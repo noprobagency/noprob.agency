@@ -5,7 +5,6 @@ import FAQ from '@/components/sections/FAQ'
 import CTA from '@/components/sections/CTA'
 import Footer from '@/components/layout/Footer'
 import Hero from '@/components/sections/Hero'
-import LogoWall from '@/components/sections/LogoWall'
 import Pricing from '@/components/sections/Pricing'
 import ProblemSection from '@/components/sections/ProblemSection'
 import ResultsCarousel from '@/components/sections/ResultsCarousel'
@@ -28,7 +27,6 @@ export default function ItalianHomePage() {
       <Pricing locale="it">
         <AiServiceCard locale="it" />
       </Pricing>
-      <LogoWall locale="it" />
       <FAQ locale="it" />
       <CTA locale="it" />
       <Footer locale="it" />
