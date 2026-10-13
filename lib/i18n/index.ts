@@ -243,7 +243,7 @@ const en: Dictionary = {
       },
       {
         title: 'Blind decisions',
-        description: '96% of eCommerce brands run on unreliable data. Tracking is broken, decisions are blind, results are random.',
+        description: 'Before its Shopify migration, Cumini’s tracking scored 31 out of 100. With data like that, decisions are blind and results are random.',
       },
       {
         title: 'Patchwork \u201cSupport\u201d',
@@ -362,7 +362,7 @@ const en: Dictionary = {
         {
           title: "Tracking data? Broken. You're scaling blind.",
           description:
-            '96% of eCommerce brands run on unreliable data. Tracking is broken, decisions are blind, results are random.',
+            'Before its Shopify migration, Cumini’s tracking scored 31 out of 100. With data like that, decisions are blind and results are random.',
         },
         {
           title: "No one's really responsible. Your team knows it",
@@ -717,7 +717,7 @@ const it: Dictionary = {
       },
       {
         title: 'Decisioni al buio',
-        description: 'Il 96% degli eCommerce lavora su dati inaffidabili. Il tracking \u00e8 rotto, le decisioni sono cieche, i risultati sono casuali.',
+        description: 'Prima della migrazione su Shopify, il tracking di Cumini segnava 31 su 100. Con dati cos\u00ec le decisioni sono cieche e i risultati casuali.',
       },
       {
         title: 'Supporto \u201cpatchwork\u201d',
@@ -835,7 +835,7 @@ const it: Dictionary = {
         {
           title: 'Tracking rotto? Stai scalando alla cieca.',
           description:
-            'Il 96% degli eCommerce lavora su dati inaffidabili. Il tracking è rotto, le decisioni sono cieche, i risultati sono casuali.',
+            'Prima della migrazione su Shopify, il tracking di Cumini segnava 31 su 100. Con dati così le decisioni sono cieche e i risultati casuali.',
         },
         {
           title: 'Responsabile? Nessuno lo è davvero.',

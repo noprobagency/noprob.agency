@@ -203,7 +203,7 @@ export default function MigrazionePricing({
                         className="h-4 w-auto object-contain"
                       />
                       <span className="font-sans text-[12px] font-semibold tracking-[-0.03em] text-np-green-trust">
-                        4,9
+                        5/5
                       </span>
                     </div>
                     <p className="text-center font-sans text-[12px] font-medium tracking-[-0.04em] text-noprob-text">

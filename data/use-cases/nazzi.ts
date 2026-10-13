@@ -235,7 +235,7 @@ export const nazzi: UseCase = {
       type: 'paragraph',
       text: 'Lo facciamo per brand e farmacie che vendono già online e vogliono passare a Shopify con un piano, dei numeri e qualcuno che risponde. [Ecco come lavoriamo sulle migrazioni a Shopify](/it/zero-loss-migration).',
     },
-    { type: 'paragraph', text: 'Farmacia Nazzi è un cliente attivo di NoProb Agency da gennaio 2024.' },
+    { type: 'paragraph', text: 'Farmacia Nazzi è un cliente attivo di NoProb Agency da gennaio 2024. Se il tuo store è collegato a un gestionale proprietario, leggi anche il [caso Cumini](/it/casi-studio/cumini-luxury-fashion-ecommerce).' },
     { type: 'cta' },
   ],
   faq: [
@@ -469,7 +469,7 @@ export const nazzi: UseCase = {
       type: 'paragraph',
       text: 'We do it for brands and pharmacies that already sell online and want to move to Shopify with a plan, real numbers and someone who answers. [This is how we run Shopify migrations](/zero-loss-migration).',
     },
-    { type: 'paragraph', text: 'Farmacia Nazzi has been an active client of NoProb Agency since January 2024.' },
+    { type: 'paragraph', text: 'Farmacia Nazzi has been an active client of NoProb Agency since January 2024. If your store is connected to a proprietary ERP, read the [Cumini case](/use-cases/cumini-luxury-fashion-ecommerce) too.' },
     { type: 'cta' },
   ],
   faqEn: [

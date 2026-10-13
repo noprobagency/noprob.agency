@@ -551,7 +551,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Cumini è un cliente attivo di NoProb Agency da oltre 4 anni. [Ecco come lavoriamo sulle migrazioni a Shopify](/it/zero-loss-migration).',
+      text: 'Cumini è un cliente attivo di NoProb Agency da oltre 4 anni. [Ecco come lavoriamo sulle migrazioni a Shopify](/it/zero-loss-migration). Se parti da WooCommerce, leggi il [caso Farmacia Nazzi](/it/casi-studio/farmacia-nazzi-integratori-shopify).',
     },
     {
       type: 'cta',
@@ -1014,7 +1014,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Cumini has been an active client of NoProb Agency for over 4 years. [This is how we run Shopify migrations](/zero-loss-migration).',
+      text: 'Cumini has been an active client of NoProb Agency for over 4 years. [This is how we run Shopify migrations](/zero-loss-migration). If you are coming from WooCommerce, read the [Farmacia Nazzi case](/use-cases/farmacia-nazzi-integratori-shopify).',
     },
     { type: 'cta' },
   ],

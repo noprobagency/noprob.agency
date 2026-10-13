@@ -1,13 +1,19 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import type { Locale } from '@/lib/i18n'
 
 type Metrics = readonly string[] | { en: readonly string[]; it: readonly string[] }
 
+// Cards without a public source show only the logo: metrics come back when a source exists
+// (docs/dati-verificati.md).
 const resultCards: ReadonlyArray<{
   image: string
   logo: string
   logoClass: string
   metrics: Metrics
+  /** Public case study, when there is one. */
+  href?: { en: string; it: string }
+  label?: string
 }> = [
   {
     image: '/images/originals/lXYpLfNsEJ0igk2CBCTjY1Irqw.png',
@@ -17,30 +23,43 @@ const resultCards: ReadonlyArray<{
       en: ['+67.7% online sales after Shopify', '+301% email revenue with Klaviyo'],
       it: ['+67,7% vendite online dopo Shopify', '+301% entrate email con Klaviyo'],
     },
+    href: { en: '/use-cases/cumini-luxury-fashion-ecommerce', it: '/it/casi-studio/cumini-luxury-fashion-ecommerce' },
+    label: 'Cumini',
+  },
+  {
+    image: '/images/use-case-nazzi/nazzi-homepage-shopify.webp',
+    logo: '/images/use-case-nazzi/nazzi-logo.svg',
+    logoClass: 'h-[30px] w-[196px] object-contain',
+    metrics: {
+      en: ['+105% online sales after Shopify', '2.8x clicks from Google'],
+      it: ['+105% vendite online dopo Shopify', '2,8x clic da Google'],
+    },
+    href: { en: '/use-cases/farmacia-nazzi-integratori-shopify', it: '/it/casi-studio/farmacia-nazzi-integratori-shopify' },
+    label: 'Farmacia Nazzi',
   },
   {
     image: '/images/originals/i9Ht9Hdb61eYmBH3DZyKGjIm6s.webp',
     logo: '/images/originals/RWVPFhFtXLH5J1UMr53qg3AEzL8.svg',
     logoClass: 'h-[62px] w-[140px] object-contain',
-    metrics: ['-14% Cost per Acquisition', '+9% MER Improvement'],
+    metrics: [],
   },
   {
     image: '/images/originals/HACWQoGOAZHSLqcFjpYb1fb90wk.jpg',
     logo: '/images/originals/UR9tJ9ihRaU7gaL1jcgl0kwQY5g.svg',
     logoClass: 'h-[30px] w-[140px] object-contain',
-    metrics: ['57% Retention Cost Reduction', '+7% AOV Growth'],
+    metrics: [],
   },
   {
     image: '/images/originals/xikMpaXW3G0T00o5bsdB5bWnpuU.png',
     logo: '/images/originals/3D4Ji7c6LSsawGoOucoTS6dFA.png',
     logoClass: 'h-[30px] w-[140px] object-contain',
-    metrics: ['€9.03 Cost per Acquisition', '32% Avg. YoY Revenue Growth'],
+    metrics: [],
   },
   {
     image: '/images/originals/cOnThGiudnDZv0DuLTLxFgBBoc.webp',
     logo: '/images/originals/8GgYF2twbCK7Wa70vrBTzBY7kg.svg',
     logoClass: 'h-[30px] w-[140px] object-contain',
-    metrics: ['+2% MER Improvement', '+13% LTV'],
+    metrics: [],
   },
 ]
 
@@ -61,6 +80,13 @@ export default function ResultsCarousel({ locale = 'en' }: { locale?: Locale }) 
                   key={`${card.image}-${index}`}
                   className="relative h-[220px] w-[340px] shrink-0 overflow-hidden rounded-card-lg border-2 border-noprob-border bg-noprob-card-off max-[809px]:w-[428px] max-[809px]:min-h-[277px] max-[809px]:h-[277px] lg:h-[277px] lg:w-[428px]"
                 >
+                  {card.href && (
+                    <Link
+                      href={card.href[locale === 'it' ? 'it' : 'en']}
+                      aria-label={card.label}
+                      className="absolute inset-0 z-[3]"
+                    />
+                  )}
                   <Image src={card.image} alt="" fill className="object-cover" aria-hidden />
                   <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0)_24.09%,#f9f9f9_70.74%)]" />
                   <Image

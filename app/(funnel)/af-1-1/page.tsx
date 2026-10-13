@@ -98,7 +98,7 @@ export default function Af11Page() {
             <div className="flex items-center gap-[6px] rounded-pill border border-np-border-pill bg-white px-3 py-[5px]">
               <Stars />
               <span className="font-sans text-[12px] font-semibold tracking-[-0.03em] text-np-dark">
-                4,9 su Trustpilot
+                5/5 su Trustpilot
               </span>
             </div>
           </div>
@@ -155,7 +155,7 @@ export default function Af11Page() {
           <div className="flex items-center gap-2">
             <Stars size={14} />
             <span className="font-sans text-[13px] font-semibold tracking-[-0.03em] text-np-green-trust">
-              4,9 su 5 su Trustpilot
+              10 recensioni a 5 stelle su Trustpilot
             </span>
           </div>
           <a href="#candidatura" data-tracking="af11_bottom_cta" className="button-principal mt-2">

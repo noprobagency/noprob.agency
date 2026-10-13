@@ -9,7 +9,7 @@
 
 ## Working Rules
 
-- Do not invent metrics or brand claims. Reuse copy and figures from the live site.
+- Do not invent metrics or brand claims. Every public number (pages, blog, landing pages, `public/llms.txt`) must be listed with its source in `docs/dati-verificati.md`; if it is not there, verify it or remove it. Client figures are published only as percentages, multipliers or ratios, never absolute revenue, orders or customers.
 - Default to Server Components. Use client components only when interaction requires them.
 - Avoid inline styles whenever a Tailwind or CSS-variable solution is practical.
 - Keep the visual language consistent with the live site:
