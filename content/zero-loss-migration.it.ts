@@ -10,10 +10,10 @@ import { ZL_SOURCES } from './zero-loss-migration.shared'
 
 export const zeroLossIt: ZlCopy = {
   meta: {
-    title: 'Shopify Launch Sprint: il tuo eCommerce su Shopify in 10 giorni lavorativi | noprob agency',
+    title: 'Shopify Launch Sprint: su Shopify in 14 giorni, più SEO e più vendite | noprob agency',
     description:
-      'Il tuo eCommerce replicato 1:1 su Shopify in 10 giorni lavorativi, con le stesse posizioni su Google. Dati riconciliati, redirect testati, tracking server-side, 90 giorni di supporto e 4 garanzie. Prezzo fisso e pubblico.',
-    ogAlt: 'Shopify Launch Sprint: il tuo eCommerce su Shopify in 10 giorni lavorativi',
+      'Il tuo eCommerce su Shopify in 14 giorni, con più posizioni su Google e più vendite: +105% per Integratori Nazzi DTC, +67,7% per Cumini. Redirect testati, tracking server-side, 90 giorni di supporto, 4 garanzie, prezzo fisso.',
+    ogAlt: 'Shopify Launch Sprint: il tuo eCommerce su Shopify in 14 giorni, più SEO e più vendite',
   },
   nav: {
     cta: 'Candidati allo sprint',
@@ -22,9 +22,9 @@ export const zeroLossIt: ZlCopy = {
   },
   hero: {
     eyebrow: 'Shopify Launch Sprint',
-    h1: 'Il tuo eCommerce su Shopify in 10 giorni lavorativi, con le stesse posizioni su Google.',
+    h1: 'Il tuo eCommerce su Shopify in 14 giorni. Più posizioni su Google, più vendite.',
     paragraph:
-      "Replichiamo il tuo store 1:1 su Shopify: dati riconciliati, redirect testati uno per uno, tracking server-side e checkout più corto. Vai live nel giorno che scegli tu, con 90 giorni di supporto. Prezzo fisso e pubblico, 4 garanzie misurabili, oltre 10 migrazioni con 0 minuti offline.",
+      "Portiamo il tuo store su Shopify senza fermare le vendite e lo rendiamo più facile da trovare e da comprare. I risultati dei nostri ultimi clienti: +105% di vendite in 85 giorni per Integratori Nazzi DTC, +67,7% in 12 mesi per Cumini. Prezzo fisso, 4 garanzie, 0 minuti offline.",
     ctaPrimary: 'Candidati allo sprint',
     ctaNote: 'Rispondiamo in 48 ore',
     ctaSecondary: 'Guarda i risultati',
@@ -35,9 +35,9 @@ export const zeroLossIt: ZlCopy = {
   overview: {
     h2: 'Shopify Launch Sprint',
     paragraph:
-      "Dieci giorni lavorativi, un calendario fisso, un referente. Il lunedì ci dai gli accessi, il venerdì della settimana dopo hai lo store su Shopify pronto a pubblicare. Non è un redesign: è il tuo store, uguale, più veloce e senza bug, con il flusso d'acquisto ottimizzato per convertire di più.",
+      "Quattordici giorni, un calendario fisso, un referente. Il lunedì ci dai gli accessi, il venerdì della settimana dopo hai lo store su Shopify pronto a pubblicare. Non è un redesign: è il tuo store, più veloce, più forte su Google e con un checkout costruito per vendere di più.",
     cta: 'Candidati allo sprint',
-    deliverablesTitle: 'Cosa ottieni al giorno 10',
+    deliverablesTitle: 'Cosa ottieni al giorno 14',
     deliverables: [
       {
         title: 'Store Shopify pronto a pubblicare',
@@ -72,9 +72,9 @@ export const zeroLossIt: ZlCopy = {
     pricingNote:
       'Prima rata al kickoff, seconda al go-live, terza e quarta nei due mesi di supporto. Piano Shopify, tema e app a carico tuo. Nessuno sconto, nessun preventivo: questo è il prezzo.',
     results: [
+      { value: '+105% di vendite online nei primi 85 giorni su Shopify', attribution: 'Integratori Nazzi DTC' },
       { value: '+67,7% di vendite online nei 12 mesi dopo la migrazione', attribution: 'Cumini, luxury multibrand' },
-      { value: 'Clic da Google 2,7 volte quelli di un anno prima', attribution: 'Integratori Nazzi DTC, Search Console' },
-      { value: '+105% di vendite online nei primi 85 giorni dopo la migrazione da WooCommerce', attribution: 'Integratori Nazzi DTC' },
+      { value: 'Posizione media su Google da 9,0 a 7,1, clic 2,7 volte l’anno prima', attribution: 'Integratori Nazzi DTC, Search Console' },
       { value: '0 minuti offline in oltre 10 migrazioni', attribution: 'noprob agency' },
     ],
   },
@@ -131,7 +131,7 @@ export const zeroLossIt: ZlCopy = {
       {
         title: 'Go-live Checklist con la tua data',
         paragraph:
-          'DNS, TTL, sitemap, Search Console, monitor di uptime, piano di rollback. La firmi tu con la data che scegli, dal giorno 11 al 30. Il giorno del lancio il tuo store non si ferma un secondo.',
+          'DNS, TTL, sitemap, Search Console, monitor di uptime, piano di rollback. La firmi tu con la data che scegli, dal giorno 15 al 30. Il giorno del lancio il tuo store non si ferma un secondo.',
         imageAlt: 'Go-live Checklist firmata con la data in evidenza',
         mockup: 'checklist',
       },
@@ -221,7 +221,7 @@ export const zeroLossIt: ZlCopy = {
       title: 'Dopo lo sprint',
       rows: [
         {
-          phase: 'Giorni 11-30',
+          phase: 'Giorni 15-30',
           title: 'Go-live, la data la scegli tu',
           detail: 'Cambio DNS, redirect attivi, sitemap e Search Console. Presidio 48 ore.',
         },
@@ -238,7 +238,7 @@ export const zeroLossIt: ZlCopy = {
     h2: 'Quattro garanzie, tutte misurabili',
     sub: 'Misurate dalla dashboard che ricevi il giorno 1, non da opinioni.',
     cards: [
-      { key: 'Sprint', text: 'Store pronto al giorno 10 o ti rimborsiamo la prima rata.' },
+      { key: 'Sprint', text: 'Store pronto al giorno 14 o ti rimborsiamo la prima rata.' },
       { key: 'SEO', text: 'Traffico organico sotto la baseline a 90 giorni dal go-live? Lavoriamo gratis finché non torna.' },
       { key: 'Go-live', text: 'Store offline al lancio per colpa nostra? Una rata la paghiamo noi.' },
       { key: 'Checkout', text: 'Il checkout converte meno di prima a 90 giorni? Lo ottimizziamo gratis finché non supera.' },
@@ -271,7 +271,7 @@ export const zeroLossIt: ZlCopy = {
       'Quando arrivano in Europa, chi è su Shopify li accende. Chi è su WooCommerce aspetta un plugin. Il costo della tua attesa, con i tuoi numeri, te lo mostriamo in call: velocità, tasso di checkout e scarto del tracking del tuo store contro la baseline dei nostri.',
   },
   proof: {
-    h2: 'Cosa succede dopo una migrazione fatta bene',
+    h2: 'Dopo la migrazione: più Google, più vendite',
     sub: 'Dati reali dei nostri clienti, con la fonte di ogni numero. Le cifre di fatturato restano loro: le vendite sono mostrate in indice.',
     charts: {
       caseLink: 'Leggi il caso studio',
@@ -364,7 +364,7 @@ export const zeroLossIt: ZlCopy = {
       {
         question: 'Il mio store resta online durante lo sprint?',
         answer:
-          'Sì. Lavoriamo in staging, il tuo sito attuale non viene toccato. Il go-live lo fai quando decidi tu, tra il giorno 11 e il 30.',
+          'Sì. Lavoriamo in staging, il tuo sito attuale non viene toccato. Il go-live lo fai quando decidi tu, tra il giorno 15 e il 30.',
       },
       {
         question: 'Perdo posizioni su Google?',
@@ -383,7 +383,7 @@ export const zeroLossIt: ZlCopy = {
       },
       {
         question: 'Cosa succede se non arrivano gli accessi in tempo?',
-        answer: 'Il kickoff slitta al lunedì successivo. Lo sprint parte solo quando può finire in 10 giorni.',
+        answer: 'Il kickoff slitta al lunedì successivo. Lo sprint parte solo quando può finire in 14 giorni.',
       },
       {
         question: 'Cosa succede se il mio store supera i limiti dello scaglione?',
@@ -398,7 +398,7 @@ export const zeroLossIt: ZlCopy = {
       {
         question: 'Come funzionano le garanzie?',
         answer:
-          'Sono quattro, misurate dalla dashboard: store pronto al giorno 10 o rimborso della prima rata; traffico organico sotto la baseline a 90 giorni e lavoriamo gratis finché non torna; store offline al lancio per colpa nostra e una rata la paghiamo noi; checkout che converte meno di prima a 90 giorni e lo ottimizziamo gratis finché non supera. Le condizioni stanno nel contratto, in una pagina.',
+          'Sono quattro, misurate dalla dashboard: store pronto al giorno 14 o rimborso della prima rata; traffico organico sotto la baseline a 90 giorni e lavoriamo gratis finché non torna; store offline al lancio per colpa nostra e una rata la paghiamo noi; checkout che converte meno di prima a 90 giorni e lo ottimizziamo gratis finché non supera. Le condizioni stanno nel contratto, in una pagina.',
       },
       {
         question: 'Cosa succede dopo i 90 giorni?',
@@ -418,10 +418,10 @@ export const zeroLossIt: ZlCopy = {
     ],
   },
   finalCta: {
-    h2: 'Candidati allo sprint',
+    h2: 'Il tuo store su Shopify fra 14 giorni. Candidati.',
     paragraph:
       'Ti rispondiamo entro 48 ore, anche se la risposta è no. Se sei dentro i criteri, la risposta è lo scaglione, il prezzo e il primo lunedì disponibile.',
-    bullets: ['Kickoff sempre di lunedì', 'Store pronto al giorno 10', '90 giorni di supporto inclusi'],
+    bullets: ['Kickoff sempre di lunedì', 'Store pronto al giorno 14', '90 giorni di supporto inclusi'],
     cta: 'Candidati allo sprint',
   },
   apply: {

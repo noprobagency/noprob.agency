@@ -23,8 +23,8 @@ function svg(claim) {
 }
 
 const variants = [
-  { file: 'public/images/og-zero-loss-migration-it.png', claim: 'Su Shopify in 10 giorni lavorativi' },
-  { file: 'public/images/og-zero-loss-migration-en.png', claim: 'On Shopify in 10 business days' },
+  { file: 'public/images/og-zero-loss-migration-it.png', claim: 'Su Shopify in 14 giorni, più SEO e vendite' },
+  { file: 'public/images/og-zero-loss-migration-en.png', claim: 'On Shopify in 14 days, more SEO and sales' },
 ]
 
 for (const { file, claim } of variants) {
