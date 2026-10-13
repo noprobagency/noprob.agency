@@ -46,6 +46,16 @@ export type Dictionary = {
     metricNote: string
     cta: string
     ctaHref: string
+    /** Second card (Integratori Nazzi DTC), same layout as Cumini. */
+    second: {
+      category: string
+      description: string
+      metric: string
+      metricNote: string
+      cta: string
+      ctaHref: string
+      tags: string[]
+    }
   }
   pricing: {
     label: string
@@ -280,6 +290,16 @@ const en: Dictionary = {
     metricNote: 'In the 12 months after the migration, compared with the 12 months before',
     cta: 'Read the Cumini case study',
     ctaHref: '/use-cases/cumini-luxury-fashion-ecommerce',
+    second: {
+      category: 'eCommerce Supplements DTC',
+      description:
+        'From WooCommerce to Shopify without stopping sales. Blog, customer history and tracking moved to the new store, plus a quiz that recommends the right supplement.',
+      metric: '\u2191 105% online sales after moving to Shopify',
+      metricNote: 'In the first 85 days on Shopify, compared with the same days of 2025',
+      cta: 'Read the Integratori Nazzi DTC case study',
+      ctaHref: '/use-cases/integratori-nazzi-dtc-shopify',
+      tags: ['WooCommerce → Shopify', 'SEO', 'Meta Ads', 'Klaviyo', 'Shopify'],
+    },
   },
   pricing: {
     label: 'Pricing',
@@ -754,6 +774,16 @@ const it: Dictionary = {
     metricNote: 'Nei 12 mesi dopo la migrazione, rispetto ai 12 mesi prima',
     cta: 'Leggi il caso studio Cumini',
     ctaHref: '/it/casi-studio/cumini-luxury-fashion-ecommerce',
+    second: {
+      category: 'eCommerce Integratori DTC',
+      description:
+        'Da WooCommerce a Shopify senza fermare le vendite. Blog, storico clienti e tracciamento portati sul nuovo store, e un quiz che consiglia l\u2019integratore giusto.',
+      metric: '\u2191 105% vendite online dopo la migrazione a Shopify',
+      metricNote: 'Nei primi 85 giorni su Shopify, rispetto agli stessi giorni del 2025',
+      cta: 'Leggi il caso studio Integratori Nazzi DTC',
+      ctaHref: '/it/casi-studio/integratori-nazzi-dtc-shopify',
+      tags: ['WooCommerce → Shopify', 'SEO', 'Meta Ads', 'Klaviyo', 'Shopify'],
+    },
   },
   pricing: {
     label: 'Pricing',
