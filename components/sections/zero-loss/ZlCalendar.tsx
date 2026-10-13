@@ -6,9 +6,16 @@ const WEEK_ACCENTS = ['bg-np-mark-green', 'bg-[#dbe9f7]'] as const
 /**
  * Section 6, Fletch "Here's exactly what the sprint looks like": pre-work
  * two columns, then one card per week with a row per day (duration only
- * where the client is involved), then the "after the sprint" rows.
+ * where the client is involved, purple pill linking to the deliverable completed
+ * that day), then the "after the sprint" rows.
  */
-export default function ZlCalendar({ copy }: { copy: ZlCopy['calendar'] }) {
+export default function ZlCalendar({
+  copy,
+  deliverables,
+}: {
+  copy: ZlCopy['calendar']
+  deliverables: ZlCopy['deliverables']
+}) {
   return (
     <section className="pt-20 min-[810px]:pt-28">
       <div className="container-noprob">
@@ -44,8 +51,20 @@ export default function ZlCalendar({ copy }: { copy: ZlCopy['calendar'] }) {
                   <li key={day.day} className="flex flex-col gap-1 px-6 py-4 lg:px-5 lg:py-5">
                     <span className="font-sans text-[12px] font-bold uppercase tracking-[0.06em] text-np-grey">{day.day}</span>
                     <h4 className="font-sans text-[16px] font-bold leading-[1.3em] tracking-[-0.03em] text-np-dark">{day.title}</h4>
+                    {day.deliverables?.map((n) => (
+                      <a
+                        key={n}
+                        href={`#deliverable-${n}`}
+                        className="mt-1 flex w-fit flex-col gap-[2px] rounded-[8px] bg-np-mark-purple px-[10px] py-[6px] font-sans text-[13px] font-semibold leading-[1.25em] tracking-[-0.02em] text-np-dark transition-opacity hover:opacity-80"
+                      >
+                        <span className="text-[10.5px] font-bold uppercase tracking-[0.06em] text-np-dark/70">
+                          {deliverables.labelPrefix} {n}
+                        </span>
+                        {deliverables.items[n - 1]?.short}
+                      </a>
+                    ))}
                     {day.duration && (
-                      <span className="inline-flex w-fit items-center gap-1 rounded-[6px] bg-np-mark-green px-2 py-[3px] font-sans text-[12px] font-semibold tracking-[-0.02em] text-np-dark">
+                      <span className="inline-flex w-fit items-center gap-1 font-sans text-[12px] font-semibold tracking-[-0.02em] text-np-grey">
                         <ClockIcon />
                         {day.duration} {copy.durationLabel}
                       </span>

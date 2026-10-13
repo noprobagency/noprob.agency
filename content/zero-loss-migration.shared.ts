@@ -113,12 +113,12 @@ export type ZlCopy = {
     h2: string
     sub: string
     labelPrefix: string
-    items: { title: string; paragraph: string; imageAlt: string; mockup: ZlMockupKind }[]
+    items: { title: string; /** Short name for the calendar pills */ short: string; paragraph: string; imageAlt: string; mockup: ZlMockupKind }[]
   }
   calendar: {
     h2: string
     prework: { label: string; yourTeamTitle: string; yourTeam: string; ourTeamTitle: string; ourTeam: string }
-    weeks: { badge: string; title: string; days: { day: string; title: string; duration?: string; detail: string }[] }[]
+    weeks: { badge: string; title: string; days: { day: string; title: string; duration?: string; detail: string; /** Deliverables (1-based) completed this day */ deliverables?: number[] }[] }[]
     durationLabel: string
     after: { title: string; rows: { phase: string; title: string; detail: string }[] }
     closing: string
