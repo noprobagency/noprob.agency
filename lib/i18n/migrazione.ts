@@ -10,17 +10,6 @@ import type { Locale } from '@/lib/i18n'
  * in the shared dictionary (so `buildMetadata({ pageKey })` keeps working).
  */
 
-type ChartData = {
-  badge: string
-  note: string
-  caption: string
-  ariaLabel: string
-  clicks: string
-  impressions: string
-  ctr: string
-  position: string
-}
-
 export type MigrazioneCopy = {
   hero: {
     trustRatingLabel: string
@@ -54,17 +43,6 @@ export type MigrazioneCopy = {
     title1: string
     titleEm: string
     subtitle: string
-    axisClicks: string
-    axisImpressions: string
-    metricClicks: string
-    metricImpressions: string
-    metricCtr: string
-    metricPosition: string
-    checkpoint1: string
-    checkpoint2: string
-    foot: string
-    bad: ChartData
-    good: ChartData
   }
   process: {
     label: string
@@ -81,6 +59,8 @@ export type MigrazioneCopy = {
     subheading: string
     tiers: { price: string; slot: string; tag: string; state: 'completed' | 'current' | 'upcoming' }[]
     priceSuffix: string
+    /** Shown above the starting price (migration page, landing tiers). */
+    priceFrom?: string
     priceBadge: string
     guarantee: string
     trustLabel: string
@@ -201,37 +181,6 @@ const it: MigrazioneCopy = {
     titleEm: 'Conta cosa succede dopo.',
     subtitle:
       'Google ri-elabora il sito: il calo è fisiologico. La risalita dipende da come è fatta la migrazione.',
-    axisClicks: 'Clic',
-    axisImpressions: 'Impressioni',
-    metricClicks: 'Clic totali',
-    metricImpressions: 'Impressioni totali',
-    metricCtr: 'CTR media',
-    metricPosition: 'Posizione media',
-    checkpoint1: '① Migrazione',
-    checkpoint2: '② Ri-elaborazione Google',
-    foot: 'Stesso punto di partenza. Esito opposto. La differenza è il metodo.',
-    bad: {
-      badge: 'Migrazione gestita male',
-      note: 'esempio illustrativo',
-      caption:
-        'Redirect mancanti, URL persi. Dopo la ri-elaborazione il traffico si stabilizza più in basso e non torna su.',
-      ariaLabel: 'Search Console: traffico che cala dopo la migrazione e si stabilizza in basso',
-      clicks: '28,4K',
-      impressions: '1,84 Mln',
-      ctr: '1,1%',
-      position: '42,8',
-    },
-    good: {
-      badge: 'Migrazione gestita da noi',
-      note: 'dato reale Cumini',
-      caption:
-        'Redirect 1:1 mappati a monte. Breve assestamento, poi Google ritrova tutto e il sito cresce. Monitoraggio post lancio continuo e modifiche rapide.',
-      ariaLabel: 'Search Console: lieve calo dopo la migrazione e poi forte crescita',
-      clicks: '99,3K',
-      impressions: '3,91 Mln',
-      ctr: '2,5%',
-      position: '9,6',
-    },
   },
   process: {
     label: 'come lavoriamo',
@@ -273,14 +222,10 @@ const it: MigrazioneCopy = {
     label: 'prezzo',
     heading: 'Un percorso non un servizio.\nLo paghi mentre lo costruiamo.',
     subheading:
-      'Niente esborso da migliaia di euro in anticipo: paghi mese per mese, mentre vedi lo store prendere forma. Il prezzo parte basso e sale man mano che acquisiamo nuovi clienti. Più aspetti, più costa.',
-    tiers: [
-      { price: '€1.100', slot: 'Primi 10 clienti', tag: 'Già acquisiti', state: 'completed' },
-      { price: '€1.450', slot: 'Clienti 11-20', tag: 'Disponibile ora', state: 'current' },
-      { price: '€1.700', slot: 'Clienti 21-30', tag: 'Quasi al completo', state: 'upcoming' },
-      { price: '€2.000', slot: 'Dal 31° in poi', tag: 'Prezzo a regime', state: 'upcoming' },
-    ],
+      'Prezzo fisso e pubblico, in base alla dimensione della tua azienda. Lo paghi in 4 rate mentre lo costruiamo: niente esborso da migliaia di euro in anticipo, nessun preventivo.',
+    tiers: [],
     priceSuffix: '/mese × 4 mesi',
+    priceFrom: 'A partire da',
     priceBadge: 'metodo noprobagency',
     guarantee:
       'Garanzia 30 giorni: se entro 30 giorni il progetto non ti convince, ti rimborsiamo, senza domande.',
@@ -293,8 +238,7 @@ const it: MigrazioneCopy = {
       'Il sito non si ferma mai',
       'Garanzia 30 giorni',
     ],
-    scarcity:
-      'Ogni progetto aggiunge esperienza, metodo, efficienza. È il valore di chi entra dopo. Chi parte ora blocca la tariffa, prima che salga. Nessun countdown: lo slot resta tuo finché c’è.',
+    scarcity: '',
     cta: 'Candidati ora',
   },
   faq: {
@@ -464,37 +408,6 @@ const en: MigrazioneCopy = {
     titleEm: 'What matters is what happens next.',
     subtitle:
       'Google re-processes the site: the drop is normal. The recovery depends on how the migration is done.',
-    axisClicks: 'Clicks',
-    axisImpressions: 'Impressions',
-    metricClicks: 'Total clicks',
-    metricImpressions: 'Total impressions',
-    metricCtr: 'Avg CTR',
-    metricPosition: 'Avg position',
-    checkpoint1: '① Migration',
-    checkpoint2: '② Google re-processing',
-    foot: 'Same starting point. Opposite outcome. The difference is the method.',
-    bad: {
-      badge: 'Poorly managed migration',
-      note: 'illustrative example',
-      caption:
-        'Missing redirects, lost URLs. After re-processing, traffic settles lower and doesn’t come back up.',
-      ariaLabel: 'Search Console: traffic dropping after migration and settling lower',
-      clicks: '28.4K',
-      impressions: '1.84M',
-      ctr: '1.1%',
-      position: '42.8',
-    },
-    good: {
-      badge: 'Migration managed by us',
-      note: 'real Cumini data',
-      caption:
-        '1:1 redirects mapped upfront. Brief settling, then Google finds everything again and the site grows. Continuous post-launch monitoring and fast fixes.',
-      ariaLabel: 'Search Console: slight drop after migration then strong growth',
-      clicks: '99.3K',
-      impressions: '3.91M',
-      ctr: '2.5%',
-      position: '9.6',
-    },
   },
   process: {
     label: 'how we work',
@@ -537,14 +450,10 @@ const en: MigrazioneCopy = {
     label: 'pricing',
     heading: 'A journey, not a service.\nYou pay as we build it.',
     subheading:
-      'No thousands of euros up front: you pay month by month, while you watch your store take shape. The price starts low and rises as we take on new clients. The longer you wait, the more it costs.',
-    tiers: [
-      { price: '€1,100', slot: 'First 10 clients', tag: 'Already taken', state: 'completed' },
-      { price: '€1,450', slot: 'Clients 11-20', tag: 'Available now', state: 'current' },
-      { price: '€1,700', slot: 'Clients 21-30', tag: 'Almost full', state: 'upcoming' },
-      { price: '€2,000', slot: 'From the 31st on', tag: 'Standard price', state: 'upcoming' },
-    ],
+      'Fixed, public price, based on the size of your company. You pay it in 4 installments while we build: no thousands of euros up front, no quotes.',
+    tiers: [],
     priceSuffix: '/month × 4 months',
+    priceFrom: 'Starting from',
     priceBadge: 'noprobagency method',
     guarantee:
       '30-day guarantee: if you’re not convinced within 30 days, we refund you, no questions asked.',
@@ -557,8 +466,7 @@ const en: MigrazioneCopy = {
       'Your store never goes down',
       '30-day guarantee',
     ],
-    scarcity:
-      'Every project adds experience, method, efficiency. That’s the value for whoever comes next. Whoever starts now locks in the rate before it goes up. No countdown: your slot stays yours as long as it’s there.',
+    scarcity: '',
     cta: 'Apply now',
   },
   faq: {

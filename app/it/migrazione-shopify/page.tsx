@@ -5,8 +5,8 @@ import MigrazioneProblem from '@/components/sections/MigrazioneProblem'
 import MigrazioneSolution from '@/components/sections/MigrazioneSolution'
 import MigrazioneSocialProof from '@/components/sections/MigrazioneSocialProof'
 import MigrazioneProcess from '@/components/sections/MigrazioneProcess'
-import MigrazionePricing from '@/components/sections/MigrazionePricing'
-import SearchConsoleCharts from '@/components/sections/SearchConsoleCharts'
+import MigrazioneSprintPricing from '@/components/sections/MigrazioneSprintPricing'
+import MigrazioneResults from '@/components/sections/MigrazioneResults'
 import MigrazioneFAQ from '@/components/sections/MigrazioneFAQ'
 import Footer from '@/components/layout/Footer'
 import { buildMetadata } from '@/lib/site'
@@ -27,15 +27,11 @@ const migrazioneJsonLd = {
   description:
     'Percorso di 4 mesi per migrare un eCommerce su Shopify senza perdere vendite o clienti. Redirect 1:1, nessuna interruzione del sito, tracciamento server-side, design e SEO.',
   offers: {
-    '@type': 'Offer',
-    price: '1450',
+    '@type': 'AggregateOffer',
     priceCurrency: 'EUR',
-    priceSpecification: {
-      '@type': 'UnitPriceSpecification',
-      price: '1450',
-      priceCurrency: 'EUR',
-      unitText: 'MONTH',
-    },
+    lowPrice: '5800',
+    highPrice: '12800',
+    offerCount: 3,
   },
 }
 
@@ -51,8 +47,8 @@ export default function MigrazioneShopifyPage() {
       <MigrazioneSolution locale={locale} />
       <MigrazioneSocialProof locale={locale} />
       <MigrazioneProcess locale={locale} />
-      <MigrazionePricing locale={locale} />
-      <SearchConsoleCharts locale={locale} />
+      <MigrazioneSprintPricing locale={locale} />
+      <MigrazioneResults locale={locale} />
       <MigrazioneFAQ locale={locale} />
       <Footer locale={locale} />
     </main>
