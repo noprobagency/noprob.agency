@@ -1,20 +1,21 @@
 import type { ZlCopy } from '@/content/zero-loss-migration'
 
-/** Simple shark fin over a waterline, brand green. */
-function SharkFin() {
+/** Rising results chart with an arrow, brand green. */
+function ResultsIcon() {
   return (
-    <svg width="56" height="40" viewBox="0 0 56 40" fill="none" aria-hidden className="shrink-0">
-      <path d="M10 31 C18 24 22 12 30 3 C31 13 35 23 44 31 Z" fill="#1dcc5d" />
-      <path d="M2 33 C8 29 14 37 20 33 S32 29 38 33 S48 37 54 33" stroke="#1dcc5d" strokeOpacity="0.55" strokeWidth="2.4" strokeLinecap="round" />
+    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" aria-hidden className="shrink-0">
+      <rect x="1" y="1" width="42" height="42" rx="12" fill="#1dcc5d" fillOpacity="0.12" stroke="#1dcc5d" strokeOpacity="0.5" />
+      <path d="M11 30 L18 23 L23 27 L33 15" stroke="#1dcc5d" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M26 15 H33 V22" stroke="#1dcc5d" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   )
 }
 
 /**
- * "Results Shark" block between the deliverables and the calendar: why 14 days
+ * Results-first block ("Ossessionati dai risultati") between the deliverables and the calendar: why 14 days
  * is possible (a whole team, one specialist per area, all in parallel).
  */
-export default function ZlResultsShark({ copy }: { copy: ZlCopy['shark'] }) {
+export default function ZlResultsFirst({ copy }: { copy: ZlCopy['resultsFirst'] }) {
   return (
     <section className="pt-14 min-[810px]:pt-28">
       <div className="container-noprob">
@@ -26,7 +27,7 @@ export default function ZlResultsShark({ copy }: { copy: ZlCopy['shark'] }) {
           <div className="relative grid gap-8 lg:grid-cols-[1.2fr_1fr] lg:items-end lg:gap-14">
             <div>
               <div className="flex items-center gap-3">
-                <SharkFin />
+                <ResultsIcon />
                 <span className="inline-flex rounded-pill border border-[#1dcc5d]/50 px-3 py-[5px] font-sans text-[12px] font-bold uppercase tracking-[0.08em] text-[#1dcc5d]">
                   {copy.label}
                 </span>

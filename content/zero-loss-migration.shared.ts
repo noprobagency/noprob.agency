@@ -129,8 +129,8 @@ export type ZlCopy = {
     closing: string
   }
   guarantees: { h2: string; sub: string; cards: { key: string; text: string }[]; line: string }
-  /** "Results Shark" block: why 14 days (a whole team, every area in parallel) */
-  shark: { label: string; h2: string; paragraph: string; areas: string[]; line: string }
+  /** Results-first block: why 14 days (a whole team, every area in parallel) */
+  resultsFirst: { label: string; h2: string; paragraph: string; areas: string[]; line: string }
   /** Mobile sticky CTA bar */
   sticky: { prefix: string; note: string; cta: string }
   whyNow: {

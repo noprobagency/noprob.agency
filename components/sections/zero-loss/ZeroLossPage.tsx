@@ -14,7 +14,7 @@ import ZlCalendar from './ZlCalendar'
 import ZlGuarantees from './ZlGuarantees'
 import ZlWhyNow from './ZlWhyNow'
 import ZlStickyCta from './ZlStickyCta'
-import ZlResultsShark from './ZlResultsShark'
+import ZlResultsFirst from './ZlResultsFirst'
 import ZlProof from './ZlProof'
 import ZlScope from './ZlScope'
 import ZlFaq from './ZlFaq'
@@ -59,7 +59,7 @@ export default function ZeroLossPage({ locale }: { locale: Locale }) {
         <ZlOverview copy={copy.overview} />
         <ZlChecklist copy={copy.checklist} />
         <ZlDeliverables copy={copy.deliverables} />
-        <ZlResultsShark copy={copy.shark} />
+        <ZlResultsFirst copy={copy.resultsFirst} />
         <ZlCalendar copy={copy.calendar} deliverables={copy.deliverables} />
         <ZlGuarantees copy={copy.guarantees} />
         <ZlWhyNow copy={copy.whyNow} />
