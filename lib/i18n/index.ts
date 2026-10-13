@@ -219,6 +219,7 @@ const en: Dictionary = {
       { label: 'Contacts', href: '/contacts' },
     ],
     serviceItems: [
+      { label: 'AI Accelerator', href: '/ai-accelerator' },
       { label: 'Shopify Development', href: '/shopify-development' },
       { label: 'Data Drive Team', href: '/data-driven-team' },
       { label: 'Shopify Migration', href: '/shopify-migration' },
@@ -628,7 +629,6 @@ const en: Dictionary = {
     description:
       'We build, improve and grow your eCommerce on Shopify, with a dedicated team in development, marketing and strategy. Together or separately, based on your needs.',
     links: [
-      { label: 'AI Accelerator', href: '/ai-accelerator' },
       { label: 'About', href: '/about' },
       { label: 'Use Case', href: '/use-cases' },
       { label: 'Blog', href: '/blog' },
@@ -699,6 +699,7 @@ const it: Dictionary = {
       { label: 'Contatti', href: '/it/contatti' },
     ],
     serviceItems: [
+      { label: 'AI Accelerator', href: '/it/ai-accelerator' },
       { label: 'Sviluppo Shopify', href: '/it/sviluppo-shopify' },
       { label: 'Data Drive Team', href: '/it/team-ecommerce-dedicato' },
       { label: 'Migrazione Shopify', href: '/it/migrazione-shopify' },
@@ -1107,7 +1108,6 @@ const it: Dictionary = {
     description:
       'Costruiamo, miglioriamo e facciamo crescere il tuo eCommerce su Shopify, con un team dedicato in sviluppo, marketing e strategia. Insieme o separatamente, in base alle tue esigenze.',
     links: [
-      { label: 'AI Accelerator', href: '/it/ai-accelerator' },
       { label: 'Chi Siamo', href: '/it/chi-siamo' },
       { label: 'Casi Studio', href: '/it/casi-studio' },
       { label: 'Blog', href: '/it/blog' },

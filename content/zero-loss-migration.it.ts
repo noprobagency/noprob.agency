@@ -256,11 +256,11 @@ export const zeroLossIt: ZlCopy = {
     ],
     line: 'Le condizioni complete stanno nel contratto, scritte in una pagina. Niente asterischi nascosti.',
   },
-  shark: {
-    label: 'Results Shark',
+  resultsFirst: {
+    label: 'Ossessionati dai risultati',
     h2: '14 giorni non è fretta. È un team intero sul tuo store.',
     paragraph:
-      'Su Shopify in 14 giorni perché non lavora una persona sola: si mette sotto un team intero, uno specialista per ogni area, tutti nello stesso momento. Così hai tutto subito, nessun collo di bottiglia e i primi risultati il prima possibile. Siamo Results Shark: puntiamo ai risultati e non li molliamo.',
+      'Su Shopify in 14 giorni perché non lavora una persona sola: si mette sotto un team intero, uno specialista per ogni area, tutti nello stesso momento. Così hai tutto subito, nessun collo di bottiglia e i primi risultati il prima possibile. Ogni area ha un numero da far salire, e non ci fermiamo finché non sale.',
     areas: ['Sviluppo Shopify', 'SEO e redirect', 'Tracking e dati', 'Checkout e CRO', 'Design', 'AI'],
     line: 'Lavoriamo in parallelo, non in fila.',
   },

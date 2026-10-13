@@ -10,7 +10,7 @@ import { getDictionary, type Locale } from '@/lib/i18n'
 import { ROUTE_PATHS, getAlternateLocalePath } from '@/lib/i18n/routes'
 import { colors, dropdown, logoText } from '@/lib/design-tokens'
 import { siteAssets } from '@/lib/site'
-import { AI_NAV_SHOW_NEW_BADGE, getAiCopy } from '@/lib/i18n/aiAccelerator'
+import { getAiCopy } from '@/lib/i18n/aiAccelerator'
 import { ZapIcon } from '@/components/sections/ai/PowerLayer'
 
 function getLocale(pathname: string): Locale {
@@ -325,27 +325,6 @@ function LangDropdown({ locale, pathname }: { locale: Locale; pathname: string }
 }
 
 /**
- * "AI Accelerator" first-level nav item (identical label in IT/EN) with a
- * lightning icon, an optional NEW badge and an electric pulsing underline.
- */
-function AiNavItem({ locale, onClick, className }: { locale: Locale; onClick?: () => void; className?: string }) {
-  return (
-    <Link
-      href={ROUTE_PATHS.aiAccelerator[locale]}
-      onClick={onClick}
-      className={cn(
-        'ai-nav-item inline-flex items-center gap-1.5 whitespace-nowrap rounded-[8px] px-[14px] py-2 font-sans text-[16px] font-normal leading-[120%] tracking-[-0.04em] text-np-dark transition-colors hover:bg-black/5',
-        className
-      )}
-    >
-      <ZapIcon size={14} className="shrink-0 text-[color:var(--ai-accent)]" />
-      <span>AI Accelerator</span>
-      {AI_NAV_SHOW_NEW_BADGE && <span className="ai-nav-badge">NEW</span>}
-    </Link>
-  )
-}
-
-/**
  * "Sprint" first-level nav item (same label in IT/EN): green lightning icon,
  * links to the Shopify Launch Sprint landing.
  */
@@ -450,8 +429,6 @@ export default function Navbar() {
             aria-label="Navigazione principale"
             className="np-nav-desktop items-center gap-0"
           >
-            <AiNavItem locale={locale} />
-            <SprintNavItem locale={locale} />
             <ServicesDropdown locale={locale} />
             {t.navbar.navLinks.map((link) => (
               <Link
@@ -462,6 +439,7 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
+            <SprintNavItem locale={locale} />
           </nav>
 
           <div className="flex shrink-0 items-center gap-2">
@@ -509,18 +487,6 @@ export default function Navbar() {
       >
         {/* Nav links */}
         <nav aria-label="Navigazione mobile" className="px-6">
-          {/* AI Accelerator (first-level item) */}
-          <AiNavItem
-            locale={locale}
-            onClick={() => setMobileOpen(false)}
-            className="w-full !px-0 py-2 text-[16px] font-medium text-np-text hover:bg-transparent"
-          />
-          <SprintNavItem
-            locale={locale}
-            onClick={() => setMobileOpen(false)}
-            className="w-full !px-0 py-2 text-[16px] font-medium text-np-text hover:bg-transparent"
-          />
-
           {/* Services accordion */}
           <button
             type="button"
@@ -558,6 +524,11 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
+          <SprintNavItem
+            locale={locale}
+            onClick={() => setMobileOpen(false)}
+            className="w-full !px-0 py-2 text-[16px] font-medium text-np-text hover:bg-transparent"
+          />
         </nav>
 
         {/* Language + bottom padding */}
