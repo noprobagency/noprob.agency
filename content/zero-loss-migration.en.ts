@@ -103,14 +103,6 @@ export const zeroLossEn: ZlCopy = {
     labelPrefix: 'Deliverable',
     items: [
       {
-        title: 'Your store, ready to publish on Shopify',
-        short: 'Store ready to publish',
-        paragraph:
-          'Your store rebuilt 1:1 on Shopify: same pages, same structure, same content. We fix the bugs and errors you have been carrying for years and apply our purchase-flow checklist: search, product page, cart, checkout. It is not a restyling. It is your store, faster and shorter to buy from.',
-        imageAlt: 'Screenshot of the Shopify staging next to the current site, with the checklist overlaid',
-        mockup: 'staging',
-      },
-      {
         title: 'Data Migration Report',
         short: 'Data Migration Report',
         paragraph:
@@ -119,12 +111,12 @@ export const zeroLossEn: ZlCopy = {
         mockup: 'report',
       },
       {
-        title: '1:1 Redirect Map',
-        short: 'Redirect Map',
+        title: 'Your store, ready to publish on Shopify',
+        short: 'Store ready to publish',
         paragraph:
-          'Every URL that received traffic in the last 12 months has its 301 redirect to a page that answers 200. Not by hand: with an automated test that runs before go-live and after. It is the reason organic traffic does not get lost.',
-        imageAlt: 'Redirect Map CSV and automated test output with 100% green',
-        mockup: 'redirects',
+          'Your store rebuilt 1:1 on Shopify: same pages, same structure, same content. We fix the bugs and errors you have been carrying for years and apply our purchase-flow checklist: search, product page, cart, checkout. It is not a restyling. It is your store, faster and shorter to buy from.',
+        imageAlt: 'Screenshot of the Shopify staging next to the current site, with the checklist overlaid',
+        mockup: 'staging',
       },
       {
         title: 'Tracking Spec and server-side setup',
@@ -133,6 +125,14 @@ export const zeroLossEn: ZlCopy = {
           'GA4, Meta Conversions API via Stape, Google Ads, email platform, consent mode. One document with every event and how we verify it: deduplicated purchase, Meta Event Match Quality above 8, gap between Shopify and GA4 orders under 3%.',
         imageAlt: 'Tracking Spec page and Event Match Quality screenshot',
         mockup: 'tracking',
+      },
+      {
+        title: '1:1 Redirect Map',
+        short: 'Redirect Map',
+        paragraph:
+          'Every URL that received traffic in the last 12 months has its 301 redirect to a page that answers 200. Not by hand: with an automated test that runs before go-live and after. It is the reason organic traffic does not get lost.',
+        imageAlt: 'Redirect Map CSV and automated test output with 100% green',
+        mockup: 'redirects',
       },
       {
         title: 'Go-live Checklist with your date',
@@ -175,7 +175,7 @@ export const zeroLossEn: ZlCopy = {
             title: 'Reconciliation and structure',
             duration: '10 minutes',
             detail: 'Source and Shopify counts at 100%. Theme, navigation, collections. You get a Loom.',
-            deliverables: [2],
+            deliverables: [1],
           },
           {
             day: 'Thursday',
@@ -187,6 +187,7 @@ export const zeroLossEn: ZlCopy = {
             title: 'Staging v1',
             duration: '30 minutes',
             detail: 'We send you the staging link and a 10-minute Loom. Feedback by Monday.',
+            deliverables: [2],
           },
         ],
       },
@@ -204,7 +205,7 @@ export const zeroLossEn: ZlCopy = {
             day: 'Tuesday',
             title: 'Tracking and integrations',
             detail: 'Stape, GA4, Meta CAPI, email, consent mode. Payments and shipping.',
-            deliverables: [4],
+            deliverables: [3],
           },
           {
             day: 'Wednesday',
@@ -215,14 +216,14 @@ export const zeroLossEn: ZlCopy = {
             day: 'Thursday',
             title: 'QA and testing',
             detail: 'Automated 301 test on every URL, end-to-end test orders, 3 devices, tracking validation.',
-            deliverables: [3],
+            deliverables: [4],
           },
           {
             day: 'Friday',
             title: 'Sprint delivery',
             duration: '45 minutes',
             detail: 'Store ready to publish, Redirect Map, Tracking Spec, Go-live Checklist. We set the date.',
-            deliverables: [1, 5],
+            deliverables: [5],
           },
         ],
       },
