@@ -8,7 +8,8 @@ import { getAiCopy } from '@/lib/i18n/aiAccelerator'
 /**
  * Link card to the AI Accelerator landing, under the three pricing plans on the
  * home pages (rendered inside the Pricing section). Leads with the visitor's
- * problem (where the eCommerce is stuck), the product name stays in the eyebrow.
+ * situation (an eCommerce that wants to grow but does not know where to start),
+ * the product name stays in the eyebrow.
  */
 export default function AiServiceCard({ locale = 'it' }: { locale?: Locale }) {
   const d = getAiCopy(locale)

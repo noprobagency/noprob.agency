@@ -122,8 +122,8 @@ const it: MigrazioneCopy = {
     titleEm2: 'clienti',
     titlePart2: '',
     subtitle:
-      'Non un semplice “ricostruiamo il tuo sito”. Impostiamo il tuo store su Shopify per vendere meglio: design, tracciamento, performance, affidabilità, flessibilità, SEO. Con un solo interlocutore, un report di conferma per ogni area di lavoro, garanzia di rimborso e manutenzione inclusa.',
-    microBenefits: ['Nemmeno un secondo offline', 'Redirect SEO 1:1', 'Garanzia rimborso 30 giorni'],
+      'Non un semplice “ricostruiamo il tuo sito”. In 14 giorni portiamo il tuo store su Shopify e lo impostiamo per vendere meglio: design, tracciamento, performance, SEO. Un solo interlocutore, un report per ogni area, 4 garanzie scritte e 90 giorni di supporto dopo il go-live.',
+    microBenefits: ['Store pronto in 14 giorni', 'Redirect SEO 1:1', 'Nemmeno un secondo offline'],
     cta: 'Candidati per la migrazione',
     trustedCount: 'Scelti da brand di Moda, Integratori e DTC eCommerce',
   },
@@ -169,9 +169,9 @@ const it: MigrazioneCopy = {
           'Sviluppo, SEO, tracciamento, design. Quando emerge un imprevisto non aspetti il freelancer giusto: il team è già lì, completo, e interviene subito.',
       },
       {
-        title: 'Bottleneck killer',
+        title: 'Un partner di crescita',
         description:
-          'Troviamo i colli di bottiglia. E li sistemiamo. Il valore non è fare tutto perfetto al primo colpo. È individuare cosa frena lo store e ottimizzarlo.',
+          'Non consegniamo e spariamo. Dopo il go-live restiamo 90 giorni su SEO, tracking e checkout: troviamo cosa si può migliorare e lo miglioriamo, ogni settimana.',
       },
     ],
   },
@@ -184,60 +184,56 @@ const it: MigrazioneCopy = {
   },
   process: {
     label: 'come lavoriamo',
-    headingPart1: '4 mesi per ',
-    headingEm: 'fare tutto.',
+    headingPart1: '14 giorni per ',
+    headingEm: 'essere su Shopify.',
     description:
-      'Tre fasi, un ordine logico. Niente fretta, niente limbo. Il tempo per seguire ogni dettaglio.\nIl flusso testato e confermato dopo oltre 10 progetti.',
+      'Uno sprint di 2 settimane, poi il go-live nella data che scegli tu e 90 giorni al tuo fianco.\nIl flusso testato e confermato dopo oltre 10 progetti.',
     phases: [
       {
         number: '01',
-        title: 'Analisi',
-        duration: 'primi ~15 giorni',
+        title: 'Sprint',
+        duration: 'giorni 1-14',
         description:
-          'Capiamo ogni dettaglio dello store: dati, prodotti, ordini, clienti, URL, integrazioni, criticità SEO. Mappiamo tutto prima di toccare qualsiasi cosa. Niente parte finché non sappiamo esattamente dove mettere le mani e impostiamo un metodo di comunicazione efficiente con il cliente.',
+          'Kickoff di lunedì, import di prodotti, clienti e ordini, riconciliazione al 100%, replica 1:1 dei template, Redirect Map, tracking server-side, checklist del flusso d’acquisto e test su 3 dispositivi. Al giorno 14 lo store è pronto a pubblicare.',
       },
       {
         number: '02',
-        title: 'Operatività',
-        duration: '~55 giorni',
+        title: 'Go-live',
+        duration: 'giorni 15-30',
         description:
-          'La parte di costruzione. Migrazione di prodotti e ordini, setup in staging, piano redirect 1:1, tracciamento server-side, design su misura e sviluppo dello store. Lo store nuovo prende forma, pezzo per pezzo. Tutti gli step verranno inviati e confermati prima del lancio ufficiale.',
+          'La data la scegli tu. Cambio DNS, redirect attivi, sitemap e Search Console. Nemmeno un secondo offline, e 48 ore di presidio dopo il lancio.',
       },
       {
         number: '03',
-        title: 'Monitoraggio',
-        duration: '~50 giorni',
+        title: 'Supporto e crescita',
+        duration: '90 giorni dal go-live',
         description:
-          'Go-live e poi controllo continuo. Il team completo resta su ogni fronte: sviluppo, SEO, tracciamento, design, pronto a intervenire su ogni collo di bottiglia. Ogni ottimizzazione possibile, la troviamo e la facciamo. Giorno dopo giorno, ottimizzazione dopo ottimizzazione, arriviamo alla perfezione.',
+          'Bug fix, modifiche, monitoraggio di SEO e tracking e nuove ottimizzazioni ogni settimana. Un Loom settimanale di 10 minuti e il report al giorno 90.',
       },
     ],
     fourMonths: {
-      title: 'Perché 4 mesi di tempo per fare tutto?',
+      title: 'Perché bastano 14 giorni?',
       description:
-        'Quattro mesi non è il tempo che ci mettiamo a migrare. È il tempo che dedichiamo a seguire tutto a 360°: analizzare, operare, monitorare. Troviamo i colli di bottiglia, controlliamo giorno dopo giorno, perfezioniamo ogni dettaglio. Non un team che consegna e sparisce, ma uno che resta finché tutto funziona come deve.',
+        'Perché il lavoro è sempre lo stesso e lo abbiamo già fatto: dati, redirect, tracking, checkout. Un metodo fisso, un calendario giorno per giorno e un team completo dal primo giorno. Il tempo che risparmi lo usi per vendere, non per aspettare.',
     },
-    closingLine: 'Non un team che consegna e sparisce.\nUn team che resta finché tutto funziona come deve.',
+    closingLine: 'Non un team che consegna e sparisce.\nUn team che resta 90 giorni dopo il go-live.',
   },
   pricing: {
     label: 'prezzo',
-    heading: 'Un percorso non un servizio.\nLo paghi mentre lo costruiamo.',
+    heading: 'Prezzo fisso, quattro rate.\nNessun preventivo.',
     subheading:
-      'Prezzo fisso e pubblico, in base alla dimensione della tua azienda. Lo paghi in 4 rate mentre lo costruiamo: niente esborso da migliaia di euro in anticipo, nessun preventivo.',
+      'Prezzo pubblico in base alla dimensione della tua azienda. Prima rata al kickoff, seconda al go-live, terza e quarta nei due mesi di supporto.',
     tiers: [],
-    priceSuffix: '/mese × 4 mesi',
+    priceSuffix: '/rata × 4',
     priceFrom: 'A partire da',
     priceBadge: 'metodo noprobagency',
     guarantee:
-      'Garanzia 30 giorni: se entro 30 giorni il progetto non ti convince, ti rimborsiamo, senza domande.',
+      '4 garanzie scritte: store pronto al giorno 14, traffico organico, go-live senza downtime e checkout. Se non funziona, paghiamo noi.',
     trustLabel: 'Scelti da brand di Moda, Integratori e DTC eCommerce',
     cardTitle: 'Migrazione Shopify',
     cardDescription:
-      'Il percorso completo di 4 mesi: migrazione tecnica, design, tracciamento e SEO. Gestito end to end, con un solo interlocutore.',
-    cardChecks: [
-      'Redirect SEO 1:1',
-      'Il sito non si ferma mai',
-      'Garanzia 30 giorni',
-    ],
+      'Lo sprint completo di 14 giorni: migrazione tecnica, tracking, SEO e flusso d’acquisto. Poi go-live e 90 giorni di supporto. Un solo interlocutore.',
+    cardChecks: ['Store pronto in 14 giorni', 'Redirect SEO 1:1', '4 garanzie scritte'],
     scarcity: '',
     cta: 'Candidati ora',
   },
@@ -251,12 +247,12 @@ const it: MigrazioneCopy = {
       {
         question: 'Quanto dura davvero la migrazione?',
         answer:
-          'Il percorso è di 4 mesi. Le tempistiche si adattano alla complessità, ma il metodo e le fasi restano questi. Ogni progetto ha la sua storia, le sue criticità, le sue difficoltà, e quattro mesi sono il tempo giusto per gestirle tutte e farla bene, senza fretta.',
+          'Lo sprint dura 14 giorni: al giorno 14 lo store è pronto a pubblicare. Il go-live lo fai tra il giorno 15 e il 30, nella data che scegli tu. Poi restiamo 90 giorni per supporto, monitoraggio e miglioramento.',
       },
       {
-        question: 'Come funziona la garanzia 30 giorni?',
+        question: 'Quali garanzie avete?',
         answer:
-          'Entro 30 giorni, se il progetto non ti convince, ti rimborsiamo. Nel primo mese facciamo il lavoro tecnico e reversibile: vedi lo store prendere forma prima di esserti impegnato del tutto.',
+          'Quattro, scritte nel contratto: store pronto al giorno 14 o ti rimborsiamo la prima rata; traffico organico sotto la baseline a 90 giorni e lavoriamo gratis finché non torna; store offline al lancio per colpa nostra e una rata la paghiamo noi; checkout che converte meno di prima e lo ottimizziamo gratis finché non supera.',
       },
       {
         question: 'Perderò posizionamento su Google?',
@@ -279,14 +275,14 @@ const it: MigrazioneCopy = {
           'Un solo interlocutore dedicato, per tutto il percorso. La stessa persona dall’inizio alla fine. Non un venditore, ma il project manager ed esperto eCommerce del tuo progetto.',
       },
       {
-        question: 'Cosa succede dopo i 4 mesi?',
+        question: 'Cosa succede dopo i 90 giorni?',
         answer:
-          'Dopo la migrazione inizia il lavoro vero. Lo store è su Shopify, solido e pronto: da qui può entrare tutto il team performance per farlo crescere con advertising, email marketing, CRO, ottimizzazione continua. È il passo naturale verso una [gestione completa](/it/team-ecommerce-dedicato).',
+          'Lo store è su Shopify, solido e misurato. Da qui può entrare tutto il team performance per farlo crescere con advertising, email marketing, CRO e ottimizzazione continua. È il passo naturale verso una [gestione completa](/it/team-ecommerce-dedicato).',
       },
       {
-        question: 'E se il lavoro finisse prima o dopo i 4 mesi?',
+        question: 'E se il mio store è molto complesso?',
         answer:
-          'Prima non può finire: quattro mesi servono proprio a gestire ogni minimo dettaglio, ed è il tempo giusto per fare tutto bene (e per permetterti di rateizzare con serenità). Se avanza tempo, lo investiamo in analisi e strategia performance: abbiamo già il team pronto, quindi iniziamo a studiare come farti crescere. Se invece servisse più tempo, cosa rarissima vista l’esperienza, il team continua a lavorare senza costi aggiuntivi finché non arriviamo al massimo della qualità.',
+          'Lo capiamo prima di partire: per questo il prezzo dipende dalla dimensione dell’azienda e il kickoff parte solo con tutti gli accessi. Se qualcosa richiede sviluppo extra, lo mettiamo per iscritto prima, con tempi e costi chiari.',
       },
     ],
   },
@@ -349,8 +345,8 @@ const en: MigrazioneCopy = {
     titleEm2: 'customers',
     titlePart2: '',
     subtitle:
-      'Not just “we’ll rebuild your site.” We set up your store on Shopify to sell better: design, tracking, performance, reliability, flexibility, SEO. One point of contact, a confirmation report for every work area, money-back guarantee and maintenance included.',
-    microBenefits: ['Never a second offline', '1:1 SEO redirects', '30-day money-back guarantee'],
+      'Not just “we rebuild your site”. In 14 days we move your store to Shopify and set it up to sell better: design, tracking, performance, SEO. One point of contact, a report for every area, 4 written guarantees and 90 days of support after go-live.',
+    microBenefits: ['Store ready in 14 days', '1:1 SEO redirects', 'Never a second offline'],
     cta: 'Apply for your migration',
     trustedCount: 'Chosen by Fashion, Supplements and DTC brands',
   },
@@ -396,9 +392,9 @@ const en: MigrazioneCopy = {
           'Development, SEO, tracking, design. When something unexpected comes up you don’t wait for the right freelancer: the team is already there, complete, and steps in right away.',
       },
       {
-        title: 'Bottleneck killers',
+        title: 'A growth partner',
         description:
-          'We find the bottlenecks. And we fix them. The value isn’t doing everything perfectly on the first try. It’s spotting what slows the store down and optimizing it.',
+          'We do not deliver and disappear. After go-live we stay 90 days on SEO, tracking and checkout: we find what can improve and we improve it, every week.',
       },
     ],
   },
@@ -411,61 +407,56 @@ const en: MigrazioneCopy = {
   },
   process: {
     label: 'how we work',
-    headingPart1: '4 months to ',
-    headingEm: 'do it all.',
+    headingPart1: '14 days to ',
+    headingEm: 'be on Shopify.',
     description:
-      'Three phases, one logical order. No rush, no limbo. The time to look after every detail.\nThe flow tested and confirmed over 10+ projects.',
+      'A 2-week sprint, then go-live on the date you choose and 90 days by your side.\nThe flow tested and confirmed over more than 10 projects.',
     phases: [
       {
         number: '01',
-        title: 'Analysis',
-        duration: 'first ~15 days',
+        title: 'Sprint',
+        duration: 'days 1-14',
         description:
-          'We understand every detail of your store: data, products, orders, customers, URLs, integrations, SEO issues. We map everything before touching anything. Nothing starts until we know exactly where to put our hands, and we set up an efficient way to communicate with you.',
+          'Kickoff on a Monday, import of products, customers and orders, 100% reconciliation, 1:1 template replication, Redirect Map, server-side tracking, purchase-flow checklist and tests on 3 devices. On day 14 the store is ready to publish.',
       },
       {
         number: '02',
-        title: 'Execution',
-        duration: '~55 days',
+        title: 'Go-live',
+        duration: 'days 15-30',
         description:
-          'The build phase. Product and order migration, staging setup, 1:1 redirect plan, server-side tracking, custom design and store development. The new store takes shape, piece by piece. Every step is shared and approved before the official launch.',
+          'You pick the date. DNS switch, redirects live, sitemap and Search Console. Not a second offline, and 48 hours on watch after launch.',
       },
       {
         number: '03',
-        title: 'Monitoring',
-        duration: '~50 days',
+        title: 'Support and growth',
+        duration: '90 days from go-live',
         description:
-          'Go-live, then continuous oversight. The full team stays on every front: development, SEO, tracking, design, ready to act on every bottleneck. Every possible optimization, we find it and we do it. Day after day, optimization after optimization, we get to perfection.',
+          'Bug fixes, changes, SEO and tracking monitoring and new optimizations every week. A weekly 10-minute Loom and a report on day 90.',
       },
     ],
     fourMonths: {
-      title: 'Why 4 months to do everything?',
+      title: 'Why are 14 days enough?',
       description:
-        'Four months isn’t how long it takes us to migrate. It’s the time we dedicate to following everything end to end: analyze, execute, monitor. We find the bottlenecks, check day after day, perfect every detail. Not a team that delivers and disappears, but one that stays until everything works the way it should.',
+        'Because the work is always the same and we have done it before: data, redirects, tracking, checkout. A fixed method, a day-by-day calendar and a full team from day one. The time you save goes into selling, not waiting.',
     },
-    closingLine:
-      'Not a team that delivers and disappears.\nA team that stays until everything works the way it should.',
+    closingLine: 'Not a team that delivers and disappears.\nA team that stays 90 days after go-live.',
   },
   pricing: {
     label: 'pricing',
-    heading: 'A journey, not a service.\nYou pay as we build it.',
+    heading: 'Fixed price, four installments.\nNo quotes.',
     subheading:
-      'Fixed, public price, based on the size of your company. You pay it in 4 installments while we build: no thousands of euros up front, no quotes.',
+      'Public price based on the size of your company. First installment at kickoff, second at go-live, third and fourth during the two months of support.',
     tiers: [],
-    priceSuffix: '/month × 4 months',
+    priceSuffix: '/installment × 4',
     priceFrom: 'Starting from',
     priceBadge: 'noprobagency method',
     guarantee:
-      '30-day guarantee: if you’re not convinced within 30 days, we refund you, no questions asked.',
+      '4 written guarantees: store ready on day 14, organic traffic, zero-downtime go-live and checkout. If it does not work, we pay.',
     trustLabel: 'Chosen by Fashion, Supplements and DTC brands',
     cardTitle: 'Shopify Migration',
     cardDescription:
-      'The complete 4-month journey: technical migration, design, tracking and SEO. Managed end to end, with one point of contact.',
-    cardChecks: [
-      '1:1 SEO redirects',
-      'Your store never goes down',
-      '30-day guarantee',
-    ],
+      'The full 14-day sprint: technical migration, tracking, SEO and purchase flow. Then go-live and 90 days of support. One point of contact.',
+    cardChecks: ['Store ready in 14 days', '1:1 SEO redirects', '4 written guarantees'],
     scarcity: '',
     cta: 'Apply now',
   },
@@ -478,12 +469,12 @@ const en: MigrazioneCopy = {
       {
         question: 'How long does the migration really take?',
         answer:
-          'The journey is 4 months. Timing adapts to complexity, but the method and phases stay the same. Every project has its own story, its own challenges, and four months is the right amount of time to handle them all and do it well, without rushing.',
+          'The sprint lasts 14 days: on day 14 the store is ready to publish. You go live between day 15 and day 30, on the date you choose. Then we stay 90 days for support, monitoring and improvement.',
       },
       {
-        question: 'How does the 30-day guarantee work?',
+        question: 'What guarantees do you give?',
         answer:
-          'Within 30 days, if you’re not convinced, we refund you. In the first month we do the technical, reversible work: you see the store take shape before you’re fully committed.',
+          'Four, written in the contract: store ready on day 14 or we refund the first installment; organic traffic below baseline at 90 days and we work for free until it is back; store offline at launch through our fault and we pay one installment; checkout converting less than before and we optimize it for free until it beats it.',
       },
       {
         question: 'Will I lose my Google rankings?',
@@ -506,14 +497,14 @@ const en: MigrazioneCopy = {
           'One dedicated point of contact, for the whole journey. The same person from start to finish. Not a salesperson, but the project manager and eCommerce expert for your project.',
       },
       {
-        question: 'What happens after the 4 months?',
+        question: 'What happens after the 90 days?',
         answer:
-          'After the migration the real work begins. The store is on Shopify, solid and ready: from here the full performance team can step in to grow it with advertising, email marketing, CRO, continuous optimization. It’s the natural step toward [complete management](/data-driven-team).',
+          'The store is on Shopify, solid and measured. From here the whole performance team can step in to grow it with advertising, email marketing, CRO and continuous optimization. It is the natural step towards [full management](/dedicated-ecommerce-team).',
       },
       {
-        question: 'What if the work finishes before or after the 4 months?',
+        question: 'What if my store is very complex?',
         answer:
-          'It can’t finish earlier: four months is exactly what’s needed to handle every last detail, and it’s the right time to do everything well (and to let you pay in installments with peace of mind). If there’s time left over, we invest it in analysis and performance strategy: we already have the team ready, so we start studying how to grow you. If it needs more time, which is extremely rare given our experience, the team keeps working at no extra cost until we reach the highest quality.',
+          'We find out before we start: that is why the price depends on company size and kickoff only starts with every access in place. If something needs extra development, we put it in writing first, with clear timing and costs.',
       },
     ],
   },

@@ -338,8 +338,8 @@ const en: Dictionary = {
         price: '',
         period: '',
         description:
-          'We migrate your eCommerce to Shopify without losing sales or customers. 1:1 redirects, no downtime, managed end to end with a single point of contact.',
-        features: ['1:1 SEO redirects', 'Your store never goes down', '30-day guarantee'],
+          'We move your eCommerce to Shopify in 14 days without losing sales or customers. 1:1 redirects, no downtime, then 90 days of support with a single point of contact.',
+        features: ['Store ready in 14 days', '1:1 SEO redirects', '4 written guarantees'],
         cta: 'Apply for your migration',
         ctaHref: '/shopify-migration',
         secondary: 'Contact us',
@@ -645,8 +645,8 @@ const en: Dictionary = {
     useCases: { title: 'eCommerce Case Studies & Results', description: 'Real results from long-term Shopify partnerships. See how we helped fashion and DTC brands grow revenue, improve MER, and scale eCommerce operations.' },
     dataDrivenTeam: { title: 'Dedicated eCommerce Team on Retainer', description: 'Your dedicated eCommerce team on retainer. One point of contact, a full team behind you. For Shopify brands that want to scale without hiring in-house.' },
     sviluppoShopify: { title: 'Shopify Development Services', description: 'Shopify development services to build your eCommerce from design to tracking, optimized to convert from day one. Lifetime maintenance included.' },
-    migrazioneShopify: { title: 'Shopify Migration Without Losing Sales', description: 'Migrate your eCommerce to Shopify in 4 months without losing sales or customers. 1:1 redirects, no downtime, one point of contact. 30-day money-back guarantee.' },
-    aiAccelerator: { title: 'AI Accelerator: unlock your company’s bottleneck with AI', description: 'A 30-day one-to-one program: we analyze your company, rank your priorities and tackle the first bottleneck with AI. Fixed price, no lock-in.' },
+    migrazioneShopify: { title: 'Shopify Migration in 14 Days Without Losing Sales', description: 'Move your eCommerce to Shopify in 14 days without losing sales or customers. 1:1 redirects, no downtime, one point of contact, 4 written guarantees and 90 days of support.' },
+    aiAccelerator: { title: 'AI Accelerator for eCommerce: find your growth opportunities with AI', description: 'A 30-day one-to-one program for established eCommerce brands: we analyze sales, acquisition and processes with you, rank the opportunities and switch on your first AI solutions. Fixed price.' },
   },
   about: {
     hero: {
@@ -817,8 +817,8 @@ const it: Dictionary = {
         price: '',
         period: '',
         description:
-          'Migriamo il tuo eCommerce su Shopify senza perdere vendite o clienti. Redirect 1:1, nessuna interruzione, gestita end to end con un solo interlocutore.',
-        features: ['Redirect SEO 1:1', 'Il sito non si ferma mai', 'Garanzia 30 giorni'],
+          'Portiamo il tuo eCommerce su Shopify in 14 giorni senza perdere vendite o clienti. Redirect 1:1, nessuna interruzione, poi 90 giorni di supporto con un solo interlocutore.',
+        features: ['Store pronto in 14 giorni', 'Redirect SEO 1:1', '4 garanzie scritte'],
         cta: 'Candidati per la migrazione',
         ctaHref: '/it/migrazione-shopify',
         secondary: 'Contattaci',
@@ -1124,8 +1124,8 @@ const it: Dictionary = {
     useCases: { title: "Casi d'Uso eCommerce e Risultati Reali", description: 'Risultati concreti da partnership Shopify a lungo termine. Come abbiamo fatto crescere brand fashion e DTC su fatturato, MER e operations eCommerce.' },
     dataDrivenTeam: { title: 'Retainer eCommerce Dedicato', description: 'Il tuo team eCommerce dedicato in retainer. Un solo interlocutore, un team completo dietro di te. Per brand Shopify che vogliono scalare.' },
     sviluppoShopify: { title: 'Sviluppo Shopify: creiamo il tuo eCommerce', description: 'Sviluppiamo il tuo eCommerce su Shopify dal design al tracciamento, ottimizzato per convertire dal primo giorno. Manutenzione a vita inclusa.' },
-    migrazioneShopify: { title: 'Migrazione a Shopify senza perdere vendite', description: 'Migra il tuo eCommerce su Shopify in 4 mesi senza perdere vendite o clienti. Redirect 1:1, nessuna interruzione, un solo interlocutore. Garanzia 30 giorni.' },
-    aiAccelerator: { title: 'AI Accelerator: sblocca con l’AI il collo di bottiglia della tua azienda', description: "Percorso one-to-one di 30 giorni: studiamo la tua azienda, mettiamo in fila le priorità e attacchiamo con l'AI il primo collo di bottiglia. Prezzo fisso." },
+    migrazioneShopify: { title: 'Migrazione a Shopify in 14 giorni senza perdere vendite', description: 'Migra il tuo eCommerce su Shopify in 14 giorni senza perdere vendite o clienti. Redirect 1:1, nessuna interruzione, un solo interlocutore, 4 garanzie scritte e 90 giorni di supporto.' },
+    aiAccelerator: { title: 'AI Accelerator per eCommerce: trova le opportunità di crescita con l’AI', description: 'Percorso one-to-one di 30 giorni per eCommerce già avviati: analizziamo con te vendite, acquisizione e processi, mettiamo in fila le opportunità e attiviamo le prime soluzioni AI. Prezzo fisso.' },
   },
   about: {
     hero: {

@@ -25,7 +25,7 @@ const migrazioneJsonLd = {
   serviceType: 'Shopify eCommerce migration',
   areaServed: ['IT', 'EU'],
   description:
-    'Percorso di 4 mesi per migrare un eCommerce su Shopify senza perdere vendite o clienti. Redirect 1:1, nessuna interruzione del sito, tracciamento server-side, design e SEO.',
+    'Migra il tuo eCommerce su Shopify in 14 giorni senza perdere vendite o clienti. Redirect 1:1, nessuna interruzione del sito, tracciamento server-side, 4 garanzie scritte e 90 giorni di supporto.',
   offers: {
     '@type': 'AggregateOffer',
     priceCurrency: 'EUR',

@@ -135,6 +135,7 @@ vanno corrette qui e nel copy.
 - "decine di altri progetti eCommerce" (playbook ambassador)
 - 15% dei visitatori arriva alle recensioni in fondo alla scheda prodotto (articolo CRO)
 - massimo tre clienti long term alla volta
+- supporto 7 giorni su 7 e manutenzione con tutto incluso (tabella "Stesso store, due velocità", landing Shopify Launch Sprint, 13 ott 2026)
 - 3 card del carosello risultati in homepage (DDglobal Store, Madotto, Sfogliate&Sfogliatelle):
   metriche numeriche tolte perché senza fonte; al loro posto pillole senza numeri (tipo di
   eCommerce e lavoro svolto, da testimonianze e indicazioni di Antonio). La card Nazzi del carosello aveva
