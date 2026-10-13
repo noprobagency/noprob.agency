@@ -25,7 +25,7 @@ export type ZlEvent =
     }
   | { event: 'dashboard_demo_click'; position: 'proof' | 'success' }
 
-export type ZlCtaPosition = 'nav' | 'hero' | 'overview' | 'checklist' | 'faq' | 'final'
+export type ZlCtaPosition = 'nav' | 'hero' | 'overview' | 'checklist' | 'whynow' | 'faq' | 'final'
 
 declare global {
   interface Window {
