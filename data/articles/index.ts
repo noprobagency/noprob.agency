@@ -4,7 +4,7 @@ export type ArticleSection =
   | { type: 'list'; items: string[] }
   | { type: 'h3'; text: string }
   | { type: 'image'; src: string; alt?: string; width?: number; height?: number; maxWidth?: string }
-  | { type: 'metrics'; merValue: string; growthValue: string; note?: string }
+  | { type: 'metrics'; merValue: string; growthValue?: string; note?: string }
   | { type: 'cta' }
 
 export type Article = {
