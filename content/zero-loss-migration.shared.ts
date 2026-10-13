@@ -133,18 +133,16 @@ export type ZlCopy = {
     h2: string
     sub: string
     charts: {
-      goLiveLabel: string
-      baselineLabel: string
       caseLink: string
       items: {
-        key: 'nazziGsc' | 'nazziGscYoy' | 'cuminiTrailing'
-        brand: string
+        key: 'nazziGsc' | 'cuminiSales'
         title: string
-        kpis: { value: string; label: string }[]
-        legend: string[]
-        note: string
+        subtitle: string
+        kpis: { label: string; value: string }[]
+        legend: [string, string]
+        migrationLabel: string
+        goLiveLabel: string
         href: string
-        baseline?: string
       }[]
     }
     dashboardCta: string
