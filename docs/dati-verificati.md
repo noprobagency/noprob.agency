@@ -99,6 +99,21 @@ media 9,4 → 7,9.
 Sito pubblico (13 ott 2026): Next.js, 831 URL in sitemap con hreflang IT/EN, llms.txt, listino
 riservato con login, schede tecniche PDF.
 
+## Mercato Shopify (sezione "Perché adesso" della landing Shopify Launch Sprint)
+
+Dati di terzi, ognuno con il link alla fonte nella pagina. Verificati il 13 ottobre 2026.
+
+| Dato | Valore | Fonte |
+|---|---|---|
+| Merchant passati a Shopify da altre piattaforme | **27.247 in 90 giorni** (≈300 al giorno) | Store Leads, report Shopify aggiornato al 9 ott 2026 (storeleads.app/reports/shopify). Flusso lordo: nello stesso periodo Shopify ne perde 17.922, netto +9.325 |
+| Di cui da WooCommerce | **9.204** | Store Leads, stesso report (prima fonte di ingresso) |
+| GMV Shopify Q2 2026 | **+32%** anno su anno (115,6 mld $) | Shopify, comunicato risultati Q2 2026 del 5 ago 2026 (SEC 8-K) |
+| Traffico e ordini da agenti AI agli store Shopify | **3x** anno su anno, Q2 2026 | Digital Commerce 360, 6 ago 2026 |
+
+La tabella "Stesso lavoro, due velocità" è qualitativa (nessun numero): funzioni native di Shopify
+(sconti, Shopify Magic, Sidekick, aggiornamenti inclusi, canale agentic) contro il lavoro tipico su
+WooCommerce/piattaforme custom.
+
 ## NoProb
 
 | Dato | Valore | Fonte |

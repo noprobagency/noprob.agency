@@ -257,10 +257,46 @@ export const zeroLossIt: ZlCopy = {
     line: 'Le condizioni complete stanno nel contratto, scritte in una pagina. Niente asterischi nascosti.',
   },
   whyNow: {
-    h2: 'Ogni mese che aspetti lo regali a chi è già su Shopify',
+    eyebrow: 'Perché adesso',
+    h2: 'I tuoi competitor stanno già passando a Shopify. Ogni mese che aspetti, il vantaggio è loro.',
     paragraph:
-      'Non è una nostra scadenza, è del mercato. Shopify è la piattaforma su cui gli assistenti AI stanno imparando a comprare, e ogni mese sulla piattaforma vecchia è un mese di posizionamento e di dati che non recuperi.',
+      'Non è una moda, è una migrazione di massa. Con Shopify e l’AI una modifica si fa in minuti, una promo parte in giornata e il tuo catalogo è già dentro ChatGPT. Chi parte prima accumula mesi di test, dati e posizioni su Google che chi arriva dopo non recupera più.',
     sourceLabel: 'Fonte',
+    stats: [
+      {
+        value: '≈300',
+        label: 'store al giorno lasciano la loro piattaforma per Shopify: 27.247 negli ultimi 90 giorni.',
+        source: { label: 'Store Leads, ottobre 2026', href: ZL_SOURCES.storeLeads },
+      },
+      {
+        value: '9.204',
+        label: 'di questi arrivano da WooCommerce, in soli 90 giorni. È la piattaforma da cui se ne vanno di più.',
+        source: { label: 'Store Leads, ottobre 2026', href: ZL_SOURCES.storeLeads },
+      },
+      {
+        value: '+32%',
+        label: 'il volume venduto su Shopify in un anno. Il mercato si sposta dove si vende di più.',
+        source: { label: 'Shopify, risultati Q2 2026', href: ZL_SOURCES.shopifyQ2 },
+      },
+      {
+        value: '3x',
+        label: 'traffico e ordini portati dagli agenti AI agli store Shopify, anno su anno.',
+        source: { label: 'Digital Commerce 360', href: ZL_SOURCES.digitalCommerce360 },
+      },
+    ],
+    race: {
+      title: 'Stesso lavoro, due velocità',
+      colOld: 'Sulla piattaforma vecchia',
+      colNew: 'Su Shopify + AI',
+      rows: [
+        { task: 'Cambiare un banner o un prezzo', old: 'Ticket al developer, giorni di attesa', now: 'Lo fai da solo, in pochi minuti' },
+        { task: 'Lanciare una promo', old: 'Plugin, test e incroci le dita', now: 'Sconti nativi, online in giornata' },
+        { task: 'Scrivere schede e testi', old: 'Ore tue o un copywriter', now: 'Con l’AI integrata nell’admin, Shopify Magic e Sidekick' },
+        { task: 'Farti trovare dagli assistenti AI', old: 'Aspetti un plugin che forse arriva', now: 'Il catalogo è già in ChatGPT, Copilot e Google AI Mode' },
+        { task: 'Aggiornamenti e sicurezza', old: 'Hosting, plugin e manutenzione da pagare', now: 'Inclusi, senza toccare niente' },
+      ],
+    },
+    cardsTitle: 'E il commercio con l’AI nasce su Shopify',
     cards: [
       {
         text: 'Shopify ha reso ogni store "agent-ready by default": i cataloghi dei merchant sono già dentro ChatGPT, Microsoft Copilot e Google AI Mode attraverso un solo canale in admin.',
@@ -278,8 +314,8 @@ export const zeroLossIt: ZlCopy = {
         sources: [{ label: 'Shopify', href: ZL_SOURCES.shopifyAgentic }],
       },
     ],
-    closing:
-      'Quando arrivano in Europa, chi è su Shopify li accende. Chi è su WooCommerce aspetta un plugin. Il costo della tua attesa, con i tuoi numeri, te lo mostriamo in call: velocità, tasso di checkout e scarto del tracking del tuo store contro la baseline dei nostri.',
+    closing: 'Prima parti, prima vedi i risultati. Lo sprint dura 14 giorni: fra due settimane il vantaggio lo prendi tu, non il tuo competitor.',
+    cta: 'Candidati allo sprint',
   },
   proof: {
     h2: 'Dopo la migrazione: più Google, più vendite',

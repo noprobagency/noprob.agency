@@ -23,6 +23,8 @@ export const ZL_SOURCES = {
     'https://www.digitalcommerce360.com/2026/08/06/how-shopify-is-approaching-agentic-ai-2026/',
   yahooFinance:
     'https://finance.yahoo.com/technology/ai/articles/shopify-turns-agent-checkout-default-124019261.html',
+  storeLeads: 'https://storeleads.app/reports/shopify',
+  shopifyQ2: 'https://www.sec.gov/Archives/edgar/data/0001594805/000159480526000046/exhibit991pressreleaseq220.htm',
 } as const
 
 export type ZlTierId = 1 | 2 | 3
@@ -128,11 +130,18 @@ export type ZlCopy = {
   }
   guarantees: { h2: string; sub: string; cards: { key: string; text: string }[]; line: string }
   whyNow: {
+    eyebrow: string
     h2: string
     paragraph: string
     sourceLabel: string
+    /** Big numbers band: the market moving to Shopify */
+    stats: { value: string; label: string; source: { label: string; href: string } }[]
+    /** Same job, two speeds: old platform vs Shopify + AI */
+    race: { title: string; colOld: string; colNew: string; rows: { task: string; old: string; now: string }[] }
+    cardsTitle: string
     cards: { text: string; sources: { label: string; href: string }[] }[]
     closing: string
+    cta: string
   }
   proof: {
     h2: string
