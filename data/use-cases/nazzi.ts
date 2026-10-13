@@ -14,9 +14,9 @@ import type { UseCase } from './index'
  * - 2025 vs 2024: sales +5.8%, ad spend +8.2%, returning customers x2.81, AOV +12.3%, MER 3.27 → 3.20
  * - June and July 2026 vs 2025: sales x2.57 and x2.19
  * - 2026 Jan → Oct 12 vs full 2025: +20.0%
- * - Search Console (data/use-cases/nazzi-gsc-daily.json, read from the GSC chart and rescaled
- *   on the real totals): last 28 days vs 28 days before go live clicks x1.45, impressions x2.24;
- *   vs same 28 days 2025 clicks x2.76, impressions x4.13
+ * - Search Console API (data/use-cases/nazzi-gsc-daily.json, exact daily data, 2025-09-09 → 2026-10-11):
+ *   last 28 days (Sep 12 → Oct 9) vs 28 days before go live (Jun 21 → Jul 18): clicks 1.41x, impressions 2.17x,
+ *   position 9.0 → 7.1; vs same 28 days 2025: clicks 2.71x, impressions 4.03x; period: CTR 1.9%, position 8.7
  * - Live site 2026-10-13: 143 blog articles in the Shopify sitemap, sitemap_agentic_discovery.xml
  *   published, 215 archived WooCommerce URLs checked one by one.
  */
@@ -38,7 +38,7 @@ export const nazzi: UseCase = {
     { type: 'paragraph', text: 'Online su Shopify dal: 19 luglio 2026' },
     {
       type: 'paragraph',
-      text: '**In breve.** Il brand Integratori Nazzi DTC è passato da WooCommerce a Shopify il 19 luglio 2026 con NoProb Agency. Nei primi 85 giorni le vendite online sono cresciute del 105% rispetto agli stessi giorni del 2025, i clienti di ritorno sono più che raddoppiati e i clic da Google sono 2,8 volte quelli di un anno prima. Tutti i numeri sono confronti percentuali su dati Shopify, Meta e Google Search Console: le fonti sono in fondo alla pagina.',
+      text: '**In breve.** Il brand Integratori Nazzi DTC è passato da WooCommerce a Shopify il 19 luglio 2026 con NoProb Agency. Nei primi 85 giorni le vendite online sono cresciute del 105% rispetto agli stessi giorni del 2025, i clienti di ritorno sono più che raddoppiati e i clic da Google negli ultimi 28 giorni sono 2,7 volte quelli di un anno prima. Tutti i numeri sono confronti percentuali su dati Shopify, Meta e Google Search Console: le fonti sono in fondo alla pagina.',
     },
     {
       type: 'paragraph',
@@ -55,7 +55,7 @@ export const nazzi: UseCase = {
         'ordini: **+77%**',
         'scontrino medio: **+16%**',
         'clienti che tornano a comprare: **2,25 volte** quelli dell’anno prima',
-        'clic da Google negli ultimi 28 giorni: **2,8 volte** lo stesso periodo del 2025',
+        'clic da Google negli ultimi 28 giorni: **2,7 volte** lo stesso periodo del 2025',
       ],
     },
     { type: 'h2', text: 'Il punto di partenza' },
@@ -160,13 +160,13 @@ export const nazzi: UseCase = {
     {
       type: 'image',
       src: '/images/use-case-nazzi/nazzi-search-console-it.png',
-      alt: 'Google Search Console di Integratori Nazzi DTC: clic e impressioni da agosto 2025 a ottobre 2026, prima e dopo la migrazione da WooCommerce a Shopify',
+      alt: 'Google Search Console di Integratori Nazzi DTC: clic e impressioni da settembre 2025 a ottobre 2026, prima e dopo la migrazione da WooCommerce a Shopify',
       width: 1600,
       height: 960,
     },
     {
       type: 'paragraph',
-      text: 'Questo è il grafico di Search Console di Integratori Nazzi DTC, ricostruito dai dati reali. La crescita parte dalla migrazione.',
+      text: 'Questo è il grafico di Search Console di Integratori Nazzi DTC, con i dati giornalieri esatti. La crescita parte dalla migrazione.',
     },
     {
       type: 'paragraph',
@@ -174,11 +174,11 @@ export const nazzi: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Negli ultimi 28 giorni i clic giornalieri da Google sono stati il 45% in più dei 28 giorni prima della migrazione, e 2,8 volte quelli dello stesso periodo del 2025. Le impressioni sono più che raddoppiate rispetto a prima della migrazione, e sono 4 volte quelle di un anno fa.',
+      text: 'Negli ultimi 28 giorni i clic da Google sono stati il 41% in più dei 28 giorni prima della migrazione, e 2,7 volte quelli dello stesso periodo del 2025. Le impressioni sono più che raddoppiate rispetto a prima della migrazione, e sono 4 volte quelle di un anno fa. La posizione media è passata da 9,0 a 7,1.',
     },
     {
       type: 'paragraph',
-      text: 'Su tutto il periodo del grafico il CTR medio è dell’1,9% e la posizione media 10,2.',
+      text: 'Su tutto il periodo del grafico il CTR medio è dell’1,9% e la posizione media 8,7.',
     },
     { type: 'h3', text: 'Le vendite dopo il go live' },
     {
@@ -221,7 +221,7 @@ export const nazzi: UseCase = {
         'Integratori Nazzi DTC vende su Shopify dal 19 luglio 2026, con lo storico di ordini e clienti dal 2023',
         'Nei primi 85 giorni le vendite online sono più che raddoppiate rispetto allo stesso periodo del 2025',
         'I clienti che tornano a comprare sono più del doppio',
-        'I clic da Google sono 2,8 volte quelli di un anno fa',
+        'I clic da Google sono 2,7 volte quelli di un anno fa',
         'Nel 2026 lo store ha già superato le vendite di tutto il 2025',
         'Oltre mille persone hanno fatto il quiz AstrumDonna nel primo mese',
       ],
@@ -245,7 +245,7 @@ export const nazzi: UseCase = {
     },
     {
       q: 'Si perde la SEO migrando da WooCommerce a Shopify?',
-      a: 'Un calo temporaneo dei clic è frequente, perché Google deve rileggere il sito. Nel caso Nazzi i clic sono scesi ad agosto e da settembre hanno superato i livelli di prima: negli ultimi 28 giorni sono il 45% in più dei 28 giorni prima della migrazione e 2,8 volte lo stesso periodo del 2025. Contano tre cose: portare tutti i contenuti, redirect 301 dai vecchi indirizzi, controllo dopo il go live.',
+      a: 'Un calo temporaneo dei clic è frequente, perché Google deve rileggere il sito. Nel caso Nazzi i clic sono scesi ad agosto e da settembre hanno superato i livelli di prima: negli ultimi 28 giorni sono il 41% in più dei 28 giorni prima della migrazione e 2,7 volte lo stesso periodo del 2025. Contano tre cose: portare tutti i contenuti, redirect 301 dai vecchi indirizzi, controllo dopo il go live.',
     },
     {
       q: 'Dopo quanto si vedono i risultati di una migrazione a Shopify?',
@@ -264,7 +264,7 @@ export const nazzi: UseCase = {
     'Vendite, ordini, scontrino medio, clienti nuovi e di ritorno: Shopify (ShopifyQL e ordini), letti dalla dashboard NoProb di Integratori Nazzi DTC. Vendite = vendite nette Shopify, spedizione inclusa.',
     'Storico 2024 e 2025: ordini WooCommerce importati su Shopify e riallineati ai totali mensili di ShopifyQL.',
     'Spesa pubblicitaria: Meta Marketing API. MER = vendite online diviso spesa pubblicitaria. Campagne spente dal 29 luglio all’11 agosto 2026, verificato su Meta.',
-    'Traffico organico: Google Search Console, report Prestazioni, da agosto 2025 a ottobre 2026. Il grafico è ricostruito dal report e riallineato sui totali reali.',
+    'Traffico organico: Google Search Console, proprietà del sito, dati giornalieri letti via API dal 9 settembre 2025 all’11 ottobre 2026. Posizione media ponderata sulle impressioni.',
     'SEO tecnica: sitemap pubblica dello store e verifica degli indirizzi WooCommerce archiviati su Wayback Machine, fatta il 13 ottobre 2026.',
     'Ogni confronto è fatto sugli stessi giorni dell’anno precedente. Per riservatezza pubblichiamo solo variazioni percentuali, non valori assoluti.',
   ],
@@ -278,7 +278,7 @@ export const nazzi: UseCase = {
     { type: 'paragraph', text: 'Live on Shopify since: July 19, 2026' },
     {
       type: 'paragraph',
-      text: '**In short.** Integratori Nazzi DTC moved from WooCommerce to Shopify on July 19, 2026 with NoProb Agency. In the first 85 days online sales grew 105% compared with the same days of 2025, returning customers more than doubled and clicks from Google are 2.8 times those of a year earlier. Every number is a percentage comparison on Shopify, Meta and Google Search Console data: sources are at the bottom of the page.',
+      text: '**In short.** Integratori Nazzi DTC moved from WooCommerce to Shopify on July 19, 2026 with NoProb Agency. In the first 85 days online sales grew 105% compared with the same days of 2025, returning customers more than doubled and Google clicks in the last 28 days are 2.7 times those of a year earlier. Every number is a percentage comparison on Shopify, Meta and Google Search Console data: sources are at the bottom of the page.',
     },
     {
       type: 'paragraph',
@@ -295,7 +295,7 @@ export const nazzi: UseCase = {
         'orders: **+77%**',
         'average order value: **+16%**',
         'returning customers: **2.25 times** the year before',
-        'clicks from Google in the last 28 days: **2.8 times** the same period of 2025',
+        'clicks from Google in the last 28 days: **2.7 times** the same period of 2025',
       ],
     },
     { type: 'h2', text: 'The starting point' },
@@ -397,13 +397,13 @@ export const nazzi: UseCase = {
     {
       type: 'image',
       src: '/images/use-case-nazzi/nazzi-search-console-en.png',
-      alt: 'Google Search Console for Integratori Nazzi DTC: clicks and impressions from August 2025 to October 2026, before and after the WooCommerce to Shopify migration',
+      alt: 'Google Search Console for Integratori Nazzi DTC: clicks and impressions from September 2025 to October 2026, before and after the WooCommerce to Shopify migration',
       width: 1600,
       height: 960,
     },
     {
       type: 'paragraph',
-      text: 'This is the Integratori Nazzi DTC Search Console chart, rebuilt from the real data. The growth starts with the migration.',
+      text: 'This is the Integratori Nazzi DTC Search Console chart, with the exact daily data. The growth starts with the migration.',
     },
     {
       type: 'paragraph',
@@ -411,11 +411,11 @@ export const nazzi: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'In the last 28 days daily clicks from Google were 45% higher than in the 28 days before the migration, and 2.8 times the same period of 2025. Impressions more than doubled compared with before the migration, and are 4 times those of a year ago.',
+      text: 'In the last 28 days Google clicks were 41% higher than in the 28 days before the migration, and 2.7 times the same period of 2025. Impressions more than doubled compared with before the migration, and are 4 times those of a year ago. The average position went from 9.0 to 7.1.',
     },
     {
       type: 'paragraph',
-      text: 'Over the whole period in the chart the average CTR is 1.9% and the average position 10.2.',
+      text: 'Over the whole period in the chart the average CTR is 1.9% and the average position 8.7.',
     },
     { type: 'h3', text: 'Sales after go live' },
     {
@@ -455,7 +455,7 @@ export const nazzi: UseCase = {
         'Integratori Nazzi DTC has been selling on Shopify since July 19, 2026, with the order and customer history since 2023',
         'In the first 85 days online sales more than doubled compared with the same period of 2025',
         'Returning customers more than doubled',
-        'Clicks from Google are 2.8 times those of a year ago',
+        'Clicks from Google are 2.7 times those of a year ago',
         'In 2026 the store has already passed the sales of the whole of 2025',
         'Over a thousand people took the AstrumDonna quiz in its first month',
       ],
@@ -479,7 +479,7 @@ export const nazzi: UseCase = {
     },
     {
       q: 'Do you lose SEO when migrating from WooCommerce to Shopify?',
-      a: 'A temporary dip in clicks is common, because Google has to read the site again. For Nazzi clicks went down in August and from September passed the previous levels: in the last 28 days they are 45% higher than in the 28 days before the migration and 2.8 times the same period of 2025. Three things matter: moving all the content, 301 redirects from the old addresses, checking after go live.',
+      a: 'A temporary dip in clicks is common, because Google has to read the site again. For Nazzi clicks went down in August and from September passed the previous levels: in the last 28 days they are 41% higher than in the 28 days before the migration and 2.7 times the same period of 2025. Three things matter: moving all the content, 301 redirects from the old addresses, checking after go live.',
     },
     {
       q: 'How soon do you see results after a Shopify migration?',
@@ -498,7 +498,7 @@ export const nazzi: UseCase = {
     'Sales, orders, average order value, new and returning customers: Shopify (ShopifyQL and orders), read from the NoProb dashboard for Integratori Nazzi DTC. Sales = Shopify net sales, shipping included.',
     '2024 and 2025 history: WooCommerce orders imported into Shopify and aligned with the ShopifyQL monthly totals.',
     'Ad spend: Meta Marketing API. MER = online sales divided by ad spend. Campaigns off from July 29 to August 11, 2026, verified on Meta.',
-    'Organic traffic: Google Search Console, Performance report, August 2025 to October 2026. The chart is rebuilt from the report and aligned with the real totals.',
+    'Organic traffic: Google Search Console, site property, daily data read through the API from September 9, 2025 to October 11, 2026. Average position weighted by impressions.',
     'Technical SEO: the store public sitemap and a check of the WooCommerce addresses archived on the Wayback Machine, done on October 13, 2026.',
     'Every comparison uses the same days of the previous year. For confidentiality we only publish percentage changes, not absolute values.',
   ],
@@ -507,8 +507,8 @@ export const nazzi: UseCase = {
     logo: '/images/originals/3D4Ji7c6LSsawGoOucoTS6dFA.png',
     logoClass: 'h-[30px] w-[140px] object-contain',
     metrics: {
-      en: ['+105% online sales after Shopify', '2.8x clicks from Google'],
-      it: ['+105% vendite online dopo Shopify', '2,8x clic da Google'],
+      en: ['+105% online sales after Shopify', '2.7x clicks from Google'],
+      it: ['+105% vendite online dopo Shopify', '2,7x clic da Google'],
     },
   },
 }
