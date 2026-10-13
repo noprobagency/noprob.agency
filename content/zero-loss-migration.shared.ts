@@ -103,10 +103,13 @@ export type ZlCopy = {
     h2: string
     sub: string
     items: string[]
-    reactionLow: string
+    /** 0 ticks (green) */
+    reactionNone: string
+    /** 1-2 ticks (orange) */
+    reactionMid: string
+    /** 3+ ticks (red) */
     reactionHigh: string
     reactionHighCta: string
-    reactionNoRevenue: string
     countLabel: string
   }
   deliverables: {

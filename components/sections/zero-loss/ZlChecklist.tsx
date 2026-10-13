@@ -10,15 +10,15 @@ type Mood = 0 | 1 | 2 | 3 | 4 | 5
 
 /** Mouth, brows and extras per pain level: 0 = calm, 5 = panic. */
 const FACES: Record<Mood, { mouth: string; brows?: string; tightEyes?: boolean; sweat?: boolean; fill: string }> = {
-  0: { mouth: 'M20 38 Q32 50 44 38', fill: '#ffd54a' },
-  1: { mouth: 'M21 40 Q32 46 43 40', fill: '#ffd54a' },
-  2: { mouth: 'M21 42 L43 42', fill: '#ffcf4a' },
-  3: { mouth: 'M21 45 Q32 38 43 45', brows: 'M17 21 L27 24 M47 21 L37 24', fill: '#ffc44a' },
-  4: { mouth: 'M20 47 Q32 35 44 47', brows: 'M17 19 L27 25 M47 19 L37 25', sweat: true, fill: '#ffb84a' },
-  5: { mouth: 'M22 48 Q32 30 42 48 Z', brows: 'M16 18 L27 25 M48 18 L37 25', tightEyes: true, sweat: true, fill: '#ffa94a' },
+  0: { mouth: 'M20 38 Q32 50 44 38', fill: '#8fd694' },
+  1: { mouth: 'M21 42 L43 42', fill: '#ffc04a' },
+  2: { mouth: 'M21 45 Q32 38 43 45', brows: 'M17 21 L27 24 M47 21 L37 24', fill: '#ffa13d' },
+  3: { mouth: 'M20 47 Q32 35 44 47', brows: 'M17 19 L27 25 M47 19 L37 25', sweat: true, fill: '#ff7a59' },
+  4: { mouth: 'M20 47 Q32 35 44 47', brows: 'M16 18 L27 25 M48 18 L37 25', sweat: true, fill: '#ff6352' },
+  5: { mouth: 'M22 48 Q32 30 42 48 Z', brows: 'M16 18 L27 25 M48 18 L37 25', tightEyes: true, sweat: true, fill: '#f04a42' },
 }
 
-/** Face that gets more stressed with every pain ticked (the revenue item does not count). */
+/** Face that goes from green and calm to red and panicked with every pain ticked. */
 function MoodFace({ mood }: { mood: Mood }) {
   const f = FACES[mood]
   return (
@@ -42,18 +42,16 @@ function MoodFace({ mood }: { mood: Mood }) {
 /**
  * Section 4, Fletch interactive checklist: tick the true ones, the reaction
  * changes with the count and a face gets more stressed with every pain ticked.
- * The last item (revenue) is the qualifier: it overrides the positive reaction.
+ * Every item already costs money, so the panel goes green (0) → orange (1-2)
+ * → red (3+) and the CTA shows from the first tick.
  */
 export default function ZlChecklist({ copy }: { copy: ZlCopy['checklist'] }) {
   const [checked, setChecked] = useState<boolean[]>(() => copy.items.map(() => false))
   const baseId = useId()
 
-  const revenueIndex = copy.items.length - 1
   const count = checked.filter(Boolean).length
-  const hasRevenue = checked[revenueIndex]
-  const pains = checked.filter((v, i) => v && i !== revenueIndex).length
-  const mood = Math.min(5, pains) as Mood
-  const state: 'low' | 'high' | 'noRevenue' = count >= 3 ? (hasRevenue ? 'high' : 'noRevenue') : 'low'
+  const mood = Math.min(5, count) as Mood
+  const state: 'none' | 'mid' | 'high' = count === 0 ? 'none' : count < 3 ? 'mid' : 'high'
 
   function toggle(index: number) {
     const next = checked.map((v, i) => (i === index ? !v : v))
@@ -98,7 +96,7 @@ export default function ZlChecklist({ copy }: { copy: ZlCopy['checklist'] }) {
           <div
             aria-live="polite"
             className={`flex flex-col items-start justify-center gap-4 rounded-card p-6 transition-colors min-[810px]:p-8 ${
-              state === 'high' ? 'bg-np-mark-green' : state === 'noRevenue' ? 'bg-[#f3e0da]' : 'bg-white border border-np-border'
+              state === 'high' ? 'bg-[#f9d2cd]' : state === 'mid' ? 'bg-[#fde3c3]' : 'bg-np-mark-green'
             }`}
           >
             <div className="flex items-center gap-4">
@@ -108,9 +106,9 @@ export default function ZlChecklist({ copy }: { copy: ZlCopy['checklist'] }) {
               </span>
             </div>
             <p className="font-display text-[1.5rem] font-semibold leading-[1.2em] tracking-[-0.04em] text-np-dark min-[810px]:text-[1.9rem]">
-              {state === 'high' ? copy.reactionHigh : state === 'noRevenue' ? copy.reactionNoRevenue : copy.reactionLow}
+              {state === 'high' ? copy.reactionHigh : state === 'mid' ? copy.reactionMid : copy.reactionNone}
             </p>
-            {state === 'high' && <ZlCta label={copy.reactionHighCta} position="checklist" />}
+            {state !== 'none' && <ZlCta label={copy.reactionHighCta} position="checklist" />}
           </div>
         </div>
       </div>
