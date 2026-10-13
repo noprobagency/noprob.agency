@@ -1,5 +1,6 @@
 import type { ZlCopy } from '@/content/zero-loss-migration'
 import { renderCopy } from './Placeholder'
+import ZlRail from './ZlRail'
 
 const WEEK_ACCENTS = ['bg-np-mark-green', 'bg-[#dbe9f7]'] as const
 
@@ -17,21 +18,21 @@ export default function ZlCalendar({
   deliverables: ZlCopy['deliverables']
 }) {
   return (
-    <section className="pt-20 min-[810px]:pt-28">
+    <section className="pt-14 min-[810px]:pt-28">
       <div className="container-noprob">
         <h2 className="text-np-h2 max-w-[820px] text-np-dark">{copy.h2}</h2>
 
         {/* Pre-work */}
-        <div className="section-card mt-8 !gap-5 min-[810px]:mt-10">
+        <div className="section-card mt-6 !gap-4 min-[810px]:mt-10 min-[810px]:!gap-5">
           <span className="np-eyebrow">{copy.prework.label}</span>
-          <div className="grid w-full gap-6 min-[810px]:grid-cols-2 min-[810px]:gap-10">
+          <div className="grid w-full gap-4 min-[810px]:grid-cols-2 min-[810px]:gap-10">
             <div>
-              <h3 className="font-sans text-[18px] font-bold tracking-[-0.03em] text-np-dark">{copy.prework.yourTeamTitle}</h3>
-              <p className="mt-2 font-sans text-[15px] font-medium leading-[1.55em] tracking-[-0.02em] text-np-text">{copy.prework.yourTeam}</p>
+              <h3 className="font-sans text-[16px] font-bold tracking-[-0.03em] text-np-dark min-[810px]:text-[18px]">{copy.prework.yourTeamTitle}</h3>
+              <p className="mt-1 font-sans text-[14px] min-[810px]:mt-2 min-[810px]:text-[15px] font-medium leading-[1.55em] tracking-[-0.02em] text-np-text">{copy.prework.yourTeam}</p>
             </div>
             <div>
-              <h3 className="font-sans text-[18px] font-bold tracking-[-0.03em] text-np-dark">{copy.prework.ourTeamTitle}</h3>
-              <p className="mt-2 font-sans text-[15px] font-medium leading-[1.55em] tracking-[-0.02em] text-np-text">{copy.prework.ourTeam}</p>
+              <h3 className="font-sans text-[16px] font-bold tracking-[-0.03em] text-np-dark min-[810px]:text-[18px]">{copy.prework.ourTeamTitle}</h3>
+              <p className="mt-1 font-sans text-[14px] min-[810px]:mt-2 min-[810px]:text-[15px] font-medium leading-[1.55em] tracking-[-0.02em] text-np-text">{copy.prework.ourTeam}</p>
             </div>
           </div>
         </div>
@@ -46,9 +47,16 @@ export default function ZlCalendar({
                 </span>
                 <h3 className="font-sans text-[18px] font-bold tracking-[-0.03em] text-np-dark">{week.title}</h3>
               </div>
-              <ol className="grid w-full divide-y divide-black/[0.06] lg:grid-cols-5 lg:divide-x lg:divide-y-0">
+              <ZlRail
+                as="ol"
+                inset
+                className="grid w-full min-[810px]:divide-y min-[810px]:divide-black/[0.06] lg:grid-cols-5 lg:divide-x lg:divide-y-0"
+              >
                 {week.days.map((day) => (
-                  <li key={day.day} className="flex flex-col gap-1 px-6 py-4 lg:px-5 lg:py-5">
+                  <li
+                    key={day.day}
+                    className="flex flex-col gap-1 rounded-[14px] border border-black/[0.08] bg-np-bg/60 p-4 min-[810px]:rounded-none min-[810px]:border-0 min-[810px]:bg-transparent min-[810px]:px-6 min-[810px]:py-4 lg:px-5 lg:py-5"
+                  >
                     <span className="font-sans text-[12px] font-bold uppercase tracking-[0.06em] text-np-grey">{day.day}</span>
                     <h4 className="font-sans text-[16px] font-bold leading-[1.3em] tracking-[-0.03em] text-np-dark">{day.title}</h4>
                     {day.deliverables?.map((n) => (
@@ -74,7 +82,7 @@ export default function ZlCalendar({
                     </p>
                   </li>
                 ))}
-              </ol>
+              </ZlRail>
             </div>
           ))}
 

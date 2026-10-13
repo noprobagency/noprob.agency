@@ -12,12 +12,12 @@ export default function ZlProof({ locale, copy }: { locale: Locale; copy: ZlCopy
   const visibleTestimonials = copy.testimonials.filter((t) => !t.hidden)
 
   return (
-    <section id="prove" className="scroll-mt-20 pt-20 min-[810px]:pt-28">
+    <section id="prove" className="scroll-mt-20 pt-14 min-[810px]:pt-28">
       <div className="container-noprob">
         <h2 className="text-np-h2 max-w-[820px] text-np-dark">{copy.h2}</h2>
-        <p className="mt-4 max-w-[680px] font-sans text-[17px] font-medium leading-[1.5em] tracking-[-0.02em] text-np-text">{copy.sub}</p>
+        <p className="mt-3 max-w-[680px] font-sans text-[15px] min-[810px]:mt-4 min-[810px]:text-[17px] font-medium leading-[1.5em] tracking-[-0.02em] text-np-text">{copy.sub}</p>
 
-        <div className="mt-10">
+        <div className="mt-6 min-[810px]:mt-10">
           <ZlSeoCharts copy={copy.charts} lang={locale === 'it' ? 'it' : 'en'} />
         </div>
 
@@ -26,7 +26,7 @@ export default function ZlProof({ locale, copy }: { locale: Locale; copy: ZlCopy
           heading={copy.testimonialsHeading}
           items={visibleTestimonials}
           tone="light"
-          className="mt-16 w-full"
+          className="mt-12 w-full min-[810px]:mt-16"
         />
       </div>
     </section>

@@ -13,6 +13,7 @@ import ZlDeliverables from './ZlDeliverables'
 import ZlCalendar from './ZlCalendar'
 import ZlGuarantees from './ZlGuarantees'
 import ZlWhyNow from './ZlWhyNow'
+import ZlStickyCta from './ZlStickyCta'
 import ZlProof from './ZlProof'
 import ZlScope from './ZlScope'
 import ZlFaq from './ZlFaq'
@@ -64,6 +65,7 @@ export default function ZeroLossPage({ locale }: { locale: Locale }) {
         <ZlFaq copy={copy.faq} />
         <ZlApplication locale={locale} copy={copy.finalCta} form={copy.form} />
       </main>
+      <ZlStickyCta copy={copy.sticky} priceFrom={copy.overview.tiers[0].price} />
       <Footer locale={locale} minimal />
     </>
   )

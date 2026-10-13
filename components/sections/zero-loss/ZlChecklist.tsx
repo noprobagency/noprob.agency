@@ -60,7 +60,7 @@ export default function ZlChecklist({ copy }: { copy: ZlCopy['checklist'] }) {
   }
 
   return (
-    <section className="pt-20 min-[810px]:pt-28">
+    <section className="pt-14 min-[810px]:pt-28">
       <div className="container-noprob">
         <h2 className="text-np-h2 text-np-dark">{copy.h2}</h2>
         <p className="mt-2 font-sans text-[15px] font-medium tracking-[-0.02em] text-np-grey">({copy.sub})</p>

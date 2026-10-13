@@ -1,4 +1,5 @@
 import type { ZlCopy } from '@/content/zero-loss-migration'
+import ZlRail from './ZlRail'
 
 function CheckIcon({ muted = false }: { muted?: boolean }) {
   return (
@@ -14,12 +15,12 @@ function CheckIcon({ muted = false }: { muted?: boolean }) {
  */
 export default function ZlScope({ copy }: { copy: ZlCopy['scope'] }) {
   return (
-    <section className="pt-20 min-[810px]:pt-28">
+    <section className="pt-14 min-[810px]:pt-28">
       <div className="container-noprob">
         <h2 className="text-np-h2 text-np-dark">{copy.h2}</h2>
 
-        <div className="mt-8 grid gap-4 min-[810px]:grid-cols-2 min-[810px]:items-stretch">
-          <div className="section-card h-full !gap-4">
+        <ZlRail className="mt-6 grid gap-4 min-[810px]:mt-8 min-[810px]:grid-cols-2 min-[810px]:items-stretch">
+          <li className="section-card h-full list-none !gap-4">
             <h3 className="font-sans text-[18px] font-bold tracking-[-0.03em] text-np-dark">{copy.includedTitle}</h3>
             <ul className="flex flex-col gap-3">
               {copy.included.map((item) => (
@@ -29,8 +30,8 @@ export default function ZlScope({ copy }: { copy: ZlCopy['scope'] }) {
                 </li>
               ))}
             </ul>
-          </div>
-          <div className="flex h-full flex-col gap-4 rounded-card border-2 border-np-border p-6">
+          </li>
+          <li className="flex h-full list-none flex-col gap-4 rounded-card border-2 border-np-border p-6">
             <h3 className="font-sans text-[18px] font-bold tracking-[-0.03em] text-np-dark">{copy.partnersTitle}</h3>
             <ul className="flex flex-col gap-3">
               {copy.partners.map((item) => (
@@ -40,8 +41,8 @@ export default function ZlScope({ copy }: { copy: ZlCopy['scope'] }) {
                 </li>
               ))}
             </ul>
-          </div>
-        </div>
+          </li>
+        </ZlRail>
 
         <p className="mt-6 font-sans text-[14px] font-medium leading-[1.5em] tracking-[-0.02em] text-np-grey">{copy.line}</p>
       </div>

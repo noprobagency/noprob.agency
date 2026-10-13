@@ -3,6 +3,7 @@ import Link from 'next/link'
 import type { ZlCopy } from '@/content/zero-loss-migration'
 import gscDaily from '@/data/use-cases/nazzi-gsc-daily.json'
 import { CUMINI_MIGRATION, NAZZI_MIGRATION, cuminiMonthly } from '@/data/zero-loss/seo-charts'
+import ZlRail from './ZlRail'
 
 type Item = ZlCopy['proof']['charts']['items'][number]
 type Lang = 'it' | 'en'
@@ -200,30 +201,30 @@ function chartFor(item: Item, lang: Lang) {
 /** Results charts of the landing (two cards, same style as the case study chart). */
 export default function ZlSeoCharts({ copy, lang }: { copy: ZlCopy['proof']['charts']; lang: Lang }) {
   return (
-    <div className="flex flex-col gap-6">
+    <ZlRail wide className="flex flex-col gap-6">
       {copy.items.map((item) => {
         const { plot, colors, kpiColors } = chartFor(item, lang)
         return (
-          <article key={item.key} className="rounded-[24px] border border-black/[0.06] bg-white px-5 py-7 min-[810px]:px-12 min-[810px]:py-11">
-            <h3 className="font-sans text-[1.35rem] font-bold leading-[1.15em] tracking-[-0.04em] text-np-dark min-[810px]:text-[1.9rem]">
+          <li key={item.key} className="list-none rounded-[24px] border border-black/[0.06] bg-white px-4 py-5 min-[810px]:px-12 min-[810px]:py-11">
+            <h3 className="font-sans text-[1.15rem] font-bold leading-[1.15em] tracking-[-0.04em] text-np-dark min-[810px]:text-[1.9rem]">
               {item.title}
             </h3>
-            <p className="mt-2 max-w-[860px] font-sans text-[12.5px] leading-[1.45em] tracking-[-0.01em] text-np-grey min-[810px]:text-[14px]">
+            <p className="mt-2 line-clamp-3 max-w-[860px] font-sans text-[11.5px] leading-[1.45em] tracking-[-0.01em] text-np-grey min-[810px]:line-clamp-none min-[810px]:text-[14px]">
               {item.subtitle}
             </p>
-            <dl className="mt-6 grid grid-cols-2 gap-x-6 gap-y-4 min-[810px]:grid-cols-4">
+            <dl className="mt-4 grid grid-cols-2 gap-x-4 gap-y-3 min-[810px]:mt-6 min-[810px]:grid-cols-4 min-[810px]:gap-x-6 min-[810px]:gap-y-4">
               {item.kpis.map((kpi, i) => (
                 <div key={kpi.label}>
                   <dt className="font-sans text-[12.5px] font-semibold tracking-[-0.02em] min-[810px]:text-[14px]" style={{ color: kpiColors[i] }}>
                     {kpi.label}
                   </dt>
-                  <dd className="mt-1 font-sans text-[1.6rem] font-bold leading-[1em] tracking-[-0.05em] text-np-dark min-[810px]:text-[2.1rem]">
+                  <dd className="mt-1 font-sans text-[1.35rem] font-bold leading-[1em] tracking-[-0.05em] text-np-dark min-[810px]:text-[2.1rem]">
                     {kpi.value}
                   </dd>
                 </div>
               ))}
             </dl>
-            <div className="mt-6">{plot}</div>
+            <div className="mt-4 min-[810px]:mt-6">{plot}</div>
             <div className="mt-3 flex flex-wrap items-center justify-between gap-x-6 gap-y-2">
               <div className="flex flex-wrap gap-5">
                 {item.legend.map((label, i) => (
@@ -237,9 +238,9 @@ export default function ZlSeoCharts({ copy, lang }: { copy: ZlCopy['proof']['cha
                 {copy.caseLink} →
               </Link>
             </div>
-          </article>
+          </li>
         )
       })}
-    </div>
+    </ZlRail>
   )
 }

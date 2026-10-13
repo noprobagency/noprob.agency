@@ -73,7 +73,7 @@ export default function ZlNav({ locale, copy, page = 'landing' }: { locale: Loca
           </nav>
 
           {page === 'landing' && (
-            <ZlCta label={copy.cta} position="nav" className="!px-4 !py-[7px] !text-[14px] min-[810px]:!px-6 min-[810px]:!text-[16px]" />
+            <ZlCta label={copy.cta} position="nav" className="!hidden min-[810px]:!inline-flex min-[810px]:!px-6 min-[810px]:!py-[7px] min-[810px]:!text-[16px]" />
           )}
         </div>
       </div>

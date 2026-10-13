@@ -129,6 +129,8 @@ export type ZlCopy = {
     closing: string
   }
   guarantees: { h2: string; sub: string; cards: { key: string; text: string }[]; line: string }
+  /** Mobile sticky CTA bar */
+  sticky: { prefix: string; note: string; cta: string }
   whyNow: {
     eyebrow: string
     h2: string
