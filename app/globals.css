@@ -1061,3 +1061,43 @@
     0 0 0 4px rgba(47, 107, 255, 0.08),
     0 0 26px var(--ai-accent-glow);
 }
+
+/* Shopify Launch Sprint: mobile swipe rails (ZlRail). Desktop keeps each list's grid. */
+@media (max-width: 809px) {
+  .zl-rail {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: stretch !important;
+    grid-template-columns: none !important;
+    gap: 12px !important;
+    margin-inline: -20px;
+    padding-inline: 20px;
+    scroll-padding-inline: 20px;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .zl-rail::-webkit-scrollbar {
+    display: none;
+  }
+  .zl-rail > * {
+    flex: 0 0 84%;
+    min-width: 0;
+    scroll-snap-align: start;
+  }
+  .zl-rail.zl-rail-wide > * {
+    flex-basis: 92%;
+  }
+  /* Rail inside a card (no bleed to the screen edge) */
+  .zl-rail.zl-rail-inset {
+    margin-inline: 0;
+    padding: 14px 16px 16px;
+    scroll-padding-inline: 16px;
+  }
+  .zl-rail.zl-rail-inset > * {
+    flex-basis: 78%;
+  }
+}

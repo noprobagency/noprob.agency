@@ -19,7 +19,7 @@ export default function ZlFaq({ copy }: { copy: ZlCopy['faq'] }) {
   }
 
   return (
-    <section className="pt-20 min-[810px]:pt-28">
+    <section className="pt-14 min-[810px]:pt-28">
       <div className="container-noprob">
         <div className="grid gap-8 lg:grid-cols-[280px_1fr] lg:gap-14">
           <div className="flex flex-row items-center justify-between gap-4 lg:sticky lg:top-24 lg:flex-col lg:items-start lg:self-start">

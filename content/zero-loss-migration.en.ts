@@ -257,6 +257,11 @@ export const zeroLossEn: ZlCopy = {
     ],
     line: 'The full terms are in the contract, written on one page. No hidden asterisks.',
   },
+  sticky: {
+    prefix: 'Fixed price from',
+    note: 'On Shopify in 14 days',
+    cta: 'Apply for the sprint',
+  },
   whyNow: {
     eyebrow: 'Why now',
     h2: 'Your competitors are already moving to Shopify. Every month you wait, the advantage is theirs.',
