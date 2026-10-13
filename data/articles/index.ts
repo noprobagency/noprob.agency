@@ -1465,7 +1465,7 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: "The second one is the quiet one. Keeps the same team, the same platform, the same plan for years. Optimizes small things every week. Isn't on social posting about growth hacks. But when you look at the numbers, the business is growing consistently and predictably.",
+        text: "The second one is the quiet one. Keeps the same team, the same platform, the same plan for years. Optimizes small things every week. Isn't on social media talking about growth hacks. But when you look at the numbers, the business is growing consistently and predictably.",
       },
       {
         type: 'paragraph',
@@ -1515,7 +1515,7 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: "It's not just the hire. It's the **time-to-ramp-up**. A new team member reaches full operational capacity in 3-6 months (SHRM). For those months the role is structurally underperforming. If you swap 2 key roles in a year, you've lost a full quarter of full operational capacity.",
+        text: "It's not just the hire. It's the **time-to-ramp-up**. A new team member reaches full operational capacity in 3-6 months (SHRM). For those months the role is structurally underperforming. If you swap 2 key roles in a year, you've lost a full quarter of operational capacity.",
       },
       {
         type: 'paragraph',
@@ -1535,7 +1535,7 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: 'The numbers tell you this: every unnecessary change is burned capital. The right question is not "how do I find someone who does better". It is "how do I make sure who is working keeps working and improving".',
+        text: 'The numbers tell you this: every unnecessary change is burned capital. The right question is not "how do I find someone who does better". It is "how do I make sure the people who are working keep working and improving".',
       },
       {
         type: 'h2',
@@ -1584,7 +1584,7 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: "Trend chasing presents itself as dynamism. It's reactivity. Real eCommerce strategy is the ability to hold the course when the market wobbles.",
+        text: "Trend chasing presents itself as dynamism. It's just reactivity. Real eCommerce strategy is the ability to hold the course when the market wobbles.",
       },
       {
         type: 'h2',
@@ -1592,7 +1592,7 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: 'Frederick Reichheld\'s study ([Bain & Company](https://www.bain.com/insights/retaining-customers-is-the-real-challenge/), founder of the Net Promoter Score) demonstrated something counterintuitive: increasing customer retention by 5% generates a profit increase between 25% and 95% (Bain, "The Loyalty Effect").',
+        text: 'Frederick Reichheld\'s study ([Bain & Company](https://www.bain.com/insights/retaining-customers-is-the-real-challenge/), the creator of the Net Promoter Score) demonstrated something counterintuitive: increasing customer retention by 5% generates a profit increase between 25% and 95% (Bain, "The Loyalty Effect").',
       },
       {
         type: 'paragraph',
@@ -1673,11 +1673,11 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: "It doesn't matter if your team is in-house or external. What matters is that the people are the same for years. A media buyer who has run your ads for 3 years knows the campaign angles, the audiences that work, the hot periods for your target. A new media buyer starts from zero and costs you 3-6 months of ramp-up.",
+        text: "It doesn't matter if your team is in-house or external. What matters is that the people are the same for years. A media buyer who has run your ads for 3 years knows the campaign angles, the audiences that work, the peak periods for your audience. A new media buyer starts from zero and costs you 3-6 months of ramp-up.",
       },
       {
         type: 'paragraph',
-        text: 'For many structured B2C brands the best model is a dedicated external team. It costs less than a complete in-house team and is more stable than a freelancer who moves on to other projects. The key is choosing a partner working to build a long relationship, not to close a project and move on.',
+        text: 'For many structured B2C brands the best model is a dedicated external team. It costs less than a complete in-house team and is more stable than a freelancer who moves on to other projects. The key is choosing a partner who works to build a long relationship, not to close a project and move on.',
       },
       {
         type: 'h3',
@@ -1782,7 +1782,7 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: "The long-term companies in the McKinsey sample delivered +47% in revenue over 13 years. Bain's 5% rule shows that small retention improvements generate huge profit differences. SHRM's turnover reality proves that every team change costs more than you think.",
+        text: "The long-term companies in the McKinsey sample delivered +47% in revenue over 13 years. Bain's 5% rule shows that small retention improvements generate huge profit differences. SHRM's turnover data shows that every team change costs more than you think.",
       },
       {
         type: 'paragraph',
@@ -1790,7 +1790,7 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: 'If you run a B2C eCommerce brand and you realize you have been navigating from one change to another for too many years without accumulating a real competitive advantage, it is time to stop and run the serious audit. How many of the "optimizations" of the last 18 months were actually structural? How many were just new attempts by workers replacing each other?',
+        text: 'If you run a B2C eCommerce brand and you realize you have been bouncing from one change to the next for too many years without accumulating a real competitive advantage, it is time to stop and run a serious audit. How many of the "optimizations" of the last 18 months were actually structural? How many were just new attempts by people swapping in and out?',
       },
       {
         type: 'paragraph',
