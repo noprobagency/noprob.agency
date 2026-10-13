@@ -24,6 +24,8 @@ export const AI_NAV_SHOW_NEW_BADGE = true
 type QuestionCards = { label: string; options: string[] }
 
 export type AiCopy = {
+  /** Card under the pricing plans on the home pages: problem first, product second. */
+  homeCard: { eyebrow: string; title: string; subtitle: string; cta: string }
   hero: {
     eyebrow: string
     titleLine1: string
@@ -224,6 +226,13 @@ export type AiCopy = {
 }
 
 const it: AiCopy = {
+  homeCard: {
+    eyebrow: 'AI Accelerator · 30 giorni one-to-one',
+    title: 'Non sai dove si blocca il tuo eCommerce?',
+    subtitle:
+      'In 30 giorni analizziamo vendite, acquisizione e processi, troviamo il collo di bottiglia e attiviamo con te le prime soluzioni AI. Prezzo fisso, zero vincoli.',
+    cta: 'Trova il collo di bottiglia',
+  },
   hero: {
     eyebrow: 'AI Accelerator · 30 giorni one-to-one per aziende ed eCommerce',
     titleLine1: 'Smetti di rincorrere tool.',
@@ -660,6 +669,13 @@ const it: AiCopy = {
 }
 
 const en: AiCopy = {
+  homeCard: {
+    eyebrow: 'AI Accelerator · 30 days one-to-one',
+    title: 'Not sure where your eCommerce is stuck?',
+    subtitle:
+      'In 30 days we analyze sales, acquisition and processes, find the bottleneck and switch on your first AI solutions with you. Fixed price, no lock-in.',
+    cta: 'Find your bottleneck',
+  },
   hero: {
     eyebrow: 'AI Accelerator · 30 days one-to-one for companies and eCommerce brands',
     titleLine1: 'Stop chasing tools.',

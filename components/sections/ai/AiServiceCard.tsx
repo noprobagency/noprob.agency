@@ -6,17 +6,18 @@ import { type Locale } from '@/lib/i18n'
 import { getAiCopy } from '@/lib/i18n/aiAccelerator'
 
 /**
- * Contextual link card to the AI Accelerator landing, shown under the
- * services grid on the home pages. Copy reuses the landing hero eyebrow
- * and benefits (no new claims).
+ * Link card to the AI Accelerator landing, under the three pricing plans on the
+ * home pages (rendered inside the Pricing section). Leads with the visitor's
+ * problem (where the eCommerce is stuck), the product name stays in the eyebrow.
  */
 export default function AiServiceCard({ locale = 'it' }: { locale?: Locale }) {
   const d = getAiCopy(locale)
+  const c = d.homeCard
   const href = ROUTE_PATHS.aiAccelerator[locale]
 
   return (
-    <section className="ai-scope px-5 pb-12 min-[810px]:px-9">
-      <div className="mx-auto w-full max-w-[1120px]">
+    <div className="ai-scope mt-3">
+      <div className="w-full">
         <Link
           href={href}
           data-tracking="home_ai_accelerator_card"
@@ -25,18 +26,16 @@ export default function AiServiceCard({ locale = 'it' }: { locale?: Locale }) {
           <div className="flex flex-col gap-2">
             <span className="inline-flex items-center gap-2 font-sans text-[13px] font-semibold tracking-[-0.02em] text-[color:var(--ai-accent-text)]">
               <ZapIcon size={14} />
-              {d.hero.eyebrow}
+              {c.eyebrow}
             </span>
-            <span className="font-display text-[22px] font-semibold leading-[1.2em] tracking-[-0.04em] text-np-dark min-[810px]:text-[26px]">
-              AI Accelerator
+            <span className="font-display text-[22px] font-semibold leading-[1.2em] tracking-[-0.04em] text-np-dark min-[810px]:text-[28px]">
+              {c.title}
             </span>
-            <span className="font-sans text-body-sm font-medium text-noprob-text">
-              {d.hero.benefits.join(' · ')}
-            </span>
+            <span className="max-w-[640px] font-sans text-body-sm font-medium text-noprob-text">{c.subtitle}</span>
           </div>
-          <span className="button-principal ai-cta shrink-0">{d.hero.cta}</span>
+          <span className="button-principal ai-cta shrink-0">{c.cta}</span>
         </Link>
       </div>
-    </section>
+    </div>
   )
 }

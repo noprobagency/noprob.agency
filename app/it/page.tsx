@@ -25,8 +25,9 @@ export default function ItalianHomePage() {
       <ProblemSection locale="it" />
       <SolutionSection locale="it" />
       <CaseStudy locale="it" />
-      <Pricing locale="it" />
-      <AiServiceCard locale="it" />
+      <Pricing locale="it">
+        <AiServiceCard locale="it" />
+      </Pricing>
       <LogoWall locale="it" />
       <FAQ locale="it" />
       <CTA locale="it" />

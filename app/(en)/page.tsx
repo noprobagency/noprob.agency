@@ -25,8 +25,9 @@ export default function HomePage() {
       <ProblemSection />
       <SolutionSection />
       <CaseStudy />
-      <Pricing />
-      <AiServiceCard locale="en" />
+      <Pricing>
+        <AiServiceCard locale="en" />
+      </Pricing>
       <LogoWall />
       <FAQ />
       <CTA />
