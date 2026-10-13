@@ -145,10 +145,12 @@ export function renderSection(section: ArticleSection, idx: number, locale: Loca
             <span>MER &gt; </span>
             <span style={{ color: '#96BF47', fontWeight: 600 }}>{section.merValue}</span>
           </div>
-          <div className="mt-2 border-t border-black/10 pt-2 font-sans text-[15px] tracking-[-0.02em] text-[#1c1c1c]">
-            <span>{growthLabel}</span>
-            <span style={{ color: '#96BF47', fontWeight: 600 }}>{section.growthValue}</span>
-          </div>
+          {section.growthValue ? (
+            <div className="mt-2 border-t border-black/10 pt-2 font-sans text-[15px] tracking-[-0.02em] text-[#1c1c1c]">
+              <span>{growthLabel}</span>
+              <span style={{ color: '#96BF47', fontWeight: 600 }}>{section.growthValue}</span>
+            </div>
+          ) : null}
           {section.note ? (
             <p className="mt-2 font-sans text-[13px] tracking-[-0.02em] text-[#7c7c7c]">
               {section.note}

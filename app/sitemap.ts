@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next'
 import { ROUTES } from '@/lib/sitemap/routes'
 import { articles } from '@/data/articles'
+import { useCases } from '@/data/use-cases'
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://noprob.agency'
 
@@ -55,6 +56,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.72,
       alternates: { languages: { en: enUrl, it: itUrl, 'x-default': enUrl } },
     })
+  }
+
+  // Use cases (same slug in both locales)
+  for (const useCase of useCases) {
+    const lastModified = new Date(useCase.date)
+    const enUrl = `${BASE_URL}/use-cases/${useCase.slug}`
+    const itUrl = `${BASE_URL}/it/casi-studio/${useCase.slug}`
+    const alternates = { languages: { en: enUrl, it: itUrl, 'x-default': enUrl } }
+    entries.push({ url: enUrl, lastModified, changeFrequency: 'monthly', priority: 0.8, alternates })
+    entries.push({ url: itUrl, lastModified, changeFrequency: 'monthly', priority: 0.72, alternates })
   }
 
   return entries
