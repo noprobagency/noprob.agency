@@ -27,17 +27,6 @@ const resultCards: ReadonlyArray<{
     label: 'Cumini',
   },
   {
-    image: '/images/use-case-nazzi/nazzi-homepage-shopify.webp',
-    logo: '/images/use-case-nazzi/nazzi-logo.svg',
-    logoClass: 'h-[30px] w-[196px] object-contain',
-    metrics: {
-      en: ['+105% online sales after Shopify', '2.8x clicks from Google'],
-      it: ['+105% vendite online dopo Shopify', '2,8x clic da Google'],
-    },
-    href: { en: '/use-cases/farmacia-nazzi-integratori-shopify', it: '/it/casi-studio/farmacia-nazzi-integratori-shopify' },
-    label: 'Farmacia Nazzi',
-  },
-  {
     image: '/images/originals/i9Ht9Hdb61eYmBH3DZyKGjIm6s.webp',
     logo: '/images/originals/RWVPFhFtXLH5J1UMr53qg3AEzL8.svg',
     logoClass: 'h-[62px] w-[140px] object-contain',
@@ -53,7 +42,12 @@ const resultCards: ReadonlyArray<{
     image: '/images/originals/xikMpaXW3G0T00o5bsdB5bWnpuU.png',
     logo: '/images/originals/3D4Ji7c6LSsawGoOucoTS6dFA.png',
     logoClass: 'h-[30px] w-[140px] object-contain',
-    metrics: [],
+    metrics: {
+      en: ['+105% online sales after Shopify', '2.8x clicks from Google'],
+      it: ['+105% vendite online dopo Shopify', '2,8x clic da Google'],
+    },
+    href: { en: '/use-cases/farmacia-nazzi-integratori-shopify', it: '/it/casi-studio/farmacia-nazzi-integratori-shopify' },
+    label: 'Farmacia Nazzi',
   },
   {
     image: '/images/originals/cOnThGiudnDZv0DuLTLxFgBBoc.webp',
