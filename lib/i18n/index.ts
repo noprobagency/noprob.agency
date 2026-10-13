@@ -44,6 +44,8 @@ export type Dictionary = {
     description: string
     metric: string
     metricNote: string
+    cta: string
+    ctaHref: string
   }
   pricing: {
     label: string
@@ -274,8 +276,10 @@ const en: Dictionary = {
     category: 'eCommerce Luxury Fashion Retail',
     description:
       'Started with no tech team or structure. Built, launched, and scaled eCommerce with a dedicated team, turning a marginal channel into a key driver of brand growth.',
-    metric: '\u2191 347% online revenue growth',
-    metricNote: 'In 36 months of full partnership with noprob agency',
+    metric: '\u2191 67.7% online sales after moving to Shopify',
+    metricNote: 'In the 12 months after the migration, compared with the 12 months before',
+    cta: 'Read the Cumini case study',
+    ctaHref: '/use-cases/cumini-luxury-fashion-ecommerce',
   },
   pricing: {
     label: 'Pricing',
@@ -746,8 +750,10 @@ const it: Dictionary = {
     category: 'eCommerce Fashion Retail di Lusso',
     description:
       'Partiti senza team tecnico n\u00e9 struttura. Costruito, lanciato e scalato un eCommerce con un team dedicato, trasformando un canale marginale in un driver chiave della crescita del brand.',
-    metric: '\u2191 347% crescita del fatturato online',
-    metricNote: 'In 36 mesi di partnership con noprob agency',
+    metric: '\u2191 67,7% vendite online dopo la migrazione a Shopify',
+    metricNote: 'Nei 12 mesi dopo la migrazione, rispetto ai 12 mesi prima',
+    cta: 'Leggi il caso studio Cumini',
+    ctaHref: '/it/casi-studio/cumini-luxury-fashion-ecommerce',
   },
   pricing: {
     label: 'Pricing',

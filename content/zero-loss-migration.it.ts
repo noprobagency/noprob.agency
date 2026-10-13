@@ -72,7 +72,7 @@ export const zeroLossIt: ZlCopy = {
     pricingNote:
       'Prima rata al kickoff, seconda al go-live, terza e quarta nei due mesi di supporto. Piano Shopify, tema e app a carico tuo. Nessuno sconto, nessun preventivo: questo è il prezzo.',
     results: [
-      { value: '+347% di fatturato online in 36 mesi', attribution: 'Cumini, luxury multibrand' },
+      { value: '+67,7% di vendite online nei 12 mesi dopo la migrazione', attribution: 'Cumini, luxury multibrand' },
       { value: '99,3K click organici e posizione media 9,6 dopo la migrazione', attribution: 'Cumini, Search Console' },
       { value: 'Conversion rate da 2% a 5%, AOV +30%', attribution: 'Cliente noprob, eCommerce DTC' },
       { value: '0 minuti offline in oltre 10 migrazioni', attribution: 'noprob agency' },

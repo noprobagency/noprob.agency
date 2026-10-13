@@ -14,8 +14,8 @@ const resultCards: ReadonlyArray<{
     logo: '/images/originals/iWbz1XLCfNQ5rbC2z8HrFO8.png',
     logoClass: 'h-[30px] w-[140px] object-contain',
     metrics: {
-      en: ['+13.2% Total Revenue in 4 years', '>1M Revenue B2C'],
-      it: ['+13.2% Fatturato Totale in 4 anni', '>1M Fatturato B2C'],
+      en: ['+67.7% online sales after Shopify', '+301% email revenue with Klaviyo'],
+      it: ['+67,7% vendite online dopo Shopify', '+301% entrate email con Klaviyo'],
     },
   },
   {
