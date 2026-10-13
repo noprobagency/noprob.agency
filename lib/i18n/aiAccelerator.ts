@@ -8,7 +8,7 @@ import type { Locale } from '@/lib/i18n'
  * locale-keyed object consumed through a `get*` accessor, isolated from the
  * shared dictionary. Only `seo.aiAccelerator` lives in `lib/i18n/index.ts`.
  *
- * IT copy rules: no "business" (use azienda/attività/eCommerce),
+ * Positioning: eCommerce only. IT copy rules: no "business" (use eCommerce),
  * "call" -> "videochiamate" (only exception: "pre-call"), "noi" voice
  * everywhere except "Chi ti segue" (third person). The qualification is
  * worded qualitatively ("già avviati, con fatturato consolidato"), never as
@@ -228,26 +228,26 @@ export type AiCopy = {
 const it: AiCopy = {
   homeCard: {
     eyebrow: 'AI Accelerator · 30 giorni one-to-one',
-    title: 'Non sai dove si blocca il tuo eCommerce?',
+    title: 'Vuoi far crescere il tuo eCommerce ma non sai da dove partire?',
     subtitle:
-      'In 30 giorni analizziamo vendite, acquisizione e processi, troviamo il collo di bottiglia e attiviamo con te le prime soluzioni AI. Prezzo fisso, zero vincoli.',
-    cta: 'Trova il collo di bottiglia',
+      'In 30 giorni analizziamo con te vendite, acquisizione e processi, troviamo le opportunità che stai lasciando sul tavolo e attiviamo le prime soluzioni AI. Prezzo fisso, zero vincoli.',
+    cta: 'Trova le tue opportunità',
   },
   hero: {
-    eyebrow: 'AI Accelerator · 30 giorni one-to-one per aziende ed eCommerce',
-    titleLine1: 'Trova il collo di bottiglia della tua azienda.',
-    titleLine2Pre: 'In 30 giorni lo sblocchiamo con l’AI, ',
-    titleEm1: 'one-to-one',
+    eyebrow: 'AI Accelerator · 30 giorni one-to-one per eCommerce',
+    titleLine1: 'Smetti di rincorrere tool.',
+    titleLine2Pre: 'In 30 giorni portiamo l’AI dove il tuo eCommerce può ',
+    titleEm1: 'risparmiare tempo',
     titleMid: ' e ',
-    titleEm2: 'a prezzo fisso',
+    titleEm2: 'vendere di più',
     titleEnd: '.',
     leadLine:
-      'Analizziamo vendite, acquisizione e processi, troviamo il punto che ti frena e attiviamo con te le prime soluzioni AI. Niente corsi, niente abbonamenti, niente tool da rincorrere.',
+      'Vuoi far crescere il tuo eCommerce ma non sai da dove partire? Analizziamo con te vendite, acquisizione e processi, troviamo le opportunità che stai lasciando sul tavolo, le mettiamo in fila e attiviamo le prime soluzioni AI. Entriamo nel progetto come partner. Niente corsi, niente abbonamenti.',
     benefits: ['One-to-one, su misura', '4 videochiamate in 30 giorni', 'Prezzo fisso, zero vincoli'],
-    cta: 'Candida la tua azienda',
-    ctaNote: 'Solo aziende ed eCommerce già avviati. Valutiamo ogni candidatura.',
+    cta: 'Candida il tuo eCommerce',
+    ctaNote: 'Solo eCommerce già avviati. Valutiamo ogni candidatura.',
     trustRatingLabel: '5/5',
-    trustLine: 'Scelti da brand eCommerce, aziende e team marketing',
+    trustLine: 'Scelti da brand eCommerce e dai loro team marketing',
   },
   problem: {
     label: 'il problema',
@@ -255,19 +255,19 @@ const it: AiCopy = {
     headingEm: 'nessun sistema',
     headingEnd: '.',
     intro:
-      'Ogni settimana esce un tool nuovo. Intanto il team fa ancora tutto a mano e l’AI resta un esperimento. Il problema non è la mancanza di strumenti: è l’eccesso.',
+      'Sai che il tuo eCommerce può fare di più. Ogni settimana esce un tool nuovo, intanto schede prodotto, email e assistenza clienti si fanno ancora a mano. Il problema non è la mancanza di strumenti: è non sapere da dove partire.',
     items: [
       {
-        title: 'Sovraccarico di informazioni',
-        description: 'Mille consigli che si contraddicono e nessun punto di partenza.',
+        title: 'Tutto urgente, niente priorità',
+        description: 'Ads, email, schede prodotto, conversion rate: tutto sembra importante e non sai cosa muovere per primo.',
       },
       {
         title: 'Tool provati e abbandonati',
-        description: 'Abbonamenti attivati e dimenticati. Ognuno risolve un pezzo, nessuno parla con l’altro.',
+        description: 'App e abbonamenti attivati e dimenticati. Ognuno risolve un pezzo, nessuno parla con l’altro.',
       },
       {
         title: 'Tempo perso in attività ripetitive',
-        description: 'Preventivi, report, email: lavoro che una macchina fa in pochi minuti.',
+        description: 'Schede prodotto, risposte ai clienti, resi, report: lavoro che una macchina fa in pochi minuti.',
       },
       {
         title: 'Consulenti poco trasparenti',
@@ -281,19 +281,19 @@ const it: AiCopy = {
     headingEm: 'non un guru',
     headingEnd: '.',
     intro:
-      'Entriamo nella tua azienda, studiamo dati e processi e portiamo l’AI dove genera un risultato misurabile: tempo recuperato o fatturato in più.',
+      'Entriamo nel tuo eCommerce come partner, studiamo con te dati e processi e portiamo l’AI dove genera un risultato misurabile: tempo recuperato o fatturato in più.',
     items: [
       {
         title: 'Contesto prima dei tool',
-        description: 'Partiamo da offerta, clienti e processi. Solo dopo scegliamo gli strumenti.',
+        description: 'Partiamo da catalogo, clienti e processi. Solo dopo scegliamo gli strumenti.',
       },
       {
         title: 'Dati, non teoria',
-        description: 'Ogni scelta nasce dai tuoi numeri e dal lavoro reale del team, non da una tendenza.',
+        description: 'Ogni scelta nasce dai numeri del tuo store e dal lavoro reale del team, non da una tendenza.',
       },
       {
         title: 'Marketing, vendite e AI insieme',
-        description: 'Un solo partner per acquisizione, sito, dati e automazioni.',
+        description: 'Un solo partner per ads, email, sito, dati e automazioni.',
       },
       {
         title: 'Autonomia, non dipendenza',
@@ -303,25 +303,25 @@ const it: AiCopy = {
   },
   audience: {
     label: 'per chi è',
-    headingPart1: 'Per chi usa l’AI, ma ',
-    headingEm: 'non di mestiere',
+    headingPart1: 'Per chi vuole crescere, ma ',
+    headingEm: 'non sa da dove partire',
     headingEnd: '.',
-    intro: 'Il tuo lavoro è far crescere l’azienda, non inseguire gli aggiornamenti dell’AI.',
+    intro: 'Il tuo lavoro è far crescere l’eCommerce, non inseguire gli aggiornamenti dell’AI.',
     cards: [
       {
         title: 'Founder e titolari',
         description:
-          'Guidi un’azienda o un eCommerce avviato. Usi l’AI a spot e sai che potresti farci molto di più: più clienti, meno ore perse.',
+          'Guidi un eCommerce avviato. Sai che può vendere di più, ma non sai su cosa puntare: ads, email, schede prodotto o assistenza. Usi l’AI a spot e sai che potresti farci molto di più.',
       },
       {
-        title: 'Uffici marketing',
+        title: 'Team marketing ed eCommerce manager',
         description:
-          'Ti hanno chiesto di “integrare l’AI” senza dirti come. Ti servono un metodo e processi che tutto il team possa seguire.',
+          'Ti hanno chiesto di “integrare l’AI” senza dirti come. Ti servono priorità chiare e processi che tutto il team possa seguire.',
       },
     ],
     notForTitle: 'Non fa per te se…',
     notForItems: [
-      'sei una startup, un privato o un progetto ancora in fase di lancio',
+      'non vendi online, sei una startup o il tuo store è ancora in fase di lancio',
       'cerchi il “prompt magico” che risolve tutto',
       'vuoi un corso generico uguale per tutti',
       'vuoi delegare tutto senza coinvolgere il team',
@@ -333,11 +333,11 @@ const it: AiCopy = {
       {
         title: 'Candidatura e pre-call',
         description:
-          'Ci racconti la tua azienda e fissi subito una pre-call gratuita di 40 minuti per capire insieme se c’è fit.',
+          'Ci racconti il tuo eCommerce e fissi subito una pre-call gratuita di 40 minuti per capire insieme se c’è fit.',
       },
       {
         title: 'Kick-off',
-        description: 'Calendario delle videochiamate, accessi e task manager condiviso: il mese parte.',
+        description: 'Calendario delle videochiamate, accessi allo store e task manager condiviso: il mese parte.',
       },
       {
         title: '4 settimane one-to-one',
@@ -348,13 +348,13 @@ const it: AiCopy = {
   timeline: {
     label: 'come lavoriamo',
     headingPart1: '30 giorni per ',
-    headingEm: 'fare chiarezza',
+    headingEm: 'trovare le opportunità',
     headingEnd: '.',
     intro:
       '4 videochiamate da 60 minuti, una a settimana. In mezzo, contatto diretto e un task manager condiviso.',
     goalBox: {
       title: 'L’obiettivo del mese',
-      text: 'Mappare numeri, processi e opportunità, metterli in ordine di priorità con te e attaccare con l’AI il primo collo di bottiglia. Prima capiamo cosa conta, poi agiamo.',
+      text: 'Mappare con te numeri, processi e opportunità del tuo eCommerce, metterli in ordine di priorità e attivare con l’AI le prime soluzioni sulla più importante. Prima capiamo cosa conta, poi agiamo.',
     },
     phaseLabel: 'Fase',
     phases: [
@@ -363,15 +363,16 @@ const it: AiCopy = {
         title: 'Contesto e obiettivi',
         week: 'Settimana 1',
         description:
-          'Modello, offerta, clienti, team, KPI e obiettivi a 6-12 mesi. Per 5 giorni il team annota le attività ripetitive: è la base per misurare il tempo recuperato.',
+          'Modello, catalogo, clienti, team, KPI e obiettivi a 6-12 mesi. Per 5 giorni il team annota le attività ripetitive: è la base per misurare il tempo recuperato.',
         outputLabel: 'Output',
-        output: 'Mappa dell’azienda e prima bozza del Context Document.',
+        output: 'Mappa del tuo eCommerce e prima bozza del Context Document.',
       },
       {
         number: '02',
         title: 'Acquisizione, vendite e retention',
         week: 'Settimana 2',
-        description: 'Come arrivano i clienti, come comprano, come tornano e dove si perdono opportunità.',
+        description:
+          'Ads, schede prodotto, conversion rate, email e riacquisti: come arrivano i clienti, come comprano, come tornano e dove si perdono vendite.',
         outputLabel: 'Output',
         output: 'Diagnosi con opportunità e aree critiche.',
       },
@@ -380,9 +381,9 @@ const it: AiCopy = {
         title: 'Operatività e AI',
         week: 'Settimana 3',
         description:
-          'Dove si perde tempo e dove l’AI porta un vantaggio concreto. In videochiamata attiviamo insieme fino a 2 quick win.',
+          'Catalogo, assistenza clienti, resi e report: dove si perde tempo e dove l’AI porta un vantaggio concreto. In videochiamata attiviamo insieme fino a 2 quick win.',
         outputLabel: 'Output',
-        output: 'Colli di bottiglia, strumenti consigliati, prime soluzioni AI attive.',
+        output: 'Opportunità operative, strumenti consigliati, prime soluzioni AI attive.',
       },
       {
         number: '04',
@@ -396,7 +397,7 @@ const it: AiCopy = {
     ],
     note: {
       title: 'Perché un mese e non una videochiamata?',
-      text: 'Perché i punti giusti per l’AI si trovano solo vedendo l’azienda lavorare, settimana dopo settimana. L’implementazione è la parte veloce.',
+      text: 'Perché le opportunità giuste per l’AI si trovano solo vedendo il tuo eCommerce lavorare, settimana dopo settimana. L’implementazione è la parte veloce.',
     },
     tagline: 'Non ti lasciamo una lista di tool. Ti lasciamo un sistema.',
   },
@@ -409,16 +410,17 @@ const it: AiCopy = {
       {
         title: 'Documento delle priorità e roadmap',
         description:
-          'Ogni area analizzata, colli di bottiglia, opportunità in ordine di impatto, strumenti da usare ed evitare con i costi, roadmap a 90 giorni e KPI.',
+          'Ogni area analizzata, opportunità in ordine di impatto, strumenti da usare ed evitare con i costi, roadmap a 90 giorni e KPI.',
       },
       {
         title: 'Protocolli operativi',
-        description: 'Procedure passo per passo con strumenti, prompt e controlli. Tutto il team lavora allo stesso modo.',
+        description:
+          'Procedure passo per passo con strumenti, prompt e controlli, dalle schede prodotto all’assistenza clienti. Tutto il team lavora allo stesso modo.',
       },
       {
-        title: 'Context Document aziendale',
+        title: 'Context Document del tuo eCommerce',
         description:
-          'La tua azienda descritta per ChatGPT, Claude e simili: risposte su misura, non generiche. Resta a te.',
+          'Brand, catalogo e clienti descritti per ChatGPT, Claude e simili: risposte su misura, non generiche. Resta a te.',
       },
     ],
     extra: 'In più: fino a 2 quick win già attive nel lavoro quotidiano.',
@@ -454,7 +456,7 @@ const it: AiCopy = {
     left: {
       tag: '↓ AI senza contesto',
       items: [
-        'Prompt generici, risposte generiche',
+        'Prompt generici, schede prodotto generiche',
         'Un tool diverso per ogni problema',
         'Ognuno nel team fa a modo suo',
         'Tempo speso a sperimentare',
@@ -477,7 +479,7 @@ const it: AiCopy = {
     headingEm: 'dall’inizio alla fine',
     headingEnd: '.',
     text1:
-      'Antonio Manitta, fondatore di NoProb Agency. Sviluppatore di formazione (laurea in Informatica), poi eCommerce manager, oggi guida un’agenzia che fa crescere aziende ed eCommerce nella moda di lusso, nel food, negli integratori e nel B2B industriale.',
+      'Antonio Manitta, fondatore di NoProb Agency. Sviluppatore di formazione (laurea in Informatica), poi eCommerce manager, oggi guida un’agenzia che fa crescere eCommerce e aziende nella moda di lusso, nel food, negli integratori e nel B2B industriale.',
     text2:
       'Usa l’AI ogni giorno per far lavorare agenti, dashboard e processi: sa dove va implementata subito e dove serve ancora una persona.',
     imageAlt: 'Antonio Manitta, fondatore di NoProb Agency',
@@ -504,17 +506,17 @@ const it: AiCopy = {
     card: {
       title: 'AI Accelerator',
       subtitle:
-        'Il percorso one-to-one di 30 giorni: priorità, roadmap e prime soluzioni AI attive. Un solo interlocutore.',
+        'Il percorso one-to-one di 30 giorni per il tuo eCommerce: opportunità, priorità, roadmap e prime soluzioni AI attive. Un solo interlocutore.',
       features: ['4 videochiamate + fino a 2 extra', '3 deliverable che restano tuoi', '2 quick win impostate insieme'],
       badge:
         'Zero rischio d’ingresso: pre-call gratuita, prezzo fisso, nessun rinnovo automatico. 50% alla firma, 50% alla consegna.',
       price: '€1.100',
       priceSuffix: 'una tantum',
       priceNote: '€550 alla firma + €550 alla consegna',
-      cta: 'Candida la tua azienda',
+      cta: 'Candida il tuo eCommerce',
     },
     trustLine: 'Dopo la candidatura fissi subito la pre-call gratuita.',
-    trustLine2: 'Solo aziende ed eCommerce già avviati, con fatturato consolidato.',
+    trustLine2: 'Solo eCommerce già avviati, con fatturato consolidato.',
   },
   after: {
     label: 'e dopo?',
@@ -550,7 +552,7 @@ const it: AiCopy = {
       {
         question: 'Lavorate anche con startup o privati?',
         answer:
-          'No. Solo aziende ed eCommerce già avviati, con fatturato consolidato e processi da migliorare. Per questo valutiamo ogni candidatura.',
+          'No. Solo eCommerce già avviati, con fatturato consolidato e margini da migliorare. Per questo valutiamo ogni candidatura.',
       },
       {
         question: 'Serve essere tecnici?',
@@ -559,7 +561,7 @@ const it: AiCopy = {
       {
         question: 'In 30 giorni vedo già un risultato?',
         answer:
-          'L’obiettivo del mese è attaccare il primo collo di bottiglia con le prime soluzioni AI. Ciò che richiede sviluppo più ampio va in roadmap, con tempi e costi chiari.',
+          'L’obiettivo del mese è trovare le opportunità, metterle in ordine e attivare le prime soluzioni AI sulla più importante. Ciò che richiede sviluppo più ampio va in roadmap, con tempi e costi chiari.',
       },
       {
         question: 'Quali strumenti di AI usate?',
@@ -567,7 +569,8 @@ const it: AiCopy = {
       },
       {
         question: 'Funziona anche se non ho un eCommerce?',
-        answer: 'Sì. Vale per qualsiasi azienda avviata con attività di marketing: servizi, agenzie, studi, PMI.',
+        answer:
+          'No. Il percorso è costruito sull’eCommerce: catalogo, ads, email, conversion rate, assistenza clienti e resi. Se non vendi online, non è il percorso giusto per te.',
       },
       {
         question: 'Quanto tempo serve e chi partecipa?',
@@ -577,7 +580,7 @@ const it: AiCopy = {
       {
         question: 'I nostri dati sono al sicuro?',
         answer:
-          'Sì. Gli accessi servono solo all’analisi, senza modifiche non concordate, con riservatezza contrattuale.',
+          'Sì. Gli accessi a store e strumenti servono solo all’analisi, senza modifiche non concordate, con riservatezza contrattuale.',
       },
       {
         question: 'Lavoriamo già con un’agenzia: ha senso?',
@@ -599,10 +602,10 @@ const it: AiCopy = {
     step1: {
       title: 'Di cosa si tratta?',
       qBusiness: {
-        label: 'Che tipo di attività è?',
+        label: 'Che tipo di eCommerce è?',
         notice:
-          'Lavoriamo esclusivamente con aziende ed eCommerce già avviati, con fatturato consolidato. Non prendiamo in considerazione startup o progetti in fase di lancio.',
-        options: ['eCommerce', 'Attività online o servizi', 'Azienda / PMI', 'Agenzia o freelance'],
+          'Lavoriamo esclusivamente con eCommerce già avviati, con fatturato consolidato. Non prendiamo in considerazione startup o progetti in fase di lancio.',
+        options: ['Solo online', 'Online e negozio fisico', 'Online e B2B / rivenditori', 'Marketplace (Amazon, Zalando…)'],
       },
       qRole: {
         label: 'Qual è il tuo ruolo?',
@@ -616,11 +619,11 @@ const it: AiCopy = {
         options: ['Quasi per niente', 'A spot, senza metodo', 'Ogni giorno, ma senza sistema'],
       },
       qPain: {
-        label: 'Cosa vorresti ottenere integrando l’AI nella tua attività?',
+        label: 'Cosa vorresti ottenere integrando l’AI nel tuo eCommerce?',
         helper:
-          'Due righe su obiettivi, idee o dubbi. Se non hai ancora le idee chiare, raccontaci in breve la tua attività: arriviamo alla pre-call già preparati.',
+          'Due righe su obiettivi, idee o dubbi. Se non sai ancora da dove partire va benissimo: raccontaci in breve il tuo eCommerce e arriviamo alla pre-call già preparati.',
         placeholder:
-          'Es. vogliamo automatizzare i preventivi e rispondere prima ai clienti. Oppure: siamo un eCommerce moda di 6 persone e facciamo quasi tutto a mano…',
+          'Es. vogliamo scrivere più in fretta le schede prodotto e rispondere prima ai clienti. Oppure: siamo un eCommerce moda di 6 persone e facciamo quasi tutto a mano…',
       },
     },
     step3: {
@@ -645,7 +648,7 @@ const it: AiCopy = {
       email: 'Inserisci un indirizzo email valido',
       legalName: 'Inserisci la ragione sociale',
       phone: 'Inserisci un numero di telefono valido',
-      website: 'Inserisci il sito web della tua attività',
+      website: 'Inserisci il sito del tuo eCommerce',
       privacy: 'Devi accettare la Privacy Policy',
     },
     errorGeneric: 'Qualcosa è andato storto. Riprova tra un momento.',
@@ -658,39 +661,39 @@ const it: AiCopy = {
     titleEm: 'fissa la pre-call',
     titleEnd: '.',
     text: 'Scegli giorno e orario per la pre-call gratuita di 40 minuti. Nel frattempo leggiamo la tua candidatura, così arriviamo già preparati.',
-    note: 'Solo aziende ed eCommerce già avviati: se non c’è fit, ti avvisiamo e annulliamo la prenotazione.',
+    note: 'Solo eCommerce già avviati: se non c’è fit, ti avvisiamo e annulliamo la prenotazione.',
   },
   finalCta: {
-    heading: 'Pronto a mettere ordine nella tua azienda?',
-    text: '30 giorni, one-to-one, prezzo fisso. Solo aziende ed eCommerce già avviati.',
-    cta: 'Candida la tua azienda',
+    heading: 'Pronto a scoprire dove può crescere il tuo eCommerce?',
+    text: '30 giorni, one-to-one, prezzo fisso. Solo eCommerce già avviati.',
+    cta: 'Candida il tuo eCommerce',
   },
-  sticky: { priceLine: '€1.100 · 30 giorni', cta: 'Candida la tua azienda' },
+  sticky: { priceLine: '€1.100 · 30 giorni', cta: 'Candida il tuo eCommerce' },
 }
 
 const en: AiCopy = {
   homeCard: {
     eyebrow: 'AI Accelerator · 30 days one-to-one',
-    title: 'Not sure where your eCommerce is stuck?',
+    title: 'Want to grow your eCommerce but not sure where to start?',
     subtitle:
-      'In 30 days we analyze sales, acquisition and processes, find the bottleneck and switch on your first AI solutions with you. Fixed price, no lock-in.',
-    cta: 'Find your bottleneck',
+      'In 30 days we analyze sales, acquisition and processes with you, find the opportunities you’re leaving on the table and switch on your first AI solutions. Fixed price, no lock-in.',
+    cta: 'Find your opportunities',
   },
   hero: {
-    eyebrow: 'AI Accelerator · 30 days one-to-one for companies and eCommerce brands',
-    titleLine1: 'Find your company’s bottleneck.',
-    titleLine2Pre: 'In 30 days we unlock it with AI, ',
-    titleEm1: 'one-to-one',
+    eyebrow: 'AI Accelerator · 30 days one-to-one for eCommerce brands',
+    titleLine1: 'Stop chasing tools.',
+    titleLine2Pre: 'In 30 days we put AI where your eCommerce can ',
+    titleEm1: 'save time',
     titleMid: ' and ',
-    titleEm2: 'at a fixed price',
+    titleEm2: 'sell more',
     titleEnd: '.',
     leadLine:
-      'We analyze sales, acquisition and processes, find what is holding you back and switch on your first AI solutions with you. No courses, no subscriptions, no tools to chase.',
+      'Want to grow your eCommerce but not sure where to start? We analyze sales, acquisition and processes with you, find the opportunities you’re leaving on the table, rank them and switch on your first AI solutions. We join the project as a partner. No courses, no subscriptions.',
     benefits: ['One-to-one, tailored', '4 video calls in 30 days', 'Fixed price, no lock-in'],
-    cta: 'Apply with your company',
-    ctaNote: 'Established companies and eCommerce brands only. We review every application.',
+    cta: 'Apply with your eCommerce',
+    ctaNote: 'Established eCommerce brands only. We review every application.',
     trustRatingLabel: '5/5',
-    trustLine: 'Chosen by eCommerce brands, companies and marketing teams',
+    trustLine: 'Chosen by eCommerce brands and their marketing teams',
   },
   problem: {
     label: 'the problem',
@@ -698,19 +701,19 @@ const en: AiCopy = {
     headingEm: 'no system',
     headingEnd: '.',
     intro:
-      'A new tool launches every week. Meanwhile your team still does everything by hand and AI stays an experiment. The problem isn’t a lack of tools: it’s too many of them.',
+      'You know your eCommerce can do more. A new tool launches every week, while product pages, emails and customer service are still done by hand. The problem isn’t a lack of tools: it’s not knowing where to start.',
     items: [
       {
-        title: 'Information overload',
-        description: 'A thousand contradicting tips and no starting point.',
+        title: 'Everything urgent, no priorities',
+        description: 'Ads, emails, product pages, conversion rate: everything feels important and you don’t know what to move first.',
       },
       {
         title: 'Tools tried and abandoned',
-        description: 'Subscriptions started and forgotten. Each solves one piece, none talk to each other.',
+        description: 'Apps and subscriptions started and forgotten. Each solves one piece, none talk to each other.',
       },
       {
         title: 'Time lost on repetitive work',
-        description: 'Quotes, reports, emails: work a machine does in minutes.',
+        description: 'Product pages, customer replies, returns, reports: work a machine does in minutes.',
       },
       {
         title: 'Opaque consultants',
@@ -724,19 +727,19 @@ const en: AiCopy = {
     headingEm: 'not a guru',
     headingEnd: '.',
     intro:
-      'We step inside your company, study data and processes, and bring AI where it drives a measurable result: time saved or extra revenue.',
+      'We step into your eCommerce as a partner, study data and processes with you, and bring AI where it drives a measurable result: time saved or extra revenue.',
     items: [
       {
         title: 'Context before tools',
-        description: 'We start from your offer, clients and processes. Only then do we pick the tools.',
+        description: 'We start from your catalog, customers and processes. Only then do we pick the tools.',
       },
       {
         title: 'Data, not theory',
-        description: 'Every choice comes from your numbers and your team’s real work, not from a trend.',
+        description: 'Every choice comes from your store’s numbers and your team’s real work, not from a trend.',
       },
       {
         title: 'Marketing, sales and AI together',
-        description: 'One partner for acquisition, website, data and automation.',
+        description: 'One partner for ads, email, website, data and automation.',
       },
       {
         title: 'Autonomy, not dependency',
@@ -746,25 +749,25 @@ const en: AiCopy = {
   },
   audience: {
     label: 'who it’s for',
-    headingPart1: 'For people who use AI, but ',
-    headingEm: 'not for a living',
+    headingPart1: 'For brands that want to grow, but ',
+    headingEm: 'don’t know where to start',
     headingEnd: '.',
-    intro: 'Your job is growing your company, not keeping up with AI updates.',
+    intro: 'Your job is growing your eCommerce, not keeping up with AI updates.',
     cards: [
       {
         title: 'Founders and owners',
         description:
-          'You run an established company or eCommerce brand. You use AI here and there and know it could do much more: more clients, fewer wasted hours.',
+          'You run an established eCommerce brand. You know it can sell more, but you’re not sure what to focus on: ads, emails, product pages or customer service. You use AI here and there and know it could do much more.',
       },
       {
-        title: 'Marketing teams',
+        title: 'Marketing teams and eCommerce managers',
         description:
-          'You’ve been asked to “integrate AI” without being told how. You need a method and processes the whole team can follow.',
+          'You’ve been asked to “integrate AI” without being told how. You need clear priorities and processes the whole team can follow.',
       },
     ],
     notForTitle: 'Not for you if…',
     notForItems: [
-      'you’re a startup, an individual or a project still in launch phase',
+      'you don’t sell online, you’re a startup or your store is still in launch phase',
       'you’re looking for the “magic prompt” that fixes everything',
       'you want a one-size-fits-all course',
       'you want to hand everything off without involving your team',
@@ -776,11 +779,11 @@ const en: AiCopy = {
       {
         title: 'Application & intro call',
         description:
-          'Tell us about your company and book a free 40-minute intro call right away to see together if there’s a fit.',
+          'Tell us about your eCommerce and book a free 40-minute intro call right away to see together if there’s a fit.',
       },
       {
         title: 'Kick-off',
-        description: 'Call calendar, tool access and a shared task manager: the month starts.',
+        description: 'Call calendar, store access and a shared task manager: the month starts.',
       },
       {
         title: '4 weeks one-to-one',
@@ -791,12 +794,12 @@ const en: AiCopy = {
   timeline: {
     label: 'how we work',
     headingPart1: '30 days to ',
-    headingEm: 'get clarity',
+    headingEm: 'find your opportunities',
     headingEnd: '.',
     intro: '4 video calls of 60 minutes, one per week. In between, direct contact and a shared task manager.',
     goalBox: {
       title: 'The goal of the month',
-      text: 'Map numbers, processes and opportunities, rank them by priority with you and tackle the first bottleneck with AI. First we understand what matters, then we act.',
+      text: 'Map your eCommerce’s numbers, processes and opportunities with you, rank them by priority and switch on the first AI solutions on the most important one. First we understand what matters, then we act.',
     },
     phaseLabel: 'Phase',
     phases: [
@@ -805,15 +808,16 @@ const en: AiCopy = {
         title: 'Context & goals',
         week: 'Week 1',
         description:
-          'Model, offer, clients, team, KPIs and 6-12 month goals. For 5 days your team logs repetitive tasks: the baseline for measuring the time we win back.',
+          'Model, catalog, customers, team, KPIs and 6-12 month goals. For 5 days your team logs repetitive tasks: the baseline for measuring the time we win back.',
         outputLabel: 'Output',
-        output: 'Company map and first draft of the Context Document.',
+        output: 'Map of your eCommerce and first draft of the Context Document.',
       },
       {
         number: '02',
         title: 'Acquisition, sales & retention',
         week: 'Week 2',
-        description: 'How clients find you, how they buy, how they come back and where opportunities are lost.',
+        description:
+          'Ads, product pages, conversion rate, emails and repeat purchases: how customers find you, how they buy, how they come back and where sales are lost.',
         outputLabel: 'Output',
         output: 'Diagnosis with opportunities and critical areas.',
       },
@@ -822,9 +826,9 @@ const en: AiCopy = {
         title: 'Operations & AI',
         week: 'Week 3',
         description:
-          'Where time is lost and where AI brings a real advantage. During the call we switch on up to 2 quick wins together.',
+          'Catalog, customer service, returns and reports: where time is lost and where AI brings a real advantage. During the call we switch on up to 2 quick wins together.',
         outputLabel: 'Output',
-        output: 'Bottlenecks, recommended tools, first AI solutions running.',
+        output: 'Operational opportunities, recommended tools, first AI solutions running.',
       },
       {
         number: '04',
@@ -838,7 +842,7 @@ const en: AiCopy = {
     ],
     note: {
       title: 'Why a month and not a single call?',
-      text: 'Because the right places for AI only show up when you watch the company work, week after week. Implementation is the fast part.',
+      text: 'Because the right opportunities for AI only show up when you watch your eCommerce work, week after week. Implementation is the fast part.',
     },
     tagline: 'We don’t leave you a list of tools. We leave you a system.',
   },
@@ -851,15 +855,17 @@ const en: AiCopy = {
       {
         title: 'Priority document & roadmap',
         description:
-          'Every area analyzed, bottlenecks, opportunities ranked by impact, tools to use and avoid with costs, a 90-day roadmap and KPIs.',
+          'Every area analyzed, opportunities ranked by impact, tools to use and avoid with costs, a 90-day roadmap and KPIs.',
       },
       {
         title: 'Operating protocols',
-        description: 'Step-by-step procedures with tools, prompts and checks. The whole team works the same way.',
+        description:
+          'Step-by-step procedures with tools, prompts and checks, from product pages to customer service. The whole team works the same way.',
       },
       {
-        title: 'Company Context Document',
-        description: 'Your company described for ChatGPT, Claude and similar tools: tailored answers, not generic ones. It stays yours.',
+        title: 'Your eCommerce Context Document',
+        description:
+          'Brand, catalog and customers described for ChatGPT, Claude and similar tools: tailored answers, not generic ones. It stays yours.',
       },
     ],
     extra: 'Plus: up to 2 quick wins already running in your daily work.',
@@ -895,7 +901,7 @@ const en: AiCopy = {
     left: {
       tag: '↓ AI without context',
       items: [
-        'Generic prompts, generic answers',
+        'Generic prompts, generic product pages',
         'A different tool for every problem',
         'Everyone on the team does it their own way',
         'Time spent experimenting',
@@ -918,7 +924,7 @@ const en: AiCopy = {
     headingEm: 'from start to finish',
     headingEnd: '.',
     text1:
-      'Antonio Manitta, founder of NoProb Agency. A developer by training (Computer Science degree), then an eCommerce manager, he now runs an agency that grows companies and eCommerce brands in luxury fashion, food, supplements and industrial B2B.',
+      'Antonio Manitta, founder of NoProb Agency. A developer by training (Computer Science degree), then an eCommerce manager, he now runs an agency that grows eCommerce brands and companies in luxury fashion, food, supplements and industrial B2B.',
     text2:
       'He uses AI every day to run agents, dashboards and processes: he knows where it should go in right away and where a person is still needed.',
     imageAlt: 'Antonio Manitta, founder of NoProb Agency',
@@ -945,16 +951,16 @@ const en: AiCopy = {
     card: {
       title: 'AI Accelerator',
       subtitle:
-        'The 30-day one-to-one program: priorities, roadmap and your first AI solutions running. One point of contact.',
+        'The 30-day one-to-one program for your eCommerce: opportunities, priorities, roadmap and your first AI solutions running. One point of contact.',
       features: ['4 calls + up to 2 extra', '3 deliverables you keep', '2 quick wins set up together'],
       badge: 'Zero entry risk: free intro call, fixed price, no auto-renewal. 50% on signing, 50% on delivery.',
       price: '€1,100',
       priceSuffix: 'one-off',
       priceNote: '€550 on signing + €550 on delivery',
-      cta: 'Apply with your company',
+      cta: 'Apply with your eCommerce',
     },
     trustLine: 'Right after applying, you book your free intro call.',
-    trustLine2: 'Established companies and eCommerce brands with consolidated revenue only.',
+    trustLine2: 'Established eCommerce brands with consolidated revenue only.',
   },
   after: {
     label: 'what’s next?',
@@ -990,7 +996,7 @@ const en: AiCopy = {
       {
         question: 'Do you work with startups or individuals?',
         answer:
-          'No. Only established companies and eCommerce brands with consolidated revenue and processes to improve. That’s why we review every application.',
+          'No. Only established eCommerce brands with consolidated revenue and room to improve. That’s why we review every application.',
       },
       {
         question: 'Do I need to be technical?',
@@ -999,7 +1005,7 @@ const en: AiCopy = {
       {
         question: 'Will I see a result within 30 days?',
         answer:
-          'The goal of the month is to tackle the first bottleneck with your first AI solutions. Anything needing broader development goes in the roadmap, with clear timing and costs.',
+          'The goal of the month is to find the opportunities, rank them and switch on your first AI solutions on the most important one. Anything needing broader development goes in the roadmap, with clear timing and costs.',
       },
       {
         question: 'Which AI tools do you use?',
@@ -1007,7 +1013,8 @@ const en: AiCopy = {
       },
       {
         question: 'Does it work if I don’t run an eCommerce store?',
-        answer: 'Yes. It works for any established business with marketing activity: services, agencies, studios, SMEs.',
+        answer:
+          'No. The program is built around eCommerce: catalog, ads, emails, conversion rate, customer service and returns. If you don’t sell online, it’s not the right program for you.',
       },
       {
         question: 'How much time does it take and who joins?',
@@ -1016,7 +1023,8 @@ const en: AiCopy = {
       },
       {
         question: 'Is our data safe?',
-        answer: 'Yes. Accesses are used only for the analysis, with no unagreed changes and contractual confidentiality.',
+        answer:
+          'Yes. Access to your store and tools is used only for the analysis, with no unagreed changes and contractual confidentiality.',
       },
       {
         question: 'We already work with an agency: does it make sense?',
@@ -1037,10 +1045,10 @@ const en: AiCopy = {
     step1: {
       title: 'What are we talking about?',
       qBusiness: {
-        label: 'What kind of business is it?',
+        label: 'What kind of eCommerce is it?',
         notice:
-          'We work exclusively with established companies and eCommerce brands with consolidated revenue. We don’t consider startups or early-stage projects.',
-        options: ['eCommerce', 'Online business or services', 'Company / SME', 'Agency or freelancer'],
+          'We work exclusively with established eCommerce brands with consolidated revenue. We don’t consider startups or early-stage projects.',
+        options: ['Online only', 'Online and physical store', 'Online and B2B / resellers', 'Marketplaces (Amazon, Zalando…)'],
       },
       qRole: {
         label: 'What’s your role?',
@@ -1054,11 +1062,11 @@ const en: AiCopy = {
         options: ['Barely at all', 'Here and there, no method', 'Every day, but no system'],
       },
       qPain: {
-        label: 'What would you like to achieve by bringing AI into your business?',
+        label: 'What would you like to achieve by bringing AI into your eCommerce?',
         helper:
-          'A couple of lines on your goals, ideas or doubts. Not sure yet? Just tell us briefly about your company: we’ll come to the intro call prepared.',
+          'A couple of lines on your goals, ideas or doubts. Not sure where to start yet? That’s fine: just tell us briefly about your eCommerce and we’ll come to the intro call prepared.',
         placeholder:
-          'E.g. we want to automate quotes and reply to clients faster. Or: we’re a 6-person fashion eCommerce brand doing most things by hand…',
+          'E.g. we want to write product pages faster and reply to customers sooner. Or: we’re a 6-person fashion eCommerce brand doing most things by hand…',
       },
     },
     step3: {
@@ -1083,7 +1091,7 @@ const en: AiCopy = {
       email: 'Enter a valid email address',
       legalName: 'Enter your company legal name',
       phone: 'Enter a valid phone number',
-      website: 'Enter your company website',
+      website: 'Enter your eCommerce website',
       privacy: 'You must accept the Privacy Policy',
     },
     errorGeneric: 'Something went wrong. Please try again.',
@@ -1096,14 +1104,14 @@ const en: AiCopy = {
     titleEm: 'book your intro call',
     titleEnd: '.',
     text: 'Pick a day and time for your free 40-minute intro call. Meanwhile we’ll read your application, so we come prepared.',
-    note: 'Established companies and eCommerce brands only: if there’s no fit, we’ll let you know and cancel the booking.',
+    note: 'Established eCommerce brands only: if there’s no fit, we’ll let you know and cancel the booking.',
   },
   finalCta: {
-    heading: 'Ready to bring order to your company?',
-    text: '30 days, one-to-one, fixed price. Established companies and eCommerce brands only.',
-    cta: 'Apply with your company',
+    heading: 'Ready to find out where your eCommerce can grow?',
+    text: '30 days, one-to-one, fixed price. Established eCommerce brands only.',
+    cta: 'Apply with your eCommerce',
   },
-  sticky: { priceLine: '€1,100 · 30 days', cta: 'Apply with your company' },
+  sticky: { priceLine: '€1,100 · 30 days', cta: 'Apply with your eCommerce' },
 }
 
 const dictionaries: Record<Locale, AiCopy> = { it, en }

@@ -69,7 +69,7 @@ export default function MigrazioneProcess({
           ))}
         </div>
 
-        {/* Why 4 months - full-width horizontal card (yellow border) */}
+        {/* Why 14 days - full-width horizontal card (yellow border) */}
         <motion.article
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}

@@ -29,7 +29,7 @@ export async function generateMetadata(): Promise<Metadata> {
     locale,
     pageKey: 'aiAccelerator',
     image: '/images/og-ai-accelerator-en.png',
-    imageAlt: 'AI Accelerator - A 30-day one-to-one AI program for companies and eCommerce brands',
+    imageAlt: 'AI Accelerator, a 30-day one-to-one AI program for eCommerce brands',
   })
 }
 
@@ -41,7 +41,7 @@ const serviceJsonLd = {
   serviceType: 'AI consulting',
   areaServed: ['IT', 'EU'],
   description:
-    'A 30-day one-to-one program for established companies and eCommerce brands: company analysis, priorities ranked by impact, a 90-day roadmap and your first AI solutions running on the first bottleneck. Fixed price, no lock-in.',
+    'A 30-day one-to-one program for established eCommerce brands: analysis of sales, acquisition and processes, opportunities ranked by impact, a 90-day roadmap and your first AI solutions running. Fixed price, no lock-in.',
   offers: {
     '@type': 'Offer',
     price: '1100',

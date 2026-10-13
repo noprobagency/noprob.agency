@@ -29,7 +29,7 @@ export async function generateMetadata(): Promise<Metadata> {
     locale,
     pageKey: 'aiAccelerator',
     image: '/images/og-ai-accelerator-it.png',
-    imageAlt: 'AI Accelerator - Percorso AI one-to-one di 30 giorni per aziende ed eCommerce',
+    imageAlt: 'AI Accelerator, percorso AI one-to-one di 30 giorni per eCommerce',
   })
 }
 
@@ -41,7 +41,7 @@ const serviceJsonLd = {
   serviceType: 'AI consulting',
   areaServed: ['IT', 'EU'],
   description:
-    'Percorso one-to-one di 30 giorni per aziende ed eCommerce già avviati: analisi dell’azienda, priorità in ordine di impatto, roadmap a 90 giorni e prime soluzioni AI attive sul primo collo di bottiglia. Prezzo fisso, nessun vincolo.',
+    'Percorso one-to-one di 30 giorni per eCommerce già avviati: analisi di vendite, acquisizione e processi, opportunità in ordine di impatto, roadmap a 90 giorni e prime soluzioni AI attive. Prezzo fisso, nessun vincolo.',
   offers: {
     '@type': 'Offer',
     price: '1100',
