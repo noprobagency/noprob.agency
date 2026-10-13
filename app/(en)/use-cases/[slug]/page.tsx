@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation'
 import { buildMetadata } from '@/lib/site'
 import { useCases } from '@/data/use-cases'
 import { renderSection } from '@/components/article/renderSection'
+import UseCaseExtras from '@/components/article/UseCaseExtras'
 import CTA from '@/components/sections/CTA'
 import Footer from '@/components/layout/Footer'
 
@@ -72,6 +73,7 @@ export default async function UseCasePage({ params }: Props) {
       <section className="w-full flex justify-center bg-[#f0f0f0] py-16 px-5 min-[810px]:px-9">
         <article className="w-full max-w-[720px]">
           {content?.map((section, idx) => renderSection(section, idx, 'en'))}
+          <UseCaseExtras useCase={useCase} locale="en" path={`/use-cases/${useCase.slug}`} />
         </article>
       </section>
 

@@ -1,14 +1,26 @@
 import type { UseCase } from './index'
 
-/** Cumini case study. Numbers from dashboard-cumini (Shopify + Meta + Google Ads), read on 2026-10-13. */
+/**
+ * Cumini case study. Rule: no direct company figures, only ratios and percentages.
+ * Verified on 2026-10-13 against dashboard-cumini (Shopify + Meta + Google Ads, data from 2023-04-10,
+ * Shopify live since 2025-05-19) and the screenshots in the article (tracking audit, Klaviyo report):
+ * 12 months after vs before Shopify (2025-06 → 2026-05 vs 2024-06 → 2025-05): sales +67.7%, orders +49.4%,
+ * AOV +12.2%, returning customers +35.3%; 2025 vs 2024 +26.3%; 2026 Jan → Oct 13 vs full 2025 +15.4%;
+ * six figure months: Jan 2024 before, Nov 2025, Dec 2025, Jan 2026, Jul 2026 after; AOV 2026 vs 2023 +69%;
+ * MER (sales / ad spend) 2023 Apr → Dec 6.85, 2024 6.09, 2025 5.43, 2026 YTD 3.74.
+ * Removed because no source was available: MER and growth for 2022 and 2023, 2024 growth, +13.2% company
+ * revenue, 95% tracking coverage, mobile CR nearly doubled, +23% email revenue, 86 → 14 urgent issues.
+ */
 export const cumini: UseCase = {
   slug: 'cumini-luxury-fashion-ecommerce',
-  title: 'Cumini: come una boutique di lusso ha superato 1 milione di euro di vendite online in 12 mesi',
-  excerpt: 'Il caso studio di Cumini, boutique multibrand di lusso in Friuli: quattro anni di lavoro, la migrazione su Shopify e i numeri veri, mese per mese.',
+  title: 'Migrazione su Shopify per una boutique di lusso: il caso Cumini, +67,7% di vendite online in 12 mesi',
+  excerpt: 'Il caso studio di Cumini, boutique multibrand di lusso in Friuli: quattro anni di lavoro, la migrazione su Shopify con gestionale proprietario e i risultati verificati prima e dopo.',
   image: '/images/originals/2QNUkNFRX0OUC0qTVjeplIvlFS0.jpg',
   imageAlt: 'Cumini fashion case study',
   caseType: 'Use Case',
   date: '2026-04-24',
+  updated: '2026-10-13',
+  about: ['Migrazione su Shopify', 'eCommerce fashion di lusso', 'Shopify', 'Tracciamento server side', 'Email marketing Klaviyo'],
   content: [
     {
       type: 'paragraph',
@@ -33,14 +45,13 @@ export const cumini: UseCase = {
     {
       type: 'list',
       items: [
-        'da un eCommerce con fatturato marginale a 1,17 milioni di euro di vendite online lorde negli ultimi 12 mesi (da ottobre 2025 a settembre 2026)',
         '+67,7% di vendite online nei 12 mesi dopo la migrazione su Shopify, rispetto ai 12 mesi prima',
-        'primo mese a sei cifre a gennaio 2024, record a luglio 2026 con 146.983 euro netti e 372 ordini',
-        'scontrino medio passato da 253 euro nel 2023 a 426 euro nel 2026',
-        '+13,2% di fatturato aziendale complessivo',
-        'tracciamento passato da incompleto a una copertura del 95% delle conversioni reali',
-        'conversion rate mobile quasi raddoppiato',
-        'email marketing reso finalmente affidabile e misurabile, con un +23% di fatturato attribuibile',
+        '+49,4% di ordini e +12,2% di scontrino medio nello stesso confronto',
+        'mesi a sei cifre: uno prima di Shopify, quattro dopo la migrazione',
+        'a metà ottobre 2026 le vendite online hanno già superato tutto il 2025 del 15,4%',
+        'scontrino medio cresciuto del 69% rispetto al 2023',
+        'punteggio del tracciamento passato da 31 a 92 su 100',
+        'entrate attribuite all’email marketing +301% rispetto al periodo precedente, pari al 61,66% delle entrate totali (report Klaviyo, 1 novembre 2025, 24 aprile 2026)',
       ],
     },
     {
@@ -116,11 +127,6 @@ export const cumini: UseCase = {
       text: 'Non è stato un picco eccezionale, ma la risposta a una domanda che, in fondo, era già esistente: l’attivazione di Google Ads ha semplicemente reso visibile un’offerta che prima non lo era.',
     },
     {
-      type: 'metrics',
-      merValue: '9',
-      growthValue: '+25,8%',
-    },
-    {
       type: 'h3',
       text: '2023: sviluppo e consolidamento operativo',
     },
@@ -162,8 +168,8 @@ export const cumini: UseCase = {
     },
     {
       type: 'metrics',
-      merValue: '7,5',
-      growthValue: '+226,9%',
+      merValue: '6,8',
+      note: 'Da aprile a dicembre 2023: da qui partono i dati della dashboard.',
     },
     {
       type: 'h3',
@@ -212,7 +218,7 @@ export const cumini: UseCase = {
     {
       type: 'metrics',
       merValue: '6',
-      growthValue: '+71,6%',
+      note: 'La crescita sul 2023 non è riportata perché il 2023 in dashboard è parziale.',
     },
     {
       type: 'h2',
@@ -230,10 +236,9 @@ export const cumini: UseCase = {
     {
       type: 'list',
       items: [
-        'tracciamento reale: dal 30% al 95% delle conversioni identificate',
-        'conversion rate mobile quasi raddoppiato',
+        'tracciamento: punteggio complessivo da 31 a 92 su 100',
         'email automation finalmente attiva e misurabile',
-        'zero crash, zero cataloghi offline, zero vendite perse per problemi tecnici',
+        'zero crash, zero cataloghi offline',
         'decisioni basate su dati precisi, non su stime',
       ],
     },
@@ -269,7 +274,7 @@ export const cumini: UseCase = {
       type: 'metrics',
       merValue: '5',
       growthValue: '+26,3%',
-      note: 'Vendite online nette 2025: 598.545 euro. Record storico.',
+      note: 'Record storico in quel momento, già superato dal 2026.',
     },
     {
       type: 'cta',
@@ -298,11 +303,11 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Questo ci permette di tracciare con precisione circa il 95% delle sessioni e delle conversioni reali, dandoci una visione completa di ciò che accade in ogni canale: quali campagne producono risultati, dove gli utenti abbandonano il funnel e qual è il reale valore di ogni touchpoint.',
+      text: 'Questo ci dà una visione completa di ciò che accade in ogni canale: quali campagne producono risultati, dove gli utenti abbandonano il funnel e qual è il reale valore di ogni touchpoint.',
     },
     {
       type: 'paragraph',
-      text: 'Naturalmente, un tracciamento al 95% non è un obiettivo in sé, ma la condizione necessaria per prendere tutte le decisioni a livello strategico, di marketing e di comunicazione.',
+      text: 'Naturalmente, un tracciamento affidabile non è un obiettivo in sé, ma la condizione necessaria per prendere tutte le decisioni a livello strategico, di marketing e di comunicazione.',
     },
     {
       type: 'h3',
@@ -352,7 +357,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Con la transizione a Shopify, la situazione è cambiata radicalmente: il tasso di conversione da mobile è quasi raddoppiato e il merito va a un checkout nativo progettato per l’esperienza mobile, privo di errori e perfettamente coerente con gli standard del brand.',
+      text: 'Con la transizione a Shopify, la situazione è cambiata radicalmente grazie a un checkout nativo progettato per l’esperienza mobile, privo di errori e perfettamente coerente con gli standard del brand.',
     },
     {
       type: 'paragraph',
@@ -373,7 +378,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Oggi Klaviyo riceve dati puliti e aggiornati in tempo reale su ogni comportamento utente. I flussi sono attivi, coerenti, performanti. Il risultato? Un incremento del fatturato attribuibile all’email marketing di circa il 23% rispetto al periodo precedente.',
+      text: 'Oggi Klaviyo riceve dati puliti e aggiornati in tempo reale su ogni comportamento utente. I flussi sono attivi, coerenti, performanti. Il risultato? Tra il 1° novembre 2025 e il 24 aprile 2026 le entrate attribuite a Klaviyo sono cresciute del 301% rispetto al periodo precedente, e valgono il 61,66% delle entrate totali dello store.',
     },
     {
       type: 'h3',
@@ -401,7 +406,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Oggi, anche nei periodi storicamente più complessi, lo store mantiene una redditività solida, con decine di migliaia di euro investiti ogni mese in advertising.',
+      text: 'Oggi questi numeri si guardano mese per mese. Ci sono mesi che costruiscono e mesi che raccolgono, e alcuni mesi di lancio chiudono sotto il pareggio. Ma su base annua il marketing resta in positivo, sia nel 2025 sia nel 2026.',
     },
     {
       type: 'h2',
@@ -418,15 +423,15 @@ export const cumini: UseCase = {
     {
       type: 'list',
       items: [
-        'vendite online nette da 448.121 a 751.372 euro: **+67,7%**',
-        'ordini da 1.219 a 1.821: **+49,4%**',
-        'scontrino medio da 368 a 413 euro: **+12,2%**',
-        'clienti che tornano a comprare da 119 a 161: **+35,3%**',
+        'vendite online: **+67,7%**',
+        'ordini: **+49,4%**',
+        'scontrino medio: **+12,2%**',
+        'clienti che tornano a comprare: **+35,3%**',
       ],
     },
     {
       type: 'paragraph',
-      text: 'Il 2026 conferma la direzione. A metà ottobre lo store ha già venduto online 690.914 euro netti, il 15,4% in più di tutto il 2025. Luglio 2026 è il mese più alto di sempre: 146.983 euro netti e 372 ordini.',
+      text: 'Il 2026 conferma la direzione. A metà ottobre lo store ha già venduto online il 15,4% in più di tutto il 2025, e luglio 2026 è stato il mese più alto di sempre.',
     },
     {
       type: 'paragraph',
@@ -518,13 +523,11 @@ export const cumini: UseCase = {
     {
       type: 'list',
       items: [
-        'Lo store eCommerce è passato da un fatturato praticamente assente a 1,17 milioni di euro di vendite online lorde negli ultimi 12 mesi',
+        'Le vendite online sono cresciute del 67,7% nei 12 mesi dopo la migrazione a Shopify',
         'I mesi a sei cifre sono passati da uno prima di Shopify a quattro dopo la migrazione',
-        'Il fatturato generale aziendale è cresciuto anno su anno per tutta la durata della collaborazione',
-        'Il tracciamento copre oggi circa il 95% delle sessioni e conversioni reali',
-        'Il tasso di conversione su mobile è quasi raddoppiato dalla migrazione a Shopify',
-        "Il fatturato attribuibile all'email marketing è cresciuto di circa il 23% con Klaviyo integrato correttamente",
-        'I problemi tecnici urgenti sono passati da 86 comunicazioni nel 2024 a 14 nel 2025',
+        'Il 2026 ha già superato le vendite online di tutto il 2025',
+        'Il punteggio del tracciamento è passato da 31 a 92 su 100',
+        'Le entrate attribuite all\'email marketing sono cresciute del 301% con Klaviyo integrato correttamente',
       ],
     },
     {
@@ -548,14 +551,14 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Cumini è un cliente attivo di NoProb Agency da oltre 4 anni.',
+      text: 'Cumini è un cliente attivo di NoProb Agency da oltre 4 anni. [Ecco come lavoriamo sulle migrazioni a Shopify](/it/zero-loss-migration).',
     },
     {
       type: 'cta',
     },
   ],
-  titleEn: 'Cumini: How a Luxury Boutique Passed €1 Million in Online Sales in 12 Months',
-  excerptEn: 'The Cumini case study, a luxury multibrand boutique in Friuli, Italy: four years of work, the move to Shopify and the real numbers, month by month.',
+  titleEn: 'Shopify Migration for a Luxury Boutique: the Cumini Case, +67.7% Online Sales in 12 Months',
+  excerptEn: 'The Cumini case study, a luxury multibrand boutique in Friuli, Italy: four years of work, the move to Shopify with a proprietary ERP and the verified results before and after.',
   contentEn: [
     { type: 'paragraph', text: 'Sector: Fashion retail | Luxury multibrand' },
     { type: 'paragraph', text: 'Partnership length: Over 4 years (active)' },
@@ -568,14 +571,13 @@ export const cumini: UseCase = {
     {
       type: 'list',
       items: [
-        'from an eCommerce with marginal revenue to €1.17 million in gross online sales over the last 12 months (October 2025 to September 2026)',
         '+67.7% online sales in the 12 months after the move to Shopify, compared with the 12 months before',
-        'first six figure month in January 2024, record in July 2026 with €146,983 net and 372 orders',
-        'average order value up from €253 in 2023 to €426 in 2026',
-        '+13.2% total company revenue',
-        'tracking moved from incomplete to a 95% coverage of real conversions',
-        'mobile conversion rate nearly doubled',
-        'email marketing finally reliable and measurable, with +23% in attributable revenue',
+        '+49.4% orders and +12.2% average order value in the same comparison',
+        'six figure months: one before Shopify, four after the migration',
+        'by mid October 2026 online sales had already passed the whole of 2025 by 15.4%',
+        'average order value up 69% compared with 2023',
+        'tracking score up from 31 to 92 out of 100',
+        'revenue attributed to email marketing +301% on the previous period, 61.66% of total revenue (Klaviyo report, November 1, 2025 to April 24, 2026)',
       ],
     },
     { type: 'h2', text: 'The starting point' },
@@ -638,7 +640,6 @@ export const cumini: UseCase = {
       type: 'paragraph',
       text: 'It was not an exceptional spike, but the response to a demand that already existed: the activation of Google Ads simply made an offer visible that previously was not.',
     },
-    { type: 'metrics', merValue: '9', growthValue: '+25.8%' },
     { type: 'h3', text: '2023: development and operational consolidation' },
     {
       type: 'paragraph',
@@ -676,7 +677,7 @@ export const cumini: UseCase = {
       type: 'paragraph',
       text: 'Despite the technical limitations, eCommerce revenue recorded significant growth.',
     },
-    { type: 'metrics', merValue: '7.5', growthValue: '+226.9%' },
+    { type: 'metrics', merValue: '6.8', note: 'April to December 2023: this is where the dashboard data starts.' },
     { type: 'h3', text: '2024: toward a new infrastructure' },
     {
       type: 'paragraph',
@@ -715,7 +716,7 @@ export const cumini: UseCase = {
       type: 'paragraph',
       text: "At the end of the year, together with the client, a strategic decision was made and planned as a long-term investment: to migrate the entire ecosystem to a modern platform and develop in-house a technical solution capable of integrating with Cumini's proprietary ERP.",
     },
-    { type: 'metrics', merValue: '6', growthValue: '+71.6%' },
+    { type: 'metrics', merValue: '6', note: 'Growth on 2023 is not reported because 2023 is partial in the dashboard.' },
     { type: 'h2', text: '2025: A structural shift with Shopify' },
     {
       type: 'image',
@@ -729,10 +730,9 @@ export const cumini: UseCase = {
     {
       type: 'list',
       items: [
-        'real tracking: from 30% to 95% of identified conversions',
-        'mobile conversion rate nearly doubled',
+        'tracking: overall score from 31 to 92 out of 100',
         'email automation finally active and measurable',
-        'zero crashes, zero offline catalogs, zero sales lost due to technical issues',
+        'zero crashes, zero offline catalogs',
         'decisions based on accurate data, not estimates',
       ],
     },
@@ -768,7 +768,7 @@ export const cumini: UseCase = {
       type: 'metrics',
       merValue: '5',
       growthValue: '+26.3%',
-      note: '2025 net online sales: €598,545. All time record.',
+      note: 'All time record at that point, already passed by 2026.',
     },
     { type: 'cta' },
     { type: 'h3', text: 'Tracking: from partial to complete' },
@@ -792,11 +792,11 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'This allows us to accurately track about 95% of real sessions and conversions, giving us a complete view of what happens in each channel: which campaigns produce results, where users abandon the funnel, and what the real value of each touchpoint is.',
+      text: 'This gives us a complete view of what happens in each channel: which campaigns produce results, where users abandon the funnel, and what the real value of each touchpoint is.',
     },
     {
       type: 'paragraph',
-      text: 'Naturally, 95% tracking is not an objective in itself, but the necessary condition for making all decisions at a strategic, marketing, and communication level.',
+      text: 'Naturally, reliable tracking is not an objective in itself, but the necessary condition for making all decisions at a strategic, marketing, and communication level.',
     },
     { type: 'h3', text: 'Deciding on data: the strategic shift' },
     {
@@ -840,7 +840,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: "With the transition to Shopify, the situation changed radically: the mobile conversion rate nearly doubled, and the credit goes to a native checkout designed for the mobile experience, free of errors and perfectly aligned with the brand's standards.",
+      text: "With the transition to Shopify, the situation changed radically thanks to a native checkout designed for the mobile experience, free of errors and perfectly aligned with the brand's standards.",
     },
     {
       type: 'paragraph',
@@ -861,7 +861,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Today Klaviyo receives clean and updated data in real time on every user behavior. The flows are active, consistent, and high-performing. The result? An increase in revenue attributable to email marketing of about 23% compared to the previous period.',
+      text: 'Today Klaviyo receives clean and updated data in real time on every user behavior. The flows are active, consistent, and high-performing. The result? Between November 1, 2025 and April 24, 2026 revenue attributed to Klaviyo grew 301% on the previous period, and it is worth 61.66% of the store total revenue.',
     },
     { type: 'h3', text: 'New collection, full price' },
     {
@@ -886,7 +886,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Today, even in historically more complex periods, the store maintains solid profitability, with tens of thousands of euros invested every month in advertising.',
+      text: 'Today these numbers are checked month by month. Some months build and some months harvest, and a few launch months close below break even. But on a yearly basis marketing stays positive, both in 2025 and in 2026.',
     },
     { type: 'h2', text: '2026: new results' },
     {
@@ -900,15 +900,15 @@ export const cumini: UseCase = {
     {
       type: 'list',
       items: [
-        'net online sales from €448,121 to €751,372: **+67.7%**',
-        'orders from 1,219 to 1,821: **+49.4%**',
-        'average order value from €368 to €413: **+12.2%**',
-        'returning customers from 119 to 161: **+35.3%**',
+        'online sales: **+67.7%**',
+        'orders: **+49.4%**',
+        'average order value: **+12.2%**',
+        'returning customers: **+35.3%**',
       ],
     },
     {
       type: 'paragraph',
-      text: '2026 confirms the direction. By mid October the store has already sold €690,914 net online, 15.4% more than the whole of 2025. July 2026 is the best month ever: €146,983 net and 372 orders.',
+      text: '2026 confirms the direction. By mid October the store has already sold 15.4% more online than the whole of 2025, and July 2026 was the best month ever.',
     },
     {
       type: 'paragraph',
@@ -991,13 +991,11 @@ export const cumini: UseCase = {
     {
       type: 'list',
       items: [
-        'The eCommerce store has gone from practically zero revenue to €1.17 million in gross online sales over the last 12 months',
+        'Online sales grew 67.7% in the 12 months after the migration to Shopify',
         'Six figure months went from one before Shopify to four after the migration',
-        'Overall company revenue has grown year over year for the entire duration of the collaboration',
-        'Tracking now covers about 95% of real sessions and conversions',
-        'The mobile conversion rate has nearly doubled since the migration to Shopify',
-        'Revenue attributable to email marketing has grown by about 23% with Klaviyo correctly integrated',
-        'Urgent technical issues went from 86 communications in 2024 to 14 in 2025',
+        '2026 has already passed the online sales of the whole of 2025',
+        'The tracking score went from 31 to 92 out of 100',
+        'Revenue attributed to email marketing grew 301% with Klaviyo correctly integrated',
       ],
     },
     { type: 'cta' },
@@ -1016,17 +1014,69 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Cumini has been an active client of NoProb Agency for over 4 years.',
+      text: 'Cumini has been an active client of NoProb Agency for over 4 years. [This is how we run Shopify migrations](/zero-loss-migration).',
     },
     { type: 'cta' },
+  ],
+  faq: [
+    {
+      q: 'Una migrazione su Shopify fa crescere le vendite?',
+      a: 'Da sola no: la piattaforma toglie i limiti, il resto lo fanno dati, advertising ed email. Per Cumini, nei 12 mesi dopo la migrazione le vendite online sono cresciute del 67,7% rispetto ai 12 mesi prima, con ordini +49,4% e scontrino medio +12,2%.',
+    },
+    {
+      q: 'Si può migrare su Shopify un eCommerce collegato a un gestionale proprietario?',
+      a: 'Sì. Per Cumini abbiamo sviluppato una soluzione che collega Shopify al gestionale proprietario dei negozi. Lo store è online su Shopify dal 19 maggio 2025.',
+    },
+    {
+      q: 'Perché il MER scende mentre le vendite crescono?',
+      a: 'Perché per crescere si investe di più in advertising, e ogni euro in più rende un po’ meno del precedente. Per Cumini il MER è passato da 6 nel 2024 a 3,7 nel 2026, mentre le vendite online del 2026 hanno già superato tutto il 2025.',
+    },
+    {
+      q: 'Quanto migliora il tracciamento dopo la migrazione a Shopify?',
+      a: 'Per Cumini il punteggio complessivo del tracciamento è passato da 31 a 92 su 100 (Analytics 100, Ads 97), con tracking server to server tramite Stape.',
+    },
+  ],
+  faqEn: [
+    {
+      q: 'Does a Shopify migration grow sales?',
+      a: 'Not on its own: the platform removes the limits, data, advertising and email do the rest. For Cumini, in the 12 months after the migration online sales grew 67.7% compared with the 12 months before, with orders +49.4% and average order value +12.2%.',
+    },
+    {
+      q: 'Can you migrate to Shopify a store connected to a proprietary ERP?',
+      a: 'Yes. For Cumini we built a solution that connects Shopify to the stores proprietary ERP. The store has been live on Shopify since May 19, 2025.',
+    },
+    {
+      q: 'Why does MER go down while sales grow?',
+      a: 'Because growing means investing more in advertising, and each extra euro returns a little less than the one before. For Cumini MER went from 6 in 2024 to 3.7 in 2026, while 2026 online sales have already passed the whole of 2025.',
+    },
+    {
+      q: 'How much does tracking improve after migrating to Shopify?',
+      a: 'For Cumini the overall tracking score went from 31 to 92 out of 100 (Analytics 100, Ads 97), with server to server tracking through Stape.',
+    },
+  ],
+  sources: [
+    'Vendite, ordini, scontrino medio e clienti di ritorno: Shopify, letti dalla dashboard NoProb di Cumini il 13 ottobre 2026. Fino al 18 maggio 2025 i dati vengono dalla piattaforma precedente, importati una volta. Vendite = vendite nette.',
+    'Spesa pubblicitaria: Meta Ads e Google Ads. MER = vendite online diviso spesa pubblicitaria.',
+    'La dashboard parte dal 10 aprile 2023: per questo il 2023 è parziale e la crescita del 2024 sul 2023 non è riportata.',
+    'Tracciamento: audit del sistema di tracking prima e dopo la migrazione (immagine nell’articolo).',
+    'Email marketing: report Klaviyo dal 1° novembre 2025 al 24 aprile 2026, confrontato con il periodo precedente (immagine nell’articolo).',
+    'Per riservatezza pubblichiamo solo variazioni percentuali e rapporti, non valori assoluti.',
+  ],
+  sourcesEn: [
+    'Sales, orders, average order value and returning customers: Shopify, read from the NoProb dashboard for Cumini on October 13, 2026. Until May 18, 2025 the data comes from the previous platform, imported once. Sales = net sales.',
+    'Ad spend: Meta Ads and Google Ads. MER = online sales divided by ad spend.',
+    'The dashboard starts on April 10, 2023: this is why 2023 is partial and 2024 growth on 2023 is not reported.',
+    'Tracking: audit of the tracking system before and after the migration (image in the article).',
+    'Email marketing: Klaviyo report from November 1, 2025 to April 24, 2026, compared with the previous period (image in the article).',
+    'For confidentiality we only publish percentage changes and ratios, not absolute values.',
   ],
   archive: {
     image: '/images/originals/lXYpLfNsEJ0igk2CBCTjY1Irqw.png',
     logo: '/images/originals/iWbz1XLCfNQ5rbC2z8HrFO8.png',
     logoClass: 'h-[30px] w-[140px] object-contain',
     metrics: {
-      en: ['+67.7% online sales after Shopify', '€1.17M online sales in 12 months'],
-      it: ['+67,7% vendite online dopo Shopify', '1,17M€ vendite online in 12 mesi'],
+      en: ['+67.7% online sales after Shopify', '+301% email revenue with Klaviyo'],
+      it: ['+67,7% vendite online dopo Shopify', '+301% entrate email con Klaviyo'],
     },
   },
 }
