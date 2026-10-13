@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // One-shot generator for the Shopify Launch Sprint OG images (1200x630, IT + EN).
 // Run with: node scripts/generate-zero-loss-og.mjs
-// Output: public/images/og-zero-loss-migration-{it,en}.png
+// Output: public/images/og-shopify-migration-sprint-{it,en}.png
 // Brand: #f0f0f0 background, near-black type, green accent (#1dcc5d).
 
 import sharp from 'sharp'
@@ -23,8 +23,8 @@ function svg(claim) {
 }
 
 const variants = [
-  { file: 'public/images/og-zero-loss-migration-it.png', claim: 'Su Shopify in 14 giorni, più SEO e vendite' },
-  { file: 'public/images/og-zero-loss-migration-en.png', claim: 'On Shopify in 14 days, more SEO and sales' },
+  { file: 'public/images/og-shopify-migration-sprint-it.png', claim: 'Su Shopify in 14 giorni, più SEO e vendite' },
+  { file: 'public/images/og-shopify-migration-sprint-en.png', claim: 'On Shopify in 14 days, more SEO and sales' },
 ]
 
 for (const { file, claim } of variants) {

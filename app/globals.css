@@ -1101,3 +1101,19 @@
     flex-basis: 78%;
   }
 }
+
+/* Migration page "AI powered" sprint banner: flickering green sparks */
+@keyframes np-spark {
+  0%, 100% { opacity: 0.15; transform: scale(0.85) rotate(var(--r, 0deg)); }
+  8% { opacity: 1; transform: scale(1.15) rotate(var(--r, 0deg)); }
+  14% { opacity: 0.35; }
+  20% { opacity: 0.95; }
+  40% { opacity: 0.2; transform: scale(0.9) rotate(var(--r, 0deg)); }
+}
+.np-spark {
+  animation: np-spark 2.6s ease-in-out infinite;
+  filter: drop-shadow(0 0 6px rgba(29, 204, 93, 0.85));
+}
+@media (prefers-reduced-motion: reduce) {
+  .np-spark { animation: none; opacity: 0.6; }
+}

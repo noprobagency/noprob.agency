@@ -5,6 +5,7 @@ import MigrazioneProblem from '@/components/sections/MigrazioneProblem'
 import MigrazioneSolution from '@/components/sections/MigrazioneSolution'
 import MigrazioneSocialProof from '@/components/sections/MigrazioneSocialProof'
 import MigrazioneProcess from '@/components/sections/MigrazioneProcess'
+import MigrazioneSprintBanner from '@/components/sections/MigrazioneSprintBanner'
 import MigrazioneSprintPricing from '@/components/sections/MigrazioneSprintPricing'
 import MigrazioneResults from '@/components/sections/MigrazioneResults'
 import MigrazioneFAQ from '@/components/sections/MigrazioneFAQ'
@@ -47,6 +48,7 @@ export default function ShopifyMigrationPage() {
       <MigrazioneSolution locale={locale} />
       <MigrazioneSocialProof locale={locale} />
       <MigrazioneProcess locale={locale} />
+      <MigrazioneSprintBanner locale={locale} />
       <MigrazioneSprintPricing locale={locale} />
       <MigrazioneResults locale={locale} />
       <MigrazioneFAQ locale={locale} />

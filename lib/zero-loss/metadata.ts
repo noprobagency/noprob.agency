@@ -22,7 +22,7 @@ export function buildZeroLossMetadata(locale: Locale): Metadata {
     title: copy.meta.title,
     description: copy.meta.description,
     noIndex: !ZL_INDEXABLE,
-    image: `/images/og-zero-loss-migration-${locale}.png`,
+    image: `/images/og-shopify-migration-sprint-${locale}.png`,
     imageAlt: copy.meta.ogAlt,
   })
   return {
@@ -47,7 +47,7 @@ export function buildZeroLossApplyMetadata(locale: Locale): Metadata {
     title: copy.apply.metaTitle,
     description: copy.apply.metaDescription,
     noIndex: true,
-    image: `/images/og-zero-loss-migration-${locale}.png`,
+    image: `/images/og-shopify-migration-sprint-${locale}.png`,
     imageAlt: copy.meta.ogAlt,
   })
   return { ...base, title: { absolute: copy.apply.metaTitle } }
