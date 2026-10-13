@@ -73,8 +73,8 @@ export const zeroLossEn: ZlCopy = {
       'First installment at kickoff, second at go-live, third and fourth during the two months of support. Shopify plan, theme and apps are on you. No discounts, no quotes: this is the price.',
     results: [
       { value: '+67.7% online sales in the 12 months after the migration', attribution: 'Cumini, luxury multibrand' },
-      { value: 'Google clicks 2.8 times those of a year earlier', attribution: 'Farmacia Nazzi, Search Console' },
-      { value: '+105% online sales in the first 85 days after the move from WooCommerce', attribution: 'Farmacia Nazzi, supplements' },
+      { value: 'Google clicks 2.8 times those of a year earlier', attribution: 'Integratori Nazzi DTC, Search Console' },
+      { value: '+105% online sales in the first 85 days after the move from WooCommerce', attribution: 'Integratori Nazzi DTC' },
       { value: '0 minutes offline across over 10 migrations', attribution: 'noprob agency' },
     ],
   },
@@ -280,7 +280,7 @@ export const zeroLossEn: ZlCopy = {
       items: [
         {
           key: 'nazziGsc',
-          brand: 'Farmacia Nazzi',
+          brand: 'Integratori Nazzi DTC',
           title: 'Google traffic before and after the move from WooCommerce',
           kpis: [
             { value: '+45%', label: 'Google clicks against the 28 days before the migration' },
@@ -289,11 +289,11 @@ export const zeroLossEn: ZlCopy = {
           ],
           legend: ['Clicks', 'Impressions'],
           note: '7-day moving average from Google Search Console. 100 = average of the 28 days before go live.',
-          href: '/use-cases/farmacia-nazzi-integratori-shopify',
+          href: '/use-cases/integratori-nazzi-dtc-shopify',
         },
         {
           key: 'nazziGscYoy',
-          brand: 'Farmacia Nazzi',
+          brand: 'Integratori Nazzi DTC',
           title: 'Google clicks, 2026 against 2025 in the same weeks',
           kpis: [
             { value: '2.3x', label: 'Google clicks, August 11 to October 9, on 2025' },
@@ -302,7 +302,7 @@ export const zeroLossEn: ZlCopy = {
           ],
           legend: ['2025, on WooCommerce', '2026, on Shopify'],
           note: 'Average daily clicks per week from Google Search Console. 100 = 2025 average in the same period.',
-          href: '/use-cases/farmacia-nazzi-integratori-shopify',
+          href: '/use-cases/integratori-nazzi-dtc-shopify',
           baseline: '100 = 2025',
         },
         {

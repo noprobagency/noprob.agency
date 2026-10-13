@@ -73,8 +73,8 @@ export const zeroLossIt: ZlCopy = {
       'Prima rata al kickoff, seconda al go-live, terza e quarta nei due mesi di supporto. Piano Shopify, tema e app a carico tuo. Nessuno sconto, nessun preventivo: questo è il prezzo.',
     results: [
       { value: '+67,7% di vendite online nei 12 mesi dopo la migrazione', attribution: 'Cumini, luxury multibrand' },
-      { value: 'Clic da Google 2,8 volte quelli di un anno prima', attribution: 'Farmacia Nazzi, Search Console' },
-      { value: '+105% di vendite online nei primi 85 giorni dopo la migrazione da WooCommerce', attribution: 'Farmacia Nazzi, integratori' },
+      { value: 'Clic da Google 2,8 volte quelli di un anno prima', attribution: 'Integratori Nazzi DTC, Search Console' },
+      { value: '+105% di vendite online nei primi 85 giorni dopo la migrazione da WooCommerce', attribution: 'Integratori Nazzi DTC' },
       { value: '0 minuti offline in oltre 10 migrazioni', attribution: 'noprob agency' },
     ],
   },
@@ -280,7 +280,7 @@ export const zeroLossIt: ZlCopy = {
       items: [
         {
           key: 'nazziGsc',
-          brand: 'Farmacia Nazzi',
+          brand: 'Integratori Nazzi DTC',
           title: 'Traffico da Google prima e dopo la migrazione da WooCommerce',
           kpis: [
             { value: '+45%', label: 'clic da Google rispetto ai 28 giorni prima della migrazione' },
@@ -289,11 +289,11 @@ export const zeroLossIt: ZlCopy = {
           ],
           legend: ['Clic', 'Impressioni'],
           note: 'Media mobile 7 giorni da Google Search Console. 100 = media dei 28 giorni prima del go live.',
-          href: '/it/casi-studio/farmacia-nazzi-integratori-shopify',
+          href: '/it/casi-studio/integratori-nazzi-dtc-shopify',
         },
         {
           key: 'nazziGscYoy',
-          brand: 'Farmacia Nazzi',
+          brand: 'Integratori Nazzi DTC',
           title: 'Clic da Google, 2026 contro 2025 nelle stesse settimane',
           kpis: [
             { value: '2,3x', label: 'clic da Google, dall’11 agosto al 9 ottobre, sul 2025' },
@@ -302,7 +302,7 @@ export const zeroLossIt: ZlCopy = {
           ],
           legend: ['2025, su WooCommerce', '2026, su Shopify'],
           note: 'Clic giornalieri medi per settimana da Google Search Console. 100 = media del 2025 nello stesso periodo.',
-          href: '/it/casi-studio/farmacia-nazzi-integratori-shopify',
+          href: '/it/casi-studio/integratori-nazzi-dtc-shopify',
           baseline: '100 = 2025',
         },
         {

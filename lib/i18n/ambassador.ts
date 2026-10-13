@@ -566,7 +566,7 @@ const it: AmbassadorCopy = {
     ],
     proofTitle: 'La prova da citare: Cumini',
     proof:
-      'Da oltre 4 anni seguiamo Cumini, boutique di moda luxury multibrand: dopo la migrazione su Shopify ha venduto online il 67,7% in più nei 12 mesi successivi. E Farmacia Nazzi, passata da WooCommerce a Shopify: +105% di vendite online nei primi 85 giorni. Sono i due nomi da citare, con i case study pubblici sul sito.',
+      'Da oltre 4 anni seguiamo Cumini, boutique di moda luxury multibrand: dopo la migrazione su Shopify ha venduto online il 67,7% in più nei 12 mesi successivi. E Integratori Nazzi DTC, passata da WooCommerce a Shopify: +105% di vendite online nei primi 85 giorni. Sono i due nomi da citare, con i case study pubblici sul sito.',
     proofFoot: 'E come Cumini ci sono decine di altri progetti eCommerce seguiti dal team. Le recensioni dei clienti sono su Trustpilot: 10 recensioni, tutte a 5 stelle.',
     objectionsTitle: 'Le obiezioni più comuni (e come rispondere)',
     objections: [
@@ -1175,7 +1175,7 @@ const en: AmbassadorCopy = {
     ],
     proofTitle: 'The proof to quote: Cumini',
     proof:
-      'For over 4 years we’ve worked with Cumini, a luxury multibrand fashion boutique: after the migration to Shopify it sold 67.7% more online in the following 12 months. And Farmacia Nazzi, moved from WooCommerce to Shopify: +105% online sales in the first 85 days. Those are the two names to quote, with public case studies on the site.',
+      'For over 4 years we’ve worked with Cumini, a luxury multibrand fashion boutique: after the migration to Shopify it sold 67.7% more online in the following 12 months. And Integratori Nazzi DTC, moved from WooCommerce to Shopify: +105% online sales in the first 85 days. Those are the two names to quote, with public case studies on the site.',
     proofFoot: 'And like Cumini there are dozens of other eCommerce projects the team has worked on. Client reviews are on Trustpilot: 10 reviews, all 5 stars.',
     objectionsTitle: 'The most common objections (and how to answer)',
     objections: [

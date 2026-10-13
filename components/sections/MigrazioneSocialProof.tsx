@@ -6,13 +6,13 @@ import { type Locale } from '@/lib/i18n'
 const MORE_CASES = {
   it: {
     label: 'Un altro caso di migrazione:',
-    title: 'Farmacia Nazzi, da WooCommerce a Shopify',
-    href: '/it/casi-studio/farmacia-nazzi-integratori-shopify',
+    title: 'Integratori Nazzi DTC, da WooCommerce a Shopify',
+    href: '/it/casi-studio/integratori-nazzi-dtc-shopify',
   },
   en: {
     label: 'Another migration case:',
-    title: 'Farmacia Nazzi, from WooCommerce to Shopify',
-    href: '/use-cases/farmacia-nazzi-integratori-shopify',
+    title: 'Integratori Nazzi DTC, from WooCommerce to Shopify',
+    href: '/use-cases/integratori-nazzi-dtc-shopify',
   },
 }
 

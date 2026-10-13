@@ -46,8 +46,8 @@ const resultCards: ReadonlyArray<{
       en: ['+105% online sales after Shopify', '2.8x clicks from Google'],
       it: ['+105% vendite online dopo Shopify', '2,8x clic da Google'],
     },
-    href: { en: '/use-cases/farmacia-nazzi-integratori-shopify', it: '/it/casi-studio/farmacia-nazzi-integratori-shopify' },
-    label: 'Farmacia Nazzi',
+    href: { en: '/use-cases/integratori-nazzi-dtc-shopify', it: '/it/casi-studio/integratori-nazzi-dtc-shopify' },
+    label: 'Integratori Nazzi DTC',
   },
   {
     image: '/images/originals/cOnThGiudnDZv0DuLTLxFgBBoc.webp',
