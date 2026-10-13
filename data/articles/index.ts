@@ -922,7 +922,7 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: 'We migrated to Shopify in 2022, built a complete server-side tracking setup achieving a Stape score of 92/100, and stabilized the technical team around the new stack. Over four years of [ongoing partnership](/use-cases/cumini-luxury-fashion-ecommerce), online revenue grew **347%** cumulatively. That result did not come from a single campaign or growth hack. It came from a technical foundation that finally allowed us to do the work properly.',
+        text: 'We migrated them to Shopify in May 2025, built a complete server-side tracking setup achieving a Stape score of 92/100, and stabilized the technical team around the new stack. In the 12 months after the migration, online sales grew **67.7%** compared with the 12 months before ([full case study](/use-cases/cumini-luxury-fashion-ecommerce)). That result did not come from a single campaign or growth hack. It came from a technical foundation that finally allowed us to do the work properly.',
       },
       {
         type: 'paragraph',
@@ -1280,7 +1280,7 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: 'Abbiamo migrato su Shopify nel 2022, costruito un tracking server-side completo (Stape score 92/100), stabilizzato il team tecnico. In quattro anni di [partnership continuativa](/it/casi-studio/cumini-luxury-fashion-ecommerce), il fatturato online è cresciuto del **347%** cumulato. Non è stato un risultato istantaneo. È stato costruito su una fondamenta tecnica che finalmente permetteva di lavorare.',
+        text: 'Li abbiamo migrati su Shopify a maggio 2025, costruito un tracking server-side completo (Stape score 92/100), stabilizzato il team tecnico. Nei 12 mesi dopo la migrazione le vendite online sono cresciute del **67,7%** rispetto ai 12 mesi prima ([caso studio completo](/it/casi-studio/cumini-luxury-fashion-ecommerce)). Non è stato un risultato istantaneo. È stato costruito su una fondamenta tecnica che finalmente permetteva di lavorare.',
       },
       {
         type: 'paragraph',
@@ -1714,19 +1714,17 @@ export const articles: Article[] = [
       {
         type: 'list',
         items: [
-          'Complete migration to Shopify, with no SEO loss or post-launch conversion drop',
+          'Migration to Shopify in May 2025, connected to the stores proprietary ERP',
           'Full server-side tracking (Stape score 92/100)',
           'Stable team: same developer, same media buyer, same email specialist for all 4 years',
-          'Cumulative online revenue growth: **+347%**',
-          'MER improvement: **+38%**',
-          'CPA reduction: **-14%**',
-          'AOV growth: **+7%**',
-          'Retention cost reduction: **-57%**',
+          'Online sales in the 12 months after the migration: **+67.7%** on the 12 months before',
+          'Orders: **+49.4%**, average order value: **+12.2%** in the same comparison',
+          'Six figure months: one before Shopify, four after',
         ],
       },
       {
         type: 'paragraph',
-        text: "What happened isn't magic. It's consistency. Same team, same platform, same methodology, for 4 years. While their competitors changed agencies every 12-18 months and complained about flat growth, they were accumulating optimizations that compounded.",
+        text: "What happened isn't magic. It's consistency. Same team, same methodology, for 4 years. While their competitors changed agencies every 12-18 months and complained about flat growth, they were accumulating optimizations that compounded.",
       },
       {
         type: 'paragraph',
@@ -2080,19 +2078,17 @@ export const articles: Article[] = [
       {
         type: 'list',
         items: [
-          'Migrazione completa a Shopify, senza perdita SEO o calo conversioni post-launch',
+          'Migrazione a Shopify a maggio 2025, collegata al gestionale proprietario dei negozi',
           'Tracking server-side completo (Stape score 92/100)',
           'Team stabile: stesso developer, stessa media buyer, stessa email specialist per tutti i 4 anni',
-          'Crescita cumulata dei ricavi online: **+347%**',
-          'Miglioramento MER: **+38%**',
-          'Riduzione CPA: **-14%**',
-          'Crescita AOV: **+7%**',
-          'Riduzione costi retention: **-57%**',
+          'Vendite online nei 12 mesi dopo la migrazione: **+67,7%** sui 12 mesi prima',
+          'Ordini: **+49,4%**, scontrino medio: **+12,2%** nello stesso confronto',
+          'Mesi a sei cifre: uno prima di Shopify, quattro dopo',
         ],
       },
       {
         type: 'paragraph',
-        text: 'Quello che è successo non è magia. È costanza. Lo stesso team, sulla stessa piattaforma, con la stessa metodologia, per 4 anni. Mentre i loro competitor cambiavano agenzia ogni 12-18 mesi e si lamentavano di crescita piatta, loro accumulavano ottimizzazioni che si componevano.',
+        text: 'Quello che è successo non è magia. È costanza. Lo stesso team, con la stessa metodologia, per 4 anni. Mentre i loro competitor cambiavano agenzia ogni 12-18 mesi e si lamentavano di crescita piatta, loro accumulavano ottimizzazioni che si componevano.',
       },
       {
         type: 'paragraph',

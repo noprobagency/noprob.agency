@@ -72,7 +72,7 @@ export const zeroLossEn: ZlCopy = {
     pricingNote:
       'First installment at kickoff, second at go-live, third and fourth during the two months of support. Shopify plan, theme and apps are on you. No discounts, no quotes: this is the price.',
     results: [
-      { value: '+347% online revenue in 36 months', attribution: 'Cumini, luxury multibrand' },
+      { value: '+67.7% online sales in the 12 months after the migration', attribution: 'Cumini, luxury multibrand' },
       { value: '99.3K organic clicks and average position 9.6 after the migration', attribution: 'Cumini, Search Console' },
       { value: 'Conversion rate from 2% to 5%, AOV +30%', attribution: 'noprob client, DTC eCommerce' },
       { value: '0 minutes offline across over 10 migrations', attribution: 'noprob agency' },

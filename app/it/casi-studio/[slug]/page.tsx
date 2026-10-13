@@ -26,6 +26,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: useCase.excerpt,
     path: `/it/casi-studio/${useCase.slug}`,
     locale: 'it',
+    image: useCase.image,
+    imageAlt: useCase.imageAlt,
   })
 }
 

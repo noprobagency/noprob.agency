@@ -26,6 +26,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: useCase.excerptEn ?? useCase.excerpt,
     path: `/use-cases/${useCase.slug}`,
     locale: 'en',
+    image: useCase.image,
+    imageAlt: useCase.imageAlt,
   })
 }
 

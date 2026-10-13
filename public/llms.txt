@@ -32,10 +32,10 @@ NoProb Agency is a Shopify technical partner for B2C brands in fashion, suppleme
 
 ## Proof Points
 
-- Anchor client: Luxury fashion multibrand boutique (Cumini), 4+ year partnership
-- Result: +347% online revenue growth in 36 months
-- Other measurable outcomes: avg YaY MER > 5
-More info on https://noprob.agency/use-cases/cumini-luxury-fashion-ecommerce
+All figures below are verified against Shopify, Meta, Google Ads, Klaviyo and Google Search Console data. Each case study lists its sources and update date.
+
+- Cumini, luxury fashion multibrand boutique, 4+ year partnership, migrated to Shopify in May 2025 with a proprietary ERP connected: +67.7% online sales in the 12 months after the migration vs the 12 months before, orders +49.4%, average order value +12.2%, tracking score from 31 to 92/100, Klaviyo attributed revenue +301%. https://noprob.agency/use-cases/cumini-luxury-fashion-ecommerce
+- Farmacia Nazzi, compounding pharmacy selling its own supplements, migrated from WooCommerce to Shopify on July 19, 2026: +105% online sales in the first 85 days vs the same days of 2025, orders +77%, returning customers 2.25x, Google clicks 2.8x year over year, +46% sales in two weeks with ads off. https://noprob.agency/use-cases/farmacia-nazzi-integratori-shopify
 
 ## Ideal Client
 

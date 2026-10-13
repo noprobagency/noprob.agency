@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import Link from 'next/link'
 import { motion } from 'framer-motion'
 
 import SectionLabel from '@/components/ui/SectionLabel'
@@ -89,6 +90,13 @@ export default function CaseStudy({
                   {t.caseStudy.metricNote}
                 </p>
               </div>
+
+              <Link
+                href={t.caseStudy.ctaHref}
+                className="font-sans text-[14px] font-semibold tracking-[-0.04em] text-[#121212] underline underline-offset-4"
+              >
+                {t.caseStudy.cta} →
+              </Link>
 
               <div className="flex flex-wrap gap-2 max-[809px]:gap-1">
                 {serviceTags.map((tag) => (
