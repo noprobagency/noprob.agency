@@ -646,7 +646,7 @@ const en: Dictionary = {
     dataDrivenTeam: { title: 'Dedicated eCommerce Team on Retainer', description: 'Your dedicated eCommerce team on retainer. One point of contact, a full team behind you. For Shopify brands that want to scale without hiring in-house.' },
     sviluppoShopify: { title: 'Shopify Development Services', description: 'Shopify development services to build your eCommerce from design to tracking, optimized to convert from day one. Lifetime maintenance included.' },
     migrazioneShopify: { title: 'Shopify Migration Without Losing Sales', description: 'Migrate your eCommerce to Shopify in 4 months without losing sales or customers. 1:1 redirects, no downtime, one point of contact. 30-day money-back guarantee.' },
-    aiAccelerator: { title: 'AI Accelerator: AI consulting for companies', description: 'A 30-day one-to-one program: we analyze your company, rank your priorities and tackle the first bottleneck with AI. Fixed price, no lock-in.' },
+    aiAccelerator: { title: 'AI Accelerator: unlock your company’s bottleneck with AI', description: 'A 30-day one-to-one program: we analyze your company, rank your priorities and tackle the first bottleneck with AI. Fixed price, no lock-in.' },
   },
   about: {
     hero: {
@@ -1125,7 +1125,7 @@ const it: Dictionary = {
     dataDrivenTeam: { title: 'Retainer eCommerce Dedicato', description: 'Il tuo team eCommerce dedicato in retainer. Un solo interlocutore, un team completo dietro di te. Per brand Shopify che vogliono scalare.' },
     sviluppoShopify: { title: 'Sviluppo Shopify: creiamo il tuo eCommerce', description: 'Sviluppiamo il tuo eCommerce su Shopify dal design al tracciamento, ottimizzato per convertire dal primo giorno. Manutenzione a vita inclusa.' },
     migrazioneShopify: { title: 'Migrazione a Shopify senza perdere vendite', description: 'Migra il tuo eCommerce su Shopify in 4 mesi senza perdere vendite o clienti. Redirect 1:1, nessuna interruzione, un solo interlocutore. Garanzia 30 giorni.' },
-    aiAccelerator: { title: 'AI Accelerator: consulenza AI per aziende', description: "Percorso one-to-one di 30 giorni: studiamo la tua azienda, mettiamo in fila le priorità e attacchiamo con l'AI il primo collo di bottiglia. Prezzo fisso." },
+    aiAccelerator: { title: 'AI Accelerator: sblocca con l’AI il collo di bottiglia della tua azienda', description: "Percorso one-to-one di 30 giorni: studiamo la tua azienda, mettiamo in fila le priorità e attacchiamo con l'AI il primo collo di bottiglia. Prezzo fisso." },
   },
   about: {
     hero: {
