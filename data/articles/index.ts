@@ -108,7 +108,7 @@ export const articles: Article[] = [
       {
         question: 'Qual è un buon tasso di conversione per un eCommerce su Shopify?',
         answer:
-          "Il tasso di conversione medio su Shopify è tra l'1,4% e il 1,8%. I store nel top 20% superano il 3,2%. Il top 10% supera il 4,7%. Questi benchmark variano per settore: il fashion ha mediamente tassi più bassi del supplement o del food, perché il ciclo decisionale è più lungo.",
+          "Il tasso di conversione medio su Shopify è tra l'1,4% e il 1,8%. Gli store nel top 20% superano il 3,2%. Il top 10% supera il 4,7%. Questi benchmark variano per settore: il fashion ha mediamente tassi più bassi degli integratori o del food, perché il ciclo decisionale è più lungo.",
       },
       {
         question: 'Da dove si inizia un progetto CRO su Shopify?',
@@ -123,7 +123,7 @@ export const articles: Article[] = [
       {
         question: 'Quanto impatta il CRO rispetto a investire in advertising?',
         answer:
-          "Raddoppiare il budget advertising con un tasso di conversione dell'1% porta la metà dei risultati di un advertising invariato con un tasso al 2%. Ogni miglioramento del tasso di conversione moltiplica il valore di ogni euro speso in advertising. I due lavorano in parallelo, non in alternativa.",
+          "Raddoppiare il budget advertising con un tasso di conversione dell'1% porta gli stessi ordini di un advertising invariato con un tasso al 2%, ma con il doppio della spesa. Ogni miglioramento del tasso di conversione moltiplica il valore di ogni euro speso in advertising. I due lavorano in parallelo, non in alternativa.",
       },
     ],
     content: [
@@ -222,7 +222,7 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: 'Research from Tsinghua University published in the Journal of International Research in Marketing measured a **sales increase of up to 31%** when sold-out variants were kept visible with a "sold out" label rather than removed from the page.',
+        text: 'Research from Tsinghua University measured a **sales increase of up to 31%** when sold-out variants were kept visible with a "sold out" label rather than removed from the page.',
       },
       {
         type: 'paragraph',
@@ -297,7 +297,7 @@ export const articles: Article[] = [
       { type: 'h3', text: 'How to distribute social proof down the page' },
       {
         type: 'paragraph',
-        text: 'Only 15% of visitors scroll far enough to reach the review section at the bottom of a product page. If all your social proof is concentrated there, 85% of visitors never see it.',
+        text: 'From our direct experience with the brands we work with: only 15% of visitors scroll far enough to reach the review section at the bottom of a product page. If all your social proof is concentrated there, 85% of visitors never see it.',
       },
       { type: 'paragraph', text: 'The correct distribution down a product page:' },
       {
@@ -381,7 +381,7 @@ export const articles: Article[] = [
       { type: 'h3', text: 'How does CRO compare to investing in advertising?' },
       {
         type: 'paragraph',
-        text: 'Advertising brings traffic. CRO determines how much of that traffic converts. Doubling your advertising budget with a 1% conversion rate delivers half the results of unchanged advertising with a 2% rate. Every improvement in conversion rate multiplies the value of every dollar spent on advertising. The two work in parallel, not as alternatives.',
+        text: 'Advertising brings traffic. CRO determines how much of that traffic converts. Doubling your advertising budget at a 1% conversion rate delivers the same orders as unchanged advertising at a 2% rate, with twice the spend. Every improvement in conversion rate multiplies the value of every dollar spent on advertising. The two work in parallel, not as alternatives.',
       },
     ],
     contentIt: [
@@ -480,7 +480,7 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: "La ricerca dell'Università di Tsinghua pubblicata sul Journal of International Research in Marketing ha misurato un **aumento fino al 31% delle vendite** quando le varianti sold-out venivano mantenute visibili (con indicazione \"esaurito\") invece di essere rimosse dalla pagina.",
+        text: "La ricerca dell'Università di Tsinghua ha misurato un **aumento fino al 31% delle vendite** quando le varianti sold-out venivano mantenute visibili (con indicazione \"esaurito\") invece di essere rimosse dalla pagina.",
       },
       {
         type: 'paragraph',
@@ -510,7 +510,7 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: "**La riflessione sulla superficie.** La ricerca pubblicata sul Journal of Consumer Research nel 2022 ha misurato che un prodotto fotografato con una riflessione lucida sulla superficie viene trovato il **23% più attraente** e genera il **32% di intenzione d'acquisto in più**. Qualsiasi prodotto con superficie materica (profumi, cosmetici, accessori, borse, supplementi in flacone) beneficia di una luce posizionata per creare un riflesso. Può essere fatto in post-produzione se necessario.",
+        text: "**La riflessione sulla superficie.** La ricerca pubblicata sul Journal of Consumer Research nel 2022 ha misurato che un prodotto fotografato con una riflessione lucida sulla superficie viene trovato il **23% più attraente** e genera il **32% di intenzione d'acquisto in più**. Qualsiasi prodotto con superficie materica (profumi, cosmetici, accessori, borse, integratori in flacone) beneficia di una luce posizionata per creare un riflesso. Può essere fatto in post-produzione se necessario.",
       },
       {
         type: 'paragraph',
@@ -527,7 +527,7 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: "**La direzione dello sguardo del modello.** La ricerca dell'Università di Houston pubblicata sul Journal of Consumer Research nel 2021 ha misurato un **aumento del 30% delle vendite** e un miglioramento del 19% nella valutazione delle campagne quando i modelli guardavano lontano dalla camera invece di guardarla direttamente. Uno sguardo lontano dalla camera permette al visitatore di immaginare se stesso al posto del modello. Uno sguardo diretto in camera crea invece una separazione: stai guardando un'altra persona, non ti stai immaginando nell'immagine. Questo vale per i prodotti acquistati per piacere e esperienza (fashion, lifestyle, travel). Per messaggi informativi o funzionali, lo sguardo diretto funziona meglio.",
+        text: "**La direzione dello sguardo del modello.** La ricerca dell'Università di Houston pubblicata sul Journal of Consumer Research nel 2021 ha misurato un **aumento del 30% delle vendite** e un miglioramento del 19% nella valutazione delle campagne quando i modelli guardavano lontano dalla camera invece di guardarla direttamente. Uno sguardo lontano dalla camera permette al visitatore di immaginare se stesso al posto del modello. Uno sguardo diretto in camera crea invece una separazione: stai guardando un'altra persona, non ti stai immaginando nell'immagine. Questo vale per i prodotti acquistati per piacere ed esperienza (fashion, lifestyle, travel). Per messaggi informativi o funzionali, lo sguardo diretto funziona meglio.",
       },
       { type: 'h3', text: 'I CTA multipli per quantità' },
       {
@@ -536,7 +536,7 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: "La logica: un bottone singolo \"aggiungi al carrello\" costringe il cliente a fare due decisioni in sequenza, devo comprare? e quanto devo comprare? Offrire bottoni \"acquista 1\", \"acquista 2\", \"acquista 3\" sposta l'attenzione sulla seconda decisione, assumendo implicitamente che la prima sia già presa. Funziona per prodotti che si acquistano naturalmente in più unità: supplement, capsule, candele, accessori consumabili, food.",
+        text: "La logica: un bottone singolo \"aggiungi al carrello\" costringe il cliente a fare due decisioni in sequenza, devo comprare? e quanto devo comprare? Offrire bottoni \"acquista 1\", \"acquista 2\", \"acquista 3\" sposta l'attenzione sulla seconda decisione, assumendo implicitamente che la prima sia già presa. Funziona per prodotti che si acquistano naturalmente in più unità: integratori, capsule, candele, accessori consumabili, food.",
       },
       { type: 'h2', text: 'Social proof: dove la maggior parte sbaglia' },
       { type: 'h3', text: 'Le stelle perfette che non convincono' },
@@ -624,7 +624,7 @@ export const articles: Article[] = [
       { type: 'h3', text: 'Qual è un buon tasso di conversione per un eCommerce su Shopify?' },
       {
         type: 'paragraph',
-        text: "Il tasso di conversione medio su Shopify è tra l'1,4% e l'1,8%. I store nel top 20% superano il 3,2%. Il top 10% supera il 4,7%. Questi benchmark variano per settore: il fashion ha mediamente tassi più bassi del supplement o del food, perché il ciclo decisionale è più lungo. Confrontarsi con la media del settore è più utile che confrontarsi con la media generale.",
+        text: "Il tasso di conversione medio su Shopify è tra l'1,4% e l'1,8%. Gli store nel top 20% superano il 3,2%. Il top 10% supera il 4,7%. Questi benchmark variano per settore: il fashion ha mediamente tassi più bassi degli integratori o del food, perché il ciclo decisionale è più lungo. Confrontarsi con la media del settore è più utile che confrontarsi con la media generale.",
       },
       { type: 'h3', text: 'Da dove si inizia un progetto CRO su Shopify?' },
       {
@@ -639,7 +639,7 @@ export const articles: Article[] = [
       { type: 'h3', text: 'Quanto impatta il CRO rispetto a investire in advertising?' },
       {
         type: 'paragraph',
-        text: "L'advertising porta traffico. Il CRO determina quanto di quel traffico si converte. Raddoppiare il budget advertising con un tasso di conversione dell'1% porta la metà dei risultati di un advertising invariato con un tasso al 2%. In pratica, ogni miglioramento del tasso di conversione moltiplica il valore di ogni euro speso in advertising. I due lavorano in parallelo, non in alternativa.",
+        text: "L'advertising porta traffico. Il CRO determina quanto di quel traffico si converte. Raddoppiare il budget advertising con un tasso di conversione dell'1% porta gli stessi ordini di un advertising invariato con un tasso al 2%, ma con il doppio della spesa. In pratica, ogni miglioramento del tasso di conversione moltiplica il valore di ogni euro speso in advertising. I due lavorano in parallelo, non in alternativa.",
       },
     ],
   },
@@ -792,20 +792,20 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: 'Shopify admin panel is considered the most intuitive in the market. This is not a marketing claim. It is consistently reported by merchants who have come from more complex platforms: doing the core things does not require a manual.',
+        text: 'The Shopify admin panel is considered the most intuitive in the market. This is not a marketing claim. It is consistently reported by merchants who have come from more complex platforms: doing the core things does not require a manual.',
       },
       {
         type: 'paragraph',
-        text: "The front end of your store, what the customer sees, is managed through themes. Shopify Theme Store has free and paid options. Advanced customizations require a Shopify developer. Routine visual changes can be handled through the Online Store 2.0 editor without writing code.",
+        text: "The front end of your store, what the customer sees, is managed through themes. The Shopify Theme Store has free and paid options. Advanced customizations require a Shopify developer. Routine visual changes can be handled through the Online Store 2.0 editor without writing code.",
       },
       { type: 'h3', text: 'Payments and Shopify Payments' },
       {
         type: 'paragraph',
-        text: 'Shopify Payments is the platform native payment solution, available in most major markets. It accepts credit cards, debit cards, Apple Pay, and Google Pay with no additional transaction fee beyond your subscription cost.',
+        text: 'Shopify Payments is the platform\'s native payment solution, available in most major markets. It accepts credit cards, debit cards, Apple Pay, and Google Pay with no additional transaction fee beyond your subscription cost.',
       },
       {
         type: 'paragraph',
-        text: 'If you use an external gateway like Stripe or PayPal, Shopify charges an additional transaction fee ranging from 0.5% to 2% depending on your plan. At high volumes, this difference is material.',
+        text: 'If you use an external gateway like Stripe or PayPal, Shopify charges an additional transaction fee ranging from 0.6% to 2% depending on your plan. At high volumes, this difference is material.',
       },
       { type: 'h3', text: 'Apps and integrations' },
       {
@@ -871,7 +871,7 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: "Our honest assessment: for B2C brands focused on growth, Shopify wins almost every time. WooCommerce makes sense in specific cases: very limited budget, a dedicated internal technical team, or deep customization requirements that Shopify ecosystem does not cover.",
+        text: "Our honest assessment: for B2C brands focused on growth, Shopify wins almost every time. WooCommerce makes sense in specific cases: very limited budget, a dedicated internal technical team, or deep customization requirements that the Shopify ecosystem does not cover.",
       },
       {
         type: 'paragraph',
@@ -1005,7 +1005,7 @@ export const articles: Article[] = [
       { type: 'h2', text: 'How Much Does Shopify Cost? The Real Number' },
       {
         type: 'paragraph',
-        text: "The price on Shopify website covers only the base subscription. Here is a realistic view of total monthly cost for a structured B2C store.",
+        text: "The price on the Shopify website covers only the base subscription. Here is a realistic view of total monthly cost for a structured B2C store.",
       },
       {
         type: 'list',
@@ -1155,7 +1155,7 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: 'Se preferisci usare un gateway esterno come Stripe, PayPal o Nexi, Shopify applica una commissione aggiuntiva che va dallo 0,5% al 2% per transazione, a seconda del piano che hai. Su volumi alti questa differenza è significativa.',
+        text: 'Se preferisci usare un gateway esterno come Stripe, PayPal o Nexi, Shopify applica una commissione aggiuntiva che va dallo 0,6% al 2% per transazione, a seconda del piano che hai. Su volumi alti questa differenza è significativa.',
       },
       { type: 'h3', text: 'App e integrazioni' },
       {
@@ -1164,7 +1164,7 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: 'Alcune sono gratuite, la maggior parte ha un costo mensile. Un setup medio con cinque-otto app di qualità aggiunge tra i 150 e i 300 euro al mese al costo base della piattaforma. Tienilo presente quando calcoli il budget complessivo.',
+        text: 'Alcune sono gratuite, la maggior parte ha un costo mensile. Un setup medio con cinque-otto app di qualità aggiunge tra i 150 e i 400 euro al mese al costo base della piattaforma. Tienilo presente quando calcoli il budget complessivo.',
       },
       { type: 'h2', text: 'I piani Shopify a confronto' },
       {
@@ -1199,7 +1199,7 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: 'Per un approfondimento completo, stiamo preparando una guida dedicata ai costi reali di Shopify che uscirà nelle prossime settimane.',
+        text: 'Per un approfondimento completo, stiamo preparando una guida dedicata ai costi reali di Shopify.',
       },
       { type: 'h2', text: 'Shopify vs le alternative' },
       {
@@ -1298,7 +1298,7 @@ export const articles: Article[] = [
           'Hai un business B2C con prodotti fisici da vendere online',
           'Vuoi una piattaforma stabile che cresce con te senza richiedere manutenzione continua',
           'Il tuo fatturato online è o sarà superiore a 50.000-100.000 euro l\'anno',
-          'Lavori nel fashion, nei supplement, nel food, nel DTC o nel retail',
+          'Lavori nel fashion, negli integratori, nel food, nel DTC o nel retail',
           'Vuoi integrare strumenti di marketing moderni: Meta Ads, Google Ads, email automation, tracking avanzato',
           'Non vuoi costruire un team tecnico interno solo per gestire la piattaforma',
         ],
@@ -1320,11 +1320,11 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: '**1. Apri un account di prova.** Shopify offre una prova gratuita di tre giorni, poi tre mesi al prezzo promozionale di 1 euro al mese per i nuovi merchant. Usali per esplorare il pannello admin prima di scegliere il piano definitivo. Carica qualche prodotto di test, naviga le impostazioni, capisce dove si trovano le cose.',
+        text: '**1. Apri un account di prova.** Shopify offre una prova gratuita di tre giorni, poi tre mesi al prezzo promozionale di 1 euro al mese per i nuovi merchant. Usali per esplorare il pannello admin prima di scegliere il piano definitivo. Carica qualche prodotto di test, naviga le impostazioni, capisci dove si trovano le cose.',
       },
       {
         type: 'paragraph',
-        text: '**2. Scegli il tema con criterio.** Non ottimizzare il tema di default a lungo. Se la tua intenzione è seria, investi in un tema professionale dall\'inizio. I temi di qualità per il fashion (Prestige, Symmetry, Impulse) costano tra i 300 e i 450 euro una tantum e risparmiano settimane di sviluppo personalizzato. Per store DTC o supplement, Dawn e Horizon sono ottimi punti di partenza gratuiti; Sense funziona bene per beauty e wellness.',
+        text: '**2. Scegli il tema con criterio.** Non ottimizzare il tema di default a lungo. Se la tua intenzione è seria, investi in un tema professionale dall\'inizio. I temi di qualità per il fashion (Prestige, Symmetry, Impulse) costano tra i 300 e i 450 euro una tantum e risparmiano settimane di sviluppo personalizzato. Per store DTC o di integratori, Dawn e Horizon sono ottimi punti di partenza gratuiti; Sense funziona bene per beauty e wellness.',
       },
       {
         type: 'paragraph',
@@ -1564,7 +1564,7 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: "This isn't marketing. It's a real, peer-reviewed dataset, picked up by Harvard Business Review and Fortune.",
+        text: "This isn't marketing. It's a real dataset of 615 companies tracked over 13 years, picked up by Harvard Business Review and Fortune.",
       },
       {
         type: 'paragraph',
@@ -1930,7 +1930,7 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: 'Non è marketing. È un dataset reale, peer-reviewed, ripreso da Harvard Business Review e Fortune.',
+        text: 'Non è marketing. È un dataset reale su 615 aziende osservate per 13 anni, ripreso da Harvard Business Review e Fortune.',
       },
       {
         type: 'paragraph',
@@ -1974,7 +1974,7 @@ export const articles: Article[] = [
           'Acquisire un nuovo cliente costa **5-25 volte di più** che fidelizzarne uno esistente ([Harvard Business Review](https://hbr.org/2014/10/the-value-of-keeping-the-right-customers))',
           'La probabilità di convertire un cliente esistente è del 60-70%; quella di convertire un nuovo prospect è del 5-20% (Marketing Metrics)',
           'I clienti esistenti spendono in media il 31% in più rispetto ai nuovi (Invesp)',
-          'I clienti ricorrenti hanno il 9x in più di probabilità di convertire rispetto ai nuovi visitatori (Adobe Digital Index)',
+          'I clienti ricorrenti hanno una probabilità 9 volte maggiore di convertire rispetto ai nuovi visitatori (Adobe Digital Index)',
         ],
       },
       {
