@@ -23,6 +23,11 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // Shopify Launch Sprint landing renamed (zero-loss-migration -> sprint slugs)
+      { source: '/zero-loss-migration', destination: '/shopify-migration-sprint', permanent: true },
+      { source: '/zero-loss-migration/apply', destination: '/shopify-migration-sprint/apply', permanent: true },
+      { source: '/it/zero-loss-migration', destination: '/it/sprint-migrazione-shopify', permanent: true },
+      { source: '/it/zero-loss-migration/candidatura', destination: '/it/sprint-migrazione-shopify/candidatura', permanent: true },
       // Nazzi case study renamed (Farmacia Nazzi -> Integratori Nazzi DTC)
       { source: '/use-cases/farmacia-nazzi-integratori-shopify', destination: '/use-cases/integratori-nazzi-dtc-shopify', permanent: true },
       { source: '/it/casi-studio/farmacia-nazzi-integratori-shopify', destination: '/it/casi-studio/integratori-nazzi-dtc-shopify', permanent: true },

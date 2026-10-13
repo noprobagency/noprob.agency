@@ -14,6 +14,7 @@ import ZlCalendar from './ZlCalendar'
 import ZlGuarantees from './ZlGuarantees'
 import ZlWhyNow from './ZlWhyNow'
 import ZlStickyCta from './ZlStickyCta'
+import ZlResultsShark from './ZlResultsShark'
 import ZlProof from './ZlProof'
 import ZlScope from './ZlScope'
 import ZlFaq from './ZlFaq'
@@ -34,6 +35,7 @@ export default function ZeroLossPage({ locale }: { locale: Locale }) {
     '@type': 'Service',
     name: ZL_PRODUCT_NAME,
     provider: { '@type': 'Organization', name: 'NoProb Agency', url: 'https://noprob.agency' },
+    alternateName: locale === 'it' ? 'Sprint migrazione Shopify' : 'Shopify migration sprint',
     serviceType: 'Shopify eCommerce migration',
     areaServed: ['IT', 'EU', 'US'],
     url: absoluteUrl(ROUTE_PATHS.zeroLossMigration[locale]),
@@ -57,6 +59,7 @@ export default function ZeroLossPage({ locale }: { locale: Locale }) {
         <ZlOverview copy={copy.overview} />
         <ZlChecklist copy={copy.checklist} />
         <ZlDeliverables copy={copy.deliverables} />
+        <ZlResultsShark copy={copy.shark} />
         <ZlCalendar copy={copy.calendar} deliverables={copy.deliverables} />
         <ZlGuarantees copy={copy.guarantees} />
         <ZlWhyNow copy={copy.whyNow} />

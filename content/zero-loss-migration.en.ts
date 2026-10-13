@@ -10,9 +10,9 @@ import { ZL_SOURCES } from './zero-loss-migration.shared'
 
 export const zeroLossEn: ZlCopy = {
   meta: {
-    title: 'Shopify Launch Sprint: on Shopify in 14 days, more SEO and more sales | noprob agency',
+    title: 'Shopify Migration in 14 Days | Shopify Launch Sprint',
     description:
-      'Your eCommerce on Shopify in 14 days, with better Google rankings and more sales: +105% for Integratori Nazzi DTC, +67.7% for Cumini. Tested redirects, server-side tracking, 90 days of support, monitoring & improvement, 4 guarantees, fixed price.',
+      'Move your eCommerce to Shopify in 14 days without losing Google rankings or sales. Fixed price, 4 written guarantees, 90 days of support. +105% sales for Integratori Nazzi DTC.',
     ogAlt: 'Shopify Launch Sprint: your eCommerce on Shopify in 14 days, more SEO and more sales',
   },
   nav: {
@@ -255,6 +255,14 @@ export const zeroLossEn: ZlCopy = {
       { key: 'Checkout', text: 'Checkout converting less than before at 90 days? We optimize it for free until it beats it.' },
     ],
     line: 'The full terms are in the contract, written on one page. No hidden asterisks.',
+  },
+  shark: {
+    label: 'Results Shark',
+    h2: '14 days is not a rush. It is a whole team on your store.',
+    paragraph:
+      'On Shopify in 14 days because it is not one person doing it: a whole team gets on it, one specialist for every area, all at the same time. So you get everything right away, no bottlenecks and the first results as soon as possible. We are Results Sharks: we lock onto results and never let go.',
+    areas: ['Shopify development', 'SEO and redirects', 'Tracking and data', 'Checkout and CRO', 'Design', 'AI'],
+    line: 'We work in parallel, not in line.',
   },
   sticky: {
     prefix: 'Fixed price from',

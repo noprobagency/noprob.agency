@@ -345,6 +345,26 @@ function AiNavItem({ locale, onClick, className }: { locale: Locale; onClick?: (
   )
 }
 
+/**
+ * "Sprint" first-level nav item (same label in IT/EN): green lightning icon,
+ * links to the Shopify Launch Sprint landing.
+ */
+function SprintNavItem({ locale, onClick, className }: { locale: Locale; onClick?: () => void; className?: string }) {
+  return (
+    <Link
+      href={ROUTE_PATHS.zeroLossMigration[locale]}
+      onClick={onClick}
+      className={cn(
+        'inline-flex items-center gap-1.5 whitespace-nowrap rounded-[8px] px-[14px] py-2 font-sans text-[16px] font-normal leading-[120%] tracking-[-0.04em] text-np-dark transition-colors hover:bg-black/5',
+        className
+      )}
+    >
+      <ZapIcon size={14} className="shrink-0 fill-[#1dcc5d] text-[#1dcc5d] drop-shadow-[0_0_4px_rgba(29,204,93,0.6)]" />
+      <span>Sprint</span>
+    </Link>
+  )
+}
+
 const MENU_PARTNERS = [
   { name: 'Shopify Partners', src: siteAssets.heroPartners[0], width: 288, height: 76, className: 'block h-[18px] w-auto object-contain opacity-75' },
   { name: 'Google Partner', src: siteAssets.heroPartners[1], width: 288, height: 76, className: 'block h-[30px] w-auto object-contain opacity-75' },
@@ -431,6 +451,7 @@ export default function Navbar() {
             className="np-nav-desktop items-center gap-0"
           >
             <AiNavItem locale={locale} />
+            <SprintNavItem locale={locale} />
             <ServicesDropdown locale={locale} />
             {t.navbar.navLinks.map((link) => (
               <Link
@@ -490,6 +511,11 @@ export default function Navbar() {
         <nav aria-label="Navigazione mobile" className="px-6">
           {/* AI Accelerator (first-level item) */}
           <AiNavItem
+            locale={locale}
+            onClick={() => setMobileOpen(false)}
+            className="w-full !px-0 py-2 text-[16px] font-medium text-np-text hover:bg-transparent"
+          />
+          <SprintNavItem
             locale={locale}
             onClick={() => setMobileOpen(false)}
             className="w-full !px-0 py-2 text-[16px] font-medium text-np-text hover:bg-transparent"

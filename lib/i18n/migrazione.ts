@@ -53,6 +53,8 @@ export type MigrazioneCopy = {
     fourMonths: { title: string; description: string }
     closingLine: string
   }
+  /** "AI powered" banner that links to the Shopify Launch Sprint landing */
+  sprintBanner: { badge: string; title: string; titleEm: string; text: string; points: string[]; cta: string }
   pricing: {
     label: string
     heading: string
@@ -217,6 +219,14 @@ const it: MigrazioneCopy = {
         'Perché il lavoro è sempre lo stesso e lo abbiamo già fatto: dati, redirect, tracking, checkout. Un metodo fisso, un calendario giorno per giorno e un team completo dal primo giorno. Il tempo che risparmi lo usi per vendere, non per aspettare.',
     },
     closingLine: 'Non un team che consegna e sparisce.\nUn team che resta 90 giorni dopo il go-live.',
+  },
+  sprintBanner: {
+    badge: 'AI powered',
+    title: 'Shopify Launch Sprint:',
+    titleEm: 'su Shopify in 14 giorni.',
+    text: 'Il metodo con cui migriamo: un team intero e l’AI su ogni area nello stesso momento. Dati, redirect, tracking e checkout pronti in due settimane, con 4 garanzie scritte.',
+    points: ['Store pronto al giorno 14', 'AI su dati, test e contenuti', 'Prezzo fisso, 4 garanzie'],
+    cta: 'Scopri lo sprint',
   },
   pricing: {
     label: 'prezzo',
@@ -440,6 +450,14 @@ const en: MigrazioneCopy = {
         'Because the work is always the same and we have done it before: data, redirects, tracking, checkout. A fixed method, a day-by-day calendar and a full team from day one. The time you save goes into selling, not waiting.',
     },
     closingLine: 'Not a team that delivers and disappears.\nA team that stays 90 days after go-live.',
+  },
+  sprintBanner: {
+    badge: 'AI powered',
+    title: 'Shopify Launch Sprint:',
+    titleEm: 'on Shopify in 14 days.',
+    text: 'The method we migrate with: a whole team and AI on every area at the same time. Data, redirects, tracking and checkout ready in two weeks, with 4 written guarantees.',
+    points: ['Store ready on day 14', 'AI on data, tests and content', 'Fixed price, 4 guarantees'],
+    cta: 'Discover the sprint',
   },
   pricing: {
     label: 'pricing',
