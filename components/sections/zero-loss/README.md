@@ -48,7 +48,7 @@ redeploy. Hreflang EN/IT + canonical are always emitted (from `ROUTE_PATHS.zeroL
   scope, FAQ, application form, minimal footer).
 - Reused site pieces: `SearchConsoleCharts` (unchanged), `Testimonials`
   (new optional `items` / `tone` / `className` props), `Accordion` (new optional
-  `renderText` prop), `Footer` (new `minimal` prop), `MarqueeScroll`,
+  `renderText` prop), `Footer` (new `minimal` prop), `PartnerLogos` (fixed partner row under the hero CTAs),
   partner/client logo assets, Trustpilot wordmark, `.button-principal`,
   `.button-secondary`, `.np-eyebrow`, `.section-card`, `container-noprob`.
 - Form: `ZlApplicationForm.tsx` (4 steps, in-memory state on back, honeypot +
