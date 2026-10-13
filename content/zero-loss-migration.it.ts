@@ -103,14 +103,6 @@ export const zeroLossIt: ZlCopy = {
     labelPrefix: 'Deliverable',
     items: [
       {
-        title: 'Il tuo store, pronto a pubblicare su Shopify',
-        short: 'Store pronto a pubblicare',
-        paragraph:
-          "Il tuo store ricostruito 1:1 su Shopify: stesse pagine, stessa struttura, stessi contenuti. Correggiamo bug ed errori che ti porti dietro da anni e applichiamo la nostra checklist sul flusso d'acquisto: ricerca, scheda prodotto, carrello, checkout. Non è un restyling. È il tuo store, più veloce e più corto da comprare.",
-        imageAlt: 'Screenshot dello staging Shopify affiancato al sito attuale, con la checklist in overlay',
-        mockup: 'staging',
-      },
-      {
         title: 'Data Migration Report',
         short: 'Data Migration Report',
         paragraph:
@@ -119,12 +111,12 @@ export const zeroLossIt: ZlCopy = {
         mockup: 'report',
       },
       {
-        title: 'Redirect Map 1:1',
-        short: 'Redirect Map',
+        title: 'Il tuo store, pronto a pubblicare su Shopify',
+        short: 'Store pronto a pubblicare',
         paragraph:
-          'Ogni URL che ha ricevuto traffico negli ultimi 12 mesi ha il suo redirect 301 verso una pagina che risponde 200. Non a mano: con un test automatico che gira prima del go-live e dopo. È il motivo per cui il traffico organico non si perde.',
-        imageAlt: 'CSV della Redirect Map e output del test automatico con 100% verde',
-        mockup: 'redirects',
+          "Il tuo store ricostruito 1:1 su Shopify: stesse pagine, stessa struttura, stessi contenuti. Correggiamo bug ed errori che ti porti dietro da anni e applichiamo la nostra checklist sul flusso d'acquisto: ricerca, scheda prodotto, carrello, checkout. Non è un restyling. È il tuo store, più veloce e più corto da comprare.",
+        imageAlt: 'Screenshot dello staging Shopify affiancato al sito attuale, con la checklist in overlay',
+        mockup: 'staging',
       },
       {
         title: 'Tracking Spec e setup server-side',
@@ -133,6 +125,14 @@ export const zeroLossIt: ZlCopy = {
           'GA4, Meta Conversions API via Stape, Google Ads, piattaforma email, consent mode. Un documento con ogni evento e come lo verifichiamo: purchase deduplicato, Event Match Quality Meta sopra 8, scarto tra ordini Shopify e GA4 sotto il 3%.',
         imageAlt: 'Pagina della Tracking Spec e screenshot dell\'Event Match Quality',
         mockup: 'tracking',
+      },
+      {
+        title: 'Redirect Map 1:1',
+        short: 'Redirect Map',
+        paragraph:
+          'Ogni URL che ha ricevuto traffico negli ultimi 12 mesi ha il suo redirect 301 verso una pagina che risponde 200. Non a mano: con un test automatico che gira prima del go-live e dopo. È il motivo per cui il traffico organico non si perde.',
+        imageAlt: 'CSV della Redirect Map e output del test automatico con 100% verde',
+        mockup: 'redirects',
       },
       {
         title: 'Go-live Checklist con la tua data',
@@ -175,7 +175,7 @@ export const zeroLossIt: ZlCopy = {
             title: 'Riconciliazione e struttura',
             duration: '10 minuti',
             detail: 'Conteggi sorgente e Shopify al 100%. Tema, navigazione, collezioni. Ti arriva un Loom.',
-            deliverables: [2],
+            deliverables: [1],
           },
           {
             day: 'Giovedì',
@@ -187,6 +187,7 @@ export const zeroLossIt: ZlCopy = {
             title: 'Staging v1',
             duration: '30 minuti',
             detail: 'Ti mandiamo il link dello staging e un Loom di 10 minuti. Feedback entro lunedì.',
+            deliverables: [2],
           },
         ],
       },
@@ -204,7 +205,7 @@ export const zeroLossIt: ZlCopy = {
             day: 'Martedì',
             title: 'Tracking e integrazioni',
             detail: 'Stape, GA4, Meta CAPI, email, consent mode. Pagamenti e spedizioni.',
-            deliverables: [4],
+            deliverables: [3],
           },
           {
             day: 'Mercoledì',
@@ -215,14 +216,14 @@ export const zeroLossIt: ZlCopy = {
             day: 'Giovedì',
             title: 'QA e test',
             detail: 'Test automatico dei 301 su tutti gli URL, ordini di prova end-to-end, 3 device, validazione del tracking.',
-            deliverables: [3],
+            deliverables: [4],
           },
           {
             day: 'Venerdì',
             title: 'Consegna dello sprint',
             duration: '45 minuti',
             detail: 'Store pronto a pubblicare, Redirect Map, Tracking Spec, Go-live Checklist. Fissiamo la data.',
-            deliverables: [1, 5],
+            deliverables: [5],
           },
         ],
       },
