@@ -28,7 +28,7 @@ export const zeroLossIt: ZlCopy = {
     ctaPrimary: 'Candidati allo sprint',
     ctaNote: 'Rispondiamo in 48 ore',
     ctaSecondary: 'Guarda i risultati',
-    logosLabel: 'Scelto da brand fashion, food e DTC',
+    logosLabel: 'Scelti da brand di Moda, Integratori e DTC eCommerce',
     trustpilotScore: '5/5',
     trustpilotLabel: '10 recensioni su Trustpilot',
   },
