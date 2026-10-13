@@ -18,6 +18,7 @@ export type RouteKey =
   | 'thankYou'
   | 'privacyPolicy'
   | 'cookiePolicy'
+  | 'demoDashboard'
 
 export const ROUTE_PATHS: Record<RouteKey, { en: string; it: string }> = {
   home:             { en: '/',                   it: '/it' },
@@ -38,6 +39,7 @@ export const ROUTE_PATHS: Record<RouteKey, { en: string; it: string }> = {
   zeroLossMigration: { en: '/shopify-migration-sprint', it: '/it/sprint-migrazione-shopify' },
   // Application form of the landing, reached from every CTA (always noindex).
   zeroLossApply:    { en: '/shopify-migration-sprint/apply', it: '/it/sprint-migrazione-shopify/candidatura' },
+  demoDashboard:    { en: '/demo-dashboard',     it: '/it/demo-dashboard' },
   blog:             { en: '/blog',               it: '/it/blog' },
   contacts:         { en: '/contacts',           it: '/it/contatti' },
   thankYou:         { en: '/thank-you',          it: '/it/grazie' },

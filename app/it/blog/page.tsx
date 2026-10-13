@@ -6,7 +6,6 @@ import { buildMetadata } from '@/lib/site'
 import SectionLabel from '@/components/ui/SectionLabel'
 import { articles } from '@/data/articles'
 import Footer from '@/components/layout/Footer'
-import { getDictionary } from '@/lib/i18n'
 
 export async function generateMetadata(): Promise<Metadata> {
   return buildMetadata({ path: '/it/blog', locale: 'it', pageKey: 'blog' })
@@ -14,7 +13,6 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default function ItalianBlogPage() {
   const locale = 'it'
-  const dict = getDictionary(locale)
 
   return (
     <>

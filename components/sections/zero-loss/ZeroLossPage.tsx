@@ -66,7 +66,7 @@ export default function ZeroLossPage({ locale }: { locale: Locale }) {
         <ZlProof locale={locale} copy={copy.proof} />
         <ZlScope copy={copy.scope} />
         <ZlFaq copy={copy.faq} />
-        <ZlApplication locale={locale} copy={copy.finalCta} form={copy.form} />
+        <ZlApplication copy={copy.finalCta} />
       </main>
       <ZlStickyCta copy={copy.sticky} priceFrom={copy.overview.tiers[0].price} />
       <Footer locale={locale} minimal />

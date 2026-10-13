@@ -476,6 +476,11 @@ export const zeroLossIt: ZlCopy = {
         answer:
           'Perché fatturato e complessità dello store vanno insieme: più prodotti, lingue, integrazioni e persone da allineare. È lo stesso criterio che usano le migliori consulenze prodottizzate. Il prezzo del tuo scaglione lo vedi qui, prima di parlarci.',
       },
+      {
+        question: "Cos'è la dashboard che ricevo il giorno 1?",
+        answer:
+          "È una dashboard di monitoraggio delle metriche chiave del tuo eCommerce (MER, margine di contribuzione, ROAS, vendite nette, ordini, CPA e retention). Al kickoff colleghiamo Shopify, le piattaforme adv e il tracking per congelare la baseline iniziale, e la usiamo durante e dopo lo sprint per verificare in tempo reale le garanzie contrattuali.",
+      },
     ],
   },
   finalCta: {
@@ -547,7 +552,8 @@ export const zeroLossIt: ZlCopy = {
       erpYes: 'Sì',
       erpWhichLabel: 'Quale?',
       erpWhichPlaceholder: 'Nome del gestionale o ERP',
-      revenueStop: 'Sotto €300k lo sprint non conviene né a te né a noi. Ci risentiamo quando cresci.',
+      revenueStop: 'Sotto €300k lo sprint richiede una valutazione preventiva. Puoi comunque proseguire e candidarti.',
+      revenueNotice: 'Nota: sotto i €300k di fatturato lo sprint richiede una valutazione preventiva per assicurarci che l’investimento sia sostenibile. Puoi comunque completare il form e inviare la candidatura: valuteremo insieme la fattibilità.',
     },
     step3: {
       timingLabel: 'Quando vuoi partire',

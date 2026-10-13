@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
-import Script from 'next/script'
-
 import Footer from '@/components/layout/Footer'
 import { PixelLead } from '@/components/thank-you/PixelLead'
+import { TidyCalEmbed } from '@/components/thank-you/TidyCalEmbed'
 
 export const metadata: Metadata = {
   title: 'Request Received',
@@ -56,17 +55,10 @@ export default function ThankYouPage() {
           </span>
         </a>
 
-        <div className="w-full max-w-[800px]">
-          <div className="tidycal-embed" data-path="noprobagency/contacts" />
-        </div>
+        <TidyCalEmbed path="noprobagency/contacts" />
       </main>
 
       <Footer />
-
-      <Script
-        src="https://asset-tidycal.b-cdn.net/js/embed.js"
-        strategy="lazyOnload"
-      />
     </>
   )
 }

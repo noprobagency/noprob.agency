@@ -13,8 +13,8 @@ export const ZL_PRODUCT_NAME = 'Shopify Launch Sprint'
 export const ZL_SOURCE_ID = 'zero-loss-migration' as const
 export const ZL_PLACEHOLDER_LABEL = '[DA CONFERMARE]'
 
-/** Demo dashboard link ([LINK DEMO]). `null` until Antonio confirms it. */
-export const ZL_DEMO_DASHBOARD_URL: string | null = null
+/** Demo dashboard link ([LINK DEMO]). */
+export const ZL_DEMO_DASHBOARD_URL: string | null = '/it/demo-dashboard'
 
 /** Urgency sources (section "Perché ora"): every fact links its source. */
 export const ZL_SOURCES = {
@@ -219,6 +219,7 @@ export type ZlCopy = {
       erpWhichLabel: string
       erpWhichPlaceholder: string
       revenueStop: string
+      revenueNotice: string
     }
     step3: {
       timingLabel: string

@@ -62,8 +62,8 @@ async function handleZeroLoss(req: NextRequest, body: unknown) {
   }
   const d = parsed.data
 
-  // Never accept what the client already stops: Shopify origin or revenue under €300k.
-  if (d.platform === 'shopify' || d.revenue_band === 'under300k') {
+  // Never accept what the client already stops: Shopify origin.
+  if (d.platform === 'shopify') {
     return NextResponse.json({ error: 'Not eligible' }, { status: 422 })
   }
 

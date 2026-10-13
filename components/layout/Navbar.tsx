@@ -8,7 +8,7 @@ import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
 import { getDictionary, type Locale } from '@/lib/i18n'
 import { ROUTE_PATHS, getAlternateLocalePath } from '@/lib/i18n/routes'
-import { colors, dropdown, logoText } from '@/lib/design-tokens'
+import { colors, dropdown } from '@/lib/design-tokens'
 import { siteAssets } from '@/lib/site'
 import { getAiCopy } from '@/lib/i18n/aiAccelerator'
 import { ZapIcon } from '@/components/sections/ai/PowerLayer'
@@ -39,16 +39,6 @@ function ChevronDown({ size = 14, color = colors.textDark }: { size?: number; co
   )
 }
 
-function CloseIcon() {
-  return (
-    <svg viewBox="0 0 256 256" width={18} height={18} aria-hidden="true" focusable="false">
-      <path
-        fill={colors.textDark}
-        d="M205.66 194.34a8 8 0 0 1-11.32 11.32L128 139.31l-66.34 66.35a8 8 0 0 1-11.32-11.32L116.69 128 50.34 61.66a8 8 0 0 1 11.32-11.32L128 116.69l66.34-66.35a8 8 0 0 1 11.32 11.32L139.31 128Z"
-      />
-    </svg>
-  )
-}
 
 function Logo({ href, size = '35px' }: { href: string; size?: string }) {
   return (
@@ -344,12 +334,6 @@ function SprintNavItem({ locale, onClick, className }: { locale: Locale; onClick
   )
 }
 
-const MENU_PARTNERS = [
-  { name: 'Shopify Partners', src: siteAssets.heroPartners[0], width: 288, height: 76, className: 'block h-[18px] w-auto object-contain opacity-75' },
-  { name: 'Google Partner', src: siteAssets.heroPartners[1], width: 288, height: 76, className: 'block h-[30px] w-auto object-contain opacity-75' },
-  { name: 'Meta Partner', src: siteAssets.heroPartners[2], width: 288, height: 76, className: 'block h-[22px] w-auto object-contain opacity-75' },
-  { name: 'Klaviyo Partners', src: siteAssets.heroPartners[3], width: 500, height: 233, className: 'block h-[24px] w-auto object-contain opacity-75' },
-] as const
 
 export default function Navbar() {
   const pathname = usePathname()
@@ -368,7 +352,6 @@ export default function Navbar() {
   const contactsHref = isAiPage ? '#candidatura' : ROUTE_PATHS.contacts[locale]
   const reserveLabel = isAiPage ? getAiCopy(locale).hero.cta : t.navbar.reserveCta
 
-  const mobileNav = [...t.navbar.serviceItems, ...t.navbar.navLinks]
 
   useEffect(() => {
     const checkScroll = () => {

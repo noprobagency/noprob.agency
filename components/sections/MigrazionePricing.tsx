@@ -78,7 +78,7 @@ export default function MigrazionePricing({
                   >
                     {tier.price}
                     <span className="ml-0.5 font-sans text-[10px] font-medium text-[#777] min-[810px]:text-[12px]">
-                      /mese
+                      {locale === 'en' ? '/mo' : '/mese'}
                     </span>
                   </span>
                 </div>

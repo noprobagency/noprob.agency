@@ -2,6 +2,7 @@ import Testimonials from '@/components/sections/Testimonials'
 import type { Locale } from '@/lib/i18n'
 import type { ZlCopy } from '@/content/zero-loss-migration'
 import ZlSeoCharts from './ZlSeoCharts'
+import ZlDashboardLink from './ZlDashboardLink'
 
 /**
  * Section 9 (#prove): real results of two migrations (Integratori Nazzi DTC from
@@ -19,6 +20,10 @@ export default function ZlProof({ locale, copy }: { locale: Locale; copy: ZlCopy
 
         <div className="mt-6 min-[810px]:mt-10">
           <ZlSeoCharts copy={copy.charts} lang={locale === 'it' ? 'it' : 'en'} />
+        </div>
+
+        <div className="mt-8 flex justify-center min-[810px]:mt-10">
+          <ZlDashboardLink label={copy.dashboardCta} position="proof" locale={locale} />
         </div>
 
         <Testimonials

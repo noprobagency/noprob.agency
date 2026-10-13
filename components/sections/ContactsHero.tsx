@@ -9,7 +9,7 @@ const copy = {
     headingMid: 'eCommerce ',
     headingEm: 'Expert',
     description:
-      'Once you submit the form, you’ll be contacted by our senior ecommerce manager. Together, you’ll analyze your current situation and define the best next steps for your growth.',
+      'Once you submit the form, you’ll be contacted by our senior eCommerce manager. Together, you’ll analyze your current situation and define the best next steps for your growth.',
   },
   it: {
     trust: 'Scelti da brand eCommerce di Fashion, Integratori e DTC',
@@ -17,7 +17,7 @@ const copy = {
     headingMid: '',
     headingEm: 'esperto eCommerce',
     description:
-      'Una volta inviato il modulo, verrai contattato dal nostro senior ecommerce manager. Insieme analizzerete la tua situazione attuale e definirete i passi migliori per la tua crescita.',
+      'Una volta inviato il modulo, verrai contattato dal nostro senior eCommerce manager. Insieme analizzerete la tua situazione attuale e definirete i passi migliori per la tua crescita.',
   },
 } as const
 

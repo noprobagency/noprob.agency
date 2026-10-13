@@ -174,7 +174,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'metrics',
-      merValue: '6,8',
+      merValue: '6',
       note: 'Da aprile a dicembre 2023: da qui partono i dati della dashboard.',
     },
     {
@@ -325,11 +325,6 @@ export const cumini: UseCase = {
       alt: 'Dashboard metriche mensili: ROAS, MER, margine',
     },
     {
-      type: 'image',
-      src: '/images/use-case-cumini/use-case-cumini3.png',
-      alt: 'Shopify analytics: sessioni, vendite, ordini, conversion rate',
-    },
-    {
       type: 'paragraph',
       text: 'Con Shopify, abbiamo accesso a una dashboard chiara, facilmente integrabile con strumenti di analisi esterni e capace di restituire metriche che prima calcolavamo manualmente su fogli Google.',
     },
@@ -449,7 +444,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'metrics',
-      merValue: '3,7',
+      merValue: '3',
       growthValue: '+15,4%',
       note: 'Da gennaio a metà ottobre 2026, confrontato con tutto il 2025. Anno ancora in corso: il MER scende perché stiamo investendo di più in advertising.',
     },
@@ -462,25 +457,20 @@ export const cumini: UseCase = {
       text: 'Metodo, numeri, crescita: la combinazione che fa la differenza',
     },
     {
-      type: 'image',
-      src: '/images/use-case-cumini/use-case-cumini4.png',
-      alt: 'Grafico MER in decrescita e fatturato generale in crescita',
-    },
-    {
       type: 'paragraph',
       text: 'La crescita di un eCommerce fashion non è mai lineare: alterna fasi di accelerazione, momenti di stallo e periodi in cui si lavora per costruire, non per raccogliere.',
     },
     {
       type: 'paragraph',
-      text: 'Il grafico qui sopra racconta questa dinamica meglio di qualsiasi parola. Il MER tende a diminuire nel tempo, segno di un mercato sempre più competitivo e di margini che si riducono con la scala. Eppure, il fatturato continua a crescere.',
+      text: 'Il MER lo mostra bene. Era 6,8 nel 2023 ed è 3,7 nel 2026: scende man mano che investiamo di più in advertising, in un mercato sempre più competitivo. Eppure le vendite online crescono: +26,3% nel 2025 e, a metà ottobre 2026, già il 15,4% in più di tutto il 2025.',
     },
     {
       type: 'paragraph',
-      text: 'Il vero indicatore di valore è il margine di contribuzione, cioè i ricavi netti anno su anno (la linea verde nel grafico). È questa la metrica che conta davvero: quanto l’azienda guadagna, di netto, ogni anno.',
+      text: 'Per questo non guardiamo solo il MER, ma anche il margine di contribuzione: quanto resta all’azienda dopo pubblicità e costi. È la metrica che conta davvero. Su base annua il marketing è in positivo sia nel 2025 sia nel 2026.',
     },
     {
       type: 'paragraph',
-      text: 'Naturalmente, la crescita dei ricavi netti non va interpretata come una linea costante in ascesa, ma come un valore che si costruisce e si accumula nel tempo. Ci possono essere anni, come il 2025, in cui si registra una lieve flessione dovuta agli investimenti lato piattaforma, pur mantenendo una base positiva e solida.',
+      text: 'Non è una linea sempre in salita. Alcuni mesi di lancio chiudono sotto il pareggio, perché costruiscono la domanda che arriva con i saldi. Conta il risultato dell’anno, non il singolo mese.',
     },
     {
       type: 'paragraph',
@@ -683,7 +673,7 @@ export const cumini: UseCase = {
       type: 'paragraph',
       text: 'Despite the technical limitations, eCommerce revenue recorded significant growth.',
     },
-    { type: 'metrics', merValue: '6.8', note: 'April to December 2023: this is where the dashboard data starts.' },
+    { type: 'metrics', merValue: '6', note: 'April to December 2023: this is where the dashboard data starts.' },
     { type: 'h3', text: '2024: toward a new infrastructure' },
     {
       type: 'paragraph',
@@ -811,11 +801,6 @@ export const cumini: UseCase = {
       alt: 'Monthly metrics dashboard: ROAS, MER, margin',
     },
     {
-      type: 'image',
-      src: '/images/use-case-cumini/use-case-cumini3.png',
-      alt: 'Shopify analytics: sessions, sales, orders, conversion rate',
-    },
-    {
       type: 'paragraph',
       text: 'With Shopify, we have access to a clear dashboard, easily integrable with external analysis tools and capable of returning metrics that we previously calculated manually on Google Sheets.',
     },
@@ -926,7 +911,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'metrics',
-      merValue: '3.7',
+      merValue: '3',
       growthValue: '+15.4%',
       note: 'January to mid October 2026, compared with the whole of 2025. Year still in progress: MER goes down because we are investing more in advertising.',
     },
@@ -936,25 +921,20 @@ export const cumini: UseCase = {
     },
     { type: 'h2', text: 'Method, numbers, growth: the combination that makes the difference' },
     {
-      type: 'image',
-      src: '/images/use-case-cumini/use-case-cumini4.png',
-      alt: 'MER decreasing chart and overall revenue growth',
-    },
-    {
       type: 'paragraph',
       text: 'The growth of a fashion eCommerce is never linear: it alternates phases of acceleration, moments of stagnation, and periods in which work is done to build, not to harvest.',
     },
     {
       type: 'paragraph',
-      text: 'The chart above tells this dynamic better than any words. The MER tends to decrease over time, a sign of an increasingly competitive market and margins that shrink with scale. Yet, revenue continues to grow.',
+      text: 'The MER shows it well. It was 6.8 in 2023 and is 3.7 in 2026: it goes down as we invest more in advertising, in an increasingly competitive market. Yet online sales keep growing: +26.3% in 2025 and, by mid October 2026, already 15.4% more than the whole of 2025.',
     },
     {
       type: 'paragraph',
-      text: 'The real value indicator is the contribution margin, that is, net revenue year over year (the green line in the chart). This is the metric that really matters: how much the company earns, net, every year.',
+      text: 'That is why we do not look at MER alone, but also at contribution margin: what the company keeps after advertising and costs. It is the metric that really matters. On a yearly basis marketing is positive in both 2025 and 2026.',
     },
     {
       type: 'paragraph',
-      text: 'Naturally, the growth of net revenue should not be interpreted as a constantly ascending line, but as a value that is built and accumulated over time. There can be years, like 2025, in which a slight dip is recorded due to platform investments, while still maintaining a positive and solid base.',
+      text: 'It is not a line that always goes up. Some launch months close below break-even, because they build the demand that arrives with the sales. What counts is the result of the year, not the single month.',
     },
     {
       type: 'paragraph',

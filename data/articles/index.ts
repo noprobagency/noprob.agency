@@ -364,6 +364,10 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
+        text: 'If you are on Shopify and want to combine a technical foundation built for conversion with a structured migration process, the [Shopify Launch Sprint](/shopify-migration-sprint) gives you a fixed timeline, a public price and 4 written guarantees — without months of uncertainty.',
+      },
+      {
+        type: 'paragraph',
         text: '[Book a consultation](/contacts).',
       },
       { type: 'h2', text: 'Frequently Asked Questions' },
@@ -589,7 +593,7 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: "**Le reviews richieste troppo presto.** Chiedere una recensione il giorno dopo la consegna, quando il cliente non ha ancora usato abbastanza il prodotto, produce recensioni mediocri. La ricerca indica che il momento ottimale dipende dal ciclo d'uso del prodotto. Per integratori e skincare: +14 o +30 giorni. Per fashion: dopo il primo utilizzo esteso, segnalabile con una seconda email a 7-10 giorni.",
+        text: "**Le recensioni richieste troppo presto.** Chiedere una recensione il giorno dopo la consegna, quando il cliente non ha ancora usato abbastanza il prodotto, produce recensioni mediocri. La ricerca indica che il momento ottimale dipende dal ciclo d'uso del prodotto. Per integratori e skincare: +14 o +30 giorni. Per fashion: dopo il primo utilizzo esteso, segnalabile con una seconda email a 7-10 giorni.",
       },
       {
         type: 'paragraph',
@@ -619,6 +623,10 @@ export const articles: Article[] = [
       {
         type: 'paragraph',
         text: "Se vuoi un'analisi più approfondita di quello che frena le conversioni del tuo store (dal tracking alla struttura delle pagine), il [nostro team](/it/team-ecommerce-dedicato) fa questo su base mensile per i brand che seguiamo in [partnership a lungo termine](/it/casi-studio/cumini-luxury-fashion-ecommerce).",
+      },
+      {
+        type: 'paragraph',
+        text: 'Se sei su Shopify e vuoi unire una base tecnica ottimizzata per le conversioni con un processo di migrazione strutturato, lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) ti dà una timeline fissa, un prezzo pubblico e 4 garanzie scritte — senza mesi di incertezza.',
       },
       {
         type: 'paragraph',
@@ -660,9 +668,9 @@ export const articles: Article[] = [
     seoTitleIt: 'Cos’è Shopify e come funziona: guida 2026',
     titleIt: "Cos'è Shopify: guida completa alla piattaforma eCommerce (2026)",
     excerpt:
-      'How Shopify actually works, what it costs, and whether it is worth it. Written by a Shopify Partner with 7+ years running real brand stores.',
+      'How Shopify actually works, what it costs, and whether it is worth it. Written by a Shopify Partner with 7+ years of eCommerce projects.',
     excerptIt:
-      "Cos'è Shopify, come funziona davvero e per chi è adatto. La guida scritta da un Shopify Partner con 7+ anni su clienti italiani.",
+      "Cos'è Shopify, come funziona davvero e per chi è adatto. La guida scritta da un Shopify Partner con oltre 7 anni di progetti eCommerce.",
     ledeEn:
       "Written from the inside: what Shopify actually does, where it works exceptionally well, where it has limits, and when it makes sense to move to it.",
     ledeIt:
@@ -737,7 +745,7 @@ export const articles: Article[] = [
     content: [
       {
         type: 'paragraph',
-        text: 'I have been working with Shopify for over seven years. Not writing about it, not reviewing it from the outside. Actually building stores, migrating brands from platforms that no longer worked for them, and managing the day-to-day operations of ecommerce businesses that take this seriously.',
+        text: 'I have been working on eCommerce projects for over seven years, today on Shopify. Not writing about it, not reviewing it from the outside. Actually building stores, migrating brands from platforms that no longer worked for them, and managing the day-to-day operations of ecommerce businesses that take this seriously.',
       },
       {
         type: 'paragraph',
@@ -937,7 +945,7 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: 'We are preparing a complete Shopify migration guide covering pre-migration checklist, realistic timelines, and cost structures. If you are evaluating a migration in the meantime, [reach out directly](/contacts) and we will give you an honest assessment of your situation.',
+        text: 'If you are evaluating a migration, see [how we work on Shopify migrations](/shopify-migration) or the [Shopify Launch Sprint](/shopify-migration-sprint): a fixed calendar, a public price and 4 written guarantees. Or [reach out directly](/contacts) and we will give you an honest assessment of your situation.',
       },
       { type: 'h2', text: 'Is Shopify Worth It? The Honest Assessment' },
       {
@@ -1085,13 +1093,17 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
+        text: 'If you already know Shopify is the right move and want a structured, risk-free transition, the [Shopify Launch Sprint](/shopify-migration-sprint) gives you a fixed-calendar migration with a public price and 4 written guarantees.',
+      },
+      {
+        type: 'paragraph',
         text: '[Book a consultation with the NoProb team](/contacts).',
       },
     ],
     contentIt: [
       {
         type: 'paragraph',
-        text: 'Gestisco eCommerce su Shopify da oltre sette anni. Ho migrato brand da piattaforme che non reggevano più il peso del business, ho seguito store dal lancio alla crescita, ho visto da vicino cosa funziona e cosa brucia risorse inutilmente.',
+        text: 'Lavoro su progetti eCommerce da oltre sette anni, oggi su Shopify. Ho migrato brand da piattaforme che non reggevano più il peso del business, ho seguito store dal lancio alla crescita, ho visto da vicino cosa funziona e cosa brucia risorse inutilmente.',
       },
       {
         type: 'paragraph',
@@ -1295,7 +1307,7 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: 'Stiamo preparando una guida completa alla migrazione su Shopify, con checklist reale, timeline e costi. Se nel frattempo vuoi capire se la tua situazione è quella giusta per una migrazione, [scrivici](/it/contatti) e ti diciamo la nostra valutazione onesta.',
+        text: 'Se stai valutando una migrazione, guarda [come lavoriamo sulle migrazioni a Shopify](/it/migrazione-shopify) o lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify): calendario fisso, prezzo pubblico e 4 garanzie scritte. Oppure [scrivici](/it/contatti) e ti diciamo la nostra valutazione onesta.',
       },
       { type: 'h2', text: 'Per chi è adatto Shopify (e per chi no)' },
       {
@@ -1425,7 +1437,11 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: 'Una cosa che ho imparato in sette anni di questo lavoro: la piattaforma sbagliata frena molto più di quanto si pensi. La piattaforma giusta, da sola, non risolve tutto. Ma crea le condizioni perché il resto funzioni.',
+        text: "Una cosa che ho imparato in sette anni di questo lavoro: la piattaforma sbagliata frena molto più di quanto si pensi. La piattaforma giusta, da sola, non risolve tutto. Ma crea le condizioni perché il resto funzioni.",
+      },
+      {
+        type: 'paragraph',
+        text: 'Se sai già che Shopify è la direzione giusta e vuoi una transizione strutturata e senza rischi, lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) ti dà una migrazione a calendario fisso, con prezzo pubblico e 4 garanzie scritte.',
       },
       {
         type: 'paragraph',
@@ -1720,7 +1736,7 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: 'An Italian luxury fashion brand (multibrand boutique, physical and online presence). Six-figure monthly online revenue, seven-figure total company revenue. When we took them on in 2022, they were on an Italian platform with integrated ERP: rigid, slow, not scalable.',
+        text: 'An Italian luxury fashion brand (multibrand boutique, physical and online presence). Physical stores and an online store. When we took them on in 2022, they were on an Italian platform with integrated ERP: rigid, slow, not scalable.',
       },
       {
         type: 'paragraph',
@@ -1731,7 +1747,7 @@ export const articles: Article[] = [
         items: [
           'Migration to Shopify in May 2025, connected to the stores proprietary ERP',
           'Full server-side tracking (Stape score 92/100)',
-          'Stable team: same developer, same media buyer, same email specialist for all 4 years',
+          'Same partner and the same direction for all 4 years',
           'Online sales in the 12 months after the migration: **+67.7%** on the 12 months before',
           'Orders: **+49.4%**, average order value: **+12.2%** in the same comparison',
           'Six figure months: one before Shopify, four after',
@@ -1808,6 +1824,10 @@ export const articles: Article[] = [
       {
         type: 'paragraph',
         text: "If you want to discuss a concrete case, [let's talk](/contacts). At noprob.agency we work with only three brands at a time in long-term partnership. It's not a marketing tactic, it's the real capacity to follow them well.",
+      },
+      {
+        type: 'paragraph',
+        text: 'If you want to build that solid technical foundation — starting with the platform — the [Shopify Launch Sprint](/shopify-migration-sprint) is a structured 10-day migration process with a fixed timeline, a public price and 4 written guarantees.',
       },
     ],
     slugIt: 'strategia-ecommerce-long-term',
@@ -2084,7 +2104,7 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: 'Un brand luxury fashion italiano (multibrand boutique, presenza fisica e online). Fatturato online a sei cifre mensili, fatturato aziendale a sette cifre. Quando li abbiamo presi in carico nel 2022, erano su una piattaforma italiana con gestionale integrato: rigida, lenta, non scalabile.',
+        text: 'Un brand luxury fashion italiano (multibrand boutique, presenza fisica e online). Negozi fisici e store online. Quando li abbiamo presi in carico nel 2022, erano su una piattaforma italiana con gestionale integrato: rigida, lenta, non scalabile.',
       },
       {
         type: 'paragraph',
@@ -2095,7 +2115,7 @@ export const articles: Article[] = [
         items: [
           'Migrazione a Shopify a maggio 2025, collegata al gestionale proprietario dei negozi',
           'Tracking server-side completo (Stape score 92/100)',
-          'Team stabile: stesso developer, stessa media buyer, stessa email specialist per tutti i 4 anni',
+          'Stesso partner e stessa regia per tutti i 4 anni',
           'Vendite online nei 12 mesi dopo la migrazione: **+67,7%** sui 12 mesi prima',
           'Ordini: **+49,4%**, scontrino medio: **+12,2%** nello stesso confronto',
           'Mesi a sei cifre: uno prima di Shopify, quattro dopo',
@@ -2172,6 +2192,10 @@ export const articles: Article[] = [
       {
         type: 'paragraph',
         text: 'Se vuoi confrontarti su un caso concreto, [parliamoci](/it/contatti). A noprob.agency lavoriamo solo con tre brand alla volta in long-term partnership. Non è una tattica di marketing, è capacità reale di seguirli bene.',
+      },
+      {
+        type: 'paragraph',
+        text: 'Se vuoi costruire quella base tecnica solida — a partire dalla piattaforma — lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) è un processo di migrazione strutturato in 10 giorni, con timeline fissa, prezzo pubblico e 4 garanzie scritte.',
       },
     ],
   },

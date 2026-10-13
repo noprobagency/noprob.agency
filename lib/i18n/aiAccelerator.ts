@@ -18,9 +18,6 @@ import type { Locale } from '@/lib/i18n'
 /** TidyCal booking page embedded on the AI Accelerator thank-you page. */
 export const AI_TIDYCAL_PATH = 'noprobagency/ai-call'
 
-/** Feature flag: show the "NEW" badge next to the AI Accelerator nav item. */
-export const AI_NAV_SHOW_NEW_BADGE = true
-
 type QuestionCards = { label: string; options: string[] }
 
 export type AiCopy = {

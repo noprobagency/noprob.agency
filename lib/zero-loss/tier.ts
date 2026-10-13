@@ -19,6 +19,7 @@ import {
  */
 export function tierForRevenue(band: ZlRevenueBand | ''): ZlTierId | null {
   switch (band) {
+    case 'under300k':
     case '300k-2m':
       return 1
     case '2m-20m':

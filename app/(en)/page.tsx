@@ -10,7 +10,7 @@ import ProblemSection from '@/components/sections/ProblemSection'
 import ResultsCarousel from '@/components/sections/ResultsCarousel'
 import SolutionSection from '@/components/sections/SolutionSection'
 import AiServiceCard from '@/components/sections/ai/AiServiceCard'
-import { buildMetadata, siteConfig } from '@/lib/site'
+import { buildMetadata } from '@/lib/site'
 
 export async function generateMetadata(): Promise<Metadata> {
   return buildMetadata({ path: '/', locale: 'en', pageKey: 'home' })

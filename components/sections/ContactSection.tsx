@@ -23,16 +23,18 @@ const copy = {
     thatsEm: 'noprob agency',
     intro:
       'NoProb Agency is the technical partner that makes eCommerce simple. A 7/7 team of developers, designers, and strategists combining code, data, and creativity to help Shopify brands scale without stress.',
-    nameLabel: 'Name and Surname',
+    nameLabel: 'Full name',
     companyLabel: 'Company Name',
-    emailLabel: 'Email send you more info',
+    emailLabel: 'Email (we’ll send you more info)',
     phoneLabel: 'Phone number',
-    urlLabel: 'eCommerce’s URL',
-    interestLabel: 'Are you interested in?',
+    urlLabel: 'Your eCommerce URL',
+    interestLabel: 'What are you interested in?',
     interestOptions: [
       'I want to launch my first eCommerce',
       'I want to implement an expert eCommerce team inside my company',
       'I want to rebuild my eCommerce website',
+      'I want to migrate to Shopify',
+      'AI Accelerator',
       'Other',
     ],
     revenueLabel: 'How much does your eCommerce generate in annual revenue?',
@@ -53,7 +55,7 @@ const copy = {
     select: 'Select…',
     badgeSupport: '7/7 support',
     badgeNda: 'NDA pre-signed after submission',
-    badgeTrial: 'Trial Discount',
+    badgeTrial: 'First sprint at half price',
     submit: 'Send Your Request',
     submitting: 'Sending...',
     afterSubmit: 'You’ll get direct access to our eCommerce manager in the next step.',
@@ -77,6 +79,8 @@ const copy = {
       'Voglio lanciare il mio primo eCommerce',
       'Voglio inserire un team eCommerce esperto nella mia azienda',
       'Voglio rifare il mio sito eCommerce',
+      'Voglio migrare a Shopify',
+      'AI Accelerator',
       'Altro',
     ],
     revenueLabel: 'Quanto fattura annualmente il tuo eCommerce?',
@@ -97,7 +101,7 @@ const copy = {
     select: 'Seleziona…',
     badgeSupport: 'Supporto 7/7',
     badgeNda: 'NDA pre-firmato dopo l’invio',
-    badgeTrial: 'Sconto di prova',
+    badgeTrial: 'Primo sprint a metà prezzo',
     submit: 'Invia la tua richiesta',
     submitting: 'Invio in corso...',
     afterSubmit: 'Avrai accesso diretto al nostro eCommerce manager nel passaggio successivo.',
@@ -108,15 +112,19 @@ const copy = {
 
 const reviews = {
   en: {
+    antonio:
+      'Collaborating with NoProb Agency for the development of our eCommerce was an <strong>extremely positive experience</strong>. From the very first stages of the project, the team stood out for its clear communication, technical expertise, and listening skills.||Every step, from graphic design to going live, was <strong>handled with professionalism</strong>…',
     cristiana:
       'I am very satisfied with my collaboration with the agency, and especially with Antonio, who <strong>supported me every step</strong> of the way with my website redesign and the promotion of my products via eCommerce.||Whenever I need help, Antonio is always very available, which I really appreciate. <strong>A very positive experience!</strong>',
     camilla:
       'Collaborating with Antonio on the creation of our <strong>eCommerce website</strong> was an extremely positive experience.||He demonstrated great professionalism, technical competence, and remarkable attention to detail, managing to transform our ideas into a functional, modern, and high-performing <strong>eCommerce website</strong>…',
     antonioRole: 'Sfogliate&Sfogliatelle - DTC eCommerce Owner',
-    cristianaRole: 'Terapia Flterapiafloreale.it - Supplement eCommerce',
+    cristianaRole: 'terapiafloreale.it - Supplement eCommerce',
     camillaRole: 'DDglobal Store - B2B eCommerce Owner',
   },
   it: {
+    antonio:
+      'Collaborare con NoProb Agency per lo sviluppo del nostro eCommerce è stata un’<strong>esperienza estremamente positiva</strong>. Fin dalle prime fasi del progetto, il team si è distinto per chiarezza nella comunicazione, competenza tecnica e capacità di ascolto.||Ogni passaggio, dalla progettazione grafica al go-live, è stato <strong>gestito con professionalità</strong>…',
     cristiana:
       'Sono molto soddisfatta della collaborazione con l’agenzia e in particolare con Antonio, che mi <strong>ha supportata in ogni fase</strong> del rifacimento del mio sito e della promozione dei miei prodotti tramite eCommerce.||Ogni volta che ho bisogno di aiuto, Antonio è sempre molto disponibile, cosa che apprezzo davvero. <strong>Un’esperienza molto positiva!</strong>',
     camilla:
@@ -250,7 +258,7 @@ export default function ContactSection({
 
             {/* Testimonial Card */}
             <article className="flex h-auto flex-col items-start justify-between rounded-[16px] border-[6px] border-[#f8f8f8] bg-noprob-card p-[24px] shadow-none overflow-visible gap-[15px]">
-              <ReviewText text={r.cristiana} />
+              <ReviewText text={r.antonio} />
 
               <div className="mt-0 w-full flex flex-col gap-[15px]">
                 <div className="h-5 w-auto">

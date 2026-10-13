@@ -476,6 +476,11 @@ export const zeroLossEn: ZlCopy = {
         answer:
           'Because revenue and store complexity go together: more products, languages, integrations and people to align. It is the same criterion the best productized consultancies use. You see the price of your tier here, before talking to us.',
       },
+      {
+        question: 'What is the dashboard I receive on day 1?',
+        answer:
+          'It is a monitoring dashboard for the key metrics of your eCommerce (MER, contribution margin, ROAS, net sales, orders, CPA and retention). At kickoff we connect Shopify, your ad platforms and tracking to freeze your initial baseline, and we use it during and after the sprint to track our written guarantees in real time.',
+      },
     ],
   },
   finalCta: {
@@ -547,7 +552,8 @@ export const zeroLossEn: ZlCopy = {
       erpYes: 'Yes',
       erpWhichLabel: 'Which one?',
       erpWhichPlaceholder: 'Name of the ERP or management system',
-      revenueStop: 'Under €300k the sprint is not worth it, for you or for us. Let us talk again when you grow.',
+      revenueStop: 'Under €300k the sprint requires an initial assessment. You can still apply and we will evaluate feasibility together.',
+      revenueNotice: 'Note: for stores under €300k, the sprint requires a feasibility assessment to ensure the investment is sustainable. You can still complete and submit your application: we will evaluate feasibility together before starting.',
     },
     step3: {
       timingLabel: 'When do you want to start',

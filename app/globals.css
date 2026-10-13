@@ -685,14 +685,13 @@
 
 /* ============================================================
    AI Accelerator "power layer"
-   Electric accent scoped to the AI Accelerator landing + nav item.
+   Electric accent scoped to the AI Accelerator landing.
    Only transform / opacity / stroke-dashoffset / background-position
    are animated. Everything is frozen by the global
    prefers-reduced-motion rule at the top of this file.
    ============================================================ */
 
 .ai-scope,
-.ai-nav-item,
 .ai-header-line,
 .ai-sticky-bar {
   --ai-accent: #2f6bff;
@@ -703,56 +702,6 @@
   --ai-accent-on-dark: #7fa5ff;
 }
 
-/* --- Nav item: pulsing underline + travelling impulse on hover --- */
-.ai-nav-item {
-  position: relative;
-}
-
-.ai-nav-item::after {
-  content: '';
-  position: absolute;
-  left: 14px;
-  right: 14px;
-  bottom: 4px;
-  height: 2px;
-  border-radius: 2px;
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    var(--ai-accent) 35%,
-    var(--ai-accent) 65%,
-    transparent 100%
-  );
-  background-size: 100% 100%;
-  opacity: 0.55;
-  animation: ai-underline-pulse 3.5s ease-in-out infinite;
-  pointer-events: none;
-}
-
-.ai-nav-item:hover::after {
-  background: linear-gradient(
-    90deg,
-    var(--ai-accent-glow) 0%,
-    var(--ai-accent-glow) 35%,
-    #fff 50%,
-    var(--ai-accent-glow) 65%,
-    var(--ai-accent-glow) 100%
-  );
-  background-size: 250% 100%;
-  opacity: 1;
-  animation: ai-underline-travel 1.1s linear infinite;
-}
-
-@keyframes ai-underline-pulse {
-  0%,
-  100% {
-    opacity: 0.35;
-  }
-  50% {
-    opacity: 0.8;
-  }
-}
-
 @keyframes ai-underline-travel {
   from {
     background-position: 120% 0;
@@ -760,20 +709,6 @@
   to {
     background-position: -120% 0;
   }
-}
-
-.ai-nav-badge {
-  display: inline-flex;
-  align-items: center;
-  border-radius: 4px;
-  background: var(--ai-accent);
-  color: #fff;
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  line-height: 1;
-  padding: 3px 4px;
-  transform: translateY(-6px);
 }
 
 /* --- Header bottom electric line (only while on the AI page) --- */

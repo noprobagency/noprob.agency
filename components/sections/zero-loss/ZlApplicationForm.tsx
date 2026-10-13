@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
 import type { Locale } from '@/lib/i18n'
 import { ROUTE_PATHS } from '@/lib/i18n/routes'
@@ -120,6 +121,7 @@ function Choice<K extends string>({
 }
 
 export default function ZlApplicationForm({ locale, copy }: { locale: Locale; copy: ZlCopy['form'] }) {
+  const router = useRouter()
   const [step, setStep] = useState(0)
   const [values, setValues] = useState<Values>(EMPTY)
   const [privacy, setPrivacy] = useState(false)
@@ -292,6 +294,7 @@ export default function ZlApplicationForm({ locale, copy }: { locale: Locale; co
       // Standard Lead on Pixel + GA4 + CAPI (shared event_id), like the other forms.
       void trackEvent('Lead', { content_category: 'zero-loss-migration', content_name: 'Zero-Loss Migration Sprint' })
       setStatus('success')
+      router.push(ROUTE_PATHS.thankYou[locale])
     } catch (err) {
       console.error('[zero-loss-form] submit error:', err)
       setServerError(copy.errors.network)
@@ -309,13 +312,13 @@ export default function ZlApplicationForm({ locale, copy }: { locale: Locale; co
           {fill(copy.success.text, { email: values.email.trim() })}
         </p>
         <div className="mt-6">
-          <ZlDashboardLink label={copy.success.dashboardCta} position="success" />
+          <ZlDashboardLink label={copy.success.dashboardCta} position="success" locale={locale} />
         </div>
       </div>
     )
   }
 
-  const stopped = (step === 0 && stoppedByShopify) || (step === 1 && stoppedByRevenue)
+  const stopped = step === 0 && stoppedByShopify
   const stepTitle = copy.steps[step]?.title ?? ''
 
   return (
@@ -415,63 +418,60 @@ export default function ZlApplicationForm({ locale, copy }: { locale: Locale; co
               onChange={(v) => set('revenue', v)}
               error={errors.revenue}
             />
-            {stoppedByRevenue ? (
-              <p role="status" className="rounded-[12px] border border-np-border bg-white p-4 font-sans text-[15px] font-medium leading-[1.5em] tracking-[-0.02em] text-np-text">
-                {copy.step2.revenueStop}
-              </p>
-            ) : (
-              <>
-                <Choice
-                  name="zl-products"
-                  label={copy.step2.productsLabel}
-                  options={copy.step2.products}
-                  value={values.products}
-                  onChange={(v) => set('products', v)}
-                  error={errors.products}
-                  columns={3}
+            {values.revenue === 'under300k' && (
+              <div role="status" className="rounded-[12px] border border-amber-300 bg-amber-50/90 p-4 font-sans text-[14px] font-medium leading-[1.5em] tracking-[-0.02em] text-amber-950">
+                {copy.step2.revenueNotice}
+              </div>
+            )}
+            <Choice
+              name="zl-products"
+              label={copy.step2.productsLabel}
+              options={copy.step2.products}
+              value={values.products}
+              onChange={(v) => set('products', v)}
+              error={errors.products}
+              columns={3}
+            />
+            <Choice
+              name="zl-languages"
+              label={copy.step2.languagesLabel}
+              options={copy.step2.languages}
+              value={values.languages}
+              onChange={(v) => set('languages', v)}
+              error={errors.languages}
+              columns={3}
+            />
+            <Choice
+              name="zl-erp"
+              label={copy.step2.erpLabel}
+              options={[
+                { value: 'no', label: copy.step2.erpNo },
+                { value: 'yes', label: copy.step2.erpYes },
+              ]}
+              value={values.erp}
+              onChange={(v) => set('erp', v)}
+              error={errors.erp}
+            />
+            {values.erp === 'yes' && (
+              <div className="flex flex-col gap-[6px]">
+                <label htmlFor="zl-erpName" className={labelClass}>
+                  {copy.step2.erpWhichLabel}
+                </label>
+                <input
+                  id="zl-erpName"
+                  type="text"
+                  value={values.erpName}
+                  onChange={(e) => set('erpName', e.target.value)}
+                  placeholder={copy.step2.erpWhichPlaceholder}
+                  aria-invalid={!!errors.erpName}
+                  className={inputClass(!!errors.erpName)}
                 />
-                <Choice
-                  name="zl-languages"
-                  label={copy.step2.languagesLabel}
-                  options={copy.step2.languages}
-                  value={values.languages}
-                  onChange={(v) => set('languages', v)}
-                  error={errors.languages}
-                  columns={3}
-                />
-                <Choice
-                  name="zl-erp"
-                  label={copy.step2.erpLabel}
-                  options={[
-                    { value: 'no', label: copy.step2.erpNo },
-                    { value: 'yes', label: copy.step2.erpYes },
-                  ]}
-                  value={values.erp}
-                  onChange={(v) => set('erp', v)}
-                  error={errors.erp}
-                />
-                {values.erp === 'yes' && (
-                  <div className="flex flex-col gap-[6px]">
-                    <label htmlFor="zl-erpName" className={labelClass}>
-                      {copy.step2.erpWhichLabel}
-                    </label>
-                    <input
-                      id="zl-erpName"
-                      type="text"
-                      value={values.erpName}
-                      onChange={(e) => set('erpName', e.target.value)}
-                      placeholder={copy.step2.erpWhichPlaceholder}
-                      aria-invalid={!!errors.erpName}
-                      className={inputClass(!!errors.erpName)}
-                    />
-                    {errors.erpName && (
-                      <span role="alert" className={errorClass}>
-                        {errors.erpName}
-                      </span>
-                    )}
-                  </div>
+                {errors.erpName && (
+                  <span role="alert" className={errorClass}>
+                    {errors.erpName}
+                  </span>
                 )}
-              </>
+              </div>
             )}
           </>
         )}

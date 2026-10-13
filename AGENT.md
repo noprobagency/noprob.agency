@@ -182,6 +182,21 @@ Every new post under `/blog/[slug]` (or `/it/blog/[slugIt]`) must include:
 - At least 2 outbound links to authoritative sources (McKinsey, Bain, HBR, Shopify, etc.)
 - Sitemap is generated dynamically from the `articles` array in `app/sitemap.ts` - no manual entry required
 
+### Internal link building priority (regola fissa per ogni articolo)
+
+Every article (new or updated) **must** include these internal links, in priority order:
+
+1. **Sprint** (massima priorità): almeno 1 link a `/it/sprint-migrazione-shopify` (IT) e `/shopify-migration-sprint` (EN) nel corpo o nella conclusione. La CTA Sprint deve apparire **prima** della CTA generica contatti.
+2. **Servizio migrazione**: almeno 1 link a `/it/migrazione-shopify` (IT) / `/shopify-migration` (EN) — a meno che l'articolo non linki già lo Sprint, che rimanda alla stessa offerta.
+3. **Casi studio o team page**: almeno 1 link a `/it/casi-studio/[slug]` o `/it/team-ecommerce-dedicato` per social proof.
+4. **Altri servizi** (AI Accelerator, ecc.): solo se tematicamente rilevanti, mai a scapito del link Sprint.
+
+**Conclusione pattern (copy da usare o adattare):**
+- IT: *"Lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) ti dà una migrazione strutturata in 10 giorni, con timeline fissa, prezzo pubblico e 4 garanzie scritte."*
+- EN: *"The [Shopify Launch Sprint](/shopify-migration-sprint) gives you a fixed-calendar migration with a public price and 4 written guarantees."*
+
+Applica questa regola quando scrivi nuovi articoli E quando modifichi quelli esistenti (le conclusioni di tutti gli articoli correnti sono state aggiornate in v1.2.0).
+
 ### Inline content syntax
 
 Paragraphs and list items support markdown-style inline tokens via `parseInline` in `components/article/renderSection.tsx`:
@@ -312,10 +327,18 @@ Paragraphs and list items support markdown-style inline tokens via `parseInline`
 
 ---
 
-## 19. Launch status (v1.0.0, 13 Oct 2026)
+## 19. Launch status (v1.2.0, 13 Oct 2026)
 
 - Live on `https://noprob.agency`, 36 URLs in `/sitemap.xml` (IT + EN), `robots.txt` and `llms.txt` served.
 - Audit script (pre-launch): crawl of the sitemap checking status, title, description, canonical, hreflang, H1, OG image, JSON-LD and every internal link. Result: 0 issues.
 - Case studies and blog posts have short Google titles/descriptions via optional `seoTitle`/`seoDescription` fields (`data/use-cases`, `data/articles`), the H1 keeps the long title.
 - Verified data: every public number is in `docs/dati-verificati.md`.
 - Open (owner): Madotto and Sfogliate metrics once their results are visible.
+
+### Changelog v1.2.0 (13 Oct 2026)
+
+- **Dashboard Demo Giorno 1**: `/it/demo-dashboard` + `/demo-dashboard` (EN), noindex, dati inventati stile Nazzi. Link da `ZlProof` e dalla schermata successo del form Sprint. `ZL_DEMO_DASHBOARD_URL` settato in `content/zero-loss-migration.shared.ts`.
+- **Form Sprint → thank-you redirect**: dopo submit del form ZeroLoss/Sprint, `router.push` rimanda a `/it/grazie` (IT) o `/thank-you` (EN) che ha già TidyCal embed (`components/thank-you/TidyCalEmbed.tsx`).
+- **Warning soft <300k**: il band `under300k` non blocca più il form; mostra un amber warning box ma lascia proseguire. La dichiarazione di ineleggibilità è rimossa dall'API handler; il tier stimato è Tier 1.
+- **SEO internal linking**: aggiunti link allo Sprint nelle conclusioni di tutti gli articoli del blog (CRO IT/EN, Cos'è Shopify IT/EN, Strategia eCommerce IT/EN). Regola link building codificata in §14.
+- **FAQ Dashboard**: aggiunta FAQ "Cos'è la dashboard che ricevo il Giorno 1?" in IT e EN (`content/zero-loss-migration.it.ts` / `.en.ts`).
