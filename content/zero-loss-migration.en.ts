@@ -12,7 +12,7 @@ export const zeroLossEn: ZlCopy = {
   meta: {
     title: 'Shopify Launch Sprint: on Shopify in 14 days, more SEO and more sales | noprob agency',
     description:
-      'Your eCommerce on Shopify in 14 days, with better Google rankings and more sales: +105% for Integratori Nazzi DTC, +67.7% for Cumini. Tested redirects, server-side tracking, 90 days of support, 4 guarantees, fixed price.',
+      'Your eCommerce on Shopify in 14 days, with better Google rankings and more sales: +105% for Integratori Nazzi DTC, +67.7% for Cumini. Tested redirects, server-side tracking, 90 days of support, monitoring & improvement, 4 guarantees, fixed price.',
     ogAlt: 'Shopify Launch Sprint: your eCommerce on Shopify in 14 days, more SEO and more sales',
   },
   nav: {
@@ -61,7 +61,7 @@ export const zeroLossEn: ZlCopy = {
       },
     ],
     afterLine:
-      'After the sprint: zero-downtime go-live in the window you choose and 90 days of support, with bug fixes, minor changes, SEO and tracking monitoring.',
+      'After the sprint: zero-downtime go-live in the window you choose and 90 days of support, monitoring & improvement: bug fixes, changes, SEO and tracking checks and new optimizations every week.',
     pricingTitle: 'Priced by the size of your company',
     pricingSub: 'and the store complexity that comes with it',
     tiers: [
@@ -79,18 +79,19 @@ export const zeroLossEn: ZlCopy = {
     ],
   },
   checklist: {
-    h2: 'Sound familiar?',
+    h2: 'Sound familiar? Be honest.',
     sub: 'tick the ones that are true',
     items: [
-      'Every change to the site goes through a ticket or the developer',
-      'You have already considered Shopify and the only thing holding you back is the fear of losing SEO or sales',
-      'The site broke or slowed down at least once during a peak period',
-      'Meta or GA4 numbers do not match your real orders',
-      'You pay more than you would like for hosting and maintenance, and you depend on one person',
+      'To change a banner you open a ticket and wait for the developer',
+      'You know you would sell more on Shopify, but you are afraid of losing Google and customers in the move',
+      'The site froze or slowed down right during sales or Black Friday',
+      'Meta and GA4 say one thing, real orders say another, and you decide on gut feeling',
+      'You pay for hosting, plugins and maintenance every month, and the site never changes',
+      'You want to use AI to sell and work better, but on your platform you do not even know where to start',
       'Your company makes at least €300k a year and sells online every month',
     ],
-    reactionLow: 'Maybe it is not the right time yet. Save this page.',
-    reactionHigh: 'No prob. This is exactly what we do.',
+    reactionLow: 'Your store holds up for now. Save this page: let us talk when it is not enough anymore.',
+    reactionHigh: 'No prob. This is exactly what we fix in 14 days.',
     reactionHighCta: 'Apply for the sprint',
     reactionNoRevenue: 'Under €300k in revenue the sprint is not worth it, for you or for us. Let us talk again when you grow.',
     countLabel: 'ticked',
@@ -227,16 +228,16 @@ export const zeroLossEn: ZlCopy = {
         },
         {
           phase: '90 days from go-live',
-          title: 'Support',
-          detail: 'Bug fixes, minor changes, SEO and tracking monitoring. Weekly 10-minute Loom. Report on day 90.',
+          title: 'Support, monitoring & improvement',
+          detail: 'Bug fixes, minor changes, SEO and tracking monitoring and new optimizations. Weekly 10-minute Loom. Report on day 90.',
         },
       ],
     },
     closing: 'Total time required from you: about 8 hours. We do the rest.',
   },
   guarantees: {
-    h2: 'Four guarantees, all measurable',
-    sub: 'Measured by the dashboard you receive on day 1, not by opinions.',
+    h2: 'If it does not work, we pay.',
+    sub: 'Four guarantees, measured by the dashboard you receive on day 1. Not by opinions.',
     cards: [
       { key: 'Sprint', text: 'Store ready on day 14 or we refund the first installment.' },
       { key: 'SEO', text: 'Organic traffic below the baseline 90 days after go-live? We work for free until it comes back.' },
@@ -246,7 +247,7 @@ export const zeroLossEn: ZlCopy = {
     line: 'The full terms are in the contract, written on one page. No hidden asterisks.',
   },
   whyNow: {
-    h2: 'Why now, not next year',
+    h2: 'Every month you wait is a month you give to those already on Shopify',
     paragraph:
       'It is not our deadline, it is the market’s. Shopify is the platform where AI assistants are learning to buy, and every month on the old platform is a month of positioning and data you do not get back.',
     sourceLabel: 'Source',
@@ -340,7 +341,7 @@ export const zeroLossEn: ZlCopy = {
       'Server-side tracking and consent mode',
       'Setup of payments, shipping, email and the platforms you already use',
       '1:1 replica, bug fixes, optimized purchase flow',
-      'Zero-downtime go-live and 90 days of support',
+      'Zero-downtime go-live and 90 days of support, monitoring & improvement',
     ],
     partnersTitle: 'With dedicated partners, after go-live',
     partners: [
@@ -421,7 +422,7 @@ export const zeroLossEn: ZlCopy = {
     h2: 'Your store on Shopify in 14 days. Apply now.',
     paragraph:
       'We reply within 48 hours, even if the answer is no. If you meet the criteria, the answer is your tier, the price and the first available Monday.',
-    bullets: ['Kickoff always on a Monday', 'Store ready on day 14', '90 days of support included'],
+    bullets: ['Kickoff always on a Monday', 'Store ready on day 14', '90 days of support, monitoring & improvement'],
     cta: 'Apply for the sprint',
   },
   apply: {

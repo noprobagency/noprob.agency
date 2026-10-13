@@ -256,6 +256,15 @@
     animation: zl-cta-dots 1.6s linear infinite;
   }
 
+  .zl-face-pop {
+    animation: zl-face-pop 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  @keyframes zl-face-pop {
+    0% { transform: scale(0.7) rotate(-8deg); }
+    100% { transform: scale(1) rotate(0); }
+  }
+
   @keyframes zl-cta-glow {
     0%, 100% {
       box-shadow:
@@ -277,6 +286,7 @@
 
   @media (prefers-reduced-motion: reduce) {
     .zl-cta,
+    .zl-face-pop,
     .zl-cta:hover::before,
     .zl-cta:focus-visible::before {
       animation: none;

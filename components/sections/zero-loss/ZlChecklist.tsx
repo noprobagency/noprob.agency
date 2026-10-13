@@ -6,18 +6,53 @@ import type { ZlCopy } from '@/content/zero-loss-migration'
 import { zlTrack } from '@/lib/zero-loss/tracking'
 import ZlCta from './ZlCta'
 
-const REVENUE_ITEM_INDEX = 5 // item 6 (1-based): "fattura almeno €300k"
+type Mood = 0 | 1 | 2 | 3 | 4 | 5
+
+/** Mouth, brows and extras per pain level: 0 = calm, 5 = panic. */
+const FACES: Record<Mood, { mouth: string; brows?: string; tightEyes?: boolean; sweat?: boolean; fill: string }> = {
+  0: { mouth: 'M20 38 Q32 50 44 38', fill: '#ffd54a' },
+  1: { mouth: 'M21 40 Q32 46 43 40', fill: '#ffd54a' },
+  2: { mouth: 'M21 42 L43 42', fill: '#ffcf4a' },
+  3: { mouth: 'M21 45 Q32 38 43 45', brows: 'M17 21 L27 24 M47 21 L37 24', fill: '#ffc44a' },
+  4: { mouth: 'M20 47 Q32 35 44 47', brows: 'M17 19 L27 25 M47 19 L37 25', sweat: true, fill: '#ffb84a' },
+  5: { mouth: 'M22 48 Q32 30 42 48 Z', brows: 'M16 18 L27 25 M48 18 L37 25', tightEyes: true, sweat: true, fill: '#ffa94a' },
+}
+
+/** Face that gets more stressed with every pain ticked (the revenue item does not count). */
+function MoodFace({ mood }: { mood: Mood }) {
+  const f = FACES[mood]
+  return (
+    <svg key={mood} width="72" height="72" viewBox="0 0 64 64" aria-hidden className="zl-face-pop shrink-0">
+      <circle cx="32" cy="32" r="28" fill={f.fill} stroke="#121212" strokeWidth="2.5" />
+      {f.tightEyes ? (
+        <path d="M19 30 L27 27 M45 30 L37 27" stroke="#121212" strokeWidth="3" strokeLinecap="round" />
+      ) : (
+        <>
+          <circle cx="23" cy="29" r="3" fill="#121212" />
+          <circle cx="41" cy="29" r="3" fill="#121212" />
+        </>
+      )}
+      {f.brows && <path d={f.brows} stroke="#121212" strokeWidth="2.5" strokeLinecap="round" fill="none" />}
+      <path d={f.mouth} stroke="#121212" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill={mood === 5 ? '#121212' : 'none'} />
+      {f.sweat && <path d="M52 14 C49 19 49 23 52 24 C55 23 55 19 52 14 Z" fill="#5aa9ff" stroke="#121212" strokeWidth="1.5" />}
+    </svg>
+  )
+}
 
 /**
  * Section 4, Fletch interactive checklist: tick the true ones, the reaction
- * changes with the count. Item 6 (revenue) overrides the positive reaction.
+ * changes with the count and a face gets more stressed with every pain ticked.
+ * The last item (revenue) is the qualifier: it overrides the positive reaction.
  */
 export default function ZlChecklist({ copy }: { copy: ZlCopy['checklist'] }) {
   const [checked, setChecked] = useState<boolean[]>(() => copy.items.map(() => false))
   const baseId = useId()
 
+  const revenueIndex = copy.items.length - 1
   const count = checked.filter(Boolean).length
-  const hasRevenue = checked[REVENUE_ITEM_INDEX]
+  const hasRevenue = checked[revenueIndex]
+  const pains = checked.filter((v, i) => v && i !== revenueIndex).length
+  const mood = Math.min(5, pains) as Mood
   const state: 'low' | 'high' | 'noRevenue' = count >= 3 ? (hasRevenue ? 'high' : 'noRevenue') : 'low'
 
   function toggle(index: number) {
@@ -66,9 +101,12 @@ export default function ZlChecklist({ copy }: { copy: ZlCopy['checklist'] }) {
               state === 'high' ? 'bg-np-mark-green' : state === 'noRevenue' ? 'bg-[#f3e0da]' : 'bg-white border border-np-border'
             }`}
           >
-            <span className="inline-flex items-center rounded-pill border border-np-dark bg-white px-3 py-[6px] font-serif text-[14px] italic tracking-[-0.02em] text-np-dark">
-              {count}/{copy.items.length} {copy.countLabel}
-            </span>
+            <div className="flex items-center gap-4">
+              <MoodFace mood={mood} />
+              <span className="inline-flex items-center rounded-pill border border-np-dark bg-white px-3 py-[6px] font-serif text-[14px] italic tracking-[-0.02em] text-np-dark">
+                {count}/{copy.items.length} {copy.countLabel}
+              </span>
+            </div>
             <p className="font-display text-[1.5rem] font-semibold leading-[1.2em] tracking-[-0.04em] text-np-dark min-[810px]:text-[1.9rem]">
               {state === 'high' ? copy.reactionHigh : state === 'noRevenue' ? copy.reactionNoRevenue : copy.reactionLow}
             </p>
