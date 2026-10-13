@@ -1,28 +1,27 @@
 # Shopify Launch Sprint landing (ex Zero-Loss Migration Sprint)
 
-Product renamed in v0.68.0: "Zero-Loss" opened with a negative frame. URLs, file
-names and the lead `source` stay `zero-loss-migration` so ads, cold email and
-ambassador links keep working.
+Product renamed in v0.68.0, URLs renamed in v0.101.0. Internal names (this folder,
+copy files, lead `source`, tracking `lp`) stay `zero-loss-migration` on purpose.
 
 Standalone landing that sells one productized service. Routes:
 
-- EN: `/zero-loss-migration` (`app/(zl-en)/zero-loss-migration/page.tsx`)
-- IT: `/it/zero-loss-migration` (`app/(zl-it)/it/zero-loss-migration/page.tsx`)
-- Application form, own page, always noindex: `/zero-loss-migration/apply`, `/it/zero-loss-migration/candidatura`
-  (`ZeroLossApplyPage.tsx`). Every CTA (`ZlCta`) links there keeping the query string;
-  the page fires `form_view`. Primary CTAs use the `.zl-cta` effect (`app/globals.css`):
-  breathing green glow, dotted halo on hover, off with reduced motion.
-- Results (#prove): `ZlSeoCharts.tsx`, three indexed charts (Nazzi Search Console before/after,
-  Nazzi clicks 2026 vs 2025, Cumini trailing 12 months sales) from `data/zero-loss/seo-charts.ts`.
-  Only index values, never absolute client figures (sources in `docs/dati-verificati.md`).
+- EN: `/shopify-migration-sprint` (`app/(zl-en)/shopify-migration-sprint/page.tsx`)
+- IT: `/it/sprint-migrazione-shopify` (`app/(zl-it)/it/sprint-migrazione-shopify/page.tsx`)
+- Application page, always noindex: `/shopify-migration-sprint/apply`, `/it/sprint-migrazione-shopify/candidatura`
+  (`ZeroLossApplyPage.tsx`, one screen on desktop). Every CTA (`ZlCta`) links there keeping
+  the query string; the page fires `form_view`. Primary CTAs use the `.zl-cta` effect.
+- Old `/zero-loss-migration` URLs (+ `/apply`, `/candidatura`) redirect permanently (`next.config.ts`).
+- Results (#prove): `ZlSeoCharts.tsx`, two charts (Integratori Nazzi DTC Search Console daily
+  clicks/impressions from the API, Cumini sales index since 2023) from
+  `data/use-cases/nazzi-gsc-daily.json` and `data/zero-loss/seo-charts.ts`. Only index values,
+  never absolute client figures (sources in `docs/dati-verificati.md`).
 
-Not linked from the global nav or footer: traffic comes from ads, cold email and
-ambassadors. `/shopify-migration` and `/it/migrazione-shopify` are untouched.
+Linked from the global navbar ("Sprint", green lightning icon) and from the "AI powered"
+banner on `/it/migrazione-shopify` and `/shopify-migration`.
 
 ## Indexing switch (`LP_ZERO_LOSS_INDEX`)
 
-The page ships **noindex, nofollow** and is **out of the sitemap** until the
-environment variable `LP_ZERO_LOSS_INDEX` is exactly `true`.
+**Live state: `true` in Vercel production since 13 Oct 2026** (index, follow + sitemap).
 
 | `LP_ZERO_LOSS_INDEX` | `<meta name="robots">` | in `/sitemap.xml` |
 | -------------------- | ---------------------- | ----------------- |
@@ -31,7 +30,7 @@ environment variable `LP_ZERO_LOSS_INDEX` is exactly `true`.
 
 Where it is read: `lib/zero-loss/metadata.ts` (`ZL_INDEXABLE`) and
 `lib/sitemap/routes.ts`. It is a build-time value: after changing it on Vercel,
-redeploy. Hreflang EN/IT + canonical are always emitted (from `ROUTE_PATHS.zeroLossMigration`).
+redeploy. Locally it is unset, so local builds show noindex.
 
 ## Structure
 
@@ -68,7 +67,7 @@ redeploy. Hreflang EN/IT + canonical are always emitted (from `ROUTE_PATHS.zeroL
   A standard `Lead` (Pixel + GA4 + CAPI, shared event_id) also fires on a
   successful submit, like the other forms. `utm_*` are captured from the URL,
   kept in `sessionStorage` and sent with the payload.
-- OG images: `public/images/og-zero-loss-migration-{it,en}.png`, regenerate with
+- OG images: `public/images/og-shopify-migration-sprint-{it,en}.png`, regenerate with
   `node scripts/generate-zero-loss-og.mjs`.
 
 ## Placeholders ("[DA CONFERMARE]")
@@ -88,8 +87,8 @@ environment (`NEXT_PUBLIC_VERCEL_ENV !== 'production'`).
 
 ## QA notes
 
-- Indexing: with the flag off the page answers `noindex, nofollow` and is absent
-  from `/sitemap.xml`; the other routes of the sitemap are unchanged.
+- Indexing: production answers `index, follow` and lists both locales in
+  `/sitemap.xml`; locally (flag unset) the page answers `noindex, nofollow`.
 - Locally, without `RESEND_API_KEY`, a submit returns 500 "Email service not
   configured": the form shows the inline error with "Riprova" and keeps the data.
   On Vercel the key exists and the admin email lands in the same inbox as

@@ -5,7 +5,8 @@
 - Project: `noprob.agency`
 - Stack target: Next.js 15, TypeScript, Tailwind CSS, App Router
 - Priority: replicate the current `https://noprob.agency` homepage as faithfully as possible while setting up strong SEO and tracking foundations
-- Current session goal: remove all remaining legacy Framer-export rendering and ship the homepage as pure React + Tailwind using only local assets, while keeping `pnpm tsc --noEmit` and `pnpm build` passing
+- Status: **v1.0.0, live and indexable** (13 Oct 2026). Pre-launch audit passed on all 36 sitemap URLs: 200, unique title ≤ ~65 chars, description ≤ 160, self canonical, hreflang IT/EN/x-default, one H1, valid JSON-LD, OG image, 0 broken internal links (see §19).
+- Ship workflow: every change goes to `main` via squash-merged PR, `siteConfig.version` bumped each time, Vercel deploys production from `main`.
 
 ## Working Rules
 
@@ -229,11 +230,10 @@ Paragraphs and list items support markdown-style inline tokens via `parseInline`
 
 ## 15. Migration landing (IT `/it/migrazione-shopify` + EN `/shopify-migration`)
 
-- Bilingual landing built from shared `components/sections/Migrazione*` + `SearchConsoleCharts` components, rendered by both `app/it/migrazione-shopify/page.tsx` (locale `it`) and `app/(en)/shopify-migration/page.tsx` (locale `en`). Style changes to a component apply to both languages automatically; copy is per-locale.
-- Copy lives in a dedicated module `lib/i18n/migrazione.ts` (`getMigrazioneCopy(locale)`, typed `MigrazioneCopy`, both `it` and `en` filled). This is intentionally separate from the giant shared dictionary; only `seo.migrazioneShopify` is added to `lib/i18n/index.ts`.
-- Section order: Hero, Problem, Solution, Cumini case study (`CaseStudy compact`), Process (3 phases + "Perché 4 mesi" card), Pricing (stepped tier bar + offer card + **qualification form `#candidatura`** + Testimonials), Search Console charts, FAQ, Footer.
-- Qualification form: `MigrazioneForm` (inside the black Pricing section), `lib/schemas/migrazione.ts` (locale-aware zod factory), posts to `app/api/migrazione-lead/route.ts` (Resend, same pattern/recipient as `/api/contact`). Success redirects to the localized thank-you (`/it/grazie` / `/thank-you`) which fire the Meta Pixel Lead event. All page CTAs smooth-scroll to `#candidatura`.
-- Routing/hreflang: `ROUTE_PATHS.migrazioneShopify` maps `en -> /shopify-migration`, `it -> /it/migrazione-shopify`; `buildMetadata` generates cross hreflang + self canonical (x-default -> EN). Added to `lib/sitemap/routes.ts` with `hasIt: true`. Listed under the navbar Services dropdown via `navbar.serviceItems`.
+- Bilingual product page for the Shopify migration, rendered by `app/it/migrazione-shopify/page.tsx` and `app/(en)/shopify-migration/page.tsx` from `components/sections/Migrazione*`. Copy in `lib/i18n/migrazione.ts` (`getMigrazioneCopy`, typed `MigrazioneCopy`); meta in `seo.migrazioneShopify` of `lib/i18n/index.ts`.
+- Aligned with the Shopify Launch Sprint (§18): 14-day sprint, go-live days 15-30 on the client's date, 90 days of support, monitoring and improvement, 4 written guarantees, same price tiers (€5.800 / €8.800 / €12.800, 4 installments).
+- Section order: Hero, Problem, Solution, social proof, Process (Sprint / Go-live / Supporto e crescita + "Perché bastano 14 giorni?"), **`MigrazioneSprintBanner`** ("AI powered" dark card with flickering green sparks, links to the sprint landing), `MigrazioneSprintPricing` (landing tiers + the same 4-step `ZlApplicationForm`), `MigrazioneResults` (the two landing charts), FAQ.
+- Leads from this page post to `/api/migrazione-lead` with the zero-loss source, so they land in the same inbox as the landing.
 
 ---
 
@@ -276,7 +276,14 @@ Paragraphs and list items support markdown-style inline tokens via `parseInline`
 - Step 2 open question is now the goal/context ("Cosa vorresti ottenere integrando l'AI…" + helper); payload key stays `mainPain`, admin email labels it "Obiettivo / contesto".
 - Step 3: VAT removed; `phone` optional (≥6 digits if filled), `website` required (bare domains accepted). Admin email shows site + tel links under the summary line.
 - After a successful submit the form fires Lead (Pixel+GA4+CAPI) and redirects client-side to the dedicated noindex booking page: `/it/ai-accelerator/grazie` · `/ai-accelerator/thank-you` (`ROUTE_PATHS.aiThankYou`, `AiThankYou` component). It embeds TidyCal `noprobagency/ai-call` (`AI_TIDYCAL_PATH`), fires custom `AiAcceleratorApplication` (Pixel) / `ai_accelerator_thank_you` (GA4), has no WhatsApp and hides the floating contact pill. The generic `/it/grazie` / `/thank-you` pages are unchanged for the other forms.
-- SEO titles shortened to fit 60 chars: "AI Accelerator: consulenza AI per aziende" / "AI Accelerator: AI consulting for companies".
+- SEO titles shortened to fit 60 chars (superseded by v6).
+
+### AI Accelerator v6 (eCommerce + opportunities, 13 Oct 2026)
+
+- eCommerce only; positioning on finding growth opportunities and joining the project as a partner, for brands that want to grow but do not know where to start. No "collo di bottiglia / bottleneck" anywhere.
+- H1 restored: "Smetti di rincorrere tool. In 30 giorni portiamo l'AI dove il tuo eCommerce può risparmiare tempo e vendere di più." Home card: "Vuoi far crescere il tuo eCommerce ma non sai da dove partire?", CTA "Trova le tue opportunità".
+- Form `qBusiness` options are eCommerce types (solo online, online + negozio, online + B2B, marketplace). FAQ "funziona senza eCommerce?" answers no.
+- SEO: "AI Accelerator per eCommerce: cresci con l'AI" / "AI Accelerator for eCommerce: Growth with AI"; OG images regenerated with the new H1.
 
 ---
 
@@ -292,12 +299,23 @@ Paragraphs and list items support markdown-style inline tokens via `parseInline`
 
 ---
 
-## 18. Zero-Loss Migration Sprint landing (IT `/it/zero-loss-migration` + EN `/zero-loss-migration`)
+## 18. Shopify Launch Sprint landing (IT `/it/sprint-migrazione-shopify` + EN `/shopify-migration-sprint`)
 
-- Standalone productized-service landing modeled on the Fletch PMM homepage structure (offer card, result cards, interactive checklist, alternating deliverables, day-by-day calendar, sticky-left FAQ) plus three sections of ours (guarantees, why now, included/not included). Full docs and the open placeholder TODO list in `components/sections/zero-loss/README.md`.
-- Own route groups `app/(zl-en)` and `app/(zl-it)` with their own root layouts (`ZeroLossRootLayout`): no global navbar/sticky pill/preloader, own `ZlNav` (logo, IT/EN switch, one CTA) and `Footer minimal`. Not linked from nav/footer; `ROUTE_PATHS.zeroLossMigration` exists for hreflang + language switch.
-- Copy in `content/zero-loss-migration.{it,en}.ts` (typed `ZlCopy`), constants/tiers in `content/zero-loss-migration.shared.ts`. `[[TOKEN]]` markers render as "[DA CONFERMARE]" (yellow outside Vercel production) via `renderCopy()`.
-- `LP_ZERO_LOSS_INDEX=true` removes noindex/nofollow and adds the page to the sitemap (`lib/zero-loss/metadata.ts`, `lib/sitemap/routes.ts`). Default: hidden.
-- 4-step qualification form (`ZlApplicationForm`, schema `lib/schemas/zeroLoss.ts`, tier logic `lib/zero-loss/tier.ts`) posts to `/api/migrazione-lead` with `source: "zero-loss-migration"`; the route has a dedicated branch (`handleZeroLoss`: own schema, server-side tier recompute, rate limit, admin email, no welcome email). Stops: Shopify origin, revenue under €300k. Business email only.
-- dataLayer/GA4 events in `lib/zero-loss/tracking.ts` (`lp_view`, `cta_click`, `checklist_change`, `form_start`, `form_step`, `form_disqualified`, `form_submit`, `dashboard_demo_click`) + standard Lead on submit. OG images via `node scripts/generate-zero-loss-og.mjs`.
-- Backward-compatible props added to shared components: `Footer minimal`, `Testimonials items/tone/className`, `Accordion renderText`.
+- Productized-service landing (ex "Zero-Loss Migration Sprint"), Fletch PMM structure plus our sections. Full docs in `components/sections/zero-loss/README.md`.
+- URLs renamed in v0.101.0; the old `/zero-loss-migration`, `/it/zero-loss-migration` (+ `/apply`, `/candidatura`) redirect permanently (`next.config.ts`). Internal names (folder `zero-loss`, copy files, lead `source`, tracking `lp`) intentionally keep `zero-loss-migration`.
+- **Indexable**: `LP_ZERO_LOSS_INDEX=true` is set in Vercel production (index, follow + in the sitemap with hreflang). The application pages stay noindex and out of the sitemap.
+- Linked from the global navbar ("Sprint" with a green lightning icon, after "AI Accelerator") and from the migration page banner. Own route groups `app/(zl-en)`, `app/(zl-it)` with `ZeroLossRootLayout` (own `ZlNav`, no global navbar).
+- Copy in `content/zero-loss-migration.{it,en}.ts` (typed `ZlCopy`), constants in `content/zero-loss-migration.shared.ts`. Mobile is app-like (`ZlRail` swipe rails with dots, `ZlStickyCta` bottom bar).
+- Application page (`ZeroLossApplyPage`): one screen on desktop (nav, wide card, `Footer bar`), 4-step `ZlApplicationForm` posting to `/api/migrazione-lead` with `source: "zero-loss-migration"` (stops: Shopify origin, revenue under €300k).
+- SEO: "Migrazione a Shopify in 14 giorni | Shopify Launch Sprint" / "Shopify Migration in 14 Days | Shopify Launch Sprint", Service (+ alternateName) and FAQPage JSON-LD, OG `public/images/og-shopify-migration-sprint-{it,en}.png` (`node scripts/generate-zero-loss-og.mjs`).
+- Events in `lib/zero-loss/tracking.ts` (`lp_view`, `cta_click` incl. `whynow` and `sticky`, `checklist_change`, `form_*`) + standard Lead on submit.
+
+---
+
+## 19. Launch status (v1.0.0, 13 Oct 2026)
+
+- Live on `https://noprob.agency`, 36 URLs in `/sitemap.xml` (IT + EN), `robots.txt` and `llms.txt` served.
+- Audit script (pre-launch): crawl of the sitemap checking status, title, description, canonical, hreflang, H1, OG image, JSON-LD and every internal link. Result: 0 issues.
+- Case studies and blog posts have short Google titles/descriptions via optional `seoTitle`/`seoDescription` fields (`data/use-cases`, `data/articles`), the H1 keeps the long title.
+- Verified data: every public number is in `docs/dati-verificati.md`.
+- Open (owner): Madotto and Sfogliate metrics once their results are visible.

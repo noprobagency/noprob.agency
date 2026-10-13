@@ -12,7 +12,7 @@ export const zeroLossEn: ZlCopy = {
   meta: {
     title: 'Shopify Migration in 14 Days | Shopify Launch Sprint',
     description:
-      'Move your eCommerce to Shopify in 14 days without losing Google rankings or sales. Fixed price, 4 written guarantees, 90 days of support. +105% sales for Integratori Nazzi DTC.',
+      'Move your eCommerce to Shopify in 14 days without losing Google rankings or sales. Fixed price, 4 written guarantees, 90 days of support, measured results.',
     ogAlt: 'Shopify Launch Sprint: your eCommerce on Shopify in 14 days, more SEO and more sales',
   },
   nav: {

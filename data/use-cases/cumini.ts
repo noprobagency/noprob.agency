@@ -14,6 +14,12 @@ import type { UseCase } from './index'
 export const cumini: UseCase = {
   slug: 'cumini-luxury-fashion-ecommerce',
   title: 'Migrazione su Shopify per una boutique di lusso: il caso Cumini, +67,7% di vendite online in 12 mesi',
+  seoTitle: 'Caso Cumini: migrazione Shopify, +67,7% vendite',
+  seoTitleEn: 'Cumini case: Shopify migration, +67.7% sales',
+  seoDescription:
+    'Come abbiamo portato su Shopify una boutique di lusso con gestionale integrato: +67,7% di vendite online in 12 mesi. Dati verificati, con le fonti.',
+  seoDescriptionEn:
+    'How we moved a luxury boutique with an integrated ERP to Shopify: +67.7% online sales in 12 months. Verified data, with sources.',
   excerpt: 'Il caso studio di Cumini, boutique multibrand di lusso in Friuli: quattro anni di lavoro, la migrazione su Shopify con gestionale proprietario e i risultati verificati prima e dopo.',
   image: '/images/originals/2QNUkNFRX0OUC0qTVjeplIvlFS0.jpg',
   imageAlt: 'Cumini fashion case study',
@@ -551,7 +557,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Cumini è un cliente attivo di NoProb Agency da oltre 4 anni. [Ecco come lavoriamo sulle migrazioni a Shopify](/it/zero-loss-migration). Se parti da WooCommerce, leggi il [caso Integratori Nazzi DTC](/it/casi-studio/integratori-nazzi-dtc-shopify).',
+      text: 'Cumini è un cliente attivo di NoProb Agency da oltre 4 anni. [Ecco come lavoriamo sulle migrazioni a Shopify](/it/sprint-migrazione-shopify). Se parti da WooCommerce, leggi il [caso Integratori Nazzi DTC](/it/casi-studio/integratori-nazzi-dtc-shopify).',
     },
     {
       type: 'cta',
@@ -1014,7 +1020,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Cumini has been an active client of NoProb Agency for over 4 years. [This is how we run Shopify migrations](/zero-loss-migration). If you are coming from WooCommerce, read the [Integratori Nazzi DTC case](/use-cases/integratori-nazzi-dtc-shopify).',
+      text: 'Cumini has been an active client of NoProb Agency for over 4 years. [This is how we run Shopify migrations](/shopify-migration-sprint). If you are coming from WooCommerce, read the [Integratori Nazzi DTC case](/use-cases/integratori-nazzi-dtc-shopify).',
     },
     { type: 'cta' },
   ],
