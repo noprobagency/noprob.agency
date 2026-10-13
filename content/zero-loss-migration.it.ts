@@ -36,7 +36,7 @@ export const zeroLossIt: ZlCopy = {
   overview: {
     h2: 'Shopify Launch Sprint',
     paragraph:
-      "Quattordici giorni, un calendario fisso, un referente. Il lunedì ci dai gli accessi, il venerdì della settimana dopo hai lo store su Shopify pronto a pubblicare. Non è un redesign: è il tuo store, più veloce, più forte su Google e con un checkout costruito per vendere di più.",
+      "Quattordici giorni, un calendario fisso, un referente. Il giorno 1 ci dai gli accessi, il giorno 14 hai lo store su Shopify pronto a pubblicare. Non è un redesign: è il tuo store, più veloce, più forte su Google e con un checkout costruito per vendere di più.",
     cta: 'Candidati allo sprint',
     deliverablesTitle: 'Cosa ottieni al giorno 14',
     deliverables: [
@@ -151,7 +151,7 @@ export const zeroLossIt: ZlCopy = {
       yourTeam: "Compili il form di intake (30 minuti), prepari la lista degli accessi e l'export di catalogo e ordini.",
       ourTeamTitle: 'Il nostro team',
       ourTeam:
-        'Apriamo il canale dedicato, prepariamo lo store di sviluppo e il piano di import. Il kickoff è sempre di lunedì: se manca un accesso, slitta al lunedì dopo. Non si parte a metà.',
+        'Apriamo il canale dedicato, prepariamo lo store di sviluppo e il piano di import. Il kickoff parte solo quando abbiamo tutti gli accessi. Non si parte a metà.',
     },
     weeks: [
       {
@@ -436,7 +436,7 @@ export const zeroLossIt: ZlCopy = {
       },
       {
         question: 'Cosa succede se non arrivano gli accessi in tempo?',
-        answer: 'Il kickoff slitta al lunedì successivo. Lo sprint parte solo quando può finire in 14 giorni.',
+        answer: 'Il kickoff slitta finché non abbiamo tutto. Lo sprint parte solo quando può finire in 14 giorni.',
       },
       {
         question: 'Cosa succede se il mio store supera i limiti dello scaglione?',
@@ -461,7 +461,7 @@ export const zeroLossIt: ZlCopy = {
       {
         question: 'Quando posso partire?',
         answer:
-          'Il kickoff è sempre di lunedì. Candidati, ti rispondiamo entro 48 ore con lo scaglione e il primo lunedì disponibile.',
+          'Candidati: ti rispondiamo entro 48 ore con lo scaglione e la prima data di kickoff disponibile.',
       },
       {
         question: 'Perché il prezzo dipende dal fatturato della mia azienda?',
@@ -473,14 +473,23 @@ export const zeroLossIt: ZlCopy = {
   finalCta: {
     h2: 'Il tuo store su Shopify fra 14 giorni. Candidati.',
     paragraph:
-      'Ti rispondiamo entro 48 ore, anche se la risposta è no. Se sei dentro i criteri, la risposta è lo scaglione, il prezzo e il primo lunedì disponibile.',
-    bullets: ['Kickoff sempre di lunedì', 'Store pronto al giorno 14', '90 giorni di supporto, monitoraggio e miglioramento'],
+      'Ti rispondiamo entro 48 ore, anche se la risposta è no. Se sei dentro i criteri, la risposta è lo scaglione, il prezzo e la prima data di kickoff disponibile.',
+    bullets: ['Store pronto al giorno 14', '4 garanzie scritte nel contratto', '90 giorni di supporto, monitoraggio e miglioramento'],
     cta: 'Candidati allo sprint',
   },
   apply: {
     metaTitle: 'Candidati allo Shopify Launch Sprint | noprob agency',
-    metaDescription: 'Quattro passi, due minuti. Ti rispondiamo entro 48 ore con lo scaglione, il prezzo e il primo lunedì disponibile.',
+    metaDescription: 'Quattro passi, due minuti. Ti rispondiamo entro 48 ore con lo scaglione, il prezzo e la prima data di kickoff disponibile.',
     back: 'Torna alla pagina dello sprint',
+    trust: 'Scelti da brand eCommerce di Moda, Integratori e DTC',
+    h1Pre: 'Il tuo store su Shopify in',
+    h1Em: '14 giorni',
+    description: 'Quattro passi, due minuti. Ti risponde direttamente chi segue lo sprint, entro 48 ore, anche se la risposta è no.',
+    trustedBy: '5/5 su Trustpilot',
+    sideTitle: 'Prezzo fisso. Data fissa.',
+    sideTitleEm: 'Zero sorprese.',
+    sideText: 'Un calendario giorno per giorno, un solo referente, 4 garanzie scritte nel contratto. Se non funziona, paghiamo noi.',
+    badges: ['Risposta in 48 ore', 'Supporto 7/7', 'Prezzo fisso, nessun preventivo'],
   },
   form: {
     progressLabel: 'Passo {step} di {total}',
@@ -578,7 +587,7 @@ export const zeroLossIt: ZlCopy = {
     },
     success: {
       title: 'Candidatura ricevuta.',
-      text: 'Ti rispondiamo entro 48 ore da {email} con lo scaglione e il primo lunedì disponibile.',
+      text: 'Ti rispondiamo entro 48 ore da {email} con lo scaglione e la prima data di kickoff disponibile.',
       dashboardCta: 'Guarda la dashboard che ricevi il giorno 1',
     },
     retry: 'Riprova',
