@@ -43,10 +43,13 @@ export default function Pricing({
   locale = 'en',
   rebuildOnly = false,
   teamOnly = false,
+  children,
 }: {
   locale?: Locale
   rebuildOnly?: boolean
   teamOnly?: boolean
+  /** Rendered right under the plan cards (home: AI Accelerator card). */
+  children?: React.ReactNode
 }) {
   const t = getDictionary(locale)
   const plans = rebuildOnly ? [t.pricing.plans[1]] : teamOnly ? [t.pricing.plans[0]] : t.pricing.plans
@@ -150,6 +153,8 @@ export default function Pricing({
               </motion.article>
             ))}
           </div>
+
+          {children}
 
           <Testimonials locale={locale} />
         </div>
