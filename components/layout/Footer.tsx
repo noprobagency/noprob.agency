@@ -9,6 +9,7 @@ import { ROUTE_PATHS } from '@/lib/i18n/routes'
 export default function Footer({
   locale = 'en',
   minimal = false,
+  bar = false,
 }: {
   locale?: Locale
   /**
@@ -16,9 +17,38 @@ export default function Footer({
    * only exits are the noprob.agency homepage (logo) and the policies.
    */
   minimal?: boolean
+  /** Single compact strip (company data + policies), for pages that must fit the viewport. */
+  bar?: boolean
 }) {
   const t = getDictionary(locale)
   const logoHref = locale === 'it' ? '/it' : '/'
+
+  const legal = (
+    <>
+      <div className="font-sans text-[12px] font-medium tracking-[-0.04em] text-[#a9a9a9]">
+        <p>NOPROB AGENCY LLC® EIN : 365136989</p>
+        <p>30 N Gould St Ste R, Sheridan, Wyoming (WY) 82801, USA</p>
+      </div>
+
+      <div className="flex flex-wrap items-center gap-4 text-[12px] font-medium tracking-[-0.04em] text-[#7c7c7c]">
+        <Link href={ROUTE_PATHS.privacyPolicy[locale]} className="transition-colors hover:text-[#989898]">
+          {t.footer.privacyPolicy}
+        </Link>
+        <Link href={ROUTE_PATHS.cookiePolicy[locale]} className="transition-colors hover:text-[#989898]">
+          {t.footer.cookiePolicy}
+        </Link>
+        <span className="uppercase tracking-[0.12em] text-[#7c7c7c]">Version {siteConfig.version}</span>
+      </div>
+    </>
+  )
+
+  if (bar) {
+    return (
+      <footer data-header-theme="dark" className="bg-black px-5 py-4 text-white min-[810px]:px-9">
+        <div className="mx-auto flex w-full max-w-[1360px] flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">{legal}</div>
+      </footer>
+    )
+  }
 
   return (
     <footer data-header-theme="dark" className="flex flex-col items-center gap-12 bg-black px-9 py-10 text-white">
@@ -64,20 +94,7 @@ export default function Footer({
       </div>
 
       <div className="flex w-full max-w-[1200px] flex-col gap-4 border-t border-white/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
-        <div className="font-sans text-[12px] font-medium tracking-[-0.04em] text-[#a9a9a9]">
-          <p>NOPROB AGENCY LLC® EIN : 365136989</p>
-          <p>30 N Gould St Ste R, Sheridan, Wyoming (WY) 82801, USA</p>
-        </div>
-
-        <div className="flex flex-wrap items-center gap-4 text-[12px] font-medium tracking-[-0.04em] text-[#7c7c7c]">
-          <Link href={ROUTE_PATHS.privacyPolicy[locale]} className="transition-colors hover:text-[#989898]">
-            {t.footer.privacyPolicy}
-          </Link>
-          <Link href={ROUTE_PATHS.cookiePolicy[locale]} className="transition-colors hover:text-[#989898]">
-            {t.footer.cookiePolicy}
-          </Link>
-          <span className="uppercase tracking-[0.12em] text-[#7c7c7c]">Version {siteConfig.version}</span>
-        </div>
+        {legal}
       </div>
     </footer>
   )
