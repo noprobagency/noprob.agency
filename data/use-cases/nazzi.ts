@@ -25,8 +25,8 @@ export const nazzi: UseCase = {
   title: 'Migrazione da WooCommerce a Shopify: il caso Farmacia Nazzi, vendite online raddoppiate in 85 giorni',
   excerpt:
     'Come abbiamo portato Farmacia Nazzi, laboratorio galenico dal 2001, da WooCommerce a Shopify: SEO, storico clienti, tracciamento e i risultati verificati prima e dopo la migrazione.',
-  image: '/images/use-case-nazzi/nazzi-homepage-shopify.webp',
-  imageAlt: 'La homepage di Farmacia Nazzi su Shopify dopo la migrazione da WooCommerce',
+  image: '/images/use-case-nazzi/nazzi-cover.png',
+  imageAlt: 'Farmacia Nazzi, case study della migrazione da WooCommerce a Shopify',
   caseType: 'Use Case',
   date: '2026-10-13',
   updated: '2026-10-13',
