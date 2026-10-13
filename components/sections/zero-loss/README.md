@@ -46,7 +46,7 @@ redeploy. Hreflang EN/IT + canonical are always emitted (from `ROUTE_PATHS.zeroL
 - Page composition: `ZeroLossPage.tsx` (section order: nav, hero + logo strip,
   overview, checklist, deliverables, calendar, guarantees, why now, proof,
   scope, FAQ, application form, minimal footer).
-- Reused site pieces: `SearchConsoleCharts` (unchanged), `Testimonials`
+- Reused site pieces: `Testimonials`
   (new optional `items` / `tone` / `className` props), `Accordion` (new optional
   `renderText` prop), `Footer` (new `minimal` prop), `PartnerLogos` (fixed partner row under the hero CTAs),
   partner/client logo assets, Trustpilot wordmark, `.button-principal`,
