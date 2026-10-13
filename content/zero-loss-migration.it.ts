@@ -104,6 +104,7 @@ export const zeroLossIt: ZlCopy = {
     items: [
       {
         title: 'Il tuo store, pronto a pubblicare su Shopify',
+        short: 'Store pronto a pubblicare',
         paragraph:
           "Il tuo store ricostruito 1:1 su Shopify: stesse pagine, stessa struttura, stessi contenuti. Correggiamo bug ed errori che ti porti dietro da anni e applichiamo la nostra checklist sul flusso d'acquisto: ricerca, scheda prodotto, carrello, checkout. Non è un restyling. È il tuo store, più veloce e più corto da comprare.",
         imageAlt: 'Screenshot dello staging Shopify affiancato al sito attuale, con la checklist in overlay',
@@ -111,6 +112,7 @@ export const zeroLossIt: ZlCopy = {
       },
       {
         title: 'Data Migration Report',
+        short: 'Data Migration Report',
         paragraph:
           'Prodotti, varianti, immagini, clienti, storico ordini, codici sconto, recensioni. Ogni conteggio della piattaforma vecchia confrontato con Shopify e riconciliato al 100%. Se una differenza c\'è, è scritta e spiegata.',
         imageAlt: 'Tabella del Data Migration Report con colonne sorgente, Shopify e differenza',
@@ -118,6 +120,7 @@ export const zeroLossIt: ZlCopy = {
       },
       {
         title: 'Redirect Map 1:1',
+        short: 'Redirect Map',
         paragraph:
           'Ogni URL che ha ricevuto traffico negli ultimi 12 mesi ha il suo redirect 301 verso una pagina che risponde 200. Non a mano: con un test automatico che gira prima del go-live e dopo. È il motivo per cui il traffico organico non si perde.',
         imageAlt: 'CSV della Redirect Map e output del test automatico con 100% verde',
@@ -125,6 +128,7 @@ export const zeroLossIt: ZlCopy = {
       },
       {
         title: 'Tracking Spec e setup server-side',
+        short: 'Tracking Spec',
         paragraph:
           'GA4, Meta Conversions API via Stape, Google Ads, piattaforma email, consent mode. Un documento con ogni evento e come lo verifichiamo: purchase deduplicato, Event Match Quality Meta sopra 8, scarto tra ordini Shopify e GA4 sotto il 3%.',
         imageAlt: 'Pagina della Tracking Spec e screenshot dell\'Event Match Quality',
@@ -132,6 +136,7 @@ export const zeroLossIt: ZlCopy = {
       },
       {
         title: 'Go-live Checklist con la tua data',
+        short: 'Go-live Checklist',
         paragraph:
           'DNS, TTL, sitemap, Search Console, monitor di uptime, piano di rollback. La firmi tu con la data che scegli, dal giorno 15 al 30. Il giorno del lancio il tuo store non si ferma un secondo.',
         imageAlt: 'Go-live Checklist firmata con la data in evidenza',
@@ -170,6 +175,7 @@ export const zeroLossIt: ZlCopy = {
             title: 'Riconciliazione e struttura',
             duration: '10 minuti',
             detail: 'Conteggi sorgente e Shopify al 100%. Tema, navigazione, collezioni. Ti arriva un Loom.',
+            deliverables: [2],
           },
           {
             day: 'Giovedì',
@@ -198,6 +204,7 @@ export const zeroLossIt: ZlCopy = {
             day: 'Martedì',
             title: 'Tracking e integrazioni',
             detail: 'Stape, GA4, Meta CAPI, email, consent mode. Pagamenti e spedizioni.',
+            deliverables: [4],
           },
           {
             day: 'Mercoledì',
@@ -208,12 +215,14 @@ export const zeroLossIt: ZlCopy = {
             day: 'Giovedì',
             title: 'QA e test',
             detail: 'Test automatico dei 301 su tutti gli URL, ordini di prova end-to-end, 3 device, validazione del tracking.',
+            deliverables: [3],
           },
           {
             day: 'Venerdì',
             title: 'Consegna dello sprint',
             duration: '45 minuti',
             detail: 'Store pronto a pubblicare, Redirect Map, Tracking Spec, Go-live Checklist. Fissiamo la data.',
+            deliverables: [1, 5],
           },
         ],
       },

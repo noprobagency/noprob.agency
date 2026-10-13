@@ -22,12 +22,13 @@ export default function ZlDeliverables({ copy }: { copy: ZlCopy['deliverables'] 
             return (
               <li
                 key={item.title}
-                className={`grid items-center gap-6 min-[810px]:grid-cols-2 min-[810px]:gap-12 ${
+                id={`deliverable-${i + 1}`}
+                className={`scroll-mt-28 grid items-center gap-6 min-[810px]:grid-cols-2 min-[810px]:gap-12 ${
                   imageRight ? '' : 'min-[810px]:[&>*:first-child]:order-2'
                 }`}
               >
                 <div>
-                  <span className="font-sans text-[12px] font-bold uppercase tracking-[0.08em] text-np-grey">
+                  <span className="inline-flex rounded-[8px] bg-np-mark-purple px-3 py-[5px] font-sans text-[12px] font-bold uppercase tracking-[0.06em] text-np-dark">
                     {copy.labelPrefix} {i + 1}
                   </span>
                   <h3 className="mt-2 font-display text-[1.6rem] font-semibold leading-[1.15em] tracking-[-0.05em] text-np-dark min-[810px]:text-[2rem]">
