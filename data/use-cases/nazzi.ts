@@ -25,8 +25,8 @@ export const nazzi: UseCase = {
   title: 'Migrazione da WooCommerce a Shopify: il caso Farmacia Nazzi, vendite online raddoppiate in 85 giorni',
   excerpt:
     'Come abbiamo portato Farmacia Nazzi, laboratorio galenico dal 2001, da WooCommerce a Shopify: SEO, storico clienti, tracciamento e i risultati verificati prima e dopo la migrazione.',
-  image: '/images/use-case-nazzi/nazzi-homepage-shopify.webp',
-  imageAlt: 'La homepage di Farmacia Nazzi su Shopify dopo la migrazione da WooCommerce',
+  image: '/images/use-case-nazzi/nazzi-astrumkap.png',
+  imageAlt: 'Astrumkap, l’integratore più venduto di Farmacia Nazzi',
   caseType: 'Use Case',
   date: '2026-10-13',
   updated: '2026-10-13',
@@ -503,9 +503,9 @@ export const nazzi: UseCase = {
     'Every comparison uses the same days of the previous year. For confidentiality we only publish percentage changes, not absolute values.',
   ],
   archive: {
-    image: '/images/use-case-nazzi/nazzi-homepage-shopify.webp',
-    logo: '/images/use-case-nazzi/nazzi-logo.svg',
-    logoClass: 'h-[30px] w-[196px] object-contain',
+    image: '/images/use-case-nazzi/nazzi-astrumkap.png',
+    logo: '/images/originals/3D4Ji7c6LSsawGoOucoTS6dFA.png',
+    logoClass: 'h-[30px] w-[140px] object-contain',
     metrics: {
       en: ['+105% online sales after Shopify', '2.8x clicks from Google'],
       it: ['+105% vendite online dopo Shopify', '2,8x clic da Google'],

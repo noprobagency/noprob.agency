@@ -90,5 +90,6 @@ vanno corrette qui e nel copy.
 - "decine di altri progetti eCommerce" (playbook ambassador)
 - 15% dei visitatori arriva alle recensioni in fondo alla scheda prodotto (articolo CRO)
 - massimo tre clienti long term alla volta
-- 4 card del carosello risultati in homepage (DDglobal Store e altri 3 brand): metriche
-  tolte, restano solo i loghi finché non c'è una fonte.
+- 3 card del carosello risultati in homepage (DDglobal Store e altri 2 brand): metriche
+  tolte, restano solo i loghi finché non c'è una fonte. La card Nazzi del carosello aveva
+  "€9,03 CPA" e "32% crescita media annua": sostituiti con i dati verificati (+105%, 2,8x).
