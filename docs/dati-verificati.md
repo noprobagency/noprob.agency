@@ -73,6 +73,29 @@ SEO tecnica (sito live, 13 ott 2026): 143 articoli nella sitemap Shopify, sitema
 discovery pubblicata, 215 URL WooCommerce archiviati controllati: 138 con redirect 301, 77 in 404
 (CSV con i redirect consegnato, da importare in Shopify).
 
+## DDglobal Store (eCommerce B2B, catalogo senza carrello)
+
+Fonte: export Google Search Console, proprietà ddglobalstore.com, giornaliero 12 giu 2025 → 11 ott
+2026 (`data/use-cases/ddglobal-gsc-daily.json`). Migrazione AI da WordPress a nuovo sito, online
+dal 29 agosto 2026 (Antonio). Posizione media ponderata sulle impressioni.
+
+| Dato | Valore | Periodo |
+| --- | --- | --- |
+| Clic al giorno, 44 gg dopo vs 44 gg prima | 15,7 vs 15,5 (stabili) | 29 ago → 11 ott vs 16 lug → 28 ago |
+| Posizione media, stesso confronto | 9,3 → 8,3 | |
+| Clic ultimi 28 gg vs 28 gg prima del lancio | **+17%** | 14 set → 11 ott vs 31 lug → 27 ago |
+| Posizione media, stesso confronto | **9,4 → 7,9** | |
+| Clic 44 gg dopo vs stessi giorni 2025 | **+55%** | |
+| Impressioni, stesso confronto | **2,7x** | |
+| Clic settembre 2026 vs settembre 2025 | **+54%** | |
+
+GA4 (screenshot Acquisizione traffico): sessioni di settembre circa 4x la media gen → lug, ma i clic
+da Google sono stabili. Lo consideriamo un cambio di misurazione col nuovo sito: **non usato** come
+risultato.
+
+Sito pubblico (13 ott 2026): Next.js, 831 URL in sitemap con hreflang IT/EN, llms.txt, listino
+riservato con login, schede tecniche PDF.
+
 ## NoProb
 
 | Dato | Valore | Fonte |

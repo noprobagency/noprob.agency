@@ -1,6 +1,7 @@
 import type { ArticleSection } from '@/data/articles'
 
 import { cumini } from './cumini'
+import { ddglobal } from './ddglobal'
 import { nazzi } from './nazzi'
 
 export type UseCase = {
@@ -39,4 +40,4 @@ export type UseCase = {
 }
 
 
-export const useCases: UseCase[] = [nazzi, cumini]
+export const useCases: UseCase[] = [nazzi, cumini, ddglobal]
