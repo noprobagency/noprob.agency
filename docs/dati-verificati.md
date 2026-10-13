@@ -6,6 +6,8 @@ Se un dato cambia, si aggiorna qui e poi ovunque compare (cerca il valore nel re
 
 Ultimo controllo: **13 ottobre 2026**.
 
+I grafici della landing Shopify Launch Sprint usano solo indici (base 100) da `data/zero-loss/seo-charts.ts`: nessun valore assoluto arriva al browser.
+
 Per riservatezza dei clienti pubblichiamo solo variazioni percentuali, moltiplicatori e
 rapporti, mai fatturati, ordini o clienti in valore assoluto.
 
@@ -24,6 +26,7 @@ Online su Shopify dal 19 maggio 2025 (prima: piattaforma proprietaria collegata 
 | 2026 vs tutto il 2025 | **+15,4%** | 1 gen → 13 ott 2026 contro anno 2025 intero |
 | Mesi a sei cifre | 1 prima di Shopify (gen 2024), 4 dopo (nov 2025, dic 2025, gen 2026, lug 2026) | vendite nette mensili |
 | Mese record | luglio 2026 | vendite nette |
+| Ultimi 12 mesi vs 12 mesi prima di Shopify | **2,08x** | ott 2025 → set 2026 vs giu 2024 → mag 2025, vendite nette (grafico landing) |
 | Scontrino medio 2026 vs 2023 | **+69%** | 2023 parziale (da aprile) |
 | MER (vendite / spesa adv) | 6,8 (apr → dic 2023), 6,1 (2024), 5,4 (2025), 3,7 (2026 al 13 ott) | in pagina come "MER > x" arrotondato per difetto |
 | Marketing in positivo su base annua | 2025 e 2026 | margine marketing della dashboard (margine 45%, costi indiretti inclusi); alcuni mesi di lancio sotto pareggio |
@@ -64,6 +67,7 @@ Search Console (grafico ricostruito dallo screenshot e riallineato sui totali re
 `data/use-cases/nazzi-gsc-daily.json`): 11,8K clic, 624K impressioni, CTR 1,9%, posizione 10,2
 (ago 2025 → ott 2026). Ultimi 28 giorni: clic 1,45x i 28 giorni prima del go live e 2,76x lo stesso
 periodo 2025; impressioni 2,24x e 4,13x. Nel testo si usano arrotondati.
+Anno su anno, 11 ago → 9 ott: clic **2,35x**, impressioni **2,97x** (2026 vs 2025, grafico landing).
 
 SEO tecnica (sito live, 13 ott 2026): 143 articoli nella sitemap Shopify, sitemap agentic
 discovery pubblicata, 215 URL WooCommerce archiviati controllati: 138 con redirect 301, 77 in 404

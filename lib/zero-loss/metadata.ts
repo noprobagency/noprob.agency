@@ -37,3 +37,18 @@ export function buildZeroLossMetadata(locale: Locale): Metadata {
     },
   }
 }
+
+/** Application page: always noindex, never in the sitemap. */
+export function buildZeroLossApplyMetadata(locale: Locale): Metadata {
+  const copy = getZeroLossCopy(locale)
+  const base = buildMetadata({
+    locale,
+    path: ROUTE_PATHS.zeroLossApply[locale],
+    title: copy.apply.metaTitle,
+    description: copy.apply.metaDescription,
+    noIndex: true,
+    image: `/images/og-zero-loss-migration-${locale}.png`,
+    imageAlt: copy.meta.ogAlt,
+  })
+  return { ...base, title: { absolute: copy.apply.metaTitle } }
+}

@@ -4,7 +4,7 @@ import { ZL_SOURCES } from './zero-loss-migration.shared'
 /*
   Copy italiano della landing Shopify Launch Sprint (ex Zero-Loss Migration Sprint).
   Regole: niente trattini lunghi, niente scarsità finta, niente numeri inventati.
-  I token [[CUMINI]] sono placeholder: in pagina diventano
+  Numeri dei clienti solo in forma relativa (vedi docs/dati-verificati.md). I token [[X]], se presenti, in pagina diventano
   "[DA CONFERMARE]" (vedi components/sections/zero-loss/README.md).
 */
 
@@ -73,7 +73,7 @@ export const zeroLossIt: ZlCopy = {
       'Prima rata al kickoff, seconda al go-live, terza e quarta nei due mesi di supporto. Piano Shopify, tema e app a carico tuo. Nessuno sconto, nessun preventivo: questo è il prezzo.',
     results: [
       { value: '+67,7% di vendite online nei 12 mesi dopo la migrazione', attribution: 'Cumini, luxury multibrand' },
-      { value: '99,3K click organici e posizione media 9,6 dopo la migrazione', attribution: 'Cumini, Search Console' },
+      { value: 'Clic da Google 2,8 volte quelli di un anno prima', attribution: 'Farmacia Nazzi, Search Console' },
       { value: '+105% di vendite online nei primi 85 giorni dopo la migrazione da WooCommerce', attribution: 'Farmacia Nazzi, integratori' },
       { value: '0 minuti offline in oltre 10 migrazioni', attribution: 'noprob agency' },
     ],
@@ -272,29 +272,53 @@ export const zeroLossIt: ZlCopy = {
   },
   proof: {
     h2: 'Cosa succede dopo una migrazione fatta bene',
-    galleryTitle: 'Una card per ogni migrazione',
-    gallery: {
-      fromLabel: 'Da',
-      goLiveLabel: 'Go-live',
-      clicksLabel: 'Click organici',
-      clicksNote: '90 giorni prima e dopo',
-      lcpLabel: 'LCP mobile',
-      lcpNote: 'prima e dopo',
-      offlineLabel: 'Minuti offline',
-      beforeLabel: 'prima',
-      afterLabel: 'dopo',
-      skeletonLabel: 'prossima migrazione',
-      cumini: {
-        brand: 'Cumini',
-        from: '[[CUMINI]]',
-        goLive: '[[CUMINI]]',
-        clicksBefore: '[[CUMINI]]',
-        clicksAfter: '[[CUMINI]]',
-        lcpBefore: '[[CUMINI]]',
-        lcpAfter: '[[CUMINI]]',
-        offline: '0',
-      },
-      skeletons: 2,
+    sub: 'Dati reali dei nostri clienti, in indice: 100 è il livello di prima della migrazione. I valori assoluti restano loro.',
+    charts: {
+      goLiveLabel: 'Online su Shopify',
+      baselineLabel: '100 = prima',
+      caseLink: 'Leggi il caso studio',
+      items: [
+        {
+          key: 'nazziGsc',
+          brand: 'Farmacia Nazzi',
+          title: 'Traffico da Google prima e dopo la migrazione da WooCommerce',
+          kpis: [
+            { value: '+45%', label: 'clic da Google rispetto ai 28 giorni prima della migrazione' },
+            { value: '2,2x', label: 'impressioni nello stesso confronto' },
+            { value: '10,2', label: 'posizione media su Google' },
+          ],
+          legend: ['Clic', 'Impressioni'],
+          note: 'Media mobile 7 giorni da Google Search Console. 100 = media dei 28 giorni prima del go live.',
+          href: '/it/casi-studio/farmacia-nazzi-integratori-shopify',
+        },
+        {
+          key: 'nazziGscYoy',
+          brand: 'Farmacia Nazzi',
+          title: 'Clic da Google, 2026 contro 2025 nelle stesse settimane',
+          kpis: [
+            { value: '2,3x', label: 'clic da Google, dall’11 agosto al 9 ottobre, sul 2025' },
+            { value: '3x', label: 'impressioni nello stesso periodo' },
+            { value: '+105%', label: 'vendite online nei primi 85 giorni su Shopify' },
+          ],
+          legend: ['2025, su WooCommerce', '2026, su Shopify'],
+          note: 'Clic giornalieri medi per settimana da Google Search Console. 100 = media del 2025 nello stesso periodo.',
+          href: '/it/casi-studio/farmacia-nazzi-integratori-shopify',
+          baseline: '100 = 2025',
+        },
+        {
+          key: 'cuminiTrailing',
+          brand: 'Cumini',
+          title: 'Vendite online degli ultimi 12 mesi, mese per mese',
+          kpis: [
+            { value: '+67,7%', label: 'vendite nei 12 mesi dopo Shopify' },
+            { value: '2,08x', label: 'ultimi 12 mesi contro i 12 mesi prima di Shopify' },
+            { value: '+49,4%', label: 'ordini nei 12 mesi dopo Shopify' },
+          ],
+          legend: ['Vendite degli ultimi 12 mesi'],
+          note: '100 = i 12 mesi prima di Shopify (da giugno 2024 a maggio 2025). Fonte: Shopify.',
+          href: '/it/casi-studio/cumini-luxury-fashion-ecommerce',
+        },
+      ],
     },
     dashboardCta: 'Guarda la dashboard che ricevi il giorno 1',
     testimonialsHeading: 'Cosa dicono i clienti',
@@ -410,6 +434,12 @@ export const zeroLossIt: ZlCopy = {
     paragraph:
       'Ti rispondiamo entro 48 ore, anche se la risposta è no. Se sei dentro i criteri, la risposta è lo scaglione, il prezzo e il primo lunedì disponibile.',
     bullets: ['Kickoff sempre di lunedì', 'Store pronto al giorno 10', '90 giorni di supporto inclusi'],
+    cta: 'Candidati allo sprint',
+  },
+  apply: {
+    metaTitle: 'Candidati allo Shopify Launch Sprint | noprob agency',
+    metaDescription: 'Quattro passi, due minuti. Ti rispondiamo entro 48 ore con lo scaglione, il prezzo e il primo lunedì disponibile.',
+    back: 'Torna alla pagina dello sprint',
   },
   form: {
     progressLabel: 'Passo {step} di {total}',

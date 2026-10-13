@@ -8,6 +8,13 @@ Standalone landing that sells one productized service. Routes:
 
 - EN: `/zero-loss-migration` (`app/(zl-en)/zero-loss-migration/page.tsx`)
 - IT: `/it/zero-loss-migration` (`app/(zl-it)/it/zero-loss-migration/page.tsx`)
+- Application form, own page, always noindex: `/zero-loss-migration/apply`, `/it/zero-loss-migration/candidatura`
+  (`ZeroLossApplyPage.tsx`). Every CTA (`ZlCta`) links there keeping the query string;
+  the page fires `form_view`. Primary CTAs use the `.zl-cta` effect (`app/globals.css`):
+  breathing green glow, dotted halo on hover, off with reduced motion.
+- Results (#prove): `ZlSeoCharts.tsx`, three indexed charts (Nazzi Search Console before/after,
+  Nazzi clicks 2026 vs 2025, Cumini trailing 12 months sales) from `data/zero-loss/seo-charts.ts`.
+  Only index values, never absolute client figures (sources in `docs/dati-verificati.md`).
 
 Not linked from the global nav or footer: traffic comes from ads, cold email and
 ambassadors. `/shopify-migration` and `/it/migrazione-shopify` are untouched.
@@ -71,14 +78,13 @@ render as `[DA CONFERMARE]` through `renderCopy()` (`Placeholder.tsx`). The
 marker is highlighted in yellow everywhere except the Vercel **production**
 environment (`NEXT_PUBLIC_VERCEL_ENV !== 'production'`).
 
-### Open data (hidden until confirmed)
+### Open data
 
-| What | Where | Behaviour while missing |
-| --- | --- | --- |
-| Cumini before/after card: origin platform, go-live date, organic clicks 90 days before/after, mobile LCP before/after | `[[CUMINI]]` in `content/zero-loss-migration.{it,en}.ts` | whole gallery hidden (`ZlProof.tsx`) |
-| Demo dashboard URL | `ZL_DEMO_DASHBOARD_URL` in `content/zero-loss-migration.shared.ts` | link hidden (proof + form success) |
-| Next migration testimonials | 3 `hidden: true` slots in the copy files | not rendered |
-| Real deliverable screenshots | `ZlMockup` in `ZlDeliverables.tsx` | JSX mockups shown |
+| What | Where |
+| --- | --- |
+| Demo dashboard URL | `ZL_DEMO_DASHBOARD_URL` in `content/zero-loss-migration.shared.ts` (link hidden while `null`) |
+| Next migration testimonials | 3 `hidden: true` slots in the copy files |
+| Real deliverable screenshots | `ZlMockup` in `ZlDeliverables.tsx` (JSX mockups shown) |
 
 ## QA notes
 
