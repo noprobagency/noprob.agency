@@ -6,7 +6,7 @@ Se un dato cambia, si aggiorna qui e poi ovunque compare (cerca il valore nel re
 
 Ultimo controllo: **13 ottobre 2026**.
 
-I grafici della landing Shopify Launch Sprint usano solo indici (base 100) da `data/zero-loss/seo-charts.ts`: nessun valore assoluto arriva al browser.
+Grafici della landing Shopify Launch Sprint: Search Console di Integratori Nazzi DTC (clic e impressioni giornaliere, come nel case study) e vendite/ordini Cumini in indice (media mobile 3 mesi, 100 = media mensile dei 12 mesi prima di Shopify, fonte backend Shopify di cumini.com). Nessuna cifra di fatturato.
 
 Per riservatezza dei clienti pubblichiamo solo variazioni percentuali, moltiplicatori e
 rapporti, mai fatturati, ordini o clienti in valore assoluto.
@@ -67,7 +67,7 @@ Search Console (grafico ricostruito dallo screenshot e riallineato sui totali re
 `data/use-cases/nazzi-gsc-daily.json`): 11,8K clic, 624K impressioni, CTR 1,9%, posizione 10,2
 (ago 2025 → ott 2026). Ultimi 28 giorni: clic 1,45x i 28 giorni prima del go live e 2,76x lo stesso
 periodo 2025; impressioni 2,24x e 4,13x. Nel testo si usano arrotondati.
-Anno su anno, 11 ago → 9 ott: clic **2,35x**, impressioni **2,97x** (2026 vs 2025, grafico landing).
+Anno su anno, 11 ago → 9 ott: clic **2,35x**, impressioni **2,97x** (2026 vs 2025).
 
 SEO tecnica (sito live, 13 ott 2026): 143 articoli nella sitemap Shopify, sitemap agentic
 discovery pubblicata, 215 URL WooCommerce archiviati controllati: 138 con redirect 301, 77 in 404

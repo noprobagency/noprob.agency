@@ -1,194 +1,234 @@
 import Link from 'next/link'
 
 import type { ZlCopy } from '@/content/zero-loss-migration'
-import { CUMINI_GO_LIVE, NAZZI_GO_LIVE, cuminiTrailing, nazziGsc, nazziGscYoy } from '@/data/zero-loss/seo-charts'
+import gscDaily from '@/data/use-cases/nazzi-gsc-daily.json'
+import { CUMINI_MIGRATION, NAZZI_MIGRATION, cuminiMonthly } from '@/data/zero-loss/seo-charts'
 
 type Item = ZlCopy['proof']['charts']['items'][number]
-type Series = { values: number[]; color: string; width?: number; dashed?: boolean }
+type Lang = 'it' | 'en'
 
-const W = 640
-const H = 240
-const PAD = { left: 36, right: 12, top: 18, bottom: 28 }
-const MONTHS = {
+const BLUE = '#4285f4'
+const PURPLE = '#5e35b1'
+const INK = '#121212'
+const GREEN = '#96bf47'
+
+const W = 720
+const H = 330
+const PAD = { left: 44, right: 50, top: 48, bottom: 36 }
+const plotW = W - PAD.left - PAD.right
+const plotH = H - PAD.top - PAD.bottom
+
+const MONTHS: Record<Lang, string[]> = {
   it: ['gen', 'feb', 'mar', 'apr', 'mag', 'giu', 'lug', 'ago', 'set', 'ott', 'nov', 'dic'],
   en: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
 }
 
+const fmt = (v: number, lang: Lang) =>
+  v >= 1000 ? `${(v / 1000).toLocaleString(lang === 'it' ? 'it-IT' : 'en-US')}K` : String(v)
+
+type Axis = { max: number; step: number; color: string }
+type Line = { values: number[]; color: string; axis: 'left' | 'right' }
+
 /**
- * Line chart for index series (100 = before the migration). Dates are only used
- * to place month ticks and the go live marker: values are already indexed.
+ * Chart in the style of the case study Search Console chart: green migration band,
+ * black "live on Shopify" pill, month ticks, numbers without units on the axes.
  */
-function IndexChart({
+function Plot({
   dates,
-  series,
-  goLive,
-  band,
+  lines,
+  left,
+  right,
+  migration,
+  goLiveLabel,
+  migrationLabel,
   lang,
-  labels,
   ariaLabel,
 }: {
   dates: string[]
-  series: Series[]
-  goLive?: string
-  band?: [string, string]
-  lang: 'it' | 'en'
-  labels: { goLive?: string; band?: string; baseline: string }
+  lines: Line[]
+  left: Axis
+  right?: Axis
+  migration: [string, string]
+  goLiveLabel: string
+  migrationLabel: string
+  lang: Lang
   ariaLabel: string
 }) {
-  const max = Math.max(...series.flatMap((s) => s.values)) * 1.1
-  const stepY = max > 250 ? 100 : 50
-  const plotW = W - PAD.left - PAD.right
-  const plotH = H - PAD.top - PAD.bottom
-  const x = (i: number) => PAD.left + (i / (dates.length - 1)) * plotW
-  const y = (v: number) => PAD.top + plotH - (v / max) * plotH
-  const idx = (d: string) => {
-    const i = dates.findIndex((date) => date >= d)
-    return i === -1 ? dates.length - 1 : i
+  const t0 = Date.parse(dates[0])
+  const t1 = Date.parse(dates[dates.length - 1])
+  const xAt = (iso: string) => PAD.left + ((Date.parse(iso) - t0) / (t1 - t0)) * plotW
+  const yAt = (v: number, axis: Axis) => PAD.top + plotH - (v / axis.max) * plotH
+  const ticks = Array.from({ length: Math.round(left.max / left.step) + 1 }, (_, k) => k)
+
+  const bandX0 = Math.max(PAD.left, xAt(migration[0]))
+  const goX = xAt(migration[1])
+  const pillW = Math.max(150, goLiveLabel.length * 7.2 + 28)
+  const pillX = Math.min(Math.max(goX - pillW / 2, PAD.left), W - PAD.right - pillW)
+
+  // First day of each month inside the range, thinned to at most 12 labels.
+  const months: string[] = []
+  const start = new Date(t0)
+  for (let d = new Date(Date.UTC(start.getUTCFullYear(), start.getUTCMonth() + 1, 1)); d.getTime() <= t1; d.setUTCMonth(d.getUTCMonth() + 1)) {
+    months.push(d.toISOString().slice(0, 10))
   }
-  const ticks = dates
-    .map((d, i) => ({ d, i }))
-    .filter(({ d, i }) => i === 0 || d.slice(0, 7) !== dates[i - 1].slice(0, 7))
-  const every = Math.ceil(ticks.length / 8)
-  const gx = goLive ? x(idx(goLive)) : null
-  const labelLeft = gx !== null && gx > W * 0.7
+  // Long ranges (Cumini, since 2023): year on January, month name on July.
+  const long = months.length > 18
+  const every = Math.ceil(months.length / 12)
+  const showTick = (d: string, k: number) => (long ? ['01', '07'].includes(d.slice(5, 7)) : k % every === 0)
+  const tickLabel = (d: string) => {
+    const m = Number(d.slice(5, 7)) - 1
+    if (long) return m === 0 ? d.slice(0, 4) : MONTHS[lang][m]
+    return `${MONTHS[lang][m]}${m === 0 ? ` ${d.slice(2, 4)}` : ''}`
+  }
 
   return (
-    <svg viewBox={`0 0 ${W} ${H}`} className="h-auto w-full font-sans" role="img" aria-label={ariaLabel}>
-      {band && (
-        <g>
-          <rect x={x(idx(band[0]))} y={PAD.top} width={Math.max(4, x(idx(band[1])) - x(idx(band[0])))} height={plotH} fill="#1dcc5d" fillOpacity="0.1" />
-          <text x={x(idx(band[0])) + 4} y={PAD.top + plotH - 6} fontSize="9" fill="#139a45">
-            {labels.band}
-          </text>
-        </g>
-      )}
-      {Array.from({ length: Math.floor(max / stepY) + 1 }, (_, k) => k * stepY).map((v) => (
-        <g key={v}>
-          <line x1={PAD.left} x2={W - PAD.right} y1={y(v)} y2={y(v)} stroke={v === 100 ? '#9AA0A6' : '#ECEDEF'} strokeDasharray={v === 100 ? '4 4' : undefined} />
-          <text x={PAD.left - 6} y={y(v) + 3} textAnchor="end" fontSize="9" fill="#9AA0A6">
-            {v}
-          </text>
-        </g>
-      ))}
-      <text x={W - PAD.right} y={y(100) - 5} textAnchor="end" fontSize="9" fill="#80868B">
-        {labels.baseline}
+    <svg viewBox={`0 0 ${W} ${H}`} className="h-auto w-full" style={{ fontFamily: 'Inter, Helvetica, Arial, sans-serif' }} role="img" aria-label={ariaLabel}>
+      <rect x={bandX0} y={PAD.top} width={Math.max(0, goX - bandX0)} height={plotH} fill="#1dcc5d" fillOpacity="0.08" />
+      <text x={(bandX0 + goX) / 2} y={PAD.top + 18} textAnchor="middle" fontSize="11" fontWeight="600" fill="#139a45">
+        {migrationLabel}
       </text>
-      {gx !== null && (
-        <g>
-          <line x1={gx} x2={gx} y1={PAD.top} y2={PAD.top + plotH} stroke="#121212" strokeDasharray="3 3" />
-          <text x={labelLeft ? gx - 5 : gx + 5} y={PAD.top + 10} textAnchor={labelLeft ? 'end' : 'start'} fontSize="10" fontWeight="600" fill="#121212">
-            {labels.goLive}
-          </text>
-        </g>
-      )}
-      {series.map((s, k) => (
+
+      {ticks.map((k) => {
+        const y = PAD.top + plotH - (k / (ticks.length - 1)) * plotH
+        return (
+          <g key={k}>
+            <line x1={PAD.left} x2={W - PAD.right} y1={y} y2={y} stroke="#ececec" />
+            <text x={PAD.left - 10} y={y + 4} textAnchor="end" fontSize="11" fill={left.color}>
+              {fmt(k * left.step, lang)}
+            </text>
+            {right && (
+              <text x={W - PAD.right + 10} y={y + 4} fontSize="11" fill={right.color}>
+                {fmt((k * right.max) / (ticks.length - 1), lang)}
+              </text>
+            )}
+          </g>
+        )
+      })}
+
+      {lines.map((line, k) => (
         <polyline
           key={k}
           fill="none"
-          stroke={s.color}
-          strokeWidth={s.width ?? 2}
-          strokeDasharray={s.dashed ? '5 4' : undefined}
+          stroke={line.color}
+          strokeWidth="2.2"
           strokeLinejoin="round"
-          points={s.values.map((v, i) => `${x(i).toFixed(1)},${y(v).toFixed(1)}`).join(' ')}
+          strokeLinecap="round"
+          points={line.values
+            .map((v, i) => `${xAt(dates[i]).toFixed(1)},${yAt(v, line.axis === 'right' && right ? right : left).toFixed(1)}`)
+            .join(' ')}
         />
       ))}
-      {ticks
-        .filter((_, k) => k % every === 0)
-        .map(({ d, i }) => (
-          <text key={d} x={x(i)} y={H - 8} textAnchor="middle" fontSize="9" fill="#80868B">
-            {MONTHS[lang][Number(d.slice(5, 7)) - 1]}
-            {d.slice(5, 7) === '01' ? ` ${d.slice(2, 4)}` : ''}
+
+      <line x1={goX} x2={goX} y1={PAD.top - 4} y2={PAD.top + plotH} stroke={INK} strokeWidth="1.3" strokeDasharray="4 4" />
+      <rect x={pillX} y={PAD.top - 34} width={pillW} height="24" rx="12" fill={INK} />
+      <text x={pillX + pillW / 2} y={PAD.top - 18} textAnchor="middle" fontSize="11.5" fontWeight="600" fill="#fff">
+        {goLiveLabel}
+      </text>
+
+      {months
+        .filter((d, k) => showTick(d, k))
+        .map((d) => (
+          <text
+            key={d}
+            x={xAt(d)}
+            y={H - 10}
+            textAnchor="middle"
+            fontSize="11"
+            fontWeight={long && d.slice(5, 7) === '01' ? 600 : 400}
+            fill={long && d.slice(5, 7) === '01' ? INK : '#7c7c7c'}
+          >
+            {tickLabel(d)}
           </text>
         ))}
     </svg>
   )
 }
 
-function chartFor(item: Item, lang: 'it' | 'en', copy: ZlCopy['proof']['charts']) {
-  const labels = { goLive: copy.goLiveLabel, baseline: item.baseline ?? copy.baselineLabel }
+function movingAverage(values: number[], days: number) {
+  return values.map((_, i) => {
+    const win = values.slice(Math.max(0, i - days + 1), i + 1)
+    return win.reduce((a, b) => a + b, 0) / win.length
+  })
+}
+
+function chartFor(item: Item, lang: Lang) {
   if (item.key === 'nazziGsc') {
+    const dates = gscDaily.map((r) => r.d)
     return {
-      colors: ['#4793F0', '#5E3FBE'],
-      chart: (
-        <IndexChart
-          dates={nazziGsc.map((r) => r[0])}
-          series={[
-            { values: nazziGsc.map((r) => r[1]), color: '#4793F0' },
-            { values: nazziGsc.map((r) => r[2]), color: '#5E3FBE' },
+      colors: [BLUE, PURPLE],
+      kpiColors: [BLUE, PURPLE, INK, INK],
+      plot: (
+        <Plot
+          dates={dates}
+          lines={[
+            { values: movingAverage(gscDaily.map((r) => r.c), 7), color: BLUE, axis: 'left' },
+            { values: movingAverage(gscDaily.map((r) => r.i), 7), color: PURPLE, axis: 'right' },
           ]}
-          goLive={NAZZI_GO_LIVE}
+          left={{ max: 75, step: 15, color: BLUE }}
+          right={{ max: 5000, step: 1000, color: PURPLE }}
+          migration={NAZZI_MIGRATION}
+          goLiveLabel={item.goLiveLabel}
+          migrationLabel={item.migrationLabel}
           lang={lang}
-          labels={labels}
           ariaLabel={item.title}
         />
       ),
     }
   }
-  if (item.key === 'nazziGscYoy') {
-    return {
-      colors: ['#B9BDC3', '#4793F0'],
-      chart: (
-        <IndexChart
-          dates={nazziGscYoy.map((r) => r[0])}
-          series={[
-            { values: nazziGscYoy.map((r) => r[1]), color: '#B9BDC3', dashed: true },
-            { values: nazziGscYoy.map((r) => r[2]), color: '#4793F0', width: 2.5 },
-          ]}
-          lang={lang}
-          labels={labels}
-          ariaLabel={item.title}
-        />
-      ),
-    }
-  }
+  const dates = cuminiMonthly.map((r) => `${r[0]}-15`)
   return {
-    colors: ['#121212'],
-    chart: (
-      <IndexChart
-        dates={cuminiTrailing.map((r) => `${r[0]}-01`)}
-        series={[{ values: cuminiTrailing.map((r) => r[1]), color: '#121212', width: 2.5 }]}
-        goLive={`${CUMINI_GO_LIVE}-01`}
+    colors: [INK, GREEN],
+    kpiColors: [INK, GREEN, INK, INK],
+    plot: (
+      <Plot
+        dates={dates}
+        lines={[
+          { values: cuminiMonthly.map((r) => r[1]), color: INK, axis: 'left' },
+          { values: cuminiMonthly.map((r) => r[2]), color: GREEN, axis: 'left' },
+        ]}
+        left={{ max: 350, step: 50, color: '#7c7c7c' }}
+        migration={CUMINI_MIGRATION}
+        goLiveLabel={item.goLiveLabel}
+        migrationLabel={item.migrationLabel}
         lang={lang}
-        labels={labels}
         ariaLabel={item.title}
       />
     ),
   }
 }
 
-/** Results charts of the landing: real client data, indexed (no absolute figures). */
-export default function ZlSeoCharts({ copy, lang }: { copy: ZlCopy['proof']['charts']; lang: 'it' | 'en' }) {
+/** Results charts of the landing (two cards, same style as the case study chart). */
+export default function ZlSeoCharts({ copy, lang }: { copy: ZlCopy['proof']['charts']; lang: Lang }) {
   return (
     <div className="flex flex-col gap-6">
       {copy.items.map((item) => {
-        const { chart, colors } = chartFor(item, lang, copy)
+        const { plot, colors, kpiColors } = chartFor(item, lang)
         return (
-          <article key={item.key} className="rounded-[16px] border border-black/[0.06] bg-white p-5 min-[810px]:p-7">
-            <span className="inline-flex rounded-pill bg-np-card-soft px-3 py-[5px] font-sans text-[12px] font-semibold tracking-[-0.02em] text-np-dark">
-              {item.brand}
-            </span>
-            <h3 className="mt-3 font-display text-[1.3rem] font-semibold leading-[1.2em] tracking-[-0.04em] text-np-dark min-[810px]:text-[1.6rem]">
+          <article key={item.key} className="rounded-[24px] border border-black/[0.06] bg-white px-5 py-7 min-[810px]:px-12 min-[810px]:py-11">
+            <h3 className="font-sans text-[1.35rem] font-bold leading-[1.15em] tracking-[-0.04em] text-np-dark min-[810px]:text-[1.9rem]">
               {item.title}
             </h3>
-            <dl className="mt-5 grid grid-cols-3 gap-3">
-              {item.kpis.map((kpi) => (
-                <div key={kpi.label} className="border-l-2 border-[#1dcc5d] pl-3">
-                  <dt className="sr-only">{kpi.label}</dt>
-                  <dd className="font-display text-[1.5rem] font-semibold leading-[1em] tracking-[-0.05em] text-np-dark min-[810px]:text-[2rem]">
-                    {kpi.value}
-                  </dd>
-                  <dd className="mt-1 font-sans text-[12px] font-medium leading-[1.35em] tracking-[-0.02em] text-np-grey min-[810px]:text-[13px]">
+            <p className="mt-2 max-w-[860px] font-sans text-[12.5px] leading-[1.45em] tracking-[-0.01em] text-np-grey min-[810px]:text-[14px]">
+              {item.subtitle}
+            </p>
+            <dl className="mt-6 grid grid-cols-2 gap-x-6 gap-y-4 min-[810px]:grid-cols-4">
+              {item.kpis.map((kpi, i) => (
+                <div key={kpi.label}>
+                  <dt className="font-sans text-[12.5px] font-semibold tracking-[-0.02em] min-[810px]:text-[14px]" style={{ color: kpiColors[i] }}>
                     {kpi.label}
+                  </dt>
+                  <dd className="mt-1 font-sans text-[1.6rem] font-bold leading-[1em] tracking-[-0.05em] text-np-dark min-[810px]:text-[2.1rem]">
+                    {kpi.value}
                   </dd>
                 </div>
               ))}
             </dl>
-            <div className="mt-5">{chart}</div>
-            <div className="mt-2 flex flex-wrap items-center justify-between gap-x-6 gap-y-2">
-              <div className="flex flex-wrap gap-4">
+            <div className="mt-6">{plot}</div>
+            <div className="mt-3 flex flex-wrap items-center justify-between gap-x-6 gap-y-2">
+              <div className="flex flex-wrap gap-5">
                 {item.legend.map((label, i) => (
-                  <span key={label} className="inline-flex items-center gap-2 font-sans text-[12px] font-medium text-np-text">
-                    <span className="inline-block h-[3px] w-4 rounded-full" style={{ backgroundColor: colors[i] }} />
+                  <span key={label} className="inline-flex items-center gap-2 font-sans text-[13px] font-medium text-np-dark">
+                    <span className="inline-block h-[10px] w-[10px] rounded-full" style={{ backgroundColor: colors[i] }} />
                     {label}
                   </span>
                 ))}
@@ -197,7 +237,6 @@ export default function ZlSeoCharts({ copy, lang }: { copy: ZlCopy['proof']['cha
                 {copy.caseLink} →
               </Link>
             </div>
-            <p className="mt-2 font-sans text-[12px] leading-[1.45em] tracking-[-0.01em] text-np-grey">{item.note}</p>
           </article>
         )
       })}
