@@ -31,6 +31,11 @@ export type Article = {
   ledeIt?: string
   /** ISO 8601 with offset, used for BlogPosting.datePublished. */
   datePublishedIso?: string
+  /** Short <title>/<meta description> for Google (the H1 keeps the long title). */
+  seoTitle?: string
+  seoTitleIt?: string
+  seoDescription?: string
+  seoDescriptionIt?: string
   /** Approximate word count, surfaced in BlogPosting JSON-LD. */
   wordCount?: number
   /** BlogPosting articleSection (broad topic category). */
@@ -50,6 +55,10 @@ export const articles: Article[] = [
     slug: 'shopify-cro-guide',
     slugIt: 'cro-ecommerce',
     title: 'Shopify CRO in 2026: What the Research Actually Proves',
+    seoTitle: 'Shopify CRO in 2026: What the Research Proves',
+    seoTitleIt: 'CRO per eCommerce: cosa dice davvero la ricerca',
+    seoDescription:
+      'Shopify conversion rate optimization backed by peer-reviewed research from Wharton and the Journal of Marketing. Not opinions: what actually converts.',
     titleIt: "CRO per eCommerce: quello che la scienza ha dimostrato (e le guide tralasciano)",
     excerpt:
       'Science-backed Shopify conversion rate optimization. Not opinions, not listicles: what peer-reviewed research from Wharton and the Journal of Marketing actually proves about converting ecommerce visitors.',
@@ -647,6 +656,8 @@ export const articles: Article[] = [
     slug: 'how-shopify-works',
     slugIt: 'cose-shopify',
     title: "How Shopify Works: A Practitioner's Guide for Growing Brands (2026)",
+    seoTitle: 'How Shopify Works: A Practitioner’s Guide (2026)',
+    seoTitleIt: 'Cos’è Shopify e come funziona: guida 2026',
     titleIt: "Cos'è Shopify: guida completa alla piattaforma eCommerce (2026)",
     excerpt:
       'How Shopify actually works, what it costs, and whether it is worth it. Written by a Shopify Partner with 7+ years running real brand stores.',
@@ -1425,6 +1436,10 @@ export const articles: Article[] = [
   {
     slug: 'ecommerce-growth-strategy-long-term',
     title: 'eCommerce Growth Strategy: Why Long-Term Thinking Beats Trend Chasing',
+    seoTitle: 'eCommerce Growth Strategy for the Long Term',
+    seoTitleIt: 'Strategia eCommerce a lungo termine',
+    seoDescription:
+      'eCommerce brands that truly grow do not chase trends: stable teams, solid technical foundations and real KPIs. What the data says about long-term growth.',
     excerpt: "eCommerce brands that truly grow don't chase trends. They build a growth strategy that compounds over the long term: stable teams, solid technical foundations, real KPIs. What the data really says.",
     ledeEn: "The secret of eCommerce brands that actually grow isn't growth hacks. It's the foundations that compound over time.",
     image: '/images/blog/strategia-ecommerce-long-term-cover.png',

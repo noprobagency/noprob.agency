@@ -23,6 +23,12 @@ import type { UseCase } from './index'
 export const nazzi: UseCase = {
   slug: 'integratori-nazzi-dtc-shopify',
   title: 'Migrazione da WooCommerce a Shopify: il caso Integratori Nazzi DTC, vendite online raddoppiate in 85 giorni',
+  seoTitle: 'Da WooCommerce a Shopify: Integratori Nazzi DTC',
+  seoTitleEn: 'WooCommerce to Shopify: Integratori Nazzi DTC',
+  seoDescription:
+    'Migrazione da WooCommerce a Shopify per un brand di integratori DTC: vendite online +105% in 85 giorni e 2,7x clic da Google. Dati verificati.',
+  seoDescriptionEn:
+    'WooCommerce to Shopify migration for a DTC supplements brand: +105% online sales in 85 days and 2.7x clicks from Google. Verified data.',
   excerpt:
     'Come abbiamo portato Integratori Nazzi DTC, brand di integratori nato da un laboratorio galenico attivo dal 2001, da WooCommerce a Shopify: SEO, storico clienti, tracciamento e i risultati verificati prima e dopo la migrazione.',
   image: '/images/use-case-nazzi/nazzi-astrumkap.png',
@@ -233,7 +239,7 @@ export const nazzi: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Lo facciamo per brand e farmacie che vendono già online e vogliono passare a Shopify con un piano, dei numeri e qualcuno che risponde. [Ecco come lavoriamo sulle migrazioni a Shopify](/it/zero-loss-migration).',
+      text: 'Lo facciamo per brand e farmacie che vendono già online e vogliono passare a Shopify con un piano, dei numeri e qualcuno che risponde. [Ecco come lavoriamo sulle migrazioni a Shopify](/it/sprint-migrazione-shopify).',
     },
     { type: 'paragraph', text: 'Integratori Nazzi DTC è un cliente attivo di NoProb Agency da gennaio 2024. Se il tuo store è collegato a un gestionale proprietario, leggi anche il [caso Cumini](/it/casi-studio/cumini-luxury-fashion-ecommerce).' },
     { type: 'cta' },
@@ -467,7 +473,7 @@ export const nazzi: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'We do it for brands and pharmacies that already sell online and want to move to Shopify with a plan, real numbers and someone who answers. [This is how we run Shopify migrations](/zero-loss-migration).',
+      text: 'We do it for brands and pharmacies that already sell online and want to move to Shopify with a plan, real numbers and someone who answers. [This is how we run Shopify migrations](/shopify-migration-sprint).',
     },
     { type: 'paragraph', text: 'Integratori Nazzi DTC has been an active client of NoProb Agency since January 2024. If your store is connected to a proprietary ERP, read the [Cumini case](/use-cases/cumini-luxury-fashion-ecommerce) too.' },
     { type: 'cta' },

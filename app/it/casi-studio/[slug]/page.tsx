@@ -22,8 +22,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const useCase = useCases.find((u) => u.slug === slug)
   if (!useCase) return {}
   return buildMetadata({
-    title: useCase.title,
-    description: useCase.excerpt,
+    title: useCase.seoTitle ?? useCase.title,
+    description: useCase.seoDescription ?? useCase.excerpt,
     path: `/it/casi-studio/${useCase.slug}`,
     locale: 'it',
     image: useCase.image,

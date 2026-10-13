@@ -49,7 +49,7 @@ const MAIL = `[${LEGAL_CONTACT_EMAIL}](mailto:${LEGAL_CONTACT_EMAIL})`
 const it: LegalCopy = {
   privacy: {
     seo: {
-      title: 'Privacy Policy',
+      title: 'Informativa privacy',
       description:
         'Quali dati raccogliamo su noprob.agency, perché li usiamo, con chi li condividiamo e come esercitare i tuoi diritti. Spiegato in breve.',
     },
@@ -131,7 +131,7 @@ const it: LegalCopy = {
   },
   cookie: {
     seo: {
-      title: 'Cookie Policy',
+      title: 'Informativa cookie',
       description:
         'Quali cookie usa noprob.agency, a cosa servono, quanto durano e come cambiare le tue preferenze in qualsiasi momento. Spiegato in breve.',
     },

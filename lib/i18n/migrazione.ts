@@ -517,7 +517,7 @@ const en: MigrazioneCopy = {
       {
         question: 'What happens after the 90 days?',
         answer:
-          'The store is on Shopify, solid and measured. From here the whole performance team can step in to grow it with advertising, email marketing, CRO and continuous optimization. It is the natural step towards [full management](/dedicated-ecommerce-team).',
+          'The store is on Shopify, solid and measured. From here the whole performance team can step in to grow it with advertising, email marketing, CRO and continuous optimization. It is the natural step towards [full management](/data-driven-team).',
       },
       {
         question: 'What if my store is very complex?',

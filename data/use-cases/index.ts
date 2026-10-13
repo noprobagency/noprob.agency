@@ -8,6 +8,11 @@ export type UseCase = {
   slug: string
   title: string
   excerpt: string
+  /** Short <title>/<meta description> for Google (the H1 keeps the long title). */
+  seoTitle?: string
+  seoTitleEn?: string
+  seoDescription?: string
+  seoDescriptionEn?: string
   image: string
   imageAlt?: string
   caseType: string

@@ -27,8 +27,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const article = articles.find((a) => a.slug === slug)
   if (!article) return {}
   return buildMetadata({
-    title: article.title,
-    description: article.excerpt,
+    title: article.seoTitle ?? article.title,
+    description: article.seoDescription ?? article.excerpt,
     path: `/blog/${article.slug}`,
     locale: 'en',
     image: article.image,

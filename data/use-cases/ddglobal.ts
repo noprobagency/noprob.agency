@@ -15,6 +15,12 @@ import type { UseCase } from './index'
 export const ddglobal: UseCase = {
   slug: 'ddglobal-store-migrazione-ai-ecommerce-b2b',
   title: 'Migrazione AI di un eCommerce B2B: il caso DDglobal Store, sessioni quadruplicate nel primo mese',
+  seoTitle: 'Migrazione AI eCommerce B2B: DDglobal Store',
+  seoTitleEn: 'AI migration of a B2B eCommerce: DDglobal Store',
+  seoDescription:
+    'Migrazione AI del catalogo B2B di DDglobal Store: modifiche più rapide, sessioni 4 volte la media nel primo mese, posizione Google da 9,4 a 7,9.',
+  seoDescriptionEn:
+    'AI migration of DDglobal Store’s B2B catalog: faster changes, sessions 4 times the average in the first month, Google position from 9.4 to 7.9.',
   excerpt:
     'Il catalogo online di DDglobal Store, azienda B2B di neoprene e tessuti tecnici, portato da WordPress a un sito nuovo con una migrazione AI. Modifiche più rapide, sessioni quadruplicate nel primo mese.',
   image: '/images/originals/i9Ht9Hdb61eYmBH3DZyKGjIm6s.webp',
