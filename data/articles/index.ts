@@ -922,7 +922,7 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: 'We migrated them to Shopify in May 2025, built a complete server-side tracking setup achieving a Stape score of 92/100, and stabilized the technical team around the new stack. In the 12 months after the migration, online sales grew **67.7%** compared with the 12 months before ([full case study](/use-cases/cumini-luxury-fashion-ecommerce)). That result did not come from a single campaign or growth hack. It came from a technical foundation that finally allowed us to do the work properly.',
+        text: 'We migrated them to Shopify in May 2025, built a complete server-side tracking setup achieving a Stape score of 92/100, and stabilized the technical team around the new stack. In the 12 months after the migration, online sales grew **67.7%** compared with the 12 months before ([full case study](/use-cases/cumini-luxury-fashion-ecommerce)). The same happens coming from WooCommerce: [Farmacia Nazzi](/use-cases/farmacia-nazzi-integratori-shopify) sold 105% more online in its first 85 days on Shopify. That result did not come from a single campaign or growth hack. It came from a technical foundation that finally allowed us to do the work properly.',
       },
       {
         type: 'paragraph',
@@ -1280,7 +1280,7 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: 'Li abbiamo migrati su Shopify a maggio 2025, costruito un tracking server-side completo (Stape score 92/100), stabilizzato il team tecnico. Nei 12 mesi dopo la migrazione le vendite online sono cresciute del **67,7%** rispetto ai 12 mesi prima ([caso studio completo](/it/casi-studio/cumini-luxury-fashion-ecommerce)). Non è stato un risultato istantaneo. È stato costruito su una fondamenta tecnica che finalmente permetteva di lavorare.',
+        text: 'Li abbiamo migrati su Shopify a maggio 2025, costruito un tracking server-side completo (Stape score 92/100), stabilizzato il team tecnico. Nei 12 mesi dopo la migrazione le vendite online sono cresciute del **67,7%** rispetto ai 12 mesi prima ([caso studio completo](/it/casi-studio/cumini-luxury-fashion-ecommerce)). Lo stesso succede partendo da WooCommerce: [Farmacia Nazzi](/it/casi-studio/farmacia-nazzi-integratori-shopify) ha venduto online il 105% in più nei primi 85 giorni su Shopify. Non è stato un risultato istantaneo. È stato costruito su una fondamenta tecnica che finalmente permetteva di lavorare.',
       },
       {
         type: 'paragraph',

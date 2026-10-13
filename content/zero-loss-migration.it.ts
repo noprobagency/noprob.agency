@@ -29,8 +29,8 @@ export const zeroLossIt: ZlCopy = {
     ctaNote: 'Rispondiamo in 48 ore',
     ctaSecondary: 'Guarda i risultati',
     logosLabel: 'Scelto da brand fashion, food e DTC',
-    trustpilotScore: '4,9',
-    trustpilotLabel: 'su Trustpilot',
+    trustpilotScore: '5/5',
+    trustpilotLabel: '10 recensioni su Trustpilot',
   },
   overview: {
     h2: 'Shopify Launch Sprint',
@@ -74,7 +74,7 @@ export const zeroLossIt: ZlCopy = {
     results: [
       { value: '+67,7% di vendite online nei 12 mesi dopo la migrazione', attribution: 'Cumini, luxury multibrand' },
       { value: '99,3K click organici e posizione media 9,6 dopo la migrazione', attribution: 'Cumini, Search Console' },
-      { value: 'Conversion rate da 2% a 5%, AOV +30%', attribution: 'Cliente noprob, eCommerce DTC' },
+      { value: '+105% di vendite online nei primi 85 giorni dopo la migrazione da WooCommerce', attribution: 'Farmacia Nazzi, integratori' },
       { value: '0 minuti offline in oltre 10 migrazioni', attribution: 'noprob agency' },
     ],
   },

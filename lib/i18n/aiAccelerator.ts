@@ -237,7 +237,7 @@ const it: AiCopy = {
     benefits: ['One-to-one, su misura', '4 videochiamate in 30 giorni', 'Prezzo fisso, zero vincoli'],
     cta: 'Candida la tua azienda',
     ctaNote: 'Solo aziende ed eCommerce già avviati. Valutiamo ogni candidatura.',
-    trustRatingLabel: '4,9',
+    trustRatingLabel: '5/5',
     trustLine: 'Scelti da brand eCommerce, aziende e team marketing',
   },
   problem: {
@@ -673,7 +673,7 @@ const en: AiCopy = {
     benefits: ['One-to-one, tailored', '4 video calls in 30 days', 'Fixed price, no lock-in'],
     cta: 'Apply with your company',
     ctaNote: 'Established companies and eCommerce brands only. We review every application.',
-    trustRatingLabel: '4.9',
+    trustRatingLabel: '5/5',
     trustLine: 'Chosen by eCommerce brands, companies and marketing teams',
   },
   problem: {

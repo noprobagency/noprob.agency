@@ -29,8 +29,8 @@ export const zeroLossEn: ZlCopy = {
     ctaNote: 'We reply within 48 hours',
     ctaSecondary: 'See the results',
     logosLabel: 'Chosen by fashion, food and DTC brands',
-    trustpilotScore: '4.9',
-    trustpilotLabel: 'on Trustpilot',
+    trustpilotScore: '5/5',
+    trustpilotLabel: '10 reviews on Trustpilot',
   },
   overview: {
     h2: 'Shopify Launch Sprint',
@@ -74,7 +74,7 @@ export const zeroLossEn: ZlCopy = {
     results: [
       { value: '+67.7% online sales in the 12 months after the migration', attribution: 'Cumini, luxury multibrand' },
       { value: '99.3K organic clicks and average position 9.6 after the migration', attribution: 'Cumini, Search Console' },
-      { value: 'Conversion rate from 2% to 5%, AOV +30%', attribution: 'noprob client, DTC eCommerce' },
+      { value: '+105% online sales in the first 85 days after the move from WooCommerce', attribution: 'Farmacia Nazzi, supplements' },
       { value: '0 minutes offline across over 10 migrations', attribution: 'noprob agency' },
     ],
   },

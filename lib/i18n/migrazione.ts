@@ -134,7 +134,7 @@ export type MigrazioneCopy = {
 
 const it: MigrazioneCopy = {
   hero: {
-    trustRatingLabel: '4,9',
+    trustRatingLabel: '5/5',
     trustSectors: 'Scelti da brand di Moda, Integratori e DTC eCommerce',
     titlePart1: 'Migra a Shopify senza perdere ',
     titleEm1: 'vendite',
@@ -397,7 +397,7 @@ const it: MigrazioneCopy = {
 
 const en: MigrazioneCopy = {
   hero: {
-    trustRatingLabel: '4.9',
+    trustRatingLabel: '5/5',
     trustSectors: 'Chosen by Fashion, Supplements and DTC brands',
     titlePart1: 'Migrate to Shopify without losing ',
     titleEm1: 'sales',
