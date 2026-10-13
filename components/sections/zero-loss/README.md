@@ -1,4 +1,8 @@
-# Zero-Loss Migration Sprint landing
+# Shopify Launch Sprint landing (ex Zero-Loss Migration Sprint)
+
+Product renamed in v0.68.0: "Zero-Loss" opened with a negative frame. URLs, file
+names and the lead `source` stay `zero-loss-migration` so ads, cold email and
+ambassador links keep working.
 
 Standalone landing that sells one productized service. Routes:
 
@@ -67,22 +71,14 @@ render as `[DA CONFERMARE]` through `renderCopy()` (`Placeholder.tsx`). The
 marker is highlighted in yellow everywhere except the Vercel **production**
 environment (`NEXT_PUBLIC_VERCEL_ENV !== 'production'`).
 
-### TODO list (open placeholders, by section)
+### Open data (hidden until confirmed)
 
-| Section | What | Where to replace |
+| What | Where | Behaviour while missing |
 | --- | --- | --- |
-| 3 Overview, "Cosa ottieni" line 1 | `[[N]]` number of checkout settings | `content/zero-loss-migration.it.ts` line 44, `.en.ts` line 44 |
-| 3 Overview, result card 3 | `[[BRAND]]` brand of the CR 2%→5% / AOV +30% case | `content/zero-loss-migration.it.ts` line 77, `.en.ts` line 77 |
-| 5 Deliverable 1 paragraph | `[[N]]` | `content/zero-loss-migration.it.ts` line 106, `.en.ts` line 106 |
-| 5 Deliverables, images 1-5 | JSX mockups (`ZlMockups.tsx`) stand in for real screenshots: staging vs current site, report table, redirect CSV + test output, tracking spec + EMQ, signed checklist | replace `ZlMockup` in `ZlDeliverables.tsx` with `next/image` screenshots (or `ImagePlaceholder`) |
-| 6 Calendar, week 2 Wednesday | `[[N]]` | `content/zero-loss-migration.it.ts` line 214, `.en.ts` line 214 |
-| 9 Proof, Cumini before/after card | `[[CUMINI]]` origin platform, go-live date, organic clicks 90 days before/after, mobile LCP before/after | `content/zero-loss-migration.it.ts` lines 300-305, `.en.ts` lines 300-305 |
-| 9 Proof + form success | `[LINK DEMO]` demo dashboard URL | `content/zero-loss-migration.shared.ts` `ZL_DEMO_DASHBOARD_URL` (currently `null`, link rendered disabled) |
-| 9 Proof, testimonials | 3 hidden slots for the next migration testimonials | `content/zero-loss-migration.it.ts` lines 328-330, `.en.ts` lines 328-330 (set `hidden: false` and fill) |
-| 11 FAQ, "Il sito sarà uguale a prima?" | `[[N]]` | `content/zero-loss-migration.it.ts` line 376, `.en.ts` line 376 |
-| 2 Hero, logo strip | confirm the stylized "S" mark is the Sfogliate&Sfogliatelle logo | `components/sections/zero-loss/ZlHero.tsx` `ZL_STRIP_LOGOS` |
-
-Line numbers refer to the files at the time of the PR; search the token to be safe.
+| Cumini before/after card: origin platform, go-live date, organic clicks 90 days before/after, mobile LCP before/after | `[[CUMINI]]` in `content/zero-loss-migration.{it,en}.ts` | whole gallery hidden (`ZlProof.tsx`) |
+| Demo dashboard URL | `ZL_DEMO_DASHBOARD_URL` in `content/zero-loss-migration.shared.ts` | link hidden (proof + form success) |
+| Next migration testimonials | 3 `hidden: true` slots in the copy files | not rendered |
+| Real deliverable screenshots | `ZlMockup` in `ZlDeliverables.tsx` | JSX mockups shown |
 
 ## QA notes
 

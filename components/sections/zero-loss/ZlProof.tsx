@@ -2,7 +2,8 @@ import SearchConsoleCharts from '@/components/sections/SearchConsoleCharts'
 import Testimonials from '@/components/sections/Testimonials'
 import type { Locale } from '@/lib/i18n'
 import type { ZlCopy } from '@/content/zero-loss-migration'
-import { renderCopy } from './Placeholder'
+import { isPlaceholderToken, renderCopy } from './Placeholder'
+import { ZL_DEMO_DASHBOARD_URL } from '@/content/zero-loss-migration'
 import ZlDashboardLink from './ZlDashboardLink'
 
 function Metric({ label, note, before, after, beforeLabel, afterLabel }: {
@@ -41,6 +42,8 @@ function Metric({ label, note, before, after, beforeLabel, afterLabel }: {
 export default function ZlProof({ locale, copy }: { locale: Locale; copy: ZlCopy['proof'] }) {
   const g = copy.gallery
   const visibleTestimonials = copy.testimonials.filter((t) => !t.hidden)
+  // The before/after gallery stays hidden until every Cumini value is confirmed.
+  const showGallery = !Object.values(g.cumini).some(isPlaceholderToken)
 
   return (
     <section id="prove" className="scroll-mt-20 pt-20 min-[810px]:pt-28">
@@ -51,8 +54,10 @@ export default function ZlProof({ locale, copy }: { locale: Locale; copy: ZlCopy
       {/* Block A: Search Console charts, unchanged */}
       <SearchConsoleCharts locale={locale} />
 
-      {/* Block B: before/after gallery */}
       <div className="container-noprob mt-16">
+        {/* Block B: before/after gallery */}
+        {showGallery && (
+        <>
         <h3 className="font-display text-[1.5rem] font-semibold leading-[1.2em] tracking-[-0.05em] text-np-dark min-[810px]:text-[1.9rem]">
           {copy.galleryTitle}
         </h3>
@@ -91,11 +96,15 @@ export default function ZlProof({ locale, copy }: { locale: Locale; copy: ZlCopy
             </li>
           ))}
         </ul>
+        </>
+        )}
 
         {/* Block C: demo dashboard */}
-        <div className="mt-8">
-          <ZlDashboardLink label={copy.dashboardCta} position="proof" />
-        </div>
+        {ZL_DEMO_DASHBOARD_URL && (
+          <div className="mt-8">
+            <ZlDashboardLink label={copy.dashboardCta} position="proof" />
+          </div>
+        )}
 
         {/* Block D: testimonials (same card as /shopify-migration) */}
         <Testimonials

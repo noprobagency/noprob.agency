@@ -9,7 +9,7 @@
  * placeholders is in components/sections/zero-loss/README.md.
  */
 
-export const ZL_PRODUCT_NAME = 'Zero-Loss Migration Sprint'
+export const ZL_PRODUCT_NAME = 'Shopify Launch Sprint'
 export const ZL_SOURCE_ID = 'zero-loss-migration' as const
 export const ZL_PLACEHOLDER_LABEL = '[DA CONFERMARE]'
 
@@ -112,8 +112,6 @@ export type ZlCopy = {
     sub: string
     labelPrefix: string
     items: { title: string; paragraph: string; imageAlt: string; mockup: ZlMockupKind }[]
-    afterTitle: string
-    afterCards: { title: string; text: string }[]
   }
   calendar: {
     h2: string
