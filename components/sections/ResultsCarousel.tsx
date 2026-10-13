@@ -30,7 +30,7 @@ const resultCards: ReadonlyArray<{
     image: '/images/originals/i9Ht9Hdb61eYmBH3DZyKGjIm6s.webp',
     logo: '/images/originals/RWVPFhFtXLH5J1UMr53qg3AEzL8.svg',
     logoClass: 'h-[62px] w-[140px] object-contain',
-    metrics: { en: ['AI migration, B2B eCommerce', '+17% Google clicks'], it: ['Migrazione AI, eCommerce B2B', '+17% clic da Google'] },
+    metrics: { en: ['AI migration, B2B eCommerce', '4x sessions in the first month'], it: ['Migrazione AI, eCommerce B2B', '4x sessioni nel primo mese'] },
     href: { en: '/use-cases/ddglobal-store-migrazione-ai-ecommerce-b2b', it: '/it/casi-studio/ddglobal-store-migrazione-ai-ecommerce-b2b' },
     label: 'DDglobal Store',
   },

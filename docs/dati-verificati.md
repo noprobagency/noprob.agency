@@ -90,9 +90,11 @@ dal 29 agosto 2026 (Antonio). Posizione media ponderata sulle impressioni.
 | Impressioni, stesso confronto | **2,7x** | |
 | Clic settembre 2026 vs settembre 2025 | **+54%** | |
 
-GA4 (screenshot Acquisizione traffico): sessioni di settembre circa 4x la media gen → lug, ma i clic
-da Google sono stabili. Lo consideriamo un cambio di misurazione col nuovo sito: **non usato** come
-risultato.
+GA4 (screenshot Acquisizione traffico): sessioni di settembre circa **4x** la media mensile gen → lug.
+Usato nel case study (scelta di Antonio, versione corta e positiva del 13 ott 2026) sempre come
+"sessioni", mai come "traffico da Google": nello stesso periodo i clic da Google sono stabili, quindi
+il salto GA4 riflette anche la misurazione del nuovo sito. In pagina da Search Console solo la posizione
+media 9,4 → 7,9.
 
 Sito pubblico (13 ott 2026): Next.js, 831 URL in sitemap con hreflang IT/EN, llms.txt, listino
 riservato con login, schede tecniche PDF.
