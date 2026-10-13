@@ -489,14 +489,11 @@ export const zeroLossEn: ZlCopy = {
     metaTitle: 'Apply for the Shopify Launch Sprint | noprob agency',
     metaDescription: 'Four steps, two minutes. We reply within 48 hours with your tier, the price and the first available kickoff date.',
     back: 'Back to the sprint page',
-    trust: 'Chosen by Fashion, Supplements and DTC eCommerce brands',
-    h1Pre: 'Your store on Shopify in',
-    h1Em: '14 days',
-    description: 'Four steps, two minutes. The person running the sprint replies within 48 hours, even if the answer is no.',
     trustedBy: '5/5 on Trustpilot',
-    sideTitle: 'Fixed price. Fixed date.',
-    sideTitleEm: 'No surprises.',
-    sideText: 'A day-by-day calendar, one point of contact, 4 guarantees written in the contract. If it does not work, we pay.',
+    h1Pre: 'Your store on Shopify in',
+    h1Em: '14 days.',
+    description:
+      'A whole team, fully focused on your store. We move it to Shopify at the highest quality in just 14 days and get it ready for a performance sprint across every area: the next step for your eCommerce business.',
     badges: ['Reply within 48 hours', '7/7 support', 'Fixed price, no quotes'],
   },
   form: {

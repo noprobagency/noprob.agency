@@ -181,16 +181,11 @@ export type ZlCopy = {
     metaTitle: string
     metaDescription: string
     back: string
-    /** Hero, same pattern as the contact page */
-    trust: string
+    /** Left column of the application card: trust line, H1, one strong paragraph */
+    trustedBy: string
     h1Pre: string
     h1Em: string
     description: string
-    /** Left card next to the form */
-    trustedBy: string
-    sideTitle: string
-    sideTitleEm: string
-    sideText: string
     /** Small badges under the form */
     badges: string[]
   }
