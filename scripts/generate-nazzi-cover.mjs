@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Cover of the Farmacia Nazzi case study, in the same style as the blog covers
+// Cover of the Integratori Nazzi DTC case study, in the same style as the blog covers
 // (light background with a soft green glow, green rule on the left, black + green
 // headline, rounded card with the brand mark on the right). Language neutral, so the
 // same file works for the IT and EN pages and as OG image.
@@ -41,7 +41,7 @@ const svg = `<?xml version="1.0" encoding="UTF-8"?>
   <text x="110" y="380" font-family="${FONT}" font-size="112" font-weight="700" letter-spacing="-5" fill="#121212">WooCommerce</text>
   <text x="110" y="508" font-family="${FONT}" font-size="112" font-weight="700" letter-spacing="-5" fill="${GREEN}">→ Shopify</text>
   <rect x="112" y="572" width="96" height="5" rx="2.5" fill="${GREEN}" fill-opacity="0.6"/>
-  <text x="112" y="652" font-family="${FONT}" font-size="40" font-weight="400" letter-spacing="-0.8" fill="#7c7c7c">Farmacia Nazzi, case study</text>
+  <text x="112" y="652" font-family="${FONT}" font-size="40" font-weight="400" letter-spacing="-0.8" fill="#7c7c7c">Integratori Nazzi DTC, case study</text>
 
   <rect x="${card.x}" y="${card.y}" width="${card.w}" height="${card.h}" rx="44" fill="#f6f8f0" stroke="#e6ebdb" stroke-width="2" filter="url(#shadow)"/>
   <g transform="translate(${card.x + (card.w - markW) / 2} ${card.y + (card.h - markH) / 2}) scale(${markScale})" fill="${NAZZI_GREEN}">

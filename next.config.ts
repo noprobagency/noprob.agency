@@ -23,6 +23,9 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // Nazzi case study renamed (Farmacia Nazzi -> Integratori Nazzi DTC)
+      { source: '/use-cases/farmacia-nazzi-integratori-shopify', destination: '/use-cases/integratori-nazzi-dtc-shopify', permanent: true },
+      { source: '/it/casi-studio/farmacia-nazzi-integratori-shopify', destination: '/it/casi-studio/integratori-nazzi-dtc-shopify', permanent: true },
       // Legacy English-named IT paths -> SEO-optimized Italian slugs
       { source: '/it/about',                  destination: '/it/chi-siamo',                permanent: true },
       { source: '/it/about/:path*',           destination: '/it/chi-siamo/:path*',         permanent: true },

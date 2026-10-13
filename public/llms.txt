@@ -35,7 +35,7 @@ NoProb Agency is a Shopify technical partner for B2C brands in fashion, suppleme
 All figures below are verified against Shopify, Meta, Google Ads, Klaviyo and Google Search Console data (last check: October 13, 2026). Each case study page lists its sources, method and update date. We publish percentage changes, not clients' absolute revenue.
 
 - Cumini, luxury fashion multibrand boutique, 4+ year partnership, migrated to Shopify in May 2025 with a proprietary ERP connected: +67.7% online sales in the 12 months after the migration vs the 12 months before, orders +49.4%, average order value +12.2%, tracking score from 31 to 92/100, Klaviyo attributed revenue +301%. https://noprob.agency/use-cases/cumini-luxury-fashion-ecommerce
-- Farmacia Nazzi, compounding pharmacy selling its own supplements, migrated from WooCommerce to Shopify on July 19, 2026: +105% online sales in the first 85 days vs the same days of 2025, orders +77%, returning customers 2.25x, Google clicks 2.8x year over year, +46% sales in two weeks with ads off. https://noprob.agency/use-cases/farmacia-nazzi-integratori-shopify
+- Integratori Nazzi DTC, direct to consumer supplement brand from a compounding laboratory, migrated from WooCommerce to Shopify on July 19, 2026: +105% online sales in the first 85 days vs the same days of 2025, orders +77%, returning customers 2.25x, Google clicks 2.8x year over year, +46% sales in two weeks with ads off. https://noprob.agency/use-cases/integratori-nazzi-dtc-shopify
 - Trustpilot: 10 reviews, all 5 stars (TrustScore shown by Trustpilot: 4.4). https://www.trustpilot.com/review/noprob.agency
 
 ## Ideal Client
@@ -56,5 +56,5 @@ Working with a maximum of three long-term clients at a time. This is a real oper
 - About: Team, principles, approach. https://noprob.agency/about
 - Use Cases: Real case studies with verified results. https://noprob.agency/use-cases
 - Case study, Shopify migration with a proprietary ERP (fashion): https://noprob.agency/use-cases/cumini-luxury-fashion-ecommerce
-- Case study, WooCommerce to Shopify migration (pharmacy, supplements): https://noprob.agency/use-cases/farmacia-nazzi-integratori-shopify
+- Case study, WooCommerce to Shopify migration (supplements, DTC): https://noprob.agency/use-cases/integratori-nazzi-dtc-shopify
 - Blog: Articles on Shopify development, migration, tracking, CRO. https://noprob.agency/blog

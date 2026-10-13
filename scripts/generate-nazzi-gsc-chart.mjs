@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Search Console chart of the Farmacia Nazzi case study (IT + EN), rebuilt from
+// Search Console chart of the Integratori Nazzi DTC case study (IT + EN), rebuilt from
 // the GSC performance screenshot: the two lines were read pixel by pixel and
 // rescaled on the real totals (11.8K clicks, 624K impressions). Daily values are
 // in data/use-cases/nazzi-gsc-daily.json, drawn here as a 7-day moving average.
@@ -41,7 +41,7 @@ const path = (pts, y) => pts.map((p, i) => `${i ? 'L' : 'M'}${x(p.d).toFixed(1)}
 
 const COPY = {
   it: {
-    title: 'Farmacia Nazzi, traffico organico da Google',
+    title: 'Integratori Nazzi DTC, traffico organico da Google',
     sub: 'Clic e impressioni giornaliere, media mobile 7 giorni. Fonte: Google Search Console, ago 2025 → ott 2026.',
     kpis: [['Clic totali', '11,8K', BLUE], ['Impressioni totali', '624K', PURPLE], ['CTR medio', '1,9%', '#181818'], ['Posizione media', '10,2', '#181818']],
     band: 'Migrazione',
@@ -52,7 +52,7 @@ const COPY = {
     k: (n) => `${n / 1000}K`,
   },
   en: {
-    title: 'Farmacia Nazzi, organic traffic from Google',
+    title: 'Integratori Nazzi DTC, organic traffic from Google',
     sub: 'Daily clicks and impressions, 7-day moving average. Source: Google Search Console, Aug 2025 → Oct 2026.',
     kpis: [['Total clicks', '11.8K', BLUE], ['Total impressions', '624K', PURPLE], ['Average CTR', '1.9%', '#181818'], ['Average position', '10.2', '#181818']],
     band: 'Migration',

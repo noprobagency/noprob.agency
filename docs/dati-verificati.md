@@ -43,7 +43,7 @@ MER 9 e 7,5 e crescite 2022/2023/2024, tracking al 95%, conversion rate mobile r
 +23% email, 86 → 14 ticket urgenti, MER +38%, CPA -14%, AOV +7%, costi retention -57%,
 "migrato su Shopify nel 2022" (vero: maggio 2025).
 
-## Farmacia Nazzi (farmacia, integratori)
+## Integratori Nazzi DTC (integratori, DTC)
 
 Fonte: dashboard-nazzi (Shopify + Meta Marketing API), dati dal 1 gennaio 2024.
 Migrazione WooCommerce → Shopify costruita tra maggio e giugno 2026, online dal 19 luglio 2026.
