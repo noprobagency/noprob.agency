@@ -36,7 +36,7 @@ export const zeroLossEn: ZlCopy = {
   overview: {
     h2: 'Shopify Launch Sprint',
     paragraph:
-      'Fourteen days, a fixed calendar, one point of contact. On Monday you give us the accesses, on the Friday of the following week your store is on Shopify, ready to publish. It is not a redesign: it is your store, faster, stronger on Google and with a checkout built to sell more.',
+      'Fourteen days, a fixed calendar, one point of contact. On day 1 you give us the accesses, on day 14 your store is on Shopify, ready to publish. It is not a redesign: it is your store, faster, stronger on Google and with a checkout built to sell more.',
     cta: 'Apply for the sprint',
     deliverablesTitle: 'What you get on day 14',
     deliverables: [
@@ -151,7 +151,7 @@ export const zeroLossEn: ZlCopy = {
       yourTeam: 'You fill in the intake form (30 minutes), prepare the list of accesses and the catalog and order exports.',
       ourTeamTitle: 'Our team',
       ourTeam:
-        'We open the dedicated channel, prepare the development store and the import plan. Kickoff is always on a Monday: if an access is missing, it moves to the following Monday. We do not start halfway.',
+        'We open the dedicated channel, prepare the development store and the import plan. Kickoff starts only when we have every access. We do not start halfway.',
     },
     weeks: [
       {
@@ -436,7 +436,7 @@ export const zeroLossEn: ZlCopy = {
       },
       {
         question: 'What happens if the accesses do not arrive in time?',
-        answer: 'The kickoff moves to the following Monday. The sprint starts only when it can finish in 14 days.',
+        answer: 'The kickoff waits until we have everything. The sprint starts only when it can finish in 14 days.',
       },
       {
         question: 'What happens if my store exceeds the tier limits?',
@@ -461,7 +461,7 @@ export const zeroLossEn: ZlCopy = {
       {
         question: 'When can I start?',
         answer:
-          'Kickoff is always on a Monday. Apply, and we reply within 48 hours with your tier and the first available Monday.',
+          'Apply: we reply within 48 hours with your tier and the first available kickoff date.',
       },
       {
         question: 'Why does the price depend on my company’s revenue?',
@@ -473,14 +473,23 @@ export const zeroLossEn: ZlCopy = {
   finalCta: {
     h2: 'Your store on Shopify in 14 days. Apply now.',
     paragraph:
-      'We reply within 48 hours, even if the answer is no. If you meet the criteria, the answer is your tier, the price and the first available Monday.',
-    bullets: ['Kickoff always on a Monday', 'Store ready on day 14', '90 days of support, monitoring & improvement'],
+      'We reply within 48 hours, even if the answer is no. If you meet the criteria, the answer is your tier, the price and the first available kickoff date.',
+    bullets: ['Store ready on day 14', '4 guarantees written in the contract', '90 days of support, monitoring & improvement'],
     cta: 'Apply for the sprint',
   },
   apply: {
     metaTitle: 'Apply for the Shopify Launch Sprint | noprob agency',
-    metaDescription: 'Four steps, two minutes. We reply within 48 hours with your tier, the price and the first available Monday.',
+    metaDescription: 'Four steps, two minutes. We reply within 48 hours with your tier, the price and the first available kickoff date.',
     back: 'Back to the sprint page',
+    trust: 'Chosen by Fashion, Supplements and DTC eCommerce brands',
+    h1Pre: 'Your store on Shopify in',
+    h1Em: '14 days',
+    description: 'Four steps, two minutes. The person running the sprint replies within 48 hours, even if the answer is no.',
+    trustedBy: '5/5 on Trustpilot',
+    sideTitle: 'Fixed price. Fixed date.',
+    sideTitleEm: 'No surprises.',
+    sideText: 'A day-by-day calendar, one point of contact, 4 guarantees written in the contract. If it does not work, we pay.',
+    badges: ['Reply within 48 hours', '7/7 support', 'Fixed price, no quotes'],
   },
   form: {
     progressLabel: 'Step {step} of {total}',
@@ -578,7 +587,7 @@ export const zeroLossEn: ZlCopy = {
     },
     success: {
       title: 'Application received.',
-      text: 'We reply within 48 hours to {email} with your tier and the first available Monday.',
+      text: 'We reply within 48 hours to {email} with your tier and the first available kickoff date.',
       dashboardCta: 'See the dashboard you receive on day 1',
     },
     retry: 'Try again',

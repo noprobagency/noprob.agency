@@ -194,7 +194,7 @@ const it: MigrazioneCopy = {
         title: 'Sprint',
         duration: 'giorni 1-14',
         description:
-          'Kickoff di lunedì, import di prodotti, clienti e ordini, riconciliazione al 100%, replica 1:1 dei template, Redirect Map, tracking server-side, checklist del flusso d’acquisto e test su 3 dispositivi. Al giorno 14 lo store è pronto a pubblicare.',
+          'Kickoff, import di prodotti, clienti e ordini, riconciliazione al 100%, replica 1:1 dei template, Redirect Map, tracking server-side, checklist del flusso d’acquisto e test su 3 dispositivi. Al giorno 14 lo store è pronto a pubblicare.',
       },
       {
         number: '02',
@@ -417,7 +417,7 @@ const en: MigrazioneCopy = {
         title: 'Sprint',
         duration: 'days 1-14',
         description:
-          'Kickoff on a Monday, import of products, customers and orders, 100% reconciliation, 1:1 template replication, Redirect Map, server-side tracking, purchase-flow checklist and tests on 3 devices. On day 14 the store is ready to publish.',
+          'Kickoff, import of products, customers and orders, 100% reconciliation, 1:1 template replication, Redirect Map, server-side tracking, purchase-flow checklist and tests on 3 devices. On day 14 the store is ready to publish.',
       },
       {
         number: '02',

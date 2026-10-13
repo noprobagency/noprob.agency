@@ -93,7 +93,7 @@ function Choice<K extends string>({
   return (
     <fieldset className="flex flex-col gap-2" aria-describedby={error ? errorId : undefined} aria-invalid={!!error}>
       <legend className={`mb-2 ${labelClass}`}>{label}</legend>
-      <div className={`grid gap-2 ${columns === 3 ? 'min-[520px]:grid-cols-3' : 'min-[520px]:grid-cols-2'}`}>
+      <div className={`grid gap-2 ${columns === 3 ? 'grid-cols-2 min-[520px]:grid-cols-3' : 'min-[520px]:grid-cols-2'}`}>
         {options.map((opt) => (
           <label key={opt.value} className="cursor-pointer">
             <input
@@ -104,7 +104,7 @@ function Choice<K extends string>({
               onChange={() => onChange(opt.value)}
               className="peer sr-only"
             />
-            <span className="block rounded-[12px] border border-np-border bg-white px-4 py-3 font-sans text-[15px] font-medium tracking-[-0.02em] text-np-dark transition-colors hover:border-np-grey peer-checked:border-np-dark peer-checked:bg-np-dark peer-checked:text-white peer-focus-visible:ring-2 peer-focus-visible:ring-np-dark peer-focus-visible:ring-offset-2">
+            <span className="block rounded-[12px] border border-np-border bg-white px-3 py-[10px] font-sans text-[14px] font-medium min-[520px]:px-4 min-[520px]:py-3 min-[520px]:text-[15px] tracking-[-0.02em] text-np-dark transition-colors hover:border-np-grey peer-checked:border-np-dark peer-checked:bg-np-dark peer-checked:text-white peer-focus-visible:ring-2 peer-focus-visible:ring-np-dark peer-focus-visible:ring-offset-2">
               {opt.label}
             </span>
           </label>
