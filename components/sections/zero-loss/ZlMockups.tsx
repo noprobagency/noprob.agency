@@ -1,5 +1,4 @@
 import type { ZlMockupKind } from '@/content/zero-loss-migration'
-import { Placeholder } from './Placeholder'
 
 /*
   Brand-coherent mockups of the 5 deliverables, drawn in JSX so they cost no
@@ -18,9 +17,6 @@ function Frame({ label, children }: { label: string; children: React.ReactNode }
       className="relative w-full overflow-hidden rounded-card border-[6px] border-np-card-soft bg-[#e9e9e9] shadow-card"
     >
       <div className="absolute inset-0 p-4 min-[810px]:p-6">{children}</div>
-      <span className="absolute bottom-2 right-2 z-10">
-        <Placeholder token="SCREENSHOT" className="!text-[10px]" />
-      </span>
     </div>
   )
 }

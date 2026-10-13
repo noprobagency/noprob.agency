@@ -176,7 +176,7 @@ const it: LegalCopy = {
         ],
         paragraphs: [
           'Con il consenso marketing inviamo a Meta gli stessi eventi anche dal nostro server (Conversions API), insieme a indirizzo IP e tipo di browser, per misurare le campagne in modo più affidabile.',
-          'Sulla pagina Zero-Loss Migration salviamo nella memoria di sessione del browser i parametri della campagna da cui arrivi (UTM): si cancellano quando chiudi la scheda.',
+          'Sulla pagina Shopify Launch Sprint salviamo nella memoria di sessione del browser i parametri della campagna da cui arrivi (UTM): si cancellano quando chiudi la scheda.',
           'Il calendario per prenotare una videochiamata, presente nelle pagine di conferma, è fornito da TidyCal, che può impostare i propri cookie tecnici quando viene caricato.',
         ],
       },
@@ -333,7 +333,7 @@ const en: LegalCopy = {
         ],
         paragraphs: [
           'With marketing consent we also send the same events to Meta from our server (Conversions API), together with IP address and browser type, to measure campaigns more reliably.',
-          'On the Zero-Loss Migration page we store the campaign parameters you arrived with (UTM) in your browser session storage: they are deleted when you close the tab.',
+          'On the Shopify Launch Sprint page we store the campaign parameters you arrived with (UTM) in your browser session storage: they are deleted when you close the tab.',
           'The calendar used to book a video call on our confirmation pages is provided by TidyCal, which may set its own technical cookies when it loads.',
         ],
       },

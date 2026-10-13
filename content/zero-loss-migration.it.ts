@@ -2,18 +2,18 @@ import type { ZlCopy } from './zero-loss-migration.shared'
 import { ZL_SOURCES } from './zero-loss-migration.shared'
 
 /*
-  Copy italiano della landing Zero-Loss Migration Sprint.
+  Copy italiano della landing Shopify Launch Sprint (ex Zero-Loss Migration Sprint).
   Regole: niente trattini lunghi, niente scarsità finta, niente numeri inventati.
-  I token [[N]], [[BRAND]], [[CUMINI]] sono placeholder: in pagina diventano
+  I token [[CUMINI]] sono placeholder: in pagina diventano
   "[DA CONFERMARE]" (vedi components/sections/zero-loss/README.md).
 */
 
 export const zeroLossIt: ZlCopy = {
   meta: {
-    title: 'Zero-Loss Migration Sprint: il tuo eCommerce su Shopify in 10 giorni | noprob agency',
+    title: 'Shopify Launch Sprint: il tuo eCommerce su Shopify in 10 giorni lavorativi | noprob agency',
     description:
-      'Replichiamo il tuo store 1:1 su Shopify in 10 giorni lavorativi, senza perdere vendite, clienti e posizioni su Google. Redirect 1:1, tracking server-side, 90 giorni di supporto, 4 garanzie. Prezzo pubblico.',
-    ogAlt: 'Zero-Loss Migration Sprint: store pronto in 10 giorni',
+      'Il tuo eCommerce replicato 1:1 su Shopify in 10 giorni lavorativi, con le stesse posizioni su Google. Dati riconciliati, redirect testati, tracking server-side, 90 giorni di supporto e 4 garanzie. Prezzo fisso e pubblico.',
+    ogAlt: 'Shopify Launch Sprint: il tuo eCommerce su Shopify in 10 giorni lavorativi',
   },
   nav: {
     cta: 'Candidati allo sprint',
@@ -21,10 +21,10 @@ export const zeroLossIt: ZlCopy = {
     logoLabel: 'noprob agency, vai alla home',
   },
   hero: {
-    eyebrow: 'Zero-Loss Migration Sprint',
-    h1: 'Porta il tuo eCommerce su Shopify senza perdere vendite, clienti e posizioni su Google.',
+    eyebrow: 'Shopify Launch Sprint',
+    h1: 'Il tuo eCommerce su Shopify in 10 giorni lavorativi, con le stesse posizioni su Google.',
     paragraph:
-      "In 10 giorni lavorativi replichiamo il tuo store 1:1 su Shopify, pronto a pubblicare: dati, redirect, tracking e flusso d'acquisto ottimizzato. Go-live quando decidi tu, 90 giorni di supporto inclusi. Oltre 10 migrazioni, zero store offline.",
+      "Replichiamo il tuo store 1:1 su Shopify: dati riconciliati, redirect testati uno per uno, tracking server-side e checkout più corto. Vai live nel giorno che scegli tu, con 90 giorni di supporto. Prezzo fisso e pubblico, 4 garanzie misurabili, oltre 10 migrazioni con 0 minuti offline.",
     ctaPrimary: 'Candidati allo sprint',
     ctaNote: 'Rispondiamo in 48 ore',
     ctaSecondary: 'Guarda i risultati',
@@ -33,7 +33,7 @@ export const zeroLossIt: ZlCopy = {
     trustpilotLabel: 'su Trustpilot',
   },
   overview: {
-    h2: 'Zero-Loss Migration Sprint',
+    h2: 'Shopify Launch Sprint',
     paragraph:
       "Dieci giorni lavorativi, un calendario fisso, un referente. Il lunedì ci dai gli accessi, il venerdì della settimana dopo hai lo store su Shopify pronto a pubblicare. Non è un redesign: è il tuo store, uguale, più veloce e senza bug, con il flusso d'acquisto ottimizzato per convertire di più.",
     cta: 'Candidati allo sprint',
@@ -41,7 +41,7 @@ export const zeroLossIt: ZlCopy = {
     deliverables: [
       {
         title: 'Store Shopify pronto a pubblicare',
-        line: "Replica 1:1 su tema premium, bug corretti, [[N]] impostazioni del flusso d'acquisto applicate.",
+        line: "Replica 1:1 su tema premium, bug corretti, la nostra checklist del flusso d'acquisto applicata.",
       },
       {
         title: 'Data Migration Report',
@@ -74,7 +74,7 @@ export const zeroLossIt: ZlCopy = {
     results: [
       { value: '+347% di fatturato online in 36 mesi', attribution: 'Cumini, luxury multibrand' },
       { value: '99,3K click organici e posizione media 9,6 dopo la migrazione', attribution: 'Cumini, Search Console' },
-      { value: 'Conversion rate da 2% a 5%, AOV +30%', attribution: '[[BRAND]], eCommerce DTC' },
+      { value: 'Conversion rate da 2% a 5%, AOV +30%', attribution: 'Cliente noprob, eCommerce DTC' },
       { value: '0 minuti offline in oltre 10 migrazioni', attribution: 'noprob agency' },
     ],
   },
@@ -103,7 +103,7 @@ export const zeroLossIt: ZlCopy = {
       {
         title: 'Il tuo store, pronto a pubblicare su Shopify',
         paragraph:
-          "Il tuo store ricostruito 1:1 su Shopify: stesse pagine, stessa struttura, stessi contenuti. Correggiamo bug ed errori che ti porti dietro da anni e applichiamo la nostra checklist di [[N]] impostazioni sul flusso d'acquisto: ricerca, scheda prodotto, carrello, checkout. Non è un restyling. È il tuo store, più veloce e più corto da comprare.",
+          "Il tuo store ricostruito 1:1 su Shopify: stesse pagine, stessa struttura, stessi contenuti. Correggiamo bug ed errori che ti porti dietro da anni e applichiamo la nostra checklist sul flusso d'acquisto: ricerca, scheda prodotto, carrello, checkout. Non è un restyling. È il tuo store, più veloce e più corto da comprare.",
         imageAlt: 'Screenshot dello staging Shopify affiancato al sito attuale, con la checklist in overlay',
         mockup: 'staging',
       },
@@ -134,17 +134,6 @@ export const zeroLossIt: ZlCopy = {
           'DNS, TTL, sitemap, Search Console, monitor di uptime, piano di rollback. La firmi tu con la data che scegli, dal giorno 11 al 30. Il giorno del lancio il tuo store non si ferma un secondo.',
         imageAlt: 'Go-live Checklist firmata con la data in evidenza',
         mockup: 'checklist',
-      },
-    ],
-    afterTitle: 'E dopo lo sprint',
-    afterCards: [
-      {
-        title: 'Go-live a zero downtime',
-        text: 'Cambio DNS, redirect attivi, sitemap inviata. Restiamo sul sito 48 ore di fila e ti mandiamo il primo report a 7 giorni.',
-      },
-      {
-        title: '90 giorni di supporto',
-        text: 'Bug fix illimitati, modifiche minori fino a 4 ore al mese, monitoraggio SEO e tracking ogni settimana. Al giorno 90 ricevi il Migration Report con il before/after.',
       },
     ],
   },
@@ -211,7 +200,7 @@ export const zeroLossIt: ZlCopy = {
           {
             day: 'Mercoledì',
             title: "Flusso d'acquisto",
-            detail: 'Le [[N]] impostazioni della checklist su ricerca, scheda prodotto, carrello e checkout. Velocità. SEO tecnica: meta, schema, sitemap.',
+            detail: "La checklist del flusso d'acquisto su ricerca, scheda prodotto, carrello e checkout. Velocità. SEO tecnica: meta, schema, sitemap.",
           },
           {
             day: 'Giovedì',
@@ -373,7 +362,7 @@ export const zeroLossIt: ZlCopy = {
       {
         question: 'Il sito sarà uguale a prima?',
         answer:
-          "Sì, ed è il punto. Replichiamo il tuo store 1:1, correggiamo bug ed errori e ottimizziamo il flusso d'acquisto con la nostra checklist di [[N]] impostazioni. Non è un redesign: se vuoi cambiare immagine, quello arriva dopo, con un partner.",
+          "Sì, ed è il punto. Replichiamo il tuo store 1:1, correggiamo bug ed errori e ottimizziamo il flusso d'acquisto con la nostra checklist. Non è un redesign: se vuoi cambiare immagine, quello arriva dopo, con un partner.",
       },
       {
         question: 'Da quali piattaforme migrate?',

@@ -42,20 +42,6 @@ export default function ZlDeliverables({ copy }: { copy: ZlCopy['deliverables'] 
             )
           })}
         </ol>
-
-        <div className="mt-16 min-[810px]:mt-20">
-          <h3 className="font-display text-[1.5rem] font-semibold leading-[1.2em] tracking-[-0.05em] text-np-dark min-[810px]:text-[1.9rem]">
-            {copy.afterTitle}
-          </h3>
-          <div className="mt-5 grid gap-4 min-[810px]:grid-cols-2">
-            {copy.afterCards.map((card) => (
-              <div key={card.title} className="section-card">
-                <h4 className="font-sans text-[18px] font-bold leading-[1.3em] tracking-[-0.03em] text-np-dark">{card.title}</h4>
-                <p className="font-sans text-[15px] font-medium leading-[1.55em] tracking-[-0.02em] text-np-text">{card.text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   )
