@@ -14,7 +14,7 @@ import ZlCta from './ZlCta'
  * Landing nav: logo, IT/EN switch, one CTA. No other links on purpose (one
  * offer, one door). Sticky; compact on mobile.
  */
-export default function ZlNav({ locale, copy }: { locale: Locale; copy: ZlCopy['nav'] }) {
+export default function ZlNav({ locale, copy, page = 'landing' }: { locale: Locale; copy: ZlCopy['nav']; page?: 'landing' | 'apply' }) {
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
@@ -25,8 +25,8 @@ export default function ZlNav({ locale, copy }: { locale: Locale; copy: ZlCopy['
   }, [])
 
   const langs: { code: Locale; href: string }[] = [
-    { code: 'en', href: ROUTE_PATHS.zeroLossMigration.en },
-    { code: 'it', href: ROUTE_PATHS.zeroLossMigration.it },
+    { code: 'en', href: ROUTE_PATHS[page === 'apply' ? 'zeroLossApply' : 'zeroLossMigration'].en },
+    { code: 'it', href: ROUTE_PATHS[page === 'apply' ? 'zeroLossApply' : 'zeroLossMigration'].it },
   ]
 
   return (
@@ -72,7 +72,9 @@ export default function ZlNav({ locale, copy }: { locale: Locale; copy: ZlCopy['
             })}
           </nav>
 
-          <ZlCta label={copy.cta} position="nav" className="!px-4 !py-[7px] !text-[14px] min-[810px]:!px-6 min-[810px]:!text-[16px]" />
+          {page === 'landing' && (
+            <ZlCta label={copy.cta} position="nav" className="!px-4 !py-[7px] !text-[14px] min-[810px]:!px-6 min-[810px]:!text-[16px]" />
+          )}
         </div>
       </div>
     </header>

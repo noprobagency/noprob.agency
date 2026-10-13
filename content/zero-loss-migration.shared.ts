@@ -131,29 +131,21 @@ export type ZlCopy = {
   }
   proof: {
     h2: string
-    galleryTitle: string
-    gallery: {
-      fromLabel: string
+    sub: string
+    charts: {
       goLiveLabel: string
-      clicksLabel: string
-      clicksNote: string
-      lcpLabel: string
-      lcpNote: string
-      offlineLabel: string
-      beforeLabel: string
-      afterLabel: string
-      skeletonLabel: string
-      cumini: {
+      baselineLabel: string
+      caseLink: string
+      items: {
+        key: 'nazziGsc' | 'nazziGscYoy' | 'cuminiTrailing'
         brand: string
-        from: string
-        goLive: string
-        clicksBefore: string
-        clicksAfter: string
-        lcpBefore: string
-        lcpAfter: string
-        offline: string
-      }
-      skeletons: number
+        title: string
+        kpis: { value: string; label: string }[]
+        legend: string[]
+        note: string
+        href: string
+        baseline?: string
+      }[]
     }
     dashboardCta: string
     testimonialsHeading: string
@@ -168,7 +160,8 @@ export type ZlCopy = {
     line: string
   }
   faq: { h2: string; cta: string; items: { question: string; answer: string }[] }
-  finalCta: { h2: string; paragraph: string; bullets: string[] }
+  finalCta: { h2: string; paragraph: string; bullets: string[]; cta: string }
+  apply: { metaTitle: string; metaDescription: string; back: string }
   form: {
     progressLabel: string
     replyNote: string

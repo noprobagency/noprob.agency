@@ -9,6 +9,7 @@ import type { Locale } from '@/lib/i18n'
  */
 export type ZlEvent =
   | { event: 'lp_view'; page: 'zero-loss-migration'; locale: Locale }
+  | { event: 'form_view'; locale: Locale }
   | { event: 'cta_click'; position: ZlCtaPosition }
   | { event: 'checklist_change'; checked_count: number }
   | { event: 'form_start'; locale: Locale }
@@ -24,7 +25,7 @@ export type ZlEvent =
     }
   | { event: 'dashboard_demo_click'; position: 'proof' | 'success' }
 
-export type ZlCtaPosition = 'nav' | 'hero' | 'overview' | 'checklist' | 'faq'
+export type ZlCtaPosition = 'nav' | 'hero' | 'overview' | 'checklist' | 'faq' | 'final'
 
 declare global {
   interface Window {

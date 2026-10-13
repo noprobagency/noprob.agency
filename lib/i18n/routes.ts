@@ -12,6 +12,7 @@ export type RouteKey =
   | 'aiThankYou'
   | 'ambassador'
   | 'zeroLossMigration'
+  | 'zeroLossApply'
   | 'blog'
   | 'contacts'
   | 'thankYou'
@@ -35,6 +36,8 @@ export const ROUTE_PATHS: Record<RouteKey, { en: string; it: string }> = {
   // Product name, same slug in both locales. noindex + out of the sitemap until
   // LP_ZERO_LOSS_INDEX=true (see components/sections/zero-loss/README.md).
   zeroLossMigration: { en: '/zero-loss-migration', it: '/it/zero-loss-migration' },
+  // Application form of the landing, reached from every CTA (always noindex).
+  zeroLossApply:    { en: '/zero-loss-migration/apply', it: '/it/zero-loss-migration/candidatura' },
   blog:             { en: '/blog',               it: '/it/blog' },
   contacts:         { en: '/contacts',           it: '/it/contatti' },
   thankYou:         { en: '/thank-you',          it: '/it/grazie' },
