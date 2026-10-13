@@ -76,6 +76,8 @@ export type ZlCopy = {
   hero: {
     eyebrow: string
     h1: string
+    /** Hand-drawn note next to the H1 (arrow + scribble), links to the results */
+    proofNote: string
     paragraph: string
     ctaPrimary: string
     ctaNote: string

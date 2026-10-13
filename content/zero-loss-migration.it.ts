@@ -23,6 +23,7 @@ export const zeroLossIt: ZlCopy = {
   hero: {
     eyebrow: 'Shopify Launch Sprint',
     h1: 'Il tuo eCommerce su Shopify in 14 giorni. Più posizioni su Google, più vendite.',
+    proofNote: 'Lo possiamo dimostrare',
     paragraph:
       "Portiamo il tuo store su Shopify senza fermare le vendite e lo rendiamo più facile da trovare e da comprare. I risultati dei nostri ultimi clienti: +105% di vendite in 85 giorni per Integratori Nazzi DTC, +67,7% in 12 mesi per Cumini. Prezzo fisso, 4 garanzie, 0 minuti offline.",
     ctaPrimary: 'Candidati allo sprint',

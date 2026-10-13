@@ -21,9 +21,37 @@ export default function ZlHero({ copy }: { copy: ZlCopy['hero'] }) {
       <div className="container-noprob">
         <span className="np-eyebrow !normal-case">{copy.eyebrow}</span>
 
-        <h1 className="mt-6 max-w-[980px] font-display text-[2.2rem] font-semibold leading-[1.02em] tracking-[-0.06em] text-np-dark min-[810px]:text-[3.6rem] lg:text-[4.2rem]">
-          {copy.h1}
-        </h1>
+        {/* Inline H1 + hand-drawn note: the note follows "più vendite." on the same line
+            when it fits (desktop) and wraps under it on small screens. */}
+        <div className="mt-6 max-w-[1040px] xl:max-w-none">
+          <h1 className="inline font-display text-[2.2rem] font-semibold leading-[1.02em] tracking-[-0.06em] text-np-dark min-[810px]:text-[3.6rem] lg:text-[4.2rem]">
+            {copy.h1}
+          </h1>
+          <a
+            href="#prove"
+            className="group ml-1 mt-3 inline-flex items-start gap-2 align-bottom min-[810px]:ml-3 min-[810px]:mt-0 min-[810px]:align-[0.35em]"
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/doddle-2.svg"
+              alt=""
+              aria-hidden
+              className="mt-[-6px] h-[26px] w-auto -scale-x-100 rotate-[-12deg] opacity-50 min-[810px]:h-[31px]"
+            />
+            <span className="relative mt-[6px] inline-block px-1">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/doddle-1.svg"
+                alt=""
+                aria-hidden
+                className="pointer-events-none absolute -bottom-[16px] -left-[18px] -right-[20px] -top-[11px] h-[calc(100%+27px)] w-[calc(100%+38px)] max-w-none opacity-40 transition-opacity group-hover:opacity-70"
+              />
+              <span className="relative whitespace-nowrap font-sans text-[12px] font-medium leading-[1.4em] tracking-[-0.02em] text-[#363636] min-[810px]:text-[13px]">
+                {copy.proofNote}
+              </span>
+            </span>
+          </a>
+        </div>
 
         <p className="mt-6 max-w-[760px] font-sans text-[17px] font-medium leading-[1.45em] tracking-[-0.02em] text-np-text min-[810px]:text-[19px]">
           {copy.paragraph}
