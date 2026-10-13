@@ -147,7 +147,6 @@ export type Dictionary = {
       items: { title: string; description: string }[]
     }
   }
-  logoWall: { label: string; heading: string }
   faq: {
     label: string
     heading: string
@@ -556,10 +555,6 @@ const en: Dictionary = {
         },
       ],
     },
-  },
-  logoWall: {
-    label: 'Clients',
-    heading: 'Brands that believed in us.',
   },
   faq: {
     label: 'FAQs',
@@ -1039,10 +1034,6 @@ const it: Dictionary = {
         },
       ],
     },
-  },
-  logoWall: {
-    label: 'Clienti',
-    heading: 'Brand che hanno creduto in noi.',
   },
   faq: {
     label: 'FAQ',
