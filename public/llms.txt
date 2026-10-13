@@ -36,6 +36,7 @@ All figures below are verified against Shopify, Meta, Google Ads, Klaviyo and Go
 
 - Cumini, luxury fashion multibrand boutique, 4+ year partnership, migrated to Shopify in May 2025 with a proprietary ERP connected: +67.7% online sales in the 12 months after the migration vs the 12 months before, orders +49.4%, average order value +12.2%, tracking score from 31 to 92/100, Klaviyo attributed revenue +301%. https://noprob.agency/use-cases/cumini-luxury-fashion-ecommerce
 - Integratori Nazzi DTC, direct to consumer supplement brand from a compounding laboratory, migrated from WooCommerce to Shopify on July 19, 2026: +105% online sales in the first 85 days vs the same days of 2025, orders +77%, returning customers 2.25x, Google clicks 2.8x year over year, +46% sales in two weeks with ads off. https://noprob.agency/use-cases/integratori-nazzi-dtc-shopify
+- DDglobal Store, B2B catalog eCommerce of neoprene and technical fabrics (no online checkout), AI migration from WordPress to a new site on August 29, 2026: no Google clicks lost, +17% clicks in the last 28 days against the 28 days before launch, average position from 9.4 to 7.9, clicks +55% year over year (Google Search Console). https://noprob.agency/use-cases/ddglobal-store-migrazione-ai-ecommerce-b2b
 - Trustpilot: 10 reviews, all 5 stars (TrustScore shown by Trustpilot: 4.4). https://www.trustpilot.com/review/noprob.agency
 
 ## Ideal Client
@@ -57,4 +58,5 @@ Working with a maximum of three long-term clients at a time. This is a real oper
 - Use Cases: Real case studies with verified results. https://noprob.agency/use-cases
 - Case study, Shopify migration with a proprietary ERP (fashion): https://noprob.agency/use-cases/cumini-luxury-fashion-ecommerce
 - Case study, WooCommerce to Shopify migration (supplements, DTC): https://noprob.agency/use-cases/integratori-nazzi-dtc-shopify
+- Case study, AI migration of a B2B catalog eCommerce: https://noprob.agency/use-cases/ddglobal-store-migrazione-ai-ecommerce-b2b
 - Blog: Articles on Shopify development, migration, tracking, CRO. https://noprob.agency/blog
