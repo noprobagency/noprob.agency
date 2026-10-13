@@ -4,8 +4,8 @@ import type { Locale } from '@/lib/i18n'
 
 type Metrics = readonly string[] | { en: readonly string[]; it: readonly string[] }
 
-// Cards without a public source show only the logo: metrics come back when a source exists
-// (docs/dati-verificati.md).
+// Pills are verified figures (Cumini, Integratori Nazzi DTC) or facts without numbers for
+// clients with no public data source yet (docs/dati-verificati.md).
 const resultCards: ReadonlyArray<{
   image: string
   logo: string
@@ -30,13 +30,13 @@ const resultCards: ReadonlyArray<{
     image: '/images/originals/i9Ht9Hdb61eYmBH3DZyKGjIm6s.webp',
     logo: '/images/originals/RWVPFhFtXLH5J1UMr53qg3AEzL8.svg',
     logoClass: 'h-[62px] w-[140px] object-contain',
-    metrics: [],
+    metrics: { en: ['B2B eCommerce', 'AI migration'], it: ['eCommerce B2B', 'Migrazione AI'] },
   },
   {
     image: '/images/originals/HACWQoGOAZHSLqcFjpYb1fb90wk.jpg',
     logo: '/images/originals/UR9tJ9ihRaU7gaL1jcgl0kwQY5g.svg',
     logoClass: 'h-[30px] w-[140px] object-contain',
-    metrics: [],
+    metrics: { en: ['Perfumery', 'eCommerce'], it: ['Profumeria', 'eCommerce'] },
   },
   {
     image: '/images/originals/xikMpaXW3G0T00o5bsdB5bWnpuU.png',
@@ -53,7 +53,7 @@ const resultCards: ReadonlyArray<{
     image: '/images/originals/cOnThGiudnDZv0DuLTLxFgBBoc.webp',
     logo: '/images/originals/8GgYF2twbCK7Wa70vrBTzBY7kg.svg',
     logoClass: 'h-[30px] w-[140px] object-contain',
-    metrics: [],
+    metrics: { en: ['DTC eCommerce', 'From design to go live'], it: ['eCommerce DTC', 'Dalla grafica al go live'] },
   },
 ]
 
