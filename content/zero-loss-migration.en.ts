@@ -73,7 +73,7 @@ export const zeroLossEn: ZlCopy = {
       'First installment at kickoff, second at go-live, third and fourth during the two months of support. Shopify plan, theme and apps are on you. No discounts, no quotes: this is the price.',
     results: [
       { value: '+67.7% online sales in the 12 months after the migration', attribution: 'Cumini, luxury multibrand' },
-      { value: 'Google clicks 2.8 times those of a year earlier', attribution: 'Integratori Nazzi DTC, Search Console' },
+      { value: 'Google clicks 2.7 times those of a year earlier', attribution: 'Integratori Nazzi DTC, Search Console' },
       { value: '+105% online sales in the first 85 days after the move from WooCommerce', attribution: 'Integratori Nazzi DTC' },
       { value: '0 minutes offline across over 10 migrations', attribution: 'noprob agency' },
     ],
@@ -279,12 +279,12 @@ export const zeroLossEn: ZlCopy = {
         {
           key: 'nazziGsc',
           title: 'Integratori Nazzi DTC, organic traffic from Google',
-          subtitle: 'Daily clicks and impressions, 7-day moving average. Source: Google Search Console, Integratori Nazzi DTC site property, August 2025 to October 2026.',
+          subtitle: 'Daily clicks and impressions, 7-day moving average. Source: Google Search Console, Integratori Nazzi DTC site property, September 2025 to October 2026.',
           kpis: [
-            { label: 'Total clicks', value: '11.8K' },
-            { label: 'Total impressions', value: '624K' },
+            { label: 'Total clicks', value: '11.5K' },
+            { label: 'Total impressions', value: '604K' },
             { label: 'Average CTR', value: '1.9%' },
-            { label: 'Average position', value: '10.2' },
+            { label: 'Average position', value: '8.7' },
           ],
           legend: ['Clicks', 'Impressions'],
           migrationLabel: 'Migration',

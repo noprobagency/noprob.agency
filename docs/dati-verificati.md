@@ -63,11 +63,12 @@ Gestione NoProb da gennaio 2024.
 | Giugno e luglio 2026 vs 2025 | 2,57x e 2,19x | mentre si costruiva il nuovo store |
 | Quiz AstrumDonna | oltre mille lead in meno di un mese | online dal 18 set 2026, Klaviyo |
 
-Search Console (grafico ricostruito dallo screenshot e riallineato sui totali reali, dati in
-`data/use-cases/nazzi-gsc-daily.json`): 11,8K clic, 624K impressioni, CTR 1,9%, posizione 10,2
-(ago 2025 → ott 2026). Ultimi 28 giorni: clic 1,45x i 28 giorni prima del go live e 2,76x lo stesso
-periodo 2025; impressioni 2,24x e 4,13x. Nel testo si usano arrotondati.
-Anno su anno, 11 ago → 9 ott: clic **2,35x**, impressioni **2,97x** (2026 vs 2025).
+Search Console via API (dati giornalieri esatti in `data/use-cases/nazzi-gsc-daily.json`, dal 9 set 2025
+all'11 ott 2026; prima del 9 set 2025 la proprietà non restituisce dati): 11,5K clic, 604K impressioni,
+CTR 1,9%, posizione media 8,7. Ultimi 28 giorni (12 set → 9 ott) contro i 28 giorni prima del go live
+(21 giu → 18 lug): clic **+41%**, impressioni **2,2x**, posizione **9,0 → 7,1**. Contro gli stessi 28 giorni
+del 2025: clic **2,7x**, impressioni **4,0x**. Agosto 2026 in calo (23 clic al giorno contro 32), settembre
+40, ottobre 53.
 
 SEO tecnica (sito live, 13 ott 2026): 143 articoli nella sitemap Shopify, sitemap agentic
 discovery pubblicata, 215 URL WooCommerce archiviati controllati: 138 con redirect 301, 77 in 404
@@ -120,4 +121,4 @@ vanno corrette qui e nel copy.
 - 3 card del carosello risultati in homepage (DDglobal Store, Madotto, Sfogliate&Sfogliatelle):
   metriche numeriche tolte perché senza fonte; al loro posto pillole senza numeri (tipo di
   eCommerce e lavoro svolto, da testimonianze e indicazioni di Antonio). La card Nazzi del carosello aveva
-  "€9,03 CPA" e "32% crescita media annua": sostituiti con i dati verificati (+105%, 2,8x).
+  "€9,03 CPA" e "32% crescita media annua": sostituiti con i dati verificati (+105%, 2,7x).

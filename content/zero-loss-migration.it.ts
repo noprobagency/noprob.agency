@@ -73,7 +73,7 @@ export const zeroLossIt: ZlCopy = {
       'Prima rata al kickoff, seconda al go-live, terza e quarta nei due mesi di supporto. Piano Shopify, tema e app a carico tuo. Nessuno sconto, nessun preventivo: questo è il prezzo.',
     results: [
       { value: '+67,7% di vendite online nei 12 mesi dopo la migrazione', attribution: 'Cumini, luxury multibrand' },
-      { value: 'Clic da Google 2,8 volte quelli di un anno prima', attribution: 'Integratori Nazzi DTC, Search Console' },
+      { value: 'Clic da Google 2,7 volte quelli di un anno prima', attribution: 'Integratori Nazzi DTC, Search Console' },
       { value: '+105% di vendite online nei primi 85 giorni dopo la migrazione da WooCommerce', attribution: 'Integratori Nazzi DTC' },
       { value: '0 minuti offline in oltre 10 migrazioni', attribution: 'noprob agency' },
     ],
@@ -279,12 +279,12 @@ export const zeroLossIt: ZlCopy = {
         {
           key: 'nazziGsc',
           title: 'Integratori Nazzi DTC, traffico organico da Google',
-          subtitle: 'Clic e impressioni giornaliere, media mobile 7 giorni. Fonte: Google Search Console, proprietà del sito di Integratori Nazzi DTC, da agosto 2025 a ottobre 2026.',
+          subtitle: 'Clic e impressioni giornaliere, media mobile 7 giorni. Fonte: Google Search Console, proprietà del sito di Integratori Nazzi DTC, da settembre 2025 a ottobre 2026.',
           kpis: [
-            { label: 'Clic totali', value: '11,8K' },
-            { label: 'Impressioni totali', value: '624K' },
+            { label: 'Clic totali', value: '11,5K' },
+            { label: 'Impressioni totali', value: '604K' },
             { label: 'CTR medio', value: '1,9%' },
-            { label: 'Posizione media', value: '10,2' },
+            { label: 'Posizione media', value: '8,7' },
           ],
           legend: ['Clic', 'Impressioni'],
           migrationLabel: 'Migrazione',
