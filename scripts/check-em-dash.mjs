@@ -1,50 +1,34 @@
 #!/usr/bin/env node
-// Fails (exit 1) if any em dash (U+2014) is present inside the Italian blog
-// fields of data/articles/index.ts: titleIt, excerptIt, ledeIt, contentIt, faqIt.
-// English content is intentionally NOT scanned (em dashes are valid English
-// punctuation). To extend scope, add file paths to FILES below.
+// Fails (exit 1) if any em dash (U+2014) is present in the public copy
+// modules: blog articles (IT and EN), the Shopify Launch Sprint copy and every
+// i18n dictionary. House style: commas, parentheses or colons instead.
+// Usage: node scripts/check-em-dash.mjs
 
-import { readFileSync, existsSync } from 'node:fs'
+import { readFileSync, readdirSync, existsSync } from 'node:fs'
+import { join } from 'node:path'
 
-const FILES = ['data/articles/index.ts']
-const IT_FIELD_RE = /\b(titleIt|excerptIt|ledeIt|contentIt|faqIt)\b/
+const FILES = [
+  'data/articles/index.ts',
+  'content/zero-loss-migration.it.ts',
+  'content/zero-loss-migration.en.ts',
+  ...readdirSync('lib/i18n').filter((f) => f.endsWith('.ts')).map((f) => join('lib/i18n', f)),
+  ...readdirSync('data/use-cases').filter((f) => f.endsWith('.ts')).map((f) => join('data/use-cases', f)),
+  'public/llms.txt',
+]
 
 let hits = 0
-
 for (const file of FILES) {
   if (!existsSync(file)) continue
-  const lines = readFileSync(file, 'utf8').split('\n')
-
-  // Track whether we are currently inside an IT field block.
-  let inItBlock = false
-  let braceDepth = 0
-
-  lines.forEach((line, idx) => {
-    if (IT_FIELD_RE.test(line)) {
-      inItBlock = true
-      braceDepth = 0
-    }
-
-    if (inItBlock) {
-      if (line.includes('\u2014')) {
-        console.error(`${file}:${idx + 1}: ${line.trim()}`)
-        hits++
-      }
-      // Crude block exit: when an IT array/object closes and we hit a top-level
-      // article-level field (slug:, title:, etc) outside braces, exit.
-      braceDepth += (line.match(/[{[]/g) || []).length
-      braceDepth -= (line.match(/[}\]]/g) || []).length
-      if (braceDepth < 0) {
-        inItBlock = false
-        braceDepth = 0
-      }
+  readFileSync(file, 'utf8').split('\n').forEach((line, idx) => {
+    if (line.includes('—')) {
+      console.error(`${file}:${idx + 1}: ${line.trim().slice(0, 120)}`)
+      hits++
     }
   })
 }
 
 if (hits > 0) {
-  console.error(`\nFound ${hits} em dash occurrence(s) inside IT blog content. Replace with comma, parentheses, or colon.`)
+  console.error(`\nFound ${hits} em dash occurrence(s). Replace with comma, parentheses, or colon.`)
   process.exit(1)
 }
-
-console.log('OK: no em dash in IT blog content')
+console.log('check-em-dash: no em dashes in the public copy.')

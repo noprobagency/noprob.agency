@@ -1,9 +1,16 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
+import { usePathname } from 'next/navigation'
 
 const LOGO_TEXT = 'noprob'
+
+/** The intro only plays on the two homepages. Every other page renders at once. */
+const HOME_PATHS = new Set(['/', '/it'])
+
+/** Hard stop: whatever happens to the animation, the overlay is gone after this. */
+const MAX_VISIBLE_MS = 2200
 
 const charVariants = {
   hidden: { opacity: 0, y: 18 },
@@ -15,9 +22,23 @@ const charVariants = {
 }
 
 export default function Preloader() {
+  const pathname = usePathname()
+  const isHome = HOME_PATHS.has(pathname)
   const [phase, setPhase] = useState<'in' | 'exit' | 'done'>('in')
 
-  if (phase === 'done') return null
+  useEffect(() => {
+    if (!isHome) return
+    // Visitors who asked for less motion never see the intro.
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      setPhase('done')
+      return
+    }
+    // Safety net: never leave the page covered if an animation callback is lost.
+    const timer = window.setTimeout(() => setPhase('done'), MAX_VISIBLE_MS)
+    return () => window.clearTimeout(timer)
+  }, [isHome])
+
+  if (!isHome || phase === 'done') return null
 
   return (
     <motion.div

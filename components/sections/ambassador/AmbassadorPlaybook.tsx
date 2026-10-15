@@ -7,15 +7,16 @@ import { siteAssets } from '@/lib/site'
 import { type Locale } from '@/lib/i18n'
 import {
   AMBASSADOR_TERMS as T,
+  AMBASSADOR_TIERS,
   ambassadorCommission,
   formatEur,
   getAmbassadorCopy,
 } from '@/lib/i18n/ambassador'
 
 /**
- * Private ambassador playbook (IT `/it/ambassador`, EN `/ambassador`).
- * A long, text-first document split into boxed sections. No CTAs, no form:
- * the page is shared by hand with potential referral partners.
+ * Ambassador playbook (IT `/it/ambassador`, EN `/ambassador`), linked from the
+ * footer, noindex. A long, text-first document split into boxed sections. No
+ * CTAs, no form: the offer it describes is the Shopify Launch Sprint.
  */
 
 const CARD_BASE = 'rounded-card shadow-card p-6 min-[810px]:p-8'
@@ -132,7 +133,7 @@ function Num({ n, dark = false }: { n: number; dark?: boolean }) {
 export default function AmbassadorPlaybook({ locale = 'it' }: { locale?: Locale }) {
   const d = getAmbassadorCopy(locale)
   const eur = (n: number) => formatEur(n, locale)
-  const commission = ambassadorCommission(T.monthlyPrice)
+  const commission = ambassadorCommission(AMBASSADOR_TIERS[0].price)
   const landingHref = d.materials.links[0].href
 
   return (
@@ -147,8 +148,8 @@ export default function AmbassadorPlaybook({ locale = 'it' }: { locale?: Locale 
             <SectionLabel>{d.hero.label}</SectionLabel>
             <span className="inline-flex items-center gap-[6px] rounded-pill border border-np-border bg-white px-3 py-[7px] font-sans text-[12px] font-semibold tracking-[-0.02em] text-noprob-text">
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden>
-                <rect x="4" y="10" width="16" height="11" rx="2" stroke="currentColor" strokeWidth="2" />
-                <path d="M8 10V7a4 4 0 118 0v3" stroke="currentColor" strokeWidth="2" />
+                <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="2" />
+                <path d="M8 12.3l2.6 2.6L16 9.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
               {d.hero.badge}
             </span>
@@ -333,6 +334,7 @@ export default function AmbassadorPlaybook({ locale = 'it' }: { locale?: Locale 
               key={link.href}
               href={link.href}
               target="_blank"
+              rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
               className={cn(CARD, 'group flex flex-col gap-1 transition-transform hover:-translate-y-[2px]')}
             >
               <span className="flex items-center justify-between gap-3 text-np-h3 text-noprob-text">
@@ -343,7 +345,7 @@ export default function AmbassadorPlaybook({ locale = 'it' }: { locale?: Locale 
               </span>
               <span className={BODY}>{link.description}</span>
               <span className="mt-1 break-all font-sans text-[12px] font-medium text-noprob-grey">
-                noprob.agency{link.href}
+                {link.href.startsWith('http') ? link.href.replace(/^https?:\/\/(www\.)?/, '') : `noprob.agency${link.href}`}
               </span>
             </Link>
           ))}
@@ -352,17 +354,30 @@ export default function AmbassadorPlaybook({ locale = 'it' }: { locale?: Locale 
       </Section>
       {/* Pricing */}
       <Section id="prezzo" label={d.pricing.label} heading={d.pricing.heading} headingEm={d.pricing.headingEm}>
-        <article className={cn(CARD, 'flex flex-col items-center gap-2 text-center')}>
-          <p className="font-display text-[44px] font-bold leading-none tracking-[-0.05em] text-np-dark min-[810px]:text-[56px]">
-            {eur(T.monthlyPrice)}
-            <span className="ml-1 font-sans text-[18px] font-medium tracking-[-0.02em] text-noprob-grey">
-              {d.pricing.perMonth} {d.pricing.monthsSuffix}
-            </span>
-          </p>
-          <p className="font-serif text-[20px] font-medium italic tracking-[-0.03em] text-noprob-text">
-            {d.pricing.totalLabel}
-          </p>
-          <div className="mt-4 w-full text-left">
+        <article className={CARD}>
+          <h3 className={CARD_TITLE}>{d.pricing.tiersTitle}</h3>
+          <ol className="mt-4 flex flex-col divide-y divide-np-border">
+            {d.pricing.tiers.map((tier, i) => (
+              <li key={tier.label} className="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 py-4">
+                <div className="flex min-w-[220px] flex-1 flex-col gap-[2px]">
+                  <span className="font-sans text-[12px] font-bold tracking-[0.04em] text-noprob-grey">
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  <span className="font-sans text-body-sm font-semibold text-noprob-text">{tier.label}</span>
+                  <span className="font-sans text-[13px] font-medium text-noprob-grey">{tier.under}</span>
+                </div>
+                <div className="flex flex-col items-end gap-[2px] text-right">
+                  <span className="font-display text-[32px] font-bold leading-none tracking-[-0.05em] text-np-dark min-[810px]:text-[40px]">
+                    {tier.price}
+                  </span>
+                  <span className="rounded-pill bg-np-mark-green px-3 py-[4px] font-sans text-[12px] font-semibold text-np-dark">
+                    {tier.commission}
+                  </span>
+                </div>
+              </li>
+            ))}
+          </ol>
+          <div className="mt-6 w-full text-left">
             <CheckList items={d.pricing.points} />
           </div>
         </article>

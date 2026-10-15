@@ -5,7 +5,7 @@
 - Project: `noprob.agency`
 - Stack target: Next.js 15, TypeScript, Tailwind CSS, App Router
 - Priority: replicate the current `https://noprob.agency` homepage as faithfully as possible while setting up strong SEO and tracking foundations
-- Status: **v1.0.0, live and indexable** (13 Oct 2026). Pre-launch audit passed on all 36 sitemap URLs: 200, unique title ≤ ~65 chars, description ≤ 160, self canonical, hreflang IT/EN/x-default, one H1, valid JSON-LD, OG image, 0 broken internal links (see §19).
+- Status: **v1.3.0, live and indexable** (15 Oct 2026). Pre-launch audit passed on all 36 sitemap URLs: 200, unique title ≤ ~65 chars, description ≤ 160, self canonical, hreflang IT/EN/x-default, one H1, valid JSON-LD, OG image, 0 broken internal links (see §19).
 - Ship workflow: every change goes to `main` via squash-merged PR, `siteConfig.version` bumped each time, Vercel deploys production from `main`.
 
 ## Working Rules
@@ -131,7 +131,7 @@ Helper in `lib/analytics/events.ts`:
 
 - `llms.txt`: structured document for LLM crawlers (ChatGPT, Claude, Perplexity) at `/llms.txt` (static public file)
 - Schema.org Organization JSON-LD in `app/(en)/layout.tsx` body
-- Schema.org Service JSON-LD on `/data-driven-team` and `/ecommerce-rebuild` with offers and pricing
+- Schema.org Service JSON-LD on `/data-driven-team`, `/shopify-development` and `/ai-accelerator` with offers and pricing
 - Entity consistency: founder "Antonio Manitta" + company "NoProb Agency LLC" mentioned cross-page
 
 ### GDPR / Consent
@@ -178,7 +178,7 @@ Every new post under `/blog/[slug]` (or `/it/blog/[slugIt]`) must include:
 - FAQPage JSON-LD when `faqIt` (or `faqEn`) is populated
 - `<BlogPostMeta />` under the H1 (date + author + reading time)
 - `<RelatedCTA />` and `<AuthorBio />` after the article body
-- At least 2 internal links to service pages (`/it/team-ecommerce-dedicato`, `/it/rifacimento-ecommerce`, `/it/casi-studio`, `/it/contatti`)
+- At least 2 internal links to service pages (`/it/team-ecommerce-dedicato`, `/it/sviluppo-shopify`, `/it/casi-studio`, `/it/contatti`)
 - At least 2 outbound links to authoritative sources (McKinsey, Bain, HBR, Shopify, etc.)
 - Sitemap is generated dynamically from the `articles` array in `app/sitemap.ts` - no manual entry required
 
@@ -192,8 +192,9 @@ Every article (new or updated) **must** include these internal links, in priorit
 4. **Altri servizi** (AI Accelerator, ecc.): solo se tematicamente rilevanti, mai a scapito del link Sprint.
 
 **Conclusione pattern (copy da usare o adattare):**
-- IT: *"Lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) ti dà una migrazione strutturata in 10 giorni, con timeline fissa, prezzo pubblico e 4 garanzie scritte."*
-- EN: *"The [Shopify Launch Sprint](/shopify-migration-sprint) gives you a fixed-calendar migration with a public price and 4 written guarantees."*
+- IT: *"Lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) è una migrazione a Shopify strutturata in 14 giorni, con calendario fisso, prezzo pubblico e 4 garanzie scritte."*
+- EN: *"The [Shopify Launch Sprint](/shopify-migration-sprint) is a structured 14-day migration to Shopify with a fixed calendar, a public price and 4 written guarantees."*
+- Durations and prices in articles must match the Sprint copy (14 days, €5.800 / €8.800 / €12.800, 90 days of support). Never "10 giorni". No em dashes anywhere in the public copy: `pnpm check:em-dash` scans articles, Sprint copy, i18n dictionaries, use cases and `llms.txt`.
 
 Applica questa regola quando scrivi nuovi articoli E quando modifichi quelli esistenti (le conclusioni di tutti gli articoli correnti sono state aggiornate in v1.2.0).
 
@@ -304,15 +305,11 @@ Paragraphs and list items support markdown-style inline tokens via `parseInline`
 
 ## 17. Ambassador playbook (IT `/it/ambassador` + EN `/ambassador`)
 
-- Private referral-partner document, shared by hand: `noIndex` via `buildMetadata`, NOT in `lib/sitemap/routes.ts`, not linked from nav/footer. `ROUTE_PATHS.ambassador` exists only for the language switch/hreflang.
+- Referral-partner document, **linked from the global footer** since v1.3.0 ("Ambassador", both locales) but still `noIndex` via `buildMetadata` and NOT in `lib/sitemap/routes.ts`. `ROUTE_PATHS.ambassador` serves the footer link, the language switch and hreflang.
 - Single server component `components/sections/ambassador/AmbassadorPlaybook.tsx` (boxed sections, no CTAs, no form); copy in `lib/i18n/ambassador.ts` (`getAmbassadorCopy(locale)`).
-- Money figures are derived from `AMBASSADOR_TERMS` (monthly price, months, 20% rate, tiers, payout days, referral validity, contact email/WhatsApp) via `ambassadorCommission()` / `formatEur()`. No minimum commission (removed in v2). When the migration price or tiers change in `lib/i18n/migrazione.ts`, update `AMBASSADOR_TERMS` too.
-- Scope: Shopify migrations only (no Shopify-to-Shopify rebuilds, no startups). Recurring commissions (from the 5th client) intentionally not written yet.
+- **The offer it describes is the Shopify Launch Sprint (§18)**, nothing else: 14-day sprint, go-live days 15-30, 90 days of support, 4 written guarantees, public price by company revenue in 4 installments. Prices come from `ZL_TIERS` (`AMBASSADOR_TIERS`) and the commission is `ambassadorCommission(price)` = 20% of the tier price (€1.160 / €1.760 / €2.560). No monthly price, no "4 mesi", no 30-day guarantee, no price negotiation: if the Sprint tiers change, the playbook follows automatically.
+- Scope: migrations from other platforms only (no Shopify-to-Shopify restyling, no startups). Materials: both Sprint landings, the Nazzi and Cumini case studies and the external Trustpilot profile.
 - `StickyContact` is hidden on both ambassador paths.
-- v2: hero has 3 stats; €5.800 is the minimum price and ambassadors who close themselves may sell higher (20% on the actual price); tier table removed; offer describes a UX review for conversion rate (not a full visual redesign, the public migration landing still says "design"); "ideal contact = already decided to migrate" card; "Chi c'è dietro" block with `public/images/shopify-partners.png`, Antonio bio (Computer Science degree, 7+ years, SaaS/apps) and the 7-person Shopify team; Cumini proof without numbers; materials moved right after the offer.
-- Migration price moved to €1.450/month (tier "Clienti 11-20") in the landing copy, both JSON-LD Offers and `public/llms.txt`.
-
----
 
 ## 18. Shopify Launch Sprint landing (IT `/it/sprint-migrazione-shopify` + EN `/shopify-migration-sprint`)
 
@@ -327,13 +324,21 @@ Paragraphs and list items support markdown-style inline tokens via `parseInline`
 
 ---
 
-## 19. Launch status (v1.2.0, 13 Oct 2026)
+## 19. Launch status (v1.3.0, 15 Oct 2026)
 
 - Live on `https://noprob.agency`, 36 URLs in `/sitemap.xml` (IT + EN), `robots.txt` and `llms.txt` served.
 - Audit script (pre-launch): crawl of the sitemap checking status, title, description, canonical, hreflang, H1, OG image, JSON-LD and every internal link. Result: 0 issues.
 - Case studies and blog posts have short Google titles/descriptions via optional `seoTitle`/`seoDescription` fields (`data/use-cases`, `data/articles`), the H1 keeps the long title.
 - Verified data: every public number is in `docs/dati-verificati.md`.
 - Open (owner): Madotto and Sfogliate metrics once their results are visible.
+
+### Changelog v1.3.0 (15 Oct 2026)
+
+- **Ambassador on the Sprint**: playbook rewritten on the Shopify Launch Sprint (see §17), linked from the footer in both locales, still noindex. Pricing section shows the 3 revenue tiers with the ambassador commission per tier.
+- **Demo dashboard anonymized**: `components/dashboard/DemoDashboard.tsx` no longer names a client or a real domain; every amount and count is rescaled and the footnote states the data is invented. Never put real client figures on this page.
+- **Preloader only on the homepages**: `components/ui/Preloader.tsx` renders only on `/` and `/it`, skips with `prefers-reduced-motion` and has a 2.2 s hard timeout so the page can never stay covered.
+- **Blog**: Sprint conclusions say 14 days (was "10 giorni"), the CRO conclusion addresses stores not yet on Shopify, em dashes removed from IT and EN; `scripts/check-em-dash.mjs` now scans all public copy.
+- AGENT.md: stale slugs (`/ecommerce-rebuild`, `/it/rifacimento-ecommerce`) and the §14 pattern updated.
 
 ### Changelog v1.2.0 (13 Oct 2026)
 

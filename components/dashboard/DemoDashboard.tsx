@@ -45,8 +45,8 @@ export default function DemoDashboard({ locale = 'it' }: { locale?: Locale }) {
           <div className="flex items-center gap-3 text-[#666]">
             <span>
               {isIt
-                ? 'Ultime novità: vendite 13/10, 20:12 · spesa adv 13/10, 20:12'
-                : 'Latest update: sales 13/10, 20:12 · ad spend 13/10, 20:12'}
+                ? 'Dati dimostrativi: vendite e spesa adv aggiornate ogni giorno'
+                : 'Demo data: sales and ad spend refreshed daily'}
             </span>
             <button
               onClick={handleRefresh}
@@ -65,9 +65,9 @@ export default function DemoDashboard({ locale = 'it' }: { locale?: Locale }) {
           <div>
             <div className="flex items-baseline gap-2">
               <h1 className="text-[24px] font-bold tracking-tight text-[#111]">
-                Dashboard Nazzi
+                Dashboard demo
               </h1>
-              <span className="text-[13px] text-[#6b7280]">farmaciagiancarlonazzi.com</span>
+              <span className="text-[13px] text-[#6b7280]">demo-store.example</span>
             </div>
           </div>
 
@@ -167,7 +167,7 @@ export default function DemoDashboard({ locale = 'it' }: { locale?: Locale }) {
               {isIt ? 'MER € Mese Corrente' : 'Current Month MER €'}
             </div>
             <div className="mt-2 text-[28px] font-bold tracking-tight text-emerald-600">
-              +448,18 €
+              +614,01 €
             </div>
             <div className="mt-1 text-[11px] text-[#6b7280]">
               {isIt ? 'margine 50,0% · costi ammortizzati al giorno' : 'margin 50.0% · daily amortized costs'}
@@ -180,10 +180,10 @@ export default function DemoDashboard({ locale = 'it' }: { locale?: Locale }) {
               {isIt ? 'Vendite Nette Mese Corrente' : 'Current Month Net Sales'}
             </div>
             <div className="mt-2 text-[28px] font-bold tracking-tight text-[#111]">
-              4444,20 €
+              6088,55 €
             </div>
             <div className="mt-1 text-[11px] text-[#6b7280]">
-              77 {isIt ? 'ordini' : 'orders'} · AOV 57,72 €
+              105 {isIt ? 'ordini' : 'orders'} · AOV 79,08 €
             </div>
           </div>
 
@@ -194,11 +194,11 @@ export default function DemoDashboard({ locale = 'it' }: { locale?: Locale }) {
               CPA Break Even
             </div>
             <div className="mt-2 text-[28px] font-bold tracking-tight text-[#111]">
-              32,56 €
+              44,61 €
             </div>
             <div className="mt-1 text-[11px] text-[#6b7280] truncate">
               {isIt
-                ? 'su LTV 180gg x margine 50% · primo ordine 25,03 € · NCAC 30,28 €'
+                ? 'su LTV 180gg x margine 50% · primo ordine 34,29 € · NCAC 41,48 €'
                 : 'on 180d LTV x 50% margin · 1st order 25.03 € · NCAC 30.28 €'}
             </div>
           </div>
@@ -209,10 +209,10 @@ export default function DemoDashboard({ locale = 'it' }: { locale?: Locale }) {
               {isIt ? 'Totale 2026' : 'Total 2026'}
             </div>
             <div className="mt-2 text-[28px] font-bold tracking-tight text-[#111]">
-              88.639,02 €
+              121.435,46 €
             </div>
             <div className="mt-1 text-[11px] text-[#6b7280]">
-              MER 1,19 · MER € +7.198,19 €
+              MER 1,19 · MER € +9861,52 €
             </div>
           </div>
         </div>
@@ -243,113 +243,113 @@ export default function DemoDashboard({ locale = 'it' }: { locale?: Locale }) {
                 {/* Spesa Adv */}
                 <tr className="hover:bg-gray-50/60 transition-colors">
                   <td className="py-2.5 px-4 font-medium text-[#4b5563]">Spesa Adv*</td>
-                  <td className="py-2.5 px-2 text-right">2945,39 €</td>
-                  <td className="py-2.5 px-2 text-right">1731,69 €</td>
-                  <td className="py-2.5 px-2 text-right">2938,96 €</td>
-                  <td className="py-2.5 px-2 text-right">3682,20 €</td>
-                  <td className="py-2.5 px-2 text-right">2649,44 €</td>
-                  <td className="py-2.5 px-2 text-right">5162,30 €</td>
-                  <td className="py-2.5 px-2 text-right">4951,76 €</td>
-                  <td className="py-2.5 px-2 text-right">1322,81 €</td>
-                  <td className="py-2.5 px-2 text-right">3062,85 €</td>
-                  <td className="py-2.5 px-2 text-right bg-emerald-50/30">1438,44 €</td>
-                  <td className="py-2.5 px-4 text-right font-bold bg-gray-50">29.885,84 €</td>
+                  <td className="py-2.5 px-2 text-right">4035,18 €</td>
+                  <td className="py-2.5 px-2 text-right">2372,42 €</td>
+                  <td className="py-2.5 px-2 text-right">4026,38 €</td>
+                  <td className="py-2.5 px-2 text-right">5044,61 €</td>
+                  <td className="py-2.5 px-2 text-right">3629,73 €</td>
+                  <td className="py-2.5 px-2 text-right">7072,35 €</td>
+                  <td className="py-2.5 px-2 text-right">6783,91 €</td>
+                  <td className="py-2.5 px-2 text-right">1812,25 €</td>
+                  <td className="py-2.5 px-2 text-right">4196,10 €</td>
+                  <td className="py-2.5 px-2 text-right bg-emerald-50/30">1970,66 €</td>
+                  <td className="py-2.5 px-4 text-right font-bold bg-gray-50">40.943,60 €</td>
                 </tr>
 
                 {/* Costi fissi */}
                 <tr className="hover:bg-gray-50/60 transition-colors">
                   <td className="py-2.5 px-4 font-medium text-[#4b5563]">Costi fissi (quota)</td>
-                  <td className="py-2.5 px-2 text-right">500,00 €</td>
-                  <td className="py-2.5 px-2 text-right">800,00 €</td>
-                  <td className="py-2.5 px-2 text-right">800,00 €</td>
-                  <td className="py-2.5 px-2 text-right">800,00 €</td>
-                  <td className="py-2.5 px-2 text-right">800,00 €</td>
-                  <td className="py-2.5 px-2 text-right">800,00 €</td>
-                  <td className="py-2.5 px-2 text-right">800,00 €</td>
-                  <td className="py-2.5 px-2 text-right">800,00 €</td>
-                  <td className="py-2.5 px-2 text-right">800,00 €</td>
-                  <td className="py-2.5 px-2 text-right bg-emerald-50/30">335,48 €</td>
-                  <td className="py-2.5 px-4 text-right font-bold bg-gray-50">7235,48 €</td>
+                  <td className="py-2.5 px-2 text-right">685,00 €</td>
+                  <td className="py-2.5 px-2 text-right">1096,00 €</td>
+                  <td className="py-2.5 px-2 text-right">1096,00 €</td>
+                  <td className="py-2.5 px-2 text-right">1096,00 €</td>
+                  <td className="py-2.5 px-2 text-right">1096,00 €</td>
+                  <td className="py-2.5 px-2 text-right">1096,00 €</td>
+                  <td className="py-2.5 px-2 text-right">1096,00 €</td>
+                  <td className="py-2.5 px-2 text-right">1096,00 €</td>
+                  <td className="py-2.5 px-2 text-right">1096,00 €</td>
+                  <td className="py-2.5 px-2 text-right bg-emerald-50/30">459,61 €</td>
+                  <td className="py-2.5 px-4 text-right font-bold bg-gray-50">9912,61 €</td>
                 </tr>
 
                 {/* Vendite nette (highlighted row) */}
                 <tr className="bg-emerald-50/40 font-semibold text-[#111] hover:bg-emerald-50/60 transition-colors">
                   <td className="py-3 px-4 font-bold text-emerald-900">Vendite nette</td>
-                  <td className="py-3 px-2 text-right">6432,10 €</td>
-                  <td className="py-3 px-2 text-right">7649,70 €</td>
-                  <td className="py-3 px-2 text-right">8503,50 €</td>
-                  <td className="py-3 px-2 text-right">10.860,73 €</td>
-                  <td className="py-3 px-2 text-right">8113,49 €</td>
-                  <td className="py-3 px-2 text-right">10.291,12 €</td>
-                  <td className="py-3 px-2 text-right">12.628,00 €</td>
-                  <td className="py-3 px-2 text-right">8397,38 €</td>
-                  <td className="py-3 px-2 text-right">11.318,80 €</td>
-                  <td className="py-3 px-2 text-right bg-emerald-100/50">4444,20 €</td>
-                  <td className="py-3 px-4 text-right font-extrabold bg-emerald-100/70">88.639,02 €</td>
+                  <td className="py-3 px-2 text-right">8811,98 €</td>
+                  <td className="py-3 px-2 text-right">10.480,09 €</td>
+                  <td className="py-3 px-2 text-right">11.649,80 €</td>
+                  <td className="py-3 px-2 text-right">14.879,20 €</td>
+                  <td className="py-3 px-2 text-right">11.115,48 €</td>
+                  <td className="py-3 px-2 text-right">14.098,83 €</td>
+                  <td className="py-3 px-2 text-right">17.300,36 €</td>
+                  <td className="py-3 px-2 text-right">11.504,41 €</td>
+                  <td className="py-3 px-2 text-right">15.506,76 €</td>
+                  <td className="py-3 px-2 text-right bg-emerald-100/50">6088,55 €</td>
+                  <td className="py-3 px-4 text-right font-extrabold bg-emerald-100/70">121.435,46 €</td>
                 </tr>
 
                 {/* Vendite anno prec. */}
                 <tr className="hover:bg-gray-50/60 transition-colors text-gray-500">
                   <td className="py-2.5 px-4 font-medium">Vendite anno prec.</td>
-                  <td className="py-2.5 px-2 text-right">7088,70 €</td>
-                  <td className="py-2.5 px-2 text-right">2209,70 €</td>
-                  <td className="py-2.5 px-2 text-right">5774,50 €</td>
-                  <td className="py-2.5 px-2 text-right">3972,70 €</td>
-                  <td className="py-2.5 px-2 text-right">4771,80 €</td>
-                  <td className="py-2.5 px-2 text-right">4002,20 €</td>
-                  <td className="py-2.5 px-2 text-right">5761,90 €</td>
-                  <td className="py-2.5 px-2 text-right">4031,70 €</td>
-                  <td className="py-2.5 px-2 text-right">5233,40 €</td>
-                  <td className="py-2.5 px-2 text-right bg-emerald-50/30">5626,50 €</td>
+                  <td className="py-2.5 px-2 text-right">9711,52 €</td>
+                  <td className="py-2.5 px-2 text-right">3027,29 €</td>
+                  <td className="py-2.5 px-2 text-right">7911,07 €</td>
+                  <td className="py-2.5 px-2 text-right">5442,60 €</td>
+                  <td className="py-2.5 px-2 text-right">6537,37 €</td>
+                  <td className="py-2.5 px-2 text-right">5483,01 €</td>
+                  <td className="py-2.5 px-2 text-right">7893,80 €</td>
+                  <td className="py-2.5 px-2 text-right">5523,43 €</td>
+                  <td className="py-2.5 px-2 text-right">7169,76 €</td>
+                  <td className="py-2.5 px-2 text-right bg-emerald-50/30">7708,31 €</td>
                   <td className="py-2.5 px-4 text-right font-bold bg-gray-50">-</td>
                 </tr>
 
                 {/* Ordini totali */}
                 <tr className="hover:bg-gray-50/60 transition-colors">
                   <td className="py-2.5 px-4 font-medium text-[#4b5563]">Ordini totali</td>
-                  <td className="py-2.5 px-2 text-right">137</td>
-                  <td className="py-2.5 px-2 text-right">154</td>
-                  <td className="py-2.5 px-2 text-right">171</td>
-                  <td className="py-2.5 px-2 text-right">229</td>
-                  <td className="py-2.5 px-2 text-right">171</td>
-                  <td className="py-2.5 px-2 text-right">227</td>
-                  <td className="py-2.5 px-2 text-right">259</td>
-                  <td className="py-2.5 px-2 text-right">146</td>
+                  <td className="py-2.5 px-2 text-right">188</td>
+                  <td className="py-2.5 px-2 text-right">211</td>
+                  <td className="py-2.5 px-2 text-right">234</td>
+                  <td className="py-2.5 px-2 text-right">314</td>
+                  <td className="py-2.5 px-2 text-right">234</td>
+                  <td className="py-2.5 px-2 text-right">311</td>
+                  <td className="py-2.5 px-2 text-right">355</td>
                   <td className="py-2.5 px-2 text-right">200</td>
-                  <td className="py-2.5 px-2 text-right bg-emerald-50/30">77</td>
-                  <td className="py-2.5 px-4 text-right font-bold bg-gray-50">1771</td>
+                  <td className="py-2.5 px-2 text-right">274</td>
+                  <td className="py-2.5 px-2 text-right bg-emerald-50/30">105</td>
+                  <td className="py-2.5 px-4 text-right font-bold bg-gray-50">2426</td>
                 </tr>
 
                 {/* Clienti NEW */}
                 <tr className="hover:bg-gray-50/60 transition-colors">
                   <td className="py-2.5 px-4 font-medium text-[#4b5563]">Clienti NEW</td>
-                  <td className="py-2.5 px-2 text-right">69</td>
-                  <td className="py-2.5 px-2 text-right">94</td>
-                  <td className="py-2.5 px-2 text-right">101</td>
-                  <td className="py-2.5 px-2 text-right">128</td>
-                  <td className="py-2.5 px-2 text-right">103</td>
-                  <td className="py-2.5 px-2 text-right">142</td>
-                  <td className="py-2.5 px-2 text-right">166</td>
-                  <td className="py-2.5 px-2 text-right">50</td>
-                  <td className="py-2.5 px-2 text-right">87</td>
-                  <td className="py-2.5 px-2 text-right bg-emerald-50/30">47</td>
-                  <td className="py-2.5 px-4 text-right font-bold bg-gray-50">987</td>
+                  <td className="py-2.5 px-2 text-right">95</td>
+                  <td className="py-2.5 px-2 text-right">129</td>
+                  <td className="py-2.5 px-2 text-right">138</td>
+                  <td className="py-2.5 px-2 text-right">175</td>
+                  <td className="py-2.5 px-2 text-right">141</td>
+                  <td className="py-2.5 px-2 text-right">195</td>
+                  <td className="py-2.5 px-2 text-right">227</td>
+                  <td className="py-2.5 px-2 text-right">68</td>
+                  <td className="py-2.5 px-2 text-right">119</td>
+                  <td className="py-2.5 px-2 text-right bg-emerald-50/30">64</td>
+                  <td className="py-2.5 px-4 text-right font-bold bg-gray-50">1352</td>
                 </tr>
 
                 {/* Clienti ricorrenti */}
                 <tr className="hover:bg-gray-50/60 transition-colors">
                   <td className="py-2.5 px-4 font-medium text-[#4b5563]">Clienti ricorrenti</td>
-                  <td className="py-2.5 px-2 text-right">66</td>
-                  <td className="py-2.5 px-2 text-right">57</td>
-                  <td className="py-2.5 px-2 text-right">67</td>
-                  <td className="py-2.5 px-2 text-right">100</td>
-                  <td className="py-2.5 px-2 text-right">63</td>
-                  <td className="py-2.5 px-2 text-right">81</td>
-                  <td className="py-2.5 px-2 text-right">89</td>
-                  <td className="py-2.5 px-2 text-right">96</td>
-                  <td className="py-2.5 px-2 text-right">109</td>
-                  <td className="py-2.5 px-2 text-right bg-emerald-50/30">30</td>
-                  <td className="py-2.5 px-4 text-right font-bold bg-gray-50">513</td>
+                  <td className="py-2.5 px-2 text-right">90</td>
+                  <td className="py-2.5 px-2 text-right">78</td>
+                  <td className="py-2.5 px-2 text-right">92</td>
+                  <td className="py-2.5 px-2 text-right">137</td>
+                  <td className="py-2.5 px-2 text-right">86</td>
+                  <td className="py-2.5 px-2 text-right">111</td>
+                  <td className="py-2.5 px-2 text-right">122</td>
+                  <td className="py-2.5 px-2 text-right">132</td>
+                  <td className="py-2.5 px-2 text-right">149</td>
+                  <td className="py-2.5 px-2 text-right bg-emerald-50/30">41</td>
+                  <td className="py-2.5 px-4 text-right font-bold bg-gray-50">703</td>
                 </tr>
 
                 {/* ROAS adv (color coded) */}
@@ -387,65 +387,65 @@ export default function DemoDashboard({ locale = 'it' }: { locale?: Locale }) {
                 {/* MER € */}
                 <tr className="hover:bg-gray-50/60 transition-colors">
                   <td className="py-2.5 px-4 font-medium text-[#4b5563]">MER €*</td>
-                  <td className="py-2.5 px-2 text-right text-red-700">-229,34 €</td>
-                  <td className="py-2.5 px-2 text-right text-emerald-700 font-medium">+1293,16 €</td>
-                  <td className="py-2.5 px-2 text-right text-emerald-700 font-medium">+512,79 €</td>
-                  <td className="py-2.5 px-2 text-right text-emerald-700 font-medium">+948,17 €</td>
-                  <td className="py-2.5 px-2 text-right text-emerald-700 font-medium">+607,31 €</td>
-                  <td className="py-2.5 px-2 text-right text-red-700">-816,74 €</td>
-                  <td className="py-2.5 px-2 text-right text-emerald-700 font-medium">+562,24 €</td>
-                  <td className="py-2.5 px-2 text-right text-emerald-700 font-medium">+2075,88 €</td>
-                  <td className="py-2.5 px-2 text-right text-emerald-700 font-medium">+1796,55 €</td>
-                  <td className="py-2.5 px-2 text-right text-emerald-700 font-medium bg-emerald-50/30">+448,18 €</td>
-                  <td className="py-2.5 px-4 text-right font-bold text-emerald-800 bg-gray-50">+7198,19 €</td>
+                  <td className="py-2.5 px-2 text-right text-red-700">-314,20 €</td>
+                  <td className="py-2.5 px-2 text-right text-emerald-700 font-medium">+1771,63 €</td>
+                  <td className="py-2.5 px-2 text-right text-emerald-700 font-medium">+702,52 €</td>
+                  <td className="py-2.5 px-2 text-right text-emerald-700 font-medium">+1298,99 €</td>
+                  <td className="py-2.5 px-2 text-right text-emerald-700 font-medium">+832,01 €</td>
+                  <td className="py-2.5 px-2 text-right text-red-700">-1118,93 €</td>
+                  <td className="py-2.5 px-2 text-right text-emerald-700 font-medium">+770,27 €</td>
+                  <td className="py-2.5 px-2 text-right text-emerald-700 font-medium">+2843,96 €</td>
+                  <td className="py-2.5 px-2 text-right text-emerald-700 font-medium">+2461,27 €</td>
+                  <td className="py-2.5 px-2 text-right text-emerald-700 font-medium bg-emerald-50/30">+614,01 €</td>
+                  <td className="py-2.5 px-4 text-right font-bold text-emerald-800 bg-gray-50">+9861,52 €</td>
                 </tr>
 
                 {/* AOV */}
                 <tr className="hover:bg-gray-50/60 transition-colors">
                   <td className="py-2.5 px-4 font-medium text-[#4b5563]">AOV</td>
-                  <td className="py-2.5 px-2 text-right">46,95 €</td>
-                  <td className="py-2.5 px-2 text-right">49,67 €</td>
-                  <td className="py-2.5 px-2 text-right">49,73 €</td>
-                  <td className="py-2.5 px-2 text-right">47,43 €</td>
-                  <td className="py-2.5 px-2 text-right">47,45 €</td>
-                  <td className="py-2.5 px-2 text-right">45,34 €</td>
-                  <td className="py-2.5 px-2 text-right">48,76 €</td>
-                  <td className="py-2.5 px-2 text-right">57,52 €</td>
-                  <td className="py-2.5 px-2 text-right">56,59 €</td>
-                  <td className="py-2.5 px-2 text-right bg-emerald-50/30">57,72 €</td>
-                  <td className="py-2.5 px-4 text-right font-bold bg-gray-50">50,05 €</td>
+                  <td className="py-2.5 px-2 text-right">64,32 €</td>
+                  <td className="py-2.5 px-2 text-right">68,05 €</td>
+                  <td className="py-2.5 px-2 text-right">68,13 €</td>
+                  <td className="py-2.5 px-2 text-right">64,98 €</td>
+                  <td className="py-2.5 px-2 text-right">65,01 €</td>
+                  <td className="py-2.5 px-2 text-right">62,12 €</td>
+                  <td className="py-2.5 px-2 text-right">66,80 €</td>
+                  <td className="py-2.5 px-2 text-right">78,80 €</td>
+                  <td className="py-2.5 px-2 text-right">77,53 €</td>
+                  <td className="py-2.5 px-2 text-right bg-emerald-50/30">79,08 €</td>
+                  <td className="py-2.5 px-4 text-right font-bold bg-gray-50">68,57 €</td>
                 </tr>
 
                 {/* CAC */}
                 <tr className="hover:bg-gray-50/60 transition-colors">
                   <td className="py-2.5 px-4 font-medium text-[#4b5563]">CAC*</td>
-                  <td className="py-2.5 px-2 text-right">21,82 €</td>
-                  <td className="py-2.5 px-2 text-right">11,47 €</td>
-                  <td className="py-2.5 px-2 text-right">17,49 €</td>
-                  <td className="py-2.5 px-2 text-right">16,15 €</td>
-                  <td className="py-2.5 px-2 text-right">15,96 €</td>
-                  <td className="py-2.5 px-2 text-right">23,15 €</td>
-                  <td className="py-2.5 px-2 text-right">19,42 €</td>
-                  <td className="py-2.5 px-2 text-right">9,06 €</td>
-                  <td className="py-2.5 px-2 text-right">15,63 €</td>
-                  <td className="py-2.5 px-2 text-right bg-emerald-50/30">18,68 €</td>
-                  <td className="py-2.5 px-4 text-right font-bold bg-gray-50">19,92 €</td>
+                  <td className="py-2.5 px-2 text-right">29,89 €</td>
+                  <td className="py-2.5 px-2 text-right">15,71 €</td>
+                  <td className="py-2.5 px-2 text-right">23,96 €</td>
+                  <td className="py-2.5 px-2 text-right">22,13 €</td>
+                  <td className="py-2.5 px-2 text-right">21,87 €</td>
+                  <td className="py-2.5 px-2 text-right">31,72 €</td>
+                  <td className="py-2.5 px-2 text-right">26,61 €</td>
+                  <td className="py-2.5 px-2 text-right">12,41 €</td>
+                  <td className="py-2.5 px-2 text-right">21,41 €</td>
+                  <td className="py-2.5 px-2 text-right bg-emerald-50/30">25,59 €</td>
+                  <td className="py-2.5 px-4 text-right font-bold bg-gray-50">27,29 €</td>
                 </tr>
 
                 {/* NCAC */}
                 <tr className="hover:bg-gray-50/60 transition-colors">
                   <td className="py-2.5 px-4 font-medium text-[#4b5563]">NCAC*</td>
-                  <td className="py-2.5 px-2 text-right">42,69 €</td>
-                  <td className="py-2.5 px-2 text-right">18,42 €</td>
-                  <td className="py-2.5 px-2 text-right">29,10 €</td>
-                  <td className="py-2.5 px-2 text-right">28,77 €</td>
-                  <td className="py-2.5 px-2 text-right">25,72 €</td>
-                  <td className="py-2.5 px-2 text-right">36,35 €</td>
-                  <td className="py-2.5 px-2 text-right">29,83 €</td>
-                  <td className="py-2.5 px-2 text-right">26,46 €</td>
-                  <td className="py-2.5 px-2 text-right">35,21 €</td>
-                  <td className="py-2.5 px-2 text-right bg-emerald-50/30">30,61 €</td>
-                  <td className="py-2.5 px-4 text-right font-bold bg-gray-50">30,28 €</td>
+                  <td className="py-2.5 px-2 text-right">58,49 €</td>
+                  <td className="py-2.5 px-2 text-right">25,24 €</td>
+                  <td className="py-2.5 px-2 text-right">39,87 €</td>
+                  <td className="py-2.5 px-2 text-right">39,41 €</td>
+                  <td className="py-2.5 px-2 text-right">35,24 €</td>
+                  <td className="py-2.5 px-2 text-right">49,80 €</td>
+                  <td className="py-2.5 px-2 text-right">40,87 €</td>
+                  <td className="py-2.5 px-2 text-right">36,25 €</td>
+                  <td className="py-2.5 px-2 text-right">48,24 €</td>
+                  <td className="py-2.5 px-2 text-right bg-emerald-50/30">41,94 €</td>
+                  <td className="py-2.5 px-4 text-right font-bold bg-gray-50">41,48 €</td>
                 </tr>
 
                 {/* Retention */}
@@ -471,8 +471,8 @@ export default function DemoDashboard({ locale = 'it' }: { locale?: Locale }) {
         {/* Footnote */}
         <p className="mt-3 text-[11px] text-[#6b7280]">
           * {isIt
-            ? 'spesa adv: dato Meta reale per giorno da 2026-06 in poi (i giorni senza spesa sono zero vero); prima, il mensile Meta è distribuito sui giorni in proporzione agli ordini. Vendite e clienti sono dati Shopify reali.'
-            : 'ad spend: Meta real daily data from 2026-06 onwards (zero-spend days are true zero); earlier Meta monthly spend is distributed proportionally by orders. Sales and customers are real Shopify data.'}
+            ? 'Dashboard dimostrativa: tutti i valori sono inventati, modellati sulla struttura di uno store reale e riscalati. Non corrispondono ai dati di nessun cliente. Nella dashboard vera la spesa adv arriva da Meta e Google Ads per giorno, vendite e clienti da Shopify.'
+            : 'Demo dashboard: every value is invented, modelled on the structure of a real store and rescaled. Nothing here matches any client’s data. In the real dashboard, ad spend comes from Meta and Google Ads by day, sales and customers from Shopify.'}
         </p>
 
         {/* Explanatory Banner & CTA */}

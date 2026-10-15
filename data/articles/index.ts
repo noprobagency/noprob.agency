@@ -364,7 +364,7 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: 'If you are on Shopify and want to combine a technical foundation built for conversion with a structured migration process, the [Shopify Launch Sprint](/shopify-migration-sprint) gives you a fixed timeline, a public price and 4 written guarantees — without months of uncertainty.',
+        text: 'If you are not on Shopify yet and want to pair a technical foundation built for conversion with a structured migration process, the [Shopify Launch Sprint](/shopify-migration-sprint) gives you a fixed 14-day calendar, a public price and 4 written guarantees, without months of uncertainty.',
       },
       {
         type: 'paragraph',
@@ -626,7 +626,7 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: 'Se sei su Shopify e vuoi unire una base tecnica ottimizzata per le conversioni con un processo di migrazione strutturato, lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) ti dà una timeline fissa, un prezzo pubblico e 4 garanzie scritte — senza mesi di incertezza.',
+        text: 'Se non sei ancora su Shopify e vuoi unire una base tecnica ottimizzata per le conversioni a un processo di migrazione strutturato, lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) ti dà un calendario fisso di 14 giorni, un prezzo pubblico e 4 garanzie scritte, senza mesi di incertezza.',
       },
       {
         type: 'paragraph',
@@ -1827,7 +1827,7 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: 'If you want to build that solid technical foundation — starting with the platform — the [Shopify Launch Sprint](/shopify-migration-sprint) is a structured 10-day migration process with a fixed timeline, a public price and 4 written guarantees.',
+        text: 'If you want to build that solid technical foundation starting with the platform, the [Shopify Launch Sprint](/shopify-migration-sprint) is a structured 14-day migration to Shopify with a fixed calendar, a public price and 4 written guarantees.',
       },
     ],
     slugIt: 'strategia-ecommerce-long-term',
@@ -2195,7 +2195,7 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: 'Se vuoi costruire quella base tecnica solida — a partire dalla piattaforma — lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) è un processo di migrazione strutturato in 10 giorni, con timeline fissa, prezzo pubblico e 4 garanzie scritte.',
+        text: 'Se vuoi costruire quella base tecnica solida a partire dalla piattaforma, lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) è una migrazione a Shopify strutturata in 14 giorni, con calendario fisso, prezzo pubblico e 4 garanzie scritte.',
       },
     ],
   },
