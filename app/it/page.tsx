@@ -10,6 +10,7 @@ import ProblemSection from '@/components/sections/ProblemSection'
 import ResultsCarousel from '@/components/sections/ResultsCarousel'
 import SolutionSection from '@/components/sections/SolutionSection'
 import AiServiceCard from '@/components/sections/ai/AiServiceCard'
+import Preloader from '@/components/ui/Preloader'
 import { buildMetadata } from '@/lib/site'
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -19,6 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function ItalianHomePage() {
   return (
     <>
+      <Preloader />
       <Hero locale="it" />
       <ResultsCarousel locale="it" />
       <ProblemSection locale="it" />

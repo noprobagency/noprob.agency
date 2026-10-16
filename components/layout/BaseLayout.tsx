@@ -1,7 +1,6 @@
 import Navbar from '@/components/layout/Navbar'
 import ConsentBanner from '@/components/tracking/ConsentBanner'
 import StickyContact from '@/components/ui/StickyContact'
-import Preloader from '@/components/ui/Preloader'
 import type { Locale } from '@/lib/i18n'
 
 export default function BaseLayout({
@@ -13,10 +12,9 @@ export default function BaseLayout({
 }) {
   return (
     <>
-      <Preloader />
-      <Navbar />
+      <Navbar locale={locale} />
       <ConsentBanner locale={locale} />
-      <StickyContact />
+      <StickyContact locale={locale} />
       {children}
     </>
   )

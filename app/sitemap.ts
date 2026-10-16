@@ -1,12 +1,12 @@
 import type { MetadataRoute } from 'next'
-import { ROUTES } from '@/lib/sitemap/routes'
+import { CONTENT_LAST_MODIFIED, ROUTES } from '@/lib/sitemap/routes'
 import { articles } from '@/data/articles'
 import { useCases } from '@/data/use-cases'
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://noprob.agency'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date()
+  const now = new Date(CONTENT_LAST_MODIFIED)
   const entries: MetadataRoute.Sitemap = []
 
   // Fixed routes (home, about, services, etc.)
@@ -37,7 +37,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Blog posts (per-locale slugs supported via slugIt)
   for (const article of articles) {
-    const lastModified = article.datePublishedIso ? new Date(article.datePublishedIso) : now
+    const lastModified = new Date(article.dateModifiedIso ?? article.datePublishedIso ?? CONTENT_LAST_MODIFIED)
     const enUrl = `${BASE_URL}/blog/${article.slug}`
     const itUrl = `${BASE_URL}/it/blog/${article.slugIt ?? article.slug}`
 

@@ -335,9 +335,11 @@ function SprintNavItem({ locale, onClick, className }: { locale: Locale; onClick
 }
 
 
-export default function Navbar() {
+export default function Navbar({ locale: localeProp }: { locale?: Locale } = {}) {
   const pathname = usePathname()
-  const locale = getLocale(pathname)
+  // The layout passes its locale: on not-found renders the server pathname is
+  // not the client one, and deriving the locale from it breaks hydration.
+  const locale = localeProp ?? getLocale(pathname)
   const t = getDictionary(locale)
 
   const [mobileOpen, setMobileOpen] = useState(false)

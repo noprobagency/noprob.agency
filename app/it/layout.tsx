@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import BaseLayout from '@/components/layout/BaseLayout'
 import { AnalyticsProvider } from '@/components/analytics/AnalyticsProvider'
-import { siteConfig } from '@/lib/site'
+import { siteConfig, organizationJsonLd } from '@/lib/site'
 import '@/app/globals.css'
 import 'vanilla-cookieconsent/dist/cookieconsent.css'
 
@@ -44,6 +44,10 @@ export default function ItalianLayout({ children }: { children: React.ReactNode 
   return (
     <html lang="it">
       <body className="bg-np-bg text-np-text font-sans antialiased overflow-x-hidden">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
         <BaseLayout locale="it">
           {children}
         </BaseLayout>
