@@ -5,7 +5,7 @@
 - Project: `noprob.agency`
 - Stack target: Next.js 15, TypeScript, Tailwind CSS, App Router
 - Priority: replicate the current `https://noprob.agency` homepage as faithfully as possible while setting up strong SEO and tracking foundations
-- Status: **v1.3.0, live and indexable** (15 Oct 2026). Pre-launch audit passed on all 36 sitemap URLs: 200, unique title ≤ ~65 chars, description ≤ 160, self canonical, hreflang IT/EN/x-default, one H1, valid JSON-LD, OG image, 0 broken internal links (see §19).
+- Status: **v1.4.0, live and indexable** (16 Oct 2026). Pre-launch audit passed on all 36 sitemap URLs: 200, unique title ≤ ~65 chars, description ≤ 160, self canonical, hreflang IT/EN/x-default, one H1, valid JSON-LD, OG image, 0 broken internal links (see §19).
 - Ship workflow: every change goes to `main` via squash-merged PR, `siteConfig.version` bumped each time, Vercel deploys production from `main`.
 
 ## Working Rules
@@ -318,19 +318,26 @@ Paragraphs and list items support markdown-style inline tokens via `parseInline`
 - **Indexable**: `LP_ZERO_LOSS_INDEX=true` is set in Vercel production (index, follow + in the sitemap with hreflang). The application pages stay noindex and out of the sitemap.
 - Linked from the global navbar ("Sprint" with a green lightning icon, last item after "Contatti") and from the migration page banner. "Ossessionati dai risultati" / "Obsessed with results" block (`ZlResultsFirst`) explains the 14 days. Own route groups `app/(zl-en)`, `app/(zl-it)` with `ZeroLossRootLayout` (own `ZlNav`, no global navbar).
 - Copy in `content/zero-loss-migration.{it,en}.ts` (typed `ZlCopy`), constants in `content/zero-loss-migration.shared.ts`. Mobile is app-like (`ZlRail` swipe rails with dots, `ZlStickyCta` bottom bar).
-- Application page (`ZeroLossApplyPage`): one screen on desktop (nav, wide card, `Footer bar`), 4-step `ZlApplicationForm` posting to `/api/migrazione-lead` with `source: "zero-loss-migration"` (stops: Shopify origin, revenue under €300k).
+- Application page (`ZeroLossApplyPage`): one screen on desktop (nav, wide card, `Footer bar`), 4-step `ZlApplicationForm` posting to `/api/migrazione-lead` with `source: "zero-loss-migration"` (stop: Shopify origin; under €300k is a soft warning). On success the form redirects to the Sprint confirmation page `ROUTE_PATHS.zeroLossThankYou` (`/it/sprint-migrazione-shopify/grazie`, `/shopify-migration-sprint/thank-you`, `ZeroLossThankYouPage`, noindex): 48-hour promise, demo dashboard, WhatsApp, TidyCal `noprobagency/contacts`. The API also sends the lead a confirmation email (`lib/emails/sprint.ts`) with the estimated tier, the 48-hour promise and the dashboard link. Copy in `ZlCopy.thankYou`.
 - SEO: "Migrazione a Shopify in 14 giorni | Shopify Launch Sprint" / "Shopify Migration in 14 Days | Shopify Launch Sprint", Service (+ alternateName) and FAQPage JSON-LD, OG `public/images/og-shopify-migration-sprint-{it,en}.png` (`node scripts/generate-zero-loss-og.mjs`).
 - Events in `lib/zero-loss/tracking.ts` (`lp_view`, `cta_click` incl. `whynow` and `sticky`, `checklist_change`, `form_*`) + standard Lead on submit.
 
 ---
 
-## 19. Launch status (v1.3.0, 15 Oct 2026)
+## 19. Launch status (v1.4.0, 16 Oct 2026)
 
 - Live on `https://noprob.agency`, 36 URLs in `/sitemap.xml` (IT + EN), `robots.txt` and `llms.txt` served.
 - Audit script (pre-launch): crawl of the sitemap checking status, title, description, canonical, hreflang, H1, OG image, JSON-LD and every internal link. Result: 0 issues.
 - Case studies and blog posts have short Google titles/descriptions via optional `seoTitle`/`seoDescription` fields (`data/use-cases`, `data/articles`), the H1 keeps the long title.
 - Verified data: every public number is in `docs/dati-verificati.md`.
 - Open (owner): Madotto and Sfogliate metrics once their results are visible.
+
+### Changelog v1.4.0 (16 Oct 2026)
+
+- **Sprint confirmation flow**: dedicated thank-you pages in both locales (`ZeroLossThankYouPage`) and a confirmation email to the lead with the estimated tier (`buildSprintWelcomeEmail`). The generic `/thank-you` and `/it/grazie` stay for the other forms.
+- **Copy coherence**: "nei mesi di supporto" instead of "due mesi" (support is 90 days) on the Sprint landing and migration page; home FAQ aligned with the service pages (who we work with, guarantees per product, photography coordinated with partners); nav and footer labels "Data-Driven Team" / "Use Cases"; `llms.txt` target, sectors and model aligned with the pages; Sviluppo tier tags logical.
+- **Unsourced claims removed or softened**: Cumini ("primo mese a sei cifre", "migliori di sempre", "record assoluto", "decine di migliaia di euro", "prodotto da 400€"), articles ("Stape score" is the tracking audit score, "competitor ogni 12-18 mesi"). Client facts and founder statements that stay are now listed in `docs/dati-verificati.md`, together with a public price list.
+- Articles carry `dateModifiedIso` (BlogPosting `dateModified`); legal pages dated 16 Oct 2026.
 
 ### Changelog v1.3.0 (15 Oct 2026)
 

@@ -4,7 +4,7 @@ Fonte unica dei numeri pubblicati sul sito, su `public/llms.txt` e nei documenti
 contesto. Regola: **un numero va online solo se è in questa pagina, con la sua fonte.**
 Se un dato cambia, si aggiorna qui e poi ovunque compare (cerca il valore nel repo).
 
-Ultimo controllo: **13 ottobre 2026**.
+Ultimo controllo: **16 ottobre 2026**.
 
 Grafici della landing Shopify Launch Sprint: Search Console di Integratori Nazzi DTC (clic e impressioni giornaliere, come nel case study) e vendite/ordini Cumini in indice (media mobile 3 mesi, 100 = media mensile dei 12 mesi prima di Shopify, fonte backend Shopify di cumini.com). Nessuna cifra di fatturato.
 
@@ -136,7 +136,25 @@ vanno corrette qui e nel copy.
 - 15% dei visitatori arriva alle recensioni in fondo alla scheda prodotto (articolo CRO)
 - massimo tre clienti long term alla volta
 - supporto 7 giorni su 7 e manutenzione con tutto incluso (tabella "Stesso store, due velocità", landing Shopify Launch Sprint, 13 ott 2026)
-- 3 card del carosello risultati in homepage (DDglobal Store, Madotto, Sfogliate&Sfogliatelle):
-  metriche numeriche tolte perché senza fonte; al loro posto pillole senza numeri (tipo di
-  eCommerce e lavoro svolto, da testimonianze e indicazioni di Antonio). La card Nazzi del carosello aveva
-  "€9,03 CPA" e "32% crescita media annua": sostituiti con i dati verificati (+105%, 2,7x).
+- carosello risultati in homepage: Madotto e Sfogliate&Sfogliatelle senza numeri (pillole su tipo di
+  eCommerce e lavoro svolto); DDglobal mostra "4x sessioni nel primo mese" (GA4, vedi sopra); Nazzi mostra
+  i dati verificati (+105%, 2,7x). Tolti i vecchi "€9,03 CPA" e "32% crescita media annua".
+- scaglioni di prezzo per numero di progetti o clienti (Sviluppo Shopify "primi 10 progetti già acquisiti",
+  AI Accelerator "primi clienti pilota chiusi, fino al 15° cliente"): meccanismo commerciale dichiarato da Antonio
+- Cumini: catalogo Google offline per tre settimane a settembre 2024 (case study, ricordo operativo di Antonio)
+- Nazzi: storico ordini e clienti importato dal 2023 (export WooCommerce; la dashboard parte dal 2024)
+- articoli: "tracking score 92/100" è il punteggio dell'audit tracking di Cumini (31 → 92), non un dato Stape
+
+## Fatti dei clienti (dal loro sito o dichiarati dal cliente)
+
+- Integratori Nazzi DTC: laboratorio galenico attivo dal 2001, spedizione gratuita sopra i 50 euro (sito del cliente)
+
+## Listino pubblico (IVA esclusa, 16 ottobre 2026)
+
+| Servizio | Prezzo | Dove |
+| --- | --- | --- |
+| Shopify Launch Sprint | €5.800 (sotto €2M di fatturato), €8.800 (€2M-20M), €12.800 (oltre €20M), in 4 rate | `content/zero-loss-migration.shared.ts` (`ZL_TIERS`), landing, pagina migrazione, llms.txt, ambassador |
+| Commissione ambassador | 20% del prezzo dello Sprint: €1.160 / €1.760 / €2.560 | `lib/i18n/ambassador.ts` (derivata da `ZL_TIERS`) |
+| Sviluppo Shopify | €1.600 (primi 10 progetti), €1.850 (11-20, attuale), €2.100 (21-30), €2.400 (dal 31°) al mese × 3 mesi | `lib/i18n/sviluppo.ts`, JSON-LD, llms.txt |
+| AI Accelerator | €750 (pilota, chiuso), €1.100 (attuale, fino al 15° cliente), €2.500 (16-30), €4.000 (dal 31°) una tantum | `lib/i18n/aiAccelerator.ts`, JSON-LD |
+| Data-Driven Team | su misura, primo sprint di 30 giorni a metà prezzo | `lib/i18n/dataTeam.ts`, `teamRoadmap.ts` |

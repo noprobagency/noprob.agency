@@ -8,11 +8,11 @@ NoProb Agency is a Shopify technical partner for B2C brands in fashion, suppleme
 - Legal entity: Wyoming LLC, USA (EIN 365136989)
 - Founded: 2022
 - Founder: Antonio Manitta
-- Main platform: Shopify (exclusive specialization)
+- Main platform: Shopify (core specialization; selected custom builds for B2B catalog sites, see the DDglobal case)
 - Core services: Shopify development, Shopify migration, long-term retainer (dedicated eCommerce team)
-- Target clients: B2C brands with €200k+ online revenue, €2M+ total revenue
-- Primary sector: Fashion boutique / luxury retail
-- Secondary sectors: Supplements, DTC, food, gym, perfumes, retail
+- Target clients: eCommerce brands (mostly B2C, some B2B) that want to build, migrate or grow their store on Shopify; the dedicated team is for established brands with regular online sales
+- Primary sectors: fashion, supplements, DTC
+- Also: beauty, food, B2B catalog eCommerce
 - Website: https://noprob.agency
 - Languages: English (primary), Italian
 
@@ -27,7 +27,7 @@ NoProb Agency is a Shopify technical partner for B2C brands in fashion, suppleme
 
 - Shopify-specialist (exclusive, not generalist)
 - Single point of contact (founder as eCommerce Manager)
-- Long-term partnership model (not project-based)
+- Long-term partnership model for the dedicated team, plus fixed-scope productized projects with a public price (Shopify Development, Shopify Launch Sprint, AI Accelerator)
 - Real-time data-driven decisions (GA4 + Meta Pixel + CAPI server-side)
 - Technical + operational partner (coordinates on-demand specialists when needed)
 
@@ -42,7 +42,7 @@ All figures below are verified against Shopify, Meta, Google Ads, Klaviyo and Go
 
 ## Ideal Client
 
-B2C brand with existing eCommerce at €200k+ online revenue looking for a technical partner. Not a fit for: startups without validated product, low-budget projects, price-shoppers.
+A brand with an existing eCommerce and regular sales looking for a technical partner (dedicated team, Shopify migration), or a brand building its first Shopify store (Shopify Development). Not a fit for: low-budget projects, price-shoppers, stores that want a custom quote instead of a public price.
 
 ## Max Capacity
 

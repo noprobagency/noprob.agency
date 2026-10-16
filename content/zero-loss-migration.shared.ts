@@ -261,6 +261,23 @@ export type ZlCopy = {
     success: { title: string; text: string; dashboardCta: string }
     retry: string
   }
+  /** Confirmation page after the application (own route, noindex). */
+  thankYou: {
+    metaTitle: string
+    badge: string
+    h1Pre: string
+    h1Em: string
+    text: string
+    nextTitle: string
+    next: string[]
+    dashboardCta: string
+    whatsapp: string
+    whatsappNote: string
+    whatsappText: string
+    bookTitle: string
+    bookText: string
+    back: string
+  }
   footer: { backToSite: string }
 }
 

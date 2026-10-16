@@ -14,7 +14,9 @@ import ZlCta from './ZlCta'
  * Landing nav: logo, IT/EN switch, one CTA. No other links on purpose (one
  * offer, one door). Sticky; compact on mobile.
  */
-export default function ZlNav({ locale, copy, page = 'landing' }: { locale: Locale; copy: ZlCopy['nav']; page?: 'landing' | 'apply' }) {
+const NAV_ROUTE = { landing: 'zeroLossMigration', apply: 'zeroLossApply', thankYou: 'zeroLossThankYou' } as const
+
+export default function ZlNav({ locale, copy, page = 'landing' }: { locale: Locale; copy: ZlCopy['nav']; page?: 'landing' | 'apply' | 'thankYou' }) {
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
@@ -25,8 +27,8 @@ export default function ZlNav({ locale, copy, page = 'landing' }: { locale: Loca
   }, [])
 
   const langs: { code: Locale; href: string }[] = [
-    { code: 'en', href: ROUTE_PATHS[page === 'apply' ? 'zeroLossApply' : 'zeroLossMigration'].en },
-    { code: 'it', href: ROUTE_PATHS[page === 'apply' ? 'zeroLossApply' : 'zeroLossMigration'].it },
+    { code: 'en', href: ROUTE_PATHS[NAV_ROUTE[page]].en },
+    { code: 'it', href: ROUTE_PATHS[NAV_ROUTE[page]].it },
   ]
 
   return (

@@ -294,7 +294,7 @@ export default function ZlApplicationForm({ locale, copy }: { locale: Locale; co
       // Standard Lead on Pixel + GA4 + CAPI (shared event_id), like the other forms.
       void trackEvent('Lead', { content_category: 'zero-loss-migration', content_name: 'Zero-Loss Migration Sprint' })
       setStatus('success')
-      router.push(ROUTE_PATHS.thankYou[locale])
+      router.push(ROUTE_PATHS.zeroLossThankYou[locale])
     } catch (err) {
       console.error('[zero-loss-form] submit error:', err)
       setServerError(copy.errors.network)

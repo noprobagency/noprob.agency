@@ -3,6 +3,9 @@ import { Resend } from 'resend'
 
 import { migrazioneSchema } from '@/lib/schemas/migrazione'
 import { buildWelcomeEmail } from '@/lib/emails/welcome'
+import { buildSprintWelcomeEmail } from '@/lib/emails/sprint'
+import { ROUTE_PATHS } from '@/lib/i18n/routes'
+import { siteConfig } from '@/lib/site'
 import { zeroLossSchema } from '@/lib/schemas/zeroLoss'
 import { estimateTier } from '@/lib/zero-loss/tier'
 import { ZL_SOURCE_ID } from '@/content/zero-loss-migration'
@@ -137,8 +140,36 @@ async function handleZeroLoss(req: NextRequest, body: unknown) {
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
   }
 
-  // No welcome email here on purpose: the landing promises a personal reply
-  // within 48 hours and has no booking step (no Calendly/TidyCal).
+  // 2) Confirmation to the lead - best-effort, never fails the request. It
+  // repeats the 48-hour promise and the estimated tier shown in the form.
+  const isIT = d.locale === 'it'
+  try {
+    const waText = isIT
+      ? 'Ciao Antonio, ho appena inviato la candidatura allo Shopify Launch Sprint su noprob.agency.'
+      : 'Hi Antonio, I just applied for the Shopify Launch Sprint on noprob.agency.'
+    const { error } = await resend.emails.send({
+      from: WELCOME_FROM,
+      to: [d.email],
+      replyTo: WELCOME_REPLY_TO,
+      subject: isIT ? 'Candidatura ricevuta · Shopify Launch Sprint' : 'Application received · Shopify Launch Sprint',
+      html: buildSprintWelcomeEmail({
+        name: d.name,
+        isIT,
+        storeUrl: d.websiteUrl,
+        tierId: tier.id,
+        price: eur(tier.price),
+        installment: eur(tier.installment),
+        addon,
+        dashboardUrl: `${siteConfig.url}${ROUTE_PATHS.demoDashboard[isIT ? 'it' : 'en']}`,
+        waUrl: `https://wa.me/393204063459?text=${encodeURIComponent(waText)}`,
+        landingUrl: `${siteConfig.url}${ROUTE_PATHS.zeroLossMigration[isIT ? 'it' : 'en']}`,
+      }),
+    })
+    if (error) console.error('[migrazione-lead][zero-loss] Lead email Resend error:', error)
+  } catch (err) {
+    console.error('[migrazione-lead][zero-loss] Lead email unexpected error:', err)
+  }
+
   return NextResponse.json({ ok: true, tier: tier.id })
 }
 

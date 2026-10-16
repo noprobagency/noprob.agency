@@ -183,7 +183,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Gennaio 2024 segna un passaggio simbolico: il primo mese a sei cifre di fatturato online.',
+      text: 'Gennaio 2024 segna un passaggio simbolico: un mese a sei cifre di vendite online, il primo da quando seguiamo i dati (aprile 2023).',
     },
     {
       type: 'paragraph',
@@ -254,7 +254,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'I primi mesi del 2025 si sono rivelati i migliori di sempre per l’eCommerce.',
+      text: 'Nel 2025 l’eCommerce ha continuato a crescere anche durante la transizione tecnica.',
     },
     {
       type: 'paragraph',
@@ -274,7 +274,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Il 2025 si è chiuso con il record assoluto di fatturato, nonostante i mesi di transizione tecnica.',
+      text: 'Il 2025 si è chiuso a +26,3% di vendite nette sul 2024, nonostante i mesi di transizione tecnica.',
     },
     {
       type: 'metrics',
@@ -362,7 +362,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'In un eCommerce fashion con un AOV elevato, anche un singolo punto percentuale di incremento nel tasso di conversione può generare decine di migliaia di euro di ricavi aggiuntivi ogni anno.',
+      text: 'In un eCommerce fashion con un AOV elevato, anche un singolo punto percentuale di incremento nel tasso di conversione vale una quota rilevante di ricavi aggiuntivi ogni anno.',
     },
     {
       type: 'h3',
@@ -395,7 +395,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Il nostro approccio è stato diverso: un prodotto da 400€ raramente viene acquistato alla prima visita. Il processo decisionale è più lungo, richiede più interazioni e tempo.',
+      text: 'Il nostro approccio è stato diverso: un prodotto di fascia alta raramente viene acquistato alla prima visita. Il processo decisionale è più lungo, richiede più interazioni e tempo.',
     },
     {
       type: 'paragraph',
@@ -677,7 +677,7 @@ export const cumini: UseCase = {
     { type: 'h3', text: '2024: toward a new infrastructure' },
     {
       type: 'paragraph',
-      text: 'January 2024 marked a symbolic moment: the first month with six figure online revenue.',
+      text: 'January 2024 marked a symbolic moment: a month with six-figure online sales, the first since we started tracking the data (April 2023).',
     },
     {
       type: 'paragraph',
@@ -738,7 +738,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'The first months of 2025 turned out to be the best ever for the eCommerce.',
+      text: 'In 2025 the eCommerce kept growing even during the technical transition.',
     },
     {
       type: 'paragraph',
@@ -758,7 +758,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: '2025 closed with the all-time revenue record, despite the months of technical transition.',
+      text: '2025 closed at +26.3% net sales over 2024, despite the months of technical transition.',
     },
     {
       type: 'metrics',
@@ -835,7 +835,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'In a fashion eCommerce with a high AOV, even a single percentage point of increase in conversion rate can generate tens of thousands of euros of additional revenue every year.',
+      text: 'In a fashion eCommerce with a high AOV, even a single percentage point of increase in conversion rate is worth a meaningful share of additional revenue every year.',
     },
     {
       type: 'h3',
@@ -865,7 +865,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Our approach was different: a 400 EUR product is rarely purchased on the first visit. The decision-making process is longer, requires more interactions and time.',
+      text: 'Our approach was different: a high-ticket product is rarely purchased on the first visit. The decision-making process is longer, requires more interactions and time.',
     },
     {
       type: 'paragraph',
