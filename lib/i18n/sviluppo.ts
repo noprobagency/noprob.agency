@@ -207,7 +207,7 @@ const it: SviluppoCopy = {
     tiers: [
       { price: '€1.600', slot: 'Primi 10 progetti', tag: 'Già acquisiti', state: 'completed' },
       { price: '€1.850', slot: 'Progetti 11-20', tag: 'Disponibile ora', state: 'current' },
-      { price: '€2.100', slot: 'Progetti 21-30', tag: 'Quasi al completo', state: 'upcoming' },
+      { price: '€2.100', slot: 'Progetti 21-30', tag: 'Prossimo scaglione', state: 'upcoming' },
       { price: '€2.400', slot: 'Dal 31° in poi', tag: 'Prezzo a regime', state: 'upcoming' },
     ],
     priceSuffix: '/mese × 3 mesi',
@@ -466,7 +466,7 @@ const en: SviluppoCopy = {
     tiers: [
       { price: '€1,600', slot: 'First 10 projects', tag: 'Already taken', state: 'completed' },
       { price: '€1,850', slot: 'Projects 11-20', tag: 'Available now', state: 'current' },
-      { price: '€2,100', slot: 'Projects 21-30', tag: 'Almost full', state: 'upcoming' },
+      { price: '€2,100', slot: 'Projects 21-30', tag: 'Next tier', state: 'upcoming' },
       { price: '€2,400', slot: 'From the 31st on', tag: 'Standard price', state: 'upcoming' },
     ],
     priceSuffix: '/mo × 3 months',

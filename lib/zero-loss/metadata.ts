@@ -38,6 +38,21 @@ export function buildZeroLossMetadata(locale: Locale): Metadata {
   }
 }
 
+/** Confirmation page after the application: always noindex, never in the sitemap. */
+export function buildZeroLossThankYouMetadata(locale: Locale): Metadata {
+  const copy = getZeroLossCopy(locale)
+  const base = buildMetadata({
+    locale,
+    path: ROUTE_PATHS.zeroLossThankYou[locale],
+    title: copy.thankYou.metaTitle,
+    description: copy.apply.metaDescription,
+    noIndex: true,
+    image: `/images/og-shopify-migration-sprint-${locale}.png`,
+    imageAlt: copy.meta.ogAlt,
+  })
+  return { ...base, title: { absolute: copy.thankYou.metaTitle } }
+}
+
 /** Application page: always noindex, never in the sitemap. */
 export function buildZeroLossApplyMetadata(locale: Locale): Metadata {
   const copy = getZeroLossCopy(locale)

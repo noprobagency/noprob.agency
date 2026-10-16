@@ -232,7 +232,7 @@ const it: MigrazioneCopy = {
     label: 'prezzo',
     heading: 'Prezzo fisso, quattro rate.\nNessun preventivo.',
     subheading:
-      'Prezzo pubblico in base alla dimensione della tua azienda. Prima rata al kickoff, seconda al go-live, terza e quarta nei due mesi di supporto.',
+      'Prezzo pubblico in base alla dimensione della tua azienda. Prima rata al kickoff, seconda al go-live, terza e quarta nei mesi di supporto.',
     tiers: [],
     priceSuffix: '/rata × 4',
     priceFrom: 'A partire da',
@@ -463,7 +463,7 @@ const en: MigrazioneCopy = {
     label: 'pricing',
     heading: 'Fixed price, four installments.\nNo quotes.',
     subheading:
-      'Public price based on the size of your company. First installment at kickoff, second at go-live, third and fourth during the two months of support.',
+      'Public price based on the size of your company. First installment at kickoff, second at go-live, third and fourth during the support months.',
     tiers: [],
     priceSuffix: '/installment × 4',
     priceFrom: 'Starting from',

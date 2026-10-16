@@ -13,6 +13,7 @@ export type RouteKey =
   | 'ambassador'
   | 'zeroLossMigration'
   | 'zeroLossApply'
+  | 'zeroLossThankYou'
   | 'blog'
   | 'contacts'
   | 'thankYou'
@@ -39,6 +40,8 @@ export const ROUTE_PATHS: Record<RouteKey, { en: string; it: string }> = {
   zeroLossMigration: { en: '/shopify-migration-sprint', it: '/it/sprint-migrazione-shopify' },
   // Application form of the landing, reached from every CTA (always noindex).
   zeroLossApply:    { en: '/shopify-migration-sprint/apply', it: '/it/sprint-migrazione-shopify/candidatura' },
+  // Confirmation after the Sprint application (noindex): 48h reply promise, demo dashboard, booking.
+  zeroLossThankYou: { en: '/shopify-migration-sprint/thank-you', it: '/it/sprint-migrazione-shopify/grazie' },
   demoDashboard:    { en: '/demo-dashboard',     it: '/it/demo-dashboard' },
   blog:             { en: '/blog',               it: '/it/blog' },
   contacts:         { en: '/contacts',           it: '/it/contatti' },

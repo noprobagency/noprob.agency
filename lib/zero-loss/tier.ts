@@ -15,7 +15,7 @@ import {
  *   €300k-2M  -> Tier 1, €5.800, 4 x €1.450
  *   €2M-20M   -> Tier 2, €8.800, 4 x €2.200
  *   over €20M -> Tier 3, €12.800, 4 x €3.200
- *   under €300k -> not eligible (form stops, no tier)
+ *   under €300k -> Tier 1 with a soft warning (the form no longer stops)
  */
 export function tierForRevenue(band: ZlRevenueBand | ''): ZlTierId | null {
   switch (band) {

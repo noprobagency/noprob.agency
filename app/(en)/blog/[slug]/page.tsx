@@ -46,7 +46,7 @@ function buildBlogPostingJsonLd(article: Article) {
     description: article.excerpt,
     image,
     datePublished,
-    dateModified: datePublished,
+    dateModified: article.dateModifiedIso ?? datePublished,
     author: {
       '@type': 'Person',
       name: 'Antonio Manitta',

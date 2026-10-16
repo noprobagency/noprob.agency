@@ -11,7 +11,7 @@ import type { Locale } from '@/lib/i18n'
  * When a tool, form or cookie is added to the site, update BOTH locales here
  * and bump `LEGAL_LAST_UPDATED`.
  */
-export const LEGAL_LAST_UPDATED = '2026-10-04'
+export const LEGAL_LAST_UPDATED = '2026-10-16'
 
 export const LEGAL_CONTACT_EMAIL = 'antonio@noprob.agency'
 

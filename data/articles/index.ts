@@ -31,6 +31,8 @@ export type Article = {
   ledeIt?: string
   /** ISO 8601 with offset, used for BlogPosting.datePublished. */
   datePublishedIso?: string
+  /** ISO 8601 with offset, last substantial update (BlogPosting.dateModified). */
+  dateModifiedIso?: string
   /** Short <title>/<meta description> for Google (the H1 keeps the long title). */
   seoTitle?: string
   seoTitleIt?: string
@@ -74,6 +76,7 @@ export const articles: Article[] = [
     articleType: 'Article',
     date: '2026-05-06',
     datePublishedIso: '2026-05-06T14:00:00+02:00',
+    dateModifiedIso: '2026-10-16T10:00:00+02:00',
     wordCount: 3200,
     articleSection: 'CRO',
     readingTimeMinutes: 13,
@@ -681,6 +684,7 @@ export const articles: Article[] = [
     articleType: 'Article',
     date: '2026-05-06',
     datePublishedIso: '2026-05-06T10:00:00+02:00',
+    dateModifiedIso: '2026-10-16T10:00:00+02:00',
     wordCount: 2900,
     articleSection: 'Shopify',
     readingTimeMinutes: 12,
@@ -941,7 +945,7 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: 'We migrated them to Shopify in May 2025, built a complete server-side tracking setup achieving a Stape score of 92/100, and stabilized the technical team around the new stack. In the 12 months after the migration, online sales grew **67.7%** compared with the 12 months before ([full case study](/use-cases/cumini-luxury-fashion-ecommerce)). The same happens coming from WooCommerce: [Integratori Nazzi DTC](/use-cases/integratori-nazzi-dtc-shopify) sold 105% more online in its first 85 days on Shopify. That result did not come from a single campaign or growth hack. It came from a technical foundation that finally allowed us to do the work properly.',
+        text: 'We migrated them to Shopify in May 2025, built a complete server-side tracking setup that took the tracking audit score to 92/100, and stabilized the technical team around the new stack. In the 12 months after the migration, online sales grew **67.7%** compared with the 12 months before ([full case study](/use-cases/cumini-luxury-fashion-ecommerce)). The same happens coming from WooCommerce: [Integratori Nazzi DTC](/use-cases/integratori-nazzi-dtc-shopify) sold 105% more online in its first 85 days on Shopify. That result did not come from a single campaign or growth hack. It came from a technical foundation that finally allowed us to do the work properly.',
       },
       {
         type: 'paragraph',
@@ -1303,7 +1307,7 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: 'Li abbiamo migrati su Shopify a maggio 2025, costruito un tracking server-side completo (Stape score 92/100), stabilizzato il team tecnico. Nei 12 mesi dopo la migrazione le vendite online sono cresciute del **67,7%** rispetto ai 12 mesi prima ([caso studio completo](/it/casi-studio/cumini-luxury-fashion-ecommerce)). Lo stesso succede partendo da WooCommerce: [Integratori Nazzi DTC](/it/casi-studio/integratori-nazzi-dtc-shopify) ha venduto online il 105% in più nei primi 85 giorni su Shopify. Non è stato un risultato istantaneo. È stato costruito su una fondamenta tecnica che finalmente permetteva di lavorare.',
+        text: 'Li abbiamo migrati su Shopify a maggio 2025, costruito un tracking server-side completo (tracking score 92/100 nell’audit), stabilizzato il team tecnico. Nei 12 mesi dopo la migrazione le vendite online sono cresciute del **67,7%** rispetto ai 12 mesi prima ([caso studio completo](/it/casi-studio/cumini-luxury-fashion-ecommerce)). Lo stesso succede partendo da WooCommerce: [Integratori Nazzi DTC](/it/casi-studio/integratori-nazzi-dtc-shopify) ha venduto online il 105% in più nei primi 85 giorni su Shopify. Non è stato un risultato istantaneo. È stato costruito su una fondamenta tecnica che finalmente permetteva di lavorare.',
       },
       {
         type: 'paragraph',
@@ -1363,7 +1367,7 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: 'Stiamo preparando una guida dedicata al tracking server-side su Shopify con Stape, che è il metodo che usiamo per i brand che seguiamo. Il risultato su uno store fashion che seguiamo è uno Stape score di 92/100, con un impatto diretto sulle campagne Meta.',
+        text: 'Stiamo preparando una guida dedicata al tracking server-side su Shopify con Stape, che è il metodo che usiamo per i brand che seguiamo. Il risultato su uno store fashion che seguiamo è un tracking score di 92/100 nell’audit (da 31/100 prima della migrazione), con un impatto diretto sulle campagne Meta.',
       },
       { type: 'h2', text: 'Quanto costa davvero Shopify' },
       {
@@ -1463,6 +1467,7 @@ export const articles: Article[] = [
     articleType: 'Article',
     date: '2026-04-29',
     datePublishedIso: '2026-04-29T10:00:00+02:00',
+    dateModifiedIso: '2026-10-16T10:00:00+02:00',
     wordCount: 2600,
     articleSection: 'eCommerce Strategy',
     readingTimeMinutes: 9,
@@ -1746,7 +1751,7 @@ export const articles: Article[] = [
         type: 'list',
         items: [
           'Migration to Shopify in May 2025, connected to the stores proprietary ERP',
-          'Full server-side tracking (Stape score 92/100)',
+          'Full server-side tracking (audit score 92/100)',
           'Same partner and the same direction for all 4 years',
           'Online sales in the 12 months after the migration: **+67.7%** on the 12 months before',
           'Orders: **+49.4%**, average order value: **+12.2%** in the same comparison',
@@ -1755,7 +1760,7 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: "What happened isn't magic. It's consistency. Same team, same methodology, for 4 years. While their competitors changed agencies every 12-18 months and complained about flat growth, they were accumulating optimizations that compounded.",
+        text: "What happened isn't magic. It's consistency. Same team, same methodology, for 4 years. While other brands keep changing agencies and complaining about flat growth, they were accumulating optimizations that compounded.",
       },
       {
         type: 'paragraph',
@@ -2114,7 +2119,7 @@ export const articles: Article[] = [
         type: 'list',
         items: [
           'Migrazione a Shopify a maggio 2025, collegata al gestionale proprietario dei negozi',
-          'Tracking server-side completo (Stape score 92/100)',
+          'Tracking server-side completo (tracking score 92/100)',
           'Stesso partner e stessa regia per tutti i 4 anni',
           'Vendite online nei 12 mesi dopo la migrazione: **+67,7%** sui 12 mesi prima',
           'Ordini: **+49,4%**, scontrino medio: **+12,2%** nello stesso confronto',
@@ -2123,7 +2128,7 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: 'Quello che è successo non è magia. È costanza. Lo stesso team, con la stessa metodologia, per 4 anni. Mentre i loro competitor cambiavano agenzia ogni 12-18 mesi e si lamentavano di crescita piatta, loro accumulavano ottimizzazioni che si componevano.',
+        text: 'Quello che è successo non è magia. È costanza. Lo stesso team, con la stessa metodologia, per 4 anni. Mentre altri brand cambiano agenzia di continuo e si lamentano di crescita piatta, loro accumulavano ottimizzazioni che si componevano.',
       },
       {
         type: 'paragraph',

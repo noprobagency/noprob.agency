@@ -214,14 +214,14 @@ const en: Dictionary = {
     menuClose: 'Close',
     navLinks: [
       { label: 'About', href: '/about' },
-      { label: 'Use Case', href: '/use-cases' },
+      { label: 'Use Cases', href: '/use-cases' },
       { label: 'Blog', href: '/blog' },
       { label: 'Contacts', href: '/contacts' },
     ],
     serviceItems: [
       { label: 'AI Accelerator', href: '/ai-accelerator' },
       { label: 'Shopify Development', href: '/shopify-development' },
-      { label: 'Data Drive Team', href: '/data-driven-team' },
+      { label: 'Data-Driven Team', href: '/data-driven-team' },
       { label: 'Shopify Migration', href: '/shopify-migration' },
     ],
     langSwitcher: { label: 'Switch to Italian', display: 'EN' },
@@ -566,7 +566,7 @@ const en: Dictionary = {
       {
         question: 'Who do you work with?',
         answer:
-          'We work exclusively with established eCommerce brands in Fashion, Supplements, and DTC sectors operating on Shopify. We select partners carefully to ensure long-term aligned growth.',
+          'With eCommerce brands, mostly in Fashion, Supplements and DTC, that want to build, migrate or grow their store on Shopify. The dedicated team is for established brands with regular online sales; Shopify Development also covers brands starting from zero. We select partners carefully to ensure long-term aligned growth.',
       },
       {
         question: 'What does support and maintenance include, and how often do you intervene?',
@@ -584,7 +584,7 @@ const en: Dictionary = {
           'We offer flexible monthly retainers with fixed, predictable costs. No hidden fees, no surprise invoices. You can scale your team up or down based on your needs.',
       },
       {
-        question: 'What\u2019s the difference between Data Driven Team and Shopify Development?',
+        question: 'What\u2019s the difference between Data-Driven Team and Shopify Development?',
         answer:
           'Data-Driven Team is a monthly retainer for brands with an existing eCommerce that want a dedicated team. Shopify Development is a full build project for brands starting from scratch or wanting to do it right from day one.',
       },
@@ -601,7 +601,7 @@ const en: Dictionary = {
       {
         question: 'Do you guarantee results or refunds?',
         answer:
-          'We offer a 100% Risk-Free guarantee on our Shopify Development plan. If we do not deliver what we promised, you get a full refund. Our Data-Driven Team plan includes a trial discount for new clients.',
+          'Shopify Development has a 30-day money-back guarantee: if the project does not convince you, we refund you. The Shopify Launch Sprint has 4 guarantees written in the contract (store ready on day 14, SEO, go-live, checkout). The Data-Driven Team starts with the first 30-day sprint at half price.',
       },
       {
         question: 'Do you also work with new brands that don\u2019t have an eCommerce yet?',
@@ -611,7 +611,7 @@ const en: Dictionary = {
       {
         question: 'What\u2019s included (and not included) in your team\u2019s work?',
         answer:
-          'Included: development, design, data and analytics, paid advertising management, email marketing, and SEO. Not included: product photography, content creation, or influencer management. We focus on what drives technical and revenue growth.',
+          'Included: development, design, data and analytics, paid advertising management, email marketing and SEO. Branding, photography and shoots are coordinated with partners under the same direction. Not included: influencer management. We focus on what drives technical and revenue growth.',
       },
     ],
   },
@@ -621,7 +621,7 @@ const en: Dictionary = {
     headingEm: "slowing",
     headingPost: ' you down?',
     buttonLabel: 'Book a call',
-    availability: 'Limited slots available',
+    availability: 'Slots available',
   },
   footer: {
     headingPre: 'Consistency\nThat\u2019s ',
@@ -630,7 +630,7 @@ const en: Dictionary = {
       'We build, improve and grow your eCommerce on Shopify, with a dedicated team in development, marketing and strategy. Together or separately, based on your needs.',
     links: [
       { label: 'About', href: '/about' },
-      { label: 'Use Case', href: '/use-cases' },
+      { label: 'Use Cases', href: '/use-cases' },
       { label: 'Blog', href: '/blog' },
       { label: 'Contacts', href: '/contacts' },
       { label: 'Ambassador', href: '/ambassador' },
@@ -643,7 +643,7 @@ const en: Dictionary = {
     about: { title: 'Your Technical eCommerce Partner', description: 'Meet the team behind NoProb. A technical Shopify partner helping B2C brands scale with development, migration, and dedicated retainer teams.' },
     contacts: { title: 'Contact Us & Book a Call', description: 'Start a conversation with NoProb. Book a call to build your eCommerce on Shopify or activate a long-term dedicated team.' },
     blog: { title: 'Shopify, eCommerce & Growth Blog', description: 'Articles on Shopify development, migration, tracking, and CRO for fashion, supplement, and DTC brands. Written by the NoProb team.' },
-    useCases: { title: 'eCommerce Case Studies & Results', description: 'Real results from long-term Shopify partnerships. See how we helped fashion and DTC brands grow revenue, improve MER, and scale eCommerce operations.' },
+    useCases: { title: 'eCommerce Case Studies & Results', description: 'Real results from long-term Shopify partnerships. See how we helped fashion and DTC brands grow sales, fix tracking and scale eCommerce operations.' },
     dataDrivenTeam: { title: 'Dedicated eCommerce Team on Retainer', description: 'Your dedicated eCommerce team on retainer. One point of contact, a full team behind you. For Shopify brands that want to scale without hiring in-house.' },
     sviluppoShopify: { title: 'Shopify Development Services', description: 'Shopify development services to build your eCommerce from design to tracking, optimized to convert from day one. Lifetime maintenance included.' },
     migrazioneShopify: { title: 'Shopify Migration Without Losing Sales', description: 'Move your eCommerce to Shopify in 14 days without losing sales or customers: 1:1 redirects, no downtime, 4 written guarantees, 90 days of support.' },
@@ -702,7 +702,7 @@ const it: Dictionary = {
     serviceItems: [
       { label: 'AI Accelerator', href: '/it/ai-accelerator' },
       { label: 'Sviluppo Shopify', href: '/it/sviluppo-shopify' },
-      { label: 'Data Drive Team', href: '/it/team-ecommerce-dedicato' },
+      { label: 'Data-Driven Team', href: '/it/team-ecommerce-dedicato' },
       { label: 'Migrazione Shopify', href: '/it/migrazione-shopify' },
     ],
     langSwitcher: { label: 'Passa alla versione inglese', display: 'IT' },
@@ -978,7 +978,7 @@ const it: Dictionary = {
         'Un unico eCommerce Manager',
         'Primo sprint a metà prezzo',
       ],
-      doodle: 'al costo di un dipendente',
+      doodle: 'all’altezza del tuo brand',
       trustLabel: 'Scelti da brand di Moda, Integratori e DTC eCommerce',
       titlePart1: 'Un team eCommerce completo,',
       titlePart2: 'dedicato alla',
@@ -1046,7 +1046,7 @@ const it: Dictionary = {
       {
         question: 'Con chi lavorate?',
         answer:
-          'Lavoriamo esclusivamente con brand eCommerce affermati nei settori Moda, Integratori e DTC operanti su Shopify. Selezioniamo i partner con cura per garantire una crescita allineata nel lungo periodo.',
+          'Con brand eCommerce, soprattutto Moda, Integratori e DTC, che vogliono costruire, migrare o far crescere il loro store su Shopify. Il team dedicato è per brand avviati con vendite regolari; lo Sviluppo Shopify copre anche chi parte da zero. Selezioniamo i partner con cura per garantire una crescita allineata nel lungo periodo.',
       },
       {
         question: 'Cosa include il supporto e la manutenzione, e con quale frequenza intervenite?',
@@ -1064,7 +1064,7 @@ const it: Dictionary = {
           'Offriamo retainer mensili flessibili con costi fissi e prevedibili. Zero commissioni nascoste, zero fatture a sorpresa. Puoi scalare il team verso l\u2019alto o il basso in base alle tue esigenze.',
       },
       {
-        question: 'Qual \u00e8 la differenza tra Data Driven Team e Sviluppo Shopify?',
+        question: 'Qual \u00e8 la differenza tra Data-Driven Team e Sviluppo Shopify?',
         answer:
           'Il Data-Driven Team \u00e8 un retainer mensile per brand con un eCommerce esistente che vogliono un team dedicato. Lo Sviluppo Shopify \u00e8 un progetto completo di costruzione dello store per brand che partono da zero o vogliono finalmente farlo bene.',
       },
@@ -1081,7 +1081,7 @@ const it: Dictionary = {
       {
         question: 'Garantite risultati o rimborsi?',
         answer:
-          'Offriamo una garanzia 100% Risk-Free sul piano Sviluppo Shopify. Se non manteniamo quanto promesso, ottieni un rimborso completo. Il piano Data-Driven Team include uno sconto trial per i nuovi clienti.',
+          'Lo Sviluppo Shopify ha una garanzia di rimborso di 30 giorni: se il progetto non ti convince, ti rimborsiamo. Lo Shopify Launch Sprint ha 4 garanzie scritte nel contratto (store pronto al giorno 14, SEO, go-live, checkout). Il Data-Driven Team parte con il primo sprint di 30 giorni a metà prezzo.',
       },
       {
         question: 'Lavorate anche con brand nuovi che non hanno ancora un eCommerce?',
@@ -1091,7 +1091,7 @@ const it: Dictionary = {
       {
         question: 'Cosa \u00e8 incluso (e cosa no) nel lavoro del vostro team?',
         answer:
-          'Incluso: sviluppo, design, dati e analytics, gestione advertising a pagamento, email marketing e SEO. Non incluso: fotografia di prodotto, produzione di contenuti o gestione influencer. Ci concentriamo su ci\u00f2 che genera crescita tecnica e di fatturato.',
+          'Incluso: sviluppo, design, dati e analytics, gestione advertising a pagamento, email marketing e SEO. Branding, fotografia e shooting li coordiniamo con partner nella stessa regia. Non incluso: gestione influencer. Ci concentriamo su ci\u00f2 che genera crescita tecnica e di fatturato.',
       },
     ],
   },
@@ -1123,7 +1123,7 @@ const it: Dictionary = {
     about: { title: 'Chi Siamo: partner tecnico eCommerce', description: 'Il team dietro NoProb. Partner tecnico Shopify che aiuta i brand B2C a scalare con sviluppo, migrazioni e team dedicati in retainer.' },
     contacts: { title: 'Contattaci: prenota una call', description: 'Apri una conversazione con NoProb. Prenota una call per costruire il tuo eCommerce su Shopify o attivare un team dedicato a lungo termine.' },
     blog: { title: 'Blog Shopify, eCommerce e Crescita', description: 'Guide e articoli su sviluppo Shopify, migrazioni, tracking server-side e CRO per brand fashion, integratori e DTC. Scritti dal team tecnico NoProb.' },
-    useCases: { title: "Casi d'Uso eCommerce e Risultati Reali", description: 'Risultati concreti da partnership Shopify a lungo termine. Come abbiamo fatto crescere brand fashion e DTC su fatturato, MER e operations eCommerce.' },
+    useCases: { title: "Casi d'Uso eCommerce e Risultati Reali", description: 'Risultati concreti da partnership Shopify a lungo termine. Come abbiamo fatto crescere brand fashion e DTC su vendite, tracciamento e operations eCommerce.' },
     dataDrivenTeam: { title: 'Retainer eCommerce Dedicato', description: 'Il tuo team eCommerce dedicato in retainer. Un solo interlocutore, un team completo dietro di te. Per brand Shopify che vogliono scalare.' },
     sviluppoShopify: { title: 'Sviluppo Shopify: creiamo il tuo eCommerce', description: 'Sviluppiamo il tuo eCommerce su Shopify dal design al tracciamento, ottimizzato per convertire dal primo giorno. Manutenzione a vita inclusa.' },
     migrazioneShopify: { title: 'Migrazione Shopify senza perdere vendite', description: 'Migra il tuo eCommerce su Shopify in 14 giorni senza perdere vendite o clienti: redirect 1:1, zero downtime, 4 garanzie scritte, 90 giorni di supporto.' },

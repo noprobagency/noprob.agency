@@ -71,7 +71,7 @@ export const zeroLossEn: ZlCopy = {
       { label: 'Revenue over €20M', price: '€12,800', under: '4 installments of €3,200, VAT excluded' },
     ],
     pricingNote:
-      'First installment at kickoff, second at go-live, third and fourth during the two months of support. Shopify plan, theme and apps are on you. No discounts, no quotes: this is the price.',
+      'First installment at kickoff, second at go-live, third and fourth during the support months. Shopify plan, theme and apps are on you. No discounts, no quotes: this is the price.',
     results: [
       { value: '+105% online sales in the first 85 days on Shopify', attribution: 'Integratori Nazzi DTC' },
       { value: '+67.7% online sales in the 12 months after the migration', attribution: 'Cumini, luxury multibrand' },
@@ -454,7 +454,7 @@ export const zeroLossEn: ZlCopy = {
       {
         question: 'How do I pay?',
         answer:
-          'Four installments: the first at kickoff, the second at go-live, the third and fourth during the two months of support. Prices exclude VAT. Shopify plan, theme and apps you pay directly to Shopify.',
+          'Four installments: the first at kickoff, the second at go-live, the third and fourth during the support months. Prices exclude VAT. Shopify plan, theme and apps you pay directly to Shopify.',
       },
       {
         question: 'How do the guarantees work?',
@@ -602,6 +602,27 @@ export const zeroLossEn: ZlCopy = {
       dashboardCta: 'See the dashboard you receive on day 1',
     },
     retry: 'Try again',
+  },
+  thankYou: {
+    metaTitle: 'Application received | Shopify Launch Sprint',
+    badge: 'Application received',
+    h1Pre: 'Done. We reply',
+    h1Em: 'within 48 hours.',
+    text:
+      'Antonio reads every application himself. He writes to the address you left us with your confirmed tier and the first available kickoff date. If the answer is no, we tell you anyway.',
+    nextTitle: 'Meanwhile, if you want a head start',
+    next: [
+      'Look at the dashboard you get on day 1: it is the one we measure the 4 guarantees with.',
+      'Prepare the list of accesses: current platform, DNS, Search Console, GA4 and Meta.',
+      'In a hurry? Book a call below or write on WhatsApp.',
+    ],
+    dashboardCta: 'See the day 1 dashboard',
+    whatsapp: 'Write on WhatsApp',
+    whatsappNote: 'Antonio replies in person',
+    whatsappText: 'Hi Antonio, I just applied for the Shopify Launch Sprint on noprob.agency.',
+    bookTitle: 'Want to bring the call forward?',
+    bookText: 'Pick a slot: we talk about your store and the sprint calendar.',
+    back: 'Back to the sprint page',
   },
   footer: {
     backToSite: 'Back to noprob.agency',
