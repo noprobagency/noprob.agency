@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# noprob.agency
 
-## Getting Started
+Marketing site of NoProb Agency: Shopify partner for fashion, supplement and DTC brands. Next.js 15 (App Router), TypeScript, Tailwind CSS 3, hosted on Vercel.
 
-First, run the development server:
+## Run it
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
+pnpm dev          # http://localhost:3000
+pnpm build && pnpm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Copy `.env.example` to `.env.local` for analytics IDs, Resend and the Meta Conversions API token. Without them the site runs; forms return a 500 until `RESEND_API_KEY` is set.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Checks
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+pnpm lint
+pnpm typecheck
+pnpm check:em-dash   # no em dashes in the public copy
+pnpm test            # Vitest: Sprint tiers, locale routes, form schemas
+```
 
-## Learn More
+The same five steps run in GitHub Actions on every push and pull request.
 
-To learn more about Next.js, take a look at the following resources:
+## Where things are
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| | |
+| --- | --- |
+| Rules and runbooks | [AGENT.md](AGENT.md) |
+| Architecture (routes, layouts, copy modules, forms, tracking, landings) | [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) |
+| History and changelog | [docs/CHANGELOG.md](docs/CHANGELOG.md) |
+| Every public number with its source | [docs/dati-verificati.md](docs/dati-verificati.md) |
+| Pages | `app/(en)` (EN, root), `app/it` (IT), `app/(zl-en)` and `app/(zl-it)` (Shopify Launch Sprint), `app/(funnel)` |
+| Copy | `lib/i18n/*.ts`, `content/zero-loss-migration.*.ts`, `data/articles`, `data/use-cases` |
+| Forms and email | `lib/schemas`, `app/api/*`, `lib/emails` |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Ship
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+One PR per change, squash-merged to `main`; bump the minor in `package.json#version`; Vercel deploys production from `main`.

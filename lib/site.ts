@@ -3,12 +3,14 @@ import type { Metadata } from 'next'
 import { absoluteUrl } from '@/lib/utils'
 import { getDictionary, type Locale } from '@/lib/i18n'
 import { getAlternateLocalePath } from '@/lib/i18n/routes'
+import pkg from '../package.json'
 
 export const siteConfig = {
   name: 'noprob agency™',
   companyName: 'NOPROB AGENCY LLC',
   url: 'https://noprob.agency',
-  version: 'v1.5.0',
+  // Single source of truth: package.json#version (bump it on every change).
+  version: `v${pkg.version}`,
   ga4Id: 'G-JD0T1HWWWV',
   metaPixelId: '1174058738142037',
   defaultTitle: 'Your eCommerce Partner. From Build to Scale.',

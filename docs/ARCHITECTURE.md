@@ -1,0 +1,187 @@
+# Architecture
+
+How noprob.agency is built. Rules and runbooks are in [AGENT.md](../AGENT.md),
+history in [CHANGELOG.md](CHANGELOG.md), verified figures in
+[dati-verificati.md](dati-verificati.md).
+
+## Stack and layout
+
+- Next.js 15 App Router, TypeScript, Tailwind CSS 3, React 19. Hosted on Vercel, production deploys from `main`, built with pnpm (`pnpm-lock.yaml`).
+- Two locales with different slugs: EN at the root (`app/(en)`), IT under `/it` (`app/it`). Every public page exists in both.
+- Several **root layouts** (route groups), each with its own `<html>`: `app/(en)/layout.tsx` and `app/it/layout.tsx` (global navbar, consent banner, sticky contact pill, analytics), `app/(zl-en)` and `app/(zl-it)` (Shopify Launch Sprint landing and its application and thank-you pages, own `ZlNav`), `app/(funnel)` (paid-traffic application funnel `/af-1-1`). Because there is no `app/layout.tsx`, the 404 for unmatched URLs is `app/global-not-found.tsx` (`experimental.globalNotFound`), and page transitions live in `app/(en)/template.tsx` and `app/it/template.tsx`, never at the root (a root template would nest `<html>` inside a `<div>`).
+- Routes and their IT/EN pairs are declared once in `lib/i18n/routes.ts` (`ROUTE_PATHS`, `getAlternateLocalePath`). The sitemap (`app/sitemap.ts` + `lib/sitemap/routes.ts`), the language switch and hreflang all read from it.
+- Copy never sits in components. Modules: `lib/i18n/index.ts` (home, about, contacts, footer, SEO titles, 404), `lib/i18n/{dataTeam,teamRoadmap,sviluppo,migrazione,aiAccelerator,ambassador,legal}.ts`, `content/zero-loss-migration.{it,en,shared}.ts` (Sprint landing), `data/articles` (blog), `data/use-cases` (case studies). Each exports a typed getter per locale.
+- Design tokens in `lib/design-tokens.ts` and `tailwind.config.ts`; global utilities (buttons, cards, reduced-motion rules) in `app/globals.css`. Fonts are local `@font-face` files in `public/fonts`.
+- `lib/site.ts`: `siteConfig` (name, URL, analytics IDs, version from `package.json`), `buildMetadata()` (title, description, canonical, hreflang, OG image, robots) and the Organization JSON-LD used by every root layout.
+
+## Forms and API routes
+
+| Form | Component | Endpoint | Notes |
+| --- | --- | --- | --- |
+| Contact | `components/sections/ContactSection.tsx` | `app/api/contact/route.ts` | admin email + welcome email, redirect to `/thank-you` or `/it/grazie` (TidyCal `noprobagency/contacts`) |
+| Migration / Sviluppo / Data Team | `MigrazioneForm` inside `MigrazionePricing` | `app/api/migrazione-lead/route.ts` (classic branch) | `source` selects subject and heading |
+| Shopify Launch Sprint | `components/sections/zero-loss/ZlApplicationForm.tsx` (also on the migration page) | `app/api/migrazione-lead/route.ts` (`source: "zero-loss-migration"`) | tier recomputed server-side (`lib/zero-loss/tier.ts`), per-IP rate limit, admin email + confirmation email (`lib/emails/sprint.ts`), redirect to the Sprint thank-you page |
+| AI Accelerator | `components/sections/ai/AiApplicationForm.tsx` | `app/api/ai-accelerator-lead/route.ts` | redirect to `/ai-accelerator/thank-you` or `/it/ai-accelerator/grazie` (TidyCal `noprobagency/ai-call`) |
+| Funnel `/af-1-1` | `components/funnel/ApplicationFunnel.tsx` | `app/api/funnel-lead/route.ts` | IT only, noindex |
+
+Every endpoint: zod schema in `lib/schemas`, honeypot + time trap (bots get a 200 and nothing is sent), Resend for email, user input HTML-escaped in admin emails. `app/api/meta-capi/route.ts` relays browser events to the Meta Conversions API: same-origin only, fixed event allowlist, per-IP rate limit.
+
+## Analytics, SEO and LLM optimization
+
+- Site live: https://noprob.agency
+- Hosting: Vercel (branch main → production)
+- Framework: Next.js 15 App Router, route groups `(en)` + `it/`
+- Current version: `package.json#version`, exposed by `siteConfig.version` in the footer (bump minor on every change)
+
+### Analytics active
+
+- Google Analytics 4 - ID: G-JD0T1HWWWV (env: `NEXT_PUBLIC_GA4_ID`)
+- Meta Pixel - ID: 1174058738142037 (env: `NEXT_PUBLIC_META_PIXEL_ID`)
+- Meta Conversions API server-side (endpoint: `/api/meta-capi`)
+  - Token in env `META_CAPI_ACCESS_TOKEN` (server-only, never exposed)
+  - Deduplication browser Pixel + CAPI via `event_id` UUID shared per event
+  - Test event code env `META_CAPI_TEST_EVENT_CODE` active only in Preview environment
+
+### Event tracking
+
+Helper in `lib/analytics/events.ts`:
+- `trackEvent(name, params)` - fires Pixel + GA4 + CAPI with same `event_id`
+- `trackPageView(url)` - automatic on route change via `RouteChangeTracker`
+- `trackContactClick(location)` - triggered on CTA clicks
+- `trackPricingView()`, `trackCaseStudyView(slug)` - content-specific events
+- `ClickTrackingDelegator` intercepts all `[data-tracking]` elements in DOM
+
+### SEO infrastructure
+
+- Sitemap: `/sitemap.xml` generated from `app/sitemap.ts` + `lib/sitemap/routes.ts`
+  - Single source of truth: add page to `ROUTES` array → sitemap auto-updates
+  - Includes hreflang `en`/`it`/`x-default` alternates inline
+- Robots: `/robots.txt` (`app/robots.ts`) - explicit allow for GPTBot, ClaudeBot, PerplexityBot, Google-Extended
+- Hreflang: EN root + `/it/` subfolder, `x-default` → EN
+- GSC verification: meta tag via env `GSC_VERIFICATION_TOKEN`
+- Canonical: self-referencing per page via `buildMetadata()`
+
+### GEO / LLM Optimization
+
+- `llms.txt`: structured document for LLM crawlers (ChatGPT, Claude, Perplexity) at `/llms.txt` (static public file)
+- Schema.org Organization JSON-LD in `app/(en)/layout.tsx` body
+- Schema.org Service JSON-LD on `/data-driven-team`, `/shopify-development` and `/ai-accelerator` with offers and pricing
+- Entity consistency: founder "Antonio Manitta" + company "NoProb Agency LLC" mentioned cross-page
+
+### GDPR / Consent
+
+- Consent is handled in-house with `vanilla-cookieconsent` (`components/tracking/ConsentBanner.tsx`, IT + EN, opt-in). Iubenda is no longer used.
+- `ConsentGate category="analytics|marketing"` mounts GA4 / Meta Pixel only after the matching category is accepted; `trackEvent` sends Meta CAPI only with marketing consent. Revoking a category clears its cookies and reloads the page.
+- Privacy Policy and Cookie Policy are in-house pages (`/privacy-policy`, `/cookie-policy`, `/it/privacy-policy`, `/it/cookie-policy`) rendered by `components/sections/legal/LegalPage.tsx`; copy in `lib/i18n/legal.ts`. When a tool, form or cookie is added, update both locales there and bump `LEGAL_LAST_UPDATED`.
+
+## Blog architecture and SEO
+
+### Pattern blog post
+
+Every new post under `/blog/[slug]` (or `/it/blog/[slugIt]`) must include:
+
+- Cover image SVG + PNG `1200×630` in `public/images/blog/[slug]-cover.{svg,png}`
+- Article entry in `data/articles/index.ts` with: `title`, `excerpt`, `slug`, `image`, `imageAlt`, `articleType`, `date`, `datePublishedIso`, `readingTimeMinutes`, `wordCount`, `articleSection`, `keywordsIt` / `keywordsEn`
+- Localized fields when available: `titleIt`, `excerptIt`, `ledeIt`, `slugIt`, `contentIt`, `faqIt`
+- BlogPosting JSON-LD via `<StructuredData />` (built from article fields in the page component)
+- FAQPage JSON-LD when `faqIt` (or `faqEn`) is populated
+- `<BlogPostMeta />` under the H1 (date + author + reading time)
+- `<RelatedCTA />` and `<AuthorBio />` after the article body
+- Internal links as in the AGENT.md runbook (Sprint first, then migration page, then a case study or the team page)
+- At least 2 outbound links to authoritative sources (McKinsey, Bain, HBR, Shopify, etc.)
+- Sitemap is generated dynamically from the `articles` array in `app/sitemap.ts` - no manual entry required
+
+### Internal link building priority (regola fissa per ogni articolo)
+
+Every article (new or updated) **must** include these internal links, in priority order:
+
+1. **Sprint** (massima priorità): almeno 1 link a `/it/sprint-migrazione-shopify` (IT) e `/shopify-migration-sprint` (EN) nel corpo o nella conclusione. La CTA Sprint deve apparire **prima** della CTA generica contatti.
+2. **Servizio migrazione**: almeno 1 link a `/it/migrazione-shopify` (IT) / `/shopify-migration` (EN) — a meno che l'articolo non linki già lo Sprint, che rimanda alla stessa offerta.
+3. **Casi studio o team page**: almeno 1 link a `/it/casi-studio/[slug]` o `/it/team-ecommerce-dedicato` per social proof.
+4. **Altri servizi** (AI Accelerator, ecc.): solo se tematicamente rilevanti, mai a scapito del link Sprint.
+
+**Conclusione pattern (copy da usare o adattare):**
+- IT: *"Lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) è una migrazione a Shopify strutturata in 14 giorni, con calendario fisso, prezzo pubblico e 4 garanzie scritte."*
+- EN: *"The [Shopify Launch Sprint](/shopify-migration-sprint) is a structured 14-day migration to Shopify with a fixed calendar, a public price and 4 written guarantees."*
+- Durations and prices in articles must match the Sprint copy (14 days, €5.800 / €8.800 / €12.800, 90 days of support). Never "10 giorni". No em dashes anywhere in the public copy: `pnpm check:em-dash` scans articles, Sprint copy, i18n dictionaries, use cases and `llms.txt`.
+
+Applica questa regola quando scrivi nuovi articoli E quando modifichi quelli esistenti (le conclusioni di tutti gli articoli correnti sono state aggiornate in v1.2.0).
+
+### Inline content syntax
+
+Paragraphs and list items support markdown-style inline tokens via `parseInline` in `components/article/renderSection.tsx`:
+
+- `[testo](/path)` → internal `<Link>` (no rel/target)
+- `[testo](https://...)` → external `<a target="_blank" rel="noopener noreferrer">`
+- `**testo**` → `<strong>`
+
+### Reusable blog components
+
+- `components/blog/StructuredData.tsx` - emits one or more JSON-LD `<script>` tags
+- `components/blog/BlogPostMeta.tsx` - author + date + reading time row under H1
+- `components/blog/AuthorBio.tsx` - Antonio Manitta bio card (locale-aware)
+- `components/blog/RelatedCTA.tsx` - contextual CTA (defaults to Data-Driven Team)
+
+### Keyword strategy primaria (Italia)
+
+- Topic primario: "strategia ecommerce" (150 vol/mo, KD 2)
+- Topic secondari: "kpi ecommerce", "gestire un ecommerce", "ottimizzazione ecommerce"
+- Keyword commerciali fondo funnel: "agenzia shopify" (150 vol KD 0), "consulente ecommerce" (150 vol KD 0)
+- Keyword da NON targettizzare: "scalare ecommerce" (0 vol IT), "crescita ecommerce" (10 vol IT)
+
+### Primo articolo pubblicato (riferimento)
+
+- IT: `/it/blog/strategia-ecommerce-long-term`
+- EN slug originale: `/blog/ecommerce-growth-secrets` (traduzione EN da rifare)
+- Pubblicato: 2026-04-29
+- Reading time: 9 min · Word count: ~2600
+- Target keyword: "strategia ecommerce"
+
+### Locale-specific slugs
+
+- Article fields: `slug` (EN, required), `slugIt` (IT override, optional)
+- IT routes match on `slugIt ?? slug`
+- 301 redirect from any old IT slug lives in `next.config.ts > redirects()`
+
+---
+
+## Migration page (IT `/it/migrazione-shopify` + EN `/shopify-migration`)
+
+- Bilingual product page for the Shopify migration, rendered by `app/it/migrazione-shopify/page.tsx` and `app/(en)/shopify-migration/page.tsx` from `components/sections/Migrazione*`. Copy in `lib/i18n/migrazione.ts` (`getMigrazioneCopy`, typed `MigrazioneCopy`); meta in `seo.migrazioneShopify` of `lib/i18n/index.ts`.
+- Aligned with the Shopify Launch Sprint (§18): 14-day sprint, go-live days 15-30 on the client's date, 90 days of support, monitoring and improvement, 4 written guarantees, same price tiers (€5.800 / €8.800 / €12.800, 4 installments).
+- Section order: Hero, Problem, Solution, social proof, Process (Sprint / Go-live / Supporto e crescita + "Perché bastano 14 giorni?"), **`MigrazioneSprintBanner`** ("AI powered" dark card with flickering green sparks, links to the sprint landing), `MigrazioneSprintPricing` (landing tiers + the same 4-step `ZlApplicationForm`), `MigrazioneResults` (the two landing charts), FAQ.
+- Leads from this page post to `/api/migrazione-lead` with the zero-loss source, so they land in the same inbox as the landing.
+
+---
+
+## AI Accelerator landing (IT `/it/ai-accelerator` + EN `/ai-accelerator`)
+
+- Bilingual landing built from dedicated `components/sections/ai/*` components, rendered by `app/it/ai-accelerator/page.tsx` and `app/(en)/ai-accelerator/page.tsx`. Copy lives in `lib/i18n/aiAccelerator.ts` (`getAiCopy(locale)`, typed `AiCopy`); only `seo.aiAccelerator` is added to the shared dictionary.
+- "Power layer": electric accent `#2F6BFF` scoped via CSS vars (`--ai-accent`, `--ai-accent-glow`, `--ai-accent-text` AA-safe, `--ai-accent-on-dark`) on `.ai-scope` / nav item / header line / sticky bar (see the AI section at the bottom of `app/globals.css`). Decorations: hero neural circuits + side cables + section dividers (`PowerLayer.tsx`), scroll-charged timeline cable (`AiTimeline`), orbiting border on the pricing card (`.ai-tier-live`). Only transform/opacity/dashoffset animated; all frozen under `prefers-reduced-motion`.
+- Navbar: since v1.1.0 "AI Accelerator" is the first item of the Services dropdown (`navbar.serviceItems`, also used by the footer); the first-level item and the NEW badge are gone. Electric header bottom line only on the AI pages. Home pages show `AiServiceCard` under the services/pricing grid.
+- Multi-step application form `#candidatura` (`AiApplicationForm`, 3 steps, card-style radio options, progress bar, inline success state with TidyCal link `tidycal.com/noprobagency/ai-accelerator`). Schema `lib/schemas/aiAccelerator.ts`, endpoint `app/api/ai-accelerator-lead/route.ts` (Resend admin email `[AI Accelerator] Nuova candidatura`, honeypot + time-trap like migrazione). Lead fired inline via `trackEvent('Lead', {content_name: 'AI Accelerator'})` (Pixel+GA4+CAPI dedup) + custom step events `ai_form_step_1/2`.
+- On the AI pages the global `StickyContact` pill is desktop-only; mobile uses the dedicated `AiStickyCta` bottom bar (portal to `<body>` because the page-transition transform breaks `position: fixed`).
+- SEO: `ROUTE_PATHS.aiAccelerator` (`/ai-accelerator` both locales), sitemap entry, Service + BreadcrumbList JSON-LD in the pages, FAQPage via reused `MigrazioneFAQ` (accepts a `copy` prop). Dedicated OG images `public/images/og-ai-accelerator-{it,en}.png` (regenerate with `node scripts/generate-ai-og.mjs`).
+- Reused components extended with optional backward-compatible props: `CaseStudy` (`heading`), `Testimonials` (`heading`), `MigrazioneFAQ` (`copy`, already existed).
+
+## Ambassador playbook (IT `/it/ambassador` + EN `/ambassador`)
+
+- Referral-partner document, **linked from the global footer** since v1.3.0 ("Ambassador", both locales) but still `noIndex` via `buildMetadata` and NOT in `lib/sitemap/routes.ts`. `ROUTE_PATHS.ambassador` serves the footer link, the language switch and hreflang.
+- Single server component `components/sections/ambassador/AmbassadorPlaybook.tsx` (boxed sections, no CTAs, no form); copy in `lib/i18n/ambassador.ts` (`getAmbassadorCopy(locale)`).
+- **The offer it describes is the Shopify Launch Sprint (§18)**, nothing else: 14-day sprint, go-live days 15-30, 90 days of support, 4 written guarantees, public price by company revenue in 4 installments. Prices come from `ZL_TIERS` (`AMBASSADOR_TIERS`) and the commission is `ambassadorCommission(price)` = 20% of the tier price (€1.160 / €1.760 / €2.560). No monthly price, no "4 mesi", no 30-day guarantee, no price negotiation: if the Sprint tiers change, the playbook follows automatically.
+- Scope: migrations from other platforms only (no Shopify-to-Shopify restyling, no startups). Materials: both Sprint landings, the Nazzi and Cumini case studies and the external Trustpilot profile.
+- `StickyContact` is hidden on both ambassador paths.
+
+## Shopify Launch Sprint landing (IT `/it/sprint-migrazione-shopify` + EN `/shopify-migration-sprint`)
+
+- Productized-service landing (ex "Zero-Loss Migration Sprint"), Fletch PMM structure plus our sections. Full docs in `components/sections/zero-loss/README.md`.
+- URLs renamed in v0.101.0; the old `/zero-loss-migration`, `/it/zero-loss-migration` (+ `/apply`, `/candidatura`) redirect permanently (`next.config.ts`). Internal names (folder `zero-loss`, copy files, lead `source`, tracking `lp`) intentionally keep `zero-loss-migration`.
+- **Indexable**: hardcoded since v1.5.0 (`ZL_INDEXABLE = true`, in `lib/sitemap/routes.ts`); the old `LP_ZERO_LOSS_INDEX` env var is no longer read. The application and thank-you pages stay noindex and out of the sitemap.
+- Linked from the global navbar ("Sprint" with a green lightning icon, last item after "Contatti") and from the migration page banner. "Ossessionati dai risultati" / "Obsessed with results" block (`ZlResultsFirst`) explains the 14 days. Own route groups `app/(zl-en)`, `app/(zl-it)` with `ZeroLossRootLayout` (own `ZlNav`, no global navbar).
+- Copy in `content/zero-loss-migration.{it,en}.ts` (typed `ZlCopy`), constants in `content/zero-loss-migration.shared.ts`. Mobile is app-like (`ZlRail` swipe rails with dots, `ZlStickyCta` bottom bar).
+- Application page (`ZeroLossApplyPage`): one screen on desktop (nav, wide card, `Footer bar`), 4-step `ZlApplicationForm` posting to `/api/migrazione-lead` with `source: "zero-loss-migration"` (stop: Shopify origin; under €300k is a soft warning). On success the form redirects to the Sprint confirmation page `ROUTE_PATHS.zeroLossThankYou` (`/it/sprint-migrazione-shopify/grazie`, `/shopify-migration-sprint/thank-you`, `ZeroLossThankYouPage`, noindex): 48-hour promise, demo dashboard, WhatsApp, TidyCal `noprobagency/contacts`. The API also sends the lead a confirmation email (`lib/emails/sprint.ts`) with the estimated tier, the 48-hour promise and the dashboard link. Copy in `ZlCopy.thankYou`.
+- SEO: "Migrazione a Shopify in 14 giorni | Shopify Launch Sprint" / "Shopify Migration in 14 Days | Shopify Launch Sprint", Service (+ alternateName) and FAQPage JSON-LD, OG `public/images/og-shopify-migration-sprint-{it,en}.png` (`node scripts/generate-zero-loss-og.mjs`).
+- Events in `lib/zero-loss/tracking.ts` (`lp_view`, `cta_click` incl. `whynow` and `sticky`, `checklist_change`, `form_*`) + standard Lead on submit.
+
+---
+
