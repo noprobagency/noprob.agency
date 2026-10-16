@@ -285,7 +285,7 @@ export default function ContactSection({
                     <p className="font-sans text-[18px] font-medium leading-[1.3em] tracking-[-0.02em] text-[#363636]">
                       Antonio Cali
                     </p>
-                    <p className="font-sans text-[12px] font-medium tracking-[-0.04em] text-noprob-muted">
+                    <p className="font-sans text-[12px] font-medium tracking-[-0.04em] text-noprob-grey">
                       {r.antonioRole}
                     </p>
                   </div>
@@ -545,7 +545,7 @@ export default function ContactSection({
                 <p className="font-sans text-[18px] font-medium leading-[1.3em] tracking-[-0.02em] text-[#363636]">
                   Cristiana Z.
                 </p>
-                <p className="font-sans text-[12px] font-medium tracking-[-0.04em] text-noprob-muted sm:whitespace-nowrap">
+                <p className="font-sans text-[12px] font-medium tracking-[-0.04em] text-noprob-grey sm:whitespace-nowrap">
                   {r.cristianaRole}
                 </p>
               </div>
@@ -582,7 +582,7 @@ export default function ContactSection({
                 <p className="font-sans text-[18px] font-medium leading-[1.3em] tracking-[-0.02em] text-[#363636]">
                   Camilla Dudine
                 </p>
-                <p className="font-sans text-[12px] font-medium tracking-[-0.04em] text-noprob-muted">
+                <p className="font-sans text-[12px] font-medium tracking-[-0.04em] text-noprob-grey">
                   {r.camillaRole}
                 </p>
               </div>

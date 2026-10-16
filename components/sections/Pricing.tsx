@@ -137,10 +137,10 @@ export default function Pricing({
                             className="object-contain object-left"
                           />
                         </div>
-                        <span className="font-sans text-[12px] font-medium tracking-[-0.04em] text-[rgb(36,143,98)]">
+                        <span className="font-sans text-[12px] font-medium tracking-[-0.04em] text-[rgb(31,122,83)]">
                           5/5
                         </span>
-                        <span className="font-sans text-[12px] font-medium tracking-[-0.04em] text-[rgb(36,143,98)]">
+                        <span className="font-sans text-[12px] font-medium tracking-[-0.04em] text-[rgb(31,122,83)]">
                           Trustpilot
                         </span>
                       </div>

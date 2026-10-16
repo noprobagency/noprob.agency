@@ -40,7 +40,7 @@ export default function AiContrast({ locale = 'it' }: { locale?: Locale }) {
                     key={item}
                     className="flex items-start gap-2 border-b border-[#f0f0f0] py-2 font-sans text-[14px] font-medium leading-[1.5em] text-noprob-grey last:border-b-0"
                   >
-                    <span aria-hidden className="mt-[1px] shrink-0 text-noprob-muted">
+                    <span aria-hidden className="mt-[1px] shrink-0 text-noprob-grey">
                       ✕
                     </span>
                     {item}

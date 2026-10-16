@@ -13,7 +13,8 @@ const resultCards: ReadonlyArray<{
   metrics: Metrics
   /** Public case study, when there is one. */
   href?: { en: string; it: string }
-  label?: string
+  /** Brand name: used for the logo and screenshot alt text. */
+  label: string
 }> = [
   {
     image: '/images/originals/lXYpLfNsEJ0igk2CBCTjY1Irqw.png',
@@ -39,6 +40,7 @@ const resultCards: ReadonlyArray<{
     logo: '/images/originals/UR9tJ9ihRaU7gaL1jcgl0kwQY5g.svg',
     logoClass: 'h-[30px] w-[140px] object-contain',
     metrics: { en: ['Perfumery', 'eCommerce'], it: ['Profumeria', 'eCommerce'] },
+    label: 'Madotto',
   },
   {
     image: '/images/originals/xikMpaXW3G0T00o5bsdB5bWnpuU.png',
@@ -56,6 +58,7 @@ const resultCards: ReadonlyArray<{
     logo: '/images/originals/8GgYF2twbCK7Wa70vrBTzBY7kg.svg',
     logoClass: 'h-[30px] w-[140px] object-contain',
     metrics: { en: ['DTC eCommerce', 'From design to go live'], it: ['eCommerce DTC', 'Dalla grafica al go live'] },
+    label: 'Sfogliate&Sfogliatelle',
   },
 ]
 
@@ -83,7 +86,12 @@ export default function ResultsCarousel({ locale = 'en' }: { locale?: Locale }) 
                       className="absolute inset-0 z-[3]"
                     />
                   )}
-                  <Image src={card.image} alt="" fill className="object-cover" aria-hidden />
+                  <Image
+                    src={card.image}
+                    alt={locale === 'it' ? `Lo store online di ${card.label}` : `${card.label} online store`}
+                    fill
+                    className="object-cover"
+                  />
                   <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0)_24.09%,#f9f9f9_70.74%)]" />
                   <Image
                     src="/images/originals/UKOEHbiYnbExoWnbKlr4yrGf8.svg"
@@ -96,7 +104,7 @@ export default function ResultsCarousel({ locale = 'en' }: { locale?: Locale }) 
                   <div className="absolute bottom-0 left-1/2 z-[2] flex w-full -translate-x-1/2 flex-col items-center justify-center gap-3 overflow-visible px-5 py-8">
                     <Image
                       src={card.logo}
-                      alt="Client logo"
+                      alt={card.label}
                       width={140}
                       height={30}
                       className={card.logoClass}

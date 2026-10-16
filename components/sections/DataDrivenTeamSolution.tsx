@@ -92,7 +92,7 @@ export default function DataDrivenTeamSolution({ locale = 'en' }: { locale?: Loc
                 <p className="font-sans text-[13px] font-medium leading-[1.35em] tracking-[-0.02em] text-noprob-text">
                   <span className="font-semibold">Antonio Manitta</span> - eCommerce Manager
                 </p>
-                <p className="font-sans text-[12px] font-medium leading-[1.35em] tracking-[-0.02em] text-noprob-muted">
+                <p className="font-sans text-[12px] font-medium leading-[1.35em] tracking-[-0.02em] text-noprob-grey">
                   {locale === 'it' ? 'Sarà il direttore del tuo progetto' : 'He will run your project'}
                 </p>
               </div>

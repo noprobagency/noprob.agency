@@ -57,8 +57,8 @@ export default function AiScope({ locale = 'it' }: { locale?: Locale }) {
             transition={{ duration: 0.4, delay: 0.1, ease: [0.25, 0.1, 0.25, 1] }}
             className="border-card-thick shadow-card rounded-card bg-noprob-card p-6 min-[810px]:p-8"
           >
-            <h3 className="text-np-h3 text-noprob-muted">
-              <span aria-hidden className="mr-2 font-semibold text-noprob-muted">
+            <h3 className="text-np-h3 text-noprob-grey">
+              <span aria-hidden className="mr-2 font-semibold text-noprob-grey">
                 ✕
               </span>
               {d.excludedTitle}
@@ -69,7 +69,7 @@ export default function AiScope({ locale = 'it' }: { locale?: Locale }) {
                   key={item}
                   className="flex items-start gap-2 font-sans text-body-sm font-medium leading-[1.6em] text-noprob-grey"
                 >
-                  <span aria-hidden className="mt-[1px] shrink-0 font-semibold text-noprob-muted">
+                  <span aria-hidden className="mt-[1px] shrink-0 font-semibold text-noprob-grey">
                     ✕
                   </span>
                   {item}
