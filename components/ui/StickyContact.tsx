@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
-import { getDictionary } from '@/lib/i18n'
+import { getDictionary, type Locale } from '@/lib/i18n'
 
 // Landing pages carry an in-page application form (#candidatura). The floating
 // CTA there is page-specific and scrolls to that form. Everywhere else it points
@@ -24,10 +24,12 @@ const LANDING_LABELS: Record<string, string> = {
 // desktop-only there to avoid overlapping the bar.
 const DESKTOP_ONLY_PATHS = ['/it/ai-accelerator', '/ai-accelerator']
 
-export default function StickyContact() {
+export default function StickyContact({ locale: localeProp }: { locale?: Locale } = {}) {
   const [visible, setVisible] = useState(false)
   const pathname = usePathname()
-  const locale = pathname.startsWith('/it') ? 'it' : 'en'
+  // Explicit locale from the layout (see Navbar): pathname-derived text would
+  // mismatch at hydration on not-found renders.
+  const locale: Locale = localeProp ?? (pathname.startsWith('/it') ? 'it' : 'en')
   const t = getDictionary(locale)
 
   // Don't show on contact pages

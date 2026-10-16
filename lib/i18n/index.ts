@@ -162,6 +162,7 @@ export type Dictionary = {
     buttonLabel: string
     availability: string
   }
+  notFound: { title: string; titleEm: string; text: string; home: string; contacts: string }
   footer: {
     headingPre: string
     headingEm: string
@@ -622,6 +623,13 @@ const en: Dictionary = {
     headingPost: ' you down?',
     buttonLabel: 'Book a call',
     availability: 'Slots available',
+  },
+  notFound: {
+    title: 'This page ',
+    titleEm: 'does not exist.',
+    text: 'The link may be old or mistyped. Everything we do is one click away.',
+    home: 'Back to the homepage',
+    contacts: 'Contact us',
   },
   footer: {
     headingPre: 'Consistency\nThat\u2019s ',
@@ -1102,6 +1110,13 @@ const it: Dictionary = {
     headingPost: '?',
     buttonLabel: 'Prenota una call',
     availability: 'Slot disponibili',
+  },
+  notFound: {
+    title: 'Questa pagina ',
+    titleEm: 'non esiste.',
+    text: 'Il link potrebbe essere vecchio o scritto male. Tutto quello che facciamo è a un click da qui.',
+    home: 'Torna alla home',
+    contacts: 'Contattaci',
   },
   footer: {
     headingPre: 'Consistency\nThat\u2019s ',

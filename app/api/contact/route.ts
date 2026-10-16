@@ -19,6 +19,14 @@ const WA_TEXT_IT =
 const BOOKING_URL_EN = 'https://noprob.agency/thank-you'
 const BOOKING_URL_IT = 'https://noprob.agency/it/grazie'
 
+function esc(value: unknown): string {
+  return String(value ?? '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+}
+
 export async function POST(req: NextRequest) {
   let body: unknown
   try {
@@ -72,20 +80,20 @@ export async function POST(req: NextRequest) {
       from: ADMIN_FROM,
       to: [ADMIN_TO],
       replyTo: email,
-      subject: `New contact request from ${name} · ${company || 'no company'}`,
+      subject: `New contact request from ${name} · ${company || 'no company'}`.replace(/[\r\n]+/g, ' '),
       html: `
         <h2>New Contact Form Submission</h2>
         <table cellpadding="6" cellspacing="0" style="border-collapse:collapse;font-family:system-ui,sans-serif;font-size:14px">
-          <tr><td><strong>Name:</strong></td><td>${name}</td></tr>
-          <tr><td><strong>Company:</strong></td><td>${company || 'n/d'}</td></tr>
-          <tr><td><strong>Email:</strong></td><td>${email}</td></tr>
-          <tr><td><strong>Phone:</strong></td><td>${phone || 'n/d'}</td></tr>
-          <tr><td><strong>Website:</strong></td><td>${websiteUrl || 'n/d'}</td></tr>
-          <tr><td><strong>Interest:</strong></td><td>${interest || 'n/d'}</td></tr>
-          <tr><td><strong>Revenue:</strong></td><td>${revenue || 'n/d'}</td></tr>
-          <tr><td><strong>Ads Spend:</strong></td><td>${adsSpend || 'n/d'}</td></tr>
-          <tr><td><strong>Locale:</strong></td><td>${locale}</td></tr>
-          <tr><td valign="top"><strong>Notes:</strong></td><td>${additionalInfo || 'n/d'}</td></tr>
+          <tr><td><strong>Name:</strong></td><td>${esc(name)}</td></tr>
+          <tr><td><strong>Company:</strong></td><td>${esc(company || 'n/d')}</td></tr>
+          <tr><td><strong>Email:</strong></td><td>${esc(email)}</td></tr>
+          <tr><td><strong>Phone:</strong></td><td>${esc(phone || 'n/d')}</td></tr>
+          <tr><td><strong>Website:</strong></td><td>${esc(websiteUrl || 'n/d')}</td></tr>
+          <tr><td><strong>Interest:</strong></td><td>${esc(interest || 'n/d')}</td></tr>
+          <tr><td><strong>Revenue:</strong></td><td>${esc(revenue || 'n/d')}</td></tr>
+          <tr><td><strong>Ads Spend:</strong></td><td>${esc(adsSpend || 'n/d')}</td></tr>
+          <tr><td><strong>Locale:</strong></td><td>${esc(locale)}</td></tr>
+          <tr><td valign="top"><strong>Notes:</strong></td><td>${esc(additionalInfo || 'n/d')}</td></tr>
         </table>
       `,
     })

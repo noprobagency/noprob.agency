@@ -19,18 +19,13 @@ Standalone landing that sells one productized service. Routes:
 Linked from the global navbar ("Sprint", green lightning icon) and from the "AI powered"
 banner on `/it/migrazione-shopify` and `/shopify-migration`.
 
-## Indexing switch (`LP_ZERO_LOSS_INDEX`)
+## Indexing
 
-**Live state: `true` in Vercel production since 13 Oct 2026** (index, follow + sitemap).
-
-| `LP_ZERO_LOSS_INDEX` | `<meta name="robots">` | in `/sitemap.xml` |
-| -------------------- | ---------------------- | ----------------- |
-| unset / anything else | `noindex, nofollow`   | no                |
-| `true`               | `index, follow`        | yes (EN + IT with hreflang) |
-
-Where it is read: `lib/zero-loss/metadata.ts` (`ZL_INDEXABLE`) and
-`lib/sitemap/routes.ts`. It is a build-time value: after changing it on Vercel,
-redeploy. Locally it is unset, so local builds show noindex.
+The landing is public and indexable since 13 Oct 2026: `index, follow` and in
+`/sitemap.xml` (EN + IT with hreflang), hardcoded in `lib/zero-loss/metadata.ts`
+(`ZL_INDEXABLE = true`) and `lib/sitemap/routes.ts`. The application and
+thank-you pages stay noindex and out of the sitemap. The old `LP_ZERO_LOSS_INDEX`
+environment variable is no longer read (v1.5.0).
 
 ## Structure
 

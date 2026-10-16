@@ -35,8 +35,7 @@ export const ROUTE_PATHS: Record<RouteKey, { en: string; it: string }> = {
   // Private ambassador playbook (noindex, not in the sitemap).
   ambassador:       { en: '/ambassador',         it: '/it/ambassador' },
   // Shopify Launch Sprint landing (ads / cold email / ambassador traffic). Old
-  // /zero-loss-migration URLs 301 here (next.config.ts). noindex + out of the sitemap until
-  // LP_ZERO_LOSS_INDEX=true (see components/sections/zero-loss/README.md).
+  // /zero-loss-migration URLs 301 here (next.config.ts). Indexable and in the sitemap.
   zeroLossMigration: { en: '/shopify-migration-sprint', it: '/it/sprint-migrazione-shopify' },
   // Application form of the landing, reached from every CTA (always noindex).
   zeroLossApply:    { en: '/shopify-migration-sprint/apply', it: '/it/sprint-migrazione-shopify/candidatura' },

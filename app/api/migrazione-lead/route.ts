@@ -215,9 +215,9 @@ export async function POST(req: NextRequest) {
   const locale = parsed.data.locale ?? 'it'
   const source = parsed.data.source ?? 'migrazione'
   const SUBJECTS: Record<string, string> = {
-    migrazione: `Nuova candidatura migrazione: ${brand}`,
-    sviluppo: `Nuova candidatura sviluppo: ${brand}`,
-    datateam: `Nuova candidatura Data Team: ${brand}`,
+    migrazione: `Nuova candidatura migrazione: ${brand.replace(/[\r\n]+/g, ' ')}`,
+    sviluppo: `Nuova candidatura sviluppo: ${brand.replace(/[\r\n]+/g, ' ')}`,
+    datateam: `Nuova candidatura Data Team: ${brand.replace(/[\r\n]+/g, ' ')}`,
   }
   const HEADINGS: Record<string, string> = {
     migrazione: 'Nuova candidatura migrazione Shopify',
@@ -237,15 +237,15 @@ export async function POST(req: NextRequest) {
       html: `
         <h2>${adminHeading}</h2>
         <table cellpadding="6" cellspacing="0" style="border-collapse:collapse;font-family:system-ui,sans-serif;font-size:14px">
-          <tr><td><strong>Nome:</strong></td><td>${name}</td></tr>
-          <tr><td><strong>Brand:</strong></td><td>${brand}</td></tr>
-          <tr><td><strong>Email:</strong></td><td>${email}</td></tr>
-          <tr><td><strong>Sito attuale:</strong></td><td>${websiteUrl}</td></tr>
-          <tr><td><strong>Piattaforma:</strong></td><td>${platform}</td></tr>
-          <tr><td><strong>Fatturato annuo:</strong></td><td>${revenue}</td></tr>
-          <tr><td><strong>Partenza:</strong></td><td>${timeline}</td></tr>
-          <tr><td valign="top"><strong>Motivo:</strong></td><td>${reason}</td></tr>
-          <tr><td><strong>Lingua:</strong></td><td>${locale}</td></tr>
+          <tr><td><strong>Nome:</strong></td><td>${esc(name)}</td></tr>
+          <tr><td><strong>Brand:</strong></td><td>${esc(brand)}</td></tr>
+          <tr><td><strong>Email:</strong></td><td>${esc(email)}</td></tr>
+          <tr><td><strong>Sito attuale:</strong></td><td>${esc(websiteUrl)}</td></tr>
+          <tr><td><strong>Piattaforma:</strong></td><td>${esc(platform)}</td></tr>
+          <tr><td><strong>Fatturato annuo:</strong></td><td>${esc(revenue)}</td></tr>
+          <tr><td><strong>Partenza:</strong></td><td>${esc(timeline)}</td></tr>
+          <tr><td valign="top"><strong>Motivo:</strong></td><td>${esc(reason)}</td></tr>
+          <tr><td><strong>Lingua:</strong></td><td>${esc(locale)}</td></tr>
         </table>
       `,
     })

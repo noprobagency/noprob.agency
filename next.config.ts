@@ -1,6 +1,9 @@
 import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
+  // One 404 document for the whole app: the route groups have their own root
+  // layouts, so a classic app/not-found.tsx cannot exist (see app/global-not-found.tsx).
+  experimental: { globalNotFound: true },
   images: {
     remotePatterns: [
       { protocol: 'https', hostname: 'cdn.sanity.io' },
@@ -54,6 +57,9 @@ const nextConfig: NextConfig = {
       { source: '/blog/ecommerce-growth-secrets',              destination: '/blog/ecommerce-growth-strategy-long-term', permanent: true },
       { source: '/blog/ecommerce-long-term-strategy',          destination: '/blog/ecommerce-growth-strategy-long-term', permanent: true },
       { source: '/it/blog/ecommerce-growth-secrets',           destination: '/it/blog/strategia-ecommerce-long-term',    permanent: true },
+      // Public reviews live on Trustpilot (used by the ambassador playbook and old links)
+      { source: '/trustpilot', destination: 'https://www.trustpilot.com/review/noprob.agency', permanent: true },
+      { source: '/it/trustpilot', destination: 'https://www.trustpilot.com/review/noprob.agency', permanent: true },
       // Defensive: any IT visitor hitting /it/thank-you lands on the IT page
       { source: '/it/thank-you',                               destination: '/it/grazie',                                permanent: true },
     ]

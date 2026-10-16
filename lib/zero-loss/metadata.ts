@@ -5,8 +5,8 @@ import { ROUTE_PATHS } from '@/lib/i18n/routes'
 import { buildMetadata } from '@/lib/site'
 import { getZeroLossCopy } from '@/content/zero-loss-migration'
 
-/** Indexing switch: the page ships noindex/nofollow until LP_ZERO_LOSS_INDEX=true. */
-export const ZL_INDEXABLE = process.env.LP_ZERO_LOSS_INDEX === 'true'
+/** The landing is public and indexable since 13 Oct 2026 (it is in the sitemap too). */
+export const ZL_INDEXABLE = true
 
 export const zeroLossViewport: Viewport = {
   width: 'device-width',

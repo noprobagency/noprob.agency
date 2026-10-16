@@ -5,7 +5,7 @@
 - Project: `noprob.agency`
 - Stack target: Next.js 15, TypeScript, Tailwind CSS, App Router
 - Priority: replicate the current `https://noprob.agency` homepage as faithfully as possible while setting up strong SEO and tracking foundations
-- Status: **v1.4.0, live and indexable** (16 Oct 2026). Pre-launch audit passed on all 36 sitemap URLs: 200, unique title ≤ ~65 chars, description ≤ 160, self canonical, hreflang IT/EN/x-default, one H1, valid JSON-LD, OG image, 0 broken internal links (see §19).
+- Status: **v1.5.0, live and indexable** (16 Oct 2026). Pre-launch audit passed on all 36 sitemap URLs: 200, unique title ≤ ~65 chars, description ≤ 160, self canonical, hreflang IT/EN/x-default, one H1, valid JSON-LD, OG image, 0 broken internal links (see §19).
 - Ship workflow: every change goes to `main` via squash-merged PR, `siteConfig.version` bumped each time, Vercel deploys production from `main`.
 
 ## Working Rules
@@ -315,7 +315,7 @@ Paragraphs and list items support markdown-style inline tokens via `parseInline`
 
 - Productized-service landing (ex "Zero-Loss Migration Sprint"), Fletch PMM structure plus our sections. Full docs in `components/sections/zero-loss/README.md`.
 - URLs renamed in v0.101.0; the old `/zero-loss-migration`, `/it/zero-loss-migration` (+ `/apply`, `/candidatura`) redirect permanently (`next.config.ts`). Internal names (folder `zero-loss`, copy files, lead `source`, tracking `lp`) intentionally keep `zero-loss-migration`.
-- **Indexable**: `LP_ZERO_LOSS_INDEX=true` is set in Vercel production (index, follow + in the sitemap with hreflang). The application pages stay noindex and out of the sitemap.
+- **Indexable**: hardcoded since v1.5.0 (`ZL_INDEXABLE = true`, in `lib/sitemap/routes.ts`); the old `LP_ZERO_LOSS_INDEX` env var is no longer read. The application and thank-you pages stay noindex and out of the sitemap.
 - Linked from the global navbar ("Sprint" with a green lightning icon, last item after "Contatti") and from the migration page banner. "Ossessionati dai risultati" / "Obsessed with results" block (`ZlResultsFirst`) explains the 14 days. Own route groups `app/(zl-en)`, `app/(zl-it)` with `ZeroLossRootLayout` (own `ZlNav`, no global navbar).
 - Copy in `content/zero-loss-migration.{it,en}.ts` (typed `ZlCopy`), constants in `content/zero-loss-migration.shared.ts`. Mobile is app-like (`ZlRail` swipe rails with dots, `ZlStickyCta` bottom bar).
 - Application page (`ZeroLossApplyPage`): one screen on desktop (nav, wide card, `Footer bar`), 4-step `ZlApplicationForm` posting to `/api/migrazione-lead` with `source: "zero-loss-migration"` (stop: Shopify origin; under €300k is a soft warning). On success the form redirects to the Sprint confirmation page `ROUTE_PATHS.zeroLossThankYou` (`/it/sprint-migrazione-shopify/grazie`, `/shopify-migration-sprint/thank-you`, `ZeroLossThankYouPage`, noindex): 48-hour promise, demo dashboard, WhatsApp, TidyCal `noprobagency/contacts`. The API also sends the lead a confirmation email (`lib/emails/sprint.ts`) with the estimated tier, the 48-hour promise and the dashboard link. Copy in `ZlCopy.thankYou`.
@@ -324,13 +324,23 @@ Paragraphs and list items support markdown-style inline tokens via `parseInline`
 
 ---
 
-## 19. Launch status (v1.4.0, 16 Oct 2026)
+## 19. Launch status (v1.5.0, 16 Oct 2026)
 
 - Live on `https://noprob.agency`, 36 URLs in `/sitemap.xml` (IT + EN), `robots.txt` and `llms.txt` served.
 - Audit script (pre-launch): crawl of the sitemap checking status, title, description, canonical, hreflang, H1, OG image, JSON-LD and every internal link. Result: 0 issues.
 - Case studies and blog posts have short Google titles/descriptions via optional `seoTitle`/`seoDescription` fields (`data/use-cases`, `data/articles`), the H1 keeps the long title.
 - Verified data: every public number is in `docs/dati-verificati.md`.
 - Open (owner): Madotto and Sfogliate metrics once their results are visible.
+
+### Changelog v1.5.0 (16 Oct 2026)
+
+- **Root `app/template.tsx` moved to `app/(en)/template.tsx`**: at the root it wrapped the route-group root layouts, putting `<html>` inside a `<div>` (invalid HTML, and the real reason every in-layout not-found went blank after hydration). Each root layout now has its own template (`(en)`, `it`); the Sprint and funnel groups have none.
+- **Preloader moved into the two homepages** (`app/(en)/page.tsx`, `app/it/page.tsx`), no longer in `BaseLayout`; `Navbar` and `StickyContact` take the `locale` from the layout. Reason: on a not-found render the server-side pathname is not the requested URL, and anything deriving text from `usePathname()` in the layout caused a hydration mismatch that unmounted the 404 page.
+- **Custom 404** in both locales: `app/global-not-found.tsx` (`experimental.globalNotFound`, own document, locale picked on the client from the URL by `NotFoundLocale`) for unmatched URLs, plus `app/(en)/not-found.tsx` and `app/it/not-found.tsx` for explicit `notFound()` calls (blog, case studies). Shared UI `NotFoundSection`, copy `notFound` in the dictionary. A catch-all page calling `notFound()` was tried first and went blank after hydration with the multiple root layouts.
+- **Organization JSON-LD** also in the IT layout.
+- **Security**: user input escaped in every admin email (`/api/contact`, `/api/ai-accelerator-lead`, classic branch of `/api/migrazione-lead`, welcome email) and subjects stripped of line breaks; `/api/meta-capi` accepts only same-origin requests (Origin/Referer host must match the request host), a fixed list of event names, and is rate-limited per IP.
+- **Sitemap**: `lastmod` comes from `CONTENT_LAST_MODIFIED` in `lib/sitemap/routes.ts` (bump it when page copy changes) instead of the build time; the Sprint landing is always listed.
+- Home CTA orbit renders integer offsets with an explicit sign (no hydration mismatch). `/trustpilot` and `/it/trustpilot` 308 to the Trustpilot profile (page removed).
 
 ### Changelog v1.4.0 (16 Oct 2026)
 

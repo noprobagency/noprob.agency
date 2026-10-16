@@ -1,5 +1,12 @@
 import { ROUTE_PATHS, type RouteKey } from '@/lib/i18n/routes'
 
+/**
+ * Last substantial content change of the fixed pages (ISO date). Bump it when
+ * the copy of a page changes, so `lastmod` in the sitemap means something
+ * instead of moving at every deploy.
+ */
+export const CONTENT_LAST_MODIFIED = '2026-10-16'
+
 export type RouteConfig = {
   key: RouteKey
   enPath: string
@@ -21,6 +28,7 @@ const ROUTE_DEFS: Array<{
   { key: 'dataDrivenTeam',   priority: 0.9, changeFrequency: 'monthly', hasIt: true },
   { key: 'sviluppoShopify', priority: 0.9, changeFrequency: 'monthly', hasIt: true },
   { key: 'migrazioneShopify', priority: 0.9, changeFrequency: 'monthly', hasIt: true },
+  { key: 'zeroLossMigration', priority: 0.9, changeFrequency: 'monthly', hasIt: true },
   { key: 'aiAccelerator',    priority: 0.9, changeFrequency: 'monthly', hasIt: true },
   { key: 'blog',             priority: 0.7, changeFrequency: 'weekly',  hasIt: true },
   { key: 'contacts',         priority: 0.6, changeFrequency: 'yearly',  hasIt: true },
@@ -28,11 +36,6 @@ const ROUTE_DEFS: Array<{
   { key: 'cookiePolicy',     priority: 0.2, changeFrequency: 'yearly',  hasIt: true },
 ]
 
-// The Zero-Loss Migration Sprint landing enters the sitemap only when the
-// indexing flag is on (it ships noindex until Antonio flips it).
-if (process.env.LP_ZERO_LOSS_INDEX === 'true') {
-  ROUTE_DEFS.push({ key: 'zeroLossMigration', priority: 0.9, changeFrequency: 'monthly', hasIt: true })
-}
 
 export const ROUTES: RouteConfig[] = ROUTE_DEFS.map((def) => ({
   ...def,

@@ -133,6 +133,11 @@ export default function CTA({
               {FLAT_AVATARS.map((src, idx) => {
                 const angle = idx * 15 // Perfect 15-degree increment for 24 avatars
                 const radian = (angle * Math.PI) / 180
+                // Integer offsets with an explicit sign: the browser serializes `calc()`
+                // the same way, so server and client markup match at hydration.
+                const dx = Math.round(radius * Math.sin(radian))
+                const dy = Math.round(radius * Math.cos(radian))
+                const offset = (v: number) => `${v < 0 ? '-' : '+'} ${Math.abs(v)}px`
 
                 return (
                   <div
@@ -141,8 +146,8 @@ export default function CTA({
                     style={{
                       width: 110,
                       height: 110,
-                      left: `calc(50% + ${radius * Math.sin(radian)}px)`,
-                      top: `calc(50% - ${radius * Math.cos(radian)}px)`,
+                      left: `calc(50% ${offset(dx)})`,
+                      top: `calc(50% ${offset(-dy)})`,
                       transform: 'translate(-50%, -50%)',
                     }}
                   >
