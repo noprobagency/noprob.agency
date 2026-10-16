@@ -9,30 +9,30 @@ import { getDictionary, type Locale } from '@/lib/i18n'
 
 // Flat list of 24 images - Shuffled to avoid side-by-side duplicates
 const FLAT_AVATARS = [
-  'https://framerusercontent.com/images/D4OlAav8RISd0opp4Z1aT4ypRXw.png', // Man glasses
-  'https://framerusercontent.com/images/QbjA7E37T5SDQiAS2aDV1zMrG4.png', // Woman short hair
-  'https://framerusercontent.com/images/w5X4QRiIXVeXf71DL6mW0nV6Awk.png', // Woman orange
-  'https://framerusercontent.com/images/UT4fxQBnxf542T5Cf7zZOvBxy0.png', // Woman black
-  'https://framerusercontent.com/images/4UX9uXT3N0WRExPOcc1r8bpVQAk.png', // Woman white
-  'https://framerusercontent.com/images/GSFkssTRojMMfTCPqH1HENDnw.png', // Woman beanie
-  'https://framerusercontent.com/images/pSEmRq7TZ5niunpklVk0dvh1mDA.png', // Woman white 2
-  'https://framerusercontent.com/images/WdMlO6P4eyTomKkSRBDtGLAio4.png', // Man curly
-  'https://framerusercontent.com/images/AcrDBNPoA5kazwDFtUC2IeoPoo.png', // Woman pink
-  'https://framerusercontent.com/images/d8p3LHFKtLnBbQ65oGYA48cZwYI.png', // Man crossed
-  'https://framerusercontent.com/images/505rrWNYkeLbF8KyvL2Owkhh7I.png', // Woman smile
-  'https://framerusercontent.com/images/AOAg5gzJT8elHJjF4ot4zv58UAE.png', // Woman side
-  'https://framerusercontent.com/images/npXLqR8zSrRQ361syHkuwTjdeds.png', // Woman orange 2
-  'https://framerusercontent.com/images/lEVDQNWDkdXcIlfM1j2Kfmp8at8.png', // Woman white 3
-  'https://framerusercontent.com/images/zRjU5BQHkKDyauYKM2E6MQnLpo.png', // Man looking up
-  'https://framerusercontent.com/images/38I07rfLJ4DXJRQZ7YXCanY6ko.png', // Woman smile 2
-  'https://framerusercontent.com/images/y3RHLfHQboDd91CD2B0QwpU4pno.png', // Woman chin
-  'https://framerusercontent.com/images/7jMr2bJ1E0BHUjGZvEWpbOHZ0.png', // Man office
-  'https://framerusercontent.com/images/D4OlAav8RISd0opp4Z1aT4ypRXw.png', // Man glasses (repeat 1)
-  'https://framerusercontent.com/images/w5X4QRiIXVeXf71DL6mW0nV6Awk.png', // Woman orange (repeat 2)
-  'https://framerusercontent.com/images/4UX9uXT3N0WRExPOcc1r8bpVQAk.png', // Woman white (repeat 3)
-  'https://framerusercontent.com/images/pSEmRq7TZ5niunpklVk0dvh1mDA.png', // Woman white 2 (repeat 4)
-  'https://framerusercontent.com/images/AcrDBNPoA5kazwDFtUC2IeoPoo.png', // Woman pink (repeat 5)
-  'https://framerusercontent.com/images/WdMlO6P4eyTomKkSRBDtGLAio4.png', // Man curly (repeat 6)
+  '/images/originals/D4OlAav8RISd0opp4Z1aT4ypRXw.png', // Man glasses
+  '/images/originals/QbjA7E37T5SDQiAS2aDV1zMrG4.png', // Woman short hair
+  '/images/originals/w5X4QRiIXVeXf71DL6mW0nV6Awk.png', // Woman orange
+  '/images/originals/UT4fxQBnxf542T5Cf7zZOvBxy0.png', // Woman black
+  '/images/originals/4UX9uXT3N0WRExPOcc1r8bpVQAk.png', // Woman white
+  '/images/originals/GSFkssTRojMMfTCPqH1HENDnw.png', // Woman beanie
+  '/images/originals/pSEmRq7TZ5niunpklVk0dvh1mDA.png', // Woman white 2
+  '/images/originals/WdMlO6P4eyTomKkSRBDtGLAio4.png', // Man curly
+  '/images/originals/AcrDBNPoA5kazwDFtUC2IeoPoo.png', // Woman pink
+  '/images/originals/d8p3LHFKtLnBbQ65oGYA48cZwYI.png', // Man crossed
+  '/images/originals/505rrWNYkeLbF8KyvL2Owkhh7I.png', // Woman smile
+  '/images/originals/AOAg5gzJT8elHJjF4ot4zv58UAE.png', // Woman side
+  '/images/originals/npXLqR8zSrRQ361syHkuwTjdeds.png', // Woman orange 2
+  '/images/originals/lEVDQNWDkdXcIlfM1j2Kfmp8at8.png', // Woman white 3
+  '/images/originals/zRjU5BQHkKDyauYKM2E6MQnLpo.png', // Man looking up
+  '/images/originals/38I07rfLJ4DXJRQZ7YXCanY6ko.png', // Woman smile 2
+  '/images/originals/y3RHLfHQboDd91CD2B0QwpU4pno.png', // Woman chin
+  '/images/originals/7jMr2bJ1E0BHUjGZvEWpbOHZ0.png', // Man office
+  '/images/originals/D4OlAav8RISd0opp4Z1aT4ypRXw.png', // Man glasses (repeat 1)
+  '/images/originals/w5X4QRiIXVeXf71DL6mW0nV6Awk.png', // Woman orange (repeat 2)
+  '/images/originals/4UX9uXT3N0WRExPOcc1r8bpVQAk.png', // Woman white (repeat 3)
+  '/images/originals/pSEmRq7TZ5niunpklVk0dvh1mDA.png', // Woman white 2 (repeat 4)
+  '/images/originals/AcrDBNPoA5kazwDFtUC2IeoPoo.png', // Woman pink (repeat 5)
+  '/images/originals/WdMlO6P4eyTomKkSRBDtGLAio4.png', // Man curly (repeat 6)
 ]
 
 const wordVariants = {
@@ -195,7 +195,7 @@ export default function CTA({
           >
             <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-[50px]">
               <Image
-                src="https://framerusercontent.com/images/7jMr2bJ1E0BHUjGZvEWpbOHZ0.png"
+                src="/images/originals/7jMr2bJ1E0BHUjGZvEWpbOHZ0.png"
                 alt="Avatar"
                 fill
                 sizes="40px"
