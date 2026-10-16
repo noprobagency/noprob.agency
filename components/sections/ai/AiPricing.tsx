@@ -146,7 +146,7 @@ export default function AiPricing({ locale = 'it' }: { locale?: Locale }) {
 
                   <div className="mt-5 flex items-end gap-2">
                     <span className="ai-number text-np-pricing">{d.card.price}</span>
-                    <span className="mb-2 font-sans text-[14px] font-medium tracking-[-0.02em] text-noprob-muted">
+                    <span className="mb-2 font-sans text-[14px] font-medium tracking-[-0.02em] text-noprob-grey">
                       {d.card.priceSuffix}
                     </span>
                   </div>

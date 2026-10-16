@@ -4,6 +4,11 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.7.0 (16 Oct 2026)
+
+- **Lighthouse pass** (mobile, production, 16 Oct): home IT 76 / EN 77, Sprint landing 81, migration page 78 on performance, 96-97 accessibility, 100 best practices and SEO. Fixes: the route templates (`app/(en)/template.tsx`, `app/it/template.tsx`) are gone, so the page is in the first paint instead of hidden at `opacity: 0` until hydration; the hero chart (LCP image on the EN home) loads with `priority`; `np-green-trust` is `rgb(31,122,83)` and `np-grey` is `#6b6b6b` so 12-13px labels pass the 4.5:1 contrast ratio on `#f0f0f0`; light-background muted text uses `noprob-grey`; the Sprint chart legends use darker text variants of the brand colors.
+- **Alt text**: the results carousel names every brand (Madotto and Sfogliate&Sfogliatelle added) and describes the store screenshots; logos no longer say "Client logo".
+
 ### Changelog v1.6.0 (16 Oct 2026)
 
 - **Repository cleanup**: removed the unused Sanity stack (`sanity`, `next-sanity`, `@sanity/*`, `@portabletext/sanity-bridge`, config files and env vars), `styled-components`, `next-sitemap`, `geist`, `@fontsource/*`, `react-intersection-observer`, `@vercel/analytics` and `@vercel/speed-insights` (never mounted), the stale `package-lock.json` (Vercel builds with pnpm), the duplicate `components/tracking/{MetaPixel,GoogleAnalytics}.tsx`, `components/ui/Button.tsx`, the client logo wall assets, scaffold SVGs, `public/icons` and 45 unused Framer originals.

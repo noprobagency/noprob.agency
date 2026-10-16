@@ -77,16 +77,16 @@ export default function Hero({ locale = 'en' }: { locale?: Locale }) {
                     width="14"
                     height="14"
                     viewBox="0 0 24 24"
-                    fill="rgb(36,143,98)"
+                    fill="rgb(31,122,83)"
                     aria-hidden="true"
                     className="h-[14px] w-[14px] shrink-0"
                   >
                     <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                   </svg>
-                  <span className="font-sans text-[13px] font-semibold tracking-[-0.03em] text-[rgb(36,143,98)]">
+                  <span className="font-sans text-[13px] font-semibold tracking-[-0.03em] text-[rgb(31,122,83)]">
                     5/5
                   </span>
-                  <span className="font-sans text-[13px] font-medium tracking-[-0.03em] text-[rgb(36,143,98)]">
+                  <span className="font-sans text-[13px] font-medium tracking-[-0.03em] text-[rgb(31,122,83)]">
                     Trustpilot
                   </span>
                 </div>
@@ -134,6 +134,7 @@ export default function Hero({ locale = 'en' }: { locale?: Locale }) {
                 alt="With NoProb versus Without NoProb chart"
                 width={235}
                 height={175}
+                priority
                 className="h-full w-full object-contain object-left"
               />
             </div>
@@ -151,7 +152,7 @@ export default function Hero({ locale = 'en' }: { locale?: Locale }) {
                   <p className="font-sans text-[12px] font-medium italic leading-[1.2] tracking-[-0.04em] text-noprob-dark">
                     {t.hero.quote}
                   </p>
-                  <p className="mt-1 font-sans text-[9.6px] font-medium leading-[1.2] tracking-[-0.04em] text-noprob-muted">
+                  <p className="mt-1 font-sans text-[9.6px] font-medium leading-[1.2] tracking-[-0.04em] text-noprob-grey">
                     {t.hero.quoteAuthor} - <em className="font-serif italic">noprob.agency</em>{' '}
                     eCommerce Manager
                   </p>

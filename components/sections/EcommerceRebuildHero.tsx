@@ -126,7 +126,7 @@ export default function EcommerceRebuildHero({
               width="14"
               height="14"
               viewBox="0 0 24 24"
-              fill="rgb(36,143,98)"
+              fill="rgb(31,122,83)"
               aria-hidden="true"
               className="shrink-0"
             >

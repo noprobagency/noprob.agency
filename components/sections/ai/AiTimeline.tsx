@@ -99,7 +99,7 @@ export default function AiTimeline({ locale = 'it' }: { locale?: Locale }) {
                 <h3 className="font-serif text-[24px] font-medium leading-[1.2em] tracking-[-0.05em] text-noprob-text">
                   {phase.title}
                 </h3>
-                <span className="font-serif text-[13px] font-medium italic tracking-[-0.02em] text-noprob-muted min-[520px]:ml-auto">
+                <span className="font-serif text-[13px] font-medium italic tracking-[-0.02em] text-noprob-grey min-[520px]:ml-auto">
                   {phase.week}
                 </span>
               </div>

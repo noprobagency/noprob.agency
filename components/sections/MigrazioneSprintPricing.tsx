@@ -90,10 +90,10 @@ export default function MigrazioneSprintPricing({ locale = 'it' }: { locale?: Lo
                     <p className="font-sans text-[13px] font-semibold leading-[1.5em] tracking-[-0.02em] text-noprob-text">{d.guarantee}</p>
                   </div>
                   <div className="mt-5">
-                    <span className="font-sans text-[13px] font-medium tracking-[-0.02em] text-noprob-muted">{d.priceFrom}</span>
+                    <span className="font-sans text-[13px] font-medium tracking-[-0.02em] text-noprob-grey">{d.priceFrom}</span>
                     <div className="flex items-end gap-2">
                       <span className="text-np-pricing text-noprob-text">{tiers[0].price}</span>
-                      <span className="mb-2 font-sans text-[14px] font-medium tracking-[-0.02em] text-noprob-muted">{tiers[0].under}</span>
+                      <span className="mb-2 font-sans text-[14px] font-medium tracking-[-0.02em] text-noprob-grey">{tiers[0].under}</span>
                     </div>
                   </div>
                   <Link href="#candidatura" data-tracking="migrazione_pricing_cta" className="button-principal zl-cta mt-5 !w-full">

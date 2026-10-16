@@ -88,7 +88,7 @@ export default function MigrazioneForm({
             aria-hidden="true"
             className="absolute left-[-9999px] top-[-9999px] h-0 w-0 opacity-0"
           />
-          <p className="font-sans text-[13px] font-medium leading-[1.5em] tracking-[-0.02em] text-noprob-muted">
+          <p className="font-sans text-[13px] font-medium leading-[1.5em] tracking-[-0.02em] text-noprob-grey">
             {d.intro}
           </p>
 

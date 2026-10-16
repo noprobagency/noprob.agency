@@ -9,9 +9,12 @@ type Item = ZlCopy['proof']['charts']['items'][number]
 type Lang = 'it' | 'en'
 
 const BLUE = '#4285f4'
+/** Darker variants for legend and KPI text: 4.5:1 on the page background. */
+const BLUE_TEXT = '#1a56c4'
 const PURPLE = '#5e35b1'
 const INK = '#121212'
 const GREEN = '#96bf47'
+const GREEN_TEXT = '#466f17'
 
 const W = 720
 const H = 330
@@ -156,8 +159,8 @@ function chartFor(item: Item, lang: Lang) {
   if (item.key === 'nazziGsc') {
     const dates = gscDaily.map((r) => r.d)
     return {
-      colors: [BLUE, PURPLE],
-      kpiColors: [BLUE, PURPLE, INK, INK],
+      colors: [BLUE_TEXT, PURPLE],
+      kpiColors: [BLUE_TEXT, PURPLE, INK, INK],
       plot: (
         <Plot
           dates={dates}
@@ -178,8 +181,8 @@ function chartFor(item: Item, lang: Lang) {
   }
   const dates = cuminiMonthly.map((r) => `${r[0]}-15`)
   return {
-    colors: [INK, GREEN],
-    kpiColors: [INK, GREEN, INK, INK],
+    colors: [INK, GREEN_TEXT],
+    kpiColors: [INK, GREEN_TEXT, INK, INK],
     plot: (
       <Plot
         dates={dates}
