@@ -5,10 +5,7 @@ const nextConfig: NextConfig = {
   // layouts, so a classic app/not-found.tsx cannot exist (see app/global-not-found.tsx).
   experimental: { globalNotFound: true },
   images: {
-    remotePatterns: [
-      { protocol: 'https', hostname: 'cdn.sanity.io' },
-      { protocol: 'https', hostname: 'framerusercontent.com' },
-    ],
+    // Every image is a local asset under public/: no remote hosts.
     formats: ['image/avif', 'image/webp'],
   },
   async headers() {
