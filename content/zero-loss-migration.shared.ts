@@ -78,8 +78,10 @@ export type ZlCopy = {
   hero: {
     eyebrow: string
     h1: string
-    /** Hand-drawn note next to the H1 (arrow + scribble), links to the results */
+    /** Proof strip under the H1 (links to #prove): claim, two verified stats, link label */
     proofNote: string
+    proofStats: { value: string; label: string }[]
+    proofCta: string
     paragraph: string
     ctaPrimary: string
     ctaNote: string
