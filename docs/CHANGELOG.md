@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.7.2 (17 Oct 2026)
+
+- **DDglobal case study**: the Google position is shown as a percentage (+16%, derived from the verified 9.4 → 7.9) and impressions as 2.7x the same period of 2025, in the copy (IT+EN), the sources, the regenerated GA4 chart PNGs (`node scripts/generate-ddglobal-ga4-chart.mjs`), `llms.txt` and `docs/dati-verificati.md`. The detailed positions are no longer published.
+
 ### Changelog v1.7.1 (16 Oct 2026)
 
 - **Fix broken images** (introduced in v1.6.0): the CTA orbit above the footer (24 avatars on every page that ends with the CTA) loaded 18 images from `framerusercontent.com`, and v1.6.0 had removed that host from `images.remotePatterns` and deleted the matching local copies as "unused" (the code referenced the remote URL, not the local path). The 16 deleted files are restored under `public/images/originals` and `CTA.tsx` now points to the local files, so the site has no remote image host. A crawl of the 48 public pages checking every image asset is now part of the release check (see AGENT.md).
