@@ -2,8 +2,10 @@
  * Series for the results charts of the Shopify Launch Sprint landing.
  * Sources and method in docs/dati-verificati.md.
  *
- * - Supplement DTC Nazzi: daily clicks and impressions from Google Search Console,
- *   read from data/use-cases/nazzi-gsc-daily.json (7-day moving average computed at render).
+ * - Supplement DTC Nazzi: daily clicks and impressions from Google Search Console as an
+ *   index (100 = daily average of the 28 days before go-live, 21 Jun → 18 Jul 2026), read
+ *   from data/use-cases/nazzi-gsc-daily.json (7-day moving average computed at render).
+ *   Index only: the raw volumes never ship to the browser.
  * - cuminiMonthly: [month, sales index, orders index], net sales and orders from the
  *   Shopify backend of cumini.com, 3-month moving average, 100 = monthly average of the
  *   12 months before Shopify (June 2024 → May 2025). Index only: no revenue figures.

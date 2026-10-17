@@ -9,7 +9,10 @@ Ultimo controllo: **16 ottobre 2026**.
 Grafici della landing Shopify Launch Sprint: Search Console di Integratori DTC Nazzi (clic e impressioni giornaliere, come nel case study) e vendite/ordini Cumini in indice (media mobile 3 mesi, 100 = media mensile dei 12 mesi prima di Shopify, fonte backend Shopify di cumini.com). Nessuna cifra di fatturato.
 
 Per riservatezza dei clienti pubblichiamo solo variazioni percentuali, moltiplicatori e
-rapporti, mai fatturati, ordini o clienti in valore assoluto.
+rapporti, mai fatturati, ordini o clienti in valore assoluto. Dal 17 ottobre 2026 vale anche per il
+traffico: niente clic, impressioni o sessioni in valore assoluto, né posizioni medie puntuali. I grafici
+sono in indice (100 = baseline prima del go-live) e i file dati spediti al browser contengono solo
+l'indice; i volumi restano in Search Console, GA4 e in questa pagina.
 
 ## Cumini (fashion luxury multibrand)
 
@@ -63,10 +66,11 @@ Gestione NoProb da gennaio 2024.
 | Giugno e luglio 2026 vs 2025 | 2,57x e 2,19x | mentre si costruiva il nuovo store |
 | Quiz AstrumDonna | oltre mille lead in meno di un mese | online dal 18 set 2026, Klaviyo |
 
-Search Console via API (dati giornalieri esatti in `data/use-cases/nazzi-gsc-daily.json`, dal 9 set 2025
-all'11 ott 2026; prima del 9 set 2025 la proprietà non restituisce dati): 11,5K clic, 604K impressioni,
-CTR 1,9%, posizione media 8,7. Ultimi 28 giorni (12 set → 9 ott) contro i 28 giorni prima del go live
-(21 giu → 18 lug): clic **+41%**, impressioni **2,2x**, posizione **9,0 → 7,1**. Contro gli stessi 28 giorni
+Search Console via API, dal 9 set 2025 all'11 ott 2026 (prima del 9 set 2025 la proprietà non restituisce
+dati): 11,5K clic, 604K impressioni, CTR 1,9%, posizione media 8,7. Questi totali restano qui: il file
+`data/use-cases/nazzi-gsc-daily.json` contiene l'indice giornaliero (100 = media dei 28 giorni prima del go
+live, 21 giu → 18 lug 2026: 31,96 clic e 1.525,7 impressioni al giorno), non i volumi. Ultimi 28 giorni (12 set → 9 ott) contro i 28 giorni prima del go live
+(21 giu → 18 lug): clic **+41%**, impressioni **2,2x**, posizione **9,0 → 7,1** (in pagina solo come **+21%**). Contro gli stessi 28 giorni
 del 2025: clic **2,7x**, impressioni **4,0x**. Agosto 2026 in calo (23 clic al giorno contro 32), settembre
 40, ottobre 53.
 

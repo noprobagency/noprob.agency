@@ -75,7 +75,7 @@ export const zeroLossIt: ZlCopy = {
     results: [
       { value: '+105% di vendite online nei primi 85 giorni su Shopify', attribution: 'Integratori DTC Nazzi' },
       { value: '+67,7% di vendite online nei 12 mesi dopo la migrazione', attribution: 'Cumini, luxury multibrand' },
-      { value: 'Posizione media su Google da 9,0 a 7,1, clic 2,7 volte l’anno prima', attribution: 'Integratori DTC Nazzi, Search Console' },
+      { value: 'Posizione su Google migliorata del 21%, clic 2,7 volte l’anno prima', attribution: 'Integratori DTC Nazzi, Search Console' },
       { value: '0 minuti offline in oltre 10 migrazioni', attribution: 'noprob agency' },
     ],
   },
@@ -355,12 +355,12 @@ export const zeroLossIt: ZlCopy = {
         {
           key: 'nazziGsc',
           title: 'Integratori DTC Nazzi, traffico organico da Google',
-          subtitle: 'Clic e impressioni giornaliere, media mobile 7 giorni. Fonte: Google Search Console, proprietà del sito di Integratori DTC Nazzi, da settembre 2025 a ottobre 2026.',
+          subtitle: 'Clic e impressioni giornaliere, media mobile 7 giorni, in indice: 100 è la media dei 28 giorni prima del go-live. Fonte: Google Search Console, proprietà del sito di Integratori DTC Nazzi, da settembre 2025 a ottobre 2026. I volumi restano del cliente.',
           kpis: [
-            { label: 'Clic totali', value: '11,5K' },
-            { label: 'Impressioni totali', value: '604K' },
-            { label: 'CTR medio', value: '1,9%' },
-            { label: 'Posizione media', value: '8,7' },
+            { label: 'Clic, 28 gg dopo il go-live', value: '+41%' },
+            { label: 'Impressioni, 28 gg dopo', value: '2,2x' },
+            { label: 'Clic vs 2025', value: '2,7x' },
+            { label: 'Posizione Google', value: '+21%' },
           ],
           legend: ['Clic', 'Impressioni'],
           migrationLabel: 'Migrazione',

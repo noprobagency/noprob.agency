@@ -16,7 +16,8 @@ import type { UseCase } from './index'
  * - 2026 Jan → Oct 12 vs full 2025: +20.0%
  * - Search Console API (data/use-cases/nazzi-gsc-daily.json, exact daily data, 2025-09-09 → 2026-10-11):
  *   last 28 days (Sep 12 → Oct 9) vs 28 days before go live (Jun 21 → Jul 18): clicks 1.41x, impressions 2.17x,
- *   position 9.0 → 7.1; vs same 28 days 2025: clicks 2.71x, impressions 4.03x; period: CTR 1.9%, position 8.7
+ *   position 9.0 → 7.1 (published as +21%); vs same 28 days 2025: clicks 2.71x, impressions 4.03x.
+ *   Public chart and JSON are an index (100 = 28 days before go-live): no absolute volumes online.
  * - Live site 2026-10-13: 143 blog articles in the Shopify sitemap, sitemap_agentic_discovery.xml
  *   published, 215 archived WooCommerce URLs checked one by one.
  */
@@ -166,7 +167,7 @@ export const nazzi: UseCase = {
     {
       type: 'image',
       src: '/images/use-case-nazzi/nazzi-search-console-it.png',
-      alt: 'Google Search Console di Integratori DTC Nazzi: clic e impressioni da settembre 2025 a ottobre 2026, prima e dopo la migrazione da WooCommerce a Shopify',
+      alt: 'Google Search Console di Integratori DTC Nazzi: clic e impressioni in indice da settembre 2025 a ottobre 2026, prima e dopo la migrazione da WooCommerce a Shopify',
       width: 1600,
       height: 960,
     },
@@ -180,11 +181,11 @@ export const nazzi: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Negli ultimi 28 giorni i clic da Google sono stati il 41% in più dei 28 giorni prima della migrazione, e 2,7 volte quelli dello stesso periodo del 2025. Le impressioni sono più che raddoppiate rispetto a prima della migrazione, e sono 4 volte quelle di un anno fa. La posizione media è passata da 9,0 a 7,1.',
+      text: 'Negli ultimi 28 giorni i clic da Google sono stati il 41% in più dei 28 giorni prima della migrazione, e 2,7 volte quelli dello stesso periodo del 2025. Le impressioni sono più che raddoppiate rispetto a prima della migrazione, e sono 4 volte quelle di un anno fa. La posizione media su Google è migliorata del 21%.',
     },
     {
       type: 'paragraph',
-      text: 'Su tutto il periodo del grafico il CTR medio è dell’1,9% e la posizione media 8,7.',
+      text: 'Nei 28 giorni dopo il go-live la posizione media su Google è migliorata del 21% rispetto ai 28 giorni prima. Il grafico è in indice (100 = media dei 28 giorni prima del go-live): l’andamento è quello reale, i volumi restano del cliente.',
     },
     { type: 'h3', text: 'Le vendite dopo il go live' },
     {
@@ -403,7 +404,7 @@ export const nazzi: UseCase = {
     {
       type: 'image',
       src: '/images/use-case-nazzi/nazzi-search-console-en.png',
-      alt: 'Google Search Console for Supplement DTC Nazzi: clicks and impressions from September 2025 to October 2026, before and after the WooCommerce to Shopify migration',
+      alt: 'Google Search Console for Supplement DTC Nazzi: clicks and impressions, indexed, from September 2025 to October 2026, before and after the WooCommerce to Shopify migration',
       width: 1600,
       height: 960,
     },
@@ -417,11 +418,11 @@ export const nazzi: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'In the last 28 days Google clicks were 41% higher than in the 28 days before the migration, and 2.7 times the same period of 2025. Impressions more than doubled compared with before the migration, and are 4 times those of a year ago. The average position went from 9.0 to 7.1.',
+      text: 'In the last 28 days Google clicks were 41% higher than in the 28 days before the migration, and 2.7 times the same period of 2025. Impressions more than doubled compared with before the migration, and are 4 times those of a year ago. The average Google position improved by 21%.',
     },
     {
       type: 'paragraph',
-      text: 'Over the whole period in the chart the average CTR is 1.9% and the average position 8.7.',
+      text: 'In the 28 days after go-live the average Google position improved by 21% compared with the 28 days before. The chart is indexed (100 = daily average of the 28 days before go-live): the trend is the real one, the volumes stay with the client.',
     },
     { type: 'h3', text: 'Sales after go live' },
     {

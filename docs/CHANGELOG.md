@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.7.6 (17 Oct 2026)
+
+- **No absolute traffic volumes online**: the Nazzi Search Console series (landing chart, case study chart PNG, `data/use-cases/nazzi-gsc-daily.json` shipped to the browser) is an index, 100 = daily average of the 28 days before go-live, on one axis; KPIs are +41% clicks and 2.2x impressions (28 days after vs before), 2.7x clicks vs 2025 and +21% average position (9.0 → 7.1, no longer published). Case study text, landing results line and `llms.txt` aligned. Cumini was already indexed; DDglobal shows no axis values. Rule added to AGENT.md and `docs/dati-verificati.md`, which keeps the raw totals and the index baseline.
+
 ### Changelog v1.7.5 (17 Oct 2026)
 
 - **Sprint hero note, final form**: the proof strip of v1.7.4 is gone. The note "Lo possiamo dimostrare 😉" / "We can prove it 😉" (serif italic, green, inline SVG arrow pointing back at the word) is glued to the last word of the H1 claim ("vendite." / "sales.") with `whitespace-nowrap`, so it sits right after it at every width and wraps together with it. No positioned elements, no SVG assets; sizes in em of the headline. `ZlHero` splits the H1 at the first sentence end (`splitHeadline`); copy keys `proofStats` / `proofCta` removed.
