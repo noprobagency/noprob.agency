@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.8.1 (17 Oct 2026)
+
+- **Sprint hero description**: the paragraph under the H1 now explains the offer in five short sentences (14 days, full team, what moves, checkout and visibility, support after launch on SEO, conversion, AOV and processes, results in 3 months with a custom dashboard, no surprises on costs) instead of quoting the two client results, which stay in the proof section. `hero.paragraph` in `content/zero-loss-migration.{it,en}.ts`.
+
 ### Changelog v1.8.0 (17 Oct 2026)
 
 - **Demo dashboard rebuilt on data** (`lib/demo-dashboard.ts`, tests in `lib/demo-dashboard.test.ts`): invented daily series for 2025 and 2026 (to 17 Oct) generated from the monthly bases with a seeded generator, so Day / Week / Month / Year really change the columns, the KPI cards (current period) and the totals; ratios (ROAS, MER, MER €, AOV, CAC, NCAC, retention, CPA break even) are derived from the totals of the period shown. The Quiz AstrumDonna tab is gone; Customers and Email are frozen (disabled, ✕ on hover). The year selector is removed (the Year view compares 2025 and 2026). AOV, CAC and retention are now consistent with sales, orders and customers (the previous hardcoded values were not).
