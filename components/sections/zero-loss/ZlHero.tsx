@@ -21,36 +21,42 @@ export default function ZlHero({ copy }: { copy: ZlCopy['hero'] }) {
       <div className="container-noprob">
         <span className="np-eyebrow !normal-case">{copy.eyebrow}</span>
 
-        {/* H1 + hand-drawn note under it: the arrow points up at the last line
-            ("più vendite." / "more sales."), same doodles as the other LPs. Block
-            layout, so it never depends on where the H1 wraps. */}
         <div className="mt-6 max-w-[1040px] xl:max-w-none">
           <h1 className="font-display text-[2.2rem] font-semibold leading-[1.02em] tracking-[-0.06em] text-np-dark min-[810px]:text-[3.6rem] lg:text-[4.2rem]">
             {copy.h1}
           </h1>
-          <a href="#prove" className="group mt-1 inline-flex items-end gap-3 pl-[6px] min-[810px]:pl-3">
-            <span aria-hidden className="relative block h-[44px] w-[30px] shrink-0 min-[810px]:h-[52px] min-[810px]:w-[34px]">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/images/doddle-2.svg"
-                alt=""
-                className="absolute left-1/2 top-1/2 h-[28px] w-auto max-w-none -translate-x-1/2 -translate-y-1/2 -rotate-[78deg] opacity-50 min-[810px]:h-[32px]"
-              />
-            </span>
-            <span className="relative mb-[2px] inline-block px-[10px] py-[6px]">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/images/doddle-1.svg"
-                alt=""
-                aria-hidden
-                className="pointer-events-none absolute inset-0 h-full w-full max-w-none object-fill opacity-40 transition-opacity group-hover:opacity-70"
-              />
-              <span className="relative whitespace-nowrap font-sans text-[12px] font-medium leading-[1.4em] tracking-[-0.02em] text-[#363636] min-[810px]:text-[13px]">
-                {copy.proofNote}
-              </span>
-            </span>
-          </a>
         </div>
+
+        {/* Proof strip: the claim under the H1 is social proof, so it is a card
+            with the two verified results and a link to the charts. Plain flex +
+            wrap: one line on desktop, three stacked rows on phones. */}
+        <a
+          href="#prove"
+          className="group mt-5 inline-flex max-w-full flex-wrap items-center gap-x-4 gap-y-2 rounded-[18px] border border-black/[0.08] bg-white py-2 pl-3 pr-4 shadow-[0_1px_3px_rgba(0,0,0,0.06)] transition-[transform,box-shadow,border-color] hover:-translate-y-[1px] hover:border-black/20 hover:shadow-[0_6px_18px_rgba(0,0,0,0.08)] min-[810px]:mt-6 min-[810px]:rounded-full min-[810px]:py-2 min-[810px]:pl-4 min-[810px]:pr-5"
+        >
+          <span className="inline-flex items-center gap-2 font-sans text-[14px] font-semibold tracking-[-0.03em] text-np-dark min-[810px]:text-[15px]">
+            <span aria-hidden className="relative inline-flex h-[10px] w-[10px] shrink-0">
+              <span className="absolute inset-0 animate-ping rounded-full bg-[#1dcc5d] opacity-60 motion-reduce:hidden" />
+              <span className="relative inline-flex h-[10px] w-[10px] rounded-full bg-[#1dcc5d]" />
+            </span>
+            {copy.proofNote}
+          </span>
+          <span className="flex flex-wrap items-center gap-2">
+            {copy.proofStats.map((stat) => (
+              <span
+                key={stat.value}
+                className="inline-flex items-baseline gap-[6px] rounded-full bg-np-bg px-3 py-[5px] font-sans text-[12px] font-medium tracking-[-0.02em] text-np-grey min-[810px]:text-[13px]"
+              >
+                <span className="font-display text-[15px] font-bold tracking-[-0.04em] text-np-dark min-[810px]:text-[16px]">{stat.value}</span>
+                {stat.label}
+              </span>
+            ))}
+          </span>
+          <span className="ml-auto inline-flex items-center gap-1 font-sans text-[13px] font-semibold tracking-[-0.02em] text-np-dark underline-offset-4 group-hover:underline min-[810px]:ml-0">
+            {copy.proofCta}
+            <span aria-hidden className="transition-transform group-hover:translate-x-[2px]">→</span>
+          </span>
+        </a>
 
         <p className="mt-4 max-w-[760px] font-sans text-[17px] font-medium leading-[1.45em] tracking-[-0.02em] text-np-text min-[810px]:text-[19px]">
           {copy.paragraph}
