@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 // Search Console chart of the Supplement DTC Nazzi case study (IT + EN), from the
-// exact daily data read through the Search Console API (2025-09-09 → 2026-10-11)
-// in data/use-cases/nazzi-gsc-daily.json, drawn here as a 7-day moving average.
+// daily data read through the Search Console API (2025-09-09 → 2026-10-11), stored
+// in data/use-cases/nazzi-gsc-daily.json as an index (100 = daily average of the
+// 28 days before go-live) and drawn here as a 7-day moving average. No volumes.
 // Run with: node scripts/generate-nazzi-gsc-chart.mjs
 // Output: public/images/use-case-nazzi/nazzi-search-console-{it,en}.png
 
@@ -15,8 +16,7 @@ const H = 960
 const PAD = { left: 110, right: 120, top: 330, bottom: 120 }
 const plotW = W - PAD.left - PAD.right
 const plotH = H - PAD.top - PAD.bottom
-const C_MAX = 75
-const I_MAX = 5000
+const MAX = 350
 const BLUE = '#4285f4'
 const PURPLE = '#5e35b1'
 const GREEN = '#1dcc5d'
@@ -26,8 +26,8 @@ const day = (iso) => Date.parse(`${iso}T00:00:00Z`) / 86400000
 const d0 = day(rows[0].d)
 const d1 = day(rows[rows.length - 1].d)
 const x = (iso) => PAD.left + ((day(iso) - d0) / (d1 - d0)) * plotW
-const yC = (v) => PAD.top + plotH - (v / C_MAX) * plotH
-const yI = (v) => PAD.top + plotH - (v / I_MAX) * plotH
+const yC = (v) => PAD.top + plotH - (v / MAX) * plotH
+const yI = yC
 
 function movingAvg(key) {
   return rows.map((r, i) => {
@@ -41,8 +41,8 @@ const path = (pts, y) => pts.map((p, i) => `${i ? 'L' : 'M'}${x(p.d).toFixed(1)}
 const COPY = {
   it: {
     title: 'Integratori DTC Nazzi, traffico organico da Google',
-    sub: 'Clic e impressioni giornaliere, media mobile 7 giorni. Fonte: Google Search Console, set 2025 → ott 2026.',
-    kpis: [['Clic totali', '11,5K', BLUE], ['Impressioni totali', '604K', PURPLE], ['CTR medio', '1,9%', '#181818'], ['Posizione media', '8,7', '#181818']],
+    sub: 'In indice: 100 = media dei 28 giorni prima del go-live. Media mobile 7 giorni. Fonte: Google Search Console, set 2025 → ott 2026.',
+    kpis: [['Clic, 28 gg dopo', '+41%', BLUE], ['Impressioni, 28 gg dopo', '2,2x', PURPLE], ['Clic vs 2025', '2,7x', '#181818'], ['Posizione Google', '+21%', '#181818']],
     band: 'Migrazione',
     golive: 'Online su Shopify, 19 lug',
     clicks: 'Clic',
@@ -52,8 +52,8 @@ const COPY = {
   },
   en: {
     title: 'Supplement DTC Nazzi, organic traffic from Google',
-    sub: 'Daily clicks and impressions, 7-day moving average. Source: Google Search Console, Sep 2025 → Oct 2026.',
-    kpis: [['Total clicks', '11.5K', BLUE], ['Total impressions', '604K', PURPLE], ['Average CTR', '1.9%', '#181818'], ['Average position', '8.7', '#181818']],
+    sub: 'Indexed: 100 = daily average of the 28 days before go-live. 7-day moving average. Source: Google Search Console, Sep 2025 → Oct 2026.',
+    kpis: [['Clicks, 28 days after', '+41%', BLUE], ['Impressions, 28 days after', '2.2x', PURPLE], ['Clicks vs 2025', '2.7x', '#181818'], ['Google position', '+21%', '#181818']],
     band: 'Migration',
     golive: 'Live on Shopify, Jul 19',
     clicks: 'Clicks',
@@ -72,8 +72,7 @@ function svg(locale) {
     .map((i) => {
       const gy = PAD.top + plotH - (i / 5) * plotH
       return `<line x1="${PAD.left}" y1="${gy}" x2="${W - PAD.right}" y2="${gy}" stroke="#ececec" stroke-width="2"/>
-      <text x="${PAD.left - 18}" y="${gy + 8}" text-anchor="end" font-family="${FONT}" font-size="22" fill="${BLUE}">${(C_MAX / 5) * i}</text>
-      <text x="${W - PAD.right + 18}" y="${gy + 8}" font-family="${FONT}" font-size="22" fill="${PURPLE}">${i ? t.k((I_MAX / 5) * i) : 0}</text>`
+      <text x="${PAD.left - 18}" y="${gy + 8}" text-anchor="end" font-family="${FONT}" font-size="22" fill="#7c7c7c">${(MAX / 5) * i}</text>`
     })
     .join('')
 

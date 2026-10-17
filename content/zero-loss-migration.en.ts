@@ -75,7 +75,7 @@ export const zeroLossEn: ZlCopy = {
     results: [
       { value: '+105% online sales in the first 85 days on Shopify', attribution: 'Supplement DTC Nazzi' },
       { value: '+67.7% online sales in the 12 months after the migration', attribution: 'Cumini, luxury multibrand' },
-      { value: 'Average Google position from 9.0 to 7.1, clicks 2.7 times the year before', attribution: 'Supplement DTC Nazzi, Search Console' },
+      { value: 'Google position improved by 21%, clicks 2.7 times the year before', attribution: 'Supplement DTC Nazzi, Search Console' },
       { value: '0 minutes offline across over 10 migrations', attribution: 'noprob agency' },
     ],
   },
@@ -355,12 +355,12 @@ export const zeroLossEn: ZlCopy = {
         {
           key: 'nazziGsc',
           title: 'Supplement DTC Nazzi, organic traffic from Google',
-          subtitle: 'Daily clicks and impressions, 7-day moving average. Source: Google Search Console, Supplement DTC Nazzi site property, September 2025 to October 2026.',
+          subtitle: 'Daily clicks and impressions, 7-day moving average, indexed: 100 is the daily average of the 28 days before go-live. Source: Google Search Console, Supplement DTC Nazzi site property, September 2025 to October 2026. The volumes stay with the client.',
           kpis: [
-            { label: 'Total clicks', value: '11.5K' },
-            { label: 'Total impressions', value: '604K' },
-            { label: 'Average CTR', value: '1.9%' },
-            { label: 'Average position', value: '8.7' },
+            { label: 'Clicks, 28 days after go-live', value: '+41%' },
+            { label: 'Impressions, 28 days after', value: '2.2x' },
+            { label: 'Clicks vs 2025', value: '2.7x' },
+            { label: 'Google position', value: '+21%' },
           ],
           legend: ['Clicks', 'Impressions'],
           migrationLabel: 'Migration',

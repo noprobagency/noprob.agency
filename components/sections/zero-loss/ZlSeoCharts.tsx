@@ -168,10 +168,9 @@ function chartFor(item: Item, lang: Lang) {
           dates={dates}
           lines={[
             { values: movingAverage(gscDaily.map((r) => r.c), 7), color: BLUE, axis: 'left' },
-            { values: movingAverage(gscDaily.map((r) => r.i), 7), color: PURPLE, axis: 'right' },
+            { values: movingAverage(gscDaily.map((r) => r.i), 7), color: PURPLE, axis: 'left' },
           ]}
-          left={{ max: 75, step: 15, color: BLUE }}
-          right={{ max: 5000, step: 1000, color: PURPLE }}
+          left={{ max: 350, step: 50, color: '#7c7c7c' }}
           migration={NAZZI_MIGRATION}
           goLiveLabel={item.goLiveLabel}
           migrationLabel={item.migrationLabel}
