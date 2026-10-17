@@ -15,48 +15,66 @@ function TrustpilotBadge({ score, label }: { score: string; label: string }) {
   )
 }
 
+/**
+ * Hand-drawn style annotation after the last word of the H1: a curved arrow
+ * pointing back at the word, then the note in the brand serif italic. Inline
+ * SVG (no asset), sized in em so it scales with the headline.
+ */
+function ProofNote({ label }: { label: string }) {
+  return (
+    <a
+      href="#prove"
+      className="group ml-[0.3em] inline-flex items-center gap-[0.12em] align-baseline font-serif text-[0.42em] font-normal italic tracking-[-0.02em] text-np-green-trust no-underline [transform:translateY(0.18em)_rotate(-2deg)] min-[810px]:text-[0.36em]"
+    >
+      <svg
+        aria-hidden
+        viewBox="0 0 32 32"
+        className="h-[1.35em] w-[1.35em] shrink-0 transition-transform duration-300 group-hover:-translate-x-[2px] group-hover:-translate-y-[2px]"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2.2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="M27 27c-7-1-15-7-20-19" />
+        <path d="M5.3 15.8 7 8l6.8 4.3" />
+      </svg>
+      <span className="underline-offset-[0.18em] group-hover:underline">{label}</span>
+    </a>
+  )
+}
+
+/** "Il tuo eCommerce su Shopify in 14 giorni. Più posizioni su Google, più vendite." →
+ *  lead = first sentence, claim = the rest; the note hooks to the claim's last word. */
+function splitHeadline(h1: string): { lead: string; claimHead: string; claimLastWord: string } {
+  const cut = h1.indexOf('. ')
+  const lead = cut === -1 ? '' : h1.slice(0, cut + 2)
+  const claim = cut === -1 ? h1 : h1.slice(cut + 2)
+  const space = claim.trimEnd().lastIndexOf(' ')
+  return { lead, claimHead: claim.slice(0, space + 1), claimLastWord: claim.slice(space + 1) }
+}
+
 export default function ZlHero({ copy }: { copy: ZlCopy['hero'] }) {
+  const { lead, claimHead, claimLastWord } = splitHeadline(copy.h1)
   return (
     <section className="pt-10 min-[810px]:pt-16">
       <div className="container-noprob">
         <span className="np-eyebrow !normal-case">{copy.eyebrow}</span>
 
+        {/* H1 in two parts: the claim ("Più posizioni su Google, più vendite.")
+            carries the proof note. The note is inline, glued to the last word with
+            `whitespace-nowrap`, so it always sits right after "vendite." / "sales."
+            and wraps together with it: no absolute positioning, nothing to break. */}
         <div className="mt-6 max-w-[1040px] xl:max-w-none">
           <h1 className="font-display text-[2.2rem] font-semibold leading-[1.02em] tracking-[-0.06em] text-np-dark min-[810px]:text-[3.6rem] lg:text-[4.2rem]">
-            {copy.h1}
+            {lead}
+            {claimHead}
+            <span className="whitespace-nowrap">
+              {claimLastWord}
+              <ProofNote label={copy.proofNote} />
+            </span>
           </h1>
         </div>
-
-        {/* Proof strip: the claim under the H1 is social proof, so it is a card
-            with the two verified results and a link to the charts. Plain flex +
-            wrap: one line on desktop, three stacked rows on phones. */}
-        <a
-          href="#prove"
-          className="group mt-5 inline-flex max-w-full flex-wrap items-center gap-x-4 gap-y-2 rounded-[18px] border border-black/[0.08] bg-white py-2 pl-3 pr-4 shadow-[0_1px_3px_rgba(0,0,0,0.06)] transition-[transform,box-shadow,border-color] hover:-translate-y-[1px] hover:border-black/20 hover:shadow-[0_6px_18px_rgba(0,0,0,0.08)] min-[810px]:mt-6 min-[810px]:rounded-full min-[810px]:py-2 min-[810px]:pl-4 min-[810px]:pr-5"
-        >
-          <span className="inline-flex items-center gap-2 font-sans text-[14px] font-semibold tracking-[-0.03em] text-np-dark min-[810px]:text-[15px]">
-            <span aria-hidden className="relative inline-flex h-[10px] w-[10px] shrink-0">
-              <span className="absolute inset-0 animate-ping rounded-full bg-[#1dcc5d] opacity-60 motion-reduce:hidden" />
-              <span className="relative inline-flex h-[10px] w-[10px] rounded-full bg-[#1dcc5d]" />
-            </span>
-            {copy.proofNote}
-          </span>
-          <span className="flex flex-wrap items-center gap-2">
-            {copy.proofStats.map((stat) => (
-              <span
-                key={stat.value}
-                className="inline-flex items-baseline gap-[6px] rounded-full bg-np-bg px-3 py-[5px] font-sans text-[12px] font-medium tracking-[-0.02em] text-np-grey min-[810px]:text-[13px]"
-              >
-                <span className="font-display text-[15px] font-bold tracking-[-0.04em] text-np-dark min-[810px]:text-[16px]">{stat.value}</span>
-                {stat.label}
-              </span>
-            ))}
-          </span>
-          <span className="ml-auto inline-flex items-center gap-1 font-sans text-[13px] font-semibold tracking-[-0.02em] text-np-dark underline-offset-4 group-hover:underline min-[810px]:ml-0">
-            {copy.proofCta}
-            <span aria-hidden className="transition-transform group-hover:translate-x-[2px]">→</span>
-          </span>
-        </a>
 
         <p className="mt-4 max-w-[760px] font-sans text-[17px] font-medium leading-[1.45em] tracking-[-0.02em] text-np-text min-[810px]:text-[19px]">
           {copy.paragraph}
