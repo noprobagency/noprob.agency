@@ -5,7 +5,7 @@ import ZlSeoCharts from './ZlSeoCharts'
 import ZlDashboardLink from './ZlDashboardLink'
 
 /**
- * Section 9 (#prove): real results of two migrations (Integratori Nazzi DTC from
+ * Section 9 (#prove): real results of two migrations (Supplement DTC Nazzi from
  * WooCommerce, Cumini from a proprietary platform) as indexed charts, then the
  * testimonial wall. No absolute client figures on the page.
  */
@@ -19,7 +19,7 @@ export default function ZlProof({ locale, copy }: { locale: Locale; copy: ZlCopy
         <p className="mt-3 max-w-[680px] font-sans text-[15px] min-[810px]:mt-4 min-[810px]:text-[17px] font-medium leading-[1.5em] tracking-[-0.02em] text-np-text">{copy.sub}</p>
 
         <div className="mt-6 min-[810px]:mt-10">
-          <ZlSeoCharts copy={copy.charts} lang={locale === 'it' ? 'it' : 'en'} />
+          <ZlSeoCharts copy={copy.charts} lang={locale === 'it' ? 'it' : 'en'} sideBySide />
         </div>
 
         <div className="mt-8 flex justify-center min-[810px]:mt-10">

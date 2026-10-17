@@ -6,7 +6,7 @@ import { getZeroLossCopy } from '@/content/zero-loss-migration'
 
 /**
  * Results of real migrations on the Shopify migration product page: the same two
- * charts as the Shopify Launch Sprint landing (Integratori Nazzi DTC Search
+ * charts as the Shopify Launch Sprint landing (Supplement DTC Nazzi Search
  * Console, Cumini sales index since 2023). Sources in docs/dati-verificati.md.
  */
 export default function MigrazioneResults({ locale = 'it' }: { locale?: Locale }) {

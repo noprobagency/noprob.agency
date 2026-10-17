@@ -25,7 +25,7 @@ export const zeroLossEn: ZlCopy = {
     h1: 'Your eCommerce on Shopify in 14 days. Higher on Google, more sales.',
     proofNote: 'We can prove it',
     paragraph:
-      'We move your store to Shopify without stopping sales and make it easier to find and to buy from. Our latest clients: +105% sales in 85 days for Integratori Nazzi DTC, +67.7% in 12 months for Cumini. Fixed price, 4 guarantees, 0 minutes offline.',
+      'We move your store to Shopify without stopping sales and make it easier to find and to buy from. Our latest clients: +105% sales in 85 days for Supplement DTC Nazzi, +67.7% in 12 months for Cumini. Fixed price, 4 guarantees, 0 minutes offline.',
     ctaPrimary: 'Apply for the sprint',
     ctaNote: 'We reply within 48 hours',
     ctaSecondary: 'See the results',
@@ -73,9 +73,9 @@ export const zeroLossEn: ZlCopy = {
     pricingNote:
       'First installment at kickoff, second at go-live, third and fourth during the support months. Shopify plan, theme and apps are on you. No discounts, no quotes: this is the price.',
     results: [
-      { value: '+105% online sales in the first 85 days on Shopify', attribution: 'Integratori Nazzi DTC' },
+      { value: '+105% online sales in the first 85 days on Shopify', attribution: 'Supplement DTC Nazzi' },
       { value: '+67.7% online sales in the 12 months after the migration', attribution: 'Cumini, luxury multibrand' },
-      { value: 'Average Google position from 9.0 to 7.1, clicks 2.7 times the year before', attribution: 'Integratori Nazzi DTC, Search Console' },
+      { value: 'Average Google position from 9.0 to 7.1, clicks 2.7 times the year before', attribution: 'Supplement DTC Nazzi, Search Console' },
       { value: '0 minutes offline across over 10 migrations', attribution: 'noprob agency' },
     ],
   },
@@ -338,21 +338,6 @@ export const zeroLossEn: ZlCopy = {
       caseLink: 'Read the case study',
       items: [
         {
-          key: 'nazziGsc',
-          title: 'Integratori Nazzi DTC, organic traffic from Google',
-          subtitle: 'Daily clicks and impressions, 7-day moving average. Source: Google Search Console, Integratori Nazzi DTC site property, September 2025 to October 2026.',
-          kpis: [
-            { label: 'Total clicks', value: '11.5K' },
-            { label: 'Total impressions', value: '604K' },
-            { label: 'Average CTR', value: '1.9%' },
-            { label: 'Average position', value: '8.7' },
-          ],
-          legend: ['Clicks', 'Impressions'],
-          migrationLabel: 'Migration',
-          goLiveLabel: 'Live on Shopify, Jul 19',
-          href: '/use-cases/integratori-nazzi-dtc-shopify',
-        },
-        {
           key: 'cuminiSales',
           title: 'Cumini, eCommerce sales growth since 2023',
           subtitle: 'Monthly net sales and orders, 3-month moving average, as an index: 100 is the average of the 12 months before Shopify. Source: Shopify backend of cumini.com, with the previous platform history imported, May 2023 to September 2026.',
@@ -366,6 +351,21 @@ export const zeroLossEn: ZlCopy = {
           migrationLabel: 'Migration',
           goLiveLabel: 'Live on Shopify, May 19, 2025',
           href: '/use-cases/cumini-luxury-fashion-ecommerce',
+        },
+        {
+          key: 'nazziGsc',
+          title: 'Supplement DTC Nazzi, organic traffic from Google',
+          subtitle: 'Daily clicks and impressions, 7-day moving average. Source: Google Search Console, Supplement DTC Nazzi site property, September 2025 to October 2026.',
+          kpis: [
+            { label: 'Total clicks', value: '11.5K' },
+            { label: 'Total impressions', value: '604K' },
+            { label: 'Average CTR', value: '1.9%' },
+            { label: 'Average position', value: '8.7' },
+          ],
+          legend: ['Clicks', 'Impressions'],
+          migrationLabel: 'Migration',
+          goLiveLabel: 'Live on Shopify, Jul 19',
+          href: '/use-cases/integratori-nazzi-dtc-shopify',
         },
       ],
     },

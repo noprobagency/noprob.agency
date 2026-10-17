@@ -25,7 +25,7 @@ export const zeroLossIt: ZlCopy = {
     h1: 'Il tuo eCommerce su Shopify in 14 giorni. Più posizioni su Google, più vendite.',
     proofNote: 'Lo possiamo dimostrare',
     paragraph:
-      "Portiamo il tuo store su Shopify senza fermare le vendite e lo rendiamo più facile da trovare e da comprare. I risultati dei nostri ultimi clienti: +105% di vendite in 85 giorni per Integratori Nazzi DTC, +67,7% in 12 mesi per Cumini. Prezzo fisso, 4 garanzie, 0 minuti offline.",
+      "Portiamo il tuo store su Shopify senza fermare le vendite e lo rendiamo più facile da trovare e da comprare. I risultati dei nostri ultimi clienti: +105% di vendite in 85 giorni per Integratori DTC Nazzi, +67,7% in 12 mesi per Cumini. Prezzo fisso, 4 garanzie, 0 minuti offline.",
     ctaPrimary: 'Candidati allo sprint',
     ctaNote: 'Rispondiamo in 48 ore',
     ctaSecondary: 'Guarda i risultati',
@@ -73,9 +73,9 @@ export const zeroLossIt: ZlCopy = {
     pricingNote:
       'Prima rata al kickoff, seconda al go-live, terza e quarta nei mesi di supporto. Piano Shopify, tema e app a carico tuo. Nessuno sconto, nessun preventivo: questo è il prezzo.',
     results: [
-      { value: '+105% di vendite online nei primi 85 giorni su Shopify', attribution: 'Integratori Nazzi DTC' },
+      { value: '+105% di vendite online nei primi 85 giorni su Shopify', attribution: 'Integratori DTC Nazzi' },
       { value: '+67,7% di vendite online nei 12 mesi dopo la migrazione', attribution: 'Cumini, luxury multibrand' },
-      { value: 'Posizione media su Google da 9,0 a 7,1, clic 2,7 volte l’anno prima', attribution: 'Integratori Nazzi DTC, Search Console' },
+      { value: 'Posizione media su Google da 9,0 a 7,1, clic 2,7 volte l’anno prima', attribution: 'Integratori DTC Nazzi, Search Console' },
       { value: '0 minuti offline in oltre 10 migrazioni', attribution: 'noprob agency' },
     ],
   },
@@ -338,21 +338,6 @@ export const zeroLossIt: ZlCopy = {
       caseLink: 'Leggi il caso studio',
       items: [
         {
-          key: 'nazziGsc',
-          title: 'Integratori Nazzi DTC, traffico organico da Google',
-          subtitle: 'Clic e impressioni giornaliere, media mobile 7 giorni. Fonte: Google Search Console, proprietà del sito di Integratori Nazzi DTC, da settembre 2025 a ottobre 2026.',
-          kpis: [
-            { label: 'Clic totali', value: '11,5K' },
-            { label: 'Impressioni totali', value: '604K' },
-            { label: 'CTR medio', value: '1,9%' },
-            { label: 'Posizione media', value: '8,7' },
-          ],
-          legend: ['Clic', 'Impressioni'],
-          migrationLabel: 'Migrazione',
-          goLiveLabel: 'Online su Shopify, 19 lug',
-          href: '/it/casi-studio/integratori-nazzi-dtc-shopify',
-        },
-        {
           key: 'cuminiSales',
           title: 'Cumini, crescita delle vendite eCommerce dal 2023',
           subtitle: 'Vendite nette e ordini mensili, media mobile 3 mesi, in indice: 100 è la media dei 12 mesi prima di Shopify. Fonte: backend Shopify di cumini.com, con lo storico della piattaforma precedente importato, da maggio 2023 a settembre 2026.',
@@ -366,6 +351,21 @@ export const zeroLossIt: ZlCopy = {
           migrationLabel: 'Migrazione',
           goLiveLabel: 'Online su Shopify, 19 mag 2025',
           href: '/it/casi-studio/cumini-luxury-fashion-ecommerce',
+        },
+        {
+          key: 'nazziGsc',
+          title: 'Integratori DTC Nazzi, traffico organico da Google',
+          subtitle: 'Clic e impressioni giornaliere, media mobile 7 giorni. Fonte: Google Search Console, proprietà del sito di Integratori DTC Nazzi, da settembre 2025 a ottobre 2026.',
+          kpis: [
+            { label: 'Clic totali', value: '11,5K' },
+            { label: 'Impressioni totali', value: '604K' },
+            { label: 'CTR medio', value: '1,9%' },
+            { label: 'Posizione media', value: '8,7' },
+          ],
+          legend: ['Clic', 'Impressioni'],
+          migrationLabel: 'Migrazione',
+          goLiveLabel: 'Online su Shopify, 19 lug',
+          href: '/it/casi-studio/integratori-nazzi-dtc-shopify',
         },
       ],
     },

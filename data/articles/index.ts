@@ -945,7 +945,7 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: 'We migrated them to Shopify in May 2025, built a complete server-side tracking setup that took the tracking audit score to 92/100, and stabilized the technical team around the new stack. In the 12 months after the migration, online sales grew **67.7%** compared with the 12 months before ([full case study](/use-cases/cumini-luxury-fashion-ecommerce)). The same happens coming from WooCommerce: [Integratori Nazzi DTC](/use-cases/integratori-nazzi-dtc-shopify) sold 105% more online in its first 85 days on Shopify. That result did not come from a single campaign or growth hack. It came from a technical foundation that finally allowed us to do the work properly.',
+        text: 'We migrated them to Shopify in May 2025, built a complete server-side tracking setup that took the tracking audit score to 92/100, and stabilized the technical team around the new stack. In the 12 months after the migration, online sales grew **67.7%** compared with the 12 months before ([full case study](/use-cases/cumini-luxury-fashion-ecommerce)). The same happens coming from WooCommerce: [Supplement DTC Nazzi](/use-cases/integratori-nazzi-dtc-shopify) sold 105% more online in its first 85 days on Shopify. That result did not come from a single campaign or growth hack. It came from a technical foundation that finally allowed us to do the work properly.',
       },
       {
         type: 'paragraph',
@@ -1307,7 +1307,7 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: 'Li abbiamo migrati su Shopify a maggio 2025, costruito un tracking server-side completo (tracking score 92/100 nell’audit), stabilizzato il team tecnico. Nei 12 mesi dopo la migrazione le vendite online sono cresciute del **67,7%** rispetto ai 12 mesi prima ([caso studio completo](/it/casi-studio/cumini-luxury-fashion-ecommerce)). Lo stesso succede partendo da WooCommerce: [Integratori Nazzi DTC](/it/casi-studio/integratori-nazzi-dtc-shopify) ha venduto online il 105% in più nei primi 85 giorni su Shopify. Non è stato un risultato istantaneo. È stato costruito su una fondamenta tecnica che finalmente permetteva di lavorare.',
+        text: 'Li abbiamo migrati su Shopify a maggio 2025, costruito un tracking server-side completo (tracking score 92/100 nell’audit), stabilizzato il team tecnico. Nei 12 mesi dopo la migrazione le vendite online sono cresciute del **67,7%** rispetto ai 12 mesi prima ([caso studio completo](/it/casi-studio/cumini-luxury-fashion-ecommerce)). Lo stesso succede partendo da WooCommerce: [Integratori DTC Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify) ha venduto online il 105% in più nei primi 85 giorni su Shopify. Non è stato un risultato istantaneo. È stato costruito su una fondamenta tecnica che finalmente permetteva di lavorare.',
       },
       {
         type: 'paragraph',

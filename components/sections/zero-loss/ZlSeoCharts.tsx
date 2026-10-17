@@ -1,5 +1,7 @@
 import Link from 'next/link'
 
+import { cn } from '@/lib/utils'
+
 import type { ZlCopy } from '@/content/zero-loss-migration'
 import gscDaily from '@/data/use-cases/nazzi-gsc-daily.json'
 import { CUMINI_MIGRATION, NAZZI_MIGRATION, cuminiMonthly } from '@/data/zero-loss/seo-charts'
@@ -202,33 +204,48 @@ function chartFor(item: Item, lang: Lang) {
 }
 
 /** Results charts of the landing (two cards, same style as the case study chart). */
-export default function ZlSeoCharts({ copy, lang }: { copy: ZlCopy['proof']['charts']; lang: Lang }) {
+export default function ZlSeoCharts({
+  copy,
+  lang,
+  sideBySide = false,
+}: {
+  copy: ZlCopy['proof']['charts']
+  lang: Lang
+  /** Two columns from 810px (landing); stacked otherwise (narrow containers). Mobile is unchanged. */
+  sideBySide?: boolean
+}) {
   return (
-    <ZlRail wide className="flex flex-col gap-6">
+    <ZlRail wide className={sideBySide ? 'flex flex-col gap-6 min-[810px]:grid min-[810px]:grid-cols-2 min-[810px]:items-stretch' : 'flex flex-col gap-6'}>
       {copy.items.map((item) => {
         const { plot, colors, kpiColors } = chartFor(item, lang)
         return (
-          <li key={item.key} className="list-none rounded-[24px] border border-black/[0.06] bg-white px-4 py-5 min-[810px]:px-12 min-[810px]:py-11">
-            <h3 className="font-sans text-[1.15rem] font-bold leading-[1.15em] tracking-[-0.04em] text-np-dark min-[810px]:text-[1.9rem]">
+          <li
+            key={item.key}
+            className={cn(
+              'list-none rounded-[24px] border border-black/[0.06] bg-white px-4 py-5',
+              sideBySide ? 'flex flex-col min-[810px]:px-6 min-[810px]:py-8 min-[1200px]:px-8 min-[1200px]:py-9' : 'min-[810px]:px-12 min-[810px]:py-11'
+            )}
+          >
+            <h3 className={cn('font-sans text-[1.15rem] font-bold leading-[1.15em] tracking-[-0.04em] text-np-dark', sideBySide ? 'min-[810px]:text-[1.35rem] min-[1200px]:text-[1.55rem]' : 'min-[810px]:text-[1.9rem]')}>
               {item.title}
             </h3>
             <p className="mt-2 line-clamp-3 max-w-[860px] font-sans text-[11.5px] leading-[1.45em] tracking-[-0.01em] text-np-grey min-[810px]:line-clamp-none min-[810px]:text-[14px]">
               {item.subtitle}
             </p>
-            <dl className="mt-4 grid grid-cols-2 gap-x-4 gap-y-3 min-[810px]:mt-6 min-[810px]:grid-cols-4 min-[810px]:gap-x-6 min-[810px]:gap-y-4">
+            <dl className={cn('mt-4 grid grid-cols-2 gap-x-4 gap-y-3 min-[810px]:mt-6 min-[810px]:gap-x-6 min-[810px]:gap-y-4', sideBySide ? 'min-[1200px]:grid-cols-4' : 'min-[810px]:grid-cols-4')}>
               {item.kpis.map((kpi, i) => (
                 <div key={kpi.label}>
                   <dt className="font-sans text-[12.5px] font-semibold tracking-[-0.02em] min-[810px]:text-[14px]" style={{ color: kpiColors[i] }}>
                     {kpi.label}
                   </dt>
-                  <dd className="mt-1 font-sans text-[1.35rem] font-bold leading-[1em] tracking-[-0.05em] text-np-dark min-[810px]:text-[2.1rem]">
+                  <dd className={cn('mt-1 font-sans text-[1.35rem] font-bold leading-[1em] tracking-[-0.05em] text-np-dark', sideBySide ? 'min-[810px]:text-[1.7rem]' : 'min-[810px]:text-[2.1rem]')}>
                     {kpi.value}
                   </dd>
                 </div>
               ))}
             </dl>
             <div className="mt-4 min-[810px]:mt-6">{plot}</div>
-            <div className="mt-3 flex flex-wrap items-center justify-between gap-x-6 gap-y-2">
+            <div className={cn('mt-3 flex flex-wrap items-center justify-between gap-x-6 gap-y-2', sideBySide && 'min-[810px]:mt-auto min-[810px]:pt-3')}>
               <div className="flex flex-wrap gap-5">
                 {item.legend.map((label, i) => (
                   <span key={label} className="inline-flex items-center gap-2 font-sans text-[13px] font-medium text-np-dark">
