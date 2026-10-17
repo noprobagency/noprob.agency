@@ -11,7 +11,7 @@ Standalone landing that sells one productized service. Routes:
   (`ZeroLossApplyPage.tsx`, one screen on desktop). Every CTA (`ZlCta`) links there keeping
   the query string; the page fires `form_view`. Primary CTAs use the `.zl-cta` effect.
 - Old `/zero-loss-migration` URLs (+ `/apply`, `/candidatura`) redirect permanently (`next.config.ts`).
-- Results (#prove): `ZlSeoCharts.tsx`, two charts (Integratori Nazzi DTC Search Console daily
+- Results (#prove): `ZlSeoCharts.tsx`, two charts (Supplement DTC Nazzi Search Console daily
   clicks/impressions from the API, Cumini sales index since 2023) from
   `data/use-cases/nazzi-gsc-daily.json` and `data/zero-loss/seo-charts.ts`. Only index values,
   never absolute client figures (sources in `docs/dati-verificati.md`).

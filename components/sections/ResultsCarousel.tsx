@@ -4,7 +4,7 @@ import type { Locale } from '@/lib/i18n'
 
 type Metrics = readonly string[] | { en: readonly string[]; it: readonly string[] }
 
-// Pills are verified figures (Cumini, Integratori Nazzi DTC) or facts without numbers for
+// Pills are verified figures (Cumini, Supplement DTC Nazzi) or facts without numbers for
 // clients with no public data source yet (docs/dati-verificati.md).
 const resultCards: ReadonlyArray<{
   image: string
@@ -14,7 +14,7 @@ const resultCards: ReadonlyArray<{
   /** Public case study, when there is one. */
   href?: { en: string; it: string }
   /** Brand name: used for the logo and screenshot alt text. */
-  label: string
+  label: string | { en: string; it: string }
 }> = [
   {
     image: '/images/originals/lXYpLfNsEJ0igk2CBCTjY1Irqw.png',
@@ -51,7 +51,7 @@ const resultCards: ReadonlyArray<{
       it: ['+105% vendite online dopo Shopify', '2,7x clic da Google'],
     },
     href: { en: '/use-cases/integratori-nazzi-dtc-shopify', it: '/it/casi-studio/integratori-nazzi-dtc-shopify' },
-    label: 'Integratori Nazzi DTC',
+    label: { en: 'Supplement DTC Nazzi', it: 'Integratori DTC Nazzi' },
   },
   {
     image: '/images/originals/cOnThGiudnDZv0DuLTLxFgBBoc.webp',
@@ -61,6 +61,10 @@ const resultCards: ReadonlyArray<{
     label: 'Sfogliate&Sfogliatelle',
   },
 ]
+
+function brand(label: string | { en: string; it: string }, locale: Locale): string {
+  return typeof label === 'string' ? label : label[locale === 'it' ? 'it' : 'en']
+}
 
 function pickMetrics(metrics: Metrics, locale: Locale): readonly string[] {
   return Array.isArray(metrics) ? metrics : (metrics as { en: readonly string[]; it: readonly string[] })[locale]
@@ -82,13 +86,13 @@ export default function ResultsCarousel({ locale = 'en' }: { locale?: Locale }) 
                   {card.href && (
                     <Link
                       href={card.href[locale === 'it' ? 'it' : 'en']}
-                      aria-label={card.label}
+                      aria-label={brand(card.label, locale)}
                       className="absolute inset-0 z-[3]"
                     />
                   )}
                   <Image
                     src={card.image}
-                    alt={locale === 'it' ? `Lo store online di ${card.label}` : `${card.label} online store`}
+                    alt={locale === 'it' ? `Lo store online di ${brand(card.label, locale)}` : `${brand(card.label, locale)} online store`}
                     fill
                     className="object-cover"
                   />
@@ -104,7 +108,7 @@ export default function ResultsCarousel({ locale = 'en' }: { locale?: Locale }) 
                   <div className="absolute bottom-0 left-1/2 z-[2] flex w-full -translate-x-1/2 flex-col items-center justify-center gap-3 overflow-visible px-5 py-8">
                     <Image
                       src={card.logo}
-                      alt={card.label}
+                      alt={brand(card.label, locale)}
                       width={140}
                       height={30}
                       className={card.logoClass}

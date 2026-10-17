@@ -1,7 +1,7 @@
 import type { UseCase } from './index'
 
 /**
- * Integratori Nazzi DTC case study: WooCommerce → Shopify migration.
+ * Integratori DTC Nazzi case study: WooCommerce → Shopify migration.
  *
  * Rule: no direct company figures (no euros, no order or customer counts). Only
  * ratios computed from the sources listed in `sources`. Every figure was
@@ -22,17 +22,17 @@ import type { UseCase } from './index'
  */
 export const nazzi: UseCase = {
   slug: 'integratori-nazzi-dtc-shopify',
-  title: 'Migrazione da WooCommerce a Shopify: il caso Integratori Nazzi DTC, vendite online raddoppiate in 85 giorni',
-  seoTitle: 'Da WooCommerce a Shopify: Integratori Nazzi DTC',
-  seoTitleEn: 'WooCommerce to Shopify: Integratori Nazzi DTC',
+  title: 'Migrazione da WooCommerce a Shopify: il caso Integratori DTC Nazzi, vendite online raddoppiate in 85 giorni',
+  seoTitle: 'Da WooCommerce a Shopify: Integratori DTC Nazzi',
+  seoTitleEn: 'WooCommerce to Shopify: Supplement DTC Nazzi',
   seoDescription:
     'Migrazione da WooCommerce a Shopify per un brand di integratori DTC: vendite online +105% in 85 giorni e 2,7x clic da Google. Dati verificati.',
   seoDescriptionEn:
     'WooCommerce to Shopify migration for a DTC supplements brand: +105% online sales in 85 days and 2.7x clicks from Google. Verified data.',
   excerpt:
-    'Come abbiamo portato Integratori Nazzi DTC, brand di integratori nato da un laboratorio galenico attivo dal 2001, da WooCommerce a Shopify: SEO, storico clienti, tracciamento e i risultati verificati prima e dopo la migrazione.',
+    'Come abbiamo portato Integratori DTC Nazzi, brand di integratori nato da un laboratorio galenico attivo dal 2001, da WooCommerce a Shopify: SEO, storico clienti, tracciamento e i risultati verificati prima e dopo la migrazione.',
   image: '/images/use-case-nazzi/nazzi-astrumkap.png',
-  imageAlt: 'Astrumkap, l’integratore più venduto di Integratori Nazzi DTC',
+  imageAlt: 'Astrumkap, l’integratore più venduto di Integratori DTC Nazzi',
   caseType: 'Use Case',
   date: '2026-10-13',
   updated: '2026-10-13',
@@ -44,11 +44,11 @@ export const nazzi: UseCase = {
     { type: 'paragraph', text: 'Online su Shopify dal: 19 luglio 2026' },
     {
       type: 'paragraph',
-      text: '**In breve.** Il brand Integratori Nazzi DTC è passato da WooCommerce a Shopify il 19 luglio 2026 con NoProb Agency. Nei primi 85 giorni le vendite online sono cresciute del 105% rispetto agli stessi giorni del 2025, i clienti di ritorno sono più che raddoppiati e i clic da Google negli ultimi 28 giorni sono 2,7 volte quelli di un anno prima. Tutti i numeri sono confronti percentuali su dati Shopify, Meta e Google Search Console: le fonti sono in fondo alla pagina.',
+      text: '**In breve.** Il brand Integratori DTC Nazzi è passato da WooCommerce a Shopify il 19 luglio 2026 con NoProb Agency. Nei primi 85 giorni le vendite online sono cresciute del 105% rispetto agli stessi giorni del 2025, i clienti di ritorno sono più che raddoppiati e i clic da Google negli ultimi 28 giorni sono 2,7 volte quelli di un anno prima. Tutti i numeri sono confronti percentuali su dati Shopify, Meta e Google Search Console: le fonti sono in fondo alla pagina.',
     },
     {
       type: 'paragraph',
-      text: 'Cambiare piattaforma fa paura per un motivo preciso: hai costruito qualcosa e non vuoi perderlo. Clienti, posizioni su Google, abitudini di chi compra. Questo caso studio racconta come abbiamo fatto la migrazione da WooCommerce a Shopify per Integratori Nazzi DTC, e cosa è successo dopo.',
+      text: 'Cambiare piattaforma fa paura per un motivo preciso: hai costruito qualcosa e non vuoi perderlo. Clienti, posizioni su Google, abitudini di chi compra. Questo caso studio racconta come abbiamo fatto la migrazione da WooCommerce a Shopify per Integratori DTC Nazzi, e cosa è successo dopo.',
     },
     {
       type: 'paragraph',
@@ -67,7 +67,7 @@ export const nazzi: UseCase = {
     { type: 'h2', text: 'Il punto di partenza' },
     {
       type: 'paragraph',
-      text: 'Integratori Nazzi DTC è il brand direct to consumer di un laboratorio galenico attivo dal 2001, dentro una farmacia. Gli integratori li formula e li prepara in casa, partendo da quello che i clienti chiedono ogni giorno al banco. Ogni formula è notificata al Ministero della Salute. Il più venduto, Astrumkap, è pensato per la perdita di capelli.',
+      text: 'Integratori DTC Nazzi è il brand direct to consumer di un laboratorio galenico attivo dal 2001, dentro una farmacia. Gli integratori li formula e li prepara in casa, partendo da quello che i clienti chiedono ogni giorno al banco. Ogni formula è notificata al Ministero della Salute. Il più venduto, Astrumkap, è pensato per la perdita di capelli.',
     },
     {
       type: 'paragraph',
@@ -122,7 +122,7 @@ export const nazzi: UseCase = {
     {
       type: 'image',
       src: '/images/use-case-nazzi/nazzi-homepage-shopify.webp',
-      alt: 'La nuova homepage di Integratori Nazzi DTC su Shopify',
+      alt: 'La nuova homepage di Integratori DTC Nazzi su Shopify',
       width: 2000,
       height: 1106,
     },
@@ -138,7 +138,7 @@ export const nazzi: UseCase = {
     { type: 'h3', text: 'Come abbiamo protetto la SEO nella migrazione' },
     {
       type: 'paragraph',
-      text: 'In una migrazione il rischio vero non è il design. È perdere quello che Google ha imparato del tuo sito in anni. Per Integratori Nazzi DTC abbiamo lavorato su quattro fronti.',
+      text: 'In una migrazione il rischio vero non è il design. È perdere quello che Google ha imparato del tuo sito in anni. Per Integratori DTC Nazzi abbiamo lavorato su quattro fronti.',
     },
     {
       type: 'list',
@@ -166,13 +166,13 @@ export const nazzi: UseCase = {
     {
       type: 'image',
       src: '/images/use-case-nazzi/nazzi-search-console-it.png',
-      alt: 'Google Search Console di Integratori Nazzi DTC: clic e impressioni da settembre 2025 a ottobre 2026, prima e dopo la migrazione da WooCommerce a Shopify',
+      alt: 'Google Search Console di Integratori DTC Nazzi: clic e impressioni da settembre 2025 a ottobre 2026, prima e dopo la migrazione da WooCommerce a Shopify',
       width: 1600,
       height: 960,
     },
     {
       type: 'paragraph',
-      text: 'Questo è il grafico di Search Console di Integratori Nazzi DTC, con i dati giornalieri esatti. La crescita parte dalla migrazione.',
+      text: 'Questo è il grafico di Search Console di Integratori DTC Nazzi, con i dati giornalieri esatti. La crescita parte dalla migrazione.',
     },
     {
       type: 'paragraph',
@@ -224,7 +224,7 @@ export const nazzi: UseCase = {
     {
       type: 'list',
       items: [
-        'Integratori Nazzi DTC vende su Shopify dal 19 luglio 2026, con lo storico di ordini e clienti dal 2023',
+        'Integratori DTC Nazzi vende su Shopify dal 19 luglio 2026, con lo storico di ordini e clienti dal 2023',
         'Nei primi 85 giorni le vendite online sono più che raddoppiate rispetto allo stesso periodo del 2025',
         'I clienti che tornano a comprare sono più del doppio',
         'I clic da Google sono 2,7 volte quelli di un anno fa',
@@ -241,13 +241,13 @@ export const nazzi: UseCase = {
       type: 'paragraph',
       text: 'Lo facciamo per brand e farmacie che vendono già online e vogliono passare a Shopify con un piano, dei numeri e qualcuno che risponde. [Ecco come lavoriamo sulle migrazioni a Shopify](/it/sprint-migrazione-shopify).',
     },
-    { type: 'paragraph', text: 'Integratori Nazzi DTC è un cliente attivo di NoProb Agency da gennaio 2024. Se il tuo store è collegato a un gestionale proprietario, leggi anche il [caso Cumini](/it/casi-studio/cumini-luxury-fashion-ecommerce).' },
+    { type: 'paragraph', text: 'Integratori DTC Nazzi è un cliente attivo di NoProb Agency da gennaio 2024. Se il tuo store è collegato a un gestionale proprietario, leggi anche il [caso Cumini](/it/casi-studio/cumini-luxury-fashion-ecommerce).' },
     { type: 'cta' },
   ],
   faq: [
     {
       q: 'Quanto dura una migrazione da WooCommerce a Shopify?',
-      a: 'Per Integratori Nazzi DTC il nuovo store è stato costruito tra maggio e giugno 2026, mentre quello vecchio continuava a vendere, ed è andato online il 19 luglio 2026.',
+      a: 'Per Integratori DTC Nazzi il nuovo store è stato costruito tra maggio e giugno 2026, mentre quello vecchio continuava a vendere, ed è andato online il 19 luglio 2026.',
     },
     {
       q: 'Si perde la SEO migrando da WooCommerce a Shopify?',
@@ -255,7 +255,7 @@ export const nazzi: UseCase = {
     },
     {
       q: 'Dopo quanto si vedono i risultati di una migrazione a Shopify?',
-      a: 'Sulle vendite da subito: nei primi 85 giorni Integratori Nazzi DTC ha venduto online il 105% in più rispetto agli stessi giorni dell’anno prima. Sulla SEO dal secondo mese, dopo il riassestamento di agosto.',
+      a: 'Sulle vendite da subito: nei primi 85 giorni Integratori DTC Nazzi ha venduto online il 105% in più rispetto agli stessi giorni dell’anno prima. Sulla SEO dal secondo mese, dopo il riassestamento di agosto.',
     },
     {
       q: 'Cosa succede a clienti e ordini storici?',
@@ -263,20 +263,20 @@ export const nazzi: UseCase = {
     },
     {
       q: 'Serve la pubblicità per far ripartire le vendite dopo la migrazione?',
-      a: 'Non per forza. Nelle due settimane dopo il go live in cui le campagne sono rimaste spente, Integratori Nazzi DTC ha venduto il 46% in più rispetto agli stessi giorni del 2025, con uno scontrino medio più alto del 33%.',
+      a: 'Non per forza. Nelle due settimane dopo il go live in cui le campagne sono rimaste spente, Integratori DTC Nazzi ha venduto il 46% in più rispetto agli stessi giorni del 2025, con uno scontrino medio più alto del 33%.',
     },
   ],
   sources: [
-    'Vendite, ordini, scontrino medio, clienti nuovi e di ritorno: Shopify (ShopifyQL e ordini), letti dalla dashboard NoProb di Integratori Nazzi DTC. Vendite = vendite nette Shopify, spedizione inclusa.',
+    'Vendite, ordini, scontrino medio, clienti nuovi e di ritorno: Shopify (ShopifyQL e ordini), letti dalla dashboard NoProb di Integratori DTC Nazzi. Vendite = vendite nette Shopify, spedizione inclusa.',
     'Storico 2024 e 2025: ordini WooCommerce importati su Shopify e riallineati ai totali mensili di ShopifyQL.',
     'Spesa pubblicitaria: Meta Marketing API. MER = vendite online diviso spesa pubblicitaria. Campagne spente dal 29 luglio all’11 agosto 2026, verificato su Meta.',
     'Traffico organico: Google Search Console, proprietà del sito, dati giornalieri letti via API dal 9 settembre 2025 all’11 ottobre 2026. Posizione media ponderata sulle impressioni.',
     'SEO tecnica: sitemap pubblica dello store e verifica degli indirizzi WooCommerce archiviati su Wayback Machine, fatta il 13 ottobre 2026.',
     'Ogni confronto è fatto sugli stessi giorni dell’anno precedente. Per riservatezza pubblichiamo solo variazioni percentuali, non valori assoluti.',
   ],
-  titleEn: 'WooCommerce to Shopify Migration: the Integratori Nazzi DTC Case, Online Sales Doubled in 85 Days',
+  titleEn: 'WooCommerce to Shopify Migration: the Supplement DTC Nazzi Case, Online Sales Doubled in 85 Days',
   excerptEn:
-    'How we moved Integratori Nazzi DTC, a supplement brand born from a compounding laboratory active since 2001, from WooCommerce to Shopify: SEO, customer history, tracking and the verified results before and after the migration.',
+    'How we moved Supplement DTC Nazzi, a supplement brand born from a compounding laboratory active since 2001, from WooCommerce to Shopify: SEO, customer history, tracking and the verified results before and after the migration.',
   contentEn: [
     { type: 'paragraph', text: 'Sector: Supplements, DTC | Compounding laboratory' },
     { type: 'paragraph', text: 'Project: WooCommerce to Shopify migration, SEO, tracking, email marketing' },
@@ -284,11 +284,11 @@ export const nazzi: UseCase = {
     { type: 'paragraph', text: 'Live on Shopify since: July 19, 2026' },
     {
       type: 'paragraph',
-      text: '**In short.** Integratori Nazzi DTC moved from WooCommerce to Shopify on July 19, 2026 with NoProb Agency. In the first 85 days online sales grew 105% compared with the same days of 2025, returning customers more than doubled and Google clicks in the last 28 days are 2.7 times those of a year earlier. Every number is a percentage comparison on Shopify, Meta and Google Search Console data: sources are at the bottom of the page.',
+      text: '**In short.** Supplement DTC Nazzi moved from WooCommerce to Shopify on July 19, 2026 with NoProb Agency. In the first 85 days online sales grew 105% compared with the same days of 2025, returning customers more than doubled and Google clicks in the last 28 days are 2.7 times those of a year earlier. Every number is a percentage comparison on Shopify, Meta and Google Search Console data: sources are at the bottom of the page.',
     },
     {
       type: 'paragraph',
-      text: 'Changing platform is scary for one simple reason: you built something and you do not want to lose it. Customers, Google rankings, the habits of the people who buy from you. This case study tells how we migrated Integratori Nazzi DTC from WooCommerce to Shopify, and what happened next.',
+      text: 'Changing platform is scary for one simple reason: you built something and you do not want to lose it. Customers, Google rankings, the habits of the people who buy from you. This case study tells how we migrated Supplement DTC Nazzi from WooCommerce to Shopify, and what happened next.',
     },
     {
       type: 'paragraph',
@@ -307,7 +307,7 @@ export const nazzi: UseCase = {
     { type: 'h2', text: 'The starting point' },
     {
       type: 'paragraph',
-      text: 'Integratori Nazzi DTC is the direct to consumer brand of a compounding laboratory active since 2001, inside a pharmacy. It formulates and prepares its supplements in house, starting from what customers ask for at the counter every day. Every formula is notified to the Italian Ministry of Health. The best seller, Astrumkap, is designed for hair loss.',
+      text: 'Supplement DTC Nazzi is the direct to consumer brand of a compounding laboratory active since 2001, inside a pharmacy. It formulates and prepares its supplements in house, starting from what customers ask for at the counter every day. Every formula is notified to the Italian Ministry of Health. The best seller, Astrumkap, is designed for hair loss.',
     },
     {
       type: 'paragraph',
@@ -359,7 +359,7 @@ export const nazzi: UseCase = {
     {
       type: 'image',
       src: '/images/use-case-nazzi/nazzi-homepage-shopify.webp',
-      alt: 'The new Integratori Nazzi DTC homepage on Shopify',
+      alt: 'The new Supplement DTC Nazzi homepage on Shopify',
       width: 2000,
       height: 1106,
     },
@@ -375,7 +375,7 @@ export const nazzi: UseCase = {
     { type: 'h3', text: 'How we protected SEO during the migration' },
     {
       type: 'paragraph',
-      text: 'In a migration the real risk is not the design. It is losing what Google has learned about your site over the years. For Integratori Nazzi DTC we worked on four fronts.',
+      text: 'In a migration the real risk is not the design. It is losing what Google has learned about your site over the years. For Supplement DTC Nazzi we worked on four fronts.',
     },
     {
       type: 'list',
@@ -403,13 +403,13 @@ export const nazzi: UseCase = {
     {
       type: 'image',
       src: '/images/use-case-nazzi/nazzi-search-console-en.png',
-      alt: 'Google Search Console for Integratori Nazzi DTC: clicks and impressions from September 2025 to October 2026, before and after the WooCommerce to Shopify migration',
+      alt: 'Google Search Console for Supplement DTC Nazzi: clicks and impressions from September 2025 to October 2026, before and after the WooCommerce to Shopify migration',
       width: 1600,
       height: 960,
     },
     {
       type: 'paragraph',
-      text: 'This is the Integratori Nazzi DTC Search Console chart, with the exact daily data. The growth starts with the migration.',
+      text: 'This is the Supplement DTC Nazzi Search Console chart, with the exact daily data. The growth starts with the migration.',
     },
     {
       type: 'paragraph',
@@ -458,7 +458,7 @@ export const nazzi: UseCase = {
     {
       type: 'list',
       items: [
-        'Integratori Nazzi DTC has been selling on Shopify since July 19, 2026, with the order and customer history since 2023',
+        'Supplement DTC Nazzi has been selling on Shopify since July 19, 2026, with the order and customer history since 2023',
         'In the first 85 days online sales more than doubled compared with the same period of 2025',
         'Returning customers more than doubled',
         'Clicks from Google are 2.7 times those of a year ago',
@@ -475,13 +475,13 @@ export const nazzi: UseCase = {
       type: 'paragraph',
       text: 'We do it for brands and pharmacies that already sell online and want to move to Shopify with a plan, real numbers and someone who answers. [This is how we run Shopify migrations](/shopify-migration-sprint).',
     },
-    { type: 'paragraph', text: 'Integratori Nazzi DTC has been an active client of NoProb Agency since January 2024. If your store is connected to a proprietary ERP, read the [Cumini case](/use-cases/cumini-luxury-fashion-ecommerce) too.' },
+    { type: 'paragraph', text: 'Supplement DTC Nazzi has been an active client of NoProb Agency since January 2024. If your store is connected to a proprietary ERP, read the [Cumini case](/use-cases/cumini-luxury-fashion-ecommerce) too.' },
     { type: 'cta' },
   ],
   faqEn: [
     {
       q: 'How long does a WooCommerce to Shopify migration take?',
-      a: 'For Integratori Nazzi DTC the new store was built between May and June 2026, while the old one kept selling, and went live on July 19, 2026.',
+      a: 'For Supplement DTC Nazzi the new store was built between May and June 2026, while the old one kept selling, and went live on July 19, 2026.',
     },
     {
       q: 'Do you lose SEO when migrating from WooCommerce to Shopify?',
@@ -489,7 +489,7 @@ export const nazzi: UseCase = {
     },
     {
       q: 'How soon do you see results after a Shopify migration?',
-      a: 'On sales right away: in the first 85 days Integratori Nazzi DTC sold 105% more online than on the same days of the year before. On SEO from the second month, after the August adjustment.',
+      a: 'On sales right away: in the first 85 days Supplement DTC Nazzi sold 105% more online than on the same days of the year before. On SEO from the second month, after the August adjustment.',
     },
     {
       q: 'What happens to past customers and orders?',
@@ -497,11 +497,11 @@ export const nazzi: UseCase = {
     },
     {
       q: 'Do you need advertising to restart sales after the migration?',
-      a: 'Not necessarily. In the two weeks after go live when the campaigns stayed off, Integratori Nazzi DTC sold 46% more than on the same days of 2025, with a 33% higher average order value.',
+      a: 'Not necessarily. In the two weeks after go live when the campaigns stayed off, Supplement DTC Nazzi sold 46% more than on the same days of 2025, with a 33% higher average order value.',
     },
   ],
   sourcesEn: [
-    'Sales, orders, average order value, new and returning customers: Shopify (ShopifyQL and orders), read from the NoProb dashboard for Integratori Nazzi DTC. Sales = Shopify net sales, shipping included.',
+    'Sales, orders, average order value, new and returning customers: Shopify (ShopifyQL and orders), read from the NoProb dashboard for Supplement DTC Nazzi. Sales = Shopify net sales, shipping included.',
     '2024 and 2025 history: WooCommerce orders imported into Shopify and aligned with the ShopifyQL monthly totals.',
     'Ad spend: Meta Marketing API. MER = online sales divided by ad spend. Campaigns off from July 29 to August 11, 2026, verified on Meta.',
     'Organic traffic: Google Search Console, site property, daily data read through the API from September 9, 2025 to October 11, 2026. Average position weighted by impressions.',

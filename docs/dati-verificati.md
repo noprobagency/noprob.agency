@@ -6,7 +6,7 @@ Se un dato cambia, si aggiorna qui e poi ovunque compare (cerca il valore nel re
 
 Ultimo controllo: **16 ottobre 2026**.
 
-Grafici della landing Shopify Launch Sprint: Search Console di Integratori Nazzi DTC (clic e impressioni giornaliere, come nel case study) e vendite/ordini Cumini in indice (media mobile 3 mesi, 100 = media mensile dei 12 mesi prima di Shopify, fonte backend Shopify di cumini.com). Nessuna cifra di fatturato.
+Grafici della landing Shopify Launch Sprint: Search Console di Integratori DTC Nazzi (clic e impressioni giornaliere, come nel case study) e vendite/ordini Cumini in indice (media mobile 3 mesi, 100 = media mensile dei 12 mesi prima di Shopify, fonte backend Shopify di cumini.com). Nessuna cifra di fatturato.
 
 Per riservatezza dei clienti pubblichiamo solo variazioni percentuali, moltiplicatori e
 rapporti, mai fatturati, ordini o clienti in valore assoluto.
@@ -43,7 +43,7 @@ MER 9 e 7,5 e crescite 2022/2023/2024, tracking al 95%, conversion rate mobile r
 +23% email, 86 → 14 ticket urgenti, MER +38%, CPA -14%, AOV +7%, costi retention -57%,
 "migrato su Shopify nel 2022" (vero: maggio 2025).
 
-## Integratori Nazzi DTC (integratori, DTC)
+## Integratori DTC Nazzi (integratori, DTC)
 
 Fonte: dashboard-nazzi (Shopify + Meta Marketing API), dati dal 1 gennaio 2024.
 Migrazione WooCommerce → Shopify costruita tra maggio e giugno 2026, online dal 19 luglio 2026.
@@ -147,7 +147,7 @@ vanno corrette qui e nel copy.
 
 ## Fatti dei clienti (dal loro sito o dichiarati dal cliente)
 
-- Integratori Nazzi DTC: laboratorio galenico attivo dal 2001, spedizione gratuita sopra i 50 euro (sito del cliente)
+- Integratori DTC Nazzi: laboratorio galenico attivo dal 2001, spedizione gratuita sopra i 50 euro (sito del cliente)
 
 ## Listino pubblico (IVA esclusa, 16 ottobre 2026)
 

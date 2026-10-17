@@ -2,7 +2,7 @@
  * Series for the results charts of the Shopify Launch Sprint landing.
  * Sources and method in docs/dati-verificati.md.
  *
- * - Integratori Nazzi DTC: daily clicks and impressions from Google Search Console,
+ * - Supplement DTC Nazzi: daily clicks and impressions from Google Search Console,
  *   read from data/use-cases/nazzi-gsc-daily.json (7-day moving average computed at render).
  * - cuminiMonthly: [month, sales index, orders index], net sales and orders from the
  *   Shopify backend of cumini.com, 3-month moving average, 100 = monthly average of the

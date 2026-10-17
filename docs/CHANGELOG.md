@@ -4,6 +4,11 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.7.3 (17 Oct 2026)
+
+- **Sprint landing**: the two result charts sit side by side from 810px (`ZlSeoCharts` `sideBySide`, used by the landing only; the migration page keeps them stacked in its narrower container), Cumini first, Nazzi second. Order comes from `proof.charts.items` in the copy files, so the migration page also shows Cumini first. Mobile behavior unchanged (swipe rail).
+- **Brand name**: "Integratori Nazzi DTC" becomes "Integratori DTC Nazzi" in Italian and "Supplement DTC Nazzi" in English everywhere (copy, alts, carousel, ambassador, articles, `llms.txt`, docs); the cover and Search Console chart PNGs are regenerated (the shared cover says "Nazzi DTC, case study"). URL slugs are unchanged.
+
 ### Changelog v1.7.2 (17 Oct 2026)
 
 - **DDglobal case study**: the Google position is shown as a percentage (+16%, derived from the verified 9.4 → 7.9) and impressions as 2.7x the same period of 2025, in the copy (IT+EN), the sources, the regenerated GA4 chart PNGs (`node scripts/generate-ddglobal-ga4-chart.mjs`), `llms.txt` and `docs/dati-verificati.md`. The detailed positions are no longer published.

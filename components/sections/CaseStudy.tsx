@@ -155,9 +155,9 @@ export default function CaseStudy({
         />
         <CaseCard
           image="/images/use-case-nazzi/nazzi-astrumkap.png"
-          imageAlt="Astrumkap, Integratori Nazzi DTC"
+          imageAlt={locale === 'it' ? 'Astrumkap, Integratori DTC Nazzi' : 'Astrumkap, Supplement DTC Nazzi'}
           logo="/images/originals/3D4Ji7c6LSsawGoOucoTS6dFA.png"
-          logoAlt="Integratori Nazzi DTC logo"
+          logoAlt={locale === 'it' ? 'Logo Integratori DTC Nazzi' : 'Supplement DTC Nazzi logo'}
           {...t.caseStudy.second}
         />
       </div>
