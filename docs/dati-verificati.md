@@ -85,7 +85,7 @@ dal 29 agosto 2026 (Antonio). Posizione media ponderata sulle impressioni.
 | Clic al giorno, 44 gg dopo vs 44 gg prima | 15,7 vs 15,5 (stabili) | 29 ago → 11 ott vs 16 lug → 28 ago |
 | Posizione media, stesso confronto | 9,3 → 8,3 | |
 | Clic ultimi 28 gg vs 28 gg prima del lancio | **+17%** | 14 set → 11 ott vs 31 lug → 27 ago |
-| Posizione media, stesso confronto | **9,4 → 7,9** | |
+| Posizione media, stesso confronto | **9,4 → 7,9**, in pagina solo come **+16%** (miglioramento calcolato: (9,4 − 7,9) / 9,4) | |
 | Clic 44 gg dopo vs stessi giorni 2025 | **+55%** | |
 | Impressioni, stesso confronto | **2,7x** | |
 | Clic settembre 2026 vs settembre 2025 | **+54%** | |
@@ -94,7 +94,7 @@ GA4 (screenshot Acquisizione traffico): sessioni di settembre circa **4x** la me
 Usato nel case study (scelta di Antonio, versione corta e positiva del 13 ott 2026) sempre come
 "sessioni", mai come "traffico da Google": nello stesso periodo i clic da Google sono stabili, quindi
 il salto GA4 riflette anche la misurazione del nuovo sito. In pagina da Search Console solo la posizione
-media 9,4 → 7,9.
+media migliorata del 16% (9,4 → 7,9, il dato dettagliato non si pubblica); impressioni 2,7 volte il 2025 negli stessi 44 giorni.
 
 Sito pubblico (13 ott 2026): Next.js, 831 URL in sitemap con hreflang IT/EN, llms.txt, listino
 riservato con login, schede tecniche PDF.

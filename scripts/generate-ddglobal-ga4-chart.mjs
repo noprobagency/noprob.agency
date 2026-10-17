@@ -30,14 +30,14 @@ const COPY = {
   it: {
     title: 'DDglobal Store, sessioni sul sito prima e dopo la migrazione AI',
     sub: 'Sessioni mensili da gennaio a settembre 2026. Fonte: Google Analytics 4.',
-    kpis: [['Sessioni nel primo mese', '4x'], ['Posizione media su Google', '9,4 → 7,9']],
+    kpis: [['Sessioni nel primo mese', '4x'], ['Posizione su Google', '+16%']],
     golive: 'Online il nuovo sito, 29 ago',
     months: ['gen', 'feb', 'mar', 'apr', 'mag', 'giu', 'lug', 'ago', 'set'],
   },
   en: {
     title: 'DDglobal Store, site sessions before and after the AI migration',
     sub: 'Monthly sessions from January to September 2026. Source: Google Analytics 4.',
-    kpis: [['Sessions in the first month', '4x'], ['Average Google position', '9.4 → 7.9']],
+    kpis: [['Sessions in the first month', '4x'], ['Google position', '+16%']],
     golive: 'New site live, Aug 29',
     months: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
   },

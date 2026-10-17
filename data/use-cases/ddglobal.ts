@@ -5,8 +5,8 @@ import type { UseCase } from './index'
  * Short, positive version (Antonio, 2026-10-13). Figures:
  * - GA4 sessions (Acquisizione traffico, monthly view): September 2026 about 4.1x the
  *   January → July 2026 monthly average, after the new site went live on 2026-08-29
- * - Google Search Console (API, exact): average position 9.4 → 7.9, last 28 days vs the
- *   28 days before go live
+ * - Google Search Console (API, exact): average position 9.4 → 7.9 (shown only as +16%),
+ *   last 28 days vs the 28 days before go live; impressions 2.7x the same 44 days of 2025
  * Internal note in docs/dati-verificati.md: Google clicks were stable in the same period,
  * so the GA4 jump also reflects the new measurement; the copy says "sessions", never
  * "Google traffic".
@@ -18,9 +18,9 @@ export const ddglobal: UseCase = {
   seoTitle: 'Migrazione AI eCommerce B2B: DDglobal Store',
   seoTitleEn: 'AI migration of a B2B eCommerce: DDglobal Store',
   seoDescription:
-    'Migrazione AI del catalogo B2B di DDglobal Store: modifiche più rapide, sessioni 4 volte la media nel primo mese, posizione Google da 9,4 a 7,9.',
+    'Migrazione AI del catalogo B2B di DDglobal Store: modifiche più rapide, sessioni 4 volte la media nel primo mese, posizione su Google migliorata del 16%.',
   seoDescriptionEn:
-    'AI migration of DDglobal Store’s B2B catalog: faster changes, sessions 4 times the average in the first month, Google position from 9.4 to 7.9.',
+    'AI migration of DDglobal Store’s B2B catalog: faster changes, sessions 4 times the average in the first month, Google position improved by 16%.',
   excerpt:
     'Il catalogo online di DDglobal Store, azienda B2B di neoprene e tessuti tecnici, portato da WordPress a un sito nuovo con una migrazione AI. Modifiche più rapide, sessioni quadruplicate nel primo mese.',
   image: '/images/originals/i9Ht9Hdb61eYmBH3DZyKGjIm6s.webp',
@@ -41,7 +41,7 @@ export const ddglobal: UseCase = {
       type: 'list',
       items: [
         'sessioni nel primo mese dopo il lancio: **4 volte** la media di inizio anno',
-        'posizione media su Google: da **9,4 a 7,9**',
+        'posizione media su Google migliorata del **16%**, impressioni **2,7 volte** lo stesso periodo del 2025',
         'catalogo in **italiano e inglese**, leggibile anche dagli assistenti AI',
       ],
     },
@@ -82,7 +82,7 @@ export const ddglobal: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Otto mesi di linea piatta, poi il salto. Nel primo mese dopo il lancio le sessioni sono state 4 volte la media di inizio anno, e su Google la posizione media è passata da 9,4 a 7,9.',
+      text: 'Otto mesi di linea piatta, poi il salto. Nel primo mese dopo il lancio le sessioni sono state 4 volte la media di inizio anno, e su Google la posizione media è migliorata del 16%, con le impressioni a 2,7 volte lo stesso periodo del 2025.',
     },
     { type: 'cta' },
     { type: 'h2', text: 'Cosa insegna questo caso' },
@@ -99,12 +99,12 @@ export const ddglobal: UseCase = {
     },
     {
       q: 'Cosa cambia dopo la migrazione?',
-      a: 'Modifiche e ottimizzazioni molto più rapide. Per DDglobal Store le sessioni del primo mese sono state 4 volte la media di inizio anno, con la posizione media su Google passata da 9,4 a 7,9.',
+      a: 'Modifiche e ottimizzazioni molto più rapide. Per DDglobal Store le sessioni del primo mese sono state 4 volte la media di inizio anno, con la posizione media su Google migliorata del 16%.',
     },
   ],
   sources: [
     'Sessioni: Google Analytics 4, proprietà ddglobalstore.com, primo mese dopo il lancio contro la media mensile da gennaio a luglio 2026.',
-    'Posizione media: Google Search Console, ultimi 28 giorni contro i 28 giorni prima del lancio.',
+    'Posizione media (miglioramento in percentuale): Google Search Console, ultimi 28 giorni contro i 28 giorni prima del lancio. Impressioni: Google Search Console, 44 giorni dopo il lancio contro gli stessi giorni del 2025.',
   ],
   titleEn: 'AI Migration of a B2B eCommerce: the DDglobal Store Case, Sessions Quadrupled in the First Month',
   excerptEn:
@@ -121,7 +121,7 @@ export const ddglobal: UseCase = {
       type: 'list',
       items: [
         'sessions in the first month after launch: **4 times** the early year average',
-        'average Google position: from **9.4 to 7.9**',
+        'average Google position improved by **16%**, impressions **2.7 times** the same period of 2025',
         'catalog in **Italian and English**, readable by AI assistants too',
       ],
     },
@@ -162,7 +162,7 @@ export const ddglobal: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Eight months of flat line, then the jump. In the first month after launch sessions were 4 times the early year average, and on Google the average position went from 9.4 to 7.9.',
+      text: 'Eight months of flat line, then the jump. In the first month after launch sessions were 4 times the early year average, and on Google the average position improved by 16%, with impressions at 2.7 times the same period of 2025.',
     },
     { type: 'cta' },
     { type: 'h2', text: 'What this case teaches' },
@@ -179,12 +179,12 @@ export const ddglobal: UseCase = {
     },
     {
       q: 'What changes after the migration?',
-      a: 'Much faster changes and optimizations. For DDglobal Store, sessions in the first month were 4 times the early year average, with the average Google position going from 9.4 to 7.9.',
+      a: 'Much faster changes and optimizations. For DDglobal Store, sessions in the first month were 4 times the early year average, with the average Google position improving by 16%.',
     },
   ],
   sourcesEn: [
     'Sessions: Google Analytics 4, ddglobalstore.com property, first month after launch against the January to July 2026 monthly average.',
-    'Average position: Google Search Console, last 28 days against the 28 days before launch.',
+    'Average position (improvement in percent): Google Search Console, last 28 days against the 28 days before launch. Impressions: Google Search Console, 44 days after launch against the same days of 2025.',
   ],
   archive: {
     image: '/images/originals/i9Ht9Hdb61eYmBH3DZyKGjIm6s.webp',
