@@ -431,6 +431,17 @@ export const cumini: UseCase = {
       ],
     },
     {
+      type: 'image',
+      src: '/images/use-case-cumini/cumini-sales-it.png',
+      alt: 'Cumini, vendite e ordini online dal 2023 in indice (100 = media dei 12 mesi prima di Shopify): il salto arriva dopo la migrazione del 19 maggio 2025',
+      width: 1600,
+      height: 960,
+    },
+    {
+      type: 'paragraph',
+      text: 'Il grafico mostra vendite e ordini mensili dal 2023, in indice: 100 è la media dei 12 mesi prima di Shopify. Il calo di primavera 2025 è la migrazione; dopo, i picchi di inizio 2026 e di luglio superano tutti quelli degli anni precedenti.',
+    },
+    {
       type: 'paragraph',
       text: 'Il 2026 conferma la direzione. A metà ottobre lo store ha già venduto online il 15,4% in più di tutto il 2025, e luglio 2026 è stato il mese più alto di sempre.',
     },
@@ -896,6 +907,17 @@ export const cumini: UseCase = {
         'average order value: **+12.2%**',
         'returning customers: **+35.3%**',
       ],
+    },
+    {
+      type: 'image',
+      src: '/images/use-case-cumini/cumini-sales-en.png',
+      alt: 'Cumini, online sales and orders since 2023 as an index (100 = average of the 12 months before Shopify): the jump comes after the May 19, 2025 migration',
+      width: 1600,
+      height: 960,
+    },
+    {
+      type: 'paragraph',
+      text: 'The chart shows monthly sales and orders since 2023, as an index: 100 is the average of the 12 months before Shopify. The spring 2025 dip is the migration; after it, the early 2026 and July peaks are higher than any of the earlier years.',
     },
     {
       type: 'paragraph',
