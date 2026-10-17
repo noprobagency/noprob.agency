@@ -242,6 +242,12 @@ export const zeroLossIt: ZlCopy = {
           detail: 'Bug fix, modifiche minori, monitoraggio di SEO e tracking e nuove ottimizzazioni. Loom settimanale di 10 minuti. Report al giorno 90.',
         },
       ],
+      dashboard: {
+        phase: 'Dal giorno 1',
+        title: 'Dashboard dei risultati',
+        detail: 'Vendite nette, MER, ROAS e retention collegati dal kickoff: è la dashboard con cui misuriamo le 4 garanzie.',
+        cta: 'Guarda la dashboard demo',
+      },
     },
     closing: 'Tempo richiesto a te in tutto: circa 8 ore. Il resto lo facciamo noi.',
   },
@@ -369,7 +375,6 @@ export const zeroLossIt: ZlCopy = {
         },
       ],
     },
-    dashboardCta: 'Guarda la dashboard che ricevi il giorno 1',
     testimonialsHeading: 'Cosa dicono i clienti',
     testimonials: [
       {

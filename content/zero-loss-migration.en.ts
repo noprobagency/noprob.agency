@@ -242,6 +242,12 @@ export const zeroLossEn: ZlCopy = {
           detail: 'Bug fixes, minor changes, SEO and tracking monitoring and new optimizations. Weekly 10-minute Loom. Report on day 90.',
         },
       ],
+      dashboard: {
+        phase: 'From day 1',
+        title: 'Results dashboard',
+        detail: 'Net sales, MER, ROAS and retention connected from kickoff: it is the dashboard we measure the 4 guarantees with.',
+        cta: 'See the demo dashboard',
+      },
     },
     closing: 'Total time required from you: about 8 hours. We do the rest.',
   },
@@ -369,7 +375,6 @@ export const zeroLossEn: ZlCopy = {
         },
       ],
     },
-    dashboardCta: 'See the dashboard you receive on day 1',
     testimonialsHeading: 'What clients say',
     testimonials: [
       {
