@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.7.5 (17 Oct 2026)
+
+- **Sprint hero note, final form**: the proof strip of v1.7.4 is gone. The note "Lo possiamo dimostrare 😉" / "We can prove it 😉" (serif italic, green, inline SVG arrow pointing back at the word) is glued to the last word of the H1 claim ("vendite." / "sales.") with `whitespace-nowrap`, so it sits right after it at every width and wraps together with it. No positioned elements, no SVG assets; sizes in em of the headline. `ZlHero` splits the H1 at the first sentence end (`splitHeadline`); copy keys `proofStats` / `proofCta` removed.
+
 ### Changelog v1.7.4 (17 Oct 2026)
 
 - **Sprint hero proof strip**: the hand-drawn arrow and scribble under the H1 (two positioned SVGs that broke at some widths) are replaced by a plain flex card linking to `#prove`: green dot + "Lo possiamo dimostrare" / "We can prove it", two verified stat chips (+105% Nazzi, +67,7% Cumini) and "Vedi i dati" / "See the data". One line on desktop, stacked card on phones. Copy keys `hero.proofStats` and `hero.proofCta` in `content/zero-loss-migration.*.ts`.

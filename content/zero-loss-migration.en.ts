@@ -23,12 +23,7 @@ export const zeroLossEn: ZlCopy = {
   hero: {
     eyebrow: 'Shopify Launch Sprint',
     h1: 'Your eCommerce on Shopify in 14 days. Higher on Google, more sales.',
-    proofNote: 'We can prove it',
-    proofStats: [
-      { value: '+105%', label: 'sales in 85 days, Supplement DTC Nazzi' },
-      { value: '+67.7%', label: 'sales in 12 months, Cumini' },
-    ],
-    proofCta: 'See the data',
+    proofNote: 'We can prove it 😉',
     paragraph:
       'We move your store to Shopify without stopping sales and make it easier to find and to buy from. Our latest clients: +105% sales in 85 days for Supplement DTC Nazzi, +67.7% in 12 months for Cumini. Fixed price, 4 guarantees, 0 minutes offline.',
     ctaPrimary: 'Apply for the sprint',
