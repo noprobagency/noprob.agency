@@ -125,7 +125,12 @@ export type ZlCopy = {
     prework: { label: string; yourTeamTitle: string; yourTeam: string; ourTeamTitle: string; ourTeam: string }
     weeks: { badge: string; title: string; days: { day: string; title: string; duration?: string; detail: string; /** Deliverables (1-based) completed this day */ deliverables?: number[] }[] }[]
     durationLabel: string
-    after: { title: string; rows: { phase: string; title: string; detail: string }[] }
+    after: {
+      title: string
+      rows: { phase: string; title: string; detail: string }[]
+      /** Third point: the results dashboard, with the link to the demo */
+      dashboard: { phase: string; title: string; detail: string; cta: string }
+    }
     closing: string
   }
   guarantees: { h2: string; sub: string; cards: { key: string; text: string }[]; line: string }
@@ -163,7 +168,6 @@ export type ZlCopy = {
         href: string
       }[]
     }
-    dashboardCta: string
     testimonialsHeading: string
     testimonials: { name: string; role: string; image: string; quote: string; hidden?: boolean }[]
   }

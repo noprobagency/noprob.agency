@@ -60,7 +60,7 @@ export default function ZeroLossPage({ locale }: { locale: Locale }) {
         <ZlChecklist copy={copy.checklist} />
         <ZlDeliverables copy={copy.deliverables} />
         <ZlResultsFirst copy={copy.resultsFirst} />
-        <ZlCalendar copy={copy.calendar} deliverables={copy.deliverables} />
+        <ZlCalendar copy={copy.calendar} deliverables={copy.deliverables} locale={locale} />
         <ZlGuarantees copy={copy.guarantees} />
         <ZlWhyNow copy={copy.whyNow} />
         <ZlProof locale={locale} copy={copy.proof} />

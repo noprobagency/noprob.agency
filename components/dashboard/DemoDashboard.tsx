@@ -1,22 +1,129 @@
 'use client'
 
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import Link from 'next/link'
 import { type Locale } from '@/lib/i18n'
 import { ROUTE_PATHS } from '@/lib/i18n/routes'
+import { buildView, derive, type Granularity, type Totals } from '@/lib/demo-dashboard'
 
-type Tab = 'performance' | 'clienti' | 'email' | 'quiz'
-type Granularity = 'giorno' | 'settimana' | 'mese' | 'anno'
+const GRANULARITIES: Granularity[] = ['day', 'week', 'month', 'year']
+
+const T = {
+  it: {
+    day: 'Giorno',
+    week: 'Settimana',
+    month: 'Mese',
+    year: 'Anno',
+    customers: 'Clienti',
+    frozen: 'Disponibile nella dashboard reale',
+    metric: 'Metrica',
+    inProgress: 'in corso',
+    totalOf: { day: 'Totale 14 giorni', week: 'Totale 12 settimane', month: 'Totale 2026', year: 'Totale' },
+    cardMer: { day: 'MER ultimo giorno', week: 'MER settimana corrente', month: 'MER mese corrente', year: 'MER anno corrente' },
+    cardMerEur: { day: 'MER € ultimo giorno', week: 'MER € settimana corrente', month: 'MER € mese corrente', year: 'MER € anno corrente' },
+    cardSales: { day: 'Vendite nette ultimo giorno', week: 'Vendite nette settimana corrente', month: 'Vendite nette mese corrente', year: 'Vendite nette anno corrente' },
+    cardTotal: { day: 'Totale 14 giorni', week: 'Totale 12 settimane', month: 'Totale 2026', year: 'Totale 2025 + 2026' },
+    legend: 'verde > 1,05 · rosso < 1,00',
+    margin: 'margine 50,0% · costi ammortizzati al giorno',
+    orders: 'ordini',
+    breakEvenSub: 'su LTV 180gg × margine 50% · NCAC',
+    rows: {
+      ad: 'Spesa Adv*',
+      fixed: 'Costi fissi (quota)',
+      sales: 'Vendite nette',
+      prev: 'Vendite anno prec.',
+      orders: 'Ordini totali',
+      newC: 'Clienti nuovi',
+      retC: 'Clienti ricorrenti',
+      roas: 'ROAS adv*',
+      mer: 'MER*',
+      merEur: 'MER €*',
+      aov: 'AOV',
+      cac: 'CAC*',
+      ncac: 'NCAC*',
+      retention: 'Retention',
+    },
+  },
+  en: {
+    day: 'Day',
+    week: 'Week',
+    month: 'Month',
+    year: 'Year',
+    customers: 'Customers',
+    frozen: 'Available in the live dashboard',
+    metric: 'Metric',
+    inProgress: 'in progress',
+    totalOf: { day: 'Total, 14 days', week: 'Total, 12 weeks', month: 'Total 2026', year: 'Total' },
+    cardMer: { day: 'Last day MER', week: 'Current week MER', month: 'Current month MER', year: 'Current year MER' },
+    cardMerEur: { day: 'Last day MER €', week: 'Current week MER €', month: 'Current month MER €', year: 'Current year MER €' },
+    cardSales: { day: 'Last day net sales', week: 'Current week net sales', month: 'Current month net sales', year: 'Current year net sales' },
+    cardTotal: { day: 'Total, 14 days', week: 'Total, 12 weeks', month: 'Total 2026', year: 'Total 2025 + 2026' },
+    legend: 'green > 1.05 · red < 1.00',
+    margin: 'margin 50.0% · daily amortized costs',
+    orders: 'orders',
+    breakEvenSub: 'on 180d LTV × 50% margin · NCAC',
+    rows: {
+      ad: 'Ad spend*',
+      fixed: 'Fixed costs (share)',
+      sales: 'Net sales',
+      prev: 'Prior-year sales',
+      orders: 'Total orders',
+      newC: 'New customers',
+      retC: 'Returning customers',
+      roas: 'Ad ROAS*',
+      mer: 'MER*',
+      merEur: 'MER €*',
+      aov: 'AOV',
+      cac: 'CAC*',
+      ncac: 'NCAC*',
+      retention: 'Retention',
+    },
+  },
+} as const
 
 export default function DemoDashboard({ locale = 'it' }: { locale?: Locale }) {
-  const [activeTab, setActiveTab] = useState<Tab>('performance')
-  const [granularity, setGranularity] = useState<Granularity>('mese')
-  const [year, setYear] = useState('2026')
+  const [granularity, setGranularity] = useState<Granularity>('month')
   const [isRefreshing, setIsRefreshing] = useState(false)
-
   const isIt = locale === 'it'
 
   const sprintUrl = ROUTE_PATHS.zeroLossMigration[locale]
+  const t = T[locale]
+  const loc = locale === 'it' ? 'it-IT' : 'en-US'
+  const eur = useMemo(() => new Intl.NumberFormat(loc, { style: 'currency', currency: 'EUR' }), [loc])
+  const eurSigned = useMemo(() => new Intl.NumberFormat(loc, { style: 'currency', currency: 'EUR', signDisplay: 'exceptZero' }), [loc])
+  const num = useMemo(() => new Intl.NumberFormat(loc), [loc])
+  const dec2 = useMemo(() => new Intl.NumberFormat(loc, { minimumFractionDigits: 2, maximumFractionDigits: 2 }), [loc])
+  const pct = useMemo(() => new Intl.NumberFormat(loc, { style: 'percent', minimumFractionDigits: 1, maximumFractionDigits: 1 }), [loc])
+  const view = useMemo(() => buildView(granularity, locale), [granularity, locale])
+  const cur = view.columns[view.columns.length - 1]
+  const curD = derive(cur.totals)
+  const totD = derive(view.total)
+  const fmtE = (v: number | null) => (v === null ? '-' : eur.format(v))
+  const merTone = (v: number | null) => (v === null ? '' : v >= 1.05 ? 'bg-emerald-100/60 text-emerald-900' : v >= 1 ? 'bg-amber-50 text-amber-800' : 'bg-red-100/70 text-red-900')
+  const roasTone = (v: number | null) => (v === null ? '' : v >= 2.5 ? 'bg-emerald-50 text-emerald-800' : v >= 2 ? 'bg-amber-50 text-amber-800' : 'bg-red-50 text-red-800')
+
+  type Row = {
+    id: keyof (typeof T)['it']['rows']
+    value: (x: Totals, prev: number | null) => string
+    tone?: (x: Totals) => string
+    strong?: boolean
+  }
+  const ROWS: Row[] = [
+    { id: 'ad', value: (x) => eur.format(x.ad) },
+    { id: 'fixed', value: (x) => eur.format(x.fixed) },
+    { id: 'sales', value: (x) => eur.format(x.sales), strong: true },
+    { id: 'prev', value: (_x, p) => fmtE(p) },
+    { id: 'orders', value: (x) => num.format(x.orders) },
+    { id: 'newC', value: (x) => num.format(x.newC) },
+    { id: 'retC', value: (x) => num.format(x.retC) },
+    { id: 'roas', value: (x) => { const d = derive(x).roas; return d === null ? '-' : dec2.format(d) }, tone: (x) => roasTone(derive(x).roas) },
+    { id: 'mer', value: (x) => { const d = derive(x).mer; return d === null ? '-' : dec2.format(d) }, tone: (x) => merTone(derive(x).mer), strong: true },
+    { id: 'merEur', value: (x) => eurSigned.format(derive(x).merEur), tone: (x) => (derive(x).merEur < 0 ? 'text-red-700' : 'text-emerald-700') },
+    { id: 'aov', value: (x) => fmtE(derive(x).aov) },
+    { id: 'cac', value: (x) => fmtE(derive(x).cac) },
+    { id: 'ncac', value: (x) => fmtE(derive(x).ncac) },
+    { id: 'retention', value: (x) => { const d = derive(x).retention; return d === null ? '-' : pct.format(d) } },
+  ]
 
   function handleRefresh() {
     setIsRefreshing(true)
@@ -72,397 +179,130 @@ export default function DemoDashboard({ locale = 'it' }: { locale?: Locale }) {
           </div>
 
           <div className="flex flex-wrap items-center gap-2">
-            {/* Tabs */}
+            {/* Tabs: only Performance is live, the other sections are frozen in the demo */}
             <div className="inline-flex rounded-lg border border-[#e5e7eb] bg-white p-0.5 shadow-sm">
-              <button
-                onClick={() => setActiveTab('performance')}
-                className={`rounded-md px-3 py-1.5 text-[13px] font-semibold transition-colors ${
-                  activeTab === 'performance'
-                    ? 'bg-[#15803d] text-white'
-                    : 'text-[#4b5563] hover:text-[#111]'
-                }`}
-              >
+              <button type="button" aria-current="page" className="rounded-md bg-[#15803d] px-3 py-1.5 text-[13px] font-semibold text-white">
                 Performance
               </button>
-              <button
-                onClick={() => setActiveTab('clienti')}
-                className={`rounded-md px-3 py-1.5 text-[13px] font-medium transition-colors ${
-                  activeTab === 'clienti' ? 'bg-[#15803d] text-white' : 'text-[#4b5563] hover:text-[#111]'
-                }`}
-              >
-                {isIt ? 'Clienti' : 'Customers'}
-              </button>
-              <button
-                onClick={() => setActiveTab('email')}
-                className={`rounded-md px-3 py-1.5 text-[13px] font-medium transition-colors ${
-                  activeTab === 'email' ? 'bg-[#15803d] text-white' : 'text-[#4b5563] hover:text-[#111]'
-                }`}
-              >
-                Email
-              </button>
-              <button
-                onClick={() => setActiveTab('quiz')}
-                className={`rounded-md px-3 py-1.5 text-[13px] font-medium transition-colors ${
-                  activeTab === 'quiz' ? 'bg-[#15803d] text-white' : 'text-[#4b5563] hover:text-[#111]'
-                }`}
-              >
-                Quiz AstrumDonna
-              </button>
+              {[t.customers, 'Email'].map((label) => (
+                <span key={label} className="group relative inline-flex" title={t.frozen}>
+                  <button
+                    type="button"
+                    aria-disabled="true"
+                    aria-label={`${label}: ${t.frozen}`}
+                    onClick={(e) => e.preventDefault()}
+                    className="cursor-not-allowed rounded-md px-3 py-1.5 text-[13px] font-medium text-[#4b5563] transition-opacity group-hover:opacity-30 group-focus-within:opacity-30"
+                  >
+                    {label}
+                  </button>
+                  <span
+                    aria-hidden
+                    className="pointer-events-none absolute inset-0 flex items-center justify-center text-[16px] font-bold leading-none text-red-600 opacity-0 transition-opacity group-hover:opacity-100"
+                  >
+                    ✕
+                  </span>
+                </span>
+              ))}
             </div>
 
-            {/* Year Selector */}
-            <select
-              value={year}
-              onChange={(e) => setYear(e.target.value)}
-              className="rounded-lg border border-[#e5e7eb] bg-white px-3 py-1.5 text-[13px] font-medium text-[#374151] shadow-sm focus:outline-none"
-            >
-              <option value="2026">2026</option>
-              <option value="2025">2025</option>
-            </select>
-
-            {/* Granularity Switcher */}
-            <div className="inline-flex rounded-lg border border-[#e5e7eb] bg-white p-0.5 shadow-sm text-[13px]">
-              {(['giorno', 'settimana', 'mese', 'anno'] as const).map((g) => (
+            {/* Granularity switcher: the whole page follows it */}
+            <div className="inline-flex rounded-lg border border-[#e5e7eb] bg-white p-0.5 shadow-sm text-[13px]" role="group">
+              {GRANULARITIES.map((g) => (
                 <button
                   key={g}
+                  type="button"
+                  aria-pressed={granularity === g}
                   onClick={() => setGranularity(g)}
-                  className={`capitalize rounded-md px-2.5 py-1.5 font-medium transition-colors ${
-                    granularity === g
-                      ? 'bg-[#15803d] text-white'
-                      : 'text-[#4b5563] hover:text-[#111]'
+                  className={`rounded-md px-2.5 py-1.5 font-medium transition-colors ${
+                    granularity === g ? 'bg-[#15803d] text-white' : 'text-[#4b5563] hover:text-[#111]'
                   }`}
                 >
-                  {g === 'giorno'
-                    ? (isIt ? 'Giorno' : 'Day')
-                    : g === 'settimana'
-                    ? (isIt ? 'Settimana' : 'Week')
-                    : g === 'mese'
-                    ? (isIt ? 'Mese' : 'Month')
-                    : (isIt ? 'Anno' : 'Year')}
+                  {t[g]}
                 </button>
               ))}
             </div>
           </div>
         </div>
 
-        {/* 5 Top KPI Cards */}
+        {/* 5 Top KPI Cards (current period of the selected granularity) */}
         <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-5">
-          {/* Card 1: MER MESE CORRENTE */}
           <div className="rounded-xl border border-[#e5e7eb] bg-white p-4 shadow-sm">
             <div className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-[#6b7280]">
-              <span className="h-2 w-2 rounded-full bg-emerald-500" />
-              {isIt ? 'MER Mese Corrente' : 'Current Month MER'}
+              <span className={`h-2 w-2 rounded-full ${curD.mer !== null && curD.mer >= 1.05 ? 'bg-emerald-500' : curD.mer !== null && curD.mer >= 1 ? 'bg-amber-400' : 'bg-red-500'}`} />
+              {t.cardMer[granularity]}
             </div>
-            <div className="mt-2 text-[28px] font-bold tracking-tight text-[#111]">
-              1,25
-            </div>
-            <div className="mt-1 text-[11px] text-[#6b7280]">
-              {isIt ? 'verde > 1,05 · rosso < 1,00' : 'green > 1.05 · red < 1.00'}
-            </div>
+            <div className="mt-2 text-[28px] font-bold tracking-tight text-[#111]">{curD.mer === null ? '-' : dec2.format(curD.mer)}</div>
+            <div className="mt-1 text-[11px] text-[#6b7280]">{t.legend}</div>
           </div>
 
-          {/* Card 2: MER € MESE CORRENTE */}
           <div className="rounded-xl border border-[#e5e7eb] bg-white p-4 shadow-sm">
-            <div className="text-[11px] font-bold uppercase tracking-wider text-[#6b7280]">
-              {isIt ? 'MER € Mese Corrente' : 'Current Month MER €'}
-            </div>
-            <div className="mt-2 text-[28px] font-bold tracking-tight text-emerald-600">
-              +614,01 €
-            </div>
-            <div className="mt-1 text-[11px] text-[#6b7280]">
-              {isIt ? 'margine 50,0% · costi ammortizzati al giorno' : 'margin 50.0% · daily amortized costs'}
-            </div>
+            <div className="text-[11px] font-bold uppercase tracking-wider text-[#6b7280]">{t.cardMerEur[granularity]}</div>
+            <div className={`mt-2 text-[28px] font-bold tracking-tight ${curD.merEur < 0 ? 'text-red-600' : 'text-emerald-600'}`}>{eurSigned.format(curD.merEur)}</div>
+            <div className="mt-1 text-[11px] text-[#6b7280]">{t.margin}</div>
           </div>
 
-          {/* Card 3: VENDITE NETTE MESE CORRENTE */}
           <div className="rounded-xl border border-[#e5e7eb] bg-white p-4 shadow-sm">
-            <div className="text-[11px] font-bold uppercase tracking-wider text-[#6b7280]">
-              {isIt ? 'Vendite Nette Mese Corrente' : 'Current Month Net Sales'}
-            </div>
-            <div className="mt-2 text-[28px] font-bold tracking-tight text-[#111]">
-              6088,55 €
-            </div>
+            <div className="text-[11px] font-bold uppercase tracking-wider text-[#6b7280]">{t.cardSales[granularity]}</div>
+            <div className="mt-2 text-[28px] font-bold tracking-tight text-[#111]">{eur.format(cur.totals.sales)}</div>
             <div className="mt-1 text-[11px] text-[#6b7280]">
-              105 {isIt ? 'ordini' : 'orders'} · AOV 79,08 €
+              {num.format(cur.totals.orders)} {t.orders} · AOV {fmtE(curD.aov)}
             </div>
           </div>
 
-          {/* Card 4: CPA BREAK EVEN */}
           <div className="rounded-xl border border-[#e5e7eb] bg-white p-4 shadow-sm">
             <div className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-[#6b7280]">
-              <span className="h-2 w-2 rounded-full bg-emerald-500" />
+              <span className={`h-2 w-2 rounded-full ${curD.ncac !== null && curD.breakEven !== null && curD.ncac <= curD.breakEven ? 'bg-emerald-500' : 'bg-red-500'}`} />
               CPA Break Even
             </div>
-            <div className="mt-2 text-[28px] font-bold tracking-tight text-[#111]">
-              44,61 €
-            </div>
-            <div className="mt-1 text-[11px] text-[#6b7280] truncate">
-              {isIt
-                ? 'su LTV 180gg x margine 50% · primo ordine 34,29 € · NCAC 41,48 €'
-                : 'on 180d LTV x 50% margin · 1st order 25.03 € · NCAC 30.28 €'}
+            <div className="mt-2 text-[28px] font-bold tracking-tight text-[#111]">{fmtE(curD.breakEven)}</div>
+            <div className="mt-1 truncate text-[11px] text-[#6b7280]">
+              {t.breakEvenSub} {fmtE(curD.ncac)}
             </div>
           </div>
 
-          {/* Card 5: TOTALE 2026 */}
           <div className="rounded-xl border border-[#e5e7eb] bg-white p-4 shadow-sm">
-            <div className="text-[11px] font-bold uppercase tracking-wider text-[#6b7280]">
-              {isIt ? 'Totale 2026' : 'Total 2026'}
-            </div>
-            <div className="mt-2 text-[28px] font-bold tracking-tight text-[#111]">
-              121.435,46 €
-            </div>
+            <div className="text-[11px] font-bold uppercase tracking-wider text-[#6b7280]">{t.cardTotal[granularity]}</div>
+            <div className="mt-2 text-[28px] font-bold tracking-tight text-[#111]">{eur.format(view.total.sales)}</div>
             <div className="mt-1 text-[11px] text-[#6b7280]">
-              MER 1,19 · MER € +9861,52 €
+              MER {totD.mer === null ? '-' : dec2.format(totD.mer)} · MER € {eurSigned.format(totD.merEur)}
             </div>
           </div>
         </div>
 
-        {/* Detailed Metrics Table */}
+        {/* Detailed Metrics Table: columns follow the granularity */}
         <div className="mt-6 overflow-hidden rounded-xl border border-[#e5e7eb] bg-white shadow-sm">
           <div className="overflow-x-auto">
-            <table className="w-full text-left text-[13px] border-collapse min-w-[1050px]">
+            <table className="w-full border-collapse text-left text-[13px]" style={{ minWidth: 190 + (view.columns.length + 1) * 92 }}>
               <thead>
                 <tr className="border-b border-[#e5e7eb] bg-[#fafafa] font-semibold text-[#374151]">
-                  <th className="py-3 px-4 w-[180px]">Metrica</th>
-                  <th className="py-3 px-2 text-right">Gen 26</th>
-                  <th className="py-3 px-2 text-right">Feb 26</th>
-                  <th className="py-3 px-2 text-right">Mar 26</th>
-                  <th className="py-3 px-2 text-right">Apr 26</th>
-                  <th className="py-3 px-2 text-right">Mag 26</th>
-                  <th className="py-3 px-2 text-right">Giu 26</th>
-                  <th className="py-3 px-2 text-right">Lug 26</th>
-                  <th className="py-3 px-2 text-right">Ago 26</th>
-                  <th className="py-3 px-2 text-right">Set 26</th>
-                  <th className="py-3 px-2 text-right font-bold text-np-dark bg-emerald-50/50">
-                    Ott 26 <span className="text-[10px] font-normal text-emerald-700">in corso</span>
-                  </th>
-                  <th className="py-3 px-4 text-right font-bold bg-[#f3f4f6]">Totale 2026</th>
+                  <th className="sticky left-0 z-10 w-[170px] bg-[#fafafa] px-4 py-3">{t.metric}</th>
+                  {view.columns.map((c) => (
+                    <th key={c.key} className={`whitespace-nowrap px-2 py-3 text-right ${c.inProgress ? 'bg-emerald-50/50 font-bold text-np-dark' : ''}`}>
+                      {c.label}
+                      {c.inProgress && <span className="ml-1 text-[10px] font-normal text-emerald-700">{t.inProgress}</span>}
+                    </th>
+                  ))}
+                  <th className="whitespace-nowrap bg-[#f3f4f6] px-4 py-3 text-right font-bold">{t.totalOf[granularity]}</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-[#f3f4f6]">
-                {/* Spesa Adv */}
-                <tr className="hover:bg-gray-50/60 transition-colors">
-                  <td className="py-2.5 px-4 font-medium text-[#4b5563]">Spesa Adv*</td>
-                  <td className="py-2.5 px-2 text-right">4035,18 €</td>
-                  <td className="py-2.5 px-2 text-right">2372,42 €</td>
-                  <td className="py-2.5 px-2 text-right">4026,38 €</td>
-                  <td className="py-2.5 px-2 text-right">5044,61 €</td>
-                  <td className="py-2.5 px-2 text-right">3629,73 €</td>
-                  <td className="py-2.5 px-2 text-right">7072,35 €</td>
-                  <td className="py-2.5 px-2 text-right">6783,91 €</td>
-                  <td className="py-2.5 px-2 text-right">1812,25 €</td>
-                  <td className="py-2.5 px-2 text-right">4196,10 €</td>
-                  <td className="py-2.5 px-2 text-right bg-emerald-50/30">1970,66 €</td>
-                  <td className="py-2.5 px-4 text-right font-bold bg-gray-50">40.943,60 €</td>
-                </tr>
-
-                {/* Costi fissi */}
-                <tr className="hover:bg-gray-50/60 transition-colors">
-                  <td className="py-2.5 px-4 font-medium text-[#4b5563]">Costi fissi (quota)</td>
-                  <td className="py-2.5 px-2 text-right">685,00 €</td>
-                  <td className="py-2.5 px-2 text-right">1096,00 €</td>
-                  <td className="py-2.5 px-2 text-right">1096,00 €</td>
-                  <td className="py-2.5 px-2 text-right">1096,00 €</td>
-                  <td className="py-2.5 px-2 text-right">1096,00 €</td>
-                  <td className="py-2.5 px-2 text-right">1096,00 €</td>
-                  <td className="py-2.5 px-2 text-right">1096,00 €</td>
-                  <td className="py-2.5 px-2 text-right">1096,00 €</td>
-                  <td className="py-2.5 px-2 text-right">1096,00 €</td>
-                  <td className="py-2.5 px-2 text-right bg-emerald-50/30">459,61 €</td>
-                  <td className="py-2.5 px-4 text-right font-bold bg-gray-50">9912,61 €</td>
-                </tr>
-
-                {/* Vendite nette (highlighted row) */}
-                <tr className="bg-emerald-50/40 font-semibold text-[#111] hover:bg-emerald-50/60 transition-colors">
-                  <td className="py-3 px-4 font-bold text-emerald-900">Vendite nette</td>
-                  <td className="py-3 px-2 text-right">8811,98 €</td>
-                  <td className="py-3 px-2 text-right">10.480,09 €</td>
-                  <td className="py-3 px-2 text-right">11.649,80 €</td>
-                  <td className="py-3 px-2 text-right">14.879,20 €</td>
-                  <td className="py-3 px-2 text-right">11.115,48 €</td>
-                  <td className="py-3 px-2 text-right">14.098,83 €</td>
-                  <td className="py-3 px-2 text-right">17.300,36 €</td>
-                  <td className="py-3 px-2 text-right">11.504,41 €</td>
-                  <td className="py-3 px-2 text-right">15.506,76 €</td>
-                  <td className="py-3 px-2 text-right bg-emerald-100/50">6088,55 €</td>
-                  <td className="py-3 px-4 text-right font-extrabold bg-emerald-100/70">121.435,46 €</td>
-                </tr>
-
-                {/* Vendite anno prec. */}
-                <tr className="hover:bg-gray-50/60 transition-colors text-gray-500">
-                  <td className="py-2.5 px-4 font-medium">Vendite anno prec.</td>
-                  <td className="py-2.5 px-2 text-right">9711,52 €</td>
-                  <td className="py-2.5 px-2 text-right">3027,29 €</td>
-                  <td className="py-2.5 px-2 text-right">7911,07 €</td>
-                  <td className="py-2.5 px-2 text-right">5442,60 €</td>
-                  <td className="py-2.5 px-2 text-right">6537,37 €</td>
-                  <td className="py-2.5 px-2 text-right">5483,01 €</td>
-                  <td className="py-2.5 px-2 text-right">7893,80 €</td>
-                  <td className="py-2.5 px-2 text-right">5523,43 €</td>
-                  <td className="py-2.5 px-2 text-right">7169,76 €</td>
-                  <td className="py-2.5 px-2 text-right bg-emerald-50/30">7708,31 €</td>
-                  <td className="py-2.5 px-4 text-right font-bold bg-gray-50">-</td>
-                </tr>
-
-                {/* Ordini totali */}
-                <tr className="hover:bg-gray-50/60 transition-colors">
-                  <td className="py-2.5 px-4 font-medium text-[#4b5563]">Ordini totali</td>
-                  <td className="py-2.5 px-2 text-right">188</td>
-                  <td className="py-2.5 px-2 text-right">211</td>
-                  <td className="py-2.5 px-2 text-right">234</td>
-                  <td className="py-2.5 px-2 text-right">314</td>
-                  <td className="py-2.5 px-2 text-right">234</td>
-                  <td className="py-2.5 px-2 text-right">311</td>
-                  <td className="py-2.5 px-2 text-right">355</td>
-                  <td className="py-2.5 px-2 text-right">200</td>
-                  <td className="py-2.5 px-2 text-right">274</td>
-                  <td className="py-2.5 px-2 text-right bg-emerald-50/30">105</td>
-                  <td className="py-2.5 px-4 text-right font-bold bg-gray-50">2426</td>
-                </tr>
-
-                {/* Clienti NEW */}
-                <tr className="hover:bg-gray-50/60 transition-colors">
-                  <td className="py-2.5 px-4 font-medium text-[#4b5563]">Clienti NEW</td>
-                  <td className="py-2.5 px-2 text-right">95</td>
-                  <td className="py-2.5 px-2 text-right">129</td>
-                  <td className="py-2.5 px-2 text-right">138</td>
-                  <td className="py-2.5 px-2 text-right">175</td>
-                  <td className="py-2.5 px-2 text-right">141</td>
-                  <td className="py-2.5 px-2 text-right">195</td>
-                  <td className="py-2.5 px-2 text-right">227</td>
-                  <td className="py-2.5 px-2 text-right">68</td>
-                  <td className="py-2.5 px-2 text-right">119</td>
-                  <td className="py-2.5 px-2 text-right bg-emerald-50/30">64</td>
-                  <td className="py-2.5 px-4 text-right font-bold bg-gray-50">1352</td>
-                </tr>
-
-                {/* Clienti ricorrenti */}
-                <tr className="hover:bg-gray-50/60 transition-colors">
-                  <td className="py-2.5 px-4 font-medium text-[#4b5563]">Clienti ricorrenti</td>
-                  <td className="py-2.5 px-2 text-right">90</td>
-                  <td className="py-2.5 px-2 text-right">78</td>
-                  <td className="py-2.5 px-2 text-right">92</td>
-                  <td className="py-2.5 px-2 text-right">137</td>
-                  <td className="py-2.5 px-2 text-right">86</td>
-                  <td className="py-2.5 px-2 text-right">111</td>
-                  <td className="py-2.5 px-2 text-right">122</td>
-                  <td className="py-2.5 px-2 text-right">132</td>
-                  <td className="py-2.5 px-2 text-right">149</td>
-                  <td className="py-2.5 px-2 text-right bg-emerald-50/30">41</td>
-                  <td className="py-2.5 px-4 text-right font-bold bg-gray-50">703</td>
-                </tr>
-
-                {/* ROAS adv (color coded) */}
-                <tr className="hover:bg-gray-50/60 transition-colors">
-                  <td className="py-2.5 px-4 font-medium text-[#4b5563]">ROAS adv*</td>
-                  <td className="py-2.5 px-2 text-right bg-amber-50 text-amber-800">2,18</td>
-                  <td className="py-2.5 px-2 text-right bg-emerald-50 text-emerald-800">4,42</td>
-                  <td className="py-2.5 px-2 text-right bg-emerald-50 text-emerald-800">2,89</td>
-                  <td className="py-2.5 px-2 text-right bg-emerald-50 text-emerald-800">2,95</td>
-                  <td className="py-2.5 px-2 text-right bg-emerald-50 text-emerald-800">3,06</td>
-                  <td className="py-2.5 px-2 text-right bg-red-50 text-red-800">1,99</td>
-                  <td className="py-2.5 px-2 text-right bg-emerald-50 text-emerald-800">2,55</td>
-                  <td className="py-2.5 px-2 text-right bg-emerald-50 text-emerald-800">6,35</td>
-                  <td className="py-2.5 px-2 text-right bg-emerald-50 text-emerald-800">3,70</td>
-                  <td className="py-2.5 px-2 text-right bg-emerald-50 text-emerald-800">3,09</td>
-                  <td className="py-2.5 px-4 text-right font-bold bg-gray-50">2,97</td>
-                </tr>
-
-                {/* MER (color coded) */}
-                <tr className="hover:bg-gray-50/60 transition-colors font-medium">
-                  <td className="py-2.5 px-4 font-semibold text-[#111]">MER*</td>
-                  <td className="py-2.5 px-2 text-right bg-red-100/70 text-red-900 font-bold">0,93</td>
-                  <td className="py-2.5 px-2 text-right bg-emerald-100/60 text-emerald-900 font-bold">1,51</td>
-                  <td className="py-2.5 px-2 text-right bg-emerald-100/60 text-emerald-900 font-bold">1,14</td>
-                  <td className="py-2.5 px-2 text-right bg-emerald-100/60 text-emerald-900 font-bold">1,21</td>
-                  <td className="py-2.5 px-2 text-right bg-emerald-100/60 text-emerald-900 font-bold">1,18</td>
-                  <td className="py-2.5 px-2 text-right bg-red-100/70 text-red-900 font-bold">0,86</td>
-                  <td className="py-2.5 px-2 text-right bg-emerald-100/60 text-emerald-900 font-bold">1,10</td>
-                  <td className="py-2.5 px-2 text-right bg-emerald-100/60 text-emerald-900 font-bold">1,98</td>
-                  <td className="py-2.5 px-2 text-right bg-emerald-100/60 text-emerald-900 font-bold">1,47</td>
-                  <td className="py-2.5 px-2 text-right bg-emerald-100/60 text-emerald-900 font-bold">1,25</td>
-                  <td className="py-2.5 px-4 text-right font-extrabold bg-gray-100">1,19</td>
-                </tr>
-
-                {/* MER € */}
-                <tr className="hover:bg-gray-50/60 transition-colors">
-                  <td className="py-2.5 px-4 font-medium text-[#4b5563]">MER €*</td>
-                  <td className="py-2.5 px-2 text-right text-red-700">-314,20 €</td>
-                  <td className="py-2.5 px-2 text-right text-emerald-700 font-medium">+1771,63 €</td>
-                  <td className="py-2.5 px-2 text-right text-emerald-700 font-medium">+702,52 €</td>
-                  <td className="py-2.5 px-2 text-right text-emerald-700 font-medium">+1298,99 €</td>
-                  <td className="py-2.5 px-2 text-right text-emerald-700 font-medium">+832,01 €</td>
-                  <td className="py-2.5 px-2 text-right text-red-700">-1118,93 €</td>
-                  <td className="py-2.5 px-2 text-right text-emerald-700 font-medium">+770,27 €</td>
-                  <td className="py-2.5 px-2 text-right text-emerald-700 font-medium">+2843,96 €</td>
-                  <td className="py-2.5 px-2 text-right text-emerald-700 font-medium">+2461,27 €</td>
-                  <td className="py-2.5 px-2 text-right text-emerald-700 font-medium bg-emerald-50/30">+614,01 €</td>
-                  <td className="py-2.5 px-4 text-right font-bold text-emerald-800 bg-gray-50">+9861,52 €</td>
-                </tr>
-
-                {/* AOV */}
-                <tr className="hover:bg-gray-50/60 transition-colors">
-                  <td className="py-2.5 px-4 font-medium text-[#4b5563]">AOV</td>
-                  <td className="py-2.5 px-2 text-right">64,32 €</td>
-                  <td className="py-2.5 px-2 text-right">68,05 €</td>
-                  <td className="py-2.5 px-2 text-right">68,13 €</td>
-                  <td className="py-2.5 px-2 text-right">64,98 €</td>
-                  <td className="py-2.5 px-2 text-right">65,01 €</td>
-                  <td className="py-2.5 px-2 text-right">62,12 €</td>
-                  <td className="py-2.5 px-2 text-right">66,80 €</td>
-                  <td className="py-2.5 px-2 text-right">78,80 €</td>
-                  <td className="py-2.5 px-2 text-right">77,53 €</td>
-                  <td className="py-2.5 px-2 text-right bg-emerald-50/30">79,08 €</td>
-                  <td className="py-2.5 px-4 text-right font-bold bg-gray-50">68,57 €</td>
-                </tr>
-
-                {/* CAC */}
-                <tr className="hover:bg-gray-50/60 transition-colors">
-                  <td className="py-2.5 px-4 font-medium text-[#4b5563]">CAC*</td>
-                  <td className="py-2.5 px-2 text-right">29,89 €</td>
-                  <td className="py-2.5 px-2 text-right">15,71 €</td>
-                  <td className="py-2.5 px-2 text-right">23,96 €</td>
-                  <td className="py-2.5 px-2 text-right">22,13 €</td>
-                  <td className="py-2.5 px-2 text-right">21,87 €</td>
-                  <td className="py-2.5 px-2 text-right">31,72 €</td>
-                  <td className="py-2.5 px-2 text-right">26,61 €</td>
-                  <td className="py-2.5 px-2 text-right">12,41 €</td>
-                  <td className="py-2.5 px-2 text-right">21,41 €</td>
-                  <td className="py-2.5 px-2 text-right bg-emerald-50/30">25,59 €</td>
-                  <td className="py-2.5 px-4 text-right font-bold bg-gray-50">27,29 €</td>
-                </tr>
-
-                {/* NCAC */}
-                <tr className="hover:bg-gray-50/60 transition-colors">
-                  <td className="py-2.5 px-4 font-medium text-[#4b5563]">NCAC*</td>
-                  <td className="py-2.5 px-2 text-right">58,49 €</td>
-                  <td className="py-2.5 px-2 text-right">25,24 €</td>
-                  <td className="py-2.5 px-2 text-right">39,87 €</td>
-                  <td className="py-2.5 px-2 text-right">39,41 €</td>
-                  <td className="py-2.5 px-2 text-right">35,24 €</td>
-                  <td className="py-2.5 px-2 text-right">49,80 €</td>
-                  <td className="py-2.5 px-2 text-right">40,87 €</td>
-                  <td className="py-2.5 px-2 text-right">36,25 €</td>
-                  <td className="py-2.5 px-2 text-right">48,24 €</td>
-                  <td className="py-2.5 px-2 text-right bg-emerald-50/30">41,94 €</td>
-                  <td className="py-2.5 px-4 text-right font-bold bg-gray-50">41,48 €</td>
-                </tr>
-
-                {/* Retention */}
-                <tr className="hover:bg-gray-50/60 transition-colors">
-                  <td className="py-2.5 px-4 font-medium text-[#4b5563]">Retention</td>
-                  <td className="py-2.5 px-2 text-right">48,9%</td>
-                  <td className="py-2.5 px-2 text-right">37,7%</td>
-                  <td className="py-2.5 px-2 text-right">39,9%</td>
-                  <td className="py-2.5 px-2 text-right">43,9%</td>
-                  <td className="py-2.5 px-2 text-right">38,0%</td>
-                  <td className="py-2.5 px-2 text-right">36,3%</td>
-                  <td className="py-2.5 px-2 text-right">34,9%</td>
-                  <td className="py-2.5 px-2 text-right">65,8%</td>
-                  <td className="py-2.5 px-2 text-right">55,6%</td>
-                  <td className="py-2.5 px-2 text-right bg-emerald-50/30">39,0%</td>
-                  <td className="py-2.5 px-4 text-right font-bold bg-gray-50">34,2%</td>
-                </tr>
+                {ROWS.map((row) => {
+                  const highlighted = row.id === 'sales'
+                  const muted = row.id === 'prev'
+                  return (
+                    <tr key={row.id} className={`transition-colors hover:bg-gray-50/60 ${highlighted ? 'bg-emerald-50/40 font-semibold text-[#111]' : ''} ${muted ? 'text-gray-500' : ''}`}>
+                      <td className={`sticky left-0 z-10 px-4 py-2.5 font-medium ${highlighted ? 'bg-emerald-50 font-bold text-emerald-900' : 'bg-white text-[#4b5563]'}`}>{t.rows[row.id]}</td>
+                      {view.columns.map((c) => (
+                        <td key={c.key} className={`whitespace-nowrap px-2 py-2.5 text-right ${row.tone ? row.tone(c.totals) : ''} ${row.strong && !highlighted ? 'font-bold' : ''}`}>
+                          {row.value(c.totals, c.prevSales)}
+                        </td>
+                      ))}
+                      <td className={`whitespace-nowrap bg-gray-50 px-4 py-2.5 text-right font-bold ${row.tone ? row.tone(view.total).replace(/bg-[^ ]+/g, '') : ''}`}>
+                        {row.value(view.total, view.prevTotal)}
+                      </td>
+                    </tr>
+                  )
+                })}
               </tbody>
             </table>
           </div>

@@ -1,6 +1,8 @@
 import type { ZlCopy } from '@/content/zero-loss-migration'
 import { renderCopy } from './Placeholder'
 import ZlRail from './ZlRail'
+import ZlDashboardLink from './ZlDashboardLink'
+import type { Locale } from '@/lib/i18n'
 
 const WEEK_ACCENTS = ['bg-np-mark-green', 'bg-[#dbe9f7]'] as const
 
@@ -13,9 +15,11 @@ const WEEK_ACCENTS = ['bg-np-mark-green', 'bg-[#dbe9f7]'] as const
 export default function ZlCalendar({
   copy,
   deliverables,
+  locale,
 }: {
   copy: ZlCopy['calendar']
   deliverables: ZlCopy['deliverables']
+  locale: Locale
 }) {
   return (
     <section className="pt-14 min-[810px]:pt-28">
@@ -91,7 +95,7 @@ export default function ZlCalendar({
             <div className="w-full border-b border-black/[0.06] px-6 py-4">
               <h3 className="font-sans text-[18px] font-bold tracking-[-0.03em] text-np-dark">{copy.after.title}</h3>
             </div>
-            <ol className="grid w-full divide-y divide-black/[0.06] min-[810px]:grid-cols-2 min-[810px]:divide-x min-[810px]:divide-y-0">
+            <ol className="grid w-full divide-y divide-black/[0.06] min-[810px]:grid-cols-3 min-[810px]:divide-x min-[810px]:divide-y-0">
               {copy.after.rows.map((row) => (
                 <li key={row.phase} className="flex flex-col gap-1 px-6 py-4 min-[810px]:py-5">
                   <span className="font-sans text-[12px] font-bold uppercase tracking-[0.06em] text-np-grey">{row.phase}</span>
@@ -99,6 +103,12 @@ export default function ZlCalendar({
                   <p className="mt-1 font-sans text-[14px] font-medium leading-[1.5em] tracking-[-0.02em] text-np-grey">{row.detail}</p>
                 </li>
               ))}
+              <li className="flex flex-col gap-1 px-6 py-4 min-[810px]:py-5">
+                <span className="font-sans text-[12px] font-bold uppercase tracking-[0.06em] text-np-grey">{copy.after.dashboard.phase}</span>
+                <h4 className="font-sans text-[16px] font-bold leading-[1.3em] tracking-[-0.03em] text-np-dark">{copy.after.dashboard.title}</h4>
+                <p className="mt-1 font-sans text-[14px] font-medium leading-[1.5em] tracking-[-0.02em] text-np-grey">{copy.after.dashboard.detail}</p>
+                <ZlDashboardLink label={copy.after.dashboard.cta} position="proof" locale={locale} className="mt-3 self-start" />
+              </li>
             </ol>
           </div>
         </div>
