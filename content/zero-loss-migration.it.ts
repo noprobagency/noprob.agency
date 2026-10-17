@@ -25,7 +25,7 @@ export const zeroLossIt: ZlCopy = {
     h1: 'Il tuo eCommerce su Shopify in 14 giorni. Più posizioni su Google, più vendite.',
     proofNote: 'Lo possiamo dimostrare 😉',
     paragraph:
-      "Portiamo il tuo store su Shopify senza fermare le vendite e lo rendiamo più facile da trovare e da comprare. I risultati dei nostri ultimi clienti: +105% di vendite in 85 giorni per Integratori DTC Nazzi, +67,7% in 12 mesi per Cumini. Prezzo fisso, 4 garanzie, 0 minuti offline.",
+      'In 14 giorni un team completo porta tutto su Shopify: sito, dati, ordini e storico. Migliora il checkout e rende il tuo store più visibile e più capace di vendere. Dopo il lancio ti seguiamo senza sosta su SEO, conversioni, AOV e processi. In 3 mesi, con una dashboard personalizzata, vedi i risultati. Nessuna sorpresa sui costi.',
     ctaPrimary: 'Candidati allo sprint',
     ctaNote: 'Rispondiamo in 48 ore',
     ctaSecondary: 'Guarda i risultati',
