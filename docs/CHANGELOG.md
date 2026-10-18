@@ -4,6 +4,12 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.12.0 (18 Oct 2026)
+
+- **Custom AI theme renamed Custom AI System, everywhere**: Sprint landing IT and EN (meta description, hero description, overview, deliverable badge and detail, blue section label, scope, FAQ, application page), migration page banner (`lib/i18n/migrazione.ts`), ambassador playbook (`lib/i18n/ambassador.ts`), `llms.txt`, Gojiberry setup kit. Prepositions follow the new name ("con il nostro Custom AI System" / "with our Custom AI System"). The blue section paragraph now ends "Compatto e forte, con sei superpoteri." / "Compact and powerful, with six superpowers." to avoid "System... un sistema".
+- **Code**: `ZlAiTheme` is now `ZlAiSystem` (`components/sections/zero-loss/ZlAiSystem.tsx`), copy key `aiTheme` is now `aiSystem`.
+- **Docs**: offer source of truth and wording rules in `docs/ARCHITECTURE.md` (always "Custom AI System", never the old name), article closing pattern in `AGENT.md` and `docs/ARCHITECTURE.md`, outreach pitch, verified-claims log, article idea "Cos'è un Custom AI System per Shopify".
+
 ### Changelog v1.11.0 (18 Oct 2026)
 
 - **Custom AI theme as the Sprint's "secret"**: new blue section `ZlAiTheme` before the deliverables ("Non un semplice redesign. Il tuo store, con i superpoteri dell'AI." / "Not just a redesign. Your store, with AI superpowers."), same dark card as `ZlResultsFirst` in the electric blue of the AI badge, with six superpowers: ultra fast, ready for AI agents, automatic GEO, development with AI agents, purchase flow under the X-ray, data mapped in detail. Copy in `aiTheme` of `content/zero-loss-migration.{it,en}.ts`. The word "tema"/"theme" is gone from the landing copy: only the name "Custom AI theme" stays.

@@ -140,7 +140,7 @@ vanno corrette qui e nel copy.
 - 15% dei visitatori arriva alle recensioni in fondo alla scheda prodotto (articolo CRO)
 - massimo tre clienti long term alla volta
 - supporto 7 giorni su 7 e manutenzione con tutto incluso (tabella "Stesso store, due velocità", landing Shopify Launch Sprint, 13 ott 2026)
-- i sei superpoteri del Custom AI theme (ultra veloce, pronto per gli agenti AI, GEO automatico, sviluppo con agenti AI,
+- i sei superpoteri del Custom AI System (ultra veloce, pronto per gli agenti AI, GEO automatico, sviluppo con agenti AI,
   flusso d'acquisto ai raggi X, dati mappati al dettaglio), sezione blu della landing Shopify Launch Sprint, confermati
   da Antonio il 18 ott 2026. Sono qualitativi: nessun numero sulla velocità finché non c'è una misura prima/dopo
 - carosello risultati in homepage: Madotto e Sfogliate&Sfogliatelle senza numeri (pillole su tipo di

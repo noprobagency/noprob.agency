@@ -38,7 +38,7 @@ environment variable is no longer read (v1.5.0).
   entry point `content/zero-loss-migration.ts` (`getZeroLossCopy(locale)`).
   Components never hardcode text.
 - Page composition: `ZeroLossPage.tsx` (section order: nav, hero + logo strip,
-  overview, checklist, Custom AI theme, deliverables, results first, calendar,
+  overview, checklist, Custom AI System, deliverables, results first, calendar,
   guarantees, why now, proof, scope, FAQ, application form, minimal footer).
 - Reused site pieces: `Testimonials`
   (new optional `items` / `tone` / `className` props), `Accordion` (new optional

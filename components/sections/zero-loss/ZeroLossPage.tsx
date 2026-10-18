@@ -9,7 +9,7 @@ import ZlNav from './ZlNav'
 import ZlHero from './ZlHero'
 import ZlOverview from './ZlOverview'
 import ZlChecklist from './ZlChecklist'
-import ZlAiTheme from './ZlAiTheme'
+import ZlAiSystem from './ZlAiSystem'
 import ZlDeliverables from './ZlDeliverables'
 import ZlCalendar from './ZlCalendar'
 import ZlGuarantees from './ZlGuarantees'
@@ -24,7 +24,7 @@ import ZlApplication from './ZlApplication'
 /**
  * Zero-Loss Migration Sprint landing, section order (Fletch homepage + 3 of
  * ours: 7 guarantees, 8 why now, 10 included/not included):
- * 1 nav · 2 hero + logos · 3 overview · 4 checklist · 4b Custom AI theme · 5 deliverables ·
+ * 1 nav · 2 hero + logos · 3 overview · 4 checklist · 4b Custom AI System · 5 deliverables ·
  * 6 calendar · 7 guarantees · 8 why now · 9 proof · 10 scope · 11 FAQ ·
  * 12 application form · footer.
  */
@@ -59,7 +59,7 @@ export default function ZeroLossPage({ locale }: { locale: Locale }) {
         <ZlHero copy={copy.hero} />
         <ZlOverview copy={copy.overview} />
         <ZlChecklist copy={copy.checklist} />
-        <ZlAiTheme copy={copy.aiTheme} />
+        <ZlAiSystem copy={copy.aiSystem} />
         <ZlDeliverables copy={copy.deliverables} />
         <ZlResultsFirst copy={copy.resultsFirst} />
         <ZlCalendar copy={copy.calendar} deliverables={copy.deliverables} locale={locale} />

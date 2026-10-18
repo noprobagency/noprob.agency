@@ -12,7 +12,7 @@ export const zeroLossIt: ZlCopy = {
   meta: {
     title: 'Migrazione a Shopify in 14 giorni | Shopify Launch Sprint',
     description:
-      'Migra il tuo eCommerce su Shopify in 14 giorni, su un Custom AI theme, senza perdere Google né vendite. Prezzo fisso, 4 garanzie scritte, 90 giorni di supporto.',
+      'Migra il tuo eCommerce su Shopify in 14 giorni, con il nostro Custom AI System, senza perdere Google né vendite. Prezzo fisso, 4 garanzie scritte, 90 giorni di supporto.',
     ogAlt: 'Shopify Launch Sprint: il tuo eCommerce su Shopify in 14 giorni, più SEO e più vendite',
   },
   nav: {
@@ -25,7 +25,7 @@ export const zeroLossIt: ZlCopy = {
     h1: 'Il tuo eCommerce su Shopify in 14 giorni. Più posizioni su Google, più vendite, più AI.',
     proofNote: 'Caso studio: +105% di vendite in 85 giorni 😉',
     paragraph:
-      'In 14 giorni un team completo porta il tuo store su Shopify, sul nostro Custom AI theme: più veloce, pronto per gli agenti AI, costruito per vendere. Poi 90 giorni su SEO, conversioni e AOV, misurati in dashboard. Prezzo fisso, zero sorprese.',
+      'In 14 giorni un team completo porta il tuo store su Shopify, con il nostro Custom AI System: più veloce, pronto per gli agenti AI, costruito per vendere. Poi 90 giorni su SEO, conversioni e AOV, misurati in dashboard. Prezzo fisso, zero sorprese.',
     ctaPrimary: 'Candidati allo sprint',
     ctaNote: 'Rispondiamo in 48 ore',
     ctaSecondary: 'Guarda i risultati',
@@ -36,14 +36,14 @@ export const zeroLossIt: ZlCopy = {
   overview: {
     h2: 'Shopify Launch Sprint',
     paragraph:
-      "Quattordici giorni, un calendario fisso, un referente. Il giorno 1 ci dai gli accessi, il giorno 14 hai lo store su Shopify pronto a pubblicare. Non è un redesign: è il tuo store, ricostruito da zero sul nostro Custom AI theme, più veloce, più forte su Google e con un checkout costruito per vendere di più.",
+      "Quattordici giorni, un calendario fisso, un referente. Il giorno 1 ci dai gli accessi, il giorno 14 hai lo store su Shopify pronto a pubblicare. Non è un redesign: è il tuo store, ricostruito da zero con il nostro Custom AI System, più veloce, più forte su Google e con un checkout costruito per vendere di più.",
     cta: 'Candidati allo sprint',
     deliverablesTitle: 'Cosa ottieni al giorno 14',
     deliverables: [
       {
         title: 'Store Shopify pronto a pubblicare',
-        line: "Replica 1:1 su un Custom AI theme sviluppato su misura, bug corretti, la nostra checklist del flusso d'acquisto applicata.",
-        badge: 'Custom AI theme',
+        line: "Replica 1:1 con il Custom AI System, sviluppato su misura, bug corretti, la nostra checklist del flusso d'acquisto applicata.",
+        badge: 'Custom AI System',
       },
       {
         title: 'Data Migration Report',
@@ -114,7 +114,7 @@ export const zeroLossIt: ZlCopy = {
         title: 'Il tuo store, pronto a pubblicare su Shopify',
         short: 'Store pronto a pubblicare',
         paragraph:
-          "Il tuo store ricostruito 1:1 su Shopify, sul Custom AI theme, sviluppato su misura per te: stesse pagine, stessa struttura, stessi contenuti. Correggiamo bug ed errori che ti porti dietro da anni e applichiamo la nostra checklist sul flusso d'acquisto: ricerca, scheda prodotto, carrello, checkout. Non è un restyling: è il tuo store, più veloce e più corto da comprare.",
+          "Il tuo store ricostruito 1:1 su Shopify, con il Custom AI System, sviluppato su misura per te: stesse pagine, stessa struttura, stessi contenuti. Correggiamo bug ed errori che ti porti dietro da anni e applichiamo la nostra checklist sul flusso d'acquisto: ricerca, scheda prodotto, carrello, checkout. Non è un restyling: è il tuo store, più veloce e più corto da comprare.",
         imageAlt: 'Screenshot dello staging Shopify affiancato al sito attuale, con la checklist in overlay',
         mockup: 'staging',
       },
@@ -263,11 +263,11 @@ export const zeroLossIt: ZlCopy = {
     ],
     line: 'Le condizioni complete stanno nel contratto, scritte in una pagina. Niente asterischi nascosti.',
   },
-  aiTheme: {
-    label: 'Custom AI theme',
+  aiSystem: {
+    label: 'Custom AI System',
     h2: "Non un semplice redesign. Il tuo store, con i superpoteri dell'AI.",
     paragraph:
-      "Non solo sviluppo, non solo marketing: con il Custom AI theme lavoriamo insieme su sito, dati, flusso d'acquisto e AI. Un sistema compatto e forte, con sei superpoteri.",
+      "Non solo sviluppo, non solo marketing: con il Custom AI System lavoriamo insieme su sito, dati, flusso d'acquisto e AI. Compatto e forte, con sei superpoteri.",
     powers: [
       { title: 'Ultra veloce', text: 'Codice scritto da zero solo per il tuo store: niente codice morto, niente app che rallentano.' },
       { title: 'Pronto per gli agenti AI', text: 'Catalogo e dati strutturati pronti per ChatGPT, Copilot e Google AI Mode, dove i clienti stanno iniziando a comprare.' },
@@ -420,7 +420,7 @@ export const zeroLossIt: ZlCopy = {
       'Redirect SEO 1:1 e SEO tecnica on-site',
       'Tracking server-side e consent mode',
       'Configurazione di pagamenti, spedizioni, email e delle piattaforme che già usi',
-      "Replica 1:1 su Custom AI theme, bug fix, flusso d'acquisto ottimizzato",
+      "Replica 1:1 con il Custom AI System, bug fix, flusso d'acquisto ottimizzato",
       'Go-live a zero downtime e 90 giorni di supporto, monitoraggio e miglioramento',
     ],
     partnersTitle: 'Con partner dedicati, dopo il go-live',
@@ -455,7 +455,7 @@ export const zeroLossIt: ZlCopy = {
       {
         question: 'Il sito sarà uguale a prima?',
         answer:
-          "Struttura, pagine e contenuti sì: è il tuo store, non un redesign. Ma lo ricostruiamo sul Custom AI theme: più veloce, senza i bug di prima e con il flusso d'acquisto ottimizzato con la nostra checklist. Se vuoi cambiare immagine, quello arriva dopo, con un partner.",
+          "Struttura, pagine e contenuti sì: è il tuo store, non un redesign. Ma lo ricostruiamo con il Custom AI System: più veloce, senza i bug di prima e con il flusso d'acquisto ottimizzato con la nostra checklist. Se vuoi cambiare immagine, quello arriva dopo, con un partner.",
       },
       {
         question: 'Da quali piattaforme migrate?',
@@ -518,7 +518,7 @@ export const zeroLossIt: ZlCopy = {
     h1Pre: 'Il tuo store su Shopify in',
     h1Em: '14 giorni.',
     description:
-      'Un intero team, totalmente in focus sul tuo store. Lo ricostruiamo su Shopify con il nostro Custom AI theme in soli 14 giorni e lo prepariamo a uno sprint di performance su ogni area: è il next step del tuo business eCommerce.',
+      'Un intero team, totalmente in focus sul tuo store. Lo ricostruiamo su Shopify con il nostro Custom AI System in soli 14 giorni e lo prepariamo a uno sprint di performance su ogni area: è il next step del tuo business eCommerce.',
     badges: ['Risposta in 48 ore', 'Supporto 7/7', 'Prezzo fisso, nessun preventivo'],
   },
   form: {
