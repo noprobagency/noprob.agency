@@ -4,6 +4,19 @@ import ZlAiBadge from './ZlAiBadge'
 import ZlCta from './ZlCta'
 import ZlRail from './ZlRail'
 
+/** Five Trustpilot-green stars on top of each result card, to make the strip pop. */
+function Stars() {
+  return (
+    <span aria-hidden className="flex gap-[3px]">
+      {Array.from({ length: 5 }, (_, i) => (
+        <svg key={i} viewBox="0 0 20 20" className="h-[16px] w-[16px] text-np-green-trust">
+          <path fill="currentColor" d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z" />
+        </svg>
+      ))}
+    </span>
+  )
+}
+
 const TIER_ACCENTS = ['bg-np-green', 'bg-[#8bcff2]', 'bg-[#d0a8e0]'] as const
 
 /**
@@ -85,8 +98,9 @@ export default function ZlOverview({ copy }: { copy: ZlCopy['overview'] }) {
         {/* 4 result cards: bold number, then attribution */}
         <ZlRail className="mt-4 grid gap-4 min-[810px]:mt-6 min-[600px]:grid-cols-2 lg:grid-cols-4">
           {copy.results.map((r) => (
-            <li key={r.value} className="flex flex-col justify-between rounded-card border border-np-border bg-white/40 p-5">
-              <p className="font-sans text-[19px] font-bold leading-[1.25em] tracking-[-0.04em] text-np-dark min-[810px]:text-[21px]">
+            <li key={r.value} className="flex flex-col justify-between rounded-card border border-np-border bg-white p-5 shadow-[0_10px_30px_-18px_rgb(0_0_0/0.25)]">
+              <Stars />
+              <p className="mt-3 font-sans text-[19px] font-bold leading-[1.25em] tracking-[-0.04em] text-np-dark min-[810px]:text-[21px]">
                 {renderCopy(r.value)}
               </p>
               <p className="mt-4 font-sans text-[13px] font-medium tracking-[-0.02em] text-np-grey">{renderCopy(r.attribution)}</p>

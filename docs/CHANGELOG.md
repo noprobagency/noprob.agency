@@ -4,6 +4,16 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.11.0 (18 Oct 2026)
+
+- **Custom AI theme as the Sprint's "secret"**: new blue section `ZlAiTheme` before the deliverables ("Non un semplice redesign. Il tuo store, con i superpoteri dell'AI." / "Not just a redesign. Your store, with AI superpowers."), same dark card as `ZlResultsFirst` in the electric blue of the AI badge, with six superpowers: ultra fast, ready for AI agents, automatic GEO, development with AI agents, purchase flow under the X-ray, data mapped in detail. Copy in `aiTheme` of `content/zero-loss-migration.{it,en}.ts`. The word "tema"/"theme" is gone from the landing copy: only the name "Custom AI theme" stays.
+- **Hero**: H1 claim "Più posizioni su Google, più vendite, più AI." / "Higher on Google, more sales, more AI." with "AI" in animated electric blue (`.np-ai-electric` in `app/globals.css`, static under `prefers-reduced-motion`). From 810px the claim is one line (font size scales with the viewport). The proof note is now "Caso studio: +105% di vendite in 85 giorni 😉" / "Case study: +105% sales in 85 days 😉": under the H1 on phones, top right with the arrow pointing down on desktop. Shorter hero description built around the Custom AI theme.
+- **Offer card**: five Trustpilot-green stars on the result cards under the pricing; "Inclusi nel prezzo" now lists the results dashboard from day 1 first (it was wrongly listed "after the sprint").
+- **Checklist**: six shorter pains in plain buyer language, one per superpower; reactions green "Tutto verde? Allora non hai bisogno di noprob." / orange "Già solo con questo potremmo migliorare i tuoi risultati." / red unchanged. Solution heading "La soluzione in uno sprint di 2 settimane", sub "andiamo a tappeto, punto per punto".
+- **Copy alignment**: Custom AI theme in the meta description, overview, FAQ ("Il sito sarà uguale a prima?"), application page, migration page banner (`lib/i18n/migrazione.ts`) and `llms.txt`.
+- **Fix**: the "Guarda la dashboard demo" button in the calendar no longer overflows its column at tablet width.
+- **Docs**: offer source of truth in `docs/ARCHITECTURE.md` (Sprint landing section), new article closing pattern in `AGENT.md` and `docs/ARCHITECTURE.md`, outreach pitch in `docs/COLD-OUTREACH.md`, superpowers logged in `docs/dati-verificati.md`, article idea in `docs/articoli-da-scrivere.md`.
+
 ### Changelog v1.10.0 (18 Oct 2026)
 
 - **Custom AI theme instead of premium theme**: the Sprint never uses premium or off-the-shelf themes, only custom Shopify themes built from scratch and connected to AI. "Store Shopify pronto a pubblicare" / "Shopify store ready to publish" now reads "Replica 1:1 su un Custom AI theme sviluppato su misura..." / "1:1 replica on a Custom AI theme built from scratch..." on the Sprint landing (deliverable, deliverable detail, scope) and in the ambassador playbook; `docs/research/gojiberry-setup-kit.md` aligned.

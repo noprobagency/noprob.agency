@@ -1100,8 +1100,33 @@
   0%, 55% { transform: translateX(-110%); }
   100% { transform: translateX(110%); }
 }
+.np-ai-electric {
+  --np-ai-rgb: 31 91 255;
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(100deg, #1f5bff 0%, #1f5bff 40%, #7f9cff 50%, #1f5bff 60%, #1f5bff 100%);
+  background-size: 250% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 0 5px rgb(31 91 255 / 0.3));
+  animation: np-ai-flow 4s ease-in-out infinite;
+}
+.np-ai-electric-spark {
+  position: absolute;
+  top: 0.04em;
+  right: -0.2em;
+  width: 0.22em;
+  height: 0.22em;
+  color: #1f5bff;
+}
+@keyframes np-ai-flow {
+  0%, 35% { background-position: 100% 0; }
+  100% { background-position: -150% 0; }
+}
 @media (prefers-reduced-motion: reduce) {
   .np-ai-badge::after,
+  .np-ai-electric,
   .np-ai-badge-spark,
   .np-ai-badge-spark-sm { animation: none; }
   .np-ai-badge::after { opacity: 0; }

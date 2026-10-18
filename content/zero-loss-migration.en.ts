@@ -12,7 +12,7 @@ export const zeroLossEn: ZlCopy = {
   meta: {
     title: 'Shopify Migration in 14 Days | Shopify Launch Sprint',
     description:
-      'Move your eCommerce to Shopify in 14 days without losing Google rankings or sales. Fixed price, 4 written guarantees, 90 days of support, measured results.',
+      'Move your eCommerce to Shopify in 14 days, on a Custom AI theme, without losing Google rankings or sales. Fixed price, 4 written guarantees, 90 days of support.',
     ogAlt: 'Shopify Launch Sprint: your eCommerce on Shopify in 14 days, more SEO and more sales',
   },
   nav: {
@@ -22,10 +22,10 @@ export const zeroLossEn: ZlCopy = {
   },
   hero: {
     eyebrow: 'Shopify Launch Sprint',
-    h1: 'Your eCommerce on Shopify in 14 days. Higher on Google, more sales.',
-    proofNote: 'We can prove it 😉',
+    h1: 'Your eCommerce on Shopify in 14 days. Higher on Google, more sales, more AI.',
+    proofNote: 'Case study: +105% sales in 85 days 😉',
     paragraph:
-      'In 14 days a full team moves everything to Shopify: site, data, orders and history. It improves the checkout and makes your store easier to find and better at selling. After launch we support you non-stop on SEO, conversion, AOV and processes. In 3 months, with a custom dashboard, you see the results. No surprises on costs.',
+      'In 14 days a full team moves your store to Shopify, onto our Custom AI theme: faster, ready for AI agents, built to sell. Then 90 days on SEO, conversion and AOV, measured in a dashboard. Fixed price, zero surprises.',
     ctaPrimary: 'Apply for the sprint',
     ctaNote: 'We reply within 48 hours',
     ctaSecondary: 'See the results',
@@ -36,7 +36,7 @@ export const zeroLossEn: ZlCopy = {
   overview: {
     h2: 'Shopify Launch Sprint',
     paragraph:
-      'Fourteen days, a fixed calendar, one point of contact. On day 1 you give us the accesses, on day 14 your store is on Shopify, ready to publish. It is not a redesign: it is your store, faster, stronger on Google and with a checkout built to sell more.',
+      'Fourteen days, a fixed calendar, one point of contact. On day 1 you give us the accesses, on day 14 your store is on Shopify, ready to publish. It is not a redesign: it is your store, rebuilt from scratch on our Custom AI theme, faster, stronger on Google and with a checkout built to sell more.',
     cta: 'Apply for the sprint',
     deliverablesTitle: 'What you get on day 14',
     deliverables: [
@@ -63,7 +63,7 @@ export const zeroLossEn: ZlCopy = {
       },
     ],
     afterLine:
-      'After the sprint: zero-downtime go-live in the window you choose and 90 days of support, monitoring & improvement: bug fixes, changes, SEO and tracking checks and new optimizations every week.',
+      'Included in the price: the results dashboard from day 1, zero-downtime go-live in the window you choose and 90 days of support, monitoring & improvement: bug fixes, changes, SEO and tracking checks and new optimizations every week.',
     pricingTitle: 'Priced by the size of your company',
     pricingSub: 'and the store complexity that comes with it',
     tiers: [
@@ -84,22 +84,22 @@ export const zeroLossEn: ZlCopy = {
     h2: 'Sound familiar? Be honest.',
     sub: 'tick the ones that are true',
     items: [
-      'To change a banner you open a ticket and wait for the developer',
-      'You know you would sell more on Shopify, but you are afraid of losing Google and customers in the move',
-      'The site froze or slowed down right during sales or Black Friday',
-      'Meta and GA4 say one thing, real orders say another, and you decide on gut feeling',
-      'You pay for hosting, plugins and maintenance every month, and the site never changes',
-      'You want to use AI to sell and work better, but on your platform you do not even know where to start',
+      'Every change to your site is slow: you always have to wait for someone',
+      'You would move to Shopify, but you are afraid of losing Google and customers',
+      'You feel your site could be a lot faster',
+      'Plenty of visitors, too few of them become orders',
+      'Platform numbers do not match your real sales',
+      'You want to be found on ChatGPT and AI too, but do not know where to start',
     ],
-    reactionNone: 'All green, for now. Tick the true ones: one is enough and you are already losing sales.',
-    reactionMid: 'Every tick is an order that is not coming in today. And it does not show in the reports.',
+    reactionNone: 'All green? Then you do not need noprob.',
+    reactionMid: 'Even just with this, we could improve your results.',
     reactionHigh: 'No prob. This is exactly what we fix in 14 days.',
     reactionHighCta: 'Apply for the sprint',
     countLabel: 'ticked',
   },
   deliverables: {
-    h2: 'The solution: a 2-week sprint',
-    sub: 'here is what you receive, one by one',
+    h2: 'The solution in a 2-week sprint',
+    sub: 'we cover it all, point by point',
     labelPrefix: 'Deliverable',
     items: [
       {
@@ -114,7 +114,7 @@ export const zeroLossEn: ZlCopy = {
         title: 'Your store, ready to publish on Shopify',
         short: 'Store ready to publish',
         paragraph:
-          'Your store rebuilt 1:1 on Shopify, on a Custom AI theme we build from scratch, never an off-the-shelf theme: same pages, same structure, same content. We fix the bugs and errors you have been carrying for years and apply our purchase-flow checklist: search, product page, cart, checkout. It is not a restyling. It is your store, faster and shorter to buy from.',
+          'Your store rebuilt 1:1 on Shopify, on the Custom AI theme, made to measure for you: same pages, same structure, same content. We fix the bugs and errors you have been carrying for years and apply our purchase-flow checklist: search, product page, cart, checkout. It is not a restyling: it is your store, faster and shorter to buy from.',
         imageAlt: 'Screenshot of the Shopify staging next to the current site, with the checklist overlaid',
         mockup: 'staging',
       },
@@ -174,7 +174,7 @@ export const zeroLossEn: ZlCopy = {
             day: 'Wednesday',
             title: 'Reconciliation and structure',
             duration: '10 minutes',
-            detail: 'Source and Shopify counts at 100%. Theme, navigation, collections. You get a Loom.',
+            detail: 'Source and Shopify counts at 100%. Structure, navigation, collections. You get a Loom.',
             deliverables: [1],
           },
           {
@@ -262,6 +262,20 @@ export const zeroLossEn: ZlCopy = {
       { key: 'Checkout', text: 'Checkout converting less than before at 90 days? We optimize it for free until it beats it.' },
     ],
     line: 'The full terms are in the contract, written on one page. No hidden asterisks.',
+  },
+  aiTheme: {
+    label: 'Custom AI theme',
+    h2: 'Not just a redesign. Your store, with AI superpowers.',
+    paragraph:
+      'Not just development, not just marketing: with the Custom AI theme we work on site, data, purchase flow and AI together. One compact, powerful system, with six superpowers.',
+    powers: [
+      { title: 'Ultra fast', text: 'Code written from scratch for your store only: no dead code, no apps slowing it down.' },
+      { title: 'Ready for AI agents', text: 'Catalog and structured data ready for ChatGPT, Copilot and Google AI Mode, where customers are starting to shop.' },
+      { title: 'Automatic GEO', text: 'Every new product is born optimized for AI answers: schema and data are generated on their own.' },
+      { title: 'Built with AI agents', text: 'Code designed for the AI agents that work on it: new features, tests and changes go live the same day, not in weeks.' },
+      { title: 'Purchase flow under the X-ray', text: 'Search, product page, cart and checkout analyzed step by step: we find where orders get lost and fix it.' },
+      { title: 'Data mapped in detail', text: 'Every product, customer and order reconciled 100%, server-side tracking and a dashboard with MER, ROAS and retention from day 1.' },
+    ],
   },
   resultsFirst: {
     label: 'Obsessed with results',
@@ -441,7 +455,7 @@ export const zeroLossEn: ZlCopy = {
       {
         question: 'Will the site look the same as before?',
         answer:
-          'Yes, and that is the point. We replicate your store 1:1, fix bugs and errors and optimize the purchase flow with our checklist. It is not a redesign: if you want to change your look, that comes later, with a partner.',
+          'Structure, pages and content, yes: it is your store, not a redesign. But we rebuild it on the Custom AI theme: faster, without the old bugs and with the purchase flow optimized with our checklist. If you want to change your look, that comes later, with a partner.',
       },
       {
         question: 'Which platforms do you migrate from?',
@@ -504,7 +518,7 @@ export const zeroLossEn: ZlCopy = {
     h1Pre: 'Your store on Shopify in',
     h1Em: '14 days.',
     description:
-      'A whole team, fully focused on your store. We move it to Shopify at the highest quality in just 14 days and get it ready for a performance sprint across every area: the next step for your eCommerce business.',
+      'A whole team, fully focused on your store. We rebuild it on Shopify with our Custom AI theme in just 14 days and get it ready for a performance sprint across every area: the next step for your eCommerce business.',
     badges: ['Reply within 48 hours', '7/7 support', 'Fixed price, no quotes'],
   },
   form: {
