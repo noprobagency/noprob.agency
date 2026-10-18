@@ -4,7 +4,9 @@ Rules for anyone (human or agent) working on `noprob.agency`. Architecture is in
 [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md), history in
 [docs/CHANGELOG.md](docs/CHANGELOG.md), every public number with its source in
 [docs/dati-verificati.md](docs/dati-verificati.md). Read those before touching
-copy, routes or tracking.
+copy, routes or tracking. Cold email and LinkedIn outreach with Gojiberry (rules, MCP tools,
+sequences, limits, compliance) are in [docs/COLD-OUTREACH.md](docs/COLD-OUTREACH.md): read it before
+any outbound work.
 
 ## Project context
 
