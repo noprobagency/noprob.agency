@@ -4,6 +4,12 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.10.0 (18 Oct 2026)
+
+- **Custom AI theme instead of premium theme**: the Sprint never uses premium or off-the-shelf themes, only custom Shopify themes built from scratch and connected to AI. "Store Shopify pronto a pubblicare" / "Shopify store ready to publish" now reads "Replica 1:1 su un Custom AI theme sviluppato su misura..." / "1:1 replica on a Custom AI theme built from scratch..." on the Sprint landing (deliverable, deliverable detail, scope) and in the ambassador playbook; `docs/research/gojiberry-setup-kit.md` aligned.
+- **External costs**: since the theme is ours and included, the theme is no longer listed among the client's external costs (pricing note, payment FAQ, ambassador commission and costs copy): only the Shopify plan and apps.
+- **AI badge**: new `ZlAiBadge` (electric-blue pill with a pulsing sparkle and a slow shimmer, `.np-ai-badge` in `app/globals.css`, static under `prefers-reduced-motion`, lighter variant inside `[data-header-theme="dark"]` sections) next to the first deliverable title on both Sprint landings, driven by the optional `badge` field of `overview.deliverables`.
+
 ### Changelog v1.9.0 (18 Oct 2026)
 
 - **Cold outreach docs**: new `docs/COLD-OUTREACH.md`, the instruction file for anyone running cold email and LinkedIn outreach with Gojiberry (non-negotiable rules, how the tool works, MCP and REST tools, strategy for the Shopify Launch Sprint, sequences, daily and weekly workflow, LinkedIn limits, email deliverability, compliance, open checks). Linked from `AGENT.md`.

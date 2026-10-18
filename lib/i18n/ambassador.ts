@@ -313,7 +313,7 @@ const it: AmbassadorCopy = {
       {
         title: 'Su cosa si calcola',
         description:
-          'Sul prezzo dello Sprint pagato dal cliente (scaglione più eventuali add-on a prezzo fisso), IVA esclusa. Sono esclusi i costi esterni: piano Shopify, tema e app.',
+          'Sul prezzo dello Sprint pagato dal cliente (scaglione più eventuali add-on a prezzo fisso), IVA esclusa. Sono esclusi i costi esterni: piano Shopify e app.',
       },
       {
         title: `Prezzo pubblico, da ${itEur(MIN)}`,
@@ -335,7 +335,7 @@ const it: AmbassadorCopy = {
     includedTitle: 'Cosa è incluso',
     included: [
       'Data Migration Report: prodotti, varianti, clienti e storico ordini riconciliati al 100%',
-      'Store Shopify pronto a pubblicare: replica 1:1 su tema premium, bug corretti, flusso d’acquisto ottimizzato',
+      'Store Shopify pronto a pubblicare: replica 1:1 su un Custom AI theme sviluppato su misura, bug corretti, flusso d’acquisto ottimizzato',
       'Redirect Map 1:1: ogni URL vecchio mappato al nuovo e testato in automatico',
       'Tracking Spec e setup server-side: GA4, Meta CAPI, email, consent mode',
       'Go-live Checklist con la data scelta dal cliente (giorni 15-30), zero downtime',
@@ -393,7 +393,7 @@ const it: AmbassadorCopy = {
     ],
     externalTitle: 'Costi esterni',
     external:
-      'Gli unici costi esterni sono il piano Shopify, il tema e le app, che il cliente paga direttamente a Shopify. Il piano dipende dalle dimensioni dello store e lo scegliamo insieme al cliente al kickoff. Nient’altro: niente costi nascosti, niente extra a consuntivo.',
+      'Gli unici costi esterni sono il piano Shopify e le app, che il cliente paga direttamente a Shopify. Il piano dipende dalle dimensioni dello store e lo scegliamo insieme al cliente al kickoff. Nient’altro: niente costi nascosti, niente extra a consuntivo.',
     externalLinkLabel: 'Prezzi aggiornati dei piani Shopify',
     argumentTitle: 'Un argomento di vendita in più',
     argument:
@@ -928,7 +928,7 @@ const en: AmbassadorCopy = {
       {
         title: 'What it’s calculated on',
         description:
-          'On the Sprint price paid by the client (tier plus any fixed-price add-ons), VAT excluded. External costs are excluded: Shopify plan, theme and apps.',
+          'On the Sprint price paid by the client (tier plus any fixed-price add-ons), VAT excluded. External costs are excluded: Shopify plan and apps.',
       },
       {
         title: `Public price, from ${enEur(MIN)}`,
@@ -950,7 +950,7 @@ const en: AmbassadorCopy = {
     includedTitle: 'What’s included',
     included: [
       'Data Migration Report: products, variants, customers and order history reconciled 100%',
-      'Shopify store ready to publish: 1:1 replica on a premium theme, bugs fixed, purchase flow optimized',
+      'Shopify store ready to publish: 1:1 replica on a Custom AI theme built from scratch, bugs fixed, purchase flow optimized',
       '1:1 Redirect Map: every old URL mapped to the new one and tested automatically',
       'Tracking Spec and server-side setup: GA4, Meta CAPI, email, consent mode',
       'Go-live Checklist with the date the client picks (days 15-30), zero downtime',
@@ -1008,7 +1008,7 @@ const en: AmbassadorCopy = {
     ],
     externalTitle: 'External costs',
     external:
-      'The only external costs are the Shopify plan, the theme and the apps, which the client pays directly to Shopify. The plan depends on the size of the store and we choose it with the client at kickoff. Nothing else: no hidden costs, no surprise extras.',
+      'The only external costs are the Shopify plan and the apps, which the client pays directly to Shopify. The plan depends on the size of the store and we choose it with the client at kickoff. Nothing else: no hidden costs, no surprise extras.',
     externalLinkLabel: 'Current Shopify plan prices',
     argumentTitle: 'One more selling point',
     argument:

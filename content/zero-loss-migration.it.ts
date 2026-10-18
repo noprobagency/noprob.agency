@@ -42,7 +42,8 @@ export const zeroLossIt: ZlCopy = {
     deliverables: [
       {
         title: 'Store Shopify pronto a pubblicare',
-        line: "Replica 1:1 su tema premium, bug corretti, la nostra checklist del flusso d'acquisto applicata.",
+        line: "Replica 1:1 su un Custom AI theme sviluppato su misura, bug corretti, la nostra checklist del flusso d'acquisto applicata.",
+        badge: 'Custom AI theme',
       },
       {
         title: 'Data Migration Report',
@@ -71,7 +72,7 @@ export const zeroLossIt: ZlCopy = {
       { label: 'Fatturato oltre €20M', price: '€12.800', under: '4 rate da €3.200, IVA esclusa' },
     ],
     pricingNote:
-      'Prima rata al kickoff, seconda al go-live, terza e quarta nei mesi di supporto. Piano Shopify, tema e app a carico tuo. Nessuno sconto, nessun preventivo: questo è il prezzo.',
+      'Prima rata al kickoff, seconda al go-live, terza e quarta nei mesi di supporto. Piano Shopify e app a carico tuo. Nessuno sconto, nessun preventivo: questo è il prezzo.',
     results: [
       { value: '+105% di vendite online nei primi 85 giorni su Shopify', attribution: 'Integratori DTC Nazzi' },
       { value: '+67,7% di vendite online nei 12 mesi dopo la migrazione', attribution: 'Cumini, luxury multibrand' },
@@ -113,7 +114,7 @@ export const zeroLossIt: ZlCopy = {
         title: 'Il tuo store, pronto a pubblicare su Shopify',
         short: 'Store pronto a pubblicare',
         paragraph:
-          "Il tuo store ricostruito 1:1 su Shopify: stesse pagine, stessa struttura, stessi contenuti. Correggiamo bug ed errori che ti porti dietro da anni e applichiamo la nostra checklist sul flusso d'acquisto: ricerca, scheda prodotto, carrello, checkout. Non è un restyling. È il tuo store, più veloce e più corto da comprare.",
+          "Il tuo store ricostruito 1:1 su Shopify, su un Custom AI theme che sviluppiamo su misura, mai su un tema già pronto: stesse pagine, stessa struttura, stessi contenuti. Correggiamo bug ed errori che ti porti dietro da anni e applichiamo la nostra checklist sul flusso d'acquisto: ricerca, scheda prodotto, carrello, checkout. Non è un restyling. È il tuo store, più veloce e più corto da comprare.",
         imageAlt: 'Screenshot dello staging Shopify affiancato al sito attuale, con la checklist in overlay',
         mockup: 'staging',
       },
@@ -405,7 +406,7 @@ export const zeroLossIt: ZlCopy = {
       'Redirect SEO 1:1 e SEO tecnica on-site',
       'Tracking server-side e consent mode',
       'Configurazione di pagamenti, spedizioni, email e delle piattaforme che già usi',
-      "Replica 1:1, bug fix, flusso d'acquisto ottimizzato",
+      "Replica 1:1 su Custom AI theme, bug fix, flusso d'acquisto ottimizzato",
       'Go-live a zero downtime e 90 giorni di supporto, monitoraggio e miglioramento',
     ],
     partnersTitle: 'Con partner dedicati, dopo il go-live',
@@ -459,7 +460,7 @@ export const zeroLossIt: ZlCopy = {
       {
         question: 'Come si paga?',
         answer:
-          'Quattro rate: la prima al kickoff, la seconda al go-live, la terza e la quarta nei mesi di supporto. Prezzi IVA esclusa. Piano Shopify, tema e app li paghi direttamente a Shopify.',
+          'Quattro rate: la prima al kickoff, la seconda al go-live, la terza e la quarta nei mesi di supporto. Prezzi IVA esclusa. Piano Shopify e app li paghi direttamente a Shopify.',
       },
       {
         question: 'Come funzionano le garanzie?',
