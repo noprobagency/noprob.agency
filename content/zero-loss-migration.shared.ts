@@ -93,7 +93,8 @@ export type ZlCopy = {
     paragraph: string
     cta: string
     deliverablesTitle: string
-    deliverables: { title: string; line: string }[]
+    /** `badge` marks a plus (e.g. the Custom AI theme) with the electric-blue AI pill next to the title */
+    deliverables: { title: string; line: string; badge?: string }[]
     afterLine: string
     pricingTitle: string
     pricingSub: string

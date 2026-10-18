@@ -1,5 +1,6 @@
 import type { ZlCopy } from '@/content/zero-loss-migration'
 import { renderCopy } from './Placeholder'
+import ZlAiBadge from './ZlAiBadge'
 import ZlCta from './ZlCta'
 import ZlRail from './ZlRail'
 
@@ -36,7 +37,10 @@ export default function ZlOverview({ copy }: { copy: ZlCopy['overview'] }) {
                   <li key={item.title} className="flex gap-3">
                     <span aria-hidden className="mt-[6px] h-[9px] w-[9px] shrink-0 rounded-full bg-np-dark min-[810px]:mt-[7px] min-[810px]:h-[10px] min-[810px]:w-[10px]" />
                     <div>
-                      <p className="font-sans text-[15px] font-semibold leading-[1.35em] tracking-[-0.02em] text-np-dark">{item.title}</p>
+                      <p className="flex flex-wrap items-center gap-x-2 gap-y-1 font-sans text-[15px] font-semibold leading-[1.35em] tracking-[-0.02em] text-np-dark">
+                        {item.title}
+                        {item.badge && <ZlAiBadge label={item.badge} />}
+                      </p>
                       <p className="mt-[2px] hidden font-sans text-[14px] font-medium leading-[1.5em] tracking-[-0.02em] text-np-grey min-[810px]:block">
                         {renderCopy(item.line)}
                       </p>

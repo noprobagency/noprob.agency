@@ -42,7 +42,8 @@ export const zeroLossEn: ZlCopy = {
     deliverables: [
       {
         title: 'Shopify store ready to publish',
-        line: '1:1 replica on a premium theme, bugs fixed, our purchase-flow checklist applied.',
+        line: '1:1 replica on a Custom AI theme built from scratch, bugs fixed, our purchase-flow checklist applied.',
+        badge: 'Custom AI theme',
       },
       {
         title: 'Data Migration Report',
@@ -71,7 +72,7 @@ export const zeroLossEn: ZlCopy = {
       { label: 'Revenue over €20M', price: '€12,800', under: '4 installments of €3,200, VAT excluded' },
     ],
     pricingNote:
-      'First installment at kickoff, second at go-live, third and fourth during the support months. Shopify plan, theme and apps are on you. No discounts, no quotes: this is the price.',
+      'First installment at kickoff, second at go-live, third and fourth during the support months. Shopify plan and apps are on you. No discounts, no quotes: this is the price.',
     results: [
       { value: '+105% online sales in the first 85 days on Shopify', attribution: 'Supplement DTC Nazzi' },
       { value: '+67.7% online sales in the 12 months after the migration', attribution: 'Cumini, luxury multibrand' },
@@ -113,7 +114,7 @@ export const zeroLossEn: ZlCopy = {
         title: 'Your store, ready to publish on Shopify',
         short: 'Store ready to publish',
         paragraph:
-          'Your store rebuilt 1:1 on Shopify: same pages, same structure, same content. We fix the bugs and errors you have been carrying for years and apply our purchase-flow checklist: search, product page, cart, checkout. It is not a restyling. It is your store, faster and shorter to buy from.',
+          'Your store rebuilt 1:1 on Shopify, on a Custom AI theme we build from scratch, never an off-the-shelf theme: same pages, same structure, same content. We fix the bugs and errors you have been carrying for years and apply our purchase-flow checklist: search, product page, cart, checkout. It is not a restyling. It is your store, faster and shorter to buy from.',
         imageAlt: 'Screenshot of the Shopify staging next to the current site, with the checklist overlaid',
         mockup: 'staging',
       },
@@ -405,7 +406,7 @@ export const zeroLossEn: ZlCopy = {
       '1:1 SEO redirects and on-site technical SEO',
       'Server-side tracking and consent mode',
       'Setup of payments, shipping, email and the platforms you already use',
-      '1:1 replica, bug fixes, optimized purchase flow',
+      '1:1 replica on a Custom AI theme, bug fixes, optimized purchase flow',
       'Zero-downtime go-live and 90 days of support, monitoring & improvement',
     ],
     partnersTitle: 'With dedicated partners, after go-live',
@@ -459,7 +460,7 @@ export const zeroLossEn: ZlCopy = {
       {
         question: 'How do I pay?',
         answer:
-          'Four installments: the first at kickoff, the second at go-live, the third and fourth during the support months. Prices exclude VAT. Shopify plan, theme and apps you pay directly to Shopify.',
+          'Four installments: the first at kickoff, the second at go-live, the third and fourth during the support months. Prices exclude VAT. Shopify plan and apps you pay directly to Shopify.',
       },
       {
         question: 'How do the guarantees work?',

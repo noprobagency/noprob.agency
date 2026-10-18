@@ -1043,3 +1043,66 @@
 @media (prefers-reduced-motion: reduce) {
   .np-spark { animation: none; opacity: 0.6; }
 }
+
+/* Sprint "Custom AI theme" plus: electric-blue pill, pulsing sparkle, slow shimmer.
+   Lighter blue inside dark sections ([data-header-theme="dark"]). */
+.np-ai-badge {
+  --np-ai: #1f5bff;
+  --np-ai-rgb: 31 91 255;
+  --np-ai-shine: rgb(255 255 255 / 0.75);
+  position: relative;
+  isolation: isolate;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  border-radius: 999px;
+  border: 1px solid rgb(var(--np-ai-rgb) / 0.35);
+  background-color: rgb(var(--np-ai-rgb) / 0.08);
+  padding: 4px 9px 4px 7px;
+  color: var(--np-ai);
+  box-shadow: 0 0 14px -4px rgb(var(--np-ai-rgb) / 0.55);
+}
+[data-header-theme='dark'] .np-ai-badge {
+  --np-ai: #7f9cff;
+  --np-ai-rgb: 127 156 255;
+  --np-ai-shine: rgb(255 255 255 / 0.18);
+}
+.np-ai-badge::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(105deg, transparent 35%, var(--np-ai-shine) 50%, transparent 65%);
+  transform: translateX(-110%);
+  animation: np-ai-shimmer 3.6s ease-in-out infinite;
+}
+.np-ai-badge-spark {
+  transform-origin: 44% 50%;
+  animation: np-ai-pulse 2.4s ease-in-out infinite;
+  filter: drop-shadow(0 0 3px rgb(var(--np-ai-rgb) / 0.8));
+}
+.np-ai-badge-spark-sm {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: np-ai-twinkle 2.4s ease-in-out 0.6s infinite;
+}
+@keyframes np-ai-pulse {
+  0%, 100% { transform: scale(0.88) rotate(0deg); opacity: 0.85; }
+  50% { transform: scale(1.12) rotate(12deg); opacity: 1; }
+}
+@keyframes np-ai-twinkle {
+  0%, 100% { transform: scale(0.4); opacity: 0.2; }
+  45% { transform: scale(1.1); opacity: 1; }
+}
+@keyframes np-ai-shimmer {
+  0%, 55% { transform: translateX(-110%); }
+  100% { transform: translateX(110%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .np-ai-badge::after,
+  .np-ai-badge-spark,
+  .np-ai-badge-spark-sm { animation: none; }
+  .np-ai-badge::after { opacity: 0; }
+}
