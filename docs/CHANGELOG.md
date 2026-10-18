@@ -4,6 +4,11 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.9.0 (18 Oct 2026)
+
+- **Cold outreach docs**: new `docs/COLD-OUTREACH.md`, the instruction file for anyone running cold email and LinkedIn outreach with Gojiberry (non-negotiable rules, how the tool works, MCP and REST tools, strategy for the Shopify Launch Sprint, sequences, daily and weekly workflow, LinkedIn limits, email deliverability, compliance, open checks). Linked from `AGENT.md`.
+- **Research**: `docs/research/gojiberry-ai-deep-research.md` (full study of Gojiberry.ai: product, signals, pricing, MCP and API, reviews, GDPR in Italy, pre-account plan) and `docs/research/gojiberry-setup-kit.md` (Workspace copy, ICP, signals, AI templates and prompts in Italian, sequences, sender limits, API payloads, day-0 checklist). No site change.
+
 ### Changelog v1.8.1 (17 Oct 2026)
 
 - **Sprint hero description**: the paragraph under the H1 now explains the offer in five short sentences (14 days, full team, what moves, checkout and visibility, support after launch on SEO, conversion, AOV and processes, results in 3 months with a custom dashboard, no surprises on costs) instead of quoting the two client results, which stay in the proof section. `hero.paragraph` in `content/zero-loss-migration.{it,en}.ts`.
