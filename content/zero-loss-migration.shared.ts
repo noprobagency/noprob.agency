@@ -135,6 +135,8 @@ export type ZlCopy = {
     closing: string
   }
   guarantees: { h2: string; sub: string; cards: { key: string; text: string }[]; line: string }
+  /** The "secret": the Custom AI theme and its superpowers, electric-blue card before the deliverables */
+  aiTheme: { label: string; h2: string; paragraph: string; powers: { title: string; text: string }[] }
   /** Results-first block: why 14 days (a whole team, every area in parallel) */
   resultsFirst: { label: string; h2: string; paragraph: string; areas: string[]; line: string }
   /** Mobile sticky CTA bar */

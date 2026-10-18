@@ -107,7 +107,7 @@ export default function ZlCalendar({
                 <span className="font-sans text-[12px] font-bold uppercase tracking-[0.06em] text-np-grey">{copy.after.dashboard.phase}</span>
                 <h4 className="font-sans text-[16px] font-bold leading-[1.3em] tracking-[-0.03em] text-np-dark">{copy.after.dashboard.title}</h4>
                 <p className="mt-1 font-sans text-[14px] font-medium leading-[1.5em] tracking-[-0.02em] text-np-grey">{copy.after.dashboard.detail}</p>
-                <ZlDashboardLink label={copy.after.dashboard.cta} position="proof" locale={locale} className="mt-3 self-start" />
+                <ZlDashboardLink label={copy.after.dashboard.cta} position="proof" locale={locale} className="mt-3 max-w-full self-start whitespace-normal text-center" />
               </li>
             </ol>
           </div>
