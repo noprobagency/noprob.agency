@@ -1,6 +1,6 @@
 /**
  * Electric-blue "AI" pill that marks a plus next to a deliverable title
- * (the Custom AI theme). Sparkle pulse and shimmer live in `.np-ai-badge`
+ * (the Custom AI System). Sparkle pulse and shimmer live in `.np-ai-badge`
  * in app/globals.css and stop under prefers-reduced-motion.
  */
 export default function ZlAiBadge({ label }: { label: string }) {

@@ -224,8 +224,8 @@ const it: MigrazioneCopy = {
     badge: 'AI powered',
     title: 'Shopify Launch Sprint:',
     titleEm: 'su Shopify in 14 giorni.',
-    text: 'Il metodo con cui migriamo: un team intero e il nostro Custom AI theme, con l’AI su ogni area nello stesso momento. Dati, redirect, tracking e checkout pronti in due settimane, con 4 garanzie scritte.',
-    points: ['Store pronto al giorno 14', 'Custom AI theme su misura', 'Prezzo fisso, 4 garanzie'],
+    text: 'Il metodo con cui migriamo: un team intero e il nostro Custom AI System, con l’AI su ogni area nello stesso momento. Dati, redirect, tracking e checkout pronti in due settimane, con 4 garanzie scritte.',
+    points: ['Store pronto al giorno 14', 'Custom AI System su misura', 'Prezzo fisso, 4 garanzie'],
     cta: 'Scopri lo sprint',
   },
   pricing: {
@@ -455,8 +455,8 @@ const en: MigrazioneCopy = {
     badge: 'AI powered',
     title: 'Shopify Launch Sprint:',
     titleEm: 'on Shopify in 14 days.',
-    text: 'The method we migrate with: a whole team and our Custom AI theme, with AI on every area at the same time. Data, redirects, tracking and checkout ready in two weeks, with 4 written guarantees.',
-    points: ['Store ready on day 14', 'Made-to-measure Custom AI theme', 'Fixed price, 4 guarantees'],
+    text: 'The method we migrate with: a whole team and our Custom AI System, with AI on every area at the same time. Data, redirects, tracking and checkout ready in two weeks, with 4 written guarantees.',
+    points: ['Store ready on day 14', 'Made-to-measure Custom AI System', 'Fixed price, 4 guarantees'],
     cta: 'Discover the sprint',
   },
   pricing: {

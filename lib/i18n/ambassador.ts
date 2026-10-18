@@ -335,7 +335,7 @@ const it: AmbassadorCopy = {
     includedTitle: 'Cosa è incluso',
     included: [
       'Data Migration Report: prodotti, varianti, clienti e storico ordini riconciliati al 100%',
-      'Store Shopify pronto a pubblicare: replica 1:1 su un Custom AI theme sviluppato su misura, bug corretti, flusso d’acquisto ottimizzato',
+      'Store Shopify pronto a pubblicare: replica 1:1 con il Custom AI System, sviluppato su misura, bug corretti, flusso d’acquisto ottimizzato',
       'Redirect Map 1:1: ogni URL vecchio mappato al nuovo e testato in automatico',
       'Tracking Spec e setup server-side: GA4, Meta CAPI, email, consent mode',
       'Go-live Checklist con la data scelta dal cliente (giorni 15-30), zero downtime',
@@ -950,7 +950,7 @@ const en: AmbassadorCopy = {
     includedTitle: 'What’s included',
     included: [
       'Data Migration Report: products, variants, customers and order history reconciled 100%',
-      'Shopify store ready to publish: 1:1 replica on a Custom AI theme built from scratch, bugs fixed, purchase flow optimized',
+      'Shopify store ready to publish: 1:1 replica with the Custom AI System, built from scratch, bugs fixed, purchase flow optimized',
       '1:1 Redirect Map: every old URL mapped to the new one and tested automatically',
       'Tracking Spec and server-side setup: GA4, Meta CAPI, email, consent mode',
       'Go-live Checklist with the date the client picks (days 15-30), zero downtime',

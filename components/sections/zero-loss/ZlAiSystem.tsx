@@ -23,11 +23,11 @@ function TurboIcon() {
 }
 
 /**
- * The "secret" block before the deliverables: the Custom AI theme and its
+ * The "secret" block before the deliverables: the Custom AI System and its
  * superpowers. Same dark card as ZlResultsFirst, in the electric blue of the
  * AI badge (#1f5bff / #7f9cff), with glows and a grid of power cards.
  */
-export default function ZlAiTheme({ copy }: { copy: ZlCopy['aiTheme'] }) {
+export default function ZlAiSystem({ copy }: { copy: ZlCopy['aiSystem'] }) {
   // Two sentences, two lines from 810px: "Non un semplice redesign." / the claim.
   const cut = copy.h2.indexOf('. ')
   const lead = cut === -1 ? '' : copy.h2.slice(0, cut + 2)

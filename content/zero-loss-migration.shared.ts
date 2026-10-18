@@ -93,7 +93,7 @@ export type ZlCopy = {
     paragraph: string
     cta: string
     deliverablesTitle: string
-    /** `badge` marks a plus (e.g. the Custom AI theme) with the electric-blue AI pill next to the title */
+    /** `badge` marks a plus (e.g. the Custom AI System) with the electric-blue AI pill next to the title */
     deliverables: { title: string; line: string; badge?: string }[]
     afterLine: string
     pricingTitle: string
@@ -135,8 +135,8 @@ export type ZlCopy = {
     closing: string
   }
   guarantees: { h2: string; sub: string; cards: { key: string; text: string }[]; line: string }
-  /** The "secret": the Custom AI theme and its superpowers, electric-blue card before the deliverables */
-  aiTheme: { label: string; h2: string; paragraph: string; powers: { title: string; text: string }[] }
+  /** The "secret": the Custom AI System and its superpowers, electric-blue card before the deliverables */
+  aiSystem: { label: string; h2: string; paragraph: string; powers: { title: string; text: string }[] }
   /** Results-first block: why 14 days (a whole team, every area in parallel) */
   resultsFirst: { label: string; h2: string; paragraph: string; areas: string[]; line: string }
   /** Mobile sticky CTA bar */

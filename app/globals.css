@@ -1044,7 +1044,7 @@
   .np-spark { animation: none; opacity: 0.6; }
 }
 
-/* Sprint "Custom AI theme" plus: electric-blue pill, pulsing sparkle, slow shimmer.
+/* Sprint "Custom AI System" plus: electric-blue pill, pulsing sparkle, slow shimmer.
    Lighter blue inside dark sections ([data-header-theme="dark"]). */
 .np-ai-badge {
   --np-ai: #1f5bff;
