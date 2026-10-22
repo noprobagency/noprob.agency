@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.19.0 (22 Oct 2026)
+
+- **`/cold` skill**: campaigns named Ada (Sprint Global, EN) and Leonardo (Sprint Italia), full sequence with the two email steps and the 7-day email fallback, pointer to the local LIA draft.
+
 ### Changelog v1.18.0 (22 Oct 2026)
 
 - **Daily cold outreach routine, no AI**: `scripts/cold-daily.mjs` runs Monday to Friday at 8:00 (macOS launchd, before Gojiberry's 9:00 launch) against the Gojiberry REST API. For new leads in the Sprint lists it moves stores already on Shopify to the side-project segment, moves Italian leads found by the EN agent to the IT list, and approves up to 10 leads per campaign with fixed rules (not Shopify, reachable site matching the company, decision-maker title, total score 2.0 or more, one person per company). One line per run in `docs/cold/daily-log.md`; leads left for a human in `docs/cold/daily-state.json` (gitignored). API key from the env or the macOS Keychain item `gojiberry-api`. `--dry` previews without writing.
