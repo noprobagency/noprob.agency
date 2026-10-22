@@ -4,6 +4,11 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.18.0 (22 Oct 2026)
+
+- **Daily cold outreach routine, no AI**: `scripts/cold-daily.mjs` runs Monday to Friday at 8:00 (macOS launchd, before Gojiberry's 9:00 launch) against the Gojiberry REST API. For new leads in the Sprint lists it moves stores already on Shopify to the side-project segment, moves Italian leads found by the EN agent to the IT list, and approves up to 10 leads per campaign with fixed rules (not Shopify, reachable site matching the company, decision-maker title, total score 2.0 or more, one person per company). One line per run in `docs/cold/daily-log.md`; leads left for a human in `docs/cold/daily-state.json` (gitignored). API key from the env or the macOS Keychain item `gojiberry-api`. `--dry` previews without writing.
+- **Shared helpers**: `lib/cold/fetch-platform.mjs` (fetch + detect, concurrency pool), `isPersonalSite` and `siteMatchesCompany` in `lib/cold/detect-platform.mjs`, with tests.
+
 ### Changelog v1.17.0 (22 Oct 2026)
 
 - **`/cold` skill, live campaigns**: the skill now lists the live Gojiberry objects (EN and IT campaigns, lists, agents, Shopify side-project segment, LinkedIn seat), the short links, the rule that agent signals are edited only via MCP, and the daily approval routine under Review Mode (non Shopify, decision makers, one person per company, Italian leads to the IT list, weekly batches by score).

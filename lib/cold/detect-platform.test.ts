@@ -1,5 +1,19 @@
 import { describe, expect, it } from 'vitest'
-import { detectPlatform, normaliseUrl } from './detect-platform.mjs'
+import { detectPlatform, isPersonalSite, normaliseUrl, siteMatchesCompany } from './detect-platform.mjs'
+
+describe('lead site checks', () => {
+  it('flags personal sites', () => {
+    expect(isPersonalSite('Leighton', 'https://www.simonleighton.com/')).toBe(true)
+    expect(isPersonalSite('Tate', 'https://www.flooringsuperstore.com/')).toBe(false)
+  })
+
+  it('matches the store domain with the company name', () => {
+    expect(siteMatchesCompany('Flooring Superstore', 'https://www.flooringsuperstore.com/')).toBe(true)
+    expect(siteMatchesCompany('Harry Hall International Ltd', 'https://www.harryhall.com/')).toBe(true)
+    expect(siteMatchesCompany('Pulse Light Clinic', 'https://www.protectormascotas.com/')).toBe(false)
+    expect(siteMatchesCompany('Unique Health Products', 'http://www.debtrescue.com.au/')).toBe(false)
+  })
+})
 
 describe('detectPlatform', () => {
   it('detects Shopify from the CDN and from headers', () => {
