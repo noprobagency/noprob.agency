@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.17.0 (22 Oct 2026)
+
+- **`/cold` skill, live campaigns**: the skill now lists the live Gojiberry objects (EN and IT campaigns, lists, agents, Shopify side-project segment, LinkedIn seat), the short links, the rule that agent signals are edited only via MCP, and the daily approval routine under Review Mode (non Shopify, decision makers, one person per company, Italian leads to the IT list, weekly batches by score).
+
 ### Changelog v1.16.0 (22 Oct 2026)
 
 - **Italian short links for cold outreach**: `noprob.agency/it/sprint` (LinkedIn) and `noprob.agency/it/ai-ready` (email) redirect (307) to the Italian Sprint landing with `utm_source=gojiberry`, `utm_medium=linkedin|email`, `utm_campaign=sprint-it`.

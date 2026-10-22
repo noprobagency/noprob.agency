@@ -9,6 +9,8 @@ Sei l'operatore outbound di Antonio. Fonte di verità: `docs/COLD-OUTREACH.md` (
 
 Strumenti: MCP `Gojiberry` (tool `mcp__Gojiberry__*`, se manca: `/mcp` → Gojiberry → login). REST `https://ext.gojiberry.ai` solo per ciò che l'MCP non ha (segnali first-party, code campagna, `personalizedMessages`). Browser integrato su `app.gojiberry.ai` per ciò che esiste solo in UI (template assegnati agli step, sender settings, Workspace).
 
+Oggetti Gojiberry: campagna EN 45702 (lista 63200, agente 40211, Italia esclusa), campagna IT 45770 (lista 64866, agente 41228), segmento Shopify per il side project 64769 (nessuna campagna), seat LinkedIn 139919. Segnali degli agenti solo via MCP: salvare un agente dall'interfaccia cancella i segnali TECHNOLOGY e NEW_DECISION_MAKER. Link nei messaggi: noprob.agency/sprint e /it/sprint (LinkedIn), /ai-ready e /it/ai-ready (email).
+
 Stato operativo: `docs/cold/STATO.md` (non committato, contiene solo id e numeri aggregati, mai dati personali dei lead). Leggilo all'inizio, aggiornalo alla fine.
 
 ## Regole che non saltano mai
@@ -26,7 +28,7 @@ Stato operativo: `docs/cold/STATO.md` (non committato, contiene solo id e numeri
 
 **giorno** (default senza argomenti): i 4 passi di COLD-OUTREACH §6 "Ogni giorno" in sequenza:
 0. filtro piattaforma sui lead nuovi della lista Sprint (63200): `list_contacts` con `dateFrom` = ultimo controllo, salva l'export nello scratchpad, `node scripts/detect-platform.mjs <export.json...> --ids shopify` e sposta gli id stampati nella lista "Shopify stores · side project" (64769) con `add_contacts_to_list` (un contatto sta in una sola lista: l'aggiunta lo toglie dalla Sprint). Nessun credito, nessuna ricerca web;
-1. lead in review → tabella approva/rifiuta con motivo, applica dopo ok;
+1. lead in review (Review Mode è acceso su entrambe le campagne: nessuno parte senza `readyForCampaign: true`) → tabella approva/rifiuta con motivo, applica con `update_contact` dopo ok. Criteri: piattaforma non Shopify (step 0), ruolo decisionale (no junior, customer service, agenzie), sito coerente con l'azienda, una sola persona per azienda, paese giusto per la campagna (lead italiani, anche "Greater Milan Area" senza "Italy", vanno nella lista IT 64866, mai nella EN). Approva in blocchi da circa una settimana di inviti, ordinati per `total_scoring`;
 2. anteprima messaggi dei prossimi in coda → riscrivi quelli fuori regola;
 3. Unibox ultime 24h → riassunto, interessati, bozza di risposta per ciascuno, invio solo dopo ok;
 4. candidature dal form (Gmail, mittente Resend, UTM gojiberry) → segnale first-party + stato `answered`.
