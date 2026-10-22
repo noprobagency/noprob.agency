@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.15.0 (22 Oct 2026)
+
+- **Curiosity short link for cold emails**: `noprob.agency/ai-ready` replaces `/sprint-mail` (never used in a message): same 307 to the Shopify Launch Sprint landing with `utm_source=gojiberry&utm_medium=email&utm_campaign=sprint-en`. `/sprint` stays for LinkedIn.
+
 ### Changelog v1.14.0 (22 Oct 2026)
 
 - **Short links for cold outreach**: `noprob.agency/sprint` and `noprob.agency/sprint-mail` redirect (307, temporary) to the Shopify Launch Sprint landing with the Gojiberry UTMs (`utm_source=gojiberry`, `utm_medium=linkedin` or `email`, `utm_campaign=sprint-en`), so LinkedIn messages and emails carry a short, readable link and the form still receives the UTMs. Defined in `next.config.ts`.
