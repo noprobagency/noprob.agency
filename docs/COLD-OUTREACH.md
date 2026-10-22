@@ -76,6 +76,7 @@ Template L1-L4, E1-E2, nota d'invito, nota vocale, AI Draft Reply e messaggi fis
 ## 6. Workflow operativo
 
 **Ogni giorno (10 minuti, tu prepari, Antonio decide)**
+0. Filtro piattaforma sui lead nuovi: export con `list_contacts`, poi `node scripts/detect-platform.mjs <export.json> --ids shopify` (una richiesta per dominio, niente crediti né ricerche web). Chi è già su Shopify non compra lo Sprint: va nella lista "Shopify stores · side project", fuori dalla campagna. Il filtro ICP di Gojiberry legge solo LinkedIn e non vede la piattaforma (22 ottobre 2026: 149 lead su 301 erano già su Shopify).
 1. `list_contacts` filtrati sui lead in attesa di review: per ciascuno proponi approva o rifiuta con il motivo (fit ICP, piattaforma, ruolo, segnale). Applica con `update_contact` (`readyForCampaign`) o `reject_contact` dopo ok.
 2. Anteprima dei messaggi dei prossimi lead in coda (`get_campaign`, `personalizedMessages` via REST): riscrivi quelli che violano la sezione 1.5 e salva.
 3. `list_unibox_threads` delle ultime 24 ore: riassumi, segna gli interessati, proponi una risposta per ciascuno (regole AI Draft Reply nel kit). Invia solo dopo ok.
@@ -101,7 +102,7 @@ Template L1-L4, E1-E2, nota d'invito, nota vocale, AI Draft Reply e messaggi fis
 | Messaggi / giorno | 15 | 25 | 35 |
 | Visite / giorno | 25 | 40 | 60 |
 
-Lun-ven, lancio 9:00 Europe/Rome, proxy Italia (Settings → Senders → Country), ~100 inviti/settimana è il tetto per un account standard (100-180 con Sales Navigator forte), > 500 inviti pendenti è un flag, restrizioni temporanee durano 24-72 ore. Connessione consigliata: Infinite Login con 2FA via app authenticator. Prerequisiti: profilo completo, attività manuale settimanale, nessun altro tool.
+Lun-ven, lancio 9:00 Europe/Lisbon, proxy Portogallo perché Antonio si collega da Lisbona (Settings → Senders → Country: il proxy segue il paese da cui accede il titolare, non quello dei lead), ~100 inviti/settimana è il tetto per un account standard (100-180 con Sales Navigator forte), > 500 inviti pendenti è un flag, restrizioni temporanee durano 24-72 ore. Connessione consigliata: Infinite Login con 2FA via app authenticator. Prerequisiti: profilo completo, attività manuale settimanale, nessun altro tool.
 
 ## 8. Email: deliverability
 
