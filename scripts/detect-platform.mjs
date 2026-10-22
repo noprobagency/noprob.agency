@@ -10,7 +10,8 @@
 // Options: --concurrency 16  --timeout 10000
 
 import { readFileSync, writeFileSync } from 'node:fs'
-import { detectPlatform, normaliseUrl } from '../lib/cold/detect-platform.mjs'
+import { isPersonalSite, normaliseUrl } from '../lib/cold/detect-platform.mjs'
+import { fetchPlatform, pool } from '../lib/cold/fetch-platform.mjs'
 
 const args = process.argv.slice(2)
 const opt = (name, fallback) => {
@@ -38,17 +39,10 @@ for (const file of files) {
   }
 }
 
-// Gojiberry's `website` is sometimes the person's own site (johnsmith.com), not the store.
-const squash = (s) => (s || '').toLowerCase().replace(/[^a-z0-9]/g, '')
-const isPersonalSite = (lead, url) => {
-  const last = squash(lead.lastName)
-  return last.length > 2 && squash(new URL(url).hostname.replace(/^www\./, '').split('.')[0]).includes(last)
-}
-
 const byDomain = new Map()
 for (const lead of leads) {
   const url = normaliseUrl(lead.website)
-  if (url && isPersonalSite(lead, url)) {
+  if (url && isPersonalSite(lead.lastName, url)) {
     lead.personal = true
     continue
   }
@@ -56,33 +50,8 @@ for (const lead of leads) {
   if (url && !byDomain.has(url)) byDomain.set(url, null)
 }
 
-async function check(url) {
-  const ctrl = new AbortController()
-  const timer = setTimeout(() => ctrl.abort(), timeout)
-  try {
-    const res = await fetch(url, {
-      redirect: 'follow',
-      signal: ctrl.signal,
-      headers: { 'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Chrome/128 Safari/537.36' },
-    })
-    const html = (await res.text()).slice(0, 500_000)
-    return { ...detectPlatform(html, Object.fromEntries(res.headers)), status: res.status, error: null }
-  } catch (err) {
-    return { platform: 'unreachable', evidence: null, status: null, error: err.name === 'AbortError' ? 'timeout' : err.message }
-  } finally {
-    clearTimeout(timer)
-  }
-}
-
-const queue = [...byDomain.keys()]
-await Promise.all(
-  Array.from({ length: Math.min(concurrency, queue.length) }, async () => {
-    while (queue.length) {
-      const url = queue.shift()
-      byDomain.set(url, await check(url))
-    }
-  }),
-)
+const checked = await pool([...byDomain.keys()], concurrency, (url) => fetchPlatform(url, { timeout }))
+for (const [url, r] of checked) byDomain.set(url, r)
 
 const results = leads.map((lead) => ({
   id: lead.id,
