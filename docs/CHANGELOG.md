@@ -4,6 +4,12 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.13.0 (22 Oct 2026)
+
+- **Cold outreach platform detector**: `scripts/detect-platform.mjs` reads Gojiberry contact exports, fetches each store homepage once (16 in parallel, 10 s timeout) and detects the platform from HTML and headers (`lib/cold/detect-platform.mjs`, tested in `lib/cold/detect-platform.test.ts`): Shopify, Salesforce Commerce Cloud, Magento, WooCommerce, PrestaShop, BigCommerce, Shopware, Wix, Squarespace, Webflow, WordPress. Flags personal sites (domain contains the lead's last name) and unreachable ones. `--ids shopify` prints the contact ids to move out of the Sprint campaign. First run: 301 leads, 271 domains, 56 seconds, 149 already on Shopify.
+- **`/cold` skill** (`.claude/skills/cold/SKILL.md`): the session's outbound operator for Gojiberry (setup, daily review, replies, Friday report), with the platform filter as step 0 of the daily routine. Operating state lives in `docs/cold/` (gitignored, never lead data in the repo).
+- **Docs**: `docs/COLD-OUTREACH.md` daily routine starts with the platform filter; LinkedIn proxy is Portugal, where Antonio logs in from.
+
 ### Changelog v1.12.0 (18 Oct 2026)
 
 - **Custom AI theme renamed Custom AI System, everywhere**: Sprint landing IT and EN (meta description, hero description, overview, deliverable badge and detail, blue section label, scope, FAQ, application page), migration page banner (`lib/i18n/migrazione.ts`), ambassador playbook (`lib/i18n/ambassador.ts`), `llms.txt`, Gojiberry setup kit. Prepositions follow the new name ("con il nostro Custom AI System" / "with our Custom AI System"). The blue section paragraph now ends "Compatto e forte, con sei superpoteri." / "Compact and powerful, with six superpowers." to avoid "System... un sistema".
