@@ -26,6 +26,8 @@ const nextConfig: NextConfig = {
       // Short links for cold outreach (Gojiberry): readable in a LinkedIn message or an email,
       // UTMs added here. Temporary (307) so the destination can change without browser caches.
       { source: '/sprint', destination: '/shopify-migration-sprint?utm_source=gojiberry&utm_medium=linkedin&utm_campaign=sprint-en', permanent: false },
+      { source: '/it/sprint', destination: '/it/sprint-migrazione-shopify?utm_source=gojiberry&utm_medium=linkedin&utm_campaign=sprint-it', permanent: false },
+      { source: '/it/ai-ready', destination: '/it/sprint-migrazione-shopify?utm_source=gojiberry&utm_medium=email&utm_campaign=sprint-it', permanent: false },
       { source: '/ai-ready', destination: '/shopify-migration-sprint?utm_source=gojiberry&utm_medium=email&utm_campaign=sprint-en', permanent: false },
       // Shopify Launch Sprint landing renamed (zero-loss-migration -> sprint slugs)
       { source: '/zero-loss-migration', destination: '/shopify-migration-sprint', permanent: true },
