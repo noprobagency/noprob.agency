@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.14.0 (22 Oct 2026)
+
+- **Short links for cold outreach**: `noprob.agency/sprint` and `noprob.agency/sprint-mail` redirect (307, temporary) to the Shopify Launch Sprint landing with the Gojiberry UTMs (`utm_source=gojiberry`, `utm_medium=linkedin` or `email`, `utm_campaign=sprint-en`), so LinkedIn messages and emails carry a short, readable link and the form still receives the UTMs. Defined in `next.config.ts`.
+
 ### Changelog v1.13.0 (22 Oct 2026)
 
 - **Cold outreach platform detector**: `scripts/detect-platform.mjs` reads Gojiberry contact exports, fetches each store homepage once (16 in parallel, 10 s timeout) and detects the platform from HTML and headers (`lib/cold/detect-platform.mjs`, tested in `lib/cold/detect-platform.test.ts`): Shopify, Salesforce Commerce Cloud, Magento, WooCommerce, PrestaShop, BigCommerce, Shopware, Wix, Squarespace, Webflow, WordPress. Flags personal sites (domain contains the lead's last name) and unreachable ones. `--ids shopify` prints the contact ids to move out of the Sprint campaign. First run: 301 leads, 271 domains, 56 seconds, 149 already on Shopify.
