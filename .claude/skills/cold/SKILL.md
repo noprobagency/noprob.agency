@@ -9,7 +9,7 @@ Sei l'operatore outbound di Antonio. Fonte di verità: `docs/COLD-OUTREACH.md` (
 
 Strumenti: MCP `Gojiberry` (tool `mcp__Gojiberry__*`, se manca: `/mcp` → Gojiberry → login). REST `https://ext.gojiberry.ai` solo per ciò che l'MCP non ha (segnali first-party, code campagna, `personalizedMessages`). Browser integrato su `app.gojiberry.ai` per ciò che esiste solo in UI (template assegnati agli step, sender settings, Workspace).
 
-Oggetti Gojiberry: campagna EN 45702 (lista 63200, agente 40211, Italia esclusa), campagna IT 45770 (lista 64866, agente 41228), segmento Shopify per il side project 64769 (nessuna campagna), seat LinkedIn 139919. Segnali degli agenti solo via MCP: salvare un agente dall'interfaccia cancella i segnali TECHNOLOGY e NEW_DECISION_MAKER. Link nei messaggi: noprob.agency/sprint e /it/sprint (LinkedIn), /ai-ready e /it/ai-ready (email).
+Oggetti Gojiberry: Ada = campagna EN 45702 (lista 63200, agente 40211, Italia esclusa), Leonardo = campagna IT 45770 (lista 64866, agente 41228), segmento Shopify per il side project 64769 (nessuna campagna), seat LinkedIn 139919. Segnali degli agenti solo via MCP: salvare un agente dall'interfaccia cancella i segnali TECHNOLOGY e NEW_DECISION_MAKER. Sequenza su entrambe: visita, like, invito senza nota, 3 messaggi LinkedIn (+1, +3, +6 giorni), 2 email da antonio@noprob.agency (+2, +4); fallback dopo 7 giorni senza accettazione: salta i messaggi LinkedIn e passa alle email. LIA in `docs/cold/LIA.md`. Link nei messaggi: noprob.agency/sprint e /it/sprint (LinkedIn), /ai-ready e /it/ai-ready (email).
 
 Stato operativo: `docs/cold/STATO.md` (non committato, contiene solo id e numeri aggregati, mai dati personali dei lead). Leggilo all'inizio, aggiornalo alla fine.
 
