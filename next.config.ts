@@ -29,6 +29,9 @@ const nextConfig: NextConfig = {
       { source: '/it/sprint', destination: '/it/sprint-migrazione-shopify?utm_source=gojiberry&utm_medium=linkedin&utm_campaign=sprint-it', permanent: false },
       { source: '/it/ai-ready', destination: '/it/sprint-migrazione-shopify?utm_source=gojiberry&utm_medium=email&utm_campaign=sprint-it', permanent: false },
       { source: '/ai-ready', destination: '/shopify-migration-sprint?utm_source=gojiberry&utm_medium=email&utm_campaign=sprint-en', permanent: false },
+      // Direct cold email from antonio@ (cold-email/README.md), kept apart from Gojiberry in analytics
+      { source: '/it/migra', destination: '/it/sprint-migrazione-shopify?utm_source=cold-email&utm_medium=email&utm_campaign=sprint-it-direct', permanent: false },
+      { source: '/migrate', destination: '/shopify-migration-sprint?utm_source=cold-email&utm_medium=email&utm_campaign=sprint-en-direct', permanent: false },
       // Shopify Launch Sprint landing renamed (zero-loss-migration -> sprint slugs)
       { source: '/zero-loss-migration', destination: '/shopify-migration-sprint', permanent: true },
       { source: '/zero-loss-migration/apply', destination: '/shopify-migration-sprint/apply', permanent: true },
