@@ -6,7 +6,8 @@ Rules for anyone (human or agent) working on `noprob.agency`. Architecture is in
 [docs/dati-verificati.md](docs/dati-verificati.md). Read those before touching
 copy, routes or tracking. Cold email and LinkedIn outreach with Gojiberry (rules, MCP tools,
 sequences, limits, compliance) are in [docs/COLD-OUTREACH.md](docs/COLD-OUTREACH.md): read it before
-any outbound work.
+any outbound work. The direct cold email channel (email only from antonio@, its own
+rules, engine and CRM) is in [cold-email/README.md](cold-email/README.md).
 
 ## Project context
 

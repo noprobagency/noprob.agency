@@ -4,6 +4,13 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.21.0 (23 Oct 2026)
+
+- **Direct cold email channel** (`cold-email/README.md`): email only, from antonio@noprob.agency, in parallel with Gojiberry and never on the same store domains (read-only check of the Sprint lists). Five emails in one Gmail thread on working days 0, 3, 7, 12, 18, stopped for good by a human reply or a bounce (out of office does not stop it). First email for stores on PHP platforms uses the CERT-EU advisory 2026-018 (PHP2Shell, 21 Oct 2026) and names the PHP version only when the store's server exposes it. Copy in `lib/cold-email/sequence.mjs`, sent only when its version is approved in the local config.
+- **Engine, no AI**: `scripts/cold-email-import.mjs` (old CRM leads, fresh platform and PHP check, segments target / warm / shopify / review / suppressed, one lead per domain), `scripts/cold-email-daily.mjs` (replies and bounces, sends due steps with a daily cap and random gaps, Gmail API with Keychain credentials, launchd Mon-Fri 9:30 via `cold-email/agency.noprob.cold-email.plist`), `scripts/cold-email-auth.mjs` (one-time OAuth), `scripts/cold-email-crm.mjs` (export to the private CRM repo, which now shows a single simple page; the old CRM moved to `/v2`). Lead data in `cold-email/data/` (gitignored).
+- **Platform detector reads PHP**: `phpVersion` (X-Powered-By) and `phpStatus` against the first fixed release per branch, with tests.
+- **Short links for the direct channel**: `noprob.agency/it/migra` and `/migrate` (307 to the Sprint landings with `utm_source=cold-email`).
+
 ### Changelog v1.20.0 (23 Oct 2026)
 
 - **Cold routine, one person per company**: `scripts/cold-daily.mjs` now groups leads by the LinkedIn company page (fallback: the company name without domain suffix), so "Semprefarmacia" and "Semprefarmacia.it" count as the same company and only one person enters the sequence.
