@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { detectPlatform, isPersonalSite, normaliseUrl, siteMatchesCompany } from './detect-platform.mjs'
+import { detectPlatform, isPersonalSite, normaliseUrl, phpStatus, phpVersion, siteMatchesCompany } from './detect-platform.mjs'
 
 describe('lead site checks', () => {
   it('flags personal sites', () => {
@@ -42,5 +42,21 @@ describe('normaliseUrl', () => {
     expect(normaliseUrl('example.com/shop?x=1')).toBe('https://example.com/')
     expect(normaliseUrl('https://www.linkedin.com/company/x')).toBeNull()
     expect(normaliseUrl('')).toBeNull()
+  })
+})
+
+describe('PHP version (CERT-EU 2026-018)', () => {
+  it('reads the version from X-Powered-By', () => {
+    expect(phpVersion({ 'X-Powered-By': 'PHP/7.4.33' })).toBe('7.4.33')
+    expect(phpVersion({ 'x-powered-by': 'W3 Total Cache' })).toBe(null)
+    expect(phpVersion({})).toBe(null)
+  })
+
+  it('classifies versions against the first fixed release', () => {
+    expect(phpStatus('8.3.35')).toBe('vulnerable')
+    expect(phpStatus('8.3.36')).toBe('patched')
+    expect(phpStatus('8.5.12')).toBe('patched')
+    expect(phpStatus('8.1.30')).toBe('eol')
+    expect(phpStatus('7.4.33')).toBe('eol')
   })
 })

@@ -50,3 +50,6 @@ pnpm
 
 # Stato operativo outbound Gojiberry (id e numeri aggregati, locale)
 docs/cold/
+
+# Direct cold email: lead data, send log (personal data, local only)
+cold-email/data/
