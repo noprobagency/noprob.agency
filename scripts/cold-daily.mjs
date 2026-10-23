@@ -66,6 +66,12 @@ async function listContacts(listId) {
   return all
 }
 
+// One person per company: the LinkedIn company page is the stable key, names vary
+// ("Semprefarmacia" vs "Semprefarmacia.it").
+const companyKey = (c) =>
+  (c.companyUrl || '').toLowerCase().replace(/\/+$/, '') ||
+  (c.company || '').toLowerCase().replace(/\.(it|com|co\.uk|de|fr|es|nl|eu|shop|store)$/, '').replace(/[^a-z0-9]/g, '')
+
 const state = existsSync(STATE) ? JSON.parse(readFileSync(STATE, 'utf8')) : { processed: [], held: [] }
 const processed = new Set(state.processed)
 const held = new Set(state.held || [])
@@ -76,7 +82,7 @@ const approvals = []
 for (const key of ['en', 'it']) {
   const contacts = await listContacts(LISTS[key])
   const busyCompanies = new Set(
-    contacts.filter((c) => c.readyForCampaign || c.hasStartedCampaign).map((c) => (c.company || '').toLowerCase()),
+    contacts.filter((c) => c.readyForCampaign || c.hasStartedCampaign).map(companyKey),
   )
   const fresh = contacts.filter(
     (c) => !processed.has(c.id) && !c.readyForCampaign && !c.hasStartedCampaign && !c.rejectedAt && !c.state,
@@ -120,7 +126,7 @@ for (const key of ['en', 'it']) {
 
   candidates.sort((a, b) => Number(b.total_scoring) - Number(a.total_scoring))
   for (const c of candidates) {
-    const company = (c.company || '').toLowerCase()
+    const company = companyKey(c)
     if (busyCompanies.has(company)) {
       stats.held++ // same company already in sequence: one person per company
       processed.add(c.id)
