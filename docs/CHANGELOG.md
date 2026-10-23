@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.20.0 (23 Oct 2026)
+
+- **Cold routine, one person per company**: `scripts/cold-daily.mjs` now groups leads by the LinkedIn company page (fallback: the company name without domain suffix), so "Semprefarmacia" and "Semprefarmacia.it" count as the same company and only one person enters the sequence.
+
 ### Changelog v1.19.0 (22 Oct 2026)
 
 - **`/cold` skill**: campaigns named Ada (Sprint Global, EN) and Leonardo (Sprint Italia), full sequence with the two email steps and the 7-day email fallback, pointer to the local LIA draft.
