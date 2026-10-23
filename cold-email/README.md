@@ -44,9 +44,9 @@ node scripts/cold-email-auth.mjs <client_secret.json>    # una volta: collega Gm
 
 ## Automazione
 
-- `scripts/cold-email-daily.mjs` gira lun-ven alle 9:30 Europe/Lisbon (launchd `agency.noprob.cold-email`, file in `cold-email/agency.noprob.cold-email.plist`). Gojiberry manda le sue email alle 9:00 dalla stessa casella.
+- `scripts/cold-email-daily.mjs` gira lun-ven alle 9:30 Europe/Lisbon (launchd `agency.noprob.cold-email`, file in `cold-email/agency.noprob.cold-email.plist`) e distribuisce gli invii fino alle 17:30 ora italiana (`--until`), con `caffeinate` perché il Mac non vada in stop durante il giro. Gojiberry manda le sue email alle 9:00 dalla stessa casella.
 - Gmail API, non il Gmail MCP: l'MCP funziona solo dentro una sessione Claude, lo script deve girare da solo. Credenziali nel Portachiavi (`cold-email-gmail-client`, `cold-email-gmail-token`).
-- **Budget casella**: antonio@noprob.agency al massimo 55 email al giorno in tutto (Gojiberry fino a 25, questo canale, email manuali). Lo script conta le email già inviate oggi dalla casella e tiene una riserva per quelle a mano (`mailboxMax` 55, `manualReserve` 10). Tetto del canale `dailyCap`: 10 nelle prime due settimane (casella in warm-up dal 18 ottobre), poi 20; oltre si passa alla seconda casella hello@noprob.agency. Pausa casuale tra un invio e l'altro (`gapSeconds`).
+- **Budget casella**: antonio@noprob.agency al massimo 55 email al giorno in tutto (Gojiberry fino a 25, questo canale, email manuali). Lo script conta le email già inviate oggi dalla casella e tiene una riserva per quelle a mano (`mailboxMax` 55, `manualReserve` 10). Tetto del canale `dailyCap` (solo sulle **nuove prime email**: i follow-up partono sempre nel loro giorno, limitati solo dal budget della casella): 10 nelle prime due settimane (casella in warm-up dal 18 ottobre), poi 20; oltre si passa alla seconda casella hello@noprob.agency. Pausa casuale tra un invio e l'altro (`gapSeconds`).
 - Log: una riga al giorno in `cold-email/data/log.md`. CRM: https://crm-noprob.vercel.app (vecchio CRM in `/v2`).
 
 ## In sessione con Claude
