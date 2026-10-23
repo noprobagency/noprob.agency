@@ -8,7 +8,7 @@ Valgono qui e solo qui; Gojiberry tiene le sue.
 
 1. **Mittente**: antonio@noprob.agency (non è la casella personale di Antonio, che è hello@antoniomanitta.it). hello@noprob.agency è pronta come seconda casella per quando il volume sale.
 2. **Sequenza di 5 email** nello stesso thread, giorni lavorativi 0, 3, 7, 12, 18. Si ferma per sempre alla prima risposta umana o al primo bounce; le risposte automatiche (fuori ufficio) non la fermano.
-3. **Chi dice no non si riscrive mai**: segmento `suppressed`. Ogni prima email chiude con la riga "PS se non ti interessa scrivimi no e chiudo qui".
+3. **Chi dice no non si riscrive mai, su nessun canale** (regola del legale): segmento `suppressed`. Lista condivisa con Gojiberry `docs/cold/suppressed.txt` (gitignored, una email o `@dominio` per riga): lo script non scrive a nessuno che ci sia dentro e ci aggiunge chi dice no qui; lo sweep orario di Gojiberry la legge. Ogni prima email chiude con la riga "PS se non ti interessa scrivimi no e chiudo qui".
 4. **Mai due canali sullo stesso store**: ogni domani lo script legge (solo GET) le liste Sprint di Gojiberry, Ada 63200 e Leonardo 64866, e salta i domini che Gojiberry sta già lavorando. Questo canale non scrive mai su Gojiberry.
 5. **Un lead per dominio**: una persona con nome vince su info@.
 6. **Fonti**: vecchio CRM (aprile-agosto 2026) e, da qui in avanti, liste costruite fuori da Gojiberry (scraping consentito in questo canale). Ogni sito passa dal controllo piattaforma prima di entrare.
@@ -46,7 +46,7 @@ node scripts/cold-email-auth.mjs <client_secret.json>    # una volta: collega Gm
 
 - `scripts/cold-email-daily.mjs` gira lun-ven alle 9:30 Europe/Lisbon (launchd `agency.noprob.cold-email`, file in `cold-email/agency.noprob.cold-email.plist`). Gojiberry manda le sue email alle 9:00 dalla stessa casella.
 - Gmail API, non il Gmail MCP: l'MCP funziona solo dentro una sessione Claude, lo script deve girare da solo. Credenziali nel Portachiavi (`cold-email-gmail-client`, `cold-email-gmail-token`).
-- Tetto giornaliero in `config.json` (`dailyCap`, partenza 20, poi 30, poi la seconda casella), pausa casuale tra un invio e l'altro (`gapSeconds`).
+- **Budget casella**: antonio@noprob.agency al massimo 55 email al giorno in tutto (Gojiberry fino a 25, questo canale, email manuali). Lo script conta le email già inviate oggi dalla casella e tiene una riserva per quelle a mano (`mailboxMax` 55, `manualReserve` 10). Tetto del canale `dailyCap`: 10 nelle prime due settimane (casella in warm-up dal 18 ottobre), poi 20; oltre si passa alla seconda casella hello@noprob.agency. Pausa casuale tra un invio e l'altro (`gapSeconds`).
 - Log: una riga al giorno in `cold-email/data/log.md`. CRM: https://crm-noprob.vercel.app (vecchio CRM in `/v2`).
 
 ## In sessione con Claude

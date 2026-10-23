@@ -13,6 +13,7 @@ import { normaliseUrl } from '../lib/cold/detect-platform.mjs'
 import { fetchPlatform, pool } from '../lib/cold/fetch-platform.mjs'
 import { gojiberryDomains } from '../lib/cold-email/gojiberry.mjs'
 import { domainOf, excludeDomains, fromCrm, onePerDomain } from '../lib/cold-email/leads.mjs'
+import { appendSuppressed, applySuppressed, readSuppressed, refusals } from '../lib/cold-email/suppression.mjs'
 
 const OUT = 'cold-email/data/leads.json'
 
@@ -49,12 +50,16 @@ if (existsSync(OUT)) {
   })
 }
 
+// Shared opt-out list: listed leads are out, our refusals go in.
+leads = applySuppressed(leads, readSuppressed())
+const added = appendSuppressed(refusals(leads), 'no / opt-out nel vecchio CRM')
+
 mkdirSync('cold-email/data', { recursive: true })
 writeFileSync(OUT, JSON.stringify({ updatedAt: new Date().toISOString(), leads }, null, 2))
 
 const count = (items, key) => items.reduce((acc, l) => ({ ...acc, [l[key]]: (acc[l[key]] || 0) + 1 }), {})
 const targets = leads.filter((l) => l.segment === 'target')
 console.log(`${leads.length} leads, ${domains.length} domains -> ${OUT}`)
-console.log('segments', count(leads, 'segment'))
+console.log('segments', count(leads, 'segment'), `· ${added} new in docs/cold/suppressed.txt`)
 console.log('target platforms', count(targets, 'platform'), 'languages', count(targets, 'lang'))
 console.log('target PHP exposed', targets.filter((l) => l.php).map((l) => l.php).join(' ') || 'none')

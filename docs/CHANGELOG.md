@@ -4,6 +4,11 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.23.0 (23 Oct 2026)
+
+- **Direct cold email, shared opt-out list**: `lib/cold-email/suppression.mjs` reads `docs/cold/suppressed.txt` (shared with the Gojiberry routine, one email or `@domain` per line): listed leads leave any sequence or list of this channel before every run, and leads who said no or opted out here are appended. Tests.
+- **Mailbox budget**: `scripts/cold-email-daily.mjs` counts the emails antonio@ already sent today and sends at most `min(dailyCap, 55 - manual reserve - already sent)`; `dailyCap` now defaults to 10 for the first two weeks of warm-up.
+
 ### Changelog v1.22.0 (23 Oct 2026)
 
 - **Cold outreach, opt-out sweep**: `lib/cold/sweep.mjs` excludes at once (`state: excluded`) every Sprint lead who replied with a refusal on LinkedIn (EN and IT patterns in `lib/cold/optout.mjs`, a bare "no" included), is marked unsubscribed in Gojiberry, or matches an email or store domain in `docs/cold/suppressed.txt`, the suppression file shared with the direct email channel. It runs hourly on its own (`scripts/cold-optout.mjs`, launchd `agency.noprob.cold-optout`) and at the start of the daily routine. Tests for both.
