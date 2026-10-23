@@ -3,21 +3,29 @@
 // (agency.noprob.cold-email). In order:
 //   1. reads every running thread: a reply or a bounce stops the sequence for good
 //      (a reply moves the lead to `warm`, a bounce to `suppressed`); out of office does not
-//   2. skips domains that Gojiberry is working (read only)
-//   3. sends the emails due today, follow-ups first, up to the daily cap, with a
-//      random gap between sends; only an approved SEQUENCE_VERSION is ever sent
+//   2. skips domains that Gojiberry is working (read only) and anyone in the shared
+//      opt-out list docs/cold/suppressed.txt; appends who said no here to that list
+//   3. sends the emails due today, follow-ups first, within the daily cap and the
+//      mailbox budget (antonio@ max 55 a day across Gojiberry, this channel and
+//      manual emails: already sent today and a manual reserve are subtracted), with
+//      a random gap between sends; only an approved SEQUENCE_VERSION is ever sent
 //   4. one line in cold-email/data/log.md, then the CRM export (+ push)
 // State is saved after every send. Lead data stays in cold-email/data/ (gitignored).
 //
 // Config cold-email/data/config.json:
-//   { "approved": "v1", "dailyCap": 20, "gapSeconds": [40, 120], "crmPath": "cold-email/data/crm" }
-// Usage: node scripts/cold-email-daily.mjs [--dry] [--cap 5]
+//   { "approved": "v1", "dailyCap": 10, "mailboxMax": 55, "manualReserve": 10,
+//     "gapSeconds": [40, 120], "crmPath": "cold-email/data/crm" }
+// A first email never goes to a store Antonio wrote to by hand in the last 60 days.
+// --until 18:30 spreads the sends evenly until that time (Europe/Rome, the
+// recipients' clock), each gap varied by ±40%; without it, gapSeconds applies.
+// Usage: node scripts/cold-email-daily.mjs [--dry] [--cap 5] [--until 18:30]
 
 import { execFileSync } from 'node:child_process'
 import { appendFileSync, existsSync, readFileSync, writeFileSync } from 'node:fs'
 import { accessToken, buildRaw, gmail, messageId, threadOutcome } from '../lib/cold-email/gmail.mjs'
 import { gojiberryDomains } from '../lib/cold-email/gojiberry.mjs'
 import { excludeDomains } from '../lib/cold-email/leads.mjs'
+import { appendSuppressed, applySuppressed, readSuppressed, refusals } from '../lib/cold-email/suppression.mjs'
 import { SEQUENCE_VERSION, dueStep, render } from '../lib/cold-email/sequence.mjs'
 
 const DIR = 'cold-email/data'
@@ -27,15 +35,23 @@ const LOG = `${DIR}/log.md`
 
 const args = process.argv.slice(2)
 const dry = args.includes('--dry')
-const config = { approved: null, dailyCap: 20, gapSeconds: [40, 120], crmPath: `${DIR}/crm`, ...(existsSync(CONFIG) ? JSON.parse(readFileSync(CONFIG, 'utf8')) : {}) }
+const config = { approved: null, dailyCap: 10, mailboxMax: 55, manualReserve: 10, gapSeconds: [40, 120], crmPath: `${DIR}/crm`, ...(existsSync(CONFIG) ? JSON.parse(readFileSync(CONFIG, 'utf8')) : {}) }
 const cap = args.includes('--cap') ? Number(args[args.indexOf('--cap') + 1]) : config.dailyCap
 const today = new Date().toLocaleDateString('en-CA', { timeZone: 'Europe/Lisbon' })
+const until = args.includes('--until') ? args[args.indexOf('--until') + 1] : null
+
+/** Minutes left until HH:MM on the recipients' clock (Europe/Rome). */
+function minutesUntil(hhmm) {
+  const [h, m] = new Date().toLocaleTimeString('en-GB', { timeZone: 'Europe/Rome', hour12: false }).split(':').map(Number)
+  const [eh, em] = hhmm.split(':').map(Number)
+  return eh * 60 + em - (h * 60 + m)
+}
 
 const db = JSON.parse(readFileSync(LEADS, 'utf8'))
 const save = () => {
   if (!dry) writeFileSync(LEADS, JSON.stringify({ ...db, updatedAt: new Date().toISOString() }, null, 2))
 }
-const stats = { replies: 0, bounces: 0, sent: { e1: 0, e2: 0, e3: 0, e4: 0, e5: 0 }, skipped: 0 }
+const stats = { replies: 0, bounces: 0, sent: { e1: 0, e2: 0, e3: 0, e4: 0, e5: 0 }, skipped: 0, recent: 0 }
 
 // A dry run works without Gmail too: it only lists what would be sent.
 const api = await accessToken().then(gmail, (err) => {
@@ -69,23 +85,39 @@ try {
   console.error(`Gojiberry check skipped: ${err.message}`)
 }
 
-// 3. Sends
+// Shared opt-out list: the file wins over any sequence, our refusals go in.
+db.leads = applySuppressed(db.leads, readSuppressed())
+if (!dry) appendSuppressed(refusals(db.leads), 'no / opt-out')
+save()
+
+// 3. Sends, within the mailbox budget
 let note = ''
+const sentToday = api ? ((await api.search(`in:sent after:${today.replaceAll('-', '/')}`)).messages || []).length : 0
+const budget = Math.max(0, Math.min(cap, config.mailboxMax - config.manualReserve - sentToday))
+if (budget < cap) note += ` · budget ${budget} (già inviate oggi da antonio@ ${sentToday})`
 if (config.approved !== SEQUENCE_VERSION) {
-  note = ` · invii fermi (sequenza ${SEQUENCE_VERSION} non approvata)`
+  note += ` · invii fermi (sequenza ${SEQUENCE_VERSION} non approvata)`
 } else {
   const priority = (l) => (l.sequence.sent.length ? 0 : l.php ? 1 : ['woocommerce', 'magento', 'prestashop', 'shopware', 'wordpress'].includes(l.platform) ? 2 : 3)
   const due = db.leads
     .map((lead) => ({ lead, step: dueStep(lead, today) }))
     .filter((d) => d.step)
     .sort((a, b) => priority(a.lead) - priority(b.lead))
-  stats.skipped = Math.max(0, due.length - cap)
 
-  for (const [i, { lead, step }] of due.slice(0, cap).entries()) {
+  let sent = 0
+  for (const { lead, step } of due) {
+    if (sent >= budget) break
+    // Never a first email to a store Antonio wrote to by hand in the last 60 days.
+    if (step.key === 'e1' && api && (await api.search(`in:sent to:(${lead.email} OR ${lead.domain}) newer_than:60d`)).messages?.length) {
+      Object.assign(lead, { segment: 'review', reason: 'contacted by hand in the last 60 days' })
+      stats.recent++
+      continue
+    }
     const { subject, body } = render(lead, step.key)
     if (dry) {
       console.log(`[dry] ${step.key} -> ${lead.email} · ${subject}`)
       stats.sent[step.key]++
+      sent++
       continue
     }
     const seq = lead.sequence
@@ -97,17 +129,22 @@ if (config.approved !== SEQUENCE_VERSION) {
     }
     seq.sent.push({ step: step.key, date: today, id: res.id })
     stats.sent[step.key]++
+    sent++
     save()
-    if (i < Math.min(cap, due.length) - 1) {
+    if (sent < budget) {
       const [min, max] = config.gapSeconds
-      await new Promise((r) => setTimeout(r, (min + Math.random() * (max - min)) * 1000))
+      const left = until ? minutesUntil(until) : 0
+      const seconds = left > 0 ? ((left * 60) / (budget - sent)) * (0.6 + Math.random() * 0.8) : min + Math.random() * (max - min)
+      await new Promise((r) => setTimeout(r, seconds * 1000))
     }
   }
+  stats.skipped = Math.max(0, due.length - stats.recent - sent)
+  save()
 }
 
 // 4. Log and CRM
 const total = Object.values(stats.sent).reduce((a, b) => a + b, 0)
-const line = `- ${new Date().toISOString().slice(0, 16).replace('T', ' ')}${dry ? ' (dry)' : ''} · inviate ${total} (${Object.entries(stats.sent).filter(([, n]) => n).map(([k, n]) => `${k} ${n}`).join(', ') || 'nessuna'}) · rinviate ${stats.skipped} · risposte ${stats.replies} · bounce ${stats.bounces}${note}\n`
+const line = `- ${new Date().toISOString().slice(0, 16).replace('T', ' ')}${dry ? ' (dry)' : ''} · inviate ${total} (${Object.entries(stats.sent).filter(([, n]) => n).map(([k, n]) => `${k} ${n}`).join(', ') || 'nessuna'}) · rinviate ${stats.skipped} · saltate (scritte a mano) ${stats.recent} · risposte ${stats.replies} · bounce ${stats.bounces}${note}\n`
 if (!dry) {
   appendFileSync(LOG, line)
   if (existsSync(config.crmPath)) execFileSync('node', ['scripts/cold-email-crm.mjs', config.crmPath, '--push'], { stdio: 'inherit' })
