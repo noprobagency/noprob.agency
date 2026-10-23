@@ -6,10 +6,10 @@
 //      moves it to `suppressed`); out of office does not
 //   2. skips domains that Gojiberry is working (read only) and anyone in the shared
 //      opt-out list docs/cold/suppressed.txt; appends who said no here to that list
-//   3. sends the emails due today, follow-ups first, within the daily cap and the
-//      mailbox budget (antonio@ max 55 a day across Gojiberry, this channel and
-//      manual emails: already sent today and a manual reserve are subtracted), with
-//      a random gap between sends; only an approved SEQUENCE_VERSION is ever sent
+//   3. sends the emails due today, follow-ups first, within the mailbox budget
+//      (antonio@ max 55 a day across Gojiberry, this channel and manual emails:
+//      already sent today and a manual reserve are subtracted); dailyCap limits only
+//      new first emails; random gap between sends; only an approved SEQUENCE_VERSION is sent
 //   4. one line in cold-email/data/log.md, then the CRM export (+ push)
 // State is saved after every send. Lead data stays in cold-email/data/ (gitignored).
 //
@@ -95,8 +95,9 @@ save()
 // 3. Sends, within the mailbox budget
 let note = ''
 const sentToday = api ? ((await api.search(`in:sent after:${today.replaceAll('-', '/')}`)).messages || []).length : 0
-const budget = Math.max(0, Math.min(cap, config.mailboxMax - config.manualReserve - sentToday))
-if (budget < cap) note += ` · budget ${budget} (già inviate oggi da antonio@ ${sentToday})`
+// The mailbox budget covers every email; dailyCap limits only new first emails, so
+// follow-ups keep their days even when a big batch reaches the same step together.
+const mailbox = Math.max(0, config.mailboxMax - config.manualReserve - sentToday)
 if (config.approved !== SEQUENCE_VERSION) {
   note += ` · invii fermi (sequenza ${SEQUENCE_VERSION} non approvata)`
 } else {
@@ -108,10 +109,14 @@ if (config.approved !== SEQUENCE_VERSION) {
 
   // At most one first email per store a day, even with several people of the same store.
   const storesToday = new Set(db.leads.filter((l) => l.sequence.sent.some((x) => x.step === 'e1' && x.date === today)).map((l) => l.domain))
+  const followUps = due.filter((d) => d.step.key !== 'e1').length
+  const budget = Math.min(mailbox, followUps + Math.min(cap, due.length - followUps))
+  if (budget < followUps + Math.min(cap, due.length - followUps)) note += ` · budget casella ${mailbox} (già inviate oggi da antonio@ ${sentToday})`
   let sent = 0
+  let firsts = 0
   for (const { lead, step } of due) {
     if (sent >= budget) break
-    if (step.key === 'e1' && storesToday.has(lead.domain)) continue
+    if (step.key === 'e1' && (firsts >= cap || storesToday.has(lead.domain))) continue
     // Never a first email to a store Antonio wrote to by hand in the last 60 days.
     if (step.key === 'e1' && api && (await api.search(`in:sent to:(${lead.email} OR ${lead.domain}) newer_than:60d`)).messages?.length) {
       Object.assign(lead, { segment: 'review', reason: 'contacted by hand in the last 60 days' })
@@ -121,7 +126,10 @@ if (config.approved !== SEQUENCE_VERSION) {
     const { subject, body } = render(lead, step.key)
     if (dry) {
       console.log(`[dry] ${step.key} -> ${lead.email} · ${subject}`)
-      if (step.key === 'e1') storesToday.add(lead.domain)
+      if (step.key === 'e1') {
+        storesToday.add(lead.domain)
+        firsts++
+      }
       stats.sent[step.key]++
       sent++
       continue
@@ -134,7 +142,10 @@ if (config.approved !== SEQUENCE_VERSION) {
       seq.version = SEQUENCE_VERSION
     }
     seq.sent.push({ step: step.key, date: today, id: res.id })
-    if (step.key === 'e1') storesToday.add(lead.domain)
+    if (step.key === 'e1') {
+      storesToday.add(lead.domain)
+      firsts++
+    }
     stats.sent[step.key]++
     sent++
     save()

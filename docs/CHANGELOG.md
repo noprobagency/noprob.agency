@@ -4,6 +4,11 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.26.0 (23 Oct 2026)
+
+- **Direct cold email, follow-ups keep their day**: `dailyCap` now limits only new first emails; follow-ups (E2 to E5) go out on their day within the antonio@ mailbox budget (55 a day minus the manual reserve and what was already sent), so a batch of 50 first emails gets its 50 E2s on the same day.
+- **Daily run spread over the day**: the launchd job runs with `--until 17:30` (recipients' clock) under `caffeinate`, so the sends are spaced from 9:30 to 17:30 and the Mac does not sleep mid-run.
+
 ### Changelog v1.25.0 (23 Oct 2026)
 
 - **Opt-out sweep reads the shared file correctly**: `docs/cold/suppressed.txt` lines like `email # reason` (written by the direct channel) were ignored by the Gojiberry sweep, which only skipped whole-line comments. New `parseSuppressed` strips comments anywhere, with a test. Leads excluded by the sweep now also add their store `@domain` (most Gojiberry leads have no email yet), with a dated comment.
