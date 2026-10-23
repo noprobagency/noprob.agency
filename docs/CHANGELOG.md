@@ -4,6 +4,11 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.24.0 (23 Oct 2026)
+
+- **Direct cold email, Gmail token refresh**: access tokens last one hour; the Gmail client now gets a fresh one on a 401 and retries once (the first run stopped after 13 of 50 sends). Test.
+- **Direct cold email, mass per store**: private mailboxes stay in the sequence (flagged `privateMailbox`) and several people of the same store can be in it; a store gets at most one first email a day, and a reply from anyone stops the sequence of everyone else of that store (`stopStore`). Replaces the one-lead-per-domain rule.
+
 ### Changelog v1.23.0 (23 Oct 2026)
 
 - **Direct cold email, shared opt-out list**: `lib/cold-email/suppression.mjs` reads `docs/cold/suppressed.txt` (shared with the Gojiberry routine, one email or `@domain` per line): listed leads leave any sequence or list of this channel before every run, and leads who said no or opted out here are appended. Tests.

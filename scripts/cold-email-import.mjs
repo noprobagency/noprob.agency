@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Builds the direct cold email lead file from the old CRM (crm-noprobagency
 // data/prospects.json): fresh platform and PHP check per domain (one request each,
-// no AI), segments, one lead per domain, and Gojiberry domains excluded (read only:
+// no AI), segments (several people per store allowed), Gojiberry domains excluded (read only:
 // GET on the Sprint lists, nothing is written to Gojiberry).
 // Sequence state of leads already in the file is kept.
 // Lead data stays in cold-email/data/ (gitignored).
@@ -12,7 +12,7 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { normaliseUrl } from '../lib/cold/detect-platform.mjs'
 import { fetchPlatform, pool } from '../lib/cold/fetch-platform.mjs'
 import { gojiberryDomains } from '../lib/cold-email/gojiberry.mjs'
-import { domainOf, excludeDomains, fromCrm, onePerDomain } from '../lib/cold-email/leads.mjs'
+import { domainOf, excludeDomains, fromCrm } from '../lib/cold-email/leads.mjs'
 import { appendSuppressed, applySuppressed, readSuppressed, refusals } from '../lib/cold-email/suppression.mjs'
 
 const OUT = 'cold-email/data/leads.json'
@@ -34,7 +34,6 @@ let leads = prospects.map(([p, section]) => {
   const domain = domainOf(p.domain || (p.email || '').split('@')[1])
   return fromCrm(p, section, domain ? checks.get(domain) : null)
 })
-leads = onePerDomain(leads)
 
 if (!args.includes('--no-gojiberry')) leads = excludeDomains(leads, await gojiberryDomains(), 'in Gojiberry')
 

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { excludeDomains, firstNameOf, fromCrm, onePerDomain } from './leads.mjs'
+import { excludeDomains, firstNameOf, fromCrm, stopStore } from './leads.mjs'
 import { STEPS, addWorkingDays, dueStep, render } from './sequence.mjs'
 
 const prospect = (over = {}) => ({
@@ -31,12 +31,14 @@ describe('leads from the old CRM', () => {
     expect(firstNameOf('', 'x@acme.it')).toBe(null)
   })
 
-  it('keeps one lead per domain and skips Gojiberry domains', () => {
+  it('stops the whole store when one person answers, and skips Gojiberry domains', () => {
     const a = fromCrm(prospect({ id: 'a', contact: '', email: 'info@acme.it' }), 'no_reply', { platform: 'magento' })
     const b = fromCrm(prospect({ id: 'b' }), 'no_reply', { platform: 'magento' })
-    const kept = onePerDomain([a, b])
-    expect(kept.map((l: { segment: string }) => l.segment)).toEqual(['review', 'target'])
-    expect(excludeDomains(kept, ['https://www.acme.it/'], 'gojiberry')[1].segment).toBe('review')
+    expect([a.segment, b.segment]).toEqual(['target', 'target'])
+    const leads = [a, b]
+    stopStore(leads, 'acme.it', 'sara ha risposto', '2026-10-27')
+    expect(leads.map((l) => l.sequence.stopReason)).toEqual(['store replied', 'store replied'])
+    expect(excludeDomains([fromCrm(prospect(), 'no_reply', { platform: 'magento' })], ['https://www.acme.it/'], 'gojiberry')[0].segment).toBe('review')
   })
 })
 
@@ -97,9 +99,10 @@ describe('gmail thread outcome', async () => {
 })
 
 describe('lead hygiene', () => {
-  it('keeps private and no-reply mailboxes out of the sequence', () => {
+  it('keeps private mailboxes in the sequence (flagged) and no-reply addresses out', () => {
     const base = prospect({ status: 'archived' })
-    expect(fromCrm({ ...base, email: 'lucia.r@gmail.com' }, 'no_reply', { platform: 'other' }).reason).toBe('private mailbox')
+    const priv = fromCrm({ ...base, email: 'lucia.r@gmail.com' }, 'no_reply', { platform: 'other' })
+    expect([priv.segment, priv.privateMailbox]).toEqual(['target', true])
     expect(fromCrm({ ...base, email: 'noreply@me.brand.com' }, 'no_reply', { platform: 'other' }).segment).toBe('suppressed')
     expect(fromCrm({ ...base, email: 'support@brand.zendesk.com' }, 'no_reply', { platform: 'other' }).segment).toBe('suppressed')
   })
@@ -110,5 +113,24 @@ describe('lead hygiene', () => {
     expect(cleanBrand('SatÃ¹')).toBe('Satù')
     expect(fromCrm(prospect({ domain: 'peachyden.co.uk', email: 'hello@peachyden.co.uk' }), 'no_reply', { platform: 'other' }).lang).toBe('en')
     expect(firstNameOf('MW', 'mw@x.com')).toBe(null)
+  })
+})
+
+describe('gmail token refresh', () => {
+  it('gets a fresh token once on a 401 and retries', async () => {
+    const { vi } = await import('vitest')
+    const calls: string[] = []
+    vi.stubGlobal('fetch', async (url: string, init: { headers?: Record<string, string> }) => {
+      if (url.includes('oauth2')) return new Response(JSON.stringify({ access_token: 'fresh' }))
+      calls.push(init.headers?.authorization || '')
+      return calls.length === 1 ? new Response('expired', { status: 401 }) : new Response('{"messages":[]}')
+    })
+    vi.doMock('node:child_process', () => ({ execFileSync: (_: string, a: string[]) => (a.includes('cold-email-gmail-client') ? '{"client_id":"i","client_secret":"s"}' : 'refresh') }))
+    vi.resetModules()
+    const { gmail } = await import('./gmail.mjs')
+    await gmail('old').search('in:sent')
+    expect(calls).toEqual(['Bearer old', 'Bearer fresh'])
+    vi.unstubAllGlobals()
+    vi.doUnmock('node:child_process')
   })
 })

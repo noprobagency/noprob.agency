@@ -2,7 +2,8 @@
 // Daily engine of the direct cold email channel (no AI). Mon-Fri via launchd
 // (agency.noprob.cold-email). In order:
 //   1. reads every running thread: a reply or a bounce stops the sequence for good
-//      (a reply moves the lead to `warm`, a bounce to `suppressed`); out of office does not
+//      (a reply moves the lead to `warm` and stops everyone else of that store, a bounce
+//      moves it to `suppressed`); out of office does not
 //   2. skips domains that Gojiberry is working (read only) and anyone in the shared
 //      opt-out list docs/cold/suppressed.txt; appends who said no here to that list
 //   3. sends the emails due today, follow-ups first, within the daily cap and the
@@ -24,7 +25,7 @@ import { execFileSync } from 'node:child_process'
 import { appendFileSync, existsSync, readFileSync, writeFileSync } from 'node:fs'
 import { accessToken, buildRaw, gmail, messageId, threadOutcome } from '../lib/cold-email/gmail.mjs'
 import { gojiberryDomains } from '../lib/cold-email/gojiberry.mjs'
-import { excludeDomains } from '../lib/cold-email/leads.mjs'
+import { excludeDomains, stopStore } from '../lib/cold-email/leads.mjs'
 import { appendSuppressed, applySuppressed, readSuppressed, refusals } from '../lib/cold-email/suppression.mjs'
 import { SEQUENCE_VERSION, dueStep, render } from '../lib/cold-email/sequence.mjs'
 
@@ -71,6 +72,7 @@ for (const lead of api ? db.leads : []) {
   if (outcome === 'reply') {
     stats.replies++
     Object.assign(lead, { segment: 'warm', reason: 'reply to sequence', priority: 1, note: `Risposta alla sequenza dopo ${seq.sent.length} email` })
+    stopStore(db.leads, lead.domain, `${lead.email} ha risposto`, today) // the whole store stops
   } else {
     stats.bounces++
     Object.assign(lead, { segment: 'suppressed', reason: 'bounce' })
@@ -104,9 +106,12 @@ if (config.approved !== SEQUENCE_VERSION) {
     .filter((d) => d.step)
     .sort((a, b) => priority(a.lead) - priority(b.lead))
 
+  // At most one first email per store a day, even with several people of the same store.
+  const storesToday = new Set(db.leads.filter((l) => l.sequence.sent.some((x) => x.step === 'e1' && x.date === today)).map((l) => l.domain))
   let sent = 0
   for (const { lead, step } of due) {
     if (sent >= budget) break
+    if (step.key === 'e1' && storesToday.has(lead.domain)) continue
     // Never a first email to a store Antonio wrote to by hand in the last 60 days.
     if (step.key === 'e1' && api && (await api.search(`in:sent to:(${lead.email} OR ${lead.domain}) newer_than:60d`)).messages?.length) {
       Object.assign(lead, { segment: 'review', reason: 'contacted by hand in the last 60 days' })
@@ -116,6 +121,7 @@ if (config.approved !== SEQUENCE_VERSION) {
     const { subject, body } = render(lead, step.key)
     if (dry) {
       console.log(`[dry] ${step.key} -> ${lead.email} · ${subject}`)
+      if (step.key === 'e1') storesToday.add(lead.domain)
       stats.sent[step.key]++
       sent++
       continue
@@ -128,6 +134,7 @@ if (config.approved !== SEQUENCE_VERSION) {
       seq.version = SEQUENCE_VERSION
     }
     seq.sent.push({ step: step.key, date: today, id: res.id })
+    if (step.key === 'e1') storesToday.add(lead.domain)
     stats.sent[step.key]++
     sent++
     save()
