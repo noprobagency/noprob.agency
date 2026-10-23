@@ -55,9 +55,12 @@ describe('sequence', () => {
 
   it('uses the PHP hook only on PHP platforms and quotes only an exposed version', () => {
     expect(render(lead, 'e1').body).toContain('PHP 7.4.33')
-    expect(render({ ...lead, php: '8.3.36' }, 'e1').body).not.toContain('risulta')
-    expect(render({ ...lead, platform: 'other' }, 'e1').body).not.toContain('PHP')
+    expect(render({ ...lead, platform: 'other', php: null }, 'e1').body).not.toContain('PHP')
     expect(render(lead, 'e2').subject).toBe('Re: Acme e la falla di PHP')
+    expect(render({ ...lead, php: '8.3.36' }, 'e1').subject).toBe('Acme su Shopify?')
+    const custom = render({ ...lead, platform: 'other', php: '7.2.34' }, 'e1').body
+    expect(custom).toContain('il sito di Acme gira ancora su PHP')
+    expect(custom).toContain('PHP 7.2.34')
   })
 
   it('spreads the steps over working days and stops on a reply', () => {
@@ -90,5 +93,22 @@ describe('gmail thread outcome', async () => {
     const mime = Buffer.from(buildRaw({ to: 'a@b.it', subject: 'Re: Acme e la falla', body: 'Ciao è', inReplyTo: '<x@mail>' }), 'base64url').toString()
     expect(mime).toContain('In-Reply-To: <x@mail>')
     expect(mime).toContain('charset=UTF-8')
+  })
+})
+
+describe('lead hygiene', () => {
+  it('keeps private and no-reply mailboxes out of the sequence', () => {
+    const base = prospect({ status: 'archived' })
+    expect(fromCrm({ ...base, email: 'lucia.r@gmail.com' }, 'no_reply', { platform: 'other' }).reason).toBe('private mailbox')
+    expect(fromCrm({ ...base, email: 'noreply@me.brand.com' }, 'no_reply', { platform: 'other' }).segment).toBe('suppressed')
+    expect(fromCrm({ ...base, email: 'support@brand.zendesk.com' }, 'no_reply', { platform: 'other' }).segment).toBe('suppressed')
+  })
+
+  it('cleans brands and writes English to foreign stores', async () => {
+    const { cleanBrand } = await import('./leads.mjs')
+    expect(cleanBrand('Motivi (Miroglio)')).toBe('Motivi')
+    expect(cleanBrand('SatÃ¹')).toBe('Satù')
+    expect(fromCrm(prospect({ domain: 'peachyden.co.uk', email: 'hello@peachyden.co.uk' }), 'no_reply', { platform: 'other' }).lang).toBe('en')
+    expect(firstNameOf('MW', 'mw@x.com')).toBe(null)
   })
 })

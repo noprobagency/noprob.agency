@@ -15,6 +15,7 @@
 // Config cold-email/data/config.json:
 //   { "approved": "v1", "dailyCap": 10, "mailboxMax": 55, "manualReserve": 10,
 //     "gapSeconds": [40, 120], "crmPath": "cold-email/data/crm" }
+// A first email never goes to a store Antonio wrote to by hand in the last 60 days.
 // Usage: node scripts/cold-email-daily.mjs [--dry] [--cap 5]
 
 import { execFileSync } from 'node:child_process'
@@ -40,7 +41,7 @@ const db = JSON.parse(readFileSync(LEADS, 'utf8'))
 const save = () => {
   if (!dry) writeFileSync(LEADS, JSON.stringify({ ...db, updatedAt: new Date().toISOString() }, null, 2))
 }
-const stats = { replies: 0, bounces: 0, sent: { e1: 0, e2: 0, e3: 0, e4: 0, e5: 0 }, skipped: 0 }
+const stats = { replies: 0, bounces: 0, sent: { e1: 0, e2: 0, e3: 0, e4: 0, e5: 0 }, skipped: 0, recent: 0 }
 
 // A dry run works without Gmail too: it only lists what would be sent.
 const api = await accessToken().then(gmail, (err) => {
@@ -92,13 +93,21 @@ if (config.approved !== SEQUENCE_VERSION) {
     .map((lead) => ({ lead, step: dueStep(lead, today) }))
     .filter((d) => d.step)
     .sort((a, b) => priority(a.lead) - priority(b.lead))
-  stats.skipped = Math.max(0, due.length - budget)
 
-  for (const [i, { lead, step }] of due.slice(0, budget).entries()) {
+  let sent = 0
+  for (const { lead, step } of due) {
+    if (sent >= budget) break
+    // Never a first email to a store Antonio wrote to by hand in the last 60 days.
+    if (step.key === 'e1' && api && (await api.search(`in:sent to:(${lead.email} OR ${lead.domain}) newer_than:60d`)).messages?.length) {
+      Object.assign(lead, { segment: 'review', reason: 'contacted by hand in the last 60 days' })
+      stats.recent++
+      continue
+    }
     const { subject, body } = render(lead, step.key)
     if (dry) {
       console.log(`[dry] ${step.key} -> ${lead.email} · ${subject}`)
       stats.sent[step.key]++
+      sent++
       continue
     }
     const seq = lead.sequence
@@ -110,17 +119,20 @@ if (config.approved !== SEQUENCE_VERSION) {
     }
     seq.sent.push({ step: step.key, date: today, id: res.id })
     stats.sent[step.key]++
+    sent++
     save()
-    if (i < Math.min(budget, due.length) - 1) {
+    if (sent < budget) {
       const [min, max] = config.gapSeconds
       await new Promise((r) => setTimeout(r, (min + Math.random() * (max - min)) * 1000))
     }
   }
+  stats.skipped = Math.max(0, due.length - stats.recent - sent)
+  save()
 }
 
 // 4. Log and CRM
 const total = Object.values(stats.sent).reduce((a, b) => a + b, 0)
-const line = `- ${new Date().toISOString().slice(0, 16).replace('T', ' ')}${dry ? ' (dry)' : ''} · inviate ${total} (${Object.entries(stats.sent).filter(([, n]) => n).map(([k, n]) => `${k} ${n}`).join(', ') || 'nessuna'}) · rinviate ${stats.skipped} · risposte ${stats.replies} · bounce ${stats.bounces}${note}\n`
+const line = `- ${new Date().toISOString().slice(0, 16).replace('T', ' ')}${dry ? ' (dry)' : ''} · inviate ${total} (${Object.entries(stats.sent).filter(([, n]) => n).map(([k, n]) => `${k} ${n}`).join(', ') || 'nessuna'}) · rinviate ${stats.skipped} · saltate (scritte a mano) ${stats.recent} · risposte ${stats.replies} · bounce ${stats.bounces}${note}\n`
 if (!dry) {
   appendFileSync(LOG, line)
   if (existsSync(config.crmPath)) execFileSync('node', ['scripts/cold-email-crm.mjs', config.crmPath, '--push'], { stdio: 'inherit' })

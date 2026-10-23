@@ -7,6 +7,8 @@ old entries, add a new one on top.
 ### Changelog v1.23.0 (23 Oct 2026)
 
 - **Direct cold email, shared opt-out list**: `lib/cold-email/suppression.mjs` reads `docs/cold/suppressed.txt` (shared with the Gojiberry routine, one email or `@domain` per line): listed leads leave any sequence or list of this channel before every run, and leads who said no or opted out here are appended. Tests.
+- **Lead hygiene**: private mailboxes (gmail, yahoo, hotmail...) leave the sequence (`review`), no-reply and ticketing addresses are suppressed, brands are cleaned ("Motivi (Miroglio)" -> "Motivi", broken accents fixed), foreign store domains get the English copy, and a first email never goes to a store Antonio wrote to by hand in the last 60 days (Gmail search before each E1).
+- **PHP hook accuracy**: stores whose server already runs a patched PHP get the non-PHP first email; custom sites that expose an old PHP version get the PHP hook with their version.
 - **Mailbox budget**: `scripts/cold-email-daily.mjs` counts the emails antonio@ already sent today and sends at most `min(dailyCap, 55 - manual reserve - already sent)`; `dailyCap` now defaults to 10 for the first two weeks of warm-up.
 
 ### Changelog v1.22.0 (23 Oct 2026)
