@@ -4,6 +4,11 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.25.0 (23 Oct 2026)
+
+- **Opt-out sweep reads the shared file correctly**: `docs/cold/suppressed.txt` lines like `email # reason` (written by the direct channel) were ignored by the Gojiberry sweep, which only skipped whole-line comments. New `parseSuppressed` strips comments anywhere, with a test. Leads excluded by the sweep now also add their store `@domain` (most Gojiberry leads have no email yet), with a dated comment.
+- **`/cold` skill** points to the direct email channel: its log, the shared opt-out file and the 55 a day ceiling on antonio@.
+
 ### Changelog v1.24.0 (23 Oct 2026)
 
 - **Direct cold email, Gmail token refresh**: access tokens last one hour; the Gmail client now gets a fresh one on a 401 and retries once (the first run stopped after 13 of 50 sends). Test.

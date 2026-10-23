@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { isOptOut } from './optout.mjs'
-import { isSuppressed } from './sweep.mjs'
+import { isSuppressed, parseSuppressed } from './sweep.mjs'
 
 describe('isOptOut', () => {
   it('catches English refusals', () => {
@@ -43,5 +43,12 @@ describe('isSuppressed', () => {
   it('ignores other leads', () => {
     expect(isSuppressed(lead, ['@other.com', 'bob@acme-store.com'])).toBe(false)
     expect(isSuppressed({ website: '' }, ['@acme-store.com'])).toBe(false)
+  })
+})
+
+describe('parseSuppressed', () => {
+  it('drops comments, also after an entry', () => {
+    const text = '# header\nAnna@Acme.com # no, cold email diretta 2026-10-23\n\n@shop.it\n'
+    expect(parseSuppressed(text)).toEqual(['anna@acme.com', '@shop.it'])
   })
 })
