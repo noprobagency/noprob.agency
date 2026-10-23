@@ -4,19 +4,22 @@
 //   1. store already on Shopify  -> moved to the side-project segment
 //   2. Italian lead in the EN list -> moved to the IT list
 //   3. lead passing the fixed criteria -> approved (readyForCampaign), max N per campaign per run
+// Before that, the opt-out sweep (lib/cold/sweep.mjs), which also runs hourly on its own.
 // Writes one line to docs/cold/daily-log.md. Lead data never leaves docs/cold/ (gitignored).
 //
-// API key: env GOJIBERRY_API_KEY, or macOS Keychain item "gojiberry-api"
-//   (security add-generic-password -s gojiberry-api -a noprob -w)
 // Usage: node scripts/cold-daily.mjs [--dry] [--cap 10]
 
-import { execFileSync } from 'node:child_process'
 import { appendFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { isPersonalSite, normaliseUrl, siteMatchesCompany } from '../lib/cold/detect-platform.mjs'
 import { fetchPlatform, pool } from '../lib/cold/fetch-platform.mjs'
+import { LISTS, api, listContacts } from '../lib/cold/gojiberry.mjs'
+import { optoutSweep } from '../lib/cold/sweep.mjs'
 
-const LISTS = { en: 63200, it: 64866, shopify: 64769 }
 const MIN_SCORE = 2.0
+// antonio@noprob.agency sends for Gojiberry and for the direct channel: 55 a day in
+// total is the ceiling Antonio set (60+ is a problem), Gojiberry keeps at most 25 of it
+// so manual and direct emails have room.
+const GOJIBERRY_EMAIL_CAP = 25
 const NOT_DECISION_MAKER = /\b(assistant|associate|intern|internship|stagista|junior|customer service|customer care|coordinator|specialist|analyst|consultant|freelance|executive assistant|trainee)\b/i
 const ITALY = /\b(italy|italia|milan|milano|rome|roma|turin|torino|naples|napoli|florence|firenze|bologna|venice|venezia|genoa|genova|verona|bari|palermo|catania|padua|padova|brescia|bergamo|como|monza|varese|treviso|vicenza|modena|parma|reggio|rimini|pesaro|ancona|perugia|cagliari|trieste|udine|trento|bolzano)\b/i
 
@@ -26,46 +29,6 @@ const cap = Number(args[args.indexOf('--cap') + 1]) || 10
 const STATE = 'docs/cold/daily-state.json'
 const LOG = 'docs/cold/daily-log.md'
 
-function apiKey() {
-  if (process.env.GOJIBERRY_API_KEY) return process.env.GOJIBERRY_API_KEY
-  try {
-    return execFileSync('security', ['find-generic-password', '-s', 'gojiberry-api', '-w'], { encoding: 'utf8' }).trim()
-  } catch {
-    console.error('Missing API key: set GOJIBERRY_API_KEY or the Keychain item "gojiberry-api".')
-    process.exit(1)
-  }
-}
-const KEY = apiKey()
-
-async function api(method, path, body) {
-  for (let attempt = 0; attempt < 3; attempt++) {
-    const res = await fetch(`https://ext.gojiberry.ai${path}`, {
-      method,
-      headers: { authorization: `Bearer ${KEY}`, 'content-type': 'application/json' },
-      body: body ? JSON.stringify(body) : undefined,
-    })
-    if (res.status === 429) {
-      await new Promise((r) => setTimeout(r, (Number(res.headers.get('retry-after')) || 10) * 1000))
-      continue
-    }
-    if (!res.ok) throw new Error(`${method} ${path} -> ${res.status} ${(await res.text()).slice(0, 200)}`)
-    const text = await res.text()
-    return text ? JSON.parse(text) : null
-  }
-  throw new Error(`${method} ${path} -> rate limited`)
-}
-
-async function listContacts(listId) {
-  const all = []
-  for (let page = 1; page < 50; page++) {
-    const data = await api('GET', `/v1/contact?listId=${listId}&limit=100&page=${page}`)
-    const items = data.contacts || data.data || []
-    all.push(...items)
-    if (items.length < 100) break
-  }
-  return all
-}
-
 // One person per company: the LinkedIn company page is the stable key, names vary
 // ("Semprefarmacia" vs "Semprefarmacia.it").
 const companyKey = (c) =>
@@ -73,6 +36,23 @@ const companyKey = (c) =>
   (c.company || '').toLowerCase().replace(/\.(it|com|co\.uk|de|fr|es|nl|eu|shop|store)$/, '').replace(/[^a-z0-9]/g, '')
 
 const state = existsSync(STATE) ? JSON.parse(readFileSync(STATE, 'utf8')) : { processed: [], held: [] }
+const stamp = () => new Date().toISOString().slice(0, 16).replace('T', ' ')
+const saveState = (extra) => {
+  if (dry) return
+  mkdirSync('docs/cold', { recursive: true })
+  const current = existsSync(STATE) ? JSON.parse(readFileSync(STATE, 'utf8')) : {}
+  writeFileSync(STATE, JSON.stringify({ ...current, ...extra }))
+}
+
+const sweep = await optoutSweep({ since: state.lastSweep, dry })
+saveState({ lastSweep: sweep.startedAt })
+
+// --- Email volume: Gojiberry seats (the direct channel adds its own) -------------
+const seats = await api('GET', '/v1/email-seat')
+const mailMax = seats.reduce((n, s) => n + (s.dailyEmailMax || 0), 0)
+const mailFlag = mailMax > GOJIBERRY_EMAIL_CAP ? ` ⚠ sopra ${GOJIBERRY_EMAIL_CAP}, abbassare in Gojiberry` : ''
+
+// --- New leads -----------------------------------------------------------------
 const processed = new Set(state.processed)
 const held = new Set(state.held || [])
 const stats = { new: 0, shopify: 0, toIt: 0, approved: { en: 0, it: 0 }, held: 0 }
@@ -147,10 +127,9 @@ if (!dry) {
   if (moves.shopify.length) await api('POST', `/v1/contact/list/${LISTS.shopify}/contacts`, { contactIds: moves.shopify })
   if (moves.it.length) await api('POST', `/v1/contact/list/${LISTS.it}/contacts`, { contactIds: moves.it })
   for (const id of approvals) await api('PATCH', `/v1/contact/${id}`, { readyForCampaign: true })
-  mkdirSync('docs/cold', { recursive: true })
-  writeFileSync(STATE, JSON.stringify({ lastRun: new Date().toISOString(), processed: [...processed], held: [...held] }))
+  saveState({ lastRun: new Date().toISOString(), processed: [...processed], held: [...held] })
 }
 
-const line = `- ${new Date().toISOString().slice(0, 16).replace('T', ' ')}${dry ? ' (dry)' : ''} · nuovi ${stats.new} · Shopify spostati ${stats.shopify} · IT spostati ${stats.toIt} · approvati EN ${stats.approved.en} IT ${stats.approved.it} · da guardare ${stats.held}\n`
+const line = `- ${stamp()}${dry ? ' (dry)' : ''} · opt-out esclusi ${sweep.excluded} · nuovi ${stats.new} · Shopify spostati ${stats.shopify} · IT spostati ${stats.toIt} · approvati EN ${stats.approved.en} IT ${stats.approved.it} · da guardare ${stats.held} · email Gojiberry max/giorno ${mailMax}${mailFlag}\n`
 if (!dry) appendFileSync(LOG, line)
 process.stdout.write(line)
