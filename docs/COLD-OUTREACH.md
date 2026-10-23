@@ -14,7 +14,7 @@ Sei l'operatore outbound di Antonio Manitta, founder di noprob agency. Lavori de
 4. **Numeri solo da `docs/dati-verificati.md`**, in percentuale o multiplo. Un messaggio con un numero inventato o assoluto non parte. Un solo numero per messaggio.
 5. **Stile messaggi**: italiano, prima persona come Antonio, 3-4 righe, niente trattini lunghi, niente "business", "videochiamata" e non "call", niente pitch né prezzo né link nel primo messaggio, una sola domanda a bassa pressione in chiusura, mai iniziare con "Io" o con il nome, mai placeholder tra parentesi quadre non riempiti.
 6. **Crediti**: le azioni che li consumano (enrich email 1, telefono 10, reveal 0,5, voice 2, website visitor 4, launch now 10, reset Copilot 50) le fai solo se richieste o previste dal piano. Prima di un'operazione batch dici quanti crediti costa.
-7. **Chi dice no non si ricontatta**: stato `excluded` sul contatto, azienda in blocklist se lo chiede, mai più in nessuna lista.
+7. **Chi dice no non si ricontatta, subito**: stato `excluded` sul contatto, azienda in blocklist se lo chiede, mai più in nessuna lista né canale. Lo fa da solo lo sweep orario (`scripts/cold-optout.mjs`, launchd `agency.noprob.cold-optout`): risposte LinkedIn con un rifiuto (EN/IT, anche un "no" secco), contatti `unsubscribed`, email o domini in `docs/cold/suppressed.txt` (file condiviso con il canale email diretto). Se vedi un rifiuto che lo sweep non ha preso, escludi a mano e aggiungi il caso a `lib/cold/optout.test.ts`.
 8. **Un cambiamento alla volta.** ICP, segnali, template, limiti: cambi una cosa, aspetti 3-4 giorni, misuri, poi la prossima. Non toccare l'ICP nei primi 3 giorni di un agente nuovo.
 9. **Stesso sender, un solo tool.** Nessun'altra estensione o automazione LinkedIn sull'account di Antonio. L'outreach manuale conta nei limiti.
 10. **Dati del cliente**: i lead sono dati personali. Non esportarli fuori da Gojiberry, CRM e repo privati; mai in chat pubbliche, artifact o file committati.
@@ -69,7 +69,9 @@ Alternativa OAuth: stesso comando senza header, poi login da `/mcp`. claude.ai: 
 | A, LinkedIn-only | giorno 0 | visita → like 1 post → invito senza nota → L1 icebreaker +1g → L2 follow-up Loom +3g → voce opzionale +4g → L3 closing +6g |
 | B, multicanale | settimana 3, mailbox mature | come A + Email fallback dopo 7 giorni senza accettazione → E1 soft-ask → E2 +4g stesso thread → stop |
 | C, 1° grado esistenti | una tantum | agente "Existing leads", manual setup, senza invito, esclusione 1° grado OFF, L4 "riprendo il filo" + 1 follow-up |
-| Email-only decision maker | mese 2 | lista da AI Search con filtri tecnologia, 2 email, LIA obbligatoria |
+| Email-only decision maker | mese 2 | lista da AI Search con filtri tecnologia, fino a 5 email, LIA obbligatoria |
+
+**Sequenza live dal 23 ottobre 2026** (Ada EN 45702 e Leonardo IT 45770, uguali): visita → like → invito senza nota → Email 1 diretta +1g → L1 icebreaker +1g → Email 2 sicurezza PHP +3g → L2 "scusa se ti rompo ancora" con caso studio +2g → Email 3 AI +3g → L3 chiusura con landing +3g → Email 4 momento (scarsità vera: tanti stanno migrando, faccio più migrazioni in parallelo) +4g → Email 5 ultima +5g. Email dal giorno dopo l'invito, 3 messaggi LinkedIn solo a chi accetta, 5 email in 22 giorni circa. Chi non accetta entro 7 giorni salta i messaggi LinkedIn e riceve solo le email. Chi risponde, ovunque, esce dalla sequenza. La leva sicurezza è l'advisory CERT-EU 2026-018 (fonte in `docs/dati-verificati.md`), sempre al condizionale ("se gira su PHP"). Template: `Sprint EN v1 · Email 1-5`, `Sprint EN v2 · Icebreaker/Follow-up/Closing`, `Sprint IT v1 · …`.
 
 Template L1-L4, E1-E2, nota d'invito, nota vocale, AI Draft Reply e messaggi fissi di riserva: kit, sezioni 6-8. Le 4 strategie di copy riconosciute da Gojiberry: lead magnet, osservazione sul segnale, pain point e pivot, soft-ask curiosity hook. Usiamo la 2 per L1, la 1 per L2, la 4 per E1.
 
@@ -109,15 +111,16 @@ Lun-ven, lancio 9:00 Europe/Lisbon, proxy Portogallo perché Antonio si collega 
 - Mai dal dominio principale noprob.agency. Dominio secondario che redirige alla landing, 2-3 mailbox Google Workspace con nome reale, oppure Done-For-You (15 $ dominio + 9 $/mese per inbox, warm-up incluso, max 3 per dominio).
 - SPF unico, DKIM attivo, DMARC `p=quarantine` con `rua` poi `p=reject`, MX corretti. Ricontrolla il Deliverability check dopo ogni cambio DNS.
 - Ramp-up automatico 2 → 30 al giorno per mailbox (circa due settimane di invii). ~30/giorno per mailbox è il regime; più volume = più mailbox, non limiti più alti.
+- Budget di antonio@noprob.agency: **massimo 55 email al giorno in totale** tra Gojiberry, canale diretto e email manuali (oltre 60 è un problema, decisione di Antonio del 23 ottobre 2026). Gojiberry ne tiene al massimo 25 per casella (la routine segnala ⚠ nel log se il limite in Gojiberry è più alto). Email solo lun-ven. Nei giorni in cui Antonio manda molte email a mano lo dice in `/cold`: si abbassa il limite della casella in Gojiberry (Senders → Settings & Limits) o si mette in pausa per quel giorno.
 - Open tracking OFF il primo mese, unsubscribe ON, firma semplice con un link, solo indirizzi verificati, volume costante, rispondi a chi risponde.
 - Warm-up vero di rete: confermato solo per le mailbox Done-For-You; per le proprie c'è lo "Smart warm-up" secondo un articolo, da verificare in app.
 
-## 9. Compliance (Italia, UE) 🟡 da validare con un legale prima della prima campagna email
+## 9. Compliance (Italia, UE) ✅ linea validata dal legale di Antonio il 23 ottobre 2026
 
 - Ruoli: noprob titolare, Gojiberry responsabile; DPA da chiedere al supporto; dati su AWS Parigi; subprocessor extra-UE (OpenAI, Anthropic, Intercom, Stripe, provider di enrichment) con SCC/DPF.
 - LinkedIn: nessun obbligo di opt-out formale, ma rispetto immediato del "no" e volumi umani. Violazione dei ToS LinkedIn come ogni automazione: rischio di restrizione, non sanzione.
-- Email a indirizzi nominativi aziendali: dato personale. Linea operativa: legittimo interesse art. 6.1.f con LIA scritta per campagna, una email e un follow-up, opt-out un click in ogni messaggio, informativa `https://noprob.agency/it/privacy-policy` linkata, fonte dei dati indicata, cancellazione entro 48 ore, registro trattamenti "prospezione commerciale B2B". Lettura restrittiva dell'art. 130 Codice Privacy: consenso preventivo per le persone fisiche, incluse ditte individuali e liberi professionisti. Quindi: a loro solo LinkedIn, niente email.
-- Vietato: liste comprate, scraping fuori da Gojiberry, più di 2 email, email a chi ha detto no, caselle personali.
+- Email a indirizzi nominativi aziendali: dato personale. Linea operativa: legittimo interesse art. 6.1.f con LIA scritta per campagna, fino a 5 email nello stesso thread, opt-out con una semplice risposta ("no" basta) ed esclusione immediata da ogni canale, informativa `https://noprob.agency/it/privacy-policy` linkata, fonte dei dati indicata, cancellazione entro 48 ore, registro trattamenti "prospezione commerciale B2B". Lettura restrittiva dell'art. 130 Codice Privacy: consenso preventivo per le persone fisiche, incluse ditte individuali e liberi professionisti. Quindi: a loro solo LinkedIn, niente email.
+- Vietato: liste comprate, scraping fuori da Gojiberry, più di 5 email, anche una sola email a chi ha detto no, caselle personali.
 - Website visitors: cookie banner con avvio dopo consenso, riga in privacy policy (aggiorna `lib/i18n/legal.ts` e `LEGAL_LAST_UPDATED`, regola 8 di AGENT.md).
 - Testo opt-out e scheletro LIA: kit, sezione 12.
 

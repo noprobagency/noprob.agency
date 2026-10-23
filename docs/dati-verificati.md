@@ -113,6 +113,7 @@ Dati di terzi, ognuno con il link alla fonte nella pagina. Verificati il 13 otto
 | Di cui da WooCommerce | **9.204** | Store Leads, stesso report (prima fonte di ingresso) |
 | GMV Shopify Q2 2026 | **+32%** anno su anno (115,6 mld $) | Shopify, comunicato risultati Q2 2026 del 5 ago 2026 (SEC 8-K) |
 | Traffico e ordini da agenti AI agli store Shopify | **3x** anno su anno, Q2 2026 | Digital Commerce 360, 6 ago 2026 |
+| Vulnerabilità PHP (PHP2Shell) | **2 falle, CVSS 9.2**, esecuzione di codice da remoto senza autenticazione; corrette in PHP 8.5.12, 8.4.27, 8.3.36 e 8.2.35; PHP 8.1 e precedenti senza fix ufficiale | CERT-EU, advisory 2026-018 del 21 ott 2026. Usata nelle email cold solo al condizionale ("se il sito gira su PHP") e per piattaforme PHP (WooCommerce, Magento, PrestaShop, Shopware). "php2shell" è un tool di verifica di NCSC-NL, non un exploit |
 
 La tabella "Stesso lavoro, due velocità" è qualitativa (nessun numero): funzioni native di Shopify
 (sconti, Shopify Magic, Sidekick, aggiornamenti inclusi, canale agentic) contro il lavoro tipico su

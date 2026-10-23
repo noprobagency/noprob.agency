@@ -4,6 +4,13 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.21.0 (23 Oct 2026)
+
+- **Cold outreach, opt-out sweep**: `lib/cold/sweep.mjs` excludes at once (`state: excluded`) every Sprint lead who replied with a refusal on LinkedIn (EN and IT patterns in `lib/cold/optout.mjs`, a bare "no" included), is marked unsubscribed in Gojiberry, or matches an email or store domain in `docs/cold/suppressed.txt`, the suppression file shared with the direct email channel. It runs hourly on its own (`scripts/cold-optout.mjs`, launchd `agency.noprob.cold-optout`) and at the start of the daily routine. Tests for both.
+- **Shared Gojiberry client**: `lib/cold/gojiberry.mjs` (REST calls, list paging, API key read on the first request so tests need none).
+- **Email volume guard**: the daily log line shows the Gojiberry email limit per day and flags it above 25; antonio@noprob.agency stays within 55 emails a day across all channels.
+- **Docs**: live 11-step sequence (5 emails, 3 LinkedIn messages), compliance line validated by the lawyer (up to 5 emails, opt-out by reply, immediate exclusion), CERT-EU 2026-018 in `docs/dati-verificati.md`, `/cold` skill updated.
+
 ### Changelog v1.20.0 (23 Oct 2026)
 
 - **Cold routine, one person per company**: `scripts/cold-daily.mjs` now groups leads by the LinkedIn company page (fallback: the company name without domain suffix), so "Semprefarmacia" and "Semprefarmacia.it" count as the same company and only one person enters the sequence.
