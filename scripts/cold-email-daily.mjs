@@ -16,7 +16,9 @@
 //   { "approved": "v1", "dailyCap": 10, "mailboxMax": 55, "manualReserve": 10,
 //     "gapSeconds": [40, 120], "crmPath": "cold-email/data/crm" }
 // A first email never goes to a store Antonio wrote to by hand in the last 60 days.
-// Usage: node scripts/cold-email-daily.mjs [--dry] [--cap 5]
+// --until 18:30 spreads the sends evenly until that time (Europe/Rome, the
+// recipients' clock), each gap varied by ±40%; without it, gapSeconds applies.
+// Usage: node scripts/cold-email-daily.mjs [--dry] [--cap 5] [--until 18:30]
 
 import { execFileSync } from 'node:child_process'
 import { appendFileSync, existsSync, readFileSync, writeFileSync } from 'node:fs'
@@ -36,6 +38,14 @@ const dry = args.includes('--dry')
 const config = { approved: null, dailyCap: 10, mailboxMax: 55, manualReserve: 10, gapSeconds: [40, 120], crmPath: `${DIR}/crm`, ...(existsSync(CONFIG) ? JSON.parse(readFileSync(CONFIG, 'utf8')) : {}) }
 const cap = args.includes('--cap') ? Number(args[args.indexOf('--cap') + 1]) : config.dailyCap
 const today = new Date().toLocaleDateString('en-CA', { timeZone: 'Europe/Lisbon' })
+const until = args.includes('--until') ? args[args.indexOf('--until') + 1] : null
+
+/** Minutes left until HH:MM on the recipients' clock (Europe/Rome). */
+function minutesUntil(hhmm) {
+  const [h, m] = new Date().toLocaleTimeString('en-GB', { timeZone: 'Europe/Rome', hour12: false }).split(':').map(Number)
+  const [eh, em] = hhmm.split(':').map(Number)
+  return eh * 60 + em - (h * 60 + m)
+}
 
 const db = JSON.parse(readFileSync(LEADS, 'utf8'))
 const save = () => {
@@ -123,7 +133,9 @@ if (config.approved !== SEQUENCE_VERSION) {
     save()
     if (sent < budget) {
       const [min, max] = config.gapSeconds
-      await new Promise((r) => setTimeout(r, (min + Math.random() * (max - min)) * 1000))
+      const left = until ? minutesUntil(until) : 0
+      const seconds = left > 0 ? ((left * 60) / (budget - sent)) * (0.6 + Math.random() * 0.8) : min + Math.random() * (max - min)
+      await new Promise((r) => setTimeout(r, seconds * 1000))
     }
   }
   stats.skipped = Math.max(0, due.length - stats.recent - sent)
