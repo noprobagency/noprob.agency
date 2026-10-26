@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.42.0 (26 Oct 2026)
+
+- **Marco, entry offer**: the Shopify Migration Check becomes the **Shopify Migration Blueprint** (€290, 3 working days): the store's bottleneck with its fix, the full migration project (apps, redirect map, data mapping, tracking, SEO risks), go-live date and fixed Sprint tier, a 30-minute video call. Fully credited to the first Sprint installment within 30 days, money back if not useful, the plan stays with the client. "Listino" in `docs/dati-verificati.md` updated. No site change.
+
 ### Changelog v1.41.0 (26 Oct 2026)
 
 - **Marco, platform research**: `backlink/README.md` now lists the platforms to open by type, the ones set aside and why, and the main finding: almost every profile link is nofollow or redirected (checked on live profiles), so profiles are for visibility and dofollow links come from press quotes, guest posts and podcasts. No site change.

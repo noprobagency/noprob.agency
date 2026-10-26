@@ -51,7 +51,21 @@ IT:
 
 Per essere visibili in più ricerche, ogni prodotto del listino può avere il suo gig o servizio, con i testi delle sue pagine sul sito e i prezzi del "Listino" di `docs/dati-verificati.md`:
 
-- **Shopify Migration Check** (solo marketplace, porta d'ingresso allo Sprint): €290, consegna in 3 giorni lavorativi. Report scritto più video di 10 minuti: piattaforma e app attuali, campione della mappa dei redirect, rischi SEO della migrazione, stato del tracciamento, fascia e calendario dello Sprint consigliati. Se lo Sprint si firma entro 30 giorni, i €290 si scalano dalla prima rata. Titolo EN: I will audit your store and plan its migration to Shopify. IT: Analizzo il tuo store e pianifico la migrazione su Shopify.
+- **Shopify Migration Blueprint** (solo marketplace, porta d'ingresso allo Sprint, ok di Antonio del 26 ottobre 2026: "diretta alla soluzione, impossibile da rifiutare"). Non è un audit che elenca problemi: è il progetto di migrazione già pronto.
+  - Titolo EN: I will find your store's bottleneck and plan its full Shopify migration
+  - Titolo IT: Trovo il collo di bottiglia del tuo store e ti preparo tutta la migrazione su Shopify
+  - Prezzo: €290, consegna in 3 giorni lavorativi.
+  - Cosa ricevi:
+    1. **Il collo di bottiglia**: le 3 cose che oggi frenano le vendite (velocità, checkout, tracciamento, SEO, gestione di ordini e magazzino), in ordine di impatto, ognuna con la soluzione.
+    2. **Il progetto di migrazione pronto**: ogni app e integrazione attuale con il suo equivalente su Shopify, la mappa completa dei redirect delle pagine indicizzate, la mappatura dei dati (prodotti, varianti, clienti, ordini), il piano di tracciamento server-side, i rischi SEO e come li copriamo.
+    3. **Data e prezzo**: il calendario dello Sprint con la data di go-live e la fascia di prezzo fissa per il tuo store.
+    4. **Videochiamata di 30 minuti** per spiegarti tutto.
+  - Perché è impossibile da rifiutare:
+    - i €290 si scalano interamente dalla prima rata se firmi lo Sprint entro 30 giorni, quindi per chi parte è gratis;
+    - se il progetto non ti è utile, ti ridiamo i €290;
+    - il progetto resta tuo anche se non lavori con noi: puoi realizzarlo con chi vuoi.
+  - Sottotitolo EN: Your store's bottleneck plus a ready Shopify migration plan in 3 days: redirects, data, apps, tracking, go-live date and fixed price. Fully credited to the Sprint, or your money back.
+  - Sottotitolo IT: Il collo di bottiglia del tuo store e il progetto di migrazione su Shopify pronto in 3 giorni: redirect, dati, app, tracciamento, data di go-live e prezzo fisso. Scalato dallo Sprint, o rimborsato.
 - **Sviluppo Shopify**: €1.850 al mese per 3 mesi (prezzo attuale del listino), pagina `/shopify-development`.
 - **AI Accelerator**: €1.100 una tantum (prezzo attuale del listino), pagina `/ai-accelerator`.
 
