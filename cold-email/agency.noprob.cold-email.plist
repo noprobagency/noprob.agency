@@ -5,8 +5,6 @@
   <key>Label</key><string>agency.noprob.cold-email</string>
   <key>ProgramArguments</key>
   <array>
-    <string>/usr/bin/caffeinate</string>
-    <string>-i</string>
     <string>/opt/homebrew/opt/node@20/bin/node</string>
     <string>scripts/cold-email-daily.mjs</string>
     <string>--until</string>

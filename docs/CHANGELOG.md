@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.28.0 (26 Oct 2026)
+
+- **Direct cold email, launchd fix**: the job failed to spawn on its first scheduled run (exit 78) because its program was `/usr/bin/caffeinate`. launchd now starts node directly, like the Gojiberry jobs, and `scripts/cold-email-daily.mjs` keeps the Mac awake itself with `caffeinate -w <pid>` for as long as the run lives.
+
 ### Changelog v1.27.0 (24 Oct 2026)
 
 - **Cold outreach sequence v2 ("Cannonball")**: Ada and Leonardo now run LinkedIn first (days 1, 4, 10: observation, value, proposal) and only then 5 emails (days 17, 21, 28, 35, 45). All copy talks about the lead's company and the value for it, never about noprob. Documented in `docs/COLD-OUTREACH.md` §5 and the `/cold` skill.
