@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.29.0 (26 Oct 2026)
+
+- **Direct cold email, launchd log**: the job still failed to spawn (exit 78) because launchd could not open its log in `~/Documents` (a file created without the macOS access grant). Output and errors now go to `~/Library/Logs/agency.noprob.cold-email.log`; the job runs.
+
 ### Changelog v1.28.0 (26 Oct 2026)
 
 - **Direct cold email, launchd fix**: the job failed to spawn on its first scheduled run (exit 78) because its program was `/usr/bin/caffeinate`. launchd now starts node directly, like the Gojiberry jobs, and `scripts/cold-email-daily.mjs` keeps the Mac awake itself with `caffeinate -w <pid>` for as long as the run lives.
