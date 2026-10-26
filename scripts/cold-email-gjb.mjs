@@ -6,8 +6,8 @@
 //   1. store already on Shopify  -> moved to the Shopify side list (64769), kept for later
 //   2. store already worked by the LinkedIn campaign (63200, 64866), by the direct
 //      channel (cold-email/data/leads.json) or in docs/cold/suppressed.txt -> rejected
-//   3. one person per store; approvals limited to what hello@ can send today
-//      (its Gojiberry daily limit, ramping 2 -> 30, minus approved leads not started yet)
+//   3. one person per store; new approvals a day = hello@'s daily limit / 3 emails per
+//      lead, minus approved leads not started yet
 // One line in cold-email/data/log.md; leads left for a human in cold-email/data/gjb-state.json.
 // Mon-Fri 8:30 via launchd (agency.noprob.cold-email-gjb), before the 9:00 campaign launch.
 //
@@ -43,7 +43,10 @@ const started = (c) => c.readyForCampaign || c.hasStartedCampaign
 const approvedStores = new Set(contacts.filter(started).map((c) => domainOf(normaliseUrl(c.website))))
 const waiting = contacts.filter((c) => c.readyForCampaign && !c.hasStartedCampaign).length
 const seat = ((await api('GET', '/v1/email-seat')) || []).find((s) => String(s.id) === String(DANTE.seat))
-const cap = Math.max(0, (seat?.dailyEmailMax ?? 2) - waiting)
+// Every lead gets 3 emails: approving a third of the daily capacity keeps room for the
+// follow-ups once the sequence is running (30/day -> 10 new leads a day).
+const STEPS = 3
+const cap = Math.max(0, Math.floor((seat?.dailyEmailMax ?? 2) / STEPS) - waiting)
 
 const fresh = contacts.filter((c) => !processed.has(c.id) && !started(c) && !c.rejectedAt && !c.state)
 const urls = [...new Set(fresh.map((c) => normaliseUrl(c.website)).filter(Boolean))]
