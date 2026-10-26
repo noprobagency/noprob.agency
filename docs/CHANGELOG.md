@@ -4,6 +4,12 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.31.0 (26 Oct 2026)
+
+- **Gojiberry email-only agent (Dante)**: agent 41228 (ex Leonardo) now feeds list 65682 for campaign 46398, three fixed emails from hello@noprob.agency, Review Mode on. `scripts/cold-email-gjb.mjs` (launchd `agency.noprob.cold-email-gjb`, Mon-Fri 8:30) reviews its new leads with `lib/cold-email/approve.mjs`: Shopify stores to the side list 64769, stores already in the LinkedIn lists, the direct channel or the opt-out list rejected, one person per store, approvals capped at what hello@ can send that day. Tests.
+- **No store gets two channels**: the direct channel also skips the domains of Dante's list.
+- **Short link** `noprob.agency/it/shopify-sprint` (307 to the Italian Sprint landing, `utm_source=gojiberry&utm_medium=email&utm_campaign=email-only-it`).
+
 ### Changelog v1.30.0 (26 Oct 2026)
 
 - **One LinkedIn agent for four markets**: Ada's agent now targets the United States, United Kingdom, Australia and Italy with English and Italian titles and keywords; Leonardo's agent is paused and its slot goes to the email-only agent. `scripts/cold-daily.mjs` approves English-language leads only from US, UK and Australia (others stay held), Italians keep moving to Leonardo's list. Docs and `/cold` skill updated.
