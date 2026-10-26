@@ -39,7 +39,9 @@ const direct = existsSync('cold-email/data/leads.json')
 const taken = { linkedin, direct, suppressed: readSuppressed() }
 
 const contacts = await listContacts(DANTE.list)
-const started = (c) => c.readyForCampaign || c.hasStartedCampaign
+// Started means started in Dante's campaign: leads taken over from another campaign
+// (the 95 Italians of the paused ex-Leonardo list) carry its history and still need review.
+const started = (c) => c.readyForCampaign || (c.campaignStatus || []).some((s) => s.campaignId === DANTE.campaign)
 const approvedStores = new Set(contacts.filter(started).map((c) => domainOf(normaliseUrl(c.website))))
 const waiting = contacts.filter((c) => c.readyForCampaign && !c.hasStartedCampaign).length
 const seat = ((await api('GET', '/v1/email-seat')) || []).find((s) => String(s.id) === String(DANTE.seat))

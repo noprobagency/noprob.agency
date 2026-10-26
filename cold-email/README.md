@@ -37,6 +37,8 @@ Secondo motore del canale, su Gojiberry e da **hello@noprob.agency** (antonio@ r
 
 Versione EN pronta (stessi testi tradotti, link `noprob.agency/shopify-sprint`) per una campagna Dante EN: serve un altro slot campagna in Gojiberry (2 attive per account più una per add-on).
 
+Il 26/10 la lista 65682 ha preso i 95 italiani della lista ex Leonardo (64866, campagna 45770 in pausa): solo visite al profilo, nessun messaggio né email; approvazioni azzerate, passano dalla stessa revisione.
+
 `scripts/cold-email-gjb.mjs` gira lun-ven alle 8:30 (launchd `agency.noprob.cold-email-gjb`), prima del lancio delle 9:00: Shopify nella lista 64769 (riserva per il futuro), scartati i negozi già lavorati su LinkedIn (63200, 64866), dal canale diretto o nella lista opt-out, una persona per negozio, approvazioni al giorno pari a un terzo della capacità di hello@ (3 email per lead: con 30 al giorno, 10 lead nuovi). Gojiberry cerca l'email (1 credito) solo dei lead approvati. I testi si cambiano in Gojiberry (campagna 46398), con l'ok di Antonio.
 
 ## Sequenza (lib/cold-email/sequence.mjs)

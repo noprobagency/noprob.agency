@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.34.0 (26 Oct 2026)
+
+- **Dante takes over the 95 Italians of the paused ex-Leonardo list**: moved into list 65682 with approvals reset; `scripts/cold-email-gjb.mjs` now counts a lead as started only in Dante's campaign (46398), so leads carrying another campaign's history still go through the review.
+
 ### Changelog v1.33.0 (26 Oct 2026)
 
 - **Cold outreach, Ada and Dante**: two Gojiberry agents on the same plan, each with its own Claude session. Ada (this flow) runs LinkedIn plus the spread email sequence from antonio@ for the US, UK and Australia; Dante runs aggressive cold email from hello@ for Italy. Leonardo's Italian campaign is paused (the plan allows 2 active campaigns). `scripts/cold-daily.mjs` now works on Ada's list only (leads outside US, UK, AU are held, nothing moves to the IT list) and checks the email limit of antonio@ only. Skill, guide and shared test log `docs/cold/test-log.md` updated.
