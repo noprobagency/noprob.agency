@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.43.0 (26 Oct 2026)
+
+- **Marco, Sprint gig and style**: `backlink/scheda.md` gets the full migration gig at the tier 1 price (€5,800, 4 milestones, tier 1 limits stated in the FAQ), with titles, long descriptions in Antonio's voice (IT and EN), Fiverr versions under 1,200 characters, FAQ and order questions, all matching the Sprint page. New style rule for published texts: Antonio's voice, no dashes, no colons; the agency descriptions are rewritten to follow it. First live profile: Clutch (submitted, under review). No site change.
+
 ### Changelog v1.42.0 (26 Oct 2026)
 
 - **Marco, entry offer**: the Shopify Migration Check becomes the **Shopify Migration Blueprint** (€290, 3 working days): the store's bottleneck with its fix, the full migration project (apps, redirect map, data mapping, tracking, SEO risks), go-live date and fixed Sprint tier, a 30-minute video call. Fully credited to the first Sprint installment within 30 days, money back if not useful, the plan stays with the client. "Listino" in `docs/dati-verificati.md` updated. No site change.
