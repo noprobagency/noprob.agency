@@ -3,6 +3,7 @@
 // campaign 46398, 3 emails from hello@noprob.agency). No AI. Review Mode is on in
 // Gojiberry, so nothing is sent (and no email lookup credit is spent) before this
 // approves a lead. For every new lead in the list:
+//   0. opt-out sweep on Dante's list (replies with a no, unsubscribes, shared file)
 //   1. store already on Shopify  -> moved to the Shopify side list (64769), kept for later
 //   2. store already worked by the LinkedIn campaign (63200, 64866), by the direct
 //      channel (cold-email/data/leads.json) or in docs/cold/suppressed.txt -> rejected
@@ -17,6 +18,7 @@ import { appendFileSync, existsSync, readFileSync, writeFileSync } from 'node:fs
 import { fetchPlatform, pool } from '../lib/cold/fetch-platform.mjs'
 import { normaliseUrl } from '../lib/cold/detect-platform.mjs'
 import { LISTS, api, listContacts } from '../lib/cold/gojiberry.mjs'
+import { optoutSweep } from '../lib/cold/sweep.mjs'
 import { review } from '../lib/cold-email/approve.mjs'
 import { domainOf } from '../lib/cold-email/leads.mjs'
 import { readSuppressed } from '../lib/cold-email/suppression.mjs'
@@ -29,6 +31,10 @@ const dry = process.argv.includes('--dry')
 const state = existsSync(STATE) ? JSON.parse(readFileSync(STATE, 'utf8')) : { processed: [], held: [] }
 const processed = new Set(state.processed)
 const held = new Map((state.held || []).map((h) => [h.id, h]))
+
+// Opt-outs first: anyone who replied no (or unsubscribed) on Dante's list is excluded and
+// lands in docs/cold/suppressed.txt, the same sweep Ada runs hourly on her lists.
+const sweep = await optoutSweep({ lists: [DANTE.list], since: state.lastSweep, dry })
 
 // Stores another channel already has
 const websites = async (listId) => (await listContacts(listId)).map((c) => domainOf(normaliseUrl(c.website))).filter(Boolean)
@@ -76,9 +82,9 @@ if (dry) {
   for (const { c } of plan.reject) await api('POST', `/v1/contact/${c.id}/reject`)
   for (const { c } of plan.approve) await api('PATCH', `/v1/contact/${c.id}`, { readyForCampaign: true })
   for (const { c, reason } of plan.hold) held.set(c.id, { id: c.id, company: c.company, website: c.website, reason })
-  writeFileSync(STATE, JSON.stringify({ lastRun: new Date().toISOString(), processed: [...processed], held: [...held.values()] }))
+  writeFileSync(STATE, JSON.stringify({ lastRun: new Date().toISOString(), lastSweep: sweep.startedAt, processed: [...processed], held: [...held.values()] }))
 }
 
-const line = `- ${new Date().toISOString().slice(0, 16).replace('T', ' ')}${dry ? ' (dry)' : ''} · Dante (Gojiberry email) · nuovi ${fresh.length} · approvati ${plan.approve.length} (capacità ${cap}) · Shopify spostati ${plan.shopify.length} · scartati ${plan.reject.length} · da guardare ${plan.hold.length}\n`
+const line = `- ${new Date().toISOString().slice(0, 16).replace('T', ' ')}${dry ? ' (dry)' : ''} · Dante (Gojiberry email) · nuovi ${fresh.length} · approvati ${plan.approve.length} (capacità ${cap}) · Shopify spostati ${plan.shopify.length} · scartati ${plan.reject.length} · da guardare ${plan.hold.length} · opt-out ${sweep.excluded}\n`
 if (!dry) appendFileSync(LOG, line)
 process.stdout.write(line)
