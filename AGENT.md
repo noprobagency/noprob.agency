@@ -8,6 +8,9 @@ copy, routes or tracking. Cold email and LinkedIn outreach with Gojiberry (rules
 sequences, limits, compliance) are in [docs/COLD-OUTREACH.md](docs/COLD-OUTREACH.md): read it before
 any outbound work. The direct cold email channel (email only from antonio@, its own
 rules, engine and CRM) is in [cold-email/README.md](cold-email/README.md).
+Backlinks and platform visibility (Marco, `/backlink`: directories, marketplaces such as
+Fiverr, community, PR) are in [backlink/README.md](backlink/README.md), with the only texts to
+use in [backlink/scheda.md](backlink/scheda.md).
 
 ## Project context
 
