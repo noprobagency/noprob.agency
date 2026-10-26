@@ -1,19 +1,19 @@
 # Scheda aziendale canonica
 
-Unica fonte dei testi che Marco usa su ogni piattaforma (README, regola 2). Cambia qui, poi copia. Dati presi da `lib/site.ts`, `public/llms.txt` e `docs/dati-verificati.md` (26 ottobre 2026). I campi segnati **da decidere** li sceglie Antonio prima di aprire il primo profilo.
+Unica fonte dei testi che Marco usa su ogni piattaforma (README, regola 2). Cambia qui, poi copia. Dati presi da `lib/site.ts`, `public/llms.txt` e `docs/dati-verificati.md` (26 ottobre 2026). Contatti e prezzi sui marketplace decisi da Antonio il 26 ottobre 2026 ("decidi tu, ultra visibile ovunque, flessibile per piattaforma").
 
 ## Identità
 
 | Campo | Valore |
 |---|---|
 | Nome pubblico | noprob agency |
-| Ragione sociale | NOPROB AGENCY LLC (Wyoming LLC, USA) |
+| Ragione sociale | NOPROB AGENCY LLC (Wyoming LLC, USA), EIN 365136989 |
 | Fondata | 2022 |
 | Fondatore | Antonio Manitta |
 | Sito | https://noprob.agency |
-| Email pubblica | **da decidere** (hello@noprob.agency oppure una casella dedicata alle piattaforme, per tenere separati i contatti in entrata dal cold) |
-| Telefono | **da decidere** (molte directory lo chiedono; serve lo stesso numero ovunque) |
-| Indirizzo | **da decidere** (indirizzo dell'LLC o nessuno, se la piattaforma lo permette; mai due indirizzi diversi) |
+| Email pubblica | hello@noprob.agency |
+| Telefono | +39 320 406 3459 (formato internazionale +393204063459) |
+| Indirizzo | 30 N Gould St Ste R, Sheridan, WY 82801, USA (sede legale, come footer, privacy e JSON-LD). Dove la piattaforma lo permette (Google Business Profile, Bing Places) si nasconde l'indirizzo e si dichiara area servita: Italia, Unione Europea, Stati Uniti, Regno Unito |
 | Lingue | inglese, italiano |
 | Mercati | Italia e internazionale |
 | Recensioni | Trustpilot https://www.trustpilot.com/review/noprob.agency |
@@ -42,9 +42,18 @@ IT:
 - Titolo EN (formato Fiverr): I will migrate your WooCommerce, PrestaShop or Magento store to Shopify in 14 days
 - Titolo IT: Porto il tuo store da WooCommerce, PrestaShop o Magento su Shopify in 14 giorni
 - Cosa include: store rifatto da zero con il Custom AI System, redirect 1:1, nessun fermo del sito, tracciamento server-side, pronto al giorno 14, go-live tra il giorno 15 e il 30, 90 giorni di supporto, 4 garanzie scritte.
-- Prezzi (IVA esclusa, 4 rate, da `ZL_TIERS`): €5.800 sotto €2M di fatturato, €8.800 da €2M a €20M, €12.800 oltre €20M. Se un marketplace ha un tetto di prezzo per pacchetto o non permette le rate, **da decidere** con Antonio come presentarlo, senza cambiare le condizioni.
+- Prezzi (IVA esclusa, 4 rate, da `ZL_TIERS`): €5.800 sotto €2M di fatturato, €8.800 da €2M a €20M, €12.800 oltre €20M.
+- Pacchetti: dove la piattaforma ha 3 pacchetti (Fiverr), i 3 pacchetti sono le 3 fasce di fatturato con contenuto identico. Le 4 rate diventano 4 milestone (Fiverr, Upwork, Contra, Malt). Dove c'è un tetto di prezzo per pacchetto, il gig mostra il prezzo più alto consentito come "a partire da" e la fascia giusta si manda come offerta personalizzata: mai un prezzo dello Sprint più basso del listino. Le commissioni della piattaforma non cambiano il nostro prezzo.
 - Prova (un numero per testo): Cumini, moda luxury, +67,7% di vendite online nei 12 mesi dopo la migrazione (EN: +67.7%). In alternativa Nazzi, integratori DTC, +105% di vendite online nei primi 85 giorni da WooCommerce.
 - Link: EN https://noprob.agency/shopify-migration-sprint · IT https://noprob.agency/it/sprint-migrazione-shopify
+
+## Altri servizi sui marketplace
+
+Per essere visibili in più ricerche, ogni prodotto del listino può avere il suo gig o servizio, con i testi delle sue pagine sul sito e i prezzi del "Listino" di `docs/dati-verificati.md`:
+
+- **Shopify Migration Check** (solo marketplace, porta d'ingresso allo Sprint): €290, consegna in 3 giorni lavorativi. Report scritto più video di 10 minuti: piattaforma e app attuali, campione della mappa dei redirect, rischi SEO della migrazione, stato del tracciamento, fascia e calendario dello Sprint consigliati. Se lo Sprint si firma entro 30 giorni, i €290 si scalano dalla prima rata. Titolo EN: I will audit your store and plan its migration to Shopify. IT: Analizzo il tuo store e pianifico la migrazione su Shopify.
+- **Sviluppo Shopify**: €1.850 al mese per 3 mesi (prezzo attuale del listino), pagina `/shopify-development`.
+- **AI Accelerator**: €1.100 una tantum (prezzo attuale del listino), pagina `/ai-accelerator`.
 
 ## Asset
 

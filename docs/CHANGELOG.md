@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.40.0 (26 Oct 2026)
+
+- **Marco, decisions**: public contacts for every platform (hello@noprob.agency, the Italian mobile, the LLC address from the footer, area served where the address can be hidden), how the Sprint fits marketplace packages, milestones and price caps without changing its terms, the other listino products as extra gigs, and a marketplace-only entry product, the Shopify Migration Check at €290 (added to the "Listino" in `docs/dati-verificati.md`). Marco now publishes and maintains profiles on its own; Antonio only creates accounts, signs terms and pays. Live profiles go into `sameAs`. No site change.
+
 ### Changelog v1.39.0 (26 Oct 2026)
 
 - **Backlink agent, Marco**: new `backlink/` folder with the rules (`README.md`: one offer, verified numbers, no dirty links, accounts and payments by Antonio), the canonical company profile with every text to paste on platforms (`scheda.md`, IT and EN) and the `/backlink` skill (stato, cerca, valuta, prepara, verifica). Working tracker in `backlink/data/` (gitignored). No site change.

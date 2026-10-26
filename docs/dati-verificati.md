@@ -166,3 +166,4 @@ vanno corrette qui e nel copy.
 | Sviluppo Shopify | €1.600 (primi 10 progetti), €1.850 (11-20, attuale), €2.100 (21-30), €2.400 (dal 31°) al mese × 3 mesi | `lib/i18n/sviluppo.ts`, JSON-LD, llms.txt |
 | AI Accelerator | €750 (pilota, chiuso), €1.100 (attuale, fino al 15° cliente), €2.500 (16-30), €4.000 (dal 31°) una tantum | `lib/i18n/aiAccelerator.ts`, JSON-LD |
 | Data-Driven Team | su misura, primo sprint di 30 giorni a metà prezzo | `lib/i18n/dataTeam.ts`, `teamRoadmap.ts` |
+| Shopify Migration Check (solo marketplace, 26 ottobre 2026) | €290 una tantum, scalato dalla prima rata dello Sprint se firmato entro 30 giorni | `backlink/scheda.md` (non sul sito) |
