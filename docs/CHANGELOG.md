@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.33.0 (26 Oct 2026)
+
+- **Cold outreach, Ada and Dante**: two Gojiberry agents on the same plan, each with its own Claude session. Ada (this flow) runs LinkedIn plus the spread email sequence from antonio@ for the US, UK and Australia; Dante runs aggressive cold email from hello@ for Italy. Leonardo's Italian campaign is paused (the plan allows 2 active campaigns). `scripts/cold-daily.mjs` now works on Ada's list only (leads outside US, UK, AU are held, nothing moves to the IT list) and checks the email limit of antonio@ only. Skill, guide and shared test log `docs/cold/test-log.md` updated.
+
 ### Changelog v1.32.0 (26 Oct 2026)
 
 - **Dante sequence v2 (Cannonball)**: observation (the first email that got a reply), value (PHP flaw "in October", offer to check exposure), proposal (14 days, public price, 4 written guarantees, landing link) on days 0, 7 and 21 from hello@ at 30 a day; the review routine now approves a third of hello@'s daily capacity (3 emails per lead) so follow-ups always fit. Copy in `cold-email/README.md`.

@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 // Daily technical routine for the Gojiberry cold outreach (no AI, no credits).
-// For every new lead in the Sprint lists:
+// For every new lead in Ada's list (US, UK, AU; Italy went to Dante's email agent on 26 Oct 2026):
 //   1. store already on Shopify  -> moved to the side-project segment
-//   2. Italian lead in the EN list -> moved to the IT list; EN leads outside US, UK, AU -> held
-//   3. lead passing the fixed criteria -> approved (readyForCampaign), max N per campaign per run
+//   2. lead outside US, UK, AU -> held for a human look
+//   3. lead passing the fixed criteria -> approved (readyForCampaign), max N per run
 // Before that, the opt-out sweep (lib/cold/sweep.mjs), which also runs hourly on its own.
 // Writes one line to docs/cold/daily-log.md. Lead data never leaves docs/cold/ (gitignored).
 //
@@ -20,11 +20,10 @@ const MIN_SCORE = 2.0
 // total is the ceiling Antonio set (60+ is a problem), Gojiberry keeps at most 25 of it
 // so manual and direct emails have room.
 const GOJIBERRY_EMAIL_CAP = 25
+const ADA_MAILBOX = 'antonio@noprob.agency' // hello@ belongs to Dante's email agent
 const NOT_DECISION_MAKER = /\b(assistant|associate|intern|internship|stagista|junior|customer service|customer care|coordinator|specialist|analyst|consultant|freelance|executive assistant|trainee)\b/i
-// Markets of the merged LinkedIn agent (Ada): US, UK and Australia in English, Italy in
-// Italian (moved to Leonardo's list). Anyone else stays held for a human look.
+// Ada's markets: US, UK and Australia. Anyone else stays held for a human look.
 const EN_MARKETS = /\b(united states|usa|u\.s\.|united kingdom|uk|england|scotland|wales|northern ireland|great britain|australia|new south wales|queensland|western australia|south australia|tasmania|bay area|new york|los angeles|chicago|boston|seattle|miami|dallas|houston|austin|atlanta|denver|phoenix|philadelphia|san diego|portland|nashville|washington dc|london|manchester|birmingham|leeds|glasgow|edinburgh|bristol|liverpool|sydney|melbourne|brisbane|perth|adelaide|gold coast|canberra)\b/i
-const ITALY = /\b(italy|italia|milan|milano|rome|roma|turin|torino|naples|napoli|florence|firenze|bologna|venice|venezia|genoa|genova|verona|bari|palermo|catania|padua|padova|brescia|bergamo|como|monza|varese|treviso|vicenza|modena|parma|reggio|rimini|pesaro|ancona|perugia|cagliari|trieste|udine|trento|bolzano)\b/i
 
 const args = process.argv.slice(2)
 const dry = args.includes('--dry')
@@ -50,19 +49,19 @@ const saveState = (extra) => {
 const sweep = await optoutSweep({ since: state.lastSweep, dry })
 saveState({ lastSweep: sweep.startedAt })
 
-// --- Email volume: Gojiberry seats (the direct channel adds its own) -------------
+// --- Email volume: Ada's Gojiberry mailbox (Dante's hello@ has its own budget) --
 const seats = await api('GET', '/v1/email-seat')
-const mailMax = seats.reduce((n, s) => n + (s.dailyEmailMax || 0), 0)
+const mailMax = seats.filter((s) => s.email === ADA_MAILBOX).reduce((n, s) => n + (s.dailyEmailMax || 0), 0)
 const mailFlag = mailMax > GOJIBERRY_EMAIL_CAP ? ` ⚠ sopra ${GOJIBERRY_EMAIL_CAP}, abbassare in Gojiberry` : ''
 
 // --- New leads -----------------------------------------------------------------
 const processed = new Set(state.processed)
 const held = new Set(state.held || [])
-const stats = { new: 0, shopify: 0, toIt: 0, approved: { en: 0, it: 0 }, held: 0 }
-const moves = { shopify: [], it: [] }
+const stats = { new: 0, shopify: 0, approved: { en: 0 }, held: 0 }
+const moves = { shopify: [] }
 const approvals = []
 
-for (const key of ['en', 'it']) {
+for (const key of ['en']) {
   const contacts = await listContacts(LISTS[key])
   const busyCompanies = new Set(
     contacts.filter((c) => c.readyForCampaign || c.hasStartedCampaign).map(companyKey),
@@ -88,12 +87,8 @@ for (const key of ['en', 'it']) {
       processed.add(c.id)
       continue
     }
-    if (key === 'en' && ITALY.test(`${c.location} ${c.companyLocation}`)) {
-      moves.it.push(c.id)
-      continue // evaluated again tomorrow inside the IT list
-    }
     const ok =
-      (key === 'it' || EN_MARKETS.test(`${c.location} ${c.companyLocation}`)) &&
+      EN_MARKETS.test(`${c.location} ${c.companyLocation}`) &&
       url &&
       platform !== 'unreachable' &&
       siteMatchesCompany(c.company, url) &&
@@ -125,15 +120,13 @@ for (const key of ['en', 'it']) {
 }
 
 stats.shopify = moves.shopify.length
-stats.toIt = moves.it.length
 
 if (!dry) {
   if (moves.shopify.length) await api('POST', `/v1/contact/list/${LISTS.shopify}/contacts`, { contactIds: moves.shopify })
-  if (moves.it.length) await api('POST', `/v1/contact/list/${LISTS.it}/contacts`, { contactIds: moves.it })
   for (const id of approvals) await api('PATCH', `/v1/contact/${id}`, { readyForCampaign: true })
   saveState({ lastRun: new Date().toISOString(), processed: [...processed], held: [...held] })
 }
 
-const line = `- ${stamp()}${dry ? ' (dry)' : ''} · opt-out esclusi ${sweep.excluded} · nuovi ${stats.new} · Shopify spostati ${stats.shopify} · IT spostati ${stats.toIt} · approvati EN ${stats.approved.en} IT ${stats.approved.it} · da guardare ${stats.held} · email Gojiberry max/giorno ${mailMax}${mailFlag}\n`
+const line = `- ${stamp()}${dry ? ' (dry)' : ''} · opt-out esclusi ${sweep.excluded} · nuovi ${stats.new} · Shopify spostati ${stats.shopify} · approvati ${stats.approved.en} · da guardare ${stats.held} · email antonio@ max/giorno ${mailMax}${mailFlag}\n`
 if (!dry) appendFileSync(LOG, line)
 process.stdout.write(line)
