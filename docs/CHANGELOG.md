@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.33.0 (26 Oct 2026)
+
+- **Cold outreach roles, Ada and Dante**: the `/cold` skill and `docs/COLD-OUTREACH.md` now say that this flow is Ada (Gojiberry LinkedIn + email from antonio@, 45 days) and that Dante runs aggressive cold email from hello@; email tests and results are shared in `docs/cold/test-log.md`. Gojiberry agent and campaigns renamed to match.
+
 ### Changelog v1.32.0 (26 Oct 2026)
 
 - **Dante sequence v2 (Cannonball)**: observation (the first email that got a reply), value (PHP flaw "in October", offer to check exposure), proposal (14 days, public price, 4 written guarantees, landing link) on days 0, 7 and 21 from hello@ at 30 a day; the review routine now approves a third of hello@'s daily capacity (3 emails per lead) so follow-ups always fit. Copy in `cold-email/README.md`.
