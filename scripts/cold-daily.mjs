@@ -2,7 +2,7 @@
 // Daily technical routine for the Gojiberry cold outreach (no AI, no credits).
 // For every new lead in the Sprint lists:
 //   1. store already on Shopify  -> moved to the side-project segment
-//   2. Italian lead in the EN list -> moved to the IT list
+//   2. Italian lead in the EN list -> moved to the IT list; EN leads outside US, UK, AU -> held
 //   3. lead passing the fixed criteria -> approved (readyForCampaign), max N per campaign per run
 // Before that, the opt-out sweep (lib/cold/sweep.mjs), which also runs hourly on its own.
 // Writes one line to docs/cold/daily-log.md. Lead data never leaves docs/cold/ (gitignored).
@@ -21,6 +21,9 @@ const MIN_SCORE = 2.0
 // so manual and direct emails have room.
 const GOJIBERRY_EMAIL_CAP = 25
 const NOT_DECISION_MAKER = /\b(assistant|associate|intern|internship|stagista|junior|customer service|customer care|coordinator|specialist|analyst|consultant|freelance|executive assistant|trainee)\b/i
+// Markets of the merged LinkedIn agent (Ada): US, UK and Australia in English, Italy in
+// Italian (moved to Leonardo's list). Anyone else stays held for a human look.
+const EN_MARKETS = /\b(united states|usa|u\.s\.|united kingdom|uk|england|scotland|wales|northern ireland|great britain|australia|new south wales|queensland|western australia|south australia|tasmania|bay area|new york|los angeles|chicago|boston|seattle|miami|dallas|houston|austin|atlanta|denver|phoenix|philadelphia|san diego|portland|nashville|washington dc|london|manchester|birmingham|leeds|glasgow|edinburgh|bristol|liverpool|sydney|melbourne|brisbane|perth|adelaide|gold coast|canberra)\b/i
 const ITALY = /\b(italy|italia|milan|milano|rome|roma|turin|torino|naples|napoli|florence|firenze|bologna|venice|venezia|genoa|genova|verona|bari|palermo|catania|padua|padova|brescia|bergamo|como|monza|varese|treviso|vicenza|modena|parma|reggio|rimini|pesaro|ancona|perugia|cagliari|trieste|udine|trento|bolzano)\b/i
 
 const args = process.argv.slice(2)
@@ -90,6 +93,7 @@ for (const key of ['en', 'it']) {
       continue // evaluated again tomorrow inside the IT list
     }
     const ok =
+      (key === 'it' || EN_MARKETS.test(`${c.location} ${c.companyLocation}`)) &&
       url &&
       platform !== 'unreachable' &&
       siteMatchesCompany(c.company, url) &&

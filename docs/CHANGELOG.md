@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.30.0 (26 Oct 2026)
+
+- **One LinkedIn agent for four markets**: Ada's agent now targets the United States, United Kingdom, Australia and Italy with English and Italian titles and keywords; Leonardo's agent is paused and its slot goes to the email-only agent. `scripts/cold-daily.mjs` approves English-language leads only from US, UK and Australia (others stay held), Italians keep moving to Leonardo's list. Docs and `/cold` skill updated.
+
 ### Changelog v1.29.0 (26 Oct 2026)
 
 - **Direct cold email, launchd log**: the job still failed to spawn (exit 78) because launchd could not open its log in `~/Documents` (a file created without the macOS access grant). Output and errors now go to `~/Library/Logs/agency.noprob.cold-email.log`; the job runs.
