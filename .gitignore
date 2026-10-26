@@ -53,3 +53,5 @@ docs/cold/
 
 # Direct cold email: lead data, send log (personal data, local only)
 cold-email/data/
+# Backlink (Marco): working tracker of platforms, local only
+backlink/data/
