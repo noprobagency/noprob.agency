@@ -6,7 +6,7 @@ old entries, add a new one on top.
 
 ### Changelog v1.33.0 (26 Oct 2026)
 
-- **Cold outreach roles, Ada and Dante**: the `/cold` skill and `docs/COLD-OUTREACH.md` now say that this flow is Ada (Gojiberry LinkedIn + email from antonio@, 45 days) and that Dante runs aggressive cold email from hello@; email tests and results are shared in `docs/cold/test-log.md`. Gojiberry agent and campaigns renamed to match.
+- **Cold outreach, Ada and Dante**: two Gojiberry agents on the same plan, each with its own Claude session. Ada (this flow) runs LinkedIn plus the spread email sequence from antonio@ for the US, UK and Australia; Dante runs aggressive cold email from hello@ for Italy. Leonardo's Italian campaign is paused (the plan allows 2 active campaigns). `scripts/cold-daily.mjs` now works on Ada's list only (leads outside US, UK, AU are held, nothing moves to the IT list) and checks the email limit of antonio@ only. Skill, guide and shared test log `docs/cold/test-log.md` updated.
 
 ### Changelog v1.32.0 (26 Oct 2026)
 
