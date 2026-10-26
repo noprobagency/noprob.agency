@@ -4,6 +4,11 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.32.0 (26 Oct 2026)
+
+- **Dante sequence v2 (Cannonball)**: observation (the first email that got a reply), value (PHP flaw "in October", offer to check exposure), proposal (14 days, public price, 4 written guarantees, landing link) on days 0, 7 and 21 from hello@ at 30 a day; the review routine now approves a third of hello@'s daily capacity (3 emails per lead) so follow-ups always fit. Copy in `cold-email/README.md`.
+- **Short link** `noprob.agency/shopify-sprint` (EN, `utm_campaign=email-only-en`) for the English version.
+
 ### Changelog v1.31.0 (26 Oct 2026)
 
 - **Gojiberry email-only agent (Dante)**: agent 41228 (ex Leonardo) now feeds list 65682 for campaign 46398, three fixed emails from hello@noprob.agency, Review Mode on. `scripts/cold-email-gjb.mjs` (launchd `agency.noprob.cold-email-gjb`, Mon-Fri 8:30) reviews its new leads with `lib/cold-email/approve.mjs`: Shopify stores to the side list 64769, stores already in the LinkedIn lists, the direct channel or the opt-out list rejected, one person per store, approvals capped at what hello@ can send that day. Tests.

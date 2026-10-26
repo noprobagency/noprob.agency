@@ -24,10 +24,20 @@ Secondo motore del canale, su Gojiberry e da **hello@noprob.agency** (antonio@ r
 |---|---|---|
 | Agente sorgente | 41228 "Dante · Email Italia" | ex Leonardo, Italia, titolari ed eCommerce più ruoli tecnici (CTO, IT, web manager), segnali tecnologia (WooCommerce, Magento, PrestaShop, Shopware, SFCC) ed eventi, punteggio minimo 0,6 |
 | Lista | 65682 | solo questo agente |
-| Campagna | 46398 | 3 email fisse (giorni 0, +3, +7), lun-ven 9:00, Review Mode attivo, link `noprob.agency/it/shopify-sprint` (`utm_source=gojiberry`, `utm_campaign=email-only-it`) |
-| Casella | hello@ (seat 11555) | ramp-up 2 → 30 al giorno (circa 13 novembre), smart warm-up spento |
+| Campagna | 46398 | 3 email fisse, giorni 0, +7 e +21 (ritardi 1, 7, 14), lun-ven 9:00, Review Mode attivo, oggetto "[Company] su Shopify?" e follow-up nello stesso thread |
+| Casella | hello@ (seat 11555) | casella già usata in passato: 30 al giorno da subito (ramp-up spento), smart warm-up e open tracking spenti, link di disiscrizione attivo |
 
-`scripts/cold-email-gjb.mjs` gira lun-ven alle 8:30 (launchd `agency.noprob.cold-email-gjb`), prima del lancio delle 9:00: Shopify nella lista 64769 (riserva per il futuro), scartati i negozi già lavorati su LinkedIn (63200, 64866), dal canale diretto o nella lista opt-out, una persona per negozio, approvazioni fino alla capacità di hello@ del giorno. Gojiberry cerca l'email (1 credito) solo dei lead approvati. I testi si cambiano in Gojiberry (campagna 46398), con l'ok di Antonio.
+**Sequenza Dante (v2, regola Cannonball: osservazione → valore → proposta, si parla di loro)**
+
+| Email | Giorno | Contenuto |
+|---|---|---|
+| E1 osservazione | 0 | L'email che ha avuto risposta il 23/10: "ho visto che [Company] non è su Shopify, è una scelta o ci state pensando?", PS opt-out |
+| E2 valore | +7 | "A ottobre" il CERT UE ha segnalato due falle critiche in PHP (WooCommerce, Magento, PrestaShop), su Shopify server e sicurezza non sono più un loro pensiero, offerta di controllare in due minuti se il sito risulta esposto |
+| E3 proposta | +21 | Per [Company] 14 giorni su Shopify senza perdere Google né vendite, prezzo pubblico e 4 garanzie scritte, link /it/shopify-sprint |
+
+Versione EN pronta (stessi testi tradotti, link `noprob.agency/shopify-sprint`) per una campagna Dante EN: serve un altro slot campagna in Gojiberry (2 attive per account più una per add-on).
+
+`scripts/cold-email-gjb.mjs` gira lun-ven alle 8:30 (launchd `agency.noprob.cold-email-gjb`), prima del lancio delle 9:00: Shopify nella lista 64769 (riserva per il futuro), scartati i negozi già lavorati su LinkedIn (63200, 64866), dal canale diretto o nella lista opt-out, una persona per negozio, approvazioni al giorno pari a un terzo della capacità di hello@ (3 email per lead: con 30 al giorno, 10 lead nuovi). Gojiberry cerca l'email (1 credito) solo dei lead approvati. I testi si cambiano in Gojiberry (campagna 46398), con l'ok di Antonio.
 
 ## Sequenza (lib/cold-email/sequence.mjs)
 
