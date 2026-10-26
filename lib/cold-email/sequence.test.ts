@@ -86,6 +86,8 @@ describe('gmail thread outcome', async () => {
   it('stops on a human reply or a bounce, not on out of office', () => {
     expect(threadOutcome({ messages: [me] })).toBe(null)
     expect(threadOutcome({ messages: [me, msg('Sara <sara@acme.it>')] })).toBe('reply')
+    expect(threadOutcome({ messages: [me, { ...msg('Sara <sara@acme.it>'), snippet: 'No grazie, non siamo interessati' }] })).toBe('optout')
+    expect(threadOutcome({ messages: [me, { ...msg('Sara <sara@acme.it>'), snippet: 'Ciao, quanto costa la migrazione?' }] })).toBe('reply')
     expect(threadOutcome({ messages: [me, msg('Mail Delivery Subsystem <mailer-daemon@googlemail.com>')] })).toBe('bounce')
     expect(threadOutcome({ messages: [me, msg('sara@acme.it', { Subject: 'Risposta automatica: fuori ufficio' })] })).toBe(null)
     expect(threadOutcome({ messages: [me, msg('sara@acme.it', { 'Auto-Submitted': 'auto-replied' })] })).toBe(null)

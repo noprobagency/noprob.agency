@@ -56,7 +56,7 @@ const db = JSON.parse(readFileSync(LEADS, 'utf8'))
 const save = () => {
   if (!dry) writeFileSync(LEADS, JSON.stringify({ ...db, updatedAt: new Date().toISOString() }, null, 2))
 }
-const stats = { replies: 0, bounces: 0, sent: { e1: 0, e2: 0, e3: 0, e4: 0, e5: 0 }, skipped: 0, recent: 0 }
+const stats = { replies: 0, optouts: 0, bounces: 0, sent: { e1: 0, e2: 0, e3: 0, e4: 0, e5: 0 }, skipped: 0, recent: 0 }
 
 // A dry run works without Gmail too: it only lists what would be sent.
 const api = await accessToken().then(gmail, (err) => {
@@ -77,6 +77,10 @@ for (const lead of api ? db.leads : []) {
     stats.replies++
     Object.assign(lead, { segment: 'warm', reason: 'reply to sequence', priority: 1, note: `Risposta alla sequenza dopo ${seq.sent.length} email` })
     stopStore(db.leads, lead.domain, `${lead.email} ha risposto`, today) // the whole store stops
+  } else if (outcome === 'optout') {
+    stats.optouts++ // to docs/cold/suppressed.txt below, with every other refusal
+    Object.assign(lead, { segment: 'suppressed', reason: 'opt-out' })
+    stopStore(db.leads, lead.domain, `${lead.email} ha detto no`, today)
   } else {
     stats.bounces++
     Object.assign(lead, { segment: 'suppressed', reason: 'bounce' })
@@ -166,7 +170,7 @@ if (config.approved !== SEQUENCE_VERSION) {
 
 // 4. Log and CRM
 const total = Object.values(stats.sent).reduce((a, b) => a + b, 0)
-const line = `- ${new Date().toISOString().slice(0, 16).replace('T', ' ')}${dry ? ' (dry)' : ''} · inviate ${total} (${Object.entries(stats.sent).filter(([, n]) => n).map(([k, n]) => `${k} ${n}`).join(', ') || 'nessuna'}) · rinviate ${stats.skipped} · saltate (scritte a mano) ${stats.recent} · risposte ${stats.replies} · bounce ${stats.bounces}${note}\n`
+const line = `- ${new Date().toISOString().slice(0, 16).replace('T', ' ')}${dry ? ' (dry)' : ''} · inviate ${total} (${Object.entries(stats.sent).filter(([, n]) => n).map(([k, n]) => `${k} ${n}`).join(', ') || 'nessuna'}) · rinviate ${stats.skipped} · saltate (scritte a mano) ${stats.recent} · risposte ${stats.replies} · opt-out ${stats.optouts} · bounce ${stats.bounces}${note}\n`
 if (!dry) {
   appendFileSync(LOG, line)
   if (existsSync(config.crmPath)) execFileSync('node', ['scripts/cold-email-crm.mjs', config.crmPath, '--push'], { stdio: 'inherit' })
