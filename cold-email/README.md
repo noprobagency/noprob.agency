@@ -16,6 +16,19 @@ Valgono qui e solo qui; Gojiberry tiene le sue.
 8. **Stile**: voce di Antonio, prima persona, poche righe, amichevole e schietto, niente trattini, niente due punti nel corpo, nessun link prima della quinta email.
 9. **Dati dei lead**: solo in `cold-email/data/` (gitignored) e nel CRM privato. Mai in file versionati, artifact o chat esterne.
 
+## Agente Gojiberry solo email: Dante
+
+Secondo motore del canale, su Gojiberry e da **hello@noprob.agency** (antonio@ resta al canale diretto e alla campagna LinkedIn). Decisione di Antonio del 26 ottobre: LinkedIn resta alla sessione Gojiberry, l'email a freddo (compreso questo agente) è di questo canale.
+
+| Oggetto | Id | Note |
+|---|---|---|
+| Agente sorgente | 41228 "Dante · Email Italia" | ex Leonardo, Italia, titolari ed eCommerce più ruoli tecnici (CTO, IT, web manager), segnali tecnologia (WooCommerce, Magento, PrestaShop, Shopware, SFCC) ed eventi, punteggio minimo 0,6 |
+| Lista | 65682 | solo questo agente |
+| Campagna | 46398 | 3 email fisse (giorni 0, +3, +7), lun-ven 9:00, Review Mode attivo, link `noprob.agency/it/shopify-sprint` (`utm_source=gojiberry`, `utm_campaign=email-only-it`) |
+| Casella | hello@ (seat 11555) | ramp-up 2 → 30 al giorno (circa 13 novembre), smart warm-up spento |
+
+`scripts/cold-email-gjb.mjs` gira lun-ven alle 8:30 (launchd `agency.noprob.cold-email-gjb`), prima del lancio delle 9:00: Shopify nella lista 64769 (riserva per il futuro), scartati i negozi già lavorati su LinkedIn (63200, 64866), dal canale diretto o nella lista opt-out, una persona per negozio, approvazioni fino alla capacità di hello@ del giorno. Gojiberry cerca l'email (1 credito) solo dei lead approvati. I testi si cambiano in Gojiberry (campagna 46398), con l'ok di Antonio.
+
 ## Sequenza (lib/cold-email/sequence.mjs)
 
 | Step | Giorno | Angolo |

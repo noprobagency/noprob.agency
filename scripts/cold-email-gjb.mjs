@@ -1,0 +1,79 @@
+#!/usr/bin/env node
+// Daily review of the Gojiberry email agent's leads (Dante: agent 41228, list 65682,
+// campaign 46398, 3 emails from hello@noprob.agency). No AI. Review Mode is on in
+// Gojiberry, so nothing is sent (and no email lookup credit is spent) before this
+// approves a lead. For every new lead in the list:
+//   1. store already on Shopify  -> moved to the Shopify side list (64769), kept for later
+//   2. store already worked by the LinkedIn campaign (63200, 64866), by the direct
+//      channel (cold-email/data/leads.json) or in docs/cold/suppressed.txt -> rejected
+//   3. one person per store; approvals limited to what hello@ can send today
+//      (its Gojiberry daily limit, ramping 2 -> 30, minus approved leads not started yet)
+// One line in cold-email/data/log.md; leads left for a human in cold-email/data/gjb-state.json.
+// Mon-Fri 8:30 via launchd (agency.noprob.cold-email-gjb), before the 9:00 campaign launch.
+//
+// Usage: node scripts/cold-email-gjb.mjs [--dry]
+
+import { appendFileSync, existsSync, readFileSync, writeFileSync } from 'node:fs'
+import { fetchPlatform, pool } from '../lib/cold/fetch-platform.mjs'
+import { normaliseUrl } from '../lib/cold/detect-platform.mjs'
+import { LISTS, api, listContacts } from '../lib/cold/gojiberry.mjs'
+import { review } from '../lib/cold-email/approve.mjs'
+import { domainOf } from '../lib/cold-email/leads.mjs'
+import { readSuppressed } from '../lib/cold-email/suppression.mjs'
+
+const DANTE = { list: 65682, campaign: 46398, seat: 11555 }
+const STATE = 'cold-email/data/gjb-state.json'
+const LOG = 'cold-email/data/log.md'
+const dry = process.argv.includes('--dry')
+
+const state = existsSync(STATE) ? JSON.parse(readFileSync(STATE, 'utf8')) : { processed: [], held: [] }
+const processed = new Set(state.processed)
+const held = new Map((state.held || []).map((h) => [h.id, h]))
+
+// Stores another channel already has
+const websites = async (listId) => (await listContacts(listId)).map((c) => domainOf(normaliseUrl(c.website))).filter(Boolean)
+const linkedin = new Set([...(await websites(LISTS.en)), ...(await websites(LISTS.it))])
+const direct = existsSync('cold-email/data/leads.json')
+  ? new Set(JSON.parse(readFileSync('cold-email/data/leads.json', 'utf8')).leads.filter((l) => l.segment !== 'shopify').map((l) => l.domain))
+  : new Set()
+const taken = { linkedin, direct, suppressed: readSuppressed() }
+
+const contacts = await listContacts(DANTE.list)
+const started = (c) => c.readyForCampaign || c.hasStartedCampaign
+const approvedStores = new Set(contacts.filter(started).map((c) => domainOf(normaliseUrl(c.website))))
+const waiting = contacts.filter((c) => c.readyForCampaign && !c.hasStartedCampaign).length
+const seat = ((await api('GET', '/v1/email-seat')) || []).find((s) => String(s.id) === String(DANTE.seat))
+const cap = Math.max(0, (seat?.dailyEmailMax ?? 2) - waiting)
+
+const fresh = contacts.filter((c) => !processed.has(c.id) && !started(c) && !c.rejectedAt && !c.state)
+const urls = [...new Set(fresh.map((c) => normaliseUrl(c.website)).filter(Boolean))]
+const checks = await pool(urls, 12, (u) => fetchPlatform(u))
+
+const plan = { approve: [], shopify: [], reject: [], hold: [] }
+for (const c of fresh.sort((a, b) => Number(b.total_scoring) - Number(a.total_scoring))) {
+  const decision = review(c, checks.get(normaliseUrl(c.website)) || null, taken)
+  if (decision.action === 'approve' && approvedStores.has(decision.domain)) {
+    plan.reject.push({ c, reason: 'same store already approved' })
+  } else if (decision.action === 'approve' && plan.approve.length >= cap) {
+    continue // waits for tomorrow's capacity, not marked processed
+  } else {
+    plan[decision.action].push({ c, reason: decision.reason })
+    if (decision.action === 'approve') approvedStores.add(decision.domain)
+  }
+  processed.add(c.id)
+}
+
+if (dry) {
+  for (const [action, items] of Object.entries(plan))
+    for (const { c, reason } of items) console.log(`[dry] ${action} · ${c.company} · ${c.jobTitle} · ${c.website}${reason ? ` · ${reason}` : ''}`)
+} else {
+  if (plan.shopify.length) await api('POST', `/v1/contact/list/${LISTS.shopify}/contacts`, { contactIds: plan.shopify.map(({ c }) => c.id) })
+  for (const { c } of plan.reject) await api('POST', `/v1/contact/${c.id}/reject`)
+  for (const { c } of plan.approve) await api('PATCH', `/v1/contact/${c.id}`, { readyForCampaign: true })
+  for (const { c, reason } of plan.hold) held.set(c.id, { id: c.id, company: c.company, website: c.website, reason })
+  writeFileSync(STATE, JSON.stringify({ lastRun: new Date().toISOString(), processed: [...processed], held: [...held.values()] }))
+}
+
+const line = `- ${new Date().toISOString().slice(0, 16).replace('T', ' ')}${dry ? ' (dry)' : ''} · Dante (Gojiberry email) · nuovi ${fresh.length} · approvati ${plan.approve.length} (capacità ${cap}) · Shopify spostati ${plan.shopify.length} · scartati ${plan.reject.length} · da guardare ${plan.hold.length}\n`
+if (!dry) appendFileSync(LOG, line)
+process.stdout.write(line)
