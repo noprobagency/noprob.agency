@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.36.0 (26 Oct 2026)
+
+- **Dante review, Italy check**: the person's location decides (the company's only as a fallback), with an explicit veto for US, UK, Canada and Australia, so "Florence, Alabama" no longer passes as Firenze. Tests.
+
 ### Changelog v1.35.0 (26 Oct 2026)
 
 - **Dante review, two more checks**: a lead is approved only if based in Italy (the campaign copy is Italian) and its website matches the company name (`siteMatchesCompany`); otherwise it waits for a human (`hold`). Tests.

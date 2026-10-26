@@ -26,6 +26,8 @@ describe('Dante lead review', () => {
     expect(review(lead(), { platform: 'unreachable' }, taken).action).toBe('hold')
     expect(review(lead({ jobTitle: 'Customer Service Assistant' }), woo, taken).reason).toBe('not a decision maker')
     expect(review(lead({ location: 'Birmingham, Alabama, United States' }), woo, taken).reason).toBe('not based in Italy (Italian copy)')
+    expect(review(lead({ location: 'Los Angeles Metropolitan Area', companyLocation: 'Florence, Alabama, United States' }), woo, taken).reason).toBe('not based in Italy (Italian copy)')
+    expect(review(lead({ location: 'Greater Milan Metropolitan Area' }), woo, taken).action).toBe('approve')
     expect(review(lead({ company: 'Mobilificio Marchese', website: 'http://www.pepperchic.com/' }), woo, taken).reason).toBe('site does not match the company')
   })
 })
