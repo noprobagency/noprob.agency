@@ -21,7 +21,7 @@
 // recipients' clock), each gap varied by ±40%; without it, gapSeconds applies.
 // Usage: node scripts/cold-email-daily.mjs [--dry] [--cap 5] [--until 18:30]
 
-import { execFileSync } from 'node:child_process'
+import { execFileSync, spawn } from 'node:child_process'
 import { appendFileSync, existsSync, readFileSync, writeFileSync } from 'node:fs'
 import { accessToken, buildRaw, gmail, messageId, threadOutcome } from '../lib/cold-email/gmail.mjs'
 import { gojiberryDomains } from '../lib/cold-email/gojiberry.mjs'
@@ -38,6 +38,10 @@ const args = process.argv.slice(2)
 const dry = args.includes('--dry')
 const config = { approved: null, dailyCap: 10, mailboxMax: 55, manualReserve: 10, gapSeconds: [40, 120], crmPath: `${DIR}/crm`, ...(existsSync(CONFIG) ? JSON.parse(readFileSync(CONFIG, 'utf8')) : {}) }
 const cap = args.includes('--cap') ? Number(args[args.indexOf('--cap') + 1]) : config.dailyCap
+// Keep the Mac awake while this run lives (launchd starts node directly: a job whose
+// program is /usr/bin/caffeinate fails to spawn).
+if (!dry) spawn('caffeinate', ['-i', '-w', String(process.pid)], { detached: true, stdio: 'ignore' }).unref()
+
 const today = new Date().toLocaleDateString('en-CA', { timeZone: 'Europe/Lisbon' })
 const until = args.includes('--until') ? args[args.indexOf('--until') + 1] : null
 
