@@ -47,9 +47,10 @@ const taken = { linkedin, direct, suppressed: readSuppressed() }
 const contacts = await listContacts(DANTE.list)
 // Started means started in Dante's campaign: leads taken over from another campaign
 // (the 95 Italians of the paused ex-Leonardo list) carry its history and still need review.
-const started = (c) => c.readyForCampaign || (c.campaignStatus || []).some((s) => s.campaignId === DANTE.campaign)
+const inDante = (c) => (c.campaignStatus || []).some((s) => s.campaignId === DANTE.campaign)
+const started = (c) => c.readyForCampaign || inDante(c)
 const approvedStores = new Set(contacts.filter(started).map((c) => domainOf(normaliseUrl(c.website))))
-const waiting = contacts.filter((c) => c.readyForCampaign && !c.hasStartedCampaign).length
+const waiting = contacts.filter((c) => c.readyForCampaign && !inDante(c)).length
 const seat = ((await api('GET', '/v1/email-seat')) || []).find((s) => String(s.id) === String(DANTE.seat))
 // Every lead gets 3 emails: approving a third of the daily capacity keeps room for the
 // follow-ups once the sequence is running (30/day -> 10 new leads a day).
