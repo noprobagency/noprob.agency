@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.38.0 (26 Oct 2026)
+
+- **Dante review, waiting leads**: approved leads count as waiting until they start in Dante's campaign (not another campaign's history), so the daily cap is not exceeded when leads carry an old profile visit.
+
 ### Changelog v1.37.0 (26 Oct 2026)
 
 - **Opt-outs on Dante's list**: `optoutSweep` (lib/cold/sweep.mjs) takes the lists to check (default unchanged: Ada's 63200 and 64866); `scripts/cold-email-gjb.mjs` runs it on Dante's list 65682 before every review, so a "no" or an unsubscribe there is excluded in Gojiberry and added to `docs/cold/suppressed.txt`.
