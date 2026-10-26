@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.35.0 (26 Oct 2026)
+
+- **Dante review, two more checks**: a lead is approved only if based in Italy (the campaign copy is Italian) and its website matches the company name (`siteMatchesCompany`); otherwise it waits for a human (`hold`). Tests.
+
 ### Changelog v1.34.0 (26 Oct 2026)
 
 - **Dante takes over the 95 Italians of the paused ex-Leonardo list**: moved into list 65682 with approvals reset; `scripts/cold-email-gjb.mjs` now counts a lead as started only in Dante's campaign (46398), so leads carrying another campaign's history still go through the review.
