@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest'
 import { review } from './approve.mjs'
 
 const taken = { linkedin: new Set(['linked.it']), direct: new Set(['direct.it']), suppressed: new Set(['@nope.it', 'anna@acme.it']) }
-const lead = (over = {}) => ({ website: 'https://www.acme.it', lastName: 'Rossi', jobTitle: 'CTO', email: '', ...over })
+const lead = (over = {}) => ({ website: 'https://www.acme.it', lastName: 'Rossi', company: 'Acme Srl', location: 'Milan, Lombardy, Italy', jobTitle: 'CTO', email: '', ...over })
 const woo = { platform: 'woocommerce' }
 
 describe('Dante lead review', () => {
@@ -15,9 +15,9 @@ describe('Dante lead review', () => {
   })
 
   it('rejects stores of other channels and opt-outs', () => {
-    expect(review(lead({ website: 'linked.it' }), woo, taken).reason).toBe('store in the LinkedIn campaign')
-    expect(review(lead({ website: 'https://direct.it/' }), woo, taken).reason).toBe('store in the direct email channel')
-    expect(review(lead({ website: 'nope.it' }), woo, taken).reason).toBe('opt-out list')
+    expect(review(lead({ website: 'linked.it', company: 'Linked' }), woo, taken).reason).toBe('store in the LinkedIn campaign')
+    expect(review(lead({ website: 'https://direct.it/', company: 'Direct' }), woo, taken).reason).toBe('store in the direct email channel')
+    expect(review(lead({ website: 'nope.it', company: 'Nope' }), woo, taken).reason).toBe('opt-out list')
     expect(review(lead({ email: 'Anna@acme.it' }), woo, taken).reason).toBe('opt-out list')
   })
 
@@ -25,5 +25,7 @@ describe('Dante lead review', () => {
     expect(review(lead({ website: '' }), null, taken).action).toBe('hold')
     expect(review(lead(), { platform: 'unreachable' }, taken).action).toBe('hold')
     expect(review(lead({ jobTitle: 'Customer Service Assistant' }), woo, taken).reason).toBe('not a decision maker')
+    expect(review(lead({ location: 'Birmingham, Alabama, United States' }), woo, taken).reason).toBe('not based in Italy (Italian copy)')
+    expect(review(lead({ company: 'Mobilificio Marchese', website: 'http://www.pepperchic.com/' }), woo, taken).reason).toBe('site does not match the company')
   })
 })
