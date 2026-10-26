@@ -17,16 +17,18 @@ Separato dalla cold acquisition (Ada e Dante, vedi [docs/COLD-OUTREACH.md](../do
 
 ## Tipi di posto
 
-Mappa iniziale, da verificare piattaforma per piattaforma (dofollow o nofollow, costo, requisiti, lingua) prima di lavorarci. Nessuna metrica di autorità scritta qui finché non è misurata.
+Ricerca del 26 ottobre 2026 (attributo `rel` letto su profili pubblici reali di 11 piattaforme). **Quasi nessun profilo dà un link dofollow**: Clutch, GoodFirms, DesignRush, Contra, Agency Vista, Trustpilot, Shopify Community, Medium, Indie Hackers e la Shopify Partner Directory sono nofollow o passano da un redirect, LinkedIn passa da un redirect 302, Sortlist e PeoplePerHour non hanno il link. Quindi i profili servono per **visibilità, fiducia e segnali di marca** (ricerche col nome, citazioni nelle risposte AI); i **link dofollow** arrivano dai contenuti editoriali: citazioni sui giornali, guest post, show notes dei podcast.
 
-| Tipo | Scopo principale | Esempi da valutare |
+| Tipo | Scopo principale | Piattaforme |
 |---|---|---|
-| Directory Shopify | visibilità ad alta intenzione | Shopify Partner Directory, Storetasker |
-| Marketplace freelance | offerta visibile, contatti in entrata | Fiverr (anche Pro), Upwork, Contra, Malt, PeoplePerHour, Legiit |
-| Directory di agenzie e recensioni | backlink e fiducia | Clutch, GoodFirms, DesignRush, Sortlist, The Manifest, Agency Vista, Trustpilot (già attivo) |
-| Profili aziendali e locali | coerenza NAP, base | Google Business Profile, LinkedIn pagina aziendale, Crunchbase, Bing Places, directory italiane |
-| Lanci e community | picchi di visibilità, link | Product Hunt (Custom AI System), Indie Hackers, Shopify Community, Reddit, Quora |
-| Contenuti e PR | backlink forti | guest post su blog eCommerce, richieste dei giornalisti (Qwoted, Featured, SourceBottle), podcast, articoli su Medium e LinkedIn con link canonico |
+| Directory e recensioni di agenzie | fiducia, visibilità | Clutch (con The Manifest in automatico), GoodFirms, DesignRush |
+| Marketplace | offerta visibile, contatti in entrata | Upwork (profilo agenzia), Malt Italia, Contra, Fiverr Pro, Twine |
+| Directory Shopify ed eCommerce | buyer ad alta intenzione | Storetasker, Klaviyo Partner Directory, ecommerceguide.com, partner LitExtension |
+| Profili aziendali | coerenza NAP, entità | LinkedIn (già attivo), Crunchbase, Trustpilot (già attivo) |
+| Community | buyer che chiedono della migrazione | Shopify Community, IT ed EN, risposte utili senza autopromozione |
+| PR e contenuti (i link dofollow) | autorità del dominio | Qwoted, Featured.com, guest post sul blog Shopify Italia, podcast eCommerce |
+
+Scartate per ora: Shopify Partner Directory (solo su invito, listing garantito dal livello Plus), Google Business Profile e Bing Places (serve una sede visitabile o andare dai clienti: un'agenzia remota rischia la sospensione), Sortlist (a pagamento, senza link), PeoplePerHour, Legiit, Toptal, Product Hunt, Indie Hackers, Agency Vista, UpCity, Expertise.com, podcast con ospitate a pagamento. Ordine, costi, requisiti e motivi sono nel tracker.
 
 ## Fasi
 

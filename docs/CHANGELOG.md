@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.41.0 (26 Oct 2026)
+
+- **Marco, platform research**: `backlink/README.md` now lists the platforms to open by type, the ones set aside and why, and the main finding: almost every profile link is nofollow or redirected (checked on live profiles), so profiles are for visibility and dofollow links come from press quotes, guest posts and podcasts. No site change.
+
 ### Changelog v1.40.0 (26 Oct 2026)
 
 - **Marco, decisions**: public contacts for every platform (hello@noprob.agency, the Italian mobile, the LLC address from the footer, area served where the address can be hidden), how the Sprint fits marketplace packages, milestones and price caps without changing its terms, the other listino products as extra gigs, and a marketplace-only entry product, the Shopify Migration Check at €290 (added to the "Listino" in `docs/dati-verificati.md`). Marco now publishes and maintains profiles on its own; Antonio only creates accounts, signs terms and pays. Live profiles go into `sameAs`. No site change.
