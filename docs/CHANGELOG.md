@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.27.0 (24 Oct 2026)
+
+- **Cold outreach sequence v2 ("Cannonball")**: Ada and Leonardo now run LinkedIn first (days 1, 4, 10: observation, value, proposal) and only then 5 emails (days 17, 21, 28, 35, 45). All copy talks about the lead's company and the value for it, never about noprob. Documented in `docs/COLD-OUTREACH.md` §5 and the `/cold` skill.
+
 ### Changelog v1.26.0 (23 Oct 2026)
 
 - **Direct cold email, follow-ups keep their day**: `dailyCap` now limits only new first emails; follow-ups (E2 to E5) go out on their day within the antonio@ mailbox budget (55 a day minus the manual reserve and what was already sent), so a batch of 50 first emails gets its 50 E2s on the same day.
