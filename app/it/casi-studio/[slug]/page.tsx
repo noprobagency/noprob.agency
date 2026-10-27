@@ -4,6 +4,8 @@ import { notFound } from 'next/navigation'
 
 import { buildMetadata } from '@/lib/site'
 import { useCases } from '@/data/use-cases'
+import { detailBreadcrumbJsonLd } from '@/lib/seo/breadcrumbs'
+import { StructuredData } from '@/components/blog/StructuredData'
 import { renderSection } from '@/components/article/renderSection'
 import UseCaseExtras from '@/components/article/UseCaseExtras'
 import CTA from '@/components/sections/CTA'
@@ -37,9 +39,15 @@ export default async function ItalianUseCasePage({ params }: Props) {
   if (!useCase) notFound()
 
   const locale = 'it'
+  const breadcrumbJsonLd = detailBreadcrumbJsonLd('useCases', locale, {
+    name: useCase.title,
+    path: `/it/casi-studio/${useCase.slug}`,
+  })
 
   return (
     <>
+      <StructuredData schemas={[breadcrumbJsonLd]} />
+
       {/* Hero */}
       <section className="w-full bg-[#f0f0f0] pt-[120px] pb-0 px-5 min-[810px]:px-9">
         <div className="mx-auto flex max-w-[860px] flex-col items-center gap-5 pb-12 text-center">

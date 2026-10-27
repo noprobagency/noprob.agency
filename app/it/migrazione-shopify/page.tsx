@@ -11,6 +11,7 @@ import MigrazioneResults from '@/components/sections/MigrazioneResults'
 import MigrazioneFAQ from '@/components/sections/MigrazioneFAQ'
 import Footer from '@/components/layout/Footer'
 import { buildMetadata } from '@/lib/site'
+import { pageBreadcrumbJsonLd } from '@/lib/seo/breadcrumbs'
 
 const locale = 'it' as const
 
@@ -36,12 +37,18 @@ const migrazioneJsonLd = {
   },
 }
 
+const breadcrumbJsonLd = pageBreadcrumbJsonLd('migrazioneShopify', locale)
+
 export default function MigrazioneShopifyPage() {
   return (
     <main>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(migrazioneJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <MigrazioneHero locale={locale} />
       <MigrazioneProblem locale={locale} />
