@@ -20,7 +20,7 @@ Stati: `da fare`, `in corso`, `fatto (data, PR)`, `bloccato (motivo)`.
 | 12 | sett. 16 nov | Agentic commerce per uno store Shopify: cosa cambia e cosa preparare (dati prodotto, catalogo, Agentic Storefronts) | agentic commerce, ai shopping agent | team | fatto (27 ott, v1.68.0) |
 | 13 | sett. 23 nov | Guida "Da WooCommerce a Shopify" (caso Nazzi, dato Store Leads) | migrate woocommerce to shopify, migrazione woocommerce shopify | team | fatto (27 ott, v1.67.0) |
 | 14 | sett. 30 nov | Revisione mensile: posizioni e Search Console contro il 27 ottobre; decisione sulle landing per piattaforma | | analista, Francesca | da fare |
-| 15 | sett. 30 nov | ChatGPT shopping per Shopify: come far comparire i prodotti | chatgpt shopping, chatgpt shopify | team | da fare |
+| 15 | sett. 30 nov | ChatGPT shopping per Shopify: come far comparire i prodotti | chatgpt shopping, chatgpt shopify | team | fatto (27 ott, v1.70.0) |
 | 16 | sett. 7 dic | Guida "Da Magento a Shopify" (processo nostro e casi su altre piattaforme come prova, detto chiaramente) | migrate from magento to shopify, magento to shopify migration | team | da fare |
 | 17 | sett. 7 dic | "Wix o Shopify" e come passare | wix or shopify, wix to shopify | team | da fare |
 | 18 | sett. 14 dic | AI per eCommerce: cosa funziona davvero oggi (collegata all'AI Accelerator) | ai ecommerce, ai for ecommerce, ai ecommerce italia | team | fatto (27 ott, v1.69.0) |
