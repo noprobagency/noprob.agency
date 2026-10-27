@@ -6,6 +6,7 @@ import { motion, Variants } from 'framer-motion'
 
 import SectionLabel from '@/components/ui/SectionLabel'
 import Testimonials from '@/components/sections/Testimonials'
+import PricingSprintCard from '@/components/sections/PricingSprintCard'
 import { siteAssets } from '@/lib/site'
 import { getDictionary, type Locale } from '@/lib/i18n'
 
@@ -52,7 +53,12 @@ export default function Pricing({
   children?: React.ReactNode
 }) {
   const t = getDictionary(locale)
-  const plans = rebuildOnly ? [t.pricing.plans[1]] : teamOnly ? [t.pricing.plans[0]] : t.pricing.plans
+  // plans[0] is the featured Shopify Launch Sprint; the standalone variants keep
+  // showing the Shopify Development (rebuild) and Data-Driven Team cards.
+  const featured = t.pricing.plans.find((p) => p.featured)
+  const others = t.pricing.plans.filter((p) => !p.featured)
+  const standalone = rebuildOnly || teamOnly
+  const plans = rebuildOnly ? [others[1]] : teamOnly ? [others[0]] : others
 
   return (
     <section id="pricing" data-header-theme="dark" className="scroll-mt-40 bg-black py-[80px]">
@@ -68,11 +74,24 @@ export default function Pricing({
             </p>
           </div>
 
-          <div className={(rebuildOnly || teamOnly) ? "mt-10 mx-auto max-w-[450px]" : "mt-10 grid gap-3 md:grid-cols-2 lg:grid-cols-3"}>
+          {featured && !standalone && (
+            <motion.div
+              custom={0}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 'some' }}
+              variants={cardVariants}
+              className="mt-10"
+            >
+              <PricingSprintCard locale={locale} />
+            </motion.div>
+          )}
+
+          <div className={standalone ? "mt-10 mx-auto max-w-[450px]" : "mt-3 grid gap-3 md:grid-cols-2"}>
             {plans.map((plan, index) => (
               <motion.article
                 key={plan.name}
-                custom={index}
+                custom={index + 1}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 'some' }}

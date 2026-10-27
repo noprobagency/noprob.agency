@@ -73,6 +73,16 @@ export type Dictionary = {
       ctaHref: string
       secondary: string
       secondaryHref: string
+      /** Set on the featured card (the Shopify Launch Sprint): AI line, key facts and public price. */
+      featured?: {
+        tagline: string
+        aiLabel: string
+        aiLine: string
+        facts: { value: string; label: string }[]
+        priceLabel: string
+        price: string
+        priceNote: string
+      }
     }[]
     from: string
     trustpilotLabel: string
@@ -311,6 +321,38 @@ const en: Dictionary = {
       'Whether your eCommerce is running and growing or you need to build it from scratch, our tech team will guide you every step of the way.',
     plans: [
       {
+        badge: 'Need to migrate to Shopify?',
+        name: 'Shopify Launch Sprint',
+        price: '',
+        period: '',
+        description:
+          'A full team moves your store to Shopify in 14 days, with 1:1 SEO redirects and zero downtime. Go-live between day 15 and 30, then 90 days of support with a single point of contact.',
+        features: [
+          'Products, customers and order history migrated',
+          '1:1 SEO redirects and on-site technical SEO',
+          'Store rebuilt 1:1, bugs fixed and purchase flow optimized',
+          'Results dashboard from day 1',
+        ],
+        cta: 'Apply for the Sprint',
+        ctaHref: '/shopify-migration-sprint',
+        secondary: 'Read the Shopify migration guide',
+        secondaryHref: '/shopify-migration',
+        featured: {
+          tagline: 'Your store on Shopify in 14 days',
+          aiLabel: 'Custom AI System',
+          aiLine: 'Built with our Custom AI System: faster, ready for AI agents, built to sell.',
+          facts: [
+            { value: '14', label: 'days to a store ready to publish' },
+            { value: '15-30', label: 'day of go-live, in the window you choose' },
+            { value: '90', label: 'days of support after go-live' },
+            { value: '4', label: 'guarantees written in the contract' },
+          ],
+          priceLabel: 'Public price by company revenue',
+          price: '\u20ac5,800',
+          priceNote: 'VAT excluded, in 4 installments',
+        },
+      },
+      {
         badge: 'Already with a good eCommerce?',
         name: 'Data-Driven Team',
         price: '',
@@ -333,19 +375,6 @@ const en: Dictionary = {
         features: ['Pay over 3 months', 'Lifetime maintenance included', '30-day guarantee'],
         cta: 'Apply for the project',
         ctaHref: '/shopify-development',
-        secondary: 'Contact us',
-        secondaryHref: '/contacts',
-      },
-      {
-        badge: 'Need to migrate to Shopify?',
-        name: 'Shopify Migration',
-        price: '',
-        period: '',
-        description:
-          'We move your eCommerce to Shopify in 14 days without losing sales or customers. 1:1 redirects, no downtime, then 90 days of support with a single point of contact.',
-        features: ['Store ready in 14 days', '1:1 SEO redirects', '4 written guarantees'],
-        cta: 'Apply for your migration',
-        ctaHref: '/shopify-migration-sprint',
         secondary: 'Contact us',
         secondaryHref: '/contacts',
       },
@@ -799,6 +828,38 @@ const it: Dictionary = {
     subheading: 'Che il tuo eCommerce stia crescendo o sia ancora tutto da costruire, il nostro team tecnico ti guida a ogni passo.',
     plans: [
       {
+        badge: 'Devi migrare a Shopify?',
+        name: 'Shopify Launch Sprint',
+        price: '',
+        period: '',
+        description:
+          'Un team completo porta il tuo store su Shopify in 14 giorni, con redirect SEO 1:1 e zero downtime. Go-live dal giorno 15 al 30, poi 90 giorni di supporto con un solo interlocutore.',
+        features: [
+          'Prodotti, clienti e storico ordini migrati',
+          'Redirect SEO 1:1 e SEO tecnica on-site',
+          "Store ricostruito 1:1, bug corretti e flusso d'acquisto ottimizzato",
+          'Dashboard dei risultati dal giorno 1',
+        ],
+        cta: 'Candidati allo Sprint',
+        ctaHref: '/it/sprint-migrazione-shopify',
+        secondary: 'Leggi la guida alla migrazione a Shopify',
+        secondaryHref: '/it/migrazione-shopify',
+        featured: {
+          tagline: 'Il tuo store su Shopify in 14 giorni',
+          aiLabel: 'Custom AI System',
+          aiLine: 'Costruito con il nostro Custom AI System: pi\u00f9 veloce, pronto per gli agenti AI, costruito per vendere.',
+          facts: [
+            { value: '14', label: 'giorni per uno store pronto a pubblicare' },
+            { value: '15-30', label: 'giorno del go-live, nella finestra che scegli tu' },
+            { value: '90', label: 'giorni di supporto dopo il go-live' },
+            { value: '4', label: 'garanzie scritte nel contratto' },
+          ],
+          priceLabel: 'Prezzo pubblico in base al fatturato',
+          price: '\u20ac5.800',
+          priceNote: 'IVA esclusa, in 4 rate',
+        },
+      },
+      {
         badge: 'Hai gi\u00e0 un buon eCommerce?',
         name: 'Data-Driven Team',
         price: '',
@@ -821,19 +882,6 @@ const it: Dictionary = {
         features: ['Paga in 3 mesi', 'Manutenzione a vita inclusa', 'Garanzia 30 giorni'],
         cta: 'Candidati per il progetto',
         ctaHref: '/it/sviluppo-shopify',
-        secondary: 'Contattaci',
-        secondaryHref: '/it/contatti',
-      },
-      {
-        badge: 'Devi migrare a Shopify?',
-        name: 'Migrazione Shopify',
-        price: '',
-        period: '',
-        description:
-          'Portiamo il tuo eCommerce su Shopify in 14 giorni senza perdere vendite o clienti. Redirect 1:1, nessuna interruzione, poi 90 giorni di supporto con un solo interlocutore.',
-        features: ['Store pronto in 14 giorni', 'Redirect SEO 1:1', '4 garanzie scritte'],
-        cta: 'Candidati per la migrazione',
-        ctaHref: '/it/sprint-migrazione-shopify',
         secondary: 'Contattaci',
         secondaryHref: '/it/contatti',
       },

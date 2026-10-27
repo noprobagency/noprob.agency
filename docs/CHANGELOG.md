@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.65.0 (27 Oct 2026)
+
+- **Home, the Sprint first**: in the services section the migration service becomes a full-width Shopify Launch Sprint card in the landing's visual language (dark gradient, AI badge): "Your store on Shopify in 14 days", built with our Custom AI System, the 4 key facts, price from €5.800 in 4 installments, CTAs to the Sprint and to the migration guide (new tracking ids `pricing_sprint_primary`, `pricing_sprint_guide`); Data-Driven Team and Shopify Development follow, unchanged (Francesca, calendar item 8).
+
 ### Changelog v1.64.0 (27 Oct 2026)
 
 - **New article: Shopify vs WooCommerce** (`/blog/shopify-vs-woocommerce`, `/it/blog/shopify-o-woocommerce`): organised around the five decisions a founder faces (who maintains the store, what breaks, speed of change, cost of growth, ease of leaving), fair about when WooCommerce wins, with the Nazzi case; standard dotted cover (Francesca, calendar item 9).
