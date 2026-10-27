@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.71.0 (27 Oct 2026)
+
+- **New article: Wix or Shopify** (`/blog/wix-vs-shopify`, `/it/blog/wix-o-shopify`): when Wix is enough, nine concrete signs a store has outgrown it, and the move to Shopify as four jobs (exports, URLs and redirects, blog and SEO settings, order of the switch), with every Wix and Shopify fact checked on the official help pages; standard dotted cover (Francesca, calendar item 17).
+
 ### Changelog v1.70.0 (27 Oct 2026)
 
 - **New article: ChatGPT shopping for Shopify** (`/blog/chatgpt-shopping-shopify`, `/it/blog/chatgpt-shopping-shopify`): how products from a Shopify store can show up when people shop in ChatGPT and what a merchant can do today, with every OpenAI and Shopify claim sourced and dated October 2026; standard dotted cover (Francesca, calendar item 15).
