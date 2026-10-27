@@ -136,3 +136,12 @@ describe('gmail token refresh', () => {
     vi.doUnmock('node:child_process')
   })
 })
+
+describe('network retry', () => {
+  it('retries a failing call and gives up after the last try', async () => {
+    const { withRetry } = await import('./gmail.mjs')
+    let n = 0
+    expect(await withRetry(async () => (++n < 3 ? Promise.reject(new Error('ECONNRESET')) : 'ok'), { pauseMs: 1 })).toBe('ok')
+    await expect(withRetry(async () => Promise.reject(new Error('down')), { tries: 2, pauseMs: 1 })).rejects.toThrow('down')
+  })
+})
