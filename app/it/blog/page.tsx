@@ -6,6 +6,8 @@ import { buildMetadata } from '@/lib/site'
 import SectionLabel from '@/components/ui/SectionLabel'
 import { articles } from '@/data/articles'
 import Footer from '@/components/layout/Footer'
+import GuideFeaturedCard from '@/components/blog/GuideFeaturedCard'
+import { getMigrazioneBlogCard } from '@/lib/i18n/migrazione'
 
 export async function generateMetadata(): Promise<Metadata> {
   return buildMetadata({ path: '/it/blog', locale: 'it', pageKey: 'blog' })
@@ -28,8 +30,13 @@ export default function ItalianBlogPage() {
           </h1>
         </div>
 
-        {/* Article Grid */}
+        {/* Featured: migration guide */}
         <div className="mx-auto mt-12 max-w-[1200px]">
+          <GuideFeaturedCard card={getMigrazioneBlogCard('it')} />
+        </div>
+
+        {/* Article Grid */}
+        <div className="mx-auto mt-6 max-w-[1200px]">
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {articles.map((article) => {
               const title = article.titleIt ?? article.title

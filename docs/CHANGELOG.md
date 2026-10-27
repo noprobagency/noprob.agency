@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.62.0 (27 Oct 2026)
+
+- **Standard blog covers**: `scripts/blog-cover.mjs` (`pnpm cover <slug>`, `--all`) generates a 1200x630 SVG and PNG per article from its slug, a background colour from a palette of 13 and one of 6 dot patterns, no text; the 3 existing covers are regenerated with the same file names (the long-term one goes from 3.7 MB to 96 KB). Articles now live one per file in `data/articles/posts/`. The migration guide appears as a featured card at the top of the blog (EN and IT) (Francesca, calendar item 7).
+
 ### Changelog v1.61.0 (27 Oct 2026)
 
 - **llms.txt and search-led meta**: `public/llms.txt` gets Guides (the migration guide), Case Studies (each with its source platform) and every blog article with EN and IT URLs; Nazzi and Cumini case studies get titles and descriptions built on how people search ("WooCommerce to Shopify migration case study", "custom platform to Shopify"); the EN Sprint title now says "Shopify Migration Services" (Francesca, calendar item 6).

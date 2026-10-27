@@ -678,3 +678,42 @@ const dictionaries: Record<Locale, MigrazioneCopy> = { it, en }
 export function getMigrazioneCopy(locale: Locale): MigrazioneCopy {
   return dictionaries[locale]
 }
+
+/**
+ * Featured card shown at the top of the blog listings (EN and IT) that links to
+ * the migration guide. Title and description come from the guide's hero, so the
+ * card never drifts from the page it points to.
+ */
+export type MigrazioneBlogCard = {
+  href: string
+  image: string
+  imageAlt: string
+  pill: string
+  title: string
+  description: string
+  cta: string
+}
+
+export function getMigrazioneBlogCard(locale: Locale): MigrazioneBlogCard {
+  const { hero } = getMigrazioneCopy(locale)
+  const title = `${hero.titlePart1}${hero.titleEm1}${hero.titleMid}${hero.titleEm2}${hero.titlePart2}`
+  return locale === 'it'
+    ? {
+        href: '/it/migrazione-shopify',
+        image: '/images/blog/shopify-migration-guide-cover.png',
+        imageAlt: 'Copertina della guida alla migrazione a Shopify: sfondo nero sfumato con una dissolvenza radiale di puntini verdi',
+        pill: 'Guida',
+        title,
+        description: hero.subtitle,
+        cta: 'Leggi la guida',
+      }
+    : {
+        href: '/shopify-migration',
+        image: '/images/blog/shopify-migration-guide-cover.png',
+        imageAlt: 'Cover of the Shopify migration guide: softly graded black background with a radial fade of green dots',
+        pill: 'Guide',
+        title,
+        description: hero.subtitle,
+        cta: 'Read the guide',
+      }
+}

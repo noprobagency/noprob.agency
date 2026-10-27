@@ -9,6 +9,7 @@ import { join } from 'node:path'
 
 const FILES = [
   'data/articles/index.ts',
+  ...readdirSync('data/articles/posts').filter((f) => f.endsWith('.ts')).map((f) => join('data/articles/posts', f)),
   'content/zero-loss-migration.it.ts',
   'content/zero-loss-migration.en.ts',
   ...readdirSync('lib/i18n').filter((f) => f.endsWith('.ts')).map((f) => join('lib/i18n', f)),
