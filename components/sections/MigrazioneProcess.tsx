@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 
 import SectionLabel from '@/components/ui/SectionLabel'
 import { type Locale } from '@/lib/i18n'
-import { getMigrazioneCopy, type MigrazioneCopy } from '@/lib/i18n/migrazione'
+import { type MigrazioneProcessCopy } from '@/lib/i18n/migrazione'
 
 // Per-phase label colors (green / purple / blue), dark text.
 const BADGE_COLORS = [
@@ -19,9 +19,9 @@ export default function MigrazioneProcess({
   copy,
 }: {
   locale?: Locale
-  copy?: MigrazioneCopy['process']
+  copy: MigrazioneProcessCopy
 }) {
-  const d = copy ?? getMigrazioneCopy(locale).process
+  const d = copy
 
   return (
     <section className="pb-[32px] pt-[40px]">

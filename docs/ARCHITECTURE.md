@@ -96,7 +96,7 @@ Every new post under `/blog/[slug]` (or `/it/blog/[slugIt]`) must include:
 Every article (new or updated) **must** include these internal links, in priority order:
 
 1. **Sprint** (massima priorità): almeno 1 link a `/it/sprint-migrazione-shopify` (IT) e `/shopify-migration-sprint` (EN) nel corpo o nella conclusione. La CTA Sprint deve apparire **prima** della CTA generica contatti.
-2. **Servizio migrazione**: almeno 1 link a `/it/migrazione-shopify` (IT) / `/shopify-migration` (EN) — a meno che l'articolo non linki già lo Sprint, che rimanda alla stessa offerta.
+2. **Guida alla migrazione**: almeno 1 link a `/it/migrazione-shopify` (IT) / `/shopify-migration` (EN), la guida completa alla migrazione a Shopify, a meno che l'articolo non linki già lo Sprint.
 3. **Casi studio o team page**: almeno 1 link a `/it/casi-studio/[slug]` o `/it/team-ecommerce-dedicato` per social proof.
 4. **Altri servizi** (AI Accelerator, ecc.): solo se tematicamente rilevanti, mai a scapito del link Sprint.
 
@@ -147,10 +147,12 @@ Paragraphs and list items support markdown-style inline tokens via `parseInline`
 
 ## Migration page (IT `/it/migrazione-shopify` + EN `/shopify-migration`)
 
-- Bilingual product page for the Shopify migration, rendered by `app/it/migrazione-shopify/page.tsx` and `app/(en)/shopify-migration/page.tsx` from `components/sections/Migrazione*`. Copy in `lib/i18n/migrazione.ts` (`getMigrazioneCopy`, typed `MigrazioneCopy`); meta in `seo.migrazioneShopify` of `lib/i18n/index.ts`.
-- Aligned with the Shopify Launch Sprint (§18): 14-day sprint, go-live days 15-30 on the client's date, 90 days of support, monitoring and improvement, 4 written guarantees, same price tiers (€5.800 / €8.800 / €12.800, 4 installments).
-- Section order: Hero, Problem, Solution, social proof, Process (Sprint / Go-live / Supporto e crescita + "Perché bastano 14 giorni?"), **`MigrazioneSprintBanner`** ("AI powered" dark card with flickering green sparks, links to the sprint landing), `MigrazioneSprintPricing` (landing tiers + the same 4-step `ZlApplicationForm`), `MigrazioneResults` (the two landing charts), FAQ.
-- Leads from this page post to `/api/migrazione-lead` with the zero-loss source, so they land in the same inbox as the landing.
+- This page is the **complete guide to migrating to Shopify** (informational intent), not a sales page: no prices and no application form. The offer lives on the Sprint landing (`/it/sprint-migrazione-shopify`, `/shopify-migration-sprint`, §18). Rendered by `app/it/migrazione-shopify/page.tsx` and `app/(en)/shopify-migration/page.tsx` (identical structure, `locale` constant on top).
+- Section order: `MigrazioneHero` (the only H1; its CTA goes to the Sprint landing through `ROUTE_PATHS.zeroLossMigration`), **`MigrazioneGuide`** (server component, renders the guide with `renderSection` from `components/article/renderSection.tsx` in the same container and typography as a blog article; the H2/H3 come from the copy), `MigrazioneSocialProof` (same case study block as the home), `MigrazioneResults` (the two landing charts), `MigrazioneSprintBanner` ("AI powered" dark card, links to the Sprint landing), `MigrazioneFAQ`, footer.
+- Guide sections (H2): platforms people migrate from, what gets migrated, SEO and 301 redirects, tracking and data, timeline, risks, cost, checklist, two real migrations (WooCommerce and a proprietary platform). Cost and Sprint figures must match the Sprint copy and `docs/dati-verificati.md`.
+- Copy in `lib/i18n/migrazione.ts` (`getMigrazioneCopy`, typed `MigrazioneCopy`: `hero`, `guide.sections` (`ArticleSection[]`, same inline syntax as blog articles), `charts`, `sprintBanner`, `faq`). Meta in `seo.migrazioneShopify` of `lib/i18n/index.ts` (title and description stay inside the lengths enforced by `lib/seo/seo-lengths.test.ts`). The `MigrazioneProcessCopy`, `MigrazionePricingCopy` and `MigrazioneFormCopy` types are still exported from the same module because the Sviluppo, Data-Driven Team and team roadmap copy reuse `MigrazioneProcess`, `MigrazionePricing` and `MigrazioneForm` (their `copy` prop is required).
+- JSON-LD: `Article` (`lib/seo/migrationGuide.ts`: headline and description from `seo.migrazioneShopify`, `inLanguage`, author Person "Antonio Manitta" with the about page URL, publisher Organization like the blog, `datePublished` and `dateModified`, `mainEntityOfPage`), `BreadcrumbList` (`pageBreadcrumbJsonLd`) and `FAQPage` (emitted by `MigrazioneFAQ` from `faq.items`). No `Service` and no offers: prices live only on the Sprint landing. Update `dateModified` in `lib/seo/migrationGuide.ts` and `CONTENT_LAST_MODIFIED` in `lib/sitemap/routes.ts` whenever the guide changes.
+- No in-page form: `StickyContact` has no entry for these routes and falls back to the generic "request information" CTA. Every conversion CTA (hero, banner) points to the Sprint landing.
 
 ---
 

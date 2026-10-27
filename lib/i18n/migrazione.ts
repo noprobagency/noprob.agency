@@ -1,4 +1,5 @@
 import type { Locale } from '@/lib/i18n'
+import type { ArticleSection } from '@/data/articles'
 
 /**
  * Copy module for the "Migrazione a Shopify" / "Shopify Migration" landing page.
@@ -9,6 +10,73 @@ import type { Locale } from '@/lib/i18n'
  * object consumed through a `get*` accessor. Only `seo.migrazioneShopify` lives
  * in the shared dictionary (so `buildMetadata({ pageKey })` keeps working).
  */
+
+/**
+ * Section shapes below are no longer part of the migration page copy (the page is now a guide).
+ * They stay exported because the Sviluppo, Data-Driven Team and Team roadmap copy modules
+ * reuse them for MigrazioneProcess, MigrazionePricing and MigrazioneForm.
+ */
+export type MigrazioneProcessCopy = {
+  label: string
+  headingPart1: string
+  headingEm: string
+  description: string
+  phases: { number: string; title: string; duration: string; description: string }[]
+  fourMonths: { title: string; description: string }
+  closingLine: string
+}
+
+export type MigrazionePricingCopy = {
+  label: string
+  heading: string
+  subheading: string
+  tiers: { price: string; slot: string; tag: string; state: 'completed' | 'current' | 'upcoming' }[]
+  priceSuffix: string
+  /** Shown above the starting price (migration page, landing tiers). */
+  priceFrom?: string
+  priceBadge: string
+  guarantee: string
+  trustLabel: string
+  cardTitle: string
+  cardDescription: string
+  cardChecks: string[]
+  scarcity: string
+  cta: string
+}
+
+export type MigrazioneFormCopy = {
+  label: string
+  heading: string
+  subheading: string
+  intro: string
+  fields: {
+    name: { label: string; placeholder: string }
+    email: { label: string; placeholder: string }
+    brand: { label: string; placeholder: string }
+    websiteUrl: { label: string; placeholder: string }
+    platform: { label: string; placeholder: string; options?: string[] }
+    revenue: { label: string; placeholder: string; options: string[] }
+    timeline: { label: string; placeholder: string; options: string[] }
+    reason: { label: string; placeholder: string }
+  }
+  privacyBefore: string
+  privacyLinkLabel: string
+  submit: string
+  submitting: string
+  errors: {
+    name: string
+    email: string
+    brand: string
+    websiteUrl: string
+    platform: string
+    revenue: string
+    timeline: string
+    reason: string
+    privacy: string
+  }
+  errorGeneric: string
+  errorNetwork: string
+}
 
 export type MigrazioneCopy = {
   hero: {
@@ -24,54 +92,16 @@ export type MigrazioneCopy = {
     cta: string
     trustedCount: string
   }
-  problem: {
-    label: string
-    heading: string
-    headingEm: string
-    description: string
-    items: { title: string; description: string }[]
-  }
-  solution: {
-    label: string
-    headingPart1: string
-    headingEm: string
-    description: string
-    items: { title: string; description: string }[]
-  }
+  /** Body of the complete migration guide (typed sections, same inline syntax as blog articles). */
+  guide: { sections: ArticleSection[] }
   charts: {
     label: string
     title1: string
     titleEm: string
     subtitle: string
   }
-  process: {
-    label: string
-    headingPart1: string
-    headingEm: string
-    description: string
-    phases: { number: string; title: string; duration: string; description: string }[]
-    fourMonths: { title: string; description: string }
-    closingLine: string
-  }
   /** "AI powered" banner that links to the Shopify Launch Sprint landing */
   sprintBanner: { badge: string; title: string; titleEm: string; text: string; points: string[]; cta: string }
-  pricing: {
-    label: string
-    heading: string
-    subheading: string
-    tiers: { price: string; slot: string; tag: string; state: 'completed' | 'current' | 'upcoming' }[]
-    priceSuffix: string
-    /** Shown above the starting price (migration page, landing tiers). */
-    priceFrom?: string
-    priceBadge: string
-    guarantee: string
-    trustLabel: string
-    cardTitle: string
-    cardDescription: string
-    cardChecks: string[]
-    scarcity: string
-    cta: string
-  }
   faq: {
     label: string
     heading: string
@@ -79,269 +109,286 @@ export type MigrazioneCopy = {
     subheading: string
     items: { question: string; answer: string }[]
   }
-  form: {
-    label: string
-    heading: string
-    subheading: string
-    intro: string
-    fields: {
-      name: { label: string; placeholder: string }
-      email: { label: string; placeholder: string }
-      brand: { label: string; placeholder: string }
-      websiteUrl: { label: string; placeholder: string }
-      platform: { label: string; placeholder: string; options?: string[] }
-      revenue: { label: string; placeholder: string; options: string[] }
-      timeline: { label: string; placeholder: string; options: string[] }
-      reason: { label: string; placeholder: string }
-    }
-    privacyBefore: string
-    privacyLinkLabel: string
-    submit: string
-    submitting: string
-    errors: {
-      name: string
-      email: string
-      brand: string
-      websiteUrl: string
-      platform: string
-      revenue: string
-      timeline: string
-      reason: string
-      privacy: string
-    }
-    errorGeneric: string
-    errorNetwork: string
-  }
 }
 
 const it: MigrazioneCopy = {
   hero: {
     trustRatingLabel: '5/5',
     trustSectors: 'Scelti da brand di Moda, Integratori e DTC eCommerce',
-    titlePart1: 'Migra a Shopify senza perdere ',
-    titleEm1: 'vendite',
-    titleMid: ' e ',
-    titleEm2: 'clienti',
+    titlePart1: 'Migrazione a ',
+    titleEm1: 'Shopify',
+    titleMid: ': la ',
+    titleEm2: 'guida completa',
     titlePart2: '',
     subtitle:
-      'Non un semplice “ricostruiamo il tuo sito”. In 14 giorni portiamo il tuo store su Shopify e lo impostiamo per vendere meglio: design, tracciamento, performance, SEO. Un solo interlocutore, un report per ogni area, 4 garanzie scritte e 90 giorni di supporto dopo il go-live.',
-    microBenefits: ['Store pronto in 14 giorni', 'Redirect SEO 1:1', 'Nemmeno un secondo offline'],
-    cta: 'Candidati per la migrazione',
+      'Tutto quello che cambia quando passi a Shopify: piattaforme, dati, SEO e redirect 301, tracking, tempi, rischi e costi, con due migrazioni reali.',
+    microBenefits: ['Piattaforme e dati', 'SEO e redirect 301', 'Tempi, rischi e costi'],
+    cta: 'Scopri lo Shopify Launch Sprint',
     trustedCount: 'Scelti da brand di Moda, Integratori e DTC eCommerce',
   },
-  problem: {
-    label: 'il problema',
-    heading: 'La tua piattaforma ',
-    headingEm: 'ti tiene fermo',
-    description:
-      'Cambiare piattaforma sembra un rischio enorme. Restare dove sei costa di più, ogni giorno, in vendite che non fai. Lo dicono i numeri.',
-    items: [
+  guide: {
+    sections: [
       {
-        title: 'Piattaforma rigida',
-        description:
-          'Ogni modifica passa da un ticket. Fuori dagli sconti non riesci a spingere. La piattaforma decide cosa puoi fare, non tu.',
+        type: 'paragraph',
+        text: 'Una migrazione a Shopify significa spostare il tuo eCommerce (prodotti, clienti, ordini, contenuti e URL) dalla piattaforma attuale a Shopify, mantenendo ciò che già funziona: il posizionamento su Google, i dati dei clienti e il tracciamento. Questa guida è per founder e responsabili eCommerce che stanno valutando il passaggio, o che hanno già deciso e vogliono sapere cosa succede davvero, in quale ordine e dove si rischia.',
       },
       {
-        title: 'Paura di migrare',
-        description:
-          'Hai sentito storie di chi ha cambiato piattaforma e ha perso metà del traffico organico. È la paura numero uno, ed è legittima.',
+        type: 'paragraph',
+        text: 'La scrive noprob agency, un team che fa migrazioni a Shopify. Spieghiamo l’intero processo, comprese le parti che puoi fare da solo, e diciamo dove parliamo per esperienza diretta: passaggi da WooCommerce e da una piattaforma proprietaria collegata a un gestionale. Per le altre piattaforme rimandiamo alla documentazione ufficiale.',
+      },
+      { type: 'paragraph', text: '**In questa guida**' },
+      {
+        type: 'list',
+        items: [
+          'Da quali piattaforme si migra e cosa cambia',
+          'Cosa si sposta davvero',
+          'SEO e redirect 301',
+          'Tracking e dati',
+          'Quanto dura una migrazione',
+          'Rischi e come evitarli',
+          'Quanto costa',
+          'La checklist di migrazione',
+          'Due migrazioni reali',
+        ],
+      },
+      { type: 'h2', text: 'Da quali piattaforme si migra a Shopify?' },
+      {
+        type: 'paragraph',
+        text: 'Si migra a Shopify da tutte le principali piattaforme, e la fonte più grande è WooCommerce. Secondo [Store Leads](https://storeleads.app/reports/shopify), nei 90 giorni al 9 ottobre 2026 sono passati a Shopify da altre piattaforme 27.247 merchant, circa 300 al giorno, e 9.204 arrivavano da WooCommerce. È un flusso lordo: nello stesso periodo Shopify ne ha persi 17.922, quindi il saldo netto è +9.325.',
+      },
+      { type: 'paragraph', text: 'Cosa cambia a seconda del punto di partenza:' },
+      {
+        type: 'list',
+        items: [
+          '**WooCommerce**: prodotti, ordini e clienti stanno nel database di WordPress e molte funzioni arrivano da plugin. Ogni plugin va sostituito con un’app o una funzione nativa di Shopify, oppure eliminato. Anche il blog vive di solito su WordPress e va spostato o mantenuto.',
+          '**Magento / Adobe Commerce**: di solito cataloghi grandi, molti attributi, moduli su misura e regole B2B. Il lavoro sta soprattutto nel mappare attributi e logiche custom sul modello dati di Shopify (metafield, app o codice dedicato).',
+          '**PrestaShop**: funzioni affidate a moduli, spesso con più lingue e più negozi. Contano la pulizia del catalogo, la mappatura dei moduli e la struttura degli URL per lingua.',
+          '**Wix e Squarespace**: piattaforme chiuse, con opzioni di esportazione più ridotte rispetto a quelle self-hosted. Prima di decidere verifica cosa riesci a esportare di prodotti, clienti, ordini e blog.',
+          '**BigCommerce**: piattaforma SaaS come Shopify. Il lavoro riguarda soprattutto design, app e URL.',
+          '**Piattaforme proprietarie**: spesso legate a un gestionale. Il lavoro è ricostruire i flussi di dati (giacenze, prezzi, ordini) tra gestionale e Shopify, oltre a spostare il catalogo.',
+        ],
       },
       {
-        title: 'Caos gestionale',
-        description:
-          'Inventario, ordini in corso, clienti abituali. Cambiare piattaforma sembra aprire un cantiere che blocca tutto per mesi.',
+        type: 'paragraph',
+        text: 'Noi abbiamo migrato store da WooCommerce e da una piattaforma proprietaria collegata a un gestionale (due casi in fondo alla guida). Su Magento, PrestaShop, BigCommerce, Wix e Squarespace non abbiamo casi da citare: le indicazioni sopra descrivono come funzionano queste piattaforme e rimandano alla documentazione di Shopify. Chiedi sempre a chi ti prepara il preventivo un riferimento sulla tua piattaforma.',
       },
-    ],
-  },
-  solution: {
-    label: 'la soluzione',
-    headingPart1: 'Team con esperienza per una migrazione ',
-    headingEm: 'gestita e prevedibile.',
-    description:
-      'In una migrazione quasi tutto si può prevedere: dati, redirect, integrazioni, SEO. Un team che le ha già fatte sa dove sono i punti critici e li copre prima che diventino problemi.',
-    items: [
+      { type: 'h2', text: 'Cosa si sposta davvero in una migrazione a Shopify?' },
       {
-        title: 'Esperienza reale',
-        description:
-          'Migrazioni complesse e redirect su larga scala, fatti bene. Sappiamo dove guardare prima ancora di iniziare.',
+        type: 'paragraph',
+        text: 'Quasi tutto ciò che è un dato si può spostare, ma ogni elemento ha le sue regole. Questi sono i blocchi da prevedere:',
       },
       {
-        title: 'Un team esperto',
-        description:
-          'Sviluppo, SEO, tracciamento, design. Quando emerge un imprevisto non aspetti il freelancer giusto: il team è già lì, completo, e interviene subito.',
+        type: 'list',
+        items: [
+          '**Prodotti e varianti**: titoli, descrizioni, immagini, SKU, prezzi, giacenze e opzioni (taglia, colore). Shopify gestisce le varianti come opzioni del prodotto, con limiti precisi (vedi la [documentazione Shopify sulle varianti](https://help.shopify.com/it/manual/products/variants)), quindi i prodotti con molti attributi vanno rimodellati.',
+          '**Collezioni**: manuali o automatiche, con le regole che le popolano.',
+          '**Clienti**: anagrafiche e indirizzi si importano ([guida Shopify all’importazione dei clienti](https://help.shopify.com/it/manual/customers/import-export-customers)), le password no. I clienti ricevono un’email di attivazione dell’account per sceglierne una nuova: conviene avvisarli prima.',
+          '**Storico ordini**: importato come storico, così report e area clienti restano completi. Dopo l’import si riconciliano numero e totali con la piattaforma di partenza.',
+          '**Contenuti e blog**: pagine, articoli, immagini, categorie e metadati SEO.',
+          '**URL**: cambiano quasi sempre, per questo servono i redirect (sezione successiva).',
+          '**App e integrazioni**: pagamenti, spedizioni, gestionale, CRM, email marketing, recensioni, abbonamenti. Ognuna diventa un’app Shopify, una funzione nativa o un’integrazione su misura.',
+          '**Tracking**: GA4, pixel degli advertising, consenso cookie.',
+        ],
       },
       {
-        title: 'Un partner di crescita',
-        description:
-          'Non consegniamo e spariamo. Dopo il go-live restiamo 90 giorni su SEO, tracking e checkout: troviamo cosa si può migliorare e lo miglioriamo, ogni settimana.',
+        type: 'paragraph',
+        text: 'Shopify documenta le basi nel suo [centro assistenza sulla migrazione](https://help.shopify.com/it/manual/migrating-to-shopify), con le app di importazione e il formato dei file CSV. Leggilo prima di definire il perimetro del progetto.',
+      },
+      { type: 'h2', text: 'Come si mantiene la SEO e come si impostano i redirect 301?' },
+      {
+        type: 'paragraph',
+        text: 'La SEO si mantiene dando a ogni vecchio URL un redirect 301 verso il suo equivalente più vicino su Shopify e tenendo titoli, descrizioni, intestazioni e contenuti vicini a quelli che oggi si posizionano.',
+      },
+      {
+        type: 'paragraph',
+        text: 'Su Shopify la struttura degli URL ha prefissi fissi: /products/, /collections/, /pages/ e /blogs/. Se la tua piattaforma usa schemi diversi, quasi ogni URL cambia (per esempio una categoria in /scarpe/ diventa /collections/scarpe). Per questo serve una mappa dei redirect, il passaggio che più spesso decide come va la migrazione sul fronte SEO:',
+      },
+      {
+        type: 'list',
+        items: [
+          '**Raccogli gli URL**: crawl del vecchio sito, più gli URL con traffico in Search Console e quelli con backlink.',
+          '**Mappa uno a uno**: ogni vecchio URL va al nuovo URL equivalente. Se una pagina non esiste più, reindirizza alla categoria più vicina, non alla home.',
+          '**Caricali in Shopify**: i redirect si gestiscono dalla sezione URL Redirects dell’admin, con importazione da CSV.',
+          '**Controlla dopo il lancio**: ripeti il crawl della lista dei vecchi URL, trova i 404 e le catene di redirect e correggili.',
+          '**Aggiorna Search Console**: invia la nuova sitemap e monitora scansione e impressioni per le settimane successive.',
+        ],
+      },
+      {
+        type: 'paragraph',
+        text: 'La [guida di Google Search Central sui trasferimenti di sito con cambio di URL](https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes) dice la stessa cosa: mappa vecchi e nuovi URL, usa redirect permanenti e tienili attivi il più a lungo possibile, idealmente almeno un anno.',
+      },
+      {
+        type: 'paragraph',
+        text: 'Nel caso Integratori DTC Nazzi (da WooCommerce a Shopify) abbiamo fatto questo controllo dopo il lancio su 215 URL WooCommerce archiviati, e il CSV dei redirect 301 è stato consegnato per l’importazione in Shopify. In Search Console gli ultimi 28 giorni al 9 ottobre 2026 mostrano clic 2,7 volte e impressioni 4,0 volte rispetto agli stessi 28 giorni del 2025. I clic giornalieri sono scesi sotto il livello pre-lancio ad agosto e sono risaliti sopra a settembre e ottobre: in una migrazione il posizionamento si muove, ed è la mappa dei redirect a decidere come recupera.',
+      },
+      { type: 'h2', text: 'Come si gestiscono tracking e dati?' },
+      {
+        type: 'paragraph',
+        text: 'Il tracking va ricostruito prima del lancio, non dopo, perché ogni giorno senza dati corretti è un giorno che non potrai confrontare con prima.',
+      },
+      {
+        type: 'list',
+        items: [
+          '**GA4**: gli eventi dell’acquisto (visualizzazione prodotto, aggiunta al carrello, inizio checkout, acquisto) vanno riportati sugli eventi cliente di Shopify. Se possibile mantieni la stessa proprietà GA4, così lo storico continua.',
+          '**Pixel e conversioni degli advertising**: ricollegali e verifica che i valori di acquisto arrivino corretti.',
+          '**Tracking server-side**: riduce la perdita di dati causata da browser e blocchi, e rende le conversioni più affidabili.',
+          '**Consenso cookie**: banner e Consent Mode vanno configurati bene fin dal primo giorno, soprattutto se vendi in Europa.',
+        ],
+      },
+      { type: 'h2', text: 'Quanto dura una migrazione a Shopify?' },
+      {
+        type: 'paragraph',
+        text: 'Una migrazione a Shopify dura da poche settimane a diversi mesi, a seconda della dimensione del catalogo, del numero di integrazioni e di quanto del design si ricostruisce. Le fasi sono quasi sempre le stesse:',
+      },
+      {
+        type: 'list',
+        items: [
+          '**Analisi e perimetro**: piattaforma, app, URL, dati e integrazioni da portare.',
+          '**Import e riconciliazione dei dati**: prodotti, clienti, ordini, con controllo dei totali.',
+          '**Design e store**: replica o ridisegno delle pagine.',
+          '**Integrazioni e app**: pagamenti, spedizioni, gestionale, email.',
+          '**SEO**: mappa dei redirect, metadati, sitemap.',
+          '**Tracking**: GA4, pixel, server-side, consenso.',
+          '**Test**: checkout, pagamenti, spedizioni, tasse, codici sconto, email, su più dispositivi.',
+          '**Go-live**: cambio DNS, redirect attivi, sitemap inviata.',
+          '**Monitoraggio dopo il lancio**: Search Console, errori 404, conversioni.',
+        ],
+      },
+      {
+        type: 'paragraph',
+        text: 'Lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) comprime questo percorso in un calendario fisso: lo store è pronto al giorno 14, il go-live avviene tra il giorno 15 e il 30 nella data che scegli tu, e seguono 90 giorni di supporto. Lavora con un team completo, il nostro Custom AI System e un solo referente.',
+      },
+      { type: 'h2', text: 'Quali sono i rischi di una migrazione e come si evitano?' },
+      {
+        type: 'paragraph',
+        text: 'I rischi principali sono cinque (downtime, perdita di posizionamento, dati persi o sbagliati, checkout che converte meno e app che smettono di funzionare) e ognuno ha una contromisura nota.',
+      },
+      {
+        type: 'list',
+        items: [
+          '**Downtime**: costruisci e testa tutto in uno store non pubblico, poi cambia il DNS in un orario tranquillo e tieni attivo il vecchio sito finché la propagazione non è finita.',
+          '**Perdita di posizionamento**: mappa dei redirect completa, contenuti e metadati conservati, monitoraggio di Search Console per le settimane dopo il lancio.',
+          '**Dati**: riconcilia numero e totali di prodotti, clienti e ordini, e conserva un export completo della vecchia piattaforma come backup.',
+          '**Checkout**: prova ogni metodo di pagamento, regola di spedizione, tassa, codice sconto ed email su dispositivi reali prima del lancio, poi confronta la conversione.',
+          '**App e integrazioni**: elenca ogni plugin e script del vecchio sito e decidi per ciascuno se sostituirlo o eliminarlo. Testa la sincronizzazione col gestionale con ordini veri.',
+          '**Giorno sbagliato**: evita di lanciare in un giorno di picco di vendite e prepara i clienti all’email di attivazione dell’account.',
+        ],
+      },
+      { type: 'h2', text: 'Quanto costa migrare a Shopify?' },
+      {
+        type: 'paragraph',
+        text: 'Una migrazione a Shopify costa da un import fatto in autonomia a un progetto completo con un’agenzia, e il prezzo dipende da dimensione del catalogo, integrazioni, lavoro di design e dati da riconciliare. Le voci che muovono il costo:',
+      },
+      {
+        type: 'list',
+        items: [
+          'numero di prodotti, varianti e attributi da rimodellare',
+          'integrazioni con gestionale, CRM, logistica e pagamenti',
+          'quanto del design si replica e quanto si ridisegna',
+          'lingue, mercati e valute',
+          'volume di URL, redirect e contenuti da spostare',
+          'tracking e configurazione del consenso',
+        ],
+      },
+      {
+        type: 'paragraph',
+        text: 'A questo si aggiungono l’abbonamento a Shopify, le app e le commissioni di pagamento, che vanno verificate sul sito di Shopify. Se vuoi la migrazione come progetto chiavi in mano, lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) ha un prezzo pubblico in base al fatturato: €5.800 sotto i €2M, €8.800 tra €2M e €20M, €12.800 oltre i €20M, IVA esclusa, in 4 rate.',
+      },
+      { type: 'h2', text: 'La checklist di migrazione a Shopify' },
+      {
+        type: 'paragraph',
+        text: 'Questa checklist riassume i controlli da fare prima, durante e dopo la migrazione:',
+      },
+      {
+        type: 'list',
+        items: [
+          'Esporta e conserva un backup completo della vecchia piattaforma.',
+          'Elenca app, plugin, script e integrazioni attivi.',
+          'Fai il crawl del vecchio sito ed esporta gli URL con traffico e backlink.',
+          'Prepara la mappa dei redirect uno a uno.',
+          'Importa prodotti, collezioni, clienti e ordini.',
+          'Riconcilia numero e totali dei dati importati.',
+          'Ricostruisci GA4, pixel, tracking server-side e consenso cookie.',
+          'Configura pagamenti, spedizioni e tasse.',
+          'Testa il checkout con ordini veri su più dispositivi.',
+          'Comunica ai clienti l’attivazione dell’account.',
+          'Cambia il DNS, attiva i redirect e invia la sitemap.',
+          'Dopo il lancio controlla 404, catene di redirect, conversioni e Search Console.',
+        ],
+      },
+      { type: 'h2', text: 'Due migrazioni reali: WooCommerce e piattaforma proprietaria' },
+      {
+        type: 'paragraph',
+        text: 'Due migrazioni che abbiamo fatto mostrano i punti di partenza più comuni: un negozio WooCommerce e una piattaforma proprietaria. I dati vengono dalle dashboard dei clienti e sono confronti con lo stesso periodo prima; non sono una promessa di risultato.',
+      },
+      { type: 'h3', text: 'Integratori DTC Nazzi: da WooCommerce a Shopify' },
+      {
+        type: 'paragraph',
+        text: 'Migrazione costruita tra maggio e giugno 2026, online dal 19 luglio 2026. Dal go-live al 12 ottobre 2026, rispetto agli stessi giorni del 2025: vendite online +105%, ordini +77%, scontrino medio +16% e clienti di ritorno 2,25 volte. Leggi il [caso studio Integratori DTC Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify).',
+      },
+      { type: 'h3', text: 'Cumini: da piattaforma proprietaria a Shopify' },
+      {
+        type: 'paragraph',
+        text: 'Moda luxury multibrand, online su Shopify dal 19 maggio 2025, prima su una piattaforma proprietaria collegata al gestionale. Nei 12 mesi successivi, rispetto ai 12 precedenti: vendite nette +67,7%, ordini +49,4%, scontrino medio +12,2%. Il punteggio del tracking è passato da 31/100 a 92/100. Leggi il [caso studio Cumini](/it/casi-studio/cumini-luxury-fashion-ecommerce).',
+      },
+      {
+        type: 'paragraph',
+        text: 'Lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) porta il tuo store su Shopify in 14 giorni con il nostro Custom AI System: calendario fisso, prezzo pubblico e 4 garanzie scritte.',
       },
     ],
   },
   charts: {
     label: 'search console',
-    title1: 'Dopo ogni migrazione il traffico scende. ',
+    title1: 'Dopo una migrazione il traffico può calare. ',
     titleEm: 'Conta cosa succede dopo.',
     subtitle:
-      'Google ri-elabora il sito: il calo è fisiologico. La risalita dipende da come è fatta la migrazione.',
-  },
-  process: {
-    label: 'come lavoriamo',
-    headingPart1: '14 giorni per ',
-    headingEm: 'essere su Shopify.',
-    description:
-      'Uno sprint di 2 settimane, poi il go-live nella data che scegli tu e 90 giorni al tuo fianco.\nIl flusso testato e confermato dopo oltre 10 progetti.',
-    phases: [
-      {
-        number: '01',
-        title: 'Sprint',
-        duration: 'giorni 1-14',
-        description:
-          'Kickoff, import di prodotti, clienti e ordini, riconciliazione al 100%, replica 1:1 dei template, Redirect Map, tracking server-side, checklist del flusso d’acquisto e test su 3 dispositivi. Al giorno 14 lo store è pronto a pubblicare.',
-      },
-      {
-        number: '02',
-        title: 'Go-live',
-        duration: 'giorni 15-30',
-        description:
-          'La data la scegli tu. Cambio DNS, redirect attivi, sitemap e Search Console. Nemmeno un secondo offline, e 48 ore di presidio dopo il lancio.',
-      },
-      {
-        number: '03',
-        title: 'Supporto e crescita',
-        duration: '90 giorni dal go-live',
-        description:
-          'Bug fix, modifiche, monitoraggio di SEO e tracking e nuove ottimizzazioni ogni settimana. Un Loom settimanale di 10 minuti e il report al giorno 90.',
-      },
-    ],
-    fourMonths: {
-      title: 'Perché bastano 14 giorni?',
-      description:
-        'Perché il lavoro è sempre lo stesso e lo abbiamo già fatto: dati, redirect, tracking, checkout. Un metodo fisso, un calendario giorno per giorno e un team completo dal primo giorno. Il tempo che risparmi lo usi per vendere, non per aspettare.',
-    },
-    closingLine: 'Non un team che consegna e sparisce.\nUn team che resta 90 giorni dopo il go-live.',
+      'Google deve rielaborare il sito: la risalita dipende da come è fatta la migrazione.',
   },
   sprintBanner: {
     badge: 'AI powered',
     title: 'Shopify Launch Sprint:',
     titleEm: 'su Shopify in 14 giorni.',
-    text: 'Il metodo con cui migriamo: un team intero e il nostro Custom AI System, con l’AI su ogni area nello stesso momento. Dati, redirect, tracking e checkout pronti in due settimane, con 4 garanzie scritte.',
-    points: ['Store pronto al giorno 14', 'Custom AI System su misura', 'Prezzo fisso, 4 garanzie'],
-    cta: 'Scopri lo sprint',
-  },
-  pricing: {
-    label: 'prezzo',
-    heading: 'Prezzo fisso, quattro rate.\nNessun preventivo.',
-    subheading:
-      'Prezzo pubblico in base alla dimensione della tua azienda. Prima rata al kickoff, seconda al go-live, terza e quarta nei mesi di supporto.',
-    tiers: [],
-    priceSuffix: '/rata × 4',
-    priceFrom: 'A partire da',
-    priceBadge: 'metodo noprobagency',
-    guarantee:
-      '4 garanzie scritte: store pronto al giorno 14, traffico organico, go-live senza downtime e checkout. Se non funziona, paghiamo noi.',
-    trustLabel: 'Scelti da brand di Moda, Integratori e DTC eCommerce',
-    cardTitle: 'Migrazione Shopify',
-    cardDescription:
-      'Lo sprint completo di 14 giorni: migrazione tecnica, tracking, SEO e flusso d’acquisto. Poi go-live e 90 giorni di supporto. Un solo interlocutore.',
-    cardChecks: ['Store pronto in 14 giorni', 'Redirect SEO 1:1', '4 garanzie scritte'],
-    scarcity: '',
-    cta: 'Candidati ora',
+    text: 'Migrazione a Shopify in 14 giorni con il nostro Custom AI System: store pronto al giorno 14, go-live tra il giorno 15 e il 30, 90 giorni di supporto e 4 garanzie scritte. Prezzo pubblico in base al fatturato, in 4 rate.',
+    points: ['Store pronto al giorno 14', 'Go-live tra il giorno 15 e il 30', 'Prezzo pubblico, 4 garanzie scritte'],
+    cta: 'Scopri lo Shopify Launch Sprint',
   },
   faq: {
     label: 'domande frequenti',
-    heading: 'Le risposte alle ',
-    headingEm: 'domande più comuni',
-    subheading:
-      'Le obiezioni più comuni prima di migrare a Shopify. Senza giri di parole.',
+    heading: 'Domande frequenti sulla ',
+    headingEm: 'migrazione a Shopify',
+    subheading: 'Le domande che ci fanno più spesso prima di migrare a Shopify, con risposte brevi.',
     items: [
       {
-        question: 'Quanto dura davvero la migrazione?',
+        question: 'Quanto tempo ci vuole per migrare a Shopify?',
         answer:
-          'Lo sprint dura 14 giorni: al giorno 14 lo store è pronto a pubblicare. Il go-live lo fai tra il giorno 15 e il 30, nella data che scegli tu. Poi restiamo 90 giorni per supporto, monitoraggio e miglioramento.',
+          'Da poche settimane a diversi mesi, a seconda di catalogo, integrazioni e design. Con lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) lo store è pronto al giorno 14, il go-live avviene tra il giorno 15 e il 30 e seguono 90 giorni di supporto.',
       },
       {
-        question: 'Quali garanzie avete?',
+        question: 'Perderò il posizionamento su Google migrando a Shopify?',
         answer:
-          'Quattro, scritte nel contratto: store pronto al giorno 14 o ti rimborsiamo la prima rata; traffico organico sotto la baseline a 90 giorni e lavoriamo gratis finché non torna; store offline al lancio per colpa nostra e una rata la paghiamo noi; checkout che converte meno di prima e lo ottimizziamo gratis finché non supera.',
+          'Il posizionamento di solito si muove per un periodo dopo la migrazione, e una mappa completa di redirect 301, contenuti conservati e monitoraggio in Search Console permettono di recuperarlo. Nessuna migrazione può promettere zero oscillazioni. Nello Sprint il traffico organico a 90 giorni è una delle 4 garanzie scritte.',
       },
       {
-        question: 'Perderò posizionamento su Google?',
+        question: 'I clienti mantengono account e password?',
         answer:
-          'No, se la migrazione è gestita. Redirect 1:1, SEO tecnica, monitoraggio post-lancio: il lavoro è impostato nel dettaglio proprio per evitare penalizzazioni e cali. È il punto su cui lavoriamo di più.',
+          'Anagrafiche e indirizzi si importano, le password no. Ogni cliente riceve un’email di attivazione dell’account e sceglie una nuova password: conviene avvisarlo prima del lancio.',
       },
       {
-        question: 'Il mio store resta online durante la migrazione?',
+        question: 'Lo storico degli ordini viene migrato?',
         answer:
-          'Sì. Lavoriamo in staging e al go-live il sito non si ferma un secondo. I tuoi clienti non si accorgono di nulla.',
+          'Sì, lo storico ordini si importa su Shopify così report e area clienti restano completi. Dopo l’import si controllano numero e totali degli ordini rispetto alla piattaforma di partenza.',
       },
       {
-        question: 'Da quali piattaforme migrate?',
+        question: 'Da quali piattaforme si può migrare a Shopify?',
         answer:
-          'CRM, ERP e gestionali integrati, WooCommerce, PrestaShop, Magento. E store già esistenti da ricostruire.',
+          'Da tutte le principali: WooCommerce, Magento / Adobe Commerce, PrestaShop, Wix, Squarespace, BigCommerce e piattaforme proprietarie. Noi abbiamo casi studio da WooCommerce e da una piattaforma proprietaria collegata a un gestionale.',
       },
       {
-        question: 'Chi è il mio referente?',
+        question: 'Quanto costa migrare a Shopify?',
         answer:
-          'Un solo interlocutore dedicato, per tutto il percorso. La stessa persona dall’inizio alla fine. Non un venditore, ma il project manager ed esperto eCommerce del tuo progetto.',
-      },
-      {
-        question: 'Cosa succede dopo i 90 giorni?',
-        answer:
-          'Lo store è su Shopify, solido e misurato. Da qui può entrare tutto il team performance per farlo crescere con advertising, email marketing, CRO e ottimizzazione continua. È il passo naturale verso una [gestione completa](/it/team-ecommerce-dedicato).',
-      },
-      {
-        question: 'E se il mio store è molto complesso?',
-        answer:
-          'Lo capiamo prima di partire: per questo il prezzo dipende dalla dimensione dell’azienda e il kickoff parte solo con tutti gli accessi. Se qualcosa richiede sviluppo extra, lo mettiamo per iscritto prima, con tempi e costi chiari.',
+          'Dipende da catalogo, integrazioni, design e dati da riconciliare. Lo Shopify Launch Sprint ha un prezzo pubblico in base al fatturato: €5.800 sotto i €2M, €8.800 tra €2M e €20M, €12.800 oltre i €20M, IVA esclusa, in 4 rate.',
       },
     ],
-  },
-  form: {
-    label: 'candidatura',
-    heading: 'Candidati per la migrazione',
-    subheading: 'Pochi slot per trimestre. Candidati e vediamo se sei il progetto giusto.',
-    intro: 'Più dettagli ci dai, più la valutazione è rapida. Leggiamo ogni candidatura.',
-    fields: {
-      name: { label: 'Nome e cognome', placeholder: 'Mario Rossi' },
-      email: { label: 'Email aziendale', placeholder: 'nome@brand.com' },
-      brand: { label: 'Nome del brand / azienda', placeholder: 'Brand srl' },
-      websiteUrl: { label: 'URL del sito eCommerce attuale', placeholder: 'brand.com' },
-      platform: {
-        label: 'Su quale piattaforma sei ora?',
-        placeholder: 'es. WooCommerce, Magento, PrestaShop, Custom…',
-      },
-      revenue: {
-        label: 'Fatturato online annuo indicativo',
-        placeholder: 'Seleziona…',
-        options: ['< 100k', '100k - 300k', '300k - 1M', '1M - 3M', '3M+'],
-      },
-      timeline: {
-        label: 'Da quando vuoi partire?',
-        placeholder: 'Seleziona…',
-        options: ['Il prima possibile', 'Entro 1-3 mesi', 'Sto solo valutando'],
-      },
-      reason: {
-        label: 'Qual è il motivo principale per cui vuoi passare a Shopify?',
-        placeholder: 'Raccontaci cosa ti blocca oggi e cosa vuoi ottenere con la migrazione.',
-      },
-    },
-    privacyBefore: 'Ho letto e accetto la ',
-    privacyLinkLabel: 'Privacy Policy',
-    submit: 'Candidati ora',
-    submitting: 'Invio in corso…',
-    errors: {
-      name: 'Inserisci nome e cognome',
-      email: 'Inserisci un indirizzo email valido',
-      brand: 'Inserisci il nome del brand',
-      websiteUrl: 'Inserisci l’URL del tuo sito',
-      platform: 'Indica la piattaforma attuale',
-      revenue: 'Seleziona un’opzione',
-      timeline: 'Seleziona un’opzione',
-      reason: 'Spiega in almeno 30 caratteri il motivo del passaggio',
-      privacy: 'Devi accettare la Privacy Policy',
-    },
-    errorGeneric: 'Qualcosa è andato storto. Riprova tra un momento.',
-    errorNetwork: 'Errore di rete. Controlla la connessione e riprova.',
   },
 }
 
@@ -349,229 +396,280 @@ const en: MigrazioneCopy = {
   hero: {
     trustRatingLabel: '5/5',
     trustSectors: 'Chosen by Fashion, Supplements and DTC brands',
-    titlePart1: 'Migrate to Shopify without losing ',
-    titleEm1: 'sales',
-    titleMid: ' or ',
-    titleEm2: 'customers',
+    titlePart1: 'How to Migrate to ',
+    titleEm1: 'Shopify',
+    titleMid: ': The ',
+    titleEm2: 'Complete Guide',
     titlePart2: '',
     subtitle:
-      'Not just “we rebuild your site”. In 14 days we move your store to Shopify and set it up to sell better: design, tracking, performance, SEO. One point of contact, a report for every area, 4 written guarantees and 90 days of support after go-live.',
-    microBenefits: ['Store ready in 14 days', '1:1 SEO redirects', 'Never a second offline'],
-    cta: 'Apply for your migration',
+      'Everything that changes when you move to Shopify: platforms, data, SEO and 301 redirects, tracking, timeline, risks and cost, with two real migrations.',
+    microBenefits: ['Platforms and data', 'SEO and 301 redirects', 'Timeline, risks and cost'],
+    cta: 'See the Shopify Launch Sprint',
     trustedCount: 'Chosen by Fashion, Supplements and DTC brands',
   },
-  problem: {
-    label: 'the problem',
-    heading: 'Your platform ',
-    headingEm: 'is holding you back',
-    description:
-      'Switching platforms feels like a huge risk. Staying where you are costs you more, every day, in sales you’re not making. The numbers say so.',
-    items: [
+  guide: {
+    sections: [
       {
-        title: 'Rigid platform',
-        description:
-          'Every change goes through a ticket. Outside of sales periods you can’t really push. The platform decides what you can do, not you.',
+        type: 'paragraph',
+        text: 'To migrate to Shopify means moving your online store (products, customers, orders, content and URLs) from your current platform to Shopify, while keeping what already works: your Google rankings, your customer data and your tracking. This guide is for founders and eCommerce managers who are deciding whether to move, or who have decided and want to know what actually happens, in what order, and where it goes wrong.',
       },
       {
-        title: 'Fear of migrating',
-        description:
-          'You’ve heard stories of brands that switched and lost half their organic traffic. It’s the number one fear, and it’s a fair one.',
+        type: 'paragraph',
+        text: 'It is written by noprob agency, a team that migrates stores to Shopify. We explain the whole process, including the parts you can do yourself, and we say where we speak from direct experience: moves from WooCommerce and from a proprietary platform tied to an ERP. For other platforms we point to official documentation.',
+      },
+      { type: 'paragraph', text: '**In this guide**' },
+      {
+        type: 'list',
+        items: [
+          'Which platforms people migrate from and what changes',
+          'What actually gets migrated',
+          'SEO and 301 redirects',
+          'Tracking and data',
+          'How long a migration takes',
+          'Risks and how to avoid them',
+          'What it costs',
+          'The migration checklist',
+          'Two real migrations',
+        ],
+      },
+      { type: 'h2', text: 'Which platforms do people migrate to Shopify from?' },
+      {
+        type: 'paragraph',
+        text: 'People migrate to Shopify from every major platform, and the largest single source is WooCommerce. According to [Store Leads](https://storeleads.app/reports/shopify), 27,247 merchants moved to Shopify from other platforms in the 90 days to 9 October 2026, about 300 a day, and 9,204 of them came from WooCommerce. That is a gross flow: in the same period Shopify also lost 17,922 stores, so the net gain is 9,325.',
+      },
+      { type: 'paragraph', text: 'What changes depends on where you start:' },
+      {
+        type: 'list',
+        items: [
+          '**WooCommerce**: products, orders and customers live in the WordPress database, and many features come from plugins. Each plugin needs a Shopify app or native feature as a replacement, or has to be dropped. The blog usually lives in WordPress too and has to be moved or kept.',
+          '**Magento / Adobe Commerce**: typically large catalogs, many attributes, custom modules and B2B rules. Most of the work is mapping attributes and custom logic to Shopify’s data model (metafields, apps or dedicated code).',
+          '**PrestaShop**: features are handled by modules, often with several languages or shops. Catalog cleanup, module mapping and the URL structure per language matter most.',
+          '**Wix and Squarespace**: closed platforms with narrower export options than self-hosted ones. Before you decide, check what you can export of products, customers, orders and blog.',
+          '**BigCommerce**: a SaaS platform like Shopify. The work is mostly design, apps and URLs.',
+          '**Proprietary platforms**: often tied to an ERP. The job is to rebuild the data flows (stock, prices, orders) between the ERP and Shopify, on top of moving the catalog.',
+        ],
       },
       {
-        title: 'Operational chaos',
-        description:
-          'Inventory, open orders, returning customers. Switching platforms feels like opening a construction site that blocks everything for months.',
+        type: 'paragraph',
+        text: 'We have migrated stores from WooCommerce and from a proprietary platform tied to an ERP (two cases at the end of this guide). We have no cases to cite on Magento, PrestaShop, BigCommerce, Wix or Squarespace: the notes above describe how those platforms work and point to Shopify’s documentation. When an agency quotes you a migration, ask for a reference on your exact platform.',
       },
-    ],
-  },
-  solution: {
-    label: 'the solution',
-    headingPart1: 'An experienced team for a ',
-    headingEm: 'managed, predictable migration.',
-    description:
-      'In a migration, almost everything can be planned for: data, redirects, integrations, SEO. A team that has done them well already knows where the critical points are and covers them before they become problems.',
-    items: [
+      { type: 'h2', text: 'What actually gets migrated to Shopify?' },
       {
-        title: 'Real experience',
-        description:
-          'Complex migrations and large-scale redirects, done right. We know where to look before we even start.',
+        type: 'paragraph',
+        text: 'Almost everything that is data can be moved, but each item has its own rules. These are the blocks to plan for:',
       },
       {
-        title: 'An expert team',
-        description:
-          'Development, SEO, tracking, design. When something unexpected comes up you don’t wait for the right freelancer: the team is already there, complete, and steps in right away.',
+        type: 'list',
+        items: [
+          '**Products and variants**: titles, descriptions, images, SKUs, prices, stock and options (size, color). Shopify handles variants as product options, with set limits (see [Shopify’s documentation on variants](https://help.shopify.com/en/manual/products/variants)), so products with many attributes have to be remodeled.',
+          '**Collections**: manual or automated, with the rules that populate them.',
+          '**Customers**: profiles and addresses can be imported ([Shopify’s guide to importing customers](https://help.shopify.com/en/manual/customers/import-export-customers)), passwords cannot. Customers get an account activation email to set a new one, so it is worth warning them first.',
+          '**Order history**: imported as history so reports and customer accounts stay complete. After the import you reconcile counts and totals against the old platform.',
+          '**Content and blog**: pages, posts, images, categories and SEO metadata.',
+          '**URLs**: they almost always change, which is why you need redirects (next section).',
+          '**Apps and integrations**: payments, shipping, ERP, CRM, email marketing, reviews, subscriptions. Each one becomes a Shopify app, a native feature or a custom integration.',
+          '**Tracking**: GA4, advertising pixels, cookie consent.',
+        ],
       },
       {
-        title: 'A growth partner',
-        description:
-          'We do not deliver and disappear. After go-live we stay 90 days on SEO, tracking and checkout: we find what can improve and we improve it, every week.',
+        type: 'paragraph',
+        text: 'Shopify documents the basics in its [migrating to Shopify help center](https://help.shopify.com/en/manual/migrating-to-shopify), including import apps and the CSV file format. Read it before you scope the project.',
+      },
+      { type: 'h2', text: 'How do you keep your SEO and set up 301 redirects?' },
+      {
+        type: 'paragraph',
+        text: 'You keep your SEO by giving every old URL a 301 redirect to its closest equivalent on Shopify, and by keeping titles, descriptions, headings and content close to what ranks today.',
+      },
+      {
+        type: 'paragraph',
+        text: 'On Shopify the URL structure has fixed prefixes: /products/, /collections/, /pages/ and /blogs/. If your platform uses different patterns, almost every URL changes (for example a category at /shoes/ becomes /collections/shoes). That is why you need a redirect map, the step that most often decides how the migration goes on the SEO side:',
+      },
+      {
+        type: 'list',
+        items: [
+          '**Collect the URLs**: crawl the old site, then add the URLs that get traffic in Search Console and the ones with backlinks.',
+          '**Map one to one**: every old URL goes to its equivalent new URL. If a page no longer exists, redirect to the closest category, not the homepage.',
+          '**Load them into Shopify**: redirects are managed from the URL Redirects section of the admin, with CSV import.',
+          '**Check after launch**: crawl the list of old URLs again, find the 404s and redirect chains, and fix them.',
+          '**Update Search Console**: submit the new sitemap and monitor crawling and impressions for the following weeks.',
+        ],
+      },
+      {
+        type: 'paragraph',
+        text: 'Google’s [Search Central guide on site moves with URL changes](https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes) says the same: map old to new URLs, use permanent redirects and keep them as long as you can, ideally at least a year.',
+      },
+      {
+        type: 'paragraph',
+        text: 'On Integratori DTC Nazzi (WooCommerce to Shopify) we ran this post-launch check on 215 archived WooCommerce URLs, and the 301 redirect CSV was handed over to import into Shopify. In Search Console, the 28 days to 9 October 2026 show clicks at 2.7x and impressions at 4.0x the same 28 days of 2025. Daily clicks dipped below the pre-launch level in August and were back above it in September and October: rankings move during a migration, and the redirect map decides how they recover.',
+      },
+      { type: 'h2', text: 'How do you handle tracking and data?' },
+      {
+        type: 'paragraph',
+        text: 'Rebuild tracking before launch, not after, because every day without correct data is a day you cannot compare with before.',
+      },
+      {
+        type: 'list',
+        items: [
+          '**GA4**: purchase events (view item, add to cart, begin checkout, purchase) have to be mapped to Shopify’s customer events. If you can, keep the same GA4 property so your history continues.',
+          '**Advertising pixels and conversions**: reconnect them and check that purchase values arrive correctly.',
+          '**Server-side tracking**: reduces the data lost to browsers and blockers and makes conversions more reliable.',
+          '**Cookie consent**: banner and Consent Mode need to be set up properly from day one, especially if you sell in Europe.',
+        ],
+      },
+      { type: 'h2', text: 'How long does a Shopify migration take?' },
+      {
+        type: 'paragraph',
+        text: 'A Shopify migration takes from a few weeks to several months, depending on catalog size, the number of integrations and how much of the design you rebuild. The phases are almost always the same:',
+      },
+      {
+        type: 'list',
+        items: [
+          '**Audit and scope**: platform, apps, URLs, data and integrations to bring over.',
+          '**Data import and reconciliation**: products, customers, orders, with a check on totals.',
+          '**Design and store**: replicating or redesigning the pages.',
+          '**Integrations and apps**: payments, shipping, ERP, email.',
+          '**SEO**: redirect map, metadata, sitemap.',
+          '**Tracking**: GA4, pixels, server-side, consent.',
+          '**Testing**: checkout, payments, shipping, taxes, discount codes, emails, on several devices.',
+          '**Go-live**: DNS switch, redirects live, sitemap submitted.',
+          '**Post-launch monitoring**: Search Console, 404 errors, conversions.',
+        ],
+      },
+      {
+        type: 'paragraph',
+        text: 'The [Shopify Launch Sprint](/shopify-migration-sprint) compresses this path into a fixed calendar: the store is ready on day 14, go-live happens between day 15 and 30 on the date you choose, and 90 days of support follow. It runs with a full team, our Custom AI System and one point of contact.',
+      },
+      { type: 'h2', text: 'What are the risks of migrating to Shopify and how do you avoid them?' },
+      {
+        type: 'paragraph',
+        text: 'There are five main risks (downtime, lost rankings, lost or wrong data, a checkout that converts worse, and apps that stop working) and each has a known countermeasure.',
+      },
+      {
+        type: 'list',
+        items: [
+          '**Downtime**: build and test everything in a store that is not public, then switch the DNS at a quiet hour and keep the old site up until propagation is finished.',
+          '**Lost rankings**: a complete redirect map, content and metadata kept, and Search Console monitored for the weeks after launch.',
+          '**Data**: reconcile counts and totals of products, customers and orders, and keep a full export of the old platform as a backup.',
+          '**Checkout**: test every payment method, shipping rule, tax, discount code and email on real devices before launch, then compare conversion.',
+          '**Apps and integrations**: list every plugin and script on the old site and decide for each whether to replace or drop it. Test the ERP sync with real orders.',
+          '**The wrong day**: avoid launching on a peak sales day, and prepare customers for the account activation email.',
+        ],
+      },
+      { type: 'h2', text: 'How much does it cost to migrate to Shopify?' },
+      {
+        type: 'paragraph',
+        text: 'A Shopify migration costs anything from a do-it-yourself import to a full agency project, and the price depends on catalog size, integrations, design work and the data to reconcile. The items that move the cost:',
+      },
+      {
+        type: 'list',
+        items: [
+          'number of products, variants and attributes to remodel',
+          'integrations with ERP, CRM, logistics and payments',
+          'how much of the design is replicated and how much redesigned',
+          'languages, markets and currencies',
+          'volume of URLs, redirects and content to move',
+          'tracking and consent setup',
+        ],
+      },
+      {
+        type: 'paragraph',
+        text: 'On top of that come the Shopify subscription, apps and payment fees, which you should check on Shopify’s site. If you want the migration as a turnkey project, the [Shopify Launch Sprint](/shopify-migration-sprint) has a public price by revenue: €5,800 under €2M, €8,800 between €2M and €20M, €12,800 above €20M, VAT excluded, in 4 installments.',
+      },
+      { type: 'h2', text: 'The Shopify migration checklist' },
+      {
+        type: 'paragraph',
+        text: 'This checklist sums up the checks to run before, during and after the migration:',
+      },
+      {
+        type: 'list',
+        items: [
+          'Export and keep a full backup of the old platform.',
+          'List the active apps, plugins, scripts and integrations.',
+          'Crawl the old site and export the URLs with traffic and backlinks.',
+          'Prepare the one-to-one redirect map.',
+          'Import products, collections, customers and orders.',
+          'Reconcile counts and totals of the imported data.',
+          'Rebuild GA4, pixels, server-side tracking and cookie consent.',
+          'Configure payments, shipping and taxes.',
+          'Test checkout with real orders on several devices.',
+          'Tell customers about the account activation.',
+          'Switch the DNS, turn on the redirects and submit the sitemap.',
+          'After launch, check 404s, redirect chains, conversions and Search Console.',
+        ],
+      },
+      { type: 'h2', text: 'Two real migrations: WooCommerce and a proprietary platform' },
+      {
+        type: 'paragraph',
+        text: 'Two migrations we ran show the most common starting points: a WooCommerce store and a proprietary platform. The figures come from the clients’ dashboards and compare against the same period before; they are not a promise of results.',
+      },
+      { type: 'h3', text: 'Integratori DTC Nazzi: WooCommerce to Shopify' },
+      {
+        type: 'paragraph',
+        text: 'Migration built between May and June 2026, live on 19 July 2026. From go-live to 12 October 2026, against the same days of 2025: online sales +105%, orders +77%, average order value +16% and returning customers at 2.25x. Read the [Integratori DTC Nazzi case study](/use-cases/integratori-nazzi-dtc-shopify).',
+      },
+      { type: 'h3', text: 'Cumini: proprietary platform to Shopify' },
+      {
+        type: 'paragraph',
+        text: 'Luxury multibrand fashion, on Shopify since 19 May 2025, before that on a proprietary platform tied to its management system. In the 12 months after, against the 12 before: net sales +67.7%, orders +49.4%, average order value +12.2%. The tracking score went from 31/100 to 92/100. Read the [Cumini case study](/use-cases/cumini-luxury-fashion-ecommerce).',
+      },
+      {
+        type: 'paragraph',
+        text: 'The [Shopify Launch Sprint](/shopify-migration-sprint) moves your store to Shopify in 14 days with our Custom AI System: a fixed calendar, a public price and 4 written guarantees.',
       },
     ],
   },
   charts: {
     label: 'search console',
-    title1: 'After every migration, traffic drops. ',
+    title1: 'After a migration, traffic can dip. ',
     titleEm: 'What matters is what happens next.',
     subtitle:
-      'Google re-processes the site: the drop is normal. The recovery depends on how the migration is done.',
-  },
-  process: {
-    label: 'how we work',
-    headingPart1: '14 days to ',
-    headingEm: 'be on Shopify.',
-    description:
-      'A 2-week sprint, then go-live on the date you choose and 90 days by your side.\nThe flow tested and confirmed over more than 10 projects.',
-    phases: [
-      {
-        number: '01',
-        title: 'Sprint',
-        duration: 'days 1-14',
-        description:
-          'Kickoff, import of products, customers and orders, 100% reconciliation, 1:1 template replication, Redirect Map, server-side tracking, purchase-flow checklist and tests on 3 devices. On day 14 the store is ready to publish.',
-      },
-      {
-        number: '02',
-        title: 'Go-live',
-        duration: 'days 15-30',
-        description:
-          'You pick the date. DNS switch, redirects live, sitemap and Search Console. Not a second offline, and 48 hours on watch after launch.',
-      },
-      {
-        number: '03',
-        title: 'Support and growth',
-        duration: '90 days from go-live',
-        description:
-          'Bug fixes, changes, SEO and tracking monitoring and new optimizations every week. A weekly 10-minute Loom and a report on day 90.',
-      },
-    ],
-    fourMonths: {
-      title: 'Why are 14 days enough?',
-      description:
-        'Because the work is always the same and we have done it before: data, redirects, tracking, checkout. A fixed method, a day-by-day calendar and a full team from day one. The time you save goes into selling, not waiting.',
-    },
-    closingLine: 'Not a team that delivers and disappears.\nA team that stays 90 days after go-live.',
+      'Google has to re-process the site: the recovery depends on how the migration is done.',
   },
   sprintBanner: {
     badge: 'AI powered',
     title: 'Shopify Launch Sprint:',
     titleEm: 'on Shopify in 14 days.',
-    text: 'The method we migrate with: a whole team and our Custom AI System, with AI on every area at the same time. Data, redirects, tracking and checkout ready in two weeks, with 4 written guarantees.',
-    points: ['Store ready on day 14', 'Made-to-measure Custom AI System', 'Fixed price, 4 guarantees'],
-    cta: 'Discover the sprint',
-  },
-  pricing: {
-    label: 'pricing',
-    heading: 'Fixed price, four installments.\nNo quotes.',
-    subheading:
-      'Public price based on the size of your company. First installment at kickoff, second at go-live, third and fourth during the support months.',
-    tiers: [],
-    priceSuffix: '/installment × 4',
-    priceFrom: 'Starting from',
-    priceBadge: 'noprobagency method',
-    guarantee:
-      '4 written guarantees: store ready on day 14, organic traffic, zero-downtime go-live and checkout. If it does not work, we pay.',
-    trustLabel: 'Chosen by Fashion, Supplements and DTC brands',
-    cardTitle: 'Shopify Migration',
-    cardDescription:
-      'The full 14-day sprint: technical migration, tracking, SEO and purchase flow. Then go-live and 90 days of support. One point of contact.',
-    cardChecks: ['Store ready in 14 days', '1:1 SEO redirects', '4 written guarantees'],
-    scarcity: '',
-    cta: 'Apply now',
+    text: 'Shopify migration in 14 days with our Custom AI System: store ready on day 14, go-live between day 15 and 30, 90 days of support and 4 written guarantees. Public price by revenue, in 4 installments.',
+    points: ['Store ready on day 14', 'Go-live between day 15 and 30', 'Public price, 4 written guarantees'],
+    cta: 'See the Shopify Launch Sprint',
   },
   faq: {
     label: 'faq',
-    heading: 'Answers to the ',
-    headingEm: 'most common questions',
-    subheading: 'The most common objections before migrating to Shopify. No fluff.',
+    heading: 'Shopify migration ',
+    headingEm: 'frequently asked questions',
+    subheading: 'The questions we hear most before a move to Shopify, with short answers.',
     items: [
       {
-        question: 'How long does the migration really take?',
+        question: 'How long does it take to migrate to Shopify?',
         answer:
-          'The sprint lasts 14 days: on day 14 the store is ready to publish. You go live between day 15 and day 30, on the date you choose. Then we stay 90 days for support, monitoring and improvement.',
+          'From a few weeks to several months, depending on catalog, integrations and design. With the [Shopify Launch Sprint](/shopify-migration-sprint) the store is ready on day 14, go-live happens between day 15 and 30, and 90 days of support follow.',
       },
       {
-        question: 'What guarantees do you give?',
+        question: 'Will I lose my Google rankings when I migrate to Shopify?',
         answer:
-          'Four, written in the contract: store ready on day 14 or we refund the first installment; organic traffic below baseline at 90 days and we work for free until it is back; store offline at launch through our fault and we pay one installment; checkout converting less than before and we optimize it for free until it beats it.',
+          'Rankings usually move for a while after a migration, and a complete map of 301 redirects, preserved content and monitoring in Search Console let them recover. No migration can promise zero movement. In the Sprint, organic traffic at 90 days is one of the 4 written guarantees.',
       },
       {
-        question: 'Will I lose my Google rankings?',
+        question: 'Do customers keep their accounts and passwords?',
         answer:
-          'No, if the migration is managed. 1:1 redirects, technical SEO, post-launch monitoring: the work is set up in detail precisely to avoid penalties and drops. It’s what we work on most.',
+          'Profiles and addresses are imported, passwords are not. Each customer gets an account activation email and sets a new password, so it is worth warning them before launch.',
       },
       {
-        question: 'Does my store stay online during the migration?',
+        question: 'Is order history migrated?',
         answer:
-          'Yes. We work in staging, and at go-live the site doesn’t stop for a second. Your customers don’t notice a thing.',
+          'Yes, order history is imported into Shopify so reports and customer accounts stay complete. After the import, order counts and totals are checked against the old platform.',
       },
       {
-        question: 'Which platforms do you migrate from?',
+        question: 'Which platforms can I migrate to Shopify from?',
         answer:
-          'CRM, ERP and integrated management systems, WooCommerce, PrestaShop, Magento. And existing stores that need rebuilding.',
+          'All the major ones: WooCommerce, Magento / Adobe Commerce, PrestaShop, Wix, Squarespace, BigCommerce and proprietary platforms. We have case studies from WooCommerce and from a proprietary platform tied to an ERP.',
       },
       {
-        question: 'Who is my point of contact?',
+        question: 'How much does it cost to migrate to Shopify?',
         answer:
-          'One dedicated point of contact, for the whole journey. The same person from start to finish. Not a salesperson, but the project manager and eCommerce expert for your project.',
-      },
-      {
-        question: 'What happens after the 90 days?',
-        answer:
-          'The store is on Shopify, solid and measured. From here the whole performance team can step in to grow it with advertising, email marketing, CRO and continuous optimization. It is the natural step towards [full management](/data-driven-team).',
-      },
-      {
-        question: 'What if my store is very complex?',
-        answer:
-          'We find out before we start: that is why the price depends on company size and kickoff only starts with every access in place. If something needs extra development, we put it in writing first, with clear timing and costs.',
+          'It depends on catalog, integrations, design and the data to reconcile. The Shopify Launch Sprint has a public price by revenue: €5,800 under €2M, €8,800 between €2M and €20M, €12,800 above €20M, VAT excluded, in 4 installments.',
       },
     ],
-  },
-  form: {
-    label: 'application',
-    heading: 'Apply for your migration',
-    subheading: 'A few slots per quarter. Apply and let’s see if you’re the right fit.',
-    intro: 'The more details you give us, the faster the review. We read every application.',
-    fields: {
-      name: { label: 'Full name', placeholder: 'John Smith' },
-      email: { label: 'Business email', placeholder: 'name@brand.com' },
-      brand: { label: 'Brand / company name', placeholder: 'Brand Ltd' },
-      websiteUrl: { label: 'Current eCommerce URL', placeholder: 'brand.com' },
-      platform: {
-        label: 'Which platform are you on now?',
-        placeholder: 'e.g. WooCommerce, Magento, PrestaShop, Custom…',
-      },
-      revenue: {
-        label: 'Approximate annual online revenue',
-        placeholder: 'Select…',
-        options: ['< 100k', '100k - 300k', '300k - 1M', '1M - 3M', '3M+'],
-      },
-      timeline: {
-        label: 'When do you want to start?',
-        placeholder: 'Select…',
-        options: ['As soon as possible', 'Within 1-3 months', 'Just exploring'],
-      },
-      reason: {
-        label: 'What’s the main reason you want to move to Shopify?',
-        placeholder: 'Tell us what’s blocking you today and what you want to achieve with the migration.',
-      },
-    },
-    privacyBefore: 'I have read and accept the ',
-    privacyLinkLabel: 'Privacy Policy',
-    submit: 'Apply now',
-    submitting: 'Sending…',
-    errors: {
-      name: 'Enter your full name',
-      email: 'Enter a valid email address',
-      brand: 'Enter your brand name',
-      websiteUrl: 'Enter your site URL',
-      platform: 'Tell us your current platform',
-      revenue: 'Select an option',
-      timeline: 'Select an option',
-      reason: 'Explain in at least 30 characters',
-      privacy: 'You must accept the Privacy Policy',
-    },
-    errorGeneric: 'Something went wrong. Please try again.',
-    errorNetwork: 'Network error. Check your connection and try again.',
   },
 }
 
