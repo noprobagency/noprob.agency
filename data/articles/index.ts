@@ -66,6 +66,8 @@ export const articles: Article[] = [
       'Science-backed Shopify conversion rate optimization. Not opinions, not listicles: what peer-reviewed research from Wharton and the Journal of Marketing actually proves about converting ecommerce visitors.',
     excerptIt:
       "CRO per eCommerce con dati reali e ricerche peer-reviewed. Non opinioni, non listicle: quello che la scienza ha dimostrato su cosa funziona davvero su Shopify nel 2026.",
+    seoDescriptionIt:
+      'CRO per eCommerce con dati reali e ricerche peer-reviewed, non opinioni: cosa ha dimostrato la scienza su ciò che funziona davvero su Shopify nel 2026.',
     ledeEn:
       'Twelve+ peer-reviewed studies, applied to a real Shopify store. The findings most CRO guides ignore, and the ones that change the numbers.',
     ledeIt:

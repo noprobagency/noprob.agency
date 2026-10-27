@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.54.0 (27 Oct 2026)
+
+- **Meta descriptions under 160 characters**: the Sprint landing (EN 165, IT 169) and the Italian CRO article (168) were cut off in Google results. The Sprint descriptions now open with the target query ("Shopify migration", "Migrazione a Shopify"); the CRO article gets its own `seoDescriptionIt`, the listing excerpt is unchanged (Francesca, audit of 27 October).
+
 ### Changelog v1.53.0 (27 Oct 2026)
 
 - **robots.txt, `/_next/` crawlable again**: the rule blocked Googlebot from the JS, CSS and `/_next/image` URLs every page loads, so Google could not render pages fully or index their images. `/api/` and `/admin/` stay blocked (Francesca, audit of 27 October).

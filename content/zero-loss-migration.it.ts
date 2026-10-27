@@ -12,7 +12,7 @@ export const zeroLossIt: ZlCopy = {
   meta: {
     title: 'Migrazione a Shopify in 14 giorni | Shopify Launch Sprint',
     description:
-      'Migra il tuo eCommerce su Shopify in 14 giorni, con il nostro Custom AI System, senza perdere Google né vendite. Prezzo fisso, 4 garanzie scritte, 90 giorni di supporto.',
+      'Migrazione a Shopify in 14 giorni con il nostro Custom AI System, senza perdere Google né vendite. Prezzo fisso, 4 garanzie scritte, 90 giorni di supporto.',
     ogAlt: 'Shopify Launch Sprint: il tuo eCommerce su Shopify in 14 giorni, più SEO e più vendite',
   },
   nav: {
