@@ -4,6 +4,7 @@ import Link from 'next/link'
 import PartnerLogos from '@/components/ui/PartnerLogos'
 import { type Locale } from '@/lib/i18n'
 import { getMigrazioneCopy } from '@/lib/i18n/migrazione'
+import { ROUTE_PATHS } from '@/lib/i18n/routes'
 
 export default function MigrazioneHero({ locale = 'it' }: { locale?: Locale }) {
   const d = getMigrazioneCopy(locale).hero
@@ -103,9 +104,13 @@ export default function MigrazioneHero({ locale = 'it' }: { locale?: Locale }) {
           ))}
         </div>
 
-        {/* CTA -> form anchor */}
+        {/* CTA -> Shopify Launch Sprint landing */}
         <div className="flex flex-col items-center gap-[9px] min-[810px]:w-auto min-[810px]:flex-row min-[810px]:flex-nowrap min-[810px]:items-center min-[810px]:gap-2">
-          <Link href="#candidatura" data-tracking="migrazione_hero_cta" className="button-principal">
+          <Link
+            href={ROUTE_PATHS.zeroLossMigration[locale]}
+            data-tracking="migrazione_hero_cta"
+            className="button-principal"
+          >
             {d.cta}
           </Link>
         </div>

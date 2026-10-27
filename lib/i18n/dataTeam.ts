@@ -1,5 +1,5 @@
 import type { Locale } from '@/lib/i18n'
-import type { MigrazioneCopy } from '@/lib/i18n/migrazione'
+import type { MigrazioneFormCopy, MigrazionePricingCopy } from '@/lib/i18n/migrazione'
 
 /**
  * Pricing + application-form copy for the Data-Driven Team page
@@ -23,8 +23,8 @@ type WhyUsCopy = {
 }
 
 export type DataTeamCopy = {
-  pricing: MigrazioneCopy['pricing']
-  form: MigrazioneCopy['form']
+  pricing: MigrazionePricingCopy
+  form: MigrazioneFormCopy
   whyUs: WhyUsCopy
 }
 

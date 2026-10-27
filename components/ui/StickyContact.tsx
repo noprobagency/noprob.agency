@@ -12,8 +12,6 @@ import { getDictionary, type Locale } from '@/lib/i18n'
 const LANDING_LABELS: Record<string, string> = {
   '/it/sviluppo-shopify': 'Candidati per il progetto',
   '/shopify-development': 'Apply for the project',
-  '/it/migrazione-shopify': 'Candidati per la migrazione',
-  '/shopify-migration': 'Apply for your migration',
   '/it/team-ecommerce-dedicato': 'Candidati per il team',
   '/data-driven-team': 'Apply for the team',
   '/it/ai-accelerator': 'Candida la tua azienda',
@@ -41,7 +39,10 @@ export default function StickyContact({ locale: localeProp }: { locale?: Locale 
     pathname === '/it/ai-accelerator/grazie' ||
     // Private ambassador playbook: no CTAs by design.
     pathname === '/ambassador' ||
-    pathname === '/it/ambassador'
+    pathname === '/it/ambassador' ||
+    // Migration guide: the Sprint CTA is the action there, a contact pill would compete with it.
+    pathname === '/shopify-migration' ||
+    pathname === '/it/migrazione-shopify'
 
   const isLanding = pathname in LANDING_LABELS
   const href = isLanding ? '#candidatura' : t.hero.ctaPrimaryHref

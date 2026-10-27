@@ -6,7 +6,7 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 
 import { type Locale } from '@/lib/i18n'
-import { getMigrazioneCopy, type MigrazioneCopy } from '@/lib/i18n/migrazione'
+import { type MigrazioneFormCopy } from '@/lib/i18n/migrazione'
 import { makeMigrazioneSchema, type MigrazioneFormData } from '@/lib/schemas/migrazione'
 import { ROUTE_PATHS } from '@/lib/i18n/routes'
 
@@ -26,16 +26,15 @@ const errorClass = 'text-[10px] text-red-500'
 
 export default function MigrazioneForm({
   locale = 'it',
-  copy,
+  copy: d,
   source = 'migrazione',
   submitTracking = 'migrazione_form_submit',
 }: {
   locale?: Locale
-  copy?: MigrazioneCopy['form']
+  copy: MigrazioneFormCopy
   source?: 'migrazione' | 'sviluppo' | 'datateam'
   submitTracking?: string
 }) {
-  const d = copy ?? getMigrazioneCopy(locale).form
   const router = useRouter()
   const [serverError, setServerError] = useState<string | null>(null)
   const mountedAtRef = useRef<number>(Date.now())

@@ -1,9 +1,9 @@
 import { type Locale } from '@/lib/i18n'
-import { type MigrazioneCopy } from '@/lib/i18n/migrazione'
+import { type MigrazioneProcessCopy } from '@/lib/i18n/migrazione'
 
 // Roadmap copy for the dedicated-team (Data-Driven Team) page.
 // Reuses the MigrazioneProcess graphic but with a 90-day, team-focused narrative.
-type ProcessCopy = MigrazioneCopy['process']
+type ProcessCopy = MigrazioneProcessCopy
 
 const it: ProcessCopy = {
   label: 'come entriamo',

@@ -9,7 +9,7 @@ import Testimonials from '@/components/sections/Testimonials'
 import MigrazioneForm from '@/components/sections/MigrazioneForm'
 import { siteAssets } from '@/lib/site'
 import { type Locale } from '@/lib/i18n'
-import { getMigrazioneCopy, type MigrazioneCopy } from '@/lib/i18n/migrazione'
+import { type MigrazionePricingCopy, type MigrazioneFormCopy } from '@/lib/i18n/migrazione'
 
 function CheckIcon() {
   return (
@@ -33,15 +33,15 @@ export default function MigrazionePricing({
   showPrice = true,
 }: {
   locale?: Locale
-  copy?: MigrazioneCopy['pricing']
+  copy: MigrazionePricingCopy
   ctaTracking?: string
-  formCopy?: MigrazioneCopy['form']
+  formCopy: MigrazioneFormCopy
   formSource?: 'migrazione' | 'sviluppo' | 'datateam'
   formSubmitTracking?: string
   showTiers?: boolean
   showPrice?: boolean
 }) {
-  const d = copy ?? getMigrazioneCopy(locale).pricing
+  const d = copy
   const tiers = d.tiers
   const currentIndex = Math.max(0, tiers.findIndex((t) => t.state === 'current'))
   const current = tiers[currentIndex] ?? tiers[0]

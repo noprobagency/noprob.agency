@@ -1,12 +1,17 @@
 import type { Locale } from '@/lib/i18n'
-import type { MigrazioneCopy } from '@/lib/i18n/migrazione'
+import type {
+  MigrazioneCopy,
+  MigrazioneFormCopy,
+  MigrazionePricingCopy,
+  MigrazioneProcessCopy,
+} from '@/lib/i18n/migrazione'
 
 /**
  * Copy module for the "Sviluppo Shopify" / "Shopify Development" landing page.
  * Routes: it -> /it/sviluppo-shopify, en -> /shopify-development.
  *
  * Twin of the migrazione page: it reuses the migrazione Process / Pricing /
- * Form / FAQ components (so those section shapes are typed via `MigrazioneCopy`)
+ * Form / FAQ components (so those section shapes are typed via `MigrazioneCopy` and the exported section types)
  * and the rebuild Hero / Problem / Solution / WhyUs components (typed below).
  * Only `seo.sviluppoShopify` lives in the shared dictionary so
  * `buildMetadata({ pageKey })` keeps working.
@@ -59,10 +64,10 @@ export type SviluppoCopy = {
   hero: HeroCopy
   problem: ProblemCopy
   solution: SolutionCopy
-  process: MigrazioneCopy['process']
+  process: MigrazioneProcessCopy
   whyUs: WhyUsCopy
-  pricing: MigrazioneCopy['pricing']
-  form: MigrazioneCopy['form']
+  pricing: MigrazionePricingCopy
+  form: MigrazioneFormCopy
   faq: MigrazioneCopy['faq']
 }
 
