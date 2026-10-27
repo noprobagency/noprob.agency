@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.47.0 (27 Oct 2026)
+
+- **Marco, two rules**: replies to Antonio stay short and concrete; the founder is presented as resident in Lisbon working remotely for the US LLC, never as based in Italy (skill and `backlink/scheda.md`). No site change.
+
 ### Changelog v1.46.0 (27 Oct 2026)
 
 - **`/cold` skill, short recaps**: status and recap answers stay within 5-6 lines, numbers first, minimum tokens (Antonio's rule for Ada and Dante).
@@ -16,10 +20,6 @@ old entries, add a new one on top.
 
 - **Direct cold email, network retry**: Gmail calls (and the token refresh) retry network errors up to 5 times with a growing pause; the 9:30 run of 27 October stopped on an ECONNRESET while the Mac's network was waking up. Test.
 - **Dante finds hello@ by address**: Gojiberry gave the mailbox a new seat id when it was reconnected on 26 October, so the review routine now looks the seat up by email address.
-
-### Changelog v1.44.0 (27 Oct 2026)
-
-- **Marco, two rules**: replies to Antonio stay short and concrete; the founder is presented as resident in Lisbon working remotely for the US LLC, never as based in Italy (skill and `backlink/scheda.md`). No site change.
 
 ### Changelog v1.43.0 (26 Oct 2026)
 
