@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { review } from './approve.mjs'
+import { cleanCompany, review } from './approve.mjs'
 
 const taken = { linkedin: new Set(['linked.it']), direct: new Set(['direct.it']), suppressed: new Set(['@nope.it', 'anna@acme.it']) }
 const lead = (over = {}) => ({ website: 'https://www.acme.it', lastName: 'Rossi', company: 'Acme Srl', location: 'Milan, Lombardy, Italy', jobTitle: 'CTO', email: '', ...over })
@@ -29,5 +29,16 @@ describe('Dante lead review', () => {
     expect(review(lead({ location: 'Los Angeles Metropolitan Area', companyLocation: 'Florence, Alabama, United States' }), woo, taken).reason).toBe('not based in Italy (Italian copy)')
     expect(review(lead({ location: 'Greater Milan Metropolitan Area' }), woo, taken).action).toBe('approve')
     expect(review(lead({ company: 'Mobilificio Marchese', website: 'http://www.pepperchic.com/' }), woo, taken).reason).toBe('site does not match the company')
+  })
+})
+
+describe('company name for the subject', () => {
+  it('drops legal suffixes, domain endings and capitals', () => {
+    expect(cleanCompany('UNOAERRE INDUSTRIES SPA')).toBe('Unoaerre Industries')
+    expect(cleanCompany('Tsunami Nutrition S.r.l.')).toBe('Tsunami Nutrition')
+    expect(cleanCompany('Zicaffè SpA')).toBe('Zicaffè')
+    expect(cleanCompany('Semprefarmacia.it')).toBe('Semprefarmacia')
+    expect(cleanCompany('Würth MODYF Italy')).toBe('Würth MODYF')
+    expect(cleanCompany('Camicissima')).toBe('Camicissima')
   })
 })
