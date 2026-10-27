@@ -236,10 +236,11 @@ Per essere visibili in più ricerche, ogni prodotto del listino può avere il su
 
 | Asset | File |
 |---|---|
+| Foto profilo di Antonio (quadrata, 800 px) | `backlink/assets/antonio-manitta.jpg` (originale in Desktop/NoProb Agency/Profile Image.png) |
+| Logo quadrato (600 px) | `backlink/assets/noprob-logo-square.png` |
 | Logo nero | `public/images/logo-no-prob-black.svg` |
 | Logo bianco | `public/images/logo-no-prob-white-1.svg` |
 | Immagine di copertina | `public/images/og-image.png` |
-| Foto del fondatore | `public/images/originals/7jMr2bJ1E0BHUjGZvEWpbOHZ0.png` |
 | Casi studio | Cumini `/use-cases/cumini-luxury-fashion-ecommerce`, Nazzi `/use-cases/integratori-nazzi-dtc-shopify`, DDglobal `/use-cases/ddglobal-store-migrazione-ai-ecommerce-b2b` |
 
 Immagini per gig e portfolio (formati richiesti dalle singole piattaforme): **da preparare** quando si apre la piattaforma, partendo da questi asset.
