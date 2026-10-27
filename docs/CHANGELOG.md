@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.72.0 (27 Oct 2026)
+
+- **New article: Squarespace or Shopify** (`/blog/squarespace-vs-shopify`, `/it/blog/squarespace-o-shopify`): who should stay on Squarespace, seven questions to ask your own admin, how to keep the design on Shopify, what leaves with you and what stays, URLs and domain; standard dotted cover (Francesca, calendar item 20).
+
 ### Changelog v1.71.0 (27 Oct 2026)
 
 - **New article: Wix or Shopify** (`/blog/wix-vs-shopify`, `/it/blog/wix-o-shopify`): when Wix is enough, nine concrete signs a store has outgrown it, and the move to Shopify as four jobs (exports, URLs and redirects, blog and SEO settings, order of the switch), with every Wix and Shopify fact checked on the official help pages; standard dotted cover (Francesca, calendar item 17).

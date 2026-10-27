@@ -25,7 +25,7 @@ Stati: `da fare`, `in corso`, `fatto (data, PR)`, `bloccato (motivo)`.
 | 17 | sett. 7 dic | "Wix o Shopify" e come passare | wix or shopify, wix to shopify | team | fatto (27 ott, v1.71.0) |
 | 18 | sett. 14 dic | AI per eCommerce: cosa funziona davvero oggi (collegata all'AI Accelerator) | ai ecommerce, ai for ecommerce, ai ecommerce italia | team | fatto (27 ott, v1.69.0) |
 | 19 | sett. 14 dic | Shopify Magic e Sidekick: cosa fanno e come usarli | shopify magic, shopify sidekick, shopify ai | team | da fare |
-| 20 | sett. 21 dic | "Squarespace o Shopify" e come passare | squarespace or shopify, shopify vs squarespace, squarespace to shopify | team | da fare |
+| 20 | sett. 21 dic | "Squarespace o Shopify" e come passare | squarespace or shopify, shopify vs squarespace, squarespace to shopify | team | fatto (27 ott, v1.72.0) |
 | 21 | gennaio | Guida "Da PrestaShop a Shopify" (stessa impostazione di Magento) | prestashop to shopify, migrazione prestashop shopify | team | da fare |
 | 22 | gennaio | "Quanto costa migrare a Shopify" (prezzo pubblico dello Sprint per fascia) | shopify migration cost, costo migrazione shopify | team | da fare |
 | 23 | gennaio | Confronto onesto delle agenzie per la migrazione a Shopify (idea di Marco) | shopify migration experts, shopify migration services | team | da fare |
