@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.70.0 (27 Oct 2026)
+
+- **New article: ChatGPT shopping for Shopify** (`/blog/chatgpt-shopping-shopify`, `/it/blog/chatgpt-shopping-shopify`): how products from a Shopify store can show up when people shop in ChatGPT and what a merchant can do today, with every OpenAI and Shopify claim sourced and dated October 2026; standard dotted cover (Francesca, calendar item 15).
+
 ### Changelog v1.69.0 (27 Oct 2026)
 
 - **New article: AI for eCommerce** (`/blog/ai-for-ecommerce`, `/it/blog/ai-per-ecommerce`): where AI pays off in an online store today, where it fails, how to start in 30 days and how to measure it, linked to the AI Accelerator; standard dotted cover (Francesca, calendar item 18).
