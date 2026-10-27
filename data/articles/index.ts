@@ -14,6 +14,7 @@ import prestashopToShopifyMigration from './posts/prestashop-to-shopify-migratio
 import magentoToShopifyMigration from './posts/magento-to-shopify-migration'
 import shopifyMagicSidekick from './posts/shopify-magic-sidekick'
 import chooseShopifyMigrationAgency from './posts/choose-shopify-migration-agency'
+import shopifyMigrationCost from './posts/shopify-migration-cost'
 
 export type ArticleSection =
   | { type: 'paragraph'; text: string }
@@ -71,6 +72,7 @@ export type Article = {
 
 /** One article per file in ./posts; a new article = a new file + one import line here. */
 export const articles: Article[] = [
+  shopifyMigrationCost,
   chooseShopifyMigrationAgency,
   shopifyMagicSidekick,
   magentoToShopifyMigration,
