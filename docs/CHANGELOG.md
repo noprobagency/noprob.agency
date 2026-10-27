@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.55.0 (27 Oct 2026)
+
+- **SEO plan, first audit**: `SEO/piano.md` records the audit of 27 October (technical base sound, visibility near zero on migration searches, no per-platform pages, possible overlap between the migration page and the Sprint landing, search demand mostly in English) and the first priorities. No site change.
+
 ### Changelog v1.54.0 (27 Oct 2026)
 
 - **Meta descriptions under 160 characters**: the Sprint landing (EN 165, IT 169) and the Italian CRO article (168) were cut off in Google results. The Sprint descriptions now open with the target query ("Shopify migration", "Migrazione a Shopify"); the CRO article gets its own `seoDescriptionIt`, the listing excerpt is unchanged (Francesca, audit of 27 October).
