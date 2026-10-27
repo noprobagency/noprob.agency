@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.51.0 (27 Oct 2026)
+
+- **SEO agent, Francesca**: new `SEO/` folder with the rules and scope (`README.md`: on page, technical, content, keywords and site structure; links and profiles stay with Marco), the roadmap (`piano.md`), the founding prompt (`FRANCESCA-PROMPT.md`) and the `/seo` skill (stato, audit, keyword, opportunita, scrivi, monitora). Working state in `SEO/data/` (gitignored). No site change.
+
 ### Changelog v1.50.0 (27 Oct 2026)
 
 - **Marco, no emails**: Marco never sends emails and never asks clients for reviews, including the automatic review requests of Clutch and GoodFirms; the work is platform visibility only (README rule 4 and skill). No site change.
