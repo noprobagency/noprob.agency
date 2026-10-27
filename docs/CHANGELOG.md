@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.75.0 (27 Oct 2026)
+
+- **New article: Shopify Magic and Sidekick** (`/blog/shopify-magic-sidekick`, `/it/blog/shopify-magic-sidekick`): what Shopify's built-in AI does as of October 2026 (Magic now redirects to Sidekick), what it can do for a merchant, its limits and how it fits with our Custom AI System and the AI Accelerator; standard dotted cover (Francesca, calendar item 19).
+
 ### Changelog v1.74.0 (27 Oct 2026)
 
 - **New article: Magento to Shopify migration** (`/blog/magento-to-shopify-migration`, `/it/blog/migrazione-magento-shopify`): why stores leave Magento and Adobe Commerce, what is specific to the move (product types, attribute sets, store views vs Markets, customer groups and B2B, extensions, URL rewrites), Shopify or Shopify Plus, honest that we have no Magento case; standard dotted cover (Francesca, calendar item 16).

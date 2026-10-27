@@ -12,6 +12,7 @@ import wixVsShopify from './posts/wix-vs-shopify'
 import squarespaceVsShopify from './posts/squarespace-vs-shopify'
 import prestashopToShopifyMigration from './posts/prestashop-to-shopify-migration'
 import magentoToShopifyMigration from './posts/magento-to-shopify-migration'
+import shopifyMagicSidekick from './posts/shopify-magic-sidekick'
 
 export type ArticleSection =
   | { type: 'paragraph'; text: string }
@@ -69,6 +70,7 @@ export type Article = {
 
 /** One article per file in ./posts; a new article = a new file + one import line here. */
 export const articles: Article[] = [
+  shopifyMagicSidekick,
   magentoToShopifyMigration,
   prestashopToShopifyMigration,
   squarespaceVsShopify,
