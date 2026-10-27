@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.74.0 (27 Oct 2026)
+
+- **New article: Magento to Shopify migration** (`/blog/magento-to-shopify-migration`, `/it/blog/migrazione-magento-shopify`): why stores leave Magento and Adobe Commerce, what is specific to the move (product types, attribute sets, store views vs Markets, customer groups and B2B, extensions, URL rewrites), Shopify or Shopify Plus, honest that we have no Magento case; standard dotted cover (Francesca, calendar item 16).
+
 ### Changelog v1.73.0 (27 Oct 2026)
 
 - **New article: PrestaShop to Shopify migration** (`/blog/prestashop-to-shopify-migration`, `/it/blog/migrazione-prestashop-shopify`): why European merchants leave PrestaShop and what is specific to moving it (combinations, groups and specific prices, modules, carriers, EU invoicing, URLs with IDs and the redirect map), honest that we have no PrestaShop case; standard dotted cover (Francesca, calendar item 21).
