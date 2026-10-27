@@ -18,7 +18,7 @@ Stati: `da fare`, `in corso`, `fatto (data, PR)`, `bloccato (motivo)`.
 | 10 | sett. 9 nov | GEO per Shopify: farsi trovare da ChatGPT, Perplexity e dalle risposte AI di Google (prodotti, schede, feed, `llms.txt`; il nostro `llms.txt` come esempio) | geo seo, geo vs seo, generative engine optimization, seo ai | team | fatto (27 ott, v1.63.0) |
 | 11 | sett. 16 nov | Migrazione senza perdere la SEO, con checklist SEO della migrazione (redirect di Nazzi, indici di Cumini; asset che poi promuove Marco) | website migration seo, seo website migration checklist, shopify 301 redirects | team | fatto (27 ott, v1.66.0) |
 | 12 | sett. 16 nov | Agentic commerce per uno store Shopify: cosa cambia e cosa preparare (dati prodotto, catalogo, Agentic Storefronts) | agentic commerce, ai shopping agent | team | da fare |
-| 13 | sett. 23 nov | Guida "Da WooCommerce a Shopify" (caso Nazzi, dato Store Leads) | migrate woocommerce to shopify, migrazione woocommerce shopify | team | da fare |
+| 13 | sett. 23 nov | Guida "Da WooCommerce a Shopify" (caso Nazzi, dato Store Leads) | migrate woocommerce to shopify, migrazione woocommerce shopify | team | fatto (27 ott, v1.67.0) |
 | 14 | sett. 30 nov | Revisione mensile: posizioni e Search Console contro il 27 ottobre; decisione sulle landing per piattaforma | | analista, Francesca | da fare |
 | 15 | sett. 30 nov | ChatGPT shopping per Shopify: come far comparire i prodotti | chatgpt shopping, chatgpt shopify | team | da fare |
 | 16 | sett. 7 dic | Guida "Da Magento a Shopify" (processo nostro e casi su altre piattaforme come prova, detto chiaramente) | migrate from magento to shopify, magento to shopify migration | team | da fare |
