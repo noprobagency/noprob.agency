@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.50.0 (27 Oct 2026)
+
+- **Marco, no emails**: Marco never sends emails and never asks clients for reviews, including the automatic review requests of Clutch and GoodFirms; the work is platform visibility only (README rule 4 and skill). No site change.
+
 ### Changelog v1.49.0 (27 Oct 2026)
 
 - **Organization JSON-LD, sameAs**: added the live Clutch and Contra profiles, so search engines link them to noprob agency (Marco, README rule 7).
