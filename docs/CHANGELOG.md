@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.52.0 (27 Oct 2026)
+
+- **robots.txt, `/_next/` crawlable again**: the rule blocked Googlebot from the JS, CSS and `/_next/image` URLs every page loads, so Google could not render pages fully or index their images. `/api/` and `/admin/` stay blocked (Francesca, audit of 27 October).
+
 ### Changelog v1.51.0 (27 Oct 2026)
 
 - **SEO agent, Francesca**: new `SEO/` folder with the rules and scope (`README.md`: on page, technical, content, keywords and site structure; links and profiles stay with Marco), the roadmap (`piano.md`), the founding prompt (`FRANCESCA-PROMPT.md`) and the `/seo` skill (stato, audit, keyword, opportunita, scrivi, monitora). Working state in `SEO/data/` (gitignored). No site change.

@@ -8,7 +8,8 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/', '/_next/', '/admin/'],
+        // /_next/ stays crawlable: Googlebot needs its JS, CSS and /_next/image to render and index images
+        disallow: ['/api/', '/admin/'],
       },
       // Explicitly allow LLM crawlers (GEO optimization)
       { userAgent: 'GPTBot', allow: '/' },
