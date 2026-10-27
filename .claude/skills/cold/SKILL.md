@@ -47,4 +47,6 @@ Chiudi con: numeri del giorno, azioni in attesa del suo ok.
 **stato**: 5 righe: campagne attive, limiti correnti, lead in coda, risposte aperte, crediti residui.
 
 ## Formato
+**Recap e "come sta andando"**: massimo 5-6 righe, numeri prima (inviti, accettati, risposte, opt-out, problemi), una riga su cosa serve da Antonio se serve. Niente tabelle, niente spiegazioni, leggi solo log e numeri che servono alla risposta. Dettagli solo se li chiede.
+
 Tabelle brevi, decisione proposta per ogni riga, un solo blocco "Serve il tuo ok:" con le azioni numerate. Antonio risponde "ok 1,3" e tu esegui solo quelle.
