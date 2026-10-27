@@ -1,6 +1,6 @@
 {
   "name": "noprob-agency",
-  "version": "1.61.0",
+  "version": "1.62.0",
   "private": true,
   "packageManager": "pnpm@10.33.0",
   "scripts": {
@@ -10,6 +10,7 @@
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "check:em-dash": "node scripts/check-em-dash.mjs",
+    "cover": "node scripts/blog-cover.mjs",
     "test": "vitest run"
   },
   "dependencies": {

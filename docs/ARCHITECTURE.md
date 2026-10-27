@@ -80,8 +80,8 @@ Helper in `lib/analytics/events.ts`:
 
 Every new post under `/blog/[slug]` (or `/it/blog/[slugIt]`) must include:
 
-- Cover image SVG + PNG `1200×630` in `public/images/blog/[slug]-cover.{svg,png}`
-- Article entry in `data/articles/index.ts` with: `title`, `excerpt`, `slug`, `image`, `imageAlt`, `articleType`, `date`, `datePublishedIso`, `readingTimeMinutes`, `wordCount`, `articleSection`, `keywordsIt` / `keywordsEn`
+- Cover image SVG + PNG `1200×630` in `public/images/blog/[slug]-cover.{svg,png}`, generated with `pnpm cover <slug>` (`scripts/blog-cover.mjs`: background colour plus dot pattern, no text, deterministic from the slug; `pnpm cover --all` regenerates every article; the script prints a suggested `imageAlt` / `imageAltEn`)
+- Article in its own file `data/articles/posts/[slug].ts` (`import type { Article } from '../index'`, `export default article`) plus one import and one entry in the `articles` array in `data/articles/index.ts` (types and the array live there, one article per file, no circular value imports). The entry has: `title`, `excerpt`, `slug`, `image`, `imageAlt`, `articleType`, `date`, `datePublishedIso`, `readingTimeMinutes`, `wordCount`, `articleSection`, `keywordsIt` / `keywordsEn`
 - Localized fields when available: `titleIt`, `excerptIt`, `ledeIt`, `slugIt`, `contentIt`, `faqIt`
 - BlogPosting JSON-LD via `<StructuredData />` (built from article fields in the page component)
 - FAQPage JSON-LD when `faqIt` (or `faqEn`) is populated
