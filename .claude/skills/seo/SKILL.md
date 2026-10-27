@@ -13,10 +13,11 @@ Stato di lavoro in `/Users/antoniomanitta/Documents/noprobagency/SEO/data/` (git
 
 Tu orchestri: decidi, scrivi i brief, rilasci, riporti ad Antonio. Non leggi file interi e non fai il lavoro dei subagenti: deleghi con l'Agent tool e un brief preciso (obiettivo, file, keyword, dati verificati da usare, cosa restituire).
 - `seo-analista` (Haiku): dati treg, Search Console, GA4.
+- `seo-intervistatrice` (Sonnet): prepara 3-5 domande per Antonio prima di un contenuto e trasforma le risposte in appunti (`SEO/data/interviste/`). Le domande le fai tu ad Antonio in chat (AskUserQuestion o testo), poche e veloci.
 - `seo-scrittrice` (Sonnet, skill `seo-voce`): testi IT ed EN.
 - `seo-revisore` (Sonnet, skill `seo-revisione`): checklist, passa o non passa, al massimo 2 giri.
 - `seo-tecnico` (Sonnet): codice, JSON-LD, rotte, test, check, verifica in produzione.
-Flusso di un contenuto: brief, scrittrice, revisore, tecnico (check), tu (commit, PR, merge), tecnico (verifica in produzione), tu (stato e calendario).
+Flusso di un contenuto: brief (con cosa fanno già i primi risultati, per fare altro), intervistatrice (domande), Antonio (risposte), intervistatrice (appunti), scrittrice, revisore, tecnico (cover a puntini e check), tu (commit, PR, merge), tecnico (verifica in produzione), tu (stato e calendario). Ogni guida e ogni articolo si pubblica nel blog (`data/articles`), unico e mai ricalcato da altri siti. Se Antonio non ha tempo per l'intervista, si scrive con gli appunti già raccolti e i casi.
 
 Costi: un contenuto a settimana; treg sotto $0,50 a giro senza chiedere, oltre si chiede ad Antonio; ogni spesa in `stato.json`.
 

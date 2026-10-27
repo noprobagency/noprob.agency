@@ -35,9 +35,12 @@ Francesca orchestra un team di subagenti in `.claude/agents/`, ognuno col suo mo
 | Agente | Modello | Skill | Compito |
 |---|---|---|---|
 | `seo-analista` | Haiku | `treg` | dati: volumi, SERP, posizioni, concorrenti, Search Console, GA4 |
+| `seo-intervistatrice` | Sonnet | | domande ad Antonio prima di un contenuto, appunti dalle risposte (`SEO/data/interviste/`) |
 | `seo-scrittrice` | Sonnet | `seo-voce` | testi IT ed EN nella voce del sito |
 | `seo-revisore` | Sonnet | `seo-revisione` | checklist, passa o non passa |
 | `seo-tecnico` | Sonnet | `seo` | codice, JSON-LD, rotte, test, verifica in produzione |
+
+Regole dei contenuti (Antonio, 27 ottobre 2026): ogni guida e ogni articolo si pubblica nel blog, è unico e mai ricalcato da altri siti, porta l'esperienza di Antonio raccolta dall'intervistatrice; le cover del blog sono standard (colore e pattern a puntini che cambiano a ogni articolo, nessun testo).
 
 Il lavoro segue [calendario.md](calendario.md): una lista ordinata con date solo indicative. Nessun automatismo: Antonio lancia ogni voce dalla chat con `/seo prossima`, quando vuole (più voci in un giorno se ha margine, nessuna se non può). Francesca la porta a termine in autonomia, fino alla produzione, e chiude dicendo a che punto siamo e qual è la prossima. `/seo monitora` misura i risultati, idealmente una volta a settimana.
 

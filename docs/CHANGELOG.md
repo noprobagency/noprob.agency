@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.60.0 (27 Oct 2026)
+
+- **Francesca, Antonio's new content rules**: new subagent `seo-intervistatrice` (Sonnet) that prepares 3-5 questions for Antonio before a piece and turns his answers into notes (`SEO/data/interviste/`, local); originality rule in `seo-voce` and a blocking check in `seo-revisione` (every guide and article is unique, never modelled on other sites, carries Antonio's experience); every piece is published in the blog with a standard cover (colour and dot pattern, no text). `SEO/calendario.md` grows to 25 items: blog covers, a new home services order with migration first, Magento and PrestaShop guides unblocked, and an AI cluster (GEO for Shopify, agentic commerce, ChatGPT shopping, AI for eCommerce, Shopify Magic and Sidekick) from the keyword research of 27 October, summarised in `SEO/piano.md`. No site change.
+
 ### Changelog v1.59.0 (27 Oct 2026)
 
 - **The migration page becomes the guide to migrating to Shopify** (`/shopify-migration`, `/it/migrazione-shopify`): "How to Migrate to Shopify: The Complete Guide" / "Migrazione a Shopify: la guida completa", about 1,900 words per language (platforms, what gets migrated, SEO and 301 redirects, tracking, timeline, risks, cost, checklist, Nazzi and Cumini), rendered with the article renderer (`MigrazioneGuide`). Prices and the application form are gone (they live on the Sprint landing, the page's CTA); JSON-LD is `Article` + `FAQPage` + `BreadcrumbList` instead of `Service` + `AggregateOffer`, so the page no longer competes with the Sprint. Unused sections and copy removed (`MigrazioneProblem`, `MigrazioneSolution`, `MigrazioneSprintPricing`); the floating contact pill is hidden on the guide. Written, reviewed and wired by Francesca's team (calendar item 5).

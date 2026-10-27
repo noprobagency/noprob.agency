@@ -24,6 +24,14 @@ Esempi della voce (dalla landing dello Sprint e dal blog):
 - "Quattordici giorni, un calendario fisso, un referente."
 - "Alcuni ti faranno cambiare qualcosa oggi."
 
+## Originalità (regola di Antonio, 27 ottobre 2026)
+
+Ogni guida e ogni articolo è **diverso e unico**: mai riscrivere, parafrasare o ricalcare la struttura di altri siti, nemmeno dei primi risultati di Google. Il brief dice cosa fanno già i primi risultati: serve a fare altro, non a copiarli.
+- Parti dall'angolo che solo noi abbiamo: gli appunti dell'intervista ad Antonio (`/Users/antoniomanitta/Documents/noprobagency/SEO/data/interviste/`), i casi Nazzi e Cumini, il nostro processo (Sprint, Custom AI System), opinioni chiare anche controcorrente.
+- Struttura propria: titoli, ordine ed esempi pensati per questo pezzo, non la scaletta standard del tema.
+- Le fonti esterne si citano e si linkano per i fatti, non si riassumono.
+- Le frasi di Antonio dagli appunti si usano quasi alla lettera: sono la sua voce. Ciò che è segnato `da verificare` non va online.
+
 ## Lo Sprint, sempre uguale
 
 Shopify Launch Sprint: migrazione a Shopify in **14 giorni** con il nostro Custom AI System, go-live tra il **giorno 15 e il 30**, **90 giorni** di supporto, **4 garanzie scritte**, prezzo pubblico per fatturato (**€5.800, €8.800, €12.800**, IVA esclusa) in **4 rate**. Mai "10 giorni", "4 mesi", "garanzia 30 giorni". Landing: IT `/it/sprint-migrazione-shopify`, EN `/shopify-migration-sprint`.
@@ -34,7 +42,7 @@ Solo quelli in `docs/dati-verificati.md`, con la fonte che indica. Clienti solo 
 
 ## Articolo del blog (schema)
 
-- Voce in `data/articles/index.ts` con: `slug` (EN) e `slugIt`, `title`/`titleIt`, `seoTitle`/`seoTitleIt` (sotto 65 caratteri, senza il brand: lo aggiunge il template), `seoDescription`/`seoDescriptionIt` (sotto 160), `excerpt`/`excerptIt`, `ledeEn`/`ledeIt`, `content`/`contentIt` (sezioni tipizzate, guarda un articolo esistente), `faqEn`/`faqIt`, `keywordsEn`/`keywordsIt`, `articleSection`, `date`, `datePublishedIso`, `dateModifiedIso`, `readingTimeMinutes`, `wordCount`, `image` (cover in `public/images/blog/[slug]-cover.{svg,png}` 1200x630, la prepara il tecnico), `imageAlt`.
+- Voce in `data/articles/index.ts` con: `slug` (EN) e `slugIt`, `title`/`titleIt`, `seoTitle`/`seoTitleIt` (sotto 65 caratteri, senza il brand: lo aggiunge il template), `seoDescription`/`seoDescriptionIt` (sotto 160), `excerpt`/`excerptIt`, `ledeEn`/`ledeIt`, `content`/`contentIt` (sezioni tipizzate, guarda un articolo esistente), `faqEn`/`faqIt`, `keywordsEn`/`keywordsIt`, `articleSection`, `date`, `datePublishedIso`, `dateModifiedIso`, `readingTimeMinutes`, `wordCount`, `image` (cover standard in `public/images/blog/[slug]-cover.{svg,png}` 1200x630: sfondo a colore con pattern a puntini, senza testo, generata dal tecnico con lo script delle cover), `imageAlt`.
 - Keyword principale nel title SEO, nell'H1 (`title`) e nel primo paragrafo; varianti negli H2.
 - Testo inline: `[testo](/percorso)` link interno, `[testo](https://...)` link esterno, `**testo**` grassetto.
 - **Link interni, in ordine**: 1) lo Sprint, nel corpo o nella conclusione, prima di qualunque CTA di contatto; 2) la guida alla migrazione (IT `/it/migrazione-shopify`, EN `/shopify-migration`); 3) un caso studio pertinente (`/it/casi-studio/<slug>`, `/use-cases/<slug>`).
