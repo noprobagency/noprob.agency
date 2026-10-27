@@ -6,6 +6,7 @@ import shopifyVsWoocommerce from './posts/shopify-vs-woocommerce'
 import shopifyMigrationSeoChecklist from './posts/shopify-migration-seo-checklist'
 import woocommerceToShopifyMigration from './posts/woocommerce-to-shopify-migration'
 import agenticCommerceShopify from './posts/agentic-commerce-shopify'
+import aiForEcommerce from './posts/ai-for-ecommerce'
 
 export type ArticleSection =
   | { type: 'paragraph'; text: string }
@@ -63,6 +64,7 @@ export type Article = {
 
 /** One article per file in ./posts; a new article = a new file + one import line here. */
 export const articles: Article[] = [
+  aiForEcommerce,
   agenticCommerceShopify,
   woocommerceToShopifyMigration,
   shopifyMigrationSeoChecklist,
