@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.53.0 (27 Oct 2026)
+
+- **robots.txt, `/_next/` crawlable again**: the rule blocked Googlebot from the JS, CSS and `/_next/image` URLs every page loads, so Google could not render pages fully or index their images. `/api/` and `/admin/` stay blocked (Francesca, audit of 27 October).
+
 ### Changelog v1.52.0 (27 Oct 2026)
 
 - **Marco, backlink gap analysis**: `backlink/analisi/2026-10-27-backlink-gap.md` compares noprob.agency with the Italian sites that rank for the migration keywords (referring domains, where their quality links come from), ranks what to recover and where it is worth spending, with insights for Francesca. Data from treg. No site change.
