@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.68.0 (27 Oct 2026)
+
+- **New article: Agentic commerce on Shopify** (`/blog/agentic-commerce-shopify`, `/it/blog/agentic-commerce-shopify`): what AI shopping agents change for a Shopify store and a five-step plan centred on an agent that buys (checkout readiness, catalog and stock accuracy, order flow and support, fraud and refunds), with Shopify's Agentic Storefronts and Catalog explained; standard dotted cover (Francesca, calendar item 12).
+
 ### Changelog v1.67.0 (27 Oct 2026)
 
 - **New article: WooCommerce to Shopify migration** (`/blog/woocommerce-to-shopify-migration`, `/it/blog/migrazione-woocommerce-shopify`): the hands-on, WooCommerce-specific guide (where each WordPress object lands, migrating jobs instead of plugins, the WordPress redirect map, cutover order), with what the Nazzi migration taught us; standard dotted cover (Francesca, calendar item 13).
