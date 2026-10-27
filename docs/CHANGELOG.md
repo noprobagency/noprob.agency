@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.48.0 (27 Oct 2026)
+
+- **Marco, assets and monitoring**: `backlink/assets/` holds Antonio's square profile photo and the square logo, loaded by the built-in browser from the public repo when filling platforms; the `/backlink monitora` command checks every live platform (review status, views, messages, orders) and reports one line each. No site change.
+
 ### Changelog v1.47.0 (27 Oct 2026)
 
 - **Marco, two rules**: replies to Antonio stay short and concrete; the founder is presented as resident in Lisbon working remotely for the US LLC, never as based in Italy (skill and `backlink/scheda.md`). No site change.
