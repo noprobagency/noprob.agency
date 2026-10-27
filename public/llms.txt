@@ -53,11 +53,26 @@ Working with a maximum of three long-term clients at a time. This is a real oper
 - Website: https://noprob.agency/contacts
 - Email: hello@noprob.agency
 
+## Guides
+
+- Guide to migrating to Shopify: what to move, how to keep Google rankings and sales, and how to plan it. https://noprob.agency/shopify-migration (Italian: https://noprob.agency/it/migrazione-shopify)
+
+## Case Studies
+
+Each case lists its source platform. Results are percentages from verified data, never absolute revenue.
+
+- Nazzi (supplements, DTC): WooCommerce to Shopify. EN https://noprob.agency/use-cases/integratori-nazzi-dtc-shopify | IT https://noprob.agency/it/casi-studio/integratori-nazzi-dtc-shopify
+- Cumini (luxury fashion multibrand boutique): proprietary platform tied to the ERP to Shopify. EN https://noprob.agency/use-cases/cumini-luxury-fashion-ecommerce | IT https://noprob.agency/it/casi-studio/cumini-luxury-fashion-ecommerce
+- DDglobal Store (B2B catalog, neoprene and technical fabrics): WordPress to a new custom site, not Shopify. EN https://noprob.agency/use-cases/ddglobal-store-migrazione-ai-ecommerce-b2b | IT https://noprob.agency/it/casi-studio/ddglobal-store-migrazione-ai-ecommerce-b2b
+
+## Blog Articles
+
+- How Shopify Works: what Shopify does, what it costs, where it fits and where it has limits. EN https://noprob.agency/blog/how-shopify-works | IT https://noprob.agency/it/blog/cose-shopify
+- Shopify CRO in 2026: conversion rate optimization based on peer-reviewed research. EN https://noprob.agency/blog/shopify-cro-guide | IT https://noprob.agency/it/blog/cro-ecommerce
+- eCommerce Growth Strategy: why long-term thinking beats trend chasing, with stable teams and solid technical foundations. EN https://noprob.agency/blog/ecommerce-growth-strategy-long-term | IT https://noprob.agency/it/blog/strategia-ecommerce-long-term
+
 ## Resources
 
 - About: Team, principles, approach. https://noprob.agency/about
 - Use Cases: Real case studies with verified results. https://noprob.agency/use-cases
-- Case study, Shopify migration with a proprietary ERP (fashion): https://noprob.agency/use-cases/cumini-luxury-fashion-ecommerce
-- Case study, WooCommerce to Shopify migration (supplements, DTC): https://noprob.agency/use-cases/integratori-nazzi-dtc-shopify
-- Case study, AI migration of a B2B catalog eCommerce: https://noprob.agency/use-cases/ddglobal-store-migrazione-ai-ecommerce-b2b
 - Blog: Articles on Shopify development, migration, tracking, CRO. https://noprob.agency/blog

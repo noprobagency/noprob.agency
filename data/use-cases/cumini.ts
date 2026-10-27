@@ -14,12 +14,12 @@ import type { UseCase } from './index'
 export const cumini: UseCase = {
   slug: 'cumini-luxury-fashion-ecommerce',
   title: 'Migrazione su Shopify per una boutique di lusso: il caso Cumini, +67,7% di vendite online in 12 mesi',
-  seoTitle: 'Caso Cumini: migrazione Shopify, +67,7% vendite',
-  seoTitleEn: 'Cumini case: Shopify migration, +67.7% sales',
+  seoTitle: 'Piattaforma proprietaria a Shopify: caso fashion',
+  seoTitleEn: 'Custom Platform to Shopify: Luxury Fashion Case',
   seoDescription:
-    'Come abbiamo portato su Shopify una boutique di lusso con gestionale integrato: +67,7% di vendite online in 12 mesi. Dati verificati, con le fonti.',
+    'Caso studio fashion lusso: da piattaforma proprietaria legata al gestionale a Shopify, con vendite online +67,7% in 12 mesi. Dati verificati, con le fonti.',
   seoDescriptionEn:
-    'How we moved a luxury boutique with an integrated ERP to Shopify: +67.7% online sales in 12 months. Verified data, with sources.',
+    'Luxury fashion case study: migration from a custom platform tied to the ERP to Shopify, with online sales +67.7% in 12 months. Verified data, with sources.',
   excerpt: 'Il caso studio di Cumini, boutique multibrand di lusso in Friuli: quattro anni di lavoro, la migrazione su Shopify con gestionale proprietario e i risultati verificati prima e dopo.',
   image: '/images/originals/2QNUkNFRX0OUC0qTVjeplIvlFS0.jpg',
   imageAlt: 'Cumini fashion case study',

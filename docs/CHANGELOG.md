@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.61.0 (27 Oct 2026)
+
+- **llms.txt and search-led meta**: `public/llms.txt` gets Guides (the migration guide), Case Studies (each with its source platform) and every blog article with EN and IT URLs; Nazzi and Cumini case studies get titles and descriptions built on how people search ("WooCommerce to Shopify migration case study", "custom platform to Shopify"); the EN Sprint title now says "Shopify Migration Services" (Francesca, calendar item 6).
+
 ### Changelog v1.60.0 (27 Oct 2026)
 
 - **Francesca, Antonio's new content rules**: new subagent `seo-intervistatrice` (Sonnet) that prepares 3-5 questions for Antonio before a piece and turns his answers into notes (`SEO/data/interviste/`, local); originality rule in `seo-voce` and a blocking check in `seo-revisione` (every guide and article is unique, never modelled on other sites, carries Antonio's experience); every piece is published in the blog with a standard cover (colour and dot pattern, no text). `SEO/calendario.md` grows to 25 items: blog covers, a new home services order with migration first, Magento and PrestaShop guides unblocked, and an AI cluster (GEO for Shopify, agentic commerce, ChatGPT shopping, AI for eCommerce, Shopify Magic and Sidekick) from the keyword research of 27 October, summarised in `SEO/piano.md`. No site change.

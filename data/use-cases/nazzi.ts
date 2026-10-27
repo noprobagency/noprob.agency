@@ -24,12 +24,12 @@ import type { UseCase } from './index'
 export const nazzi: UseCase = {
   slug: 'integratori-nazzi-dtc-shopify',
   title: 'Migrazione da WooCommerce a Shopify: il caso Integratori DTC Nazzi, vendite online raddoppiate in 85 giorni',
-  seoTitle: 'Da WooCommerce a Shopify: Integratori DTC Nazzi',
-  seoTitleEn: 'WooCommerce to Shopify: Supplement DTC Nazzi',
+  seoTitle: 'Migrazione da WooCommerce a Shopify: caso studio',
+  seoTitleEn: 'WooCommerce to Shopify Migration: Case Study',
   seoDescription:
-    'Migrazione da WooCommerce a Shopify per un brand di integratori DTC: vendite online +105% in 85 giorni e 2,7x clic da Google. Dati verificati.',
+    'Caso studio di migrazione da WooCommerce a Shopify per un brand di integratori DTC: vendite online +105% in 85 giorni. Dati verificati, con le fonti.',
   seoDescriptionEn:
-    'WooCommerce to Shopify migration for a DTC supplements brand: +105% online sales in 85 days and 2.7x clicks from Google. Verified data.',
+    'WooCommerce to Shopify migration case study for a DTC supplements brand: online sales +105% in the first 85 days. Verified data, with sources.',
   excerpt:
     'Come abbiamo portato Integratori DTC Nazzi, brand di integratori nato da un laboratorio galenico attivo dal 2001, da WooCommerce a Shopify: SEO, storico clienti, tracciamento e i risultati verificati prima e dopo la migrazione.',
   image: '/images/use-case-nazzi/nazzi-astrumkap.png',
