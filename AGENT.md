@@ -11,6 +11,8 @@ rules, engine and CRM) is in [cold-email/README.md](cold-email/README.md).
 Backlinks and platform visibility (Marco, `/backlink`: directories, marketplaces such as
 Fiverr, community, PR) are in [backlink/README.md](backlink/README.md), with the only texts to
 use in [backlink/scheda.md](backlink/scheda.md).
+SEO of the site (Francesca, `/seo`: on page, technical, content, keywords, site structure) is in
+[SEO/README.md](SEO/README.md), with the roadmap in [SEO/piano.md](SEO/piano.md).
 
 ## Project context
 
