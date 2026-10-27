@@ -19,7 +19,7 @@ import { fetchPlatform, pool } from '../lib/cold/fetch-platform.mjs'
 import { normaliseUrl } from '../lib/cold/detect-platform.mjs'
 import { LISTS, api, listContacts } from '../lib/cold/gojiberry.mjs'
 import { optoutSweep } from '../lib/cold/sweep.mjs'
-import { review } from '../lib/cold-email/approve.mjs'
+import { cleanCompany, review } from '../lib/cold-email/approve.mjs'
 import { domainOf } from '../lib/cold-email/leads.mjs'
 import { readSuppressed } from '../lib/cold-email/suppression.mjs'
 
@@ -82,7 +82,8 @@ if (dry) {
 } else {
   if (plan.shopify.length) await api('POST', `/v1/contact/list/${LISTS.shopify}/contacts`, { contactIds: plan.shopify.map(({ c }) => c.id) })
   for (const { c } of plan.reject) await api('POST', `/v1/contact/${c.id}/reject`)
-  for (const { c } of plan.approve) await api('PATCH', `/v1/contact/${c.id}`, { readyForCampaign: true })
+  // The subject is "[Company] su Shopify?": the name goes in as a person would write it.
+  for (const { c } of plan.approve) await api('PATCH', `/v1/contact/${c.id}`, { readyForCampaign: true, company: cleanCompany(c.company) })
   for (const { c, reason } of plan.hold) held.set(c.id, { id: c.id, company: c.company, website: c.website, reason })
   writeFileSync(STATE, JSON.stringify({ lastRun: new Date().toISOString(), lastSweep: sweep.startedAt, processed: [...processed], held: [...held.values()] }))
 }
