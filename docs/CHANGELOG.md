@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.67.0 (27 Oct 2026)
+
+- **New article: WooCommerce to Shopify migration** (`/blog/woocommerce-to-shopify-migration`, `/it/blog/migrazione-woocommerce-shopify`): the hands-on, WooCommerce-specific guide (where each WordPress object lands, migrating jobs instead of plugins, the WordPress redirect map, cutover order), with what the Nazzi migration taught us; standard dotted cover (Francesca, calendar item 13).
+
 ### Changelog v1.66.0 (27 Oct 2026)
 
 - **New article: Shopify migration SEO checklist** (`/blog/shopify-migration-seo-checklist`, `/it/blog/migrazione-shopify-seo-checklist`): the before, launch-day and 90-days-after checklist for moving to Shopify without losing rankings (URL inventory, redirect map, Shopify URL patterns, canonical and hreflang, Search Console), with the Nazzi pre and post go-live comparison; the linkable asset for Marco; standard dotted cover (Francesca, calendar item 11).
