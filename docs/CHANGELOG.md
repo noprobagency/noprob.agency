@@ -4,9 +4,12 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
-### Changelog v1.45.0 (27 Oct 2026)
+### Changelog v1.46.0 (27 Oct 2026)
 
 - **`/cold` skill, short recaps**: status and recap answers stay within 5-6 lines, numbers first, minimum tokens (Antonio's rule for Ada and Dante).
+
+### Changelog v1.45.0 (27 Oct 2026)
+
 - **Dante, clean company names**: the subject is "[Company] su Shopify?", so the review routine now writes the company as a person would ("UNOAERRE INDUSTRIES SPA" becomes "Unoaerre Industries", legal suffixes and domain endings dropped) when it approves a lead. Tests.
 
 ### Changelog v1.44.0 (27 Oct 2026)
