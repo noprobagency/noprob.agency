@@ -6,7 +6,7 @@ Roadmap di Francesca. Cosa si fa e in che ordine è in [calendario.md](calendari
 
 - Fase 0 (casa): fatta il 27 ottobre 2026 (v1.51.0).
 - Fase 1 (audit): primo giro fatto il 27 ottobre 2026, due fix in produzione (v1.53.0 robots, v1.54.0 description).
-- Fase 2 (keyword e concorrenti): in corso.
+- Fase 2 (keyword e concorrenti): fatta il 27 ottobre 2026 ($0,56). Esito qui sotto, dettagli in `SEO/data/fase2-2026-10-27.json`.
 - Da qui si lavora per voci del calendario, lanciate da Antonio con `/seo prossima`.
 
 ## Decisioni di Antonio (27 ottobre 2026)
@@ -26,6 +26,14 @@ Roadmap di Francesca. Cosa si fa e in che ordine è in [calendario.md](calendari
 **Cannibalizzazione.** `/shopify-migration` e la landing dello Sprint vendono la stessa offerta (stessi prezzi, stesso form) e puntano alla stessa ricerca. Si risolve con il cambio di struttura qui sotto.
 
 **Domanda di ricerca.** In Italia le ricerche sulla migrazione sono quasi tutte sotto le 10 al mese: lì si vince presto, ma porta pochi contatti. Negli Stati Uniti ci sono volumi veri con CPC da 25 a 60 dollari. Ogni contenuto nasce in IT ed EN; l'ordine delle guide segue soprattutto i dati EN.
+
+## Fase 2 (27 ottobre 2026)
+
+- **USA, le occasioni più grandi a difficoltà bassa**: confronti tra piattaforme ("woocommerce vs shopify", "wix or shopify", "squarespace or shopify", da 590 a 1.000 ricerche al mese ciascuna), migrazione e SEO ("website migration seo" e le varianti "checklist", da 210 a 260), servizi ("shopify migration services", 260-320, difficoltà 4), Magento verso Shopify (3 varianti da 210). Vincono guide e articoli; sui servizi vincono landing e classifiche.
+- **Italia**: volumi minimi; i confronti ("shopify o woocommerce", "woocommerce vs shopify") sono le uniche ricerche con un po' di domanda, a difficoltà zero.
+- **Concorrenti**: LitExtension e We Are Presta prendono i grandi confronti con un articolo per piattaforma; Optimum7 e The Commerce Shop hanno una pagina per ogni piattaforma di partenza; Craftberry tiene "shopify migration experts" con una classifica. Noi: zero keyword Shopify posizionate.
+- **Search Console (90 giorni)**: solo nome e qualche impressione; "shopify migration agency" mostra `/shopify-migration` intorno alla posizione 50 (passerà allo Sprint). Le uniche ricerche non di nome dove compariamo sono sul CRO ("cro ecommerce", "shopify cro"): utile se arriverà un'offerta CRO.
+- **Ordine del calendario rivisto** su questi dati: prima i confronti e la migrazione senza perdere la SEO, poi le guide per piattaforma.
 
 ## Struttura (le uniche modifiche)
 

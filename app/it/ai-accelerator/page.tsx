@@ -19,6 +19,7 @@ import CaseStudy from '@/components/sections/CaseStudy'
 import MigrazioneFAQ from '@/components/sections/MigrazioneFAQ'
 import Footer from '@/components/layout/Footer'
 import { buildMetadata } from '@/lib/site'
+import { pageBreadcrumbJsonLd } from '@/lib/seo/breadcrumbs'
 import { getAiCopy } from '@/lib/i18n/aiAccelerator'
 
 const locale = 'it' as const
@@ -50,14 +51,7 @@ const serviceJsonLd = {
   },
 }
 
-const breadcrumbJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://noprob.agency/it' },
-    { '@type': 'ListItem', position: 2, name: 'AI Accelerator', item: 'https://noprob.agency/it/ai-accelerator' },
-  ],
-}
+const breadcrumbJsonLd = pageBreadcrumbJsonLd('aiAccelerator', locale)
 
 export default function AiAcceleratorPage() {
   const copy = getAiCopy(locale)

@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { notFound } from 'next/navigation'
 
 import { buildMetadata } from '@/lib/site'
+import { detailBreadcrumbJsonLd } from '@/lib/seo/breadcrumbs'
 import { articles, type Article } from '@/data/articles'
 import { renderSection } from '@/components/article/renderSection'
 import { BlogPostMeta } from '@/components/blog/BlogPostMeta'
@@ -103,7 +104,10 @@ export default async function ItalianArticlePage({ params }: Props) {
   const lede = article.ledeIt ?? article.excerptIt ?? article.excerpt
   const content = article.contentIt ?? article.content
 
-  const schemas: Array<Record<string, unknown>> = [buildBlogPostingJsonLd(article, itSlug)]
+  const schemas: Array<Record<string, unknown>> = [
+    buildBlogPostingJsonLd(article, itSlug),
+    detailBreadcrumbJsonLd('blog', locale, { name: title, path: `/it/blog/${itSlug}` }),
+  ]
   if (article.faqIt && article.faqIt.length > 0) {
     schemas.push(buildFaqJsonLd(article.faqIt))
   }
@@ -152,7 +156,7 @@ export default async function ItalianArticlePage({ params }: Props) {
       <section className="w-full flex justify-center bg-[#f0f0f0] py-16 px-5 min-[810px]:px-9">
         <article className="w-full max-w-[720px]">
           {content?.map((section, idx) => renderSection(section, idx, locale))}
-          <RelatedCTA locale={locale} />
+          <RelatedCTA locale={locale} variant="sprint" />
           <AuthorBio locale={locale} />
         </article>
       </section>

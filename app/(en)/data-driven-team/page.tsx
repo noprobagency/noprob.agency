@@ -13,6 +13,7 @@ import FAQ from '@/components/sections/FAQ'
 import CTA from '@/components/sections/CTA'
 import Footer from '@/components/layout/Footer'
 import { buildMetadata } from '@/lib/site'
+import { pageBreadcrumbJsonLd } from '@/lib/seo/breadcrumbs'
 
 export async function generateMetadata(): Promise<Metadata> {
   return buildMetadata({ path: '/data-driven-team', locale: 'en', pageKey: 'dataDrivenTeam' })
@@ -29,12 +30,18 @@ const dataDrivenTeamJsonLd = {
     'A dedicated eCommerce team on retainer, led by an eCommerce Manager as your single point of contact. Development, marketing, CRO, branding and data, managed end to end.',
 }
 
+const breadcrumbJsonLd = pageBreadcrumbJsonLd('dataDrivenTeam', 'en')
+
 export default function DataDrivenTeamPage() {
   return (
     <main>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(dataDrivenTeamJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <DataDrivenTeamHero ctaHref="#candidatura" ctaTracking="datateam_hero_cta" />
       <DataDrivenTeamProblem />

@@ -11,6 +11,7 @@ import MigrazioneFAQ from '@/components/sections/MigrazioneFAQ'
 import CTA from '@/components/sections/CTA'
 import Footer from '@/components/layout/Footer'
 import { buildMetadata } from '@/lib/site'
+import { pageBreadcrumbJsonLd } from '@/lib/seo/breadcrumbs'
 import { getSviluppoCopy } from '@/lib/i18n/sviluppo'
 
 const locale = 'en' as const
@@ -41,6 +42,8 @@ const sviluppoJsonLd = {
   },
 }
 
+const breadcrumbJsonLd = pageBreadcrumbJsonLd('sviluppoShopify', locale)
+
 export default function ShopifyDevelopmentPage() {
   const c = getSviluppoCopy(locale)
   return (
@@ -48,6 +51,10 @@ export default function ShopifyDevelopmentPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(sviluppoJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <EcommerceRebuildHero
         locale={locale}

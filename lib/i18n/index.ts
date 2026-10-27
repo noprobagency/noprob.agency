@@ -6,6 +6,7 @@ export type Dictionary = {
     reserveCta: string
     menuOpen: string
     menuClose: string
+    homeLabel: string
     navLinks: { label: string; href: string }[]
     serviceItems: { label: string; href: string }[]
     langSwitcher: { label: string; display: string }
@@ -213,6 +214,7 @@ const en: Dictionary = {
     reserveCta: 'Book a call',
     menuOpen: 'Menu',
     menuClose: 'Close',
+    homeLabel: 'Home',
     navLinks: [
       { label: 'About', href: '/about' },
       { label: 'Use Cases', href: '/use-cases' },
@@ -701,6 +703,7 @@ const it: Dictionary = {
     reserveCta: 'Prenota una call',
     menuOpen: 'Menu',
     menuClose: 'Chiudi',
+    homeLabel: 'Home',
     navLinks: [
       { label: 'Chi Siamo', href: '/it/chi-siamo' },
       { label: 'Casi Studio', href: '/it/casi-studio' },

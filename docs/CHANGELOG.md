@@ -4,6 +4,14 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.58.0 (27 Oct 2026)
+
+- **Breadcrumbs everywhere**: shared `breadcrumbJsonLd` helper (`lib/seo/breadcrumbs.ts`, names from the navbar labels, new `navbar.homeLabel`) on the service pages, case studies and blog articles; AI Accelerator now uses it too.
+- **Service JSON-LD on `/it/team-ecommerce-dedicato`**, as on the EN page.
+- **Article closing CTA goes to the Sprint**: `RelatedCTA` gets a `sprint` variant (the AGENT.md runbook puts the Sprint first); the Data-Driven Team variant stays available.
+- **SEO length tests**: `lib/seo/seo-lengths.test.ts` fails CI when a rendered title passes 65 characters or a description passes 160 (pages, articles, case studies, Sprint), and checks every route has an EN and IT path.
+- **SEO calendar after Phase 2**: comparisons and "migration without losing SEO" move up (most volume at low difficulty in the US), findings in `SEO/piano.md` (Francesca, calendar items 1 and 4).
+
 ### Changelog v1.57.0 (27 Oct 2026)
 
 - **"Shopify Migration" goes to the Sprint**: the services menu item (navbar and footer) and the migration card on the home page now link to the Sprint landing (`/shopify-migration-sprint`, `/it/sprint-migrazione-shopify`) instead of the migration page, which will become the guide to migrating to Shopify (Francesca, calendar item 3).
