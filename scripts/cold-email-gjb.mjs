@@ -23,7 +23,8 @@ import { review } from '../lib/cold-email/approve.mjs'
 import { domainOf } from '../lib/cold-email/leads.mjs'
 import { readSuppressed } from '../lib/cold-email/suppression.mjs'
 
-const DANTE = { list: 65682, campaign: 46398, seat: 11555 }
+// The mailbox is found by address: reconnecting it in Gojiberry gives it a new seat id.
+const DANTE = { list: 65682, campaign: 46398, mailbox: 'hello@noprob.agency' }
 const STATE = 'cold-email/data/gjb-state.json'
 const LOG = 'cold-email/data/log.md'
 const dry = process.argv.includes('--dry')
@@ -51,7 +52,7 @@ const inDante = (c) => (c.campaignStatus || []).some((s) => s.campaignId === DAN
 const started = (c) => c.readyForCampaign || inDante(c)
 const approvedStores = new Set(contacts.filter(started).map((c) => domainOf(normaliseUrl(c.website))))
 const waiting = contacts.filter((c) => c.readyForCampaign && !inDante(c)).length
-const seat = ((await api('GET', '/v1/email-seat')) || []).find((s) => String(s.id) === String(DANTE.seat))
+const seat = ((await api('GET', '/v1/email-seat')) || []).find((s) => s.email === DANTE.mailbox)
 // Every lead gets 3 emails: approving a third of the daily capacity keeps room for the
 // follow-ups once the sequence is running (30/day -> 10 new leads a day).
 const STEPS = 3
