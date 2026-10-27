@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.78.0 (27 Oct 2026)
+
+- **New article: BigCommerce to Shopify migration** (`/blog/bigcommerce-to-shopify-migration`, `/it/blog/migrazione-bigcommerce-shopify`): moving between two SaaS platforms as seven translation points between their data models (options and modifiers, custom fields, categories, price lists and B2B, URLs, Stencil and apps, customers), honest that we have no BigCommerce case; standard dotted cover (Francesca, calendar item 24).
+
 ### Changelog v1.77.0 (27 Oct 2026)
 
 - **New article: Shopify migration cost** (`/blog/shopify-migration-cost`, `/it/blog/costo-migrazione-shopify`): the components and hidden costs of a migration, the three ways to buy it, how to read a quote, and the Sprint's public price by revenue as the worked example; standard dotted cover (Francesca, calendar item 22).
