@@ -17,6 +17,10 @@ old entries, add a new one on top.
 - **Direct cold email, network retry**: Gmail calls (and the token refresh) retry network errors up to 5 times with a growing pause; the 9:30 run of 27 October stopped on an ECONNRESET while the Mac's network was waking up. Test.
 - **Dante finds hello@ by address**: Gojiberry gave the mailbox a new seat id when it was reconnected on 26 October, so the review routine now looks the seat up by email address.
 
+### Changelog v1.44.0 (27 Oct 2026)
+
+- **Marco, two rules**: replies to Antonio stay short and concrete; the founder is presented as resident in Lisbon working remotely for the US LLC, never as based in Italy (skill and `backlink/scheda.md`). No site change.
+
 ### Changelog v1.43.0 (26 Oct 2026)
 
 - **Marco, Sprint gig and style**: `backlink/scheda.md` gets the full migration gig at the tier 1 price (€5,800, 4 milestones, tier 1 limits stated in the FAQ), with titles, long descriptions in Antonio's voice (IT and EN), Fiverr versions under 1,200 characters, FAQ and order questions, all matching the Sprint page. New style rule for published texts: Antonio's voice, no dashes, no colons; the agency descriptions are rewritten to follow it. First live profile: Clutch (submitted, under review). No site change.

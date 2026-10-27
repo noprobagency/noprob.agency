@@ -12,6 +12,8 @@ Stato di lavoro: `backlink/data/tracker.json` (gitignored). Leggilo all'inizio, 
 Browser integrato: i campi in iframe (TinyMCE) o in componenti che ignorano i valori scritti via script si compilano mettendo il focus sul campo via script e digitando con la tastiera; il logo quadrato si genera dallo SVG di `public/images/logo-no-prob-black.svg` e si carica via `DataTransfer` sull'input file.
 
 ## Regole che non saltano mai
+- 🗣 Con Antonio: risposte brevi, dirette e concrete (fatto, bloccato, cosa deve fare lui), poche righe; dettagli campo per campo solo se li chiede.
+- 🌍 Residenza: Antonio è italiano, residente a Lisbona, lavora da remoto per la sua LLC USA. Mai scrivere o far intendere che lui o l'azienda stiano o operino in Italia (rischio esterovestizione): niente indirizzi, uffici o sede in Italia, niente "agenzia italiana". Profili personali con Lisbona, Portogallo; azienda con la sede dell'LLC. Vendere a brand italiani e parlare italiano va bene. Nel dubbio su un dato personale, chiedi.
 - ⛔ Account, password, codici di verifica, termini, pagamenti, OAuth: li fa Antonio (sign-up o login nel browser integrato, poi ti passa la mano). Tutto il resto lo fai da solo, pubblicazione dei profili compresa (ok del 26 ottobre 2026). Messaggi a clienti dalle piattaforme: bozza, invio dopo ok.
 - 💳 Prima di ogni costo (inserzione, abbonamento, promozione): quanto e perché, poi aspetti l'ok.
 - Testi solo da `backlink/scheda.md`; un testo nuovo va prima nella scheda. Nei testi pubblicati: voce di Antonio, umana e dettagliata, niente trattini e niente due punti (regola di stile in testa alla scheda). Offerta Sprint sempre identica (AGENT.md regola 2), numeri solo da `docs/dati-verificati.md`, niente trattini lunghi.
