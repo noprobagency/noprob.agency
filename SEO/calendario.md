@@ -29,7 +29,7 @@ Stati: `da fare`, `in corso`, `fatto (data, PR)`, `bloccato (motivo)`.
 | 21 | gennaio | Guida "Da PrestaShop a Shopify" (stessa impostazione di Magento) | prestashop to shopify, migrazione prestashop shopify | team | fatto (27 ott, v1.73.0) |
 | 22 | gennaio | "Quanto costa migrare a Shopify" (prezzo pubblico dello Sprint per fascia) | shopify migration cost, costo migrazione shopify | team | fatto (27 ott, v1.77.0) |
 | 23 | gennaio | Confronto onesto delle agenzie per la migrazione a Shopify (idea di Marco) | shopify migration experts, shopify migration services | team | fatto (27 ott, v1.76.0) |
-| 24 | gennaio | Guida "Da BigCommerce a Shopify" (solo fonti ufficiali) | migrate bigcommerce to shopify | team | da fare |
+| 24 | gennaio | Guida "Da BigCommerce a Shopify" (solo fonti ufficiali) | migrate bigcommerce to shopify | team | fatto (27 ott, v1.78.0) |
 | 25 | quando sbloccata | "Cos'è un Custom AI System per Shopify" (`docs/articoli-da-scrivere.md`) | | team | bloccato (servono i dati di velocità prima e dopo di Nazzi e Cumini) |
 
 Misura: `/seo monitora`, la lancia Antonio, idealmente una volta a settimana.
