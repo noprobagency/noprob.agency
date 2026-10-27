@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.56.0 (27 Oct 2026)
+
+- **Francesca, SEO team and calendar**: four subagents in `.claude/agents/`, each with its own model (`seo-analista` on Haiku for treg and Search Console data, `seo-scrittrice`, `seo-revisore` and `seo-tecnico` on Sonnet), two new skills (`seo-voce` for the site voice, `seo-revisione` for the review checklist), `SEO/calendario.md` (ordered list, indicative dates, each item launched by Antonio with `/seo prossima`), `SEO/piano.md` rewritten on Antonio's decisions (site and offer unchanged, "Shopify Migration" to the Sprint, the migration page becomes a guide), crawler in `SEO/strumenti/crawl.py`. No site change.
+
 ### Changelog v1.55.0 (27 Oct 2026)
 
 - **SEO plan, first audit**: `SEO/piano.md` records the audit of 27 October (technical base sound, visibility near zero on migration searches, no per-platform pages, possible overlap between the migration page and the Sprint landing, search demand mostly in English) and the first priorities. No site change.
