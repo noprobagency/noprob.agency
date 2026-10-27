@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.49.0 (27 Oct 2026)
+
+- **Organization JSON-LD, sameAs**: added the live Clutch and Contra profiles, so search engines link them to noprob agency (Marco, README rule 7).
+
 ### Changelog v1.48.0 (27 Oct 2026)
 
 - **Marco, assets and monitoring**: `backlink/assets/` holds Antonio's square profile photo and the square logo, loaded by the built-in browser from the public repo when filling platforms; the `/backlink monitora` command checks every live platform (review status, views, messages, orders) and reports one line each. No site change.

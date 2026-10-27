@@ -176,5 +176,7 @@ export const organizationJsonLd = {
   sameAs: [
     'https://www.linkedin.com/company/noprobagency',
     'https://www.trustpilot.com/review/noprob.agency',
+    'https://clutch.co/profile/noprob-agency',
+    'https://contra.com/noprob_agency_llc',
   ],
 } as const
