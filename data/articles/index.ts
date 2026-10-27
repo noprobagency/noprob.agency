@@ -1,6 +1,7 @@
 import shopifyCroGuide from './posts/shopify-cro-guide'
 import howShopifyWorks from './posts/how-shopify-works'
 import ecommerceGrowthStrategyLongTerm from './posts/ecommerce-growth-strategy-long-term'
+import geoForShopify from './posts/geo-for-shopify'
 
 export type ArticleSection =
   | { type: 'paragraph'; text: string }
@@ -58,6 +59,7 @@ export type Article = {
 
 /** One article per file in ./posts; a new article = a new file + one import line here. */
 export const articles: Article[] = [
+  geoForShopify,
   shopifyCroGuide,
   howShopifyWorks,
   ecommerceGrowthStrategyLongTerm,

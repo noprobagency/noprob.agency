@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.63.0 (27 Oct 2026)
+
+- **New article: GEO for Shopify** (`/blog/geo-for-shopify`, `/it/blog/geo-seo-shopify`): how a Shopify store gets found and cited by ChatGPT, Perplexity and Google's AI answers, with our own `llms.txt` and robots rules as the worked example; standard dotted cover. `robots.txt` now names `OAI-SearchBot` explicitly; the AI traffic row in `docs/dati-verificati.md` now says "AI-driven" as its source does (Francesca, calendar item 10).
+
 ### Changelog v1.62.0 (27 Oct 2026)
 
 - **Standard blog covers**: `scripts/blog-cover.mjs` (`pnpm cover <slug>`, `--all`) generates a 1200x630 SVG and PNG per article from its slug, a background colour from a palette of 13 and one of 6 dot patterns, no text; the 3 existing covers are regenerated with the same file names (the long-term one goes from 3.7 MB to 96 KB). Articles now live one per file in `data/articles/posts/`. The migration guide appears as a featured card at the top of the blog (EN and IT) (Francesca, calendar item 7).
