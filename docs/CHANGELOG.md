@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.66.0 (27 Oct 2026)
+
+- **New article: Shopify migration SEO checklist** (`/blog/shopify-migration-seo-checklist`, `/it/blog/migrazione-shopify-seo-checklist`): the before, launch-day and 90-days-after checklist for moving to Shopify without losing rankings (URL inventory, redirect map, Shopify URL patterns, canonical and hreflang, Search Console), with the Nazzi pre and post go-live comparison; the linkable asset for Marco; standard dotted cover (Francesca, calendar item 11).
+
 ### Changelog v1.65.0 (27 Oct 2026)
 
 - **Home, the Sprint first**: in the services section the migration service becomes a full-width Shopify Launch Sprint card in the landing's visual language (dark gradient, AI badge): "Your store on Shopify in 14 days", built with our Custom AI System, the 4 key facts, price from €5.800 in 4 installments, CTAs to the Sprint and to the migration guide (new tracking ids `pricing_sprint_primary`, `pricing_sprint_guide`); Data-Driven Team and Shopify Development follow, unchanged (Francesca, calendar item 8).
