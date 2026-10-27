@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.64.0 (27 Oct 2026)
+
+- **New article: Shopify vs WooCommerce** (`/blog/shopify-vs-woocommerce`, `/it/blog/shopify-o-woocommerce`): organised around the five decisions a founder faces (who maintains the store, what breaks, speed of change, cost of growth, ease of leaving), fair about when WooCommerce wins, with the Nazzi case; standard dotted cover (Francesca, calendar item 9).
+
 ### Changelog v1.63.0 (27 Oct 2026)
 
 - **New article: GEO for Shopify** (`/blog/geo-for-shopify`, `/it/blog/geo-seo-shopify`): how a Shopify store gets found and cited by ChatGPT, Perplexity and Google's AI answers, with our own `llms.txt` and robots rules as the worked example; standard dotted cover. `robots.txt` now names `OAI-SearchBot` explicitly; the AI traffic row in `docs/dati-verificati.md` now says "AI-driven" as its source does (Francesca, calendar item 10).
