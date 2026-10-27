@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.73.0 (27 Oct 2026)
+
+- **New article: PrestaShop to Shopify migration** (`/blog/prestashop-to-shopify-migration`, `/it/blog/migrazione-prestashop-shopify`): why European merchants leave PrestaShop and what is specific to moving it (combinations, groups and specific prices, modules, carriers, EU invoicing, URLs with IDs and the redirect map), honest that we have no PrestaShop case; standard dotted cover (Francesca, calendar item 21).
+
 ### Changelog v1.72.0 (27 Oct 2026)
 
 - **New article: Squarespace or Shopify** (`/blog/squarespace-vs-shopify`, `/it/blog/squarespace-o-shopify`): who should stay on Squarespace, seven questions to ask your own admin, how to keep the design on Shopify, what leaves with you and what stays, URLs and domain; standard dotted cover (Francesca, calendar item 20).
