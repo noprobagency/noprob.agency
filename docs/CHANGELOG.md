@@ -4,6 +4,11 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.52.0 (27 Oct 2026)
+
+- **Marco, backlink gap analysis**: `backlink/analisi/2026-10-27-backlink-gap.md` compares noprob.agency with the Italian sites that rank for the migration keywords (referring domains, where their quality links come from), ranks what to recover and where it is worth spending, with insights for Francesca. Data from treg. No site change.
+- **ESLint**: ignores `.claude/worktrees/**`, so the worktrees of parallel agent sessions no longer break `pnpm lint` locally.
+
 ### Changelog v1.51.0 (27 Oct 2026)
 
 - **SEO agent, Francesca**: new `SEO/` folder with the rules and scope (`README.md`: on page, technical, content, keywords and site structure; links and profiles stay with Marco), the roadmap (`piano.md`), the founding prompt (`FRANCESCA-PROMPT.md`) and the `/seo` skill (stato, audit, keyword, opportunita, scrivi, monitora). Working state in `SEO/data/` (gitignored). No site change.

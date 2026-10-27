@@ -41,3 +41,7 @@ Scartate per ora: Shopify Partner Directory (solo su invito, listing garantito d
 ## Dati di lavoro
 
 `backlink/data/tracker.json` (gitignored), una voce per piattaforma: tipo, URL del profilo, stato (`da-valutare`, `da-aprire`, `in-revisione`, `live`, `scartata`), link dofollow o nofollow, costo, data dell'ultimo controllo, note. Marco lo legge all'inizio di ogni `/backlink` e lo aggiorna alla fine.
+
+## Analisi
+
+Le analisi datate dei backlink stanno in `backlink/analisi/`. L'ultima: [27 ottobre 2026](analisi/2026-10-27-backlink-gap.md).
