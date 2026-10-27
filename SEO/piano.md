@@ -35,6 +35,22 @@ Roadmap di Francesca. Cosa si fa e in che ordine è in [calendario.md](calendari
 - **Search Console (90 giorni)**: solo nome e qualche impressione; "shopify migration agency" mostra `/shopify-migration` intorno alla posizione 50 (passerà allo Sprint). Le uniche ricerche non di nome dove compariamo sono sul CRO ("cro ecommerce", "shopify cro"): utile se arriverà un'offerta CRO.
 - **Ordine del calendario rivisto** su questi dati: prima i confronti e la migrazione senza perdere la SEO, poi le guide per piattaforma.
 
+## Cluster AI (ricerca del 27 ottobre 2026)
+
+Su richiesta di Antonio: AI, Shopify AI, eCommerce AI, agenti, GEO. Dettagli in `SEO/data/ai-cluster-2026-10-27.json` ($0,42).
+- **Volumi molto più alti della migrazione, anche in Italia**: USA "agentic commerce" 5.400, "geo vs seo" 2.900 (difficoltà 9), "geo seo" 2.400, "ai ecommerce" 1.900, "chatgpt shopping" 1.000, "shopify magic" 720 (difficoltà 4); Italia "geo seo" e "ai seo" 480 ciascuna, "seo per ai" 210, "ai ecommerce" 140, quasi tutte a difficoltà bassa.
+- **Cosa pubblica Shopify**: Agentic Storefronts (una configurazione per ChatGPT, Perplexity, Copilot), guida all'agentic commerce 2026, dati sugli acquirenti che arrivano dalle AI, Catalog API e UCP per chi costruisce agenti.
+- **Concorrenti**: quasi assenti. LitExtension ha una sola pagina Shopify più AI in top 10; nessuna agenzia di migrazione presidia GEO o agentic commerce per Shopify.
+- **Spazi vuoti**: nessuna guida su come comparire in ChatGPT shopping con Shopify; GEO per schede prodotto e feed Shopify assente; `llms.txt` per Shopify non coperto; nessuna spiegazione aggiornata di Magic contro Sidekick; in Italia nessuna pagina AI specifica per Shopify.
+- **Angolo nostro**: Custom AI System, `llms.txt` già online sul sito, AI Accelerator, l'esperienza di Antonio (intervistatrice).
+
+## Regole dei contenuti (Antonio, 27 ottobre 2026)
+
+- Ogni guida e ogni articolo va nel blog, è unico e mai ricalcato da altri siti; porta l'esperienza di Antonio (intervista prima della scrittura, quando possibile).
+- Magento e PrestaShop: si scrivono comunque, senza casi su quelle piattaforme; la prova sono il nostro processo e i casi Nazzi e Cumini, detto chiaramente.
+- Cover del blog standard: colore e pattern a puntini diversi per ogni articolo, nessun testo, generate da uno script.
+- Home: la migrazione diventa il primo servizio, con un box nuovo nello stile della landing dello Sprint e l'AI in evidenza.
+
 ## Struttura (le uniche modifiche)
 
 1. **Menu verso lo Sprint**: la voce "Shopify Migration" / "Migrazione Shopify" (navbar, footer, card in home, contatto fisso) porta a `/shopify-migration-sprint` e `/it/sprint-migrazione-shopify`. Il pulsante "Sprint" resta.
@@ -57,5 +73,4 @@ Un contenuto a settimana, IT ed EN insieme, nell'ordine del calendario. Solo dov
 ## Cosa serve da Antonio
 
 - Vercel, Domains: redirect di `www.noprob.agency` permanente (308).
-- Per le guide Magento e PrestaShop: confermare se abbiamo esperienza vera su quelle piattaforme.
 - Per l'articolo sul Custom AI System: dati di velocità prima e dopo di Nazzi e Cumini.

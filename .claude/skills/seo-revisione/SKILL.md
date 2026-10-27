@@ -25,6 +25,9 @@ Riferimenti: `.claude/skills/seo-voce/SKILL.md` (voce e schema), `docs/dati-veri
 11. Almeno 2 link esterni a fonti autorevoli, raggiungibili.
 12. Articoli: chiusura obbligatoria presente; `dateModifiedIso` aggiornato se è una modifica; FAQ con risposte brevi e autonome.
 
+## Originalità
+13a. (bloccante) Nessun paragrafo riscritto o ricalcato da un altro sito: se una sezione segue da vicino struttura o frasi di uno dei risultati in SERP indicati nel brief, va rifatta. Il pezzo contiene almeno un angolo nostro (appunti dell'intervista ad Antonio, casi, processo) per sezione principale. Nessun fatto segnato `da verificare` negli appunti è online.
+
 ## Qualità (miglioramenti)
 13. Ogni sezione apre con una frase che risponde da sola alla domanda dell'H2.
 14. Il testo serve davvero chi deve migrare (passi concreti, rischi, cosa controllare), niente riempitivo né pagine fotocopia.
