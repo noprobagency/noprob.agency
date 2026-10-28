@@ -5,12 +5,12 @@ const article: Article = {
   slugIt: 'shopify-magic-sidekick',
   title: 'Shopify Magic and Sidekick: What Shopify’s Built-In AI Does in 2026',
   titleIt: 'Shopify Magic e Sidekick: cosa fa l’AI integrata di Shopify nel 2026',
-  seoTitle: 'Shopify Magic and Sidekick: What the AI Does',
-  seoTitleIt: 'Shopify Magic e Sidekick: cosa fa l’AI (2026)',
+  seoTitle: 'Shopify Magic and Sidekick: What They Do in 2026',
+  seoTitleIt: 'Shopify Magic e Sidekick: cosa fanno nel 2026',
   seoDescription:
-    'Shopify Magic and Sidekick in 2026: how they relate, what Shopify’s built-in AI really does, where it stops and what still needs a person or an agency.',
+    'Shopify Magic vs Sidekick in 2026: what each name means, what Shopify’s built-in AI does in your admin, where it stops and how to set it up so it helps.',
   seoDescriptionIt:
-    'Shopify Magic e Sidekick nel 2026: come si legano, cosa fa davvero l’AI integrata di Shopify, dove si ferma e cosa serve ancora a una persona o a un’agenzia.',
+    'Shopify Magic e Sidekick nel 2026: cosa significa ogni nome, cosa fa l’AI integrata di Shopify nel tuo admin, dove si ferma e come impostarla perché ti aiuti.',
   excerpt:
     'Shopify Magic and Sidekick explained as of October 2026: what each name means, what the AI can do in your admin, where Shopify’s own pages say it stops, and what still needs a person.',
   excerptIt:
@@ -25,8 +25,8 @@ const article: Article = {
   articleType: 'BlogPosting',
   date: '2026-10-27',
   datePublishedIso: '2026-10-27T09:00:00+00:00',
-  dateModifiedIso: '2026-10-27T09:00:00+00:00',
-  wordCount: 2100,
+  dateModifiedIso: '2026-10-28T09:00:00+00:00',
+  wordCount: 2440,
   articleSection: 'AI',
   readingTimeMinutes: 9,
   keywordsEn:
@@ -94,7 +94,7 @@ const article: Article = {
     {
       question: 'Serve ancora un’agenzia se ho Sidekick?',
       answer:
-        'Sidekick copre il lavoro quotidiano nell’admin. Un’agenzia costruisce ciò che gli sta intorno: migrazione, codice dello storefront, tracking e integrazioni, perché Sidekick lavora dentro l’admin e con i blocchi che il tuo tema ha già. Un’agenzia prepara anche i dati e i ruoli del team che rendono Sidekick utile.',
+        'Sidekick copre il lavoro quotidiano nell’admin. Un’agenzia costruisce ciò che gli sta intorno: migrazione, codice dello storefront, tracking e integrazioni, perché Sidekick lavora dentro l’admin e con i blocchi che il tuo tema Shopify ha già. Un’agenzia prepara anche i dati e i ruoli del team che rendono Sidekick utile.',
     },
   ],
   content: [
@@ -168,7 +168,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'The [Spring ’26 Edition](https://www.shopify.com/news/spring-26-edition-merchant), published on June 17, 2026, took it to more screens and devices, including the Shopify app and Apple Watch, and added App Extensions, which let third-party apps such as Klaviyo, Loop and Smile plug into Sidekick. Shopify also says that in Agentic Storefronts, Sidekick suggests fixes for products that appear in AI conversations but do not convert, such as better titles or descriptions. That is the product-data work we describe in [GEO for Shopify](/blog/geo-for-shopify), now with an assistant that points at the weak spots.',
+      text: 'The [Spring ’26 Edition](https://www.shopify.com/news/spring-26-edition-merchant), published on June 17, 2026, took it to more screens and devices, including the Shopify app and Apple Watch, and added App Extensions, which let third-party apps such as Klaviyo, Loop and Smile plug into Sidekick. Shopify also says that in Agentic Storefronts, Sidekick suggests fixes for products that appear in AI conversations but do not convert, such as better titles or descriptions. That is the product-data work we describe in [GEO for Shopify](/blog/geo-for-shopify), [agentic commerce for Shopify](/blog/agentic-commerce-shopify) and [ChatGPT shopping on Shopify](/blog/chatgpt-shopping-shopify), now with an assistant that points at the weak spots.',
     },
     {
       type: 'paragraph',
@@ -210,7 +210,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'On the starting points we have real cases for, the picture is consistent: [Nazzi](/use-cases/integratori-nazzi-dtc-shopify) came from WooCommerce and Cumini from a proprietary platform tied to the ERP. Both are mostly foundation stories, and the built-in AI is useful on top of a good foundation.',
+      text: 'On the starting points of our published case studies, the picture is consistent: [Nazzi](/use-cases/integratori-nazzi-dtc-shopify) came from WooCommerce and Cumini from a proprietary platform tied to the ERP. Both are mostly foundation stories, and the built-in AI is useful on top of a good foundation.',
     },
     { type: 'h2', text: 'How do we use Magic and Sidekick when we build a store?' },
     {
@@ -244,14 +244,49 @@ const article: Article = {
         'Save the one prompt you keep repeating as a skill.',
       ],
     },
-    { type: 'h2', text: 'A final note' },
+    { type: 'h2', text: 'Frequently asked questions' },
+    { type: 'h3', text: 'What is Shopify Magic?' },
+    {
+      type: 'paragraph',
+      text: 'Shopify Magic was the name for Shopify’s built-in AI features, such as text generation and suggestions inside admin screens. As of October 2026, shopify.com/magic redirects to the Sidekick page, and Shopify’s help center describes these features as AI built into specific workflows, next to the Sidekick assistant.',
+    },
+    { type: 'h3', text: 'Is Shopify Magic the same as Sidekick?' },
+    {
+      type: 'paragraph',
+      text: 'Not exactly. Sidekick is the assistant you chat with in the admin: it reads your store data and acts with your approval. The small AI features inside single screens are what older guides call Magic. Shopify now presents Sidekick as the main face of its AI.',
+    },
+    { type: 'h3', text: 'Is Shopify Sidekick free?' },
+    {
+      type: 'paragraph',
+      text: 'Shopify says Sidekick is included with your plan, and that features and usage limits vary by plan. Generating custom apps needs the Grow, Advanced or Shopify Plus plan.',
+    },
+    { type: 'h3', text: 'Can Sidekick change my store without me?' },
+    {
+      type: 'paragraph',
+      text: 'No. Shopify says Sidekick does not change your live store without your approval: you review highlighted fields, save generated images and publish drafts yourself. Published changes cannot be undone automatically, so review before you confirm.',
+    },
+    { type: 'h3', text: 'Does Sidekick work in languages other than English?' },
+    {
+      type: 'paragraph',
+      text: 'Shopify says Sidekick adapts to your store’s language settings and can help in several languages, but its pages do not list which languages each feature supports. Test your usual tasks in your own language before you rely on it.',
+    },
+    { type: 'h3', text: 'Do I still need an agency if I have Sidekick?' },
+    {
+      type: 'paragraph',
+      text: 'Sidekick covers daily admin work. An agency builds what sits around it: migration, storefront code, tracking and integrations, since Sidekick works inside the admin and the blocks your theme already has. An agency also prepares the data and staff roles that make Sidekick useful.',
+    },
+    { type: 'h2', text: 'How much to trust the built-in AI' },
     {
       type: 'paragraph',
       text: 'Our view after reading what Shopify publishes on this: the built-in AI is worth switching on and worth distrusting in equal measure. It saves real time on first drafts, reports and bulk edits, and it stops exactly where the work becomes engineering or judgment. Use it for the first, and plan for the second.',
     },
     {
       type: 'paragraph',
-      text: 'If you want a second opinion on where AI fits in your store, [talk to us](/contacts).',
+      text: 'The Sprint has a public price by revenue: €5,800 under €2M, €8,800 from €2M to €20M, €12,800 above €20M, VAT excluded, in 4 installments.',
+    },
+    {
+      type: 'paragraph',
+      text: '**Next step.** To put AI to work on a live store, the [AI Accelerator](/ai-accelerator) runs it in 30 days; to move to Shopify first, [apply to the Shopify Launch Sprint](/shopify-migration-sprint) and we reply within 48 hours with your tier, the price and the first available kickoff date.',
     },
     {
       type: 'paragraph',
@@ -313,7 +348,7 @@ const article: Article = {
       items: [
         '**Leggere.** Risponde a domande usando vendite, prodotti e clienti, scrive query ShopifyQL, mostra grafici e rimanda a esplorazioni personalizzate. Una richiesta tipica: quali collezioni hanno venduto di più il mese scorso e quali prodotti non hanno venduto per niente.',
         '**Scrivere bozze.** Descrizioni prodotto, articoli di blog, pagine dello store, testi per email e immagini da un prompt testuale, come banner hero e illustrazioni per il blog. Anche sconti, segmenti di clienti, valori dei metafield e workflow di Shopify Flow. Il testo che scrive in un campo viene evidenziato in viola, così lo controlli prima di accettarlo.',
-        '**Modificare.** Compila i moduli di prodotti, sconti, collezioni, clienti, ordini e bozze d’ordine, e cambia le impostazioni del tema e le sezioni e i blocchi che il tuo tema ha già. Per modifiche su molti elementi c’è una scheda Store changes che le prepara in bozza e lascia intatto lo store live finché non pubblichi, ma Shopify la indica come accesso anticipato per alcuni store.',
+        '**Modificare.** Compila i moduli di prodotti, sconti, collezioni, clienti, ordini e bozze d’ordine, e cambia le impostazioni del tema e le sezioni e i blocchi che il tuo tema Shopify ha già. Per modifiche su molti elementi c’è una scheda Store changes che le prepara in bozza e lascia intatto lo store live finché non pubblichi, ma Shopify la indica come accesso anticipato per alcuni store.',
         '**Costruire.** App personalizzate per l’admin nei piani Grow, Advanced e Shopify Plus, nuovi blocchi del tema da un prompt testuale e automazioni Flow descritte a parole.',
         '**Proporre.** [Sidekick Pulse](https://help.shopify.com/en/manual/ai-powered-tools/sidekick/pulse) mostra raccomandazioni nella Home di Shopify, in base ai dati del tuo store. Puoi anche [salvare istruzioni come skill](https://help.shopify.com/en/manual/ai-powered-tools/sidekick/skills) e lanciarle con una scorciatoia, e Sidekick può ricordare le tue preferenze così non devi rispiegare ogni volta lo stesso compito.',
       ],
@@ -329,7 +364,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'La [Spring ’26 Edition](https://www.shopify.com/news/spring-26-edition-merchant), pubblicata il 17 giugno 2026, lo ha portato su più schermate e dispositivi, compresi l’app Shopify e Apple Watch, e ha aggiunto le App Extensions, che permettono ad app di terzi come Klaviyo, Loop e Smile di collegarsi a Sidekick. Shopify dice anche che negli Agentic Storefronts Sidekick suggerisce correzioni per i prodotti che compaiono nelle conversazioni con le AI ma non convertono, come titoli o descrizioni migliori. È il lavoro sui dati prodotto che descriviamo in [GEO SEO per Shopify](/it/blog/geo-seo-shopify), ora con un assistente che segnala i punti deboli.',
+      text: 'La [Spring ’26 Edition](https://www.shopify.com/news/spring-26-edition-merchant), pubblicata il 17 giugno 2026, lo ha portato su più schermate e dispositivi, compresi l’app Shopify e Apple Watch, e ha aggiunto le App Extensions, che permettono ad app di terzi come Klaviyo, Loop e Smile di collegarsi a Sidekick. Shopify dice anche che negli Agentic Storefronts Sidekick suggerisce correzioni per i prodotti che compaiono nelle conversazioni con le AI ma non convertono, come titoli o descrizioni migliori. È il lavoro sui dati prodotto che descriviamo in [GEO SEO per Shopify](/it/blog/geo-seo-shopify), [agentic commerce per Shopify](/it/blog/agentic-commerce-shopify) e [lo shopping di ChatGPT su Shopify](/it/blog/chatgpt-shopping-shopify), ora con un assistente che segnala i punti deboli.',
     },
     {
       type: 'paragraph',
@@ -344,7 +379,7 @@ const article: Article = {
       type: 'list',
       items: [
         '**Approvazione.** Sidekick non modifica il tuo store live senza di te. Controlli i campi evidenziati, salvi tu le immagini generate e pubblichi tu le bozze. Shopify precisa anche che le modifiche pubblicate non si annullano in automatico.',
-        '**Cose che non può fare.** Non può aggiungere blocchi del tema che il tuo tema non include (quelli si generano a parte), non può sbloccare una riserva di Payments né cambiare i dati di pagamento dei payout, e non può dirti se devi registrarti o se devi l’IVA.',
+        '**Cose che non può fare.** Non può aggiungere blocchi del tema che il tuo tema Shopify non include (quelli si generano a parte), non può sbloccare una riserva di Payments né cambiare i dati di pagamento dei payout, e non può dirti se devi registrarti o se devi l’IVA.',
         '**App generate.** Possono usare solo l’Admin API dello store, possono modificare dati visibili ai clienti quindi vanno testate, non raggiungono temi, checkout o app degli account cliente, e si generano da un browser desktop. L’uso ha un tetto orario e settimanale, condiviso da tutto lo store.',
         '**Checkout.** La pagina di assistenza dice che Sidekick non può modificare direttamente le configurazioni del checkout e può solo rispondere alle domande e indicarti il posto giusto, mentre il registro della pagina di Sidekick del 13 ottobre 2026 cita l’aiuto per personalizzare checkout e account cliente. Il confine si sposta: verifica prima di promettere qualcosa a qualcuno.',
         '**Piani e copertura.** Shopify dice che Sidekick è incluso nel tuo piano e che funzioni e limiti d’uso variano in base al piano. I limiti di generazione delle immagini dipendono dal piano e sono condivisi da tutto lo store. Pulse è solo per alcuni store con vendite recenti, e l’admin nel browser del telefono non ha Sidekick: da telefono o tablet usi l’app Shopify.',
@@ -371,7 +406,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Sui punti di partenza per cui abbiamo casi reali il quadro è coerente: [Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify) veniva da WooCommerce e Cumini da una piattaforma proprietaria legata al gestionale. Sono soprattutto storie di fondamenta, e l’AI integrata serve sopra una buona base.',
+      text: 'Sui punti di partenza dei nostri casi studio pubblicati il quadro è coerente: [Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify) veniva da WooCommerce e Cumini da una piattaforma proprietaria legata al gestionale. Sono soprattutto storie di fondamenta, e l’AI integrata serve sopra una buona base.',
     },
     { type: 'h2', text: 'Come usiamo Magic e Sidekick quando costruiamo uno store?' },
     {
@@ -405,14 +440,49 @@ const article: Article = {
         'Salva come skill l’unico prompt che ripeti di continuo.',
       ],
     },
-    { type: 'h2', text: 'Una nota finale' },
+    { type: 'h2', text: 'Domande frequenti' },
+    { type: 'h3', text: 'Cos’è Shopify Magic?' },
+    {
+      type: 'paragraph',
+      text: 'Shopify Magic era il nome delle funzioni di AI integrate in Shopify, come la generazione di testi e i suggerimenti dentro le schermate dell’admin. A ottobre 2026 shopify.com/magic reindirizza alla pagina di Sidekick e il centro assistenza descrive queste funzioni come AI integrata in singoli flussi di lavoro, accanto all’assistente Sidekick.',
+    },
+    { type: 'h3', text: 'Shopify Magic e Sidekick sono la stessa cosa?' },
+    {
+      type: 'paragraph',
+      text: 'Non esattamente. Sidekick è l’assistente con cui chatti nell’admin: legge i dati del tuo store e agisce con la tua approvazione. Le piccole funzioni AI dentro le singole schermate sono ciò che le guide più vecchie chiamano Magic. Oggi Shopify presenta Sidekick come il volto principale della sua AI.',
+    },
+    { type: 'h3', text: 'Shopify Sidekick è gratis?' },
+    {
+      type: 'paragraph',
+      text: 'Shopify dice che Sidekick è incluso nel tuo piano e che funzioni e limiti d’uso variano in base al piano. Generare app personalizzate richiede il piano Grow, Advanced o Shopify Plus.',
+    },
+    { type: 'h3', text: 'Sidekick può modificare il mio store senza di me?' },
+    {
+      type: 'paragraph',
+      text: 'No. Shopify dice che Sidekick non modifica il tuo store live senza la tua approvazione: controlli i campi evidenziati, salvi tu le immagini generate e pubblichi tu le bozze. Le modifiche pubblicate non si annullano in automatico, quindi rileggi prima di confermare.',
+    },
+    { type: 'h3', text: 'Sidekick funziona in italiano?' },
+    {
+      type: 'paragraph',
+      text: 'Shopify dice che Sidekick si adatta alle impostazioni di lingua del tuo store e può aiutare in più lingue, ma le sue pagine non elencano quali lingue supporta ogni funzione. Prova le tue attività abituali in italiano prima di farci affidamento.',
+    },
+    { type: 'h3', text: 'Serve ancora un’agenzia se ho Sidekick?' },
+    {
+      type: 'paragraph',
+      text: 'Sidekick copre il lavoro quotidiano nell’admin. Un’agenzia costruisce ciò che gli sta intorno: migrazione, codice dello storefront, tracking e integrazioni, perché Sidekick lavora dentro l’admin e con i blocchi che il tuo tema Shopify ha già. Un’agenzia prepara anche i dati e i ruoli del team che rendono Sidekick utile.',
+    },
+    { type: 'h2', text: 'Quanta fiducia dare all’AI integrata' },
     {
       type: 'paragraph',
       text: 'La nostra opinione, dopo aver letto ciò che Shopify pubblica su questo: l’AI integrata va attivata e va anche guardata con sospetto, in pari misura. Fa risparmiare tempo vero su prime bozze, report e modifiche in blocco, e si ferma esattamente dove il lavoro diventa ingegneria o giudizio. Usala per il primo e prepara il secondo.',
     },
     {
       type: 'paragraph',
-      text: 'Se vuoi un secondo parere su dove l’AI ha senso nel tuo store, [scrivici](/it/contatti).',
+      text: 'Lo Sprint ha un prezzo pubblico per fatturato: €5.800 sotto i €2M, €8.800 tra €2M e €20M, €12.800 oltre i €20M, IVA esclusa, in 4 rate.',
+    },
+    {
+      type: 'paragraph',
+      text: '**Prossimo passo.** Per mettere l’AI al lavoro su uno store già online, l’[AI Accelerator](/it/ai-accelerator) lo fa in 30 giorni; per passare prima a Shopify, [candidati allo Shopify Launch Sprint](/it/sprint-migrazione-shopify) e rispondiamo entro 48 ore con la tua fascia, il prezzo e la prima data di kickoff disponibile.',
     },
     {
       type: 'paragraph',

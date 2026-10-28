@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Footer from '@/components/layout/Footer'
 import type { Locale } from '@/lib/i18n'
 import { getZeroLossCopy } from '@/content/zero-loss-migration'
+import { TRUSTPILOT_URL } from '@/lib/site'
 
 import ZlTracking from './ZlTracking'
 import ZlNav from './ZlNav'
@@ -62,7 +63,14 @@ export default function ZeroLossApplyPage({ locale }: { locale: Locale }) {
                         <Star key={s} className="h-3 w-3 lg:h-4 lg:w-4" />
                       ))}
                     </div>
-                    <span className="font-sans text-[11px] font-semibold tracking-[-0.03em] text-np-dark lg:text-[13px]">{a.trustedBy}</span>
+                    <a
+                      href={TRUSTPILOT_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-sans text-[11px] font-semibold tracking-[-0.03em] text-np-dark no-underline hover:underline lg:text-[13px]"
+                    >
+                      {a.trustedBy}
+                    </a>
                   </div>
                 </div>
                 <h1 className="font-sans text-[2.2rem] font-semibold leading-[1.05em] tracking-[-0.06em] text-black [text-wrap:balance] min-[810px]:text-[2.6rem] min-[1400px]:text-[3.2rem]">

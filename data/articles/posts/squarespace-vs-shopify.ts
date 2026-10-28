@@ -5,12 +5,12 @@ const article: Article = {
   slugIt: 'squarespace-o-shopify',
   title: 'Squarespace or Shopify: When a Design-Led Site Stops Being Enough to Sell',
   titleIt: 'Squarespace o Shopify: quando un sito curato nel design non basta più per vendere',
-  seoTitle: 'Squarespace or Shopify: When to Move (2026)',
-  seoTitleIt: 'Squarespace o Shopify: quando passare (2026)',
+  seoTitle: 'Squarespace or Shopify: Which to Pick (2026)',
+  seoTitleIt: 'Squarespace o Shopify: quale scegliere (2026)',
   seoDescription:
-    'Squarespace or Shopify for selling online: seven questions that show you have outgrown Squarespace, and how to move to Shopify keeping your design and URLs.',
+    'Squarespace or Shopify for selling online: 7 questions that show you have outgrown Squarespace, and how to move to Shopify keeping your design and your URLs.',
   seoDescriptionIt:
-    'Squarespace o Shopify per vendere online: sette domande che dicono se lo hai superato e come passare a Shopify tenendo design e URL.',
+    'Squarespace o Shopify per vendere online: 7 domande che mostrano se lo hai superato e come passare a Shopify tenendo design e URL.',
   excerpt:
     'Squarespace is design-led and site-first, Shopify is store-first. Seven questions show you have outgrown Squarespace, and this guide explains how to move to Shopify keeping the look and the URLs.',
   excerptIt:
@@ -25,8 +25,8 @@ const article: Article = {
   articleType: 'BlogPosting',
   date: '2026-10-27',
   datePublishedIso: '2026-10-27T09:00:00+00:00',
-  dateModifiedIso: '2026-10-27T09:00:00+00:00',
-  wordCount: 2100,
+  dateModifiedIso: '2026-10-28T09:00:00+00:00',
+  wordCount: 2330,
   articleSection: 'Shopify',
   readingTimeMinutes: 9,
   keywordsEn:
@@ -35,6 +35,11 @@ const article: Article = {
     'squarespace o shopify, squarespace vs shopify, da squarespace a shopify, passare da squarespace a shopify, migrazione squarespace shopify, squarespace ecommerce limiti',
   faqEn: [
     {
+      question: 'Will my Shopify store look like my Squarespace site?',
+      answer:
+        'It can, if the front end is rebuilt from your design instead of picked from a catalog. With the Shopify Launch Sprint we rebuild your store 1:1 with our Custom AI System, then compare it side by side with your current site. Squarespace-specific effects with no equivalent are shown at review, and you decide.',
+    },
+    {
       question: 'Is Squarespace or Shopify better for an online store?',
       answer:
         'Squarespace is better when the site is the product and the shop is a side door: a portfolio, bookings, a blog and a few products. Shopify is better when the store is the business: a real catalog, stock in more than one place, several markets, wholesale customers, ads and integrations.',
@@ -42,17 +47,12 @@ const article: Article = {
     {
       question: 'Can you move from Squarespace to Shopify without losing SEO?',
       answer:
-        'You can keep most of your search visibility if every old URL with traffic or links gets a 301 redirect to its new Shopify address before the domain switch. Titles, meta descriptions and blog posts are moved by hand. Expect small movements in the first weeks and check them in Search Console.',
+        'Yes, if every old URL with traffic or links gets a 301 redirect before the domain switch. In Squarespace 7.1 product URLs include a /p/ segment between the store page and the product slug, so the redirect map is built from your real URLs, not from a pattern. Titles, meta descriptions and blog posts are moved by hand; expect small movements in the first weeks and check them in Search Console.',
     },
     {
       question: 'What can I export from Squarespace to Shopify?',
       answer:
         'Products, contacts and orders export as CSV files, and Shopify imports products and customers from CSV (orders need a third-party app). Blog posts and pages export only as a WordPress file that Shopify cannot import, so they are copied by hand, and images cannot be exported in bulk.',
-    },
-    {
-      question: 'Will my Shopify store look like my Squarespace site?',
-      answer:
-        'It can, if the front end is rebuilt from your design instead of picked from a catalog. With the Shopify Launch Sprint we rebuild your store 1:1 with our Custom AI System, then compare it side by side with your current site. Squarespace-specific effects with no equivalent are shown at review, and you decide.',
     },
     {
       question: 'Does my Squarespace blog move to Shopify automatically?',
@@ -67,6 +67,11 @@ const article: Article = {
   ],
   faqIt: [
     {
+      question: 'Il mio store Shopify avrà lo stesso aspetto del sito Squarespace?',
+      answer:
+        'Può averlo, se il front end viene ricostruito dal tuo design invece di essere scelto da un catalogo. Con lo Shopify Launch Sprint ricostruiamo il tuo store 1:1 con il nostro Custom AI System e lo confrontiamo fianco a fianco con il sito attuale. Gli effetti specifici di Squarespace senza equivalente li mostriamo alla revisione, e decidi tu.',
+    },
+    {
       question: 'Meglio Squarespace o Shopify per un negozio online?',
       answer:
         'Squarespace è meglio quando il sito è il prodotto e il negozio è una porta laterale: un portfolio, prenotazioni, un blog e pochi prodotti. Shopify è meglio quando lo store è l’attività: un vero catalogo, magazzino in più di un posto, più mercati, clienti all’ingrosso, pubblicità e integrazioni.',
@@ -74,17 +79,12 @@ const article: Article = {
     {
       question: 'Si può passare da Squarespace a Shopify senza perdere la SEO?',
       answer:
-        'Puoi mantenere la maggior parte della visibilità se ogni vecchio URL con traffico o link ha un redirect 301 verso il nuovo indirizzo Shopify prima del cambio di dominio. Titoli, meta description e articoli del blog si spostano a mano. Aspettati piccoli movimenti nelle prime settimane e controllali nella Search Console.',
+        'Sì, se ogni vecchio URL con traffico o link riceve un redirect 301 prima del cambio di dominio. In Squarespace 7.1 gli URL dei prodotti includono un segmento /p/ tra la pagina del negozio e lo slug del prodotto, quindi la mappa dei redirect si costruisce sui tuoi URL reali, non su uno schema. Titoli, meta description e articoli del blog si spostano a mano; aspettati piccoli movimenti nelle prime settimane e controllali in Search Console.',
     },
     {
       question: 'Cosa posso esportare da Squarespace a Shopify?',
       answer:
         'Prodotti, contatti e ordini si esportano in CSV, e Shopify importa prodotti e clienti da CSV (per gli ordini serve un’app di terze parti). Articoli del blog e pagine si esportano solo come file WordPress che Shopify non può importare, quindi si copiano a mano, e le immagini non si esportano in blocco.',
-    },
-    {
-      question: 'Il mio store Shopify avrà lo stesso aspetto del sito Squarespace?',
-      answer:
-        'Può averlo, se il front end viene ricostruito dal tuo design invece di essere scelto da un catalogo. Con lo Shopify Launch Sprint ricostruiamo il tuo store 1:1 con il nostro Custom AI System e lo confrontiamo fianco a fianco con il sito attuale. Gli effetti specifici di Squarespace senza equivalente li mostriamo alla revisione, e decidi tu.',
     },
     {
       question: 'Il blog di Squarespace passa a Shopify in automatico?',
@@ -104,7 +104,11 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'We are a Shopify agency with more than 7 years of eCommerce projects behind us. Our [Shopify Launch Sprint](/shopify-migration-sprint) is a method that does not depend on the source platform, and the last section says where each fact comes from.',
+      text: 'We are noprob agency, and we run Shopify migrations with the [Shopify Launch Sprint](/shopify-migration-sprint), backed by more than 7 years of eCommerce projects. The Squarespace details come from Squarespace’s and Shopify’s documentation, linked in the text, and the last section shows how we run the move.',
+    },
+    {
+      type: 'paragraph',
+      text: 'Coming from another platform? Read the guides for [WooCommerce](/blog/woocommerce-to-shopify-migration), [Magento](/blog/magento-to-shopify-migration), [PrestaShop](/blog/prestashop-to-shopify-migration) and [BigCommerce](/blog/bigcommerce-to-shopify-migration).',
     },
     { type: 'h2', text: 'Squarespace or Shopify: design platform or commerce platform?' },
     {
@@ -118,7 +122,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'That is why we would not push every Squarespace brand to move. If most visits come to read, book or look at work, and the shop is a side door, the site is doing its job.',
+      text: 'If most visits come to read, book or look at work, and the shop is a side door, the site is doing its job.',
     },
     { type: 'h2', text: 'Who should stay on Squarespace for selling?' },
     {
@@ -194,7 +198,7 @@ const article: Article = {
       type: 'paragraph',
       text: 'The exports are a one-time copy, and Squarespace says nothing syncs afterwards. Freeze the catalog on the day you export, or plan a second import of what changed before go-live.',
     },
-    { type: 'h2', text: 'Squarespace URLs, redirects and your domain: the switch-over' },
+    { type: 'h2', text: 'How do you move from Squarespace to Shopify without losing URLs?' },
     {
       type: 'paragraph',
       text: 'You give every old URL that has traffic or links a 301 redirect to its Shopify address before the domain moves. Squarespace and Shopify build paths differently: Shopify uses /products/, /collections/, /blogs/ and /pages/, while in Squarespace 7.1 [product URLs include a /p/ segment](https://support.squarespace.com/hc/en-us/articles/205814578-URL-slugs) between the store page and the product slug. Check the real URLs in your own Squarespace admin, because older sites and custom setups can differ. Nothing carries over by itself.',
@@ -207,10 +211,10 @@ const article: Article = {
       type: 'paragraph',
       text: 'Switch the domain last. Shopify advises disconnecting the domain from Squarespace first to avoid SSL errors, and explains how to [connect a Squarespace domain to Shopify](https://help.shopify.com/en/manual/domains/add-a-domain/connecting-domains/connecting-to-squarespace). A recent registration or contact change can lock a domain against transfer, so check that days before, not on launch day. Keep your Squarespace plan active until the redirects are verified and you hold every export. Google’s [guide to site moves with URL changes](https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes) is the neutral reference.',
     },
-    { type: 'h2', text: 'What experience backs a Squarespace to Shopify migration?' },
+    { type: 'h2', text: 'How do we run a Squarespace to Shopify migration?' },
     {
       type: 'paragraph',
-      text: 'We have two real moves to Shopify and a process that does not depend on the source platform once the data is out.',
+      text: '**We run a Squarespace to Shopify move with a method that does not depend on the source platform once the data is out: the data reconciled before anything else, the store rebuilt 1:1, every URL redirected and tested.** Two published case studies show it:',
     },
     {
       type: 'list',
@@ -221,13 +225,18 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'What we bring to your move is the method: the data reconciled before anything else, the store rebuilt 1:1, every URL redirected and tested. Everything specific to Squarespace in this article, the formats and the gaps, comes from the Squarespace and Shopify documentation linked above, so you can check it yourself.',
+      text: 'The results belong to those two brands; what we bring to yours is the method: the data reconciled before anything else, the store rebuilt 1:1, every URL redirected and tested. Everything specific to Squarespace in this article, the formats and the gaps, comes from the Squarespace and Shopify documentation linked above, so you can check it yourself.',
     },
     {
       type: 'paragraph',
-      text: 'The Sprint takes 14 days to a store ready to publish, go-live between day 15 and 30, then 90 days of support. The price is public: from €5,800, VAT excluded, in 4 installments. Our [guide to migrating to Shopify](/shopify-migration) explains the process and [what a migration costs](/blog/shopify-migration-cost) breaks the money down. Coming from Wix instead? Read [Wix or Shopify](/blog/wix-vs-shopify).',
+      text: 'The Sprint takes 14 days to a store ready to publish, go-live between day 15 and 30, then 90 days of support. Our [guide to migrating to Shopify](/shopify-migration) explains the process and [what a migration costs](/blog/shopify-migration-cost) breaks the money down. Coming from Wix instead? Read [Wix or Shopify](/blog/wix-vs-shopify). If you are still comparing providers, read [how to choose a Shopify migration agency](/blog/choose-shopify-migration-agency).',
     },
     { type: 'h2', text: 'Frequently asked questions' },
+    { type: 'h3', text: 'Will my Shopify store look like my Squarespace site?' },
+    {
+      type: 'paragraph',
+      text: 'It can, if the front end is rebuilt from your design instead of picked from a catalog. With the Shopify Launch Sprint we rebuild your store 1:1 with our Custom AI System, then compare it side by side with your current site. Squarespace-specific effects with no equivalent are shown at review, and you decide.',
+    },
     { type: 'h3', text: 'Is Squarespace or Shopify better for an online store?' },
     {
       type: 'paragraph',
@@ -236,17 +245,12 @@ const article: Article = {
     { type: 'h3', text: 'Can you move from Squarespace to Shopify without losing SEO?' },
     {
       type: 'paragraph',
-      text: 'You can keep most of your search visibility if every old URL with traffic or links gets a 301 redirect to its new Shopify address before the domain switch. Titles, meta descriptions and blog posts are moved by hand. Expect small movements in the first weeks and check them in Search Console.',
+      text: 'Yes, if every old URL with traffic or links gets a 301 redirect before the domain switch. In Squarespace 7.1 product URLs include a /p/ segment between the store page and the product slug, so the redirect map is built from your real URLs, not from a pattern. Titles, meta descriptions and blog posts are moved by hand; expect small movements in the first weeks and check them in Search Console.',
     },
     { type: 'h3', text: 'What can I export from Squarespace to Shopify?' },
     {
       type: 'paragraph',
       text: 'Products, contacts and orders export as CSV files, and Shopify imports products and customers from CSV (orders need a third-party app). Blog posts and pages export only as a WordPress file that Shopify cannot import, so they are copied by hand, and images cannot be exported in bulk.',
-    },
-    { type: 'h3', text: 'Will my Shopify store look like my Squarespace site?' },
-    {
-      type: 'paragraph',
-      text: 'It can, if the front end is rebuilt from your design instead of picked from a catalog. With the Shopify Launch Sprint we rebuild your store 1:1 with our Custom AI System, then compare it side by side with your current site. Squarespace-specific effects with no equivalent are shown at review, and you decide.',
     },
     { type: 'h3', text: 'Does my Squarespace blog move to Shopify automatically?' },
     {
@@ -258,10 +262,18 @@ const article: Article = {
       type: 'paragraph',
       text: 'Yes, as a stopgap. Squarespace’s help center describes links and buttons that send visitors to a Shopify store, and Shopify buy buttons only through custom code that Squarespace Support does not help with. As a permanent setup it tends to hurt: customers leave your design at checkout and you run two systems.',
     },
-    { type: 'h2', text: 'A final note' },
+    { type: 'h2', text: 'Keep the look, change the engine' },
     {
       type: 'paragraph',
       text: 'Brands rarely leave Squarespace because it is bad. They leave because the shop grew into a business and the site stayed a site. The look you built is an asset worth carrying over, and carrying it over is a build job, not a template choice.',
+    },
+    {
+      type: 'paragraph',
+      text: 'The Sprint has a public price by revenue: €5,800 under €2M, €8,800 from €2M to €20M, €12,800 above €20M, VAT excluded, in 4 installments.',
+    },
+    {
+      type: 'paragraph',
+      text: '**Next step.** Send us your store: [apply to the Shopify Launch Sprint](/shopify-migration-sprint) and we reply within 48 hours with your tier, the price and the first available kickoff date.',
     },
     {
       type: 'paragraph',
@@ -275,7 +287,11 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Siamo un’agenzia Shopify con oltre 7 anni di progetti eCommerce alle spalle. Lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) è un metodo che non dipende dalla piattaforma di partenza, e l’ultima sezione dice da dove viene ogni fatto.',
+      text: 'Siamo noprob agency e facciamo migrazioni a Shopify con lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify), con oltre 7 anni di progetti eCommerce alle spalle. I dettagli su Squarespace vengono dalla documentazione di Squarespace e Shopify, linkata nel testo, e l’ultima sezione mostra come facciamo il passaggio.',
+    },
+    {
+      type: 'paragraph',
+      text: 'Arrivi da un’altra piattaforma? Leggi le guide per [WooCommerce](/it/blog/migrazione-woocommerce-shopify), [Magento](/it/blog/migrazione-magento-shopify), [PrestaShop](/it/blog/migrazione-prestashop-shopify) e [BigCommerce](/it/blog/migrazione-bigcommerce-shopify).',
     },
     { type: 'h2', text: 'Squarespace o Shopify: piattaforma di design o piattaforma di commercio?' },
     {
@@ -289,7 +305,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Per questo non spingeremmo ogni brand su Squarespace a migrare. Se la maggior parte delle visite serve a leggere, prenotare o guardare lavori, e il negozio è una porta laterale, il sito sta facendo il suo mestiere.',
+      text: 'Se la maggior parte delle visite serve a leggere, prenotare o guardare lavori, e il negozio è una porta laterale, il sito sta facendo il suo mestiere.',
     },
     { type: 'h2', text: 'Chi può restare su Squarespace per vendere?' },
     {
@@ -365,7 +381,7 @@ const article: Article = {
       type: 'paragraph',
       text: 'Gli export sono una copia una tantum, e Squarespace precisa che dopo non si sincronizza nulla. Congela il catalogo il giorno dell’export, oppure prevedi una seconda importazione di ciò che è cambiato prima del go-live.',
     },
-    { type: 'h2', text: 'URL di Squarespace, redirect e dominio: il passaggio' },
+    { type: 'h2', text: 'Come si passa da Squarespace a Shopify senza perdere gli URL?' },
     {
       type: 'paragraph',
       text: 'Dai a ogni vecchio URL che ha traffico o link un redirect 301 verso il suo indirizzo Shopify, prima di spostare il dominio. Squarespace e Shopify costruiscono i percorsi in modo diverso: Shopify usa /products/, /collections/, /blogs/ e /pages/, mentre in Squarespace 7.1 gli [URL dei prodotti hanno un segmento /p/](https://support.squarespace.com/hc/en-us/articles/205814578-URL-slugs) tra la pagina negozio e lo slug del prodotto. Controlla gli URL reali nel tuo admin Squarespace, perché i siti più vecchi e le configurazioni personalizzate possono differire. Nulla si trasferisce da solo.',
@@ -378,10 +394,10 @@ const article: Article = {
       type: 'paragraph',
       text: 'Cambia il dominio per ultimo. Shopify consiglia di scollegare prima il dominio da Squarespace per evitare errori SSL, e spiega come [collegare un dominio Squarespace a Shopify](https://help.shopify.com/en/manual/domains/add-a-domain/connecting-domains/connecting-to-squarespace). Una registrazione o una modifica dei contatti recente può bloccare il trasferimento del dominio, quindi verificalo giorni prima, non il giorno del lancio. Tieni attivo il piano Squarespace finché i redirect non sono verificati e hai in mano tutti gli export. La [guida di Google ai cambi di sito con cambio di URL](https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes) è il riferimento neutrale.',
     },
-    { type: 'h2', text: 'Quale esperienza c’è dietro una migrazione da Squarespace a Shopify?' },
+    { type: 'h2', text: 'Come lavoriamo una migrazione da Squarespace a Shopify?' },
     {
       type: 'paragraph',
-      text: 'Abbiamo due passaggi veri a Shopify e un processo che, una volta estratti i dati, non dipende dalla piattaforma di partenza.',
+      text: '**Facciamo il passaggio da Squarespace a Shopify con un metodo che, una volta usciti i dati, non dipende dalla piattaforma di partenza: i dati riconciliati prima di tutto, lo store ricostruito 1:1, ogni URL rediretto e testato.** Due casi studio pubblicati lo mostrano:',
     },
     {
       type: 'list',
@@ -392,13 +408,18 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Ciò che portiamo nel tuo passaggio è il metodo: i dati riconciliati prima di tutto, lo store ricostruito 1:1, ogni URL reindirizzato e testato. Tutto ciò che in questo articolo è specifico di Squarespace, formati e lacune, viene dalla documentazione di Squarespace e di Shopify linkata sopra, così puoi verificarlo da solo.',
+      text: 'I risultati sono di quei due brand; al tuo portiamo il metodo: i dati riconciliati prima di tutto, lo store ricostruito 1:1, ogni URL rediretto e testato. Tutto ciò che in questo articolo è specifico di Squarespace, formati e lacune, viene dalla documentazione di Squarespace e di Shopify linkata sopra, così puoi verificarlo da solo.',
     },
     {
       type: 'paragraph',
-      text: 'Lo Sprint porta in 14 giorni a uno store pronto a pubblicare, con go-live tra il giorno 15 e il 30, poi 90 giorni di supporto. Il prezzo è pubblico: da €5.800, IVA esclusa, in 4 rate. La nostra [guida alla migrazione a Shopify](/it/migrazione-shopify) spiega il processo e [quanto costa migrare](/it/blog/costo-migrazione-shopify) scompone i costi. Arrivi da Wix? Leggi [Wix o Shopify](/it/blog/wix-o-shopify).',
+      text: 'Lo Sprint porta in 14 giorni a uno store pronto a pubblicare, con go-live tra il giorno 15 e il 30, poi 90 giorni di supporto. La nostra [guida alla migrazione a Shopify](/it/migrazione-shopify) spiega il processo e [quanto costa migrare](/it/blog/costo-migrazione-shopify) scompone i costi. Arrivi da Wix? Leggi [Wix o Shopify](/it/blog/wix-o-shopify). Se stai ancora confrontando i fornitori, leggi [come scegliere un’agenzia di migrazione Shopify](/it/blog/scegliere-agenzia-migrazione-shopify).',
     },
     { type: 'h2', text: 'Domande frequenti' },
+    { type: 'h3', text: 'Il mio store Shopify avrà lo stesso aspetto del sito Squarespace?' },
+    {
+      type: 'paragraph',
+      text: 'Può averlo, se il front end viene ricostruito dal tuo design invece di essere scelto da un catalogo. Con lo Shopify Launch Sprint ricostruiamo il tuo store 1:1 con il nostro Custom AI System e lo confrontiamo fianco a fianco con il sito attuale. Gli effetti specifici di Squarespace senza equivalente li mostriamo alla revisione, e decidi tu.',
+    },
     { type: 'h3', text: 'Meglio Squarespace o Shopify per un negozio online?' },
     {
       type: 'paragraph',
@@ -407,17 +428,12 @@ const article: Article = {
     { type: 'h3', text: 'Si può passare da Squarespace a Shopify senza perdere la SEO?' },
     {
       type: 'paragraph',
-      text: 'Puoi mantenere la maggior parte della visibilità se ogni vecchio URL con traffico o link ha un redirect 301 verso il nuovo indirizzo Shopify prima del cambio di dominio. Titoli, meta description e articoli del blog si spostano a mano. Aspettati piccoli movimenti nelle prime settimane e controllali nella Search Console.',
+      text: 'Sì, se ogni vecchio URL con traffico o link riceve un redirect 301 prima del cambio di dominio. In Squarespace 7.1 gli URL dei prodotti includono un segmento /p/ tra la pagina del negozio e lo slug del prodotto, quindi la mappa dei redirect si costruisce sui tuoi URL reali, non su uno schema. Titoli, meta description e articoli del blog si spostano a mano; aspettati piccoli movimenti nelle prime settimane e controllali in Search Console.',
     },
     { type: 'h3', text: 'Cosa posso esportare da Squarespace a Shopify?' },
     {
       type: 'paragraph',
       text: 'Prodotti, contatti e ordini si esportano in CSV, e Shopify importa prodotti e clienti da CSV (per gli ordini serve un’app di terze parti). Articoli del blog e pagine si esportano solo come file WordPress che Shopify non può importare, quindi si copiano a mano, e le immagini non si esportano in blocco.',
-    },
-    { type: 'h3', text: 'Il mio store Shopify avrà lo stesso aspetto del sito Squarespace?' },
-    {
-      type: 'paragraph',
-      text: 'Può averlo, se il front end viene ricostruito dal tuo design invece di essere scelto da un catalogo. Con lo Shopify Launch Sprint ricostruiamo il tuo store 1:1 con il nostro Custom AI System e lo confrontiamo fianco a fianco con il sito attuale. Gli effetti specifici di Squarespace senza equivalente li mostriamo alla revisione, e decidi tu.',
     },
     { type: 'h3', text: 'Il blog di Squarespace passa a Shopify in automatico?' },
     {
@@ -429,10 +445,18 @@ const article: Article = {
       type: 'paragraph',
       text: 'Sì, come soluzione temporanea. Il centro assistenza di Squarespace descrive link e pulsanti che portano i visitatori a uno store Shopify, e i pulsanti di acquisto Shopify solo con codice personalizzato, per cui il supporto di Squarespace non dà assistenza. Come soluzione stabile tende a penalizzare: il cliente esce dal tuo design al checkout e gestisci due sistemi.',
     },
-    { type: 'h2', text: 'Una nota finale' },
+    { type: 'h2', text: 'Tieni il design, cambia il motore' },
     {
       type: 'paragraph',
       text: 'Raramente i brand lasciano Squarespace perché è scadente. Lo lasciano perché il negozio è cresciuto fino a diventare l’attività e il sito è rimasto un sito. Il design che hai costruito vale la pena portarlo con te, e farlo è un lavoro di sviluppo, non la scelta di un modello.',
+    },
+    {
+      type: 'paragraph',
+      text: 'Lo Sprint ha un prezzo pubblico per fatturato: €5.800 sotto i €2M, €8.800 tra €2M e €20M, €12.800 oltre i €20M, IVA esclusa, in 4 rate.',
+    },
+    {
+      type: 'paragraph',
+      text: '**Prossimo passo.** Mandaci il tuo store: [candidati allo Shopify Launch Sprint](/it/sprint-migrazione-shopify) e rispondiamo entro 48 ore con la tua fascia, il prezzo e la prima data di kickoff disponibile.',
     },
     {
       type: 'paragraph',

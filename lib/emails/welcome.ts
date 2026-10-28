@@ -70,7 +70,7 @@ export function buildWelcomeEmail({
             <p style="margin:0;font-size:16px;line-height:1.7;color:#444;">
               ${
                 isIT
-                  ? "Esaminerò personalmente i tuoi dettagli e ti contatterò entro 24 ore per organizzare una call introduttiva."
+                  ? "Esaminerò personalmente i tuoi dettagli e ti contatterò entro 24 ore per organizzare una videochiamata introduttiva."
                   : "I'll personally review your details and get back to you within 24 hours to schedule an intro call."
               }
             </p>
@@ -98,7 +98,7 @@ export function buildWelcomeEmail({
               <span>
                 ${isIT ? 'Scrivi su WhatsApp' : 'Write on WhatsApp'}
                 <span style="display:block;font-size:12px;font-weight:400;color:#a9a9a9;margin-top:1px;">
-                  ${isIT ? 'Antonio è online' : 'Antonio is online'}
+                  ${isIT ? 'Antonio risponde di persona' : 'Antonio replies personally'}
                 </span>
               </span>
             </a>
@@ -109,10 +109,10 @@ export function buildWelcomeEmail({
         <tr>
           <td style="padding:8px 36px 0;">
             <p style="margin:0 0 14px;font-size:15px;color:#444;line-height:1.6;">
-              ${isIT ? 'Oppure prenota direttamente una call usando il calendario:' : 'Or book a call directly using the calendar:'}
+              ${isIT ? 'Oppure prenota direttamente una videochiamata usando il calendario:' : 'Or book a call directly using the calendar:'}
             </p>
             <a href="${bookingUrl}" style="display:inline-block;background:#f0f0f0;color:#121212;border-radius:8px;padding:12px 24px;text-decoration:none;font-size:15px;font-weight:600;border:1px solid #d0d0d0;">
-              ${isIT ? 'Prenota una call →' : 'Book a call →'}
+              ${isIT ? 'Prenota una videochiamata →' : 'Book a call →'}
             </a>
           </td>
         </tr>

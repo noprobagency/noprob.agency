@@ -24,8 +24,8 @@ import type { UseCase } from './index'
 export const nazzi: UseCase = {
   slug: 'integratori-nazzi-dtc-shopify',
   title: 'Migrazione da WooCommerce a Shopify: il caso Integratori DTC Nazzi, vendite online raddoppiate in 85 giorni',
-  seoTitle: 'Migrazione da WooCommerce a Shopify: caso studio',
-  seoTitleEn: 'WooCommerce to Shopify Migration: Case Study',
+  seoTitle: 'Caso studio WooCommerce Shopify: vendite +105%',
+  seoTitleEn: 'WooCommerce to Shopify Case Study: Sales +105%',
   seoDescription:
     'Caso studio di migrazione da WooCommerce a Shopify per un brand di integratori DTC: vendite online +105% in 85 giorni. Dati verificati, con le fonti.',
   seoDescriptionEn:
@@ -163,7 +163,7 @@ export const nazzi: UseCase = {
       type: 'paragraph',
       text: 'Dopo la ripartenza delle campagne abbiamo controllato il tracciamento e il 20 agosto abbiamo allineato la configurazione di pixel e Google: da lì le conversioni vengono lette correttamente.',
     },
-    { type: 'h3', text: 'SEO dopo la migrazione: prima il calo, poi la salita' },
+    { type: 'h3', text: 'SEO dopo la migrazione: la salita di clic e impressioni' },
     {
       type: 'image',
       src: '/images/use-case-nazzi/nazzi-search-console-it.png',
@@ -177,7 +177,7 @@ export const nazzi: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Ad agosto i clic sono scesi. Succede spesso dopo una migrazione: Google deve rileggere il sito e capire dove sono finite le pagine. Da settembre la curva cambia pendenza.',
+      text: 'Dopo una migrazione Google deve rileggere il sito e capire dove sono finite le pagine: il posizionamento si muove per qualche settimana e la mappa dei redirect decide quanto recupera. Da settembre la curva cambia pendenza.',
     },
     {
       type: 'paragraph',
@@ -243,6 +243,7 @@ export const nazzi: UseCase = {
       text: 'Lo facciamo per brand e farmacie che vendono già online e vogliono passare a Shopify con un piano, dei numeri e qualcuno che risponde. [Ecco come lavoriamo sulle migrazioni a Shopify](/it/sprint-migrazione-shopify).',
     },
     { type: 'paragraph', text: 'Integratori DTC Nazzi è un cliente attivo di NoProb Agency da gennaio 2024. Se il tuo store è collegato a un gestionale proprietario, leggi anche il [caso Cumini](/it/casi-studio/cumini-luxury-fashion-ecommerce).' },
+    { type: 'paragraph', text: 'Come impostiamo una migrazione: la [guida completa alla migrazione a Shopify](/it/migrazione-shopify).' },
     { type: 'cta' },
   ],
   faq: [
@@ -251,12 +252,12 @@ export const nazzi: UseCase = {
       a: 'Per Integratori DTC Nazzi il nuovo store è stato costruito tra maggio e giugno 2026, mentre quello vecchio continuava a vendere, ed è andato online il 19 luglio 2026.',
     },
     {
-      q: 'Si perde la SEO migrando da WooCommerce a Shopify?',
-      a: 'Un calo temporaneo dei clic è frequente, perché Google deve rileggere il sito. Nel caso Nazzi i clic sono scesi ad agosto e da settembre hanno superato i livelli di prima: negli ultimi 28 giorni sono il 41% in più dei 28 giorni prima della migrazione e 2,7 volte lo stesso periodo del 2025. Contano tre cose: portare tutti i contenuti, redirect 301 dai vecchi indirizzi, controllo dopo il go live.',
+      q: 'Cosa succede alla SEO migrando da WooCommerce a Shopify?',
+      a: 'Dopo una migrazione il posizionamento si muove per qualche settimana e la mappa dei redirect decide quanto recupera. Nel caso Nazzi da settembre i clic hanno superato i livelli di prima: negli ultimi 28 giorni sono il 41% in più dei 28 giorni prima della migrazione e 2,7 volte lo stesso periodo del 2025. Contano tre cose: portare tutti i contenuti, redirect 301 dai vecchi indirizzi, controllo dopo il go live.',
     },
     {
       q: 'Dopo quanto si vedono i risultati di una migrazione a Shopify?',
-      a: 'Sulle vendite da subito: nei primi 85 giorni Integratori DTC Nazzi ha venduto online il 105% in più rispetto agli stessi giorni dell’anno prima. Sulla SEO dal secondo mese, dopo il riassestamento di agosto.',
+      a: 'Sulle vendite da subito: nei primi 85 giorni Integratori DTC Nazzi ha venduto online il 105% in più rispetto agli stessi giorni dell’anno prima. Sulla SEO dal secondo mese: da settembre la curva dei clic cambia pendenza.',
     },
     {
       q: 'Cosa succede a clienti e ordini storici?',
@@ -400,7 +401,7 @@ export const nazzi: UseCase = {
       type: 'paragraph',
       text: 'After the campaigns restarted we checked tracking and, on August 20, aligned the pixel and Google setup: since then conversions are read correctly.',
     },
-    { type: 'h3', text: 'SEO after the migration: first the dip, then the climb' },
+    { type: 'h3', text: 'SEO after the migration: the climb in clicks and impressions' },
     {
       type: 'image',
       src: '/images/use-case-nazzi/nazzi-search-console-en.png',
@@ -414,7 +415,7 @@ export const nazzi: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'In August clicks went down. It often happens after a migration: Google has to read the site again and work out where the pages went. From September the curve changes slope.',
+      text: 'After a migration Google has to read the site again and work out where the pages went: rankings move for a few weeks and the redirect map decides how much they recover. From September the curve changes slope.',
     },
     {
       type: 'paragraph',
@@ -477,6 +478,7 @@ export const nazzi: UseCase = {
       text: 'We do it for brands and pharmacies that already sell online and want to move to Shopify with a plan, real numbers and someone who answers. [This is how we run Shopify migrations](/shopify-migration-sprint).',
     },
     { type: 'paragraph', text: 'Supplement DTC Nazzi has been an active client of NoProb Agency since January 2024. If your store is connected to a proprietary ERP, read the [Cumini case](/use-cases/cumini-luxury-fashion-ecommerce) too.' },
+    { type: 'paragraph', text: 'How we run a migration: the [complete Shopify migration guide](/shopify-migration).' },
     { type: 'cta' },
   ],
   faqEn: [
@@ -485,12 +487,12 @@ export const nazzi: UseCase = {
       a: 'For Supplement DTC Nazzi the new store was built between May and June 2026, while the old one kept selling, and went live on July 19, 2026.',
     },
     {
-      q: 'Do you lose SEO when migrating from WooCommerce to Shopify?',
-      a: 'A temporary dip in clicks is common, because Google has to read the site again. For Nazzi clicks went down in August and from September passed the previous levels: in the last 28 days they are 41% higher than in the 28 days before the migration and 2.7 times the same period of 2025. Three things matter: moving all the content, 301 redirects from the old addresses, checking after go live.',
+      q: 'What happens to SEO when migrating from WooCommerce to Shopify?',
+      a: 'After a migration rankings move for a few weeks and the redirect map decides how much they recover. For Nazzi, from September clicks passed the previous levels: in the last 28 days they are 41% higher than in the 28 days before the migration and 2.7 times the same period of 2025. Three things matter: moving all the content, 301 redirects from the old addresses, checking after go live.',
     },
     {
       q: 'How soon do you see results after a Shopify migration?',
-      a: 'On sales right away: in the first 85 days Supplement DTC Nazzi sold 105% more online than on the same days of the year before. On SEO from the second month, after the August adjustment.',
+      a: 'On sales right away: in the first 85 days Supplement DTC Nazzi sold 105% more online than on the same days of the year before. On SEO from the second month: from September the click curve changes slope.',
     },
     {
       q: 'What happens to past customers and orders?',

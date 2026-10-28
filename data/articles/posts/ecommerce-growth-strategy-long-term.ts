@@ -3,8 +3,10 @@ import type { Article } from '../index'
 const article: Article = {
   slug: 'ecommerce-growth-strategy-long-term',
   title: 'eCommerce Growth Strategy: Why Long-Term Thinking Beats Trend Chasing',
-  seoTitle: 'eCommerce Growth Strategy for the Long Term',
-  seoTitleIt: 'Strategia eCommerce a lungo termine',
+  seoTitle: 'eCommerce Growth Strategy: 4 Lasting Foundations',
+  seoTitleIt: 'Strategia eCommerce: le 4 fondamenta che durano',
+  seoDescriptionIt:
+    'Strategia eCommerce a lungo termine: team e piattaforma stabili battono la rincorsa ai trend. Dati McKinsey, Bain e HBR e un caso reale di 4 anni.',
   seoDescription:
     'eCommerce brands that truly grow do not chase trends: stable teams, solid technical foundations and real KPIs. What the data says about long-term growth.',
   excerpt: "eCommerce brands that truly grow don't chase trends. They build a growth strategy that compounds over the long term: stable teams, solid technical foundations, real KPIs. What the data really says.",
@@ -15,11 +17,11 @@ const article: Article = {
   articleType: 'Article',
   date: '2026-04-29',
   datePublishedIso: '2026-04-29T10:00:00+02:00',
-  dateModifiedIso: '2026-10-16T10:00:00+02:00',
-  wordCount: 2600,
+  dateModifiedIso: '2026-10-28T09:00:00+00:00',
+  wordCount: 2700,
   articleSection: 'eCommerce Strategy',
   readingTimeMinutes: 9,
-  keywordsEn: 'ecommerce growth strategy, ecommerce strategy, long-term thinking, ecommerce kpi, stable team, shopify partner',
+  keywordsEn: 'ecommerce growth strategy, ecommerce strategy, long-term thinking, ecommerce kpi, stable team, ecommerce retention strategy',
   faqEn: [
     {
       question: "If I stick to the same strategy, won't I fall behind while competitors innovate?",
@@ -31,7 +33,11 @@ const article: Article = {
     },
     {
       question: "How do I tell if I'm paying a hidden cost from constant changes in my eCommerce?",
-      answer: "Make this list: in the last 12 months, how many times did you change core team members, platform, ad strategy, tracking setup, agency? If you changed more than 2 things, you're paying a cost you probably don't see on the P&L but that exists. SHRM estimates the loss of institutional knowledge represents 60-70% of the real turnover cost.",
+      answer: "Make this list: in the last 12 months, how many times did you change core team members, platform, ad strategy, tracking setup, agency? If you changed more than 2 things, you're paying a cost you probably don't see on the P&L but that exists.",
+    },
+    {
+      question: 'Which KPIs should an eCommerce track every week?',
+      answer: 'AOV, conversion rate by traffic source, retention rate, checkout drop-off and margin per product: five or six numbers, not thirty.',
     },
     {
       question: 'Does a long-term eCommerce strategy cost more than a short-term one?',
@@ -41,7 +47,11 @@ const article: Article = {
   content: [
     {
       type: 'paragraph',
-      text: "I've worked with fashion, retail, and DTC brands across Italy and Europe for over seven years. I've seen two types of founders.",
+      text: "**A long-term eCommerce growth strategy is four decisions kept stable for years (platform, tracking, team and a roadmap built on real problems) with small optimizations on top every week.** That is what separates brands that grow predictably from brands that restart every quarter.",
+    },
+    {
+      type: 'paragraph',
+      text: "I've worked with fashion, retail, and DTC brands for over seven years. I've seen two types of founders.",
     },
     {
       type: 'paragraph',
@@ -57,7 +67,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: "I say this because I see it in my clients' data. And because serious research from McKinsey, Bain, and SHRM confirms it. Real numbers, not slogans.",
+      text: "I say this because I see it in my clients' data. And because serious research from McKinsey, Bain, Gallup, and Harvard Business Review confirms it. Real numbers, not slogans.",
     },
     {
       type: 'paragraph',
@@ -68,9 +78,9 @@ const article: Article = {
       items: [
         "How much trend chasing really costs (and why you don't see it on the P&L)",
         'What the data says about companies that think long-term',
-        'Why a stable customer is worth 3-5x a new purchase',
+        'Why keeping a customer costs up to 25 times less than finding a new one',
         'The 4 foundations of a long-term eCommerce strategy that works',
-        'A real case: 4 years of technical partnership with an Italian fashion brand',
+        'A real case: 4 years of technical partnership with a luxury fashion brand',
       ],
     },
     {
@@ -91,15 +101,15 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Replacing a single employee costs between **50% and 200% of annual salary** ([SHRM, Society for Human Resource Management](https://www.shrm.org/topics-tools/tools/forms/turnover-cost-calculation-spreadsheet)). For specialized technical roles the figure rises to 100-150%. For executive roles it reaches 213% (Center for American Progress).',
+      text: 'Gallup estimates that replacing a single employee costs **from half to twice their annual salary** ([Gallup](https://www.gallup.com/workplace/247391/fixable-problem-costs-businesses-trillion.aspx)). For executive roles the Center for American Progress puts it as high as 213% ([Center for American Progress](https://www.americanprogress.org/article/there-are-significant-business-costs-to-replacing-employees/)).',
     },
     {
       type: 'paragraph',
-      text: 'In practice: replacing a €60,000 senior developer can cost the brand between €60,000 and €120,000 across recruiting, onboarding, training, lost productivity, and knowledge walking out the door.',
+      text: 'In practice, on that range, replacing a €60,000 senior developer can cost the brand between €30,000 and €120,000 across recruiting, onboarding, training, lost productivity, and knowledge walking out the door.',
     },
     {
       type: 'paragraph',
-      text: "It's not just the hire. It's the **time-to-ramp-up**. A new team member reaches full operational capacity in 3-6 months (SHRM). For those months the role is structurally underperforming. If you swap 2 key roles in a year, you've lost a full quarter of operational capacity.",
+      text: "It's not just the hire. It's the **time-to-ramp-up**. In our experience a new team member needs 3-6 months to reach full operational capacity. For those months the role is structurally underperforming. If you swap 2 key roles in a year, you've lost a full quarter of operational capacity.",
     },
     {
       type: 'paragraph',
@@ -111,7 +121,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'This is the cost you do not see on the P&L. It is called "loss of institutional knowledge" and according to SHRM it represents 60-70% of the real turnover cost. Almost nobody measures it.',
+      text: 'This is the cost you do not see on the P&L. It is called "loss of institutional knowledge", and almost nobody measures it.',
     },
     {
       type: 'paragraph',
@@ -135,20 +145,18 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'The long-term focused companies (164 in the sample) had:',
+      text: 'The long-term focused companies had:',
     },
     {
       type: 'list',
       items: [
         'Cumulative revenue growth **47% higher** than the short-term ones',
         'Cumulative earnings growth **36% higher**',
-        'Economic profit growth **81% higher**',
-        '12,000 more jobs created on average',
       ],
     },
     {
       type: 'paragraph',
-      text: "This isn't marketing. It's a real dataset of 615 companies tracked over 13 years, picked up by Harvard Business Review and Fortune.",
+      text: "This isn't marketing. It's a real dataset of 615 companies tracked over 13 years, published by the McKinsey Global Institute.",
     },
     {
       type: 'paragraph',
@@ -176,7 +184,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Frederick Reichheld\'s study ([Bain & Company](https://www.bain.com/insights/retaining-customers-is-the-real-challenge/), the creator of the Net Promoter Score) demonstrated something counterintuitive: increasing customer retention by 5% generates a profit increase between 25% and 95% (Bain, "The Loyalty Effect").',
+      text: 'Research by Frederick Reichheld of Bain & Company, the creator of the Net Promoter Score, showed something counterintuitive: increasing customer retention by 5% increases profits by 25% to 95% ([Harvard Business Review](https://hbr.org/2014/10/the-value-of-keeping-the-right-customers), citing Reichheld; Bain\'s own page is [here](https://www.bain.com/insights/retaining-customers-is-the-real-challenge/)).',
     },
     {
       type: 'paragraph',
@@ -190,9 +198,7 @@ const article: Article = {
       type: 'list',
       items: [
         'Acquiring a new customer costs **5-25 times more** than retaining an existing one ([Harvard Business Review](https://hbr.org/2014/10/the-value-of-keeping-the-right-customers))',
-        'The probability of converting an existing customer is 60-70%; converting a new prospect is 5-20% (Marketing Metrics)',
-        'Existing customers spend on average 31% more than new ones (Invesp)',
-        'Returning customers are 9x more likely to convert than new visitors (Adobe Digital Index)',
+        'Retention compounds: every returning customer skips the acquisition cost you paid the first time',
       ],
     },
     {
@@ -201,7 +207,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Yet most founders spend 90% of their marketing budget on acquisition. Half of that could go to retention (email marketing, loyalty programs, post-purchase customer experience, recurring products), generating significantly higher ROI.',
+      text: 'Yet most founders put the bulk of their marketing budget into acquisition. A larger share could go to retention (email marketing, loyalty programs, post-purchase customer experience, recurring products), usually with a higher return. More on where AI helps here in [AI for ecommerce](/blog/ai-for-ecommerce).',
     },
     {
       type: 'paragraph',
@@ -229,7 +235,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: "This doesn't mean accepting limitations. It means investing energy into optimizing the existing setup (performance, conversion rate, mobile UX) instead of migrating every 18 months. For a complete view on why Shopify is the most rational choice for structured B2C brands, read our [practitioner's guide to how Shopify works](/blog/how-shopify-works).",
+      text: "This doesn't mean accepting limitations. It means investing energy into optimizing the existing setup (performance, conversion rate, mobile UX) instead of migrating every 18 months. For a complete view on why Shopify is the most rational choice for structured B2C brands, read our [practitioner's guide to how Shopify works](/blog/how-shopify-works). If the platform is the weak foundation, change it once and properly: [how we migrate to Shopify](/shopify-migration), with platform guides for [WooCommerce](/blog/woocommerce-to-shopify-migration), [Magento](/blog/magento-to-shopify-migration), [PrestaShop](/blog/prestashop-to-shopify-migration) and [BigCommerce](/blog/bigcommerce-to-shopify-migration).",
     },
     {
       type: 'paragraph',
@@ -241,7 +247,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: "You can't optimize what you don't measure. And most eCommerce stores have partial or broken tracking, especially after iOS 14 and the end of third-party cookies.",
+      text: "You can't optimize what you don't measure. And most eCommerce stores have partial or broken tracking, especially after iOS 14 and tighter browser privacy rules.",
     },
     {
       type: 'paragraph',
@@ -249,7 +255,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'When tracking is dirty, every downstream decision is an opinion dressed as data. Investing in a serious server-side tracking setup (Google Analytics 4, Meta Conversions API, GTM) is one of the few investments that pays back in 6 months of better-optimized campaigns.',
+      text: 'When tracking is dirty, every downstream decision is an opinion dressed as data. Investing in a serious server-side tracking setup (Google Analytics 4, Meta Conversions API, GTM) is one of the few investments that pays back in 6 months of better-optimized campaigns. The same data tells you where the product page loses buyers: see the [Shopify CRO guide](/blog/shopify-cro-guide).',
     },
     {
       type: 'h3',
@@ -269,7 +275,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Every quarter founders are bombarded with new industry "must-haves": new social channel, new automation platform, new growth framework. 90% are distractions.',
+      text: 'Every quarter founders are bombarded with new industry "must-haves": new social channel, new automation platform, new growth framework. Most are distractions.',
     },
     {
       type: 'paragraph',
@@ -289,7 +295,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'An Italian luxury fashion brand (multibrand boutique, physical and online presence). Physical stores and an online store. When we took them on in 2022, they were on an Italian platform with integrated ERP: rigid, slow, not scalable.',
+      text: 'A luxury fashion brand (multibrand boutique with physical stores and an online store). When we took them on in 2022, they were on a proprietary platform tied to the stores’ ERP, where every site change went through a ticket.',
     },
     {
       type: 'paragraph',
@@ -298,7 +304,7 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        'Migration to Shopify in May 2025, connected to the stores proprietary ERP',
+        'Migration to Shopify in May 2025, connected to the stores’ ERP',
         'Full server-side tracking (audit score 92/100)',
         'Same partner and the same direction for all 4 years',
         'Online sales in the 12 months after the migration: **+67.7%** on the 12 months before',
@@ -312,7 +318,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'If you want to see the full case (initial challenge, technical approach, KPIs broken down by year), we wrote a [dedicated use case in our case studies](/use-cases).',
+      text: 'If you want to see the full case (initial challenge, technical approach, KPIs broken down by year), we wrote a [dedicated case study on Cumini](/use-cases/cumini-luxury-fashion-ecommerce).',
     },
     {
       type: 'paragraph',
@@ -348,6 +354,14 @@ const article: Article = {
     },
     {
       type: 'h3',
+      text: 'Which KPIs should an eCommerce track every week?',
+    },
+    {
+      type: 'paragraph',
+      text: 'AOV, conversion rate by traffic source, retention rate, checkout drop-off and margin per product: five or six numbers, not thirty.',
+    },
+    {
+      type: 'h3',
       text: 'Does a long-term eCommerce strategy cost more than a short-term one?',
     },
     {
@@ -364,7 +378,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: "The long-term companies in the McKinsey sample delivered +47% in revenue over 13 years. Bain's 5% rule shows that small retention improvements generate huge profit differences. SHRM's turnover data shows that every team change costs more than you think.",
+      text: "The long-term companies in the McKinsey sample delivered +47% in revenue over 13 years. Bain's 5% rule shows that small retention improvements generate huge profit differences. Gallup's turnover data shows that every team change costs more than you think.",
     },
     {
       type: 'paragraph',
@@ -376,18 +390,22 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: "If you want to discuss a concrete case, [let's talk](/contacts). At noprob.agency we work with only three brands at a time in long-term partnership, so each one has the whole team.",
+      text: 'If the platform is the weak point in your foundation, change it once and do it properly. The Sprint has a public price by revenue: €5,800 under €2M, €8,800 from €2M to €20M, €12,800 above €20M, VAT excluded, in 4 installments.',
     },
     {
       type: 'paragraph',
-      text: 'If you want to build that solid technical foundation starting with the platform, the [Shopify Launch Sprint](/shopify-migration-sprint) is a structured 14-day migration to Shopify with a fixed calendar, a public price and 4 written guarantees.',
+      text: 'The [Shopify Launch Sprint](/shopify-migration-sprint) moves your store to Shopify in 14 days with our Custom AI System: a fixed calendar, a public price and 4 written guarantees.',
+    },
+    {
+      type: 'paragraph',
+      text: "To build the long-term partnership on top, [let's talk](/contacts): we follow only three brands at a time in long-term partnership, so each one has the whole team.",
     },
   ],
   slugIt: 'strategia-ecommerce-long-term',
   titleIt: 'Strategia eCommerce: perché pensare a lungo termine batte la rincorsa ai trend',
   excerptIt: 'I brand eCommerce che crescono davvero non rincorrono trend. Costruiscono strategia long-term, team stabili e fondamenta tecniche. Cosa dicono i dati.',
   ledeIt: 'Il segreto dei brand eCommerce che crescono davvero non sono i growth hack. Sono le fondamenta che si compongono nel tempo.',
-  keywordsIt: 'strategia ecommerce, long-term thinking, kpi ecommerce, team ecommerce stabile, shopify partner italia',
+  keywordsIt: 'strategia ecommerce, strategia di crescita ecommerce, kpi ecommerce, retention ecommerce, team ecommerce stabile',
   faqIt: [
     {
       question: 'Se mantengo la stessa strategia, non rischio di rimanere indietro mentre i competitor innovano?',
@@ -399,7 +417,11 @@ const article: Article = {
     },
     {
       question: 'Come capisco se sto pagando un costo nascosto da cambi continui nel mio eCommerce?',
-      answer: 'Fai questa lista: negli ultimi 12 mesi, quante volte hai cambiato membri del team core, piattaforma, strategia ads, setup di tracciamento, agenzia? Se hai cambiato più di 2 cose, stai pagando un costo che probabilmente non vedi nel P&L ma che esiste. SHRM stima che la perdita di institutional knowledge rappresenti il 60-70% del costo reale del turnover.',
+      answer: 'Fai questa lista: negli ultimi 12 mesi, quante volte hai cambiato membri del team core, piattaforma, strategia ads, setup di tracciamento, agenzia? Se hai cambiato più di 2 cose, stai pagando un costo che probabilmente non vedi nel P&L ma che esiste.',
+    },
+    {
+      question: 'Quali KPI deve monitorare ogni settimana un eCommerce?',
+      answer: 'AOV, conversion rate per sorgente di traffico, retention rate, drop-off del checkout e margine per prodotto: cinque o sei numeri, non trenta.',
     },
     {
       question: 'Una strategia eCommerce long-term costa di più di una a breve termine?',
@@ -409,11 +431,15 @@ const article: Article = {
   contentIt: [
     {
       type: 'paragraph',
-      text: 'Ho seguito brand fashion, retail e DTC in Italia ed Europa per più di sette anni. Ho visto due tipi di founder.',
+      text: '**Una strategia di crescita eCommerce a lungo termine sono quattro decisioni tenute stabili per anni (piattaforma, tracking, team e una roadmap costruita sui problemi reali) con piccole ottimizzazioni sopra ogni settimana.** È ciò che separa i brand che crescono in modo prevedibile da quelli che ripartono ogni trimestre.',
     },
     {
       type: 'paragraph',
-      text: 'Il primo cambia ogni 6-12 mesi: nuova agenzia ads, nuovo developer, nuova piattaforma, nuova "strategia" letta su un post LinkedIn. Sembra dinamico. In realtà sta resettando il proprio business ogni trimestre.',
+      text: 'Ho seguito brand fashion, retail e DTC per più di sette anni. Ho visto due tipi di founder.',
+    },
+    {
+      type: 'paragraph',
+      text: 'Il primo cambia ogni 6-12 mesi: nuova agenzia ads, nuovo developer, nuova piattaforma, nuova "strategia" letta su un post LinkedIn. Sembra dinamico. In realtà sta azzerando il proprio eCommerce ogni trimestre.',
     },
     {
       type: 'paragraph',
@@ -425,7 +451,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Lo dico perché lo vedo nei dati dei miei clienti. E perché lo confermano studi seri di McKinsey, Bain e SHRM. Numeri reali, non slogan.',
+      text: 'Lo dico perché lo vedo nei dati dei miei clienti. E perché lo confermano studi seri di McKinsey, Bain, Gallup e Harvard Business Review. Numeri reali, non slogan.',
     },
     {
       type: 'paragraph',
@@ -436,9 +462,9 @@ const article: Article = {
       items: [
         'Quanto costa davvero la rincorsa ai trend (e perché non lo vedi nei P&L)',
         'Cosa dicono i dati sulle aziende che pensano a lungo termine',
-        'Perché un cliente stabile vale 3-5 volte un nuovo acquisto',
+        'Perché trattenere un cliente costa fino a 25 volte meno che trovarne uno nuovo',
         'Le 4 fondamenta di una strategia eCommerce long-term che funziona',
-        'Un caso reale: 4 anni di partnership tecnica con un brand fashion italiano',
+        'Un caso reale: 4 anni di partnership tecnica con un brand fashion luxury',
       ],
     },
     {
@@ -459,15 +485,15 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Sostituire un singolo dipendente costa tra il **50% e il 200% del salario annuo** ([SHRM, Society for Human Resource Management](https://www.shrm.org/topics-tools/tools/forms/turnover-cost-calculation-spreadsheet)). Per ruoli tecnici specializzati la cifra sale al 100-150%. Per ruoli executive arriva al 213% (Center for American Progress).',
+      text: 'Secondo Gallup sostituire un singolo dipendente costa **da metà a due volte il suo stipendio annuo** ([Gallup](https://www.gallup.com/workplace/247391/fixable-problem-costs-businesses-trillion.aspx)). Per i ruoli executive il Center for American Progress arriva fino al 213% ([Center for American Progress](https://www.americanprogress.org/article/there-are-significant-business-costs-to-replacing-employees/)).',
     },
     {
       type: 'paragraph',
-      text: "In pratica: cambiare un developer senior da 60.000€ può costare al brand tra 60.000 e 120.000€ tra recruiting, onboarding, formazione, perdita di produttività e know-how che esce con la persona.",
+      text: "In pratica, su quel range, cambiare un developer senior da 60.000€ può costare al brand tra 30.000 e 120.000€ tra recruiting, onboarding, formazione, perdita di produttività e know-how che esce con la persona.",
     },
     {
       type: 'paragraph',
-      text: "Non è solo l'assunzione. È il **time-to-ramp-up**. Un nuovo membro del team raggiunge piena operatività in 3-6 mesi (SHRM). Per quei mesi il rendimento del ruolo è strutturalmente sotto. Se cambi 2 figure chiave in un anno, hai perso un trimestre intero di operatività piena.",
+      text: "Non è solo l'assunzione. È il **time-to-ramp-up**. Per nostra esperienza un nuovo membro del team impiega 3-6 mesi per arrivare a piena operatività. Per quei mesi il rendimento del ruolo è strutturalmente sotto. Se cambi 2 figure chiave in un anno, hai perso un trimestre intero di operatività piena.",
     },
     {
       type: 'paragraph',
@@ -479,7 +505,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Questo è il costo che non vedi sul P&L. Si chiama "loss of institutional knowledge" e secondo SHRM rappresenta il 60-70% del costo reale del turnover. Quasi nessuno lo misura.',
+      text: 'Questo è il costo che non vedi sul P&L. Si chiama "loss of institutional knowledge" e quasi nessuno lo misura.',
     },
     {
       type: 'paragraph',
@@ -503,20 +529,18 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Le aziende long-term focused (164 nel campione) hanno avuto:',
+      text: 'Le aziende long-term focused hanno avuto:',
     },
     {
       type: 'list',
       items: [
         'Crescita cumulata dei ricavi del **47% in più** rispetto alle short-term',
         'Crescita cumulata degli utili del **36% in più**',
-        "Crescita del profitto economico dell'**81% in più**",
-        '12.000 posti di lavoro in più creati in media',
       ],
     },
     {
       type: 'paragraph',
-      text: 'Non è marketing. È un dataset reale su 615 aziende osservate per 13 anni, ripreso da Harvard Business Review e Fortune.',
+      text: 'Non è marketing. È un dataset reale su 615 aziende osservate per 13 anni, pubblicato dal McKinsey Global Institute.',
     },
     {
       type: 'paragraph',
@@ -544,7 +568,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Lo studio di Frederick Reichheld ([Bain & Company](https://www.bain.com/insights/retaining-customers-is-the-real-challenge/), fondatore del Net Promoter Score) ha dimostrato qualcosa di controintuitivo: aumentare la customer retention del 5% genera un aumento dei profitti tra il 25% e il 95% (Bain, "The Loyalty Effect").',
+      text: 'La ricerca di Frederick Reichheld di Bain & Company, ideatore del Net Promoter Score, ha mostrato qualcosa di controintuitivo: aumentare la customer retention del 5% fa crescere i profitti dal 25% al 95% ([Harvard Business Review](https://hbr.org/2014/10/the-value-of-keeping-the-right-customers), che cita Reichheld; la pagina di Bain è [qui](https://www.bain.com/insights/retaining-customers-is-the-real-challenge/)).',
     },
     {
       type: 'paragraph',
@@ -558,9 +582,7 @@ const article: Article = {
       type: 'list',
       items: [
         'Acquisire un nuovo cliente costa **5-25 volte di più** che fidelizzarne uno esistente ([Harvard Business Review](https://hbr.org/2014/10/the-value-of-keeping-the-right-customers))',
-        'La probabilità di convertire un cliente esistente è del 60-70%; quella di convertire un nuovo prospect è del 5-20% (Marketing Metrics)',
-        'I clienti esistenti spendono in media il 31% in più rispetto ai nuovi (Invesp)',
-        'I clienti ricorrenti hanno una probabilità 9 volte maggiore di convertire rispetto ai nuovi visitatori (Adobe Digital Index)',
+        'La retention si compone: ogni cliente di ritorno salta il costo di acquisizione che hai pagato la prima volta',
       ],
     },
     {
@@ -569,7 +591,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Eppure la maggior parte dei founder spende il 90% del proprio budget marketing in acquisition. La metà di quello potrebbe andare in retention (email marketing, programmi fedeltà, customer experience post-vendita, prodotto ricorrente), generando un ROI significativamente più alto.',
+      text: 'Eppure la maggior parte dei founder mette la quota maggiore del budget marketing in acquisition. Una parte più grande potrebbe andare in retention (email marketing, programmi fedeltà, customer experience post-vendita, prodotto ricorrente), di solito con un ritorno più alto. Su dove l’AI aiuta c’è [AI per eCommerce](/it/blog/ai-per-ecommerce).',
     },
     {
       type: 'paragraph',
@@ -597,7 +619,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: "Questo non significa accettare limitazioni. Significa investire le energie nell'ottimizzare il setup esistente (performance, conversion rate, mobile UX) invece che nel migrare ogni 18 mesi. Per capire perché Shopify è la scelta più razionale per i B2C strutturati, leggi la nostra [guida completa a Shopify](/it/blog/cose-shopify).",
+      text: "Questo non significa accettare limitazioni. Significa investire le energie nell'ottimizzare il setup esistente (performance, conversion rate, mobile UX) invece che nel migrare ogni 18 mesi. Per capire perché Shopify è la scelta più razionale per i B2C strutturati, leggi la nostra [guida completa a Shopify](/it/blog/cose-shopify). Se la piattaforma è la fondamenta debole, cambiala una volta sola e fatta bene: [come migriamo a Shopify](/it/migrazione-shopify), con le guide per piattaforma su [WooCommerce](/it/blog/migrazione-woocommerce-shopify), [Magento](/it/blog/migrazione-magento-shopify), [PrestaShop](/it/blog/migrazione-prestashop-shopify) e [BigCommerce](/it/blog/migrazione-bigcommerce-shopify).",
     },
     {
       type: 'paragraph',
@@ -609,15 +631,15 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Non puoi ottimizzare ciò che non misuri. E la maggior parte degli eCommerce italiani ha tracking parziale o rotto, soprattutto dopo iOS 14 e la fine dei cookie di terze parti.',
+      text: 'Non puoi ottimizzare ciò che non misuri. E la maggior parte degli eCommerce ha tracking parziale o rotto, soprattutto dopo iOS 14 e le regole sulla privacy dei browser sempre più strette.',
     },
     {
       type: 'paragraph',
-      text: 'I **KPI eCommerce essenziali** da monitorare ogni settimana sono pochi: AOV (Average Order Value), conversion rate per sorgente di traffico, retention rate, drop-off del checkout, margine per prodotto. Non 30 metriche. Quelle 5-6 che muovono davvero il business.',
+      text: 'I **KPI eCommerce essenziali** da monitorare ogni settimana sono pochi: AOV (Average Order Value), conversion rate per sorgente di traffico, retention rate, drop-off del checkout, margine per prodotto. Non 30 metriche. Quelle 5-6 che muovono davvero i conti.',
     },
     {
       type: 'paragraph',
-      text: "Quando il tracking è sporco, ogni decisione successiva è un'opinione mascherata da dato. Investire in setup tracking server-side serio (Google Analytics 4, Meta Conversions API, GTM) è uno dei pochi investimenti che si ripaga in 6 mesi di campagne meglio ottimizzate.",
+      text: "Quando il tracking è sporco, ogni decisione successiva è un'opinione mascherata da dato. Investire in setup tracking server-side serio (Google Analytics 4, Meta Conversions API, GTM) è uno dei pochi investimenti che si ripaga in 6 mesi di campagne meglio ottimizzate. Gli stessi dati dicono dove la scheda prodotto perde chi compra: vedi la [guida al CRO per Shopify](/it/blog/cro-ecommerce).",
     },
     {
       type: 'h3',
@@ -637,11 +659,11 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Ogni trimestre i founder vengono bombardati da nuove "must-have" del settore: nuovo canale social, nuova piattaforma di automation, nuovo framework di growth. Il 90% sono distrazioni.',
+      text: 'Ogni trimestre i founder vengono bombardati da nuove "must-have" del settore: nuovo canale social, nuova piattaforma di automation, nuovo framework di growth. Per la maggior parte sono distrazioni.',
     },
     {
       type: 'paragraph',
-      text: 'Una roadmap eCommerce seria parte dai problemi reali del business: dove perdi conversioni? Quale step del funnel ha il drop-off più alto? Dove hai i margini più bassi? Da lì identifichi 2-3 priorità trimestrali e ci lavori in modo focalizzato.',
+      text: 'Una roadmap eCommerce seria parte dai problemi reali dello store: dove perdi conversioni? Quale step del funnel ha il drop-off più alto? Dove hai i margini più bassi? Da lì identifichi 2-3 priorità trimestrali e ci lavori in modo focalizzato.',
     },
     {
       type: 'paragraph',
@@ -657,7 +679,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Un brand luxury fashion italiano (multibrand boutique, presenza fisica e online). Negozi fisici e store online. Quando li abbiamo presi in carico nel 2022, erano su una piattaforma italiana con gestionale integrato: rigida, lenta, non scalabile.',
+      text: 'Un brand luxury fashion (boutique multibrand con negozi fisici e store online). Quando li abbiamo presi in carico nel 2022, erano su una piattaforma proprietaria legata al gestionale dei negozi, dove ogni modifica al sito passava da un ticket.',
     },
     {
       type: 'paragraph',
@@ -666,7 +688,7 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        'Migrazione a Shopify a maggio 2025, collegata al gestionale proprietario dei negozi',
+        'Migrazione a Shopify a maggio 2025, collegata al gestionale dei negozi',
         'Tracking server-side completo (tracking score 92/100)',
         'Stesso partner e stessa regia per tutti i 4 anni',
         'Vendite online nei 12 mesi dopo la migrazione: **+67,7%** sui 12 mesi prima',
@@ -680,7 +702,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Se vuoi vedere il caso completo (challenge iniziale, approccio tecnico, KPI dettagliati per anno), abbiamo scritto un [use case dedicato nei nostri casi studio](/it/casi-studio).',
+      text: 'Se vuoi vedere il caso completo (challenge iniziale, approccio tecnico, KPI dettagliati per anno), abbiamo scritto un [caso studio dedicato su Cumini](/it/casi-studio/cumini-luxury-fashion-ecommerce).',
     },
     {
       type: 'paragraph',
@@ -716,6 +738,14 @@ const article: Article = {
     },
     {
       type: 'h3',
+      text: 'Quali KPI deve monitorare ogni settimana un eCommerce?',
+    },
+    {
+      type: 'paragraph',
+      text: 'AOV, conversion rate per sorgente di traffico, retention rate, drop-off del checkout e margine per prodotto: cinque o sei numeri, non trenta.',
+    },
+    {
+      type: 'h3',
       text: 'Una strategia eCommerce long-term costa di più di una a breve termine?',
     },
     {
@@ -732,7 +762,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Le aziende long-term del campione McKinsey hanno fatto +47% di ricavi in 13 anni. La regola del 5% di Bain mostra che piccoli miglioramenti di retention generano enormi differenze nel profitto. La realtà del turnover SHRM dimostra che ogni cambio di team costa più di quanto pensi.',
+      text: 'Le aziende long-term del campione McKinsey hanno fatto +47% di ricavi in 13 anni. La regola del 5% di Bain mostra che piccoli miglioramenti di retention generano enormi differenze nel profitto. I dati Gallup sul turnover mostrano che ogni cambio di team costa più di quanto pensi.',
     },
     {
       type: 'paragraph',
@@ -744,11 +774,15 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Se vuoi confrontarti su un caso concreto, [parliamoci](/it/contatti). A noprob.agency lavoriamo solo con tre brand alla volta in long-term partnership, così ognuno ha tutto il team.',
+      text: 'Se la piattaforma è il punto debole delle tue fondamenta, cambiala una volta sola e fatta bene. Lo Sprint ha un prezzo pubblico per fatturato: €5.800 sotto i €2M, €8.800 tra €2M e €20M, €12.800 oltre i €20M, IVA esclusa, in 4 rate.',
     },
     {
       type: 'paragraph',
-      text: 'Se vuoi costruire quella base tecnica solida a partire dalla piattaforma, lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) è una migrazione a Shopify strutturata in 14 giorni, con calendario fisso, prezzo pubblico e 4 garanzie scritte.',
+      text: 'Lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) porta il tuo store su Shopify in 14 giorni con il nostro Custom AI System: calendario fisso, prezzo pubblico e 4 garanzie scritte.',
+    },
+    {
+      type: 'paragraph',
+      text: 'Per costruire sopra la partnership di lungo periodo, [parliamone](/it/contatti): seguiamo solo tre brand alla volta in partnership continuativa, così ognuno ha il team al completo.',
     },
   ],
 }

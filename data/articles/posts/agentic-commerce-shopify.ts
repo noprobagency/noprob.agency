@@ -3,36 +3,36 @@ import type { Article } from '../index'
 const article: Article = {
   slug: 'agentic-commerce-shopify',
   slugIt: 'agentic-commerce-shopify',
-  title: 'Agentic Commerce for Shopify: What to Prepare This Quarter',
-  titleIt: 'Agentic commerce per Shopify: cosa preparare in questo trimestre',
-  seoTitle: 'Agentic Commerce on Shopify: What to Do Now',
-  seoTitleIt: 'Agentic commerce su Shopify: cosa fare ora',
+  title: 'Agentic Commerce for Shopify: A 5-Step Readiness Plan',
+  titleIt: 'Agentic commerce per Shopify: il piano in 5 passi',
+  seoTitle: 'Agentic Commerce on Shopify: 5 Steps to Prepare',
+  seoTitleIt: 'Agentic commerce Shopify: 5 passi per prepararti',
   seoDescription:
-    'Agentic commerce on Shopify without the hype: what AI shopping agents change for your store, and the five things worth fixing this quarter, in order.',
+    'Agentic commerce on Shopify without the hype: what AI shopping agents change for your store, and the five things worth fixing now, in order.',
   seoDescriptionIt:
-    'Agentic commerce su Shopify senza hype: cosa cambia per il tuo store con gli agenti AI che comprano e le cinque cose da sistemare in questo trimestre.',
+    'Agentic commerce su Shopify senza hype: cosa cambia per il tuo store con gli agenti AI che comprano e le cinque cose da sistemare ora, in ordine.',
   excerpt:
     'What agentic commerce means for a Shopify store, what is real and what is hype, and a five-step plan to get your store ready for AI shopping agents.',
   excerptIt:
     'Cosa significa agentic commerce per uno store Shopify, cosa è reale e cosa è hype, e un piano in cinque passi per preparare lo store agli agenti AI.',
   ledeEn:
-    'AI agents now search, compare and buy for shoppers. Our view on what that means for a Shopify store, what to ignore, and what to fix this quarter.',
+    'AI agents now search, compare and buy for shoppers. Our view on what that means for a Shopify store, what to ignore, and what to fix now.',
   ledeIt:
-    'Gli agenti AI ormai cercano, confrontano e comprano al posto del cliente. La nostra lettura per uno store Shopify: cosa ignorare e cosa sistemare in questo trimestre.',
+    'Gli agenti AI ormai cercano, confrontano e comprano al posto del cliente. La nostra lettura per uno store Shopify: cosa ignorare e cosa sistemare ora.',
   image: '/images/blog/agentic-commerce-shopify-cover.png',
   imageAlt: 'Copertina astratta, sfondo azzurro sfumato, con un’onda di puntini di dimensione variabile',
   imageAltEn: 'Abstract cover, softly graded sky blue background with a wave of dots changing size',
   articleType: 'Article',
   date: '2026-10-27',
   datePublishedIso: '2026-10-27T09:00:00+02:00',
-  dateModifiedIso: '2026-10-27T09:00:00+02:00',
-  wordCount: 2180,
+  dateModifiedIso: '2026-10-28T09:00:00+00:00',
+  wordCount: 2250,
   articleSection: 'AI',
   readingTimeMinutes: 9,
   keywordsEn:
-    'agentic commerce, ai shopping agent, agentic commerce shopify, shopify agentic storefronts, ai agents ecommerce, prepare store for ai agents',
+    'agentic commerce, ai shopping agent, agentic commerce shopify, agentic commerce protocol, shopify agentic storefronts, ai agents ecommerce, prepare store for ai agents',
   keywordsIt:
-    'agentic commerce, agenti ai ecommerce, agentic commerce shopify, shopify agentic storefronts, agenti ai che comprano, preparare store agenti ai',
+    'agentic commerce, agenti ai ecommerce, agentic commerce shopify, protocollo agentic commerce, shopify agentic storefronts, agenti ai che comprano, preparare store agenti ai',
   faqEn: [
     {
       question: 'What is agentic commerce?',
@@ -60,9 +60,9 @@ const article: Article = {
         'Check the AI channel attribution in your Shopify admin orders, add a channel group for AI referrers in your analytics, and run a monthly test with ten customer-style queries on the main AI assistants. Do not rely on last-click reports alone.',
     },
     {
-      question: 'Do I need an llms.txt file for agentic commerce?',
+      question: 'Do I need to choose an agentic commerce protocol?',
       answer:
-        'No. It costs an afternoon and does no harm, and product data, structured data and clear policies matter far more than a text file at the root of the site.',
+        'No: on Shopify the protocol layer is handled by the platform, so your job is the data and the checkout. Protocols are the technical rules that let an AI agent read a catalog and place an order; Agentic Storefronts connect your catalog to the AI platforms for you.',
     },
   ],
   faqIt: [
@@ -92,9 +92,9 @@ const article: Article = {
         'Guarda l’attribuzione dei canali AI negli ordini dell’admin Shopify, aggiungi un gruppo di canali per i referrer AI nelle analytics e fai ogni mese un test con dieci domande da cliente sui principali assistenti AI. Non fermarti ai report last click.',
     },
     {
-      question: 'Serve un file llms.txt per l’agentic commerce?',
+      question: 'Devo scegliere un protocollo di agentic commerce?',
       answer:
-        'No. Costa un pomeriggio e non fa danni, e dati prodotto, dati strutturati e policy chiare contano molto più di un file di testo nella radice del sito.',
+        'No: su Shopify il livello dei protocolli lo gestisce la piattaforma, quindi il tuo lavoro sono i dati e il checkout. I protocolli sono le regole tecniche con cui un agente AI legge un catalogo e fa un ordine; gli Agentic Storefronts collegano il tuo catalogo alle piattaforme AI al posto tuo.',
     },
   ],
   content: [
@@ -104,7 +104,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'We build and migrate Shopify stores at noprob agency (see the [Shopify Launch Sprint](/shopify-migration-sprint)). Since AI shopping agents moved from demo to a channel inside the Shopify admin, store owners ask us the same thing: is this real, and what do I do about it? Our answer: real enough to prepare for now, with work that also improves the store for people. Below is our view and a plan for this quarter.',
+      text: 'We build and migrate Shopify stores at noprob agency (see the [Shopify Launch Sprint](/shopify-migration-sprint)). Since AI shopping agents moved from demo to a channel inside the Shopify admin, store owners ask us the same thing: is this real, and what do I do about it? Our answer: real enough to prepare for now, with work that also improves the store for people. Below is our view and a plan.',
     },
     { type: 'h2', text: 'What does agentic commerce mean for a Shopify store?' },
     {
@@ -137,7 +137,7 @@ const article: Article = {
       type: 'paragraph',
       text: 'The figure to know is this one: AI-driven traffic and orders to Shopify stores tripled year over year in the second quarter of 2026 ([Digital Commerce 360](https://www.digitalcommerce360.com/2026/08/06/how-shopify-is-approaching-agentic-ai-2026/), 6 August 2026). It is a growth rate, not a share of orders, and a tripling can start from a small base the source does not give: it tells you the direction, not the size.',
     },
-    { type: 'paragraph', text: '**Worth doing this quarter:**' },
+    { type: 'paragraph', text: '**Worth doing now:**' },
     {
       type: 'list',
       items: [
@@ -175,6 +175,11 @@ const article: Article = {
         '**Policies become part of the product.** An agent that cannot find your return window cannot tell the shopper, and will recommend someone else.',
         '**Attribution changes.** Orders from AI channels show up in the admin with their channel. Reading only last-click reports will hide them.',
       ],
+    },
+    { type: 'h2', text: 'Do you need to choose an agentic commerce protocol?' },
+    {
+      type: 'paragraph',
+      text: '**No: on Shopify the protocol layer is handled by the platform, so your job is the data and the checkout.** Protocols are the technical rules that let an AI agent read a catalog and place an order; Agentic Storefronts connect your catalog to the AI platforms for you, and the work in this plan does not depend on which protocol wins.',
     },
     { type: 'h2', text: 'How do you prepare a Shopify store for an AI shopping agent?' },
     {
@@ -247,15 +252,15 @@ const article: Article = {
     { type: 'h2', text: 'How do we build this into a Shopify store?' },
     {
       type: 'paragraph',
-      text: 'In the [Shopify Launch Sprint](/shopify-migration-sprint) this work is part of how the store is built, not an add-on. The Sprint moves your store to Shopify in 14 days with our Custom AI System, with go-live between day 15 and 30 and 90 days of support. A migration is also the best moment to fix attributes, because every product, customer and order is being mapped anyway.',
+      text: 'If your store is already on Shopify, start with the AI Accelerator below; if you are changing platform, this is how the Sprint builds it in. In the [Shopify Launch Sprint](/shopify-migration-sprint) this work is part of how the store is built, not an add-on. The Sprint moves your store to Shopify in 14 days with our Custom AI System, with go-live between day 15 and 30 and 90 days of support. A migration is also the best moment to fix attributes, because every product, customer and order is being mapped anyway.',
     },
     {
       type: 'paragraph',
-      text: 'The Custom AI System is built to be ready for AI agents: catalog and structured data prepared for ChatGPT, Copilot and Google AI Mode, and automatic GEO, so every new product is born with schema and data generated on its own.',
+      text: 'The Custom AI System is built to be ready for AI agents: catalog and structured data prepared for ChatGPT, Copilot and Google AI Mode, and automatic GEO, so every new product is born with schema and data generated on its own. The GEO side is in [GEO for Shopify](/blog/geo-for-shopify).',
     },
     {
       type: 'paragraph',
-      text: 'Two real migrations show how we work. [Integratori DTC Nazzi](/use-cases/integratori-nazzi-dtc-shopify) moved from WooCommerce, and its live Shopify store publishes the agentic discovery sitemap (checked on 13 October 2026). It sold 105% more online in its first 85 days on Shopify than in the same days of 2025. The case shows what the migration did. [Cumini](/use-cases/cumini-luxury-fashion-ecommerce) moved from a proprietary platform tied to its ERP. For how we migrate, read the [guide to migrating to Shopify](/shopify-migration).',
+      text: 'Our published case studies show how we work. [Integratori DTC Nazzi](/use-cases/integratori-nazzi-dtc-shopify) moved from WooCommerce, and its live Shopify store publishes the agentic discovery sitemap (checked on 13 October 2026). It sold 105% more online in its first 85 days on Shopify than in the same days of 2025. The case shows what the migration did. [Cumini](/use-cases/cumini-luxury-fashion-ecommerce) moved from a proprietary platform tied to its ERP. For how we migrate, read the [guide to migrating to Shopify](/shopify-migration).',
     },
     {
       type: 'paragraph',
@@ -287,15 +292,19 @@ const article: Article = {
       type: 'paragraph',
       text: 'Check the AI channel attribution in your Shopify admin orders, add a channel group for AI referrers in your analytics, and run a monthly test with ten customer-style queries on the main AI assistants. Do not rely on last-click reports alone.',
     },
-    { type: 'h3', text: 'Do I need an llms.txt file for agentic commerce?' },
+    { type: 'h3', text: 'Do I need to choose an agentic commerce protocol?' },
     {
       type: 'paragraph',
-      text: 'No. It costs an afternoon and does no harm, and product data, structured data and clear policies matter far more than a text file at the root of the site.',
+      text: 'No: on Shopify the protocol layer is handled by the platform, so your job is the data and the checkout. Protocols are the technical rules that let an AI agent read a catalog and place an order; Agentic Storefronts connect your catalog to the AI platforms for you.',
     },
     { type: 'h2', text: 'What to do on Monday' },
     {
       type: 'paragraph',
-      text: 'Run the 30-minute test, write down the misses, and fix attributes first. Do the other four in the order above over the quarter. Skip the hype list. If agent orders grow, you will have the data ready; if they do not, you still have a better store.',
+      text: 'Run the 30-minute test, write down the misses, and fix attributes first. Do the other four in the order above, one after the other. Skip the hype list. If agent orders grow, you will have the data ready; if they do not, you still have a better store. For AI inside your admin, see [Shopify Magic and Sidekick](/blog/shopify-magic-sidekick); for the wider picture, [AI for ecommerce](/blog/ai-for-ecommerce); for ChatGPT specifically, [ChatGPT shopping for Shopify](/blog/chatgpt-shopping-shopify).',
+    },
+    {
+      type: 'paragraph',
+      text: 'The Sprint has a public price by revenue: €5,800 under €2M, €8,800 from €2M to €20M, €12,800 above €20M, VAT excluded, in 4 installments.',
     },
     {
       type: 'paragraph',
@@ -309,7 +318,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Costruiamo e migriamo store Shopify come noprob agency (vedi lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify)). Da quando gli agenti AI per lo shopping sono un canale dentro l’admin di Shopify, chi ha uno store ci chiede: è vero, e io cosa faccio? La nostra risposta: abbastanza vera da prepararsi ora, con un lavoro che migliora lo store anche per le persone. Qui sotto la nostra lettura e un piano per questo trimestre.',
+      text: 'Costruiamo e migriamo store Shopify come noprob agency (vedi lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify)). Da quando gli agenti AI per lo shopping sono un canale dentro l’admin di Shopify, chi ha uno store ci chiede: è vero, e io cosa faccio? La nostra risposta: abbastanza vera da prepararsi ora, con un lavoro che migliora lo store anche per le persone. Qui sotto la nostra lettura e un piano.',
     },
     { type: 'h2', text: 'Cosa significa agentic commerce per uno store Shopify?' },
     {
@@ -342,7 +351,7 @@ const article: Article = {
       type: 'paragraph',
       text: 'Il dato da conoscere è questo: traffico e ordini generati dall’AI verso gli store Shopify sono triplicati anno su anno nel secondo trimestre 2026 ([Digital Commerce 360](https://www.digitalcommerce360.com/2026/08/06/how-shopify-is-approaching-agentic-ai-2026/), 6 agosto 2026). È un tasso di crescita, non una quota degli ordini, e un triplicare può partire da una base piccola che la fonte non indica: dice la direzione, non la dimensione.',
     },
-    { type: 'paragraph', text: '**Vale la pena farlo in questo trimestre:**' },
+    { type: 'paragraph', text: '**Vale la pena farlo adesso:**' },
     {
       type: 'list',
       items: [
@@ -380,6 +389,11 @@ const article: Article = {
         '**Le policy diventano parte del prodotto.** Un agente che non trova il tuo periodo di reso non può dirlo al cliente e consiglierà un altro.',
         '**L’attribuzione cambia.** Gli ordini dai canali AI compaiono nell’admin con il loro canale. Guardare solo i report last click li nasconde.',
       ],
+    },
+    { type: 'h2', text: 'Devi scegliere un protocollo di agentic commerce?' },
+    {
+      type: 'paragraph',
+      text: '**No: su Shopify il livello dei protocolli lo gestisce la piattaforma, quindi il tuo lavoro sono i dati e il checkout.** I protocolli sono le regole tecniche con cui un agente AI legge un catalogo e fa un ordine; gli Agentic Storefronts collegano il tuo catalogo alle piattaforme AI al posto tuo, e il lavoro di questo piano non dipende da quale protocollo vince.',
     },
     { type: 'h2', text: 'Come si prepara uno store Shopify agli agenti AI ecommerce che comprano?' },
     {
@@ -452,15 +466,15 @@ const article: Article = {
     { type: 'h2', text: 'Come costruiamo tutto questo dentro uno store Shopify?' },
     {
       type: 'paragraph',
-      text: 'Nello [Shopify Launch Sprint](/it/sprint-migrazione-shopify) questo lavoro fa parte di come si costruisce lo store, non è un extra. Lo Sprint porta il tuo store su Shopify in 14 giorni con il nostro Custom AI System, con go-live tra il giorno 15 e il 30 e 90 giorni di supporto. Una migrazione è il momento migliore per sistemare gli attributi: ogni prodotto viene comunque mappato.',
+      text: 'Se il tuo store è già su Shopify, parti dall’AI Accelerator qui sotto; se stai cambiando piattaforma, ecco come lo Sprint lo costruisce dentro. Nello [Shopify Launch Sprint](/it/sprint-migrazione-shopify) questo lavoro fa parte di come si costruisce lo store, non è un extra. Lo Sprint porta il tuo store su Shopify in 14 giorni con il nostro Custom AI System, con go-live tra il giorno 15 e il 30 e 90 giorni di supporto. Una migrazione è il momento migliore per sistemare gli attributi: ogni prodotto viene comunque mappato.',
     },
     {
       type: 'paragraph',
-      text: 'Il Custom AI System è pensato per gli agenti AI: catalogo e dati strutturati preparati per ChatGPT, Copilot e Google AI Mode, e GEO automatico, così ogni nuovo prodotto nasce con schema e dati generati in automatico.',
+      text: 'Il Custom AI System è pensato per gli agenti AI: catalogo e dati strutturati preparati per ChatGPT, Copilot e Google AI Mode, e GEO automatico, così ogni nuovo prodotto nasce con schema e dati generati in automatico. Il lato GEO è in [GEO per Shopify](/it/blog/geo-seo-shopify).',
     },
     {
       type: 'paragraph',
-      text: 'Due migrazioni reali mostrano come lavoriamo. [Integratori DTC Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify) è passato da WooCommerce, e il suo store Shopify online pubblica la sitemap di agentic discovery (verificato il 13 ottobre 2026). Ha venduto online il 105% in più nei primi 85 giorni su Shopify rispetto agli stessi giorni del 2025. Il caso mostra cosa ha fatto la migrazione. [Cumini](/it/casi-studio/cumini-luxury-fashion-ecommerce) è passato da una piattaforma proprietaria legata al gestionale. Per come migriamo, leggi la [guida alla migrazione a Shopify](/it/migrazione-shopify).',
+      text: 'I nostri casi studio pubblicati mostrano come lavoriamo. [Integratori DTC Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify) è passato da WooCommerce, e il suo store Shopify online pubblica la sitemap di agentic discovery (verificato il 13 ottobre 2026). Ha venduto online il 105% in più nei primi 85 giorni su Shopify rispetto agli stessi giorni del 2025. Il caso mostra cosa ha fatto la migrazione. [Cumini](/it/casi-studio/cumini-luxury-fashion-ecommerce) è passato da una piattaforma proprietaria legata al gestionale. Per come migriamo, leggi la [guida alla migrazione a Shopify](/it/migrazione-shopify).',
     },
     {
       type: 'paragraph',
@@ -492,15 +506,19 @@ const article: Article = {
       type: 'paragraph',
       text: 'Guarda l’attribuzione dei canali AI negli ordini dell’admin Shopify, aggiungi un gruppo di canali per i referrer AI nelle analytics e fai ogni mese un test con dieci domande da cliente sui principali assistenti AI. Non fermarti ai report last click.',
     },
-    { type: 'h3', text: 'Serve un file llms.txt per l’agentic commerce?' },
+    { type: 'h3', text: 'Devo scegliere un protocollo di agentic commerce?' },
     {
       type: 'paragraph',
-      text: 'No. Costa un pomeriggio e non fa danni, e dati prodotto, dati strutturati e policy chiare contano molto più di un file di testo nella radice del sito.',
+      text: 'No: su Shopify il livello dei protocolli lo gestisce la piattaforma, quindi il tuo lavoro sono i dati e il checkout. I protocolli sono le regole tecniche con cui un agente AI legge un catalogo e fa un ordine; gli Agentic Storefronts collegano il tuo catalogo alle piattaforme AI al posto tuo.',
     },
     { type: 'h2', text: 'Cosa fare lunedì' },
     {
       type: 'paragraph',
-      text: 'Fai il test da 30 minuti, annota gli errori e sistema prima gli attributi. Fai gli altri quattro punti in ordine nel trimestre e salta la lista hype. Se gli ordini degli agenti crescono sei pronto; se no, hai comunque uno store migliore.',
+      text: 'Fai il test da 30 minuti, annota gli errori e sistema prima gli attributi. Fai gli altri quattro punti in ordine, uno dopo l’altro, e salta la lista hype. Se gli ordini degli agenti crescono sei pronto; se no, hai comunque uno store migliore. Per l’AI dentro l’admin c’è [Shopify Magic e Sidekick](/it/blog/shopify-magic-sidekick); per il quadro più ampio, [AI per eCommerce](/it/blog/ai-per-ecommerce); per ChatGPT in particolare, [ChatGPT shopping per Shopify](/it/blog/chatgpt-shopping-shopify).',
+    },
+    {
+      type: 'paragraph',
+      text: 'Lo Sprint ha un prezzo pubblico per fatturato: €5.800 sotto i €2M, €8.800 tra €2M e €20M, €12.800 oltre i €20M, IVA esclusa, in 4 rate.',
     },
     {
       type: 'paragraph',

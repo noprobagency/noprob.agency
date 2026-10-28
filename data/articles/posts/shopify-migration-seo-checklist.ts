@@ -24,9 +24,9 @@ const article: Article = {
   imageAltEn: 'Abstract cover, softly graded sky blue background with a wave of dots changing size',
   articleType: 'BlogPosting',
   date: '2026-10-27',
-  datePublishedIso: '2026-10-27T09:00:00+00:00',
-  dateModifiedIso: '2026-10-27T09:00:00+00:00',
-  wordCount: 2160,
+  datePublishedIso: '2026-10-27T09:00:00+02:00',
+  dateModifiedIso: '2026-10-28T09:00:00+00:00',
+  wordCount: 2400,
   readingTimeMinutes: 9,
   articleSection: 'Shopify migration',
   keywordsEn:
@@ -60,6 +60,11 @@ const article: Article = {
         'Google recommends keeping them for at least a year so signals can transfer to the new URLs, and says you can keep them indefinitely. In practice, never delete a redirect that still receives crawls, clicks or backlinks.',
     },
     {
+      question: 'What goes into a Shopify redirect map?',
+      answer:
+        'One row per old URL with the closest equivalent on Shopify: same product to same product, variants to the parent, discontinued products to their collection, posts to the same post under /blogs/.',
+    },
+    {
       question: 'How long until rankings recover after a Shopify migration?',
       answer:
         'Google says small to medium sites may take a few weeks for most pages to move, and larger sites take longer. We watch crawling first, then indexing, then clicks, over the 90 days after launch. The redirect map, content parity and tracking set the pace, and organic traffic at 90 days is one of the Sprint’s 4 written guarantees.',
@@ -90,6 +95,11 @@ const article: Article = {
       question: 'Per quanto tempo vanno tenuti i redirect 301 dopo una migrazione?',
       answer:
         'Google consiglia di tenerli almeno un anno, perché i segnali passino ai nuovi URL, e dice che si possono tenere anche per sempre. Nella pratica non si cancella mai un redirect che riceve ancora scansioni, clic o backlink.',
+    },
+    {
+      question: 'Cosa va in una mappa dei redirect su Shopify?',
+      answer:
+        'Una riga per ogni vecchio URL con l’equivalente più vicino su Shopify: stesso prodotto allo stesso prodotto, varianti al prodotto padre, prodotti fuori catalogo alla loro collezione, articoli allo stesso articolo sotto /blogs/.',
     },
     {
       question: 'Quanto tempo serve per recuperare le posizioni dopo la migrazione a Shopify?',
@@ -125,7 +135,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'That is why old URLs almost never survive, even when the domain stays the same. Our real migrations are from WooCommerce (Nazzi) and from a proprietary platform tied to the ERP (Cumini). URL patterns differ on every platform, the method below does not, and we start from each platform’s official documentation.',
+      text: 'That is why old URLs almost never survive, even when the domain stays the same. The method below comes from the migrations we have run, from WooCommerce ([Nazzi](/use-cases/integratori-nazzi-dtc-shopify)) and from a proprietary platform tied to an ERP ([Cumini](/use-cases/cumini-luxury-fashion-ecommerce)), and it holds on any platform: only the URL patterns change, and we start from each platform’s official documentation. Platform-specific guides: [Magento](/blog/magento-to-shopify-migration), [PrestaShop](/blog/prestashop-to-shopify-migration), [BigCommerce](/blog/bigcommerce-to-shopify-migration), [Wix](/blog/wix-vs-shopify) and [Squarespace](/blog/squarespace-vs-shopify).',
     },
     { type: 'h2', text: 'Phase 1: what do you do before the migration starts?' },
     {
@@ -178,7 +188,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'For a WooCommerce store the pattern rows look like this: /product/blue-shirt goes to /products/blue-shirt, /product-category/shirts goes to /collections/shirts, /2024/05/size-guide goes to /blogs/news/size-guide, and /shop goes to /collections/all. Generate those rows in a spreadsheet; do the exceptions by hand.',
+      text: 'For a WooCommerce store, for example, /product/blue-shirt goes to /products/blue-shirt. Generate pattern rows like that in a spreadsheet and do the exceptions by hand. The full list of WooCommerce patterns is in [WooCommerce to Shopify migration](/blog/woocommerce-to-shopify-migration).',
     },
     { type: 'h3', text: '4. Match the on-page SEO, page by page' },
     {
@@ -263,7 +273,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'This phase lines up with the 90 days of support in the Shopify Launch Sprint, and organic traffic at 90 days is one of its 4 written guarantees.',
+      text: 'This phase lines up with the 90 days of support in the Shopify Launch Sprint, and organic traffic at 90 days is one of its 4 written guarantees. The Sprint has a public price by revenue: €5,800 under €2M, €8,800 from €2M to €20M, €12,800 above €20M, VAT excluded, in 4 installments.',
     },
     { type: 'h2', text: 'Do you need Search Console’s Change of Address tool?' },
     {
@@ -299,12 +309,31 @@ const article: Article = {
     { type: 'h3', text: 'What it looked like on Nazzi and Cumini' },
     {
       type: 'paragraph',
-      text: 'The comparison that tells you whether the checklist worked is not against last year but against the weeks right before go-live, because that isolates the move itself. On Integratori DTC Nazzi (WooCommerce to Shopify), the 28 days to 9 October against the 28 days before go-live show clicks up 41%, impressions at 2.2x and average position improved by 21%. That is the number to put in your 90-day review: the year-on-year view and the August dip are in the [migration guide](/shopify-migration) and the [Nazzi case study](/use-cases/integratori-nazzi-dtc-shopify).',
+      text: 'The comparison that tells you whether the checklist worked is not against last year but against the weeks right before go-live, because that isolates the move itself. On Integratori DTC Nazzi (WooCommerce to Shopify), the 28 days to 9 October against the 28 days before go-live show clicks up 41%, impressions at 2.2x and average position improved by 21%. That is the number to put in your 90-day review: the year-on-year view is in the [migration guide](/shopify-migration) and the [Nazzi case study](/use-cases/integratori-nazzi-dtc-shopify).',
     },
     {
       type: 'paragraph',
       text: 'Cumini moved from a proprietary platform tied to its ERP. From June 2025 to May 2026 its online sales were up 67.7% on the previous 12 months, and the tracking score went from 31/100 to 92/100 between the audits before and after. That is the result of the whole project, not of SEO alone. See the [Cumini case study](/use-cases/cumini-luxury-fashion-ecommerce).',
     },
+    {
+      type: 'paragraph',
+      text: 'Planning the budget and the partner? Read [how much a Shopify migration costs](/blog/shopify-migration-cost) and how to [choose a Shopify migration agency](/blog/choose-shopify-migration-agency).',
+    },
+    { type: 'h2', text: 'Frequently asked questions' },
+    { type: 'h3', text: 'Will I lose my Google rankings if I migrate to Shopify?' },
+    { type: 'paragraph', text: 'Rankings usually move for a while after any migration, including well-run ones, and a complete 301 redirect map is what decides how fast they come back. In the Sprint, organic traffic at 90 days is one of the 4 written guarantees: below the baseline, we work for free until it comes back. Google itself says visibility can fluctuate temporarily during a site move and should settle over time.' },
+    { type: 'h3', text: 'Do I need Search Console’s Change of Address tool when I move to Shopify?' },
+    { type: 'paragraph', text: 'Only if the domain or subdomain changes. Google says the tool is not needed for HTTP to HTTPS, www to non-www, or moving paths within the same domain. A same-domain migration to Shopify uses redirects, a new sitemap and monitoring instead.' },
+    { type: 'h3', text: 'Can Shopify do wildcard or regex redirects?' },
+    { type: 'paragraph', text: 'Shopify’s help page on URL redirects does not document wildcard or regex support, so plan one row per URL in the redirect map. Pattern-based rows (for example every old product URL) are easy to generate in a spreadsheet and import as a CSV.' },
+    { type: 'h3', text: 'Why is my Shopify redirect not working?' },
+    { type: 'paragraph', text: 'Shopify redirects only work on URLs that return a 404. If the old path still loads a valid page on the new store, the redirect is ignored. Other common causes: a reserved path (such as /cart or /collections), a query string in the source URL, or a redirect that Shopify deleted when a hidden collection was made visible again.' },
+    { type: 'h3', text: 'How long should I keep 301 redirects after a migration?' },
+    { type: 'paragraph', text: 'Google recommends keeping them for at least a year so signals can transfer to the new URLs, and says you can keep them indefinitely. In practice, never delete a redirect that still receives crawls, clicks or backlinks.' },
+    { type: 'h3', text: 'What goes into a Shopify redirect map?' },
+    { type: 'paragraph', text: 'One row per old URL with the closest equivalent on Shopify: same product to same product, variants to the parent, discontinued products to their collection, posts to the same post under /blogs/.' },
+    { type: 'h3', text: 'How long until rankings recover after a Shopify migration?' },
+    { type: 'paragraph', text: 'Google says small to medium sites may take a few weeks for most pages to move, and larger sites take longer. We watch crawling first, then indexing, then clicks, over the 90 days after launch. The redirect map, content parity and tracking set the pace, and organic traffic at 90 days is one of the Sprint’s 4 written guarantees.' },
     {
       type: 'paragraph',
       text: 'The [Shopify Launch Sprint](/shopify-migration-sprint) moves your store to Shopify in 14 days with our Custom AI System: a fixed calendar, a public price and 4 written guarantees.',
@@ -338,7 +367,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Per questo i vecchi URL quasi mai sopravvivono, anche se il dominio resta lo stesso. Le nostre migrazioni vere: da WooCommerce (Nazzi) e da una piattaforma proprietaria legata al gestionale (Cumini). Gli schemi di URL cambiano da una piattaforma all’altra, il metodo qui sotto no, e partiamo dalla documentazione ufficiale di ciascuna.',
+      text: 'Per questo i vecchi URL quasi mai sopravvivono, anche se il dominio resta lo stesso. Il metodo qui sotto viene dalle migrazioni che abbiamo fatto, da WooCommerce ([Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify)) e da una piattaforma proprietaria legata a un gestionale ([Cumini](/it/casi-studio/cumini-luxury-fashion-ecommerce)), e vale su qualunque piattaforma: cambiano solo gli schemi di URL, e partiamo dalla documentazione ufficiale di ciascuna. Guide per piattaforma: [Magento](/it/blog/migrazione-magento-shopify), [PrestaShop](/it/blog/migrazione-prestashop-shopify), [BigCommerce](/it/blog/migrazione-bigcommerce-shopify), [Wix](/it/blog/wix-o-shopify) e [Squarespace](/it/blog/squarespace-o-shopify).',
     },
     { type: 'h2', text: 'Fase 1: cosa si fa prima di iniziare la migrazione?' },
     {
@@ -391,7 +420,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Per un negozio WooCommerce le righe per schema sono così: /prodotto/camicia-blu va a /products/camicia-blu, /categoria-prodotto/camicie va a /collections/camicie, /2024/05/guida-taglie va a /blogs/news/guida-taglie e /negozio va a /collections/all. Genera queste righe in un foglio di calcolo; le eccezioni a mano.',
+      text: 'Per un negozio WooCommerce, per esempio, /prodotto/camicia-blu va a /products/camicia-blu. Genera righe per schema come questa in un foglio di calcolo e fai le eccezioni a mano. L’elenco completo degli schemi WooCommerce è nella [migrazione da WooCommerce a Shopify](/it/blog/migrazione-woocommerce-shopify).',
     },
     { type: 'h3', text: '4. Conserva la SEO on-page, pagina per pagina' },
     {
@@ -476,7 +505,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Questa fase coincide con i 90 giorni di supporto dello Shopify Launch Sprint, che tra le 4 garanzie scritte ha il traffico organico a 90 giorni.',
+      text: 'Questa fase coincide con i 90 giorni di supporto dello Shopify Launch Sprint, che tra le 4 garanzie scritte ha il traffico organico a 90 giorni. Lo Sprint ha un prezzo pubblico per fatturato: €5.800 sotto i €2M, €8.800 tra €2M e €20M, €12.800 oltre i €20M, IVA esclusa, in 4 rate.',
     },
     { type: 'h2', text: 'Serve lo strumento Cambio di indirizzo di Search Console?' },
     {
@@ -512,12 +541,31 @@ const article: Article = {
     { type: 'h3', text: 'Com’è andata su Nazzi e Cumini' },
     {
       type: 'paragraph',
-      text: 'Il confronto che ti dice se la checklist ha funzionato non è con l’anno scorso ma con le settimane subito prima del go-live, perché isola il passaggio in sé. Su Integratori DTC Nazzi (da WooCommerce a Shopify), i 28 giorni al 9 ottobre rispetto ai 28 giorni prima del go-live mostrano clic +41%, impressioni 2,2 volte e posizione media migliorata del 21%. È il numero da mettere nella revisione dei 90 giorni: il confronto con l’anno prima e il calo di agosto sono nella [guida alla migrazione](/it/migrazione-shopify) e nel [caso studio Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify).',
+      text: 'Il confronto che ti dice se la checklist ha funzionato non è con l’anno scorso ma con le settimane subito prima del go-live, perché isola il passaggio in sé. Su Integratori DTC Nazzi (da WooCommerce a Shopify), i 28 giorni al 9 ottobre rispetto ai 28 giorni prima del go-live mostrano clic +41%, impressioni 2,2 volte e posizione media migliorata del 21%. È il numero da mettere nella revisione dei 90 giorni: il confronto con l’anno prima è nella [guida alla migrazione](/it/migrazione-shopify) e nel [caso studio Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify).',
     },
     {
       type: 'paragraph',
       text: 'Cumini veniva da una piattaforma proprietaria legata al gestionale. Da giugno 2025 a maggio 2026 le sue vendite online sono salite del 67,7% sui 12 mesi precedenti, e il punteggio del tracking è passato da 31/100 a 92/100 tra l’audit prima e dopo. È il risultato dell’intero progetto, non della sola SEO. Vedi il [caso studio Cumini](/it/casi-studio/cumini-luxury-fashion-ecommerce).',
     },
+    {
+      type: 'paragraph',
+      text: 'Stai pianificando budget e partner? Leggi [quanto costa migrare a Shopify](/it/blog/costo-migrazione-shopify) e come [scegliere un’agenzia di migrazione Shopify](/it/blog/scegliere-agenzia-migrazione-shopify).',
+    },
+    { type: 'h2', text: 'Domande frequenti' },
+    { type: 'h3', text: 'Perderò le posizioni su Google se migro a Shopify?' },
+    { type: 'paragraph', text: 'Il posizionamento di solito si muove per un periodo dopo qualunque migrazione, anche quelle fatte bene, ed è la mappa completa dei redirect 301 a decidere quanto in fretta recupera. Nello Sprint il traffico organico a 90 giorni è una delle 4 garanzie scritte: sotto la baseline, lavoriamo gratis finché non torna. Lo dice anche Google: durante un trasferimento di sito la visibilità può fluttuare temporaneamente e poi si assesta.' },
+    { type: 'h3', text: 'Devo usare lo strumento Cambio di indirizzo di Search Console per passare a Shopify?' },
+    { type: 'paragraph', text: 'Solo se cambia il dominio o il sottodominio. Per Google lo strumento non serve per il passaggio da HTTP a HTTPS, da www a non-www o per lo spostamento di percorsi nello stesso dominio. Una migrazione a Shopify sullo stesso dominio usa redirect, nuova sitemap e monitoraggio.' },
+    { type: 'h3', text: 'Shopify supporta redirect con caratteri jolly o regex?' },
+    { type: 'paragraph', text: 'La pagina di aiuto di Shopify sui redirect URL non documenta il supporto a caratteri jolly o regex, quindi conviene prevedere una riga per ogni URL nella mappa. Le righe per schema (per esempio tutti i vecchi URL prodotto) si generano facilmente in un foglio di calcolo e si importano da CSV.' },
+    { type: 'h3', text: 'Perché il mio redirect 301 su Shopify non funziona?' },
+    { type: 'paragraph', text: 'I redirect di Shopify funzionano solo sugli URL che restituiscono 404. Se il vecchio percorso carica ancora una pagina valida sul nuovo store, il redirect viene ignorato. Altre cause comuni: un percorso riservato (come /cart o /collections), una query string nell’URL di partenza, o un redirect che Shopify ha cancellato quando una collezione nascosta è tornata visibile.' },
+    { type: 'h3', text: 'Per quanto tempo vanno tenuti i redirect 301 dopo una migrazione?' },
+    { type: 'paragraph', text: 'Google consiglia di tenerli almeno un anno, perché i segnali passino ai nuovi URL, e dice che si possono tenere anche per sempre. Nella pratica non si cancella mai un redirect che riceve ancora scansioni, clic o backlink.' },
+    { type: 'h3', text: 'Cosa va in una mappa dei redirect su Shopify?' },
+    { type: 'paragraph', text: 'Una riga per ogni vecchio URL con l’equivalente più vicino su Shopify: stesso prodotto allo stesso prodotto, varianti al prodotto padre, prodotti fuori catalogo alla loro collezione, articoli allo stesso articolo sotto /blogs/.' },
+    { type: 'h3', text: 'Quanto tempo serve per recuperare le posizioni dopo la migrazione a Shopify?' },
+    { type: 'paragraph', text: 'Secondo Google per i siti piccoli e medi servono alcune settimane perché la maggior parte delle pagine si sposti, per i siti grandi di più. Noi controlliamo prima la scansione, poi l’indicizzazione, poi i clic, nei 90 giorni dopo il lancio. Il ritmo lo danno mappa dei redirect, contenuti conservati e tracking, e il traffico organico a 90 giorni è una delle 4 garanzie scritte dello Sprint.' },
     {
       type: 'paragraph',
       text: 'Lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) porta il tuo store su Shopify in 14 giorni con il nostro Custom AI System: calendario fisso, prezzo pubblico e 4 garanzie scritte.',

@@ -130,7 +130,7 @@ const it: SviluppoCopy = {
       {
         title: 'Manutenzione a vita',
         description:
-          'Non costruiamo e spariamo. Restiamo a mantenere e ottimizzare lo store nel tempo, senza che tu debba ricominciare.',
+          'Non costruiamo e spariamo. Sicurezza, aggiornamenti, istruzioni d’uso e supporto tecnico restano inclusi per sempre, senza che tu debba ricominciare.',
       },
     ],
   },
@@ -215,7 +215,7 @@ const it: SviluppoCopy = {
       { price: '€2.100', slot: 'Progetti 21-30', tag: 'Prossimo scaglione', state: 'upcoming' },
       { price: '€2.400', slot: 'Dal 31° in poi', tag: 'Prezzo a regime', state: 'upcoming' },
     ],
-    priceSuffix: '/mese × 3 mesi',
+    priceSuffix: '/mese × 3 mesi, IVA esclusa',
     priceBadge: 'metodo noprobagency',
     guarantee:
       'Garanzia 30 giorni: se entro 30 giorni il progetto non ti convince, ti rimborsiamo, senza domande.',
@@ -297,9 +297,9 @@ const it: SviluppoCopy = {
           'Design su misura, sviluppo dello store, tracciamento server-side (GA4 e Meta CAPI), SEO base on-page, performance e CRO. A parte: fotografia prodotto, contenuti e gestione influencer.',
       },
       {
-        question: 'Cosa significa manutenzione a vita?',
+        question: 'Cosa include la manutenzione a vita e quanto costa dopo i 3 mesi?',
         answer:
-          'Dopo il lancio restiamo a mantenere e ottimizzare lo store nel tempo, senza che tu debba ricostruire o cambiare partner. È il differenziatore centrale del nostro modello.',
+          'La manutenzione copre sicurezza, aggiornamenti, istruzioni d’uso e supporto tecnico, ed è inclusa per sempre nel prezzo del progetto: dopo i 3 mesi non c’è un canone da aggiungere. SEO base, performance, CRO e tracciamento fanno parte dei 3 mesi di progetto, seguiti da un eCommerce Manager. Così non devi ricostruire né cambiare partner.',
       },
       {
         question: 'Quanto dura il progetto?',
@@ -389,7 +389,7 @@ const en: SviluppoCopy = {
       {
         title: 'Lifetime maintenance',
         description:
-          'We don’t build and disappear. We stay to maintain and optimize the store over time, so you never start over.',
+          'We don’t build and disappear. Security, updates, how-to guidance and technical support stay included for good, so you never start over.',
       },
     ],
   },
@@ -474,7 +474,7 @@ const en: SviluppoCopy = {
       { price: '€2,100', slot: 'Projects 21-30', tag: 'Next tier', state: 'upcoming' },
       { price: '€2,400', slot: 'From the 31st on', tag: 'Standard price', state: 'upcoming' },
     ],
-    priceSuffix: '/mo × 3 months',
+    priceSuffix: '/mo × 3 months, VAT excluded',
     priceBadge: 'noprobagency method',
     guarantee:
       '30-day guarantee: if within 30 days the project doesn’t convince you, we refund you, no questions asked.',
@@ -556,9 +556,9 @@ const en: SviluppoCopy = {
           'Custom design, store development, server-side tracking (GA4 and Meta CAPI), base on-page SEO, performance and CRO. Handled separately: product photography, content and influencer management.',
       },
       {
-        question: 'What does lifetime maintenance mean?',
+        question: 'What does lifetime maintenance cover, and what does it cost after the 3 months?',
         answer:
-          'After launch we stay to maintain and optimize the store over time, so you never have to rebuild or switch partner. It’s the central differentiator of our model.',
+          'Maintenance covers security, updates, how-to guidance and technical support, and it is included for good in the project price: after the 3 months there is no fee to add. Base SEO, performance, CRO and tracking are part of the 3-month project, followed by an eCommerce Manager. So you never have to rebuild or switch partner.',
       },
       {
         question: 'How long does the project take?',

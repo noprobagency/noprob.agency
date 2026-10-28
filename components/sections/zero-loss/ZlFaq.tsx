@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 import type { ZlCopy } from '@/content/zero-loss-migration'
 import { stripCopy } from './Placeholder'
 import ZlFaqAccordion from './ZlFaqAccordion'
@@ -29,6 +31,16 @@ export default function ZlFaq({ copy }: { copy: ZlCopy['faq'] }) {
           <div className="border-card-thick shadow-card rounded-card-lg bg-noprob-card px-4 py-5 min-[810px]:p-8">
             <ZlFaqAccordion items={copy.items} />
           </div>
+          <p className="font-sans text-[15px] font-medium leading-[1.5em] tracking-[-0.02em] text-np-text lg:col-start-2">
+            {copy.guideLink.text}{' '}
+            <Link
+              href={copy.guideLink.href}
+              className="font-semibold text-np-dark underline underline-offset-4 decoration-np-dark/40 transition-colors hover:decoration-np-dark"
+            >
+              {copy.guideLink.label}
+            </Link>
+            .
+          </p>
         </div>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       </div>

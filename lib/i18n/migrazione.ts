@@ -113,7 +113,7 @@ export type MigrazioneCopy = {
 
 const it: MigrazioneCopy = {
   hero: {
-    trustRatingLabel: '5/5',
+    trustRatingLabel: '10 recensioni a 5 stelle su',
     trustSectors: 'Scelti da brand di Moda, Integratori e DTC eCommerce',
     titlePart1: 'Migrazione a ',
     titleEm1: 'Shopify',
@@ -121,7 +121,7 @@ const it: MigrazioneCopy = {
     titleEm2: 'guida completa',
     titlePart2: '',
     subtitle:
-      'Tutto quello che cambia quando passi a Shopify: piattaforme, dati, SEO e redirect 301, tracking, tempi, rischi e costi, con due migrazioni reali.',
+      'Tutto quello che cambia quando passi a Shopify: piattaforme, dati, SEO e redirect 301, tracking, tempi, rischi e costi, con casi studio reali.',
     microBenefits: ['Piattaforme e dati', 'SEO e redirect 301', 'Tempi, rischi e costi'],
     cta: 'Scopri lo Shopify Launch Sprint',
     trustedCount: 'Scelti da brand di Moda, Integratori e DTC eCommerce',
@@ -148,7 +148,8 @@ const it: MigrazioneCopy = {
           'Rischi e come evitarli',
           'Quanto costa',
           'La checklist di migrazione',
-          'Due migrazioni reali',
+          'Casi studio: WooCommerce e piattaforma proprietaria',
+          'Guide per piattaforma e prossimi passi',
         ],
       },
       { type: 'h2', text: 'Da quali piattaforme si migra a Shopify?' },
@@ -160,17 +161,17 @@ const it: MigrazioneCopy = {
       {
         type: 'list',
         items: [
-          '**WooCommerce**: prodotti, ordini e clienti stanno nel database di WordPress e molte funzioni arrivano da plugin. Ogni plugin va sostituito con un’app o una funzione nativa di Shopify, oppure eliminato. Anche il blog vive di solito su WordPress e va spostato o mantenuto.',
-          '**Magento / Adobe Commerce**: di solito cataloghi grandi, molti attributi, moduli su misura e regole B2B. Il lavoro sta soprattutto nel mappare attributi e logiche custom sul modello dati di Shopify (metafield, app o codice dedicato).',
-          '**PrestaShop**: funzioni affidate a moduli, spesso con più lingue e più negozi. Contano la pulizia del catalogo, la mappatura dei moduli e la struttura degli URL per lingua.',
-          '**Wix e Squarespace**: piattaforme chiuse, con opzioni di esportazione più ridotte rispetto a quelle self-hosted. Prima di decidere verifica cosa riesci a esportare di prodotti, clienti, ordini e blog.',
-          '**BigCommerce**: piattaforma SaaS come Shopify. Il lavoro riguarda soprattutto design, app e URL.',
-          '**Piattaforme proprietarie**: spesso legate a un gestionale. Il lavoro è ricostruire i flussi di dati (giacenze, prezzi, ordini) tra gestionale e Shopify, oltre a spostare il catalogo.',
+          '**WooCommerce**: prodotti, ordini e clienti stanno nel database di WordPress e molte funzioni arrivano da plugin. Ogni plugin va sostituito con un’app o una funzione nativa di Shopify, oppure eliminato. Anche il blog vive di solito su WordPress e va spostato o mantenuto. Guida pratica: [migrazione da WooCommerce a Shopify](/it/blog/migrazione-woocommerce-shopify). Il caso: [Integratori DTC Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify).',
+          '**Magento / Adobe Commerce**: di solito cataloghi grandi, molti attributi, moduli su misura e regole B2B. Il lavoro sta soprattutto nel mappare attributi e logiche custom sul modello dati di Shopify (metafield, app o codice dedicato). Approfondimento: [migrazione da Magento a Shopify](/it/blog/migrazione-magento-shopify).',
+          '**PrestaShop**: funzioni affidate a moduli, spesso con più lingue e più negozi. Contano la pulizia del catalogo, la mappatura dei moduli e la struttura degli URL per lingua. Approfondimento: [migrazione da PrestaShop a Shopify](/it/blog/migrazione-prestashop-shopify).',
+          '**Wix e Squarespace**: piattaforme chiuse, con opzioni di esportazione più ridotte rispetto a quelle self-hosted. Prima di decidere verifica cosa riesci a esportare di prodotti, clienti, ordini e blog. Confronti: [Wix o Shopify](/it/blog/wix-o-shopify) e [Squarespace o Shopify](/it/blog/squarespace-o-shopify).',
+          '**BigCommerce**: piattaforma SaaS come Shopify. Il lavoro riguarda soprattutto design, app e URL. Approfondimento: [migrazione da BigCommerce a Shopify](/it/blog/migrazione-bigcommerce-shopify).',
+          '**Piattaforme proprietarie**: spesso legate a un gestionale. Il lavoro è ricostruire i flussi di dati (giacenze, prezzi, ordini) tra gestionale e Shopify, oltre a spostare il catalogo. Un esempio: il [caso Cumini](/it/casi-studio/cumini-luxury-fashion-ecommerce).',
         ],
       },
       {
         type: 'paragraph',
-        text: 'Noi abbiamo migrato store da WooCommerce e da una piattaforma proprietaria collegata a un gestionale (due casi in fondo alla guida). Su ogni piattaforma applichiamo lo stesso metodo dello Sprint (audit, mappa dei redirect 301, migrazione dei dati, QA): le indicazioni sopra rimandano alla documentazione di Shopify. Il primo passo è sempre l’audit del tuo store.',
+        text: 'Lo Sprint copre la migrazione da WooCommerce, Magento, PrestaShop, BigCommerce, Wix, Squarespace, piattaforme proprietarie e gestionali, con le stesse fasi (audit, mappa dei redirect 301, migrazione dei dati, QA). Tra i nostri casi pubblicati, due sono in fondo alla guida: WooCommerce (Integratori DTC Nazzi) e piattaforma proprietaria collegata a un gestionale (Cumini). Per ogni piattaforma trovi qui sopra la guida dedicata. Il primo passo è sempre l’audit del tuo store.',
       },
       { type: 'h2', text: 'Cosa si sposta davvero in una migrazione a Shopify?' },
       {
@@ -219,7 +220,11 @@ const it: MigrazioneCopy = {
       },
       {
         type: 'paragraph',
-        text: 'Nel caso Integratori DTC Nazzi (da WooCommerce a Shopify) abbiamo fatto questo controllo dopo il lancio su 215 URL WooCommerce archiviati, e il CSV dei redirect 301 è stato consegnato per l’importazione in Shopify. In Search Console gli ultimi 28 giorni al 9 ottobre 2026 mostrano clic 2,7 volte e impressioni 4,0 volte rispetto agli stessi 28 giorni del 2025. I clic giornalieri sono scesi sotto il livello pre-lancio ad agosto e sono risaliti sopra a settembre e ottobre: in una migrazione il posizionamento si muove, ed è la mappa dei redirect a decidere come recupera.',
+        text: 'Nel caso Integratori DTC Nazzi (da WooCommerce a Shopify) abbiamo fatto questo controllo dopo il lancio su 215 URL WooCommerce archiviati, e il CSV dei redirect 301 è stato consegnato per l’importazione in Shopify. In Search Console gli ultimi 28 giorni al 9 ottobre 2026 mostrano clic +41% rispetto ai 28 giorni prima del go-live, e clic 2,7 volte e impressioni 4,0 volte rispetto agli stessi 28 giorni del 2025. In una migrazione il posizionamento si muove per qualche settimana, e la mappa dei redirect decide quanto recupera.',
+      },
+      {
+        type: 'paragraph',
+        text: 'Il passo passo completo è nella nostra [checklist SEO della migrazione a Shopify](/it/blog/migrazione-shopify-seo-checklist).',
       },
       { type: 'h2', text: 'Come si gestiscono tracking e dati?' },
       {
@@ -294,6 +299,10 @@ const it: MigrazioneCopy = {
         type: 'paragraph',
         text: 'A questo si aggiungono l’abbonamento a Shopify, le app e le commissioni di pagamento, che vanno verificate sul sito di Shopify. Se vuoi la migrazione come progetto chiavi in mano, lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) ha un prezzo pubblico in base al fatturato: €5.800 sotto i €2M, €8.800 tra €2M e €20M, €12.800 oltre i €20M, IVA esclusa, in 4 rate.',
       },
+      {
+        type: 'paragraph',
+        text: 'Cosa muove il prezzo e come confrontare i preventivi: [costo della migrazione a Shopify](/it/blog/costo-migrazione-shopify). Se stai scegliendo a chi affidarla: [come scegliere un’agenzia di migrazione Shopify](/it/blog/scegliere-agenzia-migrazione-shopify).',
+      },
       { type: 'h2', text: 'La checklist di migrazione a Shopify' },
       {
         type: 'paragraph',
@@ -316,10 +325,10 @@ const it: MigrazioneCopy = {
           'Dopo il lancio controlla 404, catene di redirect, conversioni e Search Console.',
         ],
       },
-      { type: 'h2', text: 'Due migrazioni reali: WooCommerce e piattaforma proprietaria' },
+      { type: 'h2', text: 'Casi studio: WooCommerce e piattaforma proprietaria' },
       {
         type: 'paragraph',
-        text: 'Due migrazioni che abbiamo fatto mostrano i punti di partenza più comuni: un negozio WooCommerce e una piattaforma proprietaria. I dati vengono dalle dashboard dei clienti e sono confronti con lo stesso periodo prima.',
+        text: 'Tra i nostri casi pubblicati, due mostrano i punti di partenza più comuni: un negozio WooCommerce e una piattaforma proprietaria. I dati vengono dalle dashboard dei clienti e sono confronti con lo stesso periodo prima.',
       },
       { type: 'h3', text: 'Integratori DTC Nazzi: da WooCommerce a Shopify' },
       {
@@ -331,6 +340,22 @@ const it: MigrazioneCopy = {
         type: 'paragraph',
         text: 'Moda luxury multibrand, online su Shopify dal 19 maggio 2025, prima su una piattaforma proprietaria collegata al gestionale. Nei 12 mesi successivi, rispetto ai 12 precedenti: vendite nette +67,7%, ordini +49,4%, scontrino medio +12,2%. Il punteggio del tracking è passato da 31/100 a 92/100. Leggi il [caso studio Cumini](/it/casi-studio/cumini-luxury-fashion-ecommerce).',
       },
+      { type: 'h2', text: 'Guide per piattaforma e prossimi passi' },
+      { type: 'paragraph', text: 'Ogni piattaforma di partenza ha la sua guida pratica. Scegli quella da cui parti, oppure vai ai confronti, ai costi e alla checklist SEO:' },
+      {
+        type: 'list',
+        items: [
+          '[Migrazione da WooCommerce a Shopify](/it/blog/migrazione-woocommerce-shopify)',
+          '[Migrazione da Magento a Shopify](/it/blog/migrazione-magento-shopify)',
+          '[Migrazione da PrestaShop a Shopify](/it/blog/migrazione-prestashop-shopify)',
+          '[Migrazione da BigCommerce a Shopify](/it/blog/migrazione-bigcommerce-shopify)',
+          '[Wix o Shopify: quale scegliere e come passare](/it/blog/wix-o-shopify)',
+          '[Squarespace o Shopify: quale scegliere e come passare](/it/blog/squarespace-o-shopify)',
+          '[Checklist SEO della migrazione a Shopify](/it/blog/migrazione-shopify-seo-checklist)',
+          '[Quanto costa migrare a Shopify](/it/blog/costo-migrazione-shopify)',
+          '[Come scegliere un’agenzia di migrazione Shopify](/it/blog/scegliere-agenzia-migrazione-shopify)',
+        ],
+      },
       {
         type: 'paragraph',
         text: 'Lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) porta il tuo store su Shopify in 14 giorni con il nostro Custom AI System: calendario fisso, prezzo pubblico e 4 garanzie scritte.',
@@ -339,10 +364,10 @@ const it: MigrazioneCopy = {
   },
   charts: {
     label: 'search console',
-    title1: 'Dopo una migrazione il traffico può calare. ',
+    title1: 'Dopo una migrazione Google rielabora il sito. ',
     titleEm: 'Conta cosa succede dopo.',
     subtitle:
-      'Google deve rielaborare il sito: la risalita dipende da come è fatta la migrazione.',
+      'Il posizionamento si muove per qualche settimana: come risale dipende da come è fatta la migrazione.',
   },
   sprintBanner: {
     badge: 'AI powered',
@@ -364,9 +389,9 @@ const it: MigrazioneCopy = {
           'Da poche settimane a diversi mesi, a seconda di catalogo, integrazioni e design. Con lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) lo store è pronto al giorno 14, il go-live avviene tra il giorno 15 e il 30 e seguono 90 giorni di supporto.',
       },
       {
-        question: 'Perderò il posizionamento su Google migrando a Shopify?',
+        question: 'Cosa succede al posizionamento su Google migrando a Shopify?',
         answer:
-          'Il posizionamento di solito si muove per un periodo dopo la migrazione, e una mappa completa di redirect 301, contenuti conservati e monitoraggio in Search Console permettono di recuperarlo. Nello Sprint il traffico organico a 90 giorni è una delle 4 garanzie scritte.',
+          'Il posizionamento si muove per qualche settimana dopo una migrazione, e la mappa dei redirect decide quanto recupera: una mappa completa di redirect 301, contenuti conservati e monitoraggio in Search Console permettono di recuperarlo. Nello Sprint il traffico organico a 90 giorni è una delle 4 garanzie scritte.',
       },
       {
         question: 'I clienti mantengono account e password?',
@@ -381,7 +406,7 @@ const it: MigrazioneCopy = {
       {
         question: 'Da quali piattaforme si può migrare a Shopify?',
         answer:
-          'Da tutte le principali: WooCommerce, Magento / Adobe Commerce, PrestaShop, Wix, Squarespace, BigCommerce e piattaforme proprietarie. Il metodo è lo stesso su ogni piattaforma: audit, mappa dei redirect 301, migrazione dei dati e QA.',
+          'Da WooCommerce, Magento, PrestaShop, BigCommerce, Wix, Squarespace, piattaforme proprietarie e gestionali. Il metodo è lo stesso su ogni piattaforma: audit, mappa dei redirect 301, migrazione dei dati e QA.',
       },
       {
         question: 'Quanto costa migrare a Shopify?',
@@ -394,7 +419,7 @@ const it: MigrazioneCopy = {
 
 const en: MigrazioneCopy = {
   hero: {
-    trustRatingLabel: '5/5',
+    trustRatingLabel: '10 five-star reviews on',
     trustSectors: 'Chosen by Fashion, Supplements and DTC brands',
     titlePart1: 'How to Migrate to ',
     titleEm1: 'Shopify',
@@ -402,7 +427,7 @@ const en: MigrazioneCopy = {
     titleEm2: 'Complete Guide',
     titlePart2: '',
     subtitle:
-      'Everything that changes when you move to Shopify: platforms, data, SEO and 301 redirects, tracking, timeline, risks and cost, with two real migrations.',
+      'Everything that changes when you move to Shopify: platforms, data, SEO and 301 redirects, tracking, timeline, risks and cost, with real case studies.',
     microBenefits: ['Platforms and data', 'SEO and 301 redirects', 'Timeline, risks and cost'],
     cta: 'See the Shopify Launch Sprint',
     trustedCount: 'Chosen by Fashion, Supplements and DTC brands',
@@ -429,7 +454,8 @@ const en: MigrazioneCopy = {
           'Risks and how to avoid them',
           'What it costs',
           'The migration checklist',
-          'Two real migrations',
+          'Case studies: WooCommerce and a proprietary platform',
+          'Platform guides and next steps',
         ],
       },
       { type: 'h2', text: 'Which platforms do people migrate to Shopify from?' },
@@ -441,17 +467,17 @@ const en: MigrazioneCopy = {
       {
         type: 'list',
         items: [
-          '**WooCommerce**: products, orders and customers live in the WordPress database, and many features come from plugins. Each plugin needs a Shopify app or native feature as a replacement, or has to be dropped. The blog usually lives in WordPress too and has to be moved or kept.',
-          '**Magento / Adobe Commerce**: typically large catalogs, many attributes, custom modules and B2B rules. Most of the work is mapping attributes and custom logic to Shopify’s data model (metafields, apps or dedicated code).',
-          '**PrestaShop**: features are handled by modules, often with several languages or shops. Catalog cleanup, module mapping and the URL structure per language matter most.',
-          '**Wix and Squarespace**: closed platforms with narrower export options than self-hosted ones. Before you decide, check what you can export of products, customers, orders and blog.',
-          '**BigCommerce**: a SaaS platform like Shopify. The work is mostly design, apps and URLs.',
-          '**Proprietary platforms**: often tied to an ERP. The job is to rebuild the data flows (stock, prices, orders) between the ERP and Shopify, on top of moving the catalog.',
+          '**WooCommerce**: products, orders and customers live in the WordPress database, and many features come from plugins. Each plugin needs a Shopify app or native feature as a replacement, or has to be dropped. The blog usually lives in WordPress too and has to be moved or kept. Hands-on guide: [WooCommerce to Shopify migration](/blog/woocommerce-to-shopify-migration). The case: [Supplement DTC Nazzi](/use-cases/integratori-nazzi-dtc-shopify).',
+          '**Magento / Adobe Commerce**: typically large catalogs, many attributes, custom modules and B2B rules. Most of the work is mapping attributes and custom logic to Shopify’s data model (metafields, apps or dedicated code). Deep dive: [Magento to Shopify migration](/blog/magento-to-shopify-migration).',
+          '**PrestaShop**: features are handled by modules, often with several languages or shops. Catalog cleanup, module mapping and the URL structure per language matter most. Deep dive: [PrestaShop to Shopify migration](/blog/prestashop-to-shopify-migration).',
+          '**Wix and Squarespace**: closed platforms with narrower export options than self-hosted ones. Before you decide, check what you can export of products, customers, orders and blog. Comparisons: [Wix or Shopify](/blog/wix-vs-shopify) and [Squarespace or Shopify](/blog/squarespace-vs-shopify).',
+          '**BigCommerce**: a SaaS platform like Shopify. The work is mostly design, apps and URLs. Deep dive: [BigCommerce to Shopify migration](/blog/bigcommerce-to-shopify-migration).',
+          '**Proprietary platforms**: often tied to an ERP. The job is to rebuild the data flows (stock, prices, orders) between the ERP and Shopify, on top of moving the catalog. One example: the [Cumini case](/use-cases/cumini-luxury-fashion-ecommerce).',
         ],
       },
       {
         type: 'paragraph',
-        text: 'We have migrated stores from WooCommerce and from a proprietary platform tied to an ERP (two cases at the end of this guide). We apply the same Sprint method on every platform (audit, 301 redirect map, data migration, QA): the notes above point to Shopify’s documentation. The first step is always an audit of your store.',
+        text: 'The Sprint covers migration from WooCommerce, Magento, PrestaShop, BigCommerce, Wix, Squarespace, proprietary platforms and ERPs, with the same phases (audit, 301 redirect map, data migration, QA). Among our published case studies, two are at the end of this guide: WooCommerce (Supplement DTC Nazzi) and a proprietary platform tied to an ERP (Cumini). Each platform has its own dedicated guide above. The first step is always an audit of your store.',
       },
       { type: 'h2', text: 'What actually gets migrated to Shopify?' },
       {
@@ -500,7 +526,11 @@ const en: MigrazioneCopy = {
       },
       {
         type: 'paragraph',
-        text: 'On Integratori DTC Nazzi (WooCommerce to Shopify) we ran this post-launch check on 215 archived WooCommerce URLs, and the 301 redirect CSV was handed over to import into Shopify. In Search Console, the 28 days to 9 October 2026 show clicks at 2.7x and impressions at 4.0x the same 28 days of 2025. Daily clicks dipped below the pre-launch level in August and were back above it in September and October: rankings move during a migration, and the redirect map decides how they recover.',
+        text: 'On Supplement DTC Nazzi (WooCommerce to Shopify) we ran this post-launch check on 215 archived WooCommerce URLs, and the 301 redirect CSV was handed over to import into Shopify. In Search Console, the 28 days to 9 October 2026 show clicks 41% above the 28 days before go-live, and clicks at 2.7x and impressions at 4.0x the same 28 days of 2025. During a migration rankings move for a few weeks, and the redirect map decides how much they recover.',
+      },
+      {
+        type: 'paragraph',
+        text: 'The full step-by-step is in our [Shopify migration SEO checklist](/blog/shopify-migration-seo-checklist).',
       },
       { type: 'h2', text: 'How do you handle tracking and data?' },
       {
@@ -575,6 +605,10 @@ const en: MigrazioneCopy = {
         type: 'paragraph',
         text: 'On top of that come the Shopify subscription, apps and payment fees, which you should check on Shopify’s site. If you want the migration as a turnkey project, the [Shopify Launch Sprint](/shopify-migration-sprint) has a public price by revenue: €5,800 under €2M, €8,800 between €2M and €20M, €12,800 above €20M, VAT excluded, in 4 installments.',
       },
+      {
+        type: 'paragraph',
+        text: 'What drives the price and how to compare quotes: [Shopify migration cost](/blog/shopify-migration-cost). If you are choosing who does it: [how to choose a Shopify migration agency](/blog/choose-shopify-migration-agency).',
+      },
       { type: 'h2', text: 'The Shopify migration checklist' },
       {
         type: 'paragraph',
@@ -597,20 +631,36 @@ const en: MigrazioneCopy = {
           'After launch, check 404s, redirect chains, conversions and Search Console.',
         ],
       },
-      { type: 'h2', text: 'Two real migrations: WooCommerce and a proprietary platform' },
+      { type: 'h2', text: 'Case studies: WooCommerce and a proprietary platform' },
       {
         type: 'paragraph',
-        text: 'Two migrations we ran show the most common starting points: a WooCommerce store and a proprietary platform. The figures come from the clients’ dashboards and compare against the same period before.',
+        text: 'Among our published case studies, two show the most common starting points: a WooCommerce store and a proprietary platform. The figures come from the clients’ dashboards and compare against the same period before.',
       },
-      { type: 'h3', text: 'Integratori DTC Nazzi: WooCommerce to Shopify' },
+      { type: 'h3', text: 'Supplement DTC Nazzi: WooCommerce to Shopify' },
       {
         type: 'paragraph',
-        text: 'Migration built between May and June 2026, live on 19 July 2026. From go-live to 12 October 2026, against the same days of 2025: online sales +105%, orders +77%, average order value +16% and returning customers at 2.25x. Read the [Integratori DTC Nazzi case study](/use-cases/integratori-nazzi-dtc-shopify).',
+        text: 'Migration built between May and June 2026, live on 19 July 2026. From go-live to 12 October 2026, against the same days of 2025: online sales +105%, orders +77%, average order value +16% and returning customers at 2.25x. Read the [Supplement DTC Nazzi case study](/use-cases/integratori-nazzi-dtc-shopify).',
       },
       { type: 'h3', text: 'Cumini: proprietary platform to Shopify' },
       {
         type: 'paragraph',
         text: 'Luxury multibrand fashion, on Shopify since 19 May 2025, before that on a proprietary platform tied to its management system. In the 12 months after, against the 12 before: net sales +67.7%, orders +49.4%, average order value +12.2%. The tracking score went from 31/100 to 92/100. Read the [Cumini case study](/use-cases/cumini-luxury-fashion-ecommerce).',
+      },
+      { type: 'h2', text: 'Platform guides and next steps' },
+      { type: 'paragraph', text: 'Every starting platform has its own hands-on guide. Pick the one you are coming from, or go to the comparisons, the costs and the SEO checklist:' },
+      {
+        type: 'list',
+        items: [
+          '[WooCommerce to Shopify migration](/blog/woocommerce-to-shopify-migration)',
+          '[Magento to Shopify migration](/blog/magento-to-shopify-migration)',
+          '[PrestaShop to Shopify migration](/blog/prestashop-to-shopify-migration)',
+          '[BigCommerce to Shopify migration](/blog/bigcommerce-to-shopify-migration)',
+          '[Wix or Shopify: which to pick and how to move](/blog/wix-vs-shopify)',
+          '[Squarespace or Shopify: which to pick and how to move](/blog/squarespace-vs-shopify)',
+          '[Shopify migration SEO checklist](/blog/shopify-migration-seo-checklist)',
+          '[Shopify migration cost](/blog/shopify-migration-cost)',
+          '[How to choose a Shopify migration agency](/blog/choose-shopify-migration-agency)',
+        ],
       },
       {
         type: 'paragraph',
@@ -620,10 +670,10 @@ const en: MigrazioneCopy = {
   },
   charts: {
     label: 'search console',
-    title1: 'After a migration, traffic can dip. ',
+    title1: 'After a migration, Google re-processes the site. ',
     titleEm: 'What matters is what happens next.',
     subtitle:
-      'Google has to re-process the site: the recovery depends on how the migration is done.',
+      'Rankings move for a few weeks: how they recover depends on how the migration is done.',
   },
   sprintBanner: {
     badge: 'AI powered',
@@ -645,9 +695,9 @@ const en: MigrazioneCopy = {
           'From a few weeks to several months, depending on catalog, integrations and design. With the [Shopify Launch Sprint](/shopify-migration-sprint) the store is ready on day 14, go-live happens between day 15 and 30, and 90 days of support follow.',
       },
       {
-        question: 'Will I lose my Google rankings when I migrate to Shopify?',
+        question: 'What happens to my Google rankings when I migrate to Shopify?',
         answer:
-          'Rankings usually move for a while after a migration, and a complete map of 301 redirects, preserved content and monitoring in Search Console let them recover. In the Sprint, organic traffic at 90 days is one of the 4 written guarantees.',
+          'Rankings move for a few weeks after a migration, and the redirect map decides how much they recover: a complete map of 301 redirects, preserved content and monitoring in Search Console let them recover. In the Sprint, organic traffic at 90 days is one of the 4 written guarantees.',
       },
       {
         question: 'Do customers keep their accounts and passwords?',
@@ -662,7 +712,7 @@ const en: MigrazioneCopy = {
       {
         question: 'Which platforms can I migrate to Shopify from?',
         answer:
-          'All the major ones: WooCommerce, Magento / Adobe Commerce, PrestaShop, Wix, Squarespace, BigCommerce and proprietary platforms. The method is the same on every platform: audit, 301 redirect map, data migration and QA.',
+          'From WooCommerce, Magento, PrestaShop, BigCommerce, Wix, Squarespace, proprietary platforms and ERPs. The method is the same on every platform: audit, 301 redirect map, data migration and QA.',
       },
       {
         question: 'How much does it cost to migrate to Shopify?',

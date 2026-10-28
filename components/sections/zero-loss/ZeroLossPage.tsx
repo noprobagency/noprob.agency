@@ -2,6 +2,9 @@ import Footer from '@/components/layout/Footer'
 import type { Locale } from '@/lib/i18n'
 import { ROUTE_PATHS } from '@/lib/i18n/routes'
 import { absoluteUrl } from '@/lib/utils'
+import { AREA_SERVED, ORGANIZATION_ID } from '@/lib/site'
+import { pageBreadcrumbJsonLd } from '@/lib/seo/breadcrumbs'
+import FounderBlock from '@/components/sections/FounderBlock'
 import { ZL_PRODUCT_NAME, ZL_TIERS, getZeroLossCopy } from '@/content/zero-loss-migration'
 
 import ZlTracking from './ZlTracking'
@@ -25,7 +28,7 @@ import ZlApplication from './ZlApplication'
  * Zero-Loss Migration Sprint landing, section order (Fletch homepage + 3 of
  * ours: 7 guarantees, 8 why now, 10 included/not included):
  * 1 nav · 2 hero + logos · 3 overview · 4 checklist · 4b Custom AI System · 5 deliverables ·
- * 6 calendar · 7 guarantees · 8 why now · 9 proof · 10 scope · 11 FAQ ·
+ * 6 calendar · 7 guarantees · 8 why now · 9 proof · 10 scope · 10b founder · 11 FAQ ·
  * 12 application form · footer.
  */
 export default function ZeroLossPage({ locale }: { locale: Locale }) {
@@ -35,10 +38,10 @@ export default function ZeroLossPage({ locale }: { locale: Locale }) {
     '@context': 'https://schema.org',
     '@type': 'Service',
     name: ZL_PRODUCT_NAME,
-    provider: { '@type': 'Organization', name: 'NoProb Agency', url: 'https://noprob.agency' },
+    provider: { '@type': 'Organization', '@id': ORGANIZATION_ID, name: 'NoProb Agency', url: 'https://noprob.agency' },
     alternateName: locale === 'it' ? 'Sprint migrazione Shopify' : 'Shopify migration sprint',
     serviceType: 'Shopify eCommerce migration',
-    areaServed: ['IT', 'EU', 'US'],
+    areaServed: AREA_SERVED,
     url: absoluteUrl(ROUTE_PATHS.zeroLossMigration[locale]),
     description: copy.meta.description,
     offers: ZL_TIERS.map((tier) => ({
@@ -56,6 +59,10 @@ export default function ZeroLossPage({ locale }: { locale: Locale }) {
       <ZlNav locale={locale} copy={copy.nav} />
       <main>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(pageBreadcrumbJsonLd('zeroLossMigration', locale)) }}
+        />
         <ZlHero copy={copy.hero} />
         <ZlOverview copy={copy.overview} />
         <ZlChecklist copy={copy.checklist} />
@@ -67,6 +74,7 @@ export default function ZeroLossPage({ locale }: { locale: Locale }) {
         <ZlWhyNow copy={copy.whyNow} />
         <ZlProof locale={locale} copy={copy.proof} />
         <ZlScope copy={copy.scope} />
+        <FounderBlock variant="sprint" locale={locale} />
         <ZlFaq copy={copy.faq} />
         <ZlApplication copy={copy.finalCta} />
       </main>

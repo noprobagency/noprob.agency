@@ -126,7 +126,7 @@ WooCommerce/piattaforme custom.
 | Trustpilot | 10 recensioni, tutte a 5 stelle; TrustScore 4,4 | trustpilot.com/review/noprob.agency, 13 ott 2026 |
 | Fondazione | 2022 | dati societari |
 
-In pagina il badge mostra "5/5" (media delle 10 recensioni). Prima c'era "4,9", che non
+In pagina si scrive "10 recensioni a 5 stelle su Trustpilot", con link al profilo (Antonio, 28 ott 2026); non "5/5" da solo, che si confonde col TrustScore. Prima c'era "4,9", che non
 corrispondeva a nessun dato Trustpilot.
 
 ## Dichiarazioni di Antonio, non verificabili dai dati
@@ -135,7 +135,14 @@ Restano online perché sono esperienza diretta, ma non hanno una fonte esterna. 
 vanno corrette qui e nel copy.
 
 - 7+ anni di progetti eCommerce (Antonio)
-- oltre 10 migrazioni, 0 minuti offline (landing Shopify Launch Sprint, pagina migrazione)
+- diverse migrazioni a Shopify, 0 minuti offline (Antonio, 28 ott 2026: al posto di "oltre 10" e di "due migrazioni"; i casi pubblicati sono Nazzi e Cumini, altri in pubblicazione)
+- team di specialisti in Shopify, marketing, advertising e SEO (Antonio, 28 ott 2026; nessun numero di persone)
+- iscritto al Shopify Partner Program (Antonio, 28 ott 2026; il profilo nella directory Partner è in richiesta)
+- "risposta in minuti, non giorni" (Antonio, 28 ott 2026)
+- circa 8 ore del tempo del cliente in uno Sprint; Event Match Quality Meta sopra 8 e scarto sotto il 3% nel tracking; laurea in Informatica e sviluppatore di formazione (Antonio); settori fashion e beauty tra i progetti (Antonio, 28 ott 2026)
+- dopo lo Sprint: 90 giorni da eCommerce manager (ottimizzazione continua delle performance); la manutenzione (sicurezza, aggiornamenti, istruzioni, supporto tecnico) resta inclusa per sempre (Antonio, 28 ott 2026)
+- lo Sprint copre la migrazione a Shopify da qualsiasi piattaforma (Antonio, 28 ott 2026)
+- uso di Shopify Magic e Sidekick nei progetti, con dati puliti prima e revisione umana (Antonio, 28 ott 2026)
 - "Trusted by 23+ founders" (form contatti)
 - "decine di altri progetti eCommerce" (playbook ambassador)
 - 15% dei visitatori arriva alle recensioni in fondo alla scheda prodotto (articolo CRO)
@@ -163,7 +170,74 @@ vanno corrette qui e nel copy.
 | --- | --- | --- |
 | Shopify Launch Sprint | €5.800 (sotto €2M di fatturato), €8.800 (€2M-20M), €12.800 (oltre €20M), in 4 rate | `content/zero-loss-migration.shared.ts` (`ZL_TIERS`), landing, pagina migrazione, llms.txt, ambassador |
 | Commissione ambassador | 20% del prezzo dello Sprint: €1.160 / €1.760 / €2.560 | `lib/i18n/ambassador.ts` (derivata da `ZL_TIERS`) |
-| Sviluppo Shopify | €1.600 (primi 10 progetti), €1.850 (11-20, attuale), €2.100 (21-30), €2.400 (dal 31°) al mese × 3 mesi | `lib/i18n/sviluppo.ts`, JSON-LD, llms.txt |
+| Sviluppo Shopify | €1.600 (primi 10 progetti), €1.850 (11-20, attuale), €2.100 (21-30), €2.400 (dal 31°) al mese × 3 mesi | `lib/i18n/sviluppo.ts`, card prezzi della home in `lib/i18n/index.ts`, JSON-LD, llms.txt |
 | AI Accelerator | €750 (pilota, chiuso), €1.100 (attuale, fino al 15° cliente), €2.500 (16-30), €4.000 (dal 31°) una tantum | `lib/i18n/aiAccelerator.ts`, JSON-LD |
 | Data-Driven Team | su misura, primo sprint di 30 giorni a metà prezzo | `lib/i18n/dataTeam.ts`, `teamRoadmap.ts` |
 | Shopify Migration Blueprint (solo marketplace, 26 ottobre 2026) | €290 una tantum, scalato interamente dalla prima rata dello Sprint se firmato entro 30 giorni, rimborsato se il progetto non è utile | `backlink/scheda.md` (non sul sito) |
+
+## Dati di terzi negli articoli
+
+Numeri e studi di altri citati nei 9 articoli rivisti il 28 ottobre 2026 (how-shopify-works, shopify-cro-guide, ecommerce-growth-strategy-long-term e gli altri sei). Ogni riga: valore, fonte, link, controllo del 28 ott 2026. Dove la fonte è secondaria (riassunto di un'università o di un editore) lo dice la colonna Nota e il numero va riverificato sul testo del paper prima di riusarlo altrove.
+
+### Shopify (prezzi e conteggi)
+
+| Dato | Valore | Fonte | Nota |
+|---|---|---|---|
+| Piani, fatturazione annuale (mensile) | Basic 19 € (27 €), Grow 56 € (74 €), Advanced 289 € (384 €) al mese | shopify.com/pricing e shopify.com/it/prezzi | Prezzi in euro come mostrati il 28 ott 2026; variano per paese, l'articolo rimanda alla pagina |
+| Shopify Plus | da 2.100 € al mese | stessa pagina | Solo prezzo mensile |
+| Commissione con gateway esterno | 2% Basic, 1% Grow, 0,6% Advanced, 0,2% Plus | stessa pagina | |
+| Prova | 3 giorni gratis, poi 1 € al mese per 3 mesi | stessa pagina | |
+| App nello Shopify App Store | oltre 16.000 | apps.shopify.com | Sostituisce "oltre 12.000" |
+
+Prezzi in dollari (29, 79, 299, 399, 2.300 $) e la nota sul cambio di nome del piano "Shopify" in "Grow": tolti, non verificabili sulla pagina ufficiale. "175+ paesi" e "oltre 5 milioni di store": tolti, nessuna fonte primaria.
+
+### Stime nostre (non di terzi)
+
+Costo mensile reale di uno store B2C strutturato: 100-1.100 € al mese, pubblicità esclusa; entry-level serio 150-200 €; app essenziali 80-300 €; sviluppo e manutenzione 0-500 €; setup completo con app 250-600 €. Sono stime di Antonio sugli store seguiti, scritte come "nostra stima" negli articoli; solo il prezzo del piano viene da Shopify.
+
+### CRO (shopify-cro-guide)
+
+| Dato | Valore | Fonte | Nota |
+|---|---|---|---|
+| Conversione Shopify | mediana 1,4%, top 20% sopra 2,7%, top 10% sopra 3,7% | Littledata, littledata.io/average/shopify-conversion-rate, 436 store, 90 giorni al 24 ott 2026 | Sostituisce 1,4-1,8%, 3,2% e 4,7% senza fonte |
+| Stelle: massima probabilità d'acquisto | tra 4,2 e 4,5 | Spiegel Research Center (Northwestern), PDF su spiegel.medill.northwestern.edu | Rapporto di un centro di ricerca, non rivista; l'articolo lo dice |
+| Tre claim | picco di persuasione a 3, scetticismo dal 4° | Shu e Carlson, Journal of Marketing 2014, doi 10.1509/jm.11.0504 | Tolto "10,4%" |
+| Varianti esaurite visibili | circa +31% di partecipanti che dicono di comprare in un esperimento; effetto a U rovesciata | Tian, Chen, Xu, Int. J. Research in Marketing 2022, doi 10.1016/j.ijresmar.2021.04.002 | 31% da riassunto secondario; tolta la soglia 10-30% |
+| Formato dinamico | oltre +79% nella scelta dell'opzione edonica in uno studio | Roggeveen, Grewal, Townsend, Krishnan, Journal of Marketing 2015, doi 10.1509/jm.13.0521 | Cifra da scheda bibliografica; prima era "disponibilità a pagare +79%" |
+| Spazio tra i prodotti | stessi articoli su spazio doppio, acquirenti raddoppiati (gioielleria) | Sevilla e Townsend, Journal of Marketing Research 2016, doi 10.1509/jmr.13.0601 | Da riassunto secondario; tolto "+11,4%" |
+| Design strutturato o no | fino a +39% di clic (test Facebook) | Affonso e Janiszewski, Journal of Marketing 2023, comunicato AMA | Cifra da riassunto secondario |
+| Messaggi razionali in alto | qualitativo | Cian, Krishna, Schwarz, Journal of Consumer Research 2015, doi 10.1093/jcr/ucv046 | |
+| Mano che tocca il prodotto | qualitativo (effetto aptico vicario) | Luangrath, Peck, Hedgcock, Xu, Journal of Marketing Research 2022, doi 10.1177/00222437211059540 | Tolti +16% e +32,5% |
+| Sguardo del modello | +30% di vendite (annuncio Facebook di un cappello) | To e Patrick, Journal of Consumer Research 2021, doi 10.1093/jcr/ucaa063 | Cifra da riassunto secondario; tolto "+19%" |
+| CTA con quantità | tassi d'acquisto più alti, effetto maggiore per offerte meno attraenti | Duke e Amir, Marketing Science 2023, doi 10.1287/mksc.2022.1364 | Tolti +14%, +28% e "37 esperimenti" |
+| Retargeting | subito dopo l'abbandono può peggiorare; da 1 a 3 giorni effetto positivo | Li, Luo, Lu, Moriguchi, Journal of Marketing 2020, comunicato AMA | Tolta la finestra "24-72 ore" come numero secco |
+| Prima recensione | -0,29 stelle dopo un anno se la prima è negativa | Park, Shin, Xie, Marketing Science 2021, doi 10.1287/mksc.2020.1264 | 0,29 dal comunicato dell'Università della South Carolina |
+
+Tolti perché non ritrovati con titolo e rivista: effetto "riflesso lucido" (+23% attrattività, +32% intenzione, "Journal of Consumer Research 2022"), sfondo contestuale per l'abbigliamento femminile, recensione negativa irrilevante (+16%), rallentatore (+22% vendite, +18% clic). Test A/B: "qualche centinaio di sessioni" sostituito da "alcune migliaia di sessioni per variante" (indicazione di pratica, non di una fonte).
+
+### Strategia di crescita (ecommerce-growth-strategy-long-term)
+
+| Dato | Valore | Fonte | Nota |
+|---|---|---|---|
+| Costo di sostituire un dipendente | da metà a 2 volte lo stipendio annuo | Gallup, gallup.com/workplace/247391/fixable-problem-costs-businesses-trillion.aspx | Sostituisce SHRM 50-200% (la pagina SHRM non lo riporta) |
+| Ruoli executive | fino a 213% | Center for American Progress, americanprogress.org/article/there-are-significant-business-costs-to-replacing-employees/ | Pagina non apribile dal controllo automatico (403) il 28 ott; cifra da riverificare a mano |
+| Campione McKinsey | 615 aziende USA large e mid-cap, indice 2001-2015 | McKinsey Global Institute, "Where companies with a long-term view outperform their peers" | |
+| Aziende long-term | ricavi cumulati +47%, utili +36% | stesso rapporto | Tolti +81% profitto economico e 12.000 posti di lavoro, non ritrovati |
+| R&D 2007-2014 | +8,5% annualizzato contro +3,7% | stesso rapporto | |
+| Costo di acquisire un cliente | 5-25 volte quello di trattenerlo | HBR, "The Value of Keeping the Right Customers" (Gallo, 29 ott 2014), hbr.org/2014/10/the-value-of-keeping-the-right-customers | |
+| Retention +5% | profitti dal +25% al +95% | stesso articolo HBR, che cita Reichheld (Bain) | La pagina Bain del 2006 dice solo "fino al 95%" |
+
+Tolti perché senza fonte primaria: Marketing Metrics (60-70% contro 5-20%), Invesp (+31%), Adobe Digital Index (9x), "3-5x" dell'introduzione, SHRM 100-150% per i ruoli tecnici, SHRM 3-6 mesi di ramp-up (ora "per nostra esperienza"), SHRM 60-70% di perdita di conoscenza, "Harvard Business Review e Fortune" come ripresa del rapporto McKinsey.
+
+### Altri articoli
+
+Store Leads (27.247 passaggi in 90 giorni, 9.204 da WooCommerce, 17.922 in uscita, +9.325 netti), Digital Commerce 360 (AI-driven 3x) e CERT-EU 2026-018 sono già nella sezione "Mercato Shopify" sopra. Le pagine OpenAI e Shopify citate in chatgpt-shopping-shopify e agentic-commerce-shopify sono linkate nel testo e datate ottobre 2026 nell'articolo.
+
+### Fonti dell'articolo su Shopify Magic e Sidekick (controllate il 27 ottobre 2026)
+
+- shopify.com/magic reindirizza in modo permanente a shopify.com/sidekick; guide su help.shopify.com/en/manual/ai-powered-tools (help-and-guidance, generate-content, pulse, skills).
+- Winter '26 Edition del 10 dicembre 2025 (shopify.com/news/winter-26-edition-merchant) e Spring '26 Edition del 17 giugno 2026 (shopify.com/news/spring-26-edition-merchant).
+- Change log di Sidekick, voci del 13 e 24 ottobre 2026; Campaign Autopilot (shopify.com/blog/introducing-campaign-autopilot); Sidekick incluso nel piano, app personalizzate solo su Grow, Advanced e Plus.
+- Percorsi URL di PrestaShop letti in `classes/Dispatcher.php`, tag 8.2.0, il 28 ottobre 2026 (articolo PrestaShop).
+- Da ricontrollare a metà novembre 2026.
+

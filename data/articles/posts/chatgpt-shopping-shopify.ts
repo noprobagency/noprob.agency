@@ -3,10 +3,10 @@ import type { Article } from '../index'
 const article: Article = {
   slug: 'chatgpt-shopping-shopify',
   slugIt: 'chatgpt-shopping-shopify',
-  title: 'ChatGPT Shopping on Shopify: How to Sell on ChatGPT (October 2026)',
-  titleIt: 'ChatGPT shopping su Shopify: come vendere su ChatGPT (ottobre 2026)',
-  seoTitle: 'ChatGPT Shopping on Shopify: Sell on ChatGPT',
-  seoTitleIt: 'ChatGPT shopping su Shopify: vendere su ChatGPT',
+  title: 'ChatGPT Shopping on Shopify: How to Sell on ChatGPT',
+  titleIt: 'ChatGPT shopping su Shopify: come vendere su ChatGPT',
+  seoTitle: 'ChatGPT Shopping on Shopify: How It Works Now',
+  seoTitleIt: 'ChatGPT shopping su Shopify: come funziona oggi',
   seoDescription:
     'How products from a Shopify store show up in ChatGPT shopping as of October 2026, what you control and how to check it. Checked against OpenAI and Shopify.',
   seoDescriptionIt:
@@ -24,15 +24,15 @@ const article: Article = {
   imageAltEn: 'Abstract cover, softly graded aubergine background with a radial fade of dots growing toward the edges',
   articleType: 'BlogPosting',
   date: '2026-10-27',
-  datePublishedIso: '2026-10-27T09:00:00+00:00',
-  dateModifiedIso: '2026-10-27T09:00:00+00:00',
-  wordCount: 1966,
+  datePublishedIso: '2026-10-27T09:00:00+02:00',
+  dateModifiedIso: '2026-10-28T09:00:00+00:00',
+  wordCount: 1900,
   articleSection: 'AI e GEO',
   readingTimeMinutes: 9,
   keywordsEn:
-    'chatgpt shopping, chatgpt shopify, sell on chatgpt, shopify agentic storefronts, shopify catalog, OAI-SearchBot, chatgpt product feed',
+    'chatgpt shopping, chatgpt shopify, sell on chatgpt, shopify catalog, OAI-SearchBot, chatgpt product feed',
   keywordsIt:
-    'chatgpt shopping, vendere su chatgpt, chatgpt ecommerce, chatgpt shopify, shopify agentic storefronts, shopify catalog, OAI-SearchBot',
+    'chatgpt shopping, vendere su chatgpt, chatgpt ecommerce, chatgpt shopify, shopify catalog, OAI-SearchBot',
   faqEn: [
     {
       question: 'Can I sell on ChatGPT with Shopify?',
@@ -62,7 +62,7 @@ const article: Article = {
     {
       question: 'Which guarantees does the Shopify Launch Sprint include?',
       answer:
-        'Four, in writing: store ready on day 14, organic traffic, go-live and checkout. In the Sprint we also build catalog and structured data so the store is ready for AI agents.',
+        'Four, in writing: store ready on day 14 or the first installment refunded; organic traffic back to the baseline at 90 days or we work for free; go-live without being offline because of us, or we pay one installment; checkout that converts at least as well as before at 90 days, or we optimize it for free. In the Sprint we also build the catalog and structured data so the store is ready for AI agents.',
     },
   ],
   faqIt: [
@@ -94,7 +94,7 @@ const article: Article = {
     {
       question: 'Quali garanzie include lo Shopify Launch Sprint?',
       answer:
-        'Quattro, per iscritto: store pronto al giorno 14, traffico organico, go-live e checkout. Nello Sprint prepariamo anche catalogo e dati strutturati perché lo store sia pronto per gli agenti AI.',
+        'Quattro, per iscritto: store pronto al giorno 14 o rimborso della prima rata; traffico organico di nuovo alla baseline a 90 giorni o lavoriamo gratis; go-live senza store offline per colpa nostra, altrimenti paghiamo una rata; checkout che converte almeno quanto prima a 90 giorni, o lo ottimizziamo gratis. Nello Sprint prepariamo anche catalogo e dati strutturati perché lo store sia pronto per gli agenti AI.',
     },
   ],
   content: [
@@ -218,7 +218,7 @@ const article: Article = {
     { type: 'h2', text: 'What do we do in the Sprint to get a store ready for AI agents?' },
     {
       type: 'paragraph',
-      text: 'A shopping assistant can only repeat what your store hands it. In the Shopify Launch Sprint the Custom AI System rebuilds your store so that it hands over clean product data, with prices and availability that match what the product page says, and every new product is born with schema and data generated automatically, so the catalog does not drift out of line as it grows.',
+      text: 'A shopping assistant can only repeat what your store hands it. In the [Shopify Launch Sprint](/shopify-migration-sprint) the Custom AI System rebuilds your store so that it hands over clean product data, with prices and availability that match what the product page says. The wider readiness plan is in [agentic commerce for Shopify](/blog/agentic-commerce-shopify).',
     },
     {
       type: 'paragraph',
@@ -226,7 +226,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'On Magento, PrestaShop, Wix, Squarespace or BigCommerce, merchants would depend on OpenAI’s direct feed; the Sprint moves your store to Shopify in 14 days. If you are already on Shopify, the [AI Accelerator](/ai-accelerator) is our 30-day one-to-one that looks at sales, acquisition and processes and activates the first AI solutions. To see how we migrate, read the [Shopify migration guide](/shopify-migration).',
+      text: 'If your store is already on Shopify, the route is the [AI Accelerator](/ai-accelerator): 30 days one-to-one in which we analyze sales, acquisition and processes with you and switch on the first AI solutions that pay back, catalog readiness included. If you are on another platform, the [Shopify Launch Sprint](/shopify-migration-sprint) moves you to Shopify and builds the catalog for AI channels from day one. How we migrate is in the [Shopify migration guide](/shopify-migration).',
     },
     { type: 'h2', text: 'Our opinion: build the data, not a ChatGPT strategy' },
     {
@@ -239,7 +239,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '**Your checkout decides what the traffic is worth.** If the shopper lands on your store, your conversion rate sets the value. That is why the [CRO guide](/blog/shopify-cro-guide) matters as much as the catalog.',
+      text: '**Your checkout decides what the traffic is worth.** If the shopper lands on your store, your conversion rate sets the value. That is why the [CRO guide](/blog/shopify-cro-guide) matters as much as the catalog. For AI inside your own admin, see [Shopify Magic and Sidekick](/blog/shopify-magic-sidekick) and [AI for ecommerce](/blog/ai-for-ecommerce).',
     },
     {
       type: 'paragraph',
@@ -283,12 +283,16 @@ const article: Article = {
     { type: 'h3', text: 'Which guarantees does the Shopify Launch Sprint include?' },
     {
       type: 'paragraph',
-      text: 'Four, in writing: store ready on day 14, organic traffic, go-live and checkout.',
+      text: 'Four, in writing: store ready on day 14 or the first installment refunded; organic traffic back to the baseline at 90 days or we work for free; go-live without being offline because of us, or we pay one installment; checkout that converts at least as well as before at 90 days, or we optimize it for free. In the Sprint we also build the catalog and structured data so the store is ready for AI agents.',
     },
     { type: 'h2', text: 'A final note' },
     {
       type: 'paragraph',
-      text: 'We will update this page when OpenAI or Shopify change what they say. For a read of how ready your store is for AI agents, [talk to us](/contacts).',
+      text: 'We update this page when OpenAI or Shopify change what they say.',
+    },
+    {
+      type: 'paragraph',
+      text: 'The Sprint has a public price by revenue: €5,800 under €2M, €8,800 from €2M to €20M, €12,800 above €20M, VAT excluded, in 4 installments.',
     },
     {
       type: 'paragraph',
@@ -416,7 +420,7 @@ const article: Article = {
     { type: 'h2', text: 'Cosa facciamo nello Sprint per preparare lo store agli agenti AI?' },
     {
       type: 'paragraph',
-      text: 'Un assistente di acquisto può ripetere solo ciò che il tuo store gli consegna. Nello Shopify Launch Sprint il Custom AI System ricostruisce il tuo store perché consegni dati prodotto puliti, con prezzi e disponibilità coerenti con quanto dice la scheda prodotto, e ogni prodotto nuovo nasca con schema e dati generati in automatico, così il catalogo non si scollega man mano che cresce.',
+      text: 'Un assistente di acquisto può ripetere solo ciò che il tuo store gli consegna. Nello [Shopify Launch Sprint](/it/sprint-migrazione-shopify) il Custom AI System ricostruisce il tuo store perché consegni dati prodotto puliti, con prezzi e disponibilità coerenti con quanto dice la scheda prodotto. Il piano di preparazione più ampio è in [agentic commerce per Shopify](/it/blog/agentic-commerce-shopify).',
     },
     {
       type: 'paragraph',
@@ -424,7 +428,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Su Magento, PrestaShop, Wix, Squarespace o BigCommerce i merchant dipenderebbero dal feed diretto di OpenAI; lo Sprint porta il tuo store su Shopify in 14 giorni. Se sei già su Shopify, l’[AI Accelerator](/it/ai-accelerator) è il nostro percorso one-to-one di 30 giorni che guarda vendite, acquisizione e processi e attiva le prime soluzioni AI. Come migriamo: [guida alla migrazione a Shopify](/it/migrazione-shopify).',
+      text: 'Se il tuo store è già su Shopify, la strada è l’[AI Accelerator](/it/ai-accelerator): 30 giorni one-to-one in cui analizziamo con te vendite, acquisizione e processi e attiviamo le prime soluzioni AI che si ripagano, compresa la preparazione del catalogo. Se sei su un’altra piattaforma, lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) ti porta su Shopify e costruisce il catalogo per i canali AI fin dal primo giorno. Come migriamo: [guida alla migrazione a Shopify](/it/migrazione-shopify).',
     },
     { type: 'h2', text: 'La nostra opinione: costruisci i dati, non una strategia ChatGPT' },
     {
@@ -437,7 +441,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '**Il tuo checkout decide quanto vale il traffico.** Se il cliente arriva sul tuo store, conta il tasso di conversione. Per questo la [guida al CRO](/it/blog/cro-ecommerce) conta quanto il catalogo.',
+      text: '**Il tuo checkout decide quanto vale il traffico.** Se il cliente arriva sul tuo store, conta il tasso di conversione. Per questo la [guida al CRO](/it/blog/cro-ecommerce) conta quanto il catalogo. Per l’AI dentro il tuo admin vedi [Shopify Magic e Sidekick](/it/blog/shopify-magic-sidekick) e [AI per eCommerce](/it/blog/ai-per-ecommerce).',
     },
     {
       type: 'paragraph',
@@ -481,12 +485,16 @@ const article: Article = {
     { type: 'h3', text: 'Quali garanzie include lo Shopify Launch Sprint?' },
     {
       type: 'paragraph',
-      text: 'Quattro, per iscritto: store pronto al giorno 14, traffico organico, go-live e checkout.',
+      text: 'Quattro, per iscritto: store pronto al giorno 14 o rimborso della prima rata; traffico organico di nuovo alla baseline a 90 giorni o lavoriamo gratis; go-live senza store offline per colpa nostra, altrimenti paghiamo una rata; checkout che converte almeno quanto prima a 90 giorni, o lo ottimizziamo gratis. Nello Sprint prepariamo anche catalogo e dati strutturati perché lo store sia pronto per gli agenti AI.',
     },
     { type: 'h2', text: 'Una nota finale' },
     {
       type: 'paragraph',
-      text: 'Aggiorneremo questa pagina quando OpenAI o Shopify cambieranno ciò che dicono. Per una lettura di quanto il tuo store sia pronto per gli agenti AI, [scrivici](/it/contatti).',
+      text: 'Aggiorniamo questa pagina quando OpenAI o Shopify cambiano ciò che dicono.',
+    },
+    {
+      type: 'paragraph',
+      text: 'Lo Sprint ha un prezzo pubblico per fatturato: €5.800 sotto i €2M, €8.800 tra €2M e €20M, €12.800 oltre i €20M, IVA esclusa, in 4 rate.',
     },
     {
       type: 'paragraph',

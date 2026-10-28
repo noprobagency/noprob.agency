@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.82.0 (28 Oct 2026)
+
+- **Site review implemented** (`SEO/revisioni/2026-10-28.md`, Antonio's decisions of 28 Oct recorded in `docs/dati-verificati.md`): home hero with Shopify and the Sprint as primary CTA, "Guides for migrating to Shopify" block, footer with Services and Guides columns, Services dropdown always in the DOM, founder block on the Sprint and About, case and blog indexes with intro, cluster sections and pills, "Read next" on every article (`data/articles/clusters.ts`), RSS feed, IndexNow script (`pnpm indexnow`), JSON-LD `@id`, `areaServed`, breadcrumbs. Copy: "10 five-star reviews on Trustpilot" with link instead of "5/5", "several migrations", team of Shopify, marketing, advertising and SEO specialists, maintenance included forever after the 90 days as eCommerce manager, Sprint covers any platform, "videochiamata" everywhere in IT. Articles: third-party numbers sourced or removed, Shopify prices checked on the official page, visible FAQ, sibling links, closing line and public price, new titles and descriptions. New article "Shopify Plus: When It Pays Off and How to Migrate" (Francesca).
+
 ### Changelog v1.81.0 (28 Oct 2026)
 
 - **Never negative about us, second pass and full site review**: about 220 more sentences in 17 articles, the Sprint landing, the migration guide, service pages, case studies, the Sprint email and `llms.txt` no longer admit gaps or sound defensive (the choose-an-agency article title drops "Our Own Weak Spots"; slugs unchanged). Added `SEO/revisioni/2026-10-28.md`: the merged report of four reviewers (pages, articles, SEO strategy and link building) with 70 prioritized actions and 13 decisions for Antonio (Francesca).

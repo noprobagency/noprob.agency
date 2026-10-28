@@ -5,7 +5,9 @@ import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
+import Link from 'next/link'
 import { siteAssets } from '@/lib/site'
+import { ZL_TIERS } from '@/content/zero-loss-migration'
 import { contactSchema, ContactFormData } from '@/lib/schemas/contact'
 
 type ContactSectionProps = {
@@ -18,11 +20,12 @@ type ContactSectionProps = {
 const copy = {
   en: {
     trustedBy: 'Trusted by 23+ founders',
-    consistency: 'Consistency.',
-    thatsPre: 'That’s ',
-    thatsEm: 'noprob agency',
-    intro:
-      'NoProb Agency is the technical partner that makes eCommerce simple. A 7/7 team of developers, designers, and strategists combining code, data, and creativity to help Shopify brands scale without stress.',
+    afterTitle: 'What happens after you send the form',
+    afterSteps: [
+      'A senior eCommerce manager replies within 48 hours.',
+      'Together you analyze your current situation.',
+      'You leave with clear next steps for your growth.',
+    ],
     nameLabel: 'Full name',
     companyLabel: 'Company Name',
     emailLabel: 'Email (we’ll send you more info)',
@@ -32,7 +35,7 @@ const copy = {
     interestOptions: [
       'I want to launch my first eCommerce',
       'I want to implement an expert eCommerce team inside my company',
-      'I want to rebuild my eCommerce website',
+      'I want to build a new Shopify store',
       'I want to migrate to Shopify',
       'AI Accelerator',
       'Other',
@@ -52,6 +55,10 @@ const copy = {
       'More than €5,000/month',
     ],
     additionalLabel: 'Add any additional information or data that could be useful for the call',
+    sprintNote: (price: string) =>
+      `For migrations there is the Shopify Launch Sprint: public price from ${price}, 4 installments, a reply in 48 hours.`,
+    sprintLinkLabel: 'Apply for the Sprint',
+    sprintHref: '/shopify-migration-sprint/apply',
     select: 'Select…',
     badgeSupport: '7/7 support',
     badgeNda: 'NDA pre-signed after submission',
@@ -64,11 +71,12 @@ const copy = {
   },
   it: {
     trustedBy: 'Scelti da oltre 23 founder',
-    consistency: 'Costanza.',
-    thatsPre: 'Questa è ',
-    thatsEm: 'noprob agency',
-    intro:
-      'NoProb Agency è il partner tecnico che rende l’eCommerce semplice. Un team 7/7 di sviluppatori, designer e strategist che unisce codice, dati e creatività per far crescere i brand Shopify senza stress.',
+    afterTitle: 'Cosa succede dopo l’invio',
+    afterSteps: [
+      'Un senior eCommerce manager ti risponde entro 48 ore.',
+      'Analizzate insieme la tua situazione attuale.',
+      'Esci con i prossimi passi chiari per la tua crescita.',
+    ],
     nameLabel: 'Nome e cognome',
     companyLabel: 'Nome azienda',
     emailLabel: 'Email per inviarti maggiori informazioni',
@@ -78,7 +86,7 @@ const copy = {
     interestOptions: [
       'Voglio lanciare il mio primo eCommerce',
       'Voglio inserire un team eCommerce esperto nella mia azienda',
-      'Voglio rifare il mio sito eCommerce',
+      'Voglio costruire un nuovo store Shopify',
       'Voglio migrare a Shopify',
       'AI Accelerator',
       'Altro',
@@ -97,7 +105,11 @@ const copy = {
       'Tra 2.500 € e 5.000 €/mese',
       'Più di 5.000 €/mese',
     ],
-    additionalLabel: 'Aggiungi qualsiasi informazione o dato utile per la call',
+    additionalLabel: 'Aggiungi qualsiasi informazione o dato utile per la videochiamata',
+    sprintNote: (price: string) =>
+      `Per la migrazione c’è lo Shopify Launch Sprint: prezzo pubblico da ${price}, 4 rate, risposta in 48 ore.`,
+    sprintLinkLabel: 'Candidati allo Sprint',
+    sprintHref: '/it/sprint-migrazione-shopify/candidatura',
     select: 'Seleziona…',
     badgeSupport: 'Supporto 7/7',
     badgeNda: 'NDA pre-firmato dopo l’invio',
@@ -165,6 +177,8 @@ export default function ContactSection({
   const mountedAtRef = useRef<number>(Date.now())
   const t = copy[locale]
   const r = reviews[locale]
+  // Entry tier of the Sprint, from the single source of truth (ZL_TIERS).
+  const sprintPrice = `€${String(ZL_TIERS[0].price).replace(/\B(?=(\d{3})+(?!\d))/g, locale === 'it' ? '.' : ',')}`
 
   const {
     register,
@@ -247,12 +261,21 @@ export default function ContactSection({
 
               <div className="flex flex-col gap-[15px]">
                 <h2 className="text-[34px] font-semibold leading-[1.1] tracking-[-0.07em] text-noprob-text">
-                  {t.consistency} <br />
-                  {t.thatsPre}<span className="font-serif italic font-normal">{t.thatsEm}</span>
+                  {t.afterTitle}
                 </h2>
-                <p className="font-sans text-[17px] font-medium leading-[1.4em] tracking-[-0.02em] text-noprob-text">
-                  {t.intro}
-                </p>
+                <ol className="flex flex-col gap-3">
+                  {t.afterSteps.map((step, i) => (
+                    <li
+                      key={step}
+                      className="flex items-start gap-3 font-sans text-[17px] font-medium leading-[1.4em] tracking-[-0.02em] text-noprob-text"
+                    >
+                      <span className="mt-[2px] flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-noprob-bg text-[13px] font-semibold">
+                        {i + 1}
+                      </span>
+                      {step}
+                    </li>
+                  ))}
+                </ol>
               </div>
             </div>
 
@@ -395,6 +418,18 @@ export default function ContactSection({
                   </select>
                   {errors.interest && <span className="text-[10px] text-red-500">{errors.interest.message}</span>}
                 </div>
+                {interestValue === t.interestOptions[3] && (
+                  <p className="mt-1 font-sans text-[13px] font-medium leading-[1.4em] tracking-[-0.02em] text-noprob-text">
+                    {t.sprintNote(sprintPrice)}{' '}
+                    <Link
+                      href={t.sprintHref}
+                      data-tracking="contact_sprint_note"
+                      className="underline underline-offset-2"
+                    >
+                      {t.sprintLinkLabel}
+                    </Link>
+                  </p>
+                )}
               </div>
 
               <div className="flex flex-col gap-[2px]">

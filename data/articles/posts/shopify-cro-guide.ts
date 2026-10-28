@@ -4,29 +4,29 @@ const article: Article = {
   slug: 'shopify-cro-guide',
   slugIt: 'cro-ecommerce',
   title: 'Shopify CRO in 2026: What the Research Actually Proves',
-  seoTitle: 'Shopify CRO in 2026: What the Research Proves',
-  seoTitleIt: 'CRO per eCommerce: cosa dice davvero la ricerca',
+  seoTitle: 'Shopify CRO: 11 Peer-Reviewed Studies Applied',
+  seoTitleIt: 'CRO eCommerce: cosa converte, secondo 11 studi',
   seoDescription:
-    'Shopify conversion rate optimization backed by peer-reviewed research from Wharton and the Journal of Marketing. Not opinions: what actually converts.',
+    'Shopify conversion rate optimization backed by 11 peer-reviewed studies from the Journal of Marketing and Marketing Science, each with its source.',
   titleIt: "CRO per eCommerce: quello che la scienza ha dimostrato (e le guide tralasciano)",
   excerpt:
-    'Science-backed Shopify conversion rate optimization. Not opinions, not listicles: what peer-reviewed research from Wharton and the Journal of Marketing actually proves about converting ecommerce visitors.',
+    'Science-backed Shopify conversion rate optimization. Not opinions, not listicles: what peer-reviewed research in the Journal of Marketing and Marketing Science actually proves about converting ecommerce visitors.',
   excerptIt:
     "CRO per eCommerce con dati reali e ricerche peer-reviewed. Non opinioni, non listicle: quello che la scienza ha dimostrato su cosa funziona davvero su Shopify nel 2026.",
   seoDescriptionIt:
     'CRO per eCommerce con dati reali e ricerche peer-reviewed, non opinioni: cosa ha dimostrato la scienza su ciò che funziona davvero su Shopify nel 2026.',
   ledeEn:
-    'Twelve+ peer-reviewed studies, applied to a real Shopify store. The findings most CRO guides ignore, and the ones that change the numbers.',
+    'Eleven peer-reviewed studies, applied to a real Shopify store, each with its source. The findings most CRO guides ignore, and the ones that change the numbers.',
   ledeIt:
-    "Dodici e più studi peer-reviewed, applicati a uno store Shopify reale. Le scoperte che la maggior parte delle guide CRO ignora, e quelle che spostano davvero i numeri.",
+    "Undici studi peer-reviewed, applicati a uno store Shopify reale, ognuno con la sua fonte. Le scoperte che la maggior parte delle guide CRO ignora, e quelle che spostano davvero i numeri.",
   image: '/images/blog/cro-ecommerce-cover.png',
   imageAlt: 'Copertina della guida CRO per Shopify: sfondo verde bosco sfumato con una griglia regolare di puntini',
   imageAltEn: 'Cover of the Shopify CRO guide: softly graded forest green background with a regular dot grid',
   articleType: 'Article',
   date: '2026-05-06',
   datePublishedIso: '2026-05-06T14:00:00+02:00',
-  dateModifiedIso: '2026-10-16T10:00:00+02:00',
-  wordCount: 3200,
+  dateModifiedIso: '2026-10-28T09:00:00+00:00',
+  wordCount: 3300,
   articleSection: 'CRO',
   readingTimeMinutes: 13,
   keywordsEn:
@@ -42,7 +42,7 @@ const article: Article = {
     {
       question: 'What is a good Shopify conversion rate in 2026?',
       answer:
-        'The average Shopify store converts between 1.4% and 1.8% of visitors. Stores in the top 20% exceed 3.2%, and the top 10% exceeds 4.7%. These benchmarks vary by industry: fashion typically has lower rates than supplements or food because the decision cycle is longer. Comparing yourself to your sector average is more useful than comparing to the overall average.',
+        'The median Shopify store converts 1.4% of visitors. Stores in the top 20% exceed 2.7%, and the top 10% exceed 3.7% (Littledata, 436 Shopify stores, 90 days to 24 October 2026). These benchmarks vary by industry: fashion typically has lower rates than supplements or food because the decision cycle is longer. Comparing yourself to your sector is more useful than comparing to the overall median.',
     },
     {
       question: 'Where should I start with Shopify CRO?',
@@ -53,6 +53,11 @@ const article: Article = {
       question: 'Does CRO help stores with low traffic?',
       answer:
         'Yes, and here is how. With low traffic you work with research-verified best practices instead of quantitative A/B tests. The impact can still be significant because many basic errors (too many claims, unoptimized images, absent social proof) do not require massive data to fix.',
+    },
+    {
+      question: 'How do I increase my Shopify conversion rate quickly?',
+      answer:
+        'Cut the claims to the three strongest, add a photo with a hand using the product, move reviews up the page and send review requests only after the product has been used.',
     },
     {
       question: 'How does CRO compare to investing in advertising?',
@@ -69,7 +74,7 @@ const article: Article = {
     {
       question: 'Qual è un buon tasso di conversione per un eCommerce su Shopify?',
       answer:
-        "Il tasso di conversione medio su Shopify è tra l'1,4% e il 1,8%. Gli store nel top 20% superano il 3,2%. Il top 10% supera il 4,7%. Questi benchmark variano per settore: il fashion ha mediamente tassi più bassi degli integratori o del food, perché il ciclo decisionale è più lungo.",
+        "Lo store Shopify mediano converte l'1,4% dei visitatori. Gli store nel top 20% superano il 2,7%, il top 10% il 3,7% (Littledata, 436 store Shopify, 90 giorni al 24 ottobre 2026). Questi benchmark variano per settore: il fashion ha mediamente tassi più bassi degli integratori o del food, perché il ciclo decisionale è più lungo.",
     },
     {
       question: 'Da dove si inizia un progetto CRO su Shopify?',
@@ -82,6 +87,11 @@ const article: Article = {
         "Sì, ed ecco come. Con poco traffico si lavora su best practice verificate dalla ricerca invece che su test A/B quantitativi. L'impatto può essere significativo perché molti errori di base (troppi claim, immagini non ottimizzate, social proof assente) si correggono senza bisogno di dati massivi.",
     },
     {
+      question: 'Come aumento in fretta il tasso di conversione su Shopify?',
+      answer:
+        "Riduci i claim ai tre più forti, aggiungi una foto con una mano che usa il prodotto, porta le recensioni più in alto nella pagina e chiedi la recensione solo dopo che il prodotto è stato usato.",
+    },
+    {
       question: 'Quanto impatta il CRO rispetto a investire in advertising?',
       answer:
         "Raddoppiare il budget advertising con un tasso di conversione dell'1% porta gli stessi ordini di un advertising invariato con un tasso al 2%, ma con il doppio della spesa. Ogni miglioramento del tasso di conversione moltiplica il valore di ogni euro speso in advertising. I due lavorano in parallelo, non in alternativa.",
@@ -90,11 +100,11 @@ const article: Article = {
   content: [
     {
       type: 'paragraph',
-      text: "I have read hundreds of CRO guides over seven years of managing ecommerce stores. Most of them say the same things: optimize your button color, add social proof, reduce checkout steps. That advice is not wrong. It is just incomplete, and it is almost never backed by anything other than one person's experience.",
+      text: '**Shopify CRO (conversion rate optimization) is the work of getting more of your store’s visitors to buy, and most of what circulates about it is opinion.** This guide keeps only what peer-reviewed research has measured, from the Journal of Marketing to Marketing Science, applied to a Shopify product page. Where a point comes from our own work with brands rather than a paper, we say so.',
     },
     {
       type: 'paragraph',
-      text: 'This guide is different for one reason: every recommendation here comes from peer-reviewed research published in journals like the Journal of Marketing, Journal of Marketing Research, and Marketing Science. Specific studies, specific universities, measurable results.',
+      text: 'Most CRO guides say the same things: optimize your button color, add social proof, reduce checkout steps. That advice is not wrong, it is incomplete. Here every study has authors, journal, year and a link to the source.',
     },
     {
       type: 'paragraph',
@@ -111,6 +121,11 @@ const article: Article = {
         'Concrete Shopify quick wins to implement immediately',
       ],
     },
+    { type: 'h2', text: 'What is a good Shopify conversion rate?' },
+    {
+      type: 'paragraph',
+      text: '**The median Shopify store converts 1.4% of visitors; the top 20% exceed 2.7% and the top 10% exceed 3.7%.** These are [Littledata](https://www.littledata.io/average/shopify-conversion-rate) figures for 436 Shopify stores over the 90 days to 24 October 2026. Fashion converts less than supplements or food because the decision takes longer, so compare yourself with your sector.',
+    },
     { type: 'h2', text: 'What eCommerce CRO Actually Is (And Why Most Guides Get It Wrong)' },
     {
       type: 'paragraph',
@@ -126,11 +141,11 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Academic research on ecommerce conversions exists and it is rigorous. The problem is that researchers at Wharton, UCLA, and Cambridge do not write marketing blogs. Their findings stay in papers, and the market continues to run on anecdotal advice.',
+      text: 'Academic research on ecommerce conversions exists and it is rigorous. The problem is that researchers do not write marketing blogs. Their findings stay in papers, and the market continues to run on anecdotal advice.',
     },
     {
       type: 'paragraph',
-      text: 'The average Shopify conversion rate sits between 1.4% and 1.8%. The top 20% of stores exceed 3.2%. The top 10% exceeds 4.7%. If you are under 2%, there is actionable work to do. If you are above 3%, there is still margin.',
+      text: 'If you are under the 1.4% median, there is actionable work to do. If you are above 2.7%, you are already in the top 20% and there is still margin.',
     },
     { type: 'h2', text: 'The Foundations: Before You Touch Any Page' },
     {
@@ -144,7 +159,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Research by Shu and Carlson published in the Journal of Marketing in 2014 (UCLA and Georgetown) demonstrated that **three positive claims are 10.4% more persuasive than four**. After the third, people become skeptical. The mechanism is simple: three is the minimum number where the brain recognizes a pattern and is ready to act. Four or more trigger the skepticism filter.',
+      text: 'Research by Shu and Carlson ([Journal of Marketing, 2014](https://doi.org/10.1509/jm.11.0504)) found that **persuasion peaks at three positive claims**: when people know the source wants to persuade them, impressions rise up to the third claim and at the fourth their skepticism takes over. Three is enough for the brain to recognize a pattern; four or more trigger the skepticism filter.',
     },
     {
       type: 'paragraph',
@@ -161,7 +176,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Research shows that **designs matching brand positioning received 39% more clicks** than misaligned designs. A premium, technical, or luxury brand benefits from structured design: geometric, symmetrical, straight lines. A young, creative, or lifestyle brand benefits from unstructured design: organic shapes, asymmetry, unpredictable patterns.',
+      text: 'Research by Affonso and Janiszewski ([Journal of Marketing, 2023](https://www.ama.org/2023/01/03/think-before-designing-your-logo-how-marketers-can-capitalize-on-the-power-of-perception-to-influence-beliefs-about-brand-performance/)) found that brands with a utilitarian positioning perform better with structured visual design, and hedonic brands with unstructured design; in a Facebook ad test the matching design got up to **39% more clicks**. A premium, technical, or luxury brand benefits from structured design: geometric, symmetrical, straight lines. A young, creative, or lifestyle brand benefits from unstructured design: organic shapes, asymmetry, unpredictable patterns.',
     },
     {
       type: 'paragraph',
@@ -169,7 +184,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'An additional rule from the same research area: position rational messages (functionality, data, specifications) in the upper part of the page. Emotional messages (lifestyle, aspiration, storytelling) belong lower. This corresponds to the embedded metaphor of "brain up, heart down" and makes both types of message more effective in the right position.',
+      text: 'An additional rule from Cian, Krishna and Schwarz ([Journal of Consumer Research, 2015](https://doi.org/10.1093/jcr/ucv046)): position rational messages (functionality, data, specifications) in the upper part of the page. Emotional messages (lifestyle, aspiration, storytelling) belong lower. People associate up with rationality and down with emotion, and each type of message works better in its place.',
     },
     { type: 'h2', text: 'What Research Says About the Product Page' },
     {
@@ -183,7 +198,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Research from Tsinghua University measured a **sales increase of up to 31%** when sold-out variants were kept visible with a "sold out" label rather than removed from the page.',
+      text: 'Research from Tsinghua University by Tian, Chen and Xu ([International Journal of Research in Marketing, 2022](https://doi.org/10.1016/j.ijresmar.2021.04.002)) found that showing some sold-out options raises purchase likelihood: in one experiment about **31% more participants said they would buy** when sold-out variants stayed visible with a "sold out" label.',
     },
     {
       type: 'paragraph',
@@ -191,12 +206,12 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'The critical condition: the proportion of sold-out options must not exceed 30% of the total. Above that threshold, the effect reverses because the store seems poorly managed. The practical rule is that between 10% and 30% of variants marked "sold out" increases sales. Above 30%, hide the excess.',
+      text: 'The critical condition: the relationship is an inverted U. A moderate share of sold-out options helps; too many reverses the effect because the store seems poorly managed. The practical rule is to keep sold-out variants a clear minority of the total and hide the excess.',
     },
     { type: 'h3', text: 'When to use video (and when not to)' },
     {
       type: 'paragraph',
-      text: 'Research from Babson College and the University of Miami published in the Journal of Marketing in 2015 measured that **dynamic formats (video, slideshow, GIF) increase willingness to pay by 79%** for products bought for pleasure or experience.',
+      text: 'Research by Roggeveen, Grewal, Townsend and Krishnan ([Journal of Marketing, 2015](https://doi.org/10.1509/jm.13.0521)) found that **dynamic formats (video, slideshow, GIF) raise preference for the hedonic option and willingness to pay**, by more than 79% in the choice of the pleasure-oriented option in one study, for products bought for pleasure or experience.',
     },
     {
       type: 'paragraph',
@@ -204,25 +219,17 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'If you sell fashion or lifestyle products on Shopify, video and GIF on the product page are not a nice-to-have. They are a verified conversion lever. An additional finding from the same research: slow-motion shots increase sales by 22% and ad clicks by 18% for premium products. Not cinematic effects for their own sake: they communicate quality and give the brain time to imagine the product.',
+      text: 'If you sell fashion or lifestyle products on Shopify, video and GIF on the product page are not a nice-to-have. They are a verified conversion lever.',
     },
     { type: 'h3', text: 'Product photography details that move conversion' },
     {
       type: 'paragraph',
-      text: '**Spacing between products.** Research from the University of Georgia and the University of Miami published in the Journal of Marketing Research in 2016 measured an **11.4% increase in perceived product value** and nearly doubled sales when products in grids or galleries were spaced out rather than packed together. The brain processes each object more clearly with visual breathing room. Practical result: increase the padding between product cards in your collection page. This is not an aesthetic recommendation.',
-    },
-    {
-      type: 'paragraph',
-      text: '**Shine and reflection.** Research published in the Journal of Consumer Research in 2022 measured that a product photographed with a glossy surface reflection is found **23% more attractive** and generates **32% more purchase intent**. Any product with a material surface (fragrances, cosmetics, accessories, bags, supplement bottles) benefits from lighting positioned to create a reflection. This can be added in post-production if needed.',
-    },
-    {
-      type: 'paragraph',
-      text: "**For women's fashion specifically.** Research demonstrates that models photographed in a contextual background (a cocktail jacket at a reception, sportswear while running) sell better than white-background shots, but only for women's clothing. For men's clothing, neutral backgrounds work equally well.",
+      text: '**Spacing between products.** Sevilla (University of Georgia) and Townsend (University of Miami) ([Journal of Marketing Research, 2016](https://doi.org/10.1509/jmr.13.0601)) showed that products look more appealing when more space surrounds them: in a field test at a jewelry retailer, the same items shown over twice the space **doubled the number of shoppers who bought**. Additional studies suggest the effect extends to products spaced on a screen. Practical result: increase the padding between product cards in your collection page. This is not an aesthetic recommendation.',
     },
     { type: 'h3', text: 'The hand touching the product' },
     {
       type: 'paragraph',
-      text: 'Fifteen experiments by researchers from the University of Iowa, Wisconsin, and Berkeley published in the Journal of Marketing Research in 2022 measured a **16% increase in purchase intent** when product images include a hand touching or holding the product naturally. In a VR setting, the effect rises to 32.5% higher willingness to pay.',
+      text: 'Luangrath, Peck, Hedgcock and Xu ([Journal of Marketing Research, 2022](https://doi.org/10.1177/00222437211059540)) ran a series of experiments showing a **vicarious haptic effect**: viewers value a product more when the image shows a hand touching it. A hand in the frame is not enough, the hand must be touching the product, and the effect disappears if the movement does not look like a real touch.',
     },
     {
       type: 'paragraph',
@@ -230,12 +237,12 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: "**Model gaze direction.** Research from the University of Houston published in the Journal of Consumer Research in 2021 measured **30% higher sales** and 19% better ad ratings when models looked away from the camera rather than directly at it. A gaze away from the camera allows the viewer to imagine themselves in the model's position. A direct gaze creates separation: you are looking at someone else, not imagining yourself in the image. This applies to products bought for pleasure and experience. For informational or functional messages, direct eye contact works better.",
+      text: "**Model gaze direction.** To and Patrick (University of Houston, [Journal of Consumer Research, 2021](https://doi.org/10.1093/jcr/ucaa063)) found that models looking away from the camera work better for products bought for pleasure; in a field test of a sun hat ad on Facebook, **sales were 30% higher** with the averted gaze. A gaze away from the camera allows the viewer to imagine themselves in the model's position. A direct gaze creates separation: you are looking at someone else, not imagining yourself in the image. This applies to products bought for pleasure and experience. For informational or functional messages, direct eye contact works better.",
     },
     { type: 'h3', text: 'Multiple quantity CTAs' },
     {
       type: 'paragraph',
-      text: 'Research from the Rotman School of Management at the University of Toronto and UC San Diego published in Marketing Science in 2022 measured a **14% average increase in conversions** and up to **28% increase in sales** across 37 separate experiments when the main CTA offers quantity options instead of a single "add to cart."',
+      text: 'Duke (Rotman School of Management, University of Toronto) and Amir (UC San Diego) ([Marketing Science, 2023](https://doi.org/10.1287/mksc.2022.1364)) found that **purchase rates are higher when the main CTA integrates the quantity decision** ("buy 1", "buy 2", "buy 3") instead of a single "add to cart", and that the effect is larger for less attractive offers.',
     },
     {
       type: 'paragraph',
@@ -245,15 +252,11 @@ const article: Article = {
     { type: 'h3', text: 'The perfect rating problem' },
     {
       type: 'paragraph',
-      text: 'Counter-intuitive but verified: products with an average rating between 4 and 4.5 stars sell more than those rated between 4.5 and 5 stars. Perfect ratings appear suspicious. A slightly imperfect but high score is more credible than a perfect one.',
+      text: 'Counter-intuitive but verified: the Spiegel Research Center at Northwestern University, analysing PowerReviews data, found that purchase likelihood peaks between 4.2 and 4.5 stars and falls as ratings approach 5.0 ([Spiegel Research Center](https://spiegel.medill.northwestern.edu/wp-content/uploads/sites/2/2021/04/Spiegel-research-reveals-4.5-stars-are-better-than-5-The-Medill-IMC-Spiegel-Research-Center.pdf), a university research center report rather than a journal article). Perfect ratings appear too good to be true. A slightly imperfect but high score is more credible than a perfect one.',
     },
     {
       type: 'paragraph',
-      text: 'Research adds another important finding: some negative reviews can actually help, if they are irrelevant to most customers. In one experiment, a product with four five-star reviews plus one one-star review about a very specific irrelevant detail was rated **16% better overall** than the product with only five-star reviews. The negative review signals authenticity.',
-    },
-    {
-      type: 'paragraph',
-      text: 'Operational implication: do not remove all negative reviews. Remove those that attack core product quality, not those addressing very specific and marginal aspects.',
+      text: 'Operational implication: do not remove every less-than-perfect review. Remove the ones that are false or abusive, and keep the honest ones that make the score credible.',
     },
     { type: 'h3', text: 'How to distribute social proof down the page' },
     {
@@ -279,15 +282,15 @@ const article: Article = {
     { type: 'h2', text: 'Three Operational Mistakes That Cost Conversions Every Day' },
     {
       type: 'paragraph',
-      text: '**Retargeting too soon.** Research from Temple University and Waseda University published in the Journal of Marketing in 2020 demonstrated that retargeting within less than one hour of cart abandonment produces worse results than not retargeting at all. People feel surveilled and become less likely to purchase. The correct timing window is between 24 and 72 hours. In that range, retargeting significantly increases return rates.',
+      text: '**Retargeting too soon.** Li, Luo, Lu and Moriguchi ([Journal of Marketing, 2020](https://www.ama.org/2020/11/12/press-release-from-the-journal-of-marketing-boosting-returns-on-e-commerce-retargeting-campaigns/), authors from Temple University and Waseda University among others) found that retargeting immediately after cart abandonment can produce worse purchase rates than not retargeting at all. A delay of one to three days had a positive effect, stronger for larger carts and higher-priced items.',
     },
     {
       type: 'paragraph',
-      text: "**Reviews requested too early.** Asking for a review the day after delivery, when the customer has not used the product enough, produces mediocre reviews. Research indicates the optimal timing depends on the product's usage cycle. For supplements and skincare: 14 or 30 days post-delivery. For fashion: after the first extended use, flagged with a second email at 7-10 days.",
+      text: "**Reviews requested too early.** Asking for a review the day after delivery, when the customer has not used the product enough, produces mediocre reviews. In our experience the right timing depends on the product's usage cycle. For supplements and skincare: 14 or 30 days post-delivery. For fashion: after the first extended use, flagged with a second email at 7-10 days.",
     },
     {
       type: 'paragraph',
-      text: '**Ignoring the first review.** Research on Amazon and Best Buy demonstrated that the first review of a product statistically biases the average rating one year later. If the first review is negative, the average score a year out is **0.29 stars lower** than it should be. When you launch a product, the first reviews are not a minor detail: they are a lever that compounds over time.',
+      text: '**Ignoring the first review.** Park, Shin and Xie ([Marketing Science, 2021](https://doi.org/10.1287/mksc.2020.1264)) compared identical products on Amazon and Best Buy and showed that a negative first review lowers the average rating: after one year it is **0.29 stars lower** than for products whose first review was positive. When you launch a product, the first reviews are not a minor detail: they are a lever that compounds over time.',
     },
     { type: 'h2', text: 'Shopify Quick Wins to Implement Today' },
     {
@@ -300,11 +303,11 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Review how your products are photographed. Is there at least one image with a hand using the product naturally? Is there visual space between products in your grid? Are there images with glossy reflections for products that allow it?',
+      text: 'Review how your products are photographed. Is there at least one image with a hand using the product naturally? Is there visual space between products in your grid?',
     },
     {
       type: 'paragraph',
-      text: 'Check your star distribution. If every product shows exactly 4.8 or 5 stars, consider whether some less-perfect reviews would actually increase overall credibility.',
+      text: 'Check your star distribution. If every product shows exactly 5 stars, consider whether the honest, less-perfect reviews you may have hidden would increase overall credibility.',
     },
     {
       type: 'paragraph',
@@ -312,15 +315,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'If you want a more complete analysis of what is limiting conversions on your store (from tracking to page structure), our [team](/data-driven-team) does this on a monthly basis for the brands we work with in [long-term partnership](/use-cases/cumini-luxury-fashion-ecommerce).',
-    },
-    {
-      type: 'paragraph',
-      text: 'If you are not on Shopify yet and want to pair a technical foundation built for conversion with a structured migration process, the [Shopify Launch Sprint](/shopify-migration-sprint) gives you a fixed 14-day calendar, a public price and 4 written guarantees, without months of uncertainty.',
-    },
-    {
-      type: 'paragraph',
-      text: '[Book a consultation](/contacts).',
+      text: 'In the Shopify Launch Sprint the purchase flow (search, product page, cart and checkout) is analyzed step by step and rebuilt with our checklist, and one of the 4 written guarantees covers it: if checkout converts less than before at 90 days, we optimize it for free until it beats it. If you are already on Shopify and want conversion work every month, the [Data-Driven Team](/data-driven-team) does it, as for [Cumini](/use-cases/cumini-luxury-fashion-ecommerce). If shoppers arrive from AI assistants, the checkout decides what that traffic is worth: see [ChatGPT shopping for Shopify](/blog/chatgpt-shopping-shopify) and [AI for ecommerce](/blog/ai-for-ecommerce). For the platform basics, read [how Shopify works](/blog/how-shopify-works); for a strategy built on stable foundations, [eCommerce growth strategy](/blog/ecommerce-growth-strategy-long-term).',
     },
     { type: 'h2', text: 'Frequently Asked Questions' },
     { type: 'h3', text: 'What is ecommerce CRO?' },
@@ -331,7 +326,7 @@ const article: Article = {
     { type: 'h3', text: 'What is a good Shopify conversion rate in 2026?' },
     {
       type: 'paragraph',
-      text: 'The average Shopify store converts between 1.4% and 1.8% of visitors. Stores in the top 20% exceed 3.2%, and the top 10% exceeds 4.7%. These benchmarks vary by industry: fashion typically has lower rates than supplements or food because the decision cycle is longer. Comparing yourself to your sector average is more useful than comparing to the overall average.',
+      text: 'The median Shopify store converts 1.4% of visitors. Stores in the top 20% exceed 2.7%, and the top 10% exceed 3.7% (Littledata, 436 Shopify stores, 90 days to 24 October 2026). These benchmarks vary by industry: fashion typically has lower rates than supplements or food because the decision cycle is longer. Comparing yourself to your sector is more useful than comparing to the overall median.',
     },
     { type: 'h3', text: 'Where should I start with Shopify CRO?' },
     {
@@ -341,22 +336,39 @@ const article: Article = {
     { type: 'h3', text: 'Does CRO help stores with low traffic?' },
     {
       type: 'paragraph',
-      text: 'Yes, and here is how. Running statistically significant A/B tests requires sufficient traffic volume, typically at least a few hundred sessions per variant. With low traffic, you work with research-verified best practices instead of quantitative tests. The impact can still be significant because many basic errors (too many claims, unoptimized images, absent social proof) do not require massive data to fix.',
+      text: 'Yes, and here is how. A reliable A/B test usually needs several thousand sessions per variant and enough purchases to read a difference. Below that, apply the practices research has already verified, as in this guide. The impact can still be significant because many basic errors (too many claims, unoptimized images, absent social proof) do not require massive data to fix.',
+    },
+    { type: 'h3', text: 'How do I increase my Shopify conversion rate quickly?' },
+    {
+      type: 'paragraph',
+      text: 'Cut the claims to the three strongest, add a photo with a hand using the product, move reviews up the page and send review requests only after the product has been used.',
     },
     { type: 'h3', text: 'How does CRO compare to investing in advertising?' },
     {
       type: 'paragraph',
-      text: 'Advertising brings traffic. CRO determines how much of that traffic converts. Doubling your advertising budget at a 1% conversion rate delivers the same orders as unchanged advertising at a 2% rate, with twice the spend. Every improvement in conversion rate multiplies the value of every dollar spent on advertising. The two work in parallel, not as alternatives.',
+      text: 'Advertising brings traffic. CRO determines how much of that traffic converts. Doubling your advertising budget at a 1% conversion rate delivers the same orders as unchanged advertising at a 2% rate, with twice the spend. Every improvement in conversion rate multiplies the value of every euro spent on advertising. The two work in parallel, not as alternatives.',
+    },
+    {
+      type: 'paragraph',
+      text: 'The Sprint has a public price by revenue: €5,800 under €2M, €8,800 from €2M to €20M, €12,800 above €20M, VAT excluded, in 4 installments.',
+    },
+    {
+      type: 'paragraph',
+      text: 'The [Shopify Launch Sprint](/shopify-migration-sprint) moves your store to Shopify in 14 days with our Custom AI System: a fixed calendar, a public price and 4 written guarantees.',
+    },
+    {
+      type: 'paragraph',
+      text: '[Book a consultation](/contacts).',
     },
   ],
   contentIt: [
     {
       type: 'paragraph',
-      text: 'Ho letto centinaia di articoli CRO negli ultimi sette anni. La maggior parte dice le stesse cose: ottimizza il bottone, aggiungi social proof, riduci i passaggi del checkout. Non è sbagliato, ma è incompleto. E spesso è presentato come verità senza un dato a supporto.',
+      text: '**Il CRO per Shopify (conversion rate optimization) è il lavoro di far comprare più visitatori del tuo store, e quasi tutto ciò che circola è opinione.** Questa guida tiene solo ciò che la ricerca peer-reviewed ha misurato, dal Journal of Marketing a Marketing Science, applicato alla pagina prodotto di uno store Shopify. Dove un punto viene dal nostro lavoro con i brand e non da un paper, lo scriviamo.',
     },
     {
       type: 'paragraph',
-      text: 'Questa guida è diversa per un motivo preciso: ogni indicazione che trovi qui è supportata da ricerca pubblicata su riviste peer-reviewed. Non "studi dimostrano" senza citazione, non "la mia esperienza dice". Dati specifici, università specifiche, risultati misurabili.',
+      text: 'La maggior parte delle guide CRO dice le stesse cose: ottimizza il bottone, aggiungi social proof, riduci i passaggi del checkout. Non è sbagliato, è incompleto. Qui ogni studio ha autori, rivista, anno e un link alla fonte.',
     },
     {
       type: 'paragraph',
@@ -373,6 +385,11 @@ const article: Article = {
         'Quick win concreti per iniziare su Shopify',
       ],
     },
+    { type: 'h2', text: 'Qual è un buon tasso di conversione su Shopify?' },
+    {
+      type: 'paragraph',
+      text: '**Lo store Shopify mediano converte l\'1,4% dei visitatori; il top 20% supera il 2,7% e il top 10% il 3,7%.** Sono i dati di [Littledata](https://www.littledata.io/average/shopify-conversion-rate) su 436 store Shopify nei 90 giorni al 24 ottobre 2026. Il fashion converte meno di integratori e food perché la decisione è più lunga, quindi confrontati con il tuo settore.',
+    },
     { type: 'h2', text: "Cos'è il CRO e perché la maggior parte delle guide lo spiega male" },
     {
       type: 'paragraph',
@@ -388,11 +405,11 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'La ricerca accademica sulle conversioni eCommerce esiste ed è solida. Il problema è che i ricercatori delle università di Wharton, UCLA e Cambridge non scrivono thread su Twitter. Risultato: le loro scoperte restano nei paper, e il mercato continua a girare su consigli aneddotici.',
+      text: 'La ricerca accademica sulle conversioni eCommerce esiste ed è solida. Il problema è che i ricercatori non scrivono thread sui social. Risultato: le loro scoperte restano nei paper, e il mercato continua a girare su consigli aneddotici.',
     },
     {
       type: 'paragraph',
-      text: "Il tasso di conversione medio su Shopify si aggira tra l'1,4% e l'1,8% per la media dei merchant, mentre il top 20% degli store supera il 3,2%. Se sei sotto il 2%, c'è lavoro da fare. Se sei sopra il 3%, c'è ancora margine.",
+      text: "Se sei sotto la mediana dell'1,4%, c'è lavoro da fare. Se sei sopra il 2,7%, sei già nel top 20% e c'è ancora margine.",
     },
     { type: 'h2', text: 'Prima di toccare qualsiasi pagina: le fondamenta' },
     {
@@ -406,7 +423,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'La ricerca di Shu e Carlson pubblicata sul Journal of Marketing nel 2014 (UCLA e Georgetown) dimostra che **tre claim positivi sono il 10,4% più persuasivi di quattro**. Dopo il terzo, le persone diventano scettiche. Il meccanismo è semplice: tre è il numero minimo dove il cervello riconosce un pattern. Quattro o più fanno scattare il filtro di difesa.',
+      text: 'La ricerca di Shu e Carlson ([Journal of Marketing, 2014](https://doi.org/10.1509/jm.11.0504)) dimostra che **la persuasione raggiunge il picco con tre claim positivi**: quando le persone sanno che la fonte vuole persuaderle, le impressioni crescono fino al terzo claim e al quarto prevale lo scetticismo. Tre bastano al cervello per riconoscere un pattern; quattro o più fanno scattare il filtro di difesa.',
     },
     {
       type: 'paragraph',
@@ -423,7 +440,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'La ricerca dimostra che **i design che corrispondevano al posizionamento del brand hanno ricevuto il 39% di click in più** rispetto a quelli non allineati. Un brand premium, tecnico o luxury beneficia di design strutturato: geometrico, simmetrico, linee rette. Un brand giovane, creativo o lifestyle beneficia di design non strutturato: forme organiche, asimmetria, pattern imprevedibili.',
+      text: 'La ricerca di Affonso e Janiszewski ([Journal of Marketing, 2023](https://www.ama.org/2023/01/03/think-before-designing-your-logo-how-marketers-can-capitalize-on-the-power-of-perception-to-influence-beliefs-about-brand-performance/)) mostra che i brand con posizionamento utilitaristico rendono meglio con un design visivo strutturato, quelli edonici con un design non strutturato; in un test di annunci su Facebook il design coerente ha ottenuto fino al **39% di click in più**. Un brand premium, tecnico o luxury beneficia di design strutturato: geometrico, simmetrico, linee rette. Un brand giovane, creativo o lifestyle beneficia di design non strutturato: forme organiche, asimmetria, pattern imprevedibili.',
     },
     {
       type: 'paragraph',
@@ -431,7 +448,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Regola operativa aggiuntiva: posiziona i messaggi razionali (funzionalità, dati, specifiche) nella parte alta della pagina. I messaggi emotivi (lifestyle, aspirazione, storytelling) nella parte bassa. La ricerca dimostra che questo corrisponde alla metafora radicata di "cervello in alto, cuore in basso" e rende i messaggi più efficaci nella posizione giusta.',
+      text: 'Regola operativa aggiuntiva, da Cian, Krishna e Schwarz ([Journal of Consumer Research, 2015](https://doi.org/10.1093/jcr/ucv046)): posiziona i messaggi razionali (funzionalità, dati, specifiche) nella parte alta della pagina. I messaggi emotivi (lifestyle, aspirazione, storytelling) nella parte bassa. Le persone associano l\'alto alla razionalità e il basso all\'emozione, e ogni tipo di messaggio rende meglio al suo posto.',
     },
     { type: 'h2', text: 'Cosa dice la ricerca sulla pagina prodotto' },
     {
@@ -445,7 +462,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: "La ricerca dell'Università di Tsinghua ha misurato un **aumento fino al 31% delle vendite** quando le varianti sold-out venivano mantenute visibili (con indicazione \"esaurito\") invece di essere rimosse dalla pagina.",
+      text: "La ricerca dell'Università di Tsinghua di Tian, Chen e Xu ([International Journal of Research in Marketing, 2022](https://doi.org/10.1016/j.ijresmar.2021.04.002)) mostra che mostrare alcune opzioni esaurite aumenta la probabilità d'acquisto: in un esperimento circa il **31% di partecipanti in più ha detto che avrebbe comprato** quando le varianti sold-out restavano visibili con l'indicazione \"esaurito\".",
     },
     {
       type: 'paragraph',
@@ -453,12 +470,12 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: "La condizione importante: la proporzione di opzioni esaurite non deve superare il 30% del totale. Sopra quella soglia l'effetto si inverte, perché lo store sembra mal gestito. Regola pratica: tra il 10% e il 30% di varianti marcate \"esaurito\" aumenta le vendite. Sopra il 30%, nascondi l'eccesso.",
+      text: "La condizione importante: la relazione è a U rovesciata. Una quota moderata di opzioni esaurite aiuta; troppe invertono l'effetto, perché lo store sembra mal gestito. Regola pratica: tieni le varianti esaurite come netta minoranza del totale e nascondi l'eccesso.",
     },
     { type: 'h3', text: 'Video vs immagini statiche: non è uguale per tutti' },
     {
       type: 'paragraph',
-      text: "La ricerca del Babson College e dell'Università di Miami pubblicata sul Journal of Marketing nel 2015 ha misurato che i **formati dinamici (video, slideshow, GIF) aumentano la disponibilità a pagare del 79%** per prodotti acquistati per piacere o esperienza.",
+      text: "La ricerca di Roggeveen, Grewal, Townsend e Krishnan ([Journal of Marketing, 2015](https://doi.org/10.1509/jm.13.0521)) mostra che i **formati dinamici (video, slideshow, GIF) aumentano la preferenza per l'opzione edonica e la disponibilità a pagare**, di oltre il 79% nella scelta dell'opzione orientata al piacere in uno studio, per prodotti acquistati per piacere o esperienza.",
     },
     {
       type: 'paragraph',
@@ -466,38 +483,30 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Se vendi fashion o prodotti lifestyle su Shopify, video e GIF sulla pagina prodotto non sono un nice-to-have. Sono una leva di conversione verificata. Un altro dato dalla stessa area di ricerca: le riprese al rallentatore aumentano le vendite del 22% e i click pubblicitari del 18% per i prodotti premium. Non effetti cinematografici fini a se stessi: comunicano qualità e danno tempo al cervello di immaginare il prodotto.',
+      text: 'Se vendi fashion o prodotti lifestyle su Shopify, video e GIF sulla pagina prodotto non sono un nice-to-have. Sono una leva di conversione verificata.',
     },
     { type: 'h3', text: 'Come fotografare il prodotto: i dettagli che cambiano le vendite' },
     {
       type: 'paragraph',
-      text: "**Spazio tra i prodotti.** La ricerca dell'Università della Georgia e di Miami pubblicata sul Journal of Marketing Research nel 2016 ha misurato un **aumento del valore percepito dell'11,4%** e quasi un raddoppio delle vendite quando i prodotti nella griglia o nelle gallery erano spaziati invece di accostati. Il cervello percepisce ogni oggetto più chiaramente quando c'è respiro visivo. Il risultato pratico: aumenta il padding tra le product card nella tua collection page. Non è un consiglio estetico.",
-    },
-    {
-      type: 'paragraph',
-      text: "**La riflessione sulla superficie.** La ricerca pubblicata sul Journal of Consumer Research nel 2022 ha misurato che un prodotto fotografato con una riflessione lucida sulla superficie viene trovato il **23% più attraente** e genera il **32% di intenzione d'acquisto in più**. Qualsiasi prodotto con superficie materica (profumi, cosmetici, accessori, borse, integratori in flacone) beneficia di una luce posizionata per creare un riflesso. Può essere fatto in post-produzione se necessario.",
-    },
-    {
-      type: 'paragraph',
-      text: "**Per l'abbigliamento femminile in particolare.** La ricerca dimostra che modelle fotografate in contesto (per esempio una giacca da cocktail in un ambiente di ricevimento, una felpa sportiva mentre si corre) vendono meglio rispetto allo sfondo bianco neutro, ma solo per abbigliamento femminile. Per il maschile, lo sfondo neutro funziona bene come il contestuale.",
+      text: "**Spazio tra i prodotti.** Sevilla (Università della Georgia) e Townsend (Università di Miami) ([Journal of Marketing Research, 2016](https://doi.org/10.1509/jmr.13.0601)) hanno mostrato che i prodotti appaiono più attraenti quando hanno più spazio intorno: in un test sul campo in una gioielleria gli stessi articoli esposti su uno spazio doppio hanno **raddoppiato il numero di clienti che hanno comprato**. Altri studi suggeriscono che l'effetto valga anche per i prodotti distanziati su uno schermo. Il risultato pratico: aumenta il padding tra le product card nella tua collection page. Non è un consiglio estetico.",
     },
     { type: 'h3', text: 'La mano che tocca il prodotto' },
     {
       type: 'paragraph',
-      text: "Quindici esperimenti condotti dall'Università dello Iowa, Wisconsin e Berkeley e pubblicati sul Journal of Marketing Research nel 2022 hanno misurato un **incremento del 16% nell'intenzione d'acquisto** quando nelle foto di prodotto appare una mano che tocca o impugna il prodotto in modo naturale. In contesti VR, l'effetto sale al 32,5% di disponibilità a pagare.",
+      text: "Luangrath, Peck, Hedgcock e Xu ([Journal of Marketing Research, 2022](https://doi.org/10.1177/00222437211059540)) hanno condotto una serie di esperimenti che mostrano un **effetto aptico vicario**: chi guarda dà più valore a un prodotto quando l'immagine mostra una mano che lo tocca. Una mano nell'inquadratura non basta, deve toccare il prodotto, e l'effetto sparisce se il movimento non sembra un vero tocco.",
     },
     {
       type: 'paragraph',
-      text: "Il meccanismo: il cervello interpreta parzialmente la mano come propria, aumentando il senso di proprietà anticipata. Per prodotti che si indossano, si usano con le mani o si tengono, una foto di lifestyle con mano è una leva di conversione verificata, non solo un'alternativa estetica.",
+      text: "Il meccanismo: chi guarda vive il tocco in modo vicario, come se stesse già maneggiando il prodotto. Per prodotti che si indossano, si usano con le mani o si tengono, una foto di lifestyle con mano è una leva di conversione verificata, non solo un'alternativa estetica.",
     },
     {
       type: 'paragraph',
-      text: "**La direzione dello sguardo del modello.** La ricerca dell'Università di Houston pubblicata sul Journal of Consumer Research nel 2021 ha misurato un **aumento del 30% delle vendite** e un miglioramento del 19% nella valutazione delle campagne quando i modelli guardavano lontano dalla camera invece di guardarla direttamente. Uno sguardo lontano dalla camera permette al visitatore di immaginare se stesso al posto del modello. Uno sguardo diretto in camera crea invece una separazione: stai guardando un'altra persona, non ti stai immaginando nell'immagine. Questo vale per i prodotti acquistati per piacere ed esperienza (fashion, lifestyle, travel). Per messaggi informativi o funzionali, lo sguardo diretto funziona meglio.",
+      text: "**La direzione dello sguardo del modello.** To e Patrick (Università di Houston, [Journal of Consumer Research, 2021](https://doi.org/10.1093/jcr/ucaa063)) hanno mostrato che i modelli che guardano lontano dalla camera funzionano meglio per i prodotti acquistati per piacere; in un test sul campo con l'annuncio Facebook di un cappello, le **vendite sono state del 30% superiori** con lo sguardo distolto. Uno sguardo lontano dalla camera permette al visitatore di immaginare se stesso al posto del modello. Uno sguardo diretto in camera crea invece una separazione: stai guardando un'altra persona, non ti stai immaginando nell'immagine. Questo vale per i prodotti acquistati per piacere ed esperienza (fashion, lifestyle, travel). Per messaggi informativi o funzionali, lo sguardo diretto funziona meglio.",
     },
     { type: 'h3', text: 'I CTA multipli per quantità' },
     {
       type: 'paragraph',
-      text: "La ricerca della Rotman School of Management dell'Università di Toronto e dell'UC San Diego pubblicata su Marketing Science nel 2022 ha misurato un **incremento delle conversioni del 14% in media** e delle vendite fino al **28% in 37 esperimenti separati** quando il CTA principale offre opzioni di quantità invece di un singolo \"aggiungi al carrello\".",
+      text: "Duke (Rotman School of Management, Università di Toronto) e Amir (UC San Diego) ([Marketing Science, 2023](https://doi.org/10.1287/mksc.2022.1364)) hanno trovato che i **tassi d'acquisto sono più alti quando il CTA principale integra la decisione sulla quantità** (\"acquista 1\", \"acquista 2\", \"acquista 3\") invece di un singolo \"aggiungi al carrello\", e che l'effetto è maggiore per le offerte meno attraenti.",
     },
     {
       type: 'paragraph',
@@ -507,15 +516,11 @@ const article: Article = {
     { type: 'h3', text: 'Le stelle perfette che non convincono' },
     {
       type: 'paragraph',
-      text: 'Controintuitivo ma verificato: i prodotti con un punteggio medio tra 4 e 4,5 stelle vendono più di quelli con un punteggio tra 4,5 e 5 stelle. Le valutazioni perfette sembrano sospette. La ricerca è chiara: un punteggio imperfetto ma alto è più credibile di uno perfetto.',
+      text: 'Controintuitivo ma verificato: lo Spiegel Research Center della Northwestern University, analizzando i dati di PowerReviews, ha trovato che la probabilità d\'acquisto raggiunge il picco tra 4,2 e 4,5 stelle e scende avvicinandosi a 5,0 ([Spiegel Research Center](https://spiegel.medill.northwestern.edu/wp-content/uploads/sites/2/2021/04/Spiegel-research-reveals-4.5-stars-are-better-than-5-The-Medill-IMC-Spiegel-Research-Center.pdf), un rapporto di un centro di ricerca universitario, non un articolo di rivista). Le valutazioni perfette sembrano troppo belle per essere vere. Un punteggio imperfetto ma alto è più credibile di uno perfetto.',
     },
     {
       type: 'paragraph',
-      text: "La ricerca aggiunge un altro punto importante: alcune recensioni negative sono utili se sono irrilevanti per la maggior parte dei clienti. In un esperimento, un prodotto con quattro recensioni da cinque stelle più una da una stella su un dettaglio irrilevante (il tipo di acqua usata con una macchina da caffè) è stato valutato il **16% meglio** del prodotto con sole cinque stelle. Il motivo: la recensione negativa irrilevante segnala autenticità.",
-    },
-    {
-      type: 'paragraph',
-      text: 'Implicazione operativa: non rimuovere tutte le recensioni negative. Rimuovi quelle che attaccano la qualità del prodotto, non quelle che riguardano aspetti molto specifici e laterali.',
+      text: 'Implicazione operativa: non rimuovere ogni recensione meno che perfetta. Togli quelle false o abusive e tieni quelle oneste che rendono credibile il punteggio.',
     },
     { type: 'h3', text: 'Come distribuire la social proof lungo la pagina' },
     {
@@ -541,15 +546,15 @@ const article: Article = {
     { type: 'h2', text: 'Tre errori operativi che costano conversioni' },
     {
       type: 'paragraph',
-      text: "**Il retargeting troppo rapido.** La ricerca della Temple University e della Waseda University pubblicata sul Journal of Marketing nel 2020 ha dimostrato che fare retargeting entro meno di un'ora dall'abbandono del carrello produce risultati peggiori rispetto a non fare retargeting affatto. Le persone si sentono sorvegliate e diventano meno propense all'acquisto. Il timing corretto è tra le 24 e le 72 ore. In quel range, il retargeting aumenta significativamente i ritorni.",
+      text: "**Il retargeting troppo rapido.** Li, Luo, Lu e Moriguchi ([Journal of Marketing, 2020](https://www.ama.org/2020/11/12/press-release-from-the-journal-of-marketing-boosting-returns-on-e-commerce-retargeting-campaigns/), con autori anche di Temple University e Waseda University) hanno trovato che il retargeting subito dopo l'abbandono del carrello può produrre tassi d'acquisto peggiori del non fare retargeting. Un ritardo da uno a tre giorni ha avuto un effetto positivo, più forte per carrelli più grandi e prodotti più cari.",
     },
     {
       type: 'paragraph',
-      text: "**Le recensioni richieste troppo presto.** Chiedere una recensione il giorno dopo la consegna, quando il cliente non ha ancora usato abbastanza il prodotto, produce recensioni mediocri. La ricerca indica che il momento ottimale dipende dal ciclo d'uso del prodotto. Per integratori e skincare: +14 o +30 giorni. Per fashion: dopo il primo utilizzo esteso, segnalabile con una seconda email a 7-10 giorni.",
+      text: "**Le recensioni richieste troppo presto.** Chiedere una recensione il giorno dopo la consegna, quando il cliente non ha ancora usato abbastanza il prodotto, produce recensioni mediocri. Per la nostra esperienza il momento giusto dipende dal ciclo d'uso del prodotto. Per integratori e skincare: +14 o +30 giorni. Per fashion: dopo il primo utilizzo esteso, segnalabile con una seconda email a 7-10 giorni.",
     },
     {
       type: 'paragraph',
-      text: "**La prima recensione ignorata.** La ricerca su Amazon e Best Buy ha dimostrato che la prima recensione di un prodotto influenza statisticamente il rating medio un anno dopo. Se la prima recensione è negativa, il punteggio medio a distanza di un anno è inferiore di **0,29 stelle** rispetto al potenziale. Quando lanci un nuovo prodotto, le prime recensioni non sono un dettaglio: sono una leva che compone nel tempo.",
+      text: "**La prima recensione ignorata.** Park, Shin e Xie ([Marketing Science, 2021](https://doi.org/10.1287/mksc.2020.1264)) hanno confrontato prodotti identici su Amazon e Best Buy e mostrato che una prima recensione negativa abbassa il rating medio: dopo un anno è inferiore di **0,29 stelle** rispetto ai prodotti la cui prima recensione era positiva. Quando lanci un nuovo prodotto, le prime recensioni non sono un dettaglio: sono una leva che compone nel tempo.",
     },
     { type: 'h2', text: 'Quick win per iniziare oggi su Shopify' },
     {
@@ -562,11 +567,11 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: "Verifica come sono fotografati i tuoi prodotti. C'è almeno un'immagine con una mano che usa il prodotto in modo naturale? C'è spazio visivo tra i prodotti nella griglia? Ci sono immagini con riflessi lucidi per i prodotti che lo permettono?",
+      text: "Verifica come sono fotografati i tuoi prodotti. C'è almeno un'immagine con una mano che usa il prodotto in modo naturale? C'è spazio visivo tra i prodotti nella griglia?",
     },
     {
       type: 'paragraph',
-      text: 'Controlla la distribuzione delle stelle. Se tutti i tuoi prodotti hanno 4,8 o 5 stelle esatte, considera se alcune recensioni meno perfette possono aumentare la credibilità complessiva.',
+      text: 'Controlla la distribuzione delle stelle. Se tutti i tuoi prodotti hanno 5 stelle esatte, considera se le recensioni oneste meno perfette che hai forse nascosto aumenterebbero la credibilità complessiva.',
     },
     {
       type: 'paragraph',
@@ -574,15 +579,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: "Se vuoi un'analisi più approfondita di quello che frena le conversioni del tuo store (dal tracking alla struttura delle pagine), il [nostro team](/it/team-ecommerce-dedicato) fa questo su base mensile per i brand che seguiamo in [partnership a lungo termine](/it/casi-studio/cumini-luxury-fashion-ecommerce).",
-    },
-    {
-      type: 'paragraph',
-      text: 'Se non sei ancora su Shopify e vuoi unire una base tecnica ottimizzata per le conversioni a un processo di migrazione strutturato, lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) ti dà un calendario fisso di 14 giorni, un prezzo pubblico e 4 garanzie scritte, senza mesi di incertezza.',
-    },
-    {
-      type: 'paragraph',
-      text: '[Prenota una consulenza](/it/contatti).',
+      text: "Nello Shopify Launch Sprint il flusso d'acquisto (ricerca, scheda prodotto, carrello e checkout) viene analizzato passo per passo e ricostruito con la nostra checklist, e una delle 4 garanzie scritte lo riguarda: se a 90 giorni il checkout converte meno di prima, lo ottimizziamo gratis finché non lo supera. Se sei già su Shopify e vuoi lavorare sulla conversione ogni mese, lo fa il [Data-Driven Team](/it/team-ecommerce-dedicato), come per [Cumini](/it/casi-studio/cumini-luxury-fashion-ecommerce). Se i clienti arrivano dagli assistenti AI, il checkout decide quanto vale quel traffico: vedi [ChatGPT shopping per Shopify](/it/blog/chatgpt-shopping-shopify) e [AI per eCommerce](/it/blog/ai-per-ecommerce). Per le basi della piattaforma leggi [cos’è Shopify e come funziona](/it/blog/cose-shopify); per una strategia costruita su fondamenta stabili, [strategia eCommerce a lungo termine](/it/blog/strategia-ecommerce-long-term).",
     },
     { type: 'h2', text: 'FAQ: le domande più frequenti sul CRO per eCommerce' },
     { type: 'h3', text: "Cos'è il CRO per eCommerce?" },
@@ -593,7 +590,7 @@ const article: Article = {
     { type: 'h3', text: 'Qual è un buon tasso di conversione per un eCommerce su Shopify?' },
     {
       type: 'paragraph',
-      text: "Il tasso di conversione medio su Shopify è tra l'1,4% e l'1,8%. Gli store nel top 20% superano il 3,2%. Il top 10% supera il 4,7%. Questi benchmark variano per settore: il fashion ha mediamente tassi più bassi degli integratori o del food, perché il ciclo decisionale è più lungo. Confrontarsi con la media del settore è più utile che confrontarsi con la media generale.",
+      text: "Lo store Shopify mediano converte l'1,4% dei visitatori. Gli store nel top 20% superano il 2,7%, il top 10% il 3,7% (Littledata, 436 store Shopify, 90 giorni al 24 ottobre 2026). Questi benchmark variano per settore: il fashion ha mediamente tassi più bassi degli integratori o del food, perché il ciclo decisionale è più lungo. Confrontarsi con la mediana del settore è più utile che confrontarsi con quella generale.",
     },
     { type: 'h3', text: 'Da dove si inizia un progetto CRO su Shopify?' },
     {
@@ -603,12 +600,29 @@ const article: Article = {
     { type: 'h3', text: 'Il CRO serve anche per chi ha poco traffico?' },
     {
       type: 'paragraph',
-      text: "Sì, ed ecco come. Per fare test A/B statisticamente significativi servono volumi di traffico sufficienti, in genere almeno alcune centinaia di sessioni per variante. Con poco traffico, si lavora su best practice verificate dalla ricerca invece che su test quantitativi. L'impatto può essere significativo anche con volumi modesti, perché molti errori di base (troppi claim, immagini non ottimizzate, social proof assente) si correggono senza bisogno di dati massivi.",
+      text: "Sì, ed ecco come. Un test A/B affidabile richiede di solito alcune migliaia di sessioni per variante e abbastanza acquisti per leggere una differenza. Sotto quella soglia conviene applicare le pratiche già verificate dalla ricerca, come in questa guida. L'impatto può essere significativo anche con volumi modesti, perché molti errori di base (troppi claim, immagini non ottimizzate, social proof assente) si correggono senza bisogno di dati massivi.",
+    },
+    { type: 'h3', text: 'Come aumento in fretta il tasso di conversione su Shopify?' },
+    {
+      type: 'paragraph',
+      text: 'Riduci i claim ai tre più forti, aggiungi una foto con una mano che usa il prodotto, porta le recensioni più in alto nella pagina e chiedi la recensione solo dopo che il prodotto è stato usato.',
     },
     { type: 'h3', text: 'Quanto impatta il CRO rispetto a investire in advertising?' },
     {
       type: 'paragraph',
       text: "L'advertising porta traffico. Il CRO determina quanto di quel traffico si converte. Raddoppiare il budget advertising con un tasso di conversione dell'1% porta gli stessi ordini di un advertising invariato con un tasso al 2%, ma con il doppio della spesa. In pratica, ogni miglioramento del tasso di conversione moltiplica il valore di ogni euro speso in advertising. I due lavorano in parallelo, non in alternativa.",
+    },
+    {
+      type: 'paragraph',
+      text: 'Lo Sprint ha un prezzo pubblico per fatturato: €5.800 sotto i €2M, €8.800 tra €2M e €20M, €12.800 oltre i €20M, IVA esclusa, in 4 rate.',
+    },
+    {
+      type: 'paragraph',
+      text: 'Lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) porta il tuo store su Shopify in 14 giorni con il nostro Custom AI System: calendario fisso, prezzo pubblico e 4 garanzie scritte.',
+    },
+    {
+      type: 'paragraph',
+      text: '[Prenota una consulenza](/it/contatti).',
     },
   ],
 }

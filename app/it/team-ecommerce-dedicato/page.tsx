@@ -12,7 +12,7 @@ import { getDataTeamCopy } from '@/lib/i18n/dataTeam'
 import FAQ from '@/components/sections/FAQ'
 import CTA from '@/components/sections/CTA'
 import Footer from '@/components/layout/Footer'
-import { buildMetadata } from '@/lib/site'
+import { AREA_SERVED, ORGANIZATION_ID, buildMetadata } from '@/lib/site'
 import { getDictionary } from '@/lib/i18n'
 import { pageBreadcrumbJsonLd } from '@/lib/seo/breadcrumbs'
 
@@ -26,9 +26,9 @@ const dataDrivenTeamJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: seoCopy.title,
-  provider: { '@type': 'Organization', name: 'NoProb Agency', url: 'https://noprob.agency' },
+  provider: { '@type': 'Organization', '@id': ORGANIZATION_ID, name: 'NoProb Agency', url: 'https://noprob.agency' },
   serviceType: 'eCommerce management retainer',
-  areaServed: ['IT', 'EU'],
+  areaServed: AREA_SERVED,
   description: seoCopy.description,
 }
 
@@ -51,7 +51,7 @@ export default function ItalianDataDrivenTeamPage() {
       <DataDrivenTeamSolution locale={locale} />
       <MigrazioneProcess locale={locale} copy={getTeamRoadmapCopy(locale)} />
       <EcommerceRebuildWhyUs locale={locale} copy={getDataTeamCopy(locale).whyUs} />
-      <CaseStudy locale={locale} noPadding={true} />
+      <CaseStudy locale={locale} noPadding={true} heading={getDictionary(locale).caseStudy.headingBuilt} />
       <MigrazionePricing
         locale={locale}
         copy={getDataTeamCopy(locale).pricing}

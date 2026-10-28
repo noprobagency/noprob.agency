@@ -1,17 +1,22 @@
 import Image from 'next/image'
 
 import PartnerLogos from '@/components/ui/PartnerLogos'
-import { siteAssets } from '@/lib/site'
+import { siteAssets, TRUSTPILOT_URL } from '@/lib/site'
 import type { ZlCopy } from '@/content/zero-loss-migration'
 import ZlCta from './ZlCta'
 
 function TrustpilotBadge({ score, label }: { score: string; label: string }) {
   return (
-    <span className="inline-flex items-center gap-2 whitespace-nowrap">
+    <a
+      href={TRUSTPILOT_URL}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-2 whitespace-nowrap no-underline transition-opacity hover:opacity-80"
+    >
       <Image src={siteAssets.trustpilotWordmark} alt="Trustpilot" width={72} height={16} className="h-4 w-auto object-contain" />
       <span className="font-sans text-[13px] font-semibold tracking-[-0.03em] text-np-green-trust">{score}</span>
       <span className="font-sans text-[12px] font-medium tracking-[-0.03em] text-np-grey">{label}</span>
-    </span>
+    </a>
   )
 }
 

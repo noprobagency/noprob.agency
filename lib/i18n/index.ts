@@ -1,3 +1,5 @@
+import { ZL_TIERS } from '@/content/zero-loss-migration'
+
 export type Locale = 'en' | 'it'
 
 export type Dictionary = {
@@ -13,6 +15,10 @@ export type Dictionary = {
   }
   hero: {
     trustpilotLabel: string
+    /** Verifiable Trustpilot claim shown next to the star (e.g. "10 five-star reviews on Trustpilot"). */
+    trustpilotRating: string
+    /** Public Trustpilot profile the rating links to. */
+    trustpilotHref: string
     line1: string
     line2: string
     line3pre: string
@@ -41,6 +47,8 @@ export type Dictionary = {
   caseStudy: {
     label: string
     heading: string
+    /** Alternative H2 for the pages that are not about migration (Shopify Development, Data-Driven Team). */
+    headingBuilt: string
     category: string
     description: string
     metric: string
@@ -111,14 +119,6 @@ export type Dictionary = {
       headingPart1: string
       headingPart2: string
       items: { title: string; description: string }[]
-    }
-    process: {
-      label: string
-      headingPart1: string
-      headingPart2: string
-      headingPart3: string
-      description: string
-      phases: { duration: string; number: string; title: string; description: string }[]
     }
     whyUs: {
       label: string
@@ -218,6 +218,10 @@ export type Dictionary = {
   }
 }
 
+/** Sprint tier prices come from ZL_TIERS (single source of truth), formatted per locale. */
+const sprintPrice = (tierIndex: 0 | 1 | 2, locale: Locale) =>
+  `\u20ac${String(ZL_TIERS[tierIndex].price).replace(/\B(?=(\d{3})+(?!\d))/g, locale === 'it' ? '.' : ',')}`
+
 const en: Dictionary = {
   navbar: {
     services: 'Services',
@@ -235,22 +239,24 @@ const en: Dictionary = {
       { label: 'AI Accelerator', href: '/ai-accelerator' },
       { label: 'Shopify Development', href: '/shopify-development' },
       { label: 'Data-Driven Team', href: '/data-driven-team' },
-      { label: 'Shopify Migration', href: '/shopify-migration-sprint' },
+      { label: 'Shopify Migration in 14 Days', href: '/shopify-migration-sprint' },
     ],
     langSwitcher: { label: 'Switch to Italian', display: 'EN' },
   },
   hero: {
     trustpilotLabel: 'Chosen by Fashion, Supplements and DTC brands',
-    line1: 'Your Brand is premium.',
-    line2: 'Your eCommerce',
+    trustpilotRating: '10 five-star reviews on Trustpilot',
+    trustpilotHref: 'https://www.trustpilot.com/review/noprob.agency',
+    line1: 'Your brand is premium.',
+    line2: 'Your Shopify',
     line3pre: 'partner should be ',
     line3em: 'too',
     description:
-      'We build, improve and grow your eCommerce on Shopify, with a dedicated team in development, marketing and strategy. Together or separately, based on your needs.',
-    ctaPrimary: 'Book a call',
-    ctaPrimaryHref: '/contacts',
-    ctaSecondary: 'Explore what we do',
-    ctaSecondaryHref: '/#pricing',
+      'We migrate, build and grow your eCommerce on Shopify: your store ready in 14 days at a public price, a custom build, or a dedicated team for development, marketing and strategy.',
+    ctaPrimary: 'Migrate to Shopify in 14 days',
+    ctaPrimaryHref: '/shopify-migration-sprint',
+    ctaSecondary: 'Book a call',
+    ctaSecondaryHref: '/contacts',
     quote: 'Success comes from long-term thinking and a team that truly knows your industry and each other',
     quoteAuthor: 'Antonio Manitta',
   },
@@ -295,7 +301,8 @@ const en: Dictionary = {
   },
   caseStudy: {
     label: 'Case Studies',
-    heading: 'What happens when tech meets execution and consistency.',
+    heading: 'Case studies: Shopify migrations with measured results',
+    headingBuilt: 'Real stores built and grown with us',
     category: 'eCommerce Luxury Fashion Retail',
     description:
       'Started with no tech team or structure. Built, launched, and scaled eCommerce with a dedicated team, turning a marginal channel into a key driver of brand growth.',
@@ -360,7 +367,7 @@ const en: Dictionary = {
         description:
           'A tailor-made eCommerce team led by an eCommerce Manager who is your single point of contact. You focus on the brand, we coordinate everything else.',
         features: ['Fast support, 7 days a week', 'One dedicated eCommerce Manager', 'First sprint at half price'],
-        cta: 'Get Your custom Data Team',
+        cta: 'Get your dedicated team',
         ctaHref: '/data-driven-team',
         secondary: 'Contact us',
         secondaryHref: '/contacts',
@@ -372,7 +379,7 @@ const en: Dictionary = {
         period: '',
         description:
           'We build your eCommerce on Shopify from design to tracking, ready to convert from day one. Lifetime maintenance included.',
-        features: ['Pay over 3 months', 'Lifetime maintenance included', '30-day guarantee'],
+        features: ['\u20ac1,850 a month for 3 months, VAT excluded', 'Lifetime maintenance included', '30-day guarantee'],
         cta: 'Apply for the project',
         ctaHref: '/shopify-development',
         secondary: 'Contact us',
@@ -442,49 +449,6 @@ const en: Dictionary = {
           title: 'Analytics that actually guide decisions',
           description:
             'Clean tracking, real dashboards, zero guesswork. We turn insights into action.',
-        },
-      ],
-    },
-    process: {
-      label: 'how we work',
-      headingPart1: 'Our standardized 90-day process.',
-      headingPart2: 'No price surprises.',
-      headingPart3: 'No missed deadlines.',
-      description:
-        "In 7+ years we've obsessively refined our internal workflows so every rebuild runs on a clear, repeatable process. You get top-tier quality, predictable timings, and zero surprise extra costs or last-minute deadline drama.",
-      phases: [
-        {
-          number: '01',
-          duration: '1 Week',
-          title: 'Onboarding & Access',
-          description: 'Kickoff call, full access collection, and alignment on priorities and goals.',
-        },
-        {
-          number: '02',
-          duration: '7 - 14 DAYS',
-          title: 'Audit & Priorities',
-          description:
-            'We analyze your current tech, data, and performance setup to identify blockers and quick wins.',
-        },
-        {
-          number: '03',
-          duration: '14 - 21 DAYS',
-          title: 'Strategy & Roadmap',
-          description:
-            'You get a clear action plan focused on what drives ROI, built around your growth targets.',
-        },
-        {
-          number: '04',
-          duration: '21 - 56 DAYS',
-          title: 'Execution & Tracking',
-          description: 'Our team works in sprints. We handle everything from implementation to measurement.',
-        },
-        {
-          number: '05',
-          duration: '56 - 90 DAYS',
-          title: 'Ongoing Optimization',
-          description:
-            'Continuous support, performance reports, and priority-based improvements. Always aligned.',
         },
       ],
     },
@@ -596,6 +560,10 @@ const en: Dictionary = {
     subheading: 'The Agency that turns data and vision into high-performing eCommerce.',
     items: [
       {
+        question: 'How long does a Shopify migration with you take, and what does it cost?',
+        answer: `The Shopify Launch Sprint moves your store to Shopify in 14 days with our Custom AI System: go-live between day 15 and 30, 90 days of support and 4 written guarantees. The price is public, by company revenue: ${sprintPrice(0, 'en')} under \u20ac2M, ${sprintPrice(1, 'en')} between \u20ac2M and \u20ac20M, ${sprintPrice(2, 'en')} over \u20ac20M, VAT excluded, in 4 installments.`,
+      },
+      {
         question: 'Who do you work with?',
         answer:
           'With eCommerce brands, mostly in Fashion, Supplements and DTC, that want to build, migrate or grow their store on Shopify. The dedicated team is for established brands with regular online sales; Shopify Development also covers brands starting from zero. We select partners carefully to ensure long-term aligned growth.',
@@ -653,7 +621,7 @@ const en: Dictionary = {
     headingEm: "slowing",
     headingPost: ' you down?',
     buttonLabel: 'Book a call',
-    availability: 'Slots available',
+    availability: 'Antonio replies personally',
   },
   notFound: {
     title: 'This page ',
@@ -678,14 +646,14 @@ const en: Dictionary = {
     cookiePolicy: 'Cookie Policy',
   },
   seo: {
-    home: { title: 'Shopify Development & eCommerce Agency | noprob agency™', description: 'Shopify Partner for fashion, supplement, and DTC brands. We build, migrate, and manage eCommerce stores as your long-term technical partner.' },
-    about: { title: 'Your Technical eCommerce Partner', description: 'Meet the team behind NoProb. A technical Shopify partner helping B2C brands scale with development, migration, and dedicated retainer teams.' },
-    contacts: { title: 'Contact Us & Book a Call', description: 'Start a conversation with NoProb. Book a call to build your eCommerce on Shopify or activate a long-term dedicated team.' },
-    blog: { title: 'Shopify, eCommerce & Growth Blog', description: 'Articles on Shopify development, migration, tracking, and CRO for fashion, supplement, and DTC brands. Written by the NoProb team.' },
-    useCases: { title: 'eCommerce Case Studies & Results', description: 'Real results from long-term Shopify partnerships. See how we helped fashion and DTC brands grow sales, fix tracking and scale eCommerce operations.' },
+    home: { title: 'Shopify Migration & Development Agency | noprob agency™', description: 'Shopify Partner for fashion, supplement and DTC brands: Shopify migration, store ready in 14 days at a public price, plus development and dedicated teams.' },
+    about: { title: 'About Us: Shopify Migration & Development', description: 'Meet noprob agency: Antonio Manitta and a team of Shopify, marketing, advertising and SEO specialists, with 7+ years of eCommerce projects.' },
+    contacts: { title: 'Contact Us & Book a Call', description: 'Talk to an eCommerce expert at noprob agency: a call to migrate to Shopify, build your store or start a dedicated team. We reply within 48 hours.' },
+    blog: { title: 'Shopify Migration & AI Guides for eCommerce', description: 'Guides on Shopify migration, platform comparisons, migration SEO and AI for eCommerce, written by the noprob agency team.' },
+    useCases: { title: 'Shopify Case Studies: Migration Results', description: 'Three case studies with sourced numbers: WooCommerce to Shopify, a custom platform to Shopify, an AI migration of a B2B catalog. Results as % and ratios.' },
     dataDrivenTeam: { title: 'Dedicated eCommerce Team on Retainer', description: 'Your dedicated eCommerce team on retainer. One point of contact, a full team behind you. For Shopify brands that want to scale without hiring in-house.' },
     sviluppoShopify: { title: 'Shopify Development Services', description: 'Shopify development services to build your eCommerce from design to tracking, optimized to convert from day one. Lifetime maintenance included.' },
-    migrazioneShopify: { title: 'How to Migrate to Shopify: The Complete Guide', description: 'Migrate to Shopify with confidence: platforms, what gets moved, 301 redirects and SEO, tracking, timeline, risks and cost, plus two real migrations.' },
+    migrazioneShopify: { title: 'How to Migrate to Shopify: The Complete Guide', description: 'Migrate to Shopify with confidence: platforms, what gets moved, 301 redirects and SEO, tracking, timeline, risks and cost, with published case studies.' },
     aiAccelerator: { title: 'AI Accelerator for eCommerce: Growth with AI', description: '30 days one-to-one for established eCommerce brands: we find your growth opportunities, rank them and switch on your first AI solutions. Fixed price.' },
   },
   about: {
@@ -713,7 +681,7 @@ const en: Dictionary = {
           name: 'Antonio Cali',
           role: 'Sfogliate&Sfogliatelle - DTC eCommerce Owner',
           image: '/images/originals/5ZClDWRqPVst2zJqghXyG33cMY0.png',
-          quote: 'Collaborating with NoProb Agency for the development of our eCommerce was an extremely positive experience. From the very first stages of the project, the team stood out for its clear communication, technical expertise, and listening skills. Every step, from graphic design to going live, was handled with professionalism\u2026',
+          quote: 'Collaborating with NoProb Agency for the development of our eCommerce was an extremely positive experience. From the very first stages of the project, the team stood out for its clear communication, technical expertise, and listening skills.',
         },
         {
           name: 'Camilla Dudine',
@@ -729,7 +697,7 @@ const en: Dictionary = {
 const it: Dictionary = {
   navbar: {
     services: 'Servizi',
-    reserveCta: 'Prenota una call',
+    reserveCta: 'Prenota una videochiamata',
     menuOpen: 'Menu',
     menuClose: 'Chiudi',
     homeLabel: 'Home',
@@ -743,29 +711,31 @@ const it: Dictionary = {
       { label: 'AI Accelerator', href: '/it/ai-accelerator' },
       { label: 'Sviluppo Shopify', href: '/it/sviluppo-shopify' },
       { label: 'Data-Driven Team', href: '/it/team-ecommerce-dedicato' },
-      { label: 'Migrazione Shopify', href: '/it/sprint-migrazione-shopify' },
+      { label: 'Migrazione Shopify in 14 giorni', href: '/it/sprint-migrazione-shopify' },
     ],
     langSwitcher: { label: 'Passa alla versione inglese', display: 'IT' },
   },
   hero: {
     trustpilotLabel: 'Scelti da brand di Moda, Integratori e DTC eCommerce',
-    line1: 'Al tuo brand serve un',
-    line2: 'partner eCommerce,',
-    line3pre: "non l'ennesimo ",
-    line3em: 'fornitore',
+    trustpilotRating: '10 recensioni a 5 stelle su Trustpilot',
+    trustpilotHref: 'https://www.trustpilot.com/review/noprob.agency',
+    line1: 'Il tuo brand è premium.',
+    line2: 'Anche il tuo partner',
+    line3pre: 'Shopify deve ',
+    line3em: 'esserlo',
     description:
-      'Costruiamo, miglioriamo e facciamo crescere il tuo eCommerce su Shopify, con un team dedicato in sviluppo, marketing e strategia. Insieme o separatamente, in base alle tue esigenze.',
-    ctaPrimary: 'Prenota una call',
-    ctaPrimaryHref: '/it/contatti',
-    ctaSecondary: 'Scopri cosa facciamo',
-    ctaSecondaryHref: '/it#pricing',
+      'Portiamo il tuo eCommerce su Shopify, lo costruiamo e lo facciamo crescere: store pronto in 14 giorni a prezzo pubblico, sviluppo su misura o team dedicato in sviluppo, marketing e strategia.',
+    ctaPrimary: 'Migra a Shopify in 14 giorni',
+    ctaPrimaryHref: '/it/sprint-migrazione-shopify',
+    ctaSecondary: 'Prenota una videochiamata',
+    ctaSecondaryHref: '/it/contatti',
     quote: 'I risultati concreti vengono dal pensiero a lungo termine e da un team che conosce davvero il tuo settore e se stesso',
     quoteAuthor: 'Antonio Manitta',
   },
   problem: {
     label: 'Problema',
-    heading: 'Dimentica la',
-    headingStrike: 'agenzia marketing all-in-one',
+    heading: 'Dimentica',
+    headingStrike: 'l\u2019agenzia marketing all-in-one',
     body: 'Certo, tutti vogliono un eCommerce che spacca. Ma se ti fidi dell\u2019hype, finisci a rincorrere bug, dati inutili e un supporto che sparisce. Una base solida in ogni area conta pi\u00f9 di un singolo trucco che brilla.',
     items: [
       {
@@ -802,8 +772,9 @@ const it: Dictionary = {
     ],
   },
   caseStudy: {
-    label: 'Case Study',
-    heading: 'Cosa succede quando la tecnologia incontra l\u2019esecuzione e la costanza.',
+    label: 'Casi studio',
+    heading: 'Casi studio: migrazioni a Shopify con risultati misurati',
+    headingBuilt: 'Store reali costruiti e cresciuti con noi',
     category: 'eCommerce Fashion Retail di Lusso',
     description:
       'Partiti senza team tecnico n\u00e9 struttura. Costruito, lanciato e scalato un eCommerce con un team dedicato, trasformando un canale marginale in un driver chiave della crescita del brand.',
@@ -823,7 +794,7 @@ const it: Dictionary = {
     },
   },
   pricing: {
-    label: 'Pricing',
+    label: 'Prezzi',
     heading: 'Piani intelligenti per brand eCommerce seri',
     subheading: 'Che il tuo eCommerce stia crescendo o sia ancora tutto da costruire, il nostro team tecnico ti guida a ogni passo.',
     plans: [
@@ -867,7 +838,7 @@ const it: Dictionary = {
         description:
           'Un team eCommerce su misura, guidato da un eCommerce Manager che \u00e8 il tuo unico punto di riferimento. Tu pensi al brand, noi coordiniamo tutto il resto.',
         features: ['Supporto rapido, 7 giorni su 7', 'Un unico eCommerce Manager', 'Primo sprint a metà prezzo'],
-        cta: 'Ottieni il tuo Data Team',
+        cta: 'Candidati per il team dedicato',
         ctaHref: '/it/team-ecommerce-dedicato',
         secondary: 'Contattaci',
         secondaryHref: '/it/contatti',
@@ -879,7 +850,7 @@ const it: Dictionary = {
         period: '',
         description:
           'Sviluppiamo il tuo eCommerce su Shopify dal design al tracciamento, pronto a convertire dal primo giorno. Manutenzione a vita inclusa.',
-        features: ['Paga in 3 mesi', 'Manutenzione a vita inclusa', 'Garanzia 30 giorni'],
+        features: ['\u20ac1.850 al mese per 3 mesi, IVA esclusa', 'Manutenzione a vita inclusa', 'Garanzia 30 giorni'],
         cta: 'Candidati per il progetto',
         ctaHref: '/it/sviluppo-shopify',
         secondary: 'Contattaci',
@@ -949,49 +920,6 @@ const it: Dictionary = {
           title: 'Analytics che guidano le decisioni',
           description:
             'Tracking pulito, dashboard reali, zero supposizioni. Trasformiamo i dati in azioni concrete.',
-        },
-      ],
-    },
-    process: {
-      label: 'come lavoriamo',
-      headingPart1: 'Il nostro processo standardizzato di 90 giorni.',
-      headingPart2: 'Nessuna sorpresa sui prezzi.',
-      headingPart3: 'Nessuna scadenza mancata.',
-      description:
-        'In oltre 7 anni abbiamo perfezionato i nostri workflow interni affinché ogni rebuild segua un processo chiaro e ripetibile. Ottieni qualità eccellente, tempi prevedibili e zero costi extra a sorpresa o ritardi dell\'ultimo minuto.',
-      phases: [
-        {
-          number: '01',
-          duration: '1 Settimana',
-          title: 'Onboarding & Accessi',
-          description: 'Call di kickoff, raccolta accessi e allineamento su priorità e obiettivi.',
-        },
-        {
-          number: '02',
-          duration: '7 - 14 GIORNI',
-          title: 'Audit & Priorità',
-          description:
-            'Analizziamo il setup tecnico, i dati e le performance per identificare blocchi e quick win.',
-        },
-        {
-          number: '03',
-          duration: '14 - 21 GIORNI',
-          title: 'Strategia & Roadmap',
-          description:
-            'Ricevi un piano d\'azione chiaro focalizzato sul ROI, costruito sui tuoi obiettivi di crescita.',
-        },
-        {
-          number: '04',
-          duration: '21 - 56 GIORNI',
-          title: 'Esecuzione & Tracking',
-          description: 'Il nostro team lavora in sprint. Gestiamo tutto, dall\'implementazione alla misurazione.',
-        },
-        {
-          number: '05',
-          duration: '56 - 90 GIORNI',
-          title: 'Ottimizzazione Continua',
-          description:
-            'Supporto costante, report sulle performance e miglioramenti basati sulle priorità.',
         },
       ],
     },
@@ -1103,6 +1031,10 @@ const it: Dictionary = {
     subheading: 'L\u2019agenzia che trasforma dati e visione in eCommerce ad alte prestazioni.',
     items: [
       {
+        question: 'Quanto dura e quanto costa una migrazione a Shopify con voi?',
+        answer: `Lo Shopify Launch Sprint porta il tuo store su Shopify in 14 giorni con il nostro Custom AI System: go-live tra il giorno 15 e il 30, 90 giorni di supporto e 4 garanzie scritte. Il prezzo \u00e8 pubblico in base al fatturato: ${sprintPrice(0, 'it')} sotto i \u20ac2M, ${sprintPrice(1, 'it')} tra \u20ac2M e \u20ac20M, ${sprintPrice(2, 'it')} oltre i \u20ac20M, IVA esclusa, in 4 rate.`,
+      },
+      {
         question: 'Con chi lavorate?',
         answer:
           'Con brand eCommerce, soprattutto Moda, Integratori e DTC, che vogliono costruire, migrare o far crescere il loro store su Shopify. Il team dedicato è per brand avviati con vendite regolari; lo Sviluppo Shopify copre anche chi parte da zero. Selezioniamo i partner con cura per garantire una crescita allineata nel lungo periodo.',
@@ -1159,8 +1091,8 @@ const it: Dictionary = {
     headingSub: "ciò che ti ",
     headingEm: "frena",
     headingPost: '?',
-    buttonLabel: 'Prenota una call',
-    availability: 'Slot disponibili',
+    buttonLabel: 'Prenota una videochiamata',
+    availability: 'Antonio risponde di persona',
   },
   notFound: {
     title: 'Questa pagina ',
@@ -1170,7 +1102,7 @@ const it: Dictionary = {
     contacts: 'Contattaci',
   },
   footer: {
-    headingPre: 'Consistency\nThat\u2019s ',
+    headingPre: 'La costanza\nè di ',
     headingEm: 'noprobagency',
     description:
       'Costruiamo, miglioriamo e facciamo crescere il tuo eCommerce su Shopify, con un team dedicato in sviluppo, marketing e strategia. Insieme o separatamente, in base alle tue esigenze.',
@@ -1185,14 +1117,14 @@ const it: Dictionary = {
     cookiePolicy: 'Cookie Policy',
   },
   seo: {
-    home: { title: 'Agenzia Shopify per Brand eCommerce | noprob agency™', description: 'Partner tecnico Shopify per brand fashion, integratori e DTC. Sviluppo, migrazione e gestione eCommerce con un team dedicato a lungo termine.' },
-    about: { title: 'Chi Siamo: partner tecnico eCommerce', description: 'Il team dietro NoProb. Partner tecnico Shopify che aiuta i brand B2C a scalare con sviluppo, migrazioni e team dedicati in retainer.' },
-    contacts: { title: 'Contattaci: prenota una call', description: 'Apri una conversazione con NoProb. Prenota una call per costruire il tuo eCommerce su Shopify o attivare un team dedicato a lungo termine.' },
-    blog: { title: 'Blog Shopify, eCommerce e Crescita', description: 'Guide e articoli su sviluppo Shopify, migrazioni, tracking server-side e CRO per brand fashion, integratori e DTC. Scritti dal team tecnico NoProb.' },
-    useCases: { title: "Casi d'Uso eCommerce e Risultati Reali", description: 'Risultati concreti da partnership Shopify a lungo termine. Come abbiamo fatto crescere brand fashion e DTC su vendite, tracciamento e operations eCommerce.' },
-    dataDrivenTeam: { title: 'Retainer eCommerce Dedicato', description: 'Il tuo team eCommerce dedicato in retainer. Un solo interlocutore, un team completo dietro di te. Per brand Shopify che vogliono scalare.' },
+    home: { title: 'Agenzia Shopify: migrazione e sviluppo | noprob agency™', description: 'Partner tecnico Shopify per brand fashion, integratori e DTC: migrazione a Shopify con store pronto in 14 giorni a prezzo pubblico, sviluppo e team dedicati.' },
+    about: { title: 'Chi siamo: migrazione e sviluppo Shopify', description: 'Il team noprob agency: Antonio Manitta e specialisti in Shopify, marketing, advertising e SEO, con oltre 7 anni di progetti eCommerce.' },
+    contacts: { title: 'Contatti: prenota una videochiamata', description: 'Parla con un esperto eCommerce: videochiamata per migrare a Shopify, costruire il tuo store o attivare un team dedicato. Rispondiamo entro 48 ore.' },
+    blog: { title: 'Guide Shopify: migrazione, SEO e AI', description: 'Guide su migrazione Shopify, confronti tra piattaforme, SEO della migrazione e AI per eCommerce, scritte dal team noprob agency.' },
+    useCases: { title: 'Casi studio Shopify: risultati di migrazione', description: 'Tre casi studio con numeri e fonti: WooCommerce a Shopify, piattaforma proprietaria a Shopify, migrazione AI di un catalogo B2B. Risultati in % e rapporti.' },
+    dataDrivenTeam: { title: 'Team eCommerce dedicato per Shopify', description: 'Il tuo team eCommerce dedicato per Shopify: un solo referente, sviluppo, marketing e dati. Il primo sprint di 30 giorni a metà prezzo, poi decidi tu.' },
     sviluppoShopify: { title: 'Sviluppo Shopify: creiamo il tuo eCommerce', description: 'Sviluppiamo il tuo eCommerce su Shopify dal design al tracciamento, ottimizzato per convertire dal primo giorno. Manutenzione a vita inclusa.' },
-    migrazioneShopify: { title: 'Migrazione a Shopify: la guida completa', description: 'Migrazione a Shopify passo per passo: piattaforme, cosa si sposta, redirect 301 e SEO, tracking, tempi, rischi e costi, con due migrazioni reali.' },
+    migrazioneShopify: { title: 'Migrazione a Shopify: la guida completa', description: 'Migrazione a Shopify passo per passo: piattaforme, cosa si sposta, redirect 301 e SEO, tracking, tempi, rischi e costi, con casi pubblicati.' },
     aiAccelerator: { title: 'AI Accelerator per eCommerce: cresci con l’AI', description: '30 giorni one-to-one per eCommerce già avviati: troviamo le tue opportunità di crescita, le mettiamo in fila e attiviamo le prime soluzioni AI. Prezzo fisso.' },
   },
   about: {
@@ -1220,7 +1152,7 @@ const it: Dictionary = {
           name: 'Antonio Cali',
           role: 'Sfogliate&Sfogliatelle - DTC eCommerce Owner',
           image: '/images/originals/5ZClDWRqPVst2zJqghXyG33cMY0.png',
-          quote: "Collaborare con NoProb Agency per lo sviluppo del nostro eCommerce \u00e8 stata un\u2019esperienza estremamente positiva. Fin dalle prime fasi del progetto, il team si \u00e8 distinto per chiarezza nella comunicazione, competenza tecnica e capacit\u00e0 di ascolto. Ogni passaggio, dalla progettazione grafica al go-live, \u00e8 stato gestito con professionalit\u00e0\u2026",
+          quote: "Collaborare con NoProb Agency per lo sviluppo del nostro eCommerce \u00e8 stata un\u2019esperienza estremamente positiva. Fin dalle prime fasi del progetto, il team si \u00e8 distinto per chiarezza nella comunicazione, competenza tecnica e capacit\u00e0 di ascolto.",
         },
         {
           name: 'Camilla Dudine',

@@ -7,8 +7,8 @@ import { motion } from 'framer-motion'
 import SectionLabel from '@/components/ui/SectionLabel'
 import Testimonials from '@/components/sections/Testimonials'
 import MigrazioneForm from '@/components/sections/MigrazioneForm'
-import { siteAssets } from '@/lib/site'
-import { type Locale } from '@/lib/i18n'
+import { siteAssets, TRUSTPILOT_URL } from '@/lib/site'
+import { getDictionary, type Locale } from '@/lib/i18n'
 import { type MigrazionePricingCopy, type MigrazioneFormCopy } from '@/lib/i18n/migrazione'
 
 function CheckIcon() {
@@ -194,18 +194,23 @@ export default function MigrazionePricing({
 
                   {/* Trustpilot */}
                   <div className="mt-4 flex flex-col items-center gap-[8px]">
-                    <div className="flex items-center gap-[5px]">
+                    <a
+                      href={TRUSTPILOT_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-[5px] no-underline hover:underline"
+                    >
                       <Image
                         src={siteAssets.trustpilotWordmark}
-                        alt="Trustpilot"
+                        alt=""
                         width={72}
                         height={16}
                         className="h-4 w-auto object-contain"
                       />
                       <span className="font-sans text-[12px] font-semibold tracking-[-0.03em] text-np-green-trust">
-                        5/5
+                        {getDictionary(locale).hero.trustpilotRating}
                       </span>
-                    </div>
+                    </a>
                     <p className="text-center font-sans text-[12px] font-medium tracking-[-0.04em] text-noprob-text">
                       {d.trustLabel}
                     </p>

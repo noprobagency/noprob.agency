@@ -9,6 +9,7 @@ import { StructuredData } from '@/components/blog/StructuredData'
 import { renderSection } from '@/components/article/renderSection'
 import UseCaseExtras from '@/components/article/UseCaseExtras'
 import CTA from '@/components/sections/CTA'
+import { getBlocchiCopy } from '@/lib/i18n/blocchi'
 import Footer from '@/components/layout/Footer'
 
 type Props = {
@@ -51,7 +52,7 @@ export default async function ItalianUseCasePage({ params }: Props) {
       {/* Hero */}
       <section className="w-full bg-[#f0f0f0] pt-[120px] pb-0 px-5 min-[810px]:px-9">
         <div className="mx-auto flex max-w-[860px] flex-col items-center gap-5 pb-12 text-center">
-          <span className="np-eyebrow">{useCase.caseType === 'Use Case' ? 'Caso d’Uso' : useCase.caseType}</span>
+          <span className="np-eyebrow">{getBlocchiCopy(locale).useCases.caseTypeLabel}</span>
           <h1
             className="font-sans font-semibold text-black tracking-[-0.07em] leading-[110%]"
             style={{ fontSize: 'clamp(32px, 5vw, 56px)' }}

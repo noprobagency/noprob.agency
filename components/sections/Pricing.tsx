@@ -147,22 +147,25 @@ export default function Pricing({
                     </div>
 
                     <div className="flex flex-col items-center gap-[10px]">
-                      <div className="flex items-center gap-[5px]">
+                      <a
+                        href={t.hero.trustpilotHref}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        data-tracking="pricing_trustpilot"
+                        className="flex items-center gap-[5px] no-underline hover:underline"
+                      >
                         <div className="relative h-4 w-12">
                           <Image
                             src={siteAssets.trustpilotWordmark}
-                            alt="Trustpilot logo"
+                            alt=""
                             fill
                             className="object-contain object-left"
                           />
                         </div>
                         <span className="font-sans text-[12px] font-medium tracking-[-0.04em] text-[rgb(31,122,83)]">
-                          5/5
+                          {t.hero.trustpilotRating}
                         </span>
-                        <span className="font-sans text-[12px] font-medium tracking-[-0.04em] text-[rgb(31,122,83)]">
-                          Trustpilot
-                        </span>
-                      </div>
+                      </a>
                       <p className="max-w-[200px] text-center font-sans text-[12px] font-medium leading-[1.3em] tracking-[-0.04em] text-[#121212]">
                         {t.pricing.trustpilotLabel}
                       </p>

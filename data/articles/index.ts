@@ -16,6 +16,7 @@ import shopifyMagicSidekick from './posts/shopify-magic-sidekick'
 import chooseShopifyMigrationAgency from './posts/choose-shopify-migration-agency'
 import shopifyMigrationCost from './posts/shopify-migration-cost'
 import bigcommerceToShopifyMigration from './posts/bigcommerce-to-shopify-migration'
+import shopifyPlus from './posts/shopify-plus'
 
 export type ArticleSection =
   | { type: 'paragraph'; text: string }
@@ -73,6 +74,7 @@ export type Article = {
 
 /** One article per file in ./posts; a new article = a new file + one import line here. */
 export const articles: Article[] = [
+  shopifyPlus,
   bigcommerceToShopifyMigration,
   shopifyMigrationCost,
   chooseShopifyMigrationAgency,

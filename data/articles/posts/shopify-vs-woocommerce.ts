@@ -4,17 +4,17 @@ const article: Article = {
   slug: 'shopify-vs-woocommerce',
   slugIt: 'shopify-o-woocommerce',
   title: 'Shopify vs WooCommerce: Five Decisions That Settle It (and When WooCommerce Wins)',
-  titleIt: 'Shopify o WooCommerce: le cinque decisioni che contano (e quando vince WooCommerce)',
-  seoTitle: 'Shopify vs WooCommerce: How to Choose in 2026',
-  seoTitleIt: 'Shopify o WooCommerce: come scegliere nel 2026',
+  titleIt: 'WooCommerce vs Shopify: le cinque decisioni che contano (e quando conviene WooCommerce)',
+  seoTitle: 'Shopify vs WooCommerce: 5 Decisions That Matter',
+  seoTitleIt: 'WooCommerce vs Shopify: 5 decisioni che contano',
   seoDescription:
     'Shopify vs WooCommerce without the feature table: five decisions that settle it, when WooCommerce wins, and what moving a real store showed us.',
   seoDescriptionIt:
-    'Shopify o WooCommerce senza tabella di funzioni: cinque decisioni che contano, quando vince WooCommerce e cosa ci ha insegnato un passaggio reale.',
+    'WooCommerce vs Shopify senza tabella di funzioni: cinque decisioni che contano, quando conviene WooCommerce e cosa ci ha insegnato un passaggio reale.',
   excerpt:
     'Shopify vs WooCommerce is less about features and more about who maintains the store, what breaks, how fast you can change things, what growth costs and how easy it is to leave. It shows when each platform is the better choice.',
   excerptIt:
-    'Shopify o WooCommerce non è una questione di funzioni: conta chi mantiene lo store, cosa si rompe, quanto sei veloce a cambiare, quanto costa crescere e quanto è facile andarsene. Mostra quando conviene l’una e quando l’altra.',
+    'WooCommerce vs Shopify non è una questione di funzioni: conta chi mantiene lo store, cosa si rompe, quanto sei veloce a cambiare, quanto costa crescere e quanto è facile andarsene. Mostra quando conviene l’una e quando l’altra.',
   ledeEn:
     'Shopify vs WooCommerce comes down to who looks after the store once it is live. Five decisions settle it, and in some cases the right answer is WooCommerce.',
   ledeIt:
@@ -25,14 +25,14 @@ const article: Article = {
   articleType: 'BlogPosting',
   date: '2026-10-27',
   datePublishedIso: '2026-10-27T09:00:00+02:00',
-  dateModifiedIso: '2026-10-27T09:00:00+02:00',
-  wordCount: 1700,
+  dateModifiedIso: '2026-10-28T09:00:00+00:00',
+  wordCount: 1900,
   articleSection: 'Shopify',
   readingTimeMinutes: 8,
   keywordsEn:
-    'shopify vs woocommerce, woocommerce vs shopify, shopify or woocommerce, woocommerce vs shopify for ecommerce, switch from woocommerce to shopify, is shopify better than woocommerce',
+    'shopify vs woocommerce, woocommerce vs shopify, shopify or woocommerce, woocommerce vs shopify for ecommerce, is shopify better than woocommerce, shopify vs woocommerce seo',
   keywordsIt:
-    'shopify o woocommerce, woocommerce vs shopify, shopify vs woocommerce, meglio shopify o woocommerce, passare da woocommerce a shopify, differenze tra shopify e woocommerce',
+    'woocommerce vs shopify, shopify o woocommerce, shopify vs woocommerce, meglio shopify o woocommerce, differenze tra shopify e woocommerce, woocommerce o shopify seo',
   faqEn: [
     {
       question: 'Is Shopify better than WooCommerce?',
@@ -58,6 +58,11 @@ const article: Article = {
       question: 'Is it hard to move from WooCommerce to Shopify?',
       answer:
         'It is a project, not a button. Products, customers, orders and blog content can move, but URLs, redirects, plugins and tracking need planning. Our Shopify Launch Sprint does it in 14 days with a fixed calendar; the practical steps are in our WooCommerce to Shopify migration guide.',
+    },
+    {
+      question: 'Is Shopify or WooCommerce better for a small store?',
+      answer:
+        'For a small store with nobody to maintain it, Shopify is usually easier: one subscription, hosting and security included. A small store with a developer already on hand can run well on WooCommerce at a lower cost. Add up a year of both before you decide.',
     },
     {
       question: 'When should I stay on WooCommerce?',
@@ -90,6 +95,11 @@ const article: Article = {
       question: 'È difficile passare da WooCommerce a Shopify?',
       answer:
         'È un progetto, non un pulsante. Prodotti, clienti, ordini e articoli del blog si possono spostare, ma URL, redirect, plugin e tracciamento vanno pianificati. Lo Shopify Launch Sprint lo fa in 14 giorni con un calendario fisso; i passaggi pratici sono nella nostra guida alla migrazione da WooCommerce a Shopify.',
+    },
+    {
+      question: 'Per un piccolo negozio è meglio Shopify o WooCommerce?',
+      answer:
+        'Per un piccolo negozio senza nessuno che lo mantenga, Shopify è di solito più semplice: un solo abbonamento, con hosting e sicurezza inclusi. Un piccolo negozio con uno sviluppatore già disponibile può funzionare bene su WooCommerce a un costo più basso. Somma un anno di entrambe prima di decidere.',
     },
     {
       question: 'Quando conviene restare su WooCommerce?',
@@ -194,7 +204,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'In the first 85 days on Shopify, from 19 July to 12 October 2026, against the same days of 2025: online sales +105%, orders +77%, average order value +16%, returning customers 2.25 times. The result also reflects the work around it: the site was redesigned, the quiz went live, the email work from 2025 kept compounding and ad campaigns restarted in mid-August. Google clicks also fell in August, as they often do after a migration, and recovered from September: in the last 28 days they were 2.7 times the same period of 2025. The full numbers and sources are in the [Nazzi case study](/use-cases/integratori-nazzi-dtc-shopify).',
+      text: 'In the first 85 days on Shopify, from 19 July to 12 October 2026, against the same days of 2025: online sales +105%, orders +77%, average order value +16%, returning customers 2.25 times. The result also reflects the work around it: the site was redesigned, the quiz went live, the email work from 2025 kept compounding and ad campaigns restarted in mid-August. Rankings move for a few weeks after a migration, and the redirect map decides how much recovers: Google clicks recovered from September and in the last 28 days were 2.7 times the same period of 2025. The full numbers and sources are in the [Nazzi case study](/use-cases/integratori-nazzi-dtc-shopify).',
     },
     { type: 'h2', text: 'When WooCommerce is the better choice' },
     {
@@ -228,7 +238,26 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'If you recognise yourself in the second list and you are on WooCommerce today, the move is a project with a known shape. Our [guide to migrating to Shopify](/shopify-migration) covers the whole process, including the parts you can do yourself, and the [Shopify Launch Sprint](/shopify-migration-sprint) is how we run it for you. If you are still choosing, our overview of [how Shopify works](/blog/how-shopify-works) is the place to start.',
+      text: 'If you recognise yourself in the second list and you are on WooCommerce today, the move is a project with a known shape. The [Shopify Launch Sprint](/shopify-migration-sprint) is how we run it: a store ready on Shopify on day 14, go-live between day 15 and 30, 90 days of support and 4 written guarantees, from €5,800 (VAT excluded, in 4 installments). Our [guide to migrating to Shopify](/shopify-migration) shows the whole process, including the parts you can do yourself, and the [WooCommerce to Shopify migration guide](/blog/woocommerce-to-shopify-migration) covers what is specific to WooCommerce. If you are still choosing, our overview of [how Shopify works](/blog/how-shopify-works) is the place to start. Other starting points: [Wix](/blog/wix-vs-shopify), [Squarespace](/blog/squarespace-vs-shopify), [Magento](/blog/magento-to-shopify-migration), [PrestaShop](/blog/prestashop-to-shopify-migration), [BigCommerce](/blog/bigcommerce-to-shopify-migration), and how to [choose a migration agency](/blog/choose-shopify-migration-agency).',
+    },
+    { type: 'h2', text: 'Frequently asked questions' },
+    { type: 'h3', text: 'Is Shopify better than WooCommerce?' },
+    { type: 'paragraph', text: 'It depends on who will maintain the store. Shopify is usually better if nobody on your side wants to handle hosting, updates and security. WooCommerce is usually better if you already have a developer and want full control of the code, the server and the data.' },
+    { type: 'h3', text: 'Is WooCommerce cheaper than Shopify?' },
+    { type: 'paragraph', text: 'It can be. WooCommerce software is free, but you pay for hosting, extensions, security and developer time, and those costs come from different vendors, so they are easy to underestimate. Shopify shows its cost on one invoice. Add up a full year of both for your own store before you decide.' },
+    { type: 'h3', text: 'Which is better for SEO, Shopify or WooCommerce?' },
+    { type: 'paragraph', text: 'Both can rank well. WordPress gives more control over URLs and content, while Shopify fixes some URL prefixes but handles the technical basics for you. In our Nazzi migration, Google clicks in the last 28 days were 2.7 times the same period of the year before, but that reflects migration work and content, not the platform alone.' },
+    { type: 'h3', text: 'Is WooCommerce secure?' },
+    { type: 'paragraph', text: 'It can be, if someone keeps WordPress, WooCommerce, extensions and PHP up to date. Security is your responsibility on a self-hosted store. If your site runs on PHP, check the version against CERT-EU advisory 2026-018, which lists the fixed releases.' },
+    { type: 'h3', text: 'Is it hard to move from WooCommerce to Shopify?' },
+    { type: 'paragraph', text: 'It is a project, not a button. Products, customers, orders and blog content can move, but URLs, redirects, plugins and tracking need planning. Our Shopify Launch Sprint does it in 14 days with a fixed calendar; the practical steps are in our WooCommerce to Shopify migration guide.' },
+    { type: 'h3', text: 'Is Shopify or WooCommerce better for a small store?' },
+    { type: 'paragraph', text: 'For a small store with nobody to maintain it, Shopify is usually easier: one subscription, hosting and security included. A small store with a developer already on hand can run well on WooCommerce at a lower cost. Add up a year of both before you decide.' },
+    { type: 'h3', text: 'When should I stay on WooCommerce?' },
+    { type: 'paragraph', text: 'Stay if maintenance is already routine for someone you trust, if the store is part of a content-led WordPress site, or if you need logic that does not fit Shopify’s data model. A move only pays off if it solves a problem you actually have.' },
+    {
+      type: 'paragraph',
+      text: 'The Sprint has a public price by revenue: €5,800 under €2M, €8,800 from €2M to €20M, €12,800 above €20M, VAT excluded, in 4 installments.',
     },
     {
       type: 'paragraph',
@@ -298,7 +327,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Il software di WooCommerce è gratuito. I costi sono l’hosting che deve crescere con il traffico, le estensioni da rinnovare ogni anno, backup e strumenti di sicurezza, e le ore di sviluppo per aggiornamenti, fix e tutto ciò che è su misura. Nessuna fattura mostra il totale, e una parte è tempo del tuo team. Non mettiamo un numero perché varia troppo; l’esercizio utile è sommare i tuoi ultimi dodici mesi di hosting, estensioni e fatture dello sviluppatore, più le ore.',
+      text: 'Il software di WooCommerce è gratuito. I costi sono l’hosting che deve crescere con il traffico, le estensioni da rinnovare ogni anno, backup e strumenti di sicurezza, e le ore di sviluppo per aggiornamenti, fix e tutto ciò che è su misura. Nessuna fattura mostra il totale, e una parte è tempo del tuo team. L’esercizio utile è sommare i tuoi ultimi dodici mesi di hosting, estensioni e fatture dello sviluppatore, più le ore.',
     },
     {
       type: 'paragraph',
@@ -332,7 +361,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Nei primi 85 giorni su Shopify, dal 19 luglio al 12 ottobre 2026, rispetto agli stessi giorni del 2025: vendite online +105%, ordini +77%, scontrino medio +16%, clienti di ritorno 2,25 volte. Il risultato riflette anche il lavoro intorno: il sito è stato ridisegnato, il quiz è andato online, il lavoro sulle email del 2025 ha continuato a rendere e le campagne sono ripartite a metà agosto. Anche i clic da Google sono scesi ad agosto, come spesso succede dopo una migrazione, e sono risaliti da settembre: negli ultimi 28 giorni sono 2,7 volte lo stesso periodo del 2025. Numeri completi e fonti sono nel [caso studio Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify).',
+      text: 'Nei primi 85 giorni su Shopify, dal 19 luglio al 12 ottobre 2026, rispetto agli stessi giorni del 2025: vendite online +105%, ordini +77%, scontrino medio +16%, clienti di ritorno 2,25 volte. Il risultato riflette anche il lavoro intorno: il sito è stato ridisegnato, il quiz è andato online, il lavoro sulle email del 2025 ha continuato a rendere e le campagne sono ripartite a metà agosto. Il posizionamento si muove per qualche settimana dopo una migrazione e la mappa dei redirect decide quanto recupera: i clic da Google sono risaliti da settembre e negli ultimi 28 giorni sono 2,7 volte lo stesso periodo del 2025. Numeri completi e fonti sono nel [caso studio Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify).',
     },
     { type: 'h2', text: 'Quando WooCommerce è la scelta migliore' },
     {
@@ -366,7 +395,26 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Se ti riconosci nella seconda lista e oggi sei su WooCommerce, il passaggio è un progetto con una forma nota. La nostra [guida alla migrazione a Shopify](/it/migrazione-shopify) spiega l’intero processo, comprese le parti che puoi fare da solo, e lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) è il modo in cui lo gestiamo per te. Se stai ancora scegliendo, per partire c’è la nostra panoramica su [cos’è Shopify e come funziona](/it/blog/cose-shopify).',
+      text: 'Se ti riconosci nella seconda lista e oggi sei su WooCommerce, il passaggio è un progetto con una forma nota. Lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) è il modo in cui lo gestiamo: store pronto su Shopify al giorno 14, go-live tra il giorno 15 e il 30, 90 giorni di supporto e 4 garanzie scritte, da €5.800 (IVA esclusa, in 4 rate). La nostra [guida alla migrazione a Shopify](/it/migrazione-shopify) spiega l’intero processo, comprese le parti che puoi fare da solo, e la [guida alla migrazione da WooCommerce a Shopify](/it/blog/migrazione-woocommerce-shopify) copre ciò che è specifico di WooCommerce. Se stai ancora scegliendo, per partire c’è la nostra panoramica su [cos’è Shopify e come funziona](/it/blog/cose-shopify). Altri punti di partenza: [Wix](/it/blog/wix-o-shopify), [Squarespace](/it/blog/squarespace-o-shopify), [Magento](/it/blog/migrazione-magento-shopify), [PrestaShop](/it/blog/migrazione-prestashop-shopify), [BigCommerce](/it/blog/migrazione-bigcommerce-shopify) e come [scegliere un’agenzia di migrazione](/it/blog/scegliere-agenzia-migrazione-shopify).',
+    },
+    { type: 'h2', text: 'Domande frequenti' },
+    { type: 'h3', text: 'È meglio Shopify o WooCommerce?' },
+    { type: 'paragraph', text: 'Dipende da chi manterrà lo store. Shopify è di solito meglio se nessuno da parte tua vuole occuparsi di hosting, aggiornamenti e sicurezza. WooCommerce è di solito meglio se hai già uno sviluppatore e vuoi il controllo completo di codice, server e dati.' },
+    { type: 'h3', text: 'WooCommerce costa meno di Shopify?' },
+    { type: 'paragraph', text: 'Può costare meno. Il software WooCommerce è gratuito, ma paghi hosting, estensioni, sicurezza e ore di sviluppo, e queste voci arrivano da fornitori diversi, quindi si sottostimano facilmente. Shopify mostra il costo in una fattura sola. Somma un anno intero di entrambe per il tuo store prima di decidere.' },
+    { type: 'h3', text: 'Per la SEO è meglio Shopify o WooCommerce?' },
+    { type: 'paragraph', text: 'Entrambe possono posizionarsi bene. WordPress dà più controllo su URL e contenuti, Shopify ha alcuni prefissi di URL fissi ma gestisce da solo le basi tecniche. Nella migrazione di Nazzi i clic da Google negli ultimi 28 giorni sono 2,7 volte quelli dello stesso periodo dell’anno prima, ma conta il lavoro di migrazione e di contenuti, non solo la piattaforma.' },
+    { type: 'h3', text: 'WooCommerce è sicuro?' },
+    { type: 'paragraph', text: 'Può esserlo, se qualcuno tiene aggiornati WordPress, WooCommerce, estensioni e PHP. Su uno store self-hosted la sicurezza è una tua responsabilità. Se il tuo sito gira su PHP, controlla la versione con l’advisory CERT-EU 2026-018, che elenca le versioni corrette.' },
+    { type: 'h3', text: 'È difficile passare da WooCommerce a Shopify?' },
+    { type: 'paragraph', text: 'È un progetto, non un pulsante. Prodotti, clienti, ordini e articoli del blog si possono spostare, ma URL, redirect, plugin e tracciamento vanno pianificati. Lo Shopify Launch Sprint lo fa in 14 giorni con un calendario fisso; i passaggi pratici sono nella nostra guida alla migrazione da WooCommerce a Shopify.' },
+    { type: 'h3', text: 'Per un piccolo negozio è meglio Shopify o WooCommerce?' },
+    { type: 'paragraph', text: 'Per un piccolo negozio senza nessuno che lo mantenga, Shopify è di solito più semplice: un solo abbonamento, con hosting e sicurezza inclusi. Un piccolo negozio con uno sviluppatore già disponibile può funzionare bene su WooCommerce a un costo più basso. Somma un anno di entrambe prima di decidere.' },
+    { type: 'h3', text: 'Quando conviene restare su WooCommerce?' },
+    { type: 'paragraph', text: 'Conviene restare se la manutenzione è già routine per una persona di cui ti fidi, se lo store è parte di un sito WordPress guidato dai contenuti, o se ti serve una logica che non entra nel modello dati di Shopify. Cambiare vale solo se risolve un problema che hai davvero.' },
+    {
+      type: 'paragraph',
+      text: 'Lo Sprint ha un prezzo pubblico per fatturato: €5.800 sotto i €2M, €8.800 tra €2M e €20M, €12.800 oltre i €20M, IVA esclusa, in 4 rate.',
     },
     {
       type: 'paragraph',

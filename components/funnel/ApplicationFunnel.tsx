@@ -34,7 +34,7 @@ const STEPS: Step[] = [
     kind: 'choice',
     field: 'qualified',
     title: 'Il tuo eCommerce fattura almeno 100.000 € all’anno?',
-    hint: 'Se no, questa call oggi non fa per te: lavoriamo con brand già avviati che vogliono scalare.',
+    hint: 'Se no, questa videochiamata oggi non fa per te: lavoriamo con brand già avviati che vogliono scalare.',
     options: [
       { value: 'si', label: 'Sì' },
       { value: 'no', label: 'No' },
@@ -47,7 +47,7 @@ const STEPS: Step[] = [
     kind: 'input',
     field: 'phone',
     title: 'Qual è il tuo numero di cellulare?',
-    hint: 'Ti scriviamo su WhatsApp solo per organizzare la call.',
+    hint: 'Ti scriviamo su WhatsApp solo per organizzare la videochiamata.',
     type: 'tel',
     placeholder: '+39 320 123 4567',
     autoComplete: 'tel',
@@ -68,7 +68,7 @@ const STEPS: Step[] = [
   {
     kind: 'textarea',
     field: 'reason',
-    title: 'Raccontaci qualcosa del tuo brand e di cosa ti ha spinto a candidarti per questa call.',
+    title: 'Raccontaci qualcosa del tuo brand e di cosa ti ha spinto a candidarti per questa videochiamata.',
     hint: '(Ci aiuta a capire se siamo il partner giusto e come possiamo esserti utili da subito)',
     placeholder: 'Scrivi qui la tua risposta',
   },

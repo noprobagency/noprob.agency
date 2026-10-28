@@ -9,6 +9,11 @@ type Props = {
   href: string
   locale: Locale
   caseTypeLabel: string
+  /**
+   * Brand name as visible text (H2) on the card, used by the case study index
+   * (the logo alone gives crawlers no text). Omitted on the home marquee.
+   */
+  brand?: string
 }
 
 /**
@@ -17,7 +22,7 @@ type Props = {
  *   brand logo + metric pills) used on the homepage marquee.
  * - Otherwise, falls back to the plain title + excerpt card.
  */
-export default function UseCaseCard({ useCase, href, locale, caseTypeLabel }: Props) {
+export default function UseCaseCard({ useCase, href, locale, caseTypeLabel, brand }: Props) {
   const title = locale === 'en' ? (useCase.titleEn ?? useCase.title) : useCase.title
   const excerpt = locale === 'en' ? (useCase.excerptEn ?? useCase.excerpt) : useCase.excerpt
 
@@ -27,7 +32,9 @@ export default function UseCaseCard({ useCase, href, locale, caseTypeLabel }: Pr
       <Link
         href={href}
         aria-label={title}
-        className="group relative block h-[320px] overflow-hidden rounded-card-lg border-2 border-noprob-border bg-noprob-card-off no-underline min-[810px]:h-[380px]"
+        className={`group relative block overflow-hidden rounded-card-lg border-2 border-noprob-border bg-noprob-card-off no-underline ${
+          brand ? 'h-[360px] min-[810px]:h-[420px]' : 'h-[320px] min-[810px]:h-[380px]'
+        }`}
       >
         <Image
           src={useCase.archive.image}
@@ -64,6 +71,11 @@ export default function UseCaseCard({ useCase, href, locale, caseTypeLabel }: Pr
             height={30}
             className={useCase.archive.logoClass ?? 'h-[30px] w-[140px] object-contain'}
           />
+          {brand ? (
+            <h2 className="text-center font-sans text-[20px] font-semibold leading-[1.2em] tracking-[-0.03em] text-np-dark">
+              {brand}
+            </h2>
+          ) : null}
           <div className="flex flex-wrap items-center justify-center gap-2">
             {metrics.map((metric) => (
               <span

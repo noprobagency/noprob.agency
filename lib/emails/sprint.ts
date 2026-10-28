@@ -39,7 +39,7 @@ export function buildSprintWelcomeEmail({
         heading: `Ciao ${esc(name)}, abbiamo ricevuto la candidatura per ${esc(storeUrl)}.`,
         body: 'Leggo ogni candidatura di persona e ti rispondo entro 48 ore con lo scaglione confermato e la prima data di kickoff disponibile.',
         tierLabel: 'Il tuo scaglione stimato',
-        tier: `Tier ${tierId}: ${price} in 4 rate da ${installment}, IVA esclusa. Lo confermiamo in call.`,
+        tier: `Tier ${tierId}: ${price} in 4 rate da ${installment}, IVA esclusa. Lo confermiamo in videochiamata.`,
         addon: 'Da quello che ci hai detto potrebbero servire add-on a prezzo fisso (prodotti, lingue o gestionale oltre i limiti dello scaglione): te li dico prima della firma.',
         nextTitle: 'Intanto, se vuoi portarti avanti',
         next: [

@@ -23,18 +23,18 @@ export const zeroLossEn: ZlCopy = {
   hero: {
     eyebrow: 'Shopify Launch Sprint',
     h1: 'Your eCommerce on Shopify in 14 days. Higher on Google, more sales, more AI.',
-    proofNote: 'Case study: +105% sales in 85 days',
+    proofNote: 'Nazzi case study: +105% online sales in 85 days',
     paragraph:
       'In 14 days a full team moves your store to Shopify, with our Custom AI System: faster, ready for AI agents, built to sell. Then 90 days on SEO, conversion and AOV, measured in a dashboard. Fixed price, zero surprises.',
     ctaPrimary: 'Apply for the sprint',
-    ctaNote: 'We reply within 48 hours',
+    ctaNote: 'Fixed price from €5,800 · We reply within 48 hours',
     ctaSecondary: 'See the results',
     logosLabel: 'Chosen by Fashion, Supplements and DTC brands',
-    trustpilotScore: '5/5',
-    trustpilotLabel: '10 reviews on Trustpilot',
+    trustpilotScore: '10 five-star reviews',
+    trustpilotLabel: 'on Trustpilot',
   },
   overview: {
-    h2: 'Shopify Launch Sprint',
+    h2: 'What is the Shopify Launch Sprint',
     paragraph:
       'Fourteen days, a fixed calendar, one point of contact. On day 1 you give us the accesses, on day 14 your store is on Shopify, ready to publish. It is not a redesign: it is your store, rebuilt from scratch with our Custom AI System, faster, stronger on Google and with a checkout built to sell more.',
     cta: 'Apply for the sprint',
@@ -63,7 +63,7 @@ export const zeroLossEn: ZlCopy = {
       },
     ],
     afterLine:
-      'Included in the price: the results dashboard from day 1, zero-downtime go-live in the window you choose and 90 days of support, monitoring & improvement: bug fixes, changes, SEO and tracking checks and new optimizations every week.',
+      'Included in the price: the results dashboard from day 1, zero-downtime go-live in the window you choose and 90 days of support, monitoring & improvement, with us acting as your eCommerce manager: bug fixes, changes and ongoing optimization of SEO, conversion, average order value and tracking.',
     pricingTitle: 'Priced by the size of your company',
     pricingSub: 'and the store complexity that comes with it',
     tiers: [
@@ -77,7 +77,7 @@ export const zeroLossEn: ZlCopy = {
       { value: '+105% online sales in the first 85 days on Shopify', attribution: 'Supplement DTC Nazzi' },
       { value: '+67.7% online sales in the 12 months after the migration', attribution: 'Cumini, luxury multibrand' },
       { value: 'Google position improved by 21%, clicks 2.7 times the year before', attribution: 'Supplement DTC Nazzi, Search Console' },
-      { value: '0 minutes offline across over 10 migrations', attribution: 'noprob agency' },
+      { value: '0 minutes offline across several migrations', attribution: 'noprob agency' },
     ],
   },
   checklist: {
@@ -98,7 +98,7 @@ export const zeroLossEn: ZlCopy = {
     countLabel: 'ticked',
   },
   deliverables: {
-    h2: 'The solution in a 2-week sprint',
+    h2: 'Shopify migration in a 2-week sprint',
     sub: 'we cover it all, point by point',
     labelPrefix: 'Deliverable',
     items: [
@@ -145,7 +145,7 @@ export const zeroLossEn: ZlCopy = {
     ],
   },
   calendar: {
-    h2: 'Here is exactly how the sprint works',
+    h2: 'How the Shopify migration works, day by day',
     prework: {
       label: 'Pre-work',
       yourTeamTitle: 'Your team',
@@ -240,7 +240,7 @@ export const zeroLossEn: ZlCopy = {
         {
           phase: '90 days from go-live',
           title: 'Support, monitoring & improvement',
-          detail: 'Bug fixes, minor changes, SEO and tracking monitoring and new optimizations. Weekly 10-minute Loom. Report on day 90.',
+          detail: 'As your eCommerce manager: ongoing optimization of SEO, conversion, average order value and tracking, plus bug fixes and minor changes. Weekly 10-minute Loom. Report on day 90.',
         },
       ],
       dashboard: {
@@ -323,7 +323,7 @@ export const zeroLossEn: ZlCopy = {
       colOld: 'On your own, on the old platform',
       colNew: 'With us, on Shopify + AI',
       rows: [
-        { task: 'Maintenance', old: 'Hosting, plugins and developers paid separately', now: 'All included: updates, fixes and changes are on us' },
+        { task: 'Maintenance', old: 'Hosting, plugins and developers paid separately', now: 'Always included: security, updates, instructions and technical support are on us' },
         { task: 'Support', old: 'A ticket and days of waiting', now: 'Support 7 days a week, straight from the team' },
         { task: 'Speed', old: 'Every change turns into a project', now: 'Changes and tests the same day, with AI on our side' },
         { task: 'Vision', old: 'Different vendors, nobody sees the big picture', now: 'A growth partner who sees every area: SEO, ads, email, tracking and AI' },
@@ -436,6 +436,11 @@ export const zeroLossEn: ZlCopy = {
   faq: {
     h2: 'Frequently asked questions',
     cta: 'Apply for the sprint',
+    guideLink: {
+      text: 'Want to understand how a migration works first?',
+      label: 'Read the complete Shopify migration guide',
+      href: '/shopify-migration',
+    },
     items: [
       {
         question: 'How much time do I need?',
@@ -448,9 +453,9 @@ export const zeroLossEn: ZlCopy = {
           'Yes. We work in staging, your current site is not touched. You go live when you decide, between day 15 and day 30.',
       },
       {
-        question: 'Will I lose Google rankings?',
+        question: 'What happens to my Google rankings?',
         answer:
-          'No, if the migration is managed. Every URL with traffic has its 1:1 redirect, tested automatically before and after launch, and we monitor Search Console for 90 days. If organic traffic stays below the baseline at 90 days, we work for free until it comes back.',
+          'After a platform change rankings move for a few weeks, and the redirect map decides how much they recover. That is why every URL with traffic has its 1:1 redirect, tested automatically before and after launch, and we monitor Search Console for 90 days. If organic traffic stays below the baseline at 90 days, we work for free until it comes back.',
       },
       {
         question: 'Will the site look the same as before?',
@@ -460,7 +465,7 @@ export const zeroLossEn: ZlCopy = {
       {
         question: 'Which platforms do you migrate from?',
         answer:
-          'WooCommerce, PrestaShop, Magento, custom platforms, management systems and ERPs with an integrated store. The sprint is built for stores coming from another platform.',
+          'WooCommerce, Magento, PrestaShop, BigCommerce, Wix, Squarespace, proprietary platforms and ERPs. The method is the same on each one; the sprint is built for stores coming from another platform.',
       },
       {
         question: 'What happens if the accesses do not arrive in time?',
@@ -484,7 +489,7 @@ export const zeroLossEn: ZlCopy = {
       {
         question: 'What happens after the 90 days?',
         answer:
-          'The store is yours, solid, with clean data. You can continue on your own, with a package of hours, or with partners for advertising, email and design. No lock-in.',
+          'The store is yours, solid, with clean data. Maintenance (security, updates, instructions and technical support) stays included. To grow further you can continue on your own, with a package of hours, or with partners for advertising, email and design. No lock-in.',
       },
       {
         question: 'When can I start?',
@@ -506,7 +511,7 @@ export const zeroLossEn: ZlCopy = {
   finalCta: {
     h2: 'Your store on Shopify in 14 days. Apply now.',
     paragraph:
-      'We reply within 48 hours. If you meet the criteria, the answer is your tier, the price and the first available kickoff date.',
+      'We reply within 48 hours with your tier, the price and the first available kickoff date.',
     bullets: ['Store ready on day 14', '4 guarantees written in the contract', '90 days of support, monitoring & improvement'],
     cta: 'Apply for the sprint',
   },
@@ -514,7 +519,7 @@ export const zeroLossEn: ZlCopy = {
     metaTitle: 'Apply for the Shopify Launch Sprint | noprob agency',
     metaDescription: 'Four steps, two minutes. We reply within 48 hours with your tier, the price and the first available kickoff date.',
     back: 'Back to the sprint page',
-    trustedBy: '5/5 on Trustpilot',
+    trustedBy: '10 five-star reviews on Trustpilot',
     h1Pre: 'Your store on Shopify in',
     h1Em: '14 days.',
     description:

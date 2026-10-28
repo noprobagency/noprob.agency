@@ -5,37 +5,33 @@ import { ROUTE_PATHS, type RouteKey } from '@/lib/i18n/routes'
  * the copy of a page changes, so `lastmod` in the sitemap means something
  * instead of moving at every deploy.
  */
-export const CONTENT_LAST_MODIFIED = '2026-10-27'
+export const CONTENT_LAST_MODIFIED = '2026-10-28'
 
 export type RouteConfig = {
   key: RouteKey
   enPath: string
   itPath: string
-  priority: number
-  changeFrequency: 'daily' | 'weekly' | 'monthly' | 'yearly'
   hasIt: boolean
 }
 
-const ROUTE_DEFS: Array<{
-  key: RouteKey
-  priority: number
-  changeFrequency: RouteConfig['changeFrequency']
-  hasIt: boolean
-}> = [
-  { key: 'home',             priority: 1.0, changeFrequency: 'weekly',  hasIt: true },
-  { key: 'about',            priority: 0.8, changeFrequency: 'monthly', hasIt: true },
-  { key: 'useCases',         priority: 0.9, changeFrequency: 'weekly',  hasIt: true },
-  { key: 'dataDrivenTeam',   priority: 0.9, changeFrequency: 'monthly', hasIt: true },
-  { key: 'sviluppoShopify', priority: 0.9, changeFrequency: 'monthly', hasIt: true },
-  { key: 'migrazioneShopify', priority: 0.9, changeFrequency: 'monthly', hasIt: true },
-  { key: 'zeroLossMigration', priority: 0.9, changeFrequency: 'monthly', hasIt: true },
-  { key: 'aiAccelerator',    priority: 0.9, changeFrequency: 'monthly', hasIt: true },
-  { key: 'blog',             priority: 0.7, changeFrequency: 'weekly',  hasIt: true },
-  { key: 'contacts',         priority: 0.6, changeFrequency: 'yearly',  hasIt: true },
-  { key: 'privacyPolicy',    priority: 0.2, changeFrequency: 'yearly',  hasIt: true },
-  { key: 'cookiePolicy',     priority: 0.2, changeFrequency: 'yearly',  hasIt: true },
+/**
+ * Fixed pages of the sitemap. No `priority` and no `changefreq`: Google ignores
+ * both, and an honest `lastmod` is the only field that decides what gets recrawled.
+ */
+const ROUTE_DEFS: Array<{ key: RouteKey; hasIt: boolean }> = [
+  { key: 'home', hasIt: true },
+  { key: 'about', hasIt: true },
+  { key: 'useCases', hasIt: true },
+  { key: 'dataDrivenTeam', hasIt: true },
+  { key: 'sviluppoShopify', hasIt: true },
+  { key: 'migrazioneShopify', hasIt: true },
+  { key: 'zeroLossMigration', hasIt: true },
+  { key: 'aiAccelerator', hasIt: true },
+  { key: 'blog', hasIt: true },
+  { key: 'contacts', hasIt: true },
+  { key: 'privacyPolicy', hasIt: true },
+  { key: 'cookiePolicy', hasIt: true },
 ]
-
 
 export const ROUTES: RouteConfig[] = ROUTE_DEFS.map((def) => ({
   ...def,

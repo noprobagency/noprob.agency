@@ -11,6 +11,7 @@ import { ROUTE_PATHS, getAlternateLocalePath } from '@/lib/i18n/routes'
 import { colors, dropdown } from '@/lib/design-tokens'
 import { siteAssets } from '@/lib/site'
 import { getAiCopy } from '@/lib/i18n/aiAccelerator'
+import { getBlocchiCopy } from '@/lib/i18n/blocchi'
 import { ZapIcon } from '@/components/sections/ai/PowerLayer'
 
 function getLocale(pathname: string): Locale {
@@ -151,43 +152,43 @@ export function ServicesDropdown({
         </span>
       </button>
 
-      {open ? (
-        <div
-          role="menu"
-          aria-label="Servizi"
-          className={`absolute left-0 z-[100] border ${theme === 'dark' ? 'border-white/10 bg-black' : 'border-black/5 bg-white'}`}
-          style={{
-            ...(direction === 'down' ? { top: `calc(100% + ${dropdown.gap})` } : { bottom: `calc(100% + ${dropdown.gap})` }),
-            borderRadius: dropdown.radius,
-            padding: dropdown.padding,
-            minWidth: dropdown.minWidth,
-            boxShadow: dropdown.shadow,
-          }}
-          onMouseEnter={() => {
-            if (typeof window !== 'undefined' && window.matchMedia('(hover: hover)').matches) {
-              openDropdown()
-            }
-          }}
-          onMouseLeave={() => {
-            if (typeof window !== 'undefined' && window.matchMedia('(hover: hover)').matches) {
-              scheduleClose()
-            }
-          }}
-        >
-          {t.navbar.serviceItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              role="menuitem"
-              onClick={() => setOpen(false)}
-              className={`block whitespace-nowrap rounded-[8px] px-4 py-[10px] font-sans text-[16px] font-normal tracking-[-0.03em] transition-colors ${theme === 'dark' ? 'text-white hover:bg-white/10' : 'text-np-text hover:bg-black/5'
-                }`}
-            >
-              {item.label}
-            </Link>
-          ))}
-        </div>
-      ) : null}
+      {/* Always in the DOM (hidden, not unmounted) so the service links are in the HTML crawlers read. */}
+      <div
+        role="menu"
+        aria-label={t.navbar.services}
+        hidden={!open}
+        className={`absolute left-0 z-[100] border ${theme === 'dark' ? 'border-white/10 bg-black' : 'border-black/5 bg-white'}`}
+        style={{
+          ...(direction === 'down' ? { top: `calc(100% + ${dropdown.gap})` } : { bottom: `calc(100% + ${dropdown.gap})` }),
+          borderRadius: dropdown.radius,
+          padding: dropdown.padding,
+          minWidth: dropdown.minWidth,
+          boxShadow: dropdown.shadow,
+        }}
+        onMouseEnter={() => {
+          if (typeof window !== 'undefined' && window.matchMedia('(hover: hover)').matches) {
+            openDropdown()
+          }
+        }}
+        onMouseLeave={() => {
+          if (typeof window !== 'undefined' && window.matchMedia('(hover: hover)').matches) {
+            scheduleClose()
+          }
+        }}
+      >
+        {t.navbar.serviceItems.map((item) => (
+          <Link
+            key={item.href}
+            href={item.href}
+            role="menuitem"
+            onClick={() => setOpen(false)}
+            className={`block whitespace-nowrap rounded-[8px] px-4 py-[10px] font-sans text-[16px] font-normal tracking-[-0.03em] transition-colors ${theme === 'dark' ? 'text-white hover:bg-white/10' : 'text-np-text hover:bg-black/5'
+              }`}
+          >
+            {item.label}
+          </Link>
+        ))}
+      </div>
     </div>
   )
 }
@@ -329,7 +330,7 @@ function SprintNavItem({ locale, onClick, className }: { locale: Locale; onClick
       )}
     >
       <ZapIcon size={14} className="shrink-0 fill-[#1dcc5d] text-[#1dcc5d] drop-shadow-[0_0_4px_rgba(29,204,93,0.6)]" />
-      <span>Sprint</span>
+      <span>{getBlocchiCopy(locale).navSprint}</span>
     </Link>
   )
 }
@@ -484,20 +485,19 @@ export default function Navbar({ locale: localeProp }: { locale?: Locale } = {})
             </span>
           </button>
 
-          {mobileServicesOpen && (
-            <div className="pl-3 pb-1">
-              {t.navbar.serviceItems.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  onClick={() => { setMobileOpen(false); setMobileServicesOpen(false) }}
-                  className="block py-1.5 font-sans text-[15px] font-medium tracking-[-0.04em] text-np-text"
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </div>
-          )}
+          {/* Always in the DOM (hidden, not unmounted), like the desktop dropdown. */}
+          <div hidden={!mobileServicesOpen} className="pl-3 pb-1">
+            {t.navbar.serviceItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                onClick={() => { setMobileOpen(false); setMobileServicesOpen(false) }}
+                className="block py-1.5 font-sans text-[15px] font-medium tracking-[-0.04em] text-np-text"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </div>
 
           {t.navbar.navLinks.map((link) => (
             <Link

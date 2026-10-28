@@ -2,11 +2,14 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
 
-import { buildMetadata } from '@/lib/site'
-import { detailBreadcrumbJsonLd } from '@/lib/seo/breadcrumbs'
+import { buildMetadata, FOUNDER_ID, ORGANIZATION_ID } from '@/lib/site'
+import { detailBreadcrumbJsonLd, homeCrumb, routeCrumb } from '@/lib/seo/breadcrumbs'
+import { articlePill, articleShortTitle } from '@/data/articles/clusters'
 import { articles, type Article } from '@/data/articles'
 import { renderSection } from '@/components/article/renderSection'
 import { BlogPostMeta } from '@/components/blog/BlogPostMeta'
+import { Breadcrumb } from '@/components/blog/Breadcrumb'
+import { ReadNext } from '@/components/blog/ReadNext'
 import { AuthorBio } from '@/components/blog/AuthorBio'
 import { RelatedCTA } from '@/components/blog/RelatedCTA'
 import { StructuredData } from '@/components/blog/StructuredData'
@@ -34,6 +37,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     locale: 'en',
     image: article.image,
     imageAlt: article.imageAltEn ?? article.imageAlt ?? article.title,
+    article: {
+      publishedTime: article.datePublishedIso ?? `${article.date}T10:00:00+02:00`,
+      modifiedTime: article.dateModifiedIso,
+      section: article.articleSection,
+    },
   })
 }
 
@@ -50,13 +58,15 @@ function buildBlogPostingJsonLd(article: Article) {
     dateModified: article.dateModifiedIso ?? datePublished,
     author: {
       '@type': 'Person',
+      '@id': FOUNDER_ID,
       name: 'Antonio Manitta',
       jobTitle: 'Founder & eCommerce Manager',
-      worksFor: { '@type': 'Organization', name: 'NoProb Agency' },
+      worksFor: { '@id': ORGANIZATION_ID },
       url: `${SITE_URL}/about`,
     },
     publisher: {
       '@type': 'Organization',
+      '@id': ORGANIZATION_ID,
       name: 'NoProb Agency',
       logo: {
         '@type': 'ImageObject',
@@ -110,7 +120,14 @@ export default async function ArticlePage({ params }: Props) {
       {/* Hero */}
       <section className="w-full bg-[#f0f0f0] pt-[120px] pb-0 px-5 min-[810px]:px-9">
         <div className="mx-auto flex max-w-[860px] flex-col items-center gap-5 pb-12 text-center">
-          <span className="np-eyebrow">{article.articleType}</span>
+          <Breadcrumb
+            items={[
+              homeCrumb(locale),
+              routeCrumb('blog', locale),
+              { name: articleShortTitle(article, locale), path: `/blog/${article.slug}` },
+            ]}
+          />
+          <span className="np-eyebrow">{articlePill(article, locale)}</span>
           <h1
             className="font-sans font-semibold text-black tracking-[-0.07em] leading-[110%]"
             style={{ fontSize: 'clamp(32px, 5vw, 56px)' }}
@@ -149,6 +166,7 @@ export default async function ArticlePage({ params }: Props) {
           {content?.map((section, idx) => renderSection(section, idx, locale))}
           <RelatedCTA locale={locale} variant="sprint" />
           <AuthorBio locale={locale} />
+          <ReadNext slug={article.slug} locale={locale} />
         </article>
       </section>
 

@@ -6,16 +6,19 @@ import type { ArticleSection } from '@/data/articles'
 import type { Locale } from '@/lib/i18n'
 import { ROUTE_PATHS } from '@/lib/i18n/routes'
 
-const CTA_COPY: Record<Locale, { heading: string; body: string; button: string }> = {
+/** Case study CTA: the main action is the Shopify Launch Sprint, the generic contact is secondary. */
+const CTA_COPY: Record<Locale, { heading: string; body: string; button: string; secondary: string }> = {
   en: {
-    heading: "You're leaving potential on the table.",
-    body: "If you have a fashion eCommerce that isn't producing what it should, let's talk. We work with a selected number of long-term projects.",
-    button: "Let's talk",
+    heading: 'Want the same method on your store?',
+    body: 'The Shopify Launch Sprint moves your store to Shopify in 14 days: a fixed calendar, a public price and 4 written guarantees.',
+    button: 'See the Shopify Launch Sprint',
+    secondary: 'Prefer to talk first? Contact us',
   },
   it: {
-    heading: 'Stai lasciando potenziale sul tavolo.',
-    body: 'Se hai un eCommerce fashion che non sta ancora rendendo quello che dovrebbe, parliamoci. Lavoriamo con un numero selezionato di progetti a lungo termine.',
-    button: 'Parliamoci',
+    heading: 'Vuoi lo stesso metodo sul tuo store?',
+    body: 'Lo Shopify Launch Sprint porta il tuo store su Shopify in 14 giorni: calendario fisso, prezzo pubblico e 4 garanzie scritte.',
+    button: 'Scopri lo Shopify Launch Sprint',
+    secondary: 'Preferisci parlarne prima? Contattaci',
   },
 }
 
@@ -161,7 +164,8 @@ export function renderSection(section: ArticleSection, idx: number, locale: Loca
     }
     case 'cta': {
       const copy = CTA_COPY[locale]
-      const href = ROUTE_PATHS.contacts[locale]
+      const href = ROUTE_PATHS.zeroLossMigration[locale]
+      const contactHref = ROUTE_PATHS.contacts[locale]
       return (
         <aside
           key={idx}
@@ -182,9 +186,16 @@ export function renderSection(section: ArticleSection, idx: number, locale: Loca
               color: '#1A1A1A',
               padding: '14px 32px',
             }}
-            data-tracking="cumini_use_case_cta"
+            data-tracking="use_case_cta_sprint"
           >
             {copy.button}
+          </Link>
+          <Link
+            href={contactHref}
+            className="mt-4 block font-sans text-[15px] font-medium text-[#AAAAAA] underline underline-offset-4 decoration-[#AAAAAA]/40 transition-colors hover:text-white hover:decoration-white"
+            data-tracking="use_case_cta_contact"
+          >
+            {copy.secondary}
           </Link>
         </aside>
       )

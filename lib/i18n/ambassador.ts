@@ -389,7 +389,7 @@ const it: AmbassadorCopy = {
       'Quattro rate: la prima al kickoff, la seconda al go-live, la terza e la quarta nei mesi di supporto. Nessun esborso unico in anticipo.',
       '4 garanzie scritte nel contratto: store pronto al giorno 14 o rimborso della prima rata; traffico organico sotto la baseline a 90 giorni e lavoriamo gratis finché non torna; store offline al lancio per colpa nostra e una rata la paghiamo noi; checkout che converte meno di prima a 90 giorni e lo ottimizziamo gratis finché non supera.',
       'Nessuno sconto, nessun preventivo: il cliente vede il suo scaglione in pagina, prima di parlarci.',
-      'Sopra i limiti dello scaglione (prodotti, lingue, gestionale) ci sono add-on a prezzo fisso, detti in call prima della firma. Mai un preventivo libero.',
+      'Sopra i limiti dello scaglione (prodotti, lingue, gestionale) ci sono add-on a prezzo fisso, comunicati per iscritto prima della firma. Mai un preventivo libero.',
     ],
     externalTitle: 'Costi esterni',
     external:
@@ -526,10 +526,10 @@ const it: AmbassadorCopy = {
     partnerText:
       'Siamo Shopify Partner e lavoriamo solo su Shopify, ogni giorno. È la prima cosa da dire: il cliente non parla con un’agenzia generalista, ma con specialisti della piattaforma su cui vuole andare.',
     authorityStats: [
-      { value: '7', label: 'persone nel team, tutte specializzate su Shopify' },
+      { value: 'Team', label: 'di specialisti in Shopify, marketing, advertising e SEO' },
       { value: '7+ anni', label: 'di progetti eCommerce' },
       { value: 'Decine', label: 'di progetti eCommerce seguiti' },
-      { value: '5/5', label: 'su Trustpilot, 10 recensioni' },
+      { value: '10', label: 'recensioni a 5 stelle su Trustpilot' },
     ],
     antonio: {
       name: 'Antonio Manitta',
@@ -543,9 +543,9 @@ const it: AmbassadorCopy = {
       ],
     },
     team: {
-      title: 'Un team di 7 specialisti Shopify',
+      title: 'Un team di specialisti in Shopify, marketing, advertising e SEO',
       description:
-        'Dietro Antonio c’è un team completo che copre ogni area della migrazione. Quando serve qualcosa, non si cerca il freelance giusto: c’è già qualcuno nel team che lo fa. E chi sviluppa SaaS e applicazioni proprie ha competenze tecniche che vanno ben oltre il classico “sito su tema”.',
+        'Dietro Antonio c’è un team completo che copre ogni area della migrazione. Quando serve qualcosa, non si cerca il freelance giusto: c’è già qualcuno nel team che lo fa. E chi sviluppa SaaS e applicazioni proprie ha competenze tecniche che vanno ben oltre il classico sito costruito su un template.',
       skills: [
         'Sviluppo Shopify',
         'SEO e redirect',
@@ -557,10 +557,10 @@ const it: AmbassadorCopy = {
       ],
     },
     pitchTitle: 'Il pitch in 30 secondi',
-    pitch: `“Conosco un team di 7 specialisti Shopify, Shopify Partner, che porta un eCommerce su Shopify in 14 giorni senza fermare le vendite e senza perdere posizionamento su Google. Hai un solo referente, Antonio, e dietro un team che segue tutto in parallelo: SEO, tracciamento, checkout e sviluppo. Il prezzo è pubblico, da ${itEur(MIN)} in 4 rate, con 4 garanzie scritte nel contratto e 90 giorni di supporto dopo il go-live. Vuoi che ti metta in contatto con Antonio?”`,
+    pitch: `“Conosco un team di specialisti in Shopify, marketing, advertising e SEO, Shopify Partner, che porta un eCommerce su Shopify in 14 giorni senza fermare le vendite e senza perdere posizionamento su Google. Hai un solo referente, Antonio, e dietro un team che segue tutto in parallelo: SEO, tracciamento, checkout e sviluppo. Il prezzo è pubblico, da ${itEur(MIN)} in 4 rate, con 4 garanzie scritte nel contratto e 90 giorni di supporto dopo il go-live. Vuoi che ti metta in contatto con Antonio?”`,
     messagesTitle: 'I 6 messaggi chiave',
     messages: [
-      'Shopify Partner, con un team di 7 persone specializzate solo su Shopify: SEO, tracciamento, UX, sviluppo.',
+      'Shopify Partner, con un team di specialisti in Shopify, marketing, advertising e SEO: tracciamento, UX, sviluppo.',
       'Nessuna vendita persa: il sito attuale resta online fino al go-live.',
       'Nessuna perdita SEO: redirect 1:1 e monitoraggio dopo il lancio.',
       'Un solo referente, con un team completo dietro.',
@@ -1004,7 +1004,7 @@ const en: AmbassadorCopy = {
       'Four installments: the first at kickoff, the second at go-live, the third and fourth during the support months. No single payment up front.',
       '4 guarantees written in the contract: store ready on day 14 or the first installment is refunded; organic traffic below the baseline at 90 days and we work for free until it comes back; store offline at launch because of us and we pay one installment; checkout converting less than before at 90 days and we optimize it for free until it beats it.',
       'No discounts, no quotes: the client sees their tier on the page, before talking to us.',
-      'Beyond the tier caps (products, languages, ERP) there are fixed-price add-ons, stated on the call before signing. Never an open quote.',
+      'Beyond the tier caps (products, languages, ERP) there are fixed-price add-ons, confirmed in writing before signing. Never an open quote.',
     ],
     externalTitle: 'External costs',
     external:
@@ -1141,10 +1141,10 @@ const en: AmbassadorCopy = {
     partnerText:
       'We’re Shopify Partners and we work only on Shopify, every day. It’s the first thing to say: the client isn’t talking to a generalist agency, but to specialists in the platform they want to move to.',
     authorityStats: [
-      { value: '7', label: 'people on the team, all Shopify specialists' },
+      { value: 'Team', label: 'of Shopify, marketing, advertising and SEO specialists' },
       { value: '7+ years', label: 'of eCommerce projects' },
       { value: 'Dozens', label: 'of eCommerce projects delivered' },
-      { value: '5/5', label: 'on Trustpilot, 10 reviews' },
+      { value: '10', label: 'five-star reviews on Trustpilot' },
     ],
     antonio: {
       name: 'Antonio Manitta',
@@ -1158,9 +1158,9 @@ const en: AmbassadorCopy = {
       ],
     },
     team: {
-      title: 'A team of 7 Shopify specialists',
+      title: 'A team of Shopify, marketing, advertising and SEO specialists',
       description:
-        'Behind Antonio there’s a full team covering every area of the migration. When something’s needed, nobody goes looking for the right freelancer: someone on the team already does it. And a team that builds its own SaaS and apps has technical skills that go far beyond the typical “theme-based site”.',
+        'Behind Antonio there’s a full team covering every area of the migration. When something’s needed, nobody goes looking for the right freelancer: someone on the team already does it. And a team that builds its own SaaS and apps has technical skills that go far beyond the typical template-based site.',
       skills: [
         'Shopify development',
         'SEO and redirects',
@@ -1172,10 +1172,10 @@ const en: AmbassadorCopy = {
       ],
     },
     pitchTitle: 'The 30-second pitch',
-    pitch: `“I know a team of 7 Shopify specialists, Shopify Partners, that moves an eCommerce to Shopify in 14 days without stopping sales and without losing Google rankings. You get one point of contact, Antonio, and behind him a team working on everything in parallel: SEO, tracking, checkout and development. The price is public, from ${enEur(MIN)} in 4 installments, with 4 guarantees written in the contract and 90 days of support after go-live. Want me to put you in touch with Antonio?”`,
+    pitch: `“I know a team of Shopify, marketing, advertising and SEO specialists, Shopify Partners, that moves an eCommerce to Shopify in 14 days without stopping sales and without losing Google rankings. You get one point of contact, Antonio, and behind him a team working on everything in parallel: SEO, tracking, checkout and development. The price is public, from ${enEur(MIN)} in 4 installments, with 4 guarantees written in the contract and 90 days of support after go-live. Want me to put you in touch with Antonio?”`,
     messagesTitle: 'The 6 key messages',
     messages: [
-      'Shopify Partners, with a team of 7 people specialized only in Shopify: SEO, tracking, UX, development.',
+      'Shopify Partners, with a team of Shopify, marketing, advertising and SEO specialists: tracking, UX, development.',
       'No lost sales: the current site stays online until go-live.',
       'No SEO loss: 1:1 redirects and post-launch monitoring.',
       'One point of contact, with a full team behind it.',
