@@ -16,9 +16,9 @@ const article: Article = {
   excerptIt:
     'Cosa significa GEO SEO per uno store Shopify, cosa resta uguale alla SEO classica e cosa abbiamo fatto davvero sul nostro sito: llms.txt, regole robots, JSON-LD e sezioni che aprono con la risposta.',
   ledeEn:
-    'GEO is young. Here is what stays the same as SEO, what changes for a Shopify store, and what we did on our own site that you can inspect today.',
+    'GEO is a new discipline. Here is what stays the same as SEO, what changes for a Shopify store, and what we did on our own site that you can inspect today.',
   ledeIt:
-    'La GEO è giovane. Ecco cosa resta uguale alla SEO, cosa cambia per uno store Shopify e cosa abbiamo fatto sul nostro sito, che puoi controllare tu stesso.',
+    'La GEO è una disciplina nuova. Ecco cosa resta uguale alla SEO, cosa cambia per uno store Shopify e cosa abbiamo fatto sul nostro sito, che puoi controllare tu stesso.',
   image: '/images/blog/geo-for-shopify-cover.png',
   imageAlt: 'Copertina astratta, sfondo menta, con una dissolvenza radiale di puntini più grandi al centro',
   imageAltEn: 'Abstract cover, mint background with a radial fade of dots growing toward the centre',
@@ -40,7 +40,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'We are noprob agency and we sell the [Shopify Launch Sprint](/shopify-migration-sprint), so we have a stake in this topic. We also have something most GEO articles lack: our own site, which you can inspect. This piece starts there, then moves to what changes on a Shopify store. GEO is young, and for every point we say where it comes from.',
+      text: 'We are noprob agency and we sell the [Shopify Launch Sprint](/shopify-migration-sprint). We also have something most GEO articles lack: our own site, which you can inspect. This piece starts there, then moves to what changes on a Shopify store, with the source for every point.',
     },
     { type: 'h2', text: 'GEO vs SEO: what stays the same and what changes?' },
     {
@@ -97,7 +97,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Does it work? Google’s guide says plainly that Google Search does not use llms.txt and that creating one neither helps nor harms visibility there. We keep it anyway: it takes an hour, it is the one place where we state prices and proof in a form we control, and other AI tools and agents may read it.',
+      text: 'Does it work? Google’s guide says that Google Search does not use llms.txt and that creating one neither helps nor harms visibility there. We keep it: it takes an hour, it is the one place where we state prices and proof in a form we control, and other AI tools and agents may read it.',
     },
     { type: 'h3', text: 'Robots rules for AI crawlers' },
     {
@@ -190,7 +190,7 @@ const article: Article = {
     { type: 'h2', text: 'Which GEO tactics are worth doing?' },
     {
       type: 'paragraph',
-      text: '**The GEO tactics worth doing are the ones that also help classic search.** Google’s guide says no special file or markup is needed for its AI features and warns against creating pages just to manipulate AI responses. What we can say: clear answers, accurate product data and open crawling cost little and help classic search too, so we do them whether or not AI cites us. Treat any promise of guaranteed AI citations as a red flag.',
+      text: '**The GEO tactics worth doing are the ones that also help classic search.** Google’s guide says no special file or markup is needed for its AI features and warns against creating pages just to manipulate AI responses. In practice, clear answers, accurate product data and open crawling cost little and help classic search too, so we do them whether or not AI cites us. Treat any promise of guaranteed AI citations as a red flag.',
     },
     { type: 'h2', text: 'Where should a Shopify store start this week?' },
     {
@@ -220,7 +220,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Siamo noprob agency e vendiamo lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify), quindi su questo tema abbiamo un interesse. Abbiamo però anche una cosa che quasi tutte le guide alla GEO SEO non hanno: un sito nostro, che puoi controllare. Partiamo da lì, poi passiamo a cosa cambia su uno store Shopify. La GEO è giovane, e per ogni punto diciamo da dove viene.',
+      text: 'Siamo noprob agency e vendiamo lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify). Abbiamo anche una cosa che quasi tutte le guide alla GEO SEO non hanno: un sito nostro, che puoi controllare. Partiamo da lì, poi passiamo a cosa cambia su uno store Shopify, con la fonte di ogni punto.',
     },
     { type: 'h2', text: 'GEO SEO e SEO tradizionale: cosa resta uguale e cosa cambia?' },
     {
@@ -277,7 +277,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Funziona? La guida di Google dice chiaramente che Google Search non usa llms.txt e che crearlo non aiuta né danneggia la visibilità lì. Lo teniamo comunque: richiede un’ora, è l’unico posto in cui mettiamo prezzi e prove in una forma che controlliamo noi, e altri strumenti e agenti AI potrebbero leggerlo.',
+      text: 'Funziona? La guida di Google dice che Google Search non usa llms.txt e che crearlo non aiuta né danneggia la visibilità lì. Lo teniamo: richiede un’ora, è l’unico posto in cui mettiamo prezzi e prove in una forma che controlliamo noi, e altri strumenti e agenti AI potrebbero leggerlo.',
     },
     { type: 'h3', text: 'Regole robots per i crawler AI' },
     {
@@ -370,7 +370,7 @@ const article: Article = {
     { type: 'h2', text: 'Quali tattiche di GEO vale la pena fare?' },
     {
       type: 'paragraph',
-      text: '**Le tattiche di GEO che vale la pena fare sono quelle che aiutano anche la ricerca classica.** La guida di Google dice che per le sue funzioni AI non servono file o markup speciali e mette in guardia dal creare pagine solo per manipolare le risposte AI. Quello che possiamo dire: risposte chiare, dati prodotto accurati e scansione aperta costano poco e aiutano anche la ricerca classica, quindi li facciamo che l’AI ci citi o no. Considera un campanello d’allarme qualsiasi promessa di citazioni AI garantite.',
+      text: '**Le tattiche di GEO che vale la pena fare sono quelle che aiutano anche la ricerca classica.** La guida di Google dice che per le sue funzioni AI non servono file o markup speciali e mette in guardia dal creare pagine solo per manipolare le risposte AI. In pratica, risposte chiare, dati prodotto accurati e scansione aperta costano poco e aiutano anche la ricerca classica, quindi li facciamo che l’AI ci citi o no. Considera un campanello d’allarme qualsiasi promessa di citazioni AI garantite.',
     },
     { type: 'h2', text: 'Da dove deve partire uno store Shopify questa settimana?' },
     {

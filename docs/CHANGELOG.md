@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.81.0 (28 Oct 2026)
+
+- **Never negative about us, second pass and full site review**: about 220 more sentences in 17 articles, the Sprint landing, the migration guide, service pages, case studies, the Sprint email and `llms.txt` no longer admit gaps or sound defensive (the choose-an-agency article title drops "Our Own Weak Spots"; slugs unchanged). Added `SEO/revisioni/2026-10-28.md`: the merged report of four reviewers (pages, articles, SEO strategy and link building) with 70 prioritized actions and 13 decisions for Antonio (Francesca).
+
 ### Changelog v1.80.0 (28 Oct 2026)
 
 - **Never negative about us**: about 95 sentences in 15 articles, the Nazzi and Cumini case studies, the migration guide, the Sprint copy and `llms.txt` no longer admit gaps ("we have no Magento case study", "no one can promise", "not everything went smoothly"); they now speak about the Sprint method, Antonio's 7+ years of eCommerce projects and the written 90-day SEO guarantee, worded exactly as on the Sprint page. The rule is now in the `seo-voce` skill, check 3b of `seo-revisione` and `SEO/README.md` (Francesca).

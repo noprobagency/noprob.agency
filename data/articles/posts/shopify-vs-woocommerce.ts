@@ -12,9 +12,9 @@ const article: Article = {
   seoDescriptionIt:
     'Shopify o WooCommerce senza tabella di funzioni: cinque decisioni che contano, quando vince WooCommerce e cosa ci ha insegnato un passaggio reale.',
   excerpt:
-    'Shopify vs WooCommerce is less about features and more about who maintains the store, what breaks, how fast you can change things, what growth costs and how easy it is to leave. We say plainly when WooCommerce is the better choice.',
+    'Shopify vs WooCommerce is less about features and more about who maintains the store, what breaks, how fast you can change things, what growth costs and how easy it is to leave. It shows when each platform is the better choice.',
   excerptIt:
-    'Shopify o WooCommerce non è una questione di funzioni: conta chi mantiene lo store, cosa si rompe, quanto sei veloce a cambiare, quanto costa crescere e quanto è facile andarsene. Diciamo chiaramente quando conviene WooCommerce.',
+    'Shopify o WooCommerce non è una questione di funzioni: conta chi mantiene lo store, cosa si rompe, quanto sei veloce a cambiare, quanto costa crescere e quanto è facile andarsene. Mostra quando conviene l’una e quando l’altra.',
   ledeEn:
     'Shopify vs WooCommerce comes down to who looks after the store once it is live. Five decisions settle it, and in some cases the right answer is WooCommerce.',
   ledeIt:
@@ -104,7 +104,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'We are a Shopify agency, so we earn from Shopify projects, and you should read this knowing it. That is why we built it around five decisions instead of the usual feature table: tables are where bias hides. Where WooCommerce wins, we say so. Our direct experience of a WooCommerce store moving to Shopify is Supplement DTC Nazzi, a case we describe in detail below.',
+      text: 'We are a Shopify agency with more than 7 years of eCommerce projects behind us. Our WooCommerce reference is Supplement DTC Nazzi, with numbers you can check, described in detail below. We built the piece around five decisions instead of the usual feature table.',
     },
     { type: 'h2', text: 'Who maintains the store?' },
     {
@@ -190,7 +190,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Note what the store was doing before the switch. In June and July 2026, the months in which the new store was being built, it sold 2.57 and 2.19 times the same months of 2025 (July includes the first days on Shopify). WooCommerce was not failing in a visible way. The reason to move was what came next, not what was broken.',
+      text: 'Note what the store was doing before the switch. In June and July 2026, the months in which the new store was being built, it sold 2.57 and 2.19 times the same months of 2025 (July includes the first days on Shopify). The move was made to go further: a fast mobile checkout, reliable campaign data and new tools.',
     },
     {
       type: 'paragraph',
@@ -242,7 +242,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Siamo un’agenzia Shopify, quindi guadagniamo dai progetti Shopify, e conviene che tu lo sappia mentre leggi. Per questo abbiamo costruito il pezzo su cinque decisioni invece che sulla solita tabella di funzioni: le tabelle sono dove si nasconde la parzialità. Dove vince WooCommerce lo diciamo. La nostra esperienza diretta di uno store WooCommerce passato a Shopify è Integratori DTC Nazzi, un caso che descriviamo nel dettaglio più sotto.',
+      text: 'Siamo un’agenzia Shopify con oltre 7 anni di progetti eCommerce alle spalle. Il nostro riferimento su WooCommerce è Integratori DTC Nazzi, con numeri verificabili, descritto nel dettaglio più sotto. Abbiamo costruito il pezzo su cinque decisioni invece che sulla solita tabella di funzioni.',
     },
     { type: 'h2', text: 'Chi mantiene lo store?' },
     {
@@ -328,7 +328,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Guarda cosa faceva lo store prima del passaggio. A giugno e luglio 2026, i mesi in cui si costruiva il nuovo, ha venduto 2,57 e 2,19 volte gli stessi mesi del 2025 (luglio include i primi giorni su Shopify). WooCommerce non stava fallendo in modo visibile. Il motivo per cambiare era quello che veniva dopo, non quello che era rotto.',
+      text: 'Guarda cosa faceva lo store prima del passaggio. A giugno e luglio 2026, i mesi in cui si costruiva il nuovo, ha venduto 2,57 e 2,19 volte gli stessi mesi del 2025 (luglio include i primi giorni su Shopify). Il passaggio è stato fatto per andare oltre: un checkout veloce da telefono, dati affidabili per le campagne e strumenti nuovi.',
     },
     {
       type: 'paragraph',

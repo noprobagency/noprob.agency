@@ -54,7 +54,7 @@ const article: Article = {
         "**Channels**: the same catalog sells on social and marketplace channels from one admin.",
         "**Total cost**: the plan price is the small number. Add apps, developer hours and the agency retainer. If one platform needs three apps for what the other does natively, the cheaper plan is the more expensive store. [What a Shopify migration costs](/blog/shopify-migration-cost) shows how to count.",
       ] },
-    { type: "paragraph", text: "A reason that does not hold up is “everyone is on Shopify”. Write down what hurts today and check that the move fixes it. And we would tell you to stay if your BigCommerce store is a B2B build with deep integrations that already works." },
+    { type: "paragraph", text: "A reason that does not hold up is “everyone is on Shopify”. Write down what hurts today and check that the move fixes it. That check is the first step of the Sprint inventory." },
     { type: "h2", text: "What is easier than leaving a self-hosted platform?" },
     { type: "paragraph", text: "Leaving BigCommerce is easier than leaving a self-hosted store because nothing sits on a server you have to dump, and the data comes out already structured." },
     { type: "list", items: [
@@ -140,7 +140,7 @@ const article: Article = {
         "**Canali**: lo stesso catalogo si vende sui canali social e sui marketplace da un solo admin.",
         "**Costo totale**: il prezzo del piano è la cifra piccola. Aggiungi app, ore di sviluppo e il canone dell’agenzia. Se una piattaforma ha bisogno di tre app per ciò che l’altra fa in modo nativo, il piano più economico è lo store più caro. [Quanto costa migrare a Shopify](/it/blog/costo-migrazione-shopify) spiega come fare il conto.",
       ] },
-    { type: "paragraph", text: "Una ragione che non regge è “tutti sono su Shopify”. Scrivi cosa ti fa male oggi e verifica che il passaggio lo risolva. E ti diciamo di restare se il tuo BigCommerce è una costruzione B2B con integrazioni profonde che funziona già." },
+    { type: "paragraph", text: "Una ragione che non regge è “tutti sono su Shopify”. Scrivi cosa ti fa male oggi e verifica che il passaggio lo risolva. Quel controllo è il primo passo dell’inventario dello Sprint." },
     { type: "h2", text: "Cosa è più facile rispetto a lasciare una piattaforma self-hosted?" },
     { type: "paragraph", text: "Lasciare BigCommerce è più facile che lasciare uno store self-hosted perché non c’è nessun server da scaricare e i dati escono già strutturati." },
     { type: "list", items: [

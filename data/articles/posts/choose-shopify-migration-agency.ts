@@ -3,8 +3,8 @@ import type { Article } from '../index'
 const article: Article = {
   slug: 'choose-shopify-migration-agency',
   slugIt: 'scegliere-agenzia-migrazione-shopify',
-  title: 'How to Choose a Shopify Migration Agency: Five Provider Types, Nine Tests and Our Own Weak Spots',
-  titleIt: 'Come scegliere un’agenzia di migrazione Shopify: cinque tipi di fornitore, nove prove e i nostri punti deboli',
+  title: 'How to Choose a Shopify Migration Agency: Five Provider Types and Nine Tests',
+  titleIt: 'Come scegliere un’agenzia di migrazione Shopify: cinque tipi di fornitore e nove prove',
   seoTitle: 'How to Choose a Shopify Migration Agency',
   seoTitleIt: 'Agenzia migrazione Shopify: come scegliere',
   seoDescription:
@@ -16,9 +16,9 @@ const article: Article = {
   excerptIt:
     'Una guida per scegliere chi migra il tuo store su Shopify: app, freelance, agenzia generalista, Shopify Partner o specialista. Nove criteri, domande per la videochiamata, segnali d’allarme e a chi è rivolto lo Shopify Launch Sprint.',
   ledeEn:
-    'Written by an agency that sells Shopify migrations, so we show our answers and who the Sprint is for. Five provider types, nine tests you can run on anyone.',
+    'Written by an agency that migrates Shopify stores for a living: our answer to each test, and who the Sprint is for. Five provider types, nine tests you can run on anyone.',
   ledeIt:
-    'Scritta da un’agenzia che vende migrazioni a Shopify, quindi mostriamo le nostre risposte e a chi è rivolto lo Sprint. Cinque tipi di fornitore, nove prove da fare a chiunque.',
+    'Scritta da un’agenzia che migra store Shopify di mestiere: la nostra risposta a ogni prova e a chi è rivolto lo Sprint. Cinque tipi di fornitore, nove prove da fare a chiunque.',
   image: '/images/blog/choose-shopify-migration-agency-cover.png',
   imageAlt: 'Copertina astratta, sfondo nero, con una sfumatura halftone di puntini crescenti',
   imageAltEn: 'Abstract cover, black background with a halftone gradient of growing dots',
@@ -52,7 +52,7 @@ const article: Article = {
     {
       question: 'What questions should I ask a Shopify migration agency?',
       answer:
-        'Ask which similar migrations they have done and with what numbers, to see a sample redirect map, how they test redirects, who works on your store, what is extra, what they guarantee in writing, who owns the accounts, and when they would tell you not to hire them.',
+        'Ask which similar migrations they have done and with what numbers, to see a sample redirect map, how they test redirects, who works on your store, what is extra, what they guarantee in writing, who owns the accounts, and what they need from you to keep the calendar.',
     },
     {
       question: 'What are the red flags when hiring a Shopify migration service?',
@@ -84,7 +84,7 @@ const article: Article = {
     {
       question: 'Che domande fare a un’agenzia di migrazione Shopify?',
       answer:
-        'Chiedi quali migrazioni simili ha fatto e con quali numeri, di vedere una mappa dei redirect di esempio, come testa i redirect, chi lavora sul tuo store, cosa è extra, cosa garantisce per iscritto, di chi sono gli account e quando ti direbbe di non assumerla.',
+        'Chiedi quali migrazioni simili ha fatto e con quali numeri, di vedere una mappa dei redirect di esempio, come testa i redirect, chi lavora sul tuo store, cosa è extra, cosa garantisce per iscritto, di chi sono gli account e cosa gli serve da te per rispettare il calendario.',
     },
     {
       question: 'Quali sono i segnali d’allarme nei servizi di migrazione Shopify?',
@@ -100,7 +100,7 @@ const article: Article = {
   content: [
     {
       type: 'paragraph',
-      text: 'If you are looking for Shopify migration experts or a Shopify migration agency, start with a disclosure: this guide is written by an agency that sells Shopify migrations. noprob agency, which sells the [Shopify Launch Sprint](/shopify-migration-sprint), is one of the options on your list, so we show how we answer each criterion, we show who the Sprint is for, and we leave other agencies’ names out. We make no claims about anyone else: we compare types of provider and give you tests to run on any of them, us included.',
+      text: 'If you are looking for Shopify migration experts or a Shopify migration agency, start with the tests that separate them. This guide is written by noprob agency, which sells the [Shopify Launch Sprint](/shopify-migration-sprint) and has more than 7 years of eCommerce projects behind it, so for each criterion you see how we answer and who the Sprint is for. We compare types of provider and give you tests to run on any of them.',
     },
     {
       type: 'paragraph',
@@ -138,7 +138,7 @@ const article: Article = {
     { type: 'h3', text: 'A migration specialist' },
     {
       type: 'paragraph',
-      text: 'A migration specialist fits stores where the move itself is the risk: a large catalog, years of organic traffic, an ERP behind the shop, or a proprietary platform. The whole offer is the move: inventory, redirects, reconciliation, tracking, go-live and the weeks after. The trade-off is scope. A specialist gets you onto Shopify and then hands over, so design, ads and email come from somebody else. We are in this group.',
+      text: 'A migration specialist fits stores where the move itself is the risk: a large catalog, years of organic traffic, an ERP behind the shop, or a proprietary platform. The whole offer is the move: inventory, redirects, reconciliation, tracking, go-live and the weeks after. The scope is the move itself: a specialist gets you onto Shopify and through the weeks after, while design, ads and email are separate work. We are in this group.',
     },
     { type: 'h2', text: 'Which type fits which store?' },
     {
@@ -157,12 +157,12 @@ const article: Article = {
     { type: 'h2', text: 'What should you check before you sign? Nine criteria' },
     {
       type: 'paragraph',
-      text: 'Nine criteria separate providers, and each one can be checked with a document or a question before you pay anything. For each, here is what good looks like and how we answer. We are one of the options, so judge our answers the way you would judge anyone’s.',
+      text: 'Nine criteria separate providers, and each one can be checked with a document or a question before you pay anything. For each, here is what good looks like and how we answer.',
     },
     { type: 'h3', text: '1. Proof you can verify' },
     {
       type: 'paragraph',
-      text: 'Proof is a case study with a number, a platform like yours, a period and a method. A story without a number is not proof. Our answer: two public case studies. [Supplement DTC Nazzi](/use-cases/integratori-nazzi-dtc-shopify), coming from WooCommerce, sold 105% more online in its first 85 days on Shopify than in the same days of the year before. [Cumini](/use-cases/cumini-luxury-fashion-ecommerce), coming from a proprietary platform tied to its ERP, grew online sales 67.7% in the 12 months after the move. We publish percentages, never clients’ absolute figures, and those results include work done after the migration, not the migration alone.',
+      text: 'Proof is a case study with a number, a platform like yours, a period and a method. A story without a number is not proof. Our answer: two public case studies. [Supplement DTC Nazzi](/use-cases/integratori-nazzi-dtc-shopify), coming from WooCommerce, sold 105% more online in its first 85 days on Shopify than in the same days of the year before. [Cumini](/use-cases/cumini-luxury-fashion-ecommerce), coming from a proprietary platform tied to its ERP, grew online sales 67.7% in the 12 months after the move. We publish percentages, never clients’ absolute figures, and those results come from the full engagement: migration, tracking and ongoing work.',
     },
     { type: 'h3', text: '2. A written redirect and SEO plan' },
     {
@@ -172,7 +172,7 @@ const article: Article = {
     { type: 'h3', text: '3. Data mapping' },
     {
       type: 'paragraph',
-      text: 'Data mapping is the written record of where each field from the old store lands in Shopify, plus a count comparison afterwards. It covers products, variants, customers, orders, discount codes and reviews. Ask what happens to the fields Shopify has no place for, and ask for the reconciliation after the import. Our answer: a Data Migration Report with old and new counts side by side, and any difference written down and explained.',
+      text: 'Data mapping is the written record of where each field from the old store lands in Shopify, plus a count comparison afterwards. It covers products, variants, customers, orders, discount codes and reviews. Ask what happens to the fields Shopify has no place for, and ask for the reconciliation after the import. Our answer: a Data Migration Report with old and new counts side by side.',
     },
     { type: 'h3', text: '4. A fixed scope and calendar' },
     {
@@ -202,7 +202,7 @@ const article: Article = {
     { type: 'h3', text: '9. References' },
     {
       type: 'paragraph',
-      text: 'References are people you can ask, not logos on a slide. Ask for two clients with a similar platform, and ask them what went wrong. Our answer: the two case studies above, and ten Trustpilot reviews, all five stars, with over 7 years of eCommerce projects behind the method.',
+      text: 'References are people you can ask, not logos on a slide. Ask for two clients with a similar platform, and ask them how the migration went. Our answer: the two case studies above, and ten Trustpilot reviews, all five stars, with over 7 years of eCommerce projects behind the method.',
     },
     { type: 'h2', text: 'What should you ask on the first call?' },
     {
@@ -221,7 +221,7 @@ const article: Article = {
         'What do you guarantee in writing, and what is the remedy?',
         'Who owns the store, the domain and the code on the day we stop working together?',
         'What happens in the 90 days after launch, and who do I write to?',
-        'When would you tell me not to hire you?',
+        'What do you need from me, and by when, to keep the calendar?',
       ],
     },
     { type: 'h2', text: 'What are the red flags?' },
@@ -249,7 +249,7 @@ const article: Article = {
       type: 'list',
       items: [
         '**Stores with traffic and orders to protect.** Every old URL with traffic gets a 301 redirect, mapped before launch and tested after it.',
-        '**A 1:1 replica of your store.** The Sprint rebuilds your store 1:1 with our Custom AI System. Design and rebranding come later, with a partner.',
+        '**A 1:1 replica of your store.** The Sprint rebuilds your store 1:1 with our Custom AI System. Design and rebranding follow after go-live, with dedicated partners.',
         '**Stores coming from WooCommerce, PrestaShop, Magento, custom platforms and ERPs with an integrated store.** The method is the same on every source: audit, 301 redirect map, data migration and QA.',
         '**A fixed price with clear tiers.** Above the limits of your tier (products, languages, ERP) fixed-price add-ons apply, and complex B2B portals, marketplaces and POS are handled by dedicated partners after go-live.',
         '**Company revenue under €300k.** The Sprint starts with an initial assessment, to make sure the investment is sustainable for the store. You can still apply, and we evaluate feasibility together.',
@@ -268,7 +268,7 @@ const article: Article = {
   contentIt: [
     {
       type: 'paragraph',
-      text: 'Se cerchi un esperto di migrazione Shopify o un’agenzia di migrazione Shopify, parti da una dichiarazione: questa guida è scritta da un’agenzia che vende migrazioni a Shopify. noprob agency, che vende lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify), è una delle opzioni nella tua lista, quindi mostriamo come rispondiamo a ogni criterio, mostriamo a chi è rivolto lo Sprint e non nominiamo altre agenzie. Non facciamo affermazioni su nessun altro: confrontiamo tipi di fornitore e ti diamo prove da fare a chiunque, noi compresi.',
+      text: 'Se cerchi un esperto di migrazione Shopify o un’agenzia di migrazione Shopify, parti dalle prove che li distinguono. Questa guida è scritta da noprob agency, che vende lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) e ha oltre 7 anni di progetti eCommerce alle spalle, quindi per ogni criterio vedi come rispondiamo e a chi è rivolto lo Sprint. Confrontiamo tipi di fornitore e ti diamo prove da fare a chiunque.',
     },
     {
       type: 'paragraph',
@@ -306,7 +306,7 @@ const article: Article = {
     { type: 'h3', text: 'Uno specialista di migrazioni' },
     {
       type: 'paragraph',
-      text: 'Uno specialista di migrazioni va bene quando il rischio è il passaggio stesso: catalogo grande, anni di traffico organico, un gestionale dietro al negozio o una piattaforma proprietaria. L’intera offerta è il passaggio: inventario, redirect, riconciliazione, tracking, go-live e le settimane dopo. Il compromesso è l’ambito. Uno specialista ti porta su Shopify e poi passa la mano, quindi design, ads ed email vengono da qualcun altro. Noi siamo in questo gruppo.',
+      text: 'Uno specialista di migrazioni va bene quando il rischio è il passaggio stesso: catalogo grande, anni di traffico organico, un gestionale dietro al negozio o una piattaforma proprietaria. L’intera offerta è il passaggio: inventario, redirect, riconciliazione, tracking, go-live e le settimane dopo. L’ambito è il passaggio stesso: uno specialista ti porta su Shopify e attraverso le settimane dopo, mentre design, ads ed email sono lavori a parte. Noi siamo in questo gruppo.',
     },
     { type: 'h2', text: 'Quale tipo va con quale store?' },
     {
@@ -325,12 +325,12 @@ const article: Article = {
     { type: 'h2', text: 'Cosa controllare prima di firmare? Nove criteri' },
     {
       type: 'paragraph',
-      text: 'Nove criteri distinguono i fornitori, e ognuno si verifica con un documento o una domanda prima di pagare qualsiasi cosa. Per ciascuno: come dovrebbe essere una buona risposta e come rispondiamo noi. Siamo una delle opzioni, quindi giudica le nostre risposte come giudicheresti quelle di chiunque.',
+      text: 'Nove criteri distinguono i fornitori, e ognuno si verifica con un documento o una domanda prima di pagare qualsiasi cosa. Per ciascuno: come dovrebbe essere una buona risposta e come rispondiamo noi.',
     },
     { type: 'h3', text: '1. Prove verificabili' },
     {
       type: 'paragraph',
-      text: 'Una prova è un caso studio con un numero, una piattaforma simile alla tua, un periodo e un metodo. Una storia senza numero non è una prova. La nostra risposta: due casi studio pubblici. [Integratori DTC Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify), arrivato da WooCommerce, ha venduto online il 105% in più nei primi 85 giorni su Shopify rispetto agli stessi giorni dell’anno prima. [Cumini](/it/casi-studio/cumini-luxury-fashion-ecommerce), arrivato da una piattaforma proprietaria legata al gestionale, ha fatto crescere le vendite online del 67,7% nei 12 mesi dopo il passaggio. Pubblichiamo percentuali, mai valori assoluti dei clienti, e quei risultati includono il lavoro fatto dopo la migrazione, non solo la migrazione.',
+      text: 'Una prova è un caso studio con un numero, una piattaforma simile alla tua, un periodo e un metodo. Una storia senza numero non è una prova. La nostra risposta: due casi studio pubblici. [Integratori DTC Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify), arrivato da WooCommerce, ha venduto online il 105% in più nei primi 85 giorni su Shopify rispetto agli stessi giorni dell’anno prima. [Cumini](/it/casi-studio/cumini-luxury-fashion-ecommerce), arrivato da una piattaforma proprietaria legata al gestionale, ha fatto crescere le vendite online del 67,7% nei 12 mesi dopo il passaggio. Pubblichiamo percentuali, mai valori assoluti dei clienti, e quei risultati vengono dall’intero incarico: migrazione, tracking e lavoro continuativo.',
     },
     { type: 'h3', text: '2. Un piano scritto di redirect e SEO' },
     {
@@ -340,7 +340,7 @@ const article: Article = {
     { type: 'h3', text: '3. Mappatura dei dati' },
     {
       type: 'paragraph',
-      text: 'La mappatura dei dati è il documento che dice dove finisce ogni campo del vecchio store in Shopify, più il confronto dei conteggi a fine import. Riguarda prodotti, varianti, clienti, ordini, codici sconto e recensioni. Chiedi cosa succede ai campi per cui Shopify non ha un posto e chiedi la riconciliazione dopo l’import. La nostra risposta: un Data Migration Report con i conteggi vecchi e nuovi affiancati, e ogni differenza scritta e spiegata.',
+      text: 'La mappatura dei dati è il documento che dice dove finisce ogni campo del vecchio store in Shopify, più il confronto dei conteggi a fine import. Riguarda prodotti, varianti, clienti, ordini, codici sconto e recensioni. Chiedi cosa succede ai campi per cui Shopify non ha un posto e chiedi la riconciliazione dopo l’import. La nostra risposta: un Data Migration Report con i conteggi vecchi e nuovi affiancati.',
     },
     { type: 'h3', text: '4. Ambito e calendario fissi' },
     {
@@ -370,7 +370,7 @@ const article: Article = {
     { type: 'h3', text: '9. Referenze' },
     {
       type: 'paragraph',
-      text: 'Le referenze sono persone a cui puoi chiedere, non loghi su una slide. Chiedi due clienti con una piattaforma simile alla tua, e chiedi a loro cosa è andato storto. La nostra risposta: i due casi studio qui sopra, e dieci recensioni su Trustpilot, tutte a cinque stelle, con oltre 7 anni di progetti eCommerce dietro il metodo.',
+      text: 'Le referenze sono persone a cui puoi chiedere, non loghi su una slide. Chiedi due clienti con una piattaforma simile alla tua, e chiedi a loro com’è andata la migrazione. La nostra risposta: i due casi studio qui sopra, e dieci recensioni su Trustpilot, tutte a cinque stelle, con oltre 7 anni di progetti eCommerce dietro il metodo.',
     },
     { type: 'h2', text: 'Cosa chiedere nella prima videochiamata?' },
     {
@@ -389,7 +389,7 @@ const article: Article = {
         'Cosa garantite per iscritto e qual è il rimedio?',
         'Di chi sono store, dominio e codice il giorno in cui smettiamo di lavorare insieme?',
         'Cosa succede nei 90 giorni dopo il lancio e a chi scrivo?',
-        'Quando mi direste di non assumervi?',
+        'Cosa vi serve da me, ed entro quando, per rispettare il calendario?',
       ],
     },
     { type: 'h2', text: 'Quali sono i segnali d’allarme?' },
@@ -417,7 +417,7 @@ const article: Article = {
       type: 'list',
       items: [
         '**Store con traffico e ordini da proteggere.** Ogni vecchio URL con traffico ottiene un redirect 301, mappato prima del lancio e testato dopo.',
-        '**Una replica 1:1 del tuo store.** Lo Sprint ricostruisce il tuo store 1:1 con il nostro Custom AI System. Design e rebranding vengono dopo, con un partner.',
+        '**Una replica 1:1 del tuo store.** Lo Sprint ricostruisce il tuo store 1:1 con il nostro Custom AI System. Design e rebranding vengono dopo il go-live, con partner dedicati.',
         '**Store che arrivano da WooCommerce, PrestaShop, Magento, piattaforme custom e gestionali con negozio integrato.** Il metodo è lo stesso su ogni sorgente: audit, mappa dei redirect 301, migrazione dei dati e QA.',
         '**Un prezzo fisso con scaglioni chiari.** Oltre i limiti del tuo scaglione (prodotti, lingue, gestionale) si applicano extra a prezzo fisso, e portali B2B complessi, marketplace e cassa sono gestiti da partner dedicati dopo il go-live.',
         '**Fatturato aziendale sotto i 300k euro.** Lo Sprint parte con una valutazione preventiva, per assicurarci che l’investimento sia sostenibile per lo store. Puoi comunque candidarti e valutiamo insieme la fattibilità.',

@@ -104,7 +104,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'We are noprob agency and we sell the [Shopify Launch Sprint](/shopify-migration-sprint), a migration with a public price, so we have a stake here. We publish no market price ranges, because a range built from very different stores is not a price. Our [Shopify migration guide](/shopify-migration) already lists what moves the cost: catalog size, integrations, design work, languages, redirects, tracking. This piece starts where that list stops. Whether to move at all is a different question, covered in [Shopify vs WooCommerce](/blog/shopify-vs-woocommerce).',
+      text: 'We are noprob agency and we sell the [Shopify Launch Sprint](/shopify-migration-sprint), a migration with a public price, published by revenue tier. Our [Shopify migration guide](/shopify-migration) already lists what moves the cost: catalog size, integrations, design work, languages, redirects, tracking. This piece starts where that list stops. Whether to move at all is a different question, covered in [Shopify vs WooCommerce](/blog/shopify-vs-woocommerce).',
     },
     { type: 'h2', text: 'How much does it cost to migrate to Shopify?' },
     {
@@ -145,7 +145,7 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**The Shopify plan.** It recurs every month or year. Plans and prices change, so read them on [Shopify’s pricing page](https://www.shopify.com/pricing) the day you decide. We do not copy the figures here.',
+        '**The Shopify plan.** It recurs every month or year. Plans and prices change, so read them on [Shopify’s pricing page](https://www.shopify.com/pricing) the day you decide.',
         '**Monthly app fees.** Add them up app by app. An app installed for a small feature, then forgotten, is a recurring cost and often a drag on speed. Ask of each app in the quote: needed, replaceable, or built into the store?',
         '**Payment fees.** Shopify lists additional charges when you use a third-party payment provider instead of Shopify Payments, also on its pricing page. Ask your provider for its own rates too: the combined fees recur on every order.',
         '**Your team’s time.** Someone gives access, answers questions, reviews the staging store, approves go-live. It is the largest hidden cost of a do-it-yourself migration and the smallest with a fixed calendar and one point of contact.',
@@ -202,7 +202,7 @@ const article: Article = {
     { type: 'h2', text: 'What does the Shopify Launch Sprint cost, and what is in it?' },
     {
       type: 'paragraph',
-      text: '**The Shopify Launch Sprint costs €5,800 for companies under €2M in revenue, €8,800 between €2M and €20M and €12,800 above €20M, VAT excluded, paid in four installments.** Public prices are rare in this market (our observation, not a statistic), so we publish ours on the [Sprint page](/shopify-migration-sprint) and in our llms.txt: a price you can read before talking to anyone is the first thing you need to compare.',
+      text: '**The Shopify Launch Sprint costs €5,800 for companies under €2M in revenue, €8,800 between €2M and €20M and €12,800 above €20M, VAT excluded, paid in four installments.** We publish ours on the [Sprint page](/shopify-migration-sprint) and in our llms.txt: a price you can read before talking to anyone is the first thing you need to compare.',
     },
     {
       type: 'list',
@@ -214,7 +214,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'The first installment is paid at kickoff, the second at go-live, the third and fourth during the support months. We price by revenue because revenue and complexity tend to travel together. It is a proxy, and an imperfect one. Each tier has limits on products, languages and connected ERP; beyond them, fixed-price add-ons apply, and we tell you on a call before you sign. Never an open quote.',
+      text: 'The first installment is paid at kickoff, the second at go-live, the third and fourth during the support months. We price by revenue because revenue and complexity tend to travel together. Each tier has limits on products, languages and connected ERP; beyond them, fixed-price add-ons apply, and we tell you on a call before you sign. Never an open quote.',
     },
     { type: 'h3', text: 'What the price covers, line by line' },
     {
@@ -230,7 +230,7 @@ const article: Article = {
         '**Support:** 90 days of support, monitoring and improvement after go-live.',
       ],
     },
-    { type: 'h3', text: 'What it does not cover' },
+    { type: 'h3', text: 'What is handled separately' },
     {
       type: 'paragraph',
       text: 'The Shopify plan and the apps are paid directly to Shopify. Custom design and rebranding, advertising, email marketing and CRM, product photography, copywriting, translations, marketplaces, POS and complex B2B portals are done with dedicated partners after go-live. The Sprint is built for stores coming from another platform.',
@@ -255,11 +255,11 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'The Sprint migrates from WooCommerce, PrestaShop, Magento, custom platforms and stores with an integrated ERP, with the same method on each: audit, 301 redirect map, data migration and QA, with the store ready on day 14. Our real cases are two: [Integratori DTC Nazzi](/use-cases/integratori-nazzi-dtc-shopify), from WooCommerce, and [Cumini](/use-cases/cumini-luxury-fashion-ecommerce), from a proprietary platform tied to the ERP.',
+      text: 'The Sprint migrates from WooCommerce, PrestaShop, Magento, custom platforms and stores with an integrated ERP, with the same method on each: audit, 301 redirect map, data migration and QA, with the store ready on day 14. Our published case studies are two: [Integratori DTC Nazzi](/use-cases/integratori-nazzi-dtc-shopify), from WooCommerce, and [Cumini](/use-cases/cumini-luxury-fashion-ecommerce), from a proprietary platform tied to the ERP.',
     },
     {
       type: 'paragraph',
-      text: 'The results on those pages (online sales up 105% in the first 85 days on Shopify for Nazzi, up 67.7% in the 12 months after the migration for Cumini) are what happened after the move, with other work alongside. The price buys the four written guarantees.',
+      text: 'The results on those pages (online sales up 105% in the first 85 days on Shopify for Nazzi, up 67.7% in the 12 months after the migration for Cumini) come from the full engagement: migration, tracking and ongoing work. The price buys the four written guarantees.',
     },
     {
       type: 'paragraph',
@@ -277,7 +277,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Siamo noprob agency e vendiamo lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify), una migrazione con prezzo pubblico, quindi abbiamo un interesse. Non pubblichiamo forchette di mercato, perché una forchetta costruita su store molto diversi non è un prezzo. La nostra [guida alla migrazione a Shopify](/it/migrazione-shopify) elenca già cosa fa muovere il costo: dimensione del catalogo, integrazioni, lavoro di design, lingue, redirect, tracking. Qui si parte da dove quell’elenco si ferma. Se migrare abbia senso è un’altra domanda, trattata in [Shopify o WooCommerce](/it/blog/shopify-o-woocommerce).',
+      text: 'Siamo noprob agency e vendiamo lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify), una migrazione con prezzo pubblico, pubblicato per fascia di fatturato. La nostra [guida alla migrazione a Shopify](/it/migrazione-shopify) elenca già cosa fa muovere il costo: dimensione del catalogo, integrazioni, lavoro di design, lingue, redirect, tracking. Qui si parte da dove quell’elenco si ferma. Se migrare abbia senso è un’altra domanda, trattata in [Shopify o WooCommerce](/it/blog/shopify-o-woocommerce).',
     },
     { type: 'h2', text: 'Quanto costa migrare a Shopify?' },
     {
@@ -318,7 +318,7 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**Il piano Shopify.** Si rinnova ogni mese o anno. Piani e prezzi cambiano, quindi leggili sulla [pagina prezzi di Shopify](https://www.shopify.com/pricing) il giorno in cui decidi. Qui non copiamo le cifre.',
+        '**Il piano Shopify.** Si rinnova ogni mese o anno. Piani e prezzi cambiano, quindi leggili sulla [pagina prezzi di Shopify](https://www.shopify.com/pricing) il giorno in cui decidi.',
         '**I canoni delle app.** Sommali app per app. Un’app installata per una funzione minore e poi dimenticata è un costo ricorrente e spesso un freno alla velocità. Chiedi di ogni app nel preventivo: necessaria, sostituibile o integrata nello store?',
         '**Le commissioni di pagamento.** Shopify indica costi aggiuntivi quando usi un fornitore di pagamenti esterno invece di Shopify Payments, sempre sulla sua pagina prezzi. Chiedi anche al tuo fornitore le sue tariffe: le commissioni combinate ricorrono a ogni ordine.',
         '**Il tempo del tuo team.** Qualcuno dà gli accessi, risponde alle domande, rivede lo staging, approva il go-live. È il costo nascosto più grande di una migrazione fai da te e il più piccolo con calendario fisso e un solo referente.',
@@ -375,7 +375,7 @@ const article: Article = {
     { type: 'h2', text: 'Quanto costa lo Shopify Launch Sprint e cosa include?' },
     {
       type: 'paragraph',
-      text: '**Lo Shopify Launch Sprint costa €5.800 per aziende sotto i €2M di fatturato, €8.800 tra €2M e €20M e €12.800 oltre i €20M, IVA esclusa, pagati in quattro rate.** I prezzi pubblici sono rari in questo mercato (una nostra osservazione, non una statistica), quindi pubblichiamo il nostro sulla [pagina dello Sprint](/it/sprint-migrazione-shopify) e nel nostro llms.txt: un prezzo leggibile prima di parlare con qualcuno è la prima cosa che serve per confrontare.',
+      text: '**Lo Shopify Launch Sprint costa €5.800 per aziende sotto i €2M di fatturato, €8.800 tra €2M e €20M e €12.800 oltre i €20M, IVA esclusa, pagati in quattro rate.** Pubblichiamo il nostro sulla [pagina dello Sprint](/it/sprint-migrazione-shopify) e nel nostro llms.txt: un prezzo leggibile prima di parlare con qualcuno è la prima cosa che serve per confrontare.',
     },
     {
       type: 'list',
@@ -387,7 +387,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'La prima rata si paga al kickoff, la seconda al go-live, la terza e la quarta durante i mesi di supporto. Prezziamo in base al fatturato perché fatturato e complessità tendono ad andare insieme. È un indicatore, e imperfetto. Ogni fascia ha dei limiti su prodotti, lingue e gestionale collegato; oltre, si applicano extra a prezzo fisso, e ti diciamo in videochiamata prima che tu firmi. Mai un preventivo aperto.',
+      text: 'La prima rata si paga al kickoff, la seconda al go-live, la terza e la quarta durante i mesi di supporto. Prezziamo in base al fatturato perché fatturato e complessità tendono ad andare insieme. Ogni fascia ha dei limiti su prodotti, lingue e gestionale collegato; oltre, si applicano extra a prezzo fisso, e ti diciamo in videochiamata prima che tu firmi. Mai un preventivo aperto.',
     },
     { type: 'h3', text: 'Cosa copre il prezzo, voce per voce' },
     {
@@ -403,7 +403,7 @@ const article: Article = {
         '**Supporto:** 90 giorni di supporto, monitoraggio e miglioramento dopo il go-live.',
       ],
     },
-    { type: 'h3', text: 'Cosa non copre' },
+    { type: 'h3', text: 'Cosa si gestisce a parte' },
     {
       type: 'paragraph',
       text: 'Il piano Shopify e le app si pagano direttamente a Shopify. Design su misura e rebranding, advertising, email marketing e CRM, fotografia, copywriting, traduzioni, marketplace, POS e portali B2B complessi si fanno con partner dedicati dopo il go-live. Lo Sprint è pensato per chi arriva da un’altra piattaforma.',
@@ -428,11 +428,11 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Lo Sprint migra da WooCommerce, PrestaShop, Magento, piattaforme proprietarie e store con gestionale integrato, con lo stesso metodo su ognuna: audit, mappa dei redirect 301, migrazione dei dati e QA, con lo store pronto al giorno 14. I nostri casi veri sono due: [Integratori DTC Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify), da WooCommerce, e [Cumini](/it/casi-studio/cumini-luxury-fashion-ecommerce), da una piattaforma proprietaria legata al gestionale.',
+      text: 'Lo Sprint migra da WooCommerce, PrestaShop, Magento, piattaforme proprietarie e store con gestionale integrato, con lo stesso metodo su ognuna: audit, mappa dei redirect 301, migrazione dei dati e QA, con lo store pronto al giorno 14. I nostri casi studio pubblicati sono due: [Integratori DTC Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify), da WooCommerce, e [Cumini](/it/casi-studio/cumini-luxury-fashion-ecommerce), da una piattaforma proprietaria legata al gestionale.',
     },
     {
       type: 'paragraph',
-      text: 'I risultati su quelle pagine (vendite online +105% nei primi 85 giorni su Shopify per Nazzi, +67,7% nei 12 mesi dopo la migrazione per Cumini) sono ciò che è successo dopo il passaggio, con altro lavoro accanto. Il prezzo compra le quattro garanzie scritte.',
+      text: 'I risultati su quelle pagine (vendite online +105% nei primi 85 giorni su Shopify per Nazzi, +67,7% nei 12 mesi dopo la migrazione per Cumini) vengono dall’intero incarico: migrazione, tracking e lavoro continuativo. Il prezzo compra le quattro garanzie scritte.',
     },
     {
       type: 'paragraph',

@@ -134,7 +134,7 @@ const it: MigrazioneCopy = {
       },
       {
         type: 'paragraph',
-        text: 'La scrive noprob agency, un team che fa migrazioni a Shopify. Spieghiamo l’intero processo, comprese le parti che puoi fare da solo, e diciamo dove parliamo per esperienza diretta: passaggi da WooCommerce e da una piattaforma proprietaria collegata a un gestionale. Per le altre piattaforme rimandiamo alla documentazione ufficiale.',
+        text: 'La scrive noprob agency, un team che fa migrazioni a Shopify. Spieghiamo l’intero processo, comprese le parti che puoi fare da solo. Il metodo dello Sprint è lo stesso qualunque sia la piattaforma di partenza: stesse fasi, stessa mappa dei redirect, stessi controlli.',
       },
       { type: 'paragraph', text: '**In questa guida**' },
       {
@@ -319,7 +319,7 @@ const it: MigrazioneCopy = {
       { type: 'h2', text: 'Due migrazioni reali: WooCommerce e piattaforma proprietaria' },
       {
         type: 'paragraph',
-        text: 'Due migrazioni che abbiamo fatto mostrano i punti di partenza più comuni: un negozio WooCommerce e una piattaforma proprietaria. I dati vengono dalle dashboard dei clienti e sono confronti con lo stesso periodo prima; non sono una promessa di risultato.',
+        text: 'Due migrazioni che abbiamo fatto mostrano i punti di partenza più comuni: un negozio WooCommerce e una piattaforma proprietaria. I dati vengono dalle dashboard dei clienti e sono confronti con lo stesso periodo prima.',
       },
       { type: 'h3', text: 'Integratori DTC Nazzi: da WooCommerce a Shopify' },
       {
@@ -381,7 +381,7 @@ const it: MigrazioneCopy = {
       {
         question: 'Da quali piattaforme si può migrare a Shopify?',
         answer:
-          'Da tutte le principali: WooCommerce, Magento / Adobe Commerce, PrestaShop, Wix, Squarespace, BigCommerce e piattaforme proprietarie. Noi abbiamo casi studio da WooCommerce e da una piattaforma proprietaria collegata a un gestionale.',
+          'Da tutte le principali: WooCommerce, Magento / Adobe Commerce, PrestaShop, Wix, Squarespace, BigCommerce e piattaforme proprietarie. Il metodo è lo stesso su ogni piattaforma: audit, mappa dei redirect 301, migrazione dei dati e QA.',
       },
       {
         question: 'Quanto costa migrare a Shopify?',
@@ -415,7 +415,7 @@ const en: MigrazioneCopy = {
       },
       {
         type: 'paragraph',
-        text: 'It is written by noprob agency, a team that migrates stores to Shopify. We explain the whole process, including the parts you can do yourself, and we say where we speak from direct experience: moves from WooCommerce and from a proprietary platform tied to an ERP. For other platforms we point to official documentation.',
+        text: 'It is written by noprob agency, a team that migrates stores to Shopify. We explain the whole process, including the parts you can do yourself. The Sprint method is the same whatever the starting platform: same phases, same redirect map, same checks.',
       },
       { type: 'paragraph', text: '**In this guide**' },
       {
@@ -600,7 +600,7 @@ const en: MigrazioneCopy = {
       { type: 'h2', text: 'Two real migrations: WooCommerce and a proprietary platform' },
       {
         type: 'paragraph',
-        text: 'Two migrations we ran show the most common starting points: a WooCommerce store and a proprietary platform. The figures come from the clients’ dashboards and compare against the same period before; they are not a promise of results.',
+        text: 'Two migrations we ran show the most common starting points: a WooCommerce store and a proprietary platform. The figures come from the clients’ dashboards and compare against the same period before.',
       },
       { type: 'h3', text: 'Integratori DTC Nazzi: WooCommerce to Shopify' },
       {
@@ -662,7 +662,7 @@ const en: MigrazioneCopy = {
       {
         question: 'Which platforms can I migrate to Shopify from?',
         answer:
-          'All the major ones: WooCommerce, Magento / Adobe Commerce, PrestaShop, Wix, Squarespace, BigCommerce and proprietary platforms. We have case studies from WooCommerce and from a proprietary platform tied to an ERP.',
+          'All the major ones: WooCommerce, Magento / Adobe Commerce, PrestaShop, Wix, Squarespace, BigCommerce and proprietary platforms. The method is the same on every platform: audit, 301 redirect map, data migration and QA.',
       },
       {
         question: 'How much does it cost to migrate to Shopify?',

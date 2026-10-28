@@ -316,7 +316,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: "I don't tell this as marketing. I tell it because it's concrete proof of what I wrote above: long-term thinking in eCommerce isn't theory, it's the factor that makes the difference between brands that grow and brands that go in circles.",
+      text: "This is the concrete proof of what I wrote above: long-term thinking in eCommerce isn't theory, it's the factor that makes the difference between brands that grow and brands that go in circles.",
     },
     {
       type: 'h2',
@@ -376,7 +376,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: "If you want to discuss a concrete case, [let's talk](/contacts). At noprob.agency we work with only three brands at a time in long-term partnership. It's not a marketing tactic, it's the real capacity to follow them well.",
+      text: "If you want to discuss a concrete case, [let's talk](/contacts). At noprob.agency we work with only three brands at a time in long-term partnership, so each one has the whole team.",
     },
     {
       type: 'paragraph',
@@ -684,7 +684,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: "Non lo racconto come marketing. Lo racconto perché è la prova concreta di quello che ho scritto sopra: il long-term thinking nell'eCommerce non è teoria, è il fattore che fa la differenza tra brand che crescono e brand che girano in circolo.",
+      text: "Questa è la prova concreta di quello che ho scritto sopra: il long-term thinking nell'eCommerce non è teoria, è il fattore che fa la differenza tra brand che crescono e brand che girano in circolo.",
     },
     {
       type: 'h2',
@@ -744,7 +744,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Se vuoi confrontarti su un caso concreto, [parliamoci](/it/contatti). A noprob.agency lavoriamo solo con tre brand alla volta in long-term partnership. Non è una tattica di marketing, è capacità reale di seguirli bene.',
+      text: 'Se vuoi confrontarti su un caso concreto, [parliamoci](/it/contatti). A noprob.agency lavoriamo solo con tre brand alla volta in long-term partnership, così ognuno ha tutto il team.',
     },
     {
       type: 'paragraph',

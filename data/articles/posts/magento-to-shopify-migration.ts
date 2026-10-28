@@ -130,7 +130,7 @@ const article: Article = {
     { type: 'h2', text: 'When is staying on Magento the better call?' },
     {
       type: 'paragraph',
-      text: 'Staying on Magento is the better call when the logic in your custom modules is your competitive edge and rebuilding it would cost more than the maintenance you would save: deep B2B pricing and approval rules tied to an ERP, or websites with genuinely different catalogs. Shopify can reach much of this with B2B, Markets, Shopify Functions and apps, but that is a rebuild of the logic, not a transfer. If the inventory below says “stay”, we will tell you.',
+      text: 'Staying on Magento is the better call when the logic in your custom modules is your competitive edge and rebuilding it would cost more than the maintenance you would save: deep B2B pricing and approval rules tied to an ERP, or websites with genuinely different catalogs. Shopify can reach much of this with B2B, Markets, Shopify Functions and apps, but that is a rebuild of the logic, not a transfer.',
     },
     { type: 'h2', text: 'How do Magento product types map to Shopify?' },
     {
@@ -324,7 +324,7 @@ const article: Article = {
     { type: 'h2', text: 'Quando conviene restare su Magento?' },
     {
       type: 'paragraph',
-      text: 'Conviene restare su Magento quando la logica dei moduli personalizzati è il tuo vantaggio competitivo e rifarla costerebbe più della manutenzione che risparmi: prezzi B2B profondi e regole legate al gestionale, o website con cataloghi davvero diversi. Shopify arriva a gran parte di questo con B2B, Markets, Functions e app, ma è una ricostruzione, non un trasferimento. Se l’inventario qui sotto dice “resta”, te lo diciamo.',
+      text: 'Conviene restare su Magento quando la logica dei moduli personalizzati è il tuo vantaggio competitivo e rifarla costerebbe più della manutenzione che risparmi: prezzi B2B profondi e regole legate al gestionale, o website con cataloghi davvero diversi. Shopify arriva a gran parte di questo con B2B, Markets, Functions e app, ma è una ricostruzione, non un trasferimento.',
     },
     { type: 'h2', text: 'Come si traducono i tipi di prodotto di Magento su Shopify?' },
     {

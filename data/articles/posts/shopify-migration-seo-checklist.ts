@@ -136,7 +136,7 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        'Export Search Console performance by page and by query. Check the property returns real history: we have seen one that only returned data from a recent date.',
+        'Export Search Console performance by page and by query. Check the property returns real history.',
         'Crawl the old site and save the file: status, title, meta description, H1, canonical, word count and internal links per URL.',
         'Export organic revenue by landing page from analytics, not just sessions.',
         'Audit the tracking before you touch anything. A baseline you cannot trust is not a baseline.',
@@ -349,7 +349,7 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        'Esporta da Search Console le prestazioni per pagina e per query. Verifica che la proprietà abbia uno storico vero: ne abbiamo vista una con dati solo da una data recente.',
+        'Esporta da Search Console le prestazioni per pagina e per query. Verifica che la proprietà abbia uno storico vero.',
         'Fai il crawl del vecchio sito e salva il file: stato, title, meta description, H1, canonical, parole e link interni per URL.',
         'Esporta da analytics il fatturato organico per pagina di destinazione, non solo le sessioni.',
         'Fai un audit del tracking prima di toccare altro: una baseline di cui non ti fidi non è una baseline.',

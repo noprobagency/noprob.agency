@@ -266,7 +266,7 @@ const en: Dictionary = {
       },
       {
         title: 'Blind decisions',
-        description: 'Before its Shopify migration, Cumini’s tracking scored 31 out of 100. With data like that, decisions are blind and results are random.',
+        description: 'On Cumini, the tracking audit went from 31/100 to 92/100 after the migration.',
       },
       {
         title: 'Patchwork \u201cSupport\u201d',
@@ -414,7 +414,7 @@ const en: Dictionary = {
         {
           title: "Tracking data? Broken. You're scaling blind.",
           description:
-            'Before its Shopify migration, Cumini’s tracking scored 31 out of 100. With data like that, decisions are blind and results are random.',
+            'On Cumini, the tracking audit went from 31/100 to 92/100 after the migration.',
         },
         {
           title: "No one's really responsible. Your team knows it",
@@ -641,9 +641,9 @@ const en: Dictionary = {
           'Yes. Our Shopify Development plan covers brands starting from zero, from design to launch and beyond. We build your entire eCommerce infrastructure from the ground up.',
       },
       {
-        question: 'What\u2019s included (and not included) in your team\u2019s work?',
+        question: 'What does your team\u2019s work cover?',
         answer:
-          'Included: development, design, data and analytics, paid advertising management, email marketing and SEO. Branding, photography and shoots are coordinated with partners under the same direction. Not included: influencer management. We focus on what drives technical and revenue growth.',
+          'Included: development, design, data and analytics, paid advertising management, email marketing and SEO. Branding, photography and shoots are coordinated with partners under the same direction. Handled separately: influencer management. We focus on what drives technical and revenue growth.',
       },
     ],
   },
@@ -701,7 +701,7 @@ const en: Dictionary = {
       card1Title: 'Seamless Integration & Proven Team',
       card1Body: 'We plug directly into your structure with aligned workflows, vetted specialists, and a methodology that delivers. You\u2019ll work with a tight-knit, stable team shaped by long-term growth partnerships. When needed, we also source the right talent for your exact eCommerce needs.',
       card2Title: 'Long-Term Vision & Strategic Focus',
-      card2Body: "We\u2019re built for Fashion, Supplements, and DTC brands. Our approach values quality over noise: stable growth, data-led decisions, and a consistent strategic partner over time. Our 2026 goal? Be the most trusted performance ally in your space.",
+      card2Body: "We\u2019re built for Fashion, Supplements, and DTC brands. Our approach values quality over noise: stable growth, data-led decisions, and a consistent strategic partner over time. We measure ourselves on one thing: the results of the brands we work with.",
       card3Title: 'Substance, Stability & Experience',
       card3Body1: 'With 7+ years of international execution and a model based on predictable, fixed costs, we help you scale without margin surprises. No fluff, just infrastructure, strategy, and industry-native talent.',
       card3Body2: 'That\u2019s why we work exclusively with a highly selected group of brands.',
@@ -774,7 +774,7 @@ const it: Dictionary = {
       },
       {
         title: 'Decisioni al buio',
-        description: 'Prima della migrazione su Shopify, il tracking di Cumini segnava 31 su 100. Con dati cos\u00ec le decisioni sono cieche e i risultati casuali.',
+        description: 'Su Cumini l’audit del tracking è passato da 31/100 a 92/100 dopo il passaggio.',
       },
       {
         title: 'Supporto \u201cpatchwork\u201d',
@@ -921,7 +921,7 @@ const it: Dictionary = {
         {
           title: 'Tracking rotto? Stai scalando alla cieca.',
           description:
-            'Prima della migrazione su Shopify, il tracking di Cumini segnava 31 su 100. Con dati così le decisioni sono cieche e i risultati casuali.',
+            'Su Cumini l’audit del tracking è passato da 31/100 a 92/100 dopo il passaggio.',
         },
         {
           title: 'Responsabile? Nessuno lo è davvero.',
@@ -1148,9 +1148,9 @@ const it: Dictionary = {
           'S\u00ec. Il piano Sviluppo Shopify copre i brand che partono da zero, dal design al lancio e oltre. Costruiamo l\u2019intera infrastruttura eCommerce dalle fondamenta.',
       },
       {
-        question: 'Cosa \u00e8 incluso (e cosa no) nel lavoro del vostro team?',
+        question: 'Cosa copre il lavoro del vostro team?',
         answer:
-          'Incluso: sviluppo, design, dati e analytics, gestione advertising a pagamento, email marketing e SEO. Branding, fotografia e shooting li coordiniamo con partner nella stessa regia. Non incluso: gestione influencer. Ci concentriamo su ci\u00f2 che genera crescita tecnica e di fatturato.',
+          'Incluso: sviluppo, design, dati e analytics, gestione advertising a pagamento, email marketing e SEO. Branding, fotografia e shooting li coordiniamo con partner nella stessa regia. A parte: gestione influencer. Ci concentriamo su ci\u00f2 che genera crescita tecnica e di fatturato.',
       },
     ],
   },
@@ -1208,7 +1208,7 @@ const it: Dictionary = {
       card1Title: 'Integrazione fluida e team consolidato',
       card1Body: 'Ci integriamo direttamente nella tua struttura con workflow allineati, specialisti verificati e una metodologia che funziona. Lavorerai con un team stabile e coeso, costruito su partnership di crescita di lungo periodo. Quando serve, attiviamo anche il talento giusto per le esigenze specifiche del tuo eCommerce.',
       card2Title: 'Visione a lungo termine e focus strategico',
-      card2Body: 'Siamo costruiti per brand Fashion, Integratori e DTC. Il nostro approccio valorizza la qualit\u00e0 sopra il rumore: crescita stabile, decisioni guidate dai dati, un partner strategico costante nel tempo. Il nostro obiettivo per il 2026? Essere il partner di performance pi\u00f9 affidabile nel tuo settore.',
+      card2Body: 'Siamo costruiti per brand Fashion, Integratori e DTC. Il nostro approccio valorizza la qualit\u00e0 sopra il rumore: crescita stabile, decisioni guidate dai dati, un partner strategico costante nel tempo. Ci misuriamo su una cosa sola: i risultati dei brand che seguiamo.',
       card3Title: 'Sostanza, stabilit\u00e0 ed esperienza',
       card3Body1: 'Con oltre 7 anni di esecuzione internazionale e un modello basato su costi fissi e prevedibili, ti aiutiamo a scalare senza sorprese sui margini. Niente fuffa, solo infrastruttura, strategia e talenti nativi del settore.',
       card3Body2: 'Per questo lavoriamo esclusivamente con un gruppo selezionato di brand.',

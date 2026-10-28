@@ -229,7 +229,7 @@ const it: SviluppoCopy = {
       'Garanzia 30 giorni',
     ],
     scarcity:
-      'Gli scaglioni si riferiscono al numero di progetti che seguiamo: il prezzo sale col crescere dell’esperienza e della richiesta, non per urgenza artificiale. Chi entra ora blocca la tariffa, prima che salga. Nessun countdown: lo slot resta tuo finché c’è.',
+      'Gli scaglioni seguono il numero di progetti che avviamo: il prezzo sale con l’esperienza e la richiesta. Chi entra ora blocca la tariffa attuale.',
     cta: 'Candidati per il progetto',
   },
   form: {
@@ -294,7 +294,7 @@ const it: SviluppoCopy = {
       {
         question: 'Cosa include lo sviluppo?',
         answer:
-          'Design su misura, sviluppo dello store, tracciamento server-side (GA4 e Meta CAPI), SEO base on-page, performance e CRO. Non incluso: fotografia prodotto, contenuti e gestione influencer.',
+          'Design su misura, sviluppo dello store, tracciamento server-side (GA4 e Meta CAPI), SEO base on-page, performance e CRO. A parte: fotografia prodotto, contenuti e gestione influencer.',
       },
       {
         question: 'Cosa significa manutenzione a vita?',
@@ -488,7 +488,7 @@ const en: SviluppoCopy = {
       '30-day guarantee',
     ],
     scarcity:
-      'The tiers refer to the number of projects we take on: the price rises with experience and demand, not artificial urgency. Apply now and lock the rate before it goes up. No countdown: your slot stays yours while it lasts.',
+      'The tiers follow the number of projects we start: the price rises with experience and demand. Apply now and lock the current rate.',
     cta: 'Apply for your project',
   },
   form: {
@@ -553,7 +553,7 @@ const en: SviluppoCopy = {
       {
         question: 'What does development include?',
         answer:
-          'Custom design, store development, server-side tracking (GA4 and Meta CAPI), base on-page SEO, performance and CRO. Not included: product photography, content and influencer management.',
+          'Custom design, store development, server-side tracking (GA4 and Meta CAPI), base on-page SEO, performance and CRO. Handled separately: product photography, content and influencer management.',
       },
       {
         question: 'What does lifetime maintenance mean?',

@@ -16,9 +16,9 @@ const article: Article = {
   excerptIt:
     'Dove l’AI rende davvero in un eCommerce oggi, dove fallisce ancora, come partire in 30 giorni senza un grande progetto e come misurarla, da un team che la usa ogni giorno.',
   ledeEn:
-    'No tool list and no adoption statistics. This is where AI earns its place in an ecommerce store, where it still fails, and how to start in 30 days without a big project.',
+    'This is where AI earns its place in an ecommerce store, where it still fails, and how to start in 30 days without a big project.',
   ledeIt:
-    'Niente elenco di tool e niente statistiche di adozione. Ecco dove l’AI si guadagna il posto in un eCommerce, dove fallisce ancora e come partire in 30 giorni senza un grande progetto.',
+    'Ecco dove l’AI si guadagna il posto in un eCommerce, dove fallisce ancora e come partire in 30 giorni senza un grande progetto.',
   image: '/images/blog/ai-for-ecommerce-cover.png',
   imageAlt: 'Copertina astratta, sfondo grigio chiaro sfumato, con fasce diagonali di puntini',
   imageAltEn: 'Abstract cover, softly graded light grey background with diagonal bands of dots',
@@ -66,7 +66,7 @@ const article: Article = {
     { type: 'h3', text: '5. Email and flows' },
     {
       type: 'paragraph',
-      text: 'AI helps write and segment, but the structure of the flows carries the result. On Cumini, revenue attributed to Klaviyo grew 301% and reached 61.66% of total revenue between 1 November 2025 and 24 April 2026, against the previous period (Klaviyo’s own report). We are not saying AI did that: it came from flows, segmentation and clean data. AI shortens the work of writing variants and testing subject lines inside a structure that already exists. On [Integratori DTC Nazzi](/use-cases/integratori-nazzi-dtc-shopify), a quiz connected to Klaviyo, live since 18 September 2026, collected over a thousand leads in under a month, and the useful part is the answers each person gave, because they feed segments and messages.',
+      text: 'AI helps write and segment, but the structure of the flows carries the result. On Cumini, revenue attributed to Klaviyo grew 301% and reached 61.66% of total revenue between 1 November 2025 and 24 April 2026, against the previous period (Klaviyo’s own report). That result came from flows, segmentation and clean data. AI shortens the work of writing variants and testing subject lines inside a structure that already exists. On [Integratori DTC Nazzi](/use-cases/integratori-nazzi-dtc-shopify), a quiz connected to Klaviyo, live since 18 September 2026, collected over a thousand leads in under a month, and the useful part is the answers each person gave, because they feed segments and messages.',
     },
     { type: 'h3', text: '6. Search and merchandising' },
     {
@@ -101,12 +101,12 @@ const article: Article = {
     { type: 'h3', text: 'Compliance and privacy' },
     {
       type: 'paragraph',
-      text: 'Do not paste customers’ personal data into consumer tools without a legal basis and a contract with the provider. A chatbot that talks to customers should say it is a machine: the [EU AI Act](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai) sets transparency duties for AI systems that interact with people. Check what applies to you with a lawyer, because we do not give legal advice.',
+      text: 'Do not paste customers’ personal data into consumer tools without a legal basis and a contract with the provider. A chatbot that talks to customers should say it is a machine: the [EU AI Act](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai) sets transparency duties for AI systems that interact with people. Check what applies to you with a lawyer.',
     },
     { type: 'h3', text: 'What we treat as hype' },
     {
       type: 'paragraph',
-      text: 'Fully autonomous stores. An “AI marketer” with write access to your budget, your prices or your refunds. Any promise of a fixed percentage uplift from installing an app. We distrust any average return of AI in ecommerce quoted without a method. The right framing is narrower: this task took this many hours, now it takes fewer, and a person still approves it.',
+      text: 'Fully autonomous stores. An “AI marketer” with write access to your budget, your prices or your refunds. Any promise of a fixed percentage uplift from installing an app. Any average return quoted for AI in ecommerce needs a method behind it. The right framing is narrower: this task took this many hours, now it takes fewer, and a person still approves it.',
     },
     { type: 'h2', text: 'How do you start with AI in an ecommerce store in 30 days?' },
     {
@@ -124,7 +124,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'That is the shape of our [AI Accelerator](/ai-accelerator): 30 days one-to-one for established ecommerce stores, four video calls of 60 minutes, one a week, up to two quick wins switched on with you, and three deliverables that stay yours (priorities and roadmap, operating protocols, the Context Document). Fixed price, no automatic renewal, no lock-in, and a free pre-call to check the fit before you commit. We also say what it does not include: development beyond the quick wins, campaign management, content production and AI licenses. Anything after the month is a separate proposal. It is not for stores that do not sell yet.',
+      text: 'That is the shape of our [AI Accelerator](/ai-accelerator): 30 days one-to-one for established ecommerce stores, four video calls of 60 minutes, one a week, up to two quick wins switched on with you, and three deliverables that stay yours (priorities and roadmap, operating protocols, the Context Document). Fixed price, no automatic renewal, no lock-in, and a free pre-call to check the fit before you commit. Quoted separately: development beyond the quick wins, campaign management, content production and AI licenses, as a proposal after the month. Built for established ecommerce stores.',
     },
     { type: 'h2', text: 'How do you measure whether AI is working?' },
     {
@@ -174,7 +174,7 @@ const article: Article = {
     {
       question: 'Will AI replace ecommerce staff?',
       answer:
-        'In our work it removes repetitive tasks, not decisions. People still set the strategy, approve what goes live, handle sensitive customers and own the brand. We would not trust anyone who claims to forecast the whole market.',
+        'In our work it removes repetitive tasks, not decisions. People still set the strategy, approve what goes live, handle sensitive customers and own the brand.',
     },
     {
       question: 'Is AI-generated product content bad for SEO?',
@@ -189,7 +189,7 @@ const article: Article = {
     {
       question: 'What does the AI Accelerator include?',
       answer:
-        'It is a 30-day one-to-one program for established ecommerce stores: four video calls of 60 minutes, up to two quick wins switched on with you, a priorities and roadmap document, operating protocols and a Context Document that stay yours. Fixed price, no automatic renewal. Development beyond the quick wins, campaign management, content production and AI licenses are not included.',
+        'It is a 30-day one-to-one program for established ecommerce stores: four video calls of 60 minutes, up to two quick wins switched on with you, a priorities and roadmap document, operating protocols and a Context Document that stay yours. Fixed price, no automatic renewal. Quoted separately: development beyond the quick wins, campaign management, content production and AI licenses.',
     },
   ],
   contentIt: [
@@ -225,7 +225,7 @@ const article: Article = {
     { type: 'h3', text: '5. Email e flussi' },
     {
       type: 'paragraph',
-      text: 'L’AI aiuta a scrivere e a segmentare, ma a portare il risultato è la struttura dei flussi. Su Cumini le entrate attribuite a Klaviyo sono cresciute del 301% e sono arrivate al 61,66% delle entrate totali tra il 1 novembre 2025 e il 24 aprile 2026, rispetto al periodo precedente (report di Klaviyo stesso). Non diciamo che sia merito dell’AI: viene da flussi, segmentazione e dati puliti. L’AI accorcia il lavoro di scrivere varianti e testare gli oggetti dentro una struttura che esiste già. Su [Integratori DTC Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify) un quiz collegato a Klaviyo, online dal 18 settembre 2026, ha raccolto oltre mille lead in meno di un mese, e la parte utile sono le risposte di ogni persona, perché alimentano segmenti e messaggi.',
+      text: 'L’AI aiuta a scrivere e a segmentare, ma a portare il risultato è la struttura dei flussi. Su Cumini le entrate attribuite a Klaviyo sono cresciute del 301% e sono arrivate al 61,66% delle entrate totali tra il 1 novembre 2025 e il 24 aprile 2026, rispetto al periodo precedente (report di Klaviyo stesso). Quel risultato viene da flussi, segmentazione e dati puliti. L’AI accorcia il lavoro di scrivere varianti e testare gli oggetti dentro una struttura che esiste già. Su [Integratori DTC Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify) un quiz collegato a Klaviyo, online dal 18 settembre 2026, ha raccolto oltre mille lead in meno di un mese, e la parte utile sono le risposte di ogni persona, perché alimentano segmenti e messaggi.',
     },
     { type: 'h3', text: '6. Ricerca interna e merchandising' },
     {
@@ -260,12 +260,12 @@ const article: Article = {
     { type: 'h3', text: 'Conformità e privacy' },
     {
       type: 'paragraph',
-      text: 'Non incollare dati personali dei clienti in strumenti per il grande pubblico senza una base giuridica e un contratto con il fornitore. Un chatbot che parla con i clienti dovrebbe dire di essere una macchina: l’[AI Act europeo](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai) prevede obblighi di trasparenza per i sistemi di AI che interagiscono con le persone. Verifica con un legale cosa vale per te, perché noi non diamo consulenza legale.',
+      text: 'Non incollare dati personali dei clienti in strumenti per il grande pubblico senza una base giuridica e un contratto con il fornitore. Un chatbot che parla con i clienti dovrebbe dire di essere una macchina: l’[AI Act europeo](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai) prevede obblighi di trasparenza per i sistemi di AI che interagiscono con le persone. Verifica con un legale cosa vale per te.',
     },
     { type: 'h3', text: 'Cosa consideriamo hype' },
     {
       type: 'paragraph',
-      text: 'Store completamente autonomi. Un “AI marketer” con accesso in scrittura a budget, prezzi o rimborsi. Qualsiasi promessa di un aumento percentuale fisso installando un’app. Diffidiamo di qualsiasi ritorno medio dell’AI negli eCommerce citato senza un metodo. La formulazione giusta è più stretta: questo compito richiedeva tante ore, ora ne richiede meno, e una persona lo approva ancora.',
+      text: 'Store completamente autonomi. Un “AI marketer” con accesso in scrittura a budget, prezzi o rimborsi. Qualsiasi promessa di un aumento percentuale fisso installando un’app. Qualunque ritorno medio citato per l’AI negli eCommerce ha bisogno di un metodo dietro. La formulazione giusta è più stretta: questo compito richiedeva tante ore, ora ne richiede meno, e una persona lo approva ancora.',
     },
     { type: 'h2', text: 'Come si parte con l’AI in un eCommerce in 30 giorni?' },
     {
@@ -283,7 +283,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'È la forma del nostro [AI Accelerator](/it/ai-accelerator): 30 giorni one-to-one per eCommerce già avviati, quattro videochiamate da 60 minuti, una a settimana, fino a due quick win attivate insieme a te e tre deliverable che restano tuoi (documento delle priorità e roadmap, protocolli operativi, Context Document). Prezzo fisso, nessun rinnovo automatico, nessun vincolo, e una pre-call gratuita per verificare il fit prima di impegnarti. Diciamo anche cosa non include: sviluppo oltre le quick win, gestione delle campagne, produzione di contenuti e licenze AI. Ciò che viene dopo il mese è una proposta separata. Non è per chi non vende ancora online.',
+      text: 'È la forma del nostro [AI Accelerator](/it/ai-accelerator): 30 giorni one-to-one per eCommerce già avviati, quattro videochiamate da 60 minuti, una a settimana, fino a due quick win attivate insieme a te e tre deliverable che restano tuoi (documento delle priorità e roadmap, protocolli operativi, Context Document). Prezzo fisso, nessun rinnovo automatico, nessun vincolo, e una pre-call gratuita per verificare il fit prima di impegnarti. A parte: sviluppo oltre le quick win, gestione delle campagne, produzione di contenuti e licenze AI, con una proposta dopo il mese. Pensato per eCommerce già avviati.',
     },
     { type: 'h2', text: 'Come si misura se l’AI sta funzionando?' },
     {
@@ -333,7 +333,7 @@ const article: Article = {
     {
       question: 'L’AI sostituirà chi lavora in un eCommerce?',
       answer:
-        'Nel nostro lavoro toglie compiti ripetitivi, non decisioni. Le persone definiscono la strategia, approvano ciò che va online, gestiscono i clienti delicati e proteggono il brand. Non ci fideremmo di chi dice di poter prevedere tutto il mercato.',
+        'Nel nostro lavoro toglie compiti ripetitivi, non decisioni. Le persone definiscono la strategia, approvano ciò che va online, gestiscono i clienti delicati e proteggono il brand.',
     },
     {
       question: 'I contenuti prodotto scritti con l’AI fanno male alla SEO?',
@@ -348,7 +348,7 @@ const article: Article = {
     {
       question: 'Cosa include l’AI Accelerator?',
       answer:
-        'È un percorso one-to-one di 30 giorni per eCommerce già avviati: quattro videochiamate da 60 minuti, fino a due quick win attivate insieme a te, un documento delle priorità con roadmap, protocolli operativi e un Context Document che restano tuoi. Prezzo fisso, nessun rinnovo automatico. Non sono inclusi sviluppo oltre le quick win, gestione delle campagne, produzione di contenuti e licenze AI.',
+        'È un percorso one-to-one di 30 giorni per eCommerce già avviati: quattro videochiamate da 60 minuti, fino a due quick win attivate insieme a te, un documento delle priorità con roadmap, protocolli operativi e un Context Document che restano tuoi. Prezzo fisso, nessun rinnovo automatico. A parte: sviluppo oltre le quick win, gestione delle campagne, produzione di contenuti e licenze AI.',
     },
   ],
 }

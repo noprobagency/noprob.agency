@@ -23,7 +23,7 @@ export const zeroLossEn: ZlCopy = {
   hero: {
     eyebrow: 'Shopify Launch Sprint',
     h1: 'Your eCommerce on Shopify in 14 days. Higher on Google, more sales, more AI.',
-    proofNote: 'Case study: +105% sales in 85 days 😉',
+    proofNote: 'Case study: +105% sales in 85 days',
     paragraph:
       'In 14 days a full team moves your store to Shopify, with our Custom AI System: faster, ready for AI agents, built to sell. Then 90 days on SEO, conversion and AOV, measured in a dashboard. Fixed price, zero surprises.',
     ctaPrimary: 'Apply for the sprint',
@@ -91,7 +91,7 @@ export const zeroLossEn: ZlCopy = {
       'Platform numbers do not match your real sales',
       'You want to be found on ChatGPT and AI too, but do not know where to start',
     ],
-    reactionNone: 'All green? Then you do not need noprob.',
+    reactionNone: 'Tick the ones that are true and see where we start.',
     reactionMid: 'Even just with this, we could improve your results.',
     reactionHigh: 'No prob. This is exactly what we fix in 14 days.',
     reactionHighCta: 'Apply for the sprint',
@@ -106,7 +106,7 @@ export const zeroLossEn: ZlCopy = {
         title: 'Data Migration Report',
         short: 'Data Migration Report',
         paragraph:
-          'Products, variants, images, customers, order history, discount codes, reviews. Every count from the old platform compared with Shopify and reconciled at 100%. If there is a difference, it is written down and explained.',
+          'Products, variants, images, customers, order history, discount codes, reviews. Every count from the old platform compared with Shopify and reconciled at 100%.',
         imageAlt: 'Data Migration Report table with source, Shopify and difference columns',
         mockup: 'report',
       },
@@ -455,7 +455,7 @@ export const zeroLossEn: ZlCopy = {
       {
         question: 'Will the site look the same as before?',
         answer:
-          'Structure, pages and content, yes: it is your store, not a redesign. But we rebuild it with the Custom AI System: faster, without the old bugs and with the purchase flow optimized with our checklist. If you want to change your look, that comes later, with a partner.',
+          'Structure, pages and content, yes: it is your store, not a redesign. But we rebuild it with the Custom AI System: faster, without the old bugs and with the purchase flow optimized with our checklist. If you want to change your look, that comes after go-live, with dedicated partners.',
       },
       {
         question: 'Which platforms do you migrate from?',
@@ -506,7 +506,7 @@ export const zeroLossEn: ZlCopy = {
   finalCta: {
     h2: 'Your store on Shopify in 14 days. Apply now.',
     paragraph:
-      'We reply within 48 hours, even if the answer is no. If you meet the criteria, the answer is your tier, the price and the first available kickoff date.',
+      'We reply within 48 hours. If you meet the criteria, the answer is your tier, the price and the first available kickoff date.',
     bullets: ['Store ready on day 14', '4 guarantees written in the contract', '90 days of support, monitoring & improvement'],
     cta: 'Apply for the sprint',
   },
@@ -629,7 +629,7 @@ export const zeroLossEn: ZlCopy = {
     h1Pre: 'Done. We reply',
     h1Em: 'within 48 hours.',
     text:
-      'Antonio reads every application himself. He writes to the address you left us with your confirmed tier and the first available kickoff date. If the answer is no, we tell you anyway.',
+      'Antonio reads every application himself. He writes to the address you left us with your confirmed tier and the first available kickoff date.',
     nextTitle: 'Meanwhile, if you want a head start',
     next: [
       'Look at the dashboard you get on day 1: it is the one we measure the 4 guarantees with.',
