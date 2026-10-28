@@ -53,12 +53,13 @@ export const AREA_SERVED = [
  */
 export const FOUNDER_SAME_AS: readonly string[] = []
 
-/** External profiles of the company (`Organization.sameAs`). Add Upwork and GoodFirms once live. */
+/** External profiles of the company (`Organization.sameAs`). Add the Upwork agency page once it has a public URL. */
 export const ORGANIZATION_SAME_AS: readonly string[] = [
   'https://www.linkedin.com/company/noprobagency',
   TRUSTPILOT_URL,
   'https://clutch.co/profile/noprob-agency',
   'https://contra.com/noprob_agency_llc',
+  'https://www.goodfirms.co/company/noprob-agency',
 ]
 
 export const siteAssets = {
