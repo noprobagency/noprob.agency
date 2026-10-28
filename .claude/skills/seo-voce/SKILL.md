@@ -44,6 +44,14 @@ Solo quelli in `docs/dati-verificati.md`, con la fonte che indica. Clienti solo 
 
 Niente frasi che giocano contro di noi: mancanze ("non abbiamo casi su...", "non ancora", "nessun dato pubblico"), scuse, limiti, toni dimessi o autoironici, meta-frasi tipo "l'articolo lo dice chiaramente". Si toglie, oppure si scrive in positivo: esperienza tecnica alta, metodo, garanzie dello Sprint come sono scritte, casi veri. Cosa non promettiamo si dice come cosa garantiamo. Le critiche agli altri (piattaforme, agenzie generiche) vanno bene.
 
+## Il libro di Antonio (28 ottobre 2026)
+
+Antonio sta scrivendo un libro sugli agenti AI (`~/agentic-book`, capitoli in `manoscritto/`, fonti verificate in `docs/fonti.md`). Per gli articoli su AI e agenti è la fonte di idee, struttura e ragionamento (i pattern: routing, tool use, reflection, planning, memoria, più agenti, valutazione); l'elenco delle idee è in `SEO/data/libro-temi-2026-10-28.md`.
+- Il testo si scrive da zero: niente frasi, figure né esempi del libro (il negozio di orologi, gli ordini numerati), esempi su store Shopify veri o generici.
+- Il libro non si nomina sul sito finché Antonio non lo conferma.
+- Dal libro si prendono solo fonti già verificate (`docs/fonti.md`), mai i punti `[DA VERIFICARE]`; i dettagli di Shopify si controllano sulla documentazione ufficiale.
+- Gli articoli della linea AI e agenti linkano anche l'AI Accelerator (IT `/it/ai-accelerator`, EN `/ai-accelerator`), dopo lo Sprint.
+
 ## Articolo del blog (schema)
 
 - Voce in un file `data/articles/posts/<slug>.ts` (un articolo per file, più una riga di import in `data/articles/index.ts`) con: `slug` (EN) e `slugIt`, `title`/`titleIt`, `seoTitle`/`seoTitleIt` (sotto 65 caratteri, senza il brand: lo aggiunge il template), `seoDescription`/`seoDescriptionIt` (sotto 160), `excerpt`/`excerptIt`, `ledeEn`/`ledeIt`, `content`/`contentIt` (sezioni tipizzate, guarda un articolo esistente), `faqEn`/`faqIt`, `keywordsEn`/`keywordsIt`, `articleSection`, `date`, `datePublishedIso`, `dateModifiedIso`, `readingTimeMinutes`, `wordCount`, `image` (cover standard in `public/images/blog/[slug]-cover.{svg,png}` 1200x630: sfondo a colore con pattern a puntini, senza testo, generata dal tecnico con lo script delle cover), `imageAlt`.

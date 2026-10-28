@@ -2,6 +2,8 @@
 
 Lista ordinata del lavoro di Francesca. Le date sono **indicative**: Antonio lancia ogni voce dalla chat con `/seo prossima`, quando vuole, e Francesca prende sempre la prima voce `da fare`. Ogni contenuto è un articolo del blog, unico, con cover standard e, quando possibile, un'intervista ad Antonio. L'ordine può cambiare se i dati lo chiedono (si aggiorna qui, in una PR). Dettagli e motivi in [piano.md](piano.md).
 
+Da novembre l'ordine segue la roadmap AI e agenti del 28 ottobre (`piano.md`): i numeri restano quelli di sempre, **conta l'ordine delle righe** (si prende la prima `da fare` dall'alto). Le keyword "da misurare" si misurano con treg nel brief (circa $0,02).
+
 Stati: `da fare`, `in corso`, `fatto (data, PR)`, `bloccato (motivo)`.
 
 | # | Data indicativa | Cosa | Keyword principale | Chi | Stato |
@@ -19,7 +21,6 @@ Stati: `da fare`, `in corso`, `fatto (data, PR)`, `bloccato (motivo)`.
 | 11 | sett. 16 nov | Migrazione senza perdere la SEO, con checklist SEO della migrazione (redirect di Nazzi, indici di Cumini; asset che poi promuove Marco) | website migration seo, seo website migration checklist, shopify 301 redirects | team | fatto (27 ott, v1.66.0) |
 | 12 | sett. 16 nov | Agentic commerce per uno store Shopify: cosa cambia e cosa preparare (dati prodotto, catalogo, Agentic Storefronts) | agentic commerce, ai shopping agent | team | fatto (27 ott, v1.68.0) |
 | 13 | sett. 23 nov | Guida "Da WooCommerce a Shopify" (caso Nazzi, dato Store Leads) | migrate woocommerce to shopify, migrazione woocommerce shopify | team | fatto (27 ott, v1.67.0) |
-| 14 | sett. 30 nov | Revisione mensile: posizioni e Search Console contro il 27 ottobre; decisione sulle landing per piattaforma | | analista, Francesca | da fare |
 | 15 | sett. 30 nov | ChatGPT shopping per Shopify: come far comparire i prodotti | chatgpt shopping, chatgpt shopify | team | fatto (27 ott, v1.70.0) |
 | 16 | sett. 7 dic | Guida "Da Magento a Shopify" (processo nostro e casi su altre piattaforme come prova, detto chiaramente) | migrate from magento to shopify, magento to shopify migration | team | fatto (27 ott, v1.74.0) |
 | 17 | sett. 7 dic | "Wix o Shopify" e come passare | wix or shopify, wix to shopify | team | fatto (27 ott, v1.71.0) |
@@ -33,9 +34,21 @@ Stati: `da fare`, `in corso`, `fatto (data, PR)`, `bloccato (motivo)`.
 | 25 | quando sbloccata | "Cos'è un Custom AI System per Shopify" (`docs/articoli-da-scrivere.md`) | | team | bloccato (servono i dati di velocità prima e dopo di Nazzi e Cumini) |
 | 26 | 28 ott | Revisione completa del sito (4 revisori) e implementazione con le decisioni di Antonio | | team | fatto (28 ott, v1.80.0 - v1.82.0) |
 | 27 | 28 ott | "Shopify Plus: quando conviene e come migrare" (R-37) | shopify plus, shopify plus agency | team | fatto (28 ott, v1.82.0) |
-| 28 | sett. 9 nov | Template della mappa dei redirect 301 per Shopify, CSV e foglio, EN e IT (asset da linkare, R-39; poi lo promuove Marco) | shopify 301 redirects, redirect 301 shopify | team | da fare |
-| 29 | sett. 16 nov | "BigCommerce o Shopify" (R-55) | bigcommerce vs shopify | team | da fare |
-| 30 | sett. 23 nov | "GEO vs SEO" e "Universal Commerce Protocol (UCP)" (R-55) | geo vs seo, ucp shopify | team | da fare |
-| 31 | ogni mese | Misura delle citazioni nelle risposte AI sulle domande della migrazione (R-54), insieme alla revisione mensile | | analista | da fare |
+| 30 | sett. 2 nov | "GEO vs SEO": cosa cambia e cosa fare su uno store Shopify (UCP passa alla voce 37) | geo vs seo, generative engine optimization vs seo | team | da fare |
+| 32 | sett. 2 nov | "Shopify MCP spiegato": cos'è, Storefront MCP, Dev MCP, cosa ci fa un merchant (libro: tool use, cap. 7) | shopify mcp, shopify mcp server, shopify storefront mcp | team | da fare |
+| 33 | sett. 9 nov | Pagina pilastro "Agenti AI per Shopify: chatbot, workflow o agente?"; nuovo gruppo "Agenti AI" nel blog (libro: cap. 1-3) | ai agents for ecommerce, shopify ai agent, agente ai shopify | team | da fare |
+| 34 | sett. 9 nov | "Creare un agente AI per il tuo store": cosa serve, quanto costa, quando non serve (nasce in IT; libro: cap. 17-18) | creare agenti ai, agenti ai cosa sono, quanto costa un agente ai | team | da fare |
+| 35 | sett. 16 nov | "Migrare a Shopify con gli agenti AI": cosa automatizza il nostro Custom AI System e cosa resta a una persona; intervista ad Antonio prima (libro: M1) | ai shopify migration, migrate to shopify with ai (da misurare nel brief) | team | da fare |
+| 28 | sett. 16 nov | Mappa dei redirect 301 in cinque passi con revisione, più il template CSV e foglio EN e IT (asset da linkare, R-39; poi lo promuove Marco; libro: M2) | shopify 301 redirects, redirect 301 shopify | team | da fare |
+| 36 | sett. 23 nov | "Claude e Claude Code su Shopify": connettore, MCP, cosa ci facciamo davvero; intervista ad Antonio prima | shopify claude code, claude shopify connector, shopify mcp claude | team | da fare |
+| 37 | sett. 23 nov | Aggiornare `agentic-commerce-shopify` (agenti d'acquisto, UCP contro ACP, Agentic Storefronts) e `chatgpt-shopping-shopify` (R-55) | ai shopping agents, ucp shopify, universal commerce protocol | team | da fare |
+| 14 | sett. 30 nov | Revisione mensile: posizioni e Search Console contro il 27 ottobre; decisione sulle landing per piattaforma | | analista, Francesca | da fare |
+| 31 | ogni mese | Citazioni nelle risposte AI: 10 domande su ChatGPT, Perplexity e AI Mode (migrazione EN e IT, agenti, MCP, GEO), insieme alla revisione mensile (R-54; circa $0,11, serve il sì di Antonio) | | analista | da fare |
+| 38 | sett. 30 nov | "Shopify Flow e AI: workflow pronti da copiare" (libro: cap. 2 e 12) | shopify flow examples, shopify flow | team | da fare |
+| 39 | sett. 7 dic | "Sicurezza degli agenti AI su Shopify": prompt injection, recensioni, dati dei clienti, guardrail (libro: cap. 7 e 14) | prompt injection ecommerce, ai agent security shopify (da misurare) | team | da fare |
+| 40 | sett. 14 dic | "Assistente AI per ordini e resi su Shopify: dove deve fermarsi l'agente" (libro: cap. 5-9) | ai customer service shopify, assistente ai ecommerce (da misurare) | team | da fare |
+| 41 | sett. 21 dic | "Come valutare un assistente AI per il tuo store: i casi di prova" (libro: cap. 15; base del futuro lead magnet) | how to evaluate ai agent, test chatbot ecommerce (da misurare) | team | da fare |
+| 29 | gennaio | "BigCommerce o Shopify" (R-55) | bigcommerce vs shopify | team | da fare |
+| 42 | quando Antonio conferma il libro | Lead magnet "La pagella del tuo assistente AI" (pagina con raccolta email) e pagina autore con il libro (Person, link dal sito del libro) | | team | bloccato (libro da confermare) |
 
 Misura: `/seo monitora`, la lancia Antonio, idealmente una volta a settimana.
