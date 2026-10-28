@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.84.0 (28 Oct 2026)
+
+- **SEO roadmap for AI and agents**: `SEO/piano.md` gets the AI and agents roadmap (treg research of 28 Oct: Shopify MCP, AI agents for ecommerce, Italian "agenti ai" queries, Claude and Shopify, searches inside AI tools, zero citations in AI answers today) and `SEO/calendario.md` is reordered from November (items 30 and 32-42: GEO vs SEO, Shopify MCP, AI agents pillar, building an AI agent, migrating with AI agents, redirect map, Claude and Shopify, agentic commerce refresh, Shopify Flow, agent security, order and returns assistant, assistant evaluation, future lead magnet). `seo-voce` skill: how to use Antonio's book on AI agents as a source. No change to the site (Francesca).
+
 ### Changelog v1.83.0 (28 Oct 2026)
 
 - **GoodFirms in Organization sameAs**: the GoodFirms profile is approved and online, so it joins LinkedIn, Trustpilot, Clutch and Contra in the `Organization` JSON-LD (Marco).
