@@ -5,12 +5,12 @@ const article: Article = {
   slugIt: 'scegliere-agenzia-migrazione-shopify',
   title: 'How to Choose a Shopify Migration Agency: Five Provider Types and Nine Tests',
   titleIt: 'Come scegliere un’agenzia di migrazione Shopify: cinque tipi di fornitore e nove prove',
-  seoTitle: 'How to Choose a Shopify Migration Agency',
+  seoTitle: 'Shopify Migration Agency: How to Choose, 9 Tests',
   seoTitleIt: 'Agenzia migrazione Shopify: come scegliere',
   seoDescription:
-    'How to choose a Shopify migration agency: five provider types, nine tests, first-call questions and red flags, from an agency that sells migrations.',
+    'How to choose a Shopify migration agency: 5 provider types, 9 tests, first-call questions and red flags, plus a public price and 4 guarantees to compare.',
   seoDescriptionIt:
-    'Come scegliere un’agenzia di migrazione Shopify: cinque tipi di fornitore, nove criteri, domande per la prima videochiamata e segnali d’allarme da evitare.',
+    'Come scegliere un’agenzia di migrazione Shopify: 5 tipi di fornitore, 9 criteri, domande per la prima videochiamata e segnali d’allarme, con prezzo pubblico.',
   excerpt:
     'A guide to choosing who migrates your store to Shopify: app, freelancer, generalist agency, Shopify Partner or specialist. Nine tests, first-call questions, red flags, and who the Shopify Launch Sprint is for.',
   excerptIt:
@@ -25,8 +25,8 @@ const article: Article = {
   articleType: 'BlogPosting',
   date: '2026-10-27',
   datePublishedIso: '2026-10-27T09:00:00+00:00',
-  dateModifiedIso: '2026-10-27T09:00:00+00:00',
-  wordCount: 2100,
+  dateModifiedIso: '2026-10-28T09:00:00+00:00',
+  wordCount: 2550,
   readingTimeMinutes: 9,
   articleSection: 'Shopify migration',
   keywordsEn:
@@ -60,7 +60,12 @@ const article: Article = {
         'Guaranteed SEO with no document behind it, no sample redirect map, no named people, a domain or Shopify account registered to the provider, case studies without a metric, vague support, and pressure to sign before you read the contract.',
     },
     {
-      question: 'Who is the Shopify Launch Sprint for?',
+      question: 'How much does a Shopify migration agency cost?',
+      answer:
+        'Agencies price different scopes, so compare the eight lines of a quote, not the total. The Shopify Launch Sprint has a public price by revenue: €5,800, €8,800 or €12,800, VAT excluded, in 4 installments.',
+    },
+    {
+      question: 'Who is the Shopify Launch Sprint built for?',
       answer:
         'For stores coming from another platform where traffic and orders already matter: the Sprint rebuilds the store 1:1 with our Custom AI System, maps every old URL with a 301 redirect and has the store ready on day 14. Under €300k of company revenue the Sprint first requires a feasibility assessment.',
     },
@@ -92,7 +97,12 @@ const article: Article = {
         'SEO “garantita” senza documenti dietro, nessuna mappa dei redirect di esempio, nessun nome di persone, dominio o account Shopify intestati al fornitore, casi studio senza una metrica, supporto vago e fretta di firmare prima di leggere il contratto.',
     },
     {
-      question: 'A chi è rivolto lo Shopify Launch Sprint?',
+      question: 'Quanto costa un’agenzia di migrazione Shopify?',
+      answer:
+        'Le agenzie prezzano perimetri diversi, quindi confronta le otto voci del preventivo, non il totale. Lo Shopify Launch Sprint ha un prezzo pubblico per fatturato: €5.800, €8.800 o €12.800, IVA esclusa, in 4 rate.',
+    },
+    {
+      question: 'A chi è pensato lo Shopify Launch Sprint?',
       answer:
         'Agli store che arrivano da un’altra piattaforma e dove traffico e ordini contano già: lo Sprint ricostruisce lo store 1:1 con il nostro Custom AI System, mappa ogni vecchio URL con un redirect 301 e ha lo store pronto al giorno 14. Sotto i 300k euro di fatturato aziendale lo Sprint richiede prima una valutazione di fattibilità.',
     },
@@ -138,7 +148,7 @@ const article: Article = {
     { type: 'h3', text: 'A migration specialist' },
     {
       type: 'paragraph',
-      text: 'A migration specialist fits stores where the move itself is the risk: a large catalog, years of organic traffic, an ERP behind the shop, or a proprietary platform. The whole offer is the move: inventory, redirects, reconciliation, tracking, go-live and the weeks after. The scope is the move itself: a specialist gets you onto Shopify and through the weeks after, while design, ads and email are separate work. We are in this group.',
+      text: 'A migration specialist fits stores where the move itself is the risk: a large catalog, years of organic traffic, an ERP behind the shop, or a proprietary platform. The whole offer is the move: inventory, redirects, reconciliation, tracking, go-live and the weeks after. The scope is the move itself: a specialist gets you onto Shopify and through the weeks after, while design, ads and email are separate work. We are in this group: the Sprint is built for exactly these stores.',
     },
     { type: 'h2', text: 'Which type fits which store?' },
     {
@@ -154,7 +164,7 @@ const article: Article = {
         '**Organic traffic that pays the bills, an ERP, or a proprietary platform:** a migration specialist.',
       ],
     },
-    { type: 'h2', text: 'What should you check before you sign? Nine criteria' },
+    { type: 'h2', text: 'What should you check before hiring a Shopify migration agency? Nine criteria' },
     {
       type: 'paragraph',
       text: 'Nine criteria separate providers, and each one can be checked with a document or a question before you pay anything. For each, here is what good looks like and how we answer.',
@@ -177,7 +187,7 @@ const article: Article = {
     { type: 'h3', text: '4. A fixed scope and calendar' },
     {
       type: 'paragraph',
-      text: 'A fixed scope and calendar means you know the deliverables, the dates and the price before work starts. Our guide to [what a Shopify migration costs](/blog/shopify-migration-cost) shows what a price should include. Our answer: 14 days to a store ready to publish, go-live on a day you choose between day 15 and day 30, and a public price by company revenue: €5,800 under €2M, €8,800 from €2M to €20M, €12,800 above €20M, VAT excluded, in four installments. Your Shopify plan and apps are paid to Shopify, not to us.',
+      text: 'A fixed scope and calendar means you know the deliverables, the dates and the price before work starts. Our answer: 14 days to a store ready to publish, go-live on a day you choose between day 15 and day 30, and a public price by company revenue, from €5,800 (the three tiers and what a price should include are in [what a Shopify migration costs](/blog/shopify-migration-cost)). Your Shopify plan and apps are paid to Shopify, not to us.',
     },
     { type: 'h3', text: '5. Who does the work' },
     {
@@ -202,7 +212,7 @@ const article: Article = {
     { type: 'h3', text: '9. References' },
     {
       type: 'paragraph',
-      text: 'References are people you can ask, not logos on a slide. Ask for two clients with a similar platform, and ask them how the migration went. Our answer: the two case studies above, and ten Trustpilot reviews, all five stars, with over 7 years of eCommerce projects behind the method.',
+      text: 'References are people you can ask, not logos on a slide. Ask for two clients with a similar platform, and ask them how the migration went. Our answer: the two case studies above, and [10 five-star reviews on Trustpilot](https://www.trustpilot.com/review/noprob.agency), with over 7 years of eCommerce projects behind the method.',
     },
     { type: 'h2', text: 'What should you ask on the first call?' },
     {
@@ -240,7 +250,7 @@ const article: Article = {
         'Support described as “available” with no length, scope or response time.',
       ],
     },
-    { type: 'h2', text: 'Who is the Shopify Launch Sprint for?' },
+    { type: 'h2', text: 'Who is the Shopify Launch Sprint built for?' },
     {
       type: 'paragraph',
       text: 'The Sprint is for stores coming from another platform where traffic and orders already matter.',
@@ -250,15 +260,60 @@ const article: Article = {
       items: [
         '**Stores with traffic and orders to protect.** Every old URL with traffic gets a 301 redirect, mapped before launch and tested after it.',
         '**A 1:1 replica of your store.** The Sprint rebuilds your store 1:1 with our Custom AI System. Design and rebranding follow after go-live, with dedicated partners.',
-        '**Stores coming from WooCommerce, PrestaShop, Magento, custom platforms and ERPs with an integrated store.** The method is the same on every source: audit, 301 redirect map, data migration and QA.',
+        '**Stores coming from any platform.** WooCommerce, Magento, PrestaShop, BigCommerce, Wix, Squarespace, proprietary platforms and ERP-integrated stores: the method is the same on every source (audit, 301 redirect map, data migration and QA), and we wrote a guide for [WooCommerce](/blog/woocommerce-to-shopify-migration), [Magento](/blog/magento-to-shopify-migration), [PrestaShop](/blog/prestashop-to-shopify-migration), [BigCommerce](/blog/bigcommerce-to-shopify-migration), [Wix](/blog/wix-vs-shopify) and [Squarespace](/blog/squarespace-vs-shopify).',
+        '**A small catalog with simple data.** A migration app and a redirect CSV may be all you need; the Sprint starts where a tool stops.',
         '**A fixed price with clear tiers.** Above the limits of your tier (products, languages, ERP) fixed-price add-ons apply, and complex B2B portals, marketplaces and POS are handled by dedicated partners after go-live.',
         '**Company revenue under €300k.** The Sprint starts with an initial assessment, to make sure the investment is sustainable for the store. You can still apply, and we evaluate feasibility together.',
       ],
     },
+    { type: 'h2', text: 'Frequently asked questions' },
+    { type: 'h3', text: 'How do I choose a Shopify migration agency?' },
+    {
+      type: 'paragraph',
+      text: 'Compare providers on nine checks: verifiable proof, a written redirect and SEO plan, data mapping, a fixed scope and calendar, who does the work, post-launch support, guarantees in writing, ownership of code and accounts, and references. Ask for documents, not adjectives.',
+    },
+    { type: 'h3', text: 'Do I need a Shopify migration expert, or can I use an app?' },
+    {
+      type: 'paragraph',
+      text: 'An app can move a small catalog with simple data. It moves records, but someone still has to decide where old URLs redirect, rebuild the storefront and set up tracking. If organic traffic pays your bills, or an ERP sits behind the shop, plan for a person who owns the whole move.',
+    },
+    { type: 'h3', text: 'Does being a Shopify Partner mean an agency can migrate my store?' },
+    {
+      type: 'paragraph',
+      text: 'No. Partner status says the agency builds on Shopify. Shopify’s directory groups partners into Select, Plus, Premier and Platinum tiers by experience and proven success, but it does not certify migrations. Ask for migration work samples from a platform like yours.',
+    },
+    { type: 'h3', text: 'What questions should I ask a Shopify migration agency?' },
+    {
+      type: 'paragraph',
+      text: 'Ask which similar migrations they have done and with what numbers, to see a sample redirect map, how they test redirects, who works on your store, what is extra, what they guarantee in writing, who owns the accounts, and what they need from you to keep the calendar.',
+    },
+    { type: 'h3', text: 'What are the red flags when hiring a Shopify migration service?' },
+    {
+      type: 'paragraph',
+      text: 'Guaranteed SEO with no document behind it, no sample redirect map, no named people, a domain or Shopify account registered to the provider, case studies without a metric, vague support, and pressure to sign before you read the contract.',
+    },
+    { type: 'h3', text: 'How much does a Shopify migration agency cost?' },
+    {
+      type: 'paragraph',
+      text: 'Agencies price different scopes, so compare the eight lines of a quote, not the total. The Shopify Launch Sprint has a public price by revenue: €5,800, €8,800 or €12,800, VAT excluded, in 4 installments.',
+    },
+    { type: 'h3', text: 'Who is the Shopify Launch Sprint built for?' },
+    {
+      type: 'paragraph',
+      text: 'For stores coming from another platform where traffic and orders already matter: the Sprint rebuilds the store 1:1 with our Custom AI System, maps every old URL with a 301 redirect and has the store ready on day 14. Under €300k of company revenue the Sprint first requires a feasibility assessment.',
+    },
     { type: 'h2', text: 'What should you do this week?' },
     {
       type: 'paragraph',
-      text: 'Shortlist two or three providers of different types, run the same ten questions on each, and compare their documents, not their decks. Ask every one for a sample redirect map, the contract and the list of extras. Our own approach is described in the [Shopify migration guide](/shopify-migration), and you can [talk to us directly](/contacts) if you want a read on which type fits your store.',
+      text: 'Shortlist two or three providers of different types, run the same ten questions on each, and compare their documents, not their decks. Ask every one for a sample redirect map, the contract and the list of extras. Our own approach is described in the [Shopify migration guide](/shopify-migration).',
+    },
+    {
+      type: 'paragraph',
+      text: 'The Sprint has a public price by revenue: €5,800 under €2M, €8,800 from €2M to €20M, €12,800 above €20M, VAT excluded, in 4 installments.',
+    },
+    {
+      type: 'paragraph',
+      text: '**Next step.** Send us your store: [apply to the Shopify Launch Sprint](/shopify-migration-sprint) and we reply within 48 hours with your tier, the price and the first available kickoff date.',
     },
     {
       type: 'paragraph',
@@ -306,7 +361,7 @@ const article: Article = {
     { type: 'h3', text: 'Uno specialista di migrazioni' },
     {
       type: 'paragraph',
-      text: 'Uno specialista di migrazioni va bene quando il rischio è il passaggio stesso: catalogo grande, anni di traffico organico, un gestionale dietro al negozio o una piattaforma proprietaria. L’intera offerta è il passaggio: inventario, redirect, riconciliazione, tracking, go-live e le settimane dopo. L’ambito è il passaggio stesso: uno specialista ti porta su Shopify e attraverso le settimane dopo, mentre design, ads ed email sono lavori a parte. Noi siamo in questo gruppo.',
+      text: 'Uno specialista di migrazioni va bene quando il rischio è il passaggio stesso: catalogo grande, anni di traffico organico, un gestionale dietro al negozio o una piattaforma proprietaria. L’intera offerta è il passaggio: inventario, redirect, riconciliazione, tracking, go-live e le settimane dopo. L’ambito è il passaggio stesso: uno specialista ti porta su Shopify e attraverso le settimane dopo, mentre design, ads ed email sono lavori a parte. Siamo in questo gruppo: lo Sprint è pensato proprio per questi store.',
     },
     { type: 'h2', text: 'Quale tipo va con quale store?' },
     {
@@ -322,7 +377,7 @@ const article: Article = {
         '**Traffico organico che paga le spese, un gestionale o una piattaforma proprietaria:** uno specialista di migrazioni.',
       ],
     },
-    { type: 'h2', text: 'Cosa controllare prima di firmare? Nove criteri' },
+    { type: 'h2', text: 'Cosa controllare prima di assumere un’agenzia di migrazione Shopify? Nove criteri' },
     {
       type: 'paragraph',
       text: 'Nove criteri distinguono i fornitori, e ognuno si verifica con un documento o una domanda prima di pagare qualsiasi cosa. Per ciascuno: come dovrebbe essere una buona risposta e come rispondiamo noi.',
@@ -345,7 +400,7 @@ const article: Article = {
     { type: 'h3', text: '4. Ambito e calendario fissi' },
     {
       type: 'paragraph',
-      text: 'Ambito e calendario fissi significano che conosci consegne, date e prezzo prima che il lavoro inizi. La nostra guida su [quanto costa migrare a Shopify](/it/blog/costo-migrazione-shopify) mostra cosa deve includere un prezzo. La nostra risposta: 14 giorni per uno store pronto da pubblicare, go-live nel giorno che scegli tra il 15 e il 30, e un prezzo pubblico in base al fatturato aziendale: €5.800 sotto i €2M, €8.800 da €2M a €20M, €12.800 sopra i €20M, IVA esclusa, in quattro rate. Piano Shopify e app li paghi a Shopify, non a noi.',
+      text: 'Ambito e calendario fissi significano che conosci consegne, date e prezzo prima che il lavoro inizi. La nostra risposta: 14 giorni per uno store pronto da pubblicare, go-live nel giorno che scegli tra il 15 e il 30, e un prezzo pubblico in base al fatturato aziendale, da €5.800 (le tre fasce e cosa deve includere un prezzo sono in [quanto costa migrare a Shopify](/it/blog/costo-migrazione-shopify)). Piano Shopify e app li paghi a Shopify, non a noi.',
     },
     { type: 'h3', text: '5. Chi fa il lavoro' },
     {
@@ -370,7 +425,7 @@ const article: Article = {
     { type: 'h3', text: '9. Referenze' },
     {
       type: 'paragraph',
-      text: 'Le referenze sono persone a cui puoi chiedere, non loghi su una slide. Chiedi due clienti con una piattaforma simile alla tua, e chiedi a loro com’è andata la migrazione. La nostra risposta: i due casi studio qui sopra, e dieci recensioni su Trustpilot, tutte a cinque stelle, con oltre 7 anni di progetti eCommerce dietro il metodo.',
+      text: 'Le referenze sono persone a cui puoi chiedere, non loghi su una slide. Chiedi due clienti con una piattaforma simile alla tua, e chiedi a loro com’è andata la migrazione. La nostra risposta: i due casi studio qui sopra, e [10 recensioni a 5 stelle su Trustpilot](https://www.trustpilot.com/review/noprob.agency), con oltre 7 anni di progetti eCommerce dietro il metodo.',
     },
     { type: 'h2', text: 'Cosa chiedere nella prima videochiamata?' },
     {
@@ -408,7 +463,7 @@ const article: Article = {
         'Supporto descritto come “disponibile” senza durata, ambito o tempi di risposta.',
       ],
     },
-    { type: 'h2', text: 'A chi è rivolto lo Shopify Launch Sprint?' },
+    { type: 'h2', text: 'A chi è pensato lo Shopify Launch Sprint?' },
     {
       type: 'paragraph',
       text: 'Lo Sprint è per gli store che arrivano da un’altra piattaforma e dove traffico e ordini contano già.',
@@ -418,15 +473,60 @@ const article: Article = {
       items: [
         '**Store con traffico e ordini da proteggere.** Ogni vecchio URL con traffico ottiene un redirect 301, mappato prima del lancio e testato dopo.',
         '**Una replica 1:1 del tuo store.** Lo Sprint ricostruisce il tuo store 1:1 con il nostro Custom AI System. Design e rebranding vengono dopo il go-live, con partner dedicati.',
-        '**Store che arrivano da WooCommerce, PrestaShop, Magento, piattaforme custom e gestionali con negozio integrato.** Il metodo è lo stesso su ogni sorgente: audit, mappa dei redirect 301, migrazione dei dati e QA.',
+        '**Store che arrivano da qualsiasi piattaforma.** WooCommerce, Magento, PrestaShop, BigCommerce, Wix, Squarespace, piattaforme proprietarie e gestionali con negozio integrato: il metodo è lo stesso su ogni sorgente (audit, mappa dei redirect 301, migrazione dei dati e QA), e abbiamo scritto una guida per [WooCommerce](/it/blog/migrazione-woocommerce-shopify), [Magento](/it/blog/migrazione-magento-shopify), [PrestaShop](/it/blog/migrazione-prestashop-shopify), [BigCommerce](/it/blog/migrazione-bigcommerce-shopify), [Wix](/it/blog/wix-o-shopify) e [Squarespace](/it/blog/squarespace-o-shopify).',
+        '**Un catalogo piccolo con dati semplici.** Un’app di migrazione e un CSV di redirect possono bastare; lo Sprint parte dove lo strumento si ferma.',
         '**Un prezzo fisso con scaglioni chiari.** Oltre i limiti del tuo scaglione (prodotti, lingue, gestionale) si applicano extra a prezzo fisso, e portali B2B complessi, marketplace e cassa sono gestiti da partner dedicati dopo il go-live.',
         '**Fatturato aziendale sotto i 300k euro.** Lo Sprint parte con una valutazione preventiva, per assicurarci che l’investimento sia sostenibile per lo store. Puoi comunque candidarti e valutiamo insieme la fattibilità.',
       ],
     },
+    { type: 'h2', text: 'Domande frequenti' },
+    { type: 'h3', text: 'Come si sceglie un’agenzia di migrazione Shopify?' },
+    {
+      type: 'paragraph',
+      text: 'Confronta i fornitori su nove controlli: prove verificabili, un piano scritto di redirect e SEO, la mappatura dei dati, ambito e calendario fissi, chi fa il lavoro, supporto dopo il lancio, garanzie scritte, proprietà di codice e account, referenze. Chiedi documenti, non aggettivi.',
+    },
+    { type: 'h3', text: 'Serve un esperto di migrazione Shopify o basta un’app?' },
+    {
+      type: 'paragraph',
+      text: 'Un’app può spostare un catalogo piccolo con dati semplici. Sposta record, ma qualcuno deve comunque decidere dove puntano i vecchi URL, ricostruire la vetrina e impostare il tracking. Se il traffico organico è ciò che ti fa fatturare, o dietro al negozio c’è un gestionale, serve chi si prende tutta la migrazione.',
+    },
+    { type: 'h3', text: 'Essere Shopify Partner significa saper migrare il mio store?' },
+    {
+      type: 'paragraph',
+      text: 'No. Lo stato di Partner dice che l’agenzia lavora su Shopify. La directory di Shopify divide i partner in livelli Select, Plus, Premier e Platinum in base a esperienza e risultati dimostrati, ma non certifica le migrazioni. Chiedi esempi di migrazioni da una piattaforma come la tua.',
+    },
+    { type: 'h3', text: 'Che domande fare a un’agenzia di migrazione Shopify?' },
+    {
+      type: 'paragraph',
+      text: 'Chiedi quali migrazioni simili ha fatto e con quali numeri, di vedere una mappa dei redirect di esempio, come testa i redirect, chi lavora sul tuo store, cosa è extra, cosa garantisce per iscritto, di chi sono gli account e cosa gli serve da te per rispettare il calendario.',
+    },
+    { type: 'h3', text: 'Quali sono i segnali d’allarme nei servizi di migrazione Shopify?' },
+    {
+      type: 'paragraph',
+      text: 'SEO “garantita” senza documenti dietro, nessuna mappa dei redirect di esempio, nessun nome di persone, dominio o account Shopify intestati al fornitore, casi studio senza una metrica, supporto vago e fretta di firmare prima di leggere il contratto.',
+    },
+    { type: 'h3', text: 'Quanto costa un’agenzia di migrazione Shopify?' },
+    {
+      type: 'paragraph',
+      text: 'Le agenzie prezzano perimetri diversi, quindi confronta le otto voci del preventivo, non il totale. Lo Shopify Launch Sprint ha un prezzo pubblico per fatturato: €5.800, €8.800 o €12.800, IVA esclusa, in 4 rate.',
+    },
+    { type: 'h3', text: 'A chi è pensato lo Shopify Launch Sprint?' },
+    {
+      type: 'paragraph',
+      text: 'Agli store che arrivano da un’altra piattaforma e dove traffico e ordini contano già: lo Sprint ricostruisce lo store 1:1 con il nostro Custom AI System, mappa ogni vecchio URL con un redirect 301 e ha lo store pronto al giorno 14. Sotto i 300k euro di fatturato aziendale lo Sprint richiede prima una valutazione di fattibilità.',
+    },
     { type: 'h2', text: 'Cosa fare questa settimana?' },
     {
       type: 'paragraph',
-      text: 'Scegli due o tre fornitori di tipi diversi, fai a ciascuno le stesse dieci domande e confronta i loro documenti, non le loro presentazioni. Chiedi a tutti una mappa dei redirect di esempio, il contratto e l’elenco degli extra. Il nostro modo di lavorare è nella [guida alla migrazione a Shopify](/it/migrazione-shopify), e puoi [parlare direttamente con noi](/it/contatti) se vuoi un parere su quale tipo si adatta al tuo store.',
+      text: 'Scegli due o tre fornitori di tipi diversi, fai a ciascuno le stesse dieci domande e confronta i loro documenti, non le loro presentazioni. Chiedi a tutti una mappa dei redirect di esempio, il contratto e l’elenco degli extra. Il nostro modo di lavorare è nella [guida alla migrazione a Shopify](/it/migrazione-shopify).',
+    },
+    {
+      type: 'paragraph',
+      text: 'Lo Sprint ha un prezzo pubblico per fatturato: €5.800 sotto i €2M, €8.800 tra €2M e €20M, €12.800 oltre i €20M, IVA esclusa, in 4 rate.',
+    },
+    {
+      type: 'paragraph',
+      text: '**Prossimo passo.** Mandaci il tuo store: [candidati allo Shopify Launch Sprint](/it/sprint-migrazione-shopify) e rispondiamo entro 48 ore con la tua fascia, il prezzo e la prima data di kickoff disponibile.',
     },
     {
       type: 'paragraph',

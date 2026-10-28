@@ -2,9 +2,29 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { siteConfig, siteAssets } from '@/lib/site'
-import { ServicesDropdown } from '@/components/layout/Navbar'
 import { getDictionary, type Locale } from '@/lib/i18n'
+import { getBlocchiCopy, type BlockLink } from '@/lib/i18n/blocchi'
 import { ROUTE_PATHS } from '@/lib/i18n/routes'
+import { articleHref, getArticle } from '@/data/articles/clusters'
+
+function resolveHref(link: BlockLink, locale: Locale): string {
+  if (link.route) return ROUTE_PATHS[link.route][locale]
+  const article = link.article ? getArticle(link.article) : undefined
+  if (!article) throw new Error(`Footer link "${link.label}" points to an unknown article`)
+  return articleHref(article, locale)
+}
+
+const FOOTER_LINK_CLASS =
+  'font-sans text-[16px] font-medium tracking-[-0.04em] text-[#f0f0f0] transition-opacity hover:opacity-70'
+
+function FooterColumn({ heading, children }: { heading: string; children: React.ReactNode }) {
+  return (
+    <div>
+      <p className="font-sans text-[12px] font-semibold uppercase tracking-[0.12em] text-[#7c7c7c]">{heading}</p>
+      <ul className="mt-3 flex flex-col gap-2">{children}</ul>
+    </div>
+  )
+}
 
 export default function Footer({
   locale = 'en',
@@ -21,6 +41,7 @@ export default function Footer({
   bar?: boolean
 }) {
   const t = getDictionary(locale)
+  const blocks = getBlocchiCopy(locale).footer
   const logoHref = locale === 'it' ? '/it' : '/'
 
   const legal = (
@@ -52,7 +73,7 @@ export default function Footer({
 
   return (
     <footer data-header-theme="dark" className="flex flex-col items-center gap-12 bg-black px-9 py-10 text-white">
-      <div className="w-full max-w-[1200px] lg:flex lg:items-end lg:justify-between lg:gap-8">
+      <div className="flex w-full max-w-[1200px] flex-col gap-12">
         <div className="max-w-[760px]">
           <Link href={logoHref} className="relative inline-flex h-[44px] w-auto items-center">
             <Image
@@ -65,11 +86,11 @@ export default function Footer({
           </Link>
 
           <div className="mt-4">
-            <h2 className="font-display text-[44px] font-semibold leading-[1.1] tracking-[-0.05em] text-white sm:text-[56px] lg:text-[64px]">
+            <p className="font-display text-[44px] font-semibold leading-[1.1] tracking-[-0.05em] text-white sm:text-[56px] lg:text-[64px]">
               {t.footer.headingPre.split('\n').map((line, i, arr) => (
-                <span key={i} className="block">{i === arr.length - 1 ? <>{line}<span className="font-serif italic font-normal">{t.footer.headingEm}</span></> : line}</span>
+                <span key={i} className="block">{i === arr.length - 1 ? <>{line}<span className="font-serif italic font-normal">{t.footer.headingEm}</span></> : <>{line} </>}</span>
               ))}
-            </h2>
+            </p>
           </div>
 
           <p className="mt-4 max-w-[547px] font-sans text-[18px] font-semibold tracking-[-0.04em] text-white">
@@ -78,17 +99,42 @@ export default function Footer({
         </div>
 
         {!minimal && (
-        <nav className="mt-8 flex flex-wrap items-center gap-2 lg:mt-0 lg:justify-end border-b border-transparent">
-          <ServicesDropdown locale={locale} theme="dark" direction="up" className="text-[18px] font-semibold" />
-          {t.footer.links.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="px-[14px] py-2 font-sans text-[18px] font-semibold tracking-[-0.04em] text-[#f0f0f0] transition-opacity hover:opacity-70"
-            >
-              {link.label}
-            </Link>
-          ))}
+        <nav
+          aria-label={locale === 'it' ? 'Link del sito' : 'Site links'}
+          className="grid max-w-[760px] grid-cols-2 gap-x-10 gap-y-8 sm:grid-cols-3"
+        >
+          <FooterColumn heading={blocks.servicesHeading}>
+            {blocks.services.map((link) => (
+              <li key={link.label}>
+                <Link href={resolveHref(link, locale)} className={FOOTER_LINK_CLASS}>
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </FooterColumn>
+          <FooterColumn heading={blocks.guidesHeading}>
+            {blocks.guides.map((link) => (
+              <li key={link.label}>
+                <Link href={resolveHref(link, locale)} className={FOOTER_LINK_CLASS}>
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </FooterColumn>
+          <FooterColumn heading={blocks.companyHeading}>
+            {t.footer.links.map((link) => (
+              <li key={link.href}>
+                <Link
+                  href={link.href}
+                  // The ambassador playbook is private (noindex): no link equity to pass.
+                  rel={link.href === ROUTE_PATHS.ambassador[locale] ? 'nofollow' : undefined}
+                  className={FOOTER_LINK_CLASS}
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </FooterColumn>
         </nav>
         )}
       </div>

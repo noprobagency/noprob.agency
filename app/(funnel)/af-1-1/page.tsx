@@ -4,13 +4,13 @@ import Link from 'next/link'
 
 import ApplicationFunnel from '@/components/funnel/ApplicationFunnel'
 import PartnerLogos from '@/components/ui/PartnerLogos'
-import { siteAssets } from '@/lib/site'
+import { siteAssets, TRUSTPILOT_URL } from '@/lib/site'
 import { ROUTE_PATHS } from '@/lib/i18n/routes'
 
 export const metadata: Metadata = {
   title: 'Candidatura | Step 1',
   description:
-    'Candidati per una call con noprob: il team eCommerce dedicato per brand Shopify di Moda, Integratori e DTC.',
+    'Candidati per una videochiamata con noprob: il team eCommerce dedicato per brand Shopify di Moda, Integratori e DTC.',
   robots: { index: false, follow: false },
 }
 
@@ -56,7 +56,7 @@ export default function Af11Page() {
             />
           </Link>
           <a href="#candidatura" data-tracking="af11_header_cta" className="button-header">
-            Prenota una call
+            Prenota una videochiamata
           </a>
         </div>
       </header>
@@ -95,12 +95,17 @@ export default function Af11Page() {
                 />
               ))}
             </div>
-            <div className="flex items-center gap-[6px] rounded-pill border border-np-border-pill bg-white px-3 py-[5px]">
+            <a
+              href={TRUSTPILOT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-[6px] rounded-pill border border-np-border-pill bg-white px-3 py-[5px] no-underline hover:opacity-80"
+            >
               <Stars />
               <span className="font-sans text-[12px] font-semibold tracking-[-0.03em] text-np-dark">
-                5/5 su Trustpilot
+                10 recensioni a 5 stelle su Trustpilot
               </span>
-            </div>
+            </a>
           </div>
 
           <h1 className="mt-6 font-display text-[34px] font-semibold leading-[1.1em] tracking-[-0.06em] text-black min-[810px]:text-[3.6rem]">
@@ -128,7 +133,7 @@ export default function Af11Page() {
                 <path d="M16 2v4M8 2v4M3 10h18M9 16l2 2 4-4" />
               </svg>
             </span>
-            Rispondi alle domande qui sotto, così arriviamo alla call già preparati.
+            Rispondi alle domande qui sotto, così arriviamo alla videochiamata già preparati.
           </p>
         </section>
 

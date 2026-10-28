@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef } from 'react'
+import { Fragment, useRef } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion'
@@ -50,13 +50,21 @@ const h2Variants = {
   visible: { transition: { staggerChildren: 0.055, delayChildren: 0.05 } },
 }
 
+/**
+ * One animated span per word. A real space follows every span (not a margin):
+ * crawlers and screen readers that do not measure the layout read the words as
+ * "Ready to fix", not "Readytofix".
+ */
 function RevealWords({ text }: { text: string }) {
   return (
     <>
       {text.split(' ').filter(Boolean).map((word, i) => (
-        <motion.span key={i} variants={wordVariants} className="inline-block mr-[0.25em]">
-          {word}
-        </motion.span>
+        <Fragment key={i}>
+          <motion.span variants={wordVariants} className="inline-block">
+            {word}
+          </motion.span>
+          {' '}
+        </Fragment>
       ))}
     </>
   )
@@ -185,7 +193,7 @@ export default function CTA({
             <RevealWords text={t.cta.heading} />
             <br className={locale === 'it' ? 'block' : 'hidden sm:block'} />
             {t.cta.headingSub && <RevealWords text={t.cta.headingSub} />}
-            <motion.span variants={wordVariants} className="inline-block font-serif italic font-normal mr-[0.25em]">{t.cta.headingEm}</motion.span>
+            <motion.span variants={wordVariants} className="inline-block font-serif italic font-normal">{t.cta.headingEm}</motion.span>{' '}
             {t.cta.headingPost && <RevealWords text={t.cta.headingPost!} />}
           </motion.h2>
 
@@ -207,7 +215,7 @@ export default function CTA({
                 {resolvedButtonLabel}
               </span>
               <div className="flex items-center gap-1.5">
-                <span className="h-2 w-2 animate-pulse rounded-full bg-[#1dcc5d]"></span>
+                <span className="h-2 w-2 rounded-full bg-[#1dcc5d]"></span>
                 <span className="text-[13px] text-[#a9a9a9]">
                   {t.cta.availability}
                 </span>

@@ -4,8 +4,12 @@ const article: Article = {
   slug: 'how-shopify-works',
   slugIt: 'cose-shopify',
   title: "How Shopify Works: A Practitioner's Guide for Growing Brands (2026)",
-  seoTitle: 'How Shopify Works: A Practitioner’s Guide (2026)',
-  seoTitleIt: 'Cos’è Shopify e come funziona: guida 2026',
+  seoTitle: 'How Shopify Works: Plans, Costs, When to Switch',
+  seoTitleIt: 'Cos’è Shopify e come funziona: costi e piani',
+  seoDescription:
+    'How Shopify works in practice: admin, payments, apps, plans and the real monthly cost, plus when moving your store pays off. Based on real migrations.',
+  seoDescriptionIt:
+    'Cos’è Shopify e come funziona nella pratica: pannello, pagamenti, app, piani e costo mensile reale, più quando conviene migrare. Da migrazioni reali.',
   titleIt: "Cos'è Shopify: guida completa alla piattaforma eCommerce (2026)",
   excerpt:
     'How Shopify actually works, what it costs, and whether it is worth it. Written by a Shopify Partner with 7+ years of eCommerce projects.',
@@ -21,8 +25,8 @@ const article: Article = {
   articleType: 'Article',
   date: '2026-05-06',
   datePublishedIso: '2026-05-06T10:00:00+02:00',
-  dateModifiedIso: '2026-10-16T10:00:00+02:00',
-  wordCount: 2900,
+  dateModifiedIso: '2026-10-28T09:00:00+00:00',
+  wordCount: 3100,
   articleSection: 'Shopify',
   readingTimeMinutes: 12,
   keywordsEn:
@@ -33,17 +37,22 @@ const article: Article = {
     {
       question: 'Is Shopify free?',
       answer:
-        'No. Shopify has a three-day free trial and a promotional three-month period at $1 per month for new merchants. The lowest-cost plan after that is $29 per month. There is no permanent free plan.',
+        'No. Shopify has a three-day free trial and a promotional three-month period at €1 per month for new merchants. After that the Basic plan costs €19 per month with annual billing, as listed on Shopify’s pricing page in October 2026. There is no permanent free plan.',
+    },
+    {
+      question: 'How much does Shopify cost per month?',
+      answer:
+        'For a structured B2C store the real cost runs from about €100 to €1,100 per month, advertising excluded: plan, essential apps, domain and, if needed, development. A serious entry-level setup sits around €150-200 per month. These ranges are our estimate from the stores we work on; plan prices are on Shopify’s pricing page.',
     },
     {
       question: 'Does Shopify work for small businesses?',
       answer:
-        'Yes. Shopify was designed for small to medium B2C businesses and remains the most used platform in that segment globally. The Basic plan at $29/month is genuinely sufficient for early-stage stores. Most small businesses find the admin interface significantly more manageable than alternatives like WooCommerce.',
+        'Yes. Shopify is built for small and medium B2C businesses, and the Basic plan is enough for an early-stage store. Most small businesses find the admin interface more manageable than alternatives like WooCommerce.',
     },
     {
       question: 'What is the difference between Shopify and Shopify Plus?',
       answer:
-        'Shopify Plus is the enterprise version designed for high-volume brands, typically above $1M annual revenue, that need a customizable checkout, advanced automation, dedicated support, and negotiated transaction fees. For the vast majority of B2C brands, standard plans are more than sufficient.',
+        'Shopify Plus is the enterprise version designed for high-volume brands that need a customizable checkout, advanced automation, dedicated support, and a lower transaction fee. For most B2C brands, the standard plans are enough.',
     },
     {
       question: 'Can you use Shopify without technical knowledge?',
@@ -60,7 +69,17 @@ const article: Article = {
     {
       question: 'Shopify è gratuito?',
       answer:
-        "No. Shopify ha una prova gratuita di tre giorni e un periodo promozionale di tre mesi a 1 euro al mese per i nuovi merchant. Il piano più economico dopo questo periodo è 29 euro al mese. Non esiste un piano gratuito permanente.",
+        "No. Shopify ha una prova gratuita di tre giorni e un periodo promozionale di tre mesi a 1 euro al mese per i nuovi merchant. Dopo, il piano Basic costa 19 euro al mese con fatturazione annuale, come indicato sulla pagina prezzi di Shopify a ottobre 2026. Non esiste un piano gratuito permanente.",
+    },
+    {
+      question: 'Quanto costa Shopify al mese?',
+      answer:
+        "Per uno store B2C strutturato il costo reale va da circa 100 a 1.100 € al mese, pubblicità esclusa: piano, app essenziali, dominio e, se serve, sviluppo. Un setup entry-level serio sta tra 150 e 200 € al mese. Sono stime nostre sugli store che seguiamo; i prezzi dei piani sono sulla pagina prezzi di Shopify.",
+    },
+    {
+      question: 'Shopify va bene per una piccola impresa?',
+      answer:
+        "Sì. Shopify è pensato per le piccole e medie imprese B2C e il piano Basic basta per uno store agli inizi. La maggior parte delle piccole imprese trova il pannello di amministrazione più gestibile di alternative come WooCommerce.",
     },
     {
       question: 'Shopify funziona in Italia?',
@@ -68,33 +87,29 @@ const article: Article = {
         "Sì. Shopify è disponibile in italiano, con supporto in italiano, Shopify Payments per accettare pagamenti con carte italiane ed europee, conformità GDPR e gestione dell'IVA italiana. Non ci sono limitazioni tecniche per il mercato italiano.",
     },
     {
-      question: 'Serve la partita IVA per usare Shopify?',
-      answer:
-        "Per aprire un account e fare una prova, no. Per vendere professionalmente e ricevere pagamenti in modo continuativo, la legge italiana richiede la partita IVA per chi esercita attività commerciale.",
-    },
-    {
       question: 'Qual è la differenza tra Shopify e Shopify Plus?',
       answer:
-        "Shopify Plus è la versione enterprise pensata per brand con volumi di vendita molto alti, tipicamente sopra il milione di euro annuo, che hanno bisogno di checkout modificabile, personalizzazioni avanzate, supporto dedicato e prezzi negoziabili sulle transazioni. Per la grande maggioranza dei brand B2C italiani, i piani standard sono più che sufficienti.",
+        "Shopify Plus è la versione enterprise pensata per brand con volumi di vendita alti, che hanno bisogno di checkout modificabile, automazioni avanzate, supporto dedicato e una commissione più bassa sulle transazioni. Per la maggior parte dei brand B2C bastano i piani standard.",
     },
     {
       question: 'È difficile usare Shopify senza competenze tecniche?',
       answer:
         "Per le operazioni quotidiane come aggiungere prodotti, gestire ordini e impostare sconti, no. L'interfaccia è progettata per essere usata senza conoscenze di programmazione. Per personalizzazioni avanzate del design, integrazioni non standard o ottimizzazioni di performance, servono competenze tecniche o un partner specializzato.",
     },
+    {
+      question: 'Com’è Shopify rispetto a WooCommerce per i brand fashion?',
+      answer:
+        "Per il fashion Shopify ha vantaggi concreti: esperienza mobile migliore di serie, più affidabilità, integrazione più pulita con la pubblicità Meta e Google e canali di vendita più semplici da collegare. WooCommerce può arrivare alle stesse funzioni con i plugin giusti e uno sviluppatore, ma la manutenzione pesa sempre di più.",
+    },
   ],
   content: [
     {
       type: 'paragraph',
-      text: 'I have been working on eCommerce projects for over seven years, today on Shopify. Not writing about it, not reviewing it from the outside. Actually building stores, migrating brands from platforms that no longer worked for them, and managing the day-to-day operations of ecommerce businesses that take this seriously.',
+      text: '**Shopify is a cloud platform that hosts your online store, takes payments, manages orders and updates itself, for a monthly subscription.** This guide shows how Shopify works in practice: the admin, payments, apps, plans, the real monthly cost, and when moving to it pays off.',
     },
     {
       type: 'paragraph',
-      text: 'Most guides about how Shopify works are written by people who have set it up once to test it, or by Shopify itself. Both perspectives have obvious limitations.',
-    },
-    {
-      type: 'paragraph',
-      text: 'This one is written from the inside. What Shopify actually does, where it works exceptionally well, where it has limits, and when it makes sense to move to it instead of staying where you are.',
+      text: 'I have worked on eCommerce projects for over seven years, today on Shopify: building stores, migrating brands from platforms that no longer worked for them and running the day to day. That is the angle of this guide.',
     },
     { type: 'paragraph', text: 'In this guide:' },
     {
@@ -120,17 +135,17 @@ const article: Article = {
         '**Cloud-based**: nothing to install or maintain. Shopify manages infrastructure, backups, and security on your behalf.',
         '**All-in-one**: product catalog, order management, payments, shipping, and analytics live in one system.',
         '**Scalable**: works for a 10-product store and for brands processing millions of orders annually through Shopify Plus.',
-        '**Open ecosystem**: over 12,000 apps available to add functionality without rebuilding your site from scratch.',
+        '**Open ecosystem**: over 16,000 apps in the [Shopify App Store](https://apps.shopify.com), to add functionality without rebuilding your site from scratch.',
       ],
     },
     {
       type: 'paragraph',
-      text: 'Founded in Canada in 2006, Shopify now powers millions of merchants across 175+ countries, with independent estimates for 2026 putting the active store count above 5 million. Its user base spans early-stage DTC brands, established fashion retailers, supplement companies, and luxury boutiques, all of which need a stable platform without building an internal technical team.',
+      text: 'Founded in Canada in 2006, Shopify now powers millions of merchants worldwide. Its user base spans early-stage DTC brands, established fashion retailers, supplement companies, and luxury boutiques, all of which need a stable platform without building an internal technical team.',
     },
     { type: 'h2', text: 'How Shopify Works: The Technical Reality' },
     {
       type: 'paragraph',
-      text: 'Understanding the architecture helps you decide whether it fits your situation and avoids surprises after you commit.',
+      text: 'Shopify runs your store as a service on its own servers: you use it from the browser, and Shopify handles hosting, security and updates. Knowing the architecture helps you decide whether it fits and avoids surprises after you commit.',
     },
     { type: 'h3', text: 'The SaaS architecture explained simply' },
     {
@@ -161,11 +176,11 @@ const article: Article = {
     { type: 'h3', text: 'Payments and Shopify Payments' },
     {
       type: 'paragraph',
-      text: 'Shopify Payments is the platform\'s native payment solution, available in most major markets. It accepts credit cards, debit cards, Apple Pay, and Google Pay with no additional transaction fee beyond your subscription cost.',
+      text: '[Shopify Payments](https://help.shopify.com/en/manual/payments/shopify-payments) is the platform\'s native payment solution, available in many markets. It accepts credit cards, debit cards, Apple Pay, and Google Pay with no additional transaction fee beyond your subscription cost.',
     },
     {
       type: 'paragraph',
-      text: 'If you use an external gateway like Stripe or PayPal, Shopify charges an additional transaction fee ranging from 0.6% to 2% depending on your plan. At high volumes, this difference is material.',
+      text: 'If you use an external gateway like Stripe or PayPal, Shopify charges an additional transaction fee ranging from 0.6% to 2% depending on your plan ([Shopify’s pricing overview](https://help.shopify.com/en/manual/intro-to-shopify/pricing-plans/pricing-overview) explains it). At high volumes, this difference is material.',
     },
     { type: 'h3', text: 'Apps and integrations' },
     {
@@ -174,7 +189,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Some are free, most have a monthly cost. A complete setup with five to eight quality apps typically adds between 150 and 400 USD per month on top of the base subscription. Factor this into your budget calculations from the start.',
+      text: 'Some are free, most have a monthly cost. In our projects a complete setup with five to eight quality apps typically adds between €150 and €400 per month on top of the base subscription. Factor this into your budget calculations from the start. This monthly weight is exactly what a store built from scratch removes.',
     },
     { type: 'h2', text: 'Shopify Plans Compared: What You Are Actually Paying For' },
     {
@@ -184,28 +199,28 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**Basic**: $29/month (annual billing, 25% discount; $39/month on monthly), 2% transaction fee. New stores, low volume.',
-        '**Grow**: $79/month (annual billing; $105/month on monthly), 1% transaction fee. Growing stores, small team.',
-        '**Advanced**: $299/month (annual billing; $399/month on monthly), 0.6% transaction fee. Structured stores, advanced reports.',
-        '**Shopify Plus**: from $2,300/month, negotiable fee. Enterprise, high volume.',
+        '**Basic**: €19/month with annual billing (€27 month to month), 2% transaction fee. New stores, low volume.',
+        '**Grow**: €56/month with annual billing (€74 month to month), 1% transaction fee. Growing stores, small team.',
+        '**Advanced**: €289/month with annual billing (€384 month to month), 0.6% transaction fee. Structured stores, advanced reports.',
+        '**Shopify Plus**: from €2,100/month, 0.2% transaction fee. Enterprise, high volume.',
       ],
     },
     {
       type: 'paragraph',
-      text: 'Prices above reflect annual billing (25% discount applied). Month-to-month plans cost $39, $105, and $399 respectively. Shopify rebranded the mid-tier plan from "Shopify" to "Grow" in 2025, so older articles may still use the previous name.',
+      text: 'Prices are those listed on [Shopify’s pricing page](https://www.shopify.com/pricing) in October 2026 and can change or vary by country, so check yours there.',
     },
     { type: 'paragraph', text: '**What matters beyond the subscription price.**' },
     {
       type: 'paragraph',
-      text: 'Transaction fees are the cost most brands underestimate. If you are not using Shopify Payments, you pay a percentage on every sale. At $100,000 monthly revenue, the difference between Basic (2%) and Advanced (0.6%) is $1,400 per month in fees alone.',
+      text: 'Transaction fees are the cost most brands underestimate. If you are not using Shopify Payments, you pay a percentage on every sale. At €100,000 monthly revenue, the difference between Basic (2%) and Advanced (0.6%) is €1,400 per month in fees alone.',
     },
     {
       type: 'paragraph',
-      text: 'App costs are the other variable to calculate upfront. A complete setup with email marketing, tracking, loyalty, and CRO tools can bring your total monthly cost to $250-600, subscription included.',
+      text: 'App costs are the other variable to calculate upfront. A complete setup with email marketing, tracking, loyalty, and CRO tools can bring your total monthly cost to roughly €250-600, subscription included.',
     },
     {
       type: 'paragraph',
-      text: 'Premium themes cost $300-450 as a one-time fee, not recurring.',
+      text: 'Paid templates from the Theme Store are a one-time cost, not recurring.',
     },
     { type: 'h2', text: 'Shopify vs the Alternatives' },
     {
@@ -218,24 +233,16 @@ const article: Article = {
       text: 'WooCommerce is a free ecommerce plugin for WordPress. The license has no cost, but you manage hosting, maintain plugin updates, handle security, and typically need a developer for any structural change.',
     },
     {
-      type: 'list',
-      items: [
-        '**Setup cost**: medium-low on Shopify, low on WooCommerce (but WooCommerce hides downstream costs).',
-        '**Ongoing maintenance**: zero on Shopify (handled by the platform), high on WooCommerce (your responsibility).',
-        '**Speed out of the box**: high on Shopify, medium on WooCommerce (depends on hosting and plugins).',
-        '**Technical flexibility**: medium-high on Shopify, very high on WooCommerce.',
-        '**Learning curve**: low on Shopify, medium-high on WooCommerce.',
-        '**Security**: managed by Shopify; your responsibility on WooCommerce.',
-        '**Updates**: automatic on Shopify; manual and frequently breaking on WooCommerce.',
-      ],
-    },
-    {
       type: 'paragraph',
       text: "Our assessment: for B2C brands focused on growth, Shopify wins almost every time. WooCommerce makes sense in specific cases: very limited budget, a dedicated internal technical team, or deep customization requirements that the Shopify ecosystem does not cover.",
     },
     {
       type: 'paragraph',
       text: 'The most common reason brands migrate from WooCommerce to Shopify is not missing features. It is time lost managing plugin conflicts and technical maintenance instead of doing marketing and selling.',
+    },
+    {
+      type: 'paragraph',
+      text: 'The full comparison, with the five decisions and the cases where WooCommerce is the better choice, is in [Shopify vs WooCommerce](/blog/shopify-vs-woocommerce). If you have already decided to move, the practical side is in [how to migrate WooCommerce to Shopify](/blog/woocommerce-to-shopify-migration).',
     },
     { type: 'h3', text: 'Shopify vs integrated ERP platforms' },
     {
@@ -278,7 +285,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'The case we reference most is a luxury fashion brand in Italy that we have been working with since 2022. They were on an integrated ERP platform with every characteristic described above: site changes through tickets, tracking impossible to implement correctly, checkout impossible to optimize.',
+      text: 'The case we reference most is a luxury fashion brand we have been working with since 2022. They were on a proprietary platform tied to the store’s ERP: every site change went through a ticket, tracking was hard to implement correctly and the checkout could not be optimized.',
     },
     {
       type: 'paragraph',
@@ -286,7 +293,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'If you are evaluating a migration, see [how we work on Shopify migrations](/shopify-migration) or the [Shopify Launch Sprint](/shopify-migration-sprint): a fixed calendar, a public price and 4 written guarantees. Or [reach out directly](/contacts) and we will give you our read of your situation.',
+      text: 'If you are evaluating a migration, see [how we work on Shopify migrations](/shopify-migration), what it costs in [how much a Shopify migration costs](/blog/shopify-migration-cost), and the SEO side in the [migration SEO checklist](/blog/shopify-migration-seo-checklist). Or [reach out directly](/contacts) and we will give you our read of your situation.',
     },
     { type: 'h2', text: 'Is Shopify Worth It? The Honest Assessment' },
     {
@@ -337,6 +344,33 @@ const article: Article = {
       type: 'paragraph',
       text: 'Understanding both sides is important before committing. Shopify gives the most when the store sells to consumers, the checkout follows standard ecommerce patterns and the ERP connects through a connector layer.',
     },
+    { type: 'h2', text: 'Who Is Shopify For, and Who Is It Not For?' },
+    {
+      type: 'paragraph',
+      text: '**Shopify is the right choice for B2C brands that sell physical products online and want a stable platform without a technical team of their own.**',
+    },
+    { type: 'paragraph', text: '**Shopify is the right choice if:**' },
+    {
+      type: 'list',
+      items: [
+        'You run a B2C business with physical products to sell online',
+        'You want a stable platform that grows with you without constant maintenance',
+        'Your online revenue is or will be above roughly €50,000-100,000 a year',
+        'You work in fashion, supplements, food, DTC or retail',
+        'You want modern marketing tools: Meta Ads, Google Ads, email automation, advanced tracking',
+        'You do not want to build an in-house technical team just to run the platform',
+      ],
+    },
+    { type: 'paragraph', text: '**Shopify may not fit if:**' },
+    {
+      type: 'list',
+      items: [
+        'You have very complex B2B needs: customer-specific prices, price-list ordering, multi-level approvals',
+        'You need deep customizations that the app ecosystem does not cover',
+        'Your monthly platform budget, apps included, is under about €30: start on free WooCommerce and move when it makes sense',
+        'You are an unvalidated startup with no product, no customers and no budget: validate the product first, then build the platform',
+      ],
+    },
     { type: 'h2', text: 'How to Get Started: 5 Steps That Actually Matter' },
     {
       type: 'paragraph',
@@ -344,11 +378,11 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '**1. Start with the free trial, use it seriously.** Shopify offers a three-day free trial, then three months for $1 per month for new merchants. Do not spend this time uploading your full catalog. Spend it learning where things are in the admin, understanding the settings structure, and evaluating whether the platform logic matches how you operate.',
+      text: '**1. Start with the free trial, use it seriously.** Shopify offers a three-day free trial, then three months for €1 per month for new merchants. Do not spend this time uploading your full catalog. Spend it learning where things are in the admin, understanding the settings structure, and evaluating whether the platform logic matches how you operate.',
     },
     {
       type: 'paragraph',
-      text: '**2. Choose your theme before touching anything else.** Do not optimize the default theme long-term. Invest in a professional theme from the start if you are serious about this store. Quality themes for fashion (Prestige, Symmetry, Impulse) cost $300-450 as a one-time fee and save weeks of custom development. For DTC or supplement brands, Dawn and Horizon are strong free starting points; Sense works well for beauty and wellness categories.',
+      text: '**2. Decide how the storefront is built before touching anything else.** You have three routes: a free template such as Dawn or Horizon to validate the idea, a paid template from the Shopify Theme Store, or a storefront written for your store only. The first two start fast but carry code and apps you do not use; the third is what we build in the [Shopify Launch Sprint](/shopify-migration-sprint) with our Custom AI System, where many jobs become code instead of another monthly app. Choose by volume and ambition, not by price alone.',
     },
     {
       type: 'paragraph',
@@ -370,16 +404,16 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**Shopify plan**: $29-299/month with annual billing ($39-399 monthly). Basic or Grow for most cases.',
-        '**Essential apps**: $80-300/month. Email, tracking, CRO, reviews.',
-        '**Domain**: $1-2/month. Annual renewal.',
-        '**Development and maintenance**: $0-500/month. Depends on whether DIY or with a partner.',
-        '**Realistic total range**: $110-1,100/month, excluding advertising spend.',
+        '**Shopify plan**: €19-289/month with annual billing (€27-384 monthly). Basic or Grow for most cases.',
+        '**Essential apps**: €80-300/month. Email, tracking, CRO, reviews.',
+        '**Domain**: €1-2/month. Annual renewal.',
+        '**Development and maintenance**: €0-500/month. Depends on whether DIY or with a partner.',
+        '**Realistic total range**: about €100-1,100/month, excluding advertising spend.',
       ],
     },
     {
       type: 'paragraph',
-      text: 'For a serious entry-level setup with the Basic plan and three to four essential apps, expect $150-200 per month.',
+      text: 'For a serious entry-level setup with the Basic plan and three to four essential apps, expect around €150-200 per month. App and development figures are our estimate from the stores we work on; the plan prices are on Shopify’s pricing page.',
     },
     {
       type: 'paragraph',
@@ -387,23 +421,28 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'If you want to understand how we structure ongoing ecommerce management, the [NoProb Data-Driven Team](/data-driven-team) is built exactly for this: a stable technical team dedicated to your store, without coordinating separate vendors for every piece of the operation.',
+      text: 'If you want to understand how we structure ongoing ecommerce management, the [NoProb Data-Driven Team](/data-driven-team) is built exactly for this: a stable technical team dedicated to your store, without coordinating separate vendors for every piece of the operation. To put AI to work in the admin, see [Shopify Magic and Sidekick](/blog/shopify-magic-sidekick); for AI shopping channels, [agentic commerce on Shopify](/blog/agentic-commerce-shopify).',
     },
     { type: 'h2', text: 'Frequently Asked Questions' },
     { type: 'h3', text: 'Is Shopify free?' },
     {
       type: 'paragraph',
-      text: 'No. Shopify has a three-day free trial and a promotional three-month period at $1 per month for new merchants. The lowest-cost plan after that is $29 per month. There is no permanent free plan.',
+      text: 'No. Shopify has a three-day free trial and a promotional three-month period at €1 per month for new merchants. After that the Basic plan costs €19 per month with annual billing, as listed on Shopify’s pricing page in October 2026. There is no permanent free plan.',
+    },
+    { type: 'h3', text: 'How much does Shopify cost per month?' },
+    {
+      type: 'paragraph',
+      text: 'For a structured B2C store the real cost runs from about €100 to €1,100 per month, advertising excluded: plan, essential apps, domain and, if needed, development. A serious entry-level setup sits around €150-200 per month. These ranges are our estimate from the stores we work on; plan prices are on Shopify’s pricing page.',
     },
     { type: 'h3', text: 'Does Shopify work for small businesses?' },
     {
       type: 'paragraph',
-      text: 'Yes. Shopify was designed for small to medium B2C businesses and remains the most used platform in that segment globally. The Basic plan at $29/month is genuinely sufficient for early-stage stores. Most small businesses find the admin interface significantly more manageable than alternatives like WooCommerce.',
+      text: 'Yes. Shopify is built for small and medium B2C businesses, and the Basic plan is enough for an early-stage store. Most small businesses find the admin interface more manageable than alternatives like WooCommerce.',
     },
     { type: 'h3', text: 'What is the difference between Shopify and Shopify Plus?' },
     {
       type: 'paragraph',
-      text: 'Shopify Plus is the enterprise version designed for high-volume brands, typically above $1M annual revenue, that need a customizable checkout, advanced automation, dedicated support, and negotiated transaction fees. For the vast majority of B2C brands, standard plans are more than sufficient.',
+      text: 'Shopify Plus is the enterprise version designed for high-volume brands that need a customizable checkout, advanced automation, dedicated support, and a lower transaction fee. For most B2C brands, the standard plans are enough.',
     },
     { type: 'h3', text: 'Can you use Shopify without technical knowledge?' },
     {
@@ -434,7 +473,11 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'If you already know Shopify is the right move and want a structured, fixed-calendar transition, the [Shopify Launch Sprint](/shopify-migration-sprint) gives you a migration with a public price and 4 written guarantees.',
+      text: 'The Sprint has a public price by revenue: €5,800 under €2M, €8,800 from €2M to €20M, €12,800 above €20M, VAT excluded, in 4 installments.',
+    },
+    {
+      type: 'paragraph',
+      text: 'The [Shopify Launch Sprint](/shopify-migration-sprint) moves your store to Shopify in 14 days with our Custom AI System: a fixed calendar, a public price and 4 written guarantees.',
     },
     {
       type: 'paragraph',
@@ -444,11 +487,11 @@ const article: Article = {
   contentIt: [
     {
       type: 'paragraph',
-      text: 'Lavoro su progetti eCommerce da oltre sette anni, oggi su Shopify. Ho migrato brand da piattaforme che non reggevano più il peso del business, ho seguito store dal lancio alla crescita, ho visto da vicino cosa funziona e cosa brucia risorse inutilmente.',
+      text: '**Shopify è una piattaforma eCommerce in cloud: ospita il tuo negozio, incassa i pagamenti, gestisce gli ordini e si aggiorna da sola, con un abbonamento mensile.** In questa guida vedi come funziona Shopify nella pratica: pannello, pagamenti, app, piani, costo mensile reale e quando conviene migrare.',
     },
     {
       type: 'paragraph',
-      text: 'Questa guida non è scritta per spiegare Shopify a qualcuno che non sa cos\'è un negozio online. È scritta per chi ha già un business, magari già vende, e vuole capire davvero se Shopify è la piattaforma giusta per il prossimo passo.',
+      text: 'Lavoro su progetti eCommerce da oltre sette anni, oggi su Shopify: costruisco store, ho migrato brand da piattaforme che non reggevano più e seguo la gestione quotidiana. È il punto di vista di questa guida.',
     },
     { type: 'paragraph', text: 'In questo articolo:' },
     {
@@ -474,17 +517,17 @@ const article: Article = {
         '**Cloud-based**: non installi nulla sul tuo server. Shopify gestisce infrastruttura, backup e sicurezza al posto tuo.',
         '**All-in-one**: catalogo prodotti, gestione ordini, pagamenti, spedizioni e analytics vivono dentro un solo sistema.',
         '**Scalabile**: funziona per uno store con dieci prodotti e per brand con milioni di ordini all\'anno tramite Shopify Plus.',
-        '**Ecosistema aperto**: oltre 12.000 app disponibili per aggiungere funzionalità senza riscrivere il sito da zero.',
+        '**Ecosistema aperto**: oltre 16.000 app nello [Shopify App Store](https://apps.shopify.com) per aggiungere funzionalità senza riscrivere il sito da zero.',
       ],
     },
     {
       type: 'paragraph',
-      text: 'Fondata nel 2006 in Canada, oggi Shopify conta milioni di merchant attivi in oltre 175 paesi, con stime indipendenti 2026 che parlano di oltre 5 milioni di store attivi. In Italia la usano brand fashion, retailer multibrand, brand DTC e boutique di lusso che hanno bisogno di una piattaforma solida senza costruire un team tecnico interno da zero.',
+      text: 'Fondata nel 2006 in Canada, oggi Shopify conta milioni di merchant attivi nel mondo. La usano brand fashion, retailer multibrand, brand DTC e boutique di lusso che hanno bisogno di una piattaforma solida senza costruire un team tecnico interno da zero.',
     },
     { type: 'h2', text: 'Come funziona Shopify tecnicamente' },
     {
       type: 'paragraph',
-      text: 'Capire come funziona aiuta a valutare se è adatta al tuo caso, e a non avere sorprese dopo aver firmato l\'abbonamento.',
+      text: 'Shopify gestisce il tuo store come un servizio sui propri server: lo usi dal browser e Shopify si occupa di hosting, sicurezza e aggiornamenti. Capire come funziona aiuta a valutare se è adatta al tuo caso, e a non avere sorprese dopo aver firmato l\'abbonamento.',
     },
     { type: 'h3', text: "L'architettura SaaS spiegata senza tecnicismi" },
     {
@@ -515,11 +558,11 @@ const article: Article = {
     { type: 'h3', text: 'Pagamenti e Shopify Payments' },
     {
       type: 'paragraph',
-      text: 'Shopify ha il proprio sistema di pagamento, Shopify Payments, disponibile in Italia. Accetta carte di credito, debito, Apple Pay e Google Pay senza commissioni aggiuntive per transazione, oltre al costo dell\'abbonamento.',
+      text: 'Shopify ha il proprio sistema di pagamento, [Shopify Payments](https://help.shopify.com/en/manual/payments/shopify-payments), disponibile in molti mercati. Accetta carte di credito, debito, Apple Pay e Google Pay senza commissioni aggiuntive per transazione, oltre al costo dell\'abbonamento.',
     },
     {
       type: 'paragraph',
-      text: 'Se preferisci usare un gateway esterno come Stripe, PayPal o Nexi, Shopify applica una commissione aggiuntiva che va dallo 0,6% al 2% per transazione, a seconda del piano che hai. Su volumi alti questa differenza è significativa.',
+      text: 'Se preferisci usare un gateway esterno come Stripe, PayPal o Nexi, Shopify applica una commissione aggiuntiva che va dallo 0,6% al 2% per transazione, a seconda del piano che hai ([la panoramica prezzi di Shopify](https://help.shopify.com/en/manual/intro-to-shopify/pricing-plans/pricing-overview) la spiega). Su volumi alti questa differenza è significativa.',
     },
     { type: 'h3', text: 'App e integrazioni' },
     {
@@ -528,7 +571,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Alcune sono gratuite, la maggior parte ha un costo mensile. Un setup medio con cinque-otto app di qualità aggiunge tra i 150 e i 400 euro al mese al costo base della piattaforma. Tienilo presente quando calcoli il budget complessivo.',
+      text: 'Alcune sono gratuite, la maggior parte ha un costo mensile. Nei nostri progetti un setup medio con cinque-otto app di qualità aggiunge tra i 150 e i 400 euro al mese al costo base della piattaforma. Tienilo presente quando calcoli il budget complessivo. È il peso mensile che uno store costruito da zero elimina.',
     },
     { type: 'h2', text: 'I piani Shopify a confronto' },
     {
@@ -538,15 +581,15 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**Basic**: 29€/mese (con fatturazione annuale; 39€/mese mensile), commissione 2%. Nuovi store, volumi bassi.',
-        '**Grow**: 79€/mese (con fatturazione annuale; 105€/mese mensile), commissione 1%. Store in crescita, piccolo team.',
-        '**Advanced**: 299€/mese (con fatturazione annuale; 399€/mese mensile), commissione 0,6%. Store strutturati, report avanzati.',
-        '**Shopify Plus**: da 2.300€/mese, commissione negoziabile. Enterprise, volumi alti.',
+        '**Basic**: 19€/mese con fatturazione annuale (27€/mese mensile), commissione 2%. Nuovi store, volumi bassi.',
+        '**Grow**: 56€/mese con fatturazione annuale (74€/mese mensile), commissione 1%. Store in crescita, piccolo team.',
+        '**Advanced**: 289€/mese con fatturazione annuale (384€/mese mensile), commissione 0,6%. Store strutturati, report avanzati.',
+        '**Shopify Plus**: da 2.100€/mese, commissione 0,2%. Enterprise, volumi alti.',
       ],
     },
     {
       type: 'paragraph',
-      text: 'I prezzi indicati sono con fatturazione annuale prepagata, che include uno sconto del 25% rispetto al mensile senza impegno. Shopify ha rinominato il piano intermedio da "Shopify" a "Grow" nel 2025, quindi articoli più vecchi potrebbero ancora usare il nome precedente.',
+      text: 'I prezzi sono quelli indicati sulla [pagina prezzi di Shopify](https://www.shopify.com/it/prezzi) a ottobre 2026 e possono cambiare o variare da paese a paese: verifica i tuoi lì.',
     },
     { type: 'paragraph', text: '**Cosa guardare oltre al prezzo mensile dell\'abbonamento.**' },
     {
@@ -555,15 +598,15 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Il costo delle app è l\'altro elemento da calcolare. Un setup completo che include email marketing, tracking, programma fedeltà e strumenti di CRO può portare il costo mensile totale tra i 250 e i 600 euro, abbonamento incluso.',
+      text: 'Il costo delle app è l\'altro elemento da calcolare. Un setup completo che include email marketing, tracking, programma fedeltà e strumenti di CRO può portare il costo mensile totale a circa 250-600 euro, abbonamento incluso.',
     },
     {
       type: 'paragraph',
-      text: 'I temi premium costano tra i 300 e i 450 euro una tantum, non ricorrenti.',
+      text: 'I template a pagamento del Theme Store sono un costo una tantum, non ricorrente.',
     },
     {
       type: 'paragraph',
-      text: 'Per un approfondimento sui costi, leggi [quanto costa migrare a Shopify](/it/blog/costo-migrazione-shopify).',
+      text: 'Il costo di una migrazione, voce per voce, è nella guida [quanto costa migrare a Shopify](/it/blog/costo-migrazione-shopify).',
     },
     { type: 'h2', text: 'Shopify vs le alternative' },
     {
@@ -576,18 +619,6 @@ const article: Article = {
       text: 'WooCommerce è un plugin eCommerce gratuito per WordPress. Ha un costo di licenza zero, ma richiede hosting a tuo carico, manutenzione continua dei plugin, aggiornamenti che possono rompere funzionalità esistenti, e spesso uno sviluppatore per ogni modifica strutturale.',
     },
     {
-      type: 'list',
-      items: [
-        '**Costo di setup iniziale**: medio-basso su Shopify, basso su WooCommerce (ma nasconde costi successivi).',
-        '**Manutenzione nel tempo**: zero su Shopify (gestita dalla piattaforma), alta su WooCommerce (a tuo carico).',
-        '**Velocità out-of-the-box**: alta su Shopify, media su WooCommerce (dipende da hosting e plugin).',
-        '**Flessibilità tecnica**: media-alta su Shopify, molto alta su WooCommerce.',
-        '**Curva di apprendimento**: bassa su Shopify, media-alta su WooCommerce.',
-        '**Sicurezza**: gestita da Shopify, a tuo carico su WooCommerce.',
-        '**Aggiornamenti**: automatici su Shopify, manuali e spesso rischiosi su WooCommerce.',
-      ],
-    },
-    {
       type: 'paragraph',
       text: 'La nostra valutazione sincera: per brand B2C con focus sulla crescita, Shopify vince quasi sempre. WooCommerce ha senso in casi specifici: budget molto limitato, team tecnico interno dedicato, o esigenze di personalizzazione profonda che l\'ecosistema Shopify non copre.',
     },
@@ -597,12 +628,12 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Il confronto completo con dati e casi reali è nell’articolo [Shopify o WooCommerce](/it/blog/shopify-o-woocommerce). Se stai valutando una migrazione, puoi [parlarci direttamente](/it/contatti).',
+      text: 'Il confronto completo, con le cinque decisioni che contano e i casi in cui conviene WooCommerce, è in [WooCommerce vs Shopify](/it/blog/shopify-o-woocommerce). Se hai già deciso di passare, c’è la [guida alla migrazione da WooCommerce a Shopify](/it/blog/migrazione-woocommerce-shopify).',
     },
     { type: 'h3', text: 'Shopify vs piattaforme con gestionale ERP integrato' },
     {
       type: 'paragraph',
-      text: 'In Italia esiste una categoria di piattaforme specifica, diffusa soprattutto nel fashion retail e nelle boutique multibrand, che integra la gestione del negozio online con il gestionale ERP, il registratore di cassa e la logica di conto-vendita tipica del settore.',
+      text: 'Esiste una categoria di piattaforme specifica, diffusa soprattutto nel fashion retail europeo e nelle boutique multibrand, che integra la gestione del negozio online con il gestionale ERP, il registratore di cassa e la logica di conto-vendita tipica del settore.',
     },
     {
       type: 'paragraph',
@@ -623,7 +654,7 @@ const article: Article = {
     { type: 'h2', text: 'Quando ha senso migrare su Shopify' },
     {
       type: 'paragraph',
-      text: 'Questa è la domanda che mi viene fatta più spesso, ed è quella a cui vale la pena rispondere con onestà invece che con una lista generica di benefici.',
+      text: 'Questa è la domanda che mi viene fatta più spesso, e merita una risposta diretta invece di una lista generica di benefici.',
     },
     { type: 'paragraph', text: 'Ha senso migrare quando:' },
     {
@@ -640,7 +671,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Il caso che racconto più spesso è quello di un brand fashion luxury italiano che seguiamo dal 2022. Erano su una piattaforma con gestionale integrato, con tutte le caratteristiche descritte sopra: ogni modifica via ticket, tracking impossibile, checkout non ottimizzabile.',
+      text: 'Il caso che racconto più spesso è quello di un brand fashion luxury che seguiamo dal 2022. Erano su una piattaforma proprietaria legata al gestionale del negozio: ogni modifica al sito passava da un ticket, il tracking era difficile da impostare bene e il checkout non si poteva ottimizzare.',
     },
     {
       type: 'paragraph',
@@ -648,18 +679,67 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Se stai valutando una migrazione, guarda [come lavoriamo sulle migrazioni a Shopify](/it/migrazione-shopify) o lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify): calendario fisso, prezzo pubblico e 4 garanzie scritte. Oppure [scrivici](/it/contatti) e ti diamo la nostra valutazione della tua situazione.',
+      text: 'Se stai valutando una migrazione, guarda [come lavoriamo sulle migrazioni a Shopify](/it/migrazione-shopify), cosa costa in [quanto costa migrare a Shopify](/it/blog/costo-migrazione-shopify) e il lato SEO nella [checklist SEO della migrazione](/it/blog/migrazione-shopify-seo-checklist). Oppure [scrivici](/it/contatti) e ti diamo la nostra valutazione della tua situazione.',
+    },
+    { type: 'h2', text: 'Shopify conviene? La valutazione sincera' },
+    {
+      type: 'paragraph',
+      text: 'La risposta dipende da cosa lo confronti: rispetto a una soluzione su misura conviene quasi sempre, rispetto a WooCommerce conviene per la maggior parte dei brand B2C, rispetto a una piattaforma con gestionale integrato conviene se l’online è una priorità strategica.',
+    },
+    {
+      type: 'paragraph',
+      text: 'Rispetto a costruire e mantenere una soluzione su misura: sì, quasi sempre. Il costo totale di una soluzione eCommerce su misura, tra sviluppo iniziale, manutenzione, sicurezza e aggiornamenti, supera di solito quello di Shopify su un orizzonte di tre-cinque anni.',
+    },
+    {
+      type: 'paragraph',
+      text: 'Rispetto a WooCommerce: sì, per la maggior parte dei brand B2C. I costi nascosti della manutenzione e le ore di sviluppo per le modifiche non banali superano di solito abbonamento e app di Shopify entro il secondo anno.',
+    },
+    {
+      type: 'paragraph',
+      text: 'Rispetto a una piattaforma con gestionale integrato: sì, se il fatturato online è una priorità strategica. I miglioramenti di conversione possibili su Shopify, più la possibilità di impostare un tracking corretto e fare buona pubblicità, generano ritorni molto superiori al costo della piattaforma.',
+    },
+    {
+      type: 'paragraph',
+      text: 'I casi in cui non è chiaramente conveniente: attività agli inizi che validano un prodotto con budget minimo, attività con esigenze B2B complesse, e casi in cui l’integrazione con il gestionale è così profonda che rifarla pesa più dei vantaggi.',
+    },
+    { type: 'h2', text: 'Pro e contro di Shopify' },
+    { type: 'paragraph', text: '**I vantaggi concreti:**' },
+    {
+      type: 'list',
+      items: [
+        'Il tempo più breve dall’apertura alla prima vendita tra le piattaforme principali',
+        'Nessun carico di manutenzione tecnica: sicurezza, aggiornamenti e hosting inclusi',
+        'Esperienza mobile ottima di serie',
+        'Un ecosistema profondo di integrazioni di marketing',
+        'Shopify Payments elimina la complessità dei gateway di pagamento',
+        'Scala dalle prime vendite all’enterprise senza cambiare piattaforma',
+      ],
+    },
+    { type: 'paragraph', text: '**I limiti reali:**' },
+    {
+      type: 'list',
+      items: [
+        'La personalizzazione del checkout è limitata a Shopify Plus (sui piani standard il checkout è in gran parte fisso)',
+        'Il costo mensile sale in modo significativo con uno stack completo di app',
+        'Si applicano commissioni sulle transazioni se non usi Shopify Payments',
+        'Poca libertà per logiche di backend profonde senza sviluppo su misura',
+        'Cambiare piattaforma ha un costo reale: lasciare Shopify non è banale dopo che ci hai costruito sopra',
+      ],
+    },
+    {
+      type: 'paragraph',
+      text: 'Conoscere entrambi i lati serve prima di impegnarsi. Shopify rende di più quando lo store vende a consumatori, il checkout segue gli schemi standard dell’eCommerce e il gestionale si collega tramite un connettore.',
     },
     { type: 'h2', text: 'Per chi è adatto Shopify (e per chi no)' },
     {
       type: 'paragraph',
-      text: 'Shopify non è la risposta giusta per ogni business. Questo è importante dirlo.',
+      text: '**Shopify è adatto ai brand B2C che vendono prodotti fisici online e vogliono una piattaforma stabile senza un team tecnico interno.**',
     },
     { type: 'paragraph', text: '**Shopify è la scelta giusta se:**' },
     {
       type: 'list',
       items: [
-        'Hai un business B2C con prodotti fisici da vendere online',
+        'Vendi prodotti fisici a consumatori (B2C) online',
         'Vuoi una piattaforma stabile che cresce con te senza richiedere manutenzione continua',
         'Il tuo fatturato online è o sarà superiore a 50.000-100.000 euro l\'anno',
         'Lavori nel fashion, negli integratori, nel food, nel DTC o nel retail',
@@ -688,11 +768,11 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '**2. Scegli il tema con criterio.** Non ottimizzare il tema di default a lungo. Se la tua intenzione è seria, investi in un tema professionale dall\'inizio. I temi di qualità per il fashion (Prestige, Symmetry, Impulse) costano tra i 300 e i 450 euro una tantum e risparmiano settimane di sviluppo personalizzato. Per store DTC o di integratori, Dawn e Horizon sono ottimi punti di partenza gratuiti; Sense funziona bene per beauty e wellness.',
+      text: '**2. Decidi come si costruisce la vetrina prima di toccare altro.** Le strade sono tre: un template gratuito come Dawn o Horizon per partire e validare, un template a pagamento dal Theme Store di Shopify, oppure una vetrina scritta solo per il tuo store. Le prime due partono in fretta ma portano codice e app che non usi; la terza è quella che costruiamo nello [Shopify Launch Sprint](/it/sprint-migrazione-shopify) con il nostro Custom AI System, dove molti compiti diventano codice invece di un\'altra app a canone mensile. Scegli per volumi e ambizione, non solo per prezzo.',
     },
     {
       type: 'paragraph',
-      text: '**3. Configura i fondamentali tecnici prima di caricare prodotti.** Dominio personalizzato, Shopify Payments, impostazioni spedizioni e tasse per il mercato italiano. Questi passaggi sembrano burocratici ma sono quelli che più spesso vengono rimandati e poi creano problemi in fase di lancio.',
+      text: '**3. Configura i fondamentali tecnici prima di caricare prodotti.** Dominio personalizzato, Shopify Payments, impostazioni spedizioni e tasse per il tuo mercato. Questi passaggi sembrano burocratici ma sono quelli che più spesso vengono rimandati e poi creano problemi in fase di lancio.',
     },
     {
       type: 'paragraph',
@@ -704,30 +784,30 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Il tracking server-side su Shopify con Stape è il metodo che usiamo per i brand che seguiamo. Il risultato su uno store fashion che seguiamo è un tracking score di 92/100 nell’audit (da 31/100 prima della migrazione), con un impatto diretto sulle campagne Meta.',
+      text: 'Su uno store fashion che seguiamo, il tracking server-side ha portato lo score dell’audit a 92/100 (da 31/100 prima della migrazione), con un impatto diretto sulle campagne Meta. Cosa controllare prima del lancio per non perdere traffico è nella [checklist SEO della migrazione](/it/blog/migrazione-shopify-seo-checklist).',
     },
     { type: 'h2', text: 'Quanto costa davvero Shopify' },
     {
       type: 'paragraph',
-      text: 'La risposta onesta è che dipende da come costruisci il setup. Il prezzo che leggi sul sito di Shopify copre solo l\'abbonamento base.',
+      text: 'Il costo dipende da come costruisci il setup. Il prezzo che leggi sul sito di Shopify copre solo l\'abbonamento base.',
     },
     {
       type: 'paragraph',
-      text: '**Costo realistico per uno store B2C strutturato in Italia:**',
+      text: '**Costo realistico per uno store B2C strutturato:**',
     },
     {
       type: 'list',
       items: [
-        '**Piano Shopify**: 29-299€/mese con fatturazione annuale (39-399€ con mensile). Basic o Grow nella maggior parte dei casi.',
+        '**Piano Shopify**: 19-289€/mese con fatturazione annuale (27-384€ con mensile). Basic o Grow nella maggior parte dei casi.',
         '**App essenziali**: 80-300€/mese. Email, tracking, CRO, recensioni.',
         '**Dominio**: 1-2€/mese. Rinnovato annualmente.',
         '**Sviluppo e manutenzione**: 0-500€/mese. Dipende se DIY o con partner.',
-        '**Totale range reale**: 110-1.100€/mese, escluso advertising.',
+        '**Totale range reale**: circa 100-1.100€/mese, escluso advertising.',
       ],
     },
     {
       type: 'paragraph',
-      text: 'Per un setup entry-level serio, con piano Basic e tre-quattro app fondamentali, il costo mensile realistico è 150-200 euro.',
+      text: 'Per un setup entry-level serio, con piano Basic e tre-quattro app fondamentali, il costo mensile realistico è intorno ai 150-200 euro. Le cifre su app e sviluppo sono stime nostre sugli store che seguiamo; i prezzi dei piani sono sulla pagina prezzi di Shopify.',
     },
     {
       type: 'paragraph',
@@ -735,38 +815,48 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Se vuoi capire come funziona il nostro modello di gestione eCommerce continuativa, il [Data-Driven Team](/it/team-ecommerce-dedicato) è il servizio che abbiamo costruito esattamente per questo: un team tecnico stabile dedicato al tuo store, senza che tu debba coordinare fornitori separati.',
+      text: 'Se vuoi capire come funziona il nostro modello di gestione eCommerce continuativa, il [Data-Driven Team](/it/team-ecommerce-dedicato) è il servizio che abbiamo costruito esattamente per questo: un team tecnico stabile dedicato al tuo store, senza che tu debba coordinare fornitori separati. Per mettere l’AI al lavoro nell’admin c’è [Shopify Magic e Sidekick](/it/blog/shopify-magic-sidekick); per i canali di acquisto AI, [agentic commerce su Shopify](/it/blog/agentic-commerce-shopify).',
     },
     { type: 'h2', text: 'FAQ: le domande più frequenti su Shopify' },
     { type: 'h3', text: 'Shopify è gratuito?' },
     {
       type: 'paragraph',
-      text: 'No. Shopify ha una prova gratuita di tre giorni e un periodo promozionale di tre mesi a 1 euro al mese per i nuovi merchant. Il piano più economico dopo questo periodo è 29 euro al mese. Non esiste un piano gratuito permanente.',
+      text: 'No. Shopify ha una prova gratuita di tre giorni e un periodo promozionale di tre mesi a 1 euro al mese per i nuovi merchant. Dopo, il piano Basic costa 19 euro al mese con fatturazione annuale, come indicato sulla pagina prezzi di Shopify a ottobre 2026. Non esiste un piano gratuito permanente.',
+    },
+    { type: 'h3', text: 'Quanto costa Shopify al mese?' },
+    {
+      type: 'paragraph',
+      text: 'Per uno store B2C strutturato il costo reale va da circa 100 a 1.100 € al mese, pubblicità esclusa: piano, app essenziali, dominio e, se serve, sviluppo. Un setup entry-level serio sta tra 150 e 200 € al mese. Sono stime nostre sugli store che seguiamo; i prezzi dei piani sono sulla pagina prezzi di Shopify.',
+    },
+    { type: 'h3', text: 'Shopify va bene per una piccola impresa?' },
+    {
+      type: 'paragraph',
+      text: 'Sì. Shopify è pensato per le piccole e medie imprese B2C e il piano Basic basta per uno store agli inizi. La maggior parte delle piccole imprese trova il pannello di amministrazione più gestibile di alternative come WooCommerce.',
     },
     { type: 'h3', text: 'Shopify funziona in Italia?' },
     {
       type: 'paragraph',
       text: 'Sì. Shopify è disponibile in italiano, con supporto in italiano, Shopify Payments per accettare pagamenti con carte italiane ed europee, conformità GDPR e gestione dell\'IVA italiana. Non ci sono limitazioni tecniche per il mercato italiano.',
     },
-    { type: 'h3', text: 'Serve la partita IVA per usare Shopify?' },
-    {
-      type: 'paragraph',
-      text: 'Per aprire un account e fare una prova, no. Per vendere professionalmente e ricevere pagamenti in modo continuativo, la legge italiana richiede la partita IVA per chi esercita attività commerciale.',
-    },
     { type: 'h3', text: 'Qual è la differenza tra Shopify e Shopify Plus?' },
     {
       type: 'paragraph',
-      text: 'Shopify Plus è la versione enterprise pensata per brand con volumi di vendita molto alti, tipicamente sopra il milione di euro annuo, che hanno bisogno di checkout modificabile, personalizzazioni avanzate, supporto dedicato e prezzi negoziabili sulle transazioni. Per la grande maggioranza dei brand B2C italiani, i piani standard sono più che sufficienti.',
+      text: 'Shopify Plus è la versione enterprise pensata per brand con volumi di vendita alti, che hanno bisogno di checkout modificabile, automazioni avanzate, supporto dedicato e una commissione più bassa sulle transazioni. Per la maggior parte dei brand B2C bastano i piani standard.',
     },
     { type: 'h3', text: 'È difficile usare Shopify senza competenze tecniche?' },
     {
       type: 'paragraph',
       text: 'Per le operazioni quotidiane come aggiungere prodotti, gestire ordini e impostare sconti, no. L\'interfaccia è progettata per essere usata senza conoscenze di programmazione. Per personalizzazioni avanzate del design, integrazioni non standard o ottimizzazioni di performance, servono competenze tecniche o un partner specializzato.',
     },
+    { type: 'h3', text: 'Com’è Shopify rispetto a WooCommerce per i brand fashion?' },
+    {
+      type: 'paragraph',
+      text: 'Per il fashion Shopify ha vantaggi concreti: esperienza mobile migliore di serie, più affidabilità, integrazione più pulita con la pubblicità Meta e Google e canali di vendita più semplici da collegare. WooCommerce può arrivare alle stesse funzioni con i plugin giusti e uno sviluppatore, ma la manutenzione pesa sempre di più.',
+    },
     { type: 'h2', text: 'Una nota finale' },
     {
       type: 'paragraph',
-      text: 'Shopify non è la risposta per ogni situazione. Ma per i brand B2C italiani che vogliono costruire un eCommerce solido, scalabile e integrato con gli strumenti di marketing moderni, è difficile trovare un\'alternativa che offra lo stesso equilibrio tra semplicità operativa e potenziale di crescita.',
+      text: 'Shopify non è la risposta per ogni situazione. Ma per i brand B2C che vogliono costruire un eCommerce solido, scalabile e integrato con gli strumenti di marketing moderni, è difficile trovare un\'alternativa che offra lo stesso equilibrio tra semplicità operativa e potenziale di crescita.',
     },
     {
       type: 'paragraph',
@@ -782,7 +872,11 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Se sai già che Shopify è la direzione giusta e vuoi una transizione strutturata a calendario fisso, lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) ti dà una migrazione con prezzo pubblico e 4 garanzie scritte.',
+      text: 'Lo Sprint ha un prezzo pubblico per fatturato: €5.800 sotto i €2M, €8.800 tra €2M e €20M, €12.800 oltre i €20M, IVA esclusa, in 4 rate.',
+    },
+    {
+      type: 'paragraph',
+      text: 'Lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) porta il tuo store su Shopify in 14 giorni con il nostro Custom AI System: calendario fisso, prezzo pubblico e 4 garanzie scritte.',
     },
     {
       type: 'paragraph',

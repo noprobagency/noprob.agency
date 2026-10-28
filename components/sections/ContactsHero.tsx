@@ -1,28 +1,27 @@
 'use client'
 
-type Locale = 'en' | 'it'
+import { getDictionary, type Locale } from '@/lib/i18n'
 
 const copy = {
   en: {
-    trust: 'Trusted by Fashion, Supplements, and DTC eCommerce brands',
     headingPre: 'Book Your Call With an',
     headingMid: 'eCommerce ',
     headingEm: 'Expert',
     description:
-      'Once you submit the form, you’ll be contacted by our senior eCommerce manager. Together, you’ll analyze your current situation and define the best next steps for your growth.',
+      'Once you submit the form, you’ll be contacted by our senior eCommerce manager within 48 hours. Together, you’ll analyze your current situation and define the best next steps for your growth.',
   },
   it: {
-    trust: 'Scelti da brand eCommerce di Fashion, Integratori e DTC',
-    headingPre: 'Prenota la tua call con un',
+    headingPre: 'Prenota la tua videochiamata con un',
     headingMid: '',
     headingEm: 'esperto eCommerce',
     description:
-      'Una volta inviato il modulo, verrai contattato dal nostro senior eCommerce manager. Insieme analizzerete la tua situazione attuale e definirete i passi migliori per la tua crescita.',
+      'Una volta inviato il modulo, verrai contattato entro 48 ore dal nostro senior eCommerce manager. Insieme analizzerete la tua situazione attuale e definirete i passi migliori per la tua crescita.',
   },
 } as const
 
 export default function ContactsHero({ locale = 'en' }: { locale?: Locale }) {
   const t = copy[locale]
+  const hero = getDictionary(locale).hero
 
   return (
     <section
@@ -32,7 +31,13 @@ export default function ContactsHero({ locale = 'en' }: { locale?: Locale }) {
       <div className="relative z-10 mx-auto flex w-full max-w-[800px] flex-col items-center text-center">
         {/* Trustpilot Badge */}
         <div className="mb-6 flex flex-col items-center gap-1">
-          <div className="flex items-center gap-[5px]">
+          <a
+            href={hero.trustpilotHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-tracking="contacts_trustpilot"
+            className="flex items-center gap-[5px] text-[rgb(31,122,83)] hover:underline"
+          >
             <svg
               width="14"
               height="14"
@@ -43,15 +48,12 @@ export default function ContactsHero({ locale = 'en' }: { locale?: Locale }) {
             >
               <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
             </svg>
-            <span className="font-sans text-[13px] font-semibold tracking-[-0.03em] text-[rgb(31,122,83)]">
-              5/5
+            <span className="font-sans text-[13px] font-semibold tracking-[-0.03em]">
+              {hero.trustpilotRating}
             </span>
-            <span className="font-sans text-[13px] font-medium tracking-[-0.03em] text-[rgb(31,122,83)]">
-              Trustpilot
-            </span>
-          </div>
+          </a>
           <p className="font-sans text-[12px] font-medium leading-[1.4em] tracking-[-0.04em] text-noprob-dark">
-            {t.trust}
+            {hero.trustpilotLabel}
           </p>
         </div>
 

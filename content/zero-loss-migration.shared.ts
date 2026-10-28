@@ -85,6 +85,7 @@ export type ZlCopy = {
     ctaNote: string
     ctaSecondary: string
     logosLabel: string
+    /** "10 recensioni a 5 stelle" (+ `trustpilotLabel` "su Trustpilot"): 10 five-star reviews, see docs/dati-verificati.md */
     trustpilotScore: string
     trustpilotLabel: string
   }
@@ -182,13 +183,20 @@ export type ZlCopy = {
     partners: string[]
     line: string
   }
-  faq: { h2: string; cta: string; items: { question: string; answer: string }[] }
+  faq: {
+    h2: string
+    cta: string
+    items: { question: string; answer: string }[]
+    /** Line under the accordion that links the migration guide (answers cannot hold links) */
+    guideLink: { text: string; label: string; href: string }
+  }
   finalCta: { h2: string; paragraph: string; bullets: string[]; cta: string }
   apply: {
     metaTitle: string
     metaDescription: string
     back: string
     /** Left column of the application card: trust line, H1, one strong paragraph */
+    /** Trust line: "10 recensioni a 5 stelle su Trustpilot" */
     trustedBy: string
     h1Pre: string
     h1Em: string

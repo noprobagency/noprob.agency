@@ -14,8 +14,8 @@ import type { UseCase } from './index'
 export const cumini: UseCase = {
   slug: 'cumini-luxury-fashion-ecommerce',
   title: 'Migrazione su Shopify per una boutique di lusso: il caso Cumini, +67,7% di vendite online in 12 mesi',
-  seoTitle: 'Piattaforma proprietaria a Shopify: caso fashion',
-  seoTitleEn: 'Custom Platform to Shopify: Luxury Fashion Case',
+  seoTitle: 'Shopify per la moda di lusso: caso Cumini',
+  seoTitleEn: 'Luxury Fashion Shopify Migration: Cumini Case',
   seoDescription:
     'Caso studio fashion lusso: da piattaforma proprietaria legata al gestionale a Shopify, con vendite online +67,7% in 12 mesi. Dati verificati, con le fonti.',
   seoDescriptionEn:
@@ -146,23 +146,23 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Il principale limite, però, restava la piattaforma eCommerce.',
+      text: 'Il tema centrale restava la piattaforma eCommerce.',
     },
     {
       type: 'paragraph',
-      text: 'Costruita su codice proprietario e non gestita direttamente, presentava criticità tecniche ricorrenti e difficilmente prevedibili: instabilità del sito, interruzioni nei processi di acquisto e una conseguente perdita di vendite.',
+      text: 'Costruita su codice proprietario e collegata al gestionale interno tramite un fornitore esterno, ogni intervento tecnico passava dal fornitore. Nel percorso di acquisto c’erano momenti di instabilità del sito e interruzioni, con ricadute sulle vendite.',
     },
     {
       type: 'paragraph',
-      text: 'Questo ha avuto un impatto diretto anche sulle attività marketing. In più momenti è stato necessario ridurre o sospendere le campagne advertising, per evitare di investire traffico su un’infrastruttura non affidabile.',
+      text: 'Questo ha avuto un impatto diretto anche sulle attività marketing. In più momenti è stato scelto di ridurre o sospendere le campagne advertising, per non indirizzare traffico verso un percorso di acquisto che poteva interrompersi.',
     },
     {
       type: 'paragraph',
-      text: 'Nel corso dell’anno sono stati fatti diversi tentativi per aggirare questi limiti: integrazioni esterne, modifiche ai flussi di tracciamento, adattamenti operativi per mantenere attivi i canali principali.',
+      text: 'Nel corso dell’anno sono stati fatti diversi interventi per mantenere attivi i canali principali: integrazioni esterne, modifiche ai flussi di tracciamento, adattamenti operativi.',
     },
     {
       type: 'paragraph',
-      text: 'Interventi utili a tamponare le criticità, ma non risolutivi, perché non intervenivano direttamente sulla causa del problema.',
+      text: 'Interventi utili a mantenere i canali attivi, che trovavano il loro limite nella piattaforma stessa: per andare oltre serviva una nuova infrastruttura.',
     },
     {
       type: 'paragraph',
@@ -170,7 +170,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Nonostante le limitazioni tecniche, il fatturato eCommerce ha registrato una crescita significativa.',
+      text: 'In questo contesto il fatturato eCommerce ha registrato una crescita significativa.',
     },
     {
       type: 'metrics',
@@ -191,15 +191,15 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Il limite principale, tuttavia, restava lo stesso: la piattaforma eCommerce presentava ancora crash improvvisi, non ci permetteva né di impostare attività di marketing automation né di inserire sistemi di tracciamento completi e precisi.',
+      text: 'Il tema centrale restava lo stesso: la piattaforma proprietaria non consentiva né attività di marketing automation né sistemi di tracciamento completi e precisi.',
     },
     {
       type: 'paragraph',
-      text: 'Inoltre, a settembre 2024, il catalogo Google è rimasto offline per tre settimane consecutive, compromettendo uno dei momenti più strategici dell’anno (saldi).',
+      text: 'A settembre 2024 il catalogo Google è rimasto fermo per tre settimane consecutive, in uno dei momenti più strategici dell’anno (saldi): un’ulteriore ragione per portare feed e tracciamento su un’infrastruttura gestibile in modo diretto.',
     },
     {
       type: 'paragraph',
-      text: 'Tutti i dati indicavano una perdita costante di vendite potenziali, legata a fattori tecnici fuori dal nostro controllo.',
+      text: 'I dati indicavano vendite potenziali non ancora colte, che richiedevano una nuova infrastruttura per essere raggiunte.',
     },
     {
       type: 'paragraph',
@@ -215,7 +215,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Tutto ciò ha permesso al brand di continuare a crescere in modo coerente su tutti i fronti, nonostante i limiti della piattaforma.',
+      text: 'Tutto ciò ha permesso al brand di continuare a crescere in modo coerente su tutti i fronti, anche con la piattaforma di allora.',
     },
     {
       type: 'paragraph',
@@ -237,7 +237,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Con Shopify, tutto quello che prima non funzionava ha smesso di essere un problema',
+      text: 'Con Shopify, tutto quello che prima dipendeva dal fornitore esterno è diventato gestibile direttamente',
     },
     {
       type: 'list',
@@ -439,7 +439,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Il grafico mostra vendite e ordini mensili dal 2023, in indice: 100 è la media dei 12 mesi prima di Shopify. Il calo di primavera 2025 è la migrazione; dopo, i picchi di inizio 2026 e di luglio superano tutti quelli degli anni precedenti.',
+      text: 'Il grafico mostra vendite e ordini mensili dal 2023, in indice: 100 è la media dei 12 mesi prima di Shopify. La primavera 2025 è il passaggio alla nuova piattaforma; dopo, i picchi di inizio 2026 e di luglio superano tutti quelli degli anni precedenti.',
     },
     {
       type: 'paragraph',
@@ -546,7 +546,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Se sei arrivato fin qui, probabilmente riconosci qualcosa della tua realtà in queste pagine. Un brand con un prodotto forte e negozi fisici che performano bene, ma con un eCommerce che non esprime il suo pieno potenziale. O uno store online attivo, ma privo di una vera governance: dati incompleti, advertising guidato dall’intuizione, piattaforma tecnica che non scala con l’ambizione del business.',
+      text: 'Se sei arrivato fin qui, probabilmente riconosci qualcosa della tua realtà in queste pagine. Un brand con un prodotto forte e negozi fisici che performano bene, ma con un eCommerce che non esprime il suo pieno potenziale. O uno store online attivo, ma privo di una vera governance: dati incompleti, advertising guidato dall’intuizione, piattaforma tecnica che non scala con l’ambizione del brand.',
     },
     {
       type: 'paragraph',
@@ -559,6 +559,10 @@ export const cumini: UseCase = {
     {
       type: 'paragraph',
       text: 'Cumini è un cliente attivo di NoProb Agency da oltre 4 anni. [Ecco come lavoriamo sulle migrazioni a Shopify](/it/sprint-migrazione-shopify). Se parti da WooCommerce, leggi il [caso Integratori DTC Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify).',
+    },
+    {
+      type: 'paragraph',
+      text: 'Come impostiamo una migrazione: la [guida completa alla migrazione a Shopify](/it/migrazione-shopify).',
     },
     {
       type: 'cta',
@@ -658,23 +662,23 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'The main limitation, however, remained the eCommerce platform.',
+      text: 'The central issue remained the eCommerce platform.',
     },
     {
       type: 'paragraph',
-      text: 'Built on proprietary code and not directly managed, it presented recurring and hardly predictable technical issues: site instability, interruptions in the purchase processes, and a consequent loss of sales.',
+      text: 'Built on proprietary code and connected to the internal ERP through an external vendor, every technical change went through the vendor. The purchase journey had moments of site instability and interruptions, with an effect on sales.',
     },
     {
       type: 'paragraph',
-      text: 'This had a direct impact on marketing activities as well. At several moments it was necessary to reduce or suspend advertising campaigns, to avoid investing traffic into an unreliable infrastructure.',
+      text: 'This had a direct impact on marketing activities as well. At several moments we chose to reduce or suspend advertising campaigns, so as not to send traffic to a purchase journey that could be interrupted.',
     },
     {
       type: 'paragraph',
-      text: 'During the year, several attempts were made to work around these limitations: external integrations, modifications to tracking flows, operational adaptations to keep the main channels active.',
+      text: 'During the year, several interventions kept the main channels active: external integrations, modifications to tracking flows, operational adaptations.',
     },
     {
       type: 'paragraph',
-      text: 'Useful interventions to mitigate the issues, but not resolutive, because they did not address the root cause.',
+      text: 'Useful to keep the channels running, they found their limit in the platform itself: to go further, a new infrastructure was needed.',
     },
     {
       type: 'paragraph',
@@ -682,7 +686,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Despite the technical limitations, eCommerce revenue recorded significant growth.',
+      text: 'In this context eCommerce revenue recorded significant growth.',
     },
     { type: 'metrics', merValue: '6', note: 'April to December 2023: this is where the dashboard data starts.' },
     { type: 'h3', text: '2024: toward a new infrastructure' },
@@ -696,15 +700,15 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'The main limitation, however, remained the same: the eCommerce platform still presented sudden crashes and did not allow us to set up marketing automation activities or implement complete and accurate tracking systems.',
+      text: 'The central issue remained the same: the proprietary platform allowed neither marketing automation activities nor complete and accurate tracking systems.',
     },
     {
       type: 'paragraph',
-      text: 'Furthermore, in September 2024, the Google catalog remained offline for three consecutive weeks, compromising one of the most strategic moments of the year (sales).',
+      text: 'In September 2024 the Google catalog stayed down for three consecutive weeks, in one of the most strategic moments of the year (sales): one more reason to move the feed and tracking to an infrastructure we can manage directly.',
     },
     {
       type: 'paragraph',
-      text: 'All the data indicated a constant loss of potential sales, linked to technical factors outside our control.',
+      text: 'The data pointed to potential sales not yet captured, which needed a new infrastructure to be reached.',
     },
     {
       type: 'paragraph',
@@ -717,7 +721,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: "All this allowed the brand to continue growing in a coherent way on all fronts, despite the platform's limitations.",
+      text: "All this allowed the brand to continue growing in a coherent way on all fronts, even on the platform of the time.",
     },
     {
       type: 'paragraph',
@@ -732,7 +736,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: "With Shopify, everything that previously didn't work stopped being a problem.",
+      text: 'With Shopify, everything that used to depend on the external vendor became directly manageable.',
     },
     {
       type: 'list',
@@ -917,7 +921,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'The chart shows monthly sales and orders since 2023, as an index: 100 is the average of the 12 months before Shopify. The spring 2025 dip is the migration; after it, the early 2026 and July peaks are higher than any of the earlier years.',
+      text: 'The chart shows monthly sales and orders since 2023, as an index: 100 is the average of the 12 months before Shopify. Spring 2025 is the switch to the new platform; after it, the early 2026 and July peaks are higher than any of the earlier years.',
     },
     {
       type: 'paragraph',
@@ -1023,6 +1027,10 @@ export const cumini: UseCase = {
     {
       type: 'paragraph',
       text: 'Cumini has been an active client of NoProb Agency for over 4 years. [This is how we run Shopify migrations](/shopify-migration-sprint). If you are coming from WooCommerce, read the [Supplement DTC Nazzi case](/use-cases/integratori-nazzi-dtc-shopify).',
+    },
+    {
+      type: 'paragraph',
+      text: 'How we run a migration: the [complete Shopify migration guide](/shopify-migration).',
     },
     { type: 'cta' },
   ],

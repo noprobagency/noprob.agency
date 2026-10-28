@@ -10,9 +10,9 @@ history in [CHANGELOG.md](CHANGELOG.md), verified figures in
 - Two locales with different slugs: EN at the root (`app/(en)`), IT under `/it` (`app/it`). Every public page exists in both.
 - Several **root layouts** (route groups), each with its own `<html>`: `app/(en)/layout.tsx` and `app/it/layout.tsx` (global navbar, consent banner, sticky contact pill, analytics), `app/(zl-en)` and `app/(zl-it)` (Shopify Launch Sprint landing and its application and thank-you pages, own `ZlNav`), `app/(funnel)` (paid-traffic application funnel `/af-1-1`). Because there is no `app/layout.tsx`, the 404 for unmatched URLs is `app/global-not-found.tsx` (`experimental.globalNotFound`), and there are no route templates (a root template would nest `<html>` inside a `<div>`, and an opacity fade kept every page invisible until hydration).
 - Routes and their IT/EN pairs are declared once in `lib/i18n/routes.ts` (`ROUTE_PATHS`, `getAlternateLocalePath`). The sitemap (`app/sitemap.ts` + `lib/sitemap/routes.ts`), the language switch and hreflang all read from it.
-- Copy never sits in components. Modules: `lib/i18n/index.ts` (home, about, contacts, footer, SEO titles, 404), `lib/i18n/{dataTeam,teamRoadmap,sviluppo,migrazione,aiAccelerator,ambassador,legal}.ts`, `content/zero-loss-migration.{it,en,shared}.ts` (Sprint landing), `data/articles` (blog), `data/use-cases` (case studies). Each exports a typed getter per locale.
+- Copy never sits in components. Modules: `lib/i18n/index.ts` (home, about, contacts, footer, SEO titles, 404), `lib/i18n/{dataTeam,teamRoadmap,sviluppo,migrazione,aiAccelerator,ambassador,legal,blocchi}.ts`, `content/zero-loss-migration.{it,en,shared}.ts` (Sprint landing), `data/articles` (blog), `data/use-cases` (case studies). Each exports a typed getter per locale.
 - Design tokens in `lib/design-tokens.ts` and `tailwind.config.ts`; global utilities (buttons, cards, reduced-motion rules) in `app/globals.css`. Fonts are local `@font-face` files in `public/fonts`.
-- `lib/site.ts`: `siteConfig` (name, URL, analytics IDs, version from `package.json`), `buildMetadata()` (title, description, canonical, hreflang, OG image, robots) and the Organization JSON-LD used by every root layout.
+- `lib/site.ts`: `siteConfig` (name, URL, analytics IDs, version from `package.json`), `buildMetadata()` (title, description, canonical, hreflang, OG image, robots; optional `article` for `og:type=article` with dates and author, optional `feedPath` for the RSS `<link rel="alternate">`) and the Organization JSON-LD used by every root layout. Entity constants live here too: `ORGANIZATION_ID`, `FOUNDER_ID` (`@id` of the company and of Antonio, referenced by the blog `author` and `publisher`), `AREA_SERVED` (US, UK, Australia, worldwide), `ORGANIZATION_SAME_AS`, `FOUNDER_SAME_AS` (empty until Antonio's LinkedIn URL is confirmed), `TRUSTPILOT_URL`.
 
 ## Forms and API routes
 
@@ -56,7 +56,10 @@ Helper in `lib/analytics/events.ts`:
 - Sitemap: `/sitemap.xml` generated from `app/sitemap.ts` + `lib/sitemap/routes.ts`
   - Single source of truth: add page to `ROUTES` array → sitemap auto-updates
   - Includes hreflang `en`/`it`/`x-default` alternates inline
-- Robots: `/robots.txt` (`app/robots.ts`) - explicit allow for GPTBot, ClaudeBot, PerplexityBot, Google-Extended
+  - Only `loc`, `lastmod` and alternates: no `priority` or `changefreq` (Google ignores them). `lastmod` is real: fixed pages share `CONTENT_LAST_MODIFIED` (bump it when their copy changes), the blog hub follows its newest article, articles and cases use their own dates
+- Robots: `/robots.txt` (`app/robots.ts`) - explicit allow for the AI crawlers (GPTBot, ChatGPT-User, OAI-SearchBot, ClaudeBot, Claude-SearchBot, Claude-User, anthropic-ai, PerplexityBot, Perplexity-User, Google-Extended, Applebot-Extended), each repeating the `Disallow` of the `*` group
+- RSS: `/blog/rss.xml` and `/it/blog/rss.xml` (`lib/seo/rss.ts`, route handlers `app/(en)/blog/rss.xml/route.ts`, `app/it/blog/rss.xml/route.ts`), all articles newest first, advertised with `<link rel="alternate" type="application/rss+xml">` on the blog index
+- IndexNow: key file `public/<key>.txt`, `pnpm indexnow` (`scripts/indexnow.mjs`) sends every URL of the live sitemap to `api.indexnow.org` (`--dry-run` prints them, `--file` reads a local sitemap). Run it by hand after each production deploy
 - Hreflang: EN root + `/it/` subfolder, `x-default` → EN
 - GSC verification: meta tag via env `GSC_VERIFICATION_TOKEN`
 - Canonical: self-referencing per page via `buildMetadata()`
@@ -64,7 +67,7 @@ Helper in `lib/analytics/events.ts`:
 ### GEO / LLM Optimization
 
 - `llms.txt`: structured document for LLM crawlers (ChatGPT, Claude, Perplexity) at `/llms.txt` (static public file)
-- Schema.org Organization JSON-LD in `app/(en)/layout.tsx` body
+- Schema.org Organization JSON-LD in `app/(en)/layout.tsx` body, with `@id` and the founder Person (`@id` `FOUNDER_ID`) inside; blog posts point their `author` and `publisher` to the same `@id`s; the About pages emit the Person and a BreadcrumbList; Sprint, Contacts, blog index and case study index emit a BreadcrumbList (the blog index also a CollectionPage with its ItemList)
 - Schema.org Service JSON-LD on `/data-driven-team`, `/shopify-development` and `/ai-accelerator` with offers and pricing
 - Entity consistency: founder "Antonio Manitta" + company "NoProb Agency LLC" mentioned cross-page
 
@@ -73,6 +76,21 @@ Helper in `lib/analytics/events.ts`:
 - Consent is handled in-house with `vanilla-cookieconsent` (`components/tracking/ConsentBanner.tsx`, IT + EN, opt-in). Iubenda is no longer used.
 - `ConsentGate category="analytics|marketing"` mounts GA4 / Meta Pixel only after the matching category is accepted; `trackEvent` sends Meta CAPI only with marketing consent. Revoking a category clears its cookies and reloads the page.
 - Privacy Policy and Cookie Policy are in-house pages (`/privacy-policy`, `/cookie-policy`, `/it/privacy-policy`, `/it/cookie-policy`) rendered by `components/sections/legal/LegalPage.tsx`; copy in `lib/i18n/legal.ts`. When a tool, form or cookie is added, update both locales there and bump `LEGAL_LAST_UPDATED`.
+
+## SEO blocks added by the review of 28 Oct 2026
+
+All copy of these blocks is in `lib/i18n/blocchi.ts` (`getBlocchiCopy(locale)`, IT and EN aligned, hrefs expressed as a `route` key or an article slug and resolved by the component).
+
+- **Home "Guides for migrating to Shopify"** (`components/sections/HomeGuides.tsx`), after the pricing section: 6 `ArticleCard`s (anchor = `seoTitle` of the article) and "All guides →" to the blog. The 6 slugs are in `homeGuides.slugs`.
+- **Footer** (`components/layout/Footer.tsx`): real link columns Services (Sprint, Development, Data-Driven Team, AI Accelerator), Guides (migration guide, cost, SEO checklist, GEO) and Company (the dictionary `footer.links`), no dropdown; the brand headline is a `<p>`, not an H2; the Ambassador link is `rel="nofollow"`. The `minimal` footer (Sprint landing) is unchanged.
+- **Navbar** (`components/layout/Navbar.tsx`): the Services dropdown list (desktop and mobile) is always in the DOM and hidden with the `hidden` attribute, so the links are in the HTML crawlers read; the first-level "Sprint" item reads `navSprint` ("Sprint migrazione" / "Migration Sprint").
+- **Founder blocks** (`components/sections/FounderBlock.tsx`, `variant="sprint"` before the FAQ of the Sprint landing, `variant="about"` on About in place of the duplicated Pricing and FAQ): photo (`siteAssets.heroAntonio`), bio and `components/ui/TrustpilotBadge.tsx` ("10 five-star reviews on Trustpilot", link to `TRUSTPILOT_URL`). The Sprint hero badge links to Trustpilot too.
+- **Case study index**: intro paragraph, brand name as H2 on each card (`UseCaseCard` `brand` prop, copy `useCases.brands`) and closing block towards the Sprint (`components/sections/UseCasesIndexBlocks.tsx`).
+- **Blog index** (`components/blog/BlogIndex.tsx`, used by both locale pages): H1, intro, migration guide card, one H2 section per topic cluster, closing Sprint band (`RelatedCTA variant="sprint"`), BreadcrumbList + CollectionPage JSON-LD.
+- **Clusters** (`data/articles/clusters.ts`): `CLUSTERS` (migration-platform, migration-planning, ai, growth) map every article slug to a cluster, `ARTICLE_PILLS` gives each article a short topic label for the card pill (the technical `articleType` is never shown), `getRelatedArticles(slug, 3)` picks 3 articles of the same cluster, cyclically after the current one so inbound links spread evenly. `ReadNext` (`components/blog/ReadNext.tsx`, "Leggi anche" / "Read next") renders them plus a line to the migration guide, after the author bio. The article template also shows a visible breadcrumb (`Breadcrumb.tsx`) and `og:type=article`. **A new article must be added to `CLUSTERS` and `ARTICLE_PILLS`**: `lib/seo/clusters.test.ts` fails otherwise.
+- **Animated headings**: `RevealWords` in `CTA.tsx` puts a real space after every word span, so the HTML text reads "Ready to fix", not "Readytofix".
+
+---
 
 ## Blog architecture and SEO
 
@@ -89,7 +107,8 @@ Every new post under `/blog/[slug]` (or `/it/blog/[slugIt]`) must include:
 - `<RelatedCTA />` and `<AuthorBio />` after the article body
 - Internal links as in the AGENT.md runbook (Sprint first, then migration page, then a case study or the team page)
 - At least 2 outbound links to authoritative sources (McKinsey, Bain, HBR, Shopify, etc.)
-- Sitemap is generated dynamically from the `articles` array in `app/sitemap.ts` - no manual entry required
+- One line in `data/articles/clusters.ts` (`CLUSTERS`) and one in `ARTICLE_PILLS`: cluster for the blog index sections and "Read next", pill label for the cards
+- Sitemap and RSS feeds are generated dynamically from the `articles` array in `app/sitemap.ts` and `lib/seo/rss.ts` - no manual entry required
 
 ### Internal link building priority (regola fissa per ogni articolo)
 
@@ -121,6 +140,7 @@ Paragraphs and list items support markdown-style inline tokens via `parseInline`
 - `components/blog/BlogPostMeta.tsx` - author + date + reading time row under H1
 - `components/blog/AuthorBio.tsx` - Antonio Manitta bio card (locale-aware)
 - `components/blog/RelatedCTA.tsx` - contextual CTA (defaults to Data-Driven Team)
+- `components/blog/ReadNext.tsx` - "Read next" (3 articles of the cluster + the migration guide); `components/blog/ArticleCard.tsx` - card shared by the blog index and the home guides; `components/blog/Breadcrumb.tsx` - visible breadcrumb
 
 ### Keyword strategy primaria (Italia)
 
@@ -188,8 +208,8 @@ Paragraphs and list items support markdown-style inline tokens via `parseInline`
   - *Wording rules*: say "Custom AI System" (brand name, never translated; it was "Custom AI theme" until v1.11.0, never use the old name), never "tema"/"theme" on its own, never "tema pronto/premium". "Non un semplice redesign": structure and content stay, speed and purchase flow change. Do not promise results, only the guarantees.
 - URLs renamed in v0.101.0; the old `/zero-loss-migration`, `/it/zero-loss-migration` (+ `/apply`, `/candidatura`) redirect permanently (`next.config.ts`). Internal names (folder `zero-loss`, copy files, lead `source`, tracking `lp`) intentionally keep `zero-loss-migration`.
 - **Indexable**: hardcoded since v1.5.0 (`ZL_INDEXABLE = true`, in `lib/sitemap/routes.ts`); the old `LP_ZERO_LOSS_INDEX` env var is no longer read. The application and thank-you pages stay noindex and out of the sitemap.
-- Section order: hero (H1 with "più AI", proof note top right on desktop), offer card + pricing + result cards with stars, checklist (green / orange / red reactions), Custom AI System section (`ZlAiSystem`), deliverables, results first, calendar, guarantees, why now, proof, scope, FAQ, application.
-- Linked from the global navbar ("Sprint" with a green lightning icon, last item after "Contatti") and from the migration page banner. "Ossessionati dai risultati" / "Obsessed with results" block (`ZlResultsFirst`) explains the 14 days. Own route groups `app/(zl-en)`, `app/(zl-it)` with `ZeroLossRootLayout` (own `ZlNav`, no global navbar).
+- Section order: hero (H1 with "più AI", proof note top right on desktop), offer card + pricing + result cards with stars, checklist (green / orange / red reactions), Custom AI System section (`ZlAiSystem`), deliverables, results first, calendar, guarantees, why now, proof, scope, founder block (`FounderBlock`, "Chi segue il tuo Sprint"), FAQ, application.
+- Linked from the global navbar ("Sprint migrazione" / "Migration Sprint" with a green lightning icon, last item after "Contatti") and from the migration page banner. "Ossessionati dai risultati" / "Obsessed with results" block (`ZlResultsFirst`) explains the 14 days. Own route groups `app/(zl-en)`, `app/(zl-it)` with `ZeroLossRootLayout` (own `ZlNav`, no global navbar).
 - Copy in `content/zero-loss-migration.{it,en}.ts` (typed `ZlCopy`), constants in `content/zero-loss-migration.shared.ts`. Mobile is app-like (`ZlRail` swipe rails with dots, `ZlStickyCta` bottom bar).
 - Application page (`ZeroLossApplyPage`): one screen on desktop (nav, wide card, `Footer bar`), 4-step `ZlApplicationForm` posting to `/api/migrazione-lead` with `source: "zero-loss-migration"` (stop: Shopify origin; under €300k is a soft warning). On success the form redirects to the Sprint confirmation page `ROUTE_PATHS.zeroLossThankYou` (`/it/sprint-migrazione-shopify/grazie`, `/shopify-migration-sprint/thank-you`, `ZeroLossThankYouPage`, noindex): 48-hour promise, demo dashboard, WhatsApp, TidyCal `noprobagency/contacts`. The API also sends the lead a confirmation email (`lib/emails/sprint.ts`) with the estimated tier, the 48-hour promise and the dashboard link. Copy in `ZlCopy.thankYou`.
 - SEO: "Migrazione a Shopify in 14 giorni | Shopify Launch Sprint" / "Shopify Migration in 14 Days | Shopify Launch Sprint", Service (+ alternateName) and FAQPage JSON-LD, OG `public/images/og-shopify-migration-sprint-{it,en}.png` (`node scripts/generate-zero-loss-og.mjs`).

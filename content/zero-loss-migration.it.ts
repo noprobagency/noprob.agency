@@ -23,18 +23,18 @@ export const zeroLossIt: ZlCopy = {
   hero: {
     eyebrow: 'Shopify Launch Sprint',
     h1: 'Il tuo eCommerce su Shopify in 14 giorni. Più posizioni su Google, più vendite, più AI.',
-    proofNote: 'Caso studio: +105% di vendite in 85 giorni',
+    proofNote: 'Caso Nazzi: +105% di vendite online in 85 giorni',
     paragraph:
       'In 14 giorni un team completo porta il tuo store su Shopify, con il nostro Custom AI System: più veloce, pronto per gli agenti AI, costruito per vendere. Poi 90 giorni su SEO, conversioni e AOV, misurati in dashboard. Prezzo fisso, zero sorprese.',
     ctaPrimary: 'Candidati allo sprint',
-    ctaNote: 'Rispondiamo in 48 ore',
+    ctaNote: 'Prezzo fisso da €5.800 · Rispondiamo in 48 ore',
     ctaSecondary: 'Guarda i risultati',
     logosLabel: 'Scelti da brand di Moda, Integratori e DTC eCommerce',
-    trustpilotScore: '5/5',
-    trustpilotLabel: '10 recensioni su Trustpilot',
+    trustpilotScore: '10 recensioni a 5 stelle',
+    trustpilotLabel: 'su Trustpilot',
   },
   overview: {
-    h2: 'Shopify Launch Sprint',
+    h2: 'Cos’è lo Shopify Launch Sprint',
     paragraph:
       "Quattordici giorni, un calendario fisso, un referente. Il giorno 1 ci dai gli accessi, il giorno 14 hai lo store su Shopify pronto a pubblicare. Non è un redesign: è il tuo store, ricostruito da zero con il nostro Custom AI System, più veloce, più forte su Google e con un checkout costruito per vendere di più.",
     cta: 'Candidati allo sprint',
@@ -63,7 +63,7 @@ export const zeroLossIt: ZlCopy = {
       },
     ],
     afterLine:
-      'Inclusi nel prezzo: dashboard dei risultati dal giorno 1, go-live a zero downtime nella finestra che scegli tu e 90 giorni di supporto, monitoraggio e miglioramento: bug fix, modifiche, controllo di SEO e tracking e nuove ottimizzazioni ogni settimana.',
+      'Inclusi nel prezzo: dashboard dei risultati dal giorno 1, go-live a zero downtime nella finestra che scegli tu e 90 giorni di supporto, monitoraggio e miglioramento da eCommerce manager: bug fix, modifiche e ottimizzazione continua di SEO, conversione, scontrino medio e tracking.',
     pricingTitle: 'Prezzo in base alla dimensione della tua azienda',
     pricingSub: 'e alla complessità dello store che ne deriva',
     tiers: [
@@ -77,7 +77,7 @@ export const zeroLossIt: ZlCopy = {
       { value: '+105% di vendite online nei primi 85 giorni su Shopify', attribution: 'Integratori DTC Nazzi' },
       { value: '+67,7% di vendite online nei 12 mesi dopo la migrazione', attribution: 'Cumini, luxury multibrand' },
       { value: 'Posizione su Google migliorata del 21%, clic 2,7 volte l’anno prima', attribution: 'Integratori DTC Nazzi, Search Console' },
-      { value: '0 minuti offline in oltre 10 migrazioni', attribution: 'noprob agency' },
+      { value: '0 minuti offline in diverse migrazioni', attribution: 'noprob agency' },
     ],
   },
   checklist: {
@@ -98,7 +98,7 @@ export const zeroLossIt: ZlCopy = {
     countLabel: 'spunte',
   },
   deliverables: {
-    h2: 'La soluzione in uno sprint di 2 settimane',
+    h2: 'Migrazione a Shopify in uno sprint di 2 settimane',
     sub: 'andiamo a tappeto, punto per punto',
     labelPrefix: 'Deliverable',
     items: [
@@ -145,7 +145,7 @@ export const zeroLossIt: ZlCopy = {
     ],
   },
   calendar: {
-    h2: 'Ecco esattamente come funziona lo sprint',
+    h2: 'Come funziona la migrazione a Shopify, giorno per giorno',
     prework: {
       label: 'Pre-work',
       yourTeamTitle: 'Il tuo team',
@@ -199,7 +199,7 @@ export const zeroLossIt: ZlCopy = {
             day: 'Lunedì',
             title: 'Review live e fix',
             duration: '60 minuti',
-            detail: 'Call sullo staging, poi carrello, checkout e account.',
+            detail: 'Videochiamata sullo staging, poi carrello, checkout e account.',
           },
           {
             day: 'Martedì',
@@ -240,7 +240,7 @@ export const zeroLossIt: ZlCopy = {
         {
           phase: '90 giorni dal go-live',
           title: 'Supporto, monitoraggio e miglioramento',
-          detail: 'Bug fix, modifiche minori, monitoraggio di SEO e tracking e nuove ottimizzazioni. Loom settimanale di 10 minuti. Report al giorno 90.',
+          detail: 'Da eCommerce manager: ottimizzazione continua di SEO, conversione, scontrino medio e tracking, più bug fix e modifiche minori. Loom settimanale di 10 minuti. Report al giorno 90.',
         },
       ],
       dashboard: {
@@ -323,7 +323,7 @@ export const zeroLossIt: ZlCopy = {
       colOld: 'Da solo, sulla piattaforma vecchia',
       colNew: 'Con noi, su Shopify + AI',
       rows: [
-        { task: 'Manutenzione', old: 'Hosting, plugin e developer da pagare a parte', now: 'Tutto incluso: aggiornamenti, fix e modifiche li facciamo noi' },
+        { task: 'Manutenzione', old: 'Hosting, plugin e developer da pagare a parte', now: 'Inclusa sempre: sicurezza, aggiornamenti, istruzioni e supporto tecnico li facciamo noi' },
         { task: 'Supporto', old: 'Un ticket e giorni di attesa', now: 'Supporto 7 giorni su 7, diretto con il team' },
         { task: 'Velocità', old: 'Ogni modifica diventa un progetto', now: 'Modifiche e test in giornata, con l’AI al nostro fianco' },
         { task: 'Visione', old: 'Fornitori diversi, nessuno vede il quadro', now: 'Un partner di crescita che vede ogni area: SEO, ads, email, tracking e AI' },
@@ -431,11 +431,16 @@ export const zeroLossIt: ZlCopy = {
       'Foto prodotto, copywriting, traduzioni',
       'Marketplace, POS, portali B2B complessi',
     ],
-    line: 'Sopra i limiti del tuo scaglione (prodotti, lingue, gestionale) si aggiungono add-on a prezzo fisso, mai un preventivo libero. Te li diciamo in call, prima di firmare.',
+    line: 'Sopra i limiti del tuo scaglione (prodotti, lingue, gestionale) si aggiungono add-on a prezzo fisso, mai un preventivo libero. Te li diciamo in videochiamata, prima di firmare.',
   },
   faq: {
     h2: 'Domande frequenti',
     cta: 'Candidati allo sprint',
+    guideLink: {
+      text: 'Vuoi capire prima come funziona una migrazione?',
+      label: 'Leggi la guida completa alla migrazione a Shopify',
+      href: '/it/migrazione-shopify',
+    },
     items: [
       {
         question: 'Quanto tempo mi serve?',
@@ -448,9 +453,9 @@ export const zeroLossIt: ZlCopy = {
           'Sì. Lavoriamo in staging, il tuo sito attuale non viene toccato. Il go-live lo fai quando decidi tu, tra il giorno 15 e il 30.',
       },
       {
-        question: 'Perdo posizioni su Google?',
+        question: 'Cosa succede al mio posizionamento su Google?',
         answer:
-          'No, se la migrazione è gestita. Ogni URL con traffico ha il suo redirect 1:1, testato in automatico prima e dopo il lancio, e monitoriamo Search Console per 90 giorni. Se il traffico organico resta sotto la baseline a 90 giorni, lavoriamo gratis finché non torna.',
+          'Dopo un cambio di piattaforma il posizionamento si muove per qualche settimana, e la mappa dei redirect decide quanto recupera. Per questo ogni URL con traffico ha il suo redirect 1:1, testato in automatico prima e dopo il lancio, e monitoriamo Search Console per 90 giorni. Se il traffico organico resta sotto la baseline a 90 giorni, lavoriamo gratis finché non torna.',
       },
       {
         question: 'Il sito sarà uguale a prima?',
@@ -460,7 +465,7 @@ export const zeroLossIt: ZlCopy = {
       {
         question: 'Da quali piattaforme migrate?',
         answer:
-          'WooCommerce, PrestaShop, Magento, piattaforme custom, gestionali ed ERP con store integrato. Lo sprint è pensato per chi arriva da un’altra piattaforma.',
+          'WooCommerce, Magento, PrestaShop, BigCommerce, Wix, Squarespace, piattaforme proprietarie e gestionali. Il metodo è lo stesso su ognuna; lo sprint è pensato per chi arriva da un’altra piattaforma.',
       },
       {
         question: 'Cosa succede se non arrivano gli accessi in tempo?',
@@ -469,7 +474,7 @@ export const zeroLossIt: ZlCopy = {
       {
         question: 'Cosa succede se il mio store supera i limiti dello scaglione?',
         answer:
-          'Gli extra (lingue, valute, gestionale custom, blog molto grande) hanno un prezzo fisso a listino e te li diciamo in call, prima della firma. Nessun preventivo libero.',
+          'Gli extra (lingue, valute, gestionale custom, blog molto grande) hanno un prezzo fisso a listino e te li diciamo in videochiamata, prima della firma. Nessun preventivo libero.',
       },
       {
         question: 'Come si paga?',
@@ -484,7 +489,7 @@ export const zeroLossIt: ZlCopy = {
       {
         question: 'Cosa succede dopo i 90 giorni?',
         answer:
-          'Lo store è tuo, solido, con dati puliti. Puoi continuare da solo, con un pacchetto ore, o con i partner per advertising, email e design. Nessun vincolo.',
+          'Lo store è tuo, solido, con dati puliti. La manutenzione (sicurezza, aggiornamenti, istruzioni e supporto tecnico) resta inclusa. Per crescere ancora puoi continuare da solo, con un pacchetto ore, o con i partner per advertising, email e design. Nessun vincolo.',
       },
       {
         question: 'Quando posso partire?',
@@ -506,7 +511,7 @@ export const zeroLossIt: ZlCopy = {
   finalCta: {
     h2: 'Il tuo store su Shopify fra 14 giorni. Candidati.',
     paragraph:
-      'Ti rispondiamo entro 48 ore. Se sei dentro i criteri, la risposta è lo scaglione, il prezzo e la prima data di kickoff disponibile.',
+      'Ti rispondiamo entro 48 ore con lo scaglione, il prezzo e la prima data di kickoff disponibile.',
     bullets: ['Store pronto al giorno 14', '4 garanzie scritte nel contratto', '90 giorni di supporto, monitoraggio e miglioramento'],
     cta: 'Candidati allo sprint',
   },
@@ -514,11 +519,11 @@ export const zeroLossIt: ZlCopy = {
     metaTitle: 'Candidati allo Shopify Launch Sprint | noprob agency',
     metaDescription: 'Quattro passi, due minuti. Ti rispondiamo entro 48 ore con lo scaglione, il prezzo e la prima data di kickoff disponibile.',
     back: 'Torna alla pagina dello sprint',
-    trustedBy: '5/5 su Trustpilot',
+    trustedBy: '10 recensioni a 5 stelle su Trustpilot',
     h1Pre: 'Il tuo store su Shopify in',
     h1Em: '14 giorni.',
     description:
-      'Un intero team, totalmente in focus sul tuo store. Lo ricostruiamo su Shopify con il nostro Custom AI System in soli 14 giorni e lo prepariamo a uno sprint di performance su ogni area: è il next step del tuo business eCommerce.',
+      'Un intero team, totalmente in focus sul tuo store. Lo ricostruiamo su Shopify con il nostro Custom AI System in soli 14 giorni e lo prepariamo a uno sprint di performance su ogni area: è il prossimo passo per il tuo eCommerce.',
     badges: ['Risposta in 48 ore', 'Supporto 7/7', 'Prezzo fisso, nessun preventivo'],
   },
   form: {
@@ -589,8 +594,8 @@ export const zeroLossIt: ZlCopy = {
     step4: {
       summaryTitle: 'Il tuo scaglione',
       summary:
-        'In base a quello che ci hai detto, il tuo scaglione è {tier}: {price} in 4 rate da {installment}, IVA esclusa. Lo confermiamo in call.',
-      addonLine: 'Alcuni extra potrebbero avere un add-on a prezzo fisso: te lo diciamo in call.',
+        'In base a quello che ci hai detto, il tuo scaglione è {tier}: {price} in 4 rate da {installment}, IVA esclusa. Lo confermiamo in videochiamata.',
+      addonLine: 'Alcuni extra potrebbero avere un add-on a prezzo fisso: te lo diciamo in videochiamata.',
       nameLabel: 'Nome e cognome',
       namePlaceholder: 'Mario Rossi',
       emailLabel: 'Email aziendale',
@@ -634,13 +639,13 @@ export const zeroLossIt: ZlCopy = {
     next: [
       'Guarda la dashboard che ricevi il giorno 1: è quella con cui misuriamo le 4 garanzie.',
       'Prepara la lista degli accessi: piattaforma attuale, DNS, Search Console, GA4 e Meta.',
-      'Se hai fretta, prenota direttamente una call qui sotto o scrivi su WhatsApp.',
+      'Se hai fretta, prenota direttamente una videochiamata qui sotto o scrivi su WhatsApp.',
     ],
     dashboardCta: 'Guarda la dashboard del giorno 1',
     whatsapp: 'Scrivi su WhatsApp',
     whatsappNote: 'Antonio risponde di persona',
     whatsappText: 'Ciao Antonio, ho appena inviato la candidatura allo Shopify Launch Sprint su noprob.agency.',
-    bookTitle: 'Vuoi anticipare la call?',
+    bookTitle: 'Vuoi anticipare la videochiamata?',
     bookText: 'Scegli uno slot: parliamo del tuo store e del calendario dello sprint.',
     back: 'Torna alla pagina dello sprint',
   },

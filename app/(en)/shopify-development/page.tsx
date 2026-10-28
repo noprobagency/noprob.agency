@@ -6,11 +6,12 @@ import EcommerceRebuildSolution from '@/components/sections/EcommerceRebuildSolu
 import MigrazioneProcess from '@/components/sections/MigrazioneProcess'
 import EcommerceRebuildWhyUs from '@/components/sections/EcommerceRebuildWhyUs'
 import CaseStudy from '@/components/sections/CaseStudy'
+import { getDictionary } from '@/lib/i18n'
 import MigrazionePricing from '@/components/sections/MigrazionePricing'
 import MigrazioneFAQ from '@/components/sections/MigrazioneFAQ'
 import CTA from '@/components/sections/CTA'
 import Footer from '@/components/layout/Footer'
-import { buildMetadata } from '@/lib/site'
+import { AREA_SERVED, ORGANIZATION_ID, buildMetadata } from '@/lib/site'
 import { pageBreadcrumbJsonLd } from '@/lib/seo/breadcrumbs'
 import { getSviluppoCopy } from '@/lib/i18n/sviluppo'
 
@@ -24,9 +25,9 @@ const sviluppoJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'Shopify eCommerce Development',
-  provider: { '@type': 'Organization', name: 'NoProb Agency', url: 'https://noprob.agency' },
+  provider: { '@type': 'Organization', '@id': ORGANIZATION_ID, name: 'NoProb Agency', url: 'https://noprob.agency' },
   serviceType: 'Shopify eCommerce development',
-  areaServed: ['IT', 'EU', 'US'],
+  areaServed: AREA_SERVED,
   description:
     'A 3-month project to build an eCommerce on Shopify from design to tracking: custom design, server-side tracking, base SEO and CRO. Lifetime maintenance included.',
   offers: {
@@ -66,7 +67,7 @@ export default function ShopifyDevelopmentPage() {
       <EcommerceRebuildSolution locale={locale} copy={c.solution} />
       <MigrazioneProcess locale={locale} copy={c.process} />
       <EcommerceRebuildWhyUs locale={locale} copy={c.whyUs} />
-      <CaseStudy locale={locale} noPadding={true} />
+      <CaseStudy locale={locale} noPadding={true} heading={getDictionary(locale).caseStudy.headingBuilt} />
       <MigrazionePricing
         locale={locale}
         copy={c.pricing}

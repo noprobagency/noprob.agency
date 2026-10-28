@@ -5,8 +5,8 @@ const article: Article = {
   slugIt: 'ai-per-ecommerce',
   title: 'AI for Ecommerce: What Works, What Is Hype, and How to Start in 30 Days',
   titleIt: 'AI per eCommerce: cosa funziona, cosa è solo hype e come partire in 30 giorni',
-  seoTitle: 'AI for Ecommerce: What Works and What Is Hype',
-  seoTitleIt: 'AI per eCommerce: cosa funziona e cosa è hype',
+  seoTitle: 'AI for Ecommerce: 7 Uses That Pay, 4 That Fail',
+  seoTitleIt: 'AI per eCommerce: 7 usi utili, 4 che falliscono',
   seoDescription:
     'AI for ecommerce from a team that uses it daily: where it pays (catalog, service, data, email, code), where it fails, and how to start in 30 days.',
   seoDescriptionIt:
@@ -25,8 +25,8 @@ const article: Article = {
   articleType: 'BlogPosting',
   date: '2026-10-27',
   datePublishedIso: '2026-10-27T09:00:00+00:00',
-  dateModifiedIso: '2026-10-27T09:00:00+00:00',
-  wordCount: 1900,
+  dateModifiedIso: '2026-10-28T09:00:00+00:00',
+  wordCount: 2230,
   articleSection: 'AI',
   readingTimeMinutes: 10,
   keywordsEn:
@@ -146,14 +146,57 @@ const article: Article = {
       type: 'paragraph',
       text: 'Two rules. Keep a control, a set of products, pages or tickets you leave untouched, so seasonality does not fool you. And never accept a vendor’s own case-study numbers as your forecast. Be patient with the clock too: time saved shows in weeks, while an effect on conversion or revenue needs a longer window than one month.',
     },
-    { type: 'h2', text: 'How does this connect to the Custom AI System and the Sprint?' },
+    { type: 'h2', text: 'How do the AI Accelerator and the Custom AI System fit in?' },
     {
       type: 'paragraph',
-      text: '**The Custom AI System is how we build stores with AI inside them from day one, and the AI Accelerator is the lighter route for a store that is already live.** If you are leaving WooCommerce or a proprietary platform, the [Shopify Launch Sprint](/shopify-migration-sprint) rebuilds your store on Shopify in 14 days with it: catalog and structured data ready for AI assistants, automatic GEO for every new product, code built for AI agents, and tracking and a dashboard from day 1. Go-live falls between day 15 and 30, followed by 90 days of support. Our [guide to migrating to Shopify](/shopify-migration) explains the process.',
+      text: '**If your store is live, the [AI Accelerator](/ai-accelerator) is the route: 30 days one-to-one, up to two quick wins switched on with you. If you are changing platform, the [Shopify Launch Sprint](/shopify-migration-sprint) rebuilds your store on Shopify in 14 days with the Custom AI System.**',
     },
     {
       type: 'paragraph',
-      text: 'Our real cases are [Integratori DTC Nazzi](/use-cases/integratori-nazzi-dtc-shopify), moved from WooCommerce, and [Cumini](/use-cases/cumini-luxury-fashion-ecommerce), moved from a proprietary platform tied to its ERP. Their pages show the migration results. The summary of this article is the same: AI is a strong tool in the hands of a team with clean data, a procedure and someone who checks.',
+      text: 'The Custom AI System is how we build stores with AI inside them from day one: catalog and structured data ready for AI assistants, automatic GEO for every new product, code built for AI agents, and tracking and a dashboard from day 1. In the Sprint, go-live falls between day 15 and 30, followed by 90 days of support. Our [guide to migrating to Shopify](/shopify-migration) explains the process.',
+    },
+    {
+      type: 'paragraph',
+      text: 'Among our published case studies are [Integratori DTC Nazzi](/use-cases/integratori-nazzi-dtc-shopify), moved from WooCommerce, and [Cumini](/use-cases/cumini-luxury-fashion-ecommerce), moved from a proprietary platform tied to its ERP. Their pages show the migration results. The summary of this article is the same: AI is a strong tool in the hands of a team with clean data, a procedure and someone who checks.',
+    },
+    {
+      type: 'paragraph',
+      text: 'The Sprint has a public price by revenue: €5,800 under €2M, €8,800 from €2M to €20M, €12,800 above €20M, VAT excluded, in 4 installments.',
+    },
+    { type: 'h2', text: 'Frequently asked questions' },
+    { type: 'h3', text: 'What is AI used for in ecommerce?' },
+    {
+      type: 'paragraph',
+      text: 'In practice: writing and enriching product content, triaging and drafting customer service replies, reading store data and flagging anomalies, speeding up development, helping with email and flows, and making products findable by AI assistants. It works best on repetitive, checkable tasks with a person approving the result.',
+    },
+    { type: 'h3', text: 'Is AI worth it for a small ecommerce store?' },
+    {
+      type: 'paragraph',
+      text: 'Yes, if you pick one repetitive task and measure the hours before and after. No, if you buy a tool without a problem to solve. Start with catalog content or customer service drafts, keep a person approving, and judge the result after a month.',
+    },
+    { type: 'h3', text: 'Will AI replace ecommerce staff?' },
+    {
+      type: 'paragraph',
+      text: 'In our work it removes repetitive tasks, not decisions. People still set the strategy, approve what goes live, handle sensitive customers and own the brand.',
+    },
+    { type: 'h3', text: 'Is AI-generated product content bad for SEO?' },
+    {
+      type: 'paragraph',
+      text: 'Not by itself. Google says using AI is not a problem in itself, while generating pages at scale mainly to manipulate rankings is spam. Content that is accurate, reviewed and written from your real product data is fine. Unreviewed bulk pages are the risk.',
+    },
+    { type: 'h3', text: 'How long before AI shows results in an ecommerce store?' },
+    {
+      type: 'paragraph',
+      text: 'Time saved on repetitive work usually shows within weeks. Effects on conversion or revenue need a longer window and a control group. In our AI Accelerator the goal of the 30 days is to find the opportunities, rank them and switch on the first AI solutions on the most important one.',
+    },
+    { type: 'h3', text: 'What does the AI Accelerator include?' },
+    {
+      type: 'paragraph',
+      text: 'It is a 30-day one-to-one program for established ecommerce stores: four video calls of 60 minutes, up to two quick wins switched on with you, a priorities and roadmap document, operating protocols and a Context Document that stay yours. Fixed price, no automatic renewal. Quoted separately: development beyond the quick wins, campaign management, content production and AI licenses.',
+    },
+    {
+      type: 'paragraph',
+      text: '**Next step.** For a live store, book the free pre-call for the [AI Accelerator](/ai-accelerator): we check the fit before you commit. If you are changing platform, [apply to the Shopify Launch Sprint](/shopify-migration-sprint) and we reply within 48 hours with your tier, the price and the first available kickoff date.',
     },
     {
       type: 'paragraph',
@@ -305,14 +348,57 @@ const article: Article = {
       type: 'paragraph',
       text: 'Due regole. Tieni un gruppo di controllo, prodotti, pagine o ticket che lasci intatti, così la stagionalità non ti inganna. E non accettare mai i numeri dei case study del fornitore come tua previsione. Abbi pazienza anche con il calendario: il tempo risparmiato si vede in settimane, mentre un effetto su conversione o fatturato richiede una finestra più lunga di un mese.',
     },
-    { type: 'h2', text: 'Che legame c’è con il Custom AI System e lo Sprint?' },
+    { type: 'h2', text: 'Come si inseriscono l’AI Accelerator e il Custom AI System?' },
     {
       type: 'paragraph',
-      text: '**Il Custom AI System è il modo in cui costruiamo store con l’AI dentro fin dal primo giorno, e l’AI Accelerator è la strada più leggera per uno store già online.** Se lasci WooCommerce o una piattaforma proprietaria, lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) ricostruisce il tuo store su Shopify in 14 giorni con quel sistema: catalogo e dati strutturati pronti per gli assistenti AI, GEO automatica per ogni nuovo prodotto, codice pensato per gli agenti AI, tracking e dashboard dal primo giorno. Il go-live cade tra il giorno 15 e il 30, poi 90 giorni di supporto. La nostra [guida alla migrazione a Shopify](/it/migrazione-shopify) spiega il processo.',
+      text: '**Se il tuo store è già online, la strada è l’[AI Accelerator](/it/ai-accelerator): 30 giorni one-to-one, fino a due quick win attivate insieme a te. Se stai cambiando piattaforma, lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) ricostruisce il tuo store su Shopify in 14 giorni con il Custom AI System.**',
     },
     {
       type: 'paragraph',
-      text: 'I nostri casi veri sono [Integratori DTC Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify), passato da WooCommerce, e [Cumini](/it/casi-studio/cumini-luxury-fashion-ecommerce), passato da una piattaforma proprietaria legata al gestionale. Le loro pagine mostrano i risultati della migrazione. La sintesi di questo articolo è la stessa: l’AI è uno strumento forte in mano a un team con dati puliti, una procedura e qualcuno che controlla.',
+      text: 'Il Custom AI System è il modo in cui costruiamo store con l’AI dentro fin dal primo giorno: catalogo e dati strutturati pronti per gli assistenti AI, GEO automatica per ogni nuovo prodotto, codice pensato per gli agenti AI, tracking e dashboard dal primo giorno. Nello Sprint il go-live cade tra il giorno 15 e il 30, poi 90 giorni di supporto. La nostra [guida alla migrazione a Shopify](/it/migrazione-shopify) spiega il processo.',
+    },
+    {
+      type: 'paragraph',
+      text: 'Tra i nostri casi studio pubblicati ci sono [Integratori DTC Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify), passato da WooCommerce, e [Cumini](/it/casi-studio/cumini-luxury-fashion-ecommerce), passato da una piattaforma proprietaria legata al gestionale. Le loro pagine mostrano i risultati della migrazione. La sintesi di questo articolo è la stessa: l’AI è uno strumento forte in mano a un team con dati puliti, una procedura e qualcuno che controlla.',
+    },
+    {
+      type: 'paragraph',
+      text: 'Lo Sprint ha un prezzo pubblico per fatturato: €5.800 sotto i €2M, €8.800 tra €2M e €20M, €12.800 oltre i €20M, IVA esclusa, in 4 rate.',
+    },
+    { type: 'h2', text: 'Domande frequenti' },
+    { type: 'h3', text: 'A cosa serve l’AI in un eCommerce?' },
+    {
+      type: 'paragraph',
+      text: 'In pratica: scrivere e arricchire i contenuti prodotto, smistare e preparare le risposte dell’assistenza, leggere i dati dello store e segnalare anomalie, accelerare lo sviluppo, aiutare con email e flussi e rendere i prodotti trovabili dagli assistenti AI. Funziona meglio su compiti ripetitivi e verificabili, con una persona che approva il risultato.',
+    },
+    { type: 'h3', text: 'Conviene l’AI per un piccolo eCommerce?' },
+    {
+      type: 'paragraph',
+      text: 'Sì, se scegli un compito ripetitivo e misuri le ore prima e dopo. No, se compri uno strumento senza un problema da risolvere. Parti dai contenuti del catalogo o dalle bozze di assistenza, fai approvare a una persona e giudica il risultato dopo un mese.',
+    },
+    { type: 'h3', text: 'L’AI sostituirà chi lavora in un eCommerce?' },
+    {
+      type: 'paragraph',
+      text: 'Nel nostro lavoro toglie compiti ripetitivi, non decisioni. Le persone definiscono la strategia, approvano ciò che va online, gestiscono i clienti delicati e proteggono il brand.',
+    },
+    { type: 'h3', text: 'I contenuti prodotto scritti con l’AI fanno male alla SEO?' },
+    {
+      type: 'paragraph',
+      text: 'Non di per sé. Google dice che usare l’AI non è un problema in sé, mentre generare pagine in serie soprattutto per manipolare il posizionamento è spam. Un contenuto accurato, rivisto e scritto sui dati veri del prodotto va bene. Il rischio sono le pagine in blocco senza revisione.',
+    },
+    { type: 'h3', text: 'Quanto ci vuole prima di vedere risultati con l’AI in un eCommerce?' },
+    {
+      type: 'paragraph',
+      text: 'Il tempo risparmiato sui lavori ripetitivi di solito si vede in settimane. Gli effetti su conversione o fatturato richiedono una finestra più lunga e un gruppo di controllo. Nel nostro AI Accelerator l’obiettivo dei 30 giorni è trovare le opportunità, metterle in ordine e attivare le prime soluzioni AI sulla più importante.',
+    },
+    { type: 'h3', text: 'Cosa include l’AI Accelerator?' },
+    {
+      type: 'paragraph',
+      text: 'È un percorso one-to-one di 30 giorni per eCommerce già avviati: quattro videochiamate da 60 minuti, fino a due quick win attivate insieme a te, un documento delle priorità con roadmap, protocolli operativi e un Context Document che restano tuoi. Prezzo fisso, nessun rinnovo automatico. A parte: sviluppo oltre le quick win, gestione delle campagne, produzione di contenuti e licenze AI.',
+    },
+    {
+      type: 'paragraph',
+      text: '**Prossimo passo.** Per uno store già online, prenota la pre-call gratuita per l’[AI Accelerator](/it/ai-accelerator): verifichiamo insieme il fit prima che tu ti impegni. Se stai cambiando piattaforma, [candidati allo Shopify Launch Sprint](/it/sprint-migrazione-shopify) e rispondiamo entro 48 ore con la tua fascia, il prezzo e la prima data di kickoff disponibile.',
     },
     {
       type: 'paragraph',

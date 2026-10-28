@@ -5,16 +5,16 @@ const article: Article = {
   slugIt: 'migrazione-magento-shopify',
   title: 'Magento to Shopify Migration: Where Magento Does Not Map One to One',
   titleIt: 'Migrazione Magento Shopify: dove Magento non si traduce uno a uno',
-  seoTitle: 'Magento to Shopify Migration: What Changes',
-  seoTitleIt: 'Migrazione Magento Shopify: cosa cambia',
+  seoTitle: 'Migrate from Magento to Shopify: What Changes',
+  seoTitleIt: 'Migrazione Magento Shopify: moduli, URL e Plus',
   seoDescription:
-    'Migrate from Magento to Shopify: how product types, store views, B2B, extensions and .html URLs map across, Shopify vs Plus, and our method.',
+    'Magento to Shopify: how product types, store views, B2B, extensions and .html URLs map across, Shopify or Plus, and a 14-day Sprint at a public price.',
   seoDescriptionIt:
-    'Migrazione da Magento a Shopify: come passano tipi di prodotto, store view, B2B, estensioni e URL .html, Shopify o Plus, e l’esperienza dietro il nostro metodo.',
+    'Da Magento a Shopify: come passano tipi di prodotto, store view, B2B, estensioni e URL .html, Shopify o Plus, e uno Sprint di 14 giorni a prezzo pubblico.',
   excerpt:
-    'A Magento to Shopify migration is decided where Magento does not map one to one: product types, store views, customer groups, extensions and URL rewrites. The Sprint method applied to it, backed by two real migrations.',
+    'A Magento to Shopify migration is decided where Magento does not map one to one: product types, store views, customer groups, extensions and URL rewrites. The redirect map, the extension inventory and the Sprint calendar.',
   excerptIt:
-    'Una migrazione da Magento a Shopify si decide dove Magento non si traduce uno a uno: tipi di prodotto, store view, gruppi clienti, estensioni e URL rewrite. Il metodo dello Sprint applicato, con due migrazioni reali alle spalle.',
+    'Una migrazione da Magento a Shopify si decide dove Magento non si traduce uno a uno: tipi di prodotto, store view, gruppi clienti, estensioni e URL rewrite. Con la mappa dei redirect, l’inventario delle estensioni e il calendario dello Sprint.',
   ledeEn:
     'Moving from Magento 2 or Adobe Commerce to Shopify is mostly a translation job. Here is what translates, what does not, and the method we use.',
   ledeIt:
@@ -25,8 +25,8 @@ const article: Article = {
   articleType: 'BlogPosting',
   date: '2026-10-27',
   datePublishedIso: '2026-10-27T09:00:00+00:00',
-  dateModifiedIso: '2026-10-27T09:00:00+00:00',
-  wordCount: 2190,
+  dateModifiedIso: '2026-10-28T09:00:00+00:00',
+  wordCount: 2350,
   readingTimeMinutes: 9,
   articleSection: 'Shopify migration',
   keywordsEn:
@@ -37,7 +37,12 @@ const article: Article = {
     {
       question: 'Will I lose my Google rankings migrating from Magento to Shopify?',
       answer:
-        'Rankings usually move for a while after any migration, and in the Sprint organic traffic at 90 days is one of the 4 written guarantees. A complete 301 redirect map, built from Magento’s URL rewrite table plus a crawl and Search Console, decides how fast they settle.',
+        'Rankings usually move for a few weeks after any migration. What decides how fast they settle is a complete 301 redirect map, built from Magento’s URL rewrite table plus a crawl and Search Console, and tested before and after go-live. In the Shopify Launch Sprint the SEO guarantee is written in the contract: if organic traffic is below the baseline 90 days after go-live, we work for free until it comes back.',
+    },
+    {
+      question: 'Is Shopify better than Magento?',
+      answer:
+        'Shopify is better when you want to stop paying for patches, hosting and developer time. Magento is better when custom B2B logic tied to an ERP is your edge. Decide from your module inventory, not from the platform name.',
     },
     {
       question: 'Do I need Shopify Plus to leave Magento?',
@@ -69,7 +74,12 @@ const article: Article = {
     {
       question: 'Perderò le posizioni su Google migrando da Magento a Shopify?',
       answer:
-        'Il posizionamento di solito si muove per un periodo dopo qualunque migrazione; nello Sprint il traffico organico a 90 giorni è una delle 4 garanzie scritte. Una mappa completa dei redirect 301, costruita dalla tabella degli URL rewrite di Magento più una scansione e Search Console, decide quanto in fretta si assesta.',
+        'Il posizionamento di solito si muove per qualche settimana dopo qualunque migrazione. Quanto in fretta si assesta lo decide una mappa completa dei redirect 301, costruita dalla tabella degli URL rewrite di Magento più una scansione e Search Console, e testata prima e dopo il go-live. Nello Shopify Launch Sprint la garanzia SEO è scritta nel contratto: se il traffico organico a 90 giorni dal go-live è sotto la baseline, lavoriamo gratis finché non torna.',
+    },
+    {
+      question: 'Shopify è meglio di Magento?',
+      answer:
+        'Shopify è meglio quando vuoi smettere di pagare patch, hosting e ore di sviluppo. Magento è meglio quando la logica B2B su misura legata a un gestionale è il tuo vantaggio. Decidi dall’inventario dei moduli, non dal nome della piattaforma.',
     },
     {
       question: 'Serve Shopify Plus per lasciare Magento?',
@@ -108,7 +118,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Our two real migrations are [Integratori DTC Nazzi](/use-cases/integratori-nazzi-dtc-shopify), from WooCommerce, and [Cumini](/use-cases/cumini-luxury-fashion-ecommerce), from a proprietary platform tied to the ERP. This article rests on those, on our process, and on Adobe’s and Shopify’s official documentation.',
+      text: 'Coming from another platform? Read the guides for [WooCommerce](/blog/woocommerce-to-shopify-migration), [PrestaShop](/blog/prestashop-to-shopify-migration) and [BigCommerce](/blog/bigcommerce-to-shopify-migration).',
     },
     { type: 'h2', text: 'Why do stores migrate from Magento to Shopify?' },
     {
@@ -203,7 +213,7 @@ const article: Article = {
       type: 'paragraph',
       text: 'Google’s [site move guide](https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes) says to map each old URL to its matching new one, not everything to the homepage, and to keep the redirects generally at least a year. Shopify imports them from a CSV through [URL redirects](https://help.shopify.com/en/manual/online-store/menus-and-links/url-redirect).',
     },
-    { type: 'h2', text: 'Shopify or Shopify Plus for a Magento store?' },
+    { type: 'h2', text: 'Shopify or Shopify Plus for a Magento or Adobe Commerce store?' },
     {
       type: 'paragraph',
       text: 'For a Magento store, the choice between Shopify and Shopify Plus comes down to four requirements, not to revenue: B2B depth, several storefronts, checkout changes and combined listings.',
@@ -237,24 +247,29 @@ const article: Article = {
         'Cutover: import what changed since the first import, switch the domain, check tracking, crawl the old URL list again and watch Search Console.',
       ],
     },
-    { type: 'h2', text: 'What experience do we bring to a Magento migration?' },
+    { type: 'h2', text: 'How do we run a Magento to Shopify migration?' },
     {
       type: 'paragraph',
-      text: 'Our experience is a process tested on two real migrations. Nazzi, a supplement brand, went from WooCommerce to Shopify on 19 July 2026 and, from go-live to 12 October, sold 105% more online than in the same days of 2025, with orders up 77%. For its URLs we checked 215 archived WooCommerce addresses and delivered the 301 redirect CSV.',
+      text: '**We run a Magento to Shopify migration with the process of every Shopify Launch Sprint: inventory first, decisions in writing, the new store built while Magento keeps selling, a tested redirect map and a fixed go-live date.** Antonio brings more than 7 years of eCommerce projects and several migrations with 0 minutes offline.',
     },
     {
       type: 'paragraph',
-      text: 'Cumini, a luxury multibrand boutique, went live on Shopify on 19 May 2025 after being on a proprietary platform tied to the ERP, and from June 2025 to May 2026 online sales were up 67.7% on the 12 months before. That platform resembles a heavily customized Magento store in one way: it was tied to an external vendor and to the ERP, with little room to change anything. We built a solution that connects Shopify to that ERP.',
+      text: 'Two projects we publish in full show the process at work. [Nazzi](/use-cases/integratori-nazzi-dtc-shopify), a supplement brand, went from WooCommerce to Shopify on 19 July 2026 and, from go-live to 12 October, sold 105% more online than in the same days of 2025, with orders up 77%; for its URLs we checked 215 archived addresses and delivered the 301 redirect CSV. [Cumini](/use-cases/cumini-luxury-fashion-ecommerce), a luxury multibrand boutique, went live on 19 May 2025 from a proprietary platform tied to the ERP, and from June 2025 to May 2026 online sales were up 67.7% on the 12 months before; we built the solution that connects Shopify to that ERP, the kind of dependency a heavily customized Magento store often carries.',
     },
     {
       type: 'paragraph',
-      text: 'What it means for you: we run the inventory first and tell you, before you sign, which modules map to native features and which are real rebuild work.',
+      text: 'For your store, we run the inventory first and tell you, before you sign, which modules map to native features and which are real rebuild work.',
     },
     { type: 'h2', text: 'Frequently asked questions' },
     { type: 'h3', text: 'Will I lose my Google rankings migrating from Magento to Shopify?' },
     {
       type: 'paragraph',
-      text: 'Rankings usually move for a while after any migration, and in the Sprint organic traffic at 90 days is one of the 4 written guarantees. A complete 301 redirect map, built from Magento’s URL rewrite table plus a crawl and Search Console, decides how fast they settle.',
+      text: 'Rankings usually move for a few weeks after any migration. What decides how fast they settle is a complete 301 redirect map, built from Magento’s URL rewrite table plus a crawl and Search Console, and tested before and after go-live. In the Shopify Launch Sprint the SEO guarantee is written in the contract: if organic traffic is below the baseline 90 days after go-live, we work for free until it comes back.',
+    },
+    { type: 'h3', text: 'Is Shopify better than Magento?' },
+    {
+      type: 'paragraph',
+      text: 'Shopify is better when you want to stop paying for patches, hosting and developer time. Magento is better when custom B2B logic tied to an ERP is your edge. Decide from your module inventory, not from the platform name.',
     },
     { type: 'h3', text: 'Do I need Shopify Plus to leave Magento?' },
     {
@@ -281,10 +296,18 @@ const article: Article = {
       type: 'paragraph',
       text: 'It depends on store views, custom modules, B2B rules, ERP connections and catalog data quality. With the Shopify Launch Sprint the store is ready on day 14 and go-live falls between day 15 and 30, followed by 90 days of support.',
     },
-    { type: 'h2', text: 'A Final Note' },
+    { type: 'h2', text: 'The two hard parts of leaving Magento: modules and URLs' },
     {
       type: 'paragraph',
       text: 'Moving from Magento is a translation job with two hard parts: the logic hidden in modules and the URLs Google already knows. Both are found by an inventory, not by a quote.',
+    },
+    {
+      type: 'paragraph',
+      text: 'The Sprint has a public price by revenue: €5,800 under €2M, €8,800 from €2M to €20M, €12,800 above €20M, VAT excluded, in 4 installments.',
+    },
+    {
+      type: 'paragraph',
+      text: '**Next step.** Send us your store: [apply to the Shopify Launch Sprint](/shopify-migration-sprint) and we reply within 48 hours with your tier, the price and the first available kickoff date.',
     },
     {
       type: 'paragraph',
@@ -302,7 +325,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Le nostre due migrazioni vere sono [Integratori DTC Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify), da WooCommerce, e [Cumini](/it/casi-studio/cumini-luxury-fashion-ecommerce), da una piattaforma proprietaria legata al gestionale. Questo articolo si regge su quelle, sul nostro processo e sulla documentazione ufficiale.',
+      text: 'Arrivi da un’altra piattaforma? Leggi le guide per [WooCommerce](/it/blog/migrazione-woocommerce-shopify), [PrestaShop](/it/blog/migrazione-prestashop-shopify) e [BigCommerce](/it/blog/migrazione-bigcommerce-shopify).',
     },
     { type: 'h2', text: 'Perché si passa da Magento a Shopify?' },
     {
@@ -397,7 +420,7 @@ const article: Article = {
       type: 'paragraph',
       text: 'La [guida di Google ai cambi di sito](https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes) dice di mappare ogni vecchio URL sul nuovo corrispondente, non tutto sulla home, e di tenere i redirect in genere almeno un anno. Importali da CSV negli [URL redirect](https://help.shopify.com/it/manual/online-store/menus-and-links/url-redirect).',
     },
-    { type: 'h2', text: 'Shopify o Shopify Plus per uno store Magento?' },
+    { type: 'h2', text: 'Shopify o Shopify Plus per uno store Magento o Adobe Commerce?' },
     {
       type: 'paragraph',
       text: 'Per uno store Magento la scelta tra Shopify e Shopify Plus dipende da quattro requisiti, non dal fatturato: profondità del B2B, più vetrine, modifiche al checkout e schede combinate.',
@@ -431,24 +454,29 @@ const article: Article = {
         'Passaggio: importare ciò che è cambiato dal primo import, spostare il dominio, controllare il tracking, scansionare di nuovo l’elenco dei vecchi URL e seguire Search Console.',
       ],
     },
-    { type: 'h2', text: 'Quale esperienza portiamo in una migrazione da Magento?' },
+    { type: 'h2', text: 'Come lavoriamo una migrazione da Magento a Shopify?' },
     {
       type: 'paragraph',
-      text: 'La nostra esperienza è un processo collaudato su due migrazioni vere. Nazzi, un brand di integratori, è passato da WooCommerce a Shopify il 19 luglio 2026 e, dal go-live al 12 ottobre, ha venduto online il 105% in più degli stessi giorni del 2025, con gli ordini in crescita del 77%. Per i suoi URL abbiamo controllato 215 indirizzi WooCommerce archiviati e consegnato il CSV dei redirect 301.',
+      text: '**Lavoriamo una migrazione da Magento a Shopify con il processo di ogni Shopify Launch Sprint: prima l’inventario, le decisioni per iscritto, il nuovo store costruito mentre Magento continua a vendere, una mappa dei redirect testata e una data di go-live fissa.** Antonio porta oltre 7 anni di progetti eCommerce e diverse migrazioni con 0 minuti offline.',
     },
     {
       type: 'paragraph',
-      text: 'Cumini, una boutique multibrand di lusso, è andata online su Shopify il 19 maggio 2025 dopo una piattaforma proprietaria legata al gestionale, e da giugno 2025 a maggio 2026 le vendite online sono state il 67,7% in più dei 12 mesi prima. Quella piattaforma somiglia a uno store Magento molto personalizzato in un punto: era legata a un fornitore esterno e al gestionale, con poco margine per cambiare qualcosa. Abbiamo collegato Shopify a quel gestionale.',
+      text: 'Due progetti che pubblichiamo per intero mostrano il processo al lavoro. [Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify), un brand di integratori, è passato da WooCommerce a Shopify il 19 luglio 2026 e, dal go-live al 12 ottobre, ha venduto online il 105% in più degli stessi giorni del 2025, con gli ordini in crescita del 77%; per i suoi URL abbiamo controllato 215 indirizzi archiviati e consegnato il CSV dei redirect 301. [Cumini](/it/casi-studio/cumini-luxury-fashion-ecommerce), una boutique multibrand di lusso, è andata online il 19 maggio 2025 da una piattaforma proprietaria legata al gestionale, e da giugno 2025 a maggio 2026 le vendite online sono state il 67,7% in più dei 12 mesi prima; abbiamo costruito la soluzione che collega Shopify a quel gestionale, lo stesso tipo di dipendenza che spesso ha uno store Magento molto personalizzato.',
     },
     {
       type: 'paragraph',
-      text: 'Cosa significa per te: facciamo prima l’inventario e ti diciamo, prima che tu firmi, quali moduli corrispondono a funzioni native e quali sono vero lavoro di ricostruzione.',
+      text: 'Per il tuo store facciamo prima l’inventario e ti diciamo, prima che tu firmi, quali moduli corrispondono a funzioni native e quali sono vero lavoro di ricostruzione.',
     },
     { type: 'h2', text: 'Domande frequenti' },
     { type: 'h3', text: 'Perderò le posizioni su Google migrando da Magento a Shopify?' },
     {
       type: 'paragraph',
-      text: 'Il posizionamento di solito si muove per un periodo dopo qualunque migrazione; nello Sprint il traffico organico a 90 giorni è una delle 4 garanzie scritte. Una mappa completa dei redirect 301, costruita dalla tabella degli URL rewrite di Magento più una scansione e Search Console, decide quanto in fretta si assesta.',
+      text: 'Il posizionamento di solito si muove per qualche settimana dopo qualunque migrazione. Quanto in fretta si assesta lo decide una mappa completa dei redirect 301, costruita dalla tabella degli URL rewrite di Magento più una scansione e Search Console, e testata prima e dopo il go-live. Nello Shopify Launch Sprint la garanzia SEO è scritta nel contratto: se il traffico organico a 90 giorni dal go-live è sotto la baseline, lavoriamo gratis finché non torna.',
+    },
+    { type: 'h3', text: 'Shopify è meglio di Magento?' },
+    {
+      type: 'paragraph',
+      text: 'Shopify è meglio quando vuoi smettere di pagare patch, hosting e ore di sviluppo. Magento è meglio quando la logica B2B su misura legata a un gestionale è il tuo vantaggio. Decidi dall’inventario dei moduli, non dal nome della piattaforma.',
     },
     { type: 'h3', text: 'Serve Shopify Plus per lasciare Magento?' },
     {
@@ -475,10 +503,18 @@ const article: Article = {
       type: 'paragraph',
       text: 'Dipende da store view, moduli personalizzati, regole B2B, collegamenti al gestionale e qualità dei dati di catalogo. Con lo Shopify Launch Sprint lo store è pronto al giorno 14 e il go-live cade tra il giorno 15 e il 30, seguito da 90 giorni di supporto.',
     },
-    { type: 'h2', text: 'Una nota finale' },
+    { type: 'h2', text: 'Le due parti difficili di lasciare Magento: moduli e URL' },
     {
       type: 'paragraph',
       text: 'Lasciare Magento è un lavoro di traduzione con due parti difficili: la logica nei moduli e gli URL che Google conosce già. Si trovano con un inventario, non con un preventivo.',
+    },
+    {
+      type: 'paragraph',
+      text: 'Lo Sprint ha un prezzo pubblico per fatturato: €5.800 sotto i €2M, €8.800 tra €2M e €20M, €12.800 oltre i €20M, IVA esclusa, in 4 rate.',
+    },
+    {
+      type: 'paragraph',
+      text: '**Prossimo passo.** Mandaci il tuo store: [candidati allo Shopify Launch Sprint](/it/sprint-migrazione-shopify) e rispondiamo entro 48 ore con la tua fascia, il prezzo e la prima data di kickoff disponibile.',
     },
     {
       type: 'paragraph',

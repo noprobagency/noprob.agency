@@ -334,7 +334,7 @@ export default function AmbassadorPlaybook({ locale = 'it' }: { locale?: Locale 
               key={link.href}
               href={link.href}
               target="_blank"
-              rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+              rel={link.href.startsWith('http') ? 'nofollow noopener noreferrer' : undefined}
               className={cn(CARD, 'group flex flex-col gap-1 transition-transform hover:-translate-y-[2px]')}
             >
               <span className="flex items-center justify-between gap-3 text-np-h3 text-noprob-text">
@@ -389,7 +389,7 @@ export default function AmbassadorPlaybook({ locale = 'it' }: { locale?: Locale 
             <a
               href="https://www.shopify.com/pricing"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow noopener noreferrer"
               className="mt-3 inline-block font-sans text-body-sm font-semibold text-noprob-text underline underline-offset-4"
             >
               {d.pricing.externalLinkLabel} ↗
@@ -753,7 +753,7 @@ export default function AmbassadorPlaybook({ locale = 'it' }: { locale?: Locale 
               <a
                 href={T.whatsappUrl}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="nofollow noopener noreferrer"
                 className="mt-1 block font-sans text-body-lg font-semibold text-noprob-text underline underline-offset-4"
               >
                 {T.whatsappDisplay}

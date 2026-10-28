@@ -29,6 +29,9 @@ const NAV_LABEL_ROUTE: Partial<Record<RouteKey, RouteKey>> = {
   sviluppoShopify: 'sviluppoShopify',
   dataDrivenTeam: 'dataDrivenTeam',
   migrazioneShopify: 'zeroLossMigration',
+  zeroLossMigration: 'zeroLossMigration',
+  contacts: 'contacts',
+  about: 'about',
 }
 
 /** Breadcrumb entry for a fixed route: name from the navbar labels, path from the route map. */

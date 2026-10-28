@@ -63,7 +63,7 @@ export default function SolutionSection({ locale = 'en' }: { locale?: Locale }) 
               />
               <h3 className="text-np-h3 text-noprob-text">
                 {solution.title.split('\n').map((line, j) => (
-                  <span key={j}>{line}{j < solution.title.split('\n').length - 1 && <br />}</span>
+                  <span key={j}>{line}{j < solution.title.split('\n').length - 1 && <>{' '}<br /></>}</span>
                 ))}
               </h3>
               <p className="font-sans text-body-sm font-medium leading-[1.6em] text-noprob-text">

@@ -4,7 +4,7 @@ import type { ZlCopy } from '@/content/zero-loss-migration'
 import ZlSeoCharts from './ZlSeoCharts'
 
 /**
- * Section 9 (#prove): real results of two migrations (Supplement DTC Nazzi from
+ * Section 9 (#prove): real results of two published migration case studies (Supplement DTC Nazzi from
  * WooCommerce, Cumini from a proprietary platform) as indexed charts, then the
  * testimonial wall. No absolute client figures on the page.
  */

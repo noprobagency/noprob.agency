@@ -31,5 +31,11 @@ Stati: `da fare`, `in corso`, `fatto (data, PR)`, `bloccato (motivo)`.
 | 23 | gennaio | Confronto onesto delle agenzie per la migrazione a Shopify (idea di Marco) | shopify migration experts, shopify migration services | team | fatto (27 ott, v1.76.0) |
 | 24 | gennaio | Guida "Da BigCommerce a Shopify" (solo fonti ufficiali) | migrate bigcommerce to shopify | team | fatto (27 ott, v1.78.0) |
 | 25 | quando sbloccata | "Cos'è un Custom AI System per Shopify" (`docs/articoli-da-scrivere.md`) | | team | bloccato (servono i dati di velocità prima e dopo di Nazzi e Cumini) |
+| 26 | 28 ott | Revisione completa del sito (4 revisori) e implementazione con le decisioni di Antonio | | team | fatto (28 ott, v1.80.0 - v1.82.0) |
+| 27 | 28 ott | "Shopify Plus: quando conviene e come migrare" (R-37) | shopify plus, shopify plus agency | team | fatto (28 ott, v1.82.0) |
+| 28 | sett. 9 nov | Template della mappa dei redirect 301 per Shopify, CSV e foglio, EN e IT (asset da linkare, R-39; poi lo promuove Marco) | shopify 301 redirects, redirect 301 shopify | team | da fare |
+| 29 | sett. 16 nov | "BigCommerce o Shopify" (R-55) | bigcommerce vs shopify | team | da fare |
+| 30 | sett. 23 nov | "GEO vs SEO" e "Universal Commerce Protocol (UCP)" (R-55) | geo vs seo, ucp shopify | team | da fare |
+| 31 | ogni mese | Misura delle citazioni nelle risposte AI sulle domande della migrazione (R-54), insieme alla revisione mensile | | analista | da fare |
 
 Misura: `/seo monitora`, la lancia Antonio, idealmente una volta a settimana.

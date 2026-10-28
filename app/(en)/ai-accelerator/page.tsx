@@ -18,7 +18,7 @@ import { ElectricDivider, SideCables } from '@/components/sections/ai/PowerLayer
 import CaseStudy from '@/components/sections/CaseStudy'
 import MigrazioneFAQ from '@/components/sections/MigrazioneFAQ'
 import Footer from '@/components/layout/Footer'
-import { buildMetadata } from '@/lib/site'
+import { AREA_SERVED, ORGANIZATION_ID, buildMetadata } from '@/lib/site'
 import { pageBreadcrumbJsonLd } from '@/lib/seo/breadcrumbs'
 import { getAiCopy } from '@/lib/i18n/aiAccelerator'
 
@@ -38,9 +38,9 @@ const serviceJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'AI Accelerator',
-  provider: { '@type': 'Organization', name: 'NoProb Agency', url: 'https://noprob.agency' },
+  provider: { '@type': 'Organization', '@id': ORGANIZATION_ID, name: 'NoProb Agency', url: 'https://noprob.agency' },
   serviceType: 'AI consulting',
-  areaServed: ['IT', 'EU'],
+  areaServed: AREA_SERVED,
   description:
     'A 30-day one-to-one program for established eCommerce brands: analysis of sales, acquisition and processes, opportunities ranked by impact, a 90-day roadmap and your first AI solutions running. Fixed price, no lock-in.',
   offers: {

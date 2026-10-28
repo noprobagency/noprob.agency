@@ -55,6 +55,7 @@ SEO of the site (Francesca, `/seo`: on page, technical, content, keywords, site 
 
 - Follow the article pattern in `docs/ARCHITECTURE.md` (cover image, `data/articles` entry with dates, `dateModifiedIso` on every update, JSON-LD, meta, related CTA, author bio).
 - Internal links, in priority order: the Sprint landing first, then the migration page, then a case study or the team page; the Sprint CTA comes before the generic contact CTA. Closing pattern, IT: *"Lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) porta il tuo store su Shopify in 14 giorni con il nostro Custom AI System: calendario fisso, prezzo pubblico e 4 garanzie scritte."* EN: *"The [Shopify Launch Sprint](/shopify-migration-sprint) moves your store to Shopify in 14 days with our Custom AI System: a fixed calendar, a public price and 4 written guarantees."*
+- Add one row in `data/articles/clusters.ts` (cluster and pill) for the new article, so it appears in its blog section and in the "Read next" block.
 - At least 2 outbound links to authoritative sources. No numbers about clients that are not in `docs/dati-verificati.md`.
 
 ### Price or offer change

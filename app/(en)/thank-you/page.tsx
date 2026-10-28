@@ -49,8 +49,8 @@ export default function ThankYouPage() {
               Write on WhatsApp
             </span>
             <span className="flex items-center gap-1.5">
-              <span className="h-2 w-2 animate-pulse rounded-full bg-np-green" aria-hidden />
-              <span className="text-[13px] text-[#a9a9a9]">Antonio is online</span>
+              <span className="h-2 w-2 rounded-full bg-np-green" aria-hidden />
+              <span className="text-[13px] text-[#a9a9a9]">Antonio replies personally</span>
             </span>
           </span>
         </a>

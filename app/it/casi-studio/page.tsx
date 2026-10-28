@@ -5,6 +5,8 @@ import SectionLabel from '@/components/ui/SectionLabel'
 import UseCaseCard from '@/components/article/UseCaseCard'
 import { useCases } from '@/data/use-cases'
 import Footer from '@/components/layout/Footer'
+import { UseCasesClosing, UseCasesIntro } from '@/components/sections/UseCasesIndexBlocks'
+import { getBlocchiCopy } from '@/lib/i18n/blocchi'
 
 export async function generateMetadata(): Promise<Metadata> {
   return buildMetadata({ path: '/it/casi-studio', locale: 'it', pageKey: 'useCases' })
@@ -18,7 +20,7 @@ export default function ItalianUseCasesPage() {
       <section className="w-full bg-[#f0f0f0] pt-[120px] pb-[80px] px-5 min-[810px]:px-9">
         {/* Header */}
         <div className="mx-auto flex max-w-[1200px] flex-col items-center gap-5 text-center">
-          <SectionLabel>Use Cases</SectionLabel>
+          <SectionLabel>{getBlocchiCopy(locale).useCases.sectionLabel}</SectionLabel>
           <h1
             className="font-sans font-semibold text-black tracking-[-0.07em] leading-[110%] text-[40px]"
           >
@@ -26,6 +28,7 @@ export default function ItalianUseCasesPage() {
             <br />
             <em className="font-serif italic tracking-[-0.08em]">Scopri come lavoriamo.</em>
           </h1>
+          <UseCasesIntro locale={locale} />
         </div>
 
         {/* Grid */}
@@ -37,11 +40,14 @@ export default function ItalianUseCasesPage() {
                 useCase={useCase}
                 href={`/it/casi-studio/${useCase.slug}`}
                 locale={locale}
-                caseTypeLabel={useCase.caseType === 'Use Case' ? "Caso d'Uso" : useCase.caseType}
+                caseTypeLabel={getBlocchiCopy(locale).useCases.caseTypeLabel}
+                brand={getBlocchiCopy(locale).useCases.brands[useCase.slug]}
               />
             ))}
           </div>
         </div>
+
+        <UseCasesClosing locale={locale} />
       </section>
       <Footer locale={locale} />
     </>

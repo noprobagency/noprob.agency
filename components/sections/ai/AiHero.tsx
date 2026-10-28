@@ -3,6 +3,7 @@ import Link from 'next/link'
 import PartnerLogos from '@/components/ui/PartnerLogos'
 import { NeuralCircuits, ZapIcon } from '@/components/sections/ai/PowerLayer'
 import { type Locale } from '@/lib/i18n'
+import { TRUSTPILOT_URL } from '@/lib/site'
 import { getAiCopy } from '@/lib/i18n/aiAccelerator'
 
 export default function AiHero({ locale = 'it' }: { locale?: Locale }) {
@@ -62,7 +63,12 @@ export default function AiHero({ locale = 'it' }: { locale?: Locale }) {
 
         {/* Trust bar: Trustpilot + partner logos */}
         <div className="relative z-[1] flex w-full max-w-[400px] flex-col items-center place-content-center gap-[10px]">
-          <div className="flex items-center gap-[5px]">
+          <a
+            href={TRUSTPILOT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-[5px] no-underline hover:underline"
+          >
             <svg
               width="14"
               height="14"
@@ -76,10 +82,7 @@ export default function AiHero({ locale = 'it' }: { locale?: Locale }) {
             <span className="font-sans text-[13px] font-semibold tracking-[-0.03em] text-np-green-trust">
               {d.trustRatingLabel}
             </span>
-            <span className="font-sans text-[13px] font-medium tracking-[-0.03em] text-np-green-trust">
-              Trustpilot
-            </span>
-          </div>
+          </a>
           <p className="font-sans text-[12px] font-medium tracking-[-0.03em] text-np-dark text-center">
             {d.trustLine}
           </p>

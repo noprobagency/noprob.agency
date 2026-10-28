@@ -29,6 +29,38 @@ export const siteConfig = {
   ],
 } as const
 
+/** Public Trustpilot profile (10 five-star reviews, see docs/dati-verificati.md). */
+export const TRUSTPILOT_URL = 'https://www.trustpilot.com/review/noprob.agency'
+
+/** One entity id per Organization and founder, referenced from every JSON-LD graph. */
+export const ORGANIZATION_ID = `${siteConfig.url}/#organization`
+export const FOUNDER_ID = `${siteConfig.url}/about#antonio-manitta`
+
+/**
+ * Markets served, for `areaServed` in every Organization and Service JSON-LD:
+ * US, UK and Australia first (outbound markets), then the rest of the world.
+ */
+export const AREA_SERVED = [
+  { '@type': 'Country', name: 'United States' },
+  { '@type': 'Country', name: 'United Kingdom' },
+  { '@type': 'Country', name: 'Australia' },
+  { '@type': 'Place', name: 'Worldwide' },
+] as const
+
+/**
+ * External profiles of the founder (`Person.sameAs`). Add Antonio's LinkedIn
+ * profile URL here once confirmed: it is not published anywhere in the repo.
+ */
+export const FOUNDER_SAME_AS: readonly string[] = []
+
+/** External profiles of the company (`Organization.sameAs`). Add Upwork and GoodFirms once live. */
+export const ORGANIZATION_SAME_AS: readonly string[] = [
+  'https://www.linkedin.com/company/noprobagency',
+  TRUSTPILOT_URL,
+  'https://clutch.co/profile/noprob-agency',
+  'https://contra.com/noprob_agency_llc',
+]
+
 export const siteAssets = {
   logo: '/images/originals/AY6rjj8ZVUbD4McJGHwEF1x9L08.svg',
   logoBlack: '/images/logo-no-prob-black.svg',
@@ -60,6 +92,10 @@ type MetadataOptions = {
   image?: string
   /** Optional alt text for the OG/Twitter image. */
   imageAlt?: string
+  /** Open Graph type: `article` for blog posts (adds published/modified time and author). */
+  article?: { publishedTime: string; modifiedTime?: string; section?: string }
+  /** RSS feed path of this section: adds `<link rel="alternate" type="application/rss+xml">`. */
+  feedPath?: string
 }
 
 export function buildMetadata({
@@ -71,6 +107,8 @@ export function buildMetadata({
   noIndex = false,
   image,
   imageAlt,
+  article,
+  feedPath,
 }: MetadataOptions): Metadata {
   const dict = pageKey ? getDictionary(locale).seo[pageKey] : null
   const resolvedTitle = title ?? dict?.title ?? siteConfig.defaultTitle
@@ -99,9 +137,18 @@ export function buildMetadata({
         it: itUrl,
         'x-default': enUrl,
       },
+      ...(feedPath ? { types: { 'application/rss+xml': absoluteUrl(feedPath) } } : {}),
     },
     openGraph: {
-      type: 'website',
+      ...(article
+        ? {
+            type: 'article' as const,
+            publishedTime: article.publishedTime,
+            ...(article.modifiedTime ? { modifiedTime: article.modifiedTime } : {}),
+            authors: ['Antonio Manitta'],
+            ...(article.section ? { section: article.section } : {}),
+          }
+        : { type: 'website' as const }),
       url: canonical,
       siteName: siteConfig.name,
       locale: ogLocale,
@@ -146,6 +193,7 @@ export function buildMetadata({
 export const organizationJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
+  '@id': ORGANIZATION_ID,
   name: 'NoProb Agency',
   legalName: siteConfig.companyName,
   url: siteConfig.url,
@@ -153,8 +201,12 @@ export const organizationJsonLd = {
   foundingDate: '2022',
   founder: {
     '@type': 'Person',
+    '@id': FOUNDER_ID,
     name: 'Antonio Manitta',
     jobTitle: 'Founder & eCommerce Manager',
+    url: absoluteUrl('/about'),
+    worksFor: { '@id': ORGANIZATION_ID },
+    ...(FOUNDER_SAME_AS.length > 0 ? { sameAs: FOUNDER_SAME_AS } : {}),
   },
   description: siteConfig.description,
   address: {
@@ -168,15 +220,14 @@ export const organizationJsonLd = {
   knowsAbout: [
     'Shopify development',
     'eCommerce migration',
+    'Shopify migration',
+    'Migration SEO',
     'Conversion rate optimization',
     'Server-side tracking',
     'eCommerce management',
+    'Generative engine optimization',
+    'Agentic commerce',
   ],
-  areaServed: ['IT', 'EU', 'US'],
-  sameAs: [
-    'https://www.linkedin.com/company/noprobagency',
-    'https://www.trustpilot.com/review/noprob.agency',
-    'https://clutch.co/profile/noprob-agency',
-    'https://contra.com/noprob_agency_llc',
-  ],
+  areaServed: AREA_SERVED,
+  sameAs: ORGANIZATION_SAME_AS,
 } as const

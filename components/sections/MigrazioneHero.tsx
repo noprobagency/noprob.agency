@@ -5,6 +5,7 @@ import PartnerLogos from '@/components/ui/PartnerLogos'
 import { type Locale } from '@/lib/i18n'
 import { getMigrazioneCopy } from '@/lib/i18n/migrazione'
 import { ROUTE_PATHS } from '@/lib/i18n/routes'
+import { TRUSTPILOT_URL } from '@/lib/site'
 
 export default function MigrazioneHero({ locale = 'it' }: { locale?: Locale }) {
   const d = getMigrazioneCopy(locale).hero
@@ -47,7 +48,12 @@ export default function MigrazioneHero({ locale = 'it' }: { locale?: Locale }) {
 
         {/* Trustpilot badge */}
         <div className="flex flex-col items-center gap-[6px]">
-          <div className="flex items-center gap-[5px]">
+          <a
+            href={TRUSTPILOT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-[5px] no-underline hover:underline"
+          >
             <svg
               width="14"
               height="14"
@@ -64,7 +70,7 @@ export default function MigrazioneHero({ locale = 'it' }: { locale?: Locale }) {
             <span className="font-sans text-[13px] font-medium tracking-[-0.03em] text-np-green-trust">
               Trustpilot
             </span>
-          </div>
+          </a>
           <p className="text-center font-sans text-[12px] font-medium leading-[1.4em] tracking-[-0.04em] text-np-dark">
             {d.trustSectors}
           </p>

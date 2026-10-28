@@ -5,6 +5,7 @@ import FAQ from '@/components/sections/FAQ'
 import CTA from '@/components/sections/CTA'
 import Footer from '@/components/layout/Footer'
 import Hero from '@/components/sections/Hero'
+import HomeGuides from '@/components/sections/HomeGuides'
 import Pricing from '@/components/sections/Pricing'
 import ProblemSection from '@/components/sections/ProblemSection'
 import ResultsCarousel from '@/components/sections/ResultsCarousel'
@@ -29,6 +30,7 @@ export default function HomePage() {
       <Pricing>
         <AiServiceCard locale="en" />
       </Pricing>
+      <HomeGuides locale="en" />
       <FAQ />
       <CTA />
       <Footer />

@@ -55,7 +55,7 @@ const it: DataTeamCopy = {
     label: 'candidatura',
     heading: 'Candidati per il team dedicato',
     subheading: 'Lavoriamo con pochi brand alla volta, per seguirli davvero.',
-    intro: 'Raccontaci il progetto: se siamo in target, ti ricontattiamo per una call.',
+    intro: 'Raccontaci il progetto: se siamo in target, ti ricontattiamo per una videochiamata.',
     fields: {
       name: { label: 'Nome e cognome', placeholder: 'Mario Rossi' },
       email: { label: 'Email aziendale', placeholder: 'nome@brand.com' },
