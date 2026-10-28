@@ -52,7 +52,7 @@ const article: Article = {
     {
       question: 'Does CRO help stores with low traffic?',
       answer:
-        'Yes, with one caveat. With low traffic you work with research-verified best practices instead of quantitative A/B tests. The impact can still be significant because many basic errors (too many claims, unoptimized images, absent social proof) do not require massive data to fix.',
+        'Yes, and here is how. With low traffic you work with research-verified best practices instead of quantitative A/B tests. The impact can still be significant because many basic errors (too many claims, unoptimized images, absent social proof) do not require massive data to fix.',
     },
     {
       question: 'How does CRO compare to investing in advertising?',
@@ -79,7 +79,7 @@ const article: Article = {
     {
       question: 'Il CRO serve anche per chi ha poco traffico?',
       answer:
-        "Sì, ma con un'avvertenza. Con poco traffico si lavora su best practice verificate dalla ricerca invece che su test A/B quantitativi. L'impatto può essere significativo perché molti errori di base (troppi claim, immagini non ottimizzate, social proof assente) si correggono senza bisogno di dati massivi.",
+        "Sì, ed ecco come. Con poco traffico si lavora su best practice verificate dalla ricerca invece che su test A/B quantitativi. L'impatto può essere significativo perché molti errori di base (troppi claim, immagini non ottimizzate, social proof assente) si correggono senza bisogno di dati massivi.",
     },
     {
       question: 'Quanto impatta il CRO rispetto a investire in advertising?',
@@ -341,7 +341,7 @@ const article: Article = {
     { type: 'h3', text: 'Does CRO help stores with low traffic?' },
     {
       type: 'paragraph',
-      text: 'Yes, with one caveat. Running statistically significant A/B tests requires sufficient traffic volume, typically at least a few hundred sessions per variant. With low traffic, you work with research-verified best practices instead of quantitative tests. The impact can still be significant because many basic errors (too many claims, unoptimized images, absent social proof) do not require massive data to fix.',
+      text: 'Yes, and here is how. Running statistically significant A/B tests requires sufficient traffic volume, typically at least a few hundred sessions per variant. With low traffic, you work with research-verified best practices instead of quantitative tests. The impact can still be significant because many basic errors (too many claims, unoptimized images, absent social proof) do not require massive data to fix.',
     },
     { type: 'h3', text: 'How does CRO compare to investing in advertising?' },
     {
@@ -603,7 +603,7 @@ const article: Article = {
     { type: 'h3', text: 'Il CRO serve anche per chi ha poco traffico?' },
     {
       type: 'paragraph',
-      text: "Sì, ma con un'avvertenza. Per fare test A/B statisticamente significativi servono volumi di traffico sufficienti, in genere almeno alcune centinaia di sessioni per variante. Con poco traffico, si lavora su best practice verificate dalla ricerca invece che su test quantitativi. L'impatto può essere significativo anche con volumi modesti, perché molti errori di base (troppi claim, immagini non ottimizzate, social proof assente) si correggono senza bisogno di dati massivi.",
+      text: "Sì, ed ecco come. Per fare test A/B statisticamente significativi servono volumi di traffico sufficienti, in genere almeno alcune centinaia di sessioni per variante. Con poco traffico, si lavora su best practice verificate dalla ricerca invece che su test quantitativi. L'impatto può essere significativo anche con volumi modesti, perché molti errori di base (troppi claim, immagini non ottimizzate, social proof assente) si correggono senza bisogno di dati massivi.",
     },
     { type: 'h3', text: 'Quanto impatta il CRO rispetto a investire in advertising?' },
     {

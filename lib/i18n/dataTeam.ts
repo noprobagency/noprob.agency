@@ -33,7 +33,7 @@ const it: DataTeamCopy = {
     label: 'prezzo',
     heading: 'Il prezzo parte dal costo di una figura.\nCresce solo se lo decidi tu.',
     subheading:
-      'Non c’è un listino: ogni progetto ha esigenze diverse. Si parte da un punto chiaro, nell’ordine di costo di un dipendente. Da lì il team può crescere, ma solo quando insieme decidiamo di aggiungere competenze o spingere su nuove aree. Paghi in base a quanto team è in gioco. Nessun costo a sorpresa.',
+      'Ogni progetto ha esigenze diverse. Si parte da un punto chiaro, nell’ordine di costo di un dipendente. Da lì il team può crescere, ma solo quando insieme decidiamo di aggiungere competenze o spingere su nuove aree. Paghi in base a quanto team è in gioco. Nessun costo a sorpresa.',
     tiers: [],
     priceSuffix: '',
     priceBadge: 'metodo noprobagency',
@@ -149,7 +149,7 @@ const en: DataTeamCopy = {
     label: 'pricing',
     heading: 'The price starts from the cost of one hire.\nIt only grows if you decide so.',
     subheading:
-      'There is no price list: every project has different needs. It starts from a clear point, around the cost of one employee. From there the team can grow, but only when we decide together to add skills or push into new areas. You pay for the team in play. No surprise costs.',
+      'Every project has different needs. It starts from a clear point, around the cost of one employee. From there the team can grow, but only when we decide together to add skills or push into new areas. You pay for the team in play. No surprise costs.',
     tiers: [],
     priceSuffix: '',
     priceBadge: 'noprobagency method',

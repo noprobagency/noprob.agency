@@ -499,7 +499,7 @@ const it: AiCopy = {
       { price: '€2.500', slot: 'Clienti 16-30', tag: 'Prossimo scaglione', state: 'upcoming' },
       { price: '€4.000', slot: 'Dal 31° in poi', tag: 'Prezzo a regime', state: 'upcoming' },
     ],
-    tiersNote: 'Nessun countdown: lo slot resta tuo finché c’è.',
+    tiersNote: 'Lo slot resta tuo finché c’è.',
     card: {
       title: 'AI Accelerator',
       subtitle:
@@ -944,7 +944,7 @@ const en: AiCopy = {
       { price: '€2,500', slot: 'Clients 16-30', tag: 'Next tier', state: 'upcoming' },
       { price: '€4,000', slot: 'From client #31', tag: 'Standard price', state: 'upcoming' },
     ],
-    tiersNote: 'No countdown: the slot is yours as long as it’s available.',
+    tiersNote: 'The slot is yours as long as it’s available.',
     card: {
       title: 'AI Accelerator',
       subtitle:

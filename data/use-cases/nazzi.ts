@@ -112,7 +112,7 @@ export const nazzi: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Le vendite sono cresciute poco, +5,8%, con una spesa pubblicitaria salita dell’8%. Ma la base era diversa: più solida e meno dipendente dalla pubblicità.',
+      text: 'Le vendite sono cresciute del 5,8%, con una spesa pubblicitaria salita dell’8%. La base era diversa: più solida e meno dipendente dalla pubblicità.',
     },
     { type: 'metrics', merValue: '3,2', growthValue: '+5,8%' },
     {
@@ -209,7 +209,7 @@ export const nazzi: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'È online dal 18 settembre 2026. In meno di un mese oltre mille persone hanno fatto il quiz e lasciato la loro email, e ora ricevono messaggi pensati per il loro profilo. È presto per parlare delle vendite del quiz, e non lo facciamo. Ma è una base di contatti che prima non esisteva.',
+      text: 'È online dal 18 settembre 2026. In meno di un mese oltre mille persone hanno fatto il quiz e lasciato la loro email, e ora ricevono messaggi pensati per il loro profilo. È una base di contatti che prima non esisteva.',
     },
     { type: 'cta' },
     { type: 'h2', text: 'Cosa insegna questo caso sulla migrazione a Shopify' },
@@ -349,7 +349,7 @@ export const nazzi: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Sales grew a little, +5.8%, with ad spend up 8%. But the base was different: stronger and less dependent on advertising.',
+      text: 'Sales grew 5.8%, with ad spend up 8%. The base was different: stronger and less dependent on advertising.',
     },
     { type: 'metrics', merValue: '3.2', growthValue: '+5.8%' },
     {
@@ -443,7 +443,7 @@ export const nazzi: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'It has been live since September 18, 2026. In less than a month over a thousand people took the quiz and left their email, and now receive messages written for their profile. It is too early to talk about quiz sales, so we will not. But it is a contact base that did not exist before.',
+      text: 'It has been live since September 18, 2026. In less than a month over a thousand people took the quiz and left their email, and now receive messages written for their profile. It is a contact base that did not exist before.',
     },
     { type: 'cta' },
     { type: 'h2', text: 'What this case teaches about migrating to Shopify' },

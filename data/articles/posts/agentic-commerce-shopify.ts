@@ -104,7 +104,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'We build and migrate Shopify stores at noprob agency (see the [Shopify Launch Sprint](/shopify-migration-sprint)). Since AI shopping agents moved from demo to a channel inside the Shopify admin, store owners ask us the same thing: is this real, and what do I do about it? Our answer: real enough to prepare for, not big enough to rebuild your store around. Below is our view and a plan for this quarter.',
+      text: 'We build and migrate Shopify stores at noprob agency (see the [Shopify Launch Sprint](/shopify-migration-sprint)). Since AI shopping agents moved from demo to a channel inside the Shopify admin, store owners ask us the same thing: is this real, and what do I do about it? Our answer: real enough to prepare for now, with work that also improves the store for people. Below is our view and a plan for this quarter.',
     },
     { type: 'h2', text: 'What does agentic commerce mean for a Shopify store?' },
     {
@@ -184,7 +184,7 @@ const article: Article = {
     { type: 'h3', text: '1. The GEO groundwork' },
     {
       type: 'paragraph',
-      text: 'Start with the data layer in our [guide to GEO for Shopify](/blog/geo-for-shopify): facts written as text, filled-in attributes and metafields, Product markup that matches the page, and shipping and returns on real pages. Then set up measurement: AI channel attribution in the admin orders and ten prompts run by hand every month. We will not repeat those steps. Skip them and an agent never reaches your checkout, because it cannot read your record.',
+      text: 'Start with the data layer in our [guide to GEO for Shopify](/blog/geo-for-shopify): facts written as text, filled-in attributes and metafields, Product markup that matches the page, and shipping and returns on real pages. Then set up measurement: AI channel attribution in the admin orders and ten prompts run by hand every month. Those steps come first. Skip them and an agent never reaches your checkout, because it cannot read your record.',
     },
     { type: 'h3', text: '2. Checkout readiness' },
     {
@@ -251,11 +251,11 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'The Custom AI System is built to be ready for AI agents: catalog and structured data prepared for ChatGPT, Copilot and Google AI Mode, and automatic GEO, so every new product is born with schema and data generated on its own. We publish no speed or conversion number for it.',
+      text: 'The Custom AI System is built to be ready for AI agents: catalog and structured data prepared for ChatGPT, Copilot and Google AI Mode, and automatic GEO, so every new product is born with schema and data generated on its own.',
     },
     {
       type: 'paragraph',
-      text: 'Our evidence is two real migrations. [Integratori DTC Nazzi](/use-cases/integratori-nazzi-dtc-shopify) moved from WooCommerce, and its live Shopify store publishes the agentic discovery sitemap (checked on 13 October 2026). It sold 105% more online in its first 85 days on Shopify than in the same days of 2025. The case shows what the migration did. [Cumini](/use-cases/cumini-luxury-fashion-ecommerce) moved from a proprietary platform tied to its ERP. For how we migrate, read the [guide to migrating to Shopify](/shopify-migration).',
+      text: 'Two real migrations show how we work. [Integratori DTC Nazzi](/use-cases/integratori-nazzi-dtc-shopify) moved from WooCommerce, and its live Shopify store publishes the agentic discovery sitemap (checked on 13 October 2026). It sold 105% more online in its first 85 days on Shopify than in the same days of 2025. The case shows what the migration did. [Cumini](/use-cases/cumini-luxury-fashion-ecommerce) moved from a proprietary platform tied to its ERP. For how we migrate, read the [guide to migrating to Shopify](/shopify-migration).',
     },
     {
       type: 'paragraph',
@@ -309,7 +309,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Costruiamo e migriamo store Shopify come noprob agency (vedi lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify)). Da quando gli agenti AI per lo shopping sono un canale dentro l’admin di Shopify, chi ha uno store ci chiede: è vero, e io cosa faccio? La nostra risposta: abbastanza vera da prepararsi, non abbastanza grande da rifare lo store. Qui sotto la nostra lettura e un piano per questo trimestre.',
+      text: 'Costruiamo e migriamo store Shopify come noprob agency (vedi lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify)). Da quando gli agenti AI per lo shopping sono un canale dentro l’admin di Shopify, chi ha uno store ci chiede: è vero, e io cosa faccio? La nostra risposta: abbastanza vera da prepararsi ora, con un lavoro che migliora lo store anche per le persone. Qui sotto la nostra lettura e un piano per questo trimestre.',
     },
     { type: 'h2', text: 'Cosa significa agentic commerce per uno store Shopify?' },
     {
@@ -389,7 +389,7 @@ const article: Article = {
     { type: 'h3', text: '1. Le basi della GEO' },
     {
       type: 'paragraph',
-      text: 'Parti dal livello dati della nostra [guida alla GEO per Shopify](/it/blog/geo-seo-shopify): fatti scritti come testo, attributi e metafield compilati, markup Product coerente con la pagina, spedizioni e resi in pagine vere. Poi imposta la misurazione: attribuzione del canale AI negli ordini dell’admin e dieci prompt a mano ogni mese. Non ripetiamo quei passaggi. Se li salti l’agente non arriva mai al checkout, perché non riesce a leggere la tua scheda.',
+      text: 'Parti dal livello dati della nostra [guida alla GEO per Shopify](/it/blog/geo-seo-shopify): fatti scritti come testo, attributi e metafield compilati, markup Product coerente con la pagina, spedizioni e resi in pagine vere. Poi imposta la misurazione: attribuzione del canale AI negli ordini dell’admin e dieci prompt a mano ogni mese. Quei passaggi vengono per primi. Se li salti l’agente non arriva mai al checkout, perché non riesce a leggere la tua scheda.',
     },
     { type: 'h3', text: '2. Checkout pronto' },
     {
@@ -456,11 +456,11 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Il Custom AI System è pensato per gli agenti AI: catalogo e dati strutturati preparati per ChatGPT, Copilot e Google AI Mode, e GEO automatico, così ogni nuovo prodotto nasce con schema e dati generati in automatico. Non pubblichiamo numeri di velocità o conversione.',
+      text: 'Il Custom AI System è pensato per gli agenti AI: catalogo e dati strutturati preparati per ChatGPT, Copilot e Google AI Mode, e GEO automatico, così ogni nuovo prodotto nasce con schema e dati generati in automatico.',
     },
     {
       type: 'paragraph',
-      text: 'Le nostre prove sono due migrazioni. [Integratori DTC Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify) è passato da WooCommerce, e il suo store Shopify online pubblica la sitemap di agentic discovery (verificato il 13 ottobre 2026). Ha venduto online il 105% in più nei primi 85 giorni su Shopify rispetto agli stessi giorni del 2025. Il caso mostra cosa ha fatto la migrazione. [Cumini](/it/casi-studio/cumini-luxury-fashion-ecommerce) è passato da una piattaforma proprietaria legata al gestionale. Per come migriamo, leggi la [guida alla migrazione a Shopify](/it/migrazione-shopify).',
+      text: 'Due migrazioni reali mostrano come lavoriamo. [Integratori DTC Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify) è passato da WooCommerce, e il suo store Shopify online pubblica la sitemap di agentic discovery (verificato il 13 ottobre 2026). Ha venduto online il 105% in più nei primi 85 giorni su Shopify rispetto agli stessi giorni del 2025. Il caso mostra cosa ha fatto la migrazione. [Cumini](/it/casi-studio/cumini-luxury-fashion-ecommerce) è passato da una piattaforma proprietaria legata al gestionale. Per come migriamo, leggi la [guida alla migrazione a Shopify](/it/migrazione-shopify).',
     },
     {
       type: 'paragraph',

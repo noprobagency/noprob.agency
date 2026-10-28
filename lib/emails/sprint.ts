@@ -37,7 +37,7 @@ export function buildSprintWelcomeEmail({
     ? {
         title: 'Candidatura ricevuta',
         heading: `Ciao ${esc(name)}, abbiamo ricevuto la candidatura per ${esc(storeUrl)}.`,
-        body: 'Leggo ogni candidatura di persona e ti rispondo entro 48 ore con lo scaglione confermato e la prima data di kickoff disponibile. Se la risposta è no, te lo dico lo stesso.',
+        body: 'Leggo ogni candidatura di persona e ti rispondo entro 48 ore con lo scaglione confermato e la prima data di kickoff disponibile.',
         tierLabel: 'Il tuo scaglione stimato',
         tier: `Tier ${tierId}: ${price} in 4 rate da ${installment}, IVA esclusa. Lo confermiamo in call.`,
         addon: 'Da quello che ci hai detto potrebbero servire add-on a prezzo fisso (prodotti, lingue o gestionale oltre i limiti dello scaglione): te li dico prima della firma.',
@@ -54,7 +54,7 @@ export function buildSprintWelcomeEmail({
     : {
         title: 'Application received',
         heading: `Hi ${esc(name)}, we received your application for ${esc(storeUrl)}.`,
-        body: 'I read every application myself and reply within 48 hours with your confirmed tier and the first available kickoff date. If the answer is no, I tell you anyway.',
+        body: 'I read every application myself and reply within 48 hours with your confirmed tier and the first available kickoff date.',
         tierLabel: 'Your estimated tier',
         tier: `Tier ${tierId}: ${price} in 4 installments of ${installment}, VAT excluded. We confirm it on the call.`,
         addon: 'From what you told us, fixed-price add-ons may apply (products, languages or ERP beyond the tier caps): I tell you before you sign.',

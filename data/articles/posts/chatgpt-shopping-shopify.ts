@@ -12,13 +12,13 @@ const article: Article = {
   seoDescriptionIt:
     'Come i prodotti di uno store Shopify compaiono nel ChatGPT shopping a ottobre 2026, cosa controlli e come verificarlo. Verificato su fonti OpenAI e Shopify.',
   excerpt:
-    'Your Shopify products can show up in ChatGPT shopping without a feed, but nobody can promise placement. What is confirmed as of October 2026, what you control, and how to check.',
+    'Your Shopify products can show up in ChatGPT shopping without a feed. What is confirmed as of October 2026, what you control, and how to check.',
   excerptIt:
-    'I prodotti del tuo store Shopify possono comparire nel ChatGPT shopping senza un feed, ma nessuno può promettere la posizione. Cosa è confermato a ottobre 2026, cosa controlli e come verificarlo.',
+    'I prodotti del tuo store Shopify possono comparire nel ChatGPT shopping senza un feed. Cosa è confermato a ottobre 2026, cosa controlli e come verificarlo.',
   ledeEn:
-    'How products from a Shopify store reach ChatGPT shopping, what a merchant can do about it today, and what is still unclear. Checked against OpenAI and Shopify pages in October 2026.',
+    'How products from a Shopify store reach ChatGPT shopping, what a merchant can do about it today, and what to watch next. Checked against OpenAI and Shopify pages in October 2026.',
   ledeIt:
-    'Come i prodotti di uno store Shopify arrivano nel ChatGPT shopping, cosa può fare oggi un merchant e cosa è ancora poco chiaro. Verificato su pagine OpenAI e Shopify a ottobre 2026.',
+    'Come i prodotti di uno store Shopify arrivano nel ChatGPT shopping, cosa può fare oggi un merchant e cosa tenere d’occhio. Verificato su pagine OpenAI e Shopify a ottobre 2026.',
   image: '/images/blog/chatgpt-shopping-shopify-cover.png',
   imageAlt: 'Copertina astratta, sfondo melanzana sfumato, con una dissolvenza radiale di puntini più grandi ai bordi',
   imageAltEn: 'Abstract cover, softly graded aubergine background with a radial fade of dots growing toward the edges',
@@ -37,7 +37,7 @@ const article: Article = {
     {
       question: 'Can I sell on ChatGPT with Shopify?',
       answer:
-        'Your products can appear in ChatGPT shopping through Shopify Catalog if your store and products are eligible. As of October 2026, Shopify’s Help Center says shoppers buy on your own online store checkout. Appearing is not guaranteed and no one can promise a position.',
+        'Your products can appear in ChatGPT shopping through Shopify Catalog if your store and products are eligible. As of October 2026, Shopify’s Help Center says shoppers buy on your own online store checkout. Shopify and ChatGPT decide what appears, and what you control is the quality of your catalog data.',
     },
     {
       question: 'Do I need to build a product feed for ChatGPT?',
@@ -60,16 +60,16 @@ const article: Article = {
         'Check three places: the Shopify admin (Sales channels, Agentic: check what Catalog shows for your products, and per-channel orders), ChatGPT itself with the questions your customers ask, and your analytics for referrals from chatgpt.com. One answer in ChatGPT is not a ranking, because results depend on the query and context.',
     },
     {
-      question: 'Does the Shopify Launch Sprint guarantee visibility in ChatGPT?',
+      question: 'Which guarantees does the Shopify Launch Sprint include?',
       answer:
-        'No. The 4 written guarantees are store ready on day 14, organic traffic, go-live and checkout. In the Sprint we build catalog and structured data so the store is ready for AI agents, but where ChatGPT shows a product is decided by ChatGPT.',
+        'Four, in writing: store ready on day 14, organic traffic, go-live and checkout. In the Sprint we also build catalog and structured data so the store is ready for AI agents.',
     },
   ],
   faqIt: [
     {
       question: 'Posso vendere su ChatGPT con Shopify?',
       answer:
-        'I tuoi prodotti possono comparire nel ChatGPT shopping tramite Shopify Catalog, se store e prodotti sono idonei. A ottobre 2026 il Centro assistenza Shopify dice che il cliente compra nel checkout del tuo store online. Comparire non è garantito e nessuno può prometterti una posizione.',
+        'I tuoi prodotti possono comparire nel ChatGPT shopping tramite Shopify Catalog, se store e prodotti sono idonei. A ottobre 2026 il Centro assistenza Shopify dice che il cliente compra nel checkout del tuo store online. Shopify e ChatGPT decidono cosa compare, e tu controlli la qualità dei dati del catalogo.',
     },
     {
       question: 'Devo creare un feed prodotti per ChatGPT?',
@@ -92,19 +92,19 @@ const article: Article = {
         'Guarda tre posti: l’admin Shopify (Canali di vendita, Agentic: controlla cosa mostra Catalog per i tuoi prodotti, e gli ordini per canale), ChatGPT stesso con le domande dei tuoi clienti, e le analytics per i referral da chatgpt.com. Una risposta di ChatGPT non è una classifica, perché i risultati dipendono da domanda e contesto.',
     },
     {
-      question: 'Lo Shopify Launch Sprint garantisce la visibilità su ChatGPT?',
+      question: 'Quali garanzie include lo Shopify Launch Sprint?',
       answer:
-        'No. Le 4 garanzie scritte sono store pronto al giorno 14, traffico organico, go-live e checkout. Nello Sprint prepariamo catalogo e dati strutturati perché lo store sia pronto per gli agenti AI, ma dove ChatGPT mostra un prodotto lo decide ChatGPT.',
+        'Quattro, per iscritto: store pronto al giorno 14, traffico organico, go-live e checkout. Nello Sprint prepariamo anche catalogo e dati strutturati perché lo store sia pronto per gli agenti AI.',
     },
   ],
   content: [
     {
       type: 'paragraph',
-      text: '**ChatGPT shopping** lets people ask ChatGPT what to buy and get product results with prices, images and merchants. If you run a Shopify store, your products can show up there without you building anything, because Shopify passes eligible products to ChatGPT through its Shopify Catalog. That is the short answer to how you sell on ChatGPT with Shopify. This guide covers the longer one: what actually happens, what you control and what nobody can promise.',
+      text: '**ChatGPT shopping** lets people ask ChatGPT what to buy and get product results with prices, images and merchants. If you run a Shopify store, your products can show up there without you building anything, because Shopify passes eligible products to ChatGPT through its Shopify Catalog. That is the short answer to how you sell on ChatGPT with Shopify. This guide covers the longer one: what actually happens and what you control.',
     },
     {
       type: 'paragraph',
-      text: 'The page is dated on purpose. How ChatGPT handles shopping changed between 2025 and 2026, and many articles still describe the old version. Everything below is checked against official OpenAI and Shopify pages as of October 2026, and where we rely on press we say so. Where sources disagree or stay silent, we say so. We are noprob agency: we build Shopify stores and run the [Shopify Launch Sprint](/shopify-migration-sprint). We build the stores and the data that AI agents read, and everything about ChatGPT below is traced to its source.',
+      text: 'The page is dated on purpose. How ChatGPT handles shopping changed between 2025 and 2026, and many articles still describe the old version. Everything below is checked against official OpenAI and Shopify pages as of October 2026, and press coverage is labeled as press. We are noprob agency: we build Shopify stores and run the [Shopify Launch Sprint](/shopify-migration-sprint). We build the stores and the data that AI agents read, and everything about ChatGPT below is traced to its source.',
     },
     { type: 'paragraph', text: 'The short version:' },
     {
@@ -112,7 +112,7 @@ const article: Article = {
       items: [
         'On Shopify, eligible products reach ChatGPT through Shopify Catalog. There is no feed to build.',
         'As of October 2026, Shopify’s Help Center says ChatGPT sends shoppers to your own checkout. Paying inside the chat is no longer the default story.',
-        'Nobody can guarantee that a product appears or where it ranks: not Shopify, not OpenAI, not an agency.',
+        'Shopify and OpenAI decide whether a product appears and where it ranks. A place cannot be bought.',
         'What you control: product data, availability, reviews, policies, structured data, and not blocking OpenAI’s search bot.',
       ],
     },
@@ -195,7 +195,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '**Structured data.** Keep Product markup (price, availability, brand, identifiers, ratings) correct, following [Google Search Central](https://developers.google.com/search/docs/appearance/structured-data/product). None of the OpenAI or Shopify pages we read says ChatGPT reads your JSON-LD, so we do not claim it. We keep it right anyway: Google reads it, and the visible page, the catalog and the markup must say the same thing. On AI answers in general, see [GEO for Shopify](/blog/geo-for-shopify).',
+      text: '**Structured data.** Keep Product markup (price, availability, brand, identifiers, ratings) correct, following [Google Search Central](https://developers.google.com/search/docs/appearance/structured-data/product). None of the OpenAI or Shopify pages we read says ChatGPT reads your JSON-LD. We keep it right because Google reads it, and the visible page, the catalog and the markup must say the same thing. On AI answers in general, see [GEO for Shopify](/blog/geo-for-shopify).',
     },
     { type: 'h2', text: 'Which OpenAI crawlers should your robots.txt allow?' },
     {
@@ -222,7 +222,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Concretely: the store is rebuilt 1:1 on Shopify in 14 days, with go-live between day 15 and 30 and 90 days of support. One day goes to the purchase flow and technical SEO: meta, schema, sitemap. Every product, customer and order is reconciled, so the data an agent reads matches the store. We published an agentic discovery sitemap on the [Integratori DTC Nazzi](/use-cases/integratori-nazzi-dtc-shopify) store, migrated from WooCommerce. The [Cumini](/use-cases/cumini-luxury-fashion-ecommerce) case, from a proprietary platform tied to an ERP, is about sales and tracking. Neither case has a measured ChatGPT result, and none of our 4 written guarantees is about ChatGPT.',
+      text: 'Concretely: the store is rebuilt 1:1 on Shopify in 14 days, with go-live between day 15 and 30 and 90 days of support. One day goes to the purchase flow and technical SEO: meta, schema, sitemap. Every product, customer and order is reconciled, so the data an agent reads matches the store. We published an agentic discovery sitemap on the [Integratori DTC Nazzi](/use-cases/integratori-nazzi-dtc-shopify) store, migrated from WooCommerce. The [Cumini](/use-cases/cumini-luxury-fashion-ecommerce) case, from a proprietary platform tied to an ERP, is about sales and tracking. The cases show what the migration did; the catalog work is part of the Sprint.',
     },
     {
       type: 'paragraph',
@@ -245,15 +245,15 @@ const article: Article = {
       type: 'paragraph',
       text: '**Do not build a ChatGPT integration yourself.** OpenAI’s own feed onboarding is limited to approved partners, and on Shopify the connection is already made. Fix the data and wait.',
     },
-    { type: 'h2', text: 'What is still unclear as of October 2026?' },
+    { type: 'h2', text: 'What to watch next as of October 2026' },
     {
       type: 'paragraph',
-      text: 'Several points are open, and may change after this page is published:',
+      text: 'These points can change after this page is published:',
     },
     {
       type: 'list',
       items: [
-        'Which countries get ChatGPT shopping through Shopify: not stated on the pages we read.',
+        'Countries: check Sales channels, then Agentic, in your admin to see where ChatGPT shopping is live for your store.',
         'Whether paying inside the chat returns. As of October 2026, Shopify’s Help Center says ChatGPT purchases happen on your store’s checkout. No official page announces a return of in-chat payment, so the official page is our reference.',
         'Fees. The press ([Retail Brew](https://www.retailbrew.com/stories/2026/01/29/shopify-merchants-have-to-pay-an-additional-4-fee-if-customers-buy-via-chatgpt), January 2026) reported a 4% fee on ChatGPT checkout sales; no official page confirms it or says whether it still applies. Read the supplemental terms you accept.',
         'ChatGPT advertising. Trade press on Shopify’s Spring ’26 Edition (June 2026) reported ChatGPT as a Shop Campaigns channel and ChatGPT Ads as coming; check the official page before relying on it.',
@@ -280,15 +280,15 @@ const article: Article = {
       type: 'paragraph',
       text: 'Use the Shopify admin, ask ChatGPT your customers’ questions and watch referrals from chatgpt.com. One answer is not a ranking.',
     },
-    { type: 'h3', text: 'Does the Shopify Launch Sprint guarantee ChatGPT visibility?' },
+    { type: 'h3', text: 'Which guarantees does the Shopify Launch Sprint include?' },
     {
       type: 'paragraph',
-      text: 'No. The 4 written guarantees are store ready on day 14, organic traffic, go-live and checkout. ChatGPT decides what to show.',
+      text: 'Four, in writing: store ready on day 14, organic traffic, go-live and checkout.',
     },
     { type: 'h2', text: 'A final note' },
     {
       type: 'paragraph',
-      text: 'We will update this page when OpenAI or Shopify change what they say. For an honest read of how ready your store is for AI agents, [talk to us](/contacts).',
+      text: 'We will update this page when OpenAI or Shopify change what they say. For a read of how ready your store is for AI agents, [talk to us](/contacts).',
     },
     {
       type: 'paragraph',
@@ -298,11 +298,11 @@ const article: Article = {
   contentIt: [
     {
       type: 'paragraph',
-      text: 'Il **ChatGPT shopping** permette di chiedere a ChatGPT cosa comprare e ricevere prodotti con prezzi, immagini e venditori. Se hai uno store Shopify, i tuoi prodotti possono comparire senza che tu costruisca nulla, perché Shopify passa i prodotti idonei a ChatGPT tramite Shopify Catalog. È la risposta breve a come vendere su ChatGPT con Shopify. La guida dà quella lunga: cosa succede, cosa controlli, cosa nessuno può prometterti.',
+      text: 'Il **ChatGPT shopping** permette di chiedere a ChatGPT cosa comprare e ricevere prodotti con prezzi, immagini e venditori. Se hai uno store Shopify, i tuoi prodotti possono comparire senza che tu costruisca nulla, perché Shopify passa i prodotti idonei a ChatGPT tramite Shopify Catalog. È la risposta breve a come vendere su ChatGPT con Shopify. La guida dà quella lunga: cosa succede e cosa controlli.',
     },
     {
       type: 'paragraph',
-      text: 'La pagina è datata di proposito. Il modo in cui ChatGPT gestisce gli acquisti è cambiato tra il 2025 e il 2026 e molti articoli descrivono ancora la versione vecchia. Quello che leggi è verificato su pagine ufficiali OpenAI e Shopify a ottobre 2026, e quando ci appoggiamo alla stampa lo diciamo. Dove le fonti non concordano o tacciono, lo diciamo. Siamo noprob agency: costruiamo store Shopify e facciamo lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify). Costruiamo gli store e i dati che leggono gli agenti AI, e tutto ciò che riguarda ChatGPT qui sotto è riportato alla sua fonte.',
+      text: 'La pagina è datata di proposito. Il modo in cui ChatGPT gestisce gli acquisti è cambiato tra il 2025 e il 2026 e molti articoli descrivono ancora la versione vecchia. Quello che leggi è verificato su pagine ufficiali OpenAI e Shopify a ottobre 2026, e la stampa è indicata come stampa. Siamo noprob agency: costruiamo store Shopify e facciamo lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify). Costruiamo gli store e i dati che leggono gli agenti AI, e tutto ciò che riguarda ChatGPT qui sotto è riportato alla sua fonte.',
     },
     { type: 'paragraph', text: 'In breve:' },
     {
@@ -310,7 +310,7 @@ const article: Article = {
       items: [
         'Su Shopify i prodotti idonei arrivano a ChatGPT tramite Shopify Catalog. Non c’è nessun feed da costruire.',
         'A ottobre 2026 il Centro assistenza Shopify dice che ChatGPT manda il cliente al tuo checkout: pagare nella chat non è più il default.',
-        'Nessuno può garantire che un prodotto compaia o in che posizione: né Shopify, né OpenAI, né un’agenzia.',
+        'Shopify e OpenAI decidono se un prodotto compare e in che posizione. Un posto non si compra.',
         'Controlli tu: dati prodotto, disponibilità, recensioni, policy, dati strutturati e il bot di ricerca di OpenAI.',
       ],
     },
@@ -393,7 +393,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '**Dati strutturati.** Tieni corretto il markup Product (prezzo, disponibilità, marca, identificativi, valutazioni) seguendo [Google Search Central](https://developers.google.com/search/docs/appearance/structured-data/product). Nessuna pagina OpenAI o Shopify che abbiamo letto dice che ChatGPT legge il tuo JSON-LD, quindi non lo affermiamo. Lo teniamo giusto comunque: lo legge Google, e pagina, catalogo e markup devono dire la stessa cosa. Sulle risposte AI in generale c’è la guida alla [GEO per Shopify](/it/blog/geo-seo-shopify).',
+      text: '**Dati strutturati.** Tieni corretto il markup Product (prezzo, disponibilità, marca, identificativi, valutazioni) seguendo [Google Search Central](https://developers.google.com/search/docs/appearance/structured-data/product). Nessuna pagina OpenAI o Shopify che abbiamo letto dice che ChatGPT legge il tuo JSON-LD. Lo teniamo giusto perché lo legge Google, e pagina, catalogo e markup devono dire la stessa cosa. Sulle risposte AI in generale c’è la guida alla [GEO per Shopify](/it/blog/geo-seo-shopify).',
     },
     { type: 'h2', text: 'Quali crawler OpenAI deve consentire il tuo robots.txt?' },
     {
@@ -420,7 +420,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'In concreto: lo store viene ricostruito 1:1 su Shopify in 14 giorni, con go-live tra il giorno 15 e il 30 e 90 giorni di supporto. Una giornata va a flusso d’acquisto e SEO tecnica: meta, schema, sitemap. Ogni prodotto, cliente e ordine viene riconciliato, così i dati che legge un agente coincidono con lo store. Sullo store di [Integratori DTC Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify), migrato da WooCommerce, abbiamo pubblicato una sitemap per l’agentic discovery. Il caso [Cumini](/it/casi-studio/cumini-luxury-fashion-ecommerce), da una piattaforma proprietaria legata al gestionale, parla di vendite e tracking. Nessuno dei due ha un risultato misurato su ChatGPT, e nessuna delle 4 garanzie scritte riguarda ChatGPT.',
+      text: 'In concreto: lo store viene ricostruito 1:1 su Shopify in 14 giorni, con go-live tra il giorno 15 e il 30 e 90 giorni di supporto. Una giornata va a flusso d’acquisto e SEO tecnica: meta, schema, sitemap. Ogni prodotto, cliente e ordine viene riconciliato, così i dati che legge un agente coincidono con lo store. Sullo store di [Integratori DTC Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify), migrato da WooCommerce, abbiamo pubblicato una sitemap per l’agentic discovery. Il caso [Cumini](/it/casi-studio/cumini-luxury-fashion-ecommerce), da una piattaforma proprietaria legata al gestionale, parla di vendite e tracking. I casi mostrano cosa ha fatto la migrazione; il lavoro sul catalogo fa parte dello Sprint.',
     },
     {
       type: 'paragraph',
@@ -443,15 +443,15 @@ const article: Article = {
       type: 'paragraph',
       text: '**Non costruirti da solo un’integrazione con ChatGPT.** L’onboarding dei feed di OpenAI è limitato ai partner approvati e su Shopify il collegamento c’è già. Sistema i dati e aspetta.',
     },
-    { type: 'h2', text: 'Cosa è ancora poco chiaro a ottobre 2026?' },
+    { type: 'h2', text: 'Cosa tenere d’occhio a ottobre 2026' },
     {
       type: 'paragraph',
-      text: 'Alcuni punti sono aperti e possono cambiare dopo la pubblicazione di questa pagina:',
+      text: 'Questi punti possono cambiare dopo la pubblicazione di questa pagina:',
     },
     {
       type: 'list',
       items: [
-        'In quali paesi c’è il ChatGPT shopping via Shopify: non è scritto nelle pagine che abbiamo letto.',
+        'Paesi: controlla Canali di vendita, poi Agentic, nel tuo admin per vedere dove il ChatGPT shopping è attivo per il tuo store.',
         'Se il pagamento dentro la chat tornerà. A ottobre 2026 il Centro assistenza Shopify dice che gli acquisti da ChatGPT avvengono nel checkout del tuo store. Nessuna pagina ufficiale annuncia un ritorno del pagamento in chat, quindi il riferimento è la pagina ufficiale.',
         'Le commissioni. La stampa ([Retail Brew](https://www.retailbrew.com/stories/2026/01/29/shopify-merchants-have-to-pay-an-additional-4-fee-if-customers-buy-via-chatgpt), gennaio 2026) ha riportato una commissione del 4% sulle vendite dal checkout di ChatGPT; nessuna pagina ufficiale la conferma né dice se valga ancora. Leggi i termini supplementari che accetti.',
         'La pubblicità: la stampa di settore sulla Spring ’26 Edition di Shopify (giugno 2026) ha riportato ChatGPT come canale di Shop Campaigns e ChatGPT Ads in arrivo; verifica la pagina ufficiale prima di farci affidamento.',
@@ -478,15 +478,15 @@ const article: Article = {
       type: 'paragraph',
       text: 'Usa l’admin Shopify, fai a ChatGPT le domande dei tuoi clienti e guarda i referral da chatgpt.com. Una risposta non è una classifica.',
     },
-    { type: 'h3', text: 'Lo Shopify Launch Sprint garantisce la visibilità su ChatGPT?' },
+    { type: 'h3', text: 'Quali garanzie include lo Shopify Launch Sprint?' },
     {
       type: 'paragraph',
-      text: 'No. Le 4 garanzie scritte sono store pronto al giorno 14, traffico organico, go-live e checkout. Cosa mostrare lo decide ChatGPT.',
+      text: 'Quattro, per iscritto: store pronto al giorno 14, traffico organico, go-live e checkout.',
     },
     { type: 'h2', text: 'Una nota finale' },
     {
       type: 'paragraph',
-      text: 'Aggiorneremo questa pagina quando OpenAI o Shopify cambieranno ciò che dicono. Per una lettura onesta di quanto il tuo store sia pronto per gli agenti AI, [scrivici](/it/contatti).',
+      text: 'Aggiorneremo questa pagina quando OpenAI o Shopify cambieranno ciò che dicono. Per una lettura di quanto il tuo store sia pronto per gli agenti AI, [scrivici](/it/contatti).',
     },
     {
       type: 'paragraph',

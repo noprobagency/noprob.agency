@@ -70,7 +70,7 @@ const article: Article = {
     {
       question: 'Serve la partita IVA per usare Shopify?',
       answer:
-        "Per aprire un account e fare una prova, no. Per vendere professionalmente e ricevere pagamenti in modo continuativo, la legge italiana richiede la partita IVA per chi esercita attività commerciale. Stiamo preparando un articolo dedicato a questo tema con tutti i casi pratici.",
+        "Per aprire un account e fare una prova, no. Per vendere professionalmente e ricevere pagamenti in modo continuativo, la legge italiana richiede la partita IVA per chi esercita attività commerciale.",
     },
     {
       question: 'Qual è la differenza tra Shopify e Shopify Plus?',
@@ -231,7 +231,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: "Our honest assessment: for B2C brands focused on growth, Shopify wins almost every time. WooCommerce makes sense in specific cases: very limited budget, a dedicated internal technical team, or deep customization requirements that the Shopify ecosystem does not cover.",
+      text: "Our assessment: for B2C brands focused on growth, Shopify wins almost every time. WooCommerce makes sense in specific cases: very limited budget, a dedicated internal technical team, or deep customization requirements that the Shopify ecosystem does not cover.",
     },
     {
       type: 'paragraph',
@@ -286,7 +286,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'If you are evaluating a migration, see [how we work on Shopify migrations](/shopify-migration) or the [Shopify Launch Sprint](/shopify-migration-sprint): a fixed calendar, a public price and 4 written guarantees. Or [reach out directly](/contacts) and we will give you an honest assessment of your situation.',
+      text: 'If you are evaluating a migration, see [how we work on Shopify migrations](/shopify-migration) or the [Shopify Launch Sprint](/shopify-migration-sprint): a fixed calendar, a public price and 4 written guarantees. Or [reach out directly](/contacts) and we will give you our read of your situation.',
     },
     { type: 'h2', text: 'Is Shopify Worth It? The Honest Assessment' },
     {
@@ -335,7 +335,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Understanding both sides is important before committing. If your business model requires extensive B2B logic, deep ERP integration without a connector layer, or a checkout experience that deviates significantly from standard ecommerce patterns, Shopify may not be the right fit regardless of its other advantages.',
+      text: 'Understanding both sides is important before committing. Shopify gives the most when the store sells to consumers, the checkout follows standard ecommerce patterns and the ERP connects through a connector layer.',
     },
     { type: 'h2', text: 'How to Get Started: 5 Steps That Actually Matter' },
     {
@@ -426,15 +426,15 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'The useful question is not "what is Shopify" but "is Shopify the right fit for my specific situation?" If you have an existing ecommerce on another platform and are evaluating migration, or if you are starting from scratch with a serious project, we can help you make that assessment honestly.',
+      text: 'The useful question is not "what is Shopify" but "is Shopify the right fit for my specific situation?" If you have an existing ecommerce on another platform and are evaluating migration, or if you are starting from scratch with a serious project, we can help you make that assessment with your numbers.',
     },
     {
       type: 'paragraph',
-      text: 'We do not push toward a solution if it is not the right one. That is not how we build partnerships that last four or more years.',
+      text: 'We recommend Shopify when your numbers support it: that is how our partnerships last four years and more.',
     },
     {
       type: 'paragraph',
-      text: 'If you already know Shopify is the right move and want a structured, risk-free transition, the [Shopify Launch Sprint](/shopify-migration-sprint) gives you a fixed-calendar migration with a public price and 4 written guarantees.',
+      text: 'If you already know Shopify is the right move and want a structured, fixed-calendar transition, the [Shopify Launch Sprint](/shopify-migration-sprint) gives you a migration with a public price and 4 written guarantees.',
     },
     {
       type: 'paragraph',
@@ -563,7 +563,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Per un approfondimento completo, stiamo preparando una guida dedicata ai costi reali di Shopify.',
+      text: 'Per un approfondimento sui costi, leggi [quanto costa migrare a Shopify](/it/blog/costo-migrazione-shopify).',
     },
     { type: 'h2', text: 'Shopify vs le alternative' },
     {
@@ -597,7 +597,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Stiamo preparando un confronto completo WooCommerce vs Shopify con dati e casi reali. Nel frattempo, se stai valutando una migrazione, puoi [parlarci direttamente](/it/contatti).',
+      text: 'Il confronto completo con dati e casi reali è nell’articolo [Shopify o WooCommerce](/it/blog/shopify-o-woocommerce). Se stai valutando una migrazione, puoi [parlarci direttamente](/it/contatti).',
     },
     { type: 'h3', text: 'Shopify vs piattaforme con gestionale ERP integrato' },
     {
@@ -648,7 +648,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Se stai valutando una migrazione, guarda [come lavoriamo sulle migrazioni a Shopify](/it/migrazione-shopify) o lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify): calendario fisso, prezzo pubblico e 4 garanzie scritte. Oppure [scrivici](/it/contatti) e ti diciamo la nostra valutazione onesta.',
+      text: 'Se stai valutando una migrazione, guarda [come lavoriamo sulle migrazioni a Shopify](/it/migrazione-shopify) o lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify): calendario fisso, prezzo pubblico e 4 garanzie scritte. Oppure [scrivici](/it/contatti) e ti diamo la nostra valutazione della tua situazione.',
     },
     { type: 'h2', text: 'Per chi è adatto Shopify (e per chi no)' },
     {
@@ -704,7 +704,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Stiamo preparando una guida dedicata al tracking server-side su Shopify con Stape, che è il metodo che usiamo per i brand che seguiamo. Il risultato su uno store fashion che seguiamo è un tracking score di 92/100 nell’audit (da 31/100 prima della migrazione), con un impatto diretto sulle campagne Meta.',
+      text: 'Il tracking server-side su Shopify con Stape è il metodo che usiamo per i brand che seguiamo. Il risultato su uno store fashion che seguiamo è un tracking score di 92/100 nell’audit (da 31/100 prima della migrazione), con un impatto diretto sulle campagne Meta.',
     },
     { type: 'h2', text: 'Quanto costa davvero Shopify' },
     {
@@ -751,7 +751,7 @@ const article: Article = {
     { type: 'h3', text: 'Serve la partita IVA per usare Shopify?' },
     {
       type: 'paragraph',
-      text: 'Per aprire un account e fare una prova, no. Per vendere professionalmente e ricevere pagamenti in modo continuativo, la legge italiana richiede la partita IVA per chi esercita attività commerciale. Stiamo preparando un articolo dedicato a questo tema con tutti i casi pratici.',
+      text: 'Per aprire un account e fare una prova, no. Per vendere professionalmente e ricevere pagamenti in modo continuativo, la legge italiana richiede la partita IVA per chi esercita attività commerciale.',
     },
     { type: 'h3', text: 'Qual è la differenza tra Shopify e Shopify Plus?' },
     {
@@ -774,7 +774,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Se hai già un eCommerce su un\'altra piattaforma e stai valutando di migrare, o stai partendo da zero con un progetto serio, possiamo aiutarti a fare la valutazione corretta senza spingere verso una soluzione se non è quella giusta.',
+      text: 'Se hai già un eCommerce su un\'altra piattaforma e stai valutando di migrare, o stai partendo da zero con un progetto serio, possiamo aiutarti a fare la valutazione corretta. Ti diciamo con i numeri quando Shopify è la scelta giusta.',
     },
     {
       type: 'paragraph',
@@ -782,7 +782,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Se sai già che Shopify è la direzione giusta e vuoi una transizione strutturata e senza rischi, lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) ti dà una migrazione a calendario fisso, con prezzo pubblico e 4 garanzie scritte.',
+      text: 'Se sai già che Shopify è la direzione giusta e vuoi una transizione strutturata a calendario fisso, lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) ti dà una migrazione con prezzo pubblico e 4 garanzie scritte.',
     },
     {
       type: 'paragraph',

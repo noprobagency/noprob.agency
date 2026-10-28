@@ -8,17 +8,17 @@ const article: Article = {
   seoTitle: 'Squarespace or Shopify: When to Move (2026)',
   seoTitleIt: 'Squarespace o Shopify: quando passare (2026)',
   seoDescription:
-    'Squarespace or Shopify for selling online: who should stay, seven questions that show you have outgrown Squarespace, and how to move without losing your look.',
+    'Squarespace or Shopify for selling online: seven questions that show you have outgrown Squarespace, and how to move to Shopify keeping your design and URLs.',
   seoDescriptionIt:
-    'Squarespace o Shopify per vendere online: chi può restare, sette domande che dicono se lo hai superato e come passare a Shopify senza perdere il design.',
+    'Squarespace o Shopify per vendere online: sette domande che dicono se lo hai superato e come passare a Shopify tenendo design e URL.',
   excerpt:
-    'Squarespace is design-led and site-first, Shopify is store-first. We say who should stay on Squarespace, the seven questions that show you have outgrown it, and how to move to Shopify keeping the look and the URLs.',
+    'Squarespace is design-led and site-first, Shopify is store-first. Seven questions show you have outgrown Squarespace, and this guide explains how to move to Shopify keeping the look and the URLs.',
   excerptIt:
-    'Squarespace è pensato per il design e per il sito, Shopify per lo store. Diciamo chi può restare su Squarespace, le sette domande che mostrano che lo hai superato e come passare a Shopify tenendo design e URL.',
+    'Squarespace è pensato per il design e per il sito, Shopify per lo store. Sette domande mostrano che lo hai superato, e la guida spiega come passare a Shopify tenendo design e URL.',
   ledeEn:
-    'Squarespace or Shopify comes down to what your brand is: a design-led site that sells a little, or a store that needs a good-looking front. Here is who should stay, when to move, and how to keep the look when you do.',
+    'Squarespace or Shopify comes down to what your brand is: a design-led site that sells a little, or a store that needs a good-looking front. Here is when to move and how to keep the look when you do.',
   ledeIt:
-    'Squarespace o Shopify dipende da cosa è il tuo brand: un sito curato nel design che vende un po’, oppure uno store che ha bisogno di una bella vetrina. Chi può restare, quando passare e come tenere il design quando lo fai.',
+    'Squarespace o Shopify dipende da cosa è il tuo brand: un sito curato nel design che vende un po’, oppure uno store che ha bisogno di una bella vetrina. Quando passare e come tenere il design quando lo fai.',
   image: '/images/blog/squarespace-vs-shopify-cover.png',
   imageAlt: 'Copertina astratta, sfondo lilla, con una griglia regolare di puntini',
   imageAltEn: 'Abstract cover, lilac background with a regular dot grid',
@@ -104,7 +104,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'We are a Shopify agency, and we will say where Squarespace is the better answer. Our [Shopify Launch Sprint](/shopify-migration-sprint) is a method that does not depend on the source platform, and the last section says where each fact comes from.',
+      text: 'We are a Shopify agency with more than 7 years of eCommerce projects behind us. Our [Shopify Launch Sprint](/shopify-migration-sprint) is a method that does not depend on the source platform, and the last section says where each fact comes from.',
     },
     { type: 'h2', text: 'Squarespace or Shopify: design platform or commerce platform?' },
     {
@@ -175,7 +175,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'A migration is not a redesign, and we say so. The Sprint is not a restyling: it is your store, faster and shorter to buy from. If you want a new look, that is a separate and later decision. We have run this design step on a WooCommerce store and on a proprietary platform; the step is the same, only the source differs.',
+      text: 'A migration is not a redesign. The Sprint is not a restyling: it is your store, faster and shorter to buy from. If you want a new look, that is a separate and later decision. We have run this design step on a WooCommerce store and on a proprietary platform; the step is the same, only the source differs.',
     },
     { type: 'h2', text: 'Which Squarespace content leaves with you, and which stays behind?' },
     {
@@ -225,7 +225,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'The Sprint takes 14 days to a store ready to publish, go-live between day 15 and 30, then 90 days of support. The price is public: from €5,800, VAT excluded, in 4 installments. Our [guide to migrating to Shopify](/shopify-migration) explains the process and [what a migration costs](/blog/shopify-migration-cost) breaks the money down. If you sell a dozen products and no one else touches the store, you do not need us: Shopify’s official guide and the CSV files are enough. Coming from Wix instead? Read [Wix or Shopify](/blog/wix-vs-shopify).',
+      text: 'The Sprint takes 14 days to a store ready to publish, go-live between day 15 and 30, then 90 days of support. The price is public: from €5,800, VAT excluded, in 4 installments. Our [guide to migrating to Shopify](/shopify-migration) explains the process and [what a migration costs](/blog/shopify-migration-cost) breaks the money down. Coming from Wix instead? Read [Wix or Shopify](/blog/wix-vs-shopify).',
     },
     { type: 'h2', text: 'Frequently asked questions' },
     { type: 'h3', text: 'Is Squarespace or Shopify better for an online store?' },
@@ -275,7 +275,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Siamo un’agenzia Shopify, e diciamo dove Squarespace è la risposta migliore. Lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) è un metodo che non dipende dalla piattaforma di partenza, e l’ultima sezione dice da dove viene ogni fatto.',
+      text: 'Siamo un’agenzia Shopify con oltre 7 anni di progetti eCommerce alle spalle. Lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) è un metodo che non dipende dalla piattaforma di partenza, e l’ultima sezione dice da dove viene ogni fatto.',
     },
     { type: 'h2', text: 'Squarespace o Shopify: piattaforma di design o piattaforma di commercio?' },
     {
@@ -346,7 +346,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Una migrazione non è un redesign, e lo diciamo. Lo Sprint non è un restyling: è il tuo store, più veloce e più corto da comprare. Se vuoi un nuovo stile, è una decisione separata e successiva. Questo passaggio sul design l’abbiamo fatto su uno store WooCommerce e su una piattaforma proprietaria; il passaggio è lo stesso, cambia solo la sorgente.',
+      text: 'Una migrazione non è un redesign. Lo Sprint non è un restyling: è il tuo store, più veloce e più corto da comprare. Se vuoi un nuovo stile, è una decisione separata e successiva. Questo passaggio sul design l’abbiamo fatto su uno store WooCommerce e su una piattaforma proprietaria; il passaggio è lo stesso, cambia solo la sorgente.',
     },
     { type: 'h2', text: 'Quali contenuti di Squarespace vengono con te e quali restano lì?' },
     {
@@ -396,7 +396,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Lo Sprint porta in 14 giorni a uno store pronto a pubblicare, con go-live tra il giorno 15 e il 30, poi 90 giorni di supporto. Il prezzo è pubblico: da €5.800, IVA esclusa, in 4 rate. La nostra [guida alla migrazione a Shopify](/it/migrazione-shopify) spiega il processo e [quanto costa migrare](/it/blog/costo-migrazione-shopify) scompone i costi. Se vendi una dozzina di prodotti e nessun altro tocca lo store, non hai bisogno di noi: la guida ufficiale di Shopify e i file CSV bastano. Arrivi da Wix? Leggi [Wix o Shopify](/it/blog/wix-o-shopify).',
+      text: 'Lo Sprint porta in 14 giorni a uno store pronto a pubblicare, con go-live tra il giorno 15 e il 30, poi 90 giorni di supporto. Il prezzo è pubblico: da €5.800, IVA esclusa, in 4 rate. La nostra [guida alla migrazione a Shopify](/it/migrazione-shopify) spiega il processo e [quanto costa migrare](/it/blog/costo-migrazione-shopify) scompone i costi. Arrivi da Wix? Leggi [Wix o Shopify](/it/blog/wix-o-shopify).',
     },
     { type: 'h2', text: 'Domande frequenti' },
     { type: 'h3', text: 'Meglio Squarespace o Shopify per un negozio online?' },

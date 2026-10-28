@@ -62,7 +62,7 @@ const article: Article = {
     {
       question: 'Do I still need an agency if I have Sidekick?',
       answer:
-        'For daily admin work, often not. For migration, storefront code, tracking and integrations, yes: Sidekick works inside the admin and the blocks your theme already has. An agency also prepares the data and staff roles that make Sidekick useful.',
+        'Sidekick covers daily admin work. An agency builds what sits around it: migration, storefront code, tracking and integrations, since Sidekick works inside the admin and the blocks your theme already has. An agency also prepares the data and staff roles that make Sidekick useful.',
     },
   ],
   faqIt: [
@@ -94,7 +94,7 @@ const article: Article = {
     {
       question: 'Serve ancora un’agenzia se ho Sidekick?',
       answer:
-        'Per il lavoro quotidiano nell’admin spesso no. Per migrazione, codice dello storefront, tracking e integrazioni sì: Sidekick lavora dentro l’admin e con i blocchi che il tuo tema ha già. Un’agenzia prepara anche i dati e i ruoli del team che rendono Sidekick utile.',
+        'Sidekick copre il lavoro quotidiano nell’admin. Un’agenzia costruisce ciò che gli sta intorno: migrazione, codice dello storefront, tracking e integrazioni, perché Sidekick lavora dentro l’admin e con i blocchi che il tuo tema ha già. Un’agenzia prepara anche i dati e i ruoli del team che rendono Sidekick utile.',
     },
   ],
   content: [
@@ -104,7 +104,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'We are noprob agency, we build and migrate stores on Shopify and we sell the [Shopify Launch Sprint](/shopify-migration-sprint), so we have a stake in saying where the built-in AI stops. Everything about features below comes from Shopify’s own pages, linked in the text and checked on 27 October 2026. Shopify updates this area every few weeks, so read it as a dated snapshot.',
+      text: 'We are noprob agency, we build and migrate stores on Shopify and we sell the [Shopify Launch Sprint](/shopify-migration-sprint), so we read what Shopify publishes on its AI line by line. Everything about features below comes from Shopify’s own pages, linked in the text and checked on 27 October 2026. Shopify updates this area every few weeks, so read it as a dated snapshot.',
     },
     { type: 'h2', text: 'Is Shopify Magic still a product, or is it Sidekick now?' },
     {
@@ -265,7 +265,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Siamo noprob agency, costruiamo e migriamo store su Shopify e vendiamo lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify), quindi abbiamo un interesse nel dire dove l’AI integrata si ferma. Tutto ciò che riguarda le funzioni viene dalle pagine di Shopify, linkate nel testo e controllate il 27 ottobre 2026. Shopify aggiorna quest’area ogni poche settimane: leggi questo pezzo come una fotografia datata.',
+      text: 'Siamo noprob agency, costruiamo e migriamo store su Shopify e vendiamo lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify), quindi leggiamo riga per riga ciò che Shopify pubblica sulla sua AI. Tutto ciò che riguarda le funzioni viene dalle pagine di Shopify, linkate nel testo e controllate il 27 ottobre 2026. Shopify aggiorna quest’area ogni poche settimane: leggi questo pezzo come una fotografia datata.',
     },
     { type: 'h2', text: 'Shopify Magic esiste ancora o ora si chiama Sidekick?' },
     {

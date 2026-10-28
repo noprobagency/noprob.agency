@@ -23,7 +23,7 @@ export const zeroLossIt: ZlCopy = {
   hero: {
     eyebrow: 'Shopify Launch Sprint',
     h1: 'Il tuo eCommerce su Shopify in 14 giorni. Più posizioni su Google, più vendite, più AI.',
-    proofNote: 'Caso studio: +105% di vendite in 85 giorni 😉',
+    proofNote: 'Caso studio: +105% di vendite in 85 giorni',
     paragraph:
       'In 14 giorni un team completo porta il tuo store su Shopify, con il nostro Custom AI System: più veloce, pronto per gli agenti AI, costruito per vendere. Poi 90 giorni su SEO, conversioni e AOV, misurati in dashboard. Prezzo fisso, zero sorprese.',
     ctaPrimary: 'Candidati allo sprint',
@@ -91,7 +91,7 @@ export const zeroLossIt: ZlCopy = {
       'I numeri delle piattaforme non tornano con le vendite vere',
       'Vorresti farti trovare anche su ChatGPT e sull’AI, ma non sai da dove partire',
     ],
-    reactionNone: 'Tutto verde? Allora non hai bisogno di noprob.',
+    reactionNone: 'Spunta quelle che ti riguardano e vediamo da dove partire.',
     reactionMid: 'Già solo con questo potremmo migliorare i tuoi risultati.',
     reactionHigh: 'No prob. È esattamente quello che risolviamo in 14 giorni.',
     reactionHighCta: 'Candidati allo sprint',
@@ -106,7 +106,7 @@ export const zeroLossIt: ZlCopy = {
         title: 'Data Migration Report',
         short: 'Data Migration Report',
         paragraph:
-          'Prodotti, varianti, immagini, clienti, storico ordini, codici sconto, recensioni. Ogni conteggio della piattaforma vecchia confrontato con Shopify e riconciliato al 100%. Se una differenza c\'è, è scritta e spiegata.',
+          'Prodotti, varianti, immagini, clienti, storico ordini, codici sconto, recensioni. Ogni conteggio della piattaforma vecchia confrontato con Shopify e riconciliato al 100%.',
         imageAlt: 'Tabella del Data Migration Report con colonne sorgente, Shopify e differenza',
         mockup: 'report',
       },
@@ -455,7 +455,7 @@ export const zeroLossIt: ZlCopy = {
       {
         question: 'Il sito sarà uguale a prima?',
         answer:
-          "Struttura, pagine e contenuti sì: è il tuo store, non un redesign. Ma lo ricostruiamo con il Custom AI System: più veloce, senza i bug di prima e con il flusso d'acquisto ottimizzato con la nostra checklist. Se vuoi cambiare immagine, quello arriva dopo, con un partner.",
+          "Struttura, pagine e contenuti sì: è il tuo store, non un redesign. Ma lo ricostruiamo con il Custom AI System: più veloce, senza i bug di prima e con il flusso d'acquisto ottimizzato con la nostra checklist. Se vuoi cambiare immagine, quello arriva dopo il go-live, con partner dedicati.",
       },
       {
         question: 'Da quali piattaforme migrate?',
@@ -506,7 +506,7 @@ export const zeroLossIt: ZlCopy = {
   finalCta: {
     h2: 'Il tuo store su Shopify fra 14 giorni. Candidati.',
     paragraph:
-      'Ti rispondiamo entro 48 ore, anche se la risposta è no. Se sei dentro i criteri, la risposta è lo scaglione, il prezzo e la prima data di kickoff disponibile.',
+      'Ti rispondiamo entro 48 ore. Se sei dentro i criteri, la risposta è lo scaglione, il prezzo e la prima data di kickoff disponibile.',
     bullets: ['Store pronto al giorno 14', '4 garanzie scritte nel contratto', '90 giorni di supporto, monitoraggio e miglioramento'],
     cta: 'Candidati allo sprint',
   },
@@ -629,7 +629,7 @@ export const zeroLossIt: ZlCopy = {
     h1Pre: 'Fatto. Ti rispondiamo',
     h1Em: 'entro 48 ore.',
     text:
-      'Antonio legge ogni candidatura di persona. Ti scrive all’indirizzo che ci hai lasciato con lo scaglione confermato e la prima data di kickoff disponibile. Se la risposta è no, te lo diciamo lo stesso.',
+      'Antonio legge ogni candidatura di persona. Ti scrive all’indirizzo che ci hai lasciato con lo scaglione confermato e la prima data di kickoff disponibile.',
     nextTitle: 'Intanto, se vuoi portarti avanti',
     next: [
       'Guarda la dashboard che ricevi il giorno 1: è quella con cui misuriamo le 4 garanzie.',

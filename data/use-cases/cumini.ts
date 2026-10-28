@@ -407,7 +407,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Oggi questi numeri si guardano mese per mese. Ci sono mesi che costruiscono e mesi che raccolgono, e alcuni mesi di lancio chiudono sotto il pareggio. Ma su base annua il marketing resta in positivo, sia nel 2025 sia nel 2026.',
+      text: 'Oggi questi numeri si guardano mese per mese. Ci sono mesi che costruiscono e mesi che raccolgono. Su base annua il marketing resta in positivo, sia nel 2025 sia nel 2026.',
     },
     {
       type: 'h2',
@@ -451,7 +451,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Non è ancora una media mensile a sei cifre, e non lo scriviamo. È una cosa più utile: i picchi arrivano quando li pianifichiamo, tra saldi, Black Friday e Natale.',
+      text: 'I picchi arrivano quando li pianifichiamo, tra saldi, Black Friday e Natale.',
     },
     {
       type: 'metrics',
@@ -481,7 +481,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Non è una linea sempre in salita. Alcuni mesi di lancio chiudono sotto il pareggio, perché costruiscono la domanda che arriva con i saldi. Conta il risultato dell’anno, non il singolo mese.',
+      text: 'I mesi di lancio costruiscono la domanda che arriva con i saldi. Conta il risultato dell’anno, non il singolo mese.',
     },
     {
       type: 'paragraph',
@@ -888,7 +888,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Today these numbers are checked month by month. Some months build and some months harvest, and a few launch months close below break even. But on a yearly basis marketing stays positive, both in 2025 and in 2026.',
+      text: 'Today these numbers are checked month by month. Some months build and some months harvest. On a yearly basis marketing stays positive, both in 2025 and in 2026.',
     },
     { type: 'h2', text: '2026: new results' },
     {
@@ -929,7 +929,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'It is not a six figure monthly average yet, and we will not write that it is. It is something more useful: the peaks arrive when we plan them, around sales, Black Friday and Christmas.',
+      text: 'The peaks arrive when we plan them, around sales, Black Friday and Christmas.',
     },
     {
       type: 'metrics',
@@ -956,7 +956,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'It is not a line that always goes up. Some launch months close below break-even, because they build the demand that arrives with the sales. What counts is the result of the year, not the single month.',
+      text: 'Launch months build the demand that arrives with the sales. What counts is the result of the year, not the single month.',
     },
     {
       type: 'paragraph',
