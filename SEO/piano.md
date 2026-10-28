@@ -7,6 +7,7 @@ Roadmap di Francesca. Cosa si fa e in che ordine è in [calendario.md](calendari
 - Fase 0 (casa): fatta il 27 ottobre 2026 (v1.51.0).
 - Fase 1 (audit): primo giro fatto il 27 ottobre 2026, due fix in produzione (v1.53.0 robots, v1.54.0 description).
 - Fase 2 (keyword e concorrenti): fatta il 27 ottobre 2026 ($0,56). Esito qui sotto, dettagli in `SEO/data/fase2-2026-10-27.json`.
+- Calendario: voci 6-13 e 15-24 eseguite il 27 e 28 ottobre 2026 su richiesta di Antonio (llms.txt, cover a puntini, home con lo Sprint in testa, 15 articoli IT ed EN nel blog, v1.61.0 - v1.78.0). Restano la revisione mensile (voce 14, a fine novembre) e l'articolo sul Custom AI System (voce 25, servono i dati di velocità).
 - Da qui si lavora per voci del calendario, lanciate da Antonio con `/seo prossima`.
 
 ## Decisioni di Antonio (27 ottobre 2026)

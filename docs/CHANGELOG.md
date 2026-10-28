@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.79.0 (28 Oct 2026)
+
+- **llms.txt lists every article**: the Blog Articles section now has all 18 articles with title, summary and EN and IT URLs, newest first, so AI assistants can find and cite them; `SEO/piano.md` records the calendar run of 27 and 28 October (Francesca).
+
 ### Changelog v1.78.0 (27 Oct 2026)
 
 - **New article: BigCommerce to Shopify migration** (`/blog/bigcommerce-to-shopify-migration`, `/it/blog/migrazione-bigcommerce-shopify`): moving between two SaaS platforms as seven translation points between their data models (options and modifiers, custom fields, categories, price lists and B2B, URLs, Stencil and apps, customers), honest that we have no BigCommerce case; standard dotted cover (Francesca, calendar item 24).
