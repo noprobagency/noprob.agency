@@ -12,6 +12,8 @@ Riferimenti: `.claude/skills/seo-voce/SKILL.md` (voce e schema), `docs/dati-veri
 2. Lo Sprint è descritto esattamente: 14 giorni, go-live giorno 15-30, 90 giorni di supporto, 4 garanzie scritte, €5.800 / €8.800 / €12.800 in 4 rate. Niente promesse di risultato fuori dalle garanzie.
 3. Nessun caso studio attribuito alla piattaforma sbagliata (Nazzi da WooCommerce, Cumini da piattaforma proprietaria, DDglobal non è Shopify).
 
+3b. (bloccante) Niente di negativo su di noi: nessuna frase che ammetta mancanze (casi che non abbiamo, "non ancora", dati che mancano), scuse, limiti o toni dimessi, nessuna meta-frase tipo "l'articolo lo dice chiaramente". Correzione: togliere o riscrivere in positivo (vedi `seo-voce`, "Mai negativo su di noi").
+
 ## Lingue
 4. IT ed EN dicono la stessa cosa: stesse sezioni, stesse FAQ, stessi numeri, stessi link (nella lingua giusta: `/it/...` nel testo IT).
 5. IT: niente "business", "videochiamata" invece di "call". "Custom AI System" mai tradotto, mai "tema" da solo.

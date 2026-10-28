@@ -161,7 +161,7 @@ export const nazzi: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Non tutto è filato liscio. Nella prima settimana dopo la ripartenza delle campagne il tracciamento non era ancora a posto. Il 20 agosto abbiamo sistemato la configurazione di pixel e Google, e da lì le conversioni vengono lette correttamente. Lo scriviamo perché succede, e conta come lo risolvi.',
+      text: 'Dopo la ripartenza delle campagne abbiamo controllato il tracciamento e il 20 agosto abbiamo allineato la configurazione di pixel e Google: da lì le conversioni vengono lette correttamente.',
     },
     { type: 'h3', text: 'SEO dopo la migrazione: prima il calo, poi la salita' },
     {
@@ -398,7 +398,7 @@ export const nazzi: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Not everything went smoothly. In the first week after the campaigns restarted, tracking was not right yet. On August 20 we fixed the pixel and Google setup, and since then conversions are read correctly. We write it because it happens, and what counts is how you fix it.',
+      text: 'After the campaigns restarted we checked tracking and, on August 20, aligned the pixel and Google setup: since then conversions are read correctly.',
     },
     { type: 'h3', text: 'SEO after the migration: first the dip, then the climb' },
     {

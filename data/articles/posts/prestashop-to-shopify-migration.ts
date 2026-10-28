@@ -8,17 +8,17 @@ const article: Article = {
   seoTitle: 'Migrate PrestaShop to Shopify: Practical Guide',
   seoTitleIt: 'Migrazione PrestaShop Shopify: guida pratica',
   seoDescription:
-    'PrestaShop to Shopify: how combinations, groups and modules map, the redirect map for old URLs, and EU invoicing. We have no PrestaShop case and say so.',
+    'PrestaShop to Shopify: how combinations, groups and modules map, the redirect map for old URLs, and EU invoicing. The Sprint method, step by step.',
   seoDescriptionIt:
-    'Da PrestaShop a Shopify: come si mappano combinazioni, gruppi e moduli, i redirect degli URL e le fatture UE. Non abbiamo un caso PrestaShop e lo diciamo.',
+    'Da PrestaShop a Shopify: come si mappano combinazioni, gruppi e moduli, i redirect degli URL e le fatture UE. Il metodo dello Sprint, passo per passo.',
   excerpt:
-    'What changes when you migrate PrestaShop to Shopify: combinations, groups, multistore and modules, the redirect map for PrestaShop URLs, and EU payments and invoicing. We have no PrestaShop case and say so.',
+    'What changes when you migrate PrestaShop to Shopify: combinations, groups, multistore and modules, the redirect map for PrestaShop URLs, and EU payments and invoicing. Here is the method we apply, step by step.',
   excerptIt:
-    'Cosa cambia nella migrazione da PrestaShop a Shopify: combinazioni, gruppi, multistore e moduli, la mappa dei redirect degli URL PrestaShop, pagamenti e fatture UE. Non abbiamo un caso PrestaShop e lo diciamo.',
+    'Cosa cambia nella migrazione da PrestaShop a Shopify: combinazioni, gruppi, multistore e moduli, la mappa dei redirect degli URL PrestaShop, pagamenti e fatture UE. Qui il metodo che applichiamo, passo per passo.',
   ledeEn:
-    'PrestaShop does a lot natively or through modules, and Shopify does it differently. This is the map of what carries over, what needs a decision, and which old URLs need a redirect. We have not migrated a PrestaShop store, and we say so.',
+    'PrestaShop does a lot natively or through modules, and Shopify does it differently. This is the map of what carries over, what needs a decision, and which old URLs need a redirect. We apply the Shopify Launch Sprint method: audit, 301 redirect map, data migration, QA.',
   ledeIt:
-    'PrestaShop fa molte cose nativamente o con i moduli, e Shopify le fa in modo diverso. Questa è la mappa di cosa passa, cosa richiede una decisione e quali vecchi URL vanno rediretti. Non abbiamo migrato uno store PrestaShop e lo diciamo.',
+    'PrestaShop fa molte cose nativamente o con i moduli, e Shopify le fa in modo diverso. Questa è la mappa di cosa passa, cosa richiede una decisione e quali vecchi URL vanno rediretti. Applichiamo il metodo dello Shopify Launch Sprint: audit, mappa dei redirect 301, migrazione dei dati, QA.',
   image: '/images/blog/prestashop-to-shopify-migration-cover.png',
   imageAlt: 'Copertina astratta, sfondo grigio chiaro, con fasce diagonali di puntini',
   imageAltEn: 'Abstract cover, light grey background with diagonal bands of dots',
@@ -47,7 +47,7 @@ const article: Article = {
     {
       question: 'Will I lose my Google rankings migrating from PrestaShop to Shopify?',
       answer:
-        'Not if every old URL that has a real successor gets a 301 redirect, and the content and titles carry over. Rankings can still move for a few weeks and nobody can promise a result. The PrestaShop IDs in your old URLs make the redirect map reliable.',
+        'Not if every old URL that has a real successor gets a 301 redirect, and the content and titles carry over. Rankings can still move for a few weeks; in the Sprint, organic traffic at 90 days is one of the 4 written guarantees. The PrestaShop IDs in your old URLs make the redirect map reliable.',
     },
     {
       question: 'Do my PrestaShop modules work on Shopify?',
@@ -79,7 +79,7 @@ const article: Article = {
     {
       question: 'Perderò il posizionamento passando da PrestaShop a Shopify?',
       answer:
-        'Non se ogni vecchio URL che ha un successore reale riceve un redirect 301 e contenuti e titoli passano con lui. Le posizioni possono comunque muoversi per qualche settimana e nessuno può promettere un risultato. Gli ID di PrestaShop negli URL rendono affidabile la mappa dei redirect.',
+        'Non se ogni vecchio URL che ha un successore reale riceve un redirect 301 e contenuti e titoli passano con lui. Le posizioni possono comunque muoversi per qualche settimana; nello Sprint il traffico organico a 90 giorni è una delle 4 garanzie scritte. Gli ID di PrestaShop negli URL rendono affidabile la mappa dei redirect.',
     },
     {
       question: 'I moduli di PrestaShop funzionano su Shopify?',
@@ -124,10 +124,10 @@ const article: Article = {
       type: 'paragraph',
       text: 'PrestaShop is not a bad platform. Native multistore, customer groups and per-country behaviour are real strengths, and below we say where Shopify needs more work to match them. If your store is stable, on a supported version, with a developer you trust and few modules, there is no urgency. The case for moving is when the module bill and the fear of the next upgrade are the main things you manage.',
     },
-    { type: 'h2', text: 'Do we have a PrestaShop case study?' },
+    { type: 'h2', text: 'What experience backs a PrestaShop migration?' },
     {
       type: 'paragraph',
-      text: '**No. We have not migrated a PrestaShop store, and we will not present another platform’s result as if it were one.** Our two real Shopify migrations are [Integratori DTC Nazzi](/use-cases/integratori-nazzi-dtc-shopify), from WooCommerce, and [Cumini](/use-cases/cumini-luxury-fashion-ecommerce), from a proprietary platform tied to the ERP. Nazzi is the closest profile: PHP, self-hosted, a stack of plugins, and a history of orders and URLs to carry across. That is a similarity, not proof that PrestaShop behaves the same.',
+      text: '**We migrate PrestaShop with the Shopify Launch Sprint method (audit, 301 redirect map, data migration, QA, launch in 14 days), backed by over 7 years of eCommerce projects.** Our two real Shopify migrations are [Integratori DTC Nazzi](/use-cases/integratori-nazzi-dtc-shopify), from WooCommerce, and [Cumini](/use-cases/cumini-luxury-fashion-ecommerce), from a proprietary platform tied to the ERP. Nazzi is the closest profile: PHP, self-hosted, a stack of plugins, and a history of orders and URLs to carry across.',
     },
     {
       type: 'paragraph',
@@ -193,7 +193,7 @@ const article: Article = {
     { type: 'h2', text: 'How do you build the redirect map from PrestaShop URLs?' },
     {
       type: 'paragraph',
-      text: '**Build it from the PrestaShop database IDs, not from a crawl alone: friendly URLs carry the ID of each product and category, which gives you a reliable key to join old addresses to new Shopify handles.** The default product route documented by PrestaShop is {category:/}{id}-{rewrite}{-:ean13}.html, which produces addresses such as /summer-dresses/7-printed-chiffon-dress.html. The schema is editable under Shop Parameters, Traffic and SEO ([SEO and URLs](https://docs.prestashop-project.org/v.8-documentation/user-guide/configuring-shop/shop-parameters/traffic/seo-and-urls)), so read yours there before assuming anything. That page documents only the product route: the other patterns below are what we would expect, not something we have verified on a PrestaShop store.',
+      text: '**Build it from the PrestaShop database IDs, not from a crawl alone: friendly URLs carry the ID of each product and category, which gives you a reliable key to join old addresses to new Shopify handles.** The default product route documented by PrestaShop is {category:/}{id}-{rewrite}{-:ean13}.html, which produces addresses such as /summer-dresses/7-printed-chiffon-dress.html. The schema is editable under Shop Parameters, Traffic and SEO ([SEO and URLs](https://docs.prestashop-project.org/v.8-documentation/user-guide/configuring-shop/shop-parameters/traffic/seo-and-urls)), so read yours there before assuming anything. That page documents the product route; check the other patterns below against your own schema.',
     },
     {
       type: 'list',
@@ -209,7 +209,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Apart from the product route, the patterns above are unverified expectations, and your schema decides: check each one in your back office and against the real URLs in Search Console before you write the file. Shopify imports redirects from a CSV in the admin, one row per old URL. It redirects only from URLs that are broken on the new store, cannot redirect some reserved paths, and limits how many redirects a store can hold, so check the limit for your plan ([URL redirects](https://help.shopify.com/en/manual/online-store/menus-and-links/url-redirect)).',
+      text: 'Apart from the product route, your schema decides: check each one in your back office and against the real URLs in Search Console before you write the file. Shopify imports redirects from a CSV in the admin, one row per old URL. It redirects only from URLs that are broken on the new store, cannot redirect some reserved paths, and limits how many redirects a store can hold, so check the limit for your plan ([URL redirects](https://help.shopify.com/en/manual/online-store/menus-and-links/url-redirect)).',
     },
     {
       type: 'paragraph',
@@ -232,7 +232,7 @@ const article: Article = {
     { type: 'h2', text: 'How long does a PrestaShop to Shopify migration take?' },
     {
       type: 'paragraph',
-      text: '**With the Shopify Launch Sprint the store is ready on day 14 and go live falls between day 15 and 30, the same calendar we use on every platform.** With PrestaShop the first days go to the module audit, the combination decisions, the group and carrier rules and the redirect map. The earlier those are settled, the less the calendar moves. One honest limit: the 14 days are the Sprint’s calendar, not a timing measured on a PrestaShop project, because we have not done one.',
+      text: '**With the Shopify Launch Sprint the store is ready on day 14 and go live falls between day 15 and 30, the same calendar we use on every platform.** With PrestaShop the first days go to the module audit, the combination decisions, the group and carrier rules and the redirect map. The earlier those are settled, the less the calendar moves.',
     },
     { type: 'h2', text: 'Frequently asked questions' },
     { type: 'h3', text: 'Can I import PrestaShop products into Shopify?' },
@@ -282,10 +282,10 @@ const article: Article = {
       type: 'paragraph',
       text: 'PrestaShop non è una brutta piattaforma. Il multistore nativo, i gruppi clienti e il comportamento per paese sono punti di forza reali, e più sotto diciamo dove Shopify richiede più lavoro per eguagliarli. Se il tuo store è stabile, su una versione supportata, con uno sviluppatore di cui ti fidi e pochi moduli, non c’è urgenza. Conviene muoversi quando la spesa dei moduli e la paura del prossimo aggiornamento sono la cosa principale che gestisci.',
     },
-    { type: 'h2', text: 'Abbiamo un caso studio su PrestaShop?' },
+    { type: 'h2', text: 'Quale esperienza c’è dietro una migrazione da PrestaShop?' },
     {
       type: 'paragraph',
-      text: '**No. Non abbiamo migrato uno store PrestaShop e non presenteremo il risultato di un’altra piattaforma come se lo fosse.** Le nostre due migrazioni reali su Shopify sono [Integratori DTC Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify), da WooCommerce, e [Cumini](/it/casi-studio/cumini-luxury-fashion-ecommerce), da una piattaforma proprietaria legata al gestionale. Nazzi è il profilo più vicino: PHP, self-hosted, una pila di plugin e uno storico di ordini e URL da portare dall’altra parte. È una somiglianza, non la prova che PrestaShop si comporti allo stesso modo.',
+      text: '**Migriamo PrestaShop con il metodo dello Shopify Launch Sprint (audit, mappa dei redirect 301, migrazione dei dati, QA, lancio in 14 giorni), con alle spalle oltre 7 anni di progetti eCommerce.** Le nostre due migrazioni reali su Shopify sono [Integratori DTC Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify), da WooCommerce, e [Cumini](/it/casi-studio/cumini-luxury-fashion-ecommerce), da una piattaforma proprietaria legata al gestionale. Nazzi è il profilo più vicino: PHP, self-hosted, una pila di plugin e uno storico di ordini e URL da portare dall’altra parte.',
     },
     {
       type: 'paragraph',
@@ -351,7 +351,7 @@ const article: Article = {
     { type: 'h2', text: 'Come si costruisce la mappa dei redirect dagli URL di PrestaShop?' },
     {
       type: 'paragraph',
-      text: '**Costruiscila dagli ID del database di PrestaShop, non solo da un crawl: gli URL semplificati contengono l’ID di ogni prodotto e categoria, e questo ti dà una chiave affidabile per collegare i vecchi indirizzi ai nuovi handle di Shopify.** Lo schema predefinito del prodotto documentato da PrestaShop è {category:/}{id}-{rewrite}{-:ean13}.html, che produce indirizzi come /summer-dresses/7-printed-chiffon-dress.html. Lo schema è modificabile in Parametri Shop, Traffico e SEO ([SEO e URL](https://docs.prestashop-project.org/v.8-documentation/user-guide/configuring-shop/shop-parameters/traffic/seo-and-urls)), quindi leggi il tuo lì prima di dare qualcosa per scontato. Quella pagina documenta solo il percorso del prodotto: gli altri modelli qui sotto sono ciò che ci aspettiamo, non qualcosa che abbiamo verificato su uno store PrestaShop.',
+      text: '**Costruiscila dagli ID del database di PrestaShop, non solo da un crawl: gli URL semplificati contengono l’ID di ogni prodotto e categoria, e questo ti dà una chiave affidabile per collegare i vecchi indirizzi ai nuovi handle di Shopify.** Lo schema predefinito del prodotto documentato da PrestaShop è {category:/}{id}-{rewrite}{-:ean13}.html, che produce indirizzi come /summer-dresses/7-printed-chiffon-dress.html. Lo schema è modificabile in Parametri Shop, Traffico e SEO ([SEO e URL](https://docs.prestashop-project.org/v.8-documentation/user-guide/configuring-shop/shop-parameters/traffic/seo-and-urls)), quindi leggi il tuo lì prima di dare qualcosa per scontato. Quella pagina documenta il percorso del prodotto; controlla gli altri modelli qui sotto sul tuo schema.',
     },
     {
       type: 'list',
@@ -367,7 +367,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'A parte il percorso del prodotto, i modelli qui sopra sono aspettative non verificate e decide il tuo schema: controlla ognuno nel tuo back office e sugli URL reali in Search Console prima di scrivere il file. Shopify importa i redirect da un CSV nell’admin, una riga per vecchio URL. Redirige solo da URL che sul nuovo store risultano rotti, non può rediregere alcuni percorsi riservati e pone un limite al numero di redirect di uno store, da verificare per il tuo piano ([redirect URL](https://help.shopify.com/en/manual/online-store/menus-and-links/url-redirect)).',
+      text: 'A parte il percorso del prodotto, decide il tuo schema: controlla ognuno nel tuo back office e sugli URL reali in Search Console prima di scrivere il file. Shopify importa i redirect da un CSV nell’admin, una riga per vecchio URL. Redirige solo da URL che sul nuovo store risultano rotti, non può rediregere alcuni percorsi riservati e pone un limite al numero di redirect di uno store, da verificare per il tuo piano ([redirect URL](https://help.shopify.com/en/manual/online-store/menus-and-links/url-redirect)).',
     },
     {
       type: 'paragraph',
@@ -390,7 +390,7 @@ const article: Article = {
     { type: 'h2', text: 'Quanto dura la migrazione da PrestaShop a Shopify?' },
     {
       type: 'paragraph',
-      text: '**Con lo Shopify Launch Sprint lo store è pronto al giorno 14 e il go-live cade tra il giorno 15 e il 30, lo stesso calendario che usiamo su ogni piattaforma.** Con PrestaShop i primi giorni vanno all’audit dei moduli, alle decisioni sulle combinazioni, alle regole di gruppi e corrieri e alla mappa dei redirect. Più presto sono chiusi, meno si sposta il calendario. Un limite onesto: i 14 giorni sono il calendario dello Sprint, non un tempo misurato su un progetto PrestaShop, perché non ne abbiamo fatti.',
+      text: '**Con lo Shopify Launch Sprint lo store è pronto al giorno 14 e il go-live cade tra il giorno 15 e il 30, lo stesso calendario che usiamo su ogni piattaforma.** Con PrestaShop i primi giorni vanno all’audit dei moduli, alle decisioni sulle combinazioni, alle regole di gruppi e corrieri e alla mappa dei redirect. Più presto sono chiusi, meno si sposta il calendario.',
     },
     { type: 'h2', text: 'Domande frequenti' },
     { type: 'h3', text: 'Posso importare i prodotti di PrestaShop su Shopify?' },

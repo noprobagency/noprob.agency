@@ -16,9 +16,9 @@ const article: Article = {
   excerptIt:
     'Cosa significa GEO SEO per uno store Shopify, cosa resta uguale alla SEO classica e cosa abbiamo fatto davvero sul nostro sito: llms.txt, regole robots, JSON-LD e sezioni che aprono con la risposta.',
   ledeEn:
-    'GEO is young and its measurement is imperfect. Here is what stays the same as SEO, what changes for a Shopify store, and what we did on our own site that you can inspect today.',
+    'GEO is young. Here is what stays the same as SEO, what changes for a Shopify store, and what we did on our own site that you can inspect today.',
   ledeIt:
-    'La GEO è giovane e si misura male. Ecco cosa resta uguale alla SEO, cosa cambia per uno store Shopify e cosa abbiamo fatto sul nostro sito, che puoi controllare tu stesso.',
+    'La GEO è giovane. Ecco cosa resta uguale alla SEO, cosa cambia per uno store Shopify e cosa abbiamo fatto sul nostro sito, che puoi controllare tu stesso.',
   image: '/images/blog/geo-for-shopify-cover.png',
   imageAlt: 'Copertina astratta, sfondo menta, con una dissolvenza radiale di puntini più grandi al centro',
   imageAltEn: 'Abstract cover, mint background with a radial fade of dots growing toward the centre',
@@ -40,7 +40,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'We are noprob agency and we sell the [Shopify Launch Sprint](/shopify-migration-sprint), so we have a stake in this topic. We also have something most GEO articles lack: our own site, which you can inspect. This piece starts there, then moves to what changes on a Shopify store. GEO is young, measurement is imperfect, and wherever we are guessing we say so.',
+      text: 'We are noprob agency and we sell the [Shopify Launch Sprint](/shopify-migration-sprint), so we have a stake in this topic. We also have something most GEO articles lack: our own site, which you can inspect. This piece starts there, then moves to what changes on a Shopify store. GEO is young, and for every point we say where it comes from.',
     },
     { type: 'h2', text: 'GEO vs SEO: what stays the same and what changes?' },
     {
@@ -97,12 +97,12 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Does it work? Google’s guide says plainly that Google Search does not use llms.txt and that creating one neither helps nor harms visibility there. We keep it anyway: it takes an hour, it is the one place where we state prices and proof in a form we control, and other AI tools and agents may read it. We have no evidence that it moved a single citation, and we will not claim it did.',
+      text: 'Does it work? Google’s guide says plainly that Google Search does not use llms.txt and that creating one neither helps nor harms visibility there. We keep it anyway: it takes an hour, it is the one place where we state prices and proof in a form we control, and other AI tools and agents may read it.',
     },
     { type: 'h3', text: 'Robots rules for AI crawlers' },
     {
       type: 'paragraph',
-      text: 'Our `robots.txt` allows everything except `/api/` and `/admin/`, and then names six AI user agents explicitly: GPTBot, ChatGPT-User, ClaudeBot, anthropic-ai, PerplexityBot and Google-Extended. Honestly, the wildcard rule already allows them all. The explicit lines document intent and survive the day someone adds a blanket block. One detail from [OpenAI’s crawler documentation](https://developers.openai.com/api/docs/bots): the bot that decides whether you appear in ChatGPT search is OAI-SearchBot, separate from GPTBot, which relates to training. Ours is covered by the wildcard; if you write explicit lines, include it.',
+      text: 'Our `robots.txt` allows everything except `/api/` and `/admin/`, and then names six AI user agents explicitly: GPTBot, ChatGPT-User, ClaudeBot, anthropic-ai, PerplexityBot and Google-Extended. The wildcard rule already allows them all. The explicit lines document intent and survive the day someone adds a blanket block. One detail from [OpenAI’s crawler documentation](https://developers.openai.com/api/docs/bots): the bot that decides whether you appear in ChatGPT search is OAI-SearchBot, separate from GPTBot, which relates to training. Ours is covered by the wildcard; if you write explicit lines, include it.',
     },
     { type: 'h3', text: 'JSON-LD on every page type' },
     {
@@ -145,7 +145,7 @@ const article: Article = {
     { type: 'h3', text: 'llms.txt and robots.txt on Shopify' },
     {
       type: 'paragraph',
-      text: '**The Shopify stores we checked already serve an llms.txt, and you can edit your robots.txt.** On 27 October 2026 we requested `/llms.txt` on two well-known Shopify brands, kith.com and allbirds.com. Both returned a platform-generated file for agents, pointing to Shopify’s Universal Commerce Protocol endpoints and the Shop skill. We did not find this documented, and we do not know whether merchants can change it. Open `yourstore.com/llms.txt` before you do anything, and spend your effort on content and data instead.',
+      text: '**The Shopify stores we checked already serve an llms.txt, and you can edit your robots.txt.** On 27 October 2026 we requested `/llms.txt` on two well-known Shopify brands, kith.com and allbirds.com. Both returned a platform-generated file for agents, pointing to Shopify’s Universal Commerce Protocol endpoints and the Shop skill. Open `yourstore.com/llms.txt` before you do anything, and spend your effort on content and data instead.',
     },
     {
       type: 'paragraph',
@@ -163,7 +163,7 @@ const article: Article = {
     { type: 'h2', text: 'What does the Custom AI System do for GEO?' },
     {
       type: 'paragraph',
-      text: '**In the Shopify Launch Sprint, the Custom AI System builds GEO into the store instead of adding it later.** Two of its six superpowers cover this: catalog and structured data ready for ChatGPT, Copilot and Google AI Mode, and an automatic GEO layer, so every new product is born with schema and data generated on its own. These are qualitative claims: we do not publish a speed or citation number for them, because we have no before-and-after measure.',
+      text: '**In the Shopify Launch Sprint, the Custom AI System builds GEO into the store instead of adding it later.** Two of its six superpowers cover this: catalog and structured data ready for ChatGPT, Copilot and Google AI Mode, and an automatic GEO layer, so every new product is born with schema and data generated on its own.',
     },
     {
       type: 'paragraph',
@@ -187,10 +187,10 @@ const article: Article = {
       type: 'paragraph',
       text: 'Measurement is why we fix tracking before comparing channels. On [Cumini](/use-cases/cumini-luxury-fashion-ecommerce), the tracking audit score went from 31 to 92 out of 100 around the migration, and only then did channel comparisons mean anything.',
     },
-    { type: 'h2', text: 'What is still unproven about GEO?' },
+    { type: 'h2', text: 'Which GEO tactics are worth doing?' },
     {
       type: 'paragraph',
-      text: '**Most GEO tactics have no public evidence behind them, including some of ours.** We do not know that llms.txt changes citations. We do not know how much explicit crawler rules or schema change what a model says. Google’s guide says no special file or markup is needed for its AI features and warns against creating pages just to manipulate AI responses. What we can say: clear answers, accurate product data and open crawling cost little and help classic search too, so we do them whether or not AI cites us. We have no AI-referral number for noprob.agency that we would publish, and no promise of citations to make you.',
+      text: '**The GEO tactics worth doing are the ones that also help classic search.** Google’s guide says no special file or markup is needed for its AI features and warns against creating pages just to manipulate AI responses. What we can say: clear answers, accurate product data and open crawling cost little and help classic search too, so we do them whether or not AI cites us. Treat any promise of guaranteed AI citations as a red flag.',
     },
     { type: 'h2', text: 'Where should a Shopify store start this week?' },
     {
@@ -220,7 +220,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Siamo noprob agency e vendiamo lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify), quindi su questo tema abbiamo un interesse. Abbiamo però anche una cosa che quasi tutte le guide alla GEO SEO non hanno: un sito nostro, che puoi controllare. Partiamo da lì, poi passiamo a cosa cambia su uno store Shopify. La GEO è giovane, si misura male e dove stiamo facendo ipotesi lo scriviamo.',
+      text: 'Siamo noprob agency e vendiamo lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify), quindi su questo tema abbiamo un interesse. Abbiamo però anche una cosa che quasi tutte le guide alla GEO SEO non hanno: un sito nostro, che puoi controllare. Partiamo da lì, poi passiamo a cosa cambia su uno store Shopify. La GEO è giovane, e per ogni punto diciamo da dove viene.',
     },
     { type: 'h2', text: 'GEO SEO e SEO tradizionale: cosa resta uguale e cosa cambia?' },
     {
@@ -277,7 +277,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Funziona? La guida di Google dice chiaramente che Google Search non usa llms.txt e che crearlo non aiuta né danneggia la visibilità lì. Lo teniamo comunque: richiede un’ora, è l’unico posto in cui mettiamo prezzi e prove in una forma che controlliamo noi, e altri strumenti e agenti AI potrebbero leggerlo. Non abbiamo prove che abbia spostato una sola citazione e non diremo che l’abbia fatto.',
+      text: 'Funziona? La guida di Google dice chiaramente che Google Search non usa llms.txt e che crearlo non aiuta né danneggia la visibilità lì. Lo teniamo comunque: richiede un’ora, è l’unico posto in cui mettiamo prezzi e prove in una forma che controlliamo noi, e altri strumenti e agenti AI potrebbero leggerlo.',
     },
     { type: 'h3', text: 'Regole robots per i crawler AI' },
     {
@@ -325,7 +325,7 @@ const article: Article = {
     { type: 'h3', text: 'llms.txt e robots.txt su Shopify' },
     {
       type: 'paragraph',
-      text: '**Gli store Shopify che abbiamo controllato servono già un llms.txt e puoi modificare il robots.txt.** Il 27 ottobre 2026 abbiamo richiesto `/llms.txt` su due marchi Shopify noti, kith.com e allbirds.com. Entrambi hanno restituito un file generato dalla piattaforma, scritto per gli agenti, che rimanda agli endpoint dello Universal Commerce Protocol di Shopify e alla Shop skill. Non l’abbiamo trovato nella documentazione e non sappiamo se i merchant possano modificarlo. Apri `tuostore.com/llms.txt` prima di fare qualsiasi cosa e metti l’impegno su contenuti e dati.',
+      text: '**Gli store Shopify che abbiamo controllato servono già un llms.txt e puoi modificare il robots.txt.** Il 27 ottobre 2026 abbiamo richiesto `/llms.txt` su due marchi Shopify noti, kith.com e allbirds.com. Entrambi hanno restituito un file generato dalla piattaforma, scritto per gli agenti, che rimanda agli endpoint dello Universal Commerce Protocol di Shopify e alla Shop skill. Apri `tuostore.com/llms.txt` prima di fare qualsiasi cosa e metti l’impegno su contenuti e dati.',
     },
     {
       type: 'paragraph',
@@ -343,7 +343,7 @@ const article: Article = {
     { type: 'h2', text: 'Cosa fa il Custom AI System per la GEO?' },
     {
       type: 'paragraph',
-      text: '**Nello Shopify Launch Sprint il Custom AI System costruisce la GEO dentro lo store invece di aggiungerla dopo.** Due dei suoi sei superpoteri riguardano questo: catalogo e dati strutturati pronti per ChatGPT, Copilot e Google AI Mode, e un livello di GEO automatico, per cui ogni prodotto nuovo nasce con schema e dati generati da soli. Sono affermazioni qualitative: non pubblichiamo un numero di velocità o di citazioni, perché non abbiamo una misura prima e dopo.',
+      text: '**Nello Shopify Launch Sprint il Custom AI System costruisce la GEO dentro lo store invece di aggiungerla dopo.** Due dei suoi sei superpoteri riguardano questo: catalogo e dati strutturati pronti per ChatGPT, Copilot e Google AI Mode, e un livello di GEO automatico, per cui ogni prodotto nuovo nasce con schema e dati generati da soli.',
     },
     {
       type: 'paragraph',
@@ -367,10 +367,10 @@ const article: Article = {
       type: 'paragraph',
       text: 'La misura è il motivo per cui sistemiamo il tracciamento prima di confrontare i canali. Su [Cumini](/it/casi-studio/cumini-luxury-fashion-ecommerce) il punteggio dell’audit di tracciamento è passato da 31 a 92 su 100 attorno alla migrazione, e solo dopo i confronti tra canali hanno avuto senso.',
     },
-    { type: 'h2', text: 'Cosa non è ancora dimostrato nella SEO per AI?' },
+    { type: 'h2', text: 'Quali tattiche di GEO vale la pena fare?' },
     {
       type: 'paragraph',
-      text: '**Per la maggior parte delle tattiche di GEO non esistono prove pubbliche, comprese alcune nostre.** Non sappiamo se llms.txt cambi le citazioni. Non sappiamo quanto le regole esplicite per i crawler o lo schema cambino ciò che dice un modello. La guida di Google dice che per le sue funzioni AI non servono file o markup speciali e mette in guardia dal creare pagine solo per manipolare le risposte AI. Quello che possiamo dire: risposte chiare, dati prodotto accurati e scansione aperta costano poco e aiutano anche la ricerca classica, quindi li facciamo che l’AI ci citi o no. Non abbiamo un dato di visite da AI per noprob.agency che pubblicheremmo e non ti promettiamo citazioni.',
+      text: '**Le tattiche di GEO che vale la pena fare sono quelle che aiutano anche la ricerca classica.** La guida di Google dice che per le sue funzioni AI non servono file o markup speciali e mette in guardia dal creare pagine solo per manipolare le risposte AI. Quello che possiamo dire: risposte chiare, dati prodotto accurati e scansione aperta costano poco e aiutano anche la ricerca classica, quindi li facciamo che l’AI ci citi o no. Considera un campanello d’allarme qualsiasi promessa di citazioni AI garantite.',
     },
     { type: 'h2', text: 'Da dove deve partire uno store Shopify questa settimana?' },
     {

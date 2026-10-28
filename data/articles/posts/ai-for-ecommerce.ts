@@ -36,7 +36,7 @@ const article: Article = {
   content: [
     {
       type: 'paragraph',
-      text: '**AI for ecommerce works today where the job is repetitive, structured and checkable: catalog content, customer service triage, data analysis, lifecycle email and software development. It still fails where it runs unsupervised, invents facts, or has to sound like your brand without context.** We are noprob agency, we build stores with the [Shopify Launch Sprint](/shopify-migration-sprint), and we use AI every day: AI agents write and test the code of the stores we build, and agents and dashboards read store data for us. This article comes from that work, not from a survey. It has no adoption statistics and no ROI promises, because we have no public figure we could verify, and we will not borrow one.',
+      text: '**AI for ecommerce works today where the job is repetitive, structured and checkable: catalog content, customer service triage, data analysis, lifecycle email and software development. It still fails where it runs unsupervised, invents facts, or has to sound like your brand without context.** We are noprob agency, we build stores with the [Shopify Launch Sprint](/shopify-migration-sprint), and we use AI every day: AI agents write and test the code of the stores we build, and agents and dashboards read store data for us. This article comes from that work, not from a survey.',
     },
     { type: 'h2', text: 'Where does AI actually pay off in an ecommerce store?' },
     {
@@ -61,7 +61,7 @@ const article: Article = {
     { type: 'h3', text: '4. Development speed with AI agents' },
     {
       type: 'paragraph',
-      text: 'This is where we feel it most. The Custom AI System is code written from scratch for one store and designed for the AI agents that work on it, so new features, tests and changes ship faster. That is a qualitative claim: we have no before-and-after speed measurement, so we publish no number. What we can say is where it helps. A first draft is cheap for everyone now. The difference is reviewing, testing and shipping safely, and every change still gets read by a person before it reaches your checkout.',
+      text: 'This is where we feel it most. The Custom AI System is code written from scratch for one store and designed for the AI agents that work on it, so new features, tests and changes ship faster. Here is where it helps. A first draft is cheap for everyone now. The difference is reviewing, testing and shipping safely, and every change still gets read by a person before it reaches your checkout.',
     },
     { type: 'h3', text: '5. Email and flows' },
     {
@@ -106,7 +106,7 @@ const article: Article = {
     { type: 'h3', text: 'What we treat as hype' },
     {
       type: 'paragraph',
-      text: 'Fully autonomous stores. An “AI marketer” with write access to your budget, your prices or your refunds. Any promise of a fixed percentage uplift from installing an app. We have no verified number for the average return of AI in ecommerce, and we distrust anyone who quotes one without a method. The honest framing is narrower: this task took this many hours, now it takes fewer, and a person still approves it.',
+      text: 'Fully autonomous stores. An “AI marketer” with write access to your budget, your prices or your refunds. Any promise of a fixed percentage uplift from installing an app. We distrust any average return of AI in ecommerce quoted without a method. The right framing is narrower: this task took this many hours, now it takes fewer, and a person still approves it.',
     },
     { type: 'h2', text: 'How do you start with AI in an ecommerce store in 30 days?' },
     {
@@ -153,7 +153,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Our real cases are [Integratori DTC Nazzi](/use-cases/integratori-nazzi-dtc-shopify), moved from WooCommerce, and [Cumini](/use-cases/cumini-luxury-fashion-ecommerce), moved from a proprietary platform tied to its ERP. Their pages show the migration results, and we have no AI-specific result for either to add here. The honest summary of this article is the same: AI is a strong tool in the hands of a team with clean data, a procedure and someone who checks.',
+      text: 'Our real cases are [Integratori DTC Nazzi](/use-cases/integratori-nazzi-dtc-shopify), moved from WooCommerce, and [Cumini](/use-cases/cumini-luxury-fashion-ecommerce), moved from a proprietary platform tied to its ERP. Their pages show the migration results. The summary of this article is the same: AI is a strong tool in the hands of a team with clean data, a procedure and someone who checks.',
     },
     {
       type: 'paragraph',
@@ -174,7 +174,7 @@ const article: Article = {
     {
       question: 'Will AI replace ecommerce staff?',
       answer:
-        'In our work it removes repetitive tasks, not decisions. People still set the strategy, approve what goes live, handle sensitive customers and own the brand. We cannot forecast the whole market, and we would not trust anyone who says they can.',
+        'In our work it removes repetitive tasks, not decisions. People still set the strategy, approve what goes live, handle sensitive customers and own the brand. We would not trust anyone who claims to forecast the whole market.',
     },
     {
       question: 'Is AI-generated product content bad for SEO?',
@@ -195,7 +195,7 @@ const article: Article = {
   contentIt: [
     {
       type: 'paragraph',
-      text: '**L’AI per eCommerce funziona oggi dove il lavoro è ripetitivo, strutturato e verificabile: contenuti del catalogo, smistamento dell’assistenza clienti, analisi dei dati, email di lifecycle e sviluppo software. Fallisce ancora dove lavora senza supervisione, inventa fatti o deve suonare come il tuo brand senza contesto.** Siamo noprob agency, costruiamo store con lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) e usiamo l’intelligenza artificiale ogni giorno: gli agenti AI scrivono e testano il codice degli store che costruiamo, e agenti e dashboard leggono i dati degli store al posto nostro. Questo articolo nasce da quel lavoro, non da un sondaggio. Non ha statistiche di adozione né promesse di ROI, perché non abbiamo cifre pubbliche che possiamo verificare e non ne prendiamo in prestito.',
+      text: '**L’AI per eCommerce funziona oggi dove il lavoro è ripetitivo, strutturato e verificabile: contenuti del catalogo, smistamento dell’assistenza clienti, analisi dei dati, email di lifecycle e sviluppo software. Fallisce ancora dove lavora senza supervisione, inventa fatti o deve suonare come il tuo brand senza contesto.** Siamo noprob agency, costruiamo store con lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) e usiamo l’intelligenza artificiale ogni giorno: gli agenti AI scrivono e testano il codice degli store che costruiamo, e agenti e dashboard leggono i dati degli store al posto nostro. Questo articolo nasce da quel lavoro, non da un sondaggio.',
     },
     { type: 'h2', text: 'Dove l’AI rende davvero in un eCommerce?' },
     {
@@ -220,7 +220,7 @@ const article: Article = {
     { type: 'h3', text: '4. Velocità di sviluppo con gli agenti AI' },
     {
       type: 'paragraph',
-      text: 'Qui è dove la sentiamo di più. Il Custom AI System è codice scritto da zero per un solo store e progettato per gli agenti AI che ci lavorano, così nuove funzioni, test e modifiche vanno online più in fretta. È un’affermazione qualitativa: non abbiamo una misura prima/dopo della velocità, quindi non pubblichiamo nessun numero. Possiamo dire dove aiuta. Una prima bozza oggi costa poco a tutti. La differenza è rivedere, testare e rilasciare in sicurezza, e ogni modifica viene letta da una persona prima di arrivare al tuo checkout.',
+      text: 'Qui è dove la sentiamo di più. Il Custom AI System è codice scritto da zero per un solo store e progettato per gli agenti AI che ci lavorano, così nuove funzioni, test e modifiche vanno online più in fretta. Ecco dove aiuta. Una prima bozza oggi costa poco a tutti. La differenza è rivedere, testare e rilasciare in sicurezza, e ogni modifica viene letta da una persona prima di arrivare al tuo checkout.',
     },
     { type: 'h3', text: '5. Email e flussi' },
     {
@@ -265,7 +265,7 @@ const article: Article = {
     { type: 'h3', text: 'Cosa consideriamo hype' },
     {
       type: 'paragraph',
-      text: 'Store completamente autonomi. Un “AI marketer” con accesso in scrittura a budget, prezzi o rimborsi. Qualsiasi promessa di un aumento percentuale fisso installando un’app. Non abbiamo un numero verificato sul ritorno medio dell’AI negli eCommerce, e diffidiamo di chi ne cita uno senza un metodo. La formulazione onesta è più stretta: questo compito richiedeva tante ore, ora ne richiede meno, e una persona lo approva ancora.',
+      text: 'Store completamente autonomi. Un “AI marketer” con accesso in scrittura a budget, prezzi o rimborsi. Qualsiasi promessa di un aumento percentuale fisso installando un’app. Diffidiamo di qualsiasi ritorno medio dell’AI negli eCommerce citato senza un metodo. La formulazione giusta è più stretta: questo compito richiedeva tante ore, ora ne richiede meno, e una persona lo approva ancora.',
     },
     { type: 'h2', text: 'Come si parte con l’AI in un eCommerce in 30 giorni?' },
     {
@@ -312,7 +312,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'I nostri casi veri sono [Integratori DTC Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify), passato da WooCommerce, e [Cumini](/it/casi-studio/cumini-luxury-fashion-ecommerce), passato da una piattaforma proprietaria legata al gestionale. Le loro pagine mostrano i risultati della migrazione, e non abbiamo un risultato specifico sull’AI per nessuno dei due da aggiungere qui. La sintesi onesta di questo articolo è la stessa: l’AI è uno strumento forte in mano a un team con dati puliti, una procedura e qualcuno che controlla.',
+      text: 'I nostri casi veri sono [Integratori DTC Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify), passato da WooCommerce, e [Cumini](/it/casi-studio/cumini-luxury-fashion-ecommerce), passato da una piattaforma proprietaria legata al gestionale. Le loro pagine mostrano i risultati della migrazione. La sintesi di questo articolo è la stessa: l’AI è uno strumento forte in mano a un team con dati puliti, una procedura e qualcuno che controlla.',
     },
     {
       type: 'paragraph',
@@ -333,7 +333,7 @@ const article: Article = {
     {
       question: 'L’AI sostituirà chi lavora in un eCommerce?',
       answer:
-        'Nel nostro lavoro toglie compiti ripetitivi, non decisioni. Le persone definiscono la strategia, approvano ciò che va online, gestiscono i clienti delicati e proteggono il brand. Non possiamo prevedere tutto il mercato e non ci fideremmo di chi dice di poterlo fare.',
+        'Nel nostro lavoro toglie compiti ripetitivi, non decisioni. Le persone definiscono la strategia, approvano ciò che va online, gestiscono i clienti delicati e proteggono il brand. Non ci fideremmo di chi dice di poter prevedere tutto il mercato.',
     },
     {
       question: 'I contenuti prodotto scritti con l’AI fanno male alla SEO?',

@@ -413,7 +413,7 @@ export const zeroLossIt: ZlCopy = {
     ],
   },
   scope: {
-    h2: 'Cosa facciamo. E cosa no.',
+    h2: 'Cosa facciamo. E cosa viene dopo.',
     includedTitle: 'Incluso nello sprint',
     included: [
       'Migrazione di prodotti, clienti e storico ordini',
@@ -460,7 +460,7 @@ export const zeroLossIt: ZlCopy = {
       {
         question: 'Da quali piattaforme migrate?',
         answer:
-          'WooCommerce, PrestaShop, Magento, piattaforme custom, gestionali ed ERP con store integrato. Se sei già su Shopify e vuoi solo un restyling, non è lo sprint giusto.',
+          'WooCommerce, PrestaShop, Magento, piattaforme custom, gestionali ed ERP con store integrato. Lo sprint è pensato per chi arriva da un’altra piattaforma.',
       },
       {
         question: 'Cosa succede se non arrivano gli accessi in tempo?',
