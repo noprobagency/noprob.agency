@@ -94,7 +94,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'We are noprob agency. We build and move Shopify stores every week with the [Shopify Launch Sprint](/shopify-migration-sprint), so we are not neutral, but we will tell you when a move is not worth it. One more thing up front: we have no Wix case study. Our two real moves are Nazzi, from WooCommerce, and Cumini, from a proprietary platform tied to the ERP. What follows about Wix comes from Wix’s and Shopify’s official documentation and from how we run any migration. Part one is the decision, part two is the move.',
+      text: 'We are noprob agency. We build and move Shopify stores every week with the [Shopify Launch Sprint](/shopify-migration-sprint), and we will tell you when a move is not worth it. Our two real moves are Nazzi, from WooCommerce, and Cumini, from a proprietary platform tied to the ERP. What follows about Wix comes from Wix’s and Shopify’s official documentation and from how we run any migration. Part one is the decision, part two is the move.',
     },
     { type: 'h2', text: 'Wix vs Shopify: which one should you choose for selling online?' },
     {
@@ -223,10 +223,10 @@ const article: Article = {
         'Do not cancel the Wix plan until the redirects are verified and every export is saved.',
       ],
     },
-    { type: 'h2', text: 'What do we know about Wix migrations, and what do we not?' },
+    { type: 'h2', text: 'What experience backs a Wix to Shopify migration?' },
     {
       type: 'paragraph',
-      text: '**We have never published a Wix migration, so our proof is the process and two real moves, not a Wix result.** [Integratori DTC Nazzi](/use-cases/integratori-nazzi-dtc-shopify) came from WooCommerce and [Cumini](/use-cases/cumini-luxury-fashion-ecommerce) from a proprietary platform tied to the ERP. What carries over to a Wix store is the method: an inventory of products, pages and URLs, a redirect map checked against the live site, a rehearsal before the domain moves, and tracking measured before and after. On Cumini the tracking audit went from 31/100 to 92/100 after the move.',
+      text: '**Our proof is the Sprint process and two real moves, backed by over 7 years of eCommerce projects.** [Integratori DTC Nazzi](/use-cases/integratori-nazzi-dtc-shopify) came from WooCommerce and [Cumini](/use-cases/cumini-luxury-fashion-ecommerce) from a proprietary platform tied to the ERP. What carries over to a Wix store is the method: an inventory of products, pages and URLs, a redirect map checked against the live site, a rehearsal before the domain moves, and tracking measured before and after. On Cumini the tracking audit went from 31/100 to 92/100 after the move.',
     },
     {
       type: 'paragraph',
@@ -279,7 +279,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Siamo noprob agency. Costruiamo e migriamo store Shopify ogni settimana con lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify): non siamo neutrali, ma ti diciamo quando non vale la pena. Una cosa subito: non abbiamo un caso studio su Wix. I nostri due passaggi reali sono Nazzi, da WooCommerce, e Cumini, da una piattaforma proprietaria legata al gestionale. Su Wix ci basiamo sulla documentazione ufficiale di Wix e di Shopify e su come conduciamo ogni migrazione. La prima parte è la decisione, la seconda il passaggio.',
+      text: 'Siamo noprob agency. Costruiamo e migriamo store Shopify ogni settimana con lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify): ti diciamo anche quando non vale la pena. I nostri due passaggi reali sono Nazzi, da WooCommerce, e Cumini, da una piattaforma proprietaria legata al gestionale. Su Wix ci basiamo sulla documentazione ufficiale di Wix e di Shopify e su come conduciamo ogni migrazione. La prima parte è la decisione, la seconda il passaggio.',
     },
     { type: 'h2', text: 'Wix o Shopify: quale scegliere per vendere online?' },
     {
@@ -408,10 +408,10 @@ const article: Article = {
         'Non disdire il piano di Wix finché i redirect non sono verificati e ogni esportazione non è salvata.',
       ],
     },
-    { type: 'h2', text: 'Cosa sappiamo delle migrazioni da Wix e cosa no?' },
+    { type: 'h2', text: 'Quale esperienza c’è dietro una migrazione da Wix a Shopify?' },
     {
       type: 'paragraph',
-      text: '**Non abbiamo mai pubblicato una migrazione da Wix, quindi la nostra prova è il processo e due passaggi reali, non un risultato su Wix.** [Integratori DTC Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify) arrivava da WooCommerce e [Cumini](/it/casi-studio/cumini-luxury-fashion-ecommerce) da una piattaforma proprietaria legata al gestionale. Su uno store Wix si porta il metodo: inventario di prodotti, pagine e URL, mappa dei redirect verificata sul sito online, prova completa prima di spostare il dominio e tracking misurato prima e dopo. Su Cumini l’audit del tracking è passato da 31/100 a 92/100 dopo il passaggio.',
+      text: '**La nostra prova è il processo dello Sprint e due passaggi reali, con oltre 7 anni di progetti eCommerce alle spalle.** [Integratori DTC Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify) arrivava da WooCommerce e [Cumini](/it/casi-studio/cumini-luxury-fashion-ecommerce) da una piattaforma proprietaria legata al gestionale. Su uno store Wix si porta il metodo: inventario di prodotti, pagine e URL, mappa dei redirect verificata sul sito online, prova completa prima di spostare il dominio e tracking misurato prima e dopo. Su Cumini l’audit del tracking è passato da 31/100 a 92/100 dopo il passaggio.',
     },
     {
       type: 'paragraph',

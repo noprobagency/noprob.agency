@@ -12,13 +12,13 @@ const article: Article = {
   seoDescriptionIt:
     'Come scegliere un’agenzia di migrazione Shopify: cinque tipi di fornitore, nove criteri, domande per la prima videochiamata e segnali d’allarme da evitare.',
   excerpt:
-    'An honest guide to choosing who migrates your store to Shopify: app, freelancer, generalist agency, Shopify Partner or specialist. Nine tests, first-call questions, red flags, and when we are not the right choice.',
+    'A guide to choosing who migrates your store to Shopify: app, freelancer, generalist agency, Shopify Partner or specialist. Nine tests, first-call questions, red flags, and who the Shopify Launch Sprint is for.',
   excerptIt:
-    'Una guida onesta per scegliere chi migra il tuo store su Shopify: app, freelance, agenzia generalista, Shopify Partner o specialista. Nove criteri, domande per la videochiamata, segnali d’allarme e quando noi non siamo la scelta giusta.',
+    'Una guida per scegliere chi migra il tuo store su Shopify: app, freelance, agenzia generalista, Shopify Partner o specialista. Nove criteri, domande per la videochiamata, segnali d’allarme e a chi è rivolto lo Shopify Launch Sprint.',
   ledeEn:
-    'Written by an agency that sells Shopify migrations, so we show our answers and say when we are not the right choice. Five provider types, nine tests you can run on anyone.',
+    'Written by an agency that sells Shopify migrations, so we show our answers and who the Sprint is for. Five provider types, nine tests you can run on anyone.',
   ledeIt:
-    'Scritta da un’agenzia che vende migrazioni a Shopify, quindi mostriamo le nostre risposte e diciamo quando non siamo la scelta giusta. Cinque tipi di fornitore, nove prove da fare a chiunque.',
+    'Scritta da un’agenzia che vende migrazioni a Shopify, quindi mostriamo le nostre risposte e a chi è rivolto lo Sprint. Cinque tipi di fornitore, nove prove da fare a chiunque.',
   image: '/images/blog/choose-shopify-migration-agency-cover.png',
   imageAlt: 'Copertina astratta, sfondo nero, con una sfumatura halftone di puntini crescenti',
   imageAltEn: 'Abstract cover, black background with a halftone gradient of growing dots',
@@ -60,9 +60,9 @@ const article: Article = {
         'Guaranteed SEO with no document behind it, no sample redirect map, no named people, a domain or Shopify account registered to the provider, case studies without a metric, vague support, and pressure to sign before you read the contract.',
     },
     {
-      question: 'When is noprob agency not the right choice?',
+      question: 'Who is the Shopify Launch Sprint for?',
       answer:
-        'When a small catalog can be moved by an app, when you want a redesign, or when the project is mostly marketplace, POS or complex B2B portal work, which sit outside the Shopify Launch Sprint scope. Under €300k of company revenue the Sprint first requires a feasibility assessment.',
+        'For stores coming from another platform where traffic and orders already matter: the Sprint rebuilds the store 1:1 with our Custom AI System, maps every old URL with a 301 redirect and has the store ready on day 14. Under €300k of company revenue the Sprint first requires a feasibility assessment.',
     },
   ],
   faqIt: [
@@ -92,15 +92,15 @@ const article: Article = {
         'SEO “garantita” senza documenti dietro, nessuna mappa dei redirect di esempio, nessun nome di persone, dominio o account Shopify intestati al fornitore, casi studio senza una metrica, supporto vago e fretta di firmare prima di leggere il contratto.',
     },
     {
-      question: 'Quando noprob agency non è la scelta giusta?',
+      question: 'A chi è rivolto lo Shopify Launch Sprint?',
       answer:
-        'Quando un catalogo piccolo si sposta con un’app, quando vuoi un redesign o quando il progetto è soprattutto marketplace, cassa o portale B2B complesso, che sono fuori dall’ambito dello Shopify Launch Sprint. Sotto i 300k euro di fatturato aziendale lo Sprint richiede prima una valutazione di fattibilità.',
+        'Agli store che arrivano da un’altra piattaforma e dove traffico e ordini contano già: lo Sprint ricostruisce lo store 1:1 con il nostro Custom AI System, mappa ogni vecchio URL con un redirect 301 e ha lo store pronto al giorno 14. Sotto i 300k euro di fatturato aziendale lo Sprint richiede prima una valutazione di fattibilità.',
     },
   ],
   content: [
     {
       type: 'paragraph',
-      text: 'If you are looking for Shopify migration experts or a Shopify migration agency, start with a disclosure: this guide is written by an agency that sells Shopify migrations. noprob agency, which sells the [Shopify Launch Sprint](/shopify-migration-sprint), is one of the options on your list, so we show how we answer each criterion, we say when we are not the right choice, and we leave other agencies’ names out. We make no claims about anyone else: we compare types of provider and give you tests to run on any of them, us included.',
+      text: 'If you are looking for Shopify migration experts or a Shopify migration agency, start with a disclosure: this guide is written by an agency that sells Shopify migrations. noprob agency, which sells the [Shopify Launch Sprint](/shopify-migration-sprint), is one of the options on your list, so we show how we answer each criterion, we show who the Sprint is for, and we leave other agencies’ names out. We make no claims about anyone else: we compare types of provider and give you tests to run on any of them, us included.',
     },
     {
       type: 'paragraph',
@@ -138,7 +138,7 @@ const article: Article = {
     { type: 'h3', text: 'A migration specialist' },
     {
       type: 'paragraph',
-      text: 'A migration specialist fits stores where the move itself is the risk: a large catalog, years of organic traffic, an ERP behind the shop, or a proprietary platform. The whole offer is the move: inventory, redirects, reconciliation, tracking, go-live and the weeks after. The trade-off is scope. A specialist gets you onto Shopify and then hands over, so design, ads and email come from somebody else. We are in this group, and we say below what falls outside our scope.',
+      text: 'A migration specialist fits stores where the move itself is the risk: a large catalog, years of organic traffic, an ERP behind the shop, or a proprietary platform. The whole offer is the move: inventory, redirects, reconciliation, tracking, go-live and the weeks after. The trade-off is scope. A specialist gets you onto Shopify and then hands over, so design, ads and email come from somebody else. We are in this group.',
     },
     { type: 'h2', text: 'Which type fits which store?' },
     {
@@ -202,7 +202,7 @@ const article: Article = {
     { type: 'h3', text: '9. References' },
     {
       type: 'paragraph',
-      text: 'References are people you can ask, not logos on a slide. Ask for two clients with a similar platform, and ask them what went wrong. Our answer: the two case studies above, and ten Trustpilot reviews, all five stars. We have no public case on Magento, PrestaShop, BigCommerce, Wix or Squarespace. If you are coming from one of those, we will say so on the first call, and you should weigh it.',
+      text: 'References are people you can ask, not logos on a slide. Ask for two clients with a similar platform, and ask them what went wrong. Our answer: the two case studies above, and ten Trustpilot reviews, all five stars, with over 7 years of eCommerce projects behind the method.',
     },
     { type: 'h2', text: 'What should you ask on the first call?' },
     {
@@ -240,26 +240,25 @@ const article: Article = {
         'Support described as “available” with no length, scope or response time.',
       ],
     },
-    { type: 'h2', text: 'When are we not the right choice?' },
+    { type: 'h2', text: 'Who is the Shopify Launch Sprint for?' },
     {
       type: 'paragraph',
-      text: 'We are not the right choice for every store, and saying so early saves you a call.',
+      text: 'The Sprint is for stores coming from another platform where traffic and orders already matter.',
     },
     {
       type: 'list',
       items: [
-        '**A small catalog with simple data.** An app can move it and you can import the redirects from a CSV yourself.',
-        '**Company revenue under €300k.** The Sprint requires an initial assessment first, to make sure the investment is sustainable for the store. You can still apply, and we evaluate feasibility together.',
-        '**You want a redesign.** The Sprint is a 1:1 replica of your store rebuilt with our Custom AI System, not a restyle. Design and rebranding come later, with a partner.',
-        '**Deep ERP, marketplace, POS or B2B portal work.** Above the limits of your tier (products, languages, ERP) fixed-price add-ons apply, and complex B2B portals, marketplaces and POS are for dedicated partners after go-live. If the project is mostly that, pick a team built for it.',
-        '**Your store is already on Shopify.** The Sprint is for stores coming from another platform.',
-        '**You need proof on your platform.** We migrate from WooCommerce, PrestaShop, Magento, custom platforms and ERPs with an integrated store, but our public cases are WooCommerce and a proprietary platform.',
+        '**Stores with traffic and orders to protect.** Every old URL with traffic gets a 301 redirect, mapped before launch and tested after it.',
+        '**A 1:1 replica of your store.** The Sprint rebuilds your store 1:1 with our Custom AI System. Design and rebranding come later, with a partner.',
+        '**Stores coming from WooCommerce, PrestaShop, Magento, custom platforms and ERPs with an integrated store.** The method is the same on every source: audit, 301 redirect map, data migration and QA.',
+        '**A fixed price with clear tiers.** Above the limits of your tier (products, languages, ERP) fixed-price add-ons apply, and complex B2B portals, marketplaces and POS are handled by dedicated partners after go-live.',
+        '**Company revenue under €300k.** The Sprint starts with an initial assessment, to make sure the investment is sustainable for the store. You can still apply, and we evaluate feasibility together.',
       ],
     },
     { type: 'h2', text: 'What should you do this week?' },
     {
       type: 'paragraph',
-      text: 'Shortlist two or three providers of different types, run the same ten questions on each, and compare their documents, not their decks. Ask every one for a sample redirect map, the contract and the list of extras. Our own approach is described in the [Shopify migration guide](/shopify-migration), and you can [talk to us directly](/contacts) if you want an honest read on which type fits your store, even when the answer is not us.',
+      text: 'Shortlist two or three providers of different types, run the same ten questions on each, and compare their documents, not their decks. Ask every one for a sample redirect map, the contract and the list of extras. Our own approach is described in the [Shopify migration guide](/shopify-migration), and you can [talk to us directly](/contacts) if you want a read on which type fits your store.',
     },
     {
       type: 'paragraph',
@@ -269,7 +268,7 @@ const article: Article = {
   contentIt: [
     {
       type: 'paragraph',
-      text: 'Se cerchi un esperto di migrazione Shopify o un’agenzia di migrazione Shopify, parti da una dichiarazione: questa guida è scritta da un’agenzia che vende migrazioni a Shopify. noprob agency, che vende lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify), è una delle opzioni nella tua lista, quindi mostriamo come rispondiamo a ogni criterio, diciamo quando non siamo la scelta giusta e non nominiamo altre agenzie. Non facciamo affermazioni su nessun altro: confrontiamo tipi di fornitore e ti diamo prove da fare a chiunque, noi compresi.',
+      text: 'Se cerchi un esperto di migrazione Shopify o un’agenzia di migrazione Shopify, parti da una dichiarazione: questa guida è scritta da un’agenzia che vende migrazioni a Shopify. noprob agency, che vende lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify), è una delle opzioni nella tua lista, quindi mostriamo come rispondiamo a ogni criterio, mostriamo a chi è rivolto lo Sprint e non nominiamo altre agenzie. Non facciamo affermazioni su nessun altro: confrontiamo tipi di fornitore e ti diamo prove da fare a chiunque, noi compresi.',
     },
     {
       type: 'paragraph',
@@ -307,7 +306,7 @@ const article: Article = {
     { type: 'h3', text: 'Uno specialista di migrazioni' },
     {
       type: 'paragraph',
-      text: 'Uno specialista di migrazioni va bene quando il rischio è il passaggio stesso: catalogo grande, anni di traffico organico, un gestionale dietro al negozio o una piattaforma proprietaria. L’intera offerta è il passaggio: inventario, redirect, riconciliazione, tracking, go-live e le settimane dopo. Il compromesso è l’ambito. Uno specialista ti porta su Shopify e poi passa la mano, quindi design, ads ed email vengono da qualcun altro. Noi siamo in questo gruppo, e più sotto diciamo cosa resta fuori dal nostro ambito.',
+      text: 'Uno specialista di migrazioni va bene quando il rischio è il passaggio stesso: catalogo grande, anni di traffico organico, un gestionale dietro al negozio o una piattaforma proprietaria. L’intera offerta è il passaggio: inventario, redirect, riconciliazione, tracking, go-live e le settimane dopo. Il compromesso è l’ambito. Uno specialista ti porta su Shopify e poi passa la mano, quindi design, ads ed email vengono da qualcun altro. Noi siamo in questo gruppo.',
     },
     { type: 'h2', text: 'Quale tipo va con quale store?' },
     {
@@ -371,7 +370,7 @@ const article: Article = {
     { type: 'h3', text: '9. Referenze' },
     {
       type: 'paragraph',
-      text: 'Le referenze sono persone a cui puoi chiedere, non loghi su una slide. Chiedi due clienti con una piattaforma simile alla tua, e chiedi a loro cosa è andato storto. La nostra risposta: i due casi studio qui sopra, e dieci recensioni su Trustpilot, tutte a cinque stelle. Non abbiamo un caso pubblico su Magento, PrestaShop, BigCommerce, Wix o Squarespace. Se parti da una di queste, lo diciamo nella prima videochiamata, e tu devi tenerne conto.',
+      text: 'Le referenze sono persone a cui puoi chiedere, non loghi su una slide. Chiedi due clienti con una piattaforma simile alla tua, e chiedi a loro cosa è andato storto. La nostra risposta: i due casi studio qui sopra, e dieci recensioni su Trustpilot, tutte a cinque stelle, con oltre 7 anni di progetti eCommerce dietro il metodo.',
     },
     { type: 'h2', text: 'Cosa chiedere nella prima videochiamata?' },
     {
@@ -409,26 +408,25 @@ const article: Article = {
         'Supporto descritto come “disponibile” senza durata, ambito o tempi di risposta.',
       ],
     },
-    { type: 'h2', text: 'Quando non siamo la scelta giusta?' },
+    { type: 'h2', text: 'A chi è rivolto lo Shopify Launch Sprint?' },
     {
       type: 'paragraph',
-      text: 'Non siamo la scelta giusta per ogni store, e dirlo subito ti risparmia una videochiamata.',
+      text: 'Lo Sprint è per gli store che arrivano da un’altra piattaforma e dove traffico e ordini contano già.',
     },
     {
       type: 'list',
       items: [
-        '**Un catalogo piccolo con dati semplici.** Un’app lo sposta e i redirect puoi importarli da CSV da solo.',
-        '**Fatturato aziendale sotto i 300k euro.** Lo Sprint richiede prima una valutazione preventiva, per assicurarci che l’investimento sia sostenibile per lo store. Puoi comunque candidarti e valutiamo insieme la fattibilità.',
-        '**Vuoi un redesign.** Lo Sprint è una replica 1:1 del tuo store ricostruita con il nostro Custom AI System, non un restyling. Design e rebranding vengono dopo, con un partner.',
-        '**Lavoro profondo su gestionale, marketplace, cassa o portale B2B.** Oltre i limiti del tuo scaglione (prodotti, lingue, gestionale) si applicano extra a prezzo fisso, e portali B2B complessi, marketplace e cassa spettano a partner dedicati dopo il go-live. Se il progetto è soprattutto questo, scegli un team fatto per quello.',
-        '**Il tuo store è già su Shopify.** Lo Sprint è per store che arrivano da un’altra piattaforma.',
-        '**Ti serve una prova sulla tua piattaforma.** Migriamo da WooCommerce, PrestaShop, Magento, piattaforme custom e gestionali con negozio integrato, ma i nostri casi pubblici sono WooCommerce e una piattaforma proprietaria.',
+        '**Store con traffico e ordini da proteggere.** Ogni vecchio URL con traffico ottiene un redirect 301, mappato prima del lancio e testato dopo.',
+        '**Una replica 1:1 del tuo store.** Lo Sprint ricostruisce il tuo store 1:1 con il nostro Custom AI System. Design e rebranding vengono dopo, con un partner.',
+        '**Store che arrivano da WooCommerce, PrestaShop, Magento, piattaforme custom e gestionali con negozio integrato.** Il metodo è lo stesso su ogni sorgente: audit, mappa dei redirect 301, migrazione dei dati e QA.',
+        '**Un prezzo fisso con scaglioni chiari.** Oltre i limiti del tuo scaglione (prodotti, lingue, gestionale) si applicano extra a prezzo fisso, e portali B2B complessi, marketplace e cassa sono gestiti da partner dedicati dopo il go-live.',
+        '**Fatturato aziendale sotto i 300k euro.** Lo Sprint parte con una valutazione preventiva, per assicurarci che l’investimento sia sostenibile per lo store. Puoi comunque candidarti e valutiamo insieme la fattibilità.',
       ],
     },
     { type: 'h2', text: 'Cosa fare questa settimana?' },
     {
       type: 'paragraph',
-      text: 'Scegli due o tre fornitori di tipi diversi, fai a ciascuno le stesse dieci domande e confronta i loro documenti, non le loro presentazioni. Chiedi a tutti una mappa dei redirect di esempio, il contratto e l’elenco degli extra. Il nostro modo di lavorare è nella [guida alla migrazione a Shopify](/it/migrazione-shopify), e puoi [parlare direttamente con noi](/it/contatti) se vuoi un parere onesto su quale tipo si adatta al tuo store, anche quando la risposta non siamo noi.',
+      text: 'Scegli due o tre fornitori di tipi diversi, fai a ciascuno le stesse dieci domande e confronta i loro documenti, non le loro presentazioni. Chiedi a tutti una mappa dei redirect di esempio, il contratto e l’elenco degli extra. Il nostro modo di lavorare è nella [guida alla migrazione a Shopify](/it/migrazione-shopify), e puoi [parlare direttamente con noi](/it/contatti) se vuoi un parere su quale tipo si adatta al tuo store.',
     },
     {
       type: 'paragraph',

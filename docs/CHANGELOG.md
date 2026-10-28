@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.80.0 (28 Oct 2026)
+
+- **Never negative about us**: about 95 sentences in 15 articles, the Nazzi and Cumini case studies, the migration guide, the Sprint copy and `llms.txt` no longer admit gaps ("we have no Magento case study", "no one can promise", "not everything went smoothly"); they now speak about the Sprint method, Antonio's 7+ years of eCommerce projects and the written 90-day SEO guarantee, worded exactly as on the Sprint page. The rule is now in the `seo-voce` skill, check 3b of `seo-revisione` and `SEO/README.md` (Francesca).
+
 ### Changelog v1.79.0 (28 Oct 2026)
 
 - **llms.txt lists every article**: the Blog Articles section now has all 18 articles with title, summary and EN and IT URLs, newest first, so AI assistants can find and cite them; `SEO/piano.md` records the calendar run of 27 and 28 October (Francesca).

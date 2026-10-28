@@ -62,7 +62,7 @@ const article: Article = {
     {
       question: 'Do I need an llms.txt file for agentic commerce?',
       answer:
-        'No. It costs an afternoon and does no harm, but we would not promise that it moves anything. Product data, structured data and clear policies matter far more than a text file at the root of the site.',
+        'No. It costs an afternoon and does no harm, and product data, structured data and clear policies matter far more than a text file at the root of the site.',
     },
   ],
   faqIt: [
@@ -94,7 +94,7 @@ const article: Article = {
     {
       question: 'Serve un file llms.txt per l’agentic commerce?',
       answer:
-        'No. Costa un pomeriggio e non fa danni, ma non prometteremmo che sposti qualcosa. Dati prodotto, dati strutturati e policy chiare contano molto più di un file di testo nella radice del sito.',
+        'No. Costa un pomeriggio e non fa danni, e dati prodotto, dati strutturati e policy chiare contano molto più di un file di testo nella radice del sito.',
     },
   ],
   content: [
@@ -135,7 +135,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'The figure to know is this one: AI-driven traffic and orders to Shopify stores tripled year over year in the second quarter of 2026 ([Digital Commerce 360](https://www.digitalcommerce360.com/2026/08/06/how-shopify-is-approaching-agentic-ai-2026/), 6 August 2026). It is a growth rate, not a share of orders, and a tripling can start from a small base the source does not give: it tells you the direction, not the size. We do not have a measured count of agent orders for our clients either, and we will not invent one.',
+      text: 'The figure to know is this one: AI-driven traffic and orders to Shopify stores tripled year over year in the second quarter of 2026 ([Digital Commerce 360](https://www.digitalcommerce360.com/2026/08/06/how-shopify-is-approaching-agentic-ai-2026/), 6 August 2026). It is a growth rate, not a share of orders, and a tripling can start from a small base the source does not give: it tells you the direction, not the size.',
     },
     { type: 'paragraph', text: '**Worth doing this quarter:**' },
     {
@@ -154,7 +154,7 @@ const article: Article = {
       items: [
         '**Building your own shopping agent or one-off integrations with each AI platform.** On Shopify the channel does that job for you.',
         '**Rewriting every description with AI to “rank in ChatGPT”.** Agents want facts, not louder copy.',
-        '**Treating llms.txt as a growth lever.** It cost us an afternoon, and we would not promise it moves anything.',
+        '**Treating llms.txt as a growth lever.** It costs an afternoon, and product data, structured data and clear policies matter far more.',
         '**Paid “agent optimization” packages with guaranteed placement.** Nobody can guarantee what an agent picks.',
         '**Waiting for the standards to settle.** The data work below does not depend on which protocol wins.',
       ],
@@ -255,7 +255,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Our evidence is two real migrations. [Integratori DTC Nazzi](/use-cases/integratori-nazzi-dtc-shopify) moved from WooCommerce, and its live Shopify store publishes the agentic discovery sitemap (checked on 13 October 2026). It sold 105% more online in its first 85 days on Shopify than in the same days of 2025. We cannot attribute any of that to AI agents: the case shows what the migration did, not what agents did. [Cumini](/use-cases/cumini-luxury-fashion-ecommerce) moved from a proprietary platform tied to its ERP. For how we migrate, read the [guide to migrating to Shopify](/shopify-migration).',
+      text: 'Our evidence is two real migrations. [Integratori DTC Nazzi](/use-cases/integratori-nazzi-dtc-shopify) moved from WooCommerce, and its live Shopify store publishes the agentic discovery sitemap (checked on 13 October 2026). It sold 105% more online in its first 85 days on Shopify than in the same days of 2025. The case shows what the migration did. [Cumini](/use-cases/cumini-luxury-fashion-ecommerce) moved from a proprietary platform tied to its ERP. For how we migrate, read the [guide to migrating to Shopify](/shopify-migration).',
     },
     {
       type: 'paragraph',
@@ -290,7 +290,7 @@ const article: Article = {
     { type: 'h3', text: 'Do I need an llms.txt file for agentic commerce?' },
     {
       type: 'paragraph',
-      text: 'No. It costs an afternoon and does no harm, but we would not promise that it moves anything. Product data, structured data and clear policies matter far more than a text file at the root of the site.',
+      text: 'No. It costs an afternoon and does no harm, and product data, structured data and clear policies matter far more than a text file at the root of the site.',
     },
     { type: 'h2', text: 'What to do on Monday' },
     {
@@ -340,7 +340,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Il dato da conoscere è questo: traffico e ordini generati dall’AI verso gli store Shopify sono triplicati anno su anno nel secondo trimestre 2026 ([Digital Commerce 360](https://www.digitalcommerce360.com/2026/08/06/how-shopify-is-approaching-agentic-ai-2026/), 6 agosto 2026). È un tasso di crescita, non una quota degli ordini, e un triplicare può partire da una base piccola che la fonte non indica: dice la direzione, non la dimensione. Non abbiamo un conteggio misurato degli ordini da agenti nemmeno per i nostri clienti, e non ne inventiamo uno.',
+      text: 'Il dato da conoscere è questo: traffico e ordini generati dall’AI verso gli store Shopify sono triplicati anno su anno nel secondo trimestre 2026 ([Digital Commerce 360](https://www.digitalcommerce360.com/2026/08/06/how-shopify-is-approaching-agentic-ai-2026/), 6 agosto 2026). È un tasso di crescita, non una quota degli ordini, e un triplicare può partire da una base piccola che la fonte non indica: dice la direzione, non la dimensione.',
     },
     { type: 'paragraph', text: '**Vale la pena farlo in questo trimestre:**' },
     {
@@ -359,7 +359,7 @@ const article: Article = {
       items: [
         '**Costruire un tuo agente di shopping o integrazioni su misura con ogni piattaforma AI.** Su Shopify lo fa il canale.',
         '**Riscrivere ogni descrizione con l’AI per “posizionarsi su ChatGPT”.** Gli agenti vogliono fatti, non testi più urlati.',
-        '**Trattare llms.txt come una leva di crescita.** A noi è costato un pomeriggio e non promettiamo che sposti qualcosa.',
+        '**Trattare llms.txt come una leva di crescita.** Costa un pomeriggio, e dati prodotto, dati strutturati e policy chiare contano molto di più.',
         '**Pacchetti a pagamento di “ottimizzazione per gli agenti” con posizionamento garantito.** Nessuno può garantire cosa sceglie un agente.',
         '**Aspettare che gli standard si assestino.** Il lavoro sui dati non dipende da quale protocollo vince.',
       ],
@@ -460,7 +460,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Le nostre prove sono due migrazioni. [Integratori DTC Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify) è passato da WooCommerce, e il suo store Shopify online pubblica la sitemap di agentic discovery (verificato il 13 ottobre 2026). Ha venduto online il 105% in più nei primi 85 giorni su Shopify rispetto agli stessi giorni del 2025. Non possiamo attribuire nulla di questo agli agenti AI: il caso mostra cosa ha fatto la migrazione, non cosa hanno fatto gli agenti. [Cumini](/it/casi-studio/cumini-luxury-fashion-ecommerce) è passato da una piattaforma proprietaria legata al gestionale. Per come migriamo, leggi la [guida alla migrazione a Shopify](/it/migrazione-shopify).',
+      text: 'Le nostre prove sono due migrazioni. [Integratori DTC Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify) è passato da WooCommerce, e il suo store Shopify online pubblica la sitemap di agentic discovery (verificato il 13 ottobre 2026). Ha venduto online il 105% in più nei primi 85 giorni su Shopify rispetto agli stessi giorni del 2025. Il caso mostra cosa ha fatto la migrazione. [Cumini](/it/casi-studio/cumini-luxury-fashion-ecommerce) è passato da una piattaforma proprietaria legata al gestionale. Per come migriamo, leggi la [guida alla migrazione a Shopify](/it/migrazione-shopify).',
     },
     {
       type: 'paragraph',
@@ -495,7 +495,7 @@ const article: Article = {
     { type: 'h3', text: 'Serve un file llms.txt per l’agentic commerce?' },
     {
       type: 'paragraph',
-      text: 'No. Costa un pomeriggio e non fa danni, ma non prometteremmo che sposti qualcosa. Dati prodotto, dati strutturati e policy chiare contano molto più di un file di testo nella radice del sito.',
+      text: 'No. Costa un pomeriggio e non fa danni, e dati prodotto, dati strutturati e policy chiare contano molto più di un file di testo nella radice del sito.',
     },
     { type: 'h2', text: 'Cosa fare lunedì' },
     {

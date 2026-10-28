@@ -37,7 +37,7 @@ const article: Article = {
     {
       question: 'Will I lose my Google rankings if I migrate to Shopify?',
       answer:
-        'Rankings usually move for a while after any migration, including well-run ones, and a complete 301 redirect map is what decides how fast they come back. No one can promise zero movement. Google itself says visibility can fluctuate temporarily during a site move and should settle over time.',
+        'Rankings usually move for a while after any migration, including well-run ones, and a complete 301 redirect map is what decides how fast they come back. In the Sprint, organic traffic at 90 days is one of the 4 written guarantees: below the baseline, we work for free until it comes back. Google itself says visibility can fluctuate temporarily during a site move and should settle over time.',
     },
     {
       question: 'Do I need Search Console’s Change of Address tool when I move to Shopify?',
@@ -62,14 +62,14 @@ const article: Article = {
     {
       question: 'How long until rankings recover after a Shopify migration?',
       answer:
-        'Google says small to medium sites may take a few weeks for most pages to move, and larger sites take longer. We watch crawling first, then indexing, then clicks, over the 90 days after launch. We do not promise a date: the redirect map, content parity and tracking decide it.',
+        'Google says small to medium sites may take a few weeks for most pages to move, and larger sites take longer. We watch crawling first, then indexing, then clicks, over the 90 days after launch. The redirect map, content parity and tracking set the pace, and organic traffic at 90 days is one of the Sprint’s 4 written guarantees.',
     },
   ],
   faqIt: [
     {
       question: 'Perderò le posizioni su Google se migro a Shopify?',
       answer:
-        'Il posizionamento di solito si muove per un periodo dopo qualunque migrazione, anche quelle fatte bene, ed è la mappa completa dei redirect 301 a decidere quanto in fretta recupera. Nessuno può promettere zero oscillazioni. Lo dice anche Google: durante un trasferimento di sito la visibilità può fluttuare temporaneamente e poi si assesta.',
+        'Il posizionamento di solito si muove per un periodo dopo qualunque migrazione, anche quelle fatte bene, ed è la mappa completa dei redirect 301 a decidere quanto in fretta recupera. Nello Sprint il traffico organico a 90 giorni è una delle 4 garanzie scritte: sotto la baseline, lavoriamo gratis finché non torna. Lo dice anche Google: durante un trasferimento di sito la visibilità può fluttuare temporaneamente e poi si assesta.',
     },
     {
       question: 'Devo usare lo strumento Cambio di indirizzo di Search Console per passare a Shopify?',
@@ -94,7 +94,7 @@ const article: Article = {
     {
       question: 'Quanto tempo serve per recuperare le posizioni dopo la migrazione a Shopify?',
       answer:
-        'Secondo Google per i siti piccoli e medi servono alcune settimane perché la maggior parte delle pagine si sposti, per i siti grandi di più. Noi controlliamo prima la scansione, poi l’indicizzazione, poi i clic, nei 90 giorni dopo il lancio. Non promettiamo una data: la decidono mappa dei redirect, contenuti conservati e tracking.',
+        'Secondo Google per i siti piccoli e medi servono alcune settimane perché la maggior parte delle pagine si sposti, per i siti grandi di più. Noi controlliamo prima la scansione, poi l’indicizzazione, poi i clic, nei 90 giorni dopo il lancio. Il ritmo lo danno mappa dei redirect, contenuti conservati e tracking, e il traffico organico a 90 giorni è una delle 4 garanzie scritte dello Sprint.',
     },
   ],
   content: [
@@ -108,7 +108,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Let’s be straight: rankings move during every migration, and nothing here promises zero movement. What you control is how complete the map is and how fast you notice gaps. That decides the recovery.',
+      text: 'Rankings move during every migration. What you control is how complete the map is and how fast you notice gaps: that decides the recovery, and in the Sprint organic traffic at 90 days is one of the 4 written guarantees.',
     },
     { type: 'h2', text: 'What does moving to Shopify change for SEO?' },
     {
@@ -125,7 +125,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'That is why old URLs almost never survive, even when the domain stays the same. Our real migrations are from WooCommerce (Nazzi) and from a proprietary platform tied to the ERP (Cumini). We have no cases on Magento, PrestaShop, Shopware, BigCommerce, Wix or Squarespace: their URL patterns differ, the method below does not, and we start from each platform’s official documentation.',
+      text: 'That is why old URLs almost never survive, even when the domain stays the same. Our real migrations are from WooCommerce (Nazzi) and from a proprietary platform tied to the ERP (Cumini). URL patterns differ on every platform, the method below does not, and we start from each platform’s official documentation.',
     },
     { type: 'h2', text: 'Phase 1: what do you do before the migration starts?' },
     {
@@ -321,7 +321,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Chiariamo subito: il posizionamento si muove in ogni migrazione, e nulla qui promette zero oscillazioni. Controlli quanto è completa la mappa e quanto in fretta vedi i buchi. Questo decide il recupero.',
+      text: 'Il posizionamento si muove in ogni migrazione. Controlli quanto è completa la mappa e quanto in fretta vedi i buchi: questo decide il recupero, e nello Sprint il traffico organico a 90 giorni è una delle 4 garanzie scritte.',
     },
     { type: 'h2', text: 'Cosa cambia per la SEO in una migrazione Shopify?' },
     {
@@ -338,7 +338,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Per questo i vecchi URL quasi mai sopravvivono, anche se il dominio resta lo stesso. Le nostre migrazioni vere: da WooCommerce (Nazzi) e da una piattaforma proprietaria legata al gestionale (Cumini). Non abbiamo casi su Magento, PrestaShop, Shopware, BigCommerce, Wix o Squarespace: gli schemi di URL cambiano, il metodo qui sotto no, e partiamo dalla documentazione ufficiale di ciascuna.',
+      text: 'Per questo i vecchi URL quasi mai sopravvivono, anche se il dominio resta lo stesso. Le nostre migrazioni vere: da WooCommerce (Nazzi) e da una piattaforma proprietaria legata al gestionale (Cumini). Gli schemi di URL cambiano da una piattaforma all’altra, il metodo qui sotto no, e partiamo dalla documentazione ufficiale di ciascuna.',
     },
     { type: 'h2', text: 'Fase 1: cosa si fa prima di iniziare la migrazione?' },
     {

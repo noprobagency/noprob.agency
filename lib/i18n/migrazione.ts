@@ -170,7 +170,7 @@ const it: MigrazioneCopy = {
       },
       {
         type: 'paragraph',
-        text: 'Noi abbiamo migrato store da WooCommerce e da una piattaforma proprietaria collegata a un gestionale (due casi in fondo alla guida). Su Magento, PrestaShop, BigCommerce, Wix e Squarespace non abbiamo casi da citare: le indicazioni sopra descrivono come funzionano queste piattaforme e rimandano alla documentazione di Shopify. Chiedi sempre a chi ti prepara il preventivo un riferimento sulla tua piattaforma.',
+        text: 'Noi abbiamo migrato store da WooCommerce e da una piattaforma proprietaria collegata a un gestionale (due casi in fondo alla guida). Su ogni piattaforma applichiamo lo stesso metodo dello Sprint (audit, mappa dei redirect 301, migrazione dei dati, QA): le indicazioni sopra rimandano alla documentazione di Shopify. Il primo passo è sempre l’audit del tuo store.',
       },
       { type: 'h2', text: 'Cosa si sposta davvero in una migrazione a Shopify?' },
       {
@@ -366,7 +366,7 @@ const it: MigrazioneCopy = {
       {
         question: 'Perderò il posizionamento su Google migrando a Shopify?',
         answer:
-          'Il posizionamento di solito si muove per un periodo dopo la migrazione, e una mappa completa di redirect 301, contenuti conservati e monitoraggio in Search Console permettono di recuperarlo. Nessuna migrazione può promettere zero oscillazioni. Nello Sprint il traffico organico a 90 giorni è una delle 4 garanzie scritte.',
+          'Il posizionamento di solito si muove per un periodo dopo la migrazione, e una mappa completa di redirect 301, contenuti conservati e monitoraggio in Search Console permettono di recuperarlo. Nello Sprint il traffico organico a 90 giorni è una delle 4 garanzie scritte.',
       },
       {
         question: 'I clienti mantengono account e password?',
@@ -451,7 +451,7 @@ const en: MigrazioneCopy = {
       },
       {
         type: 'paragraph',
-        text: 'We have migrated stores from WooCommerce and from a proprietary platform tied to an ERP (two cases at the end of this guide). We have no cases to cite on Magento, PrestaShop, BigCommerce, Wix or Squarespace: the notes above describe how those platforms work and point to Shopify’s documentation. When an agency quotes you a migration, ask for a reference on your exact platform.',
+        text: 'We have migrated stores from WooCommerce and from a proprietary platform tied to an ERP (two cases at the end of this guide). We apply the same Sprint method on every platform (audit, 301 redirect map, data migration, QA): the notes above point to Shopify’s documentation. The first step is always an audit of your store.',
       },
       { type: 'h2', text: 'What actually gets migrated to Shopify?' },
       {
@@ -647,7 +647,7 @@ const en: MigrazioneCopy = {
       {
         question: 'Will I lose my Google rankings when I migrate to Shopify?',
         answer:
-          'Rankings usually move for a while after a migration, and a complete map of 301 redirects, preserved content and monitoring in Search Console let them recover. No migration can promise zero movement. In the Sprint, organic traffic at 90 days is one of the 4 written guarantees.',
+          'Rankings usually move for a while after a migration, and a complete map of 301 redirects, preserved content and monitoring in Search Console let them recover. In the Sprint, organic traffic at 90 days is one of the 4 written guarantees.',
       },
       {
         question: 'Do customers keep their accounts and passwords?',

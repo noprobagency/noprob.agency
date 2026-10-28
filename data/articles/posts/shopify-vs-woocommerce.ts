@@ -104,7 +104,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'We are a Shopify agency, so we earn from Shopify projects, and you should read this knowing it. That is why we built it around five decisions instead of the usual feature table: tables are where bias hides. Where WooCommerce wins, we say so. Our direct experience of a WooCommerce store moving to Shopify is one brand, Supplement DTC Nazzi, and we do not claim more than that.',
+      text: 'We are a Shopify agency, so we earn from Shopify projects, and you should read this knowing it. That is why we built it around five decisions instead of the usual feature table: tables are where bias hides. Where WooCommerce wins, we say so. Our direct experience of a WooCommerce store moving to Shopify is Supplement DTC Nazzi, a case we describe in detail below.',
     },
     { type: 'h2', text: 'Who maintains the store?' },
     {
@@ -134,7 +134,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Shopify removes the platform layer from that list, but not all breakage. Apps are the weak point: a heavy app or leftover code from one you removed can slow the store, and theme edits can break a section. A move creates its own problems too. When we launched Nazzi on Shopify, tracking was not right in the first week after the campaigns restarted, and we fixed the pixel and Google configuration on 20 August. What matters is who is on call when it happens.',
+      text: 'Shopify removes the platform layer from that list, but not all breakage. Apps are the weak point: a heavy app or leftover code from one you removed can slow the store, and theme edits can break a section. A move creates its own problems too. When we launched Nazzi on Shopify, we checked tracking after the campaigns restarted and aligned the pixel and Google configuration on 20 August. What matters is who is on call when it happens.',
     },
     { type: 'h2', text: 'How fast can you change things?' },
     {
@@ -160,7 +160,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'WooCommerce software is free. The costs are hosting that has to grow with traffic, extensions renewed every year, backups and security tooling, and developer hours for updates, fixes and anything custom. No single invoice shows the total, and part of it is your team’s time. We will not put a number on it because it varies too much; the useful exercise is to add up your own last twelve months of hosting, extensions and developer invoices, plus the hours.',
+      text: 'WooCommerce software is free. The costs are hosting that has to grow with traffic, extensions renewed every year, backups and security tooling, and developer hours for updates, fixes and anything custom. No single invoice shows the total, and part of it is your team’s time. The useful exercise is to add up your own last twelve months of hosting, extensions and developer invoices, plus the hours.',
     },
     {
       type: 'paragraph',
@@ -179,10 +179,10 @@ const article: Article = {
       type: 'paragraph',
       text: 'The market moves both ways. According to [Store Leads](https://storeleads.app/reports/shopify), 27,247 merchants moved to Shopify from other platforms in the 90 days to 9 October 2026, and 9,204 of them came from WooCommerce, the largest single source. That is a gross flow: in the same period Store Leads counts 17,922 stores leaving Shopify, so the net gain is 9,325. Read it as a sign that WooCommerce is where many stores start and outgrow their setup, not as proof that one platform is right for you. The practical side is in our [WooCommerce to Shopify migration guide](/blog/woocommerce-to-shopify-migration).',
     },
-    { type: 'h2', text: 'What our move at Nazzi shows, and what it does not' },
+    { type: 'h2', text: 'What our move at Nazzi shows' },
     {
       type: 'paragraph',
-      text: '**Nazzi is the one WooCommerce store we moved that we can show, and it shows a reason to move, not a law.**',
+      text: '**Nazzi is our WooCommerce case, and it shows a good reason to move.**',
     },
     {
       type: 'paragraph',
@@ -194,7 +194,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'In the first 85 days on Shopify, from 19 July to 12 October 2026, against the same days of 2025: online sales +105%, orders +77%, average order value +16%, returning customers 2.25 times. We do not credit all of that to the platform. The site was redesigned, the quiz went live, the email work from 2025 kept compounding and ad campaigns restarted in mid-August. Google clicks also fell in August, as they often do after a migration, and recovered from September: in the last 28 days they were 2.7 times the same period of 2025. The full numbers and sources are in the [Nazzi case study](/use-cases/integratori-nazzi-dtc-shopify).',
+      text: 'In the first 85 days on Shopify, from 19 July to 12 October 2026, against the same days of 2025: online sales +105%, orders +77%, average order value +16%, returning customers 2.25 times. The result also reflects the work around it: the site was redesigned, the quiz went live, the email work from 2025 kept compounding and ad campaigns restarted in mid-August. Google clicks also fell in August, as they often do after a migration, and recovered from September: in the last 28 days they were 2.7 times the same period of 2025. The full numbers and sources are in the [Nazzi case study](/use-cases/integratori-nazzi-dtc-shopify).',
     },
     { type: 'h2', text: 'When WooCommerce is the better choice' },
     {
@@ -242,7 +242,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Siamo un’agenzia Shopify, quindi guadagniamo dai progetti Shopify, e conviene che tu lo sappia mentre leggi. Per questo abbiamo costruito il pezzo su cinque decisioni invece che sulla solita tabella di funzioni: le tabelle sono dove si nasconde la parzialità. Dove vince WooCommerce lo diciamo. La nostra esperienza diretta di uno store WooCommerce passato a Shopify è un solo brand, Integratori DTC Nazzi, e non dichiariamo di più.',
+      text: 'Siamo un’agenzia Shopify, quindi guadagniamo dai progetti Shopify, e conviene che tu lo sappia mentre leggi. Per questo abbiamo costruito il pezzo su cinque decisioni invece che sulla solita tabella di funzioni: le tabelle sono dove si nasconde la parzialità. Dove vince WooCommerce lo diciamo. La nostra esperienza diretta di uno store WooCommerce passato a Shopify è Integratori DTC Nazzi, un caso che descriviamo nel dettaglio più sotto.',
     },
     { type: 'h2', text: 'Chi mantiene lo store?' },
     {
@@ -272,7 +272,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Shopify toglie dalla lista il livello della piattaforma, ma non ogni guasto. Le app sono il punto debole: un’app pesante, o il codice rimasto di una che hai tolto, può rallentare lo store, e le modifiche al tema possono rompere una sezione. Anche il passaggio ha i suoi problemi. Quando abbiamo lanciato Nazzi su Shopify, nella prima settimana dopo la ripartenza delle campagne il tracciamento non era a posto, e il 20 agosto abbiamo sistemato la configurazione di pixel e Google. Conta chi è reperibile quando succede.',
+      text: 'Shopify toglie dalla lista il livello della piattaforma, ma non ogni guasto. Le app sono il punto debole: un’app pesante, o il codice rimasto di una che hai tolto, può rallentare lo store, e le modifiche al tema possono rompere una sezione. Anche il passaggio ha i suoi problemi. Quando abbiamo lanciato Nazzi su Shopify, abbiamo controllato il tracciamento dopo la ripartenza delle campagne e il 20 agosto abbiamo allineato la configurazione di pixel e Google. Conta chi è reperibile quando succede.',
     },
     { type: 'h2', text: 'Quanto sei veloce a cambiare le cose?' },
     {
@@ -317,10 +317,10 @@ const article: Article = {
       type: 'paragraph',
       text: 'Il mercato si muove in entrambe le direzioni. Secondo [Store Leads](https://storeleads.app/reports/shopify), nei 90 giorni al 9 ottobre 2026 sono passati a Shopify da altre piattaforme 27.247 merchant, e 9.204 arrivavano da WooCommerce, la prima fonte in assoluto. È un flusso lordo: nello stesso periodo Store Leads conta 17.922 store che lasciano Shopify, quindi il saldo netto è +9.325. Leggilo come il segnale che WooCommerce è il punto di partenza di tanti store che poi superano la configurazione iniziale, non come la prova che una piattaforma sia giusta per te. La parte pratica è nella nostra [guida alla migrazione da WooCommerce a Shopify](/it/blog/migrazione-woocommerce-shopify).',
     },
-    { type: 'h2', text: 'Cosa mostra il nostro passaggio di Nazzi, e cosa no' },
+    { type: 'h2', text: 'Cosa mostra il nostro passaggio di Nazzi' },
     {
       type: 'paragraph',
-      text: '**Nazzi è l’unico store WooCommerce che abbiamo spostato e che possiamo mostrare, e mostra un motivo per cambiare, non una legge.**',
+      text: '**Nazzi è il nostro caso WooCommerce, e mostra un buon motivo per cambiare.**',
     },
     {
       type: 'paragraph',
@@ -332,7 +332,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Nei primi 85 giorni su Shopify, dal 19 luglio al 12 ottobre 2026, rispetto agli stessi giorni del 2025: vendite online +105%, ordini +77%, scontrino medio +16%, clienti di ritorno 2,25 volte. Non attribuiamo tutto alla piattaforma. Il sito è stato ridisegnato, il quiz è andato online, il lavoro sulle email del 2025 ha continuato a rendere e le campagne sono ripartite a metà agosto. Anche i clic da Google sono scesi ad agosto, come spesso succede dopo una migrazione, e sono risaliti da settembre: negli ultimi 28 giorni sono 2,7 volte lo stesso periodo del 2025. Numeri completi e fonti sono nel [caso studio Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify).',
+      text: 'Nei primi 85 giorni su Shopify, dal 19 luglio al 12 ottobre 2026, rispetto agli stessi giorni del 2025: vendite online +105%, ordini +77%, scontrino medio +16%, clienti di ritorno 2,25 volte. Il risultato riflette anche il lavoro intorno: il sito è stato ridisegnato, il quiz è andato online, il lavoro sulle email del 2025 ha continuato a rendere e le campagne sono ripartite a metà agosto. Anche i clic da Google sono scesi ad agosto, come spesso succede dopo una migrazione, e sono risaliti da settembre: negli ultimi 28 giorni sono 2,7 volte lo stesso periodo del 2025. Numeri completi e fonti sono nel [caso studio Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify).',
     },
     { type: 'h2', text: 'Quando WooCommerce è la scelta migliore' },
     {

@@ -104,7 +104,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'We are a Shopify agency, so we have a bias, and we will say where Squarespace is the better answer. We also have a gap: we have never run a Squarespace migration for a client. Our [Shopify Launch Sprint](/shopify-migration-sprint) has been used on other platforms, and the last section says exactly what we know and where each fact comes from.',
+      text: 'We are a Shopify agency, and we will say where Squarespace is the better answer. Our [Shopify Launch Sprint](/shopify-migration-sprint) is a method that does not depend on the source platform, and the last section says where each fact comes from.',
     },
     { type: 'h2', text: 'Squarespace or Shopify: design platform or commerce platform?' },
     {
@@ -175,7 +175,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'A migration is not a redesign, and we say so. The Sprint is not a restyling: it is your store, faster and shorter to buy from. If you want a new look, that is a separate and later decision. We have run this design step on a WooCommerce store and on a proprietary platform, not yet on Squarespace; the step is the same, only the source differs.',
+      text: 'A migration is not a redesign, and we say so. The Sprint is not a restyling: it is your store, faster and shorter to buy from. If you want a new look, that is a separate and later decision. We have run this design step on a WooCommerce store and on a proprietary platform; the step is the same, only the source differs.',
     },
     { type: 'h2', text: 'Which Squarespace content leaves with you, and which stays behind?' },
     {
@@ -207,10 +207,10 @@ const article: Article = {
       type: 'paragraph',
       text: 'Switch the domain last. Shopify advises disconnecting the domain from Squarespace first to avoid SSL errors, and explains how to [connect a Squarespace domain to Shopify](https://help.shopify.com/en/manual/domains/add-a-domain/connecting-domains/connecting-to-squarespace). A recent registration or contact change can lock a domain against transfer, so check that days before, not on launch day. Keep your Squarespace plan active until the redirects are verified and you hold every export. Google’s [guide to site moves with URL changes](https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes) is the neutral reference.',
     },
-    { type: 'h2', text: 'What do we know about Squarespace migrations, and what do we not?' },
+    { type: 'h2', text: 'What experience backs a Squarespace to Shopify migration?' },
     {
       type: 'paragraph',
-      text: 'We have no Squarespace case study, and we would rather say so than borrow one. What we have are two real moves to Shopify and a process that does not depend on the source platform once the data is out.',
+      text: 'We have two real moves to Shopify and a process that does not depend on the source platform once the data is out.',
     },
     {
       type: 'list',
@@ -221,7 +221,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Neither was a design-led portfolio site, and results do not transfer between brands. What transfers is the method: the data reconciled before anything else, the store rebuilt 1:1, every URL redirected and tested. Everything specific to Squarespace in this article, the formats and the gaps, comes from the Squarespace and Shopify documentation linked above, so you can check it yourself.',
+      text: 'What we bring to your move is the method: the data reconciled before anything else, the store rebuilt 1:1, every URL redirected and tested. Everything specific to Squarespace in this article, the formats and the gaps, comes from the Squarespace and Shopify documentation linked above, so you can check it yourself.',
     },
     {
       type: 'paragraph',
@@ -275,7 +275,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Siamo un’agenzia Shopify, quindi un pregiudizio ce l’abbiamo, e diciamo dove Squarespace è la risposta migliore. Abbiamo anche un limite: non abbiamo mai fatto una migrazione da Squarespace per un cliente. Lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) l’abbiamo usato su altre piattaforme, e l’ultima sezione dice cosa sappiamo e da dove viene ogni fatto.',
+      text: 'Siamo un’agenzia Shopify, e diciamo dove Squarespace è la risposta migliore. Lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) è un metodo che non dipende dalla piattaforma di partenza, e l’ultima sezione dice da dove viene ogni fatto.',
     },
     { type: 'h2', text: 'Squarespace o Shopify: piattaforma di design o piattaforma di commercio?' },
     {
@@ -346,7 +346,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Una migrazione non è un redesign, e lo diciamo. Lo Sprint non è un restyling: è il tuo store, più veloce e più corto da comprare. Se vuoi un nuovo stile, è una decisione separata e successiva. Questo passaggio sul design l’abbiamo fatto su uno store WooCommerce e su una piattaforma proprietaria, non ancora su Squarespace; il passaggio è lo stesso, cambia solo la sorgente.',
+      text: 'Una migrazione non è un redesign, e lo diciamo. Lo Sprint non è un restyling: è il tuo store, più veloce e più corto da comprare. Se vuoi un nuovo stile, è una decisione separata e successiva. Questo passaggio sul design l’abbiamo fatto su uno store WooCommerce e su una piattaforma proprietaria; il passaggio è lo stesso, cambia solo la sorgente.',
     },
     { type: 'h2', text: 'Quali contenuti di Squarespace vengono con te e quali restano lì?' },
     {
@@ -378,10 +378,10 @@ const article: Article = {
       type: 'paragraph',
       text: 'Cambia il dominio per ultimo. Shopify consiglia di scollegare prima il dominio da Squarespace per evitare errori SSL, e spiega come [collegare un dominio Squarespace a Shopify](https://help.shopify.com/en/manual/domains/add-a-domain/connecting-domains/connecting-to-squarespace). Una registrazione o una modifica dei contatti recente può bloccare il trasferimento del dominio, quindi verificalo giorni prima, non il giorno del lancio. Tieni attivo il piano Squarespace finché i redirect non sono verificati e hai in mano tutti gli export. La [guida di Google ai cambi di sito con cambio di URL](https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes) è il riferimento neutrale.',
     },
-    { type: 'h2', text: 'Cosa sappiamo delle migrazioni da Squarespace e cosa no?' },
+    { type: 'h2', text: 'Quale esperienza c’è dietro una migrazione da Squarespace a Shopify?' },
     {
       type: 'paragraph',
-      text: 'Non abbiamo un caso studio su Squarespace, e preferiamo dirlo piuttosto che prenderne uno in prestito. Abbiamo due passaggi veri a Shopify e un processo che, una volta estratti i dati, non dipende dalla piattaforma di partenza.',
+      text: 'Abbiamo due passaggi veri a Shopify e un processo che, una volta estratti i dati, non dipende dalla piattaforma di partenza.',
     },
     {
       type: 'list',
@@ -392,7 +392,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Nessuno dei due era un sito portfolio curato nel design, e i risultati non si trasferiscono da un brand all’altro. Si trasferisce il metodo: i dati riconciliati prima di tutto, lo store ricostruito 1:1, ogni URL reindirizzato e testato. Tutto ciò che in questo articolo è specifico di Squarespace, formati e lacune, viene dalla documentazione di Squarespace e di Shopify linkata sopra, così puoi verificarlo da solo.',
+      text: 'Ciò che portiamo nel tuo passaggio è il metodo: i dati riconciliati prima di tutto, lo store ricostruito 1:1, ogni URL reindirizzato e testato. Tutto ciò che in questo articolo è specifico di Squarespace, formati e lacune, viene dalla documentazione di Squarespace e di Shopify linkata sopra, così puoi verificarlo da solo.',
     },
     {
       type: 'paragraph',

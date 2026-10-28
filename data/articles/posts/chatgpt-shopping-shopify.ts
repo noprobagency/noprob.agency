@@ -47,7 +47,7 @@ const article: Article = {
     {
       question: 'Does selling through ChatGPT cost extra on Shopify?',
       answer:
-        'We could not confirm it. Shopify’s Help Center pages and its December 2025 Agentic Storefronts announcement, as of October 2026, do not state a fee. In January 2026 the press (Retail Brew, PYMNTS) reported a 4% fee for merchants on sales through ChatGPT checkout, and we could not check whether it applies after the March 2026 change. Read the Agentic Storefronts Supplemental Terms of Service you accept.',
+        'Shopify’s Help Center pages and its December 2025 Agentic Storefronts announcement, as of October 2026, do not state a fee. In January 2026 the press (Retail Brew, PYMNTS) reported a 4% fee for merchants on sales through ChatGPT checkout, and no official page says whether it applies after the March 2026 change. Read the Agentic Storefronts Supplemental Terms of Service you accept.',
     },
     {
       question: 'Should I block GPTBot in robots.txt?',
@@ -79,7 +79,7 @@ const article: Article = {
     {
       question: 'Vendere tramite ChatGPT costa di più su Shopify?',
       answer:
-        'Non siamo riusciti a confermarlo. Le pagine del Centro assistenza Shopify e l’annuncio degli Agentic Storefronts di dicembre 2025, a ottobre 2026, non indicano una commissione. A gennaio 2026 la stampa (Retail Brew, PYMNTS) ha riportato una commissione del 4% per i merchant sulle vendite tramite il checkout di ChatGPT, e non abbiamo potuto verificare se valga dopo il cambio di marzo 2026. Leggi i Termini supplementari degli Agentic Storefronts che accetti.',
+        'Le pagine del Centro assistenza Shopify e l’annuncio degli Agentic Storefronts di dicembre 2025, a ottobre 2026, non indicano una commissione. A gennaio 2026 la stampa (Retail Brew, PYMNTS) ha riportato una commissione del 4% per i merchant sulle vendite tramite il checkout di ChatGPT, e nessuna pagina ufficiale dice se valga dopo il cambio di marzo 2026. Leggi i Termini supplementari degli Agentic Storefronts che accetti.',
     },
     {
       question: 'Devo bloccare GPTBot nel robots.txt?',
@@ -104,7 +104,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'The page is dated on purpose. How ChatGPT handles shopping changed between 2025 and 2026, and many articles still describe the old version. Everything below is checked against official OpenAI and Shopify pages as of October 2026, and where we rely on press we say so. Where sources disagree or stay silent, we say so. We are noprob agency: we build Shopify stores and run the [Shopify Launch Sprint](/shopify-migration-sprint). We have no measured ChatGPT experiment for a client, and will not pretend otherwise.',
+      text: 'The page is dated on purpose. How ChatGPT handles shopping changed between 2025 and 2026, and many articles still describe the old version. Everything below is checked against official OpenAI and Shopify pages as of October 2026, and where we rely on press we say so. Where sources disagree or stay silent, we say so. We are noprob agency: we build Shopify stores and run the [Shopify Launch Sprint](/shopify-migration-sprint). We build the stores and the data that AI agents read, and everything about ChatGPT below is traced to its source.',
     },
     { type: 'paragraph', text: 'The short version:' },
     {
@@ -131,7 +131,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'One thing we could not confirm: the pages we read do not list the countries where ChatGPT shopping through Shopify is live. Check Sales channels, then Agentic, in your admin.',
+      text: 'The official pages do not list the countries where ChatGPT shopping through Shopify is live. Check Sales channels, then Agentic, in your admin.',
     },
     { type: 'h2', text: 'How do products from a Shopify store get into ChatGPT?' },
     {
@@ -140,11 +140,11 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Per Shopify’s [Catalog documentation](https://help.shopify.com/en/manual/promoting-marketing/seo/shopify-catalog), if your store and products meet the requirements they are included automatically, with titles, descriptions, images, pricing, options and availability. You choose the AI channels from Sales channels, then Agentic, and Shopify’s [Help Center](https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts) says agentic storefronts are active by default for eligible stores. You can stop an individual agentic storefront from accessing your products through Shopify Catalog, but the documentation says you cannot opt out of Shopify Catalog itself. Using agentic storefronts requires accepting the Agentic Storefronts Supplemental Terms of Service, so read them. We found no official page, as of October 2026, that says how long a change to Catalog access takes to apply, so do not assume it is instant.',
+      text: 'Per Shopify’s [Catalog documentation](https://help.shopify.com/en/manual/promoting-marketing/seo/shopify-catalog), if your store and products meet the requirements they are included automatically, with titles, descriptions, images, pricing, options and availability. You choose the AI channels from Sales channels, then Agentic, and Shopify’s [Help Center](https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts) says agentic storefronts are active by default for eligible stores. You can stop an individual agentic storefront from accessing your products through Shopify Catalog, but the documentation says you cannot opt out of Shopify Catalog itself. Using agentic storefronts requires accepting the Agentic Storefronts Supplemental Terms of Service, so read them. As of October 2026 no official page says how long a change to Catalog access takes to apply, so do not assume it is instant.',
     },
     {
       type: 'paragraph',
-      text: 'Shopify decides what goes in. ChatGPT decides what shows. Shopify says each channel decides how to rank, word and display products. OpenAI’s Help Center says ChatGPT picks product results independently, they are not ads, and what appears depends on relevance to the question and its context, plus structured metadata from providers. As reported when OpenAI launched Instant Checkout in 2025, when several merchants sell the same product ChatGPT weighs factors such as availability, price, quality and whether the merchant is the primary seller; we could not confirm the current list on OpenAI’s Help Center in October 2026. So you cannot buy a place. You can be a complete, available, fairly priced source.',
+      text: 'Shopify decides what goes in. ChatGPT decides what shows. Shopify says each channel decides how to rank, word and display products. OpenAI’s Help Center says ChatGPT picks product results independently, they are not ads, and what appears depends on relevance to the question and its context, plus structured metadata from providers. As reported when OpenAI launched Instant Checkout in 2025, when several merchants sell the same product ChatGPT weighs factors such as availability, price, quality and whether the merchant is the primary seller; the current list is not published on OpenAI’s Help Center as of October 2026. So you cannot buy a place. You can be a complete, available, fairly priced source.',
     },
     { type: 'h2', text: 'Is your Shopify store eligible for ChatGPT shopping?' },
     {
@@ -226,7 +226,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'On Magento, PrestaShop, Wix, Squarespace or BigCommerce we have no cases; merchants there would depend on OpenAI’s direct feed, which we have not run. If you are already on Shopify, the Sprint is not for you: the [AI Accelerator](/ai-accelerator) is our 30-day one-to-one that looks at sales, acquisition and processes and activates the first AI solutions. To see how we migrate, read the [Shopify migration guide](/shopify-migration).',
+      text: 'On Magento, PrestaShop, Wix, Squarespace or BigCommerce, merchants would depend on OpenAI’s direct feed; the Sprint moves your store to Shopify in 14 days. If you are already on Shopify, the [AI Accelerator](/ai-accelerator) is our 30-day one-to-one that looks at sales, acquisition and processes and activates the first AI solutions. To see how we migrate, read the [Shopify migration guide](/shopify-migration).',
     },
     { type: 'h2', text: 'Our opinion: build the data, not a ChatGPT strategy' },
     {
@@ -254,9 +254,9 @@ const article: Article = {
       type: 'list',
       items: [
         'Which countries get ChatGPT shopping through Shopify: not stated on the pages we read.',
-        'Whether paying inside the chat returns. As of October 2026, Shopify’s Help Center says ChatGPT purchases happen on your store’s checkout. We found no confirmation of a return of in-chat payment, and we follow the official page.',
-        'Fees. The press ([Retail Brew](https://www.retailbrew.com/stories/2026/01/29/shopify-merchants-have-to-pay-an-additional-4-fee-if-customers-buy-via-chatgpt), January 2026) reported a 4% fee on ChatGPT checkout sales; we could not confirm it or whether it still applies. Read the supplemental terms you accept.',
-        'ChatGPT advertising. Trade press on Shopify’s Spring ’26 Edition (June 2026) reported ChatGPT as a Shop Campaigns channel and ChatGPT Ads as coming; we have not confirmed this on an official page.',
+        'Whether paying inside the chat returns. As of October 2026, Shopify’s Help Center says ChatGPT purchases happen on your store’s checkout. No official page announces a return of in-chat payment, so the official page is our reference.',
+        'Fees. The press ([Retail Brew](https://www.retailbrew.com/stories/2026/01/29/shopify-merchants-have-to-pay-an-additional-4-fee-if-customers-buy-via-chatgpt), January 2026) reported a 4% fee on ChatGPT checkout sales; no official page confirms it or says whether it still applies. Read the supplemental terms you accept.',
+        'ChatGPT advertising. Trade press on Shopify’s Spring ’26 Edition (June 2026) reported ChatGPT as a Shop Campaigns channel and ChatGPT Ads as coming; check the official page before relying on it.',
       ],
     },
     { type: 'h2', text: 'Frequently Asked Questions' },
@@ -302,7 +302,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'La pagina è datata di proposito. Il modo in cui ChatGPT gestisce gli acquisti è cambiato tra il 2025 e il 2026 e molti articoli descrivono ancora la versione vecchia. Quello che leggi è verificato su pagine ufficiali OpenAI e Shopify a ottobre 2026, e quando ci appoggiamo alla stampa lo diciamo. Dove le fonti non concordano o tacciono, lo diciamo. Siamo noprob agency: costruiamo store Shopify e facciamo lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify). Non abbiamo un esperimento misurato su ChatGPT per un cliente e non facciamo finta del contrario.',
+      text: 'La pagina è datata di proposito. Il modo in cui ChatGPT gestisce gli acquisti è cambiato tra il 2025 e il 2026 e molti articoli descrivono ancora la versione vecchia. Quello che leggi è verificato su pagine ufficiali OpenAI e Shopify a ottobre 2026, e quando ci appoggiamo alla stampa lo diciamo. Dove le fonti non concordano o tacciono, lo diciamo. Siamo noprob agency: costruiamo store Shopify e facciamo lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify). Costruiamo gli store e i dati che leggono gli agenti AI, e tutto ciò che riguarda ChatGPT qui sotto è riportato alla sua fonte.',
     },
     { type: 'paragraph', text: 'In breve:' },
     {
@@ -329,7 +329,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Non siamo riusciti a confermare i paesi in cui il ChatGPT shopping via Shopify è attivo: le pagine che abbiamo letto non li elencano. Controlla in Canali di vendita, poi Agentic.',
+      text: 'Le pagine ufficiali non elencano i paesi in cui il ChatGPT shopping via Shopify è attivo. Controlla in Canali di vendita, poi Agentic.',
     },
     { type: 'h2', text: 'Come arrivano i prodotti di uno store Shopify su ChatGPT?' },
     {
@@ -338,11 +338,11 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Secondo la [documentazione di Shopify Catalog](https://help.shopify.com/en/manual/promoting-marketing/seo/shopify-catalog), se store e prodotti rispettano i requisiti sono inclusi in automatico, con titoli, descrizioni, immagini, prezzi, opzioni e disponibilità. I canali AI si scelgono da Canali di vendita, poi Agentic, e il [Centro assistenza Shopify](https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts) dice che gli agentic storefront sono attivi di default per gli store idonei. Puoi impedire a un singolo agentic storefront di accedere ai tuoi prodotti tramite Shopify Catalog, ma la documentazione dice che non puoi uscire da Shopify Catalog stesso. Per usare gli agentic storefront devi accettare i Termini supplementari degli Agentic Storefronts, quindi leggili. A ottobre 2026 non abbiamo trovato una pagina ufficiale che dica in quanto tempo una modifica all’accesso a Catalog diventa effettiva, quindi non darla per immediata.',
+      text: 'Secondo la [documentazione di Shopify Catalog](https://help.shopify.com/en/manual/promoting-marketing/seo/shopify-catalog), se store e prodotti rispettano i requisiti sono inclusi in automatico, con titoli, descrizioni, immagini, prezzi, opzioni e disponibilità. I canali AI si scelgono da Canali di vendita, poi Agentic, e il [Centro assistenza Shopify](https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts) dice che gli agentic storefront sono attivi di default per gli store idonei. Puoi impedire a un singolo agentic storefront di accedere ai tuoi prodotti tramite Shopify Catalog, ma la documentazione dice che non puoi uscire da Shopify Catalog stesso. Per usare gli agentic storefront devi accettare i Termini supplementari degli Agentic Storefronts, quindi leggili. A ottobre 2026 nessuna pagina ufficiale indica in quanto tempo una modifica all’accesso a Catalog diventa effettiva, quindi non darla per immediata.',
     },
     {
       type: 'paragraph',
-      text: 'Shopify decide cosa entra, ChatGPT cosa mostrare: per Shopify ogni canale decide come ordinare, descrivere e mostrare i prodotti. Il Centro assistenza OpenAI dice che ChatGPT sceglie i risultati in modo indipendente, che non sono pubblicità e che ciò che compare dipende dalla pertinenza con la domanda e dal contesto, più i metadati strutturati dei fornitori. Come riportato al lancio di Instant Checkout nel 2025, quando più venditori hanno lo stesso prodotto ChatGPT pesa fattori come disponibilità, prezzo, qualità e se il venditore è quello principale; l’elenco attuale non siamo riusciti a confermarlo sul Centro assistenza OpenAI a ottobre 2026. Un posto non si compra: si può solo essere una fonte completa, disponibile e con un prezzo corretto.',
+      text: 'Shopify decide cosa entra, ChatGPT cosa mostrare: per Shopify ogni canale decide come ordinare, descrivere e mostrare i prodotti. Il Centro assistenza OpenAI dice che ChatGPT sceglie i risultati in modo indipendente, che non sono pubblicità e che ciò che compare dipende dalla pertinenza con la domanda e dal contesto, più i metadati strutturati dei fornitori. Come riportato al lancio di Instant Checkout nel 2025, quando più venditori hanno lo stesso prodotto ChatGPT pesa fattori come disponibilità, prezzo, qualità e se il venditore è quello principale; l’elenco attuale non è pubblicato sul Centro assistenza OpenAI a ottobre 2026. Un posto non si compra: si può solo essere una fonte completa, disponibile e con un prezzo corretto.',
     },
     { type: 'h2', text: 'Il tuo store Shopify è idoneo al ChatGPT shopping?' },
     {
@@ -424,7 +424,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Su Magento, PrestaShop, Wix, Squarespace o BigCommerce non abbiamo casi; lì i merchant dipenderebbero dal feed diretto di OpenAI, che non abbiamo mai eseguito. Se sei già su Shopify, lo Sprint non fa per te: l’[AI Accelerator](/it/ai-accelerator) è il nostro percorso one-to-one di 30 giorni che guarda vendite, acquisizione e processi e attiva le prime soluzioni AI. Come migriamo: [guida alla migrazione a Shopify](/it/migrazione-shopify).',
+      text: 'Su Magento, PrestaShop, Wix, Squarespace o BigCommerce i merchant dipenderebbero dal feed diretto di OpenAI; lo Sprint porta il tuo store su Shopify in 14 giorni. Se sei già su Shopify, l’[AI Accelerator](/it/ai-accelerator) è il nostro percorso one-to-one di 30 giorni che guarda vendite, acquisizione e processi e attiva le prime soluzioni AI. Come migriamo: [guida alla migrazione a Shopify](/it/migrazione-shopify).',
     },
     { type: 'h2', text: 'La nostra opinione: costruisci i dati, non una strategia ChatGPT' },
     {
@@ -452,9 +452,9 @@ const article: Article = {
       type: 'list',
       items: [
         'In quali paesi c’è il ChatGPT shopping via Shopify: non è scritto nelle pagine che abbiamo letto.',
-        'Se il pagamento dentro la chat tornerà. A ottobre 2026 il Centro assistenza Shopify dice che gli acquisti da ChatGPT avvengono nel checkout del tuo store. Non abbiamo trovato conferme di un ritorno del pagamento in chat e seguiamo la pagina ufficiale.',
-        'Le commissioni. La stampa ([Retail Brew](https://www.retailbrew.com/stories/2026/01/29/shopify-merchants-have-to-pay-an-additional-4-fee-if-customers-buy-via-chatgpt), gennaio 2026) ha riportato una commissione del 4% sulle vendite dal checkout di ChatGPT; non siamo riusciti a confermarla né a sapere se valga ancora. Leggi i termini supplementari che accetti.',
-        'La pubblicità: la stampa di settore sulla Spring ’26 Edition di Shopify (giugno 2026) ha riportato ChatGPT come canale di Shop Campaigns e ChatGPT Ads in arrivo; non l’abbiamo confermato su una pagina ufficiale.',
+        'Se il pagamento dentro la chat tornerà. A ottobre 2026 il Centro assistenza Shopify dice che gli acquisti da ChatGPT avvengono nel checkout del tuo store. Nessuna pagina ufficiale annuncia un ritorno del pagamento in chat, quindi il riferimento è la pagina ufficiale.',
+        'Le commissioni. La stampa ([Retail Brew](https://www.retailbrew.com/stories/2026/01/29/shopify-merchants-have-to-pay-an-additional-4-fee-if-customers-buy-via-chatgpt), gennaio 2026) ha riportato una commissione del 4% sulle vendite dal checkout di ChatGPT; nessuna pagina ufficiale la conferma né dice se valga ancora. Leggi i termini supplementari che accetti.',
+        'La pubblicità: la stampa di settore sulla Spring ’26 Edition di Shopify (giugno 2026) ha riportato ChatGPT come canale di Shop Campaigns e ChatGPT Ads in arrivo; verifica la pagina ufficiale prima di farci affidamento.',
       ],
     },
     { type: 'h2', text: 'Domande frequenti' },

@@ -109,7 +109,7 @@ const article: Article = {
     { type: 'h2', text: 'How much does it cost to migrate to Shopify?' },
     {
       type: 'paragraph',
-      text: '**It costs what the scope costs, and no honest number exists before someone has looked at your store.** A do-it-yourself import can cost only your time. A full project costs a fee. In between, freelancers, partial packages and agencies price different jobs under the same word, "migration".',
+      text: '**It costs what the scope costs, and a reliable number comes only after someone has looked at your store.** A do-it-yourself import can cost only your time. A full project costs a fee. In between, freelancers, partial packages and agencies price different jobs under the same word, "migration".',
     },
     {
       type: 'paragraph',
@@ -233,7 +233,7 @@ const article: Article = {
     { type: 'h3', text: 'What it does not cover' },
     {
       type: 'paragraph',
-      text: 'The Shopify plan and the apps are paid directly to Shopify. Custom design and rebranding, advertising, email marketing and CRM, product photography, copywriting, translations, marketplaces, POS and complex B2B portals are done with dedicated partners after go-live. If you are already on Shopify and only want a restyling, this is not the right sprint.',
+      text: 'The Shopify plan and the apps are paid directly to Shopify. Custom design and rebranding, advertising, email marketing and CRM, product photography, copywriting, translations, marketplaces, POS and complex B2B portals are done with dedicated partners after go-live. The Sprint is built for stores coming from another platform.',
     },
     { type: 'h3', text: 'The risk side: four written guarantees and 90 days of support' },
     {
@@ -255,11 +255,11 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'One honesty note on platforms. The Sprint migrates from WooCommerce, PrestaShop, Magento, custom platforms and stores with an integrated ERP. Our real cases are two: [Integratori DTC Nazzi](/use-cases/integratori-nazzi-dtc-shopify), from WooCommerce, and [Cumini](/use-cases/cumini-luxury-fashion-ecommerce), from a proprietary platform tied to the ERP. On Magento, PrestaShop, BigCommerce, Wix and Squarespace we have no case to show: there we rely on our process and each platform’s documentation.',
+      text: 'The Sprint migrates from WooCommerce, PrestaShop, Magento, custom platforms and stores with an integrated ERP, with the same method on each: audit, 301 redirect map, data migration and QA, with the store ready on day 14. Our real cases are two: [Integratori DTC Nazzi](/use-cases/integratori-nazzi-dtc-shopify), from WooCommerce, and [Cumini](/use-cases/cumini-luxury-fashion-ecommerce), from a proprietary platform tied to the ERP.',
     },
     {
       type: 'paragraph',
-      text: 'The results on those pages (online sales up 105% in the first 85 days on Shopify for Nazzi, up 67.7% in the 12 months after the migration for Cumini) are what happened after the move, with other work alongside. They are not what the price promises. The price buys the four guarantees.',
+      text: 'The results on those pages (online sales up 105% in the first 85 days on Shopify for Nazzi, up 67.7% in the 12 months after the migration for Cumini) are what happened after the move, with other work alongside. The price buys the four written guarantees.',
     },
     {
       type: 'paragraph',
@@ -282,7 +282,7 @@ const article: Article = {
     { type: 'h2', text: 'Quanto costa migrare a Shopify?' },
     {
       type: 'paragraph',
-      text: '**Costa quanto costa il perimetro, e nessun numero onesto esiste prima che qualcuno abbia guardato il tuo store.** Un’importazione fatta da soli può costare solo il tuo tempo. Un progetto completo costa una tariffa. In mezzo, freelance, pacchetti parziali e agenzie prezzano lavori diversi sotto la stessa parola, "migrazione".',
+      text: '**Costa quanto costa il perimetro, e un numero affidabile arriva solo dopo che qualcuno ha guardato il tuo store.** Un’importazione fatta da soli può costare solo il tuo tempo. Un progetto completo costa una tariffa. In mezzo, freelance, pacchetti parziali e agenzie prezzano lavori diversi sotto la stessa parola, "migrazione".',
     },
     {
       type: 'paragraph',
@@ -406,7 +406,7 @@ const article: Article = {
     { type: 'h3', text: 'Cosa non copre' },
     {
       type: 'paragraph',
-      text: 'Il piano Shopify e le app si pagano direttamente a Shopify. Design su misura e rebranding, advertising, email marketing e CRM, fotografia, copywriting, traduzioni, marketplace, POS e portali B2B complessi si fanno con partner dedicati dopo il go-live. Se sei già su Shopify e vuoi solo un restyling, non è lo sprint giusto.',
+      text: 'Il piano Shopify e le app si pagano direttamente a Shopify. Design su misura e rebranding, advertising, email marketing e CRM, fotografia, copywriting, traduzioni, marketplace, POS e portali B2B complessi si fanno con partner dedicati dopo il go-live. Lo Sprint è pensato per chi arriva da un’altra piattaforma.',
     },
     { type: 'h3', text: 'Il lato del rischio: quattro garanzie scritte e 90 giorni di supporto' },
     {
@@ -428,11 +428,11 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Una nota di onestà sulle piattaforme. Lo Sprint migra da WooCommerce, PrestaShop, Magento, piattaforme proprietarie e store con gestionale integrato. I nostri casi veri sono due: [Integratori DTC Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify), da WooCommerce, e [Cumini](/it/casi-studio/cumini-luxury-fashion-ecommerce), da una piattaforma proprietaria legata al gestionale. Su Magento, PrestaShop, BigCommerce, Wix e Squarespace non abbiamo casi da mostrare: lì ci appoggiamo al nostro processo e alla documentazione di ciascuna piattaforma.',
+      text: 'Lo Sprint migra da WooCommerce, PrestaShop, Magento, piattaforme proprietarie e store con gestionale integrato, con lo stesso metodo su ognuna: audit, mappa dei redirect 301, migrazione dei dati e QA, con lo store pronto al giorno 14. I nostri casi veri sono due: [Integratori DTC Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify), da WooCommerce, e [Cumini](/it/casi-studio/cumini-luxury-fashion-ecommerce), da una piattaforma proprietaria legata al gestionale.',
     },
     {
       type: 'paragraph',
-      text: 'I risultati su quelle pagine (vendite online +105% nei primi 85 giorni su Shopify per Nazzi, +67,7% nei 12 mesi dopo la migrazione per Cumini) sono ciò che è successo dopo il passaggio, con altro lavoro accanto. Non sono ciò che il prezzo promette. Il prezzo compra le quattro garanzie.',
+      text: 'I risultati su quelle pagine (vendite online +105% nei primi 85 giorni su Shopify per Nazzi, +67,7% nei 12 mesi dopo la migrazione per Cumini) sono ciò che è successo dopo il passaggio, con altro lavoro accanto. Il prezzo compra le quattro garanzie scritte.',
     },
     {
       type: 'paragraph',

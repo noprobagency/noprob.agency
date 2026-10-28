@@ -117,7 +117,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'We did not find a Shopify announcement that says “Magic is now Sidekick”. What we can report is what the pages show: the assistant is the face of Shopify’s AI, and everything else is described as AI built into specific workflows. In this article, “Magic” means those small features inside single screens and “Sidekick” means the assistant. If an older guide lists them as two products with separate menus, it describes an earlier setup.',
+      text: 'Shopify’s pages show that the assistant is the face of Shopify’s AI, and everything else is described as AI built into specific workflows. In this article, “Magic” means those small features inside single screens and “Sidekick” means the assistant. If an older guide lists them as two products with separate menus, it describes an earlier setup.',
     },
     { type: 'h2', text: 'What is the difference between the built-in AI features and Sidekick?' },
     {
@@ -278,7 +278,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Non abbiamo trovato un annuncio di Shopify che dica “Magic ora è Sidekick”. Possiamo riportare ciò che mostrano le pagine: l’assistente è il volto dell’AI di Shopify, e tutto il resto è descritto come AI integrata in singoli flussi di lavoro. In questo articolo “Magic” indica le piccole funzioni dentro le singole schermate e “Sidekick” indica l’assistente. Se una guida più vecchia li presenta come due prodotti con menu separati, descrive una configurazione precedente.',
+      text: 'Le pagine di Shopify mostrano che l’assistente è il volto dell’AI di Shopify, e tutto il resto è descritto come AI integrata in singoli flussi di lavoro. In questo articolo “Magic” indica le piccole funzioni dentro le singole schermate e “Sidekick” indica l’assistente. Se una guida più vecchia li presenta come due prodotti con menu separati, descrive una configurazione precedente.',
     },
     { type: 'h2', text: 'Che differenza c’è tra le funzioni AI integrate e Sidekick?' },
     {

@@ -38,7 +38,11 @@ Shopify Launch Sprint: migrazione a Shopify in **14 giorni** con il nostro Custo
 
 ## Numeri
 
-Solo quelli in `docs/dati-verificati.md`, con la fonte che indica. Clienti solo in percentuali, moltiplicatori o indici, mai valori assoluti (fatturato, ordini, clienti, clic, sessioni). Prova disponibile: Nazzi (da WooCommerce), Cumini (da piattaforma proprietaria legata all'ERP), DDglobal (da WordPress a sito nuovo, non Shopify). Nessun caso su Magento, PrestaShop, Shopware, BigCommerce, Wix, Squarespace: lì solo fonti esterne autorevoli.
+Solo quelli in `docs/dati-verificati.md`, con la fonte che indica. Clienti solo in percentuali, moltiplicatori o indici, mai valori assoluti (fatturato, ordini, clienti, clic, sessioni). Prova disponibile: Nazzi (da WooCommerce), Cumini (da piattaforma proprietaria legata all'ERP), DDglobal (da WordPress a sito nuovo, non Shopify). Su Magento, PrestaShop, Shopware, BigCommerce, Wix, Squarespace non si citano casi: si parla del metodo dello Sprint, dell'esperienza (oltre 7 anni di progetti eCommerce) e della documentazione ufficiale, senza mai dire che il caso manca.
+
+## Mai negativo su di noi (Antonio, 28 ottobre 2026)
+
+Niente frasi che giocano contro di noi: mancanze ("non abbiamo casi su...", "non ancora", "nessun dato pubblico"), scuse, limiti, toni dimessi o autoironici, meta-frasi tipo "l'articolo lo dice chiaramente". Si toglie, oppure si scrive in positivo: esperienza tecnica alta, metodo, garanzie dello Sprint come sono scritte, casi veri. Cosa non promettiamo si dice come cosa garantiamo. Le critiche agli altri (piattaforme, agenzie generiche) vanno bene.
 
 ## Articolo del blog (schema)
 

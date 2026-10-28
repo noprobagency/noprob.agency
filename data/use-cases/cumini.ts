@@ -419,7 +419,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Per misurarli in modo onesto abbiamo messo a confronto i 12 mesi prima di Shopify (da giugno 2024 a maggio 2025) con i 12 mesi dopo (da giugno 2025 a maggio 2026). Stessi negozi, stesso catalogo, stessa squadra.',
+      text: 'Per misurarli abbiamo messo a confronto i 12 mesi prima di Shopify (da giugno 2024 a maggio 2025) con i 12 mesi dopo (da giugno 2025 a maggio 2026). Stessi negozi, stesso catalogo, stessa squadra.',
     },
     {
       type: 'list',
@@ -897,7 +897,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'To measure them honestly we compared the 12 months before Shopify (June 2024 to May 2025) with the 12 months after (June 2025 to May 2026). Same stores, same catalog, same team.',
+      text: 'To measure them we compared the 12 months before Shopify (June 2024 to May 2025) with the 12 months after (June 2025 to May 2026). Same stores, same catalog, same team.',
     },
     {
       type: 'list',
