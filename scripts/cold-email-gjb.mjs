@@ -7,12 +7,13 @@
 //   1. store already on Shopify  -> moved to the Shopify side list (64769), kept for later
 //   2. store already worked by the LinkedIn campaign (63200, 64866), by the direct
 //      channel (cold-email/data/leads.json) or in docs/cold/suppressed.txt -> rejected
-//   3. one person per store; new approvals a day = hello@'s daily limit / 3 emails per
-//      lead, minus approved leads not started yet
+//   3. one person per store; new approvals a day = hello@'s daily limit minus the emails
+//      Gojiberry already has queued for today (follow-ups and approved leads not started),
+//      so hello@ sends its full limit every day
 //   4. leads that pass when Dante is full go to the direct channel (antonio@, 5 emails):
 //      Gojiberry finds the email (1 credit when found), the contact moves to list 66757
 //      (out of Dante) and the lead lands in cold-email/data/leads.json, until the direct
-//      channel has `directPool` (config.json, default 40) first emails waiting
+//      channel has `directPool` (config.json, default 55) first emails waiting
 // One line in cold-email/data/log.md; leads left for a human in cold-email/data/gjb-state.json.
 // Mon-Fri 8:30 via launchd (agency.noprob.cold-email-gjb), before the 9:00 campaign launch.
 //
@@ -56,19 +57,19 @@ const contacts = await listContacts(DANTE.list)
 const inDante = (c) => (c.campaignStatus || []).some((s) => s.campaignId === DANTE.campaign)
 const started = (c) => c.readyForCampaign || inDante(c)
 const approvedStores = new Set(contacts.filter(started).map((c) => domainOf(normaliseUrl(c.website))))
-const waiting = contacts.filter((c) => c.readyForCampaign && !inDante(c)).length
 const seat = ((await api('GET', '/v1/email-seat')) || []).find((s) => s.email === DANTE.mailbox)
-// Every lead gets 3 emails: approving a third of the daily capacity keeps room for the
-// follow-ups once the sequence is running (30/day -> 10 new leads a day).
-const STEPS = 3
-const cap = Math.max(0, Math.floor((seat?.dailyEmailMax ?? 2) / STEPS) - waiting)
+// Fill hello@ every day: what the queue (follow-ups due, approved leads waiting) leaves
+// of the daily limit goes to new leads. Gojiberry holds anything over the limit for the
+// next day, so a busy day only shifts a follow-up by a day.
+const queued = ((await api('GET', `/v1/campaign/${DANTE.campaign}/email-queue`)) || []).length
+const cap = Math.max(0, (seat?.dailyEmailMax ?? 2) - (seat?.dailyEmailCount ?? 0) - queued)
 
 const fresh = contacts.filter((c) => !processed.has(c.id) && !started(c) && !c.rejectedAt && !c.state)
 const urls = [...new Set(fresh.map((c) => normaliseUrl(c.website)).filter(Boolean))]
 const checks = await pool(urls, 12, (u) => fetchPlatform(u))
 
 // The direct channel takes the overflow up to a pool of first emails waiting to go out.
-const directPool = (existsSync(DIRECT.config) ? JSON.parse(readFileSync(DIRECT.config, 'utf8')).directPool : null) ?? 40
+const directPool = (existsSync(DIRECT.config) ? JSON.parse(readFileSync(DIRECT.config, 'utf8')).directPool : null) ?? 55
 const directWaiting = db.leads.filter((l) => l.segment === 'target' && !l.sequence.sent.length && !l.sequence.stoppedAt).length
 // The daily send run keeps leads.json in memory and saves after every email: while it
 // runs (Mac woken late, both jobs at once) the overflow waits for the next review.
