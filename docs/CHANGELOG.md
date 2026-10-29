@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.100.0 (29 Oct 2026)
+
+- **Ada's routine, blocked sites and queue cap**: a store site that answers with an error page (bot wall, 429, 5xx) is never approved; in the cloud those leads stay unprocessed and the Mac job checks them from a home IP. Approvals now top the campaign queue up to 50 approved-not-started leads (`--queue`, at most `--cap` per run), so the cloud job and the Mac job can both run without approving twice.
+
 ### Changelog v1.95.0 (29 Oct 2026)
 
 - **Veronica, Antonio's interviewer**: new skill `/veronica` (`.claude/skills/veronica/SKILL.md`), an endless conversation with Antonio, one question at a time, on eCommerce, AI, Shopify and his projects. She keeps her archive in `SEO/data/interviste/` (question queue, daily log, notes by topic, a living "voce di Antonio" style guide) and hands the key points to Francesca in `per-francesca.md`. Francesca integrates them with the new `/seo allinea` (voice skill, content alignment, verified declarations, calendar ideas); the writer reads Antonio's voice guide before writing; the interviewer subagent now feeds Veronica's queue. No change to the site (Francesca).

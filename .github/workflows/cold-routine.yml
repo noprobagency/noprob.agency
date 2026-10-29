@@ -1,6 +1,7 @@
 # Ada's Gojiberry routine in the cloud (no AI, no credits): every 2 hours, day and night,
-# it moves new leads already on Shopify to the side-project list and approves up to 25 a day
-# (Monday to Friday) for Ada's LinkedIn campaign. The opt-out sweep stays on the Mac
+# it moves new leads already on Shopify to the side-project list and tops Ada's campaign queue
+# up to 50 approved leads (at most 25 per run, Monday to Friday). Sites that block GitHub's
+# servers are left to the Mac job (agency.noprob.cold-daily, same script from a home IP). The opt-out sweep stays on the Mac
 # (agency.noprob.cold-optout), it needs docs/cold/suppressed.txt.
 # State lives in the Actions cache, never in the repo. This repo is public: the script prints
 # aggregate numbers only and hides API response bodies in CI.
@@ -43,7 +44,7 @@ jobs:
           COLD_STATE: .cold/state.json
           COLD_LOG: .cold/log.md
           COLD_NO_SWEEP: '1'
-        run: node scripts/cold-daily.mjs --cap 25 ${{ inputs.dry && '--dry' || '' }} | tee -a "$GITHUB_STEP_SUMMARY"
+        run: node scripts/cold-daily.mjs --cap 25 --queue 50 ${{ inputs.dry && '--dry' || '' }} | tee -a "$GITHUB_STEP_SUMMARY"
       - name: Keep the last 300 log lines
         if: always()
         run: if [ -f .cold/log.md ]; then tail -300 .cold/log.md > .cold/log.tmp && mv .cold/log.tmp .cold/log.md; fi
