@@ -9,22 +9,28 @@
 //      channel (cold-email/data/leads.json) or in docs/cold/suppressed.txt -> rejected
 //   3. one person per store; new approvals a day = hello@'s daily limit / 3 emails per
 //      lead, minus approved leads not started yet
+//   4. leads that pass when Dante is full go to the direct channel (antonio@, 5 emails):
+//      Gojiberry finds the email (1 credit when found), the contact moves to list 66757
+//      (out of Dante) and the lead lands in cold-email/data/leads.json, until the direct
+//      channel has `directPool` (config.json, default 40) first emails waiting
 // One line in cold-email/data/log.md; leads left for a human in cold-email/data/gjb-state.json.
 // Mon-Fri 8:30 via launchd (agency.noprob.cold-email-gjb), before the 9:00 campaign launch.
 //
 // Usage: node scripts/cold-email-gjb.mjs [--dry]
 
+import { execFileSync } from 'node:child_process'
 import { appendFileSync, existsSync, readFileSync, writeFileSync } from 'node:fs'
 import { fetchPlatform, pool } from '../lib/cold/fetch-platform.mjs'
 import { normaliseUrl } from '../lib/cold/detect-platform.mjs'
 import { LISTS, api, listContacts } from '../lib/cold/gojiberry.mjs'
 import { optoutSweep } from '../lib/cold/sweep.mjs'
 import { cleanCompany, review } from '../lib/cold-email/approve.mjs'
-import { domainOf } from '../lib/cold-email/leads.mjs'
+import { domainOf, fromGojiberry } from '../lib/cold-email/leads.mjs'
 import { readSuppressed } from '../lib/cold-email/suppression.mjs'
 
 // The mailbox is found by address: reconnecting it in Gojiberry gives it a new seat id.
 const DANTE = { list: 65682, campaign: 46398, mailbox: 'hello@noprob.agency' }
+const DIRECT = { list: 66757, leads: 'cold-email/data/leads.json', config: 'cold-email/data/config.json' }
 const STATE = 'cold-email/data/gjb-state.json'
 const LOG = 'cold-email/data/log.md'
 const dry = process.argv.includes('--dry')
@@ -40,9 +46,8 @@ const sweep = await optoutSweep({ lists: [DANTE.list], since: state.lastSweep, d
 // Stores another channel already has
 const websites = async (listId) => (await listContacts(listId)).map((c) => domainOf(normaliseUrl(c.website))).filter(Boolean)
 const linkedin = new Set([...(await websites(LISTS.en)), ...(await websites(LISTS.it))])
-const direct = existsSync('cold-email/data/leads.json')
-  ? new Set(JSON.parse(readFileSync('cold-email/data/leads.json', 'utf8')).leads.filter((l) => l.segment !== 'shopify').map((l) => l.domain))
-  : new Set()
+const db = existsSync(DIRECT.leads) ? JSON.parse(readFileSync(DIRECT.leads, 'utf8')) : { leads: [] }
+const direct = new Set(db.leads.filter((l) => l.segment !== 'shopify').map((l) => l.domain))
 const taken = { linkedin, direct, suppressed: readSuppressed() }
 
 const contacts = await listContacts(DANTE.list)
@@ -62,13 +67,29 @@ const fresh = contacts.filter((c) => !processed.has(c.id) && !started(c) && !c.r
 const urls = [...new Set(fresh.map((c) => normaliseUrl(c.website)).filter(Boolean))]
 const checks = await pool(urls, 12, (u) => fetchPlatform(u))
 
-const plan = { approve: [], shopify: [], reject: [], hold: [] }
+// The direct channel takes the overflow up to a pool of first emails waiting to go out.
+const directPool = (existsSync(DIRECT.config) ? JSON.parse(readFileSync(DIRECT.config, 'utf8')).directPool : null) ?? 40
+const directWaiting = db.leads.filter((l) => l.segment === 'target' && !l.sequence.sent.length && !l.sequence.stoppedAt).length
+// The daily send run keeps leads.json in memory and saves after every email: while it
+// runs (Mac woken late, both jobs at once) the overflow waits for the next review.
+const dailyRunning = (() => {
+  try {
+    return Boolean(execFileSync('pgrep', ['-f', 'cold-email-daily'], { encoding: 'utf8' }).trim())
+  } catch {
+    return false
+  }
+})()
+const directRoom = dailyRunning ? 0 : Math.max(0, directPool - directWaiting)
+
+const plan = { approve: [], direct: [], shopify: [], reject: [], hold: [] }
 for (const c of fresh.sort((a, b) => Number(b.total_scoring) - Number(a.total_scoring))) {
   const decision = review(c, checks.get(normaliseUrl(c.website)) || null, taken)
   if (decision.action === 'approve' && approvedStores.has(decision.domain)) {
     plan.reject.push({ c, reason: 'same store already approved' })
   } else if (decision.action === 'approve' && plan.approve.length >= cap) {
-    continue // waits for tomorrow's capacity, not marked processed
+    if (plan.direct.length >= directRoom) continue // waits for tomorrow's capacity, not marked processed
+    plan.direct.push({ c, reason: null })
+    approvedStores.add(decision.domain)
   } else {
     plan[decision.action].push({ c, reason: decision.reason })
     if (decision.action === 'approve') approvedStores.add(decision.domain)
@@ -84,10 +105,35 @@ if (dry) {
   for (const { c } of plan.reject) await api('POST', `/v1/contact/${c.id}/reject`)
   // The subject is "[Company] su Shopify?": the name goes in as a person would write it.
   for (const { c } of plan.approve) await api('PATCH', `/v1/contact/${c.id}`, { readyForCampaign: true, company: cleanCompany(c.company) })
+  // Direct channel: email lookup a few at a time (each call can take minutes).
+  const found = await pool(plan.direct, 4, async ({ c }) => {
+    try {
+      return await api('POST', `/v1/contact/${c.id}/enrich/email`)
+    } catch (err) {
+      console.error(`enrich ${c.id}: ${err.message}`)
+      return null
+    }
+  })
+  const moved = []
+  for (const item of plan.direct) {
+    const enriched = found.get(item) || item.c
+    if (!enriched.email) {
+      plan.hold.push({ c: item.c, reason: 'no email found (direct channel)' })
+      continue
+    }
+    const check = checks.get(normaliseUrl(item.c.website)) || null
+    db.leads.push(fromGojiberry({ ...item.c, ...enriched }, check, cleanCompany(item.c.company)))
+    moved.push(item.c.id)
+  }
+  if (moved.length) {
+    await api('POST', `/v1/contact/list/${DIRECT.list}/contacts`, { contactIds: moved })
+    writeFileSync(DIRECT.leads, JSON.stringify({ ...db, updatedAt: new Date().toISOString() }, null, 2))
+  }
+  plan.direct = plan.direct.filter(({ c }) => moved.includes(c.id))
   for (const { c, reason } of plan.hold) held.set(c.id, { id: c.id, company: c.company, website: c.website, reason })
   writeFileSync(STATE, JSON.stringify({ lastRun: new Date().toISOString(), lastSweep: sweep.startedAt, processed: [...processed], held: [...held.values()] }))
 }
 
-const line = `- ${new Date().toISOString().slice(0, 16).replace('T', ' ')}${dry ? ' (dry)' : ''} · Dante (Gojiberry email) · nuovi ${fresh.length} · approvati ${plan.approve.length} (capacità ${cap}) · Shopify spostati ${plan.shopify.length} · scartati ${plan.reject.length} · da guardare ${plan.hold.length} · opt-out ${sweep.excluded}\n`
+const line = `- ${new Date().toISOString().slice(0, 16).replace('T', ' ')}${dry ? ' (dry)' : ''} · Dante (Gojiberry email) · nuovi ${fresh.length} · approvati ${plan.approve.length} (capacità ${cap}) · al canale diretto ${plan.direct.length} (spazio ${directRoom}) · Shopify spostati ${plan.shopify.length} · scartati ${plan.reject.length} · da guardare ${plan.hold.length} · opt-out ${sweep.excluded}\n`
 if (!dry) appendFileSync(LOG, line)
 process.stdout.write(line)
