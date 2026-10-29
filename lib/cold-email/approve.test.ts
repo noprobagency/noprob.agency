@@ -21,6 +21,11 @@ describe('Dante lead review', () => {
     expect(review(lead({ email: 'Anna@acme.it' }), woo, taken).reason).toBe('opt-out list')
   })
 
+  it('never approves on an error page (bot wall, rate limit, server error)', () => {
+    expect(review(lead(), { platform: 'other', status: 403 }, taken)).toMatchObject({ action: 'hold', reason: 'site unreachable' })
+    expect(review(lead(), { platform: 'other', status: 200 }, taken).action).toBe('approve')
+  })
+
   it('holds what needs a human', () => {
     expect(review(lead({ website: '' }), null, taken).action).toBe('hold')
     expect(review(lead(), { platform: 'unreachable' }, taken).action).toBe('hold')
