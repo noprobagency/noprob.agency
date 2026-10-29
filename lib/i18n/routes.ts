@@ -1,5 +1,6 @@
 import type { Locale } from '@/lib/i18n'
 import { articles } from '@/data/articles'
+import { getAlternateCategoryPath } from '@/data/articles/categories'
 
 export type RouteKey =
   | 'home'
@@ -59,6 +60,8 @@ export function getRoutePath(key: RouteKey, locale: Locale): string {
  * Handles:
  *  - Fixed routes via lookup in `ROUTE_PATHS`.
  *  - Dynamic `/use-cases/[slug]` routes - slug is shared between locales.
+ *  - Blog category pages (`/blog/category/[slug]`, `/it/blog/categoria/[slug]`) -
+ *    slug differs per locale (`data/articles/categories.ts`).
  *  - Dynamic `/blog/[slug]` routes - slug differs per locale (article.slug for
  *    EN, article.slugIt for IT). The article data is consulted to map the
  *    current-locale slug to the alternate-locale slug.
@@ -78,6 +81,10 @@ export function getAlternateLocalePath(path: string, currentLocale: Locale): str
   if (path.startsWith(useCasesCurrent + '/')) {
     return useCasesAlt + path.slice(useCasesCurrent.length)
   }
+
+  // Blog category pages (must come before the article lookup: same prefix)
+  const alternateCategory = getAlternateCategoryPath(path, currentLocale)
+  if (alternateCategory) return alternateCategory
 
   // Dynamic routes: blog (per-locale slug - look up via articles data)
   const blogCurrent = ROUTE_PATHS.blog[currentLocale]

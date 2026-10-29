@@ -1,16 +1,20 @@
 import { describe, expect, it } from 'vitest'
 
 import { articles } from '@/data/articles'
+import { CATEGORIES, categoryPath } from '@/data/articles/categories'
 import {
   ARTICLE_PILLS,
   CLUSTERS,
   articleHref,
+  articlePublishedAt,
   getArticle,
   getCluster,
+  getClusterArticles,
   getRelatedArticles,
 } from '@/data/articles/clusters'
-import type { Locale } from '@/lib/i18n'
+import { getDictionary, type Locale } from '@/lib/i18n'
 import { getBlocchiCopy } from '@/lib/i18n/blocchi'
+import { getCategoriesCopy } from '@/lib/i18n/categorie'
 import { ROUTE_PATHS } from '@/lib/i18n/routes'
 
 const LOCALES: Locale[] = ['en', 'it']
@@ -38,6 +42,84 @@ describe('article clusters', () => {
         expect(getBlocchiCopy(locale).blog.sections[cluster.id].description).toBeTruthy()
       }
     }
+  })
+})
+
+describe('blog categories', () => {
+  it('are the 5 agreed categories, with the agreed URLs in both locales', () => {
+    expect(CATEGORIES.map((c) => c.id)).toEqual(['migrate', 'shopify', 'ai-agents', 'ai-search', 'growth'])
+    expect(CATEGORIES.map((c) => categoryPath(c.id, 'en'))).toEqual([
+      '/blog/category/migrate-to-shopify',
+      '/blog/category/shopify-guides',
+      '/blog/category/ai-agents',
+      '/blog/category/ai-search-geo',
+      '/blog/category/ecommerce-growth',
+    ])
+    expect(CATEGORIES.map((c) => categoryPath(c.id, 'it'))).toEqual([
+      '/it/blog/categoria/migrare-a-shopify',
+      '/it/blog/categoria/guide-shopify',
+      '/it/blog/categoria/agenti-ai',
+      '/it/blog/categoria/ricerca-ai-geo',
+      '/it/blog/categoria/crescita-ecommerce',
+    ])
+  })
+
+  it('have unique slugs per locale', () => {
+    for (const locale of LOCALES) {
+      const slugs = CATEGORIES.map((c) => c.slug[locale])
+      expect(new Set(slugs).size).toBe(slugs.length)
+    }
+  })
+
+  it('hold the agreed articles', () => {
+    const byId = Object.fromEntries(CLUSTERS.map((c) => [c.id, [...c.slugs].sort()]))
+    expect(byId.migrate).toEqual(
+      [
+        'woocommerce-to-shopify-migration',
+        'magento-to-shopify-migration',
+        'prestashop-to-shopify-migration',
+        'bigcommerce-to-shopify-migration',
+        'wix-vs-shopify',
+        'squarespace-vs-shopify',
+      ].sort()
+    )
+    expect(byId['ai-agents']).toEqual(['ai-for-ecommerce', 'shopify-magic-sidekick'])
+    expect(byId['ai-search']).toEqual(['agentic-commerce-shopify', 'chatgpt-shopping-shopify', 'geo-for-shopify'])
+    expect(byId.growth).toEqual(['ecommerce-growth-strategy-long-term', 'shopify-cro-guide'])
+  })
+
+  it('have page copy (title, description, H1 and intro) in both locales', () => {
+    for (const locale of LOCALES) {
+      const { pages } = getCategoriesCopy(locale)
+      for (const category of CATEGORIES) {
+        const page = pages[category.id]
+        expect(page.metaTitle, `${locale} ${category.id}`).toBeTruthy()
+        expect(page.metaDescription, `${locale} ${category.id}`).toBeTruthy()
+        expect(`${page.h1}${page.h1Em}`.length, `${locale} ${category.id}`).toBeGreaterThan(10)
+        const sentences = page.intro.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').split(/(?<=[.!?])\s+/)
+        expect(sentences.length, `${locale} ${category.id} intro`).toBeGreaterThanOrEqual(2)
+        expect(sentences.length, `${locale} ${category.id} intro`).toBeLessThanOrEqual(3)
+      }
+    }
+  })
+
+  it('list newest article first', () => {
+    for (const cluster of CLUSTERS) {
+      const times = getClusterArticles(cluster).map((a) => new Date(articlePublishedAt(a)).getTime())
+      expect(times, cluster.id).toEqual([...times].sort((a, b) => b - a))
+    }
+  })
+
+  it('are the items of the Learn dropdown, in order, followed by the blog index', () => {
+    for (const locale of LOCALES) {
+      const { learn } = getDictionary(locale).navbar
+      expect(learn.items).toEqual(
+        CATEGORIES.map((c) => ({ label: c.label[locale], href: categoryPath(c.id, locale) }))
+      )
+      expect(learn.allHref).toBe(ROUTE_PATHS.blog[locale])
+    }
+    expect(getDictionary('en').navbar.learn.label).toBe('Learn')
+    expect(getDictionary('it').navbar.learn.label).toBe('Risorse')
   })
 })
 

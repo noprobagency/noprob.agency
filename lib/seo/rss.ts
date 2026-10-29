@@ -6,15 +6,15 @@ import { absoluteUrl } from '@/lib/utils'
 
 const FEED_COPY: Record<Locale, { title: string; description: string; language: string }> = {
   en: {
-    title: 'noprob agency blog: Shopify migration, SEO and AI for eCommerce',
+    title: 'noprob agency blog: Shopify, AI and eCommerce guides',
     description:
-      'Guides on migrating to Shopify, platform comparisons, migration SEO, GEO and AI for eCommerce, from the noprob agency team.',
+      'Guides on Shopify, AI and eCommerce: migrating to Shopify, AI agents, AI search and GEO, and growth, from the noprob agency team.',
     language: 'en-US',
   },
   it: {
-    title: 'Blog di noprob agency: migrazione Shopify, SEO e AI per eCommerce',
+    title: 'Blog di noprob agency: guide su Shopify, AI ed eCommerce',
     description:
-      'Guide sulla migrazione a Shopify, confronti tra piattaforme, SEO della migrazione, GEO e AI per eCommerce, dal team noprob agency.',
+      'Guide su Shopify, AI ed eCommerce: migrare a Shopify, agenti AI, ricerca AI e GEO, crescita, dal team di noprob agency.',
     language: 'it-IT',
   },
 }

@@ -37,6 +37,13 @@ describe('getAlternateLocalePath', () => {
     expect(getAlternateLocalePath(`/it/blog/${withItSlug!.slugIt}`, 'it')).toBe(`/blog/${withItSlug!.slug}`)
   })
 
+  it('maps the blog category pages in both directions', () => {
+    expect(getAlternateLocalePath('/blog/category/migrate-to-shopify', 'en')).toBe('/it/blog/categoria/migrare-a-shopify')
+    expect(getAlternateLocalePath('/it/blog/categoria/migrare-a-shopify', 'it')).toBe('/blog/category/migrate-to-shopify')
+    expect(getAlternateLocalePath('/blog/category/ai-search-geo', 'en')).toBe('/it/blog/categoria/ricerca-ai-geo')
+    expect(getAlternateLocalePath('/it/blog/categoria/crescita-ecommerce', 'it')).toBe('/blog/category/ecommerce-growth')
+  })
+
   it('leaves unknown paths untouched', () => {
     expect(getAlternateLocalePath('/something-else', 'en')).toBe('/something-else')
   })

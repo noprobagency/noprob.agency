@@ -1,6 +1,8 @@
 import type { MetadataRoute } from 'next'
 import { CONTENT_LAST_MODIFIED, ROUTES } from '@/lib/sitemap/routes'
 import { articles } from '@/data/articles'
+import { categoryPath } from '@/data/articles/categories'
+import { CLUSTERS, getClusterArticles } from '@/data/articles/clusters'
 import { useCases } from '@/data/use-cases'
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://noprob.agency'
@@ -46,6 +48,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
         alternates: { languages: { en: enUrl, it: itUrl, 'x-default': enUrl } },
       })
     }
+  }
+
+  // Blog category pages: lastmod follows the newest article of the category
+  // (or the last change of the fixed pages, whichever is later).
+  for (const cluster of CLUSTERS) {
+    const lastModified = latest([
+      CONTENT_LAST_MODIFIED,
+      ...getClusterArticles(cluster).map((a) => a.dateModifiedIso ?? a.datePublishedIso),
+    ])
+    const enUrl = `${BASE_URL}${categoryPath(cluster.id, 'en')}`
+    const itUrl = `${BASE_URL}${categoryPath(cluster.id, 'it')}`
+    const alternates = { languages: { en: enUrl, it: itUrl, 'x-default': enUrl } }
+
+    entries.push({ url: enUrl, lastModified, alternates })
+    entries.push({ url: itUrl, lastModified, alternates })
   }
 
   // Blog posts (per-locale slugs supported via slugIt)

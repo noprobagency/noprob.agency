@@ -87,6 +87,20 @@ describe('sitemap', () => {
     }
   })
 
+  it('lists the 10 blog category pages with hreflang pairs and a lastmod', () => {
+    const urls = entries.map((e) => e.url)
+    const en = urls.filter((u) => /\/blog\/category\/[^/]+$/.test(u))
+    const it = urls.filter((u) => /\/it\/blog\/categoria\/[^/]+$/.test(u))
+    expect(en).toHaveLength(5)
+    expect(it).toHaveLength(5)
+    const migrate = entries.find((e) => e.url.endsWith('/blog/category/migrate-to-shopify'))!
+    expect(migrate.alternates?.languages).toMatchObject({
+      en: 'https://noprob.agency/blog/category/migrate-to-shopify',
+      it: 'https://noprob.agency/it/blog/categoria/migrare-a-shopify',
+      'x-default': 'https://noprob.agency/blog/category/migrate-to-shopify',
+    })
+  })
+
   it('moves the blog hub lastmod with its newest article', () => {
     const hub = entries.find((e) => e.url.endsWith('/blog'))!
     const articleDates = entries

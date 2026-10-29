@@ -65,6 +65,16 @@ Each case lists its source platform. Results are percentages from verified data,
 - Cumini (luxury fashion multibrand boutique): proprietary platform tied to the ERP to Shopify. EN https://noprob.agency/use-cases/cumini-luxury-fashion-ecommerce | IT https://noprob.agency/it/casi-studio/cumini-luxury-fashion-ecommerce
 - DDglobal Store (B2B catalog, neoprene and technical fabrics): WordPress to a new custom site, not Shopify. EN https://noprob.agency/use-cases/ddglobal-store-migrazione-ai-ecommerce-b2b | IT https://noprob.agency/it/casi-studio/ddglobal-store-migrazione-ai-ecommerce-b2b
 
+## Blog Categories
+
+The blog covers Shopify, AI and eCommerce, grouped in five categories.
+
+- Migrate to Shopify: one guide per platform (WooCommerce, Magento, PrestaShop, BigCommerce, Wix, Squarespace). EN https://noprob.agency/blog/category/migrate-to-shopify | IT https://noprob.agency/it/blog/categoria/migrare-a-shopify
+- Shopify guides: how Shopify works, migration cost, Shopify Plus, migration SEO checklist, how to choose an agency, Shopify vs WooCommerce. EN https://noprob.agency/blog/category/shopify-guides | IT https://noprob.agency/it/blog/categoria/guide-shopify
+- AI agents: Shopify Magic and Sidekick, and the AI uses that pay in an eCommerce store. EN https://noprob.agency/blog/category/ai-agents | IT https://noprob.agency/it/blog/categoria/agenti-ai
+- AI search and GEO: GEO for Shopify, agentic commerce, ChatGPT shopping. EN https://noprob.agency/blog/category/ai-search-geo | IT https://noprob.agency/it/blog/categoria/ricerca-ai-geo
+- eCommerce growth: conversion research (CRO) and long-term growth strategy. EN https://noprob.agency/blog/category/ecommerce-growth | IT https://noprob.agency/it/blog/categoria/crescita-ecommerce
+
 ## Blog Articles
 
 - Shopify Plus: When It Pays Off, How to Migrate: What Shopify Plus adds over the other plans, the signs a brand is ready for it, what changes when you migrate to Plus, and whether to move before or after the migration. EN https://noprob.agency/blog/shopify-plus | IT https://noprob.agency/it/blog/shopify-plus
@@ -91,4 +101,4 @@ Each case lists its source platform. Results are percentages from verified data,
 
 - About: Team, principles, approach. https://noprob.agency/about
 - Use Cases: Real case studies with verified results. https://noprob.agency/use-cases
-- Blog: Articles on Shopify development, migration, tracking, CRO. https://noprob.agency/blog
+- Blog (Learn): Guides on Shopify, AI and eCommerce, in five categories. https://noprob.agency/blog (Italian: https://noprob.agency/it/blog)

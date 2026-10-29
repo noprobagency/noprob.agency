@@ -1,64 +1,49 @@
 import { articles, type Article } from './index'
+import { CATEGORIES, type Category, type CategoryId } from './categories'
 import type { Locale } from '@/lib/i18n'
 
 /**
- * Topic clusters of the blog. Kept apart from `data/articles/posts/*` (one
- * place to read the whole map, no field to repeat in 18 files). Used by the
- * blog index (one H2 section per cluster), the "Read next" block of the
- * article template and the pill on the cards. A new article must be added
- * here too: `lib/seo/clusters.test.ts` fails otherwise.
+ * Topic clusters of the blog = its 5 categories (`categories.ts` holds id,
+ * label and URL slug). Kept apart from `data/articles/posts/*` (one place to
+ * read the whole map, no field to repeat in every file). Used by the blog
+ * index (one H2 section per category), the category pages, the "Read next"
+ * block of the article template and the pill on the cards. A new article must
+ * be added here too: `lib/seo/clusters.test.ts` fails otherwise. A category
+ * works with 2 articles or with 15: the pages list whatever is in `slugs`.
  */
-export type ClusterId = 'migration-platform' | 'migration-planning' | 'ai' | 'growth'
+export type ClusterId = CategoryId
 
-export type Cluster = {
-  id: ClusterId
-  label: Record<Locale, string>
-  /** Slugs (EN) in the order shown on the index and used for "Read next". */
+export type Cluster = Category & {
+  /** Slugs (EN) used for "Read next" (the pages sort by publication date). */
   slugs: string[]
 }
 
-export const CLUSTERS: Cluster[] = [
-  {
-    id: 'migration-platform',
-    label: { en: 'Migrate to Shopify', it: 'Migrare a Shopify' },
-    slugs: [
-      'woocommerce-to-shopify-migration',
-      'magento-to-shopify-migration',
-      'prestashop-to-shopify-migration',
-      'bigcommerce-to-shopify-migration',
-      'wix-vs-shopify',
-      'squarespace-vs-shopify',
-    ],
-  },
-  {
-    id: 'migration-planning',
-    label: { en: 'Plan and compare', it: 'Pianificare e confrontare' },
-    slugs: [
-      'shopify-migration-cost',
-      'shopify-plus',
-      'shopify-migration-seo-checklist',
-      'choose-shopify-migration-agency',
-      'shopify-vs-woocommerce',
-      'how-shopify-works',
-    ],
-  },
-  {
-    id: 'ai',
-    label: { en: 'AI and GEO', it: 'AI e GEO' },
-    slugs: [
-      'geo-for-shopify',
-      'agentic-commerce-shopify',
-      'chatgpt-shopping-shopify',
-      'shopify-magic-sidekick',
-      'ai-for-ecommerce',
-    ],
-  },
-  {
-    id: 'growth',
-    label: { en: 'Growth', it: 'Crescita' },
-    slugs: ['shopify-cro-guide', 'ecommerce-growth-strategy-long-term'],
-  },
-]
+const CLUSTER_SLUGS: Record<ClusterId, string[]> = {
+  migrate: [
+    'woocommerce-to-shopify-migration',
+    'magento-to-shopify-migration',
+    'prestashop-to-shopify-migration',
+    'bigcommerce-to-shopify-migration',
+    'wix-vs-shopify',
+    'squarespace-vs-shopify',
+  ],
+  shopify: [
+    'shopify-migration-cost',
+    'shopify-plus',
+    'shopify-migration-seo-checklist',
+    'choose-shopify-migration-agency',
+    'shopify-vs-woocommerce',
+    'how-shopify-works',
+  ],
+  'ai-agents': ['shopify-magic-sidekick', 'ai-for-ecommerce'],
+  'ai-search': ['geo-for-shopify', 'agentic-commerce-shopify', 'chatgpt-shopping-shopify'],
+  growth: ['shopify-cro-guide', 'ecommerce-growth-strategy-long-term'],
+}
+
+export const CLUSTERS: Cluster[] = CATEGORIES.map((category) => ({
+  ...category,
+  slugs: CLUSTER_SLUGS[category.id],
+}))
 
 /** Short label on the card pill (replaces the technical `articleType`). */
 export const ARTICLE_PILLS: Record<string, Record<Locale, string>> = {
@@ -91,8 +76,17 @@ export function getArticle(slug: string): Article | undefined {
   return articles.find((a) => a.slug === slug)
 }
 
+/** When an article was published (ISO 8601), falling back to the visible date. */
+export function articlePublishedAt(article: Article): string {
+  return article.datePublishedIso ?? `${article.date}T10:00:00+02:00`
+}
+
+/** Articles of a cluster, newest first by publication date. */
 export function getClusterArticles(cluster: Cluster): Article[] {
-  return cluster.slugs.map((s) => getArticle(s)).filter((a): a is Article => Boolean(a))
+  return cluster.slugs
+    .map((s) => getArticle(s))
+    .filter((a): a is Article => Boolean(a))
+    .sort((a, b) => new Date(articlePublishedAt(b)).getTime() - new Date(articlePublishedAt(a)).getTime())
 }
 
 export function articleHref(article: Article, locale: Locale): string {

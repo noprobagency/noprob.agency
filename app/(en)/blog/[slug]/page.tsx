@@ -3,8 +3,8 @@ import Image from 'next/image'
 import { notFound } from 'next/navigation'
 
 import { buildMetadata, FOUNDER_ID, ORGANIZATION_ID } from '@/lib/site'
-import { detailBreadcrumbJsonLd, homeCrumb, routeCrumb } from '@/lib/seo/breadcrumbs'
-import { articlePill, articleShortTitle } from '@/data/articles/clusters'
+import { blogTrail, breadcrumbJsonLd } from '@/lib/seo/breadcrumbs'
+import { articlePill, articleShortTitle, getCluster } from '@/data/articles/clusters'
 import { articles, type Article } from '@/data/articles'
 import { renderSection } from '@/components/article/renderSection'
 import { BlogPostMeta } from '@/components/blog/BlogPostMeta'
@@ -105,9 +105,11 @@ export default async function ArticlePage({ params }: Props) {
   const lede = article.ledeEn ?? article.excerpt
   const content = article.content
 
+  const trail = blogTrail(locale, getCluster(article.slug)?.id)
+
   const schemas: Array<Record<string, unknown>> = [
     buildBlogPostingJsonLd(article),
-    detailBreadcrumbJsonLd('blog', locale, { name: article.title, path: `/blog/${article.slug}` }),
+    breadcrumbJsonLd([...trail, { name: article.title, path: `/blog/${article.slug}` }]),
   ]
   if (article.faqEn && article.faqEn.length > 0) {
     schemas.push(buildFaqJsonLd(article.faqEn))
@@ -121,11 +123,7 @@ export default async function ArticlePage({ params }: Props) {
       <section className="w-full bg-[#f0f0f0] pt-[120px] pb-0 px-5 min-[810px]:px-9">
         <div className="mx-auto flex max-w-[860px] flex-col items-center gap-5 pb-12 text-center">
           <Breadcrumb
-            items={[
-              homeCrumb(locale),
-              routeCrumb('blog', locale),
-              { name: articleShortTitle(article, locale), path: `/blog/${article.slug}` },
-            ]}
+            items={[...trail, { name: articleShortTitle(article, locale), path: `/blog/${article.slug}` }]}
           />
           <span className="np-eyebrow">{articlePill(article, locale)}</span>
           <h1

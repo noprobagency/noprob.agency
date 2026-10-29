@@ -1,39 +1,65 @@
+import Link from 'next/link'
+
 import SectionLabel from '@/components/ui/SectionLabel'
 import GuideFeaturedCard from '@/components/blog/GuideFeaturedCard'
 import ArticleCard from '@/components/blog/ArticleCard'
 import { RelatedCTA } from '@/components/blog/RelatedCTA'
 import { StructuredData } from '@/components/blog/StructuredData'
 import { parseInline } from '@/components/article/renderSection'
-import { CLUSTERS, articleHref, articleShortTitle, getClusterArticles } from '@/data/articles/clusters'
-import type { Locale } from '@/lib/i18n'
+import { categoryPath } from '@/data/articles/categories'
+import { CLUSTERS, articleHref, articlePublishedAt, articleShortTitle, getClusterArticles } from '@/data/articles/clusters'
+import { getDictionary, type Locale } from '@/lib/i18n'
 import { getBlocchiCopy } from '@/lib/i18n/blocchi'
 import { getMigrazioneBlogCard } from '@/lib/i18n/migrazione'
 import { ROUTE_PATHS } from '@/lib/i18n/routes'
 import { breadcrumbJsonLd, homeCrumb, routeCrumb } from '@/lib/seo/breadcrumbs'
+import { ORGANIZATION_ID } from '@/lib/site'
 import { absoluteUrl } from '@/lib/utils'
 
+/** Cards shown per category on the index; the rest sits behind "See all". */
+const MAX_PER_SECTION = 6
+
 /**
- * Blog index, one component for both locales: H1 and intro (copy in
- * `lib/i18n/blocchi.ts`), the migration guide card, one H2 section per topic
- * cluster (`data/articles/clusters.ts`) and the closing Sprint CTA band.
- * JSON-LD: BreadcrumbList and a CollectionPage with the ItemList of articles.
+ * Blog index ("Learn" / "Risorse"), one component for both locales: H1 and
+ * intro (copy in `lib/i18n/blocchi.ts`), the migration guide card, one H2
+ * section per category (`data/articles/clusters.ts`, newest article first,
+ * with a "See all" link to the category page) and the closing Sprint CTA band.
+ * JSON-LD: BreadcrumbList, a Blog and a CollectionPage with the ItemList of
+ * the articles shown.
  */
 export default function BlogIndex({ locale }: { locale: Locale }) {
   const d = getBlocchiCopy(locale).blog
-  const clusters = CLUSTERS.map((cluster) => ({ cluster, items: getClusterArticles(cluster) }))
+  const clusters = CLUSTERS.map((cluster) => {
+    const all = getClusterArticles(cluster)
+    return { cluster, items: all.slice(0, MAX_PER_SECTION) }
+  })
+  const blogUrl = absoluteUrl(ROUTE_PATHS.blog[locale])
+  const inLanguage = locale === 'it' ? 'it-IT' : 'en-US'
 
   const schemas: Array<Record<string, unknown>> = [
     breadcrumbJsonLd([homeCrumb(locale), routeCrumb('blog', locale)]),
     {
       '@context': 'https://schema.org',
+      '@type': 'Blog',
+      '@id': `${blogUrl}#blog`,
+      name: `${d.h1}${d.h1Em}`,
+      url: blogUrl,
+      inLanguage,
+      publisher: { '@id': ORGANIZATION_ID },
+    },
+    {
+      '@context': 'https://schema.org',
       '@type': 'CollectionPage',
       name: `${d.h1}${d.h1Em}`,
-      url: absoluteUrl(ROUTE_PATHS.blog[locale]),
-      inLanguage: locale === 'it' ? 'it-IT' : 'en-US',
+      description: getDictionary(locale).seo.blog.description,
+      url: blogUrl,
+      inLanguage,
+      isPartOf: { '@id': `${blogUrl}#blog` },
       mainEntity: {
         '@type': 'ItemList',
         itemListElement: clusters
           .flatMap((c) => c.items)
+          .sort((a, b) => new Date(articlePublishedAt(b)).getTime() - new Date(articlePublishedAt(a)).getTime())
           .map((article, i) => ({
             '@type': 'ListItem',
             position: i + 1,
@@ -69,9 +95,19 @@ export default function BlogIndex({ locale }: { locale: Locale }) {
       {clusters.map(({ cluster, items }) => (
         <div key={cluster.id} id={cluster.id} className="mx-auto mt-14 max-w-[1200px] scroll-mt-24">
           <div className="mb-6 flex flex-col gap-2">
-            <h2 className="font-display text-[26px] font-semibold leading-[1.15em] tracking-[-0.05em] text-black min-[810px]:text-[34px]">
-              {cluster.label[locale]}
-            </h2>
+            <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
+              <h2 className="font-display text-[26px] font-semibold leading-[1.15em] tracking-[-0.05em] text-black min-[810px]:text-[34px]">
+                {cluster.label[locale]}
+              </h2>
+              <Link
+                href={categoryPath(cluster.id, locale)}
+                aria-label={d.seeAllLabel(cluster.label[locale])}
+                data-tracking="blog_see_all"
+                className="font-sans text-[15px] font-semibold tracking-[-0.02em] text-black underline underline-offset-4 decoration-black/40 hover:decoration-black"
+              >
+                {d.seeAll} →
+              </Link>
+            </div>
             <p className="max-w-[760px] font-sans text-[15px] font-medium leading-[1.5em] tracking-[-0.02em] text-[#6b6b6b]">
               {d.sections[cluster.id].description}
             </p>

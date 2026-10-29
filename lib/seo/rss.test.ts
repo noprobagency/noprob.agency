@@ -15,6 +15,12 @@ describe('buildRssFeed', () => {
         for (const link of links) expect(link).toMatch(/^https?:\/\/[^/]+\/(it\/)?blog\/[a-z0-9-]+$/)
       })
 
+      it('lists the articles newest first by publication date', () => {
+        const dates = [...xml.matchAll(/<pubDate>([^<]+)<\/pubDate>/g)].map((m) => new Date(m[1]).getTime())
+        expect(dates).toHaveLength(articles.length)
+        expect(dates).toEqual([...dates].sort((a, b) => b - a))
+      })
+
       it('declares itself and the language, and is well formed enough to start and end right', () => {
         expect(xml.startsWith('<?xml version="1.0" encoding="UTF-8"?>')).toBe(true)
         expect(xml).toContain(`<language>${locale === 'it' ? 'it-IT' : 'en-US'}</language>`)

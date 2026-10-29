@@ -101,7 +101,7 @@ export default function Footer({
         {!minimal && (
         <nav
           aria-label={locale === 'it' ? 'Link del sito' : 'Site links'}
-          className="grid max-w-[760px] grid-cols-2 gap-x-10 gap-y-8 sm:grid-cols-3"
+          className="grid max-w-[1000px] grid-cols-2 gap-x-10 gap-y-8 sm:grid-cols-4"
         >
           <FooterColumn heading={blocks.servicesHeading}>
             {blocks.services.map((link) => (
@@ -116,6 +116,15 @@ export default function Footer({
             {blocks.guides.map((link) => (
               <li key={link.label}>
                 <Link href={resolveHref(link, locale)} className={FOOTER_LINK_CLASS}>
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </FooterColumn>
+          <FooterColumn heading={t.navbar.learn.label}>
+            {[...t.navbar.learn.items, { label: t.navbar.learn.allLabel, href: t.navbar.learn.allHref }].map((link) => (
+              <li key={link.href}>
+                <Link href={link.href} className={FOOTER_LINK_CLASS}>
                   {link.label}
                 </Link>
               </li>

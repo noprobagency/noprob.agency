@@ -1,4 +1,5 @@
 import { ZL_TIERS } from '@/content/zero-loss-migration'
+import { CATEGORIES, categoryPath } from '@/data/articles/categories'
 
 export type Locale = 'en' | 'it'
 
@@ -9,8 +10,19 @@ export type Dictionary = {
     menuOpen: string
     menuClose: string
     homeLabel: string
+    /** First-level links before the Learn dropdown. */
     navLinks: { label: string; href: string }[]
+    /** First-level links after the Learn dropdown. */
+    navLinksEnd: { label: string; href: string }[]
     serviceItems: { label: string; href: string }[]
+    /** "Learn" dropdown (was the "Blog" link): the 5 blog categories, then "All articles". */
+    learn: {
+      label: string
+      /** Name of the blog section in breadcrumbs and in the footer. */
+      allLabel: string
+      allHref: string
+      items: { label: string; href: string }[]
+    }
     langSwitcher: { label: string; display: string }
   }
   hero: {
@@ -232,9 +244,14 @@ const en: Dictionary = {
     navLinks: [
       { label: 'About', href: '/about' },
       { label: 'Use Cases', href: '/use-cases' },
-      { label: 'Blog', href: '/blog' },
-      { label: 'Contacts', href: '/contacts' },
     ],
+    navLinksEnd: [{ label: 'Contacts', href: '/contacts' }],
+    learn: {
+      label: 'Learn',
+      allLabel: 'All articles',
+      allHref: '/blog',
+      items: CATEGORIES.map((c) => ({ label: c.label.en, href: categoryPath(c.id, 'en') })),
+    },
     serviceItems: [
       { label: 'AI Accelerator', href: '/ai-accelerator' },
       { label: 'Shopify Development', href: '/shopify-development' },
@@ -638,7 +655,6 @@ const en: Dictionary = {
     links: [
       { label: 'About', href: '/about' },
       { label: 'Use Cases', href: '/use-cases' },
-      { label: 'Blog', href: '/blog' },
       { label: 'Contacts', href: '/contacts' },
       { label: 'Ambassador', href: '/ambassador' },
     ],
@@ -649,7 +665,7 @@ const en: Dictionary = {
     home: { title: 'Shopify Migration & Development Agency | noprob agency™', description: 'Shopify Partner for fashion, supplement and DTC brands: Shopify migration, store ready in 14 days at a public price, plus development and dedicated teams.' },
     about: { title: 'About Us: Shopify Migration & Development', description: 'Meet noprob agency: Antonio Manitta and a team of Shopify, marketing, advertising and SEO specialists, with 7+ years of eCommerce projects.' },
     contacts: { title: 'Contact Us & Book a Call', description: 'Talk to an eCommerce expert at noprob agency: a call to migrate to Shopify, build your store or start a dedicated team. We reply within 48 hours.' },
-    blog: { title: 'Shopify Migration & AI Guides for eCommerce', description: 'Guides on Shopify migration, platform comparisons, migration SEO and AI for eCommerce, written by the noprob agency team.' },
+    blog: { title: 'Shopify, AI and eCommerce Guides', description: 'Guides on Shopify, AI and eCommerce: migrating to Shopify, AI agents, AI search and GEO, and growth. Written by the noprob agency team.' },
     useCases: { title: 'Shopify Case Studies: Migration Results', description: 'Three case studies with sourced numbers: WooCommerce to Shopify, a custom platform to Shopify, an AI migration of a B2B catalog. Results as % and ratios.' },
     dataDrivenTeam: { title: 'Dedicated eCommerce Team on Retainer', description: 'Your dedicated eCommerce team on retainer. One point of contact, a full team behind you. For Shopify brands that want to scale without hiring in-house.' },
     sviluppoShopify: { title: 'Shopify Development Services', description: 'Shopify development services to build your eCommerce from design to tracking, optimized to convert from day one. Lifetime maintenance included.' },
@@ -704,9 +720,14 @@ const it: Dictionary = {
     navLinks: [
       { label: 'Chi Siamo', href: '/it/chi-siamo' },
       { label: 'Casi Studio', href: '/it/casi-studio' },
-      { label: 'Blog', href: '/it/blog' },
-      { label: 'Contatti', href: '/it/contatti' },
     ],
+    navLinksEnd: [{ label: 'Contatti', href: '/it/contatti' }],
+    learn: {
+      label: 'Risorse',
+      allLabel: 'Tutti gli articoli',
+      allHref: '/it/blog',
+      items: CATEGORIES.map((c) => ({ label: c.label.it, href: categoryPath(c.id, 'it') })),
+    },
     serviceItems: [
       { label: 'AI Accelerator', href: '/it/ai-accelerator' },
       { label: 'Sviluppo Shopify', href: '/it/sviluppo-shopify' },
@@ -1109,7 +1130,6 @@ const it: Dictionary = {
     links: [
       { label: 'Chi Siamo', href: '/it/chi-siamo' },
       { label: 'Casi Studio', href: '/it/casi-studio' },
-      { label: 'Blog', href: '/it/blog' },
       { label: 'Contatti', href: '/it/contatti' },
       { label: 'Ambassador', href: '/it/ambassador' },
     ],
@@ -1120,7 +1140,7 @@ const it: Dictionary = {
     home: { title: 'Agenzia Shopify: migrazione e sviluppo | noprob agency™', description: 'Partner tecnico Shopify per brand fashion, integratori e DTC: migrazione a Shopify con store pronto in 14 giorni a prezzo pubblico, sviluppo e team dedicati.' },
     about: { title: 'Chi siamo: migrazione e sviluppo Shopify', description: 'Il team noprob agency: Antonio Manitta e specialisti in Shopify, marketing, advertising e SEO, con oltre 7 anni di progetti eCommerce.' },
     contacts: { title: 'Contatti: prenota una videochiamata', description: 'Parla con un esperto eCommerce: videochiamata per migrare a Shopify, costruire il tuo store o attivare un team dedicato. Rispondiamo entro 48 ore.' },
-    blog: { title: 'Guide Shopify: migrazione, SEO e AI', description: 'Guide su migrazione Shopify, confronti tra piattaforme, SEO della migrazione e AI per eCommerce, scritte dal team noprob agency.' },
+    blog: { title: 'Guide su Shopify, AI ed eCommerce', description: 'Guide su Shopify, AI ed eCommerce: migrare a Shopify, agenti AI, ricerca AI e GEO, crescita. Scritte dal team di noprob agency.' },
     useCases: { title: 'Casi studio Shopify: risultati di migrazione', description: 'Tre casi studio con numeri e fonti: WooCommerce a Shopify, piattaforma proprietaria a Shopify, migrazione AI di un catalogo B2B. Risultati in % e rapporti.' },
     dataDrivenTeam: { title: 'Team eCommerce dedicato per Shopify', description: 'Il tuo team eCommerce dedicato per Shopify: un solo referente, sviluppo, marketing e dati. Il primo sprint di 30 giorni a metà prezzo, poi decidi tu.' },
     sviluppoShopify: { title: 'Sviluppo Shopify: creiamo il tuo eCommerce', description: 'Sviluppiamo il tuo eCommerce su Shopify dal design al tracciamento, ottimizzato per convertire dal primo giorno. Manutenzione a vita inclusa.' },

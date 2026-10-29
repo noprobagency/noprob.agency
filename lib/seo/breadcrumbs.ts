@@ -1,3 +1,4 @@
+import { getCategory, categoryPath, type CategoryId } from '@/data/articles/categories'
 import { getDictionary, type Locale } from '@/lib/i18n'
 import { ROUTE_PATHS, type RouteKey } from '@/lib/i18n/routes'
 import { absoluteUrl } from '@/lib/utils'
@@ -25,7 +26,6 @@ export function breadcrumbJsonLd(items: BreadcrumbItem[]) {
 const NAV_LABEL_ROUTE: Partial<Record<RouteKey, RouteKey>> = {
   aiAccelerator: 'aiAccelerator',
   useCases: 'useCases',
-  blog: 'blog',
   sviluppoShopify: 'sviluppoShopify',
   dataDrivenTeam: 'dataDrivenTeam',
   migrazioneShopify: 'zeroLossMigration',
@@ -37,15 +37,31 @@ const NAV_LABEL_ROUTE: Partial<Record<RouteKey, RouteKey>> = {
 /** Breadcrumb entry for a fixed route: name from the navbar labels, path from the route map. */
 export function routeCrumb(key: RouteKey, locale: Locale): BreadcrumbItem {
   const nav = getDictionary(locale).navbar
+  // The blog section is the "Learn" / "Risorse" dropdown of the navbar.
+  if (key === 'blog') return { name: nav.learn.label, path: ROUTE_PATHS.blog[locale] }
   const labelRoute = NAV_LABEL_ROUTE[key]
   const labelPath = labelRoute ? ROUTE_PATHS[labelRoute][locale] : undefined
-  const entry = [...nav.navLinks, ...nav.serviceItems].find((e) => e.href === labelPath)
+  const entry = [...nav.navLinks, ...nav.navLinksEnd, ...nav.serviceItems].find((e) => e.href === labelPath)
   if (!entry) throw new Error(`No navbar label for route "${key}" (${locale})`)
   return { name: entry.label, path: ROUTE_PATHS[key][locale] }
 }
 
+/** Breadcrumb entry for a blog category page. */
+export function categoryCrumb(id: CategoryId, locale: Locale): BreadcrumbItem {
+  return { name: getCategory(id).label[locale], path: categoryPath(id, locale) }
+}
+
 export function homeCrumb(locale: Locale): BreadcrumbItem {
   return { name: getDictionary(locale).navbar.homeLabel, path: ROUTE_PATHS.home[locale] }
+}
+
+/** Home > Learn > category: the trail above an article (the category is left out when unknown). */
+export function blogTrail(locale: Locale, categoryId?: CategoryId): BreadcrumbItem[] {
+  return [
+    homeCrumb(locale),
+    routeCrumb('blog', locale),
+    ...(categoryId ? [categoryCrumb(categoryId, locale)] : []),
+  ]
 }
 
 /** Home > section (a fixed route). */

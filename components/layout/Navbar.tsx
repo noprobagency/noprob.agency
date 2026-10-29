@@ -62,20 +62,33 @@ function Logo({ href, size = '35px' }: { href: string; size?: string }) {
   )
 }
 
-export function ServicesDropdown({
-  locale = 'en',
+type NavDropdownItem = { label: string; href: string }
+
+/**
+ * Header dropdown (Services, Learn). The list is always in the DOM (hidden, not
+ * unmounted) so its links are in the HTML crawlers read. It opens on hover (mouse
+ * devices) or on click / Enter / Space of the button, closes on Escape (focus goes
+ * back to the button) and when focus leaves it. `separatedLast` draws a rule above
+ * the last item (Learn uses it for "All articles").
+ */
+export function NavDropdown({
+  label,
+  items,
+  separatedLast = false,
   theme = 'light',
   direction = 'down',
-  className
+  className,
 }: {
-  locale?: Locale
+  label: string
+  items: NavDropdownItem[]
+  separatedLast?: boolean
   theme?: 'light' | 'dark'
   direction?: 'up' | 'down'
   className?: string
 }) {
-  const t = getDictionary(locale)
   const [open, setOpen] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
+  const buttonRef = useRef<HTMLButtonElement>(null)
   const closeTimeoutRef = useRef<number | null>(null)
 
   const clearCloseTimeout = () => {
@@ -127,8 +140,18 @@ export function ServicesDropdown({
           scheduleClose()
         }
       }}
+      onKeyDown={(event) => {
+        if (event.key === 'Escape' && open) {
+          setOpen(false)
+          buttonRef.current?.focus()
+        }
+      }}
+      onBlur={(event) => {
+        if (!ref.current?.contains(event.relatedTarget as Node | null)) setOpen(false)
+      }}
     >
       <button
+        ref={buttonRef}
         type="button"
         aria-haspopup="menu"
         aria-expanded={open}
@@ -143,7 +166,7 @@ export function ServicesDropdown({
         )}
         style={theme === 'light' ? { backgroundColor: open ? dropdown.itemHoverBg : 'transparent' } : {}}
       >
-        <span>{t.navbar.services}</span>
+        <span>{label}</span>
         <span
           className="transition-transform duration-150"
           style={{ transform: open ? 'rotate(180deg)' : 'rotate(0deg)' }}
@@ -152,10 +175,10 @@ export function ServicesDropdown({
         </span>
       </button>
 
-      {/* Always in the DOM (hidden, not unmounted) so the service links are in the HTML crawlers read. */}
+      {/* Always in the DOM (hidden, not unmounted) so the links are in the HTML crawlers read. */}
       <div
         role="menu"
-        aria-label={t.navbar.services}
+        aria-label={label}
         hidden={!open}
         className={`absolute left-0 z-[100] border ${theme === 'dark' ? 'border-white/10 bg-black' : 'border-black/5 bg-white'}`}
         style={{
@@ -176,20 +199,60 @@ export function ServicesDropdown({
           }
         }}
       >
-        {t.navbar.serviceItems.map((item) => (
+        {items.map((item, index) => (
           <Link
             key={item.href}
             href={item.href}
             role="menuitem"
             onClick={() => setOpen(false)}
-            className={`block whitespace-nowrap rounded-[8px] px-4 py-[10px] font-sans text-[16px] font-normal tracking-[-0.03em] transition-colors ${theme === 'dark' ? 'text-white hover:bg-white/10' : 'text-np-text hover:bg-black/5'
-              }`}
+            className={cn(
+              'block whitespace-nowrap rounded-[8px] px-4 py-[10px] font-sans text-[16px] font-normal tracking-[-0.03em] transition-colors',
+              theme === 'dark' ? 'text-white hover:bg-white/10' : 'text-np-text hover:bg-black/5',
+              separatedLast && index === items.length - 1 && index > 0
+                ? cn('mt-1 border-t pt-[12px]', theme === 'dark' ? 'border-white/10' : 'border-black/5')
+                : ''
+            )}
           >
             {item.label}
           </Link>
         ))}
       </div>
     </div>
+  )
+}
+
+export function ServicesDropdown({
+  locale = 'en',
+  theme = 'light',
+  direction = 'down',
+  className
+}: {
+  locale?: Locale
+  theme?: 'light' | 'dark'
+  direction?: 'up' | 'down'
+  className?: string
+}) {
+  const t = getDictionary(locale)
+  return (
+    <NavDropdown
+      label={t.navbar.services}
+      items={t.navbar.serviceItems}
+      theme={theme}
+      direction={direction}
+      className={className}
+    />
+  )
+}
+
+/** "Learn" / "Risorse": the 5 blog categories, then "All articles" (the blog index). */
+export function LearnDropdown({ locale = 'en' }: { locale?: Locale }) {
+  const { learn } = getDictionary(locale).navbar
+  return (
+    <NavDropdown
+      label={learn.label}
+      items={[...learn.items, { label: learn.allLabel, href: learn.allHref }]}
+      separatedLast
+    />
   )
 }
 
@@ -345,6 +408,7 @@ export default function Navbar({ locale: localeProp }: { locale?: Locale } = {})
 
   const [mobileOpen, setMobileOpen] = useState(false)
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false)
+  const [mobileLearnOpen, setMobileLearnOpen] = useState(false)
   const [isOverDark, setIsOverDark] = useState(false)
 
   const alternateHref = getAlternateHref(pathname)
@@ -417,6 +481,16 @@ export default function Navbar({ locale: localeProp }: { locale?: Locale } = {})
           >
             <ServicesDropdown locale={locale} />
             {t.navbar.navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="inline-flex items-center gap-1 whitespace-nowrap rounded-[8px] px-[14px] py-2 font-sans text-[16px] font-normal leading-[120%] tracking-[-0.04em] text-np-dark transition-colors hover:bg-black/5"
+              >
+                {link.label}
+              </Link>
+            ))}
+            <LearnDropdown locale={locale} />
+            {t.navbar.navLinksEnd.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
@@ -500,6 +574,45 @@ export default function Navbar({ locale: localeProp }: { locale?: Locale } = {})
           </div>
 
           {t.navbar.navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              onClick={() => setMobileOpen(false)}
+              className="block py-2 font-sans text-[16px] font-medium tracking-[-0.04em] text-np-text"
+            >
+              {link.label}
+            </Link>
+          ))}
+
+          {/* Learn accordion: the 5 blog categories, then all articles */}
+          <button
+            type="button"
+            aria-expanded={mobileLearnOpen}
+            aria-controls="mobile-learn-list"
+            onClick={() => setMobileLearnOpen((v) => !v)}
+            className="flex w-full items-center justify-between py-2 font-sans text-[16px] font-medium tracking-[-0.04em] text-np-text"
+          >
+            <span>{t.navbar.learn.label}</span>
+            <span className="transition-transform duration-200" style={{ transform: mobileLearnOpen ? 'rotate(180deg)' : 'rotate(0deg)' }}>
+              <ChevronDown size={18} />
+            </span>
+          </button>
+
+          {/* Always in the DOM (hidden, not unmounted), like the desktop dropdown. */}
+          <div id="mobile-learn-list" hidden={!mobileLearnOpen} className="pl-3 pb-1">
+            {[...t.navbar.learn.items, { label: t.navbar.learn.allLabel, href: t.navbar.learn.allHref }].map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                onClick={() => { setMobileOpen(false); setMobileLearnOpen(false) }}
+                className="block py-1.5 font-sans text-[15px] font-medium tracking-[-0.04em] text-np-text"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </div>
+
+          {t.navbar.navLinksEnd.map((link) => (
             <Link
               key={link.href}
               href={link.href}
