@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.88.0 (29 Oct 2026)
+
+- **Learn menu and blog categories**: "Blog" in the navbar becomes "Learn" (EN) / "Risorse" (IT), a dropdown with five categories (Migrate to Shopify, Shopify guides, AI agents, AI search and GEO, eCommerce growth) and "All articles"; same links in a new footer column. Ten new indexable category pages (`/blog/category/<slug>`, `/it/blog/categoria/<slug>`) with intro, cards, breadcrumbs and `CollectionPage` + `ItemList` JSON-LD, in the sitemap and `llms.txt`. The blog index is repositioned on Shopify, AI and eCommerce with one section per category. Article breadcrumbs go Home > Learn > category > article. Publication dates of the articles written on 27 and 28 Oct are spread over the previous weeks, never before a fact they cite; `dateModified` stays real. Article and `/blog` URLs unchanged (Francesca).
+
 ### Changelog v1.85.0 (29 Oct 2026)
 
 - **Home guides carousel**: the home "guides" block becomes an app-style carousel (native CSS scroll-snap, server-rendered cards with cover, category pill, reading time; 12 most recent articles plus an "All guides" card). A tiny client island adds category chips and prev/next arrows after hydration (about +1 kB First Load JS); without JS it scrolls and links work. Categories and articles come from `data/articles` (Francesca).
