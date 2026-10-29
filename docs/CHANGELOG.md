@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.94.0 (29 Oct 2026)
+
+- **Ada's cold routine in the cloud**: `.github/workflows/cold-routine.yml` runs `scripts/cold-daily.mjs` on GitHub Actions every 2 hours, day and night, so the Shopify filter and approvals no longer need the Mac on. State in the Actions cache (env `COLD_STATE`, `COLD_LOG`), the cap is now a daily total (25, Monday to Friday, Lisbon time), the opt-out sweep stays on the Mac (`COLD_NO_SWEEP`), and API errors hide response bodies in CI because run logs are public.
+
 ### Changelog v1.93.0 (29 Oct 2026)
 
 - **AI agents series, 13 new articles (IT and EN)**, each with its own treg keyword research, written in Antonio's voice and reviewed: GEO vs SEO, Shopify MCP, AI agents for Shopify (pillar of the AI agents category), building an AI agent for a store and its cost, migrating to Shopify with AI agents, Shopify 301 redirects with a downloadable CSV template (`/downloads/`), Claude and Claude Code on Shopify, Claude Duet for a Shopify eCommerce, Shopify Flow with AI, AI agent security (prompt injection), an AI assistant for orders and returns, how to evaluate an AI assistant, BigCommerce vs Shopify. `agentic-commerce-shopify` and `chatgpt-shopping-shopify` updated (AI shopping agents, UCP vs ACP, Agentic Storefronts, what happened to Instant Checkout). New `table` article section with a semantic, mobile-safe `<table>`; eight articles use it. Covers, categories, `llms.txt`, third-party sources in `docs/dati-verificati.md`; `/shop` redirect note corrected in the WooCommerce guide; AI agents category copy rewritten (Francesca).
