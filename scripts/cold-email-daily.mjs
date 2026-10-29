@@ -37,7 +37,7 @@ const LOG = `${DIR}/log.md`
 
 const args = process.argv.slice(2)
 const dry = args.includes('--dry')
-const config = { approved: null, dailyCap: 10, mailboxMax: 55, manualReserve: 10, adaCampaign: 45702, gapSeconds: [40, 120], crmPath: `${DIR}/crm`, ...(existsSync(CONFIG) ? JSON.parse(readFileSync(CONFIG, 'utf8')) : {}) }
+const config = { approved: null, dailyCap: 10, mailboxMax: 55, manualReserve: 10, adaCampaign: 45702, adaEmailsLive: false, gapSeconds: [40, 120], crmPath: `${DIR}/crm`, ...(existsSync(CONFIG) ? JSON.parse(readFileSync(CONFIG, 'utf8')) : {}) }
 const cap = args.includes('--cap') ? Number(args[args.indexOf('--cap') + 1]) : config.dailyCap
 // Keep the Mac awake while this run lives (launchd starts node directly: a job whose
 // program is /usr/bin/caffeinate fails to spawn).
@@ -108,7 +108,7 @@ const sentToday = api ? ((await api.search(`in:sent after:${today.replaceAll('-'
 // follow-ups keep their days even when a big batch reaches the same step together.
 // Ada's campaign sends from antonio@ too (from 9:00, up to its warm-up limit): the
 // emails it has queued for today are kept free, the rest of the mailbox is ours.
-const gojiberryLeft = await gojiberryRemaining(SENDER.email, config.adaCampaign).catch((err) => {
+const gojiberryLeft = await gojiberryRemaining(SENDER.email, config.adaCampaign, { live: config.adaEmailsLive }).catch((err) => {
   console.error(`Gojiberry seat check failed, 25 kept free: ${err.message}`)
   return 25
 })
