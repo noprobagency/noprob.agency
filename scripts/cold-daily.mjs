@@ -6,10 +6,14 @@
 //   3. lead passing the fixed criteria -> approved (readyForCampaign), max N per run
 // Before that, the opt-out sweep (lib/cold/sweep.mjs), which also runs hourly on its own.
 // Writes one line to docs/cold/daily-log.md. Lead data never leaves docs/cold/ (gitignored).
+// Runs in the cloud too (.github/workflows/cold-routine.yml, every 2 hours): there COLD_STATE
+// and COLD_LOG point to a cache folder, COLD_NO_SWEEP=1 leaves the opt-out sweep to the Mac
+// (it needs docs/cold/suppressed.txt), and --cap is a daily total, approvals Monday to Friday.
 //
 // Usage: node scripts/cold-daily.mjs [--dry] [--cap 10]
 
 import { appendFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
+import { dirname } from 'node:path'
 import { isPersonalSite, normaliseUrl, siteMatchesCompany } from '../lib/cold/detect-platform.mjs'
 import { fetchPlatform, pool } from '../lib/cold/fetch-platform.mjs'
 import { LISTS, api, listContacts } from '../lib/cold/gojiberry.mjs'
@@ -28,8 +32,11 @@ const EN_MARKETS = /\b(united states|usa|u\.s\.|united kingdom|uk|england|scotla
 const args = process.argv.slice(2)
 const dry = args.includes('--dry')
 const cap = Number(args[args.indexOf('--cap') + 1]) || 10
-const STATE = 'docs/cold/daily-state.json'
-const LOG = 'docs/cold/daily-log.md'
+const STATE = process.env.COLD_STATE || 'docs/cold/daily-state.json'
+const LOG = process.env.COLD_LOG || 'docs/cold/daily-log.md'
+// Lisbon calendar day: the cap counts approvals per day, LinkedIn works Monday to Friday
+const today = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Lisbon' }).format(new Date())
+const weekend = ['Sat', 'Sun'].includes(new Intl.DateTimeFormat('en-US', { timeZone: 'Europe/Lisbon', weekday: 'short' }).format(new Date()))
 
 // One person per company: the LinkedIn company page is the stable key, names vary
 // ("Semprefarmacia" vs "Semprefarmacia.it").
@@ -41,13 +48,13 @@ const state = existsSync(STATE) ? JSON.parse(readFileSync(STATE, 'utf8')) : { pr
 const stamp = () => new Date().toISOString().slice(0, 16).replace('T', ' ')
 const saveState = (extra) => {
   if (dry) return
-  mkdirSync('docs/cold', { recursive: true })
+  mkdirSync(dirname(STATE), { recursive: true })
   const current = existsSync(STATE) ? JSON.parse(readFileSync(STATE, 'utf8')) : {}
   writeFileSync(STATE, JSON.stringify({ ...current, ...extra }))
 }
 
-const sweep = await optoutSweep({ since: state.lastSweep, dry })
-saveState({ lastSweep: sweep.startedAt })
+const sweep = process.env.COLD_NO_SWEEP ? { excluded: 0 } : await optoutSweep({ since: state.lastSweep, dry })
+if (!process.env.COLD_NO_SWEEP) saveState({ lastSweep: sweep.startedAt })
 
 // --- Email volume: Ada's Gojiberry mailbox (Dante's hello@ has its own budget) --
 const seats = await api('GET', '/v1/email-seat')
@@ -60,6 +67,8 @@ const held = new Set(state.held || [])
 const stats = { new: 0, shopify: 0, approved: { en: 0 }, held: 0 }
 const moves = { shopify: [] }
 const approvals = []
+const approvedToday = state.approvedOn?.date === today ? state.approvedOn.count : 0
+const room = weekend ? 0 : Math.max(0, cap - approvedToday)
 
 for (const key of ['en']) {
   const contacts = await listContacts(LISTS[key])
@@ -111,7 +120,7 @@ for (const key of ['en']) {
       processed.add(c.id)
       continue
     }
-    if (stats.approved[key] >= cap) break // the rest waits for the next run
+    if (stats.approved[key] >= room) break // the rest waits for the next run
     busyCompanies.add(company)
     approvals.push(c.id)
     stats.approved[key]++
@@ -124,9 +133,12 @@ stats.shopify = moves.shopify.length
 if (!dry) {
   if (moves.shopify.length) await api('POST', `/v1/contact/list/${LISTS.shopify}/contacts`, { contactIds: moves.shopify })
   for (const id of approvals) await api('PATCH', `/v1/contact/${id}`, { readyForCampaign: true })
-  saveState({ lastRun: new Date().toISOString(), processed: [...processed], held: [...held] })
+  saveState({ lastRun: new Date().toISOString(), processed: [...processed], held: [...held], approvedOn: { date: today, count: approvedToday + approvals.length } })
 }
 
 const line = `- ${stamp()}${dry ? ' (dry)' : ''} · opt-out esclusi ${sweep.excluded} · nuovi ${stats.new} · Shopify spostati ${stats.shopify} · approvati ${stats.approved.en} · da guardare ${stats.held} · email antonio@ max/giorno ${mailMax}${mailFlag}\n`
-if (!dry) appendFileSync(LOG, line)
+if (!dry) {
+  mkdirSync(dirname(LOG), { recursive: true })
+  appendFileSync(LOG, line)
+}
 process.stdout.write(line)

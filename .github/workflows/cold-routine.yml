@@ -1,0 +1,54 @@
+# Ada's Gojiberry routine in the cloud (no AI, no credits): every 2 hours, day and night,
+# it moves new leads already on Shopify to the side-project list and approves up to 25 a day
+# (Monday to Friday) for Ada's LinkedIn campaign. The opt-out sweep stays on the Mac
+# (agency.noprob.cold-optout), it needs docs/cold/suppressed.txt.
+# State lives in the Actions cache, never in the repo. This repo is public: the script prints
+# aggregate numbers only and hides API response bodies in CI.
+name: Cold routine
+
+on:
+  schedule:
+    - cron: '20 */2 * * *'
+  workflow_dispatch:
+    inputs:
+      dry:
+        description: Preview only, change nothing in Gojiberry
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: cold-routine
+  cancel-in-progress: false
+
+jobs:
+  ada:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - uses: actions/cache/restore@v4
+        with:
+          path: .cold
+          key: cold-state-${{ github.run_id }}
+          restore-keys: cold-state-
+      - name: Ada routine
+        env:
+          GOJIBERRY_API_KEY: ${{ secrets.GOJIBERRY_API_KEY }}
+          COLD_STATE: .cold/state.json
+          COLD_LOG: .cold/log.md
+          COLD_NO_SWEEP: '1'
+        run: node scripts/cold-daily.mjs --cap 25 ${{ inputs.dry && '--dry' || '' }} | tee -a "$GITHUB_STEP_SUMMARY"
+      - name: Keep the last 300 log lines
+        if: always()
+        run: if [ -f .cold/log.md ]; then tail -300 .cold/log.md > .cold/log.tmp && mv .cold/log.tmp .cold/log.md; fi
+      - uses: actions/cache/save@v4
+        if: always() && !inputs.dry
+        with:
+          path: .cold
+          key: cold-state-${{ github.run_id }}
