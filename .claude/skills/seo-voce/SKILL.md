@@ -24,10 +24,14 @@ Esempi della voce (dalla landing dello Sprint e dal blog):
 - "Quattordici giorni, un calendario fisso, un referente."
 - "Alcuni ti faranno cambiare qualcosa oggi."
 
+## Voce di Antonio (dalle interviste di Veronica)
+
+La firma degli articoli è Antonio Manitta e il testo deve suonare come lui. Prima di scrivere leggi `/Users/antoniomanitta/Documents/noprobagency/SEO/data/interviste/voce-di-antonio.md` (guida di stile viva, aggiornata da Veronica) e gli appunti del tema in `.../SEO/data/interviste/appunti/`. Le sue frasi si usano quasi alla lettera. Base: un maestro che parla a un allievo sveglio, "tu", frasi corte, giudizi netti ("La mia regola: ..."), un filo di ironia leggera; prima persona singolare solo per esperienza vera (appunti o `docs/dati-verificati.md`), "noi" per l'agenzia e i servizi.
+
 ## Originalità (regola di Antonio, 27 ottobre 2026)
 
 Ogni guida e ogni articolo è **diverso e unico**: mai riscrivere, parafrasare o ricalcare la struttura di altri siti, nemmeno dei primi risultati di Google. Il brief dice cosa fanno già i primi risultati: serve a fare altro, non a copiarli.
-- Parti dall'angolo che solo noi abbiamo: gli appunti dell'intervista ad Antonio (`/Users/antoniomanitta/Documents/noprobagency/SEO/data/interviste/`), i casi Nazzi e Cumini, il nostro processo (Sprint, Custom AI System), opinioni chiare anche controcorrente.
+- Parti dall'angolo che solo noi abbiamo: gli appunti delle interviste di Veronica ad Antonio (`/Users/antoniomanitta/Documents/noprobagency/SEO/data/interviste/appunti/`), i casi Nazzi e Cumini, il nostro processo (Sprint, Custom AI System), opinioni chiare anche controcorrente.
 - Struttura propria: titoli, ordine ed esempi pensati per questo pezzo, non la scaletta standard del tema.
 - Le fonti esterne si citano e si linkano per i fatti, non si riassumono.
 - Le frasi di Antonio dagli appunti si usano quasi alla lettera: sono la sua voce. Ciò che è segnato `da verificare` non va online.

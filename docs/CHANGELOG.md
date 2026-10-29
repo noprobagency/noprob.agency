@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.95.0 (29 Oct 2026)
+
+- **Veronica, Antonio's interviewer**: new skill `/veronica` (`.claude/skills/veronica/SKILL.md`), an endless conversation with Antonio, one question at a time, on eCommerce, AI, Shopify and his projects. She keeps her archive in `SEO/data/interviste/` (question queue, daily log, notes by topic, a living "voce di Antonio" style guide) and hands the key points to Francesca in `per-francesca.md`. Francesca integrates them with the new `/seo allinea` (voice skill, content alignment, verified declarations, calendar ideas); the writer reads Antonio's voice guide before writing; the interviewer subagent now feeds Veronica's queue. No change to the site (Francesca).
+
 ### Changelog v1.94.0 (29 Oct 2026)
 
 - **Ada's cold routine in the cloud**: `.github/workflows/cold-routine.yml` runs `scripts/cold-daily.mjs` on GitHub Actions every 2 hours, day and night, so the Shopify filter and approvals no longer need the Mac on. State in the Actions cache (env `COLD_STATE`, `COLD_LOG`), the cap is now a daily total (25, Monday to Friday, Lisbon time), the opt-out sweep stays on the Mac (`COLD_NO_SWEEP`), and API errors hide response bodies in CI because run logs are public.
