@@ -28,6 +28,7 @@ import { SENDER, accessToken, buildRaw, gmail, messageId, threadOutcome } from '
 import { gojiberryDomains, gojiberryRemaining } from '../lib/cold-email/gojiberry.mjs'
 import { excludeDomains, stopStore } from '../lib/cold-email/leads.mjs'
 import { appendSuppressed, applySuppressed, readSuppressed, refusals } from '../lib/cold-email/suppression.mjs'
+import { publishTaken, takenBody } from '../lib/cold-email/taken.mjs'
 import { SEQUENCE_VERSION, dueStep, render } from '../lib/cold-email/sequence.mjs'
 
 const DIR = 'cold-email/data'
@@ -186,6 +187,8 @@ const total = Object.values(stats.sent).reduce((a, b) => a + b, 0)
 const line = `- ${new Date().toISOString().slice(0, 16).replace('T', ' ')}${dry ? ' (dry)' : ''} · inviate ${total} (${Object.entries(stats.sent).filter(([, n]) => n).map(([k, n]) => `${k} ${n}`).join(', ') || 'nessuna'}) · rinviate ${stats.skipped} · saltate (scritte a mano) ${stats.recent} · risposte ${stats.replies} · opt-out ${stats.optouts} · bounce ${stats.bounces}${note}\n`
 if (!dry) {
   appendFileSync(LOG, line)
+  // The night review of Dante in the cloud reads today's stores and opt-outs from here.
+  publishTaken(takenBody(db.leads.filter((l) => l.segment !== 'shopify').map((l) => l.domain), readSuppressed()))
   if (existsSync(config.crmPath)) execFileSync('node', ['scripts/cold-email-crm.mjs', config.crmPath, '--push'], { stdio: 'inherit' })
 }
 process.stdout.write(line)
