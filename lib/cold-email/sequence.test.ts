@@ -118,6 +118,17 @@ describe('lead hygiene', () => {
   })
 })
 
+describe('leads from Gojiberry (Dante overflow)', () => {
+  it('builds an Italian direct-channel lead with the right case study category', async () => {
+    const { fromGojiberry } = await import('./leads.mjs')
+    const c = { id: 7, firstName: 'sara', lastName: 'Rossi', email: 'Sara@Acme.it', website: 'https://www.acme.it/', industry: 'Apparel & Fashion', jobTitle: 'CEO' }
+    const lead = fromGojiberry(c, { platform: 'woocommerce', php: '7.4.33' }, 'Acme')
+    expect([lead.id, lead.domain, lead.email, lead.firstName, lead.lang, lead.category, lead.segment]).toEqual(['gjb:7', 'acme.it', 'sara@acme.it', 'Sara', 'it', 'fashion', 'target'])
+    expect(render(lead, 'e1').body).toContain('PHP 7.4.33')
+    expect(fromGojiberry({ ...c, email: 'noreply@acme.it', industry: 'Food' }, null, 'Acme')).toMatchObject({ segment: 'suppressed', category: 'dtc' })
+  })
+})
+
 describe('gmail token refresh', () => {
   it('gets a fresh token once on a 401 and retries', async () => {
     const { vi } = await import('vitest')
