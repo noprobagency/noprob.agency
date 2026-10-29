@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.101.0 (29 Oct 2026)
+
+- **Damiano, lead sourcing for non-Shopify stores**: `scripts/damiano-scrape.mjs` finds Italian consumer brands with Hunter Discover (free), checks each homepage with the same detector Ada and Dante use (`lib/cold/fetch-platform.mjs`, error pages never count), keeps Shopify stores in a separate list with a free people search only, and for the rest picks the best decision maker by title (free people search) and pays only for email find + verify through treg. Only verdict `valid` becomes a lead; every answer is cached in `docs/cold/damiano/state.json` (gitignored), so a rerun never pays twice. `--crm` writes the CRM page data (`damiano.html` in the CRM repo). First test: 50 leads, 138 Shopify stores set aside, $0.60 on treg. `.claude/launch.json` gains a `crm` static preview.
+
 ### Changelog v1.100.0 (29 Oct 2026)
 
 - **Ada's routine, blocked sites and queue cap**: a store site that answers with an error page (bot wall, 429, 5xx) is never approved; in the cloud those leads stay unprocessed and the Mac job checks them from a home IP. Approvals now top the campaign queue up to 50 approved-not-started leads (`--queue`, at most `--cap` per run), so the cloud job and the Mac job can both run without approving twice.
