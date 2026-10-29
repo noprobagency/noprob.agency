@@ -8,7 +8,8 @@
 //      opt-out list docs/cold/suppressed.txt; appends who said no here to that list
 //   3. sends the emails due today, follow-ups first, within the mailbox budget
 //      (antonio@ max 55 a day across Gojiberry, this channel and manual emails:
-//      already sent today and a manual reserve are subtracted); dailyCap limits only
+//      already sent today, what Ada's Gojiberry campaign still plans to send today and a
+//      manual reserve are subtracted); dailyCap limits only
 //      new first emails; random gap between sends; only an approved SEQUENCE_VERSION is sent
 //   4. one line in cold-email/data/log.md, then the CRM export (+ push)
 // State is saved after every send. Lead data stays in cold-email/data/ (gitignored).
@@ -23,8 +24,8 @@
 
 import { execFileSync, spawn } from 'node:child_process'
 import { appendFileSync, existsSync, readFileSync, writeFileSync } from 'node:fs'
-import { accessToken, buildRaw, gmail, messageId, threadOutcome } from '../lib/cold-email/gmail.mjs'
-import { gojiberryDomains } from '../lib/cold-email/gojiberry.mjs'
+import { SENDER, accessToken, buildRaw, gmail, messageId, threadOutcome } from '../lib/cold-email/gmail.mjs'
+import { gojiberryDomains, gojiberryRemaining } from '../lib/cold-email/gojiberry.mjs'
 import { excludeDomains, stopStore } from '../lib/cold-email/leads.mjs'
 import { appendSuppressed, applySuppressed, readSuppressed, refusals } from '../lib/cold-email/suppression.mjs'
 import { SEQUENCE_VERSION, dueStep, render } from '../lib/cold-email/sequence.mjs'
@@ -105,7 +106,13 @@ let note = ''
 const sentToday = api ? ((await api.search(`in:sent after:${today.replaceAll('-', '/')}`)).messages || []).length : 0
 // The mailbox budget covers every email; dailyCap limits only new first emails, so
 // follow-ups keep their days even when a big batch reaches the same step together.
-const mailbox = Math.max(0, config.mailboxMax - config.manualReserve - sentToday)
+// Ada's campaign sends from antonio@ too, from 9:00 and growing with the warm-up: its
+// remaining quota for today is kept free.
+const gojiberryLeft = await gojiberryRemaining(SENDER.email).catch((err) => {
+  console.error(`Gojiberry seat check failed, 25 kept free: ${err.message}`)
+  return 25
+})
+const mailbox = Math.max(0, config.mailboxMax - config.manualReserve - sentToday - gojiberryLeft)
 if (config.approved !== SEQUENCE_VERSION) {
   note += ` · invii fermi (sequenza ${SEQUENCE_VERSION} non approvata)`
 } else {
@@ -119,7 +126,7 @@ if (config.approved !== SEQUENCE_VERSION) {
   const storesToday = new Set(db.leads.filter((l) => l.sequence.sent.some((x) => x.step === 'e1' && x.date === today)).map((l) => l.domain))
   const followUps = due.filter((d) => d.step.key !== 'e1').length
   const budget = Math.min(mailbox, followUps + Math.min(cap, due.length - followUps))
-  if (budget < followUps + Math.min(cap, due.length - followUps)) note += ` · budget casella ${mailbox} (già inviate oggi da antonio@ ${sentToday})`
+  if (budget < followUps + Math.min(cap, due.length - followUps)) note += ` · budget casella ${mailbox} (già inviate oggi da antonio@ ${sentToday}, riservate a Gojiberry ${gojiberryLeft})`
   let sent = 0
   let firsts = 0
   for (const { lead, step } of due) {
