@@ -97,8 +97,15 @@ const dailyRunning = (() => {
 const directRoom = cloud || dailyRunning ? 0 : Math.max(0, directPool - directWaiting)
 
 const plan = { approve: [], direct: [], shopify: [], reject: [], hold: [] }
+let skipped = 0
 for (const c of fresh.sort((a, b) => Number(b.total_scoring) - Number(a.total_scoring))) {
   const decision = review(c, checks.get(normaliseUrl(c.website)) || null, taken)
+  // Many shops block datacenter addresses: from the cloud an unreachable site is left
+  // to the Mac's review at 8:30, not held.
+  if (cloud && decision.reason === 'site unreachable') {
+    skipped++
+    continue
+  }
   if (decision.action === 'approve' && approvedStores.has(decision.domain)) {
     plan.reject.push({ c, reason: 'same store already approved' })
   } else if (decision.action === 'approve' && plan.approve.length >= cap) {
@@ -162,7 +169,7 @@ if (!dry && !cloud) {
   if (existsSync(crmPath)) execFileSync('node', ['scripts/cold-email-crm.mjs', crmPath, '--push'], { stdio: 'inherit' })
 }
 
-const line = `- ${new Date().toISOString().slice(0, 16).replace('T', ' ')}${dry ? ' (dry)' : ''} · Dante (Gojiberry email${cloud ? ', cloud' : ''}) · nuovi ${fresh.length} · approvati ${plan.approve.length} (capacità ${cap}) · al canale diretto ${plan.direct.length} (spazio ${directRoom}) · Shopify spostati ${plan.shopify.length} · scartati ${plan.reject.length} · da guardare ${plan.hold.length} · opt-out ${sweep.excluded}\n`
+const line = `- ${new Date().toISOString().slice(0, 16).replace('T', ' ')}${dry ? ' (dry)' : ''} · Dante (Gojiberry email${cloud ? ', cloud' : ''}) · nuovi ${fresh.length} · approvati ${plan.approve.length} (capacità ${cap}) · al canale diretto ${plan.direct.length} (spazio ${directRoom}) · Shopify spostati ${plan.shopify.length} · scartati ${plan.reject.length} · da guardare ${plan.hold.length}${cloud ? ` (${Object.entries(plan.hold.reduce((n, h) => ({ ...n, [h.reason]: [...(n[h.reason] || []), h] }), {})).map(([r, l]) => `${r} ${l.length}`).join(', ') || '-'}) · siti bloccati, li guarda il Mac ${skipped}` : ''} · opt-out ${sweep.excluded}\n`
 if (!dry) {
   mkdirSync(dirname(LOG), { recursive: true })
   appendFileSync(LOG, line)
