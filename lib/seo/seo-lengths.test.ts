@@ -1,9 +1,11 @@
 import { describe, expect, it } from 'vitest'
 
 import { articles } from '@/data/articles'
+import { CATEGORIES } from '@/data/articles/categories'
 import { useCases } from '@/data/use-cases'
 import { getZeroLossCopy } from '@/content/zero-loss-migration'
 import { getDictionary, type Locale } from '@/lib/i18n'
+import { getCategoriesCopy } from '@/lib/i18n/categorie'
 import { ROUTE_PATHS } from '@/lib/i18n/routes'
 import { ROUTES } from '@/lib/sitemap/routes'
 
@@ -73,6 +75,17 @@ describe('blog articles', () => {
       )
     }
   })
+})
+
+describe('blog category pages (mirror app/(en)/blog/category and app/it/blog/categoria)', () => {
+  for (const locale of LOCALES) {
+    const { pages } = getCategoriesCopy(locale)
+    for (const category of CATEGORIES) {
+      const page = pages[category.id]
+      check(titleCase(`category:${locale}:${category.id}`, `category ${locale} ${category.id}`, page.metaTitle))
+      check(descriptionCase(`category:${locale}:${category.id}`, `category ${locale} ${category.id}`, page.metaDescription))
+    }
+  }
 })
 
 describe('case studies', () => {

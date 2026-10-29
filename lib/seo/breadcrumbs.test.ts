@@ -1,6 +1,13 @@
 import { describe, expect, it } from 'vitest'
 
-import { breadcrumbJsonLd, detailBreadcrumbJsonLd, pageBreadcrumbJsonLd } from './breadcrumbs'
+import {
+  blogTrail,
+  breadcrumbJsonLd,
+  categoryCrumb,
+  detailBreadcrumbJsonLd,
+  pageBreadcrumbJsonLd,
+  routeCrumb,
+} from './breadcrumbs'
 
 describe('breadcrumbJsonLd', () => {
   it('builds positioned ListItems with absolute URLs', () => {
@@ -35,6 +42,17 @@ describe('breadcrumbJsonLd', () => {
 
   it('builds Home > section > detail', () => {
     const ld = detailBreadcrumbJsonLd('blog', 'it', { name: 'Titolo', path: '/it/blog/titolo' })
-    expect(ld.itemListElement.map((i) => i.name)).toEqual(['Home', 'Blog', 'Titolo'])
+    expect(ld.itemListElement.map((i) => i.name)).toEqual(['Home', 'Risorse', 'Titolo'])
+  })
+
+  it('names the blog section like the Learn menu item, in both locales', () => {
+    expect(routeCrumb('blog', 'en')).toEqual({ name: 'Learn', path: '/blog' })
+    expect(routeCrumb('blog', 'it')).toEqual({ name: 'Risorse', path: '/it/blog' })
+  })
+
+  it('builds Home > Learn > category above an article', () => {
+    expect(blogTrail('en', 'ai-search').map((c) => c.name)).toEqual(['Home', 'Learn', 'AI search and GEO'])
+    expect(categoryCrumb('migrate', 'it')).toEqual({ name: 'Migrare a Shopify', path: '/it/blog/categoria/migrare-a-shopify' })
+    expect(blogTrail('it').map((c) => c.name)).toEqual(['Home', 'Risorse'])
   })
 })

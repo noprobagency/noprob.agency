@@ -72,6 +72,9 @@ export type BlocchiCopy = {
     sections: Record<ClusterId, { description: string }>
     articlesCount: (n: number) => string
     readArticle: string
+    /** Link to the category page at the end of each index section. */
+    seeAll: string
+    seeAllLabel: (category: string) => string
   }
   readNext: {
     heading: string
@@ -150,23 +153,27 @@ const it: BlocchiCopy = {
     },
   },
   blog: {
-    label: 'Blog',
-    h1: 'Migrazione a Shopify, confronti tra piattaforme e ',
-    h1Em: 'AI per eCommerce',
+    label: 'Risorse',
+    h1: 'Guide su Shopify, AI ed ',
+    h1Em: 'eCommerce',
     intro:
-      'Dalla migrazione da WooCommerce, Magento o PrestaShop alla SEO, al tracking e all’AI per eCommerce: guide pratiche del team noprob agency. Se stai per migrare, parti dalla [guida completa](/it/migrazione-shopify) e dallo [Shopify Launch Sprint](/it/sprint-migrazione-shopify).',
+      'Scriviamo di tre cose: Shopify, AI ed eCommerce, dalla migrazione di uno store fino a farsi trovare dagli assistenti AI e a farlo crescere. Ogni guida nasce dai progetti che seguiamo, e se stai per migrare parti dalla [guida completa](/it/migrazione-shopify) e dallo [Shopify Launch Sprint](/it/sprint-migrazione-shopify).',
     sections: {
-      'migration-platform': {
+      migrate: {
         description:
           'Una guida per piattaforma: cosa si sposta, cosa si ricostruisce e cosa va reindirizzato quando lasci WooCommerce, Magento, PrestaShop, BigCommerce, Wix o Squarespace.',
       },
-      'migration-planning': {
+      shopify: {
         description:
-          'Costi, checklist SEO, come scegliere un’agenzia di migrazione e come si confronta Shopify con WooCommerce.',
+          'Come funziona Shopify, quanto costa migrare, quando conviene Shopify Plus, la checklist SEO della migrazione e come scegliere l’agenzia.',
       },
-      ai: {
+      'ai-agents': {
         description:
-          'GEO, agentic commerce, ChatGPT shopping, Shopify Magic e Sidekick: cosa preparare e cosa misurare.',
+          'Shopify Magic e Sidekick e gli usi dell’AI che rendono in uno store: cosa attivare e cosa lasciare a una persona.',
+      },
+      'ai-search': {
+        description:
+          'GEO, agentic commerce e ChatGPT shopping: come gli assistenti AI trovano i tuoi prodotti e cosa preparare.',
       },
       growth: {
         description: 'La ricerca sulla conversione e la strategia di lungo periodo per i brand che crescono su Shopify.',
@@ -174,6 +181,8 @@ const it: BlocchiCopy = {
     },
     articlesCount: (n) => (n === 1 ? '1 articolo' : `${n} articoli`),
     readArticle: 'Leggi l’articolo',
+    seeAll: 'Vedi tutti',
+    seeAllLabel: (category) => `Vedi tutti gli articoli: ${category}`,
   },
   readNext: {
     heading: 'Leggi anche',
@@ -252,23 +261,27 @@ const en: BlocchiCopy = {
     },
   },
   blog: {
-    label: 'Blog',
-    h1: 'Shopify migration, platform comparisons and ',
-    h1Em: 'AI for eCommerce',
+    label: 'Learn',
+    h1: 'Shopify, AI and ',
+    h1Em: 'eCommerce Guides',
     intro:
-      'From migrating off WooCommerce, Magento or PrestaShop to SEO, tracking and AI for eCommerce: practical guides from the noprob agency team. If you are about to migrate, start with the [complete guide](/shopify-migration) and the [Shopify Launch Sprint](/shopify-migration-sprint).',
+      'We write about three things: Shopify, AI and eCommerce, from migrating a store to getting found by AI assistants and growing it. Every guide comes from projects we run, and if you are about to migrate, start with the [complete guide](/shopify-migration) and the [Shopify Launch Sprint](/shopify-migration-sprint).',
     sections: {
-      'migration-platform': {
+      migrate: {
         description:
           'One guide per platform: what moves, what gets rebuilt and what to redirect when you leave WooCommerce, Magento, PrestaShop, BigCommerce, Wix or Squarespace.',
       },
-      'migration-planning': {
+      shopify: {
         description:
-          'Costs, SEO checklist, how to choose a migration agency and how Shopify compares with WooCommerce.',
+          'How Shopify works, what a migration costs, when Shopify Plus pays off, the migration SEO checklist and how to choose an agency.',
       },
-      ai: {
+      'ai-agents': {
         description:
-          'GEO, agentic commerce, ChatGPT shopping, Shopify Magic and Sidekick: what to prepare and what to measure.',
+          'Shopify Magic and Sidekick, and the AI uses that pay in a store: what to switch on and what to leave to a person.',
+      },
+      'ai-search': {
+        description:
+          'GEO, agentic commerce and ChatGPT shopping: how AI assistants find your products and what to prepare.',
       },
       growth: {
         description: 'Conversion research and long-term strategy for brands that grow on Shopify.',
@@ -276,6 +289,8 @@ const en: BlocchiCopy = {
     },
     articlesCount: (n) => (n === 1 ? '1 article' : `${n} articles`),
     readArticle: 'Read the article',
+    seeAll: 'See all',
+    seeAllLabel: (category) => `See all articles: ${category}`,
   },
   readNext: {
     heading: 'Read next',

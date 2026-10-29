@@ -24,7 +24,7 @@ const article: Article = {
   imageAltEn: 'Abstract cover, mint background with a radial fade of dots growing toward the centre',
   articleType: 'BlogPosting',
   date: '2026-10-27',
-  datePublishedIso: '2026-10-27T09:00:00+02:00',
+  datePublishedIso: '2026-10-27T17:05:00+00:00',
   dateModifiedIso: '2026-10-28T09:00:00+00:00',
   wordCount: 2150,
   articleSection: 'AI Search',
