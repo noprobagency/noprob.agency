@@ -25,7 +25,7 @@ Secondo motore del canale, su Gojiberry e da **hello@noprob.agency** (antonio@ r
 | Agente sorgente | 41228 "Dante · Email Italia" | ex Leonardo, Italia, titolari ed eCommerce più ruoli tecnici (CTO, IT, web manager), segnali tecnologia (WooCommerce, Magento, PrestaShop, Shopware, SFCC) ed eventi, punteggio minimo 0,6 |
 | Lista | 65682 | solo questo agente |
 | Campagna | 46398 | 3 email fisse, giorni 0, +7 e +21 (ritardi 1, 7, 14), lun-ven 9:00, Review Mode attivo, oggetto "[Company] su Shopify?" e follow-up nello stesso thread |
-| Casella | hello@ (seat 11555) | casella già usata in passato: 30 al giorno da subito (ramp-up spento), smart warm-up e open tracking spenti, link di disiscrizione attivo |
+| Casella | hello@ (cercata per indirizzo, seat 11595 dal 26/10) | casella già usata in passato: 30 al giorno da subito (ramp-up spento), smart warm-up e open tracking spenti, link di disiscrizione attivo |
 
 **Sequenza Dante (v2, regola Cannonball: osservazione → valore → proposta, si parla di loro)**
 
@@ -39,7 +39,9 @@ Versione EN pronta (stessi testi tradotti, link `noprob.agency/shopify-sprint`) 
 
 Il 26/10 la lista 65682 ha preso i 95 italiani della lista ex Leonardo (64866, campagna 45770 in pausa): solo visite al profilo, nessun messaggio né email; approvazioni azzerate, passano dalla stessa revisione.
 
-`scripts/cold-email-gjb.mjs` gira lun-ven alle 8:30 (launchd `agency.noprob.cold-email-gjb`), prima del lancio delle 9:00: Shopify nella lista 64769 (riserva per il futuro), scartati i negozi già lavorati su LinkedIn (63200, 64866), dal canale diretto o nella lista opt-out, una persona per negozio, approvazioni al giorno pari a un terzo della capacità di hello@ (3 email per lead: con 30 al giorno, 10 lead nuovi). Gojiberry cerca l'email (1 credito) solo dei lead approvati. I testi si cambiano in Gojiberry (campagna 46398), con l'ok di Antonio.
+`scripts/cold-email-gjb.mjs` gira lun-ven alle 8:30 (launchd `agency.noprob.cold-email-gjb`), prima del lancio delle 9:00: Shopify nella lista 64769 (riserva per il futuro), scartati i negozi già lavorati su LinkedIn (63200, 64866), dal canale diretto o nella lista opt-out, una persona per negozio, approvazioni al giorno pari a un terzo della capacità di hello@ (3 email per lead: con 30 al giorno, 10 lead nuovi). Gojiberry cerca l'email (1 credito) solo dei lead approvati.
+
+**Eccedenza al canale diretto** (dal 29 ottobre, decisione di Antonio: massimo potenziale). L'agente trova più italiani di quanti hello@ ne possa scrivere: i lead che passano la stessa revisione quando Dante è pieno vanno al canale diretto. Gojiberry cerca l'email (1 credito se la trova), il contatto passa nella lista 66757 "DIRETTO" (fuori da Dante, così nessuno store riceve due canali) e il lead entra in `cold-email/data/leads.json` con la sequenza da 5 email di antonio@, finché le prime email in attesa arrivano a `directPool` (config, 40). I testi si cambiano in Gojiberry (campagna 46398), con l'ok di Antonio.
 
 ## Sequenza (lib/cold-email/sequence.mjs)
 
@@ -71,9 +73,12 @@ node scripts/cold-email-auth.mjs <client_secret.json>    # una volta: collega Gm
 
 - `scripts/cold-email-daily.mjs` gira lun-ven alle 9:30 Europe/Lisbon (launchd `agency.noprob.cold-email`, file in `cold-email/agency.noprob.cold-email.plist`) e distribuisce gli invii fino alle 17:30 ora italiana (`--until`), e lo script avvia `caffeinate` legato al proprio processo perché il Mac non vada in stop durante il giro (un job launchd con programma `/usr/bin/caffeinate` non parte). Gojiberry manda le sue email alle 9:00 dalla stessa casella.
 - Gmail API, non il Gmail MCP: l'MCP funziona solo dentro una sessione Claude, lo script deve girare da solo. Credenziali nel Portachiavi (`cold-email-gmail-client`, `cold-email-gmail-token`).
-- **Budget casella**: antonio@noprob.agency al massimo 55 email al giorno in tutto (Gojiberry fino a 25, questo canale, email manuali). Lo script conta le email già inviate oggi dalla casella e tiene una riserva per quelle a mano (`mailboxMax` 55, `manualReserve` 10). Tetto del canale `dailyCap` (solo sulle **nuove prime email**: i follow-up partono sempre nel loro giorno, limitati solo dal budget della casella): 10 nelle prime due settimane (casella in warm-up dal 18 ottobre), poi 20; oltre si passa alla seconda casella hello@noprob.agency. Pausa casuale tra un invio e l'altro (`gapSeconds`).
+- **Budget casella**: antonio@noprob.agency al massimo 55 email al giorno in tutto (Gojiberry fino a 25, questo canale, email manuali). Lo script conta le email già inviate oggi dalla casella, tiene libere quelle che la campagna di Ada su Gojiberry deve ancora mandare oggi (limite giornaliero del seat antonio@, che sale col warm-up, meno quelle già partite) e una riserva per quelle a mano (`mailboxMax` 55, `manualReserve` 10). Tetto del canale `dailyCap` (solo sulle **nuove prime email**: i follow-up partono sempre nel loro giorno, limitati solo dal budget della casella): 40 dal 29 ottobre, obiettivo di Antonio 40 email al giorno di media (±10), `manualReserve` 5, quindi fino a 50 dalla casella. Pausa casuale tra un invio e l'altro (`gapSeconds`).
 - Log: una riga al giorno in `cold-email/data/log.md`; output ed errori del job in `~/Library/Logs/agency.noprob.cold-email.log` (launchd non può aprire un log in Documenti creato da un processo senza permesso: il job fallisce con exit 78). CRM: https://crm-noprob.vercel.app (vecchio CRM in `/v2`).
 
 ## In sessione con Claude
+
+Recap di stato: cinque o sei righe, numeri prima (inviate, risposte, opt-out, problemi), una riga su cosa serve da Antonio, niente tabelle.
+
 
 Il Gmail MCP serve per leggere i thread e rispondere ai caldi: Claude prepara la bozza, Antonio dà l'ok, poi si invia. Prima di toccare i testi della sequenza: cambio in `sequence.mjs`, test verdi (`pnpm test`), anteprima ad Antonio, nuova versione approvata in `config.json`.
