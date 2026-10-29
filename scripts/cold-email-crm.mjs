@@ -1,12 +1,13 @@
 #!/usr/bin/env node
-// Exports cold-email/data/leads.json to the CRM (noprobagency/crm-noprobagency,
+// Exports cold-email/data/leads.json (direct channel, antonio@) and
+// cold-email/data/dante.json (Dante, hello@, written by scripts/cold-email-gjb.mjs) to the CRM (noprobagency/crm-noprobagency,
 // private, Vercel with SSO) as data/leads.json, only the fields the page shows.
 // With --push it commits and pushes, and Vercel deploys.
 //
 // Usage: node scripts/cold-email-crm.mjs <path to crm-noprobagency checkout> [--push]
 
 import { execFileSync } from 'node:child_process'
-import { readFileSync, writeFileSync } from 'node:fs'
+import { existsSync, readFileSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { STEPS, addWorkingDays } from '../lib/cold-email/sequence.mjs'
 
@@ -26,7 +27,9 @@ const nextDate = (l) => {
   return l.sequence.sent.length ? addWorkingDays(l.sequence.sent[0].date, next.day) : null
 }
 
-const out = leads.map((l) => ({
+const direct = leads.map((l) => ({
+  channel: 'antonio@',
+  total: STEPS.length,
   brand: l.brand,
   domain: l.domain,
   contact: l.contact,
@@ -43,6 +46,8 @@ const out = leads.map((l) => ({
   nextDate: nextDate(l),
   stopReason: l.sequence.stopReason,
 }))
+const dante = existsSync('cold-email/data/dante.json') ? JSON.parse(readFileSync('cold-email/data/dante.json', 'utf8')).leads : []
+const out = [...direct, ...dante]
 
 writeFileSync(join(repo, 'data/leads.json'), JSON.stringify({ updatedAt: new Date().toISOString(), today, leads: out }))
 console.log(`${out.length} leads -> ${join(repo, 'data/leads.json')}`)

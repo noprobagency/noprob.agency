@@ -129,6 +129,17 @@ describe('leads from Gojiberry (Dante overflow)', () => {
   })
 })
 
+describe('Dante leads in the CRM', () => {
+  it('maps Gojiberry campaign steps to sent emails, next date and segment', async () => {
+    const { danteLead } = await import('./dante.mjs')
+    const c = { id: 1, company: 'ACME SRL', website: 'acme.it', fullName: 'Sara Rossi', email: 'sara@acme.it', campaignStatus: [{ type: 'email', stepNumber: 0, state: 'sent', createdAt: '2026-10-28T09:47:44Z', campaignId: 46398 }] }
+    expect(danteLead(c, 46398, 'Acme')).toMatchObject({ channel: 'hello@', total: 3, domain: 'acme.it', segment: 'target', sent: [{ step: 'e1', date: '2026-10-28' }], nextDate: '2026-11-04' })
+    const replied = { ...c, campaignStatus: [{ ...c.campaignStatus[0], state: 'answered' }] }
+    expect(danteLead(replied, 46398, 'Acme')).toMatchObject({ segment: 'warm', stopReason: 'reply', nextDate: null })
+    expect(danteLead({ ...c, unsubscribed: true }, 46398, 'Acme')).toMatchObject({ segment: 'suppressed', reason: 'opt-out' })
+  })
+})
+
 describe('gmail token refresh', () => {
   it('gets a fresh token once on a 401 and retries', async () => {
     const { vi } = await import('vitest')
