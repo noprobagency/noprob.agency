@@ -1,0 +1,56 @@
+# Dante's lead review in the cloud (no AI, no credits): Monday to Friday at 6:00 and
+# 8:00 Lisbon (UTC in winter), before Gojiberry launches hello@'s emails at 9:00. It
+# approves leads until hello@'s daily limit is full, moves stores on Shopify aside and
+# rejects stores another channel has. The direct channel, the opt-out sweep and the CRM
+# stay on the Mac (8:30), which publishes COLD_TAKEN (hashes of its stores and opt-outs).
+# State lives in the Actions cache, never in the repo. This repo is public: the script
+# prints aggregate numbers only and hides API response bodies in CI.
+name: Cold Dante
+
+on:
+  schedule:
+    - cron: '0 6,8 * * 1-5'
+  workflow_dispatch:
+    inputs:
+      dry:
+        description: Preview only, change nothing in Gojiberry
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: cold-dante
+  cancel-in-progress: false
+
+jobs:
+  dante:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - uses: actions/cache/restore@v4
+        with:
+          path: .cold-dante
+          key: dante-state-${{ github.run_id }}
+          restore-keys: dante-state-
+      - name: Dante review
+        env:
+          GOJIBERRY_API_KEY: ${{ secrets.GOJIBERRY_API_KEY }}
+          COLD_TAKEN: ${{ vars.COLD_TAKEN }}
+          COLD_CLOUD: '1'
+          COLD_STATE: .cold-dante/state.json
+          COLD_LOG: .cold-dante/log.md
+        run: node scripts/cold-email-gjb.mjs ${{ inputs.dry && '--dry' || '' }} | tee -a "$GITHUB_STEP_SUMMARY"
+      - name: Keep the last 300 log lines
+        if: always()
+        run: if [ -f .cold-dante/log.md ]; then tail -300 .cold-dante/log.md > .cold-dante/log.tmp && mv .cold-dante/log.tmp .cold-dante/log.md; fi
+      - uses: actions/cache/save@v4
+        if: always() && !inputs.dry
+        with:
+          path: .cold-dante
+          key: dante-state-${{ github.run_id }}

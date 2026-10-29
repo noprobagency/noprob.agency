@@ -15,12 +15,19 @@
 //      (out of Dante) and the lead lands in cold-email/data/leads.json, until the direct
 //      channel has `directPool` (config.json, default 55) first emails waiting
 // One line in cold-email/data/log.md; leads left for a human in cold-email/data/gjb-state.json.
+//
+// Two places run it. GitHub Actions at night (COLD_CLOUD=1, .github/workflows/cold-dante.yml):
+// Dante's approvals only, before the 9:00 launch, with the Mac's direct domains and
+// opt-outs read as hashes from COLD_TAKEN; no sweep, no direct channel, no CRM; aggregate
+// numbers only in the public logs. The Mac at 8:30: everything, so Dante is already full
+// and the leads left go to the direct channel; it also publishes COLD_TAKEN.
 // Mon-Fri 8:30 via launchd (agency.noprob.cold-email-gjb), before the 9:00 campaign launch.
 //
 // Usage: node scripts/cold-email-gjb.mjs [--dry]
 
 import { execFileSync } from 'node:child_process'
-import { appendFileSync, existsSync, readFileSync, writeFileSync } from 'node:fs'
+import { appendFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
+import { dirname } from 'node:path'
 import { fetchPlatform, pool } from '../lib/cold/fetch-platform.mjs'
 import { normaliseUrl } from '../lib/cold/detect-platform.mjs'
 import { LISTS, api, listContacts } from '../lib/cold/gojiberry.mjs'
@@ -29,12 +36,14 @@ import { cleanCompany, review } from '../lib/cold-email/approve.mjs'
 import { danteLead } from '../lib/cold-email/dante.mjs'
 import { domainOf, fromGojiberry } from '../lib/cold-email/leads.mjs'
 import { readSuppressed } from '../lib/cold-email/suppression.mjs'
+import { publishTaken, takenBody, takenSet } from '../lib/cold-email/taken.mjs'
 
 // The mailbox is found by address: reconnecting it in Gojiberry gives it a new seat id.
 const DANTE = { list: 65682, campaign: 46398, mailbox: 'hello@noprob.agency' }
 const DIRECT = { list: 66757, leads: 'cold-email/data/leads.json', config: 'cold-email/data/config.json' }
-const STATE = 'cold-email/data/gjb-state.json'
-const LOG = 'cold-email/data/log.md'
+const cloud = process.env.COLD_CLOUD === '1'
+const STATE = process.env.COLD_STATE || 'cold-email/data/gjb-state.json'
+const LOG = process.env.COLD_LOG || 'cold-email/data/log.md'
 const dry = process.argv.includes('--dry')
 
 const state = existsSync(STATE) ? JSON.parse(readFileSync(STATE, 'utf8')) : { processed: [], held: [] }
@@ -43,14 +52,18 @@ const held = new Map((state.held || []).map((h) => [h.id, h]))
 
 // Opt-outs first: anyone who replied no (or unsubscribed) on Dante's list is excluded and
 // lands in docs/cold/suppressed.txt, the same sweep Ada runs hourly on her lists.
-const sweep = await optoutSweep({ lists: [DANTE.list], since: state.lastSweep, dry })
+const sweep = cloud ? { excluded: 0, startedAt: state.lastSweep } : await optoutSweep({ lists: [DANTE.list], since: state.lastSweep, dry })
 
 // Stores another channel already has
 const websites = async (listId) => (await listContacts(listId)).map((c) => domainOf(normaliseUrl(c.website))).filter(Boolean)
 const linkedin = new Set([...(await websites(LISTS.en)), ...(await websites(LISTS.it))])
 const db = existsSync(DIRECT.leads) ? JSON.parse(readFileSync(DIRECT.leads, 'utf8')) : { leads: [] }
 const direct = new Set(db.leads.filter((l) => l.segment !== 'shopify').map((l) => l.domain))
-const taken = { linkedin, direct, suppressed: readSuppressed() }
+const suppressed = readSuppressed()
+if (cloud && !process.env.COLD_TAKEN) throw new Error('COLD_TAKEN missing: the Mac publishes it, no approvals without it')
+const fromMac = cloud ? takenSet(process.env.COLD_TAKEN) : null
+const taken = { linkedin, direct: fromMac || direct, suppressed: fromMac || suppressed }
+if (!cloud && !dry) publishTaken(takenBody(direct, suppressed))
 
 const contacts = await listContacts(DANTE.list)
 // Started means started in Dante's campaign: leads taken over from another campaign
@@ -81,7 +94,7 @@ const dailyRunning = (() => {
     return false
   }
 })()
-const directRoom = dailyRunning ? 0 : Math.max(0, directPool - directWaiting)
+const directRoom = cloud || dailyRunning ? 0 : Math.max(0, directPool - directWaiting)
 
 const plan = { approve: [], direct: [], shopify: [], reject: [], hold: [] }
 for (const c of fresh.sort((a, b) => Number(b.total_scoring) - Number(a.total_scoring))) {
@@ -99,7 +112,9 @@ for (const c of fresh.sort((a, b) => Number(b.total_scoring) - Number(a.total_sc
   processed.add(c.id)
 }
 
-if (dry) {
+if (dry && cloud) {
+  // public run logs: counts only (the line below)
+} else if (dry) {
   for (const [action, items] of Object.entries(plan))
     for (const { c, reason } of items) console.log(`[dry] ${action} · ${c.company} · ${c.jobTitle} · ${c.website}${reason ? ` · ${reason}` : ''}`)
 } else {
@@ -133,12 +148,13 @@ if (dry) {
   }
   plan.direct = plan.direct.filter(({ c }) => moved.includes(c.id))
   for (const { c, reason } of plan.hold) held.set(c.id, { id: c.id, company: c.company, website: c.website, reason })
+  mkdirSync(dirname(STATE), { recursive: true })
   writeFileSync(STATE, JSON.stringify({ lastRun: new Date().toISOString(), lastSweep: sweep.startedAt, processed: [...processed], held: [...held.values()] }))
 }
 
 // Dante's leads in the CRM next to the direct channel's (cold-email/data/dante.json,
 // merged by scripts/cold-email-crm.mjs).
-if (!dry) {
+if (!dry && !cloud) {
   const approvedNow = new Set(plan.approve.map(({ c }) => c.id))
   const crmLeads = contacts.filter((c) => started(c) || approvedNow.has(c.id)).map((c) => danteLead(c, DANTE.campaign, cleanCompany(c.company)))
   writeFileSync('cold-email/data/dante.json', JSON.stringify({ updatedAt: new Date().toISOString(), leads: crmLeads }))
@@ -146,6 +162,9 @@ if (!dry) {
   if (existsSync(crmPath)) execFileSync('node', ['scripts/cold-email-crm.mjs', crmPath, '--push'], { stdio: 'inherit' })
 }
 
-const line = `- ${new Date().toISOString().slice(0, 16).replace('T', ' ')}${dry ? ' (dry)' : ''} · Dante (Gojiberry email) · nuovi ${fresh.length} · approvati ${plan.approve.length} (capacità ${cap}) · al canale diretto ${plan.direct.length} (spazio ${directRoom}) · Shopify spostati ${plan.shopify.length} · scartati ${plan.reject.length} · da guardare ${plan.hold.length} · opt-out ${sweep.excluded}\n`
-if (!dry) appendFileSync(LOG, line)
+const line = `- ${new Date().toISOString().slice(0, 16).replace('T', ' ')}${dry ? ' (dry)' : ''} · Dante (Gojiberry email${cloud ? ', cloud' : ''}) · nuovi ${fresh.length} · approvati ${plan.approve.length} (capacità ${cap}) · al canale diretto ${plan.direct.length} (spazio ${directRoom}) · Shopify spostati ${plan.shopify.length} · scartati ${plan.reject.length} · da guardare ${plan.hold.length} · opt-out ${sweep.excluded}\n`
+if (!dry) {
+  mkdirSync(dirname(LOG), { recursive: true })
+  appendFileSync(LOG, line)
+}
 process.stdout.write(line)
