@@ -108,10 +108,16 @@ const sentToday = api ? ((await api.search(`in:sent after:${today.replaceAll('-'
 // follow-ups keep their days even when a big batch reaches the same step together.
 // Ada's campaign sends from antonio@ too (from 9:00, up to its warm-up limit): the
 // emails it has queued for today are kept free, the rest of the mailbox is ours.
-const gojiberryLeft = await gojiberryRemaining(SENDER.email, config.adaCampaign, { live: config.adaEmailsLive }).catch((err) => {
+const ada = await gojiberryRemaining(SENDER.email, config.adaCampaign, { live: config.adaEmailsLive }).catch((err) => {
   console.error(`Gojiberry seat check failed, 25 kept free: ${err.message}`)
-  return 25
+  return { reserve: 25, live: config.adaEmailsLive }
 })
+const gojiberryLeft = ada.reserve
+if (ada.live && !config.adaEmailsLive && !dry) {
+  const saved = JSON.parse(readFileSync(CONFIG, 'utf8'))
+  writeFileSync(CONFIG, `${JSON.stringify({ ...saved, adaEmailsLive: true }, null, 2)}\n`)
+  note += ' · Ada ha email in coda: da oggi le riservo fino a 25 al giorno'
+}
 const mailbox = Math.max(0, config.mailboxMax - config.manualReserve - sentToday - gojiberryLeft)
 if (config.approved !== SEQUENCE_VERSION) {
   note += ` · invii fermi (sequenza ${SEQUENCE_VERSION} non approvata)`
