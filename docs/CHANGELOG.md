@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.93.0 (29 Oct 2026)
+
+- **AI agents series, 13 new articles (IT and EN)**, each with its own treg keyword research, written in Antonio's voice and reviewed: GEO vs SEO, Shopify MCP, AI agents for Shopify (pillar of the AI agents category), building an AI agent for a store and its cost, migrating to Shopify with AI agents, Shopify 301 redirects with a downloadable CSV template (`/downloads/`), Claude and Claude Code on Shopify, Claude Duet for a Shopify eCommerce, Shopify Flow with AI, AI agent security (prompt injection), an AI assistant for orders and returns, how to evaluate an AI assistant, BigCommerce vs Shopify. `agentic-commerce-shopify` and `chatgpt-shopping-shopify` updated (AI shopping agents, UCP vs ACP, Agentic Storefronts, what happened to Instant Checkout). New `table` article section with a semantic, mobile-safe `<table>`; eight articles use it. Covers, categories, `llms.txt`, third-party sources in `docs/dati-verificati.md`; `/shop` redirect note corrected in the WooCommerce guide; AI agents category copy rewritten (Francesca).
+
 ### Changelog v1.88.0 (29 Oct 2026)
 
 - **Learn menu and blog categories**: "Blog" in the navbar becomes "Learn" (EN) / "Risorse" (IT), a dropdown with five categories (Migrate to Shopify, Shopify guides, AI agents, AI search and GEO, eCommerce growth) and "All articles"; same links in a new footer column. Ten new indexable category pages (`/blog/category/<slug>`, `/it/blog/categoria/<slug>`) with intro, cards, breadcrumbs and `CollectionPage` + `ItemList` JSON-LD, in the sitemap and `llms.txt`. The blog index is repositioned on Shopify, AI and eCommerce with one section per category. Article breadcrumbs go Home > Learn > category > article. Publication dates of the articles written on 27 and 28 Oct are spread over the previous weeks, never before a fact they cite; `dateModified` stays real. Article and `/blog` URLs unchanged (Francesca).
