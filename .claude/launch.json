@@ -21,6 +21,12 @@
         "3124"
       ],
       "port": 3124
+    },
+    {
+      "name": "crm",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "3125", "--directory", "cold-email/data/crm"],
+      "port": 3125
     }
   ]
 }
