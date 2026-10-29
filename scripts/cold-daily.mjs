@@ -8,7 +8,7 @@
 // Writes one line to docs/cold/daily-log.md. Lead data never leaves docs/cold/ (gitignored).
 // Runs in the cloud too (.github/workflows/cold-routine.yml, every 2 hours): there COLD_STATE
 // and COLD_LOG point to a cache folder, COLD_NO_SWEEP=1 leaves the opt-out sweep to the Mac
-// (it needs docs/cold/suppressed.txt), and --cap is a daily total, approvals Monday to Friday.
+// (it needs docs/cold/suppressed.txt). Sites that block the cloud are left to the Mac job.
 //
 // Usage: node scripts/cold-daily.mjs [--dry] [--cap 10]
 
@@ -32,10 +32,13 @@ const EN_MARKETS = /\b(united states|usa|u\.s\.|united kingdom|uk|england|scotla
 const args = process.argv.slice(2)
 const dry = args.includes('--dry')
 const cap = Number(args[args.indexOf('--cap') + 1]) || 10
+// Approvals top the campaign queue up to this many leads approved and not started yet
+// (about two days of invites). Counting the live queue lets the cloud job and the Mac
+// job both run without approving twice.
+const target = Number(args[args.indexOf('--queue') + 1]) || 50
 const STATE = process.env.COLD_STATE || 'docs/cold/daily-state.json'
 const LOG = process.env.COLD_LOG || 'docs/cold/daily-log.md'
-// Lisbon calendar day: the cap counts approvals per day, LinkedIn works Monday to Friday
-const today = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Lisbon' }).format(new Date())
+// LinkedIn works Monday to Friday (Lisbon time): no approvals at the weekend
 const weekend = ['Sat', 'Sun'].includes(new Intl.DateTimeFormat('en-US', { timeZone: 'Europe/Lisbon', weekday: 'short' }).format(new Date()))
 
 // One person per company: the LinkedIn company page is the stable key, names vary
@@ -64,14 +67,14 @@ const mailFlag = mailMax > GOJIBERRY_EMAIL_CAP ? ` ⚠ sopra ${GOJIBERRY_EMAIL_C
 // --- New leads -----------------------------------------------------------------
 const processed = new Set(state.processed)
 const held = new Set(state.held || [])
-const stats = { new: 0, shopify: 0, approved: { en: 0 }, held: 0 }
+const stats = { new: 0, shopify: 0, approved: { en: 0 }, held: 0, blocked: 0 }
 const moves = { shopify: [] }
 const approvals = []
-const approvedToday = state.approvedOn?.date === today ? state.approvedOn.count : 0
-const room = weekend ? 0 : Math.max(0, cap - approvedToday)
 
 for (const key of ['en']) {
   const contacts = await listContacts(LISTS[key])
+  const queued = contacts.filter((c) => c.readyForCampaign && !c.hasStartedCampaign && !c.state).length
+  const room = weekend ? 0 : Math.min(cap, Math.max(0, target - queued))
   const busyCompanies = new Set(
     contacts.filter((c) => c.readyForCampaign || c.hasStartedCampaign).map(companyKey),
   )
@@ -90,7 +93,16 @@ for (const key of ['en']) {
   const candidates = []
   for (const c of fresh) {
     const url = urls.get(c.id)
-    const platform = url ? platforms.get(url).platform : 'unknown'
+    const check = url ? platforms.get(url) : null
+    const platform = check ? check.platform : 'unknown'
+    // A site that answers with an error page (403 bot wall, 429, 5xx) proves nothing:
+    // from the cloud many stores block datacenter IPs. Never approve on that; in CI leave
+    // the lead unprocessed so the Mac job, from a home IP, checks it.
+    const blocked = check && (platform === 'unreachable' || !(check.status >= 200 && check.status < 400))
+    if (blocked && process.env.CI) {
+      stats.blocked++
+      continue
+    }
     if (platform === 'shopify') {
       moves.shopify.push(c.id)
       processed.add(c.id)
@@ -99,7 +111,7 @@ for (const key of ['en']) {
     const ok =
       EN_MARKETS.test(`${c.location} ${c.companyLocation}`) &&
       url &&
-      platform !== 'unreachable' &&
+      !blocked &&
       siteMatchesCompany(c.company, url) &&
       !NOT_DECISION_MAKER.test(c.jobTitle || '') &&
       Number(c.total_scoring) >= MIN_SCORE
@@ -133,10 +145,10 @@ stats.shopify = moves.shopify.length
 if (!dry) {
   if (moves.shopify.length) await api('POST', `/v1/contact/list/${LISTS.shopify}/contacts`, { contactIds: moves.shopify })
   for (const id of approvals) await api('PATCH', `/v1/contact/${id}`, { readyForCampaign: true })
-  saveState({ lastRun: new Date().toISOString(), processed: [...processed], held: [...held], approvedOn: { date: today, count: approvedToday + approvals.length } })
+  saveState({ lastRun: new Date().toISOString(), processed: [...processed], held: [...held] })
 }
 
-const line = `- ${stamp()}${dry ? ' (dry)' : ''} · opt-out esclusi ${sweep.excluded} · nuovi ${stats.new} · Shopify spostati ${stats.shopify} · approvati ${stats.approved.en} · da guardare ${stats.held} · email antonio@ max/giorno ${mailMax}${mailFlag}\n`
+const line = `- ${stamp()}${dry ? ' (dry)' : ''} · opt-out esclusi ${sweep.excluded} · nuovi ${stats.new} · Shopify spostati ${stats.shopify} · approvati ${stats.approved.en} · da guardare ${stats.held} ·${stats.blocked ? ` sito bloccato (al Mac) ${stats.blocked} ·` : ''} email antonio@ max/giorno ${mailMax}${mailFlag}\n`
 if (!dry) {
   mkdirSync(dirname(LOG), { recursive: true })
   appendFileSync(LOG, line)
