@@ -55,11 +55,11 @@ const en: CategoriesCopy = {
     'ai-agents': {
       metaTitle: 'AI Agents for eCommerce and Shopify',
       metaDescription:
-        'How AI agents and Shopify’s built-in AI (Magic and Sidekick) work in an eCommerce store: the uses that pay, where a person still decides, how to start.',
+        'AI agents on Shopify: chatbot or agent, Shopify MCP, Claude and Claude Duet, Flow, security, customer care and testing. Where they pay, where a person decides.',
       h1: 'AI agents for ',
       h1Em: 'eCommerce stores',
       intro:
-        'We use AI agents in our own work every day, and these guides show where they pay off in a store and where a person still decides. They cover Shopify’s built-in AI, Magic and Sidekick, the uses that earn their place and how to start without a big project. If your store is live on Shopify, the [AI Accelerator](/ai-accelerator) switches on the first AI solutions in 30 days.',
+        'We work with AI agents built on Claude Code every day, and these guides show where agents pay off in a Shopify store and where a person still decides. Start from the difference between a chatbot, a workflow and an agent, then go deeper: Shopify MCP, Claude and Claude Duet, Shopify Flow, Magic and Sidekick, security, the order and returns assistant, how to test it and what it costs. If your store is live on Shopify, the [AI Accelerator](/ai-accelerator) switches on the first AI solutions in 30 days.',
     },
     'ai-search': {
       metaTitle: 'AI Search and GEO for Shopify',
@@ -108,11 +108,11 @@ const it: CategoriesCopy = {
     'ai-agents': {
       metaTitle: 'Agenti AI per eCommerce e Shopify',
       metaDescription:
-        'Come lavorano gli agenti AI e l’AI integrata di Shopify (Magic e Sidekick) in un eCommerce: gli usi che rendono, dove decide ancora una persona, come iniziare.',
+        'Agenti AI su Shopify: chatbot o agente, Shopify MCP, Claude e Claude Duet, Flow, sicurezza, assistenza clienti e test. Dove rendono, dove decide una persona.',
       h1: 'Agenti AI per ',
       h1Em: 'eCommerce',
       intro:
-        'Usiamo gli agenti AI nel nostro lavoro ogni giorno, e queste guide mostrano dove rendono in uno store e dove decide ancora una persona. Raccontano l’AI integrata di Shopify, Magic e Sidekick, gli usi che si meritano un posto e come iniziare senza un grande progetto. Se il tuo store è già su Shopify, l’[AI Accelerator](/it/ai-accelerator) attiva le prime soluzioni AI in 30 giorni.',
+        'Lavoriamo ogni giorno con agenti AI costruiti su Claude Code, e queste guide mostrano dove gli agenti rendono in uno store Shopify e dove decide ancora una persona. Parti dalla differenza tra chatbot, workflow e agente, poi vai a fondo: Shopify MCP, Claude e Claude Duet, Shopify Flow, Magic e Sidekick, sicurezza, l’assistente per ordini e resi, come testarlo e quanto costa. Se il tuo store è già su Shopify, l’[AI Accelerator](/it/ai-accelerator) attiva le prime soluzioni AI in 30 giorni.',
     },
     'ai-search': {
       metaTitle: 'Ricerca AI e GEO per Shopify',

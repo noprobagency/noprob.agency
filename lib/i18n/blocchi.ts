@@ -169,7 +169,7 @@ const it: BlocchiCopy = {
       },
       'ai-agents': {
         description:
-          'Shopify Magic e Sidekick e gli usi dell’AI che rendono in uno store: cosa attivare e cosa lasciare a una persona.',
+          'Agenti AI su Shopify, dal chatbot a MCP, Claude e Flow: cosa affidare a un agente e cosa lasciare a una persona.',
       },
       'ai-search': {
         description:
@@ -277,7 +277,7 @@ const en: BlocchiCopy = {
       },
       'ai-agents': {
         description:
-          'Shopify Magic and Sidekick, and the AI uses that pay in a store: what to switch on and what to leave to a person.',
+          'AI agents on Shopify, from chatbots to MCP, Claude and Flow: what to hand to an agent and what to leave to a person.',
       },
       'ai-search': {
         description:

@@ -135,6 +135,8 @@ Paragraphs and list items support markdown-style inline tokens via `parseInline`
 - `[testo](https://...)` → external `<a target="_blank" rel="noopener noreferrer">`
 - `**testo**` → `<strong>`
 
+Section types of an article (`ArticleSection` in `data/articles/index.ts`, rendered by `renderSection`): `paragraph`, `h2`, `h3`, `list`, `image`, `metrics`, `cta` and `table` (`{ type: 'table', caption?, headers: string[], rows: string[][] }`). `table` renders a semantic `<table>` (`components/article/ArticleTable.tsx`, Server Component): optional `<caption>`, `<th scope="col">` headers, the first cell of each row is a `<th scope="row">`, cells accept the same inline tokens as paragraphs, the wrapper scrolls horizontally on mobile and is keyboard-focusable. Every row must have as many cells as `headers` and IT/EN must have the same tables (`lib/seo/article-tables.test.ts`). Use it for comparisons and matrices; an empty cell is written `-`.
+
 ### Reusable blog components
 
 - `components/blog/StructuredData.tsx` - emits one or more JSON-LD `<script>` tags

@@ -6,6 +6,8 @@ import type { ArticleSection } from '@/data/articles'
 import type { Locale } from '@/lib/i18n'
 import { ROUTE_PATHS } from '@/lib/i18n/routes'
 
+import ArticleTable from './ArticleTable'
+
 /** Case study CTA: the main action is the Shopify Launch Sprint, the generic contact is secondary. */
 const CTA_COPY: Record<Locale, { heading: string; body: string; button: string; secondary: string }> = {
   en: {
@@ -136,6 +138,16 @@ export function renderSection(section: ArticleSection, idx: number, locale: Loca
             </li>
           ))}
         </ul>
+      )
+    case 'table':
+      return (
+        <ArticleTable
+          key={idx}
+          caption={section.caption}
+          headers={section.headers}
+          rows={section.rows}
+          renderInline={parseInline}
+        />
       )
     case 'metrics': {
       const growthLabel = locale === 'en' ? 'eCommerce revenue growth: ' : 'Crescita fatturato eCommerce: '

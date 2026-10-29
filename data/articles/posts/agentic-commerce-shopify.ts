@@ -5,34 +5,34 @@ const article: Article = {
   slugIt: 'agentic-commerce-shopify',
   title: 'Agentic Commerce for Shopify: A 5-Step Readiness Plan',
   titleIt: 'Agentic commerce per Shopify: il piano in 5 passi',
-  seoTitle: 'Agentic Commerce on Shopify: 5 Steps to Prepare',
-  seoTitleIt: 'Agentic commerce Shopify: 5 passi per prepararti',
+  seoTitle: 'Agentic Commerce Shopify: AI Agents, UCP vs ACP',
+  seoTitleIt: 'Agentic commerce Shopify: agenti AI, UCP vs ACP',
   seoDescription:
-    'Agentic commerce on Shopify without the hype: what AI shopping agents change for your store, and the five things worth fixing now, in order.',
+    'Agentic commerce on Shopify: what AI shopping agents do today, UCP vs ACP side by side, where Agentic Storefronts stand and five steps to prepare.',
   seoDescriptionIt:
-    'Agentic commerce su Shopify senza hype: cosa cambia per il tuo store con gli agenti AI che comprano e le cinque cose da sistemare ora, in ordine.',
+    'Commercio agentico su Shopify: cosa fanno oggi gli AI shopping agents, UCP vs ACP a confronto, a che punto sono gli Agentic Storefronts e 5 passi.',
   excerpt:
-    'What agentic commerce means for a Shopify store, what is real and what is hype, and a five-step plan to get your store ready for AI shopping agents.',
+    'What agentic commerce means for a Shopify store: what AI shopping agents already do, UCP vs ACP, where Agentic Storefronts stand, and a five-step plan to get ready.',
   excerptIt:
-    'Cosa significa agentic commerce per uno store Shopify, cosa è reale e cosa è hype, e un piano in cinque passi per preparare lo store agli agenti AI.',
+    'Cosa significa agentic commerce (commercio agentico) per uno store Shopify: cosa fanno già gli AI shopping agents, UCP vs ACP, a che punto sono gli Agentic Storefronts e un piano in cinque passi.',
   ledeEn:
-    'AI agents now search, compare and buy for shoppers. Our view on what that means for a Shopify store, what to ignore, and what to fix now.',
+    'AI shopping agents now search, compare and buy for shoppers. What that means for a Shopify store: what the agents do today, UCP vs ACP, and what to fix first.',
   ledeIt:
-    'Gli agenti AI ormai cercano, confrontano e comprano al posto del cliente. La nostra lettura per uno store Shopify: cosa ignorare e cosa sistemare ora.',
+    'Gli AI shopping agents cercano, confrontano e comprano al posto del cliente: è il commercio agentico. Cosa cambia per uno store Shopify, UCP e ACP a confronto, e cosa sistemare per primo.',
   image: '/images/blog/agentic-commerce-shopify-cover.png',
   imageAlt: 'Copertina astratta, sfondo azzurro sfumato, con un’onda di puntini di dimensione variabile',
   imageAltEn: 'Abstract cover, softly graded sky blue background with a wave of dots changing size',
   articleType: 'Article',
   date: '2026-10-14',
   datePublishedIso: '2026-10-14T15:05:00+01:00',
-  dateModifiedIso: '2026-10-28T09:00:00+00:00',
-  wordCount: 2250,
+  dateModifiedIso: '2026-10-29T09:00:00+00:00',
+  wordCount: 3500,
   articleSection: 'AI',
-  readingTimeMinutes: 9,
+  readingTimeMinutes: 14,
   keywordsEn:
-    'agentic commerce, ai shopping agent, agentic commerce shopify, agentic commerce protocol, shopify agentic storefronts, ai agents ecommerce, prepare store for ai agents',
+    'agentic commerce, ai shopping agents, agentic commerce shopify, ucp vs acp, universal commerce protocol, agentic commerce protocol, agentic storefronts, shopify agentic storefronts, ai agents ecommerce, prepare store for ai agents',
   keywordsIt:
-    'agentic commerce, agenti ai ecommerce, agentic commerce shopify, protocollo agentic commerce, shopify agentic storefronts, agenti ai che comprano, preparare store agenti ai',
+    'agentic commerce, commercio agentico, agentic commerce cos’è, agentic commerce shopify, ai shopping agents, ucp vs acp, universal commerce protocol, protocollo agentic commerce, agentic storefronts, agenti ai ecommerce, preparare store agenti ai',
   faqEn: [
     {
       question: 'What is agentic commerce?',
@@ -62,7 +62,27 @@ const article: Article = {
     {
       question: 'Do I need to choose an agentic commerce protocol?',
       answer:
-        'No: on Shopify the protocol layer is handled by the platform, so your job is the data and the checkout. Protocols are the technical rules that let an AI agent read a catalog and place an order; Agentic Storefronts connect your catalog to the AI platforms for you.',
+        'No: on Shopify the protocol layer is handled by the platform, so your job is the data and the checkout. Protocols are the technical rules that let an AI agent read a catalog and place an order; Shopify merchants are UCP-enabled by default, and Agentic Storefronts connect your catalog to the AI platforms for you.',
+    },
+    {
+      question: 'What are AI shopping agents?',
+      answer:
+        'AI shopping agents are AI assistants that find, compare and sometimes buy products for a person, such as ChatGPT, Gemini, Copilot or an agent connected through shop.md. Today the shopper still approves the purchase, and the agent decides what to show from your product data, prices, stock and policies.',
+    },
+    {
+      question: 'Can AI agents buy things for you?',
+      answer:
+        'Yes, once you approve. On Shopify the purchase either happens inside the AI channel with a direct checkout, where the store has switched it on, or on the store’s own checkout in an in-app browser, as with ChatGPT. When an agent cannot finish alone, UCP hands the buyer a link to continue.',
+    },
+    {
+      question: 'What is the difference between UCP and ACP?',
+      answer:
+        'UCP (Universal Commerce Protocol) was co-developed by Google and Shopify and covers discovery, cart, checkout and orders. ACP (Agentic Commerce Protocol) comes from OpenAI and Stripe and began with ChatGPT checkout. Both are open, and in both you stay the merchant of record.',
+    },
+    {
+      question: 'How do I turn off Agentic Storefronts in Shopify?',
+      answer:
+        'In your admin go to Sales channels, then Agentic, and switch off the AI channels you do not want. Shopify says you cannot opt out of Shopify Catalog itself, only block an individual agentic storefront from accessing your products through it.',
     },
   ],
   faqIt: [
@@ -94,7 +114,27 @@ const article: Article = {
     {
       question: 'Devo scegliere un protocollo di agentic commerce?',
       answer:
-        'No: su Shopify il livello dei protocolli lo gestisce la piattaforma, quindi il tuo lavoro sono i dati e il checkout. I protocolli sono le regole tecniche con cui un agente AI legge un catalogo e fa un ordine; gli Agentic Storefronts collegano il tuo catalogo alle piattaforme AI al posto tuo.',
+        'No: su Shopify il livello dei protocolli lo gestisce la piattaforma, quindi il tuo lavoro sono i dati e il checkout. I protocolli sono le regole tecniche con cui un agente AI legge un catalogo e fa un ordine; i merchant Shopify sono abilitati a UCP di default e gli Agentic Storefronts collegano il tuo catalogo alle piattaforme AI al posto tuo.',
+    },
+    {
+      question: 'Cosa sono gli AI shopping agents?',
+      answer:
+        'Gli AI shopping agents sono assistenti AI che trovano, confrontano e a volte comprano prodotti per una persona, come ChatGPT, Gemini, Copilot o un agente collegato con shop.md. Oggi chi compra approva ancora l’acquisto, e l’agente decide cosa mostrare dai tuoi dati prodotto, prezzi, giacenze e policy.',
+    },
+    {
+      question: 'Gli agenti AI possono comprare al posto mio?',
+      answer:
+        'Sì, quando approvi tu. Su Shopify l’acquisto avviene dentro il canale AI con un checkout diretto, se lo store lo ha attivato, oppure nel checkout del tuo store in un browser interno, come con ChatGPT. Quando un agente non riesce a finire da solo, UCP dà a chi compra un link per continuare.',
+    },
+    {
+      question: 'Qual è la differenza tra UCP e ACP?',
+      answer:
+        'UCP (Universal Commerce Protocol) è stato sviluppato da Google con Shopify e copre scoperta, carrello, checkout e ordini. ACP (Agentic Commerce Protocol) viene da OpenAI e Stripe ed è nato con il checkout di ChatGPT. Entrambi sono aperti, e in entrambi resti tu il merchant of record.',
+    },
+    {
+      question: 'Come disattivo gli Agentic Storefronts in Shopify?',
+      answer:
+        'Nell’admin vai su Canali di vendita, poi Agentic, e disattiva i canali AI che non vuoi. Shopify dice che non puoi uscire da Shopify Catalog, ma solo impedire a un singolo agentic storefront di accedere ai tuoi prodotti tramite Catalog.',
     },
   ],
   content: [
@@ -104,7 +144,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'We build and migrate Shopify stores at noprob agency (see the [Shopify Launch Sprint](/shopify-migration-sprint)). Since AI shopping agents moved from demo to a channel inside the Shopify admin, store owners ask us the same thing: is this real, and what do I do about it? Our answer: real enough to prepare for now, with work that also improves the store for people. Below is our view and a plan.',
+      text: 'We build and migrate Shopify stores at noprob agency (see the [Shopify Launch Sprint](/shopify-migration-sprint)). Since AI shopping agents moved from demo to a channel inside the Shopify admin, one question keeps coming up: is this real, and what do I do about it? Our answer: real enough to prepare for now, with work that also improves the store for people. Below is our view and a plan.',
     },
     { type: 'h2', text: 'What does agentic commerce mean for a Shopify store?' },
     {
@@ -117,16 +157,34 @@ const article: Article = {
       items: [
         '**It does not see your homepage.** No hero, no brand video, no carefully chosen photo order. It sees a record: title, attributes, price, availability, shipping, returns.',
         '**It compares many stores at once, on facts.** Price, stock, delivery time, return terms and product attributes decide who gets recommended.',
-        '**It can finish at checkout without a visit to your theme.** In Shopify’s setup you remain the merchant of record and the order lands in your admin.',
+        '**It can finish at checkout without a visit to your Shopify theme.** In Shopify’s setup you remain the merchant of record and the order lands in your admin.',
       ],
     },
     {
       type: 'paragraph',
-      text: "Shopify's move is [Agentic Storefronts](https://www.shopify.com/news/winter-26-edition-agentic-storefronts): one setup in the admin that makes your catalog available inside AI conversations, with each AI platform switched on or off separately and orders showing AI channel attribution. Behind it, Shopify Catalog structures product data (categories, attributes, variants) and keeps prices and inventory current across agents, which is why your own data quality is the part you still control. The platform list changes, so check your admin for the current one.",
+      text: "Shopify's move is [Agentic Storefronts](https://www.shopify.com/news/winter-26-edition-agentic-storefronts): one setup in the admin that makes your catalog available inside AI conversations, with each AI platform switched on or off separately and orders showing AI channel attribution. Behind it, Shopify Catalog structures product data (categories, attributes, variants) and keeps prices and inventory current across agents, which is why your own data quality is the part you still control. Where it stands today is in its own section below.",
     },
     {
       type: 'paragraph',
-      text: "Shopify's own [guide to agentic commerce](https://www.shopify.com/blog/agentic-commerce) covers the basics. This article covers what to do first and what to skip, for the agent that buys. For the neighbouring topics, see [ChatGPT shopping for Shopify](/blog/chatgpt-shopping-shopify) (getting products into ChatGPT) and [GEO for Shopify](/blog/geo-for-shopify) (being cited in AI answers).",
+      text: "Shopify's own [guide to agentic commerce](https://www.shopify.com/blog/agentic-commerce) covers the basics. This article covers what to do first and what to skip, for the agent that buys. For the neighbouring topics, see [ChatGPT shopping for Shopify](/blog/chatgpt-shopping-shopify) (getting products into ChatGPT, and what happened to Instant Checkout), [GEO for Shopify](/blog/geo-for-shopify) and [GEO vs SEO](/blog/geo-vs-seo) (being cited in AI answers).",
+    },
+    { type: 'h2', text: 'What are AI shopping agents and what do they already do for shoppers?' },
+    {
+      type: 'paragraph',
+      text: '**AI shopping agents are AI assistants that find, compare and sometimes buy products for a person, and today the person still approves the purchase.** They are not one product. You will meet four kinds:',
+    },
+    {
+      type: 'list',
+      items: [
+        '**Chat assistants: ChatGPT, Gemini, Copilot.** The shopper describes what they want and the assistant searches and compares. On ChatGPT the shopper finishes on your store’s checkout; in Copilot, Google’s AI Mode and Gemini a direct checkout inside the AI is possible if you switched it on ([Shopify Help Center](https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts)).',
+        '**Google Universal Cart.** Launched in the US on 15 October 2026, it saves products from several retailers, tracks price drops, and lets the shopper pay with Google Pay or move to the merchant’s site ([Google](https://blog.google/products-and-platforms/products/shopping/universal-cart-launch/)). Its checkout runs on UCP.',
+        '**Personal agents.** On 28 October 2026 Shopify presented shop.md, a skill that turns an agent such as ChatGPT or Claude into a personal shopper, and Shop Pay inside agents such as Muse from Meta and [Claude Duet](/blog/claude-duet-shopify). The card is never shared with the agent ([Fall ’26 Edition](https://www.shopify.com/news/fall-26-edition-merchant)).',
+        '**Browser agents.** WebMCP tools on every Liquid and Hydrogen storefront let a browser agent read structured data, update the cart and complete checkout once the buyer approves ([Shopify](https://www.shopify.com/news/fall-26-edition-developer)).',
+      ],
+    },
+    {
+      type: 'paragraph',
+      text: '**Can AI agents buy things for you? Yes, with your approval.** UCP builds the handoff into the protocol: when an agent cannot finish alone, the merchant returns a link and the buyer picks up where the agent stopped ([Shopify Engineering](https://shopify.engineering/ucp)). The agent does the searching and comparing, so your data decides who is shown, and Shopify’s VP of Product says discovery matters more than a faster checkout ([Fall ’26 interview](https://www.shopify.com/news/fall-26-edition-feature)). These are the shopper’s agents, not the ones you build to run your store: that is [AI agents for Shopify](/blog/ai-agents-for-shopify), and connecting Claude to your admin is [Claude and Claude Code on Shopify](/blog/claude-shopify).',
     },
     { type: 'h2', text: 'What is real and what is hype in agentic commerce?' },
     {
@@ -176,10 +234,48 @@ const article: Article = {
         '**Attribution changes.** Orders from AI channels show up in the admin with their channel. Reading only last-click reports will hide them.',
       ],
     },
+    { type: 'h2', text: 'UCP vs ACP: what is the difference?' },
+    {
+      type: 'paragraph',
+      text: '**UCP and ACP are two open protocols that let an AI agent check out in a merchant’s store: the Universal Commerce Protocol (UCP) was co-developed by Google and Shopify and covers the whole shopping journey, while the Agentic Commerce Protocol (ACP) comes from OpenAI and Stripe and began with ChatGPT checkout.** A protocol is the agreed format for what an agent may ask a store and how the store answers. Google announced UCP on [11 January 2026](https://blog.google/products/ads-commerce/agentic-commerce-ai-tools-protocol-retailers-platforms/), with Etsy, Wayfair, Target and Walmart among the developers and more than 20 endorsers, Stripe, Visa and Mastercard among them. Stripe and OpenAI announced ACP on [29 September 2025](https://stripe.com/newsroom/news/stripe-openai-instant-checkout), with Instant Checkout. Side by side, as of 29 October 2026:',
+    },
+    {
+      type: 'list',
+      items: [
+        '**Who promotes it.** UCP: Google and Shopify. ACP: OpenAI and Stripe, who maintain the specification together ([GitHub](https://github.com/agentic-commerce-protocol/agentic-commerce-protocol)).',
+        '**What it covers.** UCP: catalog, cart, identity linking, checkout and orders, with agents and stores negotiating what each supports ([ucp.dev](https://ucp.dev)). ACP: product feed, checkout and delegated payment ([OpenAI’s documentation](https://developers.openai.com/commerce/guides/key-concepts)).',
+        '**Payment.** UCP: any processor, with Shop Pay and Google Pay chosen per transaction ([Shopify Engineering](https://shopify.engineering/ucp)). ACP: a one-time token with a maximum amount and an expiry, first with Stripe’s Shared Payment Token.',
+        '**Where it runs.** UCP: Google’s AI Mode and the Gemini app, and Copilot Checkout ([Shopify](https://www.shopify.com/blog/how-agentic-commerce-works)). ACP: ChatGPT, where feed onboarding is limited to approved partners.',
+        '**How Shopify fits.** Co-developer of UCP: merchants are UCP-enabled by default ([Spring ’26 Edition](https://www.shopify.com/news/spring-26-edition-merchant)) and Shopify’s MCP tools for agents implement it ([shopify.dev](https://shopify.dev/docs/agents)). For ChatGPT, Shopify uses Catalog and your own checkout.',
+        '**What they share.** Both are open under the Apache License 2.0, and in both you stay the merchant of record.',
+      ],
+    },
+    {
+      type: 'paragraph',
+      text: '**UCP is not MCP.** MCP (Model Context Protocol) is a general way for a model to call tools on another system; UCP defines what commerce looks like for an agent and can travel over MCP, REST, A2A or AP2 ([Shopify](https://www.shopify.com/news/ai-commerce-at-scale)). Shopify’s MCP servers are explained in [Shopify MCP explained](/blog/shopify-mcp).',
+    },
     { type: 'h2', text: 'Do you need to choose an agentic commerce protocol?' },
     {
       type: 'paragraph',
-      text: '**No: on Shopify the protocol layer is handled by the platform, so your job is the data and the checkout.** Protocols are the technical rules that let an AI agent read a catalog and place an order; Agentic Storefronts connect your catalog to the AI platforms for you, and the work in this plan does not depend on which protocol wins.',
+      text: '**No: on Shopify the protocol layer is handled by the platform, so your job is the data and the checkout.** Shopify says that [when a new AI platform adopts UCP, Shopify merchants are ready to sell there with no extra integration](https://www.shopify.com/blog/how-agentic-commerce-works), and the work in this plan does not depend on which protocol wins. Off Shopify, on your own stack, the choice is real: [UCP](https://ucp.dev) is what Google’s surfaces use, [ACP](https://developers.openai.com/commerce/guides/key-concepts) is how ChatGPT checkout was built, and each platform decides whom it onboards.',
+    },
+    { type: 'h2', text: 'Where do Agentic Storefronts stand on Shopify in October 2026?' },
+    {
+      type: 'paragraph',
+      text: '**Agentic Storefronts is the part of the Shopify admin (Sales channels, then Agentic) where you choose which AI channels get your products and whether each can check out directly; it is active by default for eligible stores.** Per Shopify’s [Help Center](https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts): ChatGPT is discovery, with the purchase on your online store checkout; Google AI Mode and Gemini, Microsoft Copilot and Meta (including Muse) are sales channels with Shopify-powered direct checkout, if you activate it; Shop agents pay with Shop Pay, and orders show agent attribution. How it moved, in Shopify’s own announcements:',
+    },
+    {
+      type: 'list',
+      items: [
+        '**10 December 2025:** [Agentic Storefronts announced](https://www.shopify.com/news/winter-26-edition-agentic-storefronts), one admin setup that syndicates your catalog to AI platforms.',
+        '**24 March 2026:** millions of merchants can sell to ChatGPT users, with checkout in an in-app browser and no transaction fees beyond standard processing rates; the Agentic plan opens Catalog to brands that are not on Shopify ([Shopify](https://www.shopify.com/news/agentic-commerce-momentum)).',
+        '**17 June 2026, Spring ’26 Edition:** one place to manage channels, see orders and conversions per channel, find AI queries you do not rank for, and get Sidekick suggestions on products that appear but do not convert ([Shopify](https://www.shopify.com/news/spring-26-edition-merchant)).',
+        '**28 October 2026, Fall ’26 Edition:** a Catalog eligibility view and a knowledge base page (Sales channels, then Agentic) where you review and publish facts such as return windows and shipping destinations; nothing reaches an agent without your sign-off ([Shopify](https://www.shopify.com/news/fall-26-edition-merchant)).',
+      ],
+    },
+    {
+      type: 'paragraph',
+      text: 'Limits to know. In Shopify’s [guide](https://www.shopify.com/blog/how-agentic-commerce-works), updated in June 2026, ChatGPT and Copilot are live for merchants that sell to US buyers, wherever the store is, and AI Mode and Gemini are for select US shops. You cannot opt out of Shopify Catalog itself, but you can block an individual agentic storefront ([Help Center](https://help.shopify.com/en/manual/promoting-marketing/seo/shopify-catalog)), and using the channel means accepting the Agentic Storefronts Supplemental Terms of Service. On another platform, the Agentic plan lists your products in Catalog without a Shopify store; the other route is the [Shopify Launch Sprint](/shopify-migration-sprint).',
     },
     { type: 'h2', text: 'How do you prepare a Shopify store for an AI shopping agent?' },
     {
@@ -189,7 +285,7 @@ const article: Article = {
     { type: 'h3', text: '1. The GEO groundwork' },
     {
       type: 'paragraph',
-      text: 'Start with the data layer in our [guide to GEO for Shopify](/blog/geo-for-shopify): facts written as text, filled-in attributes and metafields, Product markup that matches the page, and shipping and returns on real pages. Then set up measurement: AI channel attribution in the admin orders and ten prompts run by hand every month. Those steps come first. Skip them and an agent never reaches your checkout, because it cannot read your record.',
+      text: 'Start with the data layer in our [guide to GEO for Shopify](/blog/geo-for-shopify): facts written as text, filled-in attributes and metafields, Product markup that matches the page, and shipping and returns on real pages. Then set up measurement: AI channel attribution in the admin orders and ten prompts run by hand every month. In Sales channels, then Agentic, check Catalog eligibility and fill in the knowledge base, so the facts an agent gets about returns and shipping are the ones you approved. Those steps come first. Skip them and an agent never reaches your checkout, because it cannot read your record.',
     },
     { type: 'h3', text: '2. Checkout readiness' },
     {
@@ -230,7 +326,7 @@ const article: Article = {
     { type: 'h3', text: '5. Fraud and refunds' },
     {
       type: 'paragraph',
-      text: 'Agent orders can look odd to a fraud filter: a first order, a request that never touched your theme. Do not switch the rules off, and do not let them cancel everything from the AI channel. Review the first agent orders by hand in Shopify’s order risk analysis, then adjust. On refunds, the shopper approved a purchase on the strength of what the agent said. If your data was wrong, expect the refund to be yours, one more reason to fix items 1 and 3. If the shopper just regrets it, your normal returns policy applies, so write it for a person and for software alike.',
+      text: 'Agent orders can look odd to a fraud filter: a first order, a request that never touched your Shopify theme. Do not switch the rules off, and do not let them cancel everything from the AI channel. Review the first agent orders by hand in Shopify’s order risk analysis, then adjust. On refunds, the shopper approved a purchase on the strength of what the agent said. If your data was wrong, expect the refund to be yours, one more reason to fix items 1 and 3. If the shopper just regrets it, your normal returns policy applies, so write it for a person and for software alike.',
     },
     { type: 'h2', text: 'How can you test your store with an AI agent in 30 minutes?' },
     {
@@ -260,7 +356,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Our published case studies show how we work. [Integratori DTC Nazzi](/use-cases/integratori-nazzi-dtc-shopify) moved from WooCommerce, and its live Shopify store publishes the agentic discovery sitemap (checked on 13 October 2026). It sold 105% more online in its first 85 days on Shopify than in the same days of 2025. The case shows what the migration did. [Cumini](/use-cases/cumini-luxury-fashion-ecommerce) moved from a proprietary platform tied to its ERP. For how we migrate, read the [guide to migrating to Shopify](/shopify-migration).',
+      text: 'Our published case studies show how we work. [Integratori DTC Nazzi](/use-cases/integratori-nazzi-dtc-shopify) moved from WooCommerce, and its live Shopify store publishes the agentic discovery sitemap (checked on 13 October 2026). From 19 July to 12 October 2026 it sold 105% more online than in the same days of 2025. The case shows what the migration did. [Cumini](/use-cases/cumini-luxury-fashion-ecommerce) moved from a proprietary platform tied to its ERP. For how we migrate, read the [guide to migrating to Shopify](/shopify-migration).',
     },
     {
       type: 'paragraph',
@@ -295,12 +391,32 @@ const article: Article = {
     { type: 'h3', text: 'Do I need to choose an agentic commerce protocol?' },
     {
       type: 'paragraph',
-      text: 'No: on Shopify the protocol layer is handled by the platform, so your job is the data and the checkout. Protocols are the technical rules that let an AI agent read a catalog and place an order; Agentic Storefronts connect your catalog to the AI platforms for you.',
+      text: 'No: on Shopify the protocol layer is handled by the platform, so your job is the data and the checkout. Protocols are the technical rules that let an AI agent read a catalog and place an order; Shopify merchants are UCP-enabled by default, and Agentic Storefronts connect your catalog to the AI platforms for you.',
+    },
+    { type: 'h3', text: 'What are AI shopping agents?' },
+    {
+      type: 'paragraph',
+      text: 'AI shopping agents are AI assistants that find, compare and sometimes buy products for a person, such as ChatGPT, Gemini, Copilot or an agent connected through shop.md. Today the shopper still approves the purchase, and the agent decides what to show from your product data, prices, stock and policies.',
+    },
+    { type: 'h3', text: 'Can AI agents buy things for you?' },
+    {
+      type: 'paragraph',
+      text: 'Yes, once you approve. On Shopify the purchase either happens inside the AI channel with a direct checkout, where the store has switched it on, or on the store’s own checkout in an in-app browser, as with ChatGPT. When an agent cannot finish alone, UCP hands the buyer a link to continue.',
+    },
+    { type: 'h3', text: 'What is the difference between UCP and ACP?' },
+    {
+      type: 'paragraph',
+      text: 'UCP (Universal Commerce Protocol) was co-developed by Google and Shopify and covers discovery, cart, checkout and orders. ACP (Agentic Commerce Protocol) comes from OpenAI and Stripe and began with ChatGPT checkout. Both are open, and in both you stay the merchant of record.',
+    },
+    { type: 'h3', text: 'How do I turn off Agentic Storefronts in Shopify?' },
+    {
+      type: 'paragraph',
+      text: 'In your admin go to Sales channels, then Agentic, and switch off the AI channels you do not want. Shopify says you cannot opt out of Shopify Catalog itself, only block an individual agentic storefront from accessing your products through it.',
     },
     { type: 'h2', text: 'What to do on Monday' },
     {
       type: 'paragraph',
-      text: 'Run the 30-minute test, write down the misses, and fix attributes first. Do the other four in the order above, one after the other. Skip the hype list. If agent orders grow, you will have the data ready; if they do not, you still have a better store. For AI inside your admin, see [Shopify Magic and Sidekick](/blog/shopify-magic-sidekick); for the wider picture, [AI for ecommerce](/blog/ai-for-ecommerce); for ChatGPT specifically, [ChatGPT shopping for Shopify](/blog/chatgpt-shopping-shopify).',
+      text: 'Run the 30-minute test, write down the misses, and fix attributes first. Then open Sales channels, then Agentic, and check Catalog eligibility and the knowledge base. Do the other four steps in the order above, one after the other. Skip the hype list. If agent orders grow, you will have the data ready; if they do not, you still have a better store. For AI inside your admin, see [Shopify Magic and Sidekick](/blog/shopify-magic-sidekick); for the wider picture, [AI for ecommerce](/blog/ai-for-ecommerce); for ChatGPT specifically, [ChatGPT shopping for Shopify](/blog/chatgpt-shopping-shopify).',
     },
     {
       type: 'paragraph',
@@ -314,13 +430,13 @@ const article: Article = {
   contentIt: [
     {
       type: 'paragraph',
-      text: "**L’agentic commerce è lo shopping in cui un agente AI cerca, confronta e compra al posto del cliente. Per uno store Shopify si riduce a questo: un agente riesce a leggere il tuo catalogo e le tue policy senza tirare a indovinare?** Canali, protocolli e annunci stanno sopra.",
+      text: "**L’agentic commerce (in italiano commercio agentico) è lo shopping in cui un agente AI cerca, confronta e compra al posto del cliente. Per uno store Shopify si riduce a questo: un agente riesce a leggere il tuo catalogo e le tue policy senza tirare a indovinare?** Canali, protocolli e annunci stanno sopra.",
     },
     {
       type: 'paragraph',
-      text: 'Costruiamo e migriamo store Shopify come noprob agency (vedi lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify)). Da quando gli agenti AI per lo shopping sono un canale dentro l’admin di Shopify, chi ha uno store ci chiede: è vero, e io cosa faccio? La nostra risposta: abbastanza vera da prepararsi ora, con un lavoro che migliora lo store anche per le persone. Qui sotto la nostra lettura e un piano.',
+      text: 'Costruiamo e migriamo store Shopify come noprob agency (vedi lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify)). Da quando gli agenti AI per lo shopping sono un canale dentro l’admin di Shopify, una domanda ricorre: è vero, e io cosa faccio? La nostra risposta: abbastanza vera da prepararsi ora, con un lavoro che migliora lo store anche per le persone. Qui sotto la nostra lettura e un piano.',
     },
-    { type: 'h2', text: 'Cosa significa agentic commerce per uno store Shopify?' },
+    { type: 'h2', text: 'Agentic commerce: cos’è e cosa significa per uno store Shopify?' },
     {
       type: 'paragraph',
       text: 'Per uno store Shopify, agentic commerce significa un nuovo tipo di visitatore: un software che compra per conto di una persona, legge i tuoi dati invece del tuo design e può chiudere l’acquisto quando la persona approva.',
@@ -331,16 +447,34 @@ const article: Article = {
       items: [
         '**Non vede la tua homepage.** Niente hero, niente video del brand, niente foto in ordine studiato. Vede una scheda: titolo, attributi, prezzo, disponibilità, spedizione, resi.',
         '**Confronta molti store insieme, sui fatti.** Prezzo, giacenza, tempi di consegna, condizioni di reso e attributi del prodotto decidono chi viene consigliato.',
-        '**Può chiudere al checkout senza passare dal tuo tema.** Nella configurazione di Shopify resti tu il venditore e l’ordine arriva nel tuo admin.',
+        '**Può chiudere al checkout senza passare dal tuo tema Shopify.** Nella configurazione di Shopify resti tu il venditore e l’ordine arriva nel tuo admin.',
       ],
     },
     {
       type: 'paragraph',
-      text: "La mossa di Shopify si chiama [Agentic Storefronts](https://www.shopify.com/news/winter-26-edition-agentic-storefronts): un’unica configurazione in admin che rende il catalogo disponibile dentro le conversazioni con l’AI, con ogni piattaforma AI attivabile o disattivabile separatamente e gli ordini con l’attribuzione del canale AI. Dietro c’è Shopify Catalog, che struttura i dati prodotto (categorie, attributi, varianti) e tiene aggiornati prezzi e giacenze per gli agenti: la qualità dei tuoi dati resta la parte in mano a te. L’elenco delle piattaforme cambia, quindi controlla quello attuale nel tuo admin.",
+      text: "La mossa di Shopify si chiama [Agentic Storefronts](https://www.shopify.com/news/winter-26-edition-agentic-storefronts): un’unica configurazione in admin che rende il catalogo disponibile dentro le conversazioni con l’AI, con ogni piattaforma AI attivabile o disattivabile separatamente e gli ordini con l’attribuzione del canale AI. Dietro c’è Shopify Catalog, che struttura i dati prodotto (categorie, attributi, varianti) e tiene aggiornati prezzi e giacenze per gli agenti: la qualità dei tuoi dati resta la parte in mano a te. A che punto è oggi lo trovi in una sezione dedicata più sotto.",
     },
     {
       type: 'paragraph',
-      text: "La [guida di Shopify all’agentic commerce](https://www.shopify.com/blog/agentic-commerce) spiega le basi. Questo articolo dice cosa fare per primo e cosa saltare, per l’agente che compra. Per i temi vicini: [ChatGPT shopping per Shopify](/it/blog/chatgpt-shopping-shopify) (portare i prodotti in ChatGPT) e [GEO per Shopify](/it/blog/geo-seo-shopify) (essere citati nelle risposte AI).",
+      text: "La [guida di Shopify all’agentic commerce](https://www.shopify.com/blog/agentic-commerce) spiega le basi. Questo articolo dice cosa fare per primo e cosa saltare, per l’agente che compra. Per i temi vicini: [ChatGPT shopping per Shopify](/it/blog/chatgpt-shopping-shopify) (portare i prodotti in ChatGPT e cosa è successo a Instant Checkout), [GEO per Shopify](/it/blog/geo-seo-shopify) e [GEO vs SEO](/it/blog/geo-vs-seo) (essere citati nelle risposte AI).",
+    },
+    { type: 'h2', text: 'Cosa sono gli AI shopping agents e cosa fanno già oggi per chi compra?' },
+    {
+      type: 'paragraph',
+      text: '**Gli AI shopping agents sono assistenti AI che trovano, confrontano e a volte comprano prodotti per una persona, e oggi la persona approva ancora l’acquisto.** Non sono un prodotto solo. Ne incontri quattro tipi:',
+    },
+    {
+      type: 'list',
+      items: [
+        '**Assistenti in chat: ChatGPT, Gemini, Copilot.** Chi compra descrive cosa cerca e l’assistente cerca e confronta. Su ChatGPT il cliente conclude nel checkout del tuo store; in Copilot, nella modalità AI di Google e in Gemini è possibile un checkout diretto dentro l’AI, se lo hai attivato ([Centro assistenza Shopify](https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts)).',
+        '**Google Universal Cart.** Lanciato negli Stati Uniti il 15 ottobre 2026, salva prodotti di più rivenditori, segue i cali di prezzo e permette di pagare con Google Pay o di passare al sito del venditore ([Google](https://blog.google/products-and-platforms/products/shopping/universal-cart-launch/)). Il suo checkout usa UCP.',
+        '**Agenti personali.** Il 28 ottobre 2026 Shopify ha presentato shop.md, una skill che trasforma un agente come ChatGPT o Claude in un personal shopper, e Shop Pay dentro agenti come Muse di Meta e [Claude Duet](/it/blog/claude-duet-shopify). La carta non viene mai condivisa con l’agente ([Fall ’26 Edition](https://www.shopify.com/news/fall-26-edition-merchant)).',
+        '**Agenti nel browser.** Gli strumenti WebMCP su ogni storefront Liquid e Hydrogen permettono a un agente nel browser di leggere dati strutturati, aggiornare il carrello e completare il checkout quando chi compra approva ([Shopify](https://www.shopify.com/news/fall-26-edition-developer)).',
+      ],
+    },
+    {
+      type: 'paragraph',
+      text: '**Gli agenti AI possono comprare al posto tuo? Sì, con la tua approvazione.** UCP include il passaggio di mano nel protocollo: se un agente non riesce a finire da solo, il merchant restituisce un link e chi compra riprende da dove l’agente si è fermato ([Shopify Engineering](https://shopify.engineering/ucp)). L’agente cerca e confronta, quindi sono i tuoi dati a decidere chi viene mostrato, e la VP of Product di Shopify dice che conta più la scoperta di un checkout più veloce ([intervista Fall ’26](https://www.shopify.com/news/fall-26-edition-feature)). Questi sono gli agenti di chi compra, non quelli che costruisci per far funzionare il tuo store: per quelli c’è [Agenti AI per Shopify](/it/blog/agenti-ai-shopify), e per collegare Claude al tuo admin [Claude e Claude Code su Shopify](/it/blog/claude-shopify).',
     },
     { type: 'h2', text: 'Cosa è reale e cosa è hype negli agenti AI per l’eCommerce?' },
     {
@@ -390,10 +524,48 @@ const article: Article = {
         '**L’attribuzione cambia.** Gli ordini dai canali AI compaiono nell’admin con il loro canale. Guardare solo i report last click li nasconde.',
       ],
     },
+    { type: 'h2', text: 'UCP vs ACP: qual è la differenza?' },
+    {
+      type: 'paragraph',
+      text: '**UCP e ACP sono due protocolli aperti che permettono a un agente AI di fare checkout nello store di un merchant: l’Universal Commerce Protocol (UCP) è stato sviluppato da Google con Shopify e copre tutto il percorso d’acquisto, mentre l’Agentic Commerce Protocol (ACP) viene da OpenAI e Stripe ed è nato con il checkout di ChatGPT.** Un protocollo è il formato concordato di ciò che un agente può chiedere a uno store e di come lo store risponde. Google ha annunciato UCP l’[11 gennaio 2026](https://blog.google/products/ads-commerce/agentic-commerce-ai-tools-protocol-retailers-platforms/), con Etsy, Wayfair, Target e Walmart tra gli sviluppatori e più di 20 aziende a sostenerlo, tra cui Stripe, Visa e Mastercard. Stripe e OpenAI hanno annunciato ACP il [29 settembre 2025](https://stripe.com/newsroom/news/stripe-openai-instant-checkout), con Instant Checkout. Uno accanto all’altro, al 29 ottobre 2026:',
+    },
+    {
+      type: 'list',
+      items: [
+        '**Chi lo promuove.** UCP: Google e Shopify. ACP: OpenAI e Stripe, che mantengono insieme la specifica ([GitHub](https://github.com/agentic-commerce-protocol/agentic-commerce-protocol)).',
+        '**Cosa copre.** UCP: catalogo, carrello, collegamento dell’identità, checkout e ordini, con agenti e store che negoziano cosa supporta ciascuno ([ucp.dev](https://ucp.dev)). ACP: feed prodotti, checkout e pagamento delegato ([documentazione OpenAI](https://developers.openai.com/commerce/guides/key-concepts)).',
+        '**Pagamento.** UCP: qualsiasi processore, con Shop Pay e Google Pay scelti a ogni transazione ([Shopify Engineering](https://shopify.engineering/ucp)). ACP: un token monouso con importo massimo e scadenza, all’inizio con lo Shared Payment Token di Stripe.',
+        '**Dove gira.** UCP: la modalità AI di Google e l’app Gemini, e Copilot Checkout ([Shopify](https://www.shopify.com/blog/how-agentic-commerce-works)). ACP: ChatGPT, dove l’onboarding dei feed è limitato ai partner approvati.',
+        '**Dove sta Shopify.** Co-sviluppatore di UCP: i merchant sono abilitati di default ([Spring ’26 Edition](https://www.shopify.com/news/spring-26-edition-merchant)) e gli strumenti MCP di Shopify per gli agenti lo implementano ([shopify.dev](https://shopify.dev/docs/agents)). Con ChatGPT usa Catalog e il tuo checkout.',
+        '**Cosa hanno in comune.** Entrambi sono aperti con licenza Apache 2.0, e in entrambi resti tu il merchant of record.',
+      ],
+    },
+    {
+      type: 'paragraph',
+      text: '**UCP non è MCP.** MCP (Model Context Protocol) è un modo generale con cui un modello chiama strumenti di un altro sistema; UCP definisce come appare il commercio per un agente e può viaggiare su MCP, REST, A2A o AP2 ([Shopify](https://www.shopify.com/news/ai-commerce-at-scale)). I server MCP di Shopify sono spiegati in [Shopify MCP spiegato](/it/blog/shopify-mcp).',
+    },
     { type: 'h2', text: 'Devi scegliere un protocollo di agentic commerce?' },
     {
       type: 'paragraph',
-      text: '**No: su Shopify il livello dei protocolli lo gestisce la piattaforma, quindi il tuo lavoro sono i dati e il checkout.** I protocolli sono le regole tecniche con cui un agente AI legge un catalogo e fa un ordine; gli Agentic Storefronts collegano il tuo catalogo alle piattaforme AI al posto tuo, e il lavoro di questo piano non dipende da quale protocollo vince.',
+      text: '**No: su Shopify il livello dei protocolli lo gestisce la piattaforma, quindi il tuo lavoro sono i dati e il checkout.** Shopify dice che [quando una nuova piattaforma AI adotta UCP, i merchant Shopify sono pronti a vendere lì senza integrazioni aggiuntive](https://www.shopify.com/blog/how-agentic-commerce-works), e il lavoro di questo piano non dipende da quale protocollo vince. Fuori da Shopify, su uno stack tuo, la scelta è reale: [UCP](https://ucp.dev) è quello che usano le superfici di Google, [ACP](https://developers.openai.com/commerce/guides/key-concepts) è come è stato costruito il checkout di ChatGPT, e ogni piattaforma decide chi far entrare.',
+    },
+    { type: 'h2', text: 'A che punto sono gli Agentic Storefronts su Shopify a ottobre 2026?' },
+    {
+      type: 'paragraph',
+      text: '**Gli Agentic Storefronts sono la sezione dell’admin Shopify (Canali di vendita, poi Agentic) in cui scegli quali canali AI ricevono i tuoi prodotti e se ognuno può fare checkout diretto; sono attivi di default per gli store idonei.** Secondo il [Centro assistenza](https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts) di Shopify: ChatGPT è scoperta, con l’acquisto nel checkout del tuo store online; modalità AI di Google e Gemini, Microsoft Copilot e Meta (compreso Muse) sono canali di vendita con checkout diretto basato su Shopify, se lo attivi; gli agenti Shop pagano con Shop Pay e gli ordini mostrano l’attribuzione. Come si è mosso, negli annunci di Shopify:',
+    },
+    {
+      type: 'list',
+      items: [
+        '**10 dicembre 2025:** [annunciati gli Agentic Storefronts](https://www.shopify.com/news/winter-26-edition-agentic-storefronts), un unico setup in admin che porta il tuo catalogo alle piattaforme AI.',
+        '**24 marzo 2026:** milioni di merchant possono vendere agli utenti di ChatGPT, con checkout in un browser interno e nessuna commissione sulle transazioni oltre i costi standard di elaborazione; il piano Agentic apre Catalog ai brand che non sono su Shopify ([Shopify](https://www.shopify.com/news/agentic-commerce-momentum)).',
+        '**17 giugno 2026, Spring ’26 Edition:** un posto solo per gestire i canali, vedere ordini e conversioni per canale, trovare le ricerche AI su cui non compari e ricevere da Sidekick suggerimenti sui prodotti che compaiono ma non convertono ([Shopify](https://www.shopify.com/news/spring-26-edition-merchant)).',
+        '**28 ottobre 2026, Fall ’26 Edition:** una vista sull’idoneità a Catalog e una pagina knowledge base (Canali di vendita, poi Agentic) in cui rivedi e pubblichi fatti come periodo di reso e paesi di spedizione; nulla arriva a un agente senza la tua approvazione ([Shopify](https://www.shopify.com/news/fall-26-edition-merchant)).',
+      ],
+    },
+    {
+      type: 'paragraph',
+      text: 'Limiti da conoscere. Nella [guida](https://www.shopify.com/blog/how-agentic-commerce-works) di Shopify, aggiornata a giugno 2026, ChatGPT e Copilot sono attivi per i merchant che vendono a clienti statunitensi, ovunque sia lo store, e la modalità AI di Google e Gemini per negozi selezionati negli Stati Uniti. Non puoi uscire da Shopify Catalog, ma puoi bloccare un singolo agentic storefront ([Centro assistenza](https://help.shopify.com/en/manual/promoting-marketing/seo/shopify-catalog)), e usare il canale significa accettare i Termini supplementari degli Agentic Storefronts. Su un’altra piattaforma, il piano Agentic mette i tuoi prodotti in Catalog senza uno store Shopify; l’altra strada è lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify).',
     },
     { type: 'h2', text: 'Come si prepara uno store Shopify agli agenti AI ecommerce che comprano?' },
     {
@@ -403,7 +575,7 @@ const article: Article = {
     { type: 'h3', text: '1. Le basi della GEO' },
     {
       type: 'paragraph',
-      text: 'Parti dal livello dati della nostra [guida alla GEO per Shopify](/it/blog/geo-seo-shopify): fatti scritti come testo, attributi e metafield compilati, markup Product coerente con la pagina, spedizioni e resi in pagine vere. Poi imposta la misurazione: attribuzione del canale AI negli ordini dell’admin e dieci prompt a mano ogni mese. Quei passaggi vengono per primi. Se li salti l’agente non arriva mai al checkout, perché non riesce a leggere la tua scheda.',
+      text: 'Parti dal livello dati della nostra [guida alla GEO per Shopify](/it/blog/geo-seo-shopify): fatti scritti come testo, attributi e metafield compilati, markup Product coerente con la pagina, spedizioni e resi in pagine vere. Poi imposta la misurazione: attribuzione del canale AI negli ordini dell’admin e dieci prompt a mano ogni mese. In Canali di vendita, poi Agentic, controlla l’idoneità a Catalog e compila la knowledge base, così i fatti che un agente riceve su resi e spedizioni sono quelli che hai approvato tu. Quei passaggi vengono per primi. Se li salti l’agente non arriva mai al checkout, perché non riesce a leggere la tua scheda.',
     },
     { type: 'h3', text: '2. Checkout pronto' },
     {
@@ -444,7 +616,7 @@ const article: Article = {
     { type: 'h3', text: '5. Frodi e rimborsi' },
     {
       type: 'paragraph',
-      text: 'Gli ordini degli agenti possono sembrare strani a un filtro antifrode: un primo ordine, una richiesta che non è passata dal tuo tema. Non spegnere le regole, ma non lasciare che cancellino tutto il canale AI. Rivedi a mano i primi ordini degli agenti nell’analisi del rischio di Shopify, poi correggi. Sui rimborsi: il cliente ha approvato l’acquisto in base a ciò che ha detto l’agente. Se i tuoi dati erano sbagliati, il rimborso sarà a tuo carico: un motivo in più per sistemare i punti 1 e 3. Se si è solo pentito vale la tua policy di reso, quindi scrivila per una persona e per un software.',
+      text: 'Gli ordini degli agenti possono sembrare strani a un filtro antifrode: un primo ordine, una richiesta che non è passata dal tuo tema Shopify. Non spegnere le regole, ma non lasciare che cancellino tutto il canale AI. Rivedi a mano i primi ordini degli agenti nell’analisi del rischio di Shopify, poi correggi. Sui rimborsi: il cliente ha approvato l’acquisto in base a ciò che ha detto l’agente. Se i tuoi dati erano sbagliati, il rimborso sarà a tuo carico: un motivo in più per sistemare i punti 1 e 3. Se si è solo pentito vale la tua policy di reso, quindi scrivila per una persona e per un software.',
     },
     { type: 'h2', text: 'Come testi il tuo store con un agente AI in 30 minuti?' },
     {
@@ -474,7 +646,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'I nostri casi studio pubblicati mostrano come lavoriamo. [Integratori DTC Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify) è passato da WooCommerce, e il suo store Shopify online pubblica la sitemap di agentic discovery (verificato il 13 ottobre 2026). Ha venduto online il 105% in più nei primi 85 giorni su Shopify rispetto agli stessi giorni del 2025. Il caso mostra cosa ha fatto la migrazione. [Cumini](/it/casi-studio/cumini-luxury-fashion-ecommerce) è passato da una piattaforma proprietaria legata al gestionale. Per come migriamo, leggi la [guida alla migrazione a Shopify](/it/migrazione-shopify).',
+      text: 'I nostri casi studio pubblicati mostrano come lavoriamo. [Integratori DTC Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify) è passato da WooCommerce, e il suo store Shopify online pubblica la sitemap di agentic discovery (verificato il 13 ottobre 2026). Dal 19 luglio al 12 ottobre 2026 ha venduto online il 105% in più rispetto agli stessi giorni del 2025. Il caso mostra cosa ha fatto la migrazione. [Cumini](/it/casi-studio/cumini-luxury-fashion-ecommerce) è passato da una piattaforma proprietaria legata al gestionale. Per come migriamo, leggi la [guida alla migrazione a Shopify](/it/migrazione-shopify).',
     },
     {
       type: 'paragraph',
@@ -489,7 +661,7 @@ const article: Article = {
     { type: 'h3', text: 'Se il mio store è già su Shopify devo fare qualcosa?' },
     {
       type: 'paragraph',
-      text: 'Sì, ma è lavoro sui dati, non un rifacimento. Shopify mette a disposizione in admin il canale di vendita AI (Agentic Storefronts) e tu scegli su quali piattaforme AI vendere. Quello che non può fare al posto tuo è sistemare attributi incompleti, policy mancanti e un catalogo disordinato.',
+      text: 'Sì, ma è lavoro sui dati, non un rifacimento. Shopify mette a disposizione in admin il canale di vendita AI (Agentic Storefronts) e tu scegli su quali piattaforme AI vendere. Non può sistemare al posto tuo attributi incompleti, policy mancanti e un catalogo disordinato.',
     },
     { type: 'h3', text: 'Gli agenti AI sostituiranno il mio sito?' },
     {
@@ -509,12 +681,32 @@ const article: Article = {
     { type: 'h3', text: 'Devo scegliere un protocollo di agentic commerce?' },
     {
       type: 'paragraph',
-      text: 'No: su Shopify il livello dei protocolli lo gestisce la piattaforma, quindi il tuo lavoro sono i dati e il checkout. I protocolli sono le regole tecniche con cui un agente AI legge un catalogo e fa un ordine; gli Agentic Storefronts collegano il tuo catalogo alle piattaforme AI al posto tuo.',
+      text: 'No: su Shopify il livello dei protocolli lo gestisce la piattaforma, quindi il tuo lavoro sono i dati e il checkout. I protocolli sono le regole tecniche con cui un agente AI legge un catalogo e fa un ordine; i merchant Shopify sono abilitati a UCP di default e gli Agentic Storefronts collegano il tuo catalogo alle piattaforme AI al posto tuo.',
+    },
+    { type: 'h3', text: 'Cosa sono gli AI shopping agents?' },
+    {
+      type: 'paragraph',
+      text: 'Gli AI shopping agents sono assistenti AI che trovano, confrontano e a volte comprano prodotti per una persona, come ChatGPT, Gemini, Copilot o un agente collegato con shop.md. Oggi chi compra approva ancora l’acquisto, e l’agente decide cosa mostrare dai tuoi dati prodotto, prezzi, giacenze e policy.',
+    },
+    { type: 'h3', text: 'Gli agenti AI possono comprare al posto mio?' },
+    {
+      type: 'paragraph',
+      text: 'Sì, quando approvi tu. Su Shopify l’acquisto avviene dentro il canale AI con un checkout diretto, se lo store lo ha attivato, oppure nel checkout del tuo store in un browser interno, come con ChatGPT. Quando un agente non riesce a finire da solo, UCP dà a chi compra un link per continuare.',
+    },
+    { type: 'h3', text: 'Qual è la differenza tra UCP e ACP?' },
+    {
+      type: 'paragraph',
+      text: 'UCP (Universal Commerce Protocol) è stato sviluppato da Google con Shopify e copre scoperta, carrello, checkout e ordini. ACP (Agentic Commerce Protocol) viene da OpenAI e Stripe ed è nato con il checkout di ChatGPT. Entrambi sono aperti, e in entrambi resti tu il merchant of record.',
+    },
+    { type: 'h3', text: 'Come disattivo gli Agentic Storefronts in Shopify?' },
+    {
+      type: 'paragraph',
+      text: 'Nell’admin vai su Canali di vendita, poi Agentic, e disattiva i canali AI che non vuoi. Shopify dice che non puoi uscire da Shopify Catalog, ma solo impedire a un singolo agentic storefront di accedere ai tuoi prodotti tramite Catalog.',
     },
     { type: 'h2', text: 'Cosa fare lunedì' },
     {
       type: 'paragraph',
-      text: 'Fai il test da 30 minuti, annota gli errori e sistema prima gli attributi. Fai gli altri quattro punti in ordine, uno dopo l’altro, e salta la lista hype. Se gli ordini degli agenti crescono sei pronto; se no, hai comunque uno store migliore. Per l’AI dentro l’admin c’è [Shopify Magic e Sidekick](/it/blog/shopify-magic-sidekick); per il quadro più ampio, [AI per eCommerce](/it/blog/ai-per-ecommerce); per ChatGPT in particolare, [ChatGPT shopping per Shopify](/it/blog/chatgpt-shopping-shopify).',
+      text: 'Fai il test da 30 minuti, annota gli errori e sistema prima gli attributi. Poi apri Canali di vendita, poi Agentic, e controlla l’idoneità a Catalog e la knowledge base. Fai gli altri quattro punti in ordine, uno dopo l’altro, e salta la lista hype. Se gli ordini degli agenti crescono sei pronto; se no, hai comunque uno store migliore. Per l’AI dentro l’admin c’è [Shopify Magic e Sidekick](/it/blog/shopify-magic-sidekick); per il quadro più ampio, [AI per eCommerce](/it/blog/ai-per-ecommerce); per ChatGPT in particolare, [ChatGPT shopping per Shopify](/it/blog/chatgpt-shopping-shopify).',
     },
     {
       type: 'paragraph',

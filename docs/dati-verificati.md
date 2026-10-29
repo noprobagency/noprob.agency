@@ -143,6 +143,7 @@ vanno corrette qui e nel copy.
 - dopo lo Sprint: 90 giorni da eCommerce manager (ottimizzazione continua delle performance); la manutenzione (sicurezza, aggiornamenti, istruzioni, supporto tecnico) resta inclusa per sempre (Antonio, 28 ott 2026)
 - lo Sprint copre la migrazione a Shopify da qualsiasi piattaforma (Antonio, 28 ott 2026)
 - uso di Shopify Magic e Sidekick nei progetti, con dati puliti prima e revisione umana (Antonio, 28 ott 2026)
+- noprob lavora ogni giorno con agenti AI costruiti su Claude Code; il sito noprob.agency è sviluppato e curato con agenti su Claude Code (Antonio, 29 ott 2026)
 - "Trusted by 23+ founders" (form contatti)
 - "decine di altri progetti eCommerce" (playbook ambassador)
 - 15% dei visitatori arriva alle recensioni in fondo alla scheda prodotto (articolo CRO)
@@ -232,6 +233,146 @@ Tolti perché senza fonte primaria: Marketing Metrics (60-70% contro 5-20%), Inv
 ### Altri articoli
 
 Store Leads (27.247 passaggi in 90 giorni, 9.204 da WooCommerce, 17.922 in uscita, +9.325 netti), Digital Commerce 360 (AI-driven 3x) e CERT-EU 2026-018 sono già nella sezione "Mercato Shopify" sopra. Le pagine OpenAI e Shopify citate in chatgpt-shopping-shopify e agentic-commerce-shopify sono linkate nel testo e datate ottobre 2026 nell'articolo.
+
+### Articoli del 29 ottobre 2026 (13 nuovi: fatti e numeri di terzi)
+
+Controllato il 29 ottobre 2026 su ogni pagina indicata. Una riga per fatto; dove l'articolo scrive "il 29 ottobre" è il giorno di lettura delle pagine prezzi. Prezzi e limiti dei fornitori cambiano: da ricontrollare a metà novembre 2026.
+
+**geo-vs-seo**
+- Traffico e ordini da AI verso gli store Shopify triplicati su base annua nel secondo trimestre 2026, attribuito al presidente di Shopify nella call sugli utili: https://www.digitalcommerce360.com/2026/08/06/how-shopify-is-approaching-agentic-ai-2026/
+- Per essere link di supporto in AI Overviews e AI Mode una pagina deve essere indicizzata e idonea a mostrare uno snippet, senza altri requisiti: https://developers.google.com/search/docs/appearance/ai-features
+- Per le funzioni AI di Google non servono file o markup speciali; Google Search non usa i file llms.txt: https://developers.google.com/search/docs/fundamentals/ai-optimization-guide
+- Chi esclude OAI-SearchBot non compare nelle risposte della ricerca di ChatGPT; ogni impostazione dei crawler OpenAI è indipendente: https://developers.openai.com/api/docs/bots
+- Google distingue snippet di prodotto e schede del commerciante (spedizione e resi): https://developers.google.com/search/docs/appearance/structured-data/product
+- Il filtro `structured_data` di Shopify produce Product, o ProductGroup con le varianti: https://shopify.dev/docs/api/liquid/filters/structured_data
+- Agentic Storefronts pubblicano il catalogo su ChatGPT, Perplexity e Microsoft Copilot da un'unica configurazione, il merchant resta merchant of record: https://www.shopify.com/news/winter-26-edition-agentic-storefronts
+- Su Shopify llms.txt è generato dalla piattaforma sugli store controllati il 27 ottobre 2026 (nostro controllo, vedi geo-for-shopify); proposta llms.txt: https://llmstxt.org
+
+**shopify-mcp**
+- MCP è uno standard aperto, paragonato a una porta USB-C: https://modelcontextprotocol.io/docs/getting-started/intro
+- Anthropic ha donato MCP all'Agentic AI Foundation (Linux Foundation, con Block e OpenAI) a dicembre 2025: https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation
+- La specifica MCP dice che deve esserci sempre una persona che può negare una chiamata a uno strumento: https://modelcontextprotocol.io/specification/2026-07-28/server/tools
+- Il connettore Shopify per Claude: scrittura su prodotti, collezioni, inventario e codici sconto a percentuale; sola lettura su ordini, clienti e analytics; si installa dalla directory di Claude, non dallo Shopify App Store; un lotto grande modifica gli elementi uno alla volta e può fermarsi a metà: https://help.shopify.com/en/manual/ai-powered-tools/connecting-ai-tools/shopify-connector-for-claude
+- Altri strumenti AI (tra cui ChatGPT, Gemini, Microsoft Copilot) possono collegarsi: https://help.shopify.com/en/manual/ai-powered-tools/connecting-ai-tools
+- Responsabilità sui cambi sbagliati e trattamento dati secondo i termini dello strumento AI: https://help.shopify.com/en/manual/ai-powered-tools/connecting-ai-tools/considerations
+- Dev MCP gira in locale e non richiede autenticazione: https://shopify.dev/docs/apps/build/devmcp
+- AI Toolkit: documentazione, schemi API, validazione GraphQL, Liquid ed estensioni, attività di gestione tramite Shopify CLI: https://shopify.dev/docs/apps/build/ai-toolkit
+- Tre livelli di identificazione dell'agente (credenziale Dev Dashboard, richieste firmate, anonimo): https://shopify.dev/docs/agents/profiles/auth-and-rate-limiting
+- Storefront Catalog MCP: strumenti di ricerca e consultazione, nessuna configurazione per il merchant: https://shopify.dev/docs/agents/catalog/storefront-catalog
+- Global Catalog MCP cerca tra i merchant: https://shopify.dev/docs/agents/catalog/global-catalog
+- Cart MCP: `update_cart` sostituisce l'intero stato del carrello: https://shopify.dev/docs/agents/carts-and-checkout/cart-mcp
+- Checkout MCP: `update_checkout` allo stesso modo; il cliente finisce sullo storefront salvo agente fidato: https://shopify.dev/docs/agents/carts-and-checkout/checkout-mcp
+- Ask MCP (funzione in bozza): https://shopify.dev/docs/agents/ask ; Order MCP (solo ordini fatti tramite l'agente): https://shopify.dev/docs/agents/orders/order-mcp
+- Customer Accounts MCP richiede dominio personalizzato, approvazione per dati cliente protetti e login OAuth: https://shopify.dev/docs/apps/build/storefront-mcp/servers/customer-account
+- Storefront MCP: strumenti di catalogo e carrello rimossi e sostituiti da UCP su /api/ucp/mcp: https://shopify.dev/docs/apps/build/storefront-mcp
+- UCP sviluppato con Google, Shopify, Etsy, Walmart, Amazon e Stripe tra gli altri: https://ucp.dev
+- OWASP: prompt injection tra i rischi principali, mitigazioni con privilegi minimi e approvazione umana: https://genai.owasp.org/llmrisk/llm01-prompt-injection/
+
+**ai-agents-for-shopify**
+- Workflow (percorsi predefiniti) contro agente (decide passi e strumenti): https://www.anthropic.com/engineering/building-effective-agents
+- Eccesso di autonomia: troppi strumenti, permessi e autonomia: https://genai.owasp.org/llmrisk/llm062025-excessive-agency/
+- Più agenti utili in tre casi (contesto inquinato, parallelismo, specializzazione): https://claude.com/resources/articles/building-multi-agent-systems-when-and-how-to-use-them
+- Shopify Flow: app gratuita su Basic, Grow, Advanced e Plus; Send HTTP Request su Grow, Advanced e Plus: https://help.shopify.com/en/manual/shopify-flow
+- Documentazione agenti di Shopify: https://shopify.dev/docs/agents
+
+**build-ai-agent-shopify**
+- Piani Shopify: Basic 19 €, Grow 56 €, Advanced 289 € al mese con fatturazione annuale, Plus da 2.100 € (29 ott 2026, variano per paese): https://www.shopify.com/pricing
+- Anthropic, per milione di token (input / output): Claude Haiku 5.5 0,10 $ / 0,50 $ (prompt fino a 100.000 token), Claude Sonnet 5.5 2 $ / 10 $, Claude Fable 5.1 10 $ / 50 $: https://platform.claude.com/docs/en/about-claude/pricing
+- Lettura dalla cache a una frazione dell'input: 10% su Haiku 5.5, 5% su Sonnet 5.5, 2,5% su Fable 5.1; batch al 50% (stessa pagina e quella OpenAI): https://platform.claude.com/docs/en/about-claude/pricing
+- OpenAI, per milione di token: gpt-6-luna 0,10 $ / 0,50 $, gpt-6-astra 10 $ / 50 $: https://developers.openai.com/api/docs/pricing
+- Shopify Flow gratuito su Basic, Grow, Advanced e Plus; Sidekick incluso nel piano (funzioni e limiti variano) e propone le modifiche prima di applicarle: https://help.shopify.com/en/manual/shopify-flow ; https://help.shopify.com/en/manual/shopify-admin/productivity-tools/sidekick
+- Stime di costo per conversazione (circa 0,002 $, 0,04 $, 0,20 $) e per 1.000 conversazioni (circa 2 $, 40 $, 200 $): calcolo nostro, illustrativo, da 4 chiamate da 3.000 token in ingresso e 400 in uscita sui prezzi sopra
+- Semplicità prima di tutto, complessità solo quando serve: https://www.anthropic.com/engineering/building-effective-agents
+
+**shopify-migration-ai-agents**
+- Cinque modi per spostare uno store (copia e incolla, CSV, app, Partner, soluzione su API); ordine prodotti, clienti, ordini storici; blog e pagine tra i contenuti spostabili; ordini di prova prima del lancio: https://help.shopify.com/en/manual/migrating-to-shopify
+- CSV prodotti: prodotto identificato dall'handle, varianti fino a 3 opzioni, colonne opzione assenti in aggiornamento cancellano le varianti esistenti, colonne vuote sovrascrivono: https://help.shopify.com/en/manual/products/import-export/using-csv
+- Google: mappatura completa, redirect permanenti, niente catene né home page come ripiego, redirect mantenuti in genere almeno un anno: https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes
+- Shopify reindirizza solo URL che mostrano "Page not found"; percorsi riservati come /cart: https://help.shopify.com/en/manual/online-store/menus-and-links/url-redirect
+- Pattern workflow e agenti: https://www.anthropic.com/engineering/building-effective-agents ; prompt injection indiretta: https://genai.owasp.org/llmrisk/llm01-prompt-injection/
+- Cumini (audit tracking da 31 a 92 su 100) e Nazzi (215 URL archiviati, 138 con 301, 77 in 404): già nelle rispettive sezioni di questo file
+
+**shopify-301-redirects**
+- Un 301 è un redirect permanente; Google chiede una destinazione per ogni vecchio URL: https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes
+- CSV di Shopify con le intestazioni Redirect from e Redirect to; si reindirizza solo da URL rotti; percorsi fissi /products, /collections, /collections/all; prefissi riservati /apps, /application, /cart, /carts, /orders, /services, /shop; .html non reindirizzabile allo stesso URL senza .html; tag di collezione non reindirizzabili; query string non sempre funzionanti: https://help.shopify.com/en/manual/online-store/menus-and-links/url-redirect
+- Basi predefinite di WooCommerce `product` e `product-category`: https://github.com/woocommerce/woocommerce/blob/trunk/plugins/woocommerce/includes/wc-core-functions.php
+- Suffisso configurabile degli URL Magento: https://experienceleague.adobe.com/en/docs/commerce-admin/catalog/catalog/catalog-urls
+- Rotte PrestaShop in `Dispatcher.php`, tag 8.2.0: https://github.com/PrestaShop/PrestaShop/blob/8.2.0/classes/Dispatcher.php
+- Redirect da impostare prima di spostare il dominio: https://help.shopify.com/en/manual/migrating-to-shopify/migrating-from-woocommerce
+- `UrlRedirectImport` riporta righe create, aggiornate e fallite: https://shopify.dev/docs/api/admin-graphql/latest/objects/UrlRedirectImport
+
+**claude-shopify**
+- Connettore ufficiale nella directory di Claude, di Shopify, verificato da Anthropic: https://claude.com/marketplace/connectors/shopify
+- Installazione dalla directory di Claude, nessun costo Shopify aggiuntivo, può creare uno store sul tema Canvas protetto da password; cosa legge, scrive e non può fare; i temi pubblicati non si modificano: https://help.shopify.com/en/manual/ai-powered-tools/connecting-ai-tools/shopify-connector-for-claude
+- Accesso di sola lettura o scrittura, non riducibile (si disinstalla e si riautorizza), segue i permessi staff, non creare token API propri: https://help.shopify.com/en/manual/ai-powered-tools/connecting-ai-tools/authorizing-access
+- Connettore per sviluppatori su Shopify CLI: https://help.shopify.com/en/manual/ai-powered-tools/shopify-cli-connector
+- Claude Code (terminale, IDE, app desktop, browser; Agent SDK; esecuzione pianificata): https://code.claude.com/docs/en/overview
+- Server MCP aggiunti con `claude mcp add`; i server che leggono contenuti esterni espongono a prompt injection: https://code.claude.com/docs/en/mcp
+- Modalità di permesso (chiede prima di modifiche, comandi shell e rete; plan mode): https://code.claude.com/docs/en/permission-modes ; revisione di codice e comandi: https://code.claude.com/docs/en/security
+- AI Toolkit: Node.js 18 o superiore; plugin `shopify-ai-toolkit@claude-plugins-official`; migrazione delle estensioni da versioni API precedenti a 2025-10: https://shopify.dev/docs/apps/build/ai-toolkit
+- Functions personalizzano la logica backend; le app personalizzate con Function API richiedono Plus: https://shopify.dev/docs/apps/build/functions
+- Store di sviluppo solo per sviluppo e test: https://shopify.dev/docs/api/development-stores
+
+**claude-duet-shopify**
+- Claude Duet annunciato e aperto come research preview il 21 ottobre 2026; nota del 23 ottobre: protezioni di sicurezza e privacy ancora in sviluppo; lavora con Shopify e Shop Pay; approvazione prima di inviare, pagare, firmare, cancellare: https://claude.com/resources/articles/claude-duet
+- Lista d'attesa per abbonati Pro e Max negli USA, incluso nei piani senza costo extra, non su Team ed Enterprise; brief mattutino; non si sceglie il modello; limiti da cinque ore e settimanali come la chat; non si vede il browser; prompt injection; azioni vietate come negoziare titoli: https://support.claude.com/en/articles/17631495-get-started-with-claude-duet
+- App iOS, Android e claude.ai; esempio di dashboard aggiornata ogni giorno: https://claude.com/product/claude-duet
+- Eccesso di autonomia (rimedi): https://genai.owasp.org/llmrisk/llm062025-excessive-agency/
+- Ruoli staff con permessi limitati: https://help.shopify.com/en/manual/your-account/staff-accounts/staff-permissions
+
+**shopify-flow-ai**
+- Azioni di Flow lette il 29 ottobre 2026: nessuna è un'azione AI: https://help.shopify.com/en/manual/shopify-flow/reference/actions ; trigger: https://help.shopify.com/en/manual/shopify-flow/reference/triggers
+- Flow gratuito su Basic, Grow, Advanced e Plus; Send HTTP request su Grow, Advanced e Plus; Sidekick che costruisce workflow solo desktop; attività di app partner personalizzate solo Plus; limiti d'uso variano per piano; avviso oltre 250 tag; campi dell'ordine che si compilano dopo: https://help.shopify.com/en/manual/shopify-flow ; https://help.shopify.com/en/manual/shopify-flow/create-workflow
+- Flow disponibile solo in inglese: https://www.shopify.com/flow
+- Send HTTP request: retry fino a 24 ore su risposte 5XX e 429, segreti nascosti e oscurati nei log, permesso "Manage connections and secrets": https://help.shopify.com/en/manual/shopify-flow/reference/actions/send-http-request
+- Run code: JavaScript con limite di 5 secondi e senza rete: https://help.shopify.com/en/manual/shopify-flow/reference/actions/run-code
+- Sidekick costruisce workflow, annunciato l'11 dicembre 2025: https://changelog.shopify.com/posts/create-flow-automations-with-sidekick ; esempio del prompt VIP: https://www.shopify.com/blog/flow-automation-updates-2025
+- Libreria di centinaia di template: https://shopify.dev/docs/apps/build/flow/templates ; esempi: https://help.shopify.com/en/manual/shopify-flow/getting-started/workflow-examples
+
+**ai-agent-security-shopify**
+- OWASP LLM01:2025 Prompt Injection al primo posto della Top 10 per applicazioni LLM: https://genai.owasp.org/llmrisk/llm01-prompt-injection/
+- Simon Willison, "lethal trifecta" (nessuno sa ancora fermare questi attacchi in modo affidabile): https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/
+- Anthropic: filtrare ciò che restituiscono gli strumenti e limitare accesso a dati e azioni sensibili: https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/mitigate-jailbreaks
+- Ambiti di accesso Shopify (`read_orders`, `write_orders`, `read_customers`): https://shopify.dev/docs/api/usage/access-scopes
+- Dati cliente protetti (nomi, indirizzi, email, telefoni), solo il minimo necessario: https://shopify.dev/docs/apps/launch/protected-customer-data
+- Specifica MCP 2025-06-18: sempre una persona che può negare una chiamata: https://modelcontextprotocol.io/specification/2025-06-18/server/tools
+- OWASP AI Agent Security Cheat Sheet (approvazione per azioni ad alto impatto e irreversibili): https://cheatsheetseries.owasp.org/cheatsheets/AI_Agent_Security_Cheat_Sheet.html
+- Eccesso di autonomia: https://genai.owasp.org/llmrisk/llm062025-excessive-agency/
+- EDPB, guida per le piccole imprese: solo i dati personali necessari per ciascuna finalità: https://www.edpb.europa.eu/sme-data-protection-guide/be-compliant_en
+
+**ai-customer-service-shopify**
+- Guida Shopify ai chatbot per l'assistenza: i chatbot controllano dati d'ordine live, spiegano la policy resi e avviano un reso, ma non sostituiscono le persone: https://www.shopify.com/blog/ai-chatbot-customer-service
+- `refundCreate` dietro l'ambito di accesso agli ordini: https://shopify.dev/docs/api/admin-graphql/latest/mutations/refundCreate
+- `returnRequest` crea un reso che richiede l'approvazione del merchant (stato REQUESTED): https://shopify.dev/docs/api/admin-graphql/latest/mutations/returnRequest
+- Risposte istantanee di Shopify Inbox: "Track my order" richiede l'accesso del cliente, suggerimenti AI solo in inglese: https://help.shopify.com/en/manual/inbox/chat-settings-and-appearance/instant-answers
+- Risposte suggerite: aiuto alla scrittura per lo staff, riviste prima dell'invio: https://help.shopify.com/en/manual/inbox/chat-settings-and-appearance/shopify-magic
+- Gorgias (AI Agent più helpdesk, integrazione Shopify): https://www.gorgias.com/ ; Tidio (agente Lyro, azioni Shopify nel piano a pagamento): https://apps.shopify.com/tidio-chat
+- Eccesso di autonomia (rimedi) https://genai.owasp.org/llmrisk/llm062025-excessive-agency/ ; clienti e agenti: https://www.anthropic.com/engineering/building-effective-agents
+- Solo nella versione italiana: Codice del consumo, 14 giorni per recedere (art. 52), basta una dichiarazione esplicita (art. 54), eccezioni (art. 59), difetto di conformità con scelta tra riparazione e sostituzione (art. 135-bis, obbligo di informare per i contratti dal 31 luglio 2026): https://www.normattiva.it/
+
+**evaluate-ai-assistant-ecommerce**
+- "20-50 simple tasks drawn from real failures is a great start": https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents
+- Valutare con casi tipici, limite e avversari, non a sensazione: https://developers.openai.com/api/docs/guides/evaluation-best-practices
+- Criteri di successo e valutazioni (input irrilevanti, molto lunghi, ambigui): https://platform.claude.com/docs/en/test-and-evaluate/develop-tests
+- OWASP LLM01 prompt injection, primo rischio per le applicazioni LLM: https://genai.owasp.org/llmrisk/llm01-prompt-injection/
+
+**bigcommerce-vs-shopify**
+- Shopify, fatturazione annuale (mensile): Basic 19 € (27 €), Grow 56 € (74 €), Advanced 289 € (384 €), Plus da 2.100 € al mese; prova 3 giorni gratis poi 1 € al mese per 3 mesi; nessun limite di vendite indicato; Markets su ogni piano; fino a 3 cataloghi B2B sui piani standard e illimitati su Plus: https://www.shopify.com/pricing
+- Shopify, commissione gateway esterno 2% / 1% / 0,6% / 0,2% (Basic, Grow, Advanced, Plus); carte online con Shopify Payments 1,8% + 0,30 € (Basic), 1,6% (Grow), 1,5% (Advanced), 1,35% (Plus), tutte + 0,30 €: https://www.shopify.com/pricing
+- BigCommerce, fatturazione annuale (mensile): Core 29 $ (39 $), Growth 79 $ (105 $), Scale 299 $ (399 $), Performance da 1.499 $ al mese; prova 15 giorni senza carta: https://www.bigcommerce.com/essentials/pricing/
+- BigCommerce, limiti legati al GMV degli ultimi dodici mesi: Core fino a 30.000 $, Growth fino a 100.000 $, Scale 33.333 $ al mese con 0,9% sull'eccedenza, Performance da 2 milioni di $; GMV = valore lordo degli ordini meno 10%: https://www.bigcommerce.com/essentials/pricing/
+- BigCommerce, commissioni: 0 $ con gli Embedded Payment Providers; Open Payment Provider 2,0% / 1,0% / 0,6% / 0% (Core, Growth, Scale, Performance con contratto); elaborazione carte da 2,89% + 0,29 $: https://www.bigcommerce.com/essentials/pricing/
+- BigCommerce, storefront aggiuntivi 30 $ (Core, fino a 3), 50 $ (Growth, fino a 5), 100 $ (Scale, fino a 8) al mese; Price Lists solo su Performance; checkout in una pagina su tutti i piani: https://www.bigcommerce.com/essentials/pricing/
+- Shopify, oltre 16.000 app: https://apps.shopify.com/ ; BigCommerce, oltre 1.200: https://www.bigcommerce.com/apps/
+- Shopify, fino a 2.048 varianti e tre opzioni per prodotto: https://help.shopify.com/en/manual/products/variants/add-variants
+- BigCommerce, 600 SKU di variante per prodotto (dichiarazione della sua pagina); studio Forrester 2023 citato da BigCommerce (ROI 211% in 8 mesi, conversione +30%): https://www.bigcommerce.com/compare/bigcommerce-vs-shopify/
+- Shopify, confronto: checkout con conversione più alta del 12% (studio completato ad aprile 2023) e costo totale di proprietà migliore del 31% (ricerca commissionata da Shopify su 250 aziende con ricavi da 10 milioni di $, dicembre 2023 - gennaio 2024); agentic storefronts: https://www.shopify.com/compare/shopify-vs-bigcommerce
+- Shopify B2B su Basic, Grow, Advanced e Plus: https://help.shopify.com/en/manual/b2b ; BigCommerce B2B Edition (account aziendali, preventivi, fatture, ruoli, agenti di vendita, Buyer Portal): https://docs.bigcommerce.com/developer/docs/b2b-edition/getting-started/overview
+- Shopify, expansion store su Plus: fino a dieci store nel contratto senza costo extra, app fatturate per store e licenza tema per ciascuno: https://help.shopify.com/en/manual/organization-settings/expansion-stores
+- Shopify, checkout: personalizzazione standard su ogni piano, avanzata su Plus: https://help.shopify.com/en/manual/checkout-settings/checkout-extensibility
+- Shopify, fino a 100.000 redirect; /products e /collections non reindirizzabili: https://help.shopify.com/en/manual/online-store/menus-and-links/url-redirect
+- BigCommerce, modificatori di prodotto: https://docs.bigcommerce.com/docs/store-operations/catalog/products-overview ; server MCP: https://docs.bigcommerce.com/developer/api-reference/mcp/overview
+- Sidekick (incluso nel piano, funzioni e limiti variano): https://www.shopify.com/sidekick ; Companion (nel pannello BigCommerce, modifiche solo dopo anteprima e approvazione): https://www.bigcommerce.com/product/companion/
 
 ### Fonti dell'articolo su Shopify Magic e Sidekick (controllate il 27 ottobre 2026)
 

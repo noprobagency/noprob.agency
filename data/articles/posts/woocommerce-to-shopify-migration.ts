@@ -23,7 +23,7 @@ const article: Article = {
   articleType: 'BlogPosting',
   date: '2026-10-13',
   datePublishedIso: '2026-10-13T09:40:00+01:00',
-  dateModifiedIso: '2026-10-28T09:00:00+00:00',
+  dateModifiedIso: '2026-10-29T09:00:00+00:00',
   wordCount: 2200,
   articleSection: 'Shopify migration',
   readingTimeMinutes: 10,
@@ -143,7 +143,7 @@ const article: Article = {
       items: [
         "/product/blue-shirt/ becomes /products/blue-shirt",
         "/product-category/shirts/ becomes /collections/shirts",
-        "/shop/ becomes /collections/all",
+        "/shop/ cannot be redirected, because [Shopify blocks URLs that begin with /shop](https://help.shopify.com/en/manual/online-store/menus-and-links/url-redirect): point your menus and links to /collections/all instead",
         "/about/ becomes /pages/about",
         "/my-account/ becomes /account",
         "/blue-shirt-review/ or /2025/05/blue-shirt-review/ (a post) becomes /blogs/news/blue-shirt-review",
@@ -253,7 +253,7 @@ const article: Article = {
       items: [
         "/product/camicia-blu/ diventa /products/camicia-blu",
         "/product-category/camicie/ diventa /collections/camicie",
-        "/shop/ diventa /collections/all",
+        "/shop/ non si può reindirizzare, perché [Shopify blocca gli URL che iniziano con /shop](https://help.shopify.com/en/manual/online-store/menus-and-links/url-redirect): punta menu e link a /collections/all",
         "/chi-siamo/ diventa /pages/chi-siamo",
         "/my-account/ diventa /account",
         "/recensione-camicia-blu/ o /2025/05/recensione-camicia-blu/ (un articolo) diventa /blogs/news/recensione-camicia-blu",

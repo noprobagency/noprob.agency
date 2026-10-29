@@ -26,6 +26,8 @@ const CLUSTER_SLUGS: Record<ClusterId, string[]> = {
     'bigcommerce-to-shopify-migration',
     'wix-vs-shopify',
     'squarespace-vs-shopify',
+    'shopify-migration-ai-agents',
+    'bigcommerce-vs-shopify',
   ],
   shopify: [
     'shopify-migration-cost',
@@ -34,9 +36,22 @@ const CLUSTER_SLUGS: Record<ClusterId, string[]> = {
     'choose-shopify-migration-agency',
     'shopify-vs-woocommerce',
     'how-shopify-works',
+    'shopify-301-redirects',
   ],
-  'ai-agents': ['shopify-magic-sidekick', 'ai-for-ecommerce'],
-  'ai-search': ['geo-for-shopify', 'agentic-commerce-shopify', 'chatgpt-shopping-shopify'],
+  'ai-agents': [
+    'ai-agents-for-shopify',
+    'build-ai-agent-shopify',
+    'claude-shopify',
+    'claude-duet-shopify',
+    'shopify-mcp',
+    'shopify-flow-ai',
+    'ai-agent-security-shopify',
+    'ai-customer-service-shopify',
+    'evaluate-ai-assistant-ecommerce',
+    'shopify-magic-sidekick',
+    'ai-for-ecommerce',
+  ],
+  'ai-search': ['geo-for-shopify', 'geo-vs-seo', 'agentic-commerce-shopify', 'chatgpt-shopping-shopify'],
   growth: ['shopify-cro-guide', 'ecommerce-growth-strategy-long-term'],
 }
 
@@ -66,6 +81,19 @@ export const ARTICLE_PILLS: Record<string, Record<Locale, string>> = {
   'ai-for-ecommerce': { en: 'AI', it: 'AI' },
   'shopify-cro-guide': { en: 'CRO', it: 'CRO' },
   'ecommerce-growth-strategy-long-term': { en: 'Strategy', it: 'Strategia' },
+  'ai-agents-for-shopify': { en: 'AI agents', it: 'Agenti AI' },
+  'build-ai-agent-shopify': { en: 'Guide', it: 'Guida' },
+  'claude-shopify': { en: 'Claude', it: 'Claude' },
+  'claude-duet-shopify': { en: 'Claude', it: 'Claude' },
+  'shopify-mcp': { en: 'MCP', it: 'MCP' },
+  'shopify-flow-ai': { en: 'Automation', it: 'Automazione' },
+  'ai-agent-security-shopify': { en: 'Security', it: 'Sicurezza' },
+  'ai-customer-service-shopify': { en: 'Support', it: 'Assistenza' },
+  'evaluate-ai-assistant-ecommerce': { en: 'Guide', it: 'Guida' },
+  'geo-vs-seo': { en: 'GEO', it: 'GEO' },
+  'shopify-migration-ai-agents': { en: 'Migration', it: 'Migrazione' },
+  'bigcommerce-vs-shopify': { en: 'Comparison', it: 'Confronto' },
+  'shopify-301-redirects': { en: 'SEO', it: 'SEO' },
 }
 
 export function getCluster(slug: string): Cluster | undefined {

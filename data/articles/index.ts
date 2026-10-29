@@ -17,12 +17,26 @@ import chooseShopifyMigrationAgency from './posts/choose-shopify-migration-agenc
 import shopifyMigrationCost from './posts/shopify-migration-cost'
 import bigcommerceToShopifyMigration from './posts/bigcommerce-to-shopify-migration'
 import shopifyPlus from './posts/shopify-plus'
+import aiAgentsForShopify from './posts/ai-agents-for-shopify'
+import buildAiAgentShopify from './posts/build-ai-agent-shopify'
+import claudeShopify from './posts/claude-shopify'
+import claudeDuetShopify from './posts/claude-duet-shopify'
+import shopifyMcp from './posts/shopify-mcp'
+import shopifyFlowAi from './posts/shopify-flow-ai'
+import aiAgentSecurityShopify from './posts/ai-agent-security-shopify'
+import aiCustomerServiceShopify from './posts/ai-customer-service-shopify'
+import evaluateAiAssistantEcommerce from './posts/evaluate-ai-assistant-ecommerce'
+import geoVsSeo from './posts/geo-vs-seo'
+import shopifyMigrationAiAgents from './posts/shopify-migration-ai-agents'
+import bigcommerceVsShopify from './posts/bigcommerce-vs-shopify'
+import shopify301Redirects from './posts/shopify-301-redirects'
 
 export type ArticleSection =
   | { type: 'paragraph'; text: string }
   | { type: 'h2'; text: string }
   | { type: 'list'; items: string[] }
   | { type: 'h3'; text: string }
+  | { type: 'table'; caption?: string; headers: string[]; rows: string[][] }
   | { type: 'image'; src: string; alt?: string; width?: number; height?: number; maxWidth?: string }
   | { type: 'metrics'; merValue: string; growthValue?: string; note?: string }
   | { type: 'cta' }
@@ -74,6 +88,19 @@ export type Article = {
 
 /** One article per file in ./posts; a new article = a new file + one import line here. */
 export const articles: Article[] = [
+  aiAgentsForShopify,
+  buildAiAgentShopify,
+  claudeShopify,
+  claudeDuetShopify,
+  shopifyMcp,
+  shopifyFlowAi,
+  aiAgentSecurityShopify,
+  aiCustomerServiceShopify,
+  evaluateAiAssistantEcommerce,
+  geoVsSeo,
+  shopifyMigrationAiAgents,
+  bigcommerceVsShopify,
+  shopify301Redirects,
   shopifyPlus,
   bigcommerceToShopifyMigration,
   shopifyMigrationCost,

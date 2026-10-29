@@ -1,0 +1,15 @@
+Redirect from,Redirect to
+/product/blue-cotton-shirt,/products/blue-cotton-shirt
+/product-category/shirts,/collections/shirts
+/about-us,/pages/about-us
+/2025/05/how-to-care-for-linen,/blogs/news/how-to-care-for-linen
+/product/discontinued-linen-shirt,/collections/shirts
+/blue-cotton-shirt.html,/products/blue-cotton-shirt
+/men/shirts/blue-cotton-shirt.html,/products/blue-cotton-shirt
+/men/shirts.html,/collections/shirts
+/catalog/product/view/id/34,/products/blue-cotton-shirt
+/shirts/7-blue-cotton-shirt.html,/products/blue-cotton-shirt
+/12-shirts,/collections/shirts
+/content/4-delivery-and-returns,/pages/shipping-and-returns
+/brand/3-acme,/collections/acme
+/index.php?controller=category&id_category=12,/collections/shirts

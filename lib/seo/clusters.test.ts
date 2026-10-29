@@ -81,10 +81,29 @@ describe('blog categories', () => {
         'bigcommerce-to-shopify-migration',
         'wix-vs-shopify',
         'squarespace-vs-shopify',
+        'shopify-migration-ai-agents',
+        'bigcommerce-vs-shopify',
       ].sort()
     )
-    expect(byId['ai-agents']).toEqual(['ai-for-ecommerce', 'shopify-magic-sidekick'])
-    expect(byId['ai-search']).toEqual(['agentic-commerce-shopify', 'chatgpt-shopping-shopify', 'geo-for-shopify'])
+    expect(byId.shopify).toContain('shopify-301-redirects')
+    expect(byId['ai-agents']).toEqual(
+      [
+        'ai-agents-for-shopify',
+        'build-ai-agent-shopify',
+        'claude-shopify',
+        'claude-duet-shopify',
+        'shopify-mcp',
+        'shopify-flow-ai',
+        'ai-agent-security-shopify',
+        'ai-customer-service-shopify',
+        'evaluate-ai-assistant-ecommerce',
+        'shopify-magic-sidekick',
+        'ai-for-ecommerce',
+      ].sort()
+    )
+    expect(byId['ai-search']).toEqual(
+      ['agentic-commerce-shopify', 'chatgpt-shopping-shopify', 'geo-for-shopify', 'geo-vs-seo'].sort()
+    )
     expect(byId.growth).toEqual(['ecommerce-growth-strategy-long-term', 'shopify-cro-guide'])
   })
 
