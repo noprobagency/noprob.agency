@@ -15,15 +15,24 @@ export type BlockLink = { label: string; route?: RouteKey; article?: string }
 export type BlocchiCopy = {
   /** Label of the first-level "Sprint" item of the navbar (keyword in every page). */
   navSprint: string
+  /** Home guides carousel: newest articles, categories come from `CLUSTERS`. */
   homeGuides: {
     label: string
     heading: string
     headingEm: string
     text: string
-    /** EN slugs, in order; the anchor of each card is the SEO title of the article. */
-    slugs: string[]
+    /** aria-label of the carousel region. */
+    regionLabel: string
+    filterLabel: string
+    /** Chip that removes the category filter. */
+    filterAll: string
+    /** Reading time suffix, after the minutes ("min read"). */
+    minRead: string
+    prev: string
+    next: string
+    /** Last card, link to the blog index. */
     allGuides: string
-    readCta: string
+    allGuidesText: string
   }
   footer: {
     servicesHeading: string
@@ -75,19 +84,17 @@ const it: BlocchiCopy = {
   navSprint: 'Sprint migrazione',
   homeGuides: {
     label: 'Guide',
-    heading: 'Guide per ',
-    headingEm: 'migrare a Shopify',
-    text: 'Costi, checklist SEO, guide per piattaforma e AI, dal team che gestisce lo Shopify Launch Sprint.',
-    slugs: [
-      'shopify-migration-cost',
-      'shopify-migration-seo-checklist',
-      'woocommerce-to-shopify-migration',
-      'choose-shopify-migration-agency',
-      'geo-for-shopify',
-      'agentic-commerce-shopify',
-    ],
+    heading: 'Shopify, AI ed eCommerce, ',
+    headingEm: 'spiegati',
+    text: 'Guide pratiche su migrazione, Shopify, agenti AI e crescita, scritte dal team che gestisce lo Shopify Launch Sprint.',
+    regionLabel: 'Guide del blog su Shopify, AI ed eCommerce',
+    filterLabel: 'Filtra le guide per argomento',
+    filterAll: 'Tutte',
+    minRead: 'min di lettura',
+    prev: 'Guide precedenti',
+    next: 'Guide successive',
     allGuides: 'Tutte le guide',
-    readCta: 'Leggi la guida',
+    allGuidesText: 'Tutto il blog, diviso per argomento.',
   },
   footer: {
     servicesHeading: 'Servizi',
@@ -179,19 +186,17 @@ const en: BlocchiCopy = {
   navSprint: 'Migration Sprint',
   homeGuides: {
     label: 'Guides',
-    heading: 'Guides for ',
-    headingEm: 'migrating to Shopify',
-    text: 'Costs, SEO checklist, platform guides and AI, from the team that runs the Shopify Launch Sprint.',
-    slugs: [
-      'shopify-migration-cost',
-      'shopify-migration-seo-checklist',
-      'woocommerce-to-shopify-migration',
-      'choose-shopify-migration-agency',
-      'geo-for-shopify',
-      'agentic-commerce-shopify',
-    ],
+    heading: 'Shopify, AI and eCommerce, ',
+    headingEm: 'explained',
+    text: 'Practical guides on migration, Shopify, AI agents and growth, written by the team that runs the Shopify Launch Sprint.',
+    regionLabel: 'Blog guides on Shopify, AI and eCommerce',
+    filterLabel: 'Filter guides by topic',
+    filterAll: 'All',
+    minRead: 'min read',
+    prev: 'Previous guides',
+    next: 'Next guides',
     allGuides: 'All guides',
-    readCta: 'Read the guide',
+    allGuidesText: 'The whole blog, by topic.',
   },
   footer: {
     servicesHeading: 'Services',

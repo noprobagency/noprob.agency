@@ -75,11 +75,14 @@ describe('getRelatedArticles', () => {
 })
 
 describe('blocks that point at articles', () => {
-  it('home guides: 6 existing articles', () => {
+  it('home guides carousel: copy in both locales, every article has a topic and a reading time', () => {
     for (const locale of LOCALES) {
-      const { slugs } = getBlocchiCopy(locale).homeGuides
-      expect(slugs).toHaveLength(6)
-      for (const slug of slugs) expect(getArticle(slug), slug).toBeDefined()
+      const copy = getBlocchiCopy(locale).homeGuides
+      for (const [key, value] of Object.entries(copy)) expect(value, key).not.toBe('')
+    }
+    for (const article of articles) {
+      expect(getCluster(article.slug), article.slug).toBeDefined()
+      expect(article.readingTimeMinutes, article.slug).toBeGreaterThan(0)
     }
   })
 
