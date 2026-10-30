@@ -32,7 +32,8 @@ import { fetchPlatform, pool } from '../lib/cold/fetch-platform.mjs'
 import { normaliseUrl } from '../lib/cold/detect-platform.mjs'
 import { LISTS, api, listContacts } from '../lib/cold/gojiberry.mjs'
 import { optoutSweep } from '../lib/cold/sweep.mjs'
-import { cleanCompany, review } from '../lib/cold-email/approve.mjs'
+import { cleanCompany, review, storeVerdict } from '../lib/cold-email/approve.mjs'
+import { storeCheck } from '../lib/cold/store-check.mjs'
 import { DAMIANO, helloPayload, pickQueue } from '../lib/cold-email/damiano.mjs'
 import { danteLead } from '../lib/cold-email/dante.mjs'
 import { domainOf, fromDamiano, fromGojiberry } from '../lib/cold-email/leads.mjs'
@@ -139,8 +140,23 @@ const directRoom = cloud || dailyRunning ? 0 : Math.max(0, directPool - directWa
 
 const plan = { approve: [], direct: [], shopify: [], reject: [], hold: [] }
 let skipped = 0
+// Agent leads about to be approved get a second look: a real consumer shop (cart, not
+// B2B). Damiano's contacts were checked the same way before they reached the list.
+const decisions = new Map(fresh.map((c) => [c.id, review(c, checks.get(normaliseUrl(c.website)) || null, taken)]))
+const toCheck = fresh.filter((c) => decisions.get(c.id).action === 'approve' && !/Lotto Damiano/.test(c.note || ''))
+const stores = await pool([...new Set(toCheck.map((c) => decisions.get(c.id).domain))], 8, (d) => storeCheck(d))
+for (const c of toCheck) {
+  const d = decisions.get(c.id)
+  const store = stores.get(d.domain)
+  if (store.drop === 'unreachable') decisions.set(c.id, { ...d, action: 'hold', reason: 'site unreachable' })
+  else {
+    const reason = storeVerdict(store, c.companySize)
+    if (reason) decisions.set(c.id, { ...d, action: 'hold', reason })
+  }
+}
+
 for (const c of fresh.sort((a, b) => Number(b.total_scoring) - Number(a.total_scoring))) {
-  const decision = review(c, checks.get(normaliseUrl(c.website)) || null, taken)
+  const decision = decisions.get(c.id)
   // Many shops block datacenter addresses: from the cloud an unreachable site is not
   // held but left for the next review (the Mac's, or tomorrow's).
   if ((cloud || process.env.CI) && decision.reason === 'site unreachable') {
