@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.118.0 (30 Oct 2026)
+
+- **Damiano's queue matches Dante's agreement**: every row of `coda.json` now says `source: "damiano"`, and the dedup also reads the Gojiberry list 64866 (ex Leonardo), next to 63200, 65682, 66757 and 64769.
+
 ### Changelog v1.117.0 (30 Oct 2026)
 
 - **Damiano ready for the cloud**: `scripts/damiano-scrape.mjs` gains `--add N --spend USD`, which are relative to the saved state, for the daily run in crm-noprobagency (`damiano.yml`). The free store check now runs inside the script, before any paid call: the homepage or a usual shop page must show a cart, and B2B signals must not outweigh it. Before, this check was a separate step on the 30 Oct batch. The script now writes `coda.json`, the queue Dante's review reads (v1.116.0). The queue holds only ready leads: a company mailbox in Italy, not in any channel and not in `usati.json`. Each row has `channel` (`hello` with a LinkedIn URL, otherwise `diretto`). The run also stops 6 calls short of the budget, so it ends under it.
