@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.122.0 (30 Oct 2026)
+
+- **Dante follow-ups shorter (1, 5, 7)**: Gojiberry's customer success shortened campaign 46398 in the call with Antonio, who accepted it. Follow-ups now go out 5 and 12 days after the first email instead of 7 and 21; texts unchanged. `DANTE_DELAYS` and the README follow, so the CRM registry computes the right next dates. Applies to every send from 30 Oct 17:40 UTC; results before and after are compared on 13 Nov.
+
 ### Changelog v1.121.0 (30 Oct 2026)
 
 - **Repository renamed to noprob.agency and public again**: Marco's image URLs point at the new name; the repo had briefly become private with the rename, which dropped the branch protection of main (restored) and would have counted Actions minutes.
