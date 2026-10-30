@@ -11,7 +11,12 @@
 // ~$0.007 each). Only verdict "valid" becomes a contact. A lead keeps its best contact
 // and, when one exists, a second verified one. Lead data stays local (docs/cold/ is gitignored).
 //
+// --market intl is Ada's mode: US, UK and AU stores, a decision maker with a LinkedIn
+// URL, no paid email find (add --email to pay for one), the person's country must match
+// the market, 5-999 employees, and every store already in a Gojiberry list is skipped.
+//
 // Usage: node scripts/damiano-scrape.mjs --target 500 [--budget 7] [--out docs/cold/damiano] [--crm <crm checkout>]
+//        node scripts/damiano-scrape.mjs --market intl --target 200   (writes docs/cold/damiano/intl)
 
 import { execFile } from 'node:child_process'
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
@@ -19,6 +24,7 @@ import { join } from 'node:path'
 import { promisify } from 'node:util'
 import { normaliseUrl, phpStatus, siteMatchesCompany } from '../lib/cold/detect-platform.mjs'
 import { fetchPlatform, pool } from '../lib/cold/fetch-platform.mjs'
+import { listContacts } from '../lib/cold/gojiberry.mjs'
 
 const run = promisify(execFile)
 const args = process.argv.slice(2)
@@ -30,7 +36,10 @@ const TARGET = Number(opt('target', 50))
 const BUDGET_MICRO = Number(opt('budget', 5)) * 1e6
 // --export rewrites the lists from the saved state, with no calls at all.
 const EXPORT_ONLY = args.includes('--export')
-const OUT = opt('out', 'docs/cold/damiano')
+const INTL = opt('market', 'it') === 'intl'
+// In intl mode the email is optional: Ada is LinkedIn-first and Gojiberry finds it later.
+const PAY_EMAIL = !INTL || args.includes('--email')
+const OUT = opt('out', INTL ? 'docs/cold/damiano/intl' : 'docs/cold/damiano')
 const STATE_FILE = join(OUT, 'state.json')
 const PEOPLE_VERSION = 2 // bump to redo the free people searches on cached companies
 
@@ -59,10 +68,28 @@ const VERTICALS = [
   'fitness equipment brands', 'stationery, gifts and paper goods brands', 'craft beer and spirits brands',
 ]
 const SIZES = ['2-10', '11-50', '51-200', '201-500']
-const QUERIES = [
-  ...FIRST,
-  ...SIZES.flatMap((s) => VERTICALS.map((v) => `Italian ${v} headquartered in Italy selling online with an ecommerce website, ${s} employees`)),
+// Ada's markets: the person's country_code must be one of the codes.
+const MARKETS = [
+  { market: 'US', name: 'the United States', codes: ['US'] },
+  { market: 'UK', name: 'the United Kingdom', codes: ['GB', 'UK'] },
+  { market: 'AU', name: 'Australia', codes: ['AU'] },
 ]
+const INTL_VERTICALS = [
+  'fashion and apparel brands', 'beauty, cosmetics and skincare brands', 'food and beverage DTC brands',
+  'home decor and furniture retailers', 'jewelry and watch brands', 'sports, outdoor and cycling brands',
+  'shoe and footwear brands', 'pet products brands', 'supplements and wellness brands', 'wine, beer and spirits brands',
+]
+// Markets interleaved, so a small target still covers all three.
+const INTL_QUERIES = [
+  'Online retail stores headquartered in {m} using Magento, WooCommerce, PrestaShop, BigCommerce or Salesforce Commerce Cloud, 11-500 employees',
+  ...INTL_VERTICALS.map((v) => `${v} headquartered in {m} selling online with an ecommerce website, 11-500 employees`),
+].flatMap((q) => MARKETS.map((m) => ({ q: q.replace('{m}', m.name), market: m.market })))
+const QUERIES = INTL
+  ? INTL_QUERIES
+  : [
+      ...FIRST,
+      ...SIZES.flatMap((s) => VERTICALS.map((v) => `Italian ${v} headquartered in Italy selling online with an ecommerce website, ${s} employees`)),
+    ].map((q) => ({ q, market: 'IT' }))
 const PAGES = 10
 
 const STORE_PLATFORMS = new Set(['magento', 'woocommerce', 'prestashop', 'shopware', 'salesforce-commerce-cloud', 'bigcommerce'])
@@ -74,17 +101,37 @@ const RANKS = [
   [/\bcmo\b|marketing.*(director|manager|head|responsabile|direttore)|(head|responsabile|direttore).*marketing|\bcoo\b|chief operating/i, 3],
   [/e-?commerce|digital/i, 4],
 ]
-const ROLE_LABEL = { 1: 'titolare/CEO', 2: 'e-commerce/digital', 3: 'marketing/ops', 4: 'altro e-commerce' }
+// Ada's list (30 Oct): no "President of Sales", VPs only for marketing or IT, no
+// "online operations" or merchandising, which the Italian ranks would let through.
+const INTL_RANKS = [
+  [/\b(ceo|founder|co-?founder|owner|managing director|general manager|coo|chief operating)\b|(?<!vice )\bpresident\b(?!.*\bof\b)/i, 1],
+  [/(head|director|vp|vice president) of (e-?commerce|digital)|(e-?commerce|digital) (director|manager|lead)|chief digital/i, 2],
+  [/\bcmo\b|chief marketing|(head|director|vp|vice president),? (of )?marketing|marketing director|\bvp\b.*\b(it|technology)\b/i, 3],
+]
+const ROLE_LABEL = INTL
+  ? { 1: 'founder/CEO/owner', 2: 'ecommerce/digital', 3: 'marketing/IT' }
+  : { 1: 'titolare/CEO', 2: 'e-commerce/digital', 3: 'marketing/ops', 4: 'altro e-commerce' }
 // Role searches run on top of the plain domain search, which lists only 25 people.
-const ROLE_SEARCHES = ['founder', 'CEO', 'owner', 'amministratore', 'general manager', 'e-commerce manager']
+const ROLE_SEARCHES = INTL
+  ? ['founder', 'CEO', 'owner', 'managing director', 'ecommerce', 'marketing director']
+  : ['founder', 'CEO', 'owner', 'amministratore', 'general manager', 'e-commerce manager']
 // Consumer brands only: Hunter drifts into agencies, SaaS and B2B manufacturers whose
 // WordPress has a WooCommerce plugin. The industry comes free with the people search.
 const FIT_INDUSTRY = /retail|apparel|fashion|luxury|jewel|cosmetic|personal care|beauty|food|beverage|wine|winer|spirits|wellness|sporting goods|sports equipment|furniture|home furnish|consumer|footwear|toy|pet |e-?commerce|internet marketplace|textile|eyewear|leather/i
-const fits = (c) => FIT_INDUSTRY.test(c.industry || '')
+// B2B industries that pass the words above (Ada's and the Fable review's discards).
+const B2B_INDUSTRY = /office equipment|office furniture|wholesale|food production/i
+// Employee bands come as "20 - 99" or "< 5"; unknown sizes pass. Intl only, Ada's 5-999.
+const sizeFits = (c) => {
+  if (!INTL || !c.employees) return true
+  if (/^</.test(c.employees)) return false
+  const low = parseInt(c.employees, 10)
+  return Number.isNaN(low) || (low >= 5 && low < 1000)
+}
+const fits = (c) => FIT_INDUSTRY.test(c.industry || '') && !B2B_INDUSTRY.test(c.industry || '') && sizeFits(c)
 const SKIP_TITLE = /intern|stagi|tirocin|assistant|assistente|customer (service|care)|magazzin|warehouse|student/i
 const rankOf = (title = '') => {
   if (!title || SKIP_TITLE.test(title)) return null
-  for (const [re, r] of RANKS) if (re.test(title)) return r
+  for (const [re, r] of INTL ? INTL_RANKS : RANKS) if (re.test(title)) return r
   return null
 }
 // Same rule as Ada and Dante: an error page (bot wall, 429, 5xx) proves nothing about the platform.
@@ -146,7 +193,7 @@ async function discover(query, offset) {
 }
 
 async function discoverPage() {
-  for (const q of QUERIES) {
+  for (const { q, market } of QUERIES) {
     for (let page = 0; page < PAGES; page++) {
       const key = `${q}#${page * 100}`
       if (state.queries[key] != null) {
@@ -160,7 +207,7 @@ async function discoverPage() {
       for (const row of rows) {
         const domain = row.domain?.toLowerCase().replace(/^www\./, '')
         if (domain && !state.companies[domain]) {
-          state.companies[domain] = { domain, name: row.organization, query: q }
+          state.companies[domain] = { domain, name: row.organization, query: q, market }
           fresh.push(domain)
         }
       }
@@ -174,7 +221,7 @@ async function discoverPage() {
 async function checkPlatforms(domains) {
   const todo = domains.filter((d) => !state.companies[d].platform || state.companies[d].status === undefined)
   const res = await pool(todo, 16, (d) => fetchPlatform(normaliseUrl(d), { timeout: 12000 }))
-  for (const [d, r] of res) Object.assign(state.companies[d], { platform: r.platform, evidence: r.evidence, php: r.php, status: r.status })
+  for (const [d, r] of res) Object.assign(state.companies[d], { platform: r.platform, evidence: r.evidence, php: r.php, status: r.status, checkedAt: new Date().toISOString() })
   save()
 }
 
@@ -184,6 +231,7 @@ const mapPerson = (p) => ({
   first: clean(p.first_name),
   last: clean(p.last_name),
   title: p.title,
+  country: clean(p.country_code),
   linkedin: p.employee_linkedin && p.employee_linkedin !== 'N/A' ? p.employee_linkedin : null,
 })
 const FREE = { 'X-Treg-Route-Prefer': 'quickenrich', 'X-Treg-Route-Waterfall': '0', 'X-Treg-Route-Max-Cost': '0.01' }
@@ -203,7 +251,7 @@ async function people(c, { roles = true } = {}) {
     const r = await treg('treg.people.search', { company_domain: c.domain, limit: 25 }, FREE)
     const rows = r?.output?.people || []
     add(rows)
-    if (rows[0]) Object.assign(c, { legalName: rows[0].company_name, employees: rows[0].employee_count, revenue: rows[0].revenue, industry: rows[0].industry, city: rows[0].city, companyLinkedin: rows[0].company_linked })
+    if (rows[0]) Object.assign(c, { legalName: rows[0].company_name, employees: rows[0].employee_count, revenue: rows[0].revenue, industry: rows[0].industry, city: rows[0].city, country: clean(rows[0].country_code), companyLinkedin: rows[0].company_linked })
     c.peopleV = 1
   }
   if (roles && c.peopleV < PEOPLE_VERSION && (c.industry === undefined || fits(c))) {
@@ -231,13 +279,23 @@ async function findEmail(c, p) {
   return p.verdict === 'valid' ? p : null
 }
 
-const contact = (p) => ({ name: p.name, title: p.title, email: p.email, linkedin: p.linkedin, rank: p.rank })
+const contact = (p) => ({ name: p.name, first: p.first, last: p.last, title: p.title, email: p.email || null, linkedin: p.linkedin, country: p.country || null, rank: p.rank })
 
 /** Best verified contact plus a second one: upgrades an older lead when a higher role turns up. */
 async function work(c, { second = true } = {}) {
   const found = await people(c)
   if (!fits(c)) return
-  const ranked = found.filter((p) => p.rank != null).sort((a, b) => a.rank - b.rank)
+  let ranked = found.filter((p) => p.rank != null).sort((a, b) => a.rank - b.rank)
+  if (INTL) {
+    // Ada needs the profile URL, someone in the store's market, and nobody she already has.
+    const codes = MARKETS.find((m) => m.market === c.market)?.codes || []
+    ranked = ranked.filter((p) => p.linkedin && codes.includes(p.country || c.country) && !knownProfiles.has(profileKey(p.linkedin)))
+    if (!PAY_EMAIL) {
+      const [primary, backup] = ranked
+      c.lead = primary ? { ...contact(primary), second: backup ? contact(backup) : null, bestRankFound: primary.rank } : null
+      return
+    }
+  }
   const valid = () => ranked.filter((p) => p.verdict === 'valid')
   const bestRank = ranked[0]?.rank
   // Primary: try the best ranks first, up to 3 paid attempts, until one is valid.
@@ -274,6 +332,30 @@ function score(c) {
 
 mkdirSync(OUT, { recursive: true })
 const known = knownDomains()
+// Gojiberry lists, read only: Ada 63200, Dante 65682, DIRETTO 66757, Shopify reserve 64769.
+// Their stores and LinkedIn profiles are never handed out again.
+const profileKey = (url) => String(url).toLowerCase().replace(/^https?:\/\/(www\.)?/, '').replace(/\/+$/, '')
+const knownProfiles = new Set()
+try {
+  for (const id of [63200, 65682, 66757, 64769]) {
+    for (const c of await listContacts(id)) {
+      if (c.website) {
+        try {
+          known.add(new URL(normaliseUrl(c.website)).hostname.replace(/^www\./, '').toLowerCase())
+        } catch {}
+      }
+      for (const k of ['linkedinUrl', 'linkedin_url', 'linkedin', 'profileUrl']) if (c[k]) knownProfiles.add(profileKey(c[k]))
+    }
+  }
+} catch (err) {
+  // Ada's mode must never hand her a store she already has; Italy can run on the local files.
+  if (INTL) throw err
+  console.error(`Gojiberry lists not read (${err.message.split('\n')[0]}), local files only`)
+}
+// Intl never repeats an Italian lead's store, and vice versa through the CRM files.
+if (INTL && existsSync('docs/cold/damiano/leads.json')) {
+  for (const l of JSON.parse(readFileSync('docs/cold/damiano/leads.json', 'utf8'))) known.add(l.domain)
+}
 const fresh = (d) => !known.has(d)
 const leads = () => Object.values(state.companies).filter((c) => c.lead && fits(c) && reachable(c) && fresh(c.domain))
 const isStore = (c) => STORE_PLATFORMS.has(c.platform) && reachable(c) && fresh(c.domain)
@@ -314,8 +396,10 @@ if (!EXPORT_ONLY) {
   }
 
   // Pass 3: second verified contact for leads that have one person only, while the budget lasts.
-  await pass(leads().filter((c) => !c.lead.second).map((c) => c.domain), { second: true, seconds: true })
-  log('second contacts added')
+  if (PAY_EMAIL) {
+    await pass(leads().filter((c) => !c.lead.second).map((c) => c.domain), { second: true, seconds: true })
+    log('second contacts added')
+  }
 }
 
 const company = (c) => ({
@@ -344,12 +428,23 @@ const leadRows = leads()
     ...company(c),
     name: c.lead.name,
     title: c.lead.title,
-    email: c.lead.email,
+    email: c.lead.email || null,
     linkedin: c.lead.linkedin,
     second: c.lead.second,
     others: others(c, [c.lead.name, c.lead.second?.name]),
     score: score(c),
-    verdict: 'valid',
+    verdict: c.lead.email ? 'valid' : null,
+    // Ada's import fields
+    ...(INTL && {
+      firstName: c.lead.first,
+      lastName: c.lead.last,
+      role: ROLE_LABEL[c.lead.rank],
+      company: c.legalName || c.name,
+      website: `https://${c.domain}`,
+      market: c.market,
+      country: c.lead.country || c.country || null,
+      platformCheckedAt: (c.checkedAt || '').slice(0, 10) || null,
+    }),
   }))
   .sort((a, b) => b.score - a.score)
 const shopifyRows = Object.values(state.companies)
@@ -385,5 +480,5 @@ writeFileSync(join(OUT, 'shopify.json'), JSON.stringify(shopifyRows, null, 2))
 writeFileSync(join(OUT, 'summary.json'), JSON.stringify(summary, null, 2))
 // The CRM section damiano/ reads data/damiano.json from the crm-noprobagency checkout.
 const crm = opt('crm', null)
-if (crm) writeFileSync(join(crm, 'data/damiano.json'), JSON.stringify({ summary, leads: leadRows, shopify: shopifyRows }))
+if (crm && !INTL) writeFileSync(join(crm, 'data/damiano.json'), JSON.stringify({ summary, leads: leadRows, shopify: shopifyRows }))
 console.log(JSON.stringify(summary, null, 2))
