@@ -33,8 +33,9 @@ import { normaliseUrl } from '../lib/cold/detect-platform.mjs'
 import { LISTS, api, listContacts } from '../lib/cold/gojiberry.mjs'
 import { optoutSweep } from '../lib/cold/sweep.mjs'
 import { cleanCompany, review } from '../lib/cold-email/approve.mjs'
+import { DAMIANO, helloPayload, pickQueue } from '../lib/cold-email/damiano.mjs'
 import { danteLead } from '../lib/cold-email/dante.mjs'
-import { domainOf, fromGojiberry } from '../lib/cold-email/leads.mjs'
+import { domainOf, fromDamiano, fromGojiberry } from '../lib/cold-email/leads.mjs'
 import { readSuppressed } from '../lib/cold-email/suppression.mjs'
 import { publishTaken, takenBody, takenSet } from '../lib/cold-email/taken.mjs'
 
@@ -65,12 +66,61 @@ const fromMac = cloud ? takenSet(process.env.COLD_TAKEN) : null
 const taken = { linkedin, direct: fromMac || direct, suppressed: fromMac || suppressed }
 if (!cloud && !dry) publishTaken(takenBody(direct, suppressed))
 
-const contacts = await listContacts(DANTE.list)
+let contacts = await listContacts(DANTE.list)
 // Started means started in Dante's campaign: leads taken over from another campaign
 // (the 95 Italians of the paused ex-Leonardo list) carry its history and still need review.
 const inDante = (c) => (c.campaignStatus || []).some((s) => s.campaignId === DANTE.campaign)
 const started = (c) => c.readyForCampaign || inDante(c)
 const approvedStores = new Set(contacts.filter(started).map((c) => domainOf(normaliseUrl(c.website))))
+// The daily send run keeps leads.json in memory and saves after every email: while it
+// runs (Mac woken late, both jobs at once) the overflow waits for the next review.
+const dailyRunning = (() => {
+  try {
+    return Boolean(execFileSync('pgrep', ['-f', 'cold-email-daily'], { encoding: 'utf8' }).trim())
+  } catch {
+    return false
+  }
+})()
+// Damiano's nightly queue tops up both channels when they run low: hello@ under 25
+// leads approved or waiting for review (up to 50, those with a LinkedIn profile, which
+// Gojiberry needs), the direct channel under 30 first emails ready (up to 60).
+const today = new Date().toLocaleDateString('en-CA', { timeZone: 'Europe/Lisbon' })
+const feed = { hello: 0, direct: 0 }
+if (!cloud && existsSync(DAMIANO.queue)) {
+  const used = existsSync(DAMIANO.used) ? JSON.parse(readFileSync(DAMIANO.used, 'utf8')) : {}
+  const domains = new Set([...linkedin, ...db.leads.map((l) => l.domain), ...contacts.map((c) => domainOf(normaliseUrl(c.website))), ...(await websites(DIRECT.list)), ...(await websites(LISTS.shopify))].filter(Boolean))
+  const emails = new Set([...db.leads.map((l) => l.email), ...contacts.map((c) => (c.email || '').toLowerCase())].filter(Boolean))
+  let rows = pickQueue(JSON.parse(readFileSync(DAMIANO.queue, 'utf8')).leads || [], { used, domains, emails, suppressed })
+  const helloSupply = contacts.filter((c) => (c.readyForCampaign && !inDante(c)) || (!processed.has(c.id) && !started(c) && !c.rejectedAt && !c.state)).length
+  if (helloSupply < 25) {
+    for (const r of rows.filter((x) => x.linkedin).slice(0, 50 - helloSupply)) {
+      try {
+        if (!dry) await api('POST', '/v1/contact', helloPayload(r, DANTE.list))
+        used[domainOf(r.domain)] = { channel: 'hello@', date: today }
+        feed.hello++
+      } catch (err) {
+        console.error(`Damiano -> hello@ failed: ${err.message.split(' ->')[0]}`)
+      }
+    }
+    rows = rows.filter((r) => !used[domainOf(r.domain)])
+    if (feed.hello && !dry) contacts = await listContacts(DANTE.list)
+  }
+  const ready = db.leads.filter((l) => l.segment === 'target' && !l.sequence.sent.length && !l.sequence.stoppedAt).length
+  if (ready < 30 && !dailyRunning) {
+    const take = [...rows.filter((r) => !r.linkedin), ...rows.filter((r) => r.linkedin)].slice(0, 60)
+    const live = await pool(take.map((r) => `https://${domainOf(r.domain)}`), 12, (u) => fetchPlatform(u))
+    for (const r of take) {
+      const lead = fromDamiano(r, live.get(`https://${domainOf(r.domain)}`))
+      if (lead.segment === 'review' && process.env.CI) continue // site blocked from the cloud: stays in the queue
+      if (!dry) db.leads.push(lead)
+      used[lead.domain] = { channel: 'antonio@', date: today }
+      if (lead.segment === 'target') feed.direct++
+    }
+    if (!dry && take.length) writeFileSync(DIRECT.leads, JSON.stringify({ ...db, updatedAt: new Date().toISOString() }, null, 2))
+  }
+  if (!dry) writeFileSync(DAMIANO.used, JSON.stringify(used, null, 2))
+}
+
 const seat = ((await api('GET', '/v1/email-seat')) || []).find((s) => s.email === DANTE.mailbox)
 // Fill hello@ every day: what the queue (follow-ups due, approved leads waiting) leaves
 // of the daily limit goes to new leads. Gojiberry holds anything over the limit for the
@@ -85,15 +135,6 @@ const checks = await pool(urls, 12, (u) => fetchPlatform(u))
 // The direct channel takes the overflow up to a pool of first emails waiting to go out.
 const directPool = (existsSync(DIRECT.config) ? JSON.parse(readFileSync(DIRECT.config, 'utf8')).directPool : null) ?? 55
 const directWaiting = db.leads.filter((l) => l.segment === 'target' && !l.sequence.sent.length && !l.sequence.stoppedAt).length
-// The daily send run keeps leads.json in memory and saves after every email: while it
-// runs (Mac woken late, both jobs at once) the overflow waits for the next review.
-const dailyRunning = (() => {
-  try {
-    return Boolean(execFileSync('pgrep', ['-f', 'cold-email-daily'], { encoding: 'utf8' }).trim())
-  } catch {
-    return false
-  }
-})()
 const directRoom = cloud || dailyRunning ? 0 : Math.max(0, directPool - directWaiting)
 
 const plan = { approve: [], direct: [], shopify: [], reject: [], hold: [] }
@@ -179,7 +220,7 @@ if (!dry && !cloud) {
   }
 }
 
-const line = `- ${new Date().toISOString().slice(0, 16).replace('T', ' ')}${dry ? ' (dry)' : ''} · Dante (Gojiberry email${cloud ? ', cloud' : ''}) · nuovi ${fresh.length} · approvati ${plan.approve.length} (capacità ${cap}) · al canale diretto ${plan.direct.length} (spazio ${directRoom}) · Shopify spostati ${plan.shopify.length} · scartati ${plan.reject.length} · da guardare ${plan.hold.length}${cloud ? ` (${Object.entries(plan.hold.reduce((n, h) => ({ ...n, [h.reason]: [...(n[h.reason] || []), h] }), {})).map(([r, l]) => `${r} ${l.length}`).join(', ') || '-'}) · siti bloccati, li guarda il Mac ${skipped}` : ''} · opt-out ${sweep.excluded}\n`
+const line = `- ${new Date().toISOString().slice(0, 16).replace('T', ' ')}${dry ? ' (dry)' : ''} · Dante (Gojiberry email${cloud ? ', cloud' : ''}) · nuovi ${fresh.length} · approvati ${plan.approve.length} (capacità ${cap}) · al canale diretto ${plan.direct.length} (spazio ${directRoom}) · da Damiano hello@ ${feed.hello} diretto ${feed.direct} · Shopify spostati ${plan.shopify.length} · scartati ${plan.reject.length} · da guardare ${plan.hold.length}${cloud ? ` (${Object.entries(plan.hold.reduce((n, h) => ({ ...n, [h.reason]: [...(n[h.reason] || []), h] }), {})).map(([r, l]) => `${r} ${l.length}`).join(', ') || '-'}) · siti bloccati, li guarda il Mac ${skipped}` : ''} · opt-out ${sweep.excluded}\n`
 if (!dry) {
   mkdirSync(dirname(LOG), { recursive: true })
   appendFileSync(LOG, line)
