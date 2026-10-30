@@ -172,14 +172,19 @@ const sentOn = (day, channel) => {
   const dan = read('cold-email/data/dante.json', { leads: [] }).leads.filter((l) => (l.sent || []).some((x) => x.date === day)).length
   return channel === 'antonio@' ? dir : dan
 }
-const out = {
-  updatedAt: new Date().toISOString(),
-  today,
-  gojiberryFetchedAt: lists.fetchedAt,
-  counts: { stores: rows.length, byChannel: count((r) => r.channel), byStatus: count((r) => r.status), bySource: rows.flatMap((r) => r.sources).reduce((m, k) => ((m[k] = (m[k] || 0) + 1), m), {}), byPlatform: count((r) => r.platform || 'sconosciuta'), sentToday: { 'antonio@': sentOn(today, 'antonio@'), 'hello@': sentOn(today, 'hello@') }, limit: 50 },
-  stores: rows,
-}
+// Emails sent per working day, last 15 days: the one trend Antonio looks at
+const days = []
+for (const d = new Date(`${today}T12:00:00`); days.length < 15; d.setDate(d.getDate() - 1)) if (d.getDay() % 6) days.unshift(d.toISOString().slice(0, 10))
+const sentByDay = Object.fromEntries(days.map((day) => [day, { 'antonio@': sentOn(day, 'antonio@'), 'hello@': sentOn(day, 'hello@') }]))
+const counts = { stores: rows.length, byChannel: count((r) => r.channel), byStatus: count((r) => r.status), bySource: rows.flatMap((r) => r.sources).reduce((m, k) => ((m[k] = (m[k] || 0) + 1), m), {}), byPlatform: count((r) => r.platform || 'sconosciuta'), sentToday: sentByDay[today], sentByDay, limit: 50 }
+const out = { updatedAt: new Date().toISOString(), today, gojiberryFetchedAt: lists.fetchedAt, counts, stores: rows }
 writeFileSync(join(repo, 'data/registry.json'), JSON.stringify(out))
+
+// History: one line per day with the aggregate numbers, so the trend survives every rebuild
+const histPath = join(repo, 'data/storia.json')
+const hist = read(histPath, {})
+hist[today] = { stores: rows.length, byChannel: counts.byChannel, byStatus: counts.byStatus, sent: sentByDay[today] }
+writeFileSync(histPath, JSON.stringify(hist, null, 1))
 console.log(`${rows.length} stores -> ${join(repo, 'data/registry.json')}`)
 console.log('by channel', JSON.stringify(out.counts.byChannel))
 console.log('by status ', JSON.stringify(out.counts.byStatus))
@@ -187,8 +192,8 @@ console.log('by source ', JSON.stringify(out.counts.bySource))
 
 if (args.includes('--push')) {
   const git = (...a) => execFileSync('git', ['-C', repo, '-c', 'user.name=noprobagency', '-c', 'user.email=hello@noprob.agency', ...a], { encoding: 'utf8' })
-  git('add', 'data/registry.json')
-  if (git('status', '--porcelain', 'data/registry.json').trim()) {
+  git('add', 'data/registry.json', 'data/storia.json')
+  if (git('status', '--porcelain', 'data/registry.json', 'data/storia.json').trim()) {
     git('commit', '-q', '-m', `chore(crm): registry update ${today}`)
     git('push', '-q')
     console.log('pushed')

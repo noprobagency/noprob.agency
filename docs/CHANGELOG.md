@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.107.0 (30 Oct 2026)
+
+- **CRM registry keeps a daily history**: `scripts/crm-registry.mjs` now writes emails sent per working day for the last 15 days and appends one line per day to `data/storia.json` in the CRM, so the trend survives every rebuild. The CRM home is reduced to four numbers (emails today, hot and replies, in progress, ready to contact), one chart and six views.
+
 ### Changelog v1.106.0 (30 Oct 2026)
 
 - **Damiano supplies Ada too**: `scripts/damiano-scrape.mjs --market intl` sources US, UK and AU non-Shopify stores for Ada, with the filters she asked for after the first 100-lead test (75 imported, 25 dropped). Each lead is a decision maker with a LinkedIn URL. Accepted titles are founder, CEO, owner, MD, GM, COO and president, but never "president of sales"; also head or director of ecommerce/digital, CMO, and VP marketing or IT. The person must be in the store's market and the company must have 5-999 employees. There is no paid email find unless `--email` is passed. Output goes to `docs/cold/damiano/intl` (gitignored) with Ada's import fields. Both modes now skip the stores and profiles already in the Gojiberry lists 63200, 65682, 66757 and 64769 (read only), and drop the office equipment, office furniture, wholesale and food production industries.
