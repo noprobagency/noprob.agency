@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.115.0 (30 Oct 2026)
+
+- **Main requires an up-to-date branch**: branch protection now needs the `check` status on a branch that includes the latest main, so the version check compares against the real main; before merging run `gh pr update-branch <n>`, wait for green, then merge. Restored from PR #172 (lost in a merge): **cold email scripts ready to run in the private CRM repo** (Dante's review and the direct sends as hourly jobs, state in `state/`, secrets for Gojiberry and Gmail, `COLD_LIVE` switch, trial in parallel with the Mac on 2 Nov).
+
 ### Changelog v1.114.0 (30 Oct 2026)
 
 - **Claudio's memory lives in the private CRM repo**: `manager/data` is now a symlink to `manager/` in crm-noprobagency (so the cloud routine can read and write it), the registry push also commits that folder, and the symlink is gitignored.
