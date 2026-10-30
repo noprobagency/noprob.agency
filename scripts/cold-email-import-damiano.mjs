@@ -20,6 +20,7 @@ import { fetchPlatform, pool } from '../lib/cold/fetch-platform.mjs'
 import { LISTS, api, listContacts } from '../lib/cold/gojiberry.mjs'
 import { normaliseUrl } from '../lib/cold/detect-platform.mjs'
 import { domainOf, fromDamiano } from '../lib/cold-email/leads.mjs'
+import { helloPayload } from '../lib/cold-email/damiano.mjs'
 import { readSuppressed } from '../lib/cold-email/suppression.mjs'
 
 const LEADS = 'cold-email/data/leads.json'
@@ -80,25 +81,12 @@ if (channel === 'direct') {
   stats.noLinkedin = without.length
   stats.created = 0
   for (const r of withProfile) {
-    const [firstName, ...rest] = (r.name || '').trim().split(/\s+/)
     if (dry) {
       stats.created++
       continue
     }
     try {
-      await api('POST', '/v1/contact', {
-        firstName: firstName || r.brand,
-        lastName: rest.join(' ') || '-',
-        profileUrl: r.linkedin,
-        jobTitle: r.title || undefined,
-        company: r.brand,
-        website: `https://${domainOf(r.domain)}`,
-        industry: r.industry || undefined,
-        location: r.city ? `${r.city}, Italy` : 'Italy',
-        email: r.email,
-        note: 'Lotto Damiano (scraping, email verificata)',
-        listId: DANTE_LIST,
-      })
+      await api('POST', '/v1/contact', helloPayload(r, DANTE_LIST))
       stats.created++
     } catch (err) {
       stats.errors = (stats.errors || 0) + 1
