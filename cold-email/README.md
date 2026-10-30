@@ -24,7 +24,7 @@ Secondo motore del canale, su Gojiberry e da **hello@noprob.agency** (antonio@ r
 |---|---|---|
 | Agente sorgente | 41228 "Dante · Email Italia" | ex Leonardo, Italia, titolari ed eCommerce più ruoli tecnici (CTO, IT, web manager), segnali tecnologia (WooCommerce, Magento, PrestaShop, Shopware, SFCC) ed eventi, punteggio minimo 0,6 |
 | Lista | 65682 | solo questo agente |
-| Campagna | 46398 | 3 email fisse, giorni 0, +7 e +21 (ritardi 1, 7, 14), lun-ven 9:00, Review Mode attivo, oggetto "[Company] su Shopify?" e follow-up nello stesso thread |
+| Campagna | 46398 | 3 email fisse, giorni 0, +5 e +12 (ritardi 1, 5, 7 dal 30/10, prima 1, 7, 14), lun-ven 9:00, Review Mode attivo, oggetto "[Company] su Shopify?" e follow-up nello stesso thread |
 | Casella | hello@ (cercata per indirizzo, seat 11595 dal 26/10) | casella già usata in passato: 30 al giorno da subito (ramp-up spento), smart warm-up e open tracking spenti, link di disiscrizione attivo |
 
 **Sequenza Dante (v2, regola Cannonball: osservazione → valore → proposta, si parla di loro)**
