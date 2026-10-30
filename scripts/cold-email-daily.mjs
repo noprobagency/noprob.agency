@@ -40,9 +40,15 @@ const args = process.argv.slice(2)
 const dry = args.includes('--dry')
 const config = { approved: null, dailyCap: 10, mailboxMax: 55, manualReserve: 10, adaCampaign: 45702, adaEmailsLive: false, gapSeconds: [40, 120], crmPath: `${DIR}/crm`, ...(existsSync(CONFIG) ? JSON.parse(readFileSync(CONFIG, 'utf8')) : {}) }
 const cap = args.includes('--cap') ? Number(args[args.indexOf('--cap') + 1]) : config.dailyCap
+// In the cloud (crm-noprobagency, GitHub Actions) the day is split in hourly runs:
+// --slots N sends this run's share of what is left (N runs left today, this one included),
+// --gap a,b sets the pause between emails, COLD_CRM_PATH points at the CRM checkout.
+const slots = args.includes('--slots') ? Math.max(1, Number(args[args.indexOf('--slots') + 1])) : 1
+if (args.includes('--gap')) config.gapSeconds = args[args.indexOf('--gap') + 1].split(',').map(Number)
+if (process.env.COLD_CRM_PATH) config.crmPath = process.env.COLD_CRM_PATH
 // Keep the Mac awake while this run lives (launchd starts node directly: a job whose
 // program is /usr/bin/caffeinate fails to spawn).
-if (!dry) spawn('caffeinate', ['-i', '-w', String(process.pid)], { detached: true, stdio: 'ignore' }).unref()
+if (!dry && process.platform === 'darwin') spawn('caffeinate', ['-i', '-w', String(process.pid)], { detached: true, stdio: 'ignore' }).unref()
 
 const today = new Date().toLocaleDateString('en-CA', { timeZone: 'Europe/Lisbon' })
 const until = args.includes('--until') ? args[args.indexOf('--until') + 1] : null
@@ -132,13 +138,17 @@ if (config.approved !== SEQUENCE_VERSION) {
   // At most one first email per store a day, even with several people of the same store.
   const storesToday = new Set(db.leads.filter((l) => l.sequence.sent.some((x) => x.step === 'e1' && x.date === today)).map((l) => l.domain))
   const followUps = due.filter((d) => d.step.key !== 'e1').length
-  const budget = Math.min(mailbox, followUps + Math.min(cap, due.length - followUps))
-  if (budget < followUps + Math.min(cap, due.length - followUps)) note += ` · budget casella ${mailbox} (già inviate oggi da antonio@ ${sentToday}, riservate a Gojiberry ${gojiberryLeft})`
+  // First emails already sent today (an earlier hourly run) count against dailyCap.
+  const firstsToday = db.leads.filter((l) => l.sequence.sent.some((x) => x.step === 'e1' && x.date === today)).length
+  const capLeft = Math.max(0, cap - firstsToday)
+  const wanted = followUps + Math.min(capLeft, due.length - followUps)
+  const budget = Math.ceil(Math.min(mailbox, wanted) / slots)
+  if (Math.min(mailbox, wanted) < wanted) note += ` · budget casella ${mailbox} (già inviate oggi da antonio@ ${sentToday}, riservate a Gojiberry ${gojiberryLeft})`
   let sent = 0
   let firsts = 0
   for (const { lead, step } of due) {
     if (sent >= budget) break
-    if (step.key === 'e1' && (firsts >= cap || storesToday.has(lead.domain))) continue
+    if (step.key === 'e1' && (firsts >= capLeft || storesToday.has(lead.domain))) continue
     // Never a first email to a store Antonio wrote to by hand in the last 60 days.
     if (step.key === 'e1' && api && (await api.search(`in:sent to:(${lead.email} OR ${lead.domain}) newer_than:60d`)).messages?.length) {
       Object.assign(lead, { segment: 'review', reason: 'contacted by hand in the last 60 days' })

@@ -57,6 +57,8 @@ if (args.includes('--push')) {
   git('add', 'data/leads.json')
   if (git('status', '--porcelain').trim()) {
     git('commit', '-m', `chore(crm): cold email update ${today}`)
+    // Other writers push to the same repo (Claudio's registry, the cloud state commits).
+    git('pull', '--rebase', '--autostash', '-q')
     git('push', '-q')
     console.log('pushed')
   } else console.log('no changes')
