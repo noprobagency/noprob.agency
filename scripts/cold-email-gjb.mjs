@@ -100,9 +100,9 @@ const plan = { approve: [], direct: [], shopify: [], reject: [], hold: [] }
 let skipped = 0
 for (const c of fresh.sort((a, b) => Number(b.total_scoring) - Number(a.total_scoring))) {
   const decision = review(c, checks.get(normaliseUrl(c.website)) || null, taken)
-  // Many shops block datacenter addresses: from the cloud an unreachable site is left
-  // to the Mac's review at 8:30, not held.
-  if (cloud && decision.reason === 'site unreachable') {
+  // Many shops block datacenter addresses: from the cloud an unreachable site is not
+  // held but left for the next review (the Mac's, or tomorrow's).
+  if ((cloud || process.env.CI) && decision.reason === 'site unreachable') {
     skipped++
     continue
   }
@@ -166,7 +166,7 @@ if (!dry && !cloud) {
   const approvedNow = new Set(plan.approve.map(({ c }) => c.id))
   const crmLeads = contacts.filter((c) => started(c) || approvedNow.has(c.id)).map((c) => danteLead(c, DANTE.campaign, cleanCompany(c.company)))
   writeFileSync('cold-email/data/dante.json', JSON.stringify({ updatedAt: new Date().toISOString(), leads: crmLeads }))
-  const crmPath = (existsSync(DIRECT.config) && JSON.parse(readFileSync(DIRECT.config, 'utf8')).crmPath) || 'cold-email/data/crm'
+  const crmPath = process.env.COLD_CRM_PATH || (existsSync(DIRECT.config) && JSON.parse(readFileSync(DIRECT.config, 'utf8')).crmPath) || 'cold-email/data/crm'
   if (existsSync(crmPath)) execFileSync('node', ['scripts/cold-email-crm.mjs', crmPath, '--push'], { stdio: 'inherit' })
   // The CRM's single store registry (Claudio's) is rebuilt after every export; a failure
   // there never stops this run.
