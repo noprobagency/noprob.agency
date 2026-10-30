@@ -13,6 +13,8 @@ Fiverr, community, PR) are in [backlink/README.md](backlink/README.md), with the
 use in [backlink/scheda.md](backlink/scheda.md).
 SEO of the site (Francesca, `/seo`: on page, technical, content, keywords, site structure) is in
 [SEO/README.md](SEO/README.md), with the roadmap in [SEO/piano.md](SEO/piano.md).
+The team manager (Claudio, `/claudio`: cadences, alert thresholds, decisions, daily diary) is in
+[manager/README.md](manager/README.md).
 
 ## Project context
 

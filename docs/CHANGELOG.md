@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.103.0 (30 Oct 2026)
+
+- **Claudio, the team manager**: new skill `/claudio` and folder `manager/` (README versioned, `manager/data/` gitignored) where the manager keeps one short file per purpose: agent cards with check cadences and alert thresholds (`team.md`), last known numbers and open alerts (`stato.json`), open and taken decisions (`decisioni.md`), one diary file per day. Claudio reads the agents' state files, asks their sessions for aggregates, and reports to Antonio in a few lines; it never does the agents' work, sends nothing and spends nothing.
+
 ### Changelog v1.102.0 (29 Oct 2026)
 
 - **Damiano, richer leads and a resumable 500 run**: the query set grows to company size × 31 consumer verticals, the free people search adds role searches (founder, CEO, owner, amministratore, general manager, e-commerce manager), non-consumer companies are filtered out before any paid call, and each lead gets a 0-100 score (role, second verified contact, LinkedIn, company size, outdated PHP), a second verified contact while the budget lasts, other decision makers, revenue and company LinkedIn. Hunter's rate limit (403, not billed) now waits and retries instead of stopping the run, and `--export` rewrites the lists from the saved state with no calls. Run so far: 282 leads (226 with the owner or CEO first), 693 Shopify stores set aside, $3.87 on treg.
