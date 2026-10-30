@@ -4,7 +4,7 @@ Claudio coordina gli agenti di noprob agency: Damiano (lead), Dante (email a fre
 
 ## La cartella
 
-Tutto ciò che è vivo sta in `manager/data/` (gitignored: il repo è pubblico). Un file per scopo, tutti corti.
+Tutto ciò che è vivo sta in `manager/data/`, che è un link alla cartella `manager/` del repo privato crm-noprobagency (checkout `cold-email/data/crm`): così la leggono il Mac e il cloud, e il repo pubblico non la contiene. Un file per scopo, tutti corti.
 
 | File | Cosa contiene | Quando si aggiorna |
 |---|---|---|

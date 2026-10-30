@@ -199,8 +199,8 @@ console.log('by source ', JSON.stringify(out.counts.bySource))
 
 if (args.includes('--push')) {
   const git = (...a) => execFileSync('git', ['-C', repo, '-c', 'user.name=noprobagency', '-c', 'user.email=hello@noprob.agency', ...a], { encoding: 'utf8' })
-  git('add', 'data/registry.json', 'data/storia.json')
-  if (git('status', '--porcelain', 'data/registry.json', 'data/storia.json').trim()) {
+  git('add', 'data/registry.json', 'data/storia.json', 'manager')
+  if (git('status', '--porcelain', 'data/registry.json', 'data/storia.json', 'manager').trim()) {
     git('commit', '-q', '-m', `chore(crm): registry update ${today}`)
     git('push', '-q')
     console.log('pushed')
