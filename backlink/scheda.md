@@ -14,7 +14,7 @@ Unica fonte dei testi che Marco usa su ogni piattaforma (README, regola 2). Camb
 | Fondatore | Antonio Manitta |
 | Sito | https://noprob.agency |
 | Email pubblica | hello@noprob.agency |
-| Telefono | +39 320 406 3459 (formato internazionale +393204063459) |
+| Telefono | Non si pubblica (decisione del 30 ottobre 2026). Se un modulo lo esige, lascia vuoto e segnala ad Antonio |
 | Indirizzo | 30 N Gould St Ste R, Sheridan, WY 82801, USA (sede legale, come footer, privacy e JSON-LD). Dove la piattaforma lo permette (Google Business Profile, Bing Places) si nasconde l'indirizzo e si dichiara area servita: Italia, Unione Europea, Stati Uniti, Regno Unito |
 | Fondatore, residenza | cittadino italiano residente a Lisbona, Portogallo, lavora da remoto per l'LLC USA. Nei profili personali la località è Lisbona; mai indirizzi, sede o uffici in Italia (rischio esterovestizione) |
 | Lingue | inglese, italiano |
