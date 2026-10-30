@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.121.0 (30 Oct 2026)
+
+- **Repository renamed to noprob.agency and public again**: Marco's image URLs point at the new name; the repo had briefly become private with the rename, which dropped the branch protection of main (restored) and would have counted Actions minutes.
+
 ### Changelog v1.120.0 (30 Oct 2026)
 
 - **Every agent reports to Claudio's diary**: AGENT.md and the `/cold`, `/backlink`, `/seo` skills now say that any change (batch, reply, fix, block, an order Antonio gives an agent directly) is appended to `manager/data/diario/<today>.md` in the private repo and announced to the "CLAUDIO manager" session; `/claudio giro` hands Telegram orders to the right session and asks Dante, Ada and Damiano for their daily update (Mac task `claudio-mac`, weekdays 10:30).
