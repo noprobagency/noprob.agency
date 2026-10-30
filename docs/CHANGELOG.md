@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.111.0 (30 Oct 2026)
+
+- **CRM registry counts hello@ emails and Ada's LinkedIn actions from the Gojiberry steps** (type and state with a timestamp), so the emails-per-day chart is live instead of the 8:30 export; a contact whose step is `answered` becomes `risposto`.
+
 ### Changelog v1.110.0 (30 Oct 2026)
 
 - **Damiano searches Italy by region and city**: the national Hunter queries ran dry after 502 leads, so `scripts/damiano-scrape.mjs` now follows them with 10 grouped verticals for each of the 20 regions and 15 cities (350 new queries, all free). Old queries are cached and skip at once. A first test of 50 leads, at a cap of $0.75, measures the yield before the daily run for hello@.

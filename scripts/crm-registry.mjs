@@ -101,10 +101,12 @@ for (const l of read('cold-email/data/dante.json', { leads: [] }).leads) {
 }
 
 // 3. Gojiberry lists (Ada's LinkedIn flow, Dante's list, Shopify reserve, overflow)
+const stepsOf = (c) => (Array.isArray(c.campaignStatus) ? c.campaignStatus : c.campaignStatus ? [c.campaignStatus] : [])
 const gjbStatus = (c) => {
   if (c.unsubscribed || c.redListed) return 'opt-out'
   if (c.rejectedAt || c.blocked) return 'escluso'
   if (c.bounced) return 'escluso'
+  if (stepsOf(c).some((x) => x.state === 'answered' || x.state === 'accepted' && x.type === 'message')) return 'risposto'
   if (c.hasStartedCampaign) return 'in-sequenza'
   if (c.readyForCampaign) return 'approvato'
   return 'da-rivedere'
@@ -167,15 +169,20 @@ for (const [d, note] of Object.entries(read('cold-email/data/crm-note.json', {})
 
 const rows = [...stores.values()].map((s) => ({ ...s, sources: [...s.sources].sort(), contacts: [...s.contacts.values()] }))
 const count = (f) => rows.reduce((m, r) => { const k = f(r); m[k] = (m[k] || 0) + 1; return m }, {})
+// Emails of hello@ come from the Gojiberry steps themselves (type email, state sent or answered),
+// so the count is live and not the 8:30 export; Ada's LinkedIn actions the same way.
+const lisbonDay = (iso) => new Date(iso).toLocaleDateString('en-CA', { timeZone: 'Europe/Lisbon' })
+const gjbSteps = (listId, type) => (lists.lists[listId] || []).flatMap(stepsOf).filter((x) => x.type === type && ['sent', 'answered'].includes(x.state)).map((x) => lisbonDay(x.createdAt))
+const helloSteps = gjbSteps('65682', 'email')
+const adaSteps = (lists.lists['63200'] || []).flatMap(stepsOf).filter((x) => ['invitation', 'message'].includes(x.type) && x.state === 'sent').map((x) => lisbonDay(x.createdAt))
 const sentOn = (day, channel) => {
-  const dir = direct.filter((l) => (l.sequence?.sent || []).some((x) => x.date === day)).length
-  const dan = read('cold-email/data/dante.json', { leads: [] }).leads.filter((l) => (l.sent || []).some((x) => x.date === day)).length
-  return channel === 'antonio@' ? dir : dan
+  if (channel === 'antonio@') return direct.filter((l) => (l.sequence?.sent || []).some((x) => x.date === day)).length
+  return helloSteps.filter((d) => d === day).length
 }
 // Emails sent per working day, last 15 days: the one trend Antonio looks at
 const days = []
 for (const d = new Date(`${today}T12:00:00`); days.length < 15; d.setDate(d.getDate() - 1)) if (d.getDay() % 6) days.unshift(d.toISOString().slice(0, 10))
-const sentByDay = Object.fromEntries(days.map((day) => [day, { 'antonio@': sentOn(day, 'antonio@'), 'hello@': sentOn(day, 'hello@') }]))
+const sentByDay = Object.fromEntries(days.map((day) => [day, { 'antonio@': sentOn(day, 'antonio@'), 'hello@': sentOn(day, 'hello@'), linkedin: adaSteps.filter((d) => d === day).length }]))
 const counts = { stores: rows.length, byChannel: count((r) => r.channel), byStatus: count((r) => r.status), bySource: rows.flatMap((r) => r.sources).reduce((m, k) => ((m[k] = (m[k] || 0) + 1), m), {}), byPlatform: count((r) => r.platform || 'sconosciuta'), sentToday: sentByDay[today], sentByDay, limit: 50 }
 const out = { updatedAt: new Date().toISOString(), today, gojiberryFetchedAt: lists.fetchedAt, counts, stores: rows }
 writeFileSync(join(repo, 'data/registry.json'), JSON.stringify(out))
