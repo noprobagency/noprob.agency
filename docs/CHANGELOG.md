@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.112.0 (30 Oct 2026)
+
+- **CI blocks a PR whose version is not above main**: two PRs had taken the same number twice today and a CHANGELOG entry was lost in the merge. Restored here: **the CRM registry is rebuilt after every export** (`crm-registry.mjs --gojiberry --push` at the end of `cold-email-gjb.mjs` at 8:30 and `cold-email-daily.mjs` at 17:30; a failure logs one line and the run goes on), from PR #169.
+
 ### Changelog v1.111.0 (30 Oct 2026)
 
 - **CRM registry counts hello@ emails and Ada's LinkedIn actions from the Gojiberry steps** (type and state with a timestamp), so the emails-per-day chart is live instead of the 8:30 export; a contact whose step is `answered` becomes `risposto`.
