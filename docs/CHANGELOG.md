@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.110.0 (30 Oct 2026)
+
+- **Damiano searches Italy by region and city**: the national Hunter queries ran dry after 502 leads, so `scripts/damiano-scrape.mjs` now follows them with 10 grouped verticals for each of the 20 regions and 15 cities (350 new queries, all free). Old queries are cached and skip at once. A first test of 50 leads, at a cap of $0.75, measures the yield before the daily run for hello@.
+
 ### Changelog v1.107.0 (30 Oct 2026)
 
 - **CRM registry keeps a daily history**: `scripts/crm-registry.mjs` now writes emails sent per working day for the last 15 days and appends one line per day to `data/storia.json` in the CRM, so the trend survives every rebuild. The CRM home is reduced to four numbers (emails today, hot and replies, in progress, ready to contact), one chart and six views.
