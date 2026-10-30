@@ -14,7 +14,11 @@ use in [backlink/scheda.md](backlink/scheda.md).
 SEO of the site (Francesca, `/seo`: on page, technical, content, keywords, site structure) is in
 [SEO/README.md](SEO/README.md), with the roadmap in [SEO/piano.md](SEO/piano.md).
 The team manager (Claudio, `/claudio`: cadences, alert thresholds, decisions, daily diary) is in
-[manager/README.md](manager/README.md).
+[manager/README.md](manager/README.md). Rule for every agent (Ada, Dante, Damiano, Marco, Francesca):
+whenever something changes (a batch, a reply, a fix, a block, an order Antonio gave you directly),
+append a short section `## HH:MM · <Agent>` with the numbers to `manager/data/diario/<today>.md`,
+publish it (`git -C cold-email/data/crm add manager && git -C cold-email/data/crm -c user.name=noprobagency -c user.email=hello@noprob.agency commit -qm "<Agent>: diario" && git -C cold-email/data/crm pull -q --rebase origin main && git -C cold-email/data/crm push -q`)
+and, if your session is open, tell Claudio with a SendMessage to "CLAUDIO manager". Aggregates only, never lead data.
 
 ## Project context
 

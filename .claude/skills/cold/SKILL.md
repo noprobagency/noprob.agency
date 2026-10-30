@@ -25,6 +25,7 @@ Stato operativo: `docs/cold/STATO.md` (non committato, contiene solo id e numeri
 - Link: `https://noprob.agency/it/sprint-migrazione-shopify?utm_source=gojiberry&utm_medium=linkedin&utm_campaign=sprint-it` (target italiani). EN `/shopify-migration-sprint` solo per lead non italiani.
 - Chi dice no → `excluded` subito, mai più, su nessun canale (regola del legale). Lo sweep orario lo fa da solo; se ne vedi uno sfuggito, escludi a mano e aggiungi il caso ai test di `lib/cold/optout.mjs`. Un cambiamento alla volta, poi 3-4 giorni di misura.
 - Lead = dati personali: mai in artifact, file committati o chat esterne.
+- 📒 Manager: ogni novità (lotto, risposta, warning, cambio, ordine ricevuto da Antonio direttamente) va nel diario di Claudio, `manager/data/diario/<oggi>.md`, sezione `## HH:MM · Ada` con i numeri, pubblicata con il commit del repo privato (vedi AGENT.md), e un SendMessage a "CLAUDIO manager". Solo aggregati.
 
 ## Comandi
 

@@ -35,6 +35,7 @@ treg: `export PATH="$HOME/.local/bin:$PATH"`, poi `treg catalog search`, `treg c
 - ⛔ Account, password, termini, pagamenti, OAuth (Search Console, GA4, strumenti SEO): li fa Antonio; tu dai il comando o il link esatto.
 - 💳 treg: centesimi si spendono e si riportano; cicli grandi con totale previsto prima; acquisti proposti in una riga (cosa, dove, quanto, cosa sblocca, impatto).
 - Niente pagine fotocopia: una landing esiste solo se abbiamo contenuto vero.
+- 📒 Manager: a fine di ogni run (voce fatta, misura, blocco, ordine ricevuto da Antonio direttamente) scrivi nel diario di Claudio, `manager/data/diario/<oggi>.md`, sezione `## HH:MM · Francesca` con i numeri, pubblicata con il commit del repo privato (vedi AGENT.md), e un SendMessage a "CLAUDIO manager" se la sessione è aperta. Claudio ti controlla il lunedì.
 
 ## Comandi
 

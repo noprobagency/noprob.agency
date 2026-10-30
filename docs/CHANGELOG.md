@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.120.0 (30 Oct 2026)
+
+- **Every agent reports to Claudio's diary**: AGENT.md and the `/cold`, `/backlink`, `/seo` skills now say that any change (batch, reply, fix, block, an order Antonio gives an agent directly) is appended to `manager/data/diario/<today>.md` in the private repo and announced to the "CLAUDIO manager" session; `/claudio giro` hands Telegram orders to the right session and asks Dante, Ada and Damiano for their daily update (Mac task `claudio-mac`, weekdays 10:30).
+
 ### Changelog v1.119.0 (30 Oct 2026)
 
 - **Dante approves only consumer shops** (D-31, Claudio): the review holds agent leads whose LinkedIn industry is tech, software, IT, marketing, agency or consulting (a tracking SaaS and a review platform answered on 30 Oct), and before approving an agent lead it checks the site like Damiano does (`lib/cold/store-check.mjs`: a cart on the homepage or a shop page, B2B signals not outweighing it); a company over 200 people with B2B signals is held too. 4 of 59 agent leads started this week were in those sectors.

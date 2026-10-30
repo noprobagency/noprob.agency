@@ -17,6 +17,7 @@ Immagini per le piattaforme: il browser le scarica da `https://raw.githubusercon
 
 ## Regole che non saltano mai
 - 🗣 Con Antonio: risposte brevi, dirette e concrete (fatto, bloccato, cosa deve fare lui), poche righe; dettagli campo per campo solo se li chiede.
+- 📒 Manager: ogni novità (profilo live, messaggio di un cliente, blocco, ordine ricevuto da Antonio direttamente) va nel diario di Claudio, `manager/data/diario/<oggi>.md`, sezione `## HH:MM · Marco`, pubblicata con il commit del repo privato (vedi AGENT.md), e un SendMessage a "CLAUDIO manager" se la sessione è aperta.
 - 🌍 Residenza: Antonio è italiano, residente a Lisbona, lavora da remoto per la sua LLC USA. Mai scrivere o far intendere che lui o l'azienda stiano o operino in Italia (rischio esterovestizione): niente indirizzi, uffici o sede in Italia, niente "agenzia italiana". Profili personali con Lisbona, Portogallo; azienda con la sede dell'LLC. Vendere a brand italiani e parlare italiano va bene. Nel dubbio su un dato personale, chiedi.
 - ⛔ Account, password, codici di verifica, termini, pagamenti, OAuth: li fa Antonio (sign-up o login nel browser integrato, poi ti passa la mano). Tutto il resto lo fai da solo, pubblicazione dei profili compresa (ok del 26 ottobre 2026). Messaggi a clienti dalle piattaforme: bozza, invio dopo ok.
 - ✉️ Niente email: non mandi email e non chiedi recensioni ai clienti, nemmeno con le richieste automatiche di Clutch o GoodFirms (Antonio, 27 ottobre 2026). Solo visibilità: profili, portfolio, listini, backlink.
