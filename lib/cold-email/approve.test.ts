@@ -31,6 +31,21 @@ describe('Dante lead review', () => {
     expect(review(lead({ lastName: 'Rossi', company: 'Acme', website: 'https://www.rossi.it' }), woo, taken).reason).toBe('no store site')
   })
 
+  it('holds companies that sell to eCommerce instead of being shops', () => {
+    expect(review(lead({ industry: 'Technology, Information and Internet' }), woo, taken).reason).toBe('not a store (sector)')
+    expect(review(lead({ industry: 'Marketing Services' }), woo, taken).reason).toBe('not a store (sector)')
+    expect(review(lead({ industry: 'Internet Marketplace Platforms' }), woo, taken).action).toBe('approve')
+    expect(review(lead({ industry: 'Retail Apparel and Fashion' }), woo, taken).action).toBe('approve')
+  })
+
+  it('second look on the site: cart, B2B, large B2B companies', async () => {
+    const { storeVerdict } = await import('./approve.mjs')
+    expect(storeVerdict({ drop: 'no-cart', b2b: 0 }, '11-50 employees')).toBe('not a store (no cart)')
+    expect(storeVerdict({ drop: 'b2b', b2b: 3 }, null)).toBe('B2B site')
+    expect(storeVerdict({ drop: null, b2b: 1 }, '201 - 500 employees')).toBe('large B2B company')
+    expect(storeVerdict({ drop: null, b2b: 1 }, '11-50 employees')).toBe(null)
+  })
+
   it('holds what needs a human', () => {
     expect(review(lead({ website: '' }), null, taken).action).toBe('hold')
     expect(review(lead(), { platform: 'unreachable' }, taken).action).toBe('hold')
