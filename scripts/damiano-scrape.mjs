@@ -409,12 +409,12 @@ function score(c) {
 
 mkdirSync(OUT, { recursive: true })
 const known = knownDomains()
-// Gojiberry lists, read only: Ada 63200, Dante 65682, DIRETTO 66757, Shopify reserve 64769.
+// Gojiberry lists, read only: Ada 63200, ex Leonardo 64866, Dante 65682, DIRETTO 66757, Shopify reserve 64769.
 // Their stores and LinkedIn profiles are never handed out again.
 const profileKey = (url) => String(url).toLowerCase().replace(/^https?:\/\/(www\.)?/, '').replace(/\/+$/, '')
 const knownProfiles = new Set()
 try {
-  for (const id of [63200, 65682, 66757, 64769]) {
+  for (const id of [63200, 64866, 65682, 66757, 64769]) {
     for (const c of await listContacts(id)) {
       if (c.website) {
         try {
@@ -523,6 +523,7 @@ const leadRows = leads()
     score: score(c),
     verdict: c.lead.email ? 'valid' : null,
     shopPath: c.store?.shopPath || null,
+    source: 'damiano',
     // Where Dante's review imports it: Gojiberry (hello@) needs a LinkedIn profile.
     ...(!INTL && { channel: c.lead.linkedin ? 'hello' : 'diretto' }),
     // Ada's import fields
