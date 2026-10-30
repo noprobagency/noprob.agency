@@ -202,7 +202,14 @@ async function discover(query, offset) {
     try {
       return await treg('hunter.x.discover-companies', { query, limit: 100, offset })
     } catch (err) {
-      const limited = /too_many_requests|rate limit| 429/i.test(`${err.message} ${err.stdout || ''}`)
+      const text = `${err.message} ${err.stdout || ''}`
+      // A location Hunter does not support ("This region isn't supported", 400, not billed)
+      // counts as an empty page: the query is marked done and the run goes on.
+      if (/query_failed/.test(text)) {
+        console.log(`hunter refused the query, skipped: ${query}`)
+        return { data: [] }
+      }
+      const limited = /too_many_requests|rate limit| 429/i.test(text)
       if (!limited || attempt >= 8) throw err
       console.log(`hunter rate limit, retry ${attempt} in ${attempt} min`)
       await new Promise((r) => setTimeout(r, attempt * 60000))
