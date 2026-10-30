@@ -129,6 +129,16 @@ describe('leads from Gojiberry (Dante overflow)', () => {
   })
 })
 
+describe('leads from Damiano batches', () => {
+  it('re-checks the platform: Shopify aside, blocked sites to review, the rest in sequence', async () => {
+    const { fromDamiano } = await import('./leads.mjs')
+    const row = { brand: 'Acme', domain: 'www.acme.it', platform: 'woocommerce', php: null, name: 'Sara Rossi', title: 'CEO', email: 'Sara@acme.it', industry: 'Fashion' }
+    expect(fromDamiano(row, { platform: 'woocommerce', php: '7.4.33', status: 200 })).toMatchObject({ segment: 'target', domain: 'acme.it', firstName: 'Sara', category: 'fashion', php: '7.4.33', source: 'damiano' })
+    expect(fromDamiano(row, { platform: 'shopify', status: 200 }).segment).toBe('shopify')
+    expect(fromDamiano(row, { platform: 'other', status: 403 })).toMatchObject({ segment: 'review', platform: 'woocommerce' })
+  })
+})
+
 describe('Dante leads in the CRM', () => {
   it('maps Gojiberry campaign steps to sent emails, next date and segment', async () => {
     const { danteLead } = await import('./dante.mjs')

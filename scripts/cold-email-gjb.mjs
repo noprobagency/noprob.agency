@@ -131,6 +131,7 @@ if (dry && cloud) {
   for (const { c } of plan.approve) await api('PATCH', `/v1/contact/${c.id}`, { readyForCampaign: true, company: cleanCompany(c.company) })
   // Direct channel: email lookup a few at a time (each call can take minutes).
   const found = await pool(plan.direct, 4, async ({ c }) => {
+    if (c.email) return c // Damiano's contacts come with a verified email: no lookup, no credit
     try {
       return await api('POST', `/v1/contact/${c.id}/enrich/email`)
     } catch (err) {

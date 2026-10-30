@@ -45,6 +45,10 @@ Il 26/10 la lista 65682 ha preso i 95 italiani della lista ex Leonardo (64866, c
 
 **Caselle al massimo** (29 ottobre, Antonio: "spremiamo entrambe le caselle"). hello@ approva ogni giorno tanti lead nuovi quanti ne lascia liberi la coda di Gojiberry (limite giornaliero meno follow-up e approvati in attesa). antonio@ arriva a 55 al giorno: il canale diretto prende tutto quello che non è già partito e non è in coda per oggi nella campagna di Ada (45702), così lo spazio che Ada non usa è nostro. Il primo giorno in cui la coda di Ada ha uno step email (stima 7-10 novembre) lo script mette da solo `adaEmailsLive: true` in config e da lì si tiene libero il limite rimanente del seat antonio@ (massimo 25), perché Gojiberry mette in coda le sue email durante il giorno, dopo il giro delle 9:30. I testi si cambiano in Gojiberry (campagna 46398), con l'ok di Antonio.
 
+## Lotti di Damiano (scraping)
+
+Damiano prepara lotti di lead italiani non Shopify con email verificata in `docs/cold/damiano/lotti/` (gitignored), uno per canale e senza negozi in comune. `node scripts/cold-email-import-damiano.mjs --direct <file>` li mette nella sequenza di antonio@ (piattaforma ricontrollata dal vivo), `--hello <file>` crea i contatti nella lista 65682 con l'email già presente (0 crediti) e li lascia alla revisione delle 8:30. Prima di importare scarta i negozi di ogni altro canale e la lista opt-out. Nuovo lotto quando le prime email pronte scendono sotto 30 sul diretto o gli approvati in attesa sotto 25 su hello@.
+
 ## Sequenza (lib/cold-email/sequence.mjs)
 
 | Step | Giorno | Angolo |
