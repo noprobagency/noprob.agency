@@ -26,6 +26,11 @@ describe('Dante lead review', () => {
     expect(review(lead(), { platform: 'other', status: 200 }, taken).action).toBe('approve')
   })
 
+  it('approves family brands whose domain carries the owner surname', () => {
+    expect(review(lead({ lastName: 'Bernabei', company: 'Bernabei', website: 'https://www.bernabei.it' }), woo, taken).action).toBe('approve')
+    expect(review(lead({ lastName: 'Rossi', company: 'Acme', website: 'https://www.rossi.it' }), woo, taken).reason).toBe('no store site')
+  })
+
   it('holds what needs a human', () => {
     expect(review(lead({ website: '' }), null, taken).action).toBe('hold')
     expect(review(lead(), { platform: 'unreachable' }, taken).action).toBe('hold')
