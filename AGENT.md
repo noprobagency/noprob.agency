@@ -38,7 +38,7 @@ The team manager (Claudio, `/claudio`: cadences, alert thresholds, decisions, da
 ## Ship workflow
 
 - Branch from `main`, one PR per change, squash-merge to `main`; Vercel deploys production from `main`.
-- Bump the minor in `package.json#version` on every change (content or code).
+- Bump the minor in `package.json#version` on every change (content or code). Read the number from `origin/main` right before opening the PR, not when you start. Main requires the branch to be up to date: before merging run `gh pr update-branch <n>`, wait for the checks, then `gh pr merge --squash --delete-branch`. If the version check fails, bump again.
 - Before opening the PR, all green: `pnpm lint`, `pnpm typecheck`, `pnpm check:em-dash`, `pnpm test`, `pnpm build`. GitHub Actions runs the same on every push and PR.
 - Before deleting any file under `public/`, grep for its file name across `app`, `components`, `lib`, `content`, `data`, `scripts` and CSS, including inside remote URLs that end with the same hash. After any asset or `next.config.ts` image change, crawl the pages of `sitemap.xml` and check that every `src`, `srcset` and `/_next/image` URL answers 200 (a broken image does not fail lint, typecheck or build).
 - Verify in the browser what the change touches (production build with `pnpm build && pnpm start`): status codes, console, mobile.
