@@ -58,4 +58,5 @@ backlink/data/
 # SEO (Francesca): working state, positions and volumes, local only
 SEO/data/
 # Manager (Claudio): team state, decisions, daily diary, local only
+manager/data
 manager/data/
