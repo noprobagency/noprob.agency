@@ -4,9 +4,13 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.113.0 (30 Oct 2026)
+
+- **CI blocks a PR whose version is not above main**: three times today two PRs took the same number and a CHANGELOG entry was lost in the merge. Restored here: **the CRM registry is rebuilt after every export** (`crm-registry.mjs --gojiberry --push` at the end of `cold-email-gjb.mjs` at 8:30 and `cold-email-daily.mjs` at 17:30; a failure logs one line and the run goes on), from PR #169.
+
 ### Changelog v1.112.0 (30 Oct 2026)
 
-- **CI blocks a PR whose version is not above main**: two PRs had taken the same number twice today and a CHANGELOG entry was lost in the merge. Restored here: **the CRM registry is rebuilt after every export** (`crm-registry.mjs --gojiberry --push` at the end of `cold-email-gjb.mjs` at 8:30 and `cold-email-daily.mjs` at 17:30; a failure logs one line and the run goes on), from PR #169.
+- **Damiano skips locations Hunter refuses**: some Italian regions return a 400 `query_failed` ("This region isn't supported in Discover yet", not billed). The query now counts as an empty page instead of stopping the run.
 
 ### Changelog v1.111.0 (30 Oct 2026)
 
