@@ -84,11 +84,29 @@ const INTL_QUERIES = [
   'Online retail stores headquartered in {m} using Magento, WooCommerce, PrestaShop, BigCommerce or Salesforce Commerce Cloud, 11-500 employees',
   ...INTL_VERTICALS.map((v) => `${v} headquartered in {m} selling online with an ecommerce website, 11-500 employees`),
 ].flatMap((q) => MARKETS.map((m) => ({ q: q.replace('{m}', m.name), market: m.market })))
+// After the national queries ran dry (Oct 2026): the same verticals, grouped, by region
+// and by city, so Hunter returns companies the national pages never reached.
+const REGIONS = [
+  'Lombardy', 'Veneto', 'Emilia-Romagna', 'Tuscany', 'Piedmont', 'Lazio', 'Campania', 'Apulia', 'Marche', 'Sicily',
+  'Trentino-Alto Adige', 'Friuli-Venezia Giulia', 'Liguria', 'Umbria', 'Abruzzo', 'Sardinia', 'Calabria', 'Basilicata', 'Molise', "Valle d'Aosta",
+]
+const CITIES = ['Milan', 'Rome', 'Turin', 'Florence', 'Naples', 'Bologna', 'Verona', 'Padua', 'Bergamo', 'Brescia', 'Bari', 'Vicenza', 'Treviso', 'Modena', 'Parma']
+const REGION_VERTICALS = [
+  'fashion, clothing and footwear brands', 'bags, leather goods and accessories brands', 'jewelry, watches and eyewear brands',
+  'cosmetics, skincare and perfume brands', 'wine, spirits and craft beer producers', 'gourmet food, coffee, pasta and sweets producers',
+  'supplements, organic food and pharmacy shops', 'home decor, furniture, lighting and textiles brands', 'sports, cycling and outdoor brands',
+  'toys, kids, pet products and gifts brands',
+]
+const LOCAL_QUERIES = [
+  ...REGIONS.flatMap((r) => REGION_VERTICALS.map((v) => `Italian ${v} headquartered in ${r}, Italy, selling online with an ecommerce website`)),
+  ...CITIES.flatMap((c) => REGION_VERTICALS.map((v) => `${v} based in ${c}, Italy, with an online store`)),
+]
 const QUERIES = INTL
   ? INTL_QUERIES
   : [
       ...FIRST,
       ...SIZES.flatMap((s) => VERTICALS.map((v) => `Italian ${v} headquartered in Italy selling online with an ecommerce website, ${s} employees`)),
+      ...LOCAL_QUERIES,
     ].map((q) => ({ q, market: 'IT' }))
 const PAGES = 10
 
