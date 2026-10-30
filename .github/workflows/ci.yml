@@ -10,6 +10,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      # Every change bumps package.json#version; two PRs picking the same number merge without a
+      # conflict and one CHANGELOG entry gets lost, so a PR must be strictly above main.
+      - name: Version must be above main
+        if: github.event_name == 'pull_request'
+        run: |
+          git fetch -q origin main
+          main=$(git show origin/main:package.json | node -pe 'JSON.parse(require("fs").readFileSync(0,"utf8")).version')
+          pr=$(node -pe 'require("./package.json").version')
+          node -e 'const [a,b]=process.argv.slice(1).map(v=>v.split(".").map(Number)); const gt=a[0]>b[0]||(a[0]==b[0]&&(a[1]>b[1]||(a[1]==b[1]&&a[2]>b[2]))); if(!gt){console.error(`package.json is ${process.argv[1]}, main is ${process.argv[2]}: bump again`);process.exit(1)}' "$pr" "$main"
       - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
         with:
