@@ -17,6 +17,11 @@
 //
 // Usage: node scripts/damiano-scrape.mjs --target 500 [--budget 7] [--out docs/cold/damiano] [--crm <crm checkout>]
 //        node scripts/damiano-scrape.mjs --market intl --target 200   (writes docs/cold/damiano/intl)
+//        node scripts/damiano-scrape.mjs --add 50 --spend 0.65        (daily cloud run, crm-noprobagency)
+//
+// leads.json holds only ready leads that no channel has yet: store check passed, company
+// mailbox, in Italy. Each Italian row says its channel (hello with a LinkedIn URL, else
+// diretto); Dante's review imports from it when a mailbox runs low.
 
 import { execFile } from 'node:child_process'
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
@@ -32,8 +37,10 @@ const opt = (name, fallback) => {
   const i = args.indexOf(`--${name}`)
   return i === -1 ? fallback : args[i + 1]
 }
-const TARGET = Number(opt('target', 50))
-const BUDGET_MICRO = Number(opt('budget', 5)) * 1e6
+// --add and --spend are relative to the saved state (the daily cloud run): N more ready
+// leads, USD more spend. --target and --budget are totals.
+let TARGET = Number(opt('target', 50))
+let BUDGET_MICRO = Number(opt('budget', 5)) * 1e6
 // --export rewrites the lists from the saved state, with no calls at all.
 const EXPORT_ONLY = args.includes('--export')
 const INTL = opt('market', 'it') === 'intl'
@@ -159,7 +166,11 @@ const state = existsSync(STATE_FILE)
   ? JSON.parse(readFileSync(STATE_FILE, 'utf8'))
   : { companies: {}, queries: {}, spentMicro: 0, calls: 0 }
 const save = () => writeFileSync(STATE_FILE, JSON.stringify(state, null, 1))
-const over = () => state.spentMicro >= BUDGET_MICRO
+if (opt('spend', null) != null) BUDGET_MICRO = state.spentMicro + Number(opt('spend')) * 1e6
+// Up to 6 calls run at once and each can cost ~$0.01: stop that much early so the run
+// ends under the budget, not just past it.
+const IN_FLIGHT_MICRO = 60000
+const over = () => state.spentMicro >= BUDGET_MICRO - IN_FLIGHT_MICRO
 
 async function treg(id, body, headers = {}) {
   if (over()) throw new Error('budget reached')
@@ -250,6 +261,46 @@ async function checkPlatforms(domains) {
   save()
 }
 
+// Store check (free, before any paid call): a WooCommerce plugin is not a shop. The
+// homepage, or a usual shop page, must show a cart, and B2B signals must not outweigh it.
+// From the 30 Oct batch: it dropped 63 sites with no cart and 10 B2B out of 479.
+const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Chrome/128 Safari/537.36'
+const CART = [/add[-_ ]to[-_ ]cart/i, /aggiungi al carrello/i, /\/cart\b/i, /\/carrello/i, /checkout\/cart/i, /woocommerce-cart|wc-block-mini-cart|cart-contents|mini-?cart/i, /blockcart|shopping_cart|shopping-cart/i, /data-product_id|add_to_cart_button|product-add-to-cart/i, /\/checkout\b/i, /\/basket\b/i]
+const B2B = [/\bb2b\b/i, /ingrosso/i, /area rivenditor/i, /solo (per )?professionisti/i, /listino (prezzi )?riservato/i, /\bcontract\b/i, /richiedi (un )?preventivo/i, /diventa rivenditore/i, /wholesale/i, /per aziende/i, /trade (account|only)/i]
+const SHOP_PATHS = ['shop/', 'negozio/', 'store/', 'it/shop/', 'prodotti/', 'catalogo/', 'products/']
+async function html(url) {
+  const ctrl = new AbortController()
+  const timer = setTimeout(() => ctrl.abort(), 12000)
+  try {
+    const res = await fetch(url, { redirect: 'follow', signal: ctrl.signal, headers: { 'user-agent': UA } })
+    return res.status < 400 ? (await res.text()).slice(0, 800_000) : null
+  } catch {
+    return null
+  } finally {
+    clearTimeout(timer)
+  }
+}
+async function storeCheck(c) {
+  if (c.store) return c.store
+  const home = await html(`https://${c.domain}/`)
+  // Not cached: a site that blocks this run (often GitHub's IPs) is tried again next time.
+  if (home === null) return { drop: 'unreachable' }
+  let cart = CART.filter((re) => re.test(home)).length
+  const b2b = B2B.filter((re) => re.test(home)).length
+  let shopPath = null
+  for (const p of cart ? [] : SHOP_PATHS) {
+    const page = await html(`https://${c.domain}/${p}`)
+    if (page && CART.some((re) => re.test(page))) {
+      cart = 1
+      shopPath = p
+      break
+    }
+  }
+  c.store = { cart, b2b, shopPath, drop: !cart ? 'no-cart' : b2b >= 2 && cart < 3 ? 'b2b' : null, at: new Date().toISOString() }
+  save()
+  return c.store
+}
+
 const clean = (s) => (s && s !== 'N/A' ? s : null)
 const mapPerson = (p) => ({
   name: [clean(p.first_name), clean(p.last_name)].filter(Boolean).join(' '),
@@ -310,6 +361,7 @@ const contact = (p) => ({ name: p.name, first: p.first, last: p.last, title: p.t
 async function work(c, { second = true } = {}) {
   const found = await people(c)
   if (!fits(c)) return
+  if ((await storeCheck(c)).drop) return
   let ranked = found.filter((p) => p.rank != null).sort((a, b) => a.rank - b.rank)
   if (INTL) {
     // Ada needs the profile URL, someone in the store's market, and nobody she already has.
@@ -381,12 +433,23 @@ try {
 if (INTL && existsSync('docs/cold/damiano/leads.json')) {
   for (const l of JSON.parse(readFileSync('docs/cold/damiano/leads.json', 'utf8'))) known.add(l.domain)
 }
+// usati.json is Dante's (lib/cold-email/damiano.mjs): the stores his review already took.
+const USED_FILE = join(OUT, 'usati.json')
+if (existsSync(USED_FILE)) for (const d of Object.keys(JSON.parse(readFileSync(USED_FILE, 'utf8')))) known.add(d.replace(/^www\./, '').toLowerCase())
 const fresh = (d) => !known.has(d)
-const leads = () => Object.values(state.companies).filter((c) => c.lead && fits(c) && reachable(c) && fresh(c.domain))
+// Ready to hand out: store check passed, a company address (not gmail and the like) for
+// Italy, and the company in Italy when the people search says where it is.
+const PRIVATE_MAILBOX = /@(gmail|googlemail|hotmail|yahoo|libero|outlook|icloud|tiscali|alice|virgilio|live|msn|email)\./i
+const ready = (c) => c.store && !c.store.drop && (INTL || (!PRIVATE_MAILBOX.test(c.lead.email || '') && (!c.country || c.country === 'IT')))
+const candidates = () => Object.values(state.companies).filter((c) => c.lead && fits(c) && reachable(c) && fresh(c.domain))
+const leads = () => candidates().filter(ready)
 const isStore = (c) => STORE_PLATFORMS.has(c.platform) && reachable(c) && fresh(c.domain)
 const isShopify = (c) => c.platform === 'shopify' && reachable(c) && fresh(c.domain)
 
 if (!EXPORT_ONLY) {
+  // Pass 0: store check on leads found before it existed (free).
+  await pool(candidates().filter((c) => !c.store), 10, storeCheck)
+  if (opt('add', null) != null) TARGET = leads().length + Number(opt('add'))
   // Pass 1: re-work the stores already done with the role searches (upgrades, second contacts).
   const log = (msg) => console.error(`${leads().length}/${TARGET} leads · $${(state.spentMicro / 1e6).toFixed(3)} · ${msg}`)
   await checkPlatforms(Object.keys(state.companies).filter(fresh))
@@ -459,6 +522,9 @@ const leadRows = leads()
     others: others(c, [c.lead.name, c.lead.second?.name]),
     score: score(c),
     verdict: c.lead.email ? 'valid' : null,
+    shopPath: c.store?.shopPath || null,
+    // Where Dante's review imports it: Gojiberry (hello@) needs a LinkedIn profile.
+    ...(!INTL && { channel: c.lead.linkedin ? 'hello' : 'diretto' }),
     // Ada's import fields
     ...(INTL && {
       firstName: c.lead.first,
@@ -501,6 +567,8 @@ const summary = {
   tregCalls: state.calls,
 }
 writeFileSync(join(OUT, 'leads.json'), JSON.stringify(leadRows, null, 2))
+// The queue Dante's 8:00 review reads; Damiano is its only writer.
+if (!INTL) writeFileSync(join(OUT, 'coda.json'), JSON.stringify({ updatedAt: new Date().toISOString(), leads: leadRows }, null, 1))
 writeFileSync(join(OUT, 'shopify.json'), JSON.stringify(shopifyRows, null, 2))
 writeFileSync(join(OUT, 'summary.json'), JSON.stringify(summary, null, 2))
 // The CRM section damiano/ reads data/damiano.json from the crm-noprobagency checkout.
