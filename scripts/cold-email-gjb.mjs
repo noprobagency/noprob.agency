@@ -168,6 +168,15 @@ if (!dry && !cloud) {
   writeFileSync('cold-email/data/dante.json', JSON.stringify({ updatedAt: new Date().toISOString(), leads: crmLeads }))
   const crmPath = (existsSync(DIRECT.config) && JSON.parse(readFileSync(DIRECT.config, 'utf8')).crmPath) || 'cold-email/data/crm'
   if (existsSync(crmPath)) execFileSync('node', ['scripts/cold-email-crm.mjs', crmPath, '--push'], { stdio: 'inherit' })
+  // The CRM's single store registry (Claudio's) is rebuilt after every export; a failure
+  // there never stops this run.
+  if (existsSync(crmPath)) {
+    try {
+      execFileSync('node', ['scripts/crm-registry.mjs', crmPath, '--gojiberry', '--push'], { stdio: 'inherit' })
+    } catch (err) {
+      console.error(`CRM registry not rebuilt: ${err.message.split('\n')[0]}`)
+    }
+  }
 }
 
 const line = `- ${new Date().toISOString().slice(0, 16).replace('T', ' ')}${dry ? ' (dry)' : ''} · Dante (Gojiberry email${cloud ? ', cloud' : ''}) · nuovi ${fresh.length} · approvati ${plan.approve.length} (capacità ${cap}) · al canale diretto ${plan.direct.length} (spazio ${directRoom}) · Shopify spostati ${plan.shopify.length} · scartati ${plan.reject.length} · da guardare ${plan.hold.length}${cloud ? ` (${Object.entries(plan.hold.reduce((n, h) => ({ ...n, [h.reason]: [...(n[h.reason] || []), h] }), {})).map(([r, l]) => `${r} ${l.length}`).join(', ') || '-'}) · siti bloccati, li guarda il Mac ${skipped}` : ''} · opt-out ${sweep.excluded}\n`

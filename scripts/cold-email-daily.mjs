@@ -190,5 +190,14 @@ if (!dry) {
   // The night review of Dante in the cloud reads today's stores and opt-outs from here.
   publishTaken(takenBody(db.leads.filter((l) => l.segment !== 'shopify').map((l) => l.domain), readSuppressed()))
   if (existsSync(config.crmPath)) execFileSync('node', ['scripts/cold-email-crm.mjs', config.crmPath, '--push'], { stdio: 'inherit' })
+  // The CRM's single store registry (Claudio's) is rebuilt after every export; a failure
+  // there never stops this run.
+  if (existsSync(config.crmPath)) {
+    try {
+      execFileSync('node', ['scripts/crm-registry.mjs', config.crmPath, '--gojiberry', '--push'], { stdio: 'inherit' })
+    } catch (err) {
+      console.error(`CRM registry not rebuilt: ${err.message.split('\n')[0]}`)
+    }
+  }
 }
 process.stdout.write(line)
