@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.104.0 (30 Oct 2026)
+
+- **Marco reads Francesca's link opportunities and drops the phone number**: `/backlink` now reads `SEO/data/per-marco.md` at every start and turns each new opportunity into a tracker entry; the +39 number is no longer published on any platform (Antonio's decision of 30 Oct, in line with the "never Italy-based" rule) and `backlink/scheda.md` says so. Marco reports to Claudio.
+
 ### Changelog v1.103.0 (30 Oct 2026)
 
 - **Claudio, the team manager**: new skill `/claudio` and folder `manager/` (README versioned, `manager/data/` gitignored) where the manager keeps one short file per purpose: agent cards with check cadences and alert thresholds (`team.md`), last known numbers and open alerts (`stato.json`), open and taken decisions (`decisioni.md`), one diary file per day. Claudio reads the agents' state files, asks their sessions for aggregates, and reports to Antonio in a few lines; it never does the agents' work, sends nothing and spends nothing.
