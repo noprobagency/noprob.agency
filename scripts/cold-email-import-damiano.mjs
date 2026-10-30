@@ -10,7 +10,7 @@
 //                    (no credit), not approved: the 8:30 review approves them up to
 //                    hello@'s limit. Rows without a LinkedIn profile URL (required by
 //                    Gojiberry) are left out.
-// Prints counts only. Refuses to run while the daily send run holds leads.json.
+// Prints counts only. --direct refuses to run while the daily send run holds leads.json.
 //
 // Usage: node scripts/cold-email-import-damiano.mjs --direct <file> | --hello <file> [--dry]
 
@@ -35,7 +35,7 @@ if (!file) {
   process.exit(1)
 }
 try {
-  if (!dry && execFileSync('pgrep', ['-f', 'cold-email-daily'], { encoding: 'utf8' }).trim()) {
+  if (!dry && channel === 'direct' && execFileSync('pgrep', ['-f', 'cold-email-daily'], { encoding: 'utf8' }).trim()) {
     console.error('The daily send run is active: it saves leads.json after every email. Run this when it ends.')
     process.exit(1)
   }
