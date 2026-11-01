@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.123.0 (1 Nov 2026)
+
+- **Ada's platform check sees Shopify behind its bot wall**: a lead on Shopify reached Ada's LinkedIn sequence because the store answered with Shopify's 423 bot page, which has no theme markers. `detectPlatform` now also reads `powered-by: Shopify`, the `_shopify_` cookies, `shopify-complexity-score` and `<meta name="shopify-…">`, and `cold-daily` moves a Shopify store before the blocked-site rule, so even a cloud run catches it. A rescan of Ada's 253 approved leads found 2 (one paused, one had already replied). The routine also holds leads whose industry is software, SaaS, IT, cloud, payments or wholesale, the exclusions Gojiberry's customer success suggested and that agent 40211's free-text criteria cannot take through the API.
+
 ### Changelog v1.122.0 (30 Oct 2026)
 
 - **Dante follow-ups shorter (1, 5, 7)**: Gojiberry's customer success shortened campaign 46398 in the call with Antonio, who accepted it. Follow-ups now go out 5 and 12 days after the first email instead of 7 and 21; texts unchanged. `DANTE_DELAYS` and the README follow, so the CRM registry computes the right next dates. Applies to every send from 30 Oct 17:40 UTC; results before and after are compared on 13 Nov.
