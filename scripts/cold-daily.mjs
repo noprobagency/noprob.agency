@@ -25,6 +25,9 @@ const MIN_SCORE = 2.0
 // so manual and direct emails have room.
 const GOJIBERRY_EMAIL_CAP = 25
 const ADA_MAILBOX = 'antonio@noprob.agency' // hello@ belongs to Dante's email agent
+// Only top roles reach Ada's sequence (D-45, 1 Nov 2026): the agent asks Gojiberry for these,
+// and leads imported by hand (Damiano) must match them too.
+const TOP_ROLE = /\b(founder|co-?founder|owner|co-?owner|president|ceo|chief executive|managing director|head of e-?commerce|e-?commerce director|director of e-?commerce)\b/i
 const NOT_DECISION_MAKER = /\b(assistant|associate|intern|internship|stagista|junior|customer service|customer care|coordinator|specialist|analyst|consultant|freelance|executive assistant|trainee)\b/i
 // Not a consumer store: software, SaaS, payments, wholesale (Gojiberry ICP exclusions, 1 Nov 2026).
 const NOT_CONSUMER_STORE = /\b(software|saas|information technology|it services|computer|cloud|payment|wholesale)\b/i
@@ -116,6 +119,7 @@ for (const key of ['en']) {
       url &&
       !blocked &&
       siteMatchesCompany(c.company, url) &&
+      TOP_ROLE.test(c.jobTitle || '') &&
       !NOT_DECISION_MAKER.test(c.jobTitle || '') &&
       !NOT_CONSUMER_STORE.test(c.industry || '') &&
       Number(c.total_scoring) >= MIN_SCORE
