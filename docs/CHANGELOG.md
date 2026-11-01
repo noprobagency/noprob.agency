@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.124.0 (1 Nov 2026)
+
+- **Ada's routine approves top roles only (D-45)**: `cold-daily` now holds any lead whose job title is not founder, co-founder, owner, president, CEO, managing director, head of ecommerce or ecommerce director, the same roles agent 40211 asks Gojiberry for. Leads imported by hand go through the same rule. The 23 queued leads with other roles (marketing, general manager, ecommerce manager, COO) came out of the queue (readyForCampaign off, still in the list, not rejected): queue 103 to 80. Without this rule the routine would have approved 19 of them again, since only 4 were already in its state.
+
 ### Changelog v1.123.0 (1 Nov 2026)
 
 - **Ada's platform check sees Shopify behind its bot wall**: a lead on Shopify reached Ada's LinkedIn sequence because the store answered with Shopify's 423 bot page, which has no theme markers. `detectPlatform` now also reads `powered-by: Shopify`, the `_shopify_` cookies, `shopify-complexity-score` and `<meta name="shopify-…">`, and `cold-daily` moves a Shopify store before the blocked-site rule, so even a cloud run catches it. A rescan of Ada's 253 approved leads found 2 (one paused, one had already replied). The routine also holds leads whose industry is software, SaaS, IT, cloud, payments or wholesale, the exclusions Gojiberry's customer success suggested and that agent 40211's free-text criteria cannot take through the API.
