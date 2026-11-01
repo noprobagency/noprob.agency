@@ -19,6 +19,10 @@ describe('detectPlatform', () => {
   it('detects Shopify from the CDN and from headers', () => {
     expect(detectPlatform('<link href="//cdn.shopify.com/s/files/1/theme.css">').platform).toBe('shopify')
     expect(detectPlatform('<html></html>', { 'X-ShopId': '123' }).platform).toBe('shopify')
+    // Shopify's bot wall (HTTP 423) has none of the theme markers
+    expect(detectPlatform('<meta name="shopify-s" content="x">').platform).toBe('shopify')
+    expect(detectPlatform('<html></html>', { 'powered-by': 'Shopify' }).platform).toBe('shopify')
+    expect(detectPlatform('<html></html>', { 'set-cookie': '_shopify_essential=abc; Path=/' }).platform).toBe('shopify')
   })
 
   it('detects the platforms we migrate from', () => {

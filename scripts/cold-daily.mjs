@@ -26,6 +26,8 @@ const MIN_SCORE = 2.0
 const GOJIBERRY_EMAIL_CAP = 25
 const ADA_MAILBOX = 'antonio@noprob.agency' // hello@ belongs to Dante's email agent
 const NOT_DECISION_MAKER = /\b(assistant|associate|intern|internship|stagista|junior|customer service|customer care|coordinator|specialist|analyst|consultant|freelance|executive assistant|trainee)\b/i
+// Not a consumer store: software, SaaS, payments, wholesale (Gojiberry ICP exclusions, 1 Nov 2026).
+const NOT_CONSUMER_STORE = /\b(software|saas|information technology|it services|computer|cloud|payment|wholesale)\b/i
 // Ada's markets: US, UK and Australia. Anyone else stays held for a human look.
 const EN_MARKETS = /\b(united states|usa|u\.s\.|united kingdom|uk|england|scotland|wales|northern ireland|great britain|australia|new south wales|queensland|western australia|south australia|tasmania|bay area|new york|los angeles|chicago|boston|seattle|miami|dallas|houston|austin|atlanta|denver|phoenix|philadelphia|san diego|portland|nashville|washington dc|london|manchester|birmingham|leeds|glasgow|edinburgh|bristol|liverpool|sydney|melbourne|brisbane|perth|adelaide|gold coast|canberra)\b/i
 
@@ -95,6 +97,12 @@ for (const key of ['en']) {
     const url = urls.get(c.id)
     const check = url ? platforms.get(url) : null
     const platform = check ? check.platform : 'unknown'
+    // Shopify first: its bot wall (423/429) still carries Shopify headers.
+    if (platform === 'shopify') {
+      moves.shopify.push(c.id)
+      processed.add(c.id)
+      continue
+    }
     // A site that answers with an error page (403 bot wall, 429, 5xx) proves nothing:
     // from the cloud many stores block datacenter IPs. Never approve on that; in CI leave
     // the lead unprocessed so the Mac job, from a home IP, checks it.
@@ -103,17 +111,13 @@ for (const key of ['en']) {
       stats.blocked++
       continue
     }
-    if (platform === 'shopify') {
-      moves.shopify.push(c.id)
-      processed.add(c.id)
-      continue
-    }
     const ok =
       EN_MARKETS.test(`${c.location} ${c.companyLocation}`) &&
       url &&
       !blocked &&
       siteMatchesCompany(c.company, url) &&
       !NOT_DECISION_MAKER.test(c.jobTitle || '') &&
+      !NOT_CONSUMER_STORE.test(c.industry || '') &&
       Number(c.total_scoring) >= MIN_SCORE
     if (!ok) {
       stats.held++
