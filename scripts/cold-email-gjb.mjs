@@ -83,16 +83,31 @@ const dailyRunning = (() => {
   }
 })()
 // Damiano's nightly queue tops up both channels when they run low: hello@ under 25
-// leads approved or waiting for review (up to 50, those with a LinkedIn profile, which
+// leads approved and not yet sent (up to 50, those with a LinkedIn profile, which
 // Gojiberry needs), the direct channel under 30 first emails ready (up to 60).
+// Damiano's job runs in the cloud, so on the Mac the queue is state/damiano of the CRM
+// checkout (pulled first, usati.json pushed back); the local copy is the fallback.
 const today = new Date().toLocaleDateString('en-CA', { timeZone: 'Europe/Lisbon' })
 const feed = { hello: 0, direct: 0 }
-if (!cloud && existsSync(DAMIANO.queue)) {
-  const used = existsSync(DAMIANO.used) ? JSON.parse(readFileSync(DAMIANO.used, 'utf8')) : {}
+const crmPath = process.env.COLD_CRM_PATH || (existsSync(DIRECT.config) && JSON.parse(readFileSync(DIRECT.config, 'utf8')).crmPath) || 'cold-email/data/crm'
+const crmDamiano = `${crmPath}/state/damiano`
+if (!cloud && existsSync(`${crmDamiano}/coda.json`)) {
+  try {
+    execFileSync('git', ['-C', crmPath, 'pull', '--rebase', '--autostash', '-q'], { stdio: 'inherit' })
+  } catch (err) {
+    console.error(`CRM pull failed, Damiano queue as last pulled: ${err.message.split('\n')[0]}`)
+  }
+}
+const damiano = !cloud && existsSync(`${crmDamiano}/coda.json`) ? { queue: `${crmDamiano}/coda.json`, used: `${crmDamiano}/usati.json` } : DAMIANO
+if (!cloud && existsSync(damiano.queue)) {
+  const readUsed = (f) => (existsSync(f) ? JSON.parse(readFileSync(f, 'utf8')) : {})
+  const used = { ...readUsed(DAMIANO.used), ...readUsed(damiano.used) }
   const domains = new Set([...linkedin, ...db.leads.map((l) => l.domain), ...contacts.map((c) => domainOf(normaliseUrl(c.website))), ...(await websites(DIRECT.list)), ...(await websites(LISTS.shopify))].filter(Boolean))
   const emails = new Set([...db.leads.map((l) => l.email), ...contacts.map((c) => (c.email || '').toLowerCase())].filter(Boolean))
-  let rows = pickQueue(JSON.parse(readFileSync(DAMIANO.queue, 'utf8')).leads || [], { used, domains, emails, suppressed })
-  const helloSupply = contacts.filter((c) => (c.readyForCampaign && !inDante(c)) || (!processed.has(c.id) && !started(c) && !c.rejectedAt && !c.state)).length
+  let rows = pickQueue(JSON.parse(readFileSync(damiano.queue, 'utf8')).leads || [], { used, domains, emails, suppressed })
+  // Only approved leads count: a long review backlog of Gojiberry's own finds never
+  // holds Damiano's verified leads back.
+  const helloSupply = contacts.filter((c) => c.readyForCampaign && !inDante(c)).length
   if (helloSupply < 25) {
     for (const r of rows.filter((x) => x.linkedin).slice(0, 50 - helloSupply)) {
       try {
@@ -119,7 +134,20 @@ if (!cloud && existsSync(DAMIANO.queue)) {
     }
     if (!dry && take.length) writeFileSync(DIRECT.leads, JSON.stringify({ ...db, updatedAt: new Date().toISOString() }, null, 2))
   }
-  if (!dry) writeFileSync(DAMIANO.used, JSON.stringify(used, null, 2))
+  if (!dry) {
+    writeFileSync(damiano.used, JSON.stringify(used, null, 2))
+    if (damiano.used !== DAMIANO.used && (feed.hello || feed.direct)) {
+      try {
+        const git = (...a) => execFileSync('git', ['-C', crmPath, ...a], { stdio: 'inherit' })
+        git('add', 'state/damiano/usati.json')
+        git('-c', 'user.name=noprobagency', '-c', 'user.email=hello@noprob.agency', 'commit', '-qm', `Dante: usati Damiano ${today}`)
+        git('pull', '--rebase', '-q')
+        git('push', '-q')
+      } catch (err) {
+        console.error(`usati.json not pushed: ${err.message.split('\n')[0]}`)
+      }
+    }
+  }
 }
 
 const seat = ((await api('GET', '/v1/email-seat')) || []).find((s) => s.email === DANTE.mailbox)
@@ -223,7 +251,6 @@ if (!dry && !cloud) {
   const approvedNow = new Set(plan.approve.map(({ c }) => c.id))
   const crmLeads = contacts.filter((c) => started(c) || approvedNow.has(c.id)).map((c) => danteLead(c, DANTE.campaign, cleanCompany(c.company)))
   writeFileSync('cold-email/data/dante.json', JSON.stringify({ updatedAt: new Date().toISOString(), leads: crmLeads }))
-  const crmPath = process.env.COLD_CRM_PATH || (existsSync(DIRECT.config) && JSON.parse(readFileSync(DIRECT.config, 'utf8')).crmPath) || 'cold-email/data/crm'
   if (existsSync(crmPath)) execFileSync('node', ['scripts/cold-email-crm.mjs', crmPath, '--push'], { stdio: 'inherit' })
   // The CRM's single store registry (Claudio's) is rebuilt after every export; a failure
   // there never stops this run.
