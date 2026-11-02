@@ -206,8 +206,9 @@ function knownDomains() {
 }
 
 /** Next unread Hunter page; returns the new domains, or null when every query is exhausted. */
-// Hunter's discovery has a rate limit (403 too_many_requests, not billed): wait and retry
-// instead of dropping the run.
+// Hunter's discovery has a rate limit (403 too_many_requests, not billed), and a lookup can
+// fail for a moment under load (ConnectError, nothing reached Hunter): wait and retry instead
+// of dropping the run.
 async function discover(query, offset) {
   for (let attempt = 1; ; attempt++) {
     try {
@@ -220,9 +221,9 @@ async function discover(query, offset) {
         console.log(`hunter refused the query, skipped: ${query}`)
         return { data: [] }
       }
-      const limited = /too_many_requests|rate limit| 429/i.test(text)
-      if (!limited || attempt >= 8) throw err
-      console.log(`hunter rate limit, retry ${attempt} in ${attempt} min`)
+      const transient = /too_many_requests|rate limit| 429|ConnectError/i.test(text)
+      if (!transient || attempt >= 8) throw err
+      console.log(`hunter unavailable, retry ${attempt} in ${attempt} min`)
       await new Promise((r) => setTimeout(r, attempt * 60000))
     }
   }
