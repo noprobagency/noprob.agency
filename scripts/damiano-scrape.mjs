@@ -443,7 +443,9 @@ const fresh = (d) => !known.has(d)
 // Ready to hand out: store check passed, a company address (not gmail and the like) for
 // Italy, and the company in Italy when the people search says where it is.
 const PRIVATE_MAILBOX = /@(gmail|googlemail|hotmail|yahoo|libero|outlook|icloud|tiscali|alice|virgilio|live|msn|email)\./i
-const ready = (c) => c.store && !c.store.drop && (INTL || (!PRIVATE_MAILBOX.test(c.lead.email || '') && (!c.country || c.country === 'IT')))
+// CBD and cannabis stay out of cold (Claudio, 2 Nov): on Shopify they need a third-party gateway.
+const NOT_COLD = /cbd|cannabi|canapa/i
+const ready = (c) => c.store && !c.store.drop && !NOT_COLD.test(`${c.domain} ${c.name || ''}`) && (INTL || (!PRIVATE_MAILBOX.test(c.lead.email || '') && (!c.country || c.country === 'IT')))
 // The saved lead is checked against the current ranks: a role Ada stopped taking drops out.
 const candidates = () => Object.values(state.companies).filter((c) => c.lead && (!INTL || rankOf(c.lead.title)) && fits(c) && reachable(c) && fresh(c.domain))
 const leads = () => candidates().filter(ready)

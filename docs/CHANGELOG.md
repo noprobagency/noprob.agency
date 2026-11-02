@@ -6,7 +6,7 @@ old entries, add a new one on top.
 
 ### Changelog v1.131.0 (2 Nov 2026)
 
-- **Damiano follows Ada's filters**: the intl mode of `damiano-scrape.mjs` keeps only founder, co-founder, owner, president, CEO, managing director, head of e-commerce and e-commerce director, and no longer drops a store for its sector tag: what counts is a real consumer cart (D-50). `esclusi.json` next to the state holds back stores waiting for a decision. Saved leads are checked against the new ranks too, so the ones she discarded do not come back. Italy is unchanged. `siteMatchesCompany` now accepts a domain holding the whole company name: 3B International on 3binternational.com came out as a mismatch.
+- **Damiano follows Ada's filters**: the intl mode of `damiano-scrape.mjs` keeps only founder, co-founder, owner, president, CEO, managing director, head of e-commerce and e-commerce director, and no longer drops a store for its sector tag: what counts is a real consumer cart (D-50). `esclusi.json` next to the state holds back stores waiting for a decision. CBD and cannabis stores stay out in both markets. Saved leads are checked against the new ranks too, so the ones she discarded do not come back. Italy is unchanged. `siteMatchesCompany` now accepts a domain holding the whole company name: 3B International on 3binternational.com came out as a mismatch.
 
 ### Changelog v1.130.0 (2 Nov 2026)
 
