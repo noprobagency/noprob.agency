@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.129.0 (2 Nov 2026)
+
+- **Damiano survives a network blip**: Hunter discovery in `damiano-scrape.mjs` waits and retries on a connection error, as it does on the rate limit, instead of stopping the run. A lookup failing for a moment under load had stopped Ada's Monday run three times.
+
 ### Changelog v1.128.0 (2 Nov 2026)
 
 - **Gmail connection without the client file**: `cold-email-auth.mjs` uses the OAuth client already in the Keychain when no `client_secret.json` is passed, so connecting hello@ needs only `node scripts/cold-email-auth.mjs --account hello@noprob.agency`.
