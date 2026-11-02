@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.128.0 (2 Nov 2026)
+
+- **Gmail connection without the client file**: `cold-email-auth.mjs` uses the OAuth client already in the Keychain when no `client_secret.json` is passed, so connecting hello@ needs only `node scripts/cold-email-auth.mjs --account hello@noprob.agency`.
+
 ### Changelog v1.127.0 (2 Nov 2026)
 
 - **hello@ can be connected to the Gmail API too**: `cold-email-auth.mjs --account hello@noprob.agency` asks for read-only access and keeps the refresh token in its own Keychain entry (`cold-email-gmail-token-hello`), so antonio@'s connection is untouched. It lets Dante read the replies to the Gojiberry emails.
