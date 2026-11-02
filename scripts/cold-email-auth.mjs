@@ -1,10 +1,12 @@
 #!/usr/bin/env node
-// One-time Gmail connection for the cold email engine (antonio@noprob.agency).
+// One-time Gmail connection for the cold email engine (antonio@noprob.agency, or with
+// --account hello@noprob.agency the mailbox Gojiberry sends Dante's emails from: read
+// only, for the replies, in its own Keychain entry).
 // Needs an OAuth client of type "Desktop app" in a Google Cloud project of the
 // noprob.agency Workspace, with the Gmail API enabled and the consent screen set
 // to "Internal". Saves client and refresh token in the macOS Keychain; nothing on disk.
 //
-// Usage: node scripts/cold-email-auth.mjs <client_secret.json downloaded from Google Cloud>
+// Usage: node scripts/cold-email-auth.mjs <client_secret.json downloaded from Google Cloud> [--account hello@noprob.agency]
 // Afterwards the downloaded JSON can be deleted.
 
 import { execFileSync } from 'node:child_process'
@@ -12,11 +14,17 @@ import { readFileSync } from 'node:fs'
 import { createServer } from 'node:http'
 import { SCOPES, SENDER } from '../lib/cold-email/gmail.mjs'
 
-const file = process.argv[2]
+const args = process.argv.slice(2)
+const file = args.find((a, i) => !a.startsWith('--') && args[i - 1] !== '--account')
 if (!file) {
-  console.error('Usage: node scripts/cold-email-auth.mjs <client_secret.json>')
+  console.error('Usage: node scripts/cold-email-auth.mjs <client_secret.json> [--account hello@noprob.agency]')
   process.exit(1)
 }
+const account = args.includes('--account') ? args[args.indexOf('--account') + 1] : SENDER.email
+const extra = account !== SENDER.email
+// antonio@ sends and reads; any other mailbox is read only, its token in its own entry.
+const scopes = extra ? ['https://www.googleapis.com/auth/gmail.readonly'] : SCOPES
+const tokenEntry = extra ? `cold-email-gmail-token-${account.split('@')[0]}` : 'cold-email-gmail-token'
 const json = JSON.parse(readFileSync(file, 'utf8'))
 const { client_id, client_secret } = json.installed || json.web || {}
 if (!client_id || !client_secret) throw new Error('Not an OAuth client JSON (expected "installed.client_id")')
@@ -31,10 +39,10 @@ const url = `https://accounts.google.com/o/oauth2/v2/auth?${new URLSearchParams(
   client_id,
   redirect_uri: redirect,
   response_type: 'code',
-  scope: SCOPES.join(' '),
+  scope: scopes.join(' '),
   access_type: 'offline',
   prompt: 'consent',
-  login_hint: SENDER.email,
+  login_hint: account,
 })}`
 
 const code = await new Promise((resolve, reject) => {
@@ -45,7 +53,7 @@ const code = await new Promise((resolve, reject) => {
     if (params.get('code')) resolve(params.get('code'))
     else reject(new Error(params.get('error') || 'no code'))
   })
-  console.log(`Accedi come ${SENDER.email} e autorizza:\n${url}`)
+  console.log(`Accedi come ${account} e autorizza:\n${url}`)
   execFileSync('open', [url])
 })
 
@@ -57,5 +65,5 @@ const token = await res.json()
 if (!token.refresh_token) throw new Error(`No refresh token: ${JSON.stringify(token).slice(0, 200)}`)
 
 store('cold-email-gmail-client', JSON.stringify({ client_id, client_secret }))
-store('cold-email-gmail-token', token.refresh_token)
-console.log('Saved in the Keychain: cold-email-gmail-client, cold-email-gmail-token')
+store(tokenEntry, token.refresh_token)
+console.log(`Saved in the Keychain: cold-email-gmail-client, ${tokenEntry}`)
