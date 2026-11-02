@@ -31,6 +31,8 @@ const TOP_ROLE = /\b(founder|co-?founder|owner|co-?owner|president|ceo|chief exe
 const NOT_DECISION_MAKER = /\b(assistant|associate|intern|internship|stagista|junior|customer service|customer care|coordinator|specialist|analyst|consultant|freelance|executive assistant|trainee|vice[- ]president|president of)\b/i
 // Not a consumer store: software, SaaS, payments, wholesale (Gojiberry ICP exclusions, 1 Nov 2026).
 const NOT_CONSUMER_STORE = /\b(software|saas|information technology|it services|computer|cloud|payment|wholesale)\b/i
+// CBD and cannabis stay out of cold: on Shopify they need a third-party gateway, so the Sprint promise needs its own check (2 Nov 2026).
+const RESTRICTED_GOODS = /cbd|cannabis|marijuana|\bhemp\b|\bthc\b|kratom/i
 // Ada's markets: US, UK and Australia. Anyone else stays held for a human look.
 const EN_MARKETS = /\b(united states|usa|u\.s\.|united kingdom|uk|england|scotland|wales|northern ireland|great britain|australia|new south wales|queensland|western australia|south australia|tasmania|bay area|new york|los angeles|chicago|boston|seattle|miami|dallas|houston|austin|atlanta|denver|phoenix|philadelphia|san diego|portland|nashville|washington dc|london|manchester|birmingham|leeds|glasgow|edinburgh|bristol|liverpool|sydney|melbourne|brisbane|perth|adelaide|gold coast|canberra)\b/i
 
@@ -122,6 +124,7 @@ for (const key of ['en']) {
       TOP_ROLE.test(c.jobTitle || '') &&
       !NOT_DECISION_MAKER.test(c.jobTitle || '') &&
       !NOT_CONSUMER_STORE.test(c.industry || '') &&
+      !RESTRICTED_GOODS.test(`${c.company} ${url} ${c.industry}`) &&
       Number(c.total_scoring) >= MIN_SCORE
     if (!ok) {
       stats.held++
