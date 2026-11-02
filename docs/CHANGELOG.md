@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.130.0 (2 Nov 2026)
+
+- **Ada's routine no longer takes a vice president for a president**: the top-role rule matched "president" inside "Vice President" and "President of Sales", so `cold-daily` now holds both. The 6 queued leads with those titles came out of the queue (readyForCampaign off, still in the list, not rejected).
+
 ### Changelog v1.129.0 (2 Nov 2026)
 
 - **Damiano survives a network blip**: Hunter discovery in `damiano-scrape.mjs` waits and retries on a connection error, as it does on the rate limit, instead of stopping the run. A lookup failing for a moment under load had stopped Ada's Monday run three times.
