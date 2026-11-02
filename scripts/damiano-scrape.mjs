@@ -151,8 +151,9 @@ const sizeFits = (c) => {
   const low = parseInt(c.employees, 10)
   return Number.isNaN(low) || (low >= 5 && low < 1000)
 }
-// Ada's list too (D-45, 2 Nov): no manufacturing, wellness or marketplaces.
-const INTL_OUT = /manufacturing|wellness|marketplace/i
+// Ada's list too (2 Nov): no wellness or marketplaces. A manufacturing tag does not count
+// against a store (D-50): a ready lead has already passed the live cart check.
+const INTL_OUT = /wellness|marketplace/i
 const fits = (c) => FIT_INDUSTRY.test(c.industry || '') && !B2B_INDUSTRY.test(c.industry || '') && !(INTL && INTL_OUT.test(c.industry || '')) && sizeFits(c)
 const SKIP_TITLE = /intern|stagi|tirocin|assistant|assistente|customer (service|care)|magazzin|warehouse|student/i
 const rankOf = (title = '') => {
