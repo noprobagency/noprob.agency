@@ -6,7 +6,7 @@ old entries, add a new one on top.
 
 ### Changelog v1.131.0 (2 Nov 2026)
 
-- **Damiano follows Ada's filters**: the intl mode of `damiano-scrape.mjs` keeps only founder, co-founder, owner, president, CEO, managing director, head of e-commerce and e-commerce director, and drops wellness and marketplaces. A manufacturing tag no longer counts against a store with a real consumer cart (D-50). Saved leads are checked against the new ranks too, so the ones she discarded do not come back. Italy is unchanged.
+- **Damiano follows Ada's filters**: the intl mode of `damiano-scrape.mjs` keeps only founder, co-founder, owner, president, CEO, managing director, head of e-commerce and e-commerce director, and drops wellness and marketplaces. A manufacturing tag no longer counts against a store with a real consumer cart (D-50). Saved leads are checked against the new ranks too, so the ones she discarded do not come back. Italy is unchanged. `siteMatchesCompany` now accepts a domain holding the whole company name: 3B International on 3binternational.com came out as a mismatch.
 
 ### Changelog v1.130.0 (2 Nov 2026)
 

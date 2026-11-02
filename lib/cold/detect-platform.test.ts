@@ -10,6 +10,7 @@ describe('lead site checks', () => {
   it('matches the store domain with the company name', () => {
     expect(siteMatchesCompany('Flooring Superstore', 'https://www.flooringsuperstore.com/')).toBe(true)
     expect(siteMatchesCompany('Harry Hall International Ltd', 'https://www.harryhall.com/')).toBe(true)
+    expect(siteMatchesCompany('3B International', 'https://3binternational.com/')).toBe(true)
     expect(siteMatchesCompany('Pulse Light Clinic', 'https://www.protectormascotas.com/')).toBe(false)
     expect(siteMatchesCompany('Unique Health Products', 'http://www.debtrescue.com.au/')).toBe(false)
   })
