@@ -151,10 +151,7 @@ const sizeFits = (c) => {
   const low = parseInt(c.employees, 10)
   return Number.isNaN(low) || (low >= 5 && low < 1000)
 }
-// Ada's list too (2 Nov): no wellness or marketplaces. A manufacturing tag does not count
-// against a store (D-50): a ready lead has already passed the live cart check.
-const INTL_OUT = /wellness|marketplace/i
-const fits = (c) => FIT_INDUSTRY.test(c.industry || '') && !B2B_INDUSTRY.test(c.industry || '') && !(INTL && INTL_OUT.test(c.industry || '')) && sizeFits(c)
+const fits = (c) => FIT_INDUSTRY.test(c.industry || '') && !B2B_INDUSTRY.test(c.industry || '') && sizeFits(c)
 const SKIP_TITLE = /intern|stagi|tirocin|assistant|assistente|customer (service|care)|magazzin|warehouse|student/i
 const rankOf = (title = '') => {
   if (!title || SKIP_TITLE.test(title)) return null
@@ -439,6 +436,9 @@ if (INTL && existsSync('docs/cold/damiano/leads.json')) {
 // usati.json is Dante's (lib/cold-email/damiano.mjs): the stores his review already took.
 const USED_FILE = join(OUT, 'usati.json')
 if (existsSync(USED_FILE)) for (const d of Object.keys(JSON.parse(readFileSync(USED_FILE, 'utf8')))) known.add(d.replace(/^www\./, '').toLowerCase())
+// esclusi.json { domain: reason }: stores held back by hand, such as those waiting for a decision.
+const HELD_FILE = join(OUT, 'esclusi.json')
+if (existsSync(HELD_FILE)) for (const d of Object.keys(JSON.parse(readFileSync(HELD_FILE, 'utf8')))) known.add(d.replace(/^www\./, '').toLowerCase())
 const fresh = (d) => !known.has(d)
 // Ready to hand out: store check passed, a company address (not gmail and the like) for
 // Italy, and the company in Italy when the people search says where it is.
