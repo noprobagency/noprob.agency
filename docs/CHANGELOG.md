@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.131.0 (2 Nov 2026)
+
+- **CBD and cannabis stay out of Ada's cold outreach**: `cold-daily` now holds leads whose company, site or industry points to CBD, cannabis, hemp, THC or kratom. On Shopify these stores cannot use Shopify Payments and need a third-party gateway, so the Sprint promise would need a separate check. One queued lead came out of the queue (still in the list, not rejected).
+
 ### Changelog v1.130.0 (2 Nov 2026)
 
 - **Ada's routine no longer takes a vice president for a president**: the top-role rule matched "president" inside "Vice President" and "President of Sales", so `cold-daily` now holds both. The 6 queued leads with those titles came out of the queue (readyForCampaign off, still in the list, not rejected).
