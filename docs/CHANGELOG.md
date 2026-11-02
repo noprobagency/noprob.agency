@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.131.0 (2 Nov 2026)
+
+- **Damiano follows Ada's filters**: the intl mode of `damiano-scrape.mjs` keeps only founder, co-founder, owner, president, CEO, managing director, head of e-commerce and e-commerce director, and drops manufacturing, wellness and marketplaces (D-45). Saved leads are checked against the new ranks too, so the ones she discarded do not come back. Italy is unchanged.
+
 ### Changelog v1.130.0 (2 Nov 2026)
 
 - **Ada's routine no longer takes a vice president for a president**: the top-role rule matched "president" inside "Vice President" and "President of Sales", so `cold-daily` now holds both. The 6 queued leads with those titles came out of the queue (readyForCampaign off, still in the list, not rejected).

@@ -126,19 +126,18 @@ const RANKS = [
   [/\bcmo\b|marketing.*(director|manager|head|responsabile|direttore)|(head|responsabile|direttore).*marketing|\bcoo\b|chief operating/i, 3],
   [/e-?commerce|digital/i, 4],
 ]
-// Ada's list (30 Oct): no "President of Sales", VPs only for marketing or IT, no
-// "online operations" or merchandising, which the Italian ranks would let through.
+// Ada's list (2 Nov): the top of the company and the head of e-commerce, nobody else. No
+// general manager, COO, marketing, digital or vice president, no "President of Sales".
 const INTL_RANKS = [
-  [/\b(ceo|founder|co-?founder|owner|managing director|general manager|coo|chief operating)\b|(?<!vice )\bpresident\b(?!.*\bof\b)/i, 1],
-  [/(head|director|vp|vice president) of (e-?commerce|digital)|(e-?commerce|digital) (director|manager|lead)|chief digital/i, 2],
-  [/\bcmo\b|chief marketing|(head|director|vp|vice president),? (of )?marketing|marketing director|\bvp\b.*\b(it|technology)\b/i, 3],
+  [/\b(ceo|chief executive|founder|owner|managing director)\b|(?<!vice[ -])\bpresident\b(?!.*\bof\b)/i, 1],
+  [/(head|director) of e-?commerce|e-?commerce director/i, 2],
 ]
 const ROLE_LABEL = INTL
-  ? { 1: 'founder/CEO/owner', 2: 'ecommerce/digital', 3: 'marketing/IT' }
+  ? { 1: 'founder/CEO/owner', 2: 'ecommerce' }
   : { 1: 'titolare/CEO', 2: 'e-commerce/digital', 3: 'marketing/ops', 4: 'altro e-commerce' }
 // Role searches run on top of the plain domain search, which lists only 25 people.
 const ROLE_SEARCHES = INTL
-  ? ['founder', 'CEO', 'owner', 'managing director', 'ecommerce', 'marketing director']
+  ? ['founder', 'CEO', 'owner', 'managing director', 'president', 'ecommerce']
   : ['founder', 'CEO', 'owner', 'amministratore', 'general manager', 'e-commerce manager']
 // Consumer brands only: Hunter drifts into agencies, SaaS and B2B manufacturers whose
 // WordPress has a WooCommerce plugin. The industry comes free with the people search.
@@ -152,7 +151,9 @@ const sizeFits = (c) => {
   const low = parseInt(c.employees, 10)
   return Number.isNaN(low) || (low >= 5 && low < 1000)
 }
-const fits = (c) => FIT_INDUSTRY.test(c.industry || '') && !B2B_INDUSTRY.test(c.industry || '') && sizeFits(c)
+// Ada's list too (D-45, 2 Nov): no manufacturing, wellness or marketplaces.
+const INTL_OUT = /manufacturing|wellness|marketplace/i
+const fits = (c) => FIT_INDUSTRY.test(c.industry || '') && !B2B_INDUSTRY.test(c.industry || '') && !(INTL && INTL_OUT.test(c.industry || '')) && sizeFits(c)
 const SKIP_TITLE = /intern|stagi|tirocin|assistant|assistente|customer (service|care)|magazzin|warehouse|student/i
 const rankOf = (title = '') => {
   if (!title || SKIP_TITLE.test(title)) return null
@@ -442,7 +443,8 @@ const fresh = (d) => !known.has(d)
 // Italy, and the company in Italy when the people search says where it is.
 const PRIVATE_MAILBOX = /@(gmail|googlemail|hotmail|yahoo|libero|outlook|icloud|tiscali|alice|virgilio|live|msn|email)\./i
 const ready = (c) => c.store && !c.store.drop && (INTL || (!PRIVATE_MAILBOX.test(c.lead.email || '') && (!c.country || c.country === 'IT')))
-const candidates = () => Object.values(state.companies).filter((c) => c.lead && fits(c) && reachable(c) && fresh(c.domain))
+// The saved lead is checked against the current ranks: a role Ada stopped taking drops out.
+const candidates = () => Object.values(state.companies).filter((c) => c.lead && (!INTL || rankOf(c.lead.title)) && fits(c) && reachable(c) && fresh(c.domain))
 const leads = () => candidates().filter(ready)
 const isStore = (c) => STORE_PLATFORMS.has(c.platform) && reachable(c) && fresh(c.domain)
 const isShopify = (c) => c.platform === 'shopify' && reachable(c) && fresh(c.domain)
