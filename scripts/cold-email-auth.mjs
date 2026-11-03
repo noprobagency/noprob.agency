@@ -6,7 +6,8 @@
 // noprob.agency Workspace, with the Gmail API enabled and the consent screen set
 // to "Internal". Saves client and refresh token in the macOS Keychain; nothing on disk.
 //
-// Usage: node scripts/cold-email-auth.mjs [client_secret.json downloaded from Google Cloud] [--account hello@noprob.agency]
+// Usage: node scripts/cold-email-auth.mjs [client_secret.json downloaded from Google Cloud] [--account hello@noprob.agency] [--send]
+// --send also lets that other mailbox send: Antonio's replies from the /risposte page of the CRM.
 // Without the file the OAuth client already saved in the Keychain is used.
 // Afterwards the downloaded JSON can be deleted.
 
@@ -24,8 +25,8 @@ if (!file && !saved) {
 }
 const account = args.includes('--account') ? args[args.indexOf('--account') + 1] : SENDER.email
 const extra = account !== SENDER.email
-// antonio@ sends and reads; any other mailbox is read only, its token in its own entry.
-const scopes = extra ? ['https://www.googleapis.com/auth/gmail.readonly'] : SCOPES
+// antonio@ sends and reads; any other mailbox is read only unless --send, its token in its own entry.
+const scopes = extra && !args.includes('--send') ? ['https://www.googleapis.com/auth/gmail.readonly'] : SCOPES
 const tokenEntry = extra ? `cold-email-gmail-token-${account.split('@')[0]}` : 'cold-email-gmail-token'
 const json = file ? JSON.parse(readFileSync(file, 'utf8')) : JSON.parse(saved)
 const { client_id, client_secret } = json.installed || json.web || json
