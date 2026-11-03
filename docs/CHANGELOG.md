@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.132.0 (3 Nov 2026)
+
+- **A Gmail minute quota no longer stops the direct send**: the thread check grows with every lead in sequence and hit the `Units per minute per user` limit before the first send, so antonio@ sent nothing on the morning of 3 Nov. The Gmail client now waits 65 seconds and retries, up to 10 times; daily limits and other 403s still stop the run.
+
 ### Changelog v1.131.0 (2 Nov 2026)
 
 - **CBD and cannabis stay out of Ada's cold outreach**: `cold-daily` now holds leads whose company, site or industry points to CBD, cannabis, hemp, THC or kratom. On Shopify these stores cannot use Shopify Payments and need a third-party gateway, so the Sprint promise would need a separate check. One queued lead came out of the queue (still in the list, not rejected).

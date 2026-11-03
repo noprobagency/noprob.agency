@@ -1,4 +1,4 @@
-import { describe, expect, it } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 import { excludeDomains, firstNameOf, fromCrm, stopStore } from './leads.mjs'
 import { STEPS, addWorkingDays, dueStep, render } from './sequence.mjs'
 
@@ -175,5 +175,19 @@ describe('network retry', () => {
     let n = 0
     expect(await withRetry(async () => (++n < 3 ? Promise.reject(new Error('ECONNRESET')) : 'ok'), { pauseMs: 1 })).toBe('ok')
     await expect(withRetry(async () => Promise.reject(new Error('down')), { tries: 2, pauseMs: 1 })).rejects.toThrow('down')
+  })
+
+  it('waits out the per-minute Gmail quota and stops on any other 403', async () => {
+    const { gmail } = await import('./gmail.mjs')
+    const replies = [
+      new Response('Quota exceeded for Units per minute per user', { status: 403 }),
+      new Response('{"id":"t1"}'),
+      new Response('Daily user sending limit exceeded', { status: 403 }),
+    ]
+    vi.stubGlobal('fetch', async () => replies.shift())
+    const api = gmail('token', { quotaPauseMs: 1 })
+    expect(await api.thread('t1')).toEqual({ id: 't1' })
+    await expect(api.thread('t2')).rejects.toThrow('Daily user sending limit')
+    vi.unstubAllGlobals()
   })
 })
