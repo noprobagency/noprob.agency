@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.134.0 (3 Nov 2026)
+
+- **Marco prepares magazine pitches**: Antonio asked for pitch emails and editorial contacts to propose articles. Marco's email rule now allows them as drafts in the gitignored `backlink/data/outreach/`, sent only after Antonio's explicit ok. The ban on client and review emails stays. Client link analyses and outreach drafts stay out of committed files because the repo is public.
+
 ### Changelog v1.133.0 (3 Nov 2026)
 
 - **Damiano follows Ada's filters**: the intl mode of `damiano-scrape.mjs` keeps only founder, co-founder, owner, president, CEO, managing director, head of e-commerce and e-commerce director, and no longer drops a store for its sector tag: what counts is a real consumer cart (D-50). `esclusi.json` next to the state holds back stores waiting for a decision. CBD and cannabis stores stay out in both markets. Saved leads are checked against the new ranks too, so the ones she discarded do not come back. Italy is unchanged. `siteMatchesCompany` now accepts a domain holding the whole company name: 3B International on 3binternational.com came out as a mismatch.
