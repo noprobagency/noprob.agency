@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.135.0 (3 Nov 2026)
+
+- **Replies from the private CRM**: `scripts/cold-email-auth.mjs --account <mailbox> --send` lets hello@ send too, for Antonio's replies from the CRM's new replies page; Claudio reads his comments there and only writes drafts. The CRM address is no longer written in this public repo: the private CRM is now behind a password.
+
 ### Changelog v1.134.0 (3 Nov 2026)
 
 - **Marco prepares magazine pitches**: Antonio asked for pitch emails and editorial contacts to propose articles. Marco's email rule now allows them as drafts in the gitignored `backlink/data/outreach/`, sent only after Antonio's explicit ok. The ban on client and review emails stays. Client link analyses and outreach drafts stay out of committed files because the repo is public.
