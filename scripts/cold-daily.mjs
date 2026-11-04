@@ -3,7 +3,7 @@
 // For every new lead in Ada's list (US, UK, AU; Italy went to Dante's email agent on 26 Oct 2026):
 //   1. store already on Shopify  -> moved to the side-project segment
 //   2. lead outside US, UK, AU -> held for a human look
-//   3. lead passing the fixed criteria -> approved (readyForCampaign), max N per run
+//   3. lead passing the fixed criteria and showing a consumer cart -> approved (readyForCampaign), max N per run
 // Before that, the opt-out sweep (lib/cold/sweep.mjs), which also runs hourly on its own.
 // Writes one line to docs/cold/daily-log.md. Lead data never leaves docs/cold/ (gitignored).
 // Runs in the cloud too (.github/workflows/cold-routine.yml, every 2 hours): there COLD_STATE
@@ -17,7 +17,9 @@ import { dirname } from 'node:path'
 import { isPersonalSite, normaliseUrl, siteMatchesCompany } from '../lib/cold/detect-platform.mjs'
 import { fetchPlatform, pool } from '../lib/cold/fetch-platform.mjs'
 import { LISTS, api, listContacts } from '../lib/cold/gojiberry.mjs'
+import { storeCheck } from '../lib/cold/store-check.mjs'
 import { optoutSweep } from '../lib/cold/sweep.mjs'
+import { domainOf } from '../lib/cold-email/leads.mjs'
 import { syncSuppressed } from '../lib/cold-email/suppression.mjs'
 
 const MIN_SCORE = 2.0
@@ -146,6 +148,19 @@ for (const key of ['en']) {
       continue
     }
     if (stats.approved[key] >= room) break // the rest waits for the next run
+    // The industry tag lets software and distributors through (4 Nov 2026): no consumer
+    // cart, no approval. Same rule as above for a blocked site: in CI the Mac job checks it.
+    const store = await storeCheck(domainOf(urls.get(c.id)))
+    if (store.drop === 'unreachable' && process.env.CI) {
+      stats.blocked++
+      continue
+    }
+    if (store.drop) {
+      stats.held++
+      held.add(c.id)
+      processed.add(c.id)
+      continue
+    }
     busyCompanies.add(company)
     approvals.push(c.id)
     stats.approved[key]++
