@@ -49,20 +49,33 @@ describe('sequence', () => {
     for (const step of STEPS) {
       for (const l of [lead, { ...lead, lang: 'en' }, { ...lead, platform: 'other' }]) {
         const { body } = render(l, step.key)
-        expect(body).not.toMatch(/[—–]| - |:/)
+        expect(body.replaceAll(':)', '')).not.toMatch(/[—–]| - |:/)
         expect(body).not.toMatch(/undefined|null/)
       }
     }
   })
 
-  it('uses the PHP hook only on PHP platforms and quotes only an exposed version', () => {
-    expect(render(lead, 'e1').body).toContain('PHP 7.4.33')
+  it('uses the PHP hook only on PHP platforms', () => {
+    expect(render(lead, 'e1').body).toContain('gira su WooCommerce')
     expect(render({ ...lead, platform: 'other', php: null }, 'e1').body).not.toContain('PHP')
-    expect(render(lead, 'e2').subject).toBe('Re: Acme e la falla di PHP')
-    expect(render({ ...lead, php: '8.3.36' }, 'e1').subject).toBe('Acme su Shopify?')
-    const custom = render({ ...lead, platform: 'other', php: '7.2.34' }, 'e1').body
-    expect(custom).toContain('il sito di Acme gira ancora su PHP')
-    expect(custom).toContain('PHP 7.2.34')
+    expect(render(lead, 'e1').subject).toBe('Acme e la falla di PHP')
+    expect(render({ ...lead, php: '8.3.36' }, 'e1').subject).toBe('Acme e l’AI')
+    expect(render({ ...lead, platform: 'other', php: '7.2.34' }, 'e1').body).toContain('gira su PHP')
+  })
+
+  it('offers the opt-out line in the first email only', () => {
+    for (const l of [lead, { ...lead, platform: 'other', php: null }]) {
+      expect(render(l, 'e1').body).toContain('basta dirmelo')
+      expect(render(l, 'e1').body).not.toContain('PS')
+      expect(render(l, 'e2').body).not.toContain('basta dirmelo')
+    }
+  })
+
+  it('keeps the old subject on threads opened by v1', () => {
+    const shop = { ...lead, platform: 'other', php: null }
+    const v1 = { ...shop, sequence: { ...shop.sequence, version: 'v1' } }
+    expect(render(v1, 'e2').subject).toBe('Re: Acme su Shopify?')
+    expect(render({ ...shop, sequence: { ...shop.sequence, version: 'v2' } }, 'e2').subject).toBe('Re: Acme e l’AI')
   })
 
   it('spreads the steps over working days and stops on a reply', () => {
@@ -130,7 +143,7 @@ describe('leads from Gojiberry (Dante overflow)', () => {
     const c = { id: 7, firstName: 'sara', lastName: 'Rossi', email: 'Sara@Acme.it', website: 'https://www.acme.it/', industry: 'Apparel & Fashion', jobTitle: 'CEO' }
     const lead = fromGojiberry(c, { platform: 'woocommerce', php: '7.4.33' }, 'Acme')
     expect([lead.id, lead.domain, lead.email, lead.firstName, lead.lang, lead.category, lead.segment]).toEqual(['gjb:7', 'acme.it', 'sara@acme.it', 'Sara', 'it', 'fashion', 'target'])
-    expect(render(lead, 'e1').body).toContain('PHP 7.4.33')
+    expect(render(lead, 'e1').body).toContain('falle critiche in PHP')
     expect(fromGojiberry({ ...c, email: 'noreply@acme.it', industry: 'Food' }, null, 'Acme')).toMatchObject({ segment: 'suppressed', category: 'dtc' })
   })
 })
