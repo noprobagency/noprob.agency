@@ -29,7 +29,7 @@ import { gojiberryDomains, gojiberryRemaining } from '../lib/cold-email/gojiberr
 import { excludeDomains, stopStore } from '../lib/cold-email/leads.mjs'
 import { appendSuppressed, applySuppressed, readSuppressed, refusals } from '../lib/cold-email/suppression.mjs'
 import { publishTaken, takenBody } from '../lib/cold-email/taken.mjs'
-import { SEQUENCE_VERSION, dueStep, render } from '../lib/cold-email/sequence.mjs'
+import { SEQUENCE_VERSION, dueDate, dueStep, render } from '../lib/cold-email/sequence.mjs'
 
 const DIR = 'cold-email/data'
 const LEADS = `${DIR}/leads.json`
@@ -136,7 +136,7 @@ if (config.approved !== SEQUENCE_VERSION) {
   const due = db.leads
     .map((lead) => ({ lead, step: dueStep(lead, today) }))
     .filter((d) => d.step)
-    .sort((a, b) => priority(a.lead) - priority(b.lead))
+    .sort((a, b) => priority(a.lead) - priority(b.lead) || (a.step.key === 'e1' ? 0 : dueDate(a.lead, a.step).localeCompare(dueDate(b.lead, b.step))))
 
   // At most one first email per store a day, even with several people of the same store.
   const storesToday = new Set(db.leads.filter((l) => l.sequence.sent.some((x) => x.step === 'e1' && x.date === today)).map((l) => l.domain))
