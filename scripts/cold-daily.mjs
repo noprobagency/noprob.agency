@@ -18,6 +18,7 @@ import { isPersonalSite, normaliseUrl, siteMatchesCompany } from '../lib/cold/de
 import { fetchPlatform, pool } from '../lib/cold/fetch-platform.mjs'
 import { LISTS, api, listContacts } from '../lib/cold/gojiberry.mjs'
 import { optoutSweep } from '../lib/cold/sweep.mjs'
+import { syncSuppressed } from '../lib/cold-email/suppression.mjs'
 
 const MIN_SCORE = 2.0
 // antonio@noprob.agency sends for Gojiberry and for the direct channel: 55 a day in
@@ -63,6 +64,7 @@ const saveState = (extra) => {
   writeFileSync(STATE, JSON.stringify({ ...current, ...extra }))
 }
 
+if (!dry) syncSuppressed()
 const sweep = process.env.COLD_NO_SWEEP ? { excluded: 0 } : await optoutSweep({ since: state.lastSweep, dry })
 if (!process.env.COLD_NO_SWEEP) saveState({ lastSweep: sweep.startedAt })
 

@@ -3,7 +3,7 @@ import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { describe, expect, it } from 'vitest'
 import { fromCrm } from './leads.mjs'
-import { appendSuppressed, applySuppressed, isSuppressed, parseSuppressed, readSuppressed, refusals } from './suppression.mjs'
+import { appendSuppressed, applySuppressed, isSuppressed, missingLines, parseSuppressed, readSuppressed, refusals } from './suppression.mjs'
 
 const lead = fromCrm({ id: 'a', brand: 'Acme', contact: 'Anna', email: 'Anna@Acme-Store.com', domain: 'www.acme-store.com', status: 'archived' }, 'no_reply', {
   platform: 'woocommerce',
@@ -32,5 +32,14 @@ describe('shared opt-out list', () => {
     expect(appendSuppressed(refusals([said]), 'no', file)).toBe(0)
     expect(readSuppressed(file).has('anna@acme-store.com')).toBe(true)
     expect(readFileSync(file, 'utf8')).toContain('# no, cold email diretta')
+  })
+})
+
+describe('opt-out list on two sides', () => {
+  it('copies only what the other side lacks, comments kept, case ignored', () => {
+    const local = '# header\na@x.it # no\n@shop.it\n'
+    const shared = 'A@X.it\nb@y.it # opt-out\n'
+    expect(missingLines(local, shared)).toEqual(['@shop.it'])
+    expect(missingLines(shared, local)).toEqual(['b@y.it # opt-out'])
   })
 })
