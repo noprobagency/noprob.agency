@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.137.0 (4 Nov 2026)
+
+- **Ada approves only shops with a consumer cart**: `scripts/cold-daily.mjs` now runs `storeCheck` (`lib/cold/store-check.mjs`, the check Dante already uses) on each lead just before approving it. No cart or a B2B site stays held for a human look; a blocked site is never approved, and in the cloud it stays for the Mac job. The Gojiberry industry tag alone was letting software companies and distributors through.
+
 ### Changelog v1.136.0 (4 Nov 2026)
 
 - **Dante's email moves to the cloud**: the private CRM repo now runs the review and the hourly sends, so `.github/workflows/cold-dante.yml` is gone from this repo.
