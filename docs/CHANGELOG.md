@@ -4,6 +4,11 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.136.0 (4 Nov 2026)
+
+- **Dante's email moves to the cloud**: the private CRM repo now runs the review and the hourly sends, so `.github/workflows/cold-dante.yml` is gone from this repo.
+- **The opt-out list stays one**: the cloud works on `state/suppressed.txt`, Ada's Mac routines on `docs/cold/suppressed.txt`. `syncSuppressed` copies what each side lacks, at the start of `cold-daily` and at every hourly `cold-optout`.
+
 ### Changelog v1.135.0 (3 Nov 2026)
 
 - **Replies from the private CRM**: `scripts/cold-email-auth.mjs --account <mailbox> --send` lets hello@ send too, for Antonio's replies from the CRM's new replies page; Claudio reads his comments there and only writes drafts. The CRM address is no longer written in this public repo: the private CRM is now behind a password.

@@ -6,9 +6,12 @@
 
 import { appendFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { optoutSweep } from '../lib/cold/sweep.mjs'
+import { syncSuppressed } from '../lib/cold-email/suppression.mjs'
 
 const STATE = 'docs/cold/daily-state.json'
 const dry = process.argv.includes('--dry')
+
+if (!dry) syncSuppressed()
 
 const state = existsSync(STATE) ? JSON.parse(readFileSync(STATE, 'utf8')) : {}
 const sweep = await optoutSweep({ since: state.lastSweep, dry })
