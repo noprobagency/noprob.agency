@@ -3,36 +3,36 @@ import type { Article } from '../index'
 const article: Article = {
   slug: 'shopify-plus',
   slugIt: 'shopify-plus',
-  title: 'Shopify Plus: When It Pays Off and How to Migrate',
-  titleIt: 'Shopify Plus: quando conviene e come migrare',
-  seoTitle: 'Shopify Plus: When It Pays Off, How to Migrate',
-  seoTitleIt: 'Shopify Plus: quando conviene e come migrare',
+  title: 'Shopify Plus: When It Pays Off and What It Adds',
+  titleIt: 'Shopify Plus: quando conviene e cosa aggiunge',
+  seoTitle: 'Shopify Plus: When It Pays Off and What It Adds',
+  seoTitleIt: 'Shopify Plus: quando conviene e cosa aggiunge',
   seoDescription:
-    'Shopify Plus explained: what it adds over other plans, signs you are ready, what changes in a migration and whether to move before or after.',
+    'What Shopify Plus adds over other plans: checkout, B2B, expansion stores, APIs. The signs you are ready, and what it adds to a migration.',
   seoDescriptionIt:
-    'Shopify Plus spiegato: cosa aggiunge agli altri piani, i segnali che sei pronto, cosa cambia in una migrazione e se passare a Plus prima o dopo.',
+    'Cosa aggiunge Shopify Plus agli altri piani: checkout, B2B, expansion store, API. I segnali che sei pronto e cosa aggiunge a una migrazione.',
   excerpt:
-    'What Shopify Plus adds over the other plans, the signs a brand is ready for it, what changes when you migrate to Plus, and whether to move before or after the migration.',
+    'What Shopify Plus adds over the other plans, the signs a brand is ready for it, what it adds to a migration, and whether to move before or after.',
   excerptIt:
-    'Cosa aggiunge Shopify Plus rispetto agli altri piani, i segnali che un brand è pronto, cosa cambia migrando su Plus e se passare a Plus prima o dopo la migrazione.',
+    'Cosa aggiunge Shopify Plus rispetto agli altri piani, i segnali che un brand è pronto, cosa aggiunge a una migrazione e se passare a Plus prima o dopo.',
   ledeEn:
-    'Plus is not a badge for big brands: it is a set of tools you either use or pay for. Here is what it adds, how to tell if you need it, and how to migrate.',
+    'Plus is not a badge for big brands: it is a set of tools you either use or pay for. Here is what it adds, how to tell if you need it, and what changes in a migration.',
   ledeIt:
-    'Plus non è un distintivo per i grandi brand: è un insieme di strumenti che o usi o paghi. Ecco cosa aggiunge, come capire se ti serve e come migrare.',
+    'Plus non è un distintivo per i grandi brand: è un insieme di strumenti che o usi o paghi. Ecco cosa aggiunge, come capire se ti serve e cosa cambia in una migrazione.',
   image: '/images/blog/shopify-plus-cover.png',
   imageAlt: 'Cover astratta a puntini colorati per l’articolo su Shopify Plus',
   imageAltEn: 'Abstract dotted cover for the article on Shopify Plus',
   articleType: 'BlogPosting',
   date: '2026-10-21',
   datePublishedIso: '2026-10-21T16:25:00+01:00',
-  dateModifiedIso: '2026-10-28T09:00:00+00:00',
-  wordCount: 2125,
+  dateModifiedIso: '2026-11-04T20:30:00+00:00',
+  wordCount: 2209,
   articleSection: 'Shopify Migration',
-  readingTimeMinutes: 8,
+  readingTimeMinutes: 9,
   keywordsEn:
-    'shopify plus, shopify plus agency, shopify plus migration, shopify plus vs shopify, when to upgrade to shopify plus, shopify plus features, shopify plus b2b, shopify plus checkout',
+    'shopify plus, shopify plus agency, shopify plus vs shopify, when to upgrade to shopify plus, shopify plus features, shopify plus b2b, shopify plus checkout',
   keywordsIt:
-    'shopify plus, agenzia shopify plus, migrazione shopify plus, shopify plus differenze, quando passare a shopify plus, funzioni shopify plus, shopify plus b2b, checkout shopify plus',
+    'shopify plus, agenzia shopify plus, shopify plus differenze, quando passare a shopify plus, funzioni shopify plus, shopify plus b2b, checkout shopify plus',
   faqEn: [
     {
       question: 'What is Shopify Plus?',
@@ -42,7 +42,7 @@ const article: Article = {
     {
       question: 'How much does Shopify Plus cost?',
       answer:
-        'Check Shopify’s official Plus page: plans and prices change, so we do not copy a figure here. What we can tell you is how to judge it: list the Plus features you will use in the first 90 days and compare the plan with the cost of building the same thing another way.',
+        'From €2,100 a month on a 3-year term, as shown on Shopify’s pricing page (shopify.com/pricing) on 4 November 2026. Plans and prices change, so check the page the day you decide. To judge it, list the Plus features you will use in the first 90 days and compare the plan with the cost of building the same thing another way.',
     },
     {
       question: 'Do I need Shopify Plus to sell B2B?',
@@ -74,7 +74,7 @@ const article: Article = {
     {
       question: 'Quanto costa Shopify Plus?',
       answer:
-        'Controlla la pagina ufficiale di Shopify Plus: piani e prezzi cambiano, quindi non copiamo una cifra qui. Possiamo dirti come valutarlo: elenca le funzioni Plus che userai nei primi 90 giorni e confronta il piano con il costo di ottenere la stessa cosa in un altro modo.',
+        'Da €2.100 al mese con termine di 3 anni, come mostrato sulla pagina prezzi di Shopify (shopify.com/pricing) il 4 novembre 2026. Piani e prezzi cambiano, quindi controlla la pagina il giorno in cui decidi. Per valutarlo, elenca le funzioni Plus che userai nei primi 90 giorni e confronta il piano con il costo di ottenere la stessa cosa in un altro modo.',
     },
     {
       question: 'Serve Shopify Plus per vendere B2B?',
@@ -104,7 +104,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'We are noprob agency and we sell the [Shopify Launch Sprint](/shopify-migration-sprint), so here is how we answer. We stay with what Shopify’s own documentation says about Plus, we publish no price for it (Shopify sets it, see [shopify.com/plus](https://www.shopify.com/plus)), and we keep the opinions clearly marked as ours. For the migration itself, our [Shopify migration guide](/shopify-migration) has the full path; this piece covers what Plus adds to it.',
+      text: 'We are noprob agency and we sell the [Shopify Launch Sprint](/shopify-migration-sprint), so here is how we answer. We stay with what Shopify’s own documentation says about Plus, we quote Shopify’s own price for it (from €2,100 a month on a 3-year term, [shopify.com/pricing](https://www.shopify.com/pricing), 4 November 2026), and we keep the opinions clearly marked as ours. For the migration itself, our [Shopify migration guide](/shopify-migration) has the full path; this piece covers what Plus adds to it.',
     },
     { type: 'h2', text: 'What is Shopify Plus and how does it differ from the other plans?' },
     {
@@ -136,7 +136,7 @@ const article: Article = {
       items: [
         '**Checkout rules you cannot build today.** Different shipping or payment rules by customer type, required fields, logic that a standard checkout cannot express. If you can write the rule on one line and nobody can implement it, that is a Plus signal.',
         '**Wholesale next to retail.** Company accounts, negotiated catalogs, payment terms for B2B buyers, with a retail checkout that must stay untouched.',
-        '**More than one store by design.** Separate brands, regions with different catalogs, a physical location with its own setup. Our view: do not open a store per country by reflex. Start with one store and Shopify Markets, and add an expansion store when the catalogs genuinely diverge.',
+        '**More than one store by design.** Regions with different catalogs or a physical location with its own setup, under the same brand. [Expansion stores](https://help.shopify.com/en/manual/organization-settings/expansion-stores) must extend the main brand: for separate brands Shopify points to a multi-brand agreement, with one Plus subscription per brand. Our view: do not open a store per country by reflex. Start with one store and Shopify Markets, and add an expansion store when the catalogs genuinely diverge.',
         '**Integration pressure.** An ERP or warehouse system that reads and writes orders all day and hits API limits, or logic that has to run inside the backend rather than in an app.',
         '**Manual operations at scale.** Tags, holds, fraud checks, routing, handled by a person today. Flow does much of this on standard plans; Plus matters when the tasks come from partner apps.',
         '**A team that outgrew roles and staging.** Many people in the admin, each needing the right permissions, and changes that must be tested before they reach customers.',
@@ -148,12 +148,12 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Shopify publishes the price, so open the [official Plus page](https://www.shopify.com/plus) the day you decide. The other half of the comparison is the one-off cost of the move: our [Shopify migration cost](/blog/shopify-migration-cost) article breaks down the eight lines of a quote.',
+      text: 'Shopify publishes the price, from €2,100 a month on 4 November 2026, so open its [pricing page](https://www.shopify.com/pricing) the day you decide. The other half of the comparison is the one-off cost of the move: our [Shopify migration cost](/blog/shopify-migration-cost) article breaks down the eight lines of a quote.',
     },
-    { type: 'h2', text: 'What changes when you migrate to Shopify Plus?' },
+    { type: 'h2', text: 'What Plus adds to a migration' },
     {
       type: 'paragraph',
-      text: '**A migration to Plus is the same migration as any other, with four extra areas to plan: data, checkout, apps and B2B.** The base work does not change: products, customers, order history, a 1:1 redirect map, tracking, testing. Our [migration SEO checklist](/blog/shopify-migration-seo-checklist) covers it. Here is what Plus adds.',
+      text: '**A migration to Plus is the same migration as any other, with four extra areas to plan: data, checkout, apps and B2B.** The base work does not change: products, customers, order history, a 1:1 redirect map, tracking, testing. Our [migration SEO checklist](/blog/shopify-migration-seo-checklist) covers it. Here is what Plus adds; for the two routes, the dates and the bills, read our [Shopify Plus migration](/blog/shopify-plus-migration) article.',
     },
     { type: 'h3', text: 'Data' },
     {
@@ -163,7 +163,7 @@ const article: Article = {
     { type: 'h3', text: 'Checkout' },
     {
       type: 'paragraph',
-      text: 'Checkout is where Plus changes the build. Shopify’s direction is checkout extensibility and [Shopify Functions](https://shopify.dev/docs/apps/build/functions), replacing the older ways of customizing the checkout, so a rule from your old platform becomes an extension, a Function or an app. Read the current status in Shopify’s documentation rather than in an article: dates move. In the migration, list every checkout behavior of the old store (fields, shipping rules, payment rules, discounts), decide for each whether it is still needed, then choose how to build it. Often a good part of that list can simply go.',
+      text: 'Checkout is where Plus changes the build. Shopify’s direction is checkout extensibility and [Shopify Functions](https://shopify.dev/docs/apps/build/functions), replacing the older ways of customizing the checkout, so a rule from your old platform becomes an extension, a Function or an app. Read the current status in Shopify’s documentation, because dates move; our [Shopify Plus migration](/blog/shopify-plus-migration) article has the dates, each linked to its page. In the migration, list every checkout behavior of the old store (fields, shipping rules, payment rules, discounts), decide for each whether it is still needed, then choose how to build it. Often a good part of that list can simply go.',
     },
     { type: 'h3', text: 'Apps' },
     {
@@ -182,7 +182,7 @@ const article: Article = {
     { type: 'h2', text: 'Should you move to Shopify Plus before or after the migration?' },
     {
       type: 'paragraph',
-      text: '**Move to Plus before the migration only if Plus features are part of day one; otherwise migrate first and upgrade when a limit appears.** Plus is a plan on the same platform, so the upgrade later does not mean a second migration. The work sits in what you build on top of the Plus features, and that is what you must time.',
+      text: '**Move to Plus before the migration only if Plus features are part of day one; otherwise migrate first and upgrade when a limit appears.** From Advanced, the later upgrade is a plan change, not a second migration. The work sits in what you build on top of the Plus features, and that is what you must time.',
     },
     {
       type: 'list',
@@ -228,7 +228,7 @@ const article: Article = {
     { type: 'h3', text: 'How much does Shopify Plus cost?' },
     {
       type: 'paragraph',
-      text: 'Check Shopify’s [official Plus page](https://www.shopify.com/plus): prices change, so we do not copy a figure here.',
+      text: 'From €2,100 a month on a 3-year term, as shown on [Shopify’s pricing page](https://www.shopify.com/pricing) on 4 November 2026. Plans and prices change, so check the page the day you decide. To judge it, list the Plus features you will use in the first 90 days and compare the plan with the cost of building the same thing another way.',
     },
     { type: 'h3', text: 'Do I need Shopify Plus to sell B2B?' },
     {
@@ -262,7 +262,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Siamo noprob agency e vendiamo lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify), quindi ecco come rispondiamo noi. Restiamo su ciò che dice la documentazione ufficiale di Shopify, non pubblichiamo un prezzo di Plus (lo stabilisce Shopify, vedi [shopify.com/plus](https://www.shopify.com/plus)) e teniamo le opinioni distinte, perché sono nostre. Per la migrazione in sé, la [guida alla migrazione a Shopify](/it/migrazione-shopify) ha il percorso completo; questo pezzo copre ciò che Plus aggiunge.',
+      text: 'Siamo noprob agency e vendiamo lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify), quindi ecco come rispondiamo noi. Restiamo su ciò che dice la documentazione ufficiale di Shopify, riportiamo il prezzo di Plus indicato da Shopify (da €2.100 al mese con termine di 3 anni, [shopify.com/pricing](https://www.shopify.com/pricing), 4 novembre 2026) e teniamo le opinioni distinte, perché sono nostre. Per la migrazione in sé, la [guida alla migrazione a Shopify](/it/migrazione-shopify) ha il percorso completo; questo pezzo copre ciò che Plus aggiunge.',
     },
     { type: 'h2', text: 'Che cos’è Shopify Plus e in cosa differisce dagli altri piani?' },
     {
@@ -294,7 +294,7 @@ const article: Article = {
       items: [
         '**Regole di checkout che oggi non riesci a costruire.** Spedizioni o pagamenti diversi per tipo di cliente, campi obbligatori, logiche che un checkout standard non sa esprimere. Se la regola si scrive in una riga e nessuno la sa implementare, è un segnale Plus.',
         '**Ingrosso accanto al dettaglio.** Account aziendali, cataloghi negoziati, termini di pagamento per i compratori B2B, con un checkout retail che deve restare intatto.',
-        '**Più di uno store per progetto.** Brand separati, aree con cataloghi diversi, una sede fisica con la sua configurazione. La nostra opinione: non aprire uno store per paese d’istinto. Parti con uno store e Shopify Markets, e aggiungi un negozio di espansione quando i cataloghi divergono davvero.',
+        '**Più di uno store per progetto.** Aree con cataloghi diversi o una sede fisica con la sua configurazione, sotto lo stesso brand. I [negozi di espansione](https://help.shopify.com/en/manual/organization-settings/expansion-stores) devono estendere il brand principale: per brand separati Shopify rimanda a un accordo multi-brand, con un abbonamento Plus per brand. La nostra opinione: non aprire uno store per paese d’istinto. Parti con uno store e Shopify Markets, e aggiungi un negozio di espansione quando i cataloghi divergono davvero.',
         '**Pressione sulle integrazioni.** Un gestionale o un sistema di magazzino che legge e scrive ordini tutto il giorno e arriva ai limiti delle API, o una logica che deve girare nel backend e non in un’app.',
         '**Operazioni manuali su larga scala.** Tag, blocchi, controlli antifrode, smistamento, oggi fatti da una persona. Flow ne fa molte sui piani standard; Plus conta quando le attività arrivano da app dei partner.',
         '**Un team che ha superato ruoli e staging.** Molte persone nell’admin, ognuna con i permessi giusti, e modifiche da provare prima che arrivino ai clienti.',
@@ -306,12 +306,12 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Il prezzo lo pubblica Shopify, quindi apri la [pagina ufficiale di Plus](https://www.shopify.com/plus) il giorno in cui decidi. L’altra metà del confronto è il costo una tantum del passaggio: l’articolo sul [costo della migrazione a Shopify](/it/blog/costo-migrazione-shopify) scompone le otto voci di un preventivo.',
+      text: 'Il prezzo lo pubblica Shopify, da €2.100 al mese il 4 novembre 2026, quindi apri la sua [pagina prezzi](https://www.shopify.com/pricing) il giorno in cui decidi. L’altra metà del confronto è il costo una tantum del passaggio: l’articolo sul [costo della migrazione a Shopify](/it/blog/costo-migrazione-shopify) scompone le otto voci di un preventivo.',
     },
-    { type: 'h2', text: 'Cosa cambia migrando su Shopify Plus?' },
+    { type: 'h2', text: 'Cosa aggiunge Plus a una migrazione' },
     {
       type: 'paragraph',
-      text: '**Migrare su Plus è la stessa migrazione di sempre, con quattro aree in più da pianificare: dati, checkout, app e B2B.** Il lavoro di base non cambia: prodotti, clienti, storico ordini, una mappa dei redirect 1:1, tracking, collaudo. La nostra [checklist SEO per la migrazione](/it/blog/migrazione-shopify-seo-checklist) lo copre. Ecco cosa aggiunge Plus.',
+      text: '**Migrare su Plus è la stessa migrazione di sempre, con quattro aree in più da pianificare: dati, checkout, app e B2B.** Il lavoro di base non cambia: prodotti, clienti, storico ordini, una mappa dei redirect 1:1, tracking, collaudo. La nostra [checklist SEO per la migrazione](/it/blog/migrazione-shopify-seo-checklist) lo copre. Ecco cosa aggiunge Plus; per i due percorsi, le date e i conti leggi il nostro articolo sulla [migrazione a Shopify Plus](/it/blog/migrazione-shopify-plus).',
     },
     { type: 'h3', text: 'Dati' },
     {
@@ -321,7 +321,7 @@ const article: Article = {
     { type: 'h3', text: 'Checkout' },
     {
       type: 'paragraph',
-      text: 'Il checkout è dove Plus cambia la costruzione. La direzione di Shopify sono le checkout extensibility e le [Shopify Functions](https://shopify.dev/docs/apps/build/functions), che sostituiscono i vecchi modi di personalizzare il checkout: una regola della vecchia piattaforma diventa un’estensione, una Function o un’app. Leggi lo stato aggiornato nella documentazione di Shopify e non in un articolo: le date si spostano. Nella migrazione, elenca ogni comportamento del checkout del vecchio store (campi, regole di spedizione, regole di pagamento, sconti), decidi per ciascuno se serve ancora, poi scegli come costruirlo. Spesso una buona parte dell’elenco può semplicemente sparire.',
+      text: 'Il checkout è dove Plus cambia la costruzione. La direzione di Shopify sono le checkout extensibility e le [Shopify Functions](https://shopify.dev/docs/apps/build/functions), che sostituiscono i vecchi modi di personalizzare il checkout: una regola della vecchia piattaforma diventa un’estensione, una Function o un’app. Leggi lo stato aggiornato nella documentazione di Shopify, perché le date si spostano; il nostro articolo sulla [migrazione a Shopify Plus](/it/blog/migrazione-shopify-plus) ha le date, ognuna con il link alla sua pagina. Nella migrazione, elenca ogni comportamento del checkout del vecchio store (campi, regole di spedizione, regole di pagamento, sconti), decidi per ciascuno se serve ancora, poi scegli come costruirlo. Spesso una buona parte dell’elenco può semplicemente sparire.',
     },
     { type: 'h3', text: 'App' },
     {
@@ -340,7 +340,7 @@ const article: Article = {
     { type: 'h2', text: 'Conviene passare a Shopify Plus prima o dopo la migrazione?' },
     {
       type: 'paragraph',
-      text: '**Passa a Plus prima della migrazione solo se le funzioni Plus fanno parte del giorno uno; altrimenti migra prima e fai l’upgrade quando compare un limite.** Plus è un piano sulla stessa piattaforma, quindi l’upgrade dopo non significa una seconda migrazione. Il lavoro sta in ciò che costruisci sopra le funzioni Plus, ed è quello che devi pianificare nel tempo.',
+      text: '**Passa a Plus prima della migrazione solo se le funzioni Plus fanno parte del giorno uno; altrimenti migra prima e fai l’upgrade quando compare un limite.** Da Advanced, il passaggio dopo è un cambio di piano, non una seconda migrazione. Il lavoro sta in ciò che costruisci sopra le funzioni Plus, ed è quello che devi pianificare nel tempo.',
     },
     {
       type: 'list',
@@ -386,7 +386,7 @@ const article: Article = {
     { type: 'h3', text: 'Quanto costa Shopify Plus?' },
     {
       type: 'paragraph',
-      text: 'Controlla la [pagina ufficiale di Plus](https://www.shopify.com/plus): i prezzi cambiano, quindi non copiamo una cifra qui.',
+      text: 'Da €2.100 al mese con termine di 3 anni, come mostrato sulla [pagina prezzi di Shopify](https://www.shopify.com/pricing) il 4 novembre 2026. Piani e prezzi cambiano, quindi controlla la pagina il giorno in cui decidi. Per valutarlo, elenca le funzioni Plus che userai nei primi 90 giorni e confronta il piano con il costo di ottenere la stessa cosa in un altro modo.',
     },
     { type: 'h3', text: 'Serve Shopify Plus per vendere B2B?' },
     {

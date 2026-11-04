@@ -30,6 +30,7 @@ import geoVsSeo from './posts/geo-vs-seo'
 import shopifyMigrationAiAgents from './posts/shopify-migration-ai-agents'
 import bigcommerceVsShopify from './posts/bigcommerce-vs-shopify'
 import shopify301Redirects from './posts/shopify-301-redirects'
+import shopifyPlusMigration from './posts/shopify-plus-migration'
 
 export type ArticleSection =
   | { type: 'paragraph'; text: string }
@@ -88,6 +89,7 @@ export type Article = {
 
 /** One article per file in ./posts; a new article = a new file + one import line here. */
 export const articles: Article[] = [
+  shopifyPlusMigration,
   aiAgentsForShopify,
   buildAiAgentShopify,
   claudeShopify,

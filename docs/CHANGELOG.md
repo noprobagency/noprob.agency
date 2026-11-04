@@ -4,6 +4,12 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.140.0 (4 Nov 2026)
+
+- **New article on Shopify Plus migration** (`/blog/shopify-plus-migration`, `/it/blog/migrazione-shopify-plus`): plan change or replatform, checkout dates, what is really Plus only and the three bills to budget, with its dotted cover, its row in the Shopify guides cluster and its line in `public/llms.txt`.
+- **Shopify Plus article refocused** (`/blog/shopify-plus`, `/it/blog/shopify-plus`) on when Plus pays off and what it adds, with a new title; the migration part now points to the new article.
+- **Links to the new article** from the cost, agency and Magento articles. The Magento article now ties expansion stores to the same brand and sends several brands to a multi-brand agreement. Plus prices and facts read on 4 Nov 2026 are in `docs/dati-verificati.md`.
+
 ### Changelog v1.139.0 (4 Nov 2026)
 
 - **Exact-anchor internal links from the two IT articles (and EN counterparts) to the migration guide** (`/it/blog/costo-migrazione-shopify`, `/it/blog/scegliere-agenzia-migrazione-shopify` and their EN versions).

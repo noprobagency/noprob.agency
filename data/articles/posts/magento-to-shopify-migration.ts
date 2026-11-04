@@ -25,8 +25,8 @@ const article: Article = {
   articleType: 'BlogPosting',
   date: '2026-10-23',
   datePublishedIso: '2026-10-23T13:40:00+01:00',
-  dateModifiedIso: '2026-10-28T09:00:00+00:00',
-  wordCount: 2350,
+  dateModifiedIso: '2026-11-04T20:30:00+00:00',
+  wordCount: 2363,
   readingTimeMinutes: 9,
   articleSection: 'Shopify migration',
   keywordsEn:
@@ -62,7 +62,7 @@ const article: Article = {
     {
       question: 'How do I replace Magento store views and websites on Shopify?',
       answer:
-        'Language and currency store views usually become Shopify Markets on one store. Websites with separate catalogs, prices or legal entities may need separate stores, which is where Plus and its expansion stores come in.',
+        'Language and currency store views usually become Shopify Markets on one store. Websites with separate catalogs or prices under the same brand may need separate stores, which is where Plus and its expansion stores come in.',
     },
     {
       question: 'How long does a Magento to Shopify migration take?',
@@ -99,7 +99,7 @@ const article: Article = {
     {
       question: 'Come si sostituiscono store view e website di Magento su Shopify?',
       answer:
-        'Le store view per lingua e valuta di solito diventano Shopify Markets su un solo store. I website con cataloghi, prezzi o società separati possono richiedere store distinti, ed è qui che entrano Plus e gli expansion store.',
+        'Le store view per lingua e valuta di solito diventano Shopify Markets su un solo store. I website con cataloghi o prezzi separati sotto lo stesso brand possono richiedere store distinti, ed è qui che entrano Plus e gli expansion store.',
     },
     {
       question: 'Quanto dura una migrazione da Magento a Shopify?',
@@ -169,7 +169,7 @@ const article: Article = {
       type: 'list',
       items: [
         '**Store views by language or currency** map to [Shopify Markets](https://help.shopify.com/en/manual/markets), where you set language, currency, pricing and domain per market on one store.',
-        '**Websites with separate catalogs, prices or legal entities** are a decision: one store with markets, or separate Shopify stores. [Shopify Plus](https://help.shopify.com/en/manual/intro-to-shopify/pricing-plans/plans-features/shopify-plus-plan) supports expansion stores for this. Decide website by website.',
+        '**Websites with separate catalogs or prices under the same brand** are a decision: one store with markets, or separate Shopify stores. [Shopify Plus](https://help.shopify.com/en/manual/intro-to-shopify/pricing-plans/plans-features/shopify-plus-plan) supports expansion stores for this. Decide website by website.',
         '**Customer groups with tier prices** map to [Shopify B2B](https://help.shopify.com/en/manual/b2b), where customers are set up as companies with their own pricing, products, payment and shipping methods. Shopify says B2B is available on Basic, Grow, Advanced and Plus, so check which B2B features each plan includes against your price lists.',
       ],
     },
@@ -216,13 +216,13 @@ const article: Article = {
     { type: 'h2', text: 'Shopify or Shopify Plus for a Magento or Adobe Commerce store?' },
     {
       type: 'paragraph',
-      text: 'For a Magento store, the choice between Shopify and Shopify Plus comes down to four requirements, not to revenue: B2B depth, several storefronts, checkout changes and combined listings.',
+      text: 'For a Magento store, the choice between Shopify and Shopify Plus comes down to four requirements, not to revenue: B2B depth, several storefronts, checkout changes and combined listings. If they point to Plus, our [Shopify Plus migration](/blog/shopify-plus-migration) article covers checkout dates, contract and costs.',
     },
     {
       type: 'list',
       items: [
         '**B2B:** available on Basic, Grow, Advanced and Plus. Compare the features with your price lists, not only the availability.',
-        '**Several storefronts:** Markets covers language, currency, pricing and domain on one store. Separate catalogs or legal entities point to more stores, which means Plus expansion stores.',
+        '**Several storefronts:** Markets covers language, currency, pricing and domain on one store. Separate catalogs under the same brand point to more stores, which means [Plus expansion stores](https://help.shopify.com/en/manual/organization-settings/expansion-stores). Several brands point to a multi-brand agreement, with one Plus subscription per brand.',
         '**Checkout:** if your Magento checkout has custom rules, test how much Shopify Functions reproduce before you choose. Shopify says [advanced checkout customization](https://help.shopify.com/en/manual/checkout-settings/checkout-extensibility) is available only on Plus.',
         '**Grouped products as one listing:** the Combined Listings app is available only on Plus and enterprise commerce plans.',
       ],
@@ -289,7 +289,7 @@ const article: Article = {
     { type: 'h3', text: 'How do I replace Magento store views and websites on Shopify?' },
     {
       type: 'paragraph',
-      text: 'Language and currency store views usually become Shopify Markets on one store. Websites with separate catalogs, prices or legal entities may need separate stores, which is where Plus and its expansion stores come in.',
+      text: 'Language and currency store views usually become Shopify Markets on one store. Websites with separate catalogs or prices under the same brand may need separate stores, which is where Plus and its expansion stores come in.',
     },
     { type: 'h3', text: 'How long does a Magento to Shopify migration take?' },
     {
@@ -376,7 +376,7 @@ const article: Article = {
       type: 'list',
       items: [
         '**Le store view per lingua o valuta** corrispondono a [Shopify Markets](https://help.shopify.com/it/manual/markets), dove imposti lingua, valuta, prezzi e dominio per mercato su un solo store.',
-        '**I website con cataloghi, prezzi o società separati** sono una decisione: un solo store con più mercati, o store Shopify separati. [Shopify Plus](https://help.shopify.com/it/manual/intro-to-shopify/pricing-plans/plans-features/shopify-plus-plan) prevede gli expansion store per questo. Si decide website per website.',
+        '**I website con cataloghi o prezzi separati sotto lo stesso brand** sono una decisione: un solo store con più mercati, o store Shopify separati. [Shopify Plus](https://help.shopify.com/it/manual/intro-to-shopify/pricing-plans/plans-features/shopify-plus-plan) prevede gli expansion store per questo. Si decide website per website.',
         '**I gruppi clienti con prezzi a scaglioni** passano a [Shopify B2B](https://help.shopify.com/it/manual/b2b), dove i clienti sono aziende con prezzi, prodotti, pagamenti e spedizioni propri. Shopify dice che è disponibile su Basic, Grow, Advanced e Plus: confronta le funzioni di ogni piano con i tuoi listini.',
       ],
     },
@@ -423,13 +423,13 @@ const article: Article = {
     { type: 'h2', text: 'Shopify o Shopify Plus per uno store Magento o Adobe Commerce?' },
     {
       type: 'paragraph',
-      text: 'Per uno store Magento la scelta tra Shopify e Shopify Plus dipende da quattro requisiti, non dal fatturato: profondità del B2B, più vetrine, modifiche al checkout e schede combinate.',
+      text: 'Per uno store Magento la scelta tra Shopify e Shopify Plus dipende da quattro requisiti, non dal fatturato: profondità del B2B, più vetrine, modifiche al checkout e schede combinate. Se portano a Plus, il nostro articolo sulla [migrazione a Shopify Plus](/it/blog/migrazione-shopify-plus) copre date del checkout, contratto e costi.',
     },
     {
       type: 'list',
       items: [
         '**B2B:** disponibile su Basic, Grow, Advanced e Plus. Confronta le funzioni con i tuoi listini, non solo la disponibilità.',
-        '**Più vetrine:** Markets copre lingua, valuta, prezzi e dominio su un solo store. Cataloghi o società separati portano a più store, cioè gli expansion store di Plus.',
+        '**Più vetrine:** Markets copre lingua, valuta, prezzi e dominio su un solo store. Cataloghi separati sotto lo stesso brand portano a più store, cioè gli [expansion store di Plus](https://help.shopify.com/en/manual/organization-settings/expansion-stores). Più brand portano a un accordo multi-brand, con un abbonamento Plus per brand.',
         '**Checkout:** se il checkout di Magento ha regole su misura, prova quanto riproducono Shopify Functions prima di scegliere. Shopify dice che la [personalizzazione avanzata del checkout](https://help.shopify.com/it/manual/checkout-settings/checkout-extensibility) è disponibile solo su Plus.',
         '**Prodotti raggruppati come una sola scheda:** l’app Combined Listings è disponibile solo su Plus e sui piani enterprise.',
       ],
@@ -496,7 +496,7 @@ const article: Article = {
     { type: 'h3', text: 'Come si sostituiscono store view e website di Magento su Shopify?' },
     {
       type: 'paragraph',
-      text: 'Le store view per lingua e valuta di solito diventano Shopify Markets su un solo store. I website con cataloghi, prezzi o società separati possono richiedere store distinti, ed è qui che entrano Plus e gli expansion store.',
+      text: 'Le store view per lingua e valuta di solito diventano Shopify Markets su un solo store. I website con cataloghi o prezzi separati sotto lo stesso brand possono richiedere store distinti, ed è qui che entrano Plus e gli expansion store.',
     },
     { type: 'h3', text: 'Quanto dura una migrazione da Magento a Shopify?' },
     {
