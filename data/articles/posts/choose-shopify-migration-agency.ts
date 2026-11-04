@@ -25,8 +25,8 @@ const article: Article = {
   articleType: 'BlogPosting',
   date: '2026-10-16',
   datePublishedIso: '2026-10-16T08:50:00+01:00',
-  dateModifiedIso: '2026-10-28T09:00:00+00:00',
-  wordCount: 2550,
+  dateModifiedIso: '2026-11-04T20:00:00+00:00',
+  wordCount: 2565,
   readingTimeMinutes: 9,
   articleSection: 'Shopify migration',
   keywordsEn:
@@ -114,7 +114,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'A Shopify migration agency, a freelancer and a migration app can all move the same products. What differs is who answers for the parts that do not show on launch day: redirects, data that does not reconcile, tracking, and the first 90 days. Those parts decide whether the move costs you rankings and sales, so compare Shopify migration services on them.',
+      text: 'A Shopify migration agency, a freelancer and a migration app can all move the same products. What differs is who answers for the parts that do not show on launch day: redirects, data that does not reconcile, tracking, and the first 90 days. Those parts decide whether the move costs you rankings and sales, so compare Shopify migration services on them. If you want to see the whole path first, start with our guide to [Shopify migration](/shopify-migration).',
     },
     { type: 'h2', text: 'Who can migrate your store to Shopify? Five types of provider' },
     {
@@ -327,7 +327,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Un’agenzia di migrazione Shopify, un freelance e un’app possono spostare gli stessi prodotti. Cambia chi risponde delle parti che il giorno del lancio non si vedono: redirect, dati che non tornano, tracking e i primi 90 giorni. Sono queste a decidere se il passaggio ti costa posizioni e vendite: confronta su queste i servizi di migrazione Shopify.',
+      text: 'Un’agenzia di migrazione Shopify, un freelance e un’app possono spostare gli stessi prodotti. Cambia chi risponde delle parti che il giorno del lancio non si vedono: redirect, dati che non tornano, tracking e i primi 90 giorni. Sono queste a decidere se il passaggio ti costa posizioni e vendite: confronta su queste i servizi di migrazione Shopify. Se vuoi vedere prima l’intero percorso, parti dalla nostra guida alla [migrazione Shopify](/it/migrazione-shopify).',
     },
     { type: 'h2', text: 'Chi può migrare il tuo store su Shopify? Cinque tipi di fornitore' },
     {

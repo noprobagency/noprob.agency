@@ -25,7 +25,7 @@ const article: Article = {
   articleType: 'BlogPosting',
   date: '2026-10-15',
   datePublishedIso: '2026-10-15T11:30:00+01:00',
-  dateModifiedIso: '2026-10-28T09:00:00+00:00',
+  dateModifiedIso: '2026-11-04T20:00:00+00:00',
   wordCount: 2290,
   articleSection: 'Shopify Migration',
   readingTimeMinutes: 9,
@@ -104,7 +104,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'We are noprob agency and we sell the [Shopify Launch Sprint](/shopify-migration-sprint), a migration with a public price, published by revenue tier. Our [Shopify migration guide](/shopify-migration) already lists what moves the cost: catalog size, integrations, design work, languages, redirects, tracking. This piece starts where that list stops. Whether to move at all is a different question, covered in [Shopify vs WooCommerce](/blog/shopify-vs-woocommerce).',
+      text: 'We are noprob agency and we sell the [Shopify Launch Sprint](/shopify-migration-sprint), a migration with a public price, published by revenue tier. Our guide to [Shopify migration](/shopify-migration) already lists what moves the cost: catalog size, integrations, design work, languages, redirects, tracking. This piece starts where that list stops. Whether to move at all is a different question, covered in [Shopify vs WooCommerce](/blog/shopify-vs-woocommerce).',
     },
     { type: 'h2', text: 'How much does it cost to migrate to Shopify?' },
     {
@@ -305,7 +305,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Siamo noprob agency e vendiamo lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify), una migrazione con prezzo pubblico, pubblicato per fascia di fatturato. La nostra [guida alla migrazione a Shopify](/it/migrazione-shopify) elenca già cosa fa muovere il costo: dimensione del catalogo, integrazioni, lavoro di design, lingue, redirect, tracking. Qui si parte da dove quell’elenco si ferma. Se migrare abbia senso è un’altra domanda, trattata in [Shopify o WooCommerce](/it/blog/shopify-o-woocommerce).',
+      text: 'Siamo noprob agency e vendiamo lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify), una migrazione con prezzo pubblico, pubblicato per fascia di fatturato. La nostra guida alla [migrazione Shopify](/it/migrazione-shopify) elenca già cosa fa muovere il costo: dimensione del catalogo, integrazioni, lavoro di design, lingue, redirect, tracking. Qui si parte da dove quell’elenco si ferma. Se migrare abbia senso è un’altra domanda, trattata in [Shopify o WooCommerce](/it/blog/shopify-o-woocommerce).',
     },
     { type: 'h2', text: 'Quanto costa migrare a Shopify?' },
     {
