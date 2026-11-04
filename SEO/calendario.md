@@ -54,5 +54,6 @@ Stati: `da fare`, `in corso`, `fatto (data, PR)`, `bloccato (motivo)`.
 | 44 | 4 nov | Aggiornare `/blog/shopify-cro-guide` su "Shopify CRO": title, H1, sezione servizio con lo Sprint (misura 2 nov) | shopify cro, cro shopify | team | fatto (4 nov, PR #197) |
 | 45 | 4 nov | Articolo nuovo "Shopify Plus migration", EN e IT: cambio di piano o migrazione, checkout, cosa è solo Plus, costi; `/blog/shopify-plus` ricentrato su quando conviene (misura 2 nov) | shopify plus migration, migrate to shopify plus | team | fatto (4 nov, PR #199) |
 | 46 | 4 nov | Link interni con anchor "migrazione Shopify" dai due articoli IT in alto (costo, agenzia) e dalle versioni EN verso la guida alla migrazione (misura 2 nov) | migrazione shopify | team | fatto (4 nov, PR #198) |
+| 47 | 4 nov | Garanzie dello Sprint alla lettera in articoli e pagina ambassador (ordine di Antonio via Claudio) | | team | fatto (4 nov, PR #200) |
 
 Misura: `/seo monitora`, la lancia Antonio, idealmente una volta a settimana.

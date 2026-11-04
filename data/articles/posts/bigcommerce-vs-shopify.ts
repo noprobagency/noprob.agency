@@ -25,7 +25,7 @@ const article: Article = {
   articleType: 'BlogPosting',
   date: '2026-10-29',
   datePublishedIso: '2026-10-29T09:00:00+00:00',
-  dateModifiedIso: '2026-10-29T09:00:00+00:00',
+  dateModifiedIso: '2026-11-04T21:18:00+00:00',
   wordCount: 2800,
   articleSection: 'Migrate to Shopify',
   readingTimeMinutes: 11,
@@ -640,7 +640,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) è una migrazione a Shopify in 14 giorni con il nostro Custom AI System, go-live tra il giorno 15 e il giorno 30, 90 giorni di supporto e 4 garanzie scritte. Store pronto al giorno 14 o rimborsiamo la prima rata. Il metodo è lo stesso su ogni piattaforma: guarda com’è andata da [Cumini](/it/casi-studio/cumini-luxury-fashion-ecommerce), online su Shopify dal 19 maggio 2025, e da [Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify), online dal 19 luglio 2026. Se stai confrontando i fornitori, leggi [come scegliere un’agenzia di migrazione Shopify](/it/blog/scegliere-agenzia-migrazione-shopify).',
+      text: 'Lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) è una migrazione a Shopify in 14 giorni con il nostro Custom AI System, go-live tra il giorno 15 e il giorno 30, 90 giorni di supporto e 4 garanzie scritte. Store pronto al giorno 14 o ti rimborsiamo la prima rata. Il metodo è lo stesso su ogni piattaforma: guarda com’è andata da [Cumini](/it/casi-studio/cumini-luxury-fashion-ecommerce), online su Shopify dal 19 maggio 2025, e da [Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify), online dal 19 luglio 2026. Se stai confrontando i fornitori, leggi [come scegliere un’agenzia di migrazione Shopify](/it/blog/scegliere-agenzia-migrazione-shopify).',
     },
     {
       type: 'paragraph',

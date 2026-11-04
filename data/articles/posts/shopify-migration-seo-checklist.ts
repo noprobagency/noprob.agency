@@ -25,7 +25,7 @@ const article: Article = {
   articleType: 'BlogPosting',
   date: '2026-10-12',
   datePublishedIso: '2026-10-12T10:20:00+01:00',
-  dateModifiedIso: '2026-10-28T09:00:00+00:00',
+  dateModifiedIso: '2026-11-04T21:21:00+00:00',
   wordCount: 2400,
   readingTimeMinutes: 9,
   articleSection: 'Shopify migration',
@@ -37,7 +37,7 @@ const article: Article = {
     {
       question: 'Will I lose my Google rankings if I migrate to Shopify?',
       answer:
-        'Rankings usually move for a while after any migration, including well-run ones, and a complete 301 redirect map is what decides how fast they come back. In the Sprint, organic traffic at 90 days is one of the 4 written guarantees: below the baseline, we work for free until it comes back. Google itself says visibility can fluctuate temporarily during a site move and should settle over time.',
+        'Rankings usually move for a while after any migration, including well-run ones, and a complete 301 redirect map is what decides how fast they come back. One of the 4 written guarantees in the Sprint covers it: "Organic traffic below the baseline 90 days after go-live? We work for free until it comes back." Google itself says visibility can fluctuate temporarily during a site move and should settle over time.',
     },
     {
       question: 'Do I need Search Console’s Change of Address tool when I move to Shopify?',
@@ -74,7 +74,7 @@ const article: Article = {
     {
       question: 'Perderò le posizioni su Google se migro a Shopify?',
       answer:
-        'Il posizionamento di solito si muove per un periodo dopo qualunque migrazione, anche quelle fatte bene, ed è la mappa completa dei redirect 301 a decidere quanto in fretta recupera. Nello Sprint il traffico organico a 90 giorni è una delle 4 garanzie scritte: sotto la baseline, lavoriamo gratis finché non torna. Lo dice anche Google: durante un trasferimento di sito la visibilità può fluttuare temporaneamente e poi si assesta.',
+        'Il posizionamento di solito si muove per un periodo dopo qualunque migrazione, anche quelle fatte bene, ed è la mappa completa dei redirect 301 a decidere quanto in fretta recupera. Una delle 4 garanzie scritte dello Sprint lo copre: "Traffico organico sotto la baseline a 90 giorni dal go-live? Lavoriamo gratis finché non torna." Lo dice anche Google: durante un trasferimento di sito la visibilità può fluttuare temporaneamente e poi si assesta.',
     },
     {
       question: 'Devo usare lo strumento Cambio di indirizzo di Search Console per passare a Shopify?',
@@ -321,7 +321,7 @@ const article: Article = {
     },
     { type: 'h2', text: 'Frequently asked questions' },
     { type: 'h3', text: 'Will I lose my Google rankings if I migrate to Shopify?' },
-    { type: 'paragraph', text: 'Rankings usually move for a while after any migration, including well-run ones, and a complete 301 redirect map is what decides how fast they come back. In the Sprint, organic traffic at 90 days is one of the 4 written guarantees: below the baseline, we work for free until it comes back. Google itself says visibility can fluctuate temporarily during a site move and should settle over time.' },
+    { type: 'paragraph', text: 'Rankings usually move for a while after any migration, including well-run ones, and a complete 301 redirect map is what decides how fast they come back. One of the 4 written guarantees in the Sprint covers it: "Organic traffic below the baseline 90 days after go-live? We work for free until it comes back." Google itself says visibility can fluctuate temporarily during a site move and should settle over time.' },
     { type: 'h3', text: 'Do I need Search Console’s Change of Address tool when I move to Shopify?' },
     { type: 'paragraph', text: 'Only if the domain or subdomain changes. Google says the tool is not needed for HTTP to HTTPS, www to non-www, or moving paths within the same domain. A same-domain migration to Shopify uses redirects, a new sitemap and monitoring instead.' },
     { type: 'h3', text: 'Can Shopify do wildcard or regex redirects?' },
@@ -553,7 +553,7 @@ const article: Article = {
     },
     { type: 'h2', text: 'Domande frequenti' },
     { type: 'h3', text: 'Perderò le posizioni su Google se migro a Shopify?' },
-    { type: 'paragraph', text: 'Il posizionamento di solito si muove per un periodo dopo qualunque migrazione, anche quelle fatte bene, ed è la mappa completa dei redirect 301 a decidere quanto in fretta recupera. Nello Sprint il traffico organico a 90 giorni è una delle 4 garanzie scritte: sotto la baseline, lavoriamo gratis finché non torna. Lo dice anche Google: durante un trasferimento di sito la visibilità può fluttuare temporaneamente e poi si assesta.' },
+    { type: 'paragraph', text: 'Il posizionamento di solito si muove per un periodo dopo qualunque migrazione, anche quelle fatte bene, ed è la mappa completa dei redirect 301 a decidere quanto in fretta recupera. Una delle 4 garanzie scritte dello Sprint lo copre: "Traffico organico sotto la baseline a 90 giorni dal go-live? Lavoriamo gratis finché non torna." Lo dice anche Google: durante un trasferimento di sito la visibilità può fluttuare temporaneamente e poi si assesta.' },
     { type: 'h3', text: 'Devo usare lo strumento Cambio di indirizzo di Search Console per passare a Shopify?' },
     { type: 'paragraph', text: 'Solo se cambia il dominio o il sottodominio. Per Google lo strumento non serve per il passaggio da HTTP a HTTPS, da www a non-www o per lo spostamento di percorsi nello stesso dominio. Una migrazione a Shopify sullo stesso dominio usa redirect, nuova sitemap e monitoraggio.' },
     { type: 'h3', text: 'Shopify supporta redirect con caratteri jolly o regex?' },

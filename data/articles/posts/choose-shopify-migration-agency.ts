@@ -25,7 +25,7 @@ const article: Article = {
   articleType: 'BlogPosting',
   date: '2026-10-16',
   datePublishedIso: '2026-10-16T08:50:00+01:00',
-  dateModifiedIso: '2026-11-04T20:30:00+00:00',
+  dateModifiedIso: '2026-11-04T21:21:00+00:00',
   wordCount: 2565,
   readingTimeMinutes: 9,
   articleSection: 'Shopify migration',
@@ -202,7 +202,7 @@ const article: Article = {
     { type: 'h3', text: '7. Guarantees in writing' },
     {
       type: 'paragraph',
-      text: 'A guarantee in writing is a clause with a measurable condition and a remedy, in the contract and not only on the sales page. Compare what is measured, against which baseline, and what you get. Our answer: four. Store ready on day 14 or we refund the first installment. Organic traffic below the baseline 90 days after go-live and we work for free until it comes back. Store offline at launch because of us and we pay one installment. Checkout converting less than before at 90 days and we optimize it for free until it beats it. They are measured on a dashboard you receive on day 1, and the terms fit on one page.',
+      text: 'A guarantee in writing is a clause with a measurable condition and a remedy, in the contract and not only on the sales page. Compare what is measured, against which baseline, and what you get. Our answer: four. Store ready on day 14 or we refund the first installment. Organic traffic below the baseline 90 days after go-live? We work for free until it comes back. Store offline at launch because of us? We pay one installment. Checkout converting less than before at 90 days? We optimize it for free until it beats it. They are measured on a dashboard you receive on day 1, and the terms fit on one page.',
     },
     { type: 'h3', text: '8. Ownership of code and accounts' },
     {
@@ -415,7 +415,7 @@ const article: Article = {
     { type: 'h3', text: '7. Garanzie scritte' },
     {
       type: 'paragraph',
-      text: 'Una garanzia scritta è una clausola con una condizione misurabile e un rimedio, nel contratto e non solo nella pagina commerciale. Confronta cosa si misura, rispetto a quale base di partenza e cosa ottieni. La nostra risposta: quattro. Store pronto al giorno 14 o rimborsiamo la prima rata. Traffico organico sotto la base di partenza a 90 giorni dal go-live e lavoriamo gratis finché non torna. Store offline al lancio per colpa nostra e paghiamo una rata. Checkout che converte meno di prima a 90 giorni e lo ottimizziamo gratis finché non lo supera. Si misurano su una dashboard che ricevi dal giorno 1, e le condizioni stanno in una pagina.',
+      text: 'Una garanzia scritta è una clausola con una condizione misurabile e un rimedio, nel contratto e non solo nella pagina commerciale. Confronta cosa si misura, rispetto a quale baseline e cosa ottieni. La nostra risposta: quattro. Store pronto al giorno 14 o ti rimborsiamo la prima rata. Traffico organico sotto la baseline a 90 giorni dal go-live? Lavoriamo gratis finché non torna. Store offline al lancio per colpa nostra? Una rata la paghiamo noi. Il checkout converte meno di prima a 90 giorni? Lo ottimizziamo gratis finché non supera. Si misurano su una dashboard che ricevi dal giorno 1, e le condizioni stanno in una pagina.',
     },
     { type: 'h3', text: '8. Proprietà di codice e account' },
     {

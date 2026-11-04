@@ -25,7 +25,7 @@ const article: Article = {
   articleType: 'BlogPosting',
   date: '2026-10-15',
   datePublishedIso: '2026-10-15T11:30:00+01:00',
-  dateModifiedIso: '2026-11-04T20:30:00+00:00',
+  dateModifiedIso: '2026-11-04T21:18:00+00:00',
   wordCount: 2290,
   articleSection: 'Shopify Migration',
   readingTimeMinutes: 9,
@@ -240,10 +240,10 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**Sprint:** store ready on day 14 or we refund the first installment.',
-        '**SEO:** organic traffic below the baseline 90 days after go-live, and we work for free until it comes back.',
-        '**Go-live:** store offline at launch because of us, and we pay one installment.',
-        '**Checkout:** checkout converting less than before at 90 days, and we optimize it for free until it beats it.',
+        '**Sprint:** Store ready on day 14 or we refund the first installment.',
+        '**SEO:** Organic traffic below the baseline 90 days after go-live? We work for free until it comes back.',
+        '**Go-live:** Store offline at launch because of us? We pay one installment.',
+        '**Checkout:** Checkout converting less than before at 90 days? We optimize it for free until it beats it.',
       ],
     },
     {
@@ -441,10 +441,10 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**Sprint:** store pronto al giorno 14 o rimborsiamo la prima rata.',
-        '**SEO:** traffico organico sotto la baseline a 90 giorni dal go-live, e lavoriamo gratis finché non torna.',
-        '**Go-live:** store offline al lancio per colpa nostra, e una rata la paghiamo noi.',
-        '**Checkout:** checkout che converte meno di prima a 90 giorni, e lo ottimizziamo gratis finché non lo supera.',
+        '**Sprint:** Store pronto al giorno 14 o ti rimborsiamo la prima rata.',
+        '**SEO:** Traffico organico sotto la baseline a 90 giorni dal go-live? Lavoriamo gratis finché non torna.',
+        '**Go-live:** Store offline al lancio per colpa nostra? Una rata la paghiamo noi.',
+        '**Checkout:** Il checkout converte meno di prima a 90 giorni? Lo ottimizziamo gratis finché non supera.',
       ],
     },
     {

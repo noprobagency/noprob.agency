@@ -387,7 +387,7 @@ const it: AmbassadorCopy = {
     ],
     points: [
       'Quattro rate: la prima al kickoff, la seconda al go-live, la terza e la quarta nei mesi di supporto. Nessun esborso unico in anticipo.',
-      '4 garanzie scritte nel contratto: store pronto al giorno 14 o rimborso della prima rata; traffico organico sotto la baseline a 90 giorni e lavoriamo gratis finché non torna; store offline al lancio per colpa nostra e una rata la paghiamo noi; checkout che converte meno di prima a 90 giorni e lo ottimizziamo gratis finché non supera.',
+      '4 garanzie scritte nel contratto. Store pronto al giorno 14 o ti rimborsiamo la prima rata. Traffico organico sotto la baseline a 90 giorni dal go-live? Lavoriamo gratis finché non torna. Store offline al lancio per colpa nostra? Una rata la paghiamo noi. Il checkout converte meno di prima a 90 giorni? Lo ottimizziamo gratis finché non supera.',
       'Nessuno sconto, nessun preventivo: il cliente vede il suo scaglione in pagina, prima di parlarci.',
       'Sopra i limiti dello scaglione (prodotti, lingue, gestionale) ci sono add-on a prezzo fisso, comunicati per iscritto prima della firma. Mai un preventivo libero.',
     ],
@@ -593,7 +593,7 @@ const it: AmbassadorCopy = {
       },
       {
         question: '“E se non mi trovo bene?”',
-        answer: 'Quattro garanzie scritte nel contratto: store pronto al giorno 14 o rimborso della prima rata; traffico organico sotto la baseline a 90 giorni e lavoriamo gratis finché non torna; store offline al lancio per colpa nostra e una rata la paghiamo noi; checkout che converte meno di prima a 90 giorni e lo ottimizziamo gratis finché non supera.',
+        answer: 'Quattro garanzie scritte nel contratto. Store pronto al giorno 14 o ti rimborsiamo la prima rata. Traffico organico sotto la baseline a 90 giorni dal go-live? Lavoriamo gratis finché non torna. Store offline al lancio per colpa nostra? Una rata la paghiamo noi. Il checkout converte meno di prima a 90 giorni? Lo ottimizziamo gratis finché non supera.',
       },
       {
         question: '“Perché proprio Shopify?”',
@@ -1002,7 +1002,7 @@ const en: AmbassadorCopy = {
     ],
     points: [
       'Four installments: the first at kickoff, the second at go-live, the third and fourth during the support months. No single payment up front.',
-      '4 guarantees written in the contract: store ready on day 14 or the first installment is refunded; organic traffic below the baseline at 90 days and we work for free until it comes back; store offline at launch because of us and we pay one installment; checkout converting less than before at 90 days and we optimize it for free until it beats it.',
+      '4 guarantees written in the contract. Store ready on day 14 or we refund the first installment. Organic traffic below the baseline 90 days after go-live? We work for free until it comes back. Store offline at launch because of us? We pay one installment. Checkout converting less than before at 90 days? We optimize it for free until it beats it.',
       'No discounts, no quotes: the client sees their tier on the page, before talking to us.',
       'Beyond the tier caps (products, languages, ERP) there are fixed-price add-ons, confirmed in writing before signing. Never an open quote.',
     ],
@@ -1208,7 +1208,7 @@ const en: AmbassadorCopy = {
       },
       {
         question: '“What if I’m not happy?”',
-        answer: 'Four guarantees written in the contract: store ready on day 14 or the first installment is refunded; organic traffic below the baseline at 90 days and we work for free until it comes back; store offline at launch because of us and we pay one installment; checkout converting less than before at 90 days and we optimize it for free until it beats it.',
+        answer: 'Four guarantees written in the contract. Store ready on day 14 or we refund the first installment. Organic traffic below the baseline 90 days after go-live? We work for free until it comes back. Store offline at launch because of us? We pay one installment. Checkout converting less than before at 90 days? We optimize it for free until it beats it.',
       },
       {
         question: '“Why Shopify?”',
