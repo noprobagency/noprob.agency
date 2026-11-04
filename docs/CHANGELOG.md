@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.141.0 (4 Nov 2026)
+
+- **Sprint guarantees word for word**: the articles on ChatGPT shopping, agency choice, migration cost, Shopify Plus, BigCommerce, Magento, PrestaShop and the SEO checklist, and the ambassador page, now use the exact text of the guarantee cards in `content/zero-loss-migration.*.ts`. The text is also recorded in `docs/dati-verificati.md`. The ChatGPT shopping article also stops saying "converts at least as well", which was not the guarantee.
+
 ### Changelog v1.140.0 (4 Nov 2026)
 
 - **New article on Shopify Plus migration** (`/blog/shopify-plus-migration`, `/it/blog/migrazione-shopify-plus`): plan change or replatform, checkout dates, what is really Plus only and the three bills to budget, with its dotted cover, its row in the Shopify guides cluster and its line in `public/llms.txt`.

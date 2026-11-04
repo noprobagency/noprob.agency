@@ -25,7 +25,7 @@ const article: Article = {
   articleType: 'BlogPosting',
   date: '2026-10-23',
   datePublishedIso: '2026-10-23T13:40:00+01:00',
-  dateModifiedIso: '2026-11-04T20:30:00+00:00',
+  dateModifiedIso: '2026-11-04T21:21:00+00:00',
   wordCount: 2363,
   readingTimeMinutes: 9,
   articleSection: 'Shopify migration',
@@ -37,7 +37,7 @@ const article: Article = {
     {
       question: 'Will I lose my Google rankings migrating from Magento to Shopify?',
       answer:
-        'Rankings usually move for a few weeks after any migration. What decides how fast they settle is a complete 301 redirect map, built from Magento’s URL rewrite table plus a crawl and Search Console, and tested before and after go-live. In the Shopify Launch Sprint the SEO guarantee is written in the contract: if organic traffic is below the baseline 90 days after go-live, we work for free until it comes back.',
+        'Rankings usually move for a few weeks after any migration. What decides how fast they settle is a complete 301 redirect map, built from Magento’s URL rewrite table plus a crawl and Search Console, and tested before and after go-live. In the Shopify Launch Sprint the SEO guarantee is written in the contract: "Organic traffic below the baseline 90 days after go-live? We work for free until it comes back."',
     },
     {
       question: 'Is Shopify better than Magento?',
@@ -74,7 +74,7 @@ const article: Article = {
     {
       question: 'Perderò le posizioni su Google migrando da Magento a Shopify?',
       answer:
-        'Il posizionamento di solito si muove per qualche settimana dopo qualunque migrazione. Quanto in fretta si assesta lo decide una mappa completa dei redirect 301, costruita dalla tabella degli URL rewrite di Magento più una scansione e Search Console, e testata prima e dopo il go-live. Nello Shopify Launch Sprint la garanzia SEO è scritta nel contratto: se il traffico organico a 90 giorni dal go-live è sotto la baseline, lavoriamo gratis finché non torna.',
+        'Il posizionamento di solito si muove per qualche settimana dopo qualunque migrazione. Quanto in fretta si assesta lo decide una mappa completa dei redirect 301, costruita dalla tabella degli URL rewrite di Magento più una scansione e Search Console, e testata prima e dopo il go-live. Nello Shopify Launch Sprint la garanzia SEO è scritta nel contratto: "Traffico organico sotto la baseline a 90 giorni dal go-live? Lavoriamo gratis finché non torna."',
     },
     {
       question: 'Shopify è meglio di Magento?',
@@ -264,7 +264,7 @@ const article: Article = {
     { type: 'h3', text: 'Will I lose my Google rankings migrating from Magento to Shopify?' },
     {
       type: 'paragraph',
-      text: 'Rankings usually move for a few weeks after any migration. What decides how fast they settle is a complete 301 redirect map, built from Magento’s URL rewrite table plus a crawl and Search Console, and tested before and after go-live. In the Shopify Launch Sprint the SEO guarantee is written in the contract: if organic traffic is below the baseline 90 days after go-live, we work for free until it comes back.',
+      text: 'Rankings usually move for a few weeks after any migration. What decides how fast they settle is a complete 301 redirect map, built from Magento’s URL rewrite table plus a crawl and Search Console, and tested before and after go-live. In the Shopify Launch Sprint the SEO guarantee is written in the contract: "Organic traffic below the baseline 90 days after go-live? We work for free until it comes back."',
     },
     { type: 'h3', text: 'Is Shopify better than Magento?' },
     {
@@ -471,7 +471,7 @@ const article: Article = {
     { type: 'h3', text: 'Perderò le posizioni su Google migrando da Magento a Shopify?' },
     {
       type: 'paragraph',
-      text: 'Il posizionamento di solito si muove per qualche settimana dopo qualunque migrazione. Quanto in fretta si assesta lo decide una mappa completa dei redirect 301, costruita dalla tabella degli URL rewrite di Magento più una scansione e Search Console, e testata prima e dopo il go-live. Nello Shopify Launch Sprint la garanzia SEO è scritta nel contratto: se il traffico organico a 90 giorni dal go-live è sotto la baseline, lavoriamo gratis finché non torna.',
+      text: 'Il posizionamento di solito si muove per qualche settimana dopo qualunque migrazione. Quanto in fretta si assesta lo decide una mappa completa dei redirect 301, costruita dalla tabella degli URL rewrite di Magento più una scansione e Search Console, e testata prima e dopo il go-live. Nello Shopify Launch Sprint la garanzia SEO è scritta nel contratto: "Traffico organico sotto la baseline a 90 giorni dal go-live? Lavoriamo gratis finché non torna."',
     },
     { type: 'h3', text: 'Shopify è meglio di Magento?' },
     {

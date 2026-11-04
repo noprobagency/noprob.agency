@@ -25,7 +25,7 @@ const article: Article = {
   articleType: 'BlogPosting',
   date: '2026-10-08',
   datePublishedIso: '2026-10-08T11:50:00+01:00',
-  dateModifiedIso: '2026-10-29T09:00:00+00:00',
+  dateModifiedIso: '2026-11-04T21:21:00+00:00',
   wordCount: 3200,
   articleSection: 'AI e GEO',
   readingTimeMinutes: 13,
@@ -77,7 +77,7 @@ const article: Article = {
     {
       question: 'Which guarantees does the Shopify Launch Sprint include?',
       answer:
-        'Four, in writing: store ready on day 14 or the first installment refunded; organic traffic back to the baseline at 90 days or we work for free; go-live without being offline because of us, or we pay one installment; checkout that converts at least as well as before at 90 days, or we optimize it for free. In the Sprint we also build the catalog and structured data so the store is ready for AI agents.',
+        'Four, in writing. Store ready on day 14 or we refund the first installment. Organic traffic below the baseline 90 days after go-live? We work for free until it comes back. Store offline at launch because of us? We pay one installment. Checkout converting less than before at 90 days? We optimize it for free until it beats it. In the Sprint we also build the catalog and structured data so the store is ready for AI agents.',
     },
   ],
   faqIt: [
@@ -124,7 +124,7 @@ const article: Article = {
     {
       question: 'Quali garanzie include lo Shopify Launch Sprint?',
       answer:
-        'Quattro, per iscritto: store pronto al giorno 14 o rimborso della prima rata; traffico organico di nuovo alla baseline a 90 giorni o lavoriamo gratis; go-live senza store offline per colpa nostra, altrimenti paghiamo una rata; checkout che converte almeno quanto prima a 90 giorni, o lo ottimizziamo gratis. Nello Sprint prepariamo anche catalogo e dati strutturati perché lo store sia pronto per gli agenti AI.',
+        'Quattro, per iscritto. Store pronto al giorno 14 o ti rimborsiamo la prima rata. Traffico organico sotto la baseline a 90 giorni dal go-live? Lavoriamo gratis finché non torna. Store offline al lancio per colpa nostra? Una rata la paghiamo noi. Il checkout converte meno di prima a 90 giorni? Lo ottimizziamo gratis finché non supera. Nello Sprint prepariamo anche catalogo e dati strutturati perché lo store sia pronto per gli agenti AI.',
     },
   ],
   content: [
@@ -400,7 +400,7 @@ const article: Article = {
     { type: 'h3', text: 'Which guarantees does the Shopify Launch Sprint include?' },
     {
       type: 'paragraph',
-      text: 'Four, in writing: store ready on day 14 or the first installment refunded; organic traffic back to the baseline at 90 days or we work for free; go-live without being offline because of us, or we pay one installment; checkout that converts at least as well as before at 90 days, or we optimize it for free. In the Sprint we also build the catalog and structured data so the store is ready for AI agents.',
+      text: 'Four, in writing. Store ready on day 14 or we refund the first installment. Organic traffic below the baseline 90 days after go-live? We work for free until it comes back. Store offline at launch because of us? We pay one installment. Checkout converting less than before at 90 days? We optimize it for free until it beats it. In the Sprint we also build the catalog and structured data so the store is ready for AI agents.',
     },
     { type: 'h2', text: 'A final note' },
     {
@@ -689,7 +689,7 @@ const article: Article = {
     { type: 'h3', text: 'Quali garanzie include lo Shopify Launch Sprint?' },
     {
       type: 'paragraph',
-      text: 'Quattro, per iscritto: store pronto al giorno 14 o rimborso della prima rata; traffico organico di nuovo alla baseline a 90 giorni o lavoriamo gratis; go-live senza store offline per colpa nostra, altrimenti paghiamo una rata; checkout che converte almeno quanto prima a 90 giorni, o lo ottimizziamo gratis. Nello Sprint prepariamo anche catalogo e dati strutturati perché lo store sia pronto per gli agenti AI.',
+      text: 'Quattro, per iscritto. Store pronto al giorno 14 o ti rimborsiamo la prima rata. Traffico organico sotto la baseline a 90 giorni dal go-live? Lavoriamo gratis finché non torna. Store offline al lancio per colpa nostra? Una rata la paghiamo noi. Il checkout converte meno di prima a 90 giorni? Lo ottimizziamo gratis finché non supera. Nello Sprint prepariamo anche catalogo e dati strutturati perché lo store sia pronto per gli agenti AI.',
     },
     { type: 'h2', text: 'Una nota finale' },
     {

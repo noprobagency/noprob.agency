@@ -25,7 +25,7 @@ const article: Article = {
   articleType: 'BlogPosting',
   date: '2026-10-21',
   datePublishedIso: '2026-10-21T16:25:00+01:00',
-  dateModifiedIso: '2026-11-04T20:30:00+00:00',
+  dateModifiedIso: '2026-11-04T21:21:00+00:00',
   wordCount: 2209,
   articleSection: 'Shopify Migration',
   readingTimeMinutes: 9,
@@ -208,7 +208,7 @@ const article: Article = {
         '**What the price covers:** data with a reconciliation report, a 1:1 replica of your store, apps and integrations, a 1:1 redirect map tested automatically before and after go-live, tracking, QA and project management.',
         '**Plus-specific builds** (custom checkout logic, company accounts and catalogs, expansion stores) are scoped with you on a video call before you sign.',
         '**90 days after go-live** we work as your eCommerce manager on SEO, conversion, average order value and tracking. Maintenance (security, updates, instructions, technical support) stays included.',
-        '**4 written guarantees:** store ready on day 14 or we refund the first installment; organic traffic below baseline at 90 days and we work free until it returns; store offline at launch through our fault and we pay an installment; checkout that converts less than before at 90 days and we optimize it free until it beats the old one.',
+        '**4 written guarantees.** Store ready on day 14 or we refund the first installment. Organic traffic below the baseline 90 days after go-live? We work for free until it comes back. Store offline at launch because of us? We pay one installment. Checkout converting less than before at 90 days? We optimize it for free until it beats it.',
       ],
     },
     {
@@ -366,7 +366,7 @@ const article: Article = {
         '**Cosa copre il prezzo:** dati con report di riconciliazione, una replica 1:1 del tuo store, app e integrazioni, una mappa dei redirect 1:1 collaudata in automatico prima e dopo il go-live, tracking, collaudo e gestione del progetto.',
         '**Le costruzioni specifiche di Plus** (logiche di checkout personalizzate, account aziendali e cataloghi, negozi di espansione) si definiscono con te in videochiamata prima che tu firmi.',
         '**90 giorni dopo il go-live** lavoriamo da eCommerce manager su SEO, conversione, scontrino medio e tracking. La manutenzione (sicurezza, aggiornamenti, istruzioni, supporto tecnico) resta inclusa.',
-        '**4 garanzie scritte:** store pronto al giorno 14 o rimborsiamo la prima rata; traffico organico sotto la baseline a 90 giorni e lavoriamo gratis finché non torna; store offline al lancio per colpa nostra e una rata la paghiamo noi; checkout che converte meno di prima a 90 giorni e lo ottimizziamo gratis finché non lo supera.',
+        '**4 garanzie scritte.** Store pronto al giorno 14 o ti rimborsiamo la prima rata. Traffico organico sotto la baseline a 90 giorni dal go-live? Lavoriamo gratis finché non torna. Store offline al lancio per colpa nostra? Una rata la paghiamo noi. Il checkout converte meno di prima a 90 giorni? Lo ottimizziamo gratis finché non supera.',
       ],
     },
     {

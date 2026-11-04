@@ -25,7 +25,7 @@ const article: Article = {
   articleType: 'BlogPosting',
   date: '2026-10-26',
   datePublishedIso: '2026-10-26T11:05:00+00:00',
-  dateModifiedIso: '2026-10-28T09:00:00+00:00',
+  dateModifiedIso: '2026-11-04T21:21:00+00:00',
   wordCount: 2390,
   articleSection: 'Shopify migration',
   readingTimeMinutes: 10,
@@ -52,7 +52,7 @@ const article: Article = {
     {
       question: 'Will I lose my Google rankings migrating from PrestaShop to Shopify?',
       answer:
-        'Rankings usually move for a few weeks after any migration. What decides how fast they settle is a complete 301 redirect map, built from the PrestaShop IDs in your old URLs plus a crawl and Search Console, and tested before and after go-live. In the Shopify Launch Sprint the SEO guarantee is written in the contract: if organic traffic is below the baseline 90 days after go-live, we work for free until it comes back.',
+        'Rankings usually move for a few weeks after any migration. What decides how fast they settle is a complete 301 redirect map, built from the PrestaShop IDs in your old URLs plus a crawl and Search Console, and tested before and after go-live. In the Shopify Launch Sprint the SEO guarantee is written in the contract: "Organic traffic below the baseline 90 days after go-live? We work for free until it comes back."',
     },
     {
       question: 'Do my PrestaShop modules work on Shopify?',
@@ -89,7 +89,7 @@ const article: Article = {
     {
       question: 'Perderò il posizionamento passando da PrestaShop a Shopify?',
       answer:
-        'Il posizionamento di solito si muove per qualche settimana dopo qualunque migrazione. Quanto in fretta si assesta lo decide una mappa completa dei redirect 301, costruita dagli ID di PrestaShop nei tuoi vecchi URL più una scansione e Search Console, e testata prima e dopo il go-live. Nello Shopify Launch Sprint la garanzia SEO è scritta nel contratto: se il traffico organico a 90 giorni dal go-live è sotto la baseline, lavoriamo gratis finché non torna.',
+        'Il posizionamento di solito si muove per qualche settimana dopo qualunque migrazione. Quanto in fretta si assesta lo decide una mappa completa dei redirect 301, costruita dagli ID di PrestaShop nei tuoi vecchi URL più una scansione e Search Console, e testata prima e dopo il go-live. Nello Shopify Launch Sprint la garanzia SEO è scritta nel contratto: "Traffico organico sotto la baseline a 90 giorni dal go-live? Lavoriamo gratis finché non torna."',
     },
     {
       question: 'I moduli di PrestaShop funzionano su Shopify?',
@@ -263,7 +263,7 @@ const article: Article = {
     { type: 'h3', text: 'Will I lose my Google rankings migrating from PrestaShop to Shopify?' },
     {
       type: 'paragraph',
-      text: 'Rankings usually move for a few weeks after any migration. What decides how fast they settle is a complete 301 redirect map, built from the PrestaShop IDs in your old URLs plus a crawl and Search Console, and tested before and after go-live. In the Shopify Launch Sprint the SEO guarantee is written in the contract: if organic traffic is below the baseline 90 days after go-live, we work for free until it comes back.',
+      text: 'Rankings usually move for a few weeks after any migration. What decides how fast they settle is a complete 301 redirect map, built from the PrestaShop IDs in your old URLs plus a crawl and Search Console, and tested before and after go-live. In the Shopify Launch Sprint the SEO guarantee is written in the contract: "Organic traffic below the baseline 90 days after go-live? We work for free until it comes back."',
     },
     { type: 'h3', text: 'Do my PrestaShop modules work on Shopify?' },
     {
@@ -454,7 +454,7 @@ const article: Article = {
     { type: 'h3', text: 'Perderò il posizionamento passando da PrestaShop a Shopify?' },
     {
       type: 'paragraph',
-      text: 'Il posizionamento di solito si muove per qualche settimana dopo qualunque migrazione. Quanto in fretta si assesta lo decide una mappa completa dei redirect 301, costruita dagli ID di PrestaShop nei tuoi vecchi URL più una scansione e Search Console, e testata prima e dopo il go-live. Nello Shopify Launch Sprint la garanzia SEO è scritta nel contratto: se il traffico organico a 90 giorni dal go-live è sotto la baseline, lavoriamo gratis finché non torna.',
+      text: 'Il posizionamento di solito si muove per qualche settimana dopo qualunque migrazione. Quanto in fretta si assesta lo decide una mappa completa dei redirect 301, costruita dagli ID di PrestaShop nei tuoi vecchi URL più una scansione e Search Console, e testata prima e dopo il go-live. Nello Shopify Launch Sprint la garanzia SEO è scritta nel contratto: "Traffico organico sotto la baseline a 90 giorni dal go-live? Lavoriamo gratis finché non torna."',
     },
     { type: 'h3', text: 'I moduli di PrestaShop funzionano su Shopify?' },
     {

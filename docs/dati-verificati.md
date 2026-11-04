@@ -421,3 +421,20 @@ Fatti usati in `data/articles/posts/shopify-plus-migration.ts`, `shopify-plus.ts
 - Metodi di migrazione: copia e incolla, CSV, app, Partner, soluzione custom con API: https://help.shopify.com/en/manual/migrating-to-shopify (versione IT linkata: https://help.shopify.com/it/manual/migrating-to-shopify)
 - Sprint, risposta alla candidatura entro 48 ore (già pubblicata sulla landing): `content/zero-loss-migration.en.ts`, `content/zero-loss-migration.it.ts`
 
+## Garanzie dello Sprint (testo da citare alla lettera)
+
+Fonte: blocco `guarantees` in `content/zero-loss-migration.en.ts` e `.it.ts`.
+
+IT:
+
+- Store pronto al giorno 14 o ti rimborsiamo la prima rata.
+- Traffico organico sotto la baseline a 90 giorni dal go-live? Lavoriamo gratis finché non torna.
+- Store offline al lancio per colpa nostra? Una rata la paghiamo noi.
+- Il checkout converte meno di prima a 90 giorni? Lo ottimizziamo gratis finché non supera.
+
+EN:
+
+- Store ready on day 14 or we refund the first installment.
+- Organic traffic below the baseline 90 days after go-live? We work for free until it comes back.
+- Store offline at launch because of us? We pay one installment.
+- Checkout converting less than before at 90 days? We optimize it for free until it beats it.
