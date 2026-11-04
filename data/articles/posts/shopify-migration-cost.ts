@@ -25,7 +25,7 @@ const article: Article = {
   articleType: 'BlogPosting',
   date: '2026-10-15',
   datePublishedIso: '2026-10-15T11:30:00+01:00',
-  dateModifiedIso: '2026-11-04T20:00:00+00:00',
+  dateModifiedIso: '2026-11-04T20:30:00+00:00',
   wordCount: 2290,
   articleSection: 'Shopify Migration',
   readingTimeMinutes: 9,
@@ -145,7 +145,7 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**The Shopify plan.** It recurs every month or year. Plans and prices change, so read them on [Shopify’s pricing page](https://www.shopify.com/pricing) the day you decide.',
+        '**The Shopify plan.** It recurs every month or year. Plans and prices change, so read them on [Shopify’s pricing page](https://www.shopify.com/pricing) the day you decide. Heading to Plus? Plan, migration and Plus work are three separate bills: our [Shopify Plus migration](/blog/shopify-plus-migration) article keeps them apart.',
         '**Monthly app fees.** Add them up app by app. An app installed for a small feature, then forgotten, is a recurring cost and often a drag on speed. Ask of each app in the quote: needed, replaceable, or built into the store?',
         '**Payment fees.** Shopify lists additional charges when you use a third-party payment provider instead of Shopify Payments, also on its pricing page. Ask your provider for its own rates too: the combined fees recur on every order.',
         '**Your team’s time.** Someone gives access, answers questions, reviews the staging store, approves go-live. It is the largest hidden cost of a do-it-yourself migration and the smallest with a fixed calendar and one point of contact.',
@@ -346,7 +346,7 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**Il piano Shopify.** Si rinnova ogni mese o anno. Piani e prezzi cambiano, quindi leggili sulla [pagina prezzi di Shopify](https://www.shopify.com/pricing) il giorno in cui decidi.',
+        '**Il piano Shopify.** Si rinnova ogni mese o anno. Piani e prezzi cambiano, quindi leggili sulla [pagina prezzi di Shopify](https://www.shopify.com/pricing) il giorno in cui decidi. Vai su Plus? Piano, migrazione e lavoro Plus sono tre conti separati: l’articolo sulla [migrazione a Shopify Plus](/it/blog/migrazione-shopify-plus) li tiene distinti.',
         '**I canoni delle app.** Sommali app per app. Un’app installata per una funzione minore e poi dimenticata è un costo ricorrente e spesso un freno alla velocità. Chiedi di ogni app nel preventivo: necessaria, sostituibile o integrata nello store?',
         '**Le commissioni di pagamento.** Shopify indica costi aggiuntivi quando usi un fornitore di pagamenti esterno invece di Shopify Payments, sempre sulla sua pagina prezzi. Chiedi anche al tuo fornitore le sue tariffe: le commissioni combinate ricorrono a ogni ordine.',
         '**Il tempo del tuo team.** Qualcuno dà gli accessi, risponde alle domande, rivede lo staging, approva il go-live. È il costo nascosto più grande di una migrazione fai da te e il più piccolo con calendario fisso e un solo referente.',

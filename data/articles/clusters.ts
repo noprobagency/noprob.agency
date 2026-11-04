@@ -32,6 +32,7 @@ const CLUSTER_SLUGS: Record<ClusterId, string[]> = {
   shopify: [
     'shopify-migration-cost',
     'shopify-plus',
+    'shopify-plus-migration',
     'shopify-migration-seo-checklist',
     'choose-shopify-migration-agency',
     'shopify-vs-woocommerce',
@@ -70,6 +71,7 @@ export const ARTICLE_PILLS: Record<string, Record<Locale, string>> = {
   'squarespace-vs-shopify': { en: 'Comparison', it: 'Confronto' },
   'shopify-migration-cost': { en: 'Costs', it: 'Costi' },
   'shopify-plus': { en: 'Shopify Plus', it: 'Shopify Plus' },
+  'shopify-plus-migration': { en: 'Plus migration', it: 'Migrazione Plus' },
   'shopify-migration-seo-checklist': { en: 'SEO', it: 'SEO' },
   'choose-shopify-migration-agency': { en: 'Guide', it: 'Guida' },
   'shopify-vs-woocommerce': { en: 'Comparison', it: 'Confronto' },

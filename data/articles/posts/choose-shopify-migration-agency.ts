@@ -25,7 +25,7 @@ const article: Article = {
   articleType: 'BlogPosting',
   date: '2026-10-16',
   datePublishedIso: '2026-10-16T08:50:00+01:00',
-  dateModifiedIso: '2026-11-04T20:00:00+00:00',
+  dateModifiedIso: '2026-11-04T20:30:00+00:00',
   wordCount: 2565,
   readingTimeMinutes: 9,
   articleSection: 'Shopify migration',
@@ -187,7 +187,7 @@ const article: Article = {
     { type: 'h3', text: '4. A fixed scope and calendar' },
     {
       type: 'paragraph',
-      text: 'A fixed scope and calendar means you know the deliverables, the dates and the price before work starts. Our answer: 14 days to a store ready to publish, go-live on a day you choose between day 15 and day 30, and a public price by company revenue, from €5,800 (the three tiers and what a price should include are in [what a Shopify migration costs](/blog/shopify-migration-cost)). Your Shopify plan and apps are paid to Shopify, not to us.',
+      text: 'A fixed scope and calendar means you know the deliverables, the dates and the price before work starts. Our answer: 14 days to a store ready to publish, go-live on a day you choose between day 15 and day 30, and a public price by company revenue, from €5,800 (the three tiers and what a price should include are in [what a Shopify migration costs](/blog/shopify-migration-cost)). Your Shopify plan and apps are paid to Shopify, not to us. If you are moving to Plus, ask each agency to price the plan, the move and the Plus work separately: our [Shopify Plus migration](/blog/shopify-plus-migration) article shows why.',
     },
     { type: 'h3', text: '5. Who does the work' },
     {
@@ -400,7 +400,7 @@ const article: Article = {
     { type: 'h3', text: '4. Ambito e calendario fissi' },
     {
       type: 'paragraph',
-      text: 'Ambito e calendario fissi significano che conosci consegne, date e prezzo prima che il lavoro inizi. La nostra risposta: 14 giorni per uno store pronto da pubblicare, go-live nel giorno che scegli tra il 15 e il 30, e un prezzo pubblico in base al fatturato aziendale, da €5.800 (le tre fasce e cosa deve includere un prezzo sono in [quanto costa migrare a Shopify](/it/blog/costo-migrazione-shopify)). Piano Shopify e app li paghi a Shopify, non a noi.',
+      text: 'Ambito e calendario fissi significano che conosci consegne, date e prezzo prima che il lavoro inizi. La nostra risposta: 14 giorni per uno store pronto da pubblicare, go-live nel giorno che scegli tra il 15 e il 30, e un prezzo pubblico in base al fatturato aziendale, da €5.800 (le tre fasce e cosa deve includere un prezzo sono in [quanto costa migrare a Shopify](/it/blog/costo-migrazione-shopify)). Piano Shopify e app li paghi a Shopify, non a noi. Se vai su Plus, chiedi a ogni agenzia di prezzare a parte piano, passaggio e lavoro Plus: l’articolo sulla [migrazione a Shopify Plus](/it/blog/migrazione-shopify-plus) spiega perché.',
     },
     { type: 'h3', text: '5. Chi fa il lavoro' },
     {

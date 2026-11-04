@@ -384,3 +384,40 @@ Controllato il 29 ottobre 2026 su ogni pagina indicata. Una riga per fatto; dove
 - Percorsi URL di PrestaShop letti in `classes/Dispatcher.php`, tag 8.2.0, il 28 ottobre 2026 (articolo PrestaShop).
 - Da ricontrollare a metà novembre 2026.
 
+## Shopify Plus migration (lettura 4 nov 2026)
+
+Fatti usati in `data/articles/posts/shopify-plus-migration.ts`, `shopify-plus.ts` e, per gli expansion store, `magento-to-shopify-migration.ts`. Pagine ufficiali di Shopify lette il 4 novembre 2026; tra virgolette il testo della pagina. Prezzi e date cambiano: si ricontrollano prima di riusarli.
+
+- Plus, prezzo al mese con termine 1 anno / 3 anni: €2.250 / €2.100, $2.500 / $2.300, £1.950 / £1.800: https://help.shopify.com/en/manual/intro-to-shopify/pricing-plans/plans-features/shopify-plus-plan
+- Plus "da €2.100 al mese" riconfermato il 4 novembre 2026 (è il termine di 3 anni): https://www.shopify.com/pricing
+- Quei prezzi valgono "for standard setups and integrations"; per attività più complesse e con più volumi "there might be a variable platform fee", basata su ricavi e modello di attività, diversa per B2B e D2C: https://help.shopify.com/en/manual/intro-to-shopify/pricing-plans/plans-features/shopify-plus-plan
+- Altri costi possibili: Shopify Plus Partners, acquisto una tantum di un tema, app di terzi: stessa pagina
+- Da Advanced a Plus "without rebuilding its existing store", trattato come cambio di piano; Plus si seleziona in Settings > Plan e le funzioni "take effect immediately" (blog Shopify, aggiornato il 23 settembre 2026; la frase parla solo di Advanced): https://www.shopify.com/enterprise/blog/upgrade-to-shopify-plus
+- "The upgrade unlocks access to Plus features, but it doesn't configure them"; cosa resta da fare per area: expansion store da creare e licenziare, estensioni di checkout da costruire o installare, Launchpad da installare, utenti e gruppi, cataloghi B2B da creare, staging da creare e test drive da attivare, integrazioni da aggiornare: stessa pagina
+- "A new theme, custom checkout, or expansion store is a separate project"; "Shopify does not publish a single compatibility list" per le app: stessa pagina
+- Nessun fatturato minimo pubblicato; Sales valuta volumi, setup dei pagamenti ed esigenze operative prima del prezzo esatto: stessa pagina
+- Il piano si gestisce da Settings > Plan: https://help.shopify.com/en/manual/your-account/manage-orgs-and-stores/manage-pricing-plan
+- Prova Plus a pagamento per merchant idonei, da 1 a 2 mesi, $399, €384 o £344 al mese: https://help.shopify.com/en/manual/intro-to-shopify/pricing-plans/plus-trial
+- Prova Plus: "If you take no action by the end of your trial, then your store is automatically enrolled in a full Plus plan"; non include expansion store, staging illimitati, impostazioni di organizzazione, Test Drive, bot protection; B2B solo in storefront misto: stessa pagina
+- Abbonamento Plus di 1 o 3 anni, "you can cancel when your term commitment expires": https://www.shopify.com/pricing
+- Rinnovo e downgrade, se idonei, dall'admin, con effetto alla data di rinnovo; "You can't cancel your Shopify Plus agreement from the Shopify admin": serve il CSM o Plus Support: https://help.shopify.com/en/manual/your-account/manage-orgs-and-stores/manage-pricing-plan/renew-downgrade-plus-plan
+- checkout.liquid "is now unsupported" sui passaggi Information, Shipping, Payment; checkout.liquid e additional scripts dismessi su Thank you e Order status il 28 agosto 2025; script tag su quelle pagine dismessi il 28 agosto 2025 per Plus e il 26 agosto 2026 per i non Plus: https://shopify.dev/docs/storefronts/themes/architecture/layouts/checkout-liquid
+- 26 agosto 2026, scadenza per aggiornare Thank you e Order status; gli store non aggiornati sono stati aggiornati in automatico: https://help.shopify.com/en/manual/checkout-settings/customize-checkout-configurations/upgrade-thank-you-order-status
+- Additional scripts sostituiti da blocchi e web pixel: https://help.shopify.com/en/manual/checkout-settings/checkout-extensibility/checkout-upgrade
+- Da Basic in su editor di checkout e app su Thank you e Order status; solo Plus app su information, shipping, payment e Checkout Branding API: https://help.shopify.com/en/manual/checkout-settings/checkout-extensibility
+- Checkout UI extensions su information, shipping, payment "available only to stores on a Shopify Plus plan": https://shopify.dev/docs/api/checkout-ui-extensions/latest
+- Flussi di checkout distinti per B2B e D2C nello stesso store su Plus: https://help.shopify.com/en/manual/intro-to-shopify/pricing-plans/plans-features/shopify-plus-plan
+- Shopify Scripts deprecato il 30 giugno 2026; il report Scripts customizations in Apps > Script Editor dice cosa ricreare, con app basate su Functions o Functions proprie: https://help.shopify.com/en/manual/checkout-settings/script-editor/migrating
+- Store su ogni piano possono usare app pubbliche con functions; "Only stores on a Shopify Plus plan can use custom apps that contain Shopify Function APIs": https://shopify.dev/docs/apps/build/functions
+- Cart Transform, operazioni lineUpdate e update solo per store Plus e di sviluppo: https://shopify.dev/docs/api/functions/latest/cart-transform
+- B2B su Basic, Grow, Advanced, Plus; 3 assegnazioni di catalogo sui mercati B2B attivi sui piani standard, illimitate su Plus; solo Plus: cataloghi diretti su azienda o location, requisiti di deposito, pagamenti parziali, richieste di pagamento per fulfillment: https://help.shopify.com/en/manual/b2b/getting-started/plan-features
+- Expansion store: massimo 10 store a contratto senza costi extra, 1 principale e 9 expansion; gli staging non contano: https://help.shopify.com/en/manual/organization-settings/expansion-stores
+- Expansion store: store indipendenti, impostazioni, prodotti, collezioni e inventario non si sincronizzano di default; app fatturate per store; licenza tema per store; import di temi, prodotti, collezioni, file solo alla creazione: stessa pagina
+- Expansion store: estensione del brand principale, stessi nome, branding, beni e servizi; altrimenti accordo multi-brand con un abbonamento Plus per brand: stessa pagina
+- Expansion store: "Only stores billed in USD or INR can be added to a Plus agreement", mentre la pagina del piano mostra prezzi anche in euro e sterline. Non risolto: nell'articolo si scrive solo di farlo confermare nel contratto: stessa pagina
+- Launchpad: pianifica sale, product drop e restock, cambia prezzi all'inizio e alla fine, rilascia prodotti, aumenta inventario, programma tema e creatività, protegge con password: https://help.shopify.com/en/manual/promoting-marketing/create-marketing/launchpad ; fra le app per Plus: pagina del piano Plus
+- Checklist di lancio Plus, ordine di import: prodotti, clienti, ordini storici, gift card, B2B, altri dati: https://help.shopify.com/en/manual/intro-to-shopify/plus-launch-checklist (versione IT linkata: https://help.shopify.com/it/manual/intro-to-shopify/plus-launch-checklist)
+- Stessa checklist: ordini importati fanno partire le notifiche di nuovo ordine, si disattivano da Settings > Notifications o tramite Plus Support; gift card subito prima del lancio, non modificabili né eliminabili; ordini almeno nella finestra di reso, "import orders from the past 2-5 years"; aziende e location a mano o in blocco "using Matrixify, a third-party app", cataloghi a mano o via CSV
+- Metodi di migrazione: copia e incolla, CSV, app, Partner, soluzione custom con API: https://help.shopify.com/en/manual/migrating-to-shopify (versione IT linkata: https://help.shopify.com/it/manual/migrating-to-shopify)
+- Sprint, risposta alla candidatura entro 48 ore (già pubblicata sulla landing): `content/zero-loss-migration.en.ts`, `content/zero-loss-migration.it.ts`
+

@@ -52,6 +52,7 @@ Stati: `da fare`, `in corso`, `fatto (data, PR)`, `bloccato (motivo)`.
 | 29 | gennaio | "BigCommerce o Shopify" (R-55) | bigcommerce vs shopify | team | fatto (29 ott, v1.93.0) |
 | 42 | quando Antonio conferma il libro | Lead magnet "La pagella del tuo assistente AI" (pagina con raccolta email) e pagina autore con il libro (Person, link dal sito del libro) | | team | bloccato (libro da confermare) |
 | 44 | 4 nov | Aggiornare `/blog/shopify-cro-guide` su "Shopify CRO": title, H1, sezione servizio con lo Sprint (misura 2 nov) | shopify cro, cro shopify | team | fatto (4 nov, PR #197) |
+| 45 | 4 nov | Articolo nuovo "Shopify Plus migration", EN e IT: cambio di piano o migrazione, checkout, cosa è solo Plus, costi; `/blog/shopify-plus` ricentrato su quando conviene (misura 2 nov) | shopify plus migration, migrate to shopify plus | team | fatto (4 nov, PR #199) |
 | 46 | 4 nov | Link interni con anchor "migrazione Shopify" dai due articoli IT in alto (costo, agenzia) e dalle versioni EN verso la guida alla migrazione (misura 2 nov) | migrazione shopify | team | fatto (4 nov, PR #198) |
 
 Misura: `/seo monitora`, la lancia Antonio, idealmente una volta a settimana.
