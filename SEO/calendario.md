@@ -51,5 +51,6 @@ Stati: `da fare`, `in corso`, `fatto (data, PR)`, `bloccato (motivo)`.
 | 43 | 29 ott | "Claude Duet per un eCommerce Shopify" (richiesta di Antonio) | claude duet, claude duet shopify | team | fatto (29 ott, v1.93.0) |
 | 29 | gennaio | "BigCommerce o Shopify" (R-55) | bigcommerce vs shopify | team | fatto (29 ott, v1.93.0) |
 | 42 | quando Antonio conferma il libro | Lead magnet "La pagella del tuo assistente AI" (pagina con raccolta email) e pagina autore con il libro (Person, link dal sito del libro) | | team | bloccato (libro da confermare) |
+| 44 | 4 nov | Aggiornare `/blog/shopify-cro-guide` su "Shopify CRO": title, H1, sezione servizio con lo Sprint (misura 2 nov) | shopify cro, cro shopify | team | fatto (4 nov, PR #197) |
 
 Misura: `/seo monitora`, la lancia Antonio, idealmente una volta a settimana.

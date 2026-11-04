@@ -3,41 +3,41 @@ import type { Article } from '../index'
 const article: Article = {
   slug: 'shopify-cro-guide',
   slugIt: 'cro-ecommerce',
-  title: 'Shopify CRO in 2026: What the Research Actually Proves',
-  seoTitle: 'Shopify CRO: 11 Peer-Reviewed Studies Applied',
-  seoTitleIt: 'CRO eCommerce: cosa converte, secondo 11 studi',
+  title: 'Shopify CRO: What 11 Peer-Reviewed Studies Actually Prove',
+  seoTitle: 'Shopify CRO: What 11 Peer-Reviewed Studies Show',
+  seoTitleIt: 'CRO Shopify ed eCommerce: cosa provano 11 studi',
   seoDescription:
-    'Shopify conversion rate optimization backed by 11 peer-reviewed studies from the Journal of Marketing and Marketing Science, each with its source.',
-  titleIt: "CRO per eCommerce: quello che la scienza ha dimostrato (e le guide tralasciano)",
+    'Shopify CRO explained with 11 peer-reviewed studies: what they measured, how to apply it to product pages and reviews, each with its source.',
+  titleIt: 'CRO per Shopify ed eCommerce: cosa dimostrano 11 studi peer-reviewed',
   excerpt:
     'Science-backed Shopify conversion rate optimization. Not opinions, not listicles: what peer-reviewed research in the Journal of Marketing and Marketing Science actually proves about converting ecommerce visitors.',
   excerptIt:
     "CRO per eCommerce con dati reali e ricerche peer-reviewed. Non opinioni, non listicle: quello che la scienza ha dimostrato su cosa funziona davvero su Shopify nel 2026.",
   seoDescriptionIt:
-    'CRO per eCommerce con dati reali e ricerche peer-reviewed, non opinioni: cosa ha dimostrato la scienza su ciò che funziona davvero su Shopify nel 2026.',
+    'CRO per Shopify ed eCommerce: cosa hanno misurato 11 studi peer-reviewed, come applicarlo a pagine prodotto e recensioni, ognuno con la sua fonte.',
   ledeEn:
-    'Eleven peer-reviewed studies, applied to a real Shopify store, each with its source. The findings most CRO guides ignore, and the ones that change the numbers.',
+    'Eleven peer-reviewed studies, applied to a Shopify product page, each with its source. The findings most CRO guides ignore, and the ones that change the numbers.',
   ledeIt:
-    "Undici studi peer-reviewed, applicati a uno store Shopify reale, ognuno con la sua fonte. Le scoperte che la maggior parte delle guide CRO ignora, e quelle che spostano davvero i numeri.",
+    "Undici studi peer-reviewed, applicati alla pagina prodotto di uno store Shopify, ognuno con la sua fonte. Le scoperte che la maggior parte delle guide CRO ignora, e quelle che spostano davvero i numeri.",
   image: '/images/blog/cro-ecommerce-cover.png',
   imageAlt: 'Copertina della guida CRO per Shopify: sfondo verde bosco sfumato con una griglia regolare di puntini',
   imageAltEn: 'Cover of the Shopify CRO guide: softly graded forest green background with a regular dot grid',
   articleType: 'Article',
   date: '2026-05-06',
   datePublishedIso: '2026-05-06T14:00:00+02:00',
-  dateModifiedIso: '2026-10-28T09:00:00+00:00',
-  wordCount: 3300,
+  dateModifiedIso: '2026-11-04T20:00:00+00:00',
+  wordCount: 2783,
   articleSection: 'CRO',
-  readingTimeMinutes: 13,
+  readingTimeMinutes: 11,
   keywordsEn:
     'shopify cro, shopify conversion rate optimization, ecommerce cro, product page optimization, how to increase shopify conversion rate, ecommerce cro tips',
   keywordsIt:
-    "cro ecommerce, cos'è il cro, ottimizzare tasso conversione, scheda prodotto ecommerce, conversioni shopify, cro shopify",
+    "cro ecommerce, cos'è il cro, ottimizzare tasso conversione, scheda prodotto ecommerce, conversioni shopify, cro shopify, cro per shopify",
   faqEn: [
     {
-      question: 'What is ecommerce CRO?',
+      question: 'What is Shopify CRO?',
       answer:
-        'eCommerce CRO (Conversion Rate Optimization) is the process of increasing the percentage of store visitors who complete a purchase or another desired action. It involves working systematically on site elements (product pages, checkout, navigation, copy, images) to reduce barriers to purchase and increase trust signals, based on data and testing rather than assumptions.',
+        'Shopify CRO (conversion rate optimization) is eCommerce CRO applied to a Shopify store: the process of increasing the percentage of visitors who complete a purchase or another desired action. It involves working systematically on site elements (product pages, checkout, navigation, copy, images) to reduce barriers to purchase and increase trust signals, based on data and testing rather than assumptions.',
     },
     {
       question: 'What is a good Shopify conversion rate in 2026?',
@@ -47,12 +47,12 @@ const article: Article = {
     {
       question: 'Where should I start with Shopify CRO?',
       answer:
-        'Start with the product page. It is where purchase intent either converts into a transaction or becomes an abandonment. Before optimizing homepage or checkout, verify that your product page has a benefit-oriented headline, quality images showing variants and details, social proof visible above the fold, a clear CTA, and correct mobile layout. Only then move to other elements.',
+        'Start with the product page. It is where purchase intent either converts into a transaction or becomes an abandonment. Before optimizing homepage or checkout, verify that your product page has: a benefit-oriented headline, quality images showing variants and details, social proof visible above the fold, a clear CTA, and correct mobile layout. Only then move to other elements.',
     },
     {
       question: 'Does CRO help stores with low traffic?',
       answer:
-        'Yes, and here is how. With low traffic you work with research-verified best practices instead of quantitative A/B tests. The impact can still be significant because many basic errors (too many claims, unoptimized images, absent social proof) do not require massive data to fix.',
+        'Yes, and here is how. A reliable A/B test usually needs several thousand sessions per variant and enough purchases to read a difference. Below that, apply the practices research has already verified, as in this guide. The impact can still be significant because many basic errors (too many claims, unoptimized images, absent social proof) do not require massive data to fix.',
     },
     {
       question: 'How do I increase my Shopify conversion rate quickly?',
@@ -62,29 +62,29 @@ const article: Article = {
     {
       question: 'How does CRO compare to investing in advertising?',
       answer:
-        'Advertising brings traffic. CRO determines how much of that traffic converts. Every improvement in conversion rate multiplies the value of every dollar spent on advertising. The two work in parallel, not as alternatives.',
+        'Advertising brings traffic. CRO determines how much of that traffic converts. Doubling your advertising budget at a 1% conversion rate delivers the same orders as unchanged advertising at a 2% rate, with twice the spend. Every improvement in conversion rate multiplies the value of every euro spent on advertising. The two work in parallel, not as alternatives.',
     },
   ],
   faqIt: [
     {
-      question: "Cos'è il CRO per eCommerce?",
+      question: "Cos'è il CRO per Shopify?",
       answer:
-        "Il CRO (Conversion Rate Optimization) per eCommerce è il processo di aumentare la percentuale di visitatori che completano un acquisto o un'altra azione desiderata. Si lavora sugli elementi del sito (pagine prodotto, checkout, navigazione, copy, immagini) per ridurre gli ostacoli all'acquisto e aumentare i segnali di fiducia, basandosi su dati e test invece che su opinioni.",
+        "Il CRO per Shopify (Conversion Rate Optimization) è il CRO per eCommerce applicato a uno store Shopify: il processo di aumentare la percentuale di visitatori che completano un acquisto o un'altra azione desiderata. Si lavora sugli elementi del sito (pagine prodotto, checkout, navigazione, copy, immagini) per ridurre gli ostacoli all'acquisto e aumentare i segnali di fiducia, basandosi su dati e test invece che su opinioni.",
     },
     {
       question: 'Qual è un buon tasso di conversione per un eCommerce su Shopify?',
       answer:
-        "Lo store Shopify mediano converte l'1,4% dei visitatori. Gli store nel top 20% superano il 2,7%, il top 10% il 3,7% (Littledata, 436 store Shopify, 90 giorni al 24 ottobre 2026). Questi benchmark variano per settore: il fashion ha mediamente tassi più bassi degli integratori o del food, perché il ciclo decisionale è più lungo.",
+        "Lo store Shopify mediano converte l'1,4% dei visitatori. Gli store nel top 20% superano il 2,7%, il top 10% il 3,7% (Littledata, 436 store Shopify, 90 giorni al 24 ottobre 2026). Questi benchmark variano per settore: il fashion ha mediamente tassi più bassi degli integratori o del food, perché il ciclo decisionale è più lungo. Confrontarsi con la mediana del settore è più utile che confrontarsi con quella generale.",
     },
     {
       question: 'Da dove si inizia un progetto CRO su Shopify?',
       answer:
-        "Dalla pagina prodotto. È il punto dove l'intenzione d'acquisto si trasforma in transazione o abbandono. Prima di ottimizzare homepage o checkout, verifica che la tua pagina prodotto abbia headline orientata al beneficio, immagini di qualità, social proof visibile sopra il fold, CTA chiaro e gestione mobile corretta.",
+        "Dalla pagina prodotto. È il punto dove l'intenzione d'acquisto si trasforma in transazione o abbandono. Prima di ottimizzare homepage o checkout, verifica che la tua pagina prodotto abbia: headline orientata al beneficio, immagini di qualità con varianti e dettagli, social proof visibile sopra il fold, CTA chiaro e ben posizionato, e gestione del mobile corretta. Solo dopo si lavora sugli altri elementi.",
     },
     {
       question: 'Il CRO serve anche per chi ha poco traffico?',
       answer:
-        "Sì, ed ecco come. Con poco traffico si lavora su best practice verificate dalla ricerca invece che su test A/B quantitativi. L'impatto può essere significativo perché molti errori di base (troppi claim, immagini non ottimizzate, social proof assente) si correggono senza bisogno di dati massivi.",
+        "Sì, ed ecco come. Un test A/B affidabile richiede di solito alcune migliaia di sessioni per variante e abbastanza acquisti per leggere una differenza. Sotto quella soglia conviene applicare le pratiche già verificate dalla ricerca, come in questa guida. L'impatto può essere significativo anche con volumi modesti, perché molti errori di base (troppi claim, immagini non ottimizzate, social proof assente) si correggono senza bisogno di dati massivi.",
     },
     {
       question: 'Come aumento in fretta il tasso di conversione su Shopify?',
@@ -94,13 +94,13 @@ const article: Article = {
     {
       question: 'Quanto impatta il CRO rispetto a investire in advertising?',
       answer:
-        "Raddoppiare il budget advertising con un tasso di conversione dell'1% porta gli stessi ordini di un advertising invariato con un tasso al 2%, ma con il doppio della spesa. Ogni miglioramento del tasso di conversione moltiplica il valore di ogni euro speso in advertising. I due lavorano in parallelo, non in alternativa.",
+        "L'advertising porta traffico. Il CRO determina quanto di quel traffico si converte. Raddoppiare il budget advertising con un tasso di conversione dell'1% porta gli stessi ordini di un advertising invariato con un tasso al 2%, ma con il doppio della spesa. In pratica, ogni miglioramento del tasso di conversione moltiplica il valore di ogni euro speso in advertising. I due lavorano in parallelo, non in alternativa.",
     },
   ],
   content: [
     {
       type: 'paragraph',
-      text: '**Shopify CRO (conversion rate optimization) is the work of getting more of your store’s visitors to buy, and most of what circulates about it is opinion.** This guide keeps only what peer-reviewed research has measured, from the Journal of Marketing to Marketing Science, applied to a Shopify product page. Where a point comes from our own work with brands rather than a paper, we say so.',
+      text: '**Shopify CRO (conversion rate optimization) is the work of getting a larger share of your Shopify store’s visitors to buy, by changing product pages, reviews and checkout based on evidence.** Most of what circulates about it is opinion. This guide keeps only what peer-reviewed research has measured, from the Journal of Marketing to Marketing Science, applied to a Shopify product page. Where a point comes from our own work with brands rather than a paper, we say so.',
     },
     {
       type: 'paragraph',
@@ -114,11 +114,12 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        'What ecommerce CRO actually is and why most guides start from the wrong premise',
+        'What Shopify CRO actually is and why most guides start from the wrong premise',
         'The foundations to define before touching any page',
         'What research says about the product page: the page that decides whether you sell',
         'The most common operational mistakes that cost conversions every day',
         'Concrete Shopify quick wins to implement immediately',
+        'Shopify CRO during a migration, and after: what we cover',
       ],
     },
     { type: 'h2', text: 'What is a good Shopify conversion rate?' },
@@ -126,10 +127,10 @@ const article: Article = {
       type: 'paragraph',
       text: '**The median Shopify store converts 1.4% of visitors; the top 20% exceed 2.7% and the top 10% exceed 3.7%.** These are [Littledata](https://www.littledata.io/average/shopify-conversion-rate) figures for 436 Shopify stores over the 90 days to 24 October 2026. Fashion converts less than supplements or food because the decision takes longer, so compare yourself with your sector.',
     },
-    { type: 'h2', text: 'What eCommerce CRO Actually Is (And Why Most Guides Get It Wrong)' },
+    { type: 'h2', text: 'What Shopify CRO Actually Is (And Why Most Guides Get It Wrong)' },
     {
       type: 'paragraph',
-      text: '**eCommerce CRO (Conversion Rate Optimization) is the systematic process of increasing the percentage of visitors who complete a desired action on your store: a purchase, a signup, or an add to cart.**',
+      text: '**Shopify CRO (conversion rate optimization) is the systematic process of increasing the percentage of visitors who complete a desired action on your Shopify store: a purchase, a signup, or an add to cart.**',
     },
     {
       type: 'paragraph',
@@ -151,6 +152,10 @@ const article: Article = {
     {
       type: 'paragraph',
       text: 'Every optimization built without these foundations is built on sand. This applies to any store, regardless of platform.',
+    },
+    {
+      type: 'paragraph',
+      text: 'In our work, the lever we have seen really move the numbers is loading speed, not a design change. The restyling comes after.',
     },
     { type: 'h3', text: 'The rule of three (with the data behind it)' },
     {
@@ -190,6 +195,10 @@ const article: Article = {
     {
       type: 'paragraph',
       text: 'The product page is where the buying decision happens. Not the homepage, not the collection page. If you have one place to focus CRO energy, it is here.',
+    },
+    {
+      type: 'paragraph',
+      text: 'In our work, related products on the product page do not move much, because people who want something search for it. The minicart suggestion ("add this too") is where we have seen the numbers move most.',
     },
     { type: 'h3', text: 'Sold-out items that increase sales' },
     {
@@ -286,7 +295,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: "**Reviews requested too early.** Asking for a review the day after delivery, when the customer has not used the product enough, produces mediocre reviews. In our experience the right timing depends on the product's usage cycle. For supplements and skincare: 14 or 30 days post-delivery. For fashion: after the first extended use, flagged with a second email at 7-10 days.",
+      text: "**Reviews requested too early.** Asking for a review the day after delivery, when the customer has not used the product enough, produces mediocre reviews. In our experience the right timing depends on the product's usage cycle. For supplements and skincare: once the customer has had time to see the effect. For fashion: after the first extended use, with a second reminder email.",
     },
     {
       type: 'paragraph',
@@ -295,7 +304,7 @@ const article: Article = {
     { type: 'h2', text: 'Shopify Quick Wins to Implement Today' },
     {
       type: 'paragraph',
-      text: 'If you want a starting point without a full CRO audit:',
+      text: 'If you want a starting point for Shopify CRO without a full audit:',
     },
     {
       type: 'paragraph',
@@ -311,17 +320,26 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Verify the timing of your post-purchase email flow. If you are sending review requests less than 48 hours after delivery, you are collecting feedback before the product has been used.',
+      text: 'Verify the timing of your post-purchase email flow. If you are sending review requests right after delivery, you are collecting feedback before the product has been used.',
+    },
+    { type: 'h2', text: 'Shopify CRO during a migration, and after' },
+    {
+      type: 'paragraph',
+      text: 'During a migration, the [Shopify Launch Sprint](/shopify-migration-sprint) **covers the purchase flow**: search, product page, cart and checkout are analyzed step by step and rebuilt with our checklist. It moves your store to Shopify in 14 days with our Custom AI System, with go-live between day 15 and day 30, 90 days of support and 4 written guarantees. One of them is about conversion: "Checkout converting less than before at 90 days? We optimize it for free until it beats it." For the whole process, read the [Shopify migration guide](/shopify-migration).',
     },
     {
       type: 'paragraph',
-      text: 'In the Shopify Launch Sprint the purchase flow (search, product page, cart and checkout) is analyzed step by step and rebuilt with our checklist, and one of the 4 written guarantees covers it: if checkout converts less than before at 90 days, we optimize it for free until it beats it. If you are already on Shopify and want conversion work every month, the [Data-Driven Team](/data-driven-team) does it, as for [Cumini](/use-cases/cumini-luxury-fashion-ecommerce). If shoppers arrive from AI assistants, the checkout decides what that traffic is worth: see [ChatGPT shopping for Shopify](/blog/chatgpt-shopping-shopify) and [AI for ecommerce](/blog/ai-for-ecommerce). For the platform basics, read [how Shopify works](/blog/how-shopify-works); for a strategy built on stable foundations, [eCommerce growth strategy](/blog/ecommerce-growth-strategy-long-term).',
+      text: 'If you are already on Shopify and want conversion work every month, the [Data-Driven Team](/data-driven-team) does it, as for [Cumini](/use-cases/cumini-luxury-fashion-ecommerce).',
+    },
+    {
+      type: 'paragraph',
+      text: 'If shoppers arrive from AI assistants, the checkout decides what that traffic is worth: see [ChatGPT shopping for Shopify](/blog/chatgpt-shopping-shopify) and [AI for ecommerce](/blog/ai-for-ecommerce). For the platform basics, read [how Shopify works](/blog/how-shopify-works); for a strategy built on stable foundations, [eCommerce growth strategy](/blog/ecommerce-growth-strategy-long-term).',
     },
     { type: 'h2', text: 'Frequently Asked Questions' },
-    { type: 'h3', text: 'What is ecommerce CRO?' },
+    { type: 'h3', text: 'What is Shopify CRO?' },
     {
       type: 'paragraph',
-      text: 'eCommerce CRO (Conversion Rate Optimization) is the process of increasing the percentage of store visitors who complete a purchase or another desired action. It involves working systematically on site elements (product pages, checkout, navigation, copy, images) to reduce barriers to purchase and increase trust signals, based on data and testing rather than assumptions.',
+      text: 'Shopify CRO (conversion rate optimization) is eCommerce CRO applied to a Shopify store: the process of increasing the percentage of visitors who complete a purchase or another desired action. It involves working systematically on site elements (product pages, checkout, navigation, copy, images) to reduce barriers to purchase and increase trust signals, based on data and testing rather than assumptions.',
     },
     { type: 'h3', text: 'What is a good Shopify conversion rate in 2026?' },
     {
@@ -364,7 +382,7 @@ const article: Article = {
   contentIt: [
     {
       type: 'paragraph',
-      text: '**Il CRO per Shopify (conversion rate optimization) è il lavoro di far comprare più visitatori del tuo store, e quasi tutto ciò che circola è opinione.** Questa guida tiene solo ciò che la ricerca peer-reviewed ha misurato, dal Journal of Marketing a Marketing Science, applicato alla pagina prodotto di uno store Shopify. Dove un punto viene dal nostro lavoro con i brand e non da un paper, lo scriviamo.',
+      text: '**Il CRO per Shopify (conversion rate optimization), cioè il CRO eCommerce applicato al tuo store, è il lavoro di far comprare una quota più alta dei tuoi visitatori, cambiando pagine prodotto, recensioni e checkout sulla base di prove.** Quasi tutto ciò che circola è opinione. Questa guida tiene solo ciò che la ricerca peer-reviewed ha misurato, dal Journal of Marketing a Marketing Science, applicato alla pagina prodotto di uno store Shopify. Dove un punto viene dal nostro lavoro con i brand e non da un paper, lo scriviamo.',
     },
     {
       type: 'paragraph',
@@ -378,11 +396,12 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        "Cos'è il CRO e perché la maggioranza delle guide parte dal presupposto sbagliato",
+        "Cos'è il CRO per Shopify e perché la maggioranza delle guide parte dal presupposto sbagliato",
         'Le fondamenta da definire prima di toccare qualsiasi pagina',
         'Cosa dice la ricerca sulla pagina prodotto: la pagina che decide se vendi o no',
         'I tre errori più comuni che costano conversioni ogni giorno',
         'Quick win concreti per iniziare su Shopify',
+        'CRO per Shopify durante una migrazione e dopo: cosa copriamo',
       ],
     },
     { type: 'h2', text: 'Qual è un buon tasso di conversione su Shopify?' },
@@ -390,10 +409,10 @@ const article: Article = {
       type: 'paragraph',
       text: '**Lo store Shopify mediano converte l\'1,4% dei visitatori; il top 20% supera il 2,7% e il top 10% il 3,7%.** Sono i dati di [Littledata](https://www.littledata.io/average/shopify-conversion-rate) su 436 store Shopify nei 90 giorni al 24 ottobre 2026. Il fashion converte meno di integratori e food perché la decisione è più lunga, quindi confrontati con il tuo settore.',
     },
-    { type: 'h2', text: "Cos'è il CRO e perché la maggior parte delle guide lo spiega male" },
+    { type: 'h2', text: "Cos'è il CRO per Shopify e perché la maggior parte delle guide lo spiega male" },
     {
       type: 'paragraph',
-      text: "**CRO (Conversion Rate Optimization) è il processo sistematico di aumentare la percentuale di visitatori che compiono un'azione desiderata sul tuo store: che sia un acquisto, una registrazione o l'aggiunta al carrello.**",
+      text: "**Il CRO per Shopify (Conversion Rate Optimization) è il processo sistematico di aumentare la percentuale di visitatori che compiono un'azione desiderata sul tuo store Shopify: che sia un acquisto, una registrazione o l'aggiunta al carrello.**",
     },
     {
       type: 'paragraph',
@@ -415,6 +434,10 @@ const article: Article = {
     {
       type: 'paragraph',
       text: 'Ogni ottimizzazione costruita senza queste fondamenta è costruita sulla sabbia. Vale per qualsiasi store, indipendentemente dalla piattaforma.',
+    },
+    {
+      type: 'paragraph',
+      text: 'Nel nostro lavoro, la leva che abbiamo visto muovere davvero i numeri è la velocità di caricamento, non cambiare design. Il restyling viene dopo.',
     },
     { type: 'h3', text: 'La regola del 3 (supportata da ricerca peer-reviewed)' },
     {
@@ -455,10 +478,14 @@ const article: Article = {
       type: 'paragraph',
       text: "La pagina prodotto è il momento in cui l'utente decide. Non la homepage, non la collection page. Se hai un solo posto dove concentrare l'energia CRO, è qui.",
     },
+    {
+      type: 'paragraph',
+      text: 'Nel nostro lavoro, i prodotti correlati in pagina prodotto non spostano molto, perché chi vuole una cosa la cerca. Il suggerimento nel minicart ("aggiungi anche questo") è dove abbiamo visto muoversi di più i numeri.',
+    },
     { type: 'h3', text: 'Il potere dei prodotti esauriti visibili' },
     {
       type: 'paragraph',
-      text: 'Questo è il risultato contro-intuitivo che più sorprende i miei clienti: mostrare prodotti o varianti esauriti, anziché nasconderli, aumenta le vendite.',
+      text: 'Questo è il risultato contro-intuitivo che più sorprende i brand: mostrare prodotti o varianti esauriti, anziché nasconderli, aumenta le vendite.',
     },
     {
       type: 'paragraph',
@@ -479,7 +506,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Il punto critico: questo vale per prodotti hedonic (fashion, food di qualità, esperienze, profumi, accessori lifestyle). Per prodotti funzionali e tecnici (elettrodomestici, strumenti, prodotti per la pulizia), le immagini statiche funzionano altrettanto bene.',
+      text: 'Il punto critico: questo vale per prodotti edonici (fashion, food di qualità, esperienze, profumi, accessori lifestyle). Per prodotti funzionali e tecnici (elettrodomestici, strumenti, prodotti per la pulizia), le immagini statiche funzionano altrettanto bene.',
     },
     {
       type: 'paragraph',
@@ -550,7 +577,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: "**Le recensioni richieste troppo presto.** Chiedere una recensione il giorno dopo la consegna, quando il cliente non ha ancora usato abbastanza il prodotto, produce recensioni mediocri. Per la nostra esperienza il momento giusto dipende dal ciclo d'uso del prodotto. Per integratori e skincare: +14 o +30 giorni. Per fashion: dopo il primo utilizzo esteso, segnalabile con una seconda email a 7-10 giorni.",
+      text: "**Le recensioni richieste troppo presto.** Chiedere una recensione il giorno dopo la consegna, quando il cliente non ha ancora usato abbastanza il prodotto, produce recensioni mediocri. Per la nostra esperienza il momento giusto dipende dal ciclo d'uso del prodotto. Per integratori e skincare: dopo che il cliente ha avuto il tempo di vedere l'effetto. Per fashion: dopo il primo utilizzo esteso, con una seconda email di promemoria.",
     },
     {
       type: 'paragraph',
@@ -559,7 +586,7 @@ const article: Article = {
     { type: 'h2', text: 'Quick win per iniziare oggi su Shopify' },
     {
       type: 'paragraph',
-      text: 'Se vuoi un punto di partenza concreto senza un audit completo:',
+      text: 'Se vuoi un punto di partenza concreto per il CRO su Shopify, senza un audit completo:',
     },
     {
       type: 'paragraph',
@@ -575,17 +602,26 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Verifica il timing delle email post-acquisto. Se stai mandando richieste di recensione a meno di 48 ore dalla consegna, stai raccogliendo feedback prima che il prodotto sia stato usato.',
+      text: 'Verifica il timing delle email post-acquisto. Se stai mandando richieste di recensione subito dopo la consegna, stai raccogliendo feedback prima che il prodotto sia stato usato.',
+    },
+    { type: 'h2', text: 'CRO per Shopify durante una migrazione e dopo' },
+    {
+      type: 'paragraph',
+      text: "Durante una migrazione, lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) **copre il flusso d'acquisto**: ricerca, scheda prodotto, carrello e checkout vengono analizzati passo per passo e ricostruiti con la nostra checklist. Porta il tuo store su Shopify in 14 giorni con il nostro Custom AI System, con go-live tra il giorno 15 e il 30, 90 giorni di supporto e 4 garanzie scritte. Una di queste riguarda la conversione: \"Il checkout converte meno di prima a 90 giorni? Lo ottimizziamo gratis finché non supera.\" Per tutto il processo, leggi la [guida alla migrazione a Shopify](/it/migrazione-shopify).",
     },
     {
       type: 'paragraph',
-      text: "Nello Shopify Launch Sprint il flusso d'acquisto (ricerca, scheda prodotto, carrello e checkout) viene analizzato passo per passo e ricostruito con la nostra checklist, e una delle 4 garanzie scritte lo riguarda: se a 90 giorni il checkout converte meno di prima, lo ottimizziamo gratis finché non lo supera. Se sei già su Shopify e vuoi lavorare sulla conversione ogni mese, lo fa il [Data-Driven Team](/it/team-ecommerce-dedicato), come per [Cumini](/it/casi-studio/cumini-luxury-fashion-ecommerce). Se i clienti arrivano dagli assistenti AI, il checkout decide quanto vale quel traffico: vedi [ChatGPT shopping per Shopify](/it/blog/chatgpt-shopping-shopify) e [AI per eCommerce](/it/blog/ai-per-ecommerce). Per le basi della piattaforma leggi [cos’è Shopify e come funziona](/it/blog/cose-shopify); per una strategia costruita su fondamenta stabili, [strategia eCommerce a lungo termine](/it/blog/strategia-ecommerce-long-term).",
+      text: 'Se sei già su Shopify e vuoi lavorare sulla conversione ogni mese, lo fa il [Data-Driven Team](/it/team-ecommerce-dedicato), come per [Cumini](/it/casi-studio/cumini-luxury-fashion-ecommerce).',
+    },
+    {
+      type: 'paragraph',
+      text: "Se i clienti arrivano dagli assistenti AI, il checkout decide quanto vale quel traffico: vedi [ChatGPT shopping per Shopify](/it/blog/chatgpt-shopping-shopify) e [AI per eCommerce](/it/blog/ai-per-ecommerce). Per le basi della piattaforma leggi [cos’è Shopify e come funziona](/it/blog/cose-shopify); per una strategia costruita su fondamenta stabili, [strategia eCommerce a lungo termine](/it/blog/strategia-ecommerce-long-term).",
     },
     { type: 'h2', text: 'FAQ: le domande più frequenti sul CRO per eCommerce' },
-    { type: 'h3', text: "Cos'è il CRO per eCommerce?" },
+    { type: 'h3', text: "Cos'è il CRO per Shopify?" },
     {
       type: 'paragraph',
-      text: "Il CRO (Conversion Rate Optimization) per eCommerce è il processo sistematico di aumentare la percentuale di visitatori che compiono un'azione desiderata: acquisto, registrazione, aggiunta al carrello. Si lavora sugli elementi del sito (pagine prodotto, checkout, navigazione, copy, immagini) per ridurre gli ostacoli all'acquisto e aumentare i segnali di fiducia, basandosi su dati e test invece che su opinioni.",
+      text: "Il CRO per Shopify (Conversion Rate Optimization) è il CRO per eCommerce applicato a uno store Shopify: il processo di aumentare la percentuale di visitatori che completano un acquisto o un'altra azione desiderata. Si lavora sugli elementi del sito (pagine prodotto, checkout, navigazione, copy, immagini) per ridurre gli ostacoli all'acquisto e aumentare i segnali di fiducia, basandosi su dati e test invece che su opinioni.",
     },
     { type: 'h3', text: 'Qual è un buon tasso di conversione per un eCommerce su Shopify?' },
     {

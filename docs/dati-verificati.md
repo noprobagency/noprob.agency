@@ -198,6 +198,8 @@ Costo mensile reale di uno store B2C strutturato: 100-1.100 € al mese, pubblic
 
 ### CRO (shopify-cro-guide)
 
+La guida cita 11 studi peer-reviewed: le righe sotto, escluse Littledata e Spiegel.
+
 | Dato | Valore | Fonte | Nota |
 |---|---|---|---|
 | Conversione Shopify | mediana 1,4%, top 20% sopra 2,7%, top 10% sopra 3,7% | Littledata, littledata.io/average/shopify-conversion-rate, 436 store, 90 giorni al 24 ott 2026 | Sostituisce 1,4-1,8%, 3,2% e 4,7% senza fonte |
