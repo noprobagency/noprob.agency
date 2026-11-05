@@ -18,6 +18,7 @@
 // Usage: node scripts/damiano-scrape.mjs --target 500 [--budget 7] [--out docs/cold/damiano] [--crm <crm checkout>]
 //        node scripts/damiano-scrape.mjs --market intl --target 200   (writes docs/cold/damiano/intl)
 //        node scripts/damiano-scrape.mjs --add 50 --spend 0.65        (daily cloud run, crm-noprobagency)
+//        With --add the run first counts the stock (lib/cold/supply-gate.mjs) and may pause at zero spend.
 //
 // leads.json holds only ready leads that no channel has yet: store check passed, company
 // mailbox, in Italy. Each Italian row says its channel (hello with a LinkedIn URL, else
@@ -31,6 +32,7 @@ import { normaliseUrl, phpStatus, siteMatchesCompany } from '../lib/cold/detect-
 import { fetchPlatform, pool } from '../lib/cold/fetch-platform.mjs'
 import { listContacts } from '../lib/cold/gojiberry.mjs'
 import { peopleRows } from '../lib/cold/people-rows.mjs'
+import { reviewYields, SUPPLY, supplyGate } from '../lib/cold/supply-gate.mjs'
 
 const run = promisify(execFile)
 const args = process.argv.slice(2)
@@ -456,9 +458,31 @@ const leads = () => candidates().filter(ready)
 const isStore = (c) => STORE_PLATFORMS.has(c.platform) && reachable(c) && fresh(c.domain)
 const isShopify = (c) => c.platform === 'shopify' && reachable(c) && fresh(c.domain)
 
-if (!EXPORT_ONLY) {
-  // Pass 0: store check on leads found before it existed (free).
-  await pool(candidates().filter((c) => !c.store), 10, storeCheck)
+// Pass 0: store check on leads found before it existed (free).
+if (!EXPORT_ONLY) await pool(candidates().filter((c) => !c.store), 10, storeCheck)
+
+// D-61: the daily run (--add) pauses at zero spend while both channels have stock.
+const readRows = (f) => (existsSync(f) ? JSON.parse(readFileSync(f, 'utf8')).leads || [] : [])
+const checkSupply = () => {
+  const ready = leads()
+  const directLeads = readRows('cold-email/data/leads.json')
+  const used = existsSync(USED_FILE) ? JSON.parse(readFileSync(USED_FILE, 'utf8')) : {}
+  const gate = supplyGate({
+    hello: ready.filter((c) => c.lead.linkedin).length,
+    direct: ready.filter((c) => !c.lead.linkedin).length,
+    readyFirst: directLeads.filter((l) => l.segment === 'target' && !l.sequence?.sent?.length && !l.sequence?.stoppedAt).length,
+    yields: reviewYields({ used, danteLeads: readRows('cold-email/data/dante.json'), directLeads }),
+    wasPaused: Boolean(state.supplyPaused),
+    limits: { pauseDays: Number(opt('pause-days', SUPPLY.pauseDays)), resumeDays: Number(opt('resume-days', SUPPLY.resumeDays)) },
+  })
+  state.supplyPaused = gate.paused
+  save()
+  console.error(`supply · hello ${gate.helloDays} days · direct ${gate.directDays} days · ${gate.paused ? 'paused, no spend' : 'running'}`)
+  return gate
+}
+const supply = !EXPORT_ONLY && !INTL && opt('add', null) != null ? checkSupply() : null
+
+if (!EXPORT_ONLY && !supply?.paused) {
   if (opt('add', null) != null) TARGET = leads().length + Number(opt('add'))
   // Pass 1: re-work the stores already done with the role searches (upgrades, second contacts).
   const log = (msg) => console.error(`${leads().length}/${TARGET} leads · $${(state.spentMicro / 1e6).toFixed(3)} · ${msg}`)
@@ -576,6 +600,7 @@ const summary = {
   spentUsd: +(state.spentMicro / 1e6).toFixed(4),
   costPerLeadUsd: leadRows.length ? +(state.spentMicro / 1e6 / leadRows.length).toFixed(4) : null,
   tregCalls: state.calls,
+  ...(supply && { supply }),
 }
 writeFileSync(join(OUT, 'leads.json'), JSON.stringify(leadRows, null, 2))
 // The queue Dante's 8:00 review reads; Damiano is its only writer.
