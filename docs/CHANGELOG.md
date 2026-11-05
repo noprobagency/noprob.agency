@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.147.0 (5 Nov 2026)
+
+- **Direct cold email sequence v2, in Antonio's voice and approved by him**: first email with a concrete reason (AI on Shopify) and the offer of a preview, a neutral opt-out line instead of the PS, a direct question instead of the scarcity email. Threads opened by v1 keep their subject. Follow-ups now go out oldest first.
+
 ### Changelog v1.146.0 (5 Nov 2026)
 
 - **Damiano's stock check counts LinkedIn surplus for the direct channel (D-62)**: LinkedIn leads beyond hello@'s 10 days also count as direct stock, as Dante's import can send them there. The pause arrives with about 1,000 leads instead of 2,800.
