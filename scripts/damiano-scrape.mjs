@@ -30,6 +30,7 @@ import { promisify } from 'node:util'
 import { normaliseUrl, phpStatus, siteMatchesCompany } from '../lib/cold/detect-platform.mjs'
 import { fetchPlatform, pool } from '../lib/cold/fetch-platform.mjs'
 import { listContacts } from '../lib/cold/gojiberry.mjs'
+import { peopleRows } from '../lib/cold/people-rows.mjs'
 
 const run = promisify(execFile)
 const args = process.argv.slice(2)
@@ -169,7 +170,10 @@ if (opt('spend', null) != null) BUDGET_MICRO = state.spentMicro + Number(opt('sp
 // Up to 6 calls run at once and each can cost ~$0.01: stop that much early so the run
 // ends under the budget, not just past it.
 const IN_FLIGHT_MICRO = 60000
-const over = () => state.spentMicro >= BUDGET_MICRO - IN_FLIGHT_MICRO
+// A run that reaches neither the target nor the budget still ends and writes its lists,
+// before the workflow's 150 minute limit cuts it off.
+const DEADLINE = Date.now() + Number(opt('minutes', 120)) * 60000
+const over = () => state.spentMicro >= BUDGET_MICRO - IN_FLIGHT_MICRO || Date.now() >= DEADLINE
 
 async function treg(id, body, headers = {}) {
   if (over()) throw new Error('budget reached')
@@ -325,7 +329,7 @@ async function people(c, { roles = true } = {}) {
   }
   if (!c.peopleV) {
     const r = await treg('treg.people.search', { company_domain: c.domain, limit: 25 }, FREE)
-    const rows = r?.output?.people || []
+    const rows = peopleRows(r)
     add(rows)
     if (rows[0]) Object.assign(c, { legalName: rows[0].company_name, employees: rows[0].employee_count, revenue: rows[0].revenue, industry: rows[0].industry, city: rows[0].city, country: clean(rows[0].country_code), companyLinkedin: rows[0].company_linked })
     c.peopleV = 1
@@ -333,7 +337,7 @@ async function people(c, { roles = true } = {}) {
   if (roles && c.peopleV < PEOPLE_VERSION && (c.industry === undefined || fits(c))) {
     for (const title of ROLE_SEARCHES) {
       const r = await treg('treg.people.search', { company_domain: c.domain, title, limit: 5 }, FREE)
-      add(r?.output?.people)
+      add(peopleRows(r))
     }
     c.peopleV = PEOPLE_VERSION
   }
