@@ -11,6 +11,9 @@ old entries, add a new one on top.
 ### Changelog v1.142.0 (5 Nov 2026)
 
 - **Damiano reads the people again**: `treg.people.search` now returns a short row in `output.people`, so `damiano-scrape.mjs` found no names, paid for no email and ran into the 150 minute workflow limit with 0 leads. It now reads the provider's row in `raw.data` (`lib/cold/people-rows.mjs`). A run also stops by itself after 120 minutes (`--minutes`) and still writes its lists.
+### Changelog v1.144.0 (5 Nov 2026)
+
+- **The direct channel reads replies in full before calling them interested**: a written request to be removed from the databases stayed "warm" because only the preview was read and only the first reply. `threadOutcome` now reads the whole text of every reply, warm threads stay under watch, and `isOptOut` knows "cancellazione", removal from a database, a bare "no" above a signature and Italian Outlook quotes.
 
 ### Changelog v1.141.0 (4 Nov 2026)
 

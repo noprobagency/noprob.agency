@@ -76,10 +76,13 @@ const api = await accessToken().then(gmail, (err) => {
 // 1. Replies and bounces on running threads
 for (const lead of api ? db.leads : []) {
   const seq = lead.sequence
-  if (lead.segment !== 'target' || !seq.threadId || seq.stoppedAt) continue
-  const outcome = threadOutcome(await api.thread(seq.threadId))
-  if (!outcome) continue
-  seq.stoppedAt = today
+  // Warm leads stay under watch: a later message can still ask to be removed.
+  const warm = lead.segment === 'warm'
+  if (!seq.threadId || !(warm || (lead.segment === 'target' && !seq.stoppedAt))) continue
+  let outcome = threadOutcome(await api.thread(seq.threadId))
+  if (outcome === 'reply') outcome = threadOutcome(await api.threadFull(seq.threadId))
+  if (!outcome || (warm && outcome !== 'optout')) continue
+  seq.stoppedAt ||= today
   seq.stopReason = outcome
   if (outcome === 'reply') {
     stats.replies++
