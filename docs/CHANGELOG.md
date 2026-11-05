@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.148.0 (5 Nov 2026)
+
+- **Damiano's queue fills a full day on both cold channels**: hello@ tops up to 50 and the direct channel tops up under 50, instead of only under 25 and 30. The direct channel takes LinkedIn rows only beyond hello@'s reserve of 100, so D-58 holds.
+
 ### Changelog v1.147.0 (5 Nov 2026)
 
 - **Direct cold email sequence v2, in Antonio's voice and approved by him**: first email with a concrete reason (AI on Shopify) and the offer of a preview, a neutral opt-out line instead of the PS, a direct question instead of the scarcity email. Threads opened by v1 keep their subject. Follow-ups now go out oldest first.

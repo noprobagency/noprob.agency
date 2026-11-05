@@ -34,7 +34,7 @@ import { LISTS, api, listContacts } from '../lib/cold/gojiberry.mjs'
 import { optoutSweep } from '../lib/cold/sweep.mjs'
 import { cleanCompany, review, storeVerdict } from '../lib/cold-email/approve.mjs'
 import { storeCheck } from '../lib/cold/store-check.mjs'
-import { DAMIANO, helloPayload, pickQueue } from '../lib/cold-email/damiano.mjs'
+import { DAMIANO, FEED, directTake, helloPayload, helloTake, pickQueue } from '../lib/cold-email/damiano.mjs'
 import { danteLead } from '../lib/cold-email/dante.mjs'
 import { domainOf, fromDamiano, fromGojiberry } from '../lib/cold-email/leads.mjs'
 import { readSuppressed } from '../lib/cold-email/suppression.mjs'
@@ -82,9 +82,10 @@ const dailyRunning = (() => {
     return false
   }
 })()
-// Damiano's nightly queue tops up both channels when they run low: hello@ under 25
-// leads approved and not yet sent (up to 50, those with a LinkedIn profile, which
-// Gojiberry needs), the direct channel under 30 first emails ready (up to 60).
+// Damiano's nightly queue tops up both channels so each can fill a day: hello@ up to 50
+// leads approved and not yet sent (those with a LinkedIn profile, which Gojiberry
+// needs), the direct channel up to 60 first emails ready when under 50, leaving
+// hello@ its reserve of LinkedIn rows (lib/cold-email/damiano.mjs).
 // Damiano's job runs in the cloud, so on the Mac the queue is state/damiano of the CRM
 // checkout (pulled first, usati.json pushed back); the local copy is the fallback.
 const today = new Date().toLocaleDateString('en-CA', { timeZone: 'Europe/Lisbon' })
@@ -108,8 +109,8 @@ if (!cloud && existsSync(damiano.queue)) {
   // Only approved leads count: a long review backlog of Gojiberry's own finds never
   // holds Damiano's verified leads back.
   const helloSupply = contacts.filter((c) => c.readyForCampaign && !inDante(c)).length
-  if (helloSupply < 25) {
-    for (const r of rows.filter((x) => x.linkedin).slice(0, 50 - helloSupply)) {
+  if (helloSupply < FEED.helloDay) {
+    for (const r of helloTake(rows, helloSupply)) {
       try {
         if (!dry) await api('POST', '/v1/contact', helloPayload(r, DANTE.list))
         used[domainOf(r.domain)] = { channel: 'hello@', date: today }
@@ -122,8 +123,8 @@ if (!cloud && existsSync(damiano.queue)) {
     if (feed.hello && !dry) contacts = await listContacts(DANTE.list)
   }
   const ready = db.leads.filter((l) => l.segment === 'target' && !l.sequence.sent.length && !l.sequence.stoppedAt).length
-  if (ready < 30 && !dailyRunning) {
-    const take = [...rows.filter((r) => !r.linkedin), ...rows.filter((r) => r.linkedin)].slice(0, 60)
+  if (ready < FEED.directDay && !dailyRunning) {
+    const take = directTake(rows, ready)
     const live = await pool(take.map((r) => `https://${domainOf(r.domain)}`), 12, (u) => fetchPlatform(u))
     for (const r of take) {
       const lead = fromDamiano(r, live.get(`https://${domainOf(r.domain)}`))
