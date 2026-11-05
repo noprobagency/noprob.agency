@@ -60,3 +60,5 @@ SEO/data/
 # Manager (Claudio): team state, decisions, daily diary, local only
 manager/data
 manager/data/
+# LinkedIn (Gabri): raw posts, emails and lead texts, local only
+linkedin/private/
