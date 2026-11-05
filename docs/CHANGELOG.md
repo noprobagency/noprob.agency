@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.146.0 (5 Nov 2026)
+
+- **Damiano's stock check counts LinkedIn surplus for the direct channel (D-62)**: LinkedIn leads beyond hello@'s 10 days also count as direct stock, as Dante's import can send them there. The pause arrives with about 1,000 leads instead of 2,800.
+
 ### Changelog v1.145.0 (5 Nov 2026)
 
 - **Damiano pauses by himself when stock is high (D-61)**: at the start of each daily run he counts ready leads after the real share Dante's review keeps. With at least 10 working days on both channels, at 50 a day, the run exits at zero spend and says so in the summary. It restarts by itself as soon as a channel drops under 5 days.

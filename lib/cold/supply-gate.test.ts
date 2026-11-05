@@ -10,7 +10,7 @@ describe('supplyGate', () => {
   })
 
   it('keeps running when only one channel reaches 10 days', () => {
-    expect(supplyGate({ hello: days(40), direct: days(9), readyFirst: 0, yields }).paused).toBe(false)
+    expect(supplyGate({ hello: days(10), direct: days(9), readyFirst: 0, yields }).paused).toBe(false)
   })
 
   it('stays paused between 5 and 10 days', () => {
@@ -22,12 +22,31 @@ describe('supplyGate', () => {
   })
 
   it('restarts as soon as one channel drops under 5 days', () => {
-    expect(supplyGate({ hello: days(40), direct: days(4.9), readyFirst: 0, yields, wasPaused: true }).paused).toBe(false)
+    expect(supplyGate({ hello: days(10), direct: days(4.9), readyFirst: 0, yields, wasPaused: true }).paused).toBe(false)
   })
 
   it('counts ready first emails for the direct channel, without the review share', () => {
     const gate = supplyGate({ hello: 0, direct: 100, readyFirst: 100, yields: { hello: 1, direct: 0.5 } })
     expect(gate.directDays).toBe(3)
+  })
+
+  it('counts LinkedIn leads beyond the hello@ pause level for the direct channel', () => {
+    const gate = supplyGate({ hello: days(15), direct: days(2), readyFirst: days(3), yields })
+    expect(gate.surplusLeads).toBe(days(5))
+    expect(gate.directDays).toBe(10)
+    expect(gate.paused).toBe(true)
+  })
+
+  it('leaves the direct channel alone when hello@ has no surplus', () => {
+    const gate = supplyGate({ hello: days(9), direct: days(2), readyFirst: days(3), yields })
+    expect(gate.surplusLeads).toBe(0)
+    expect(gate.directDays).toBe(5)
+  })
+
+  it('reserves the hello@ pause level after its review share', () => {
+    const gate = supplyGate({ hello: 700, direct: 0, readyFirst: 0, yields: { hello: 0.8, direct: 0.5 } })
+    expect(gate.surplusLeads).toBe(75)
+    expect(gate.directDays).toBe(0.8)
   })
 
   it('counts stock after the review, not theoretical leads', () => {
