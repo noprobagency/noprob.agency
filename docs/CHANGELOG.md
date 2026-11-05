@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.143.0 (5 Nov 2026)
+
+- **No account email in agent commands**: agents commit with the identity already in git config, so sessions stop halting on an approval prompt.
+
 ### Changelog v1.142.0 (5 Nov 2026)
 
 - **Damiano reads the people again**: `treg.people.search` now returns a short row in `output.people`, so `damiano-scrape.mjs` found no names, paid for no email and ran into the 150 minute workflow limit with 0 leads. It now reads the provider's row in `raw.data` (`lib/cold/people-rows.mjs`). A run also stops by itself after 120 minutes (`--minutes`) and still writes its lists.
