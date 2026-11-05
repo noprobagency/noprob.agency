@@ -18,9 +18,8 @@ The team manager (Claudio, `/claudio`: cadences, alert thresholds, decisions, da
 whenever something changes (a batch, a reply, a fix, a block, an order Antonio gave you directly),
 append a short section `## HH:MM · <Agent>` with the numbers to `manager/data/diario/<today>.md`,
 publish it (`git -C cold-email/data/crm add manager && git -C cold-email/data/crm commit -qm "<Agent>: diario" && git -C cold-email/data/crm pull -q --rebase origin main && git -C cold-email/data/crm push -q`)
-
-Never write the account email or `git -c user...` in a command: it stops the session on an approval prompt. The identity is already set in the git config of both repos, so a plain `git commit` is right.
 and, if your session is open, tell Claudio with a SendMessage to "CLAUDIO manager". Aggregates only, never lead data.
+Never write the account email or `git -c user...` in a command: it stops the session on an approval prompt. The identity is already set in the git config of both repos, so a plain `git commit` is right.
 
 ## Project context
 
