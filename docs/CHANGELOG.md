@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.142.0 (5 Nov 2026)
+
+- **Damiano reads the people again**: `treg.people.search` now returns a short row in `output.people`, so `damiano-scrape.mjs` found no names, paid for no email and ran into the 150 minute workflow limit with 0 leads. It now reads the provider's row in `raw.data` (`lib/cold/people-rows.mjs`). A run also stops by itself after 120 minutes (`--minutes`) and still writes its lists.
+
 ### Changelog v1.141.0 (4 Nov 2026)
 
 - **Sprint guarantees word for word**: the articles on ChatGPT shopping, agency choice, migration cost, Shopify Plus, BigCommerce, Magento, PrestaShop and the SEO checklist, and the ambassador page, now use the exact text of the guarantee cards in `content/zero-loss-migration.*.ts`. The text is also recorded in `docs/dati-verificati.md`. The ChatGPT shopping article also stops saying "converts at least as well", which was not the guarantee.
