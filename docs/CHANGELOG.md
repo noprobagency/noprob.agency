@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.151.0 (6 Nov 2026)
+
+- **Gabri's voice, no advice and always pro AI**: after Antonio's second feedback, `linkedin/voce-antonio.md` and `linkedin/piano.md` ask for his own thought said straight in the first person, playful and never arrogant, with no advice or imperatives to the reader, and always on the side of AI.
+
 ### Changelog v1.150.0 (6 Nov 2026)
 
 - **Gabri's voice, calmer tone**: after Antonio's feedback on the first draft, `linkedin/voce-antonio.md` and `linkedin/piano.md` ask for posts that take a side calmly ("in my experience"), read like a chat, avoid strings of imperatives and one-line sentences, and always give the context (what moves the numbers now, what matters in the long run).
