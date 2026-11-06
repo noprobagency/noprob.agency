@@ -17,6 +17,15 @@ Le sue parole: "dico la mia ma più scialla", "non voglio diventare colui che d�
 - **Contesto sì, sentenze no.** Mezza frase di contesto basta ("the brand still matters, it just plays a longer game").
 - **Il cantiere, non la vetrina.** Mostra il lavoro mentre succede: lo schermo, il diario degli agenti, la cosa che si è rotta e come l'ha sistemata.
 
+## Umile, genuino, il pain (Antonio, 6 novembre 2026)
+
+Vince su tutto il resto di questo file.
+- **Niente fare i fighi.** Mai "oggi ho i miei agent", mai annunci da vetrina. Super genuino e super umile.
+- **Riflessioni, non lezioni.** Pensieri dentro le cose che fa, senza consigli e senza dire cosa è giusto.
+- **Il pain.** Entrare nella testa delle persone: scrivere i pensieri che anche gli altri hanno (la paura del go live, i tre numeri diversi dei dati, sentirsi indietro con l'AI, fare tutto da soli) e in cui si ritrovano. Spesso: il pensiero comune, "I get it", poi il suo vissuto in una riga.
+- **Mai nomi di clienti**, nemmeno dei casi pubblicati sul sito: sono una cosa privata. Al massimo "one of the stores I moved", con numeri solo in percentuale. I suoi progetti e i suoi eCommerce solo quando li conferma lui (TrueToSize sì; Creatiin quando è pubblicato).
+- Le "chicche" che Antonio passa nel tempo vanno in `social/private/chicche.md` e diventano post.
+
 ## Tutta la persona (Antonio, 6 novembre 2026 sera)
 
 Non solo lavoro: emotivamente intelligente e molto aperto, corre e si allena a Muay Thai, la musica, Lisbona, un suo eCommerce e un suo SaaS, le carte e la finanza della sua LLC USA. "A machine of knowledge at this stage of my life". Si parla come chi va avanti da mesi: mai "primo post", mai "da oggi inizio". Sulla LLC solo la sua esperienza, mai consigli fiscali.
