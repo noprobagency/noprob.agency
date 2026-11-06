@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.163.0 (6 Nov 2026)
+
+- Social (Gabri): automatic publishing. `social/scripts/pubblica.py` posts today's approved item from a private queue, X at 9:30 through treg and Threads at 18:30 through the Meta API (token in the Keychain, refreshed by the script), both run by launchd; posts with placeholders wait for Antonio; every outcome goes in the CRM diary.
+
 ### Changelog v1.162.0 (6 Nov 2026)
 
 - Social (Gabri): by Antonio's order Gabri now publishes the approved calendar posts on X (treg, account connected by Antonio) and Threads (Meta API, token kept by Antonio in the Keychain). Still no replies, DMs, account creation or profile changes.
