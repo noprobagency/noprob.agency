@@ -1,6 +1,6 @@
 # Piano X e Threads di Antonio
 
-Gabri, 6 novembre 2026. Nuova direzione di Antonio: **X e Threads per primi, LinkedIn solo dopo e come derivato**. Sempre in inglese. Un build in public vero di tutti i suoi progetti e prodotti. Voce: `voce-antonio.md`. Ricerca: `ricerca.md`. Progetti: `progetti.md`. Il piano LinkedIn del 5 novembre è archiviato in `linkedin/`. Pubblica sempre Antonio; Gabri non crea account e non pubblica.
+Gabri, 6 novembre 2026. Nuova direzione di Antonio: **X e Threads per primi, LinkedIn solo dopo e come derivato**. Sempre in inglese. Un build in public vero di tutti i suoi progetti e prodotti. Voce: `voce-antonio.md`. Ricerca: `ricerca.md`. Progetti: `progetti.md`. Il piano LinkedIn del 5 novembre è archiviato in `linkedin/`. Dal 6 novembre 2026 pubblica Gabri, per ordine di Antonio, solo i post del calendario approvati (X con treg, Threads con l'API di Meta); Gabri non crea account e non risponde.
 
 ## Direzione di Antonio (6 novembre 2026, sera)
 
@@ -103,7 +103,7 @@ Ogni serie è un filo che il pubblico può seguire (pattern 3 della ricerca).
 7. **Niente trattini lunghi** né frasi prese dai profili della ricerca.
 8. **Lunghezza**: X sotto i 280 caratteri a post; Threads sotto le 25 parole.
 9. **Screenshot e video** (vedi sotto).
-10. **Ok di Antonio** sulla versione finale. Pubblica lui.
+10. **Ok di Antonio** sul calendario. Poi pubblica Gabri, un post alla volta, e annota il link.
 
 ### Checklist screenshot e video
 - Mai CRM, strumenti di outreach (nemmeno il nome), caselle email, dati o nomi di lead.

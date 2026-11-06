@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.162.0 (6 Nov 2026)
+
+- Social (Gabri): by Antonio's order Gabri now publishes the approved calendar posts on X (treg, account connected by Antonio) and Threads (Meta API, token kept by Antonio in the Keychain). Still no replies, DMs, account creation or profile changes.
+
 ### Changelog v1.161.0 (6 Nov 2026)
 
 - Social (Gabri): Antonio's insights. Humble and genuine, never showing off; reflections and the pain people recognise themselves in, no advice; never client names in posts, his own projects only once he confirms them. Voice, plan (weekly mix and 4-week calendar rewritten), project inventory and `/gabri` skill updated.
