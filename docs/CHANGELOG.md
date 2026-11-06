@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.155.0 (6 Nov 2026)
+
+- **Damiano, Hunter messages on stderr**: the two Hunter messages (query refused, retry after a rate limit) went to stdout, mixed into the JSON summary. In the cloud job the summary line failed to parse and the `hunter retries` count was always 0, because it reads the progress log. They now go to stderr with the other progress lines.
+
 ### Changelog v1.154.0 (6 Nov 2026)
 
 - **Magento to Shopify migration**: the article ranks around position 21-39 for "magento to shopify migration", "magento shopify migration" and "magento to shopify migration checklist". Title now opens with the query (EN "Magento to Shopify Migration: What Changes", IT "Migrazione da Magento a Shopify: cosa cambia"), a new 8-point checklist section built from the article's own content, and a descriptive link to the Sprint, IT and EN.
