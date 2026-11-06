@@ -28,10 +28,19 @@ describe('shared opt-out list', () => {
     const file = join(mkdtempSync(join(tmpdir(), 'supp-')), 'suppressed.txt')
     writeFileSync(file, '# shared\n')
     const said = { ...lead, segment: 'suppressed', reason: 'said no' }
-    expect(appendSuppressed(refusals([said, lead]), 'no', file)).toBe(1)
+    expect(appendSuppressed(refusals([said, lead]), 'no', file)).toBe(2)
     expect(appendSuppressed(refusals([said]), 'no', file)).toBe(0)
     expect(readSuppressed(file).has('anna@acme-store.com')).toBe(true)
+    expect(readSuppressed(file).has('@acme-store.com')).toBe(true)
     expect(readFileSync(file, 'utf8')).toContain('# no, cold email diretta')
+  })
+})
+
+describe('store-wide refusals', () => {
+  it('lists the store domain, never a private mailbox domain', () => {
+    const said = { ...lead, segment: 'suppressed', reason: 'opt-out' }
+    expect(refusals([said])).toEqual(['anna@acme-store.com', '@acme-store.com'])
+    expect(refusals([{ ...said, email: 'anna@gmail.com', domain: 'gmail.com' }])).toEqual(['anna@gmail.com'])
   })
 })
 
