@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.157.0 (6 Nov 2026)
+
+- **Links inside bold text**: the inline parser of the article renderer did not parse a bold span again, so a link inside **bold** showed as raw markdown. Found in production on GEO vs SEO, GEO for Shopify, AI for eCommerce and AI agents for Shopify (IT and EN, 8 links, 4 of them to the Sprint). The bold span is now parsed again.
+
 ### Changelog v1.156.0 (6 Nov 2026)
 
 - **GEO vs SEO for eCommerce**: the article sits at position 8 for "geo vs seo for ecommerce". Title, H1 and lede now carry the query (IT "GEO vs SEO per l'eCommerce"), and the body link to the Sprint has a descriptive anchor. Calendar rows 48-51 for today's work (indexing via the Search Console API, Sprint anchors, Magento, GEO).

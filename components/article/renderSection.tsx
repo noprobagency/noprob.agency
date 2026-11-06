@@ -32,8 +32,8 @@ const INLINE_LINK_CLASS =
  * Supports:
  *   [text](url)   -> Next Link for internal, <a target="_blank" rel="noopener noreferrer"> for http(s)
  *   **text**      -> <strong>
- * Tokens are matched in a single pass; nesting is not supported (each pattern
- * is at the same level, which is sufficient for blog body copy).
+ * Tokens are matched in a single pass; a bold span is parsed again, so a link
+ * inside **bold** renders as a link instead of raw markdown.
  */
 export function parseInline(text: string): ReactNode[] {
   const regex = /\[([^\]]+)\]\(([^)]+)\)|\*\*([^*]+)\*\*/g
@@ -70,7 +70,7 @@ export function parseInline(text: string): ReactNode[] {
         )
       }
     } else if (match[3] !== undefined) {
-      nodes.push(<strong key={key++}>{match[3]}</strong>)
+      nodes.push(<strong key={key++}>{parseInline(match[3])}</strong>)
     }
     lastIndex = regex.lastIndex
   }
