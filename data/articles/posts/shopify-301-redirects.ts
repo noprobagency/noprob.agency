@@ -104,7 +104,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'We are noprob agency. In the [Shopify Launch Sprint](/shopify-migration-sprint) the 1:1 redirect map is tested automatically before and after go-live, so this is a process we run, not a theory. Our [migration SEO checklist](/blog/shopify-migration-seo-checklist) says what to check across a whole move; this article is the process for producing the one document that checklist depends on. For the full path of a migration, read the [Shopify migration guide](/shopify-migration).',
+      text: 'We are noprob agency. In the Shopify Launch Sprint, our [Shopify migration service](/shopify-migration-sprint), the 1:1 redirect map is tested automatically before and after go-live, so this is a process we run, not a theory. Our [migration SEO checklist](/blog/shopify-migration-seo-checklist) says what to check across a whole move; this article is the process for producing the one document that checklist depends on. For the full path of a migration, read the [Shopify migration guide](/shopify-migration).',
     },
     {
       type: 'h2',
@@ -330,7 +330,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Siamo noprob agency. Nello [Shopify Launch Sprint](/it/sprint-migrazione-shopify) la mappa dei redirect 1:1 viene collaudata in automatico prima e dopo il go-live, quindi questo è un processo che eseguiamo, non una teoria. La nostra [checklist SEO per la migrazione](/it/blog/migrazione-shopify-seo-checklist) dice cosa controllare in tutto il passaggio; questo articolo è il processo per produrre l’unico documento da cui quella checklist dipende. Per il percorso completo di una migrazione leggi la [guida alla migrazione a Shopify](/it/migrazione-shopify).',
+      text: 'Siamo noprob agency. Nello Shopify Launch Sprint, il nostro [servizio di migrazione a Shopify](/it/sprint-migrazione-shopify), la mappa dei redirect 1:1 viene collaudata in automatico prima e dopo il go-live, quindi questo è un processo che eseguiamo, non una teoria. La nostra [checklist SEO per la migrazione](/it/blog/migrazione-shopify-seo-checklist) dice cosa controllare in tutto il passaggio; questo articolo è il processo per produrre l’unico documento da cui quella checklist dipende. Per il percorso completo di una migrazione leggi la [guida alla migrazione a Shopify](/it/migrazione-shopify).',
     },
     {
       type: 'h2',
