@@ -25,7 +25,7 @@ const article: Article = {
   articleType: 'BlogPosting',
   date: '2026-10-12',
   datePublishedIso: '2026-10-12T10:20:00+01:00',
-  dateModifiedIso: '2026-11-04T21:21:00+00:00',
+  dateModifiedIso: '2026-11-06T12:00:00+00:00',
   wordCount: 2400,
   readingTimeMinutes: 9,
   articleSection: 'Shopify migration',
@@ -110,7 +110,7 @@ const article: Article = {
   content: [
     {
       type: 'paragraph',
-      text: 'A website migration SEO plan for Shopify comes down to one document and three phases. The document is the redirect map, which tells Google where every old URL lives now. The phases are before launch, launch day and the 90 days after. When we run a migration inside the [Shopify Launch Sprint](/shopify-migration-sprint), this is the SEO work running underneath it.',
+      text: 'A website migration SEO plan for Shopify comes down to one document and three phases. The document is the redirect map, which tells Google where every old URL lives now. The phases are before launch, launch day and the 90 days after. When we run a migration inside our [Shopify migration service with a written SEO guarantee](/shopify-migration-sprint), the Shopify Launch Sprint, this is the SEO work running underneath it.',
     },
     {
       type: 'paragraph',
@@ -342,7 +342,7 @@ const article: Article = {
   contentIt: [
     {
       type: 'paragraph',
-      text: 'Un piano di migrazione sito SEO per Shopify si riduce a un documento e tre fasi. Il documento è la mappa dei redirect, che dice a Google dove vive oggi ogni vecchio URL. Le fasi sono prima del lancio, giorno del lancio e i 90 giorni dopo. Quando facciamo una migrazione dentro lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify), questo è il lavoro SEO che gira sotto.',
+      text: 'Un piano di migrazione sito SEO per Shopify si riduce a un documento e tre fasi. Il documento è la mappa dei redirect, che dice a Google dove vive oggi ogni vecchio URL. Le fasi sono prima del lancio, giorno del lancio e i 90 giorni dopo. Quando facciamo una migrazione dentro il nostro [servizio di migrazione a Shopify con garanzia SEO scritta](/it/sprint-migrazione-shopify), lo Shopify Launch Sprint, questo è il lavoro SEO che gira sotto.',
     },
     {
       type: 'paragraph',

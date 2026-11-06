@@ -297,7 +297,7 @@ const it: MigrazioneCopy = {
       },
       {
         type: 'paragraph',
-        text: 'A questo si aggiungono l’abbonamento a Shopify, le app e le commissioni di pagamento, che vanno verificate sul sito di Shopify. Se vuoi la migrazione come progetto chiavi in mano, lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) ha un prezzo pubblico in base al fatturato: €5.800 sotto i €2M, €8.800 tra €2M e €20M, €12.800 oltre i €20M, IVA esclusa, in 4 rate.',
+        text: 'A questo si aggiungono l’abbonamento a Shopify, le app e le commissioni di pagamento, che vanno verificate sul sito di Shopify. Se vuoi la migrazione come progetto chiavi in mano, i nostri [servizi di migrazione a Shopify](/it/sprint-migrazione-shopify), con lo Shopify Launch Sprint, hanno un prezzo pubblico in base al fatturato: €5.800 sotto i €2M, €8.800 tra €2M e €20M, €12.800 oltre i €20M, IVA esclusa, in 4 rate.',
       },
       {
         type: 'paragraph',
@@ -603,7 +603,7 @@ const en: MigrazioneCopy = {
       },
       {
         type: 'paragraph',
-        text: 'On top of that come the Shopify subscription, apps and payment fees, which you should check on Shopify’s site. If you want the migration as a turnkey project, the [Shopify Launch Sprint](/shopify-migration-sprint) has a public price by revenue: €5,800 under €2M, €8,800 between €2M and €20M, €12,800 above €20M, VAT excluded, in 4 installments.',
+        text: 'On top of that come the Shopify subscription, apps and payment fees, which you should check on Shopify’s site. If you want the migration as a turnkey project, our [Shopify migration services](/shopify-migration-sprint), with the Shopify Launch Sprint, have a public price by revenue: €5,800 under €2M, €8,800 between €2M and €20M, €12,800 above €20M, VAT excluded, in 4 installments.',
       },
       {
         type: 'paragraph',

@@ -19,7 +19,7 @@ const article: Article = {
   articleType: "BlogPosting",
   date: "2026-09-10",
   datePublishedIso: "2026-09-10T10:25:00+01:00",
-  dateModifiedIso: "2026-11-04T21:21:00+00:00",
+  dateModifiedIso: "2026-11-06T12:00:00+00:00",
   wordCount: 2150,
   articleSection: "Shopify migration",
   readingTimeMinutes: 10,
@@ -45,7 +45,7 @@ const article: Article = {
   ],
   content: [
     { type: "paragraph", text: "To migrate BigCommerce to Shopify, you export the catalog, customers and orders as structured files, rebuild what does not map, and redirect every old URL. A BigCommerce to Shopify migration is the gentlest kind we handle: both platforms are hosted, so there is no server to move. Even so, when you transfer BigCommerce to Shopify, the same few things tend to go wrong." },
-    { type: "paragraph", text: "We are noprob agency, and we run these moves with the [Shopify Launch Sprint](/shopify-migration-sprint). Among our published case studies are Nazzi, from WooCommerce, and Cumini, from a proprietary platform tied to the ERP. What follows rests on how we work and on the official documentation of both platforms, linked wherever a fact comes from." },
+    { type: "paragraph", text: "We are noprob agency, and we run these moves with our [BigCommerce to Shopify migration service](/shopify-migration-sprint), the Shopify Launch Sprint. Among our published case studies are Nazzi, from WooCommerce, and Cumini, from a proprietary platform tied to the ERP. What follows rests on how we work and on the official documentation of both platforms, linked wherever a fact comes from." },
     { type: "paragraph", text: "What is the same on every platform (scope, timeline, risks) is in our [guide to migrating to Shopify](/shopify-migration). This piece covers only what is specific to BigCommerce." },
     { type: "paragraph", text: "Coming from another platform? Read the guides for [WooCommerce](/blog/woocommerce-to-shopify-migration), [Magento](/blog/magento-to-shopify-migration) and [PrestaShop](/blog/prestashop-to-shopify-migration)." },
     { type: "h2", text: "Why do brands move from BigCommerce to Shopify?" },
@@ -145,7 +145,7 @@ const article: Article = {
   ],
   contentIt: [
     { type: "paragraph", text: "La migrazione BigCommerce Shopify si fa esportando catalogo, clienti e ordini in file strutturati, ricostruendo ciò che non ha un equivalente e reindirizzando ogni vecchio URL. Passare da BigCommerce a Shopify è il tipo di migrazione più tranquillo che gestiamo: le due piattaforme sono in hosting, quindi non c’è nessun server da spostare. Eppure, quando si migra da BigCommerce a Shopify, le stesse poche cose tendono ad andare storte." },
-    { type: "paragraph", text: "Siamo noprob agency e facciamo questi passaggi con lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify). Tra i nostri casi pubblicati ci sono Nazzi, da WooCommerce, e Cumini, da una piattaforma proprietaria collegata al gestionale. Quello che segue si regge sul nostro modo di lavorare e sulla documentazione ufficiale delle due piattaforme, linkata dove nasce ogni fatto." },
+    { type: "paragraph", text: "Siamo noprob agency e facciamo questi passaggi con il nostro [servizio di migrazione da BigCommerce a Shopify](/it/sprint-migrazione-shopify), lo Shopify Launch Sprint. Tra i nostri casi pubblicati ci sono Nazzi, da WooCommerce, e Cumini, da una piattaforma proprietaria collegata al gestionale. Quello che segue si regge sul nostro modo di lavorare e sulla documentazione ufficiale delle due piattaforme, linkata dove nasce ogni fatto." },
     { type: "paragraph", text: "Ciò che vale per ogni piattaforma (perimetro, tempi, rischi) sta nella nostra [guida alla migrazione a Shopify](/it/migrazione-shopify). Qui trovi solo ciò che è specifico di BigCommerce." },
     { type: "paragraph", text: "Arrivi da un’altra piattaforma? Leggi le guide per [WooCommerce](/it/blog/migrazione-woocommerce-shopify), [Magento](/it/blog/migrazione-magento-shopify) e [PrestaShop](/it/blog/migrazione-prestashop-shopify)." },
     { type: "h2", text: "Perché si passa da BigCommerce a Shopify?" },

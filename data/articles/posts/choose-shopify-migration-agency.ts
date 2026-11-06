@@ -25,7 +25,7 @@ const article: Article = {
   articleType: 'BlogPosting',
   date: '2026-10-16',
   datePublishedIso: '2026-10-16T08:50:00+01:00',
-  dateModifiedIso: '2026-11-04T21:21:00+00:00',
+  dateModifiedIso: '2026-11-06T12:00:00+00:00',
   wordCount: 2565,
   readingTimeMinutes: 9,
   articleSection: 'Shopify migration',
@@ -110,7 +110,7 @@ const article: Article = {
   content: [
     {
       type: 'paragraph',
-      text: 'If you are looking for Shopify migration experts or a Shopify migration agency, start with the tests that separate them. This guide is written by noprob agency, which sells the [Shopify Launch Sprint](/shopify-migration-sprint) and has more than 7 years of eCommerce projects behind it, so for each criterion you see how we answer and who the Sprint is for. We compare types of provider and give you tests to run on any of them.',
+      text: 'If you are looking for Shopify migration experts or a Shopify migration agency, start with the tests that separate them. This guide is written by noprob agency, which offers [Shopify migration services](/shopify-migration-sprint) with the Shopify Launch Sprint and has more than 7 years of eCommerce projects behind it, so for each criterion you see how we answer and who the Sprint is for. We compare types of provider and give you tests to run on any of them.',
     },
     {
       type: 'paragraph',
@@ -323,7 +323,7 @@ const article: Article = {
   contentIt: [
     {
       type: 'paragraph',
-      text: 'Se cerchi un esperto di migrazione Shopify o un’agenzia di migrazione Shopify, parti dalle prove che li distinguono. Questa guida è scritta da noprob agency, che vende lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) e ha oltre 7 anni di progetti eCommerce alle spalle, quindi per ogni criterio vedi come rispondiamo e a chi è rivolto lo Sprint. Confrontiamo tipi di fornitore e ti diamo prove da fare a chiunque.',
+      text: 'Se cerchi un esperto di migrazione Shopify o un’agenzia di migrazione Shopify, parti dalle prove che li distinguono. Questa guida è scritta da noprob agency, che offre un [servizio di migrazione a Shopify](/it/sprint-migrazione-shopify) con lo Shopify Launch Sprint e ha oltre 7 anni di progetti eCommerce alle spalle, quindi per ogni criterio vedi come rispondiamo e a chi è rivolto lo Sprint. Confrontiamo tipi di fornitore e ti diamo prove da fare a chiunque.',
     },
     {
       type: 'paragraph',
