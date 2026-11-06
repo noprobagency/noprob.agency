@@ -1,5 +1,7 @@
 # Build in public: come hanno iniziato 15 builder su X (e cosa cambia su Threads)
 
+> **Solo riferimento (6 novembre 2026, sera).** Antonio: "Let's do what we want, not what the internet tells us". La direzione è in `piano.md`.
+
 Ricerca di Gabri, 6 novembre 2026. Serve a capire **come si parte** con un build in public vero, non cosa dire: la voce resta quella di Antonio (`voce-antonio.md`). Mai copiare frasi o format riconoscibili di questi profili.
 
 ## Metodo

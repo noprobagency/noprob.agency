@@ -2,6 +2,37 @@
 
 Gabri, 6 novembre 2026. Nuova direzione di Antonio: **X e Threads per primi, LinkedIn solo dopo e come derivato**. Sempre in inglese. Un build in public vero di tutti i suoi progetti e prodotti. Voce: `voce-antonio.md`. Ricerca: `ricerca.md`. Progetti: `progetti.md`. Il piano LinkedIn del 5 novembre è archiviato in `linkedin/`. Pubblica sempre Antonio; Gabri non crea account e non pubblica.
 
+## Direzione di Antonio (6 novembre 2026, sera)
+
+"Let's do what we want, not what the internet tells us." Vince su tutto il resto di questo file e su `ricerca.md`, che resta come riferimento ma non si segue più.
+
+1. **Niente primo post e niente "da oggi costruisco in pubblico"**: si parte come se andassimo avanti da mesi, a pieno ritmo. Via il post di presentazione fissato e la squadra presentata come lancio.
+2. **Si alza il livello dal primo post**: Antonio ha già i numeri (casi in percentuale), i prodotti e la squadra di agenti, e si mostrano subito.
+3. **Tutta la persona, non solo il lavoro**: emotivamente intelligente e molto aperto; corre e si allena a Muay Thai; la musica; lancia un suo eCommerce e un suo SaaS oltre all'agenzia; migrazioni e clienti che vanno bene (solo in percentuale, verificati); fortissimo sul tecnico e anche su carte, finanza e fisco (LLC USA, vive a Lisbona). Parole sue: "a machine of knowledge at this stage of my life".
+4. **Temi mescolati**: tech e AI, agenzia, prodotti, clienti, corsa e Muay Thai, musica, Lisbona, la LLC e le carte. Sempre il suo pensiero, giocoso, spicy, pro AI, senza consigli, mai arrogante.
+5. **Programmazione in blocco**: 4 settimane pronte da pubblicare in fila (testi in `social/private/bozze/2026-11-09-quattro-settimane.md`).
+6. **LLC e fisco**: solo la sua esperienza personale di gestire una LLC USA vivendo a Lisbona. Mai "come pagare meno tasse", mai niente che sembri pianificazione fiscale, mai l'Italia come base.
+
+### Il mix di ogni settimana
+- **X, 5 post**: un cliente o una migrazione (in percentuale), uno su AI o agenti, un prodotto (SaaS, eCommerce, dashboard, Still Life AI), uno personale (corsa, Muay Thai, musica, Lisbona, LLC), uno a rotazione.
+- **Threads, 3 post**: più personali e leggeri, spesso con un video corto.
+- I dettagli personali (orari, abitudini, cosa fa con la musica) si confermano con Antonio prima di pubblicare: nelle bozze sono segnati (P).
+
+### Calendario 9 novembre - 4 dicembre 2026
+
+| Settimana | X | Threads |
+|---|---|---|
+| 9-13 nov | Nazzi +105% · il manager agente · i 500 redirect · TrueToSize · corsa e Muay Thai | Lisbona e gli agenti · il computer lento in chiamata · venerdì guantoni |
+| 16-20 nov | Cumini +67,7% e +35,3% di ritorno · l'AI che scrive piatto è "behind on updates" · dashboard Velmara · la LLC e le carte · il suo eCommerce | dopo la corsa · fake shop, real dashboard · il suo brand |
+| 23-27 nov | Black Friday si decide prima · il blocco peso, due mesi contro dieci minuti · tracking Cumini 31 → 92 · la musica · DDglobal +55% di clic | Lisbona a fine novembre · la musica · Black Friday e Muay Thai |
+| 30 nov - 4 dic | il SaaS sopra l'agenzia · il 20% umano · il tool che teneva il vecchio oggetto · Nazzi senza Meta +46% · "a machine of knowledge" | un mese pieno · Still Life AI · imparare tutto insieme |
+
+## Proposta: la pagina "now" di Antonio (da valutare, non costruita)
+
+- **Dominio**: `antoniomanitta.com` (oggi libero secondo whois, 6 nov 2026); in alternativa `antonio.noprob.agency`. Va nella bio di X e Threads, i post ci puntano.
+- **Struttura**, una pagina sola: Now (il mese in 3 righe), Building (agenzia e Sprint, il SaaS, l'eCommerce, Still Life AI, con lo stato), Clients (casi solo in percentuale da `docs/dati-verificati.md`), The team (gli 8 agenti, cosa hanno fatto nella settimana in aggregato), Body (corsa e Muay Thai), Music, Lisbon.
+- **Come si aggiorna**: statica, Gabri la aggiorna ogni venerdì dagli aggregati di Claudio e dalle note di Antonio; niente CRM, niente cifre assolute dei clienti, niente dettagli fiscali.
+
 ## Account
 
 ### X
@@ -24,7 +55,7 @@ Gabri, 6 novembre 2026. Nuova direzione di Antonio: **X e Threads per primi, Lin
 - **Threads è il dietro le quinte leggero**: lo schermo, la giornata, Lisbona, un video corto con poche parole. Si prende il materiale di X e lo si rende più caldo, non si incolla.
 - **Ritmo**: su X **un post al giorno dal lunedì al venerdì**, al massimo un thread a settimana; su Threads **3 post a settimana** (lunedì, mercoledì, venerdì). Mattina, ora di Lisbona.
 - **20 minuti al giorno di risposte** su X ad altri builder (AI, Shopify, indie). Nella ricerca, nei primi 90 giorni tutti rispondono quasi quanto postano: è da lì che arrivano i primi follower. Le risposte le scrive Antonio; Gabri al massimo propone 3-5 post a cui rispondere.
-- **L'inizio è muto**: nei 15 profili il primo post da 100 like arriva in mediana dopo circa 5 mesi. Si misura la costanza e le risposte, non i like del singolo post.
+- **Costanza**: si misurano la costanza e le risposte, non i like del singolo post.
 - **Niente consigli, sempre pro AI, mai arrogante** (vedi voce).
 
 ## Le serie
@@ -51,9 +82,9 @@ Ogni serie è un filo che il pubblico può seguire (pattern 3 della ricerca).
 | X5 | Diario del venerdì | 2-4 frasi | X e Threads |
 | X6 | Esperimento con l'AI che chiama il pubblico a partecipare | 1-2 frasi | X, ogni tanto |
 
-## Le prime due settimane (9-20 novembre 2026)
+## Le prime due settimane (superate dal calendario di 4 settimane qui sopra)
 
-Testi interi in `social/private/bozze/2026-11-09-prime-due-settimane.md`.
+Testi in `social/private/bozze/2026-11-09-prime-due-settimane.md`, archiviati.
 
 | Data | X | Threads |
 |---|---|---|
