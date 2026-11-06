@@ -25,7 +25,7 @@ const article: Article = {
   articleType: 'BlogPosting',
   date: '2026-10-21',
   datePublishedIso: '2026-10-21T16:25:00+01:00',
-  dateModifiedIso: '2026-11-04T21:21:00+00:00',
+  dateModifiedIso: '2026-11-06T12:00:00+00:00',
   wordCount: 2209,
   articleSection: 'Shopify Migration',
   readingTimeMinutes: 9,
@@ -199,7 +199,7 @@ const article: Article = {
     { type: 'h2', text: 'How does a Shopify Plus agency work on a migration?' },
     {
       type: 'paragraph',
-      text: '**A Shopify Plus agency should give you a fixed calendar, a written scope and a way to measure the result, not just a team that knows the Plus features.** Ask any agency the same three things: what is the scope in writing, what happens if the date slips, and how are the redirects tested. This is how we answer them with the [Shopify Launch Sprint](/shopify-migration-sprint).',
+      text: '**A Shopify Plus agency should give you a fixed calendar, a written scope and a way to measure the result, not just a team that knows the Plus features.** Ask any agency the same three things: what is the scope in writing, what happens if the date slips, and how are the redirects tested. This is how we answer them with our [Shopify migration service](/shopify-migration-sprint), the Shopify Launch Sprint.',
     },
     {
       type: 'list',
@@ -357,7 +357,7 @@ const article: Article = {
     { type: 'h2', text: 'Come lavora un’agenzia Shopify Plus in una migrazione?' },
     {
       type: 'paragraph',
-      text: '**Un’agenzia Shopify Plus dovrebbe darti un calendario fisso, un perimetro scritto e un modo per misurare il risultato, non solo un team che conosce le funzioni Plus.** Fai a qualsiasi agenzia le stesse tre domande: qual è il perimetro per iscritto, cosa succede se la data slitta, come si collaudano i redirect. Ecco come rispondiamo noi con lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify).',
+      text: '**Un’agenzia Shopify Plus dovrebbe darti un calendario fisso, un perimetro scritto e un modo per misurare il risultato, non solo un team che conosce le funzioni Plus.** Fai a qualsiasi agenzia le stesse tre domande: qual è il perimetro per iscritto, cosa succede se la data slitta, come si collaudano i redirect. Ecco come rispondiamo noi con il nostro [servizio di migrazione a Shopify](/it/sprint-migrazione-shopify), lo Shopify Launch Sprint.',
     },
     {
       type: 'list',
