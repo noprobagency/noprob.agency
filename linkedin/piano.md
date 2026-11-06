@@ -6,7 +6,7 @@ Gabri, 5 novembre 2026. Profilo personale di Antonio Manitta, post in inglese. V
 
 - **2-3 post a settimana**: martedì e giovedì fissi, venerdì quando c'è un terzo post. Mattina, ora di Lisbona.
 - **Corti**: 15-120 parole. Oltre solo se il formato lo dichiara.
-- **Spicy e autentici**: una presa di posizione netta per post, presa dalle sue opinioni vere (appunti di Veronica, email, chiamate). Mai una tesi tiepida, mai inventata.
+- **Spicy e autentici, ma scialli**: una presa di posizione chiara per post, detta con calma e con il suo contesto, presa dalle sue opinioni vere (appunti di Veronica, email, chiamate). Mai tono da guru, mai inventata.
 - **Temi, in ordine di peso**: Shopify (circa 1 post su 2), eCommerce e performance, AI, fashion, personale (1 ogni due settimane, solo se Antonio ha risposto a uno spunto).
 - **CTA**: quasi mai. Al massimo una domanda vera in fondo. Il link allo Sprint solo nel primo commento e al massimo un post su quattro.
 
@@ -60,7 +60,7 @@ Gabri non inventa storie: le prende dalle sue risposte. Antonio risponde con un 
 
 1. **Una sola idea**, detta nella prima riga. La prima riga regge da sola, senza "ecco perché" o "thread".
 2. **Sotto le 120 parole** (o il limite del formato). Tagliato tutto quello che si può tagliare.
-3. **Suona come lui**: riletto contro `voce-antonio.md` (frasi corte, "I", niente gergo da guru, al massimo una faccina in fondo).
+3. **Suona come lui**: riletto contro `voce-antonio.md` (tono tranquillo, frasi che scorrono, niente imperativi a raffica, contesto e non bianco o nero, "I", al massimo una faccina in fondo).
 4. **Vero**: ogni fatto viene dalle sue risposte, email o appunti; ogni numero da `docs/dati-verificati.md`, clienti solo in percentuale o indice.
 5. **Niente contro di noi**: nessuna lacuna, scusa o "non ancora". Le critiche vanno a piattaforme, abitudini e hype, mai a clienti, lead o colleghi con nome.
 6. **Residenza**: niente che lo faccia sembrare basato in Italia.

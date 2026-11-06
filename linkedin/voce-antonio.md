@@ -6,12 +6,22 @@ Fonti lette per intero: 1.184 email inviate da antonio@ e hello@ (di cui circa 7
 
 ## In una riga
 
-Un eCommerce manager che parla da amico del mestiere: frasi corte, giudizi netti, ironia che disarma, numeri veri, zero pressione. Non vende: dice come stanno le cose e lascia decidere.
+Un eCommerce manager che parla da amico del mestiere, tranquillo: dice la sua senza alzare la voce, con ironia che disarma, numeri veri e zero pressione. Non vende e non dà ordini: racconta come la vede e lascia decidere.
+
+## Tono: dico la mia, ma scialla (Antonio, 6 novembre 2026)
+
+Le sue parole: "TOV più chill", "dico la mia ma più scialla", "come quello che prende una parte, ma in modo tranquillo", "poi parliamo ad altri", "c'è sempre il discorso del contesto".
+
+- **Prende posizione con calma.** "In my experience", "I think", "for me", "honestly". Mai tono da guru, mai verità assolute.
+- **Chiacchierata, non lezione.** Parla al lettore come al tavolo con un collega: racconta cosa ha visto, non gli dice cosa fare. Niente imperativi a raffica ("Do this. Stop that. Make it fast.").
+- **Sempre il contesto, mai bianco o nero.** Una cosa è davvero game changer, l'altra no subito, ma nel lungo periodo è essenziale. Le due cose stanno insieme nello stesso post.
+- **Frasi che scorrono.** Meno a capo e meno punti fermi: frasi intere legate da "and", "but", "because", "so", come quando parla. Niente sequenze di frasi da una riga una dopo l'altra.
+- **Chiude aprendo agli altri**: una domanda vera o "curious how you see it", non una morale.
 
 ## Ritmo
 
-- **Frasi da 8-14 parole**, una breve dopo una lunga. Soggetto, verbo, fatto.
-- **Paragrafi di una o due frasi**, una riga vuota tra l'uno e l'altro. Sembra parlato, non scritto.
+- **Frasi da 10-20 parole**, che scorrono e si legano tra loro. Ogni tanto una più corta, mai una raffica di frasi corte.
+- **Paragrafi di due o tre frasi**, una riga vuota tra l'uno e l'altro. Sembra parlato, non scritto.
 - **Corto**: le sue risposte stanno tra 20 e 60 parole, i messaggi lunghi tra 120 e 180. Su LinkedIn: 15-120.
 - La frase che si ricorda è costruita a contrasto: "Il difficile non è Shopify, è il momento del passaggio."
 
@@ -80,7 +90,7 @@ Giudizi netti, decisione all'altro: "io cambierei subito… poi votate voi con c
 ## Prima e dopo (per Gabri)
 
 - Prima: "Unlock your store's full potential with a data-driven redesign."
-- Dopo: "Your store doesn't need a new look. It needs to load in 2 seconds, not 15."
+- Dopo: "In my experience the thing that really moves the numbers is speed, going from 15 seconds to 2. The brand matters too, just on a longer clock."
 
 - Prima: "AI is revolutionizing eCommerce migrations."
 - Dopo: "Until last year, 500 redirects meant a spreadsheet and a week. Now it's an afternoon."
@@ -90,17 +100,18 @@ Giudizi netti, decisione all'altro: "io cambierei subito… poi votate voi con c
 Dieci post in inglese, scritti da lui. Sono la base più vicina a quello che faremo.
 
 - **Cosa funziona già**: l'osservazione dal lavoro vero (le videochiamate con i brand, la lista di potenziali clienti controllati uno per uno), le opinioni nette sull'hype degli LLM, il personale vero e coraggioso (l'idea di lanciare un suo brand di abbigliamento), una domanda in fondo.
-- **Ritmo**: una frase per riga, tante righe corte, anafore ("Sometimes it's harder…" ripetuto), domanda retorica alla fine. Faccine rare (🥲 😅).
+- **Ritmo**: allora una frase per riga, tante righe corte, anafore ("Sometimes it's harder…" ripetuto), domanda retorica alla fine. Faccine rare (🥲 😅). Dal 6 novembre il ritmo è più disteso: frasi che scorrono, meno a capo (vedi Tono).
 - **Il numero come hook**: "68 out of 76 have insufficient tracking setups" è il suo hook migliore per forma: un numero suo, contato da lui.
 - **Cosa spingere di più**: la tesi nella prima riga, metà della lunghezza (sotto le 120 parole), una domanda vera in fondo. Sono le tre leve che nei riferimenti portano i commenti.
 - **Numeri**: solo percentuali, moltiplicatori o indici da `docs/dati-verificati.md`, mai cifre di fatturato di un cliente.
 
 ## Regole operative per i post
 
-1. Prima riga = la tesi o il fatto visto. Niente preamboli.
-2. 15-120 parole, una frase per riga quando il ritmo lo chiede, paragrafi di una o due frasi.
+1. Prima riga = la sua opinione o il fatto visto, detta con calma. Niente preamboli.
+2. 15-120 parole, paragrafi di due o tre frasi che scorrono. Mai più di due frasi da una riga di fila.
 3. "I" per l'esperienza vera, "we" per noprob, "you" per il lettore.
-4. Un solo tema, una sola provocazione, sempre su idee e abitudini, mai su persone.
-5. Al massimo una faccina, in fondo. Un solo punto esclamativo.
-6. Una domanda vera in fondo quando il post apre una discussione; nessuna CTA commerciale nel testo.
-7. Personale solo da cose che ha detto o scritto lui.
+4. Un solo tema, una posizione chiara ma tranquilla, con il suo contesto (cosa conta subito, cosa conta nel lungo periodo). Sempre su idee e abitudini, mai su persone.
+5. Nessun imperativo verso il lettore, al massimo uno. Racconta, non ordina.
+6. Al massimo una faccina, in fondo. Un solo punto esclamativo.
+7. Una domanda vera in fondo quando il post apre una discussione; nessuna CTA commerciale nel testo.
+8. Personale solo da cose che ha detto o scritto lui.
