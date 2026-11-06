@@ -5,8 +5,8 @@ const article: Article = {
   slugIt: 'migrazione-magento-shopify',
   title: 'Magento to Shopify Migration: Where Magento Does Not Map One to One',
   titleIt: 'Migrazione Magento Shopify: dove Magento non si traduce uno a uno',
-  seoTitle: 'Migrate from Magento to Shopify: What Changes',
-  seoTitleIt: 'Migrazione Magento Shopify: moduli, URL e Plus',
+  seoTitle: 'Magento to Shopify Migration: What Changes',
+  seoTitleIt: 'Migrazione da Magento a Shopify: cosa cambia',
   seoDescription:
     'Magento to Shopify: how product types, store views, B2B, extensions and .html URLs map across, Shopify or Plus, and a 14-day Sprint at a public price.',
   seoDescriptionIt:
@@ -25,8 +25,8 @@ const article: Article = {
   articleType: 'BlogPosting',
   date: '2026-10-23',
   datePublishedIso: '2026-10-23T13:40:00+01:00',
-  dateModifiedIso: '2026-11-04T21:21:00+00:00',
-  wordCount: 2363,
+  dateModifiedIso: '2026-11-06T12:00:00+00:00',
+  wordCount: 2565,
   readingTimeMinutes: 9,
   articleSection: 'Shopify migration',
   keywordsEn:
@@ -114,7 +114,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'We are noprob agency, and we run these moves with the [Shopify Launch Sprint](/shopify-migration-sprint). This article covers only what is specific to Magento 2 and Adobe Commerce. For the parts that are the same on every platform, read our [guide to migrating to Shopify](/shopify-migration), the [migration SEO checklist](/blog/shopify-migration-seo-checklist), [what a Shopify migration costs](/blog/shopify-migration-cost) and [how to choose a Shopify migration agency](/blog/choose-shopify-migration-agency).',
+      text: 'We are noprob agency, and we run these moves with our [Magento to Shopify migration service](/shopify-migration-sprint), the Shopify Launch Sprint. The method is the same on every store: inventory, decisions in writing, a tested redirect map. This article covers only what is specific to Magento 2 and Adobe Commerce. For the parts that are the same on every platform, read our [guide to migrating to Shopify](/shopify-migration), the [migration SEO checklist](/blog/shopify-migration-seo-checklist), [what a Shopify migration costs](/blog/shopify-migration-cost) and [how to choose a Shopify migration agency](/blog/choose-shopify-migration-agency).',
     },
     {
       type: 'paragraph',
@@ -247,6 +247,24 @@ const article: Article = {
         'Cutover: import what changed since the first import, switch the domain, check tracking, crawl the old URL list again and watch Search Console.',
       ],
     },
+    { type: 'h2', text: 'Magento to Shopify migration checklist' },
+    {
+      type: 'paragraph',
+      text: 'A Magento to Shopify migration checklist has eight checks, in this order. Each one comes from a section above, so you can use it as the working list for your own store.',
+    },
+    {
+      type: 'list',
+      items: [
+        'List every module from app/code and composer.json, with its job in one sentence.',
+        'Give each module one of four outcomes: native feature, app, store code or retirement.',
+        'Export the data of the apps you will replace, such as reviews and loyalty points.',
+        'Map every product type (configurable, grouped, bundle) and keep only the attributes customers see or filter by.',
+        'Decide each store view and website: a market on one store, or a separate store.',
+        'Choose Shopify or Plus from your B2B, multi-store and checkout requirements.',
+        'Export the url_rewrite table per store, add a crawl, Search Console pages and backlinks, and write the redirect CSV.',
+        'Import products, then customers, then orders, place test orders, check tracking and only then switch the domain.',
+      ],
+    },
     { type: 'h2', text: 'How do we run a Magento to Shopify migration?' },
     {
       type: 'paragraph',
@@ -321,7 +339,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Siamo noprob agency e facciamo questi passaggi con lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify). Questo articolo copre solo ciò che è specifico di Magento 2 e Adobe Commerce. Per le parti uguali su ogni piattaforma leggi la [guida alla migrazione a Shopify](/it/migrazione-shopify), la [checklist SEO](/it/blog/migrazione-shopify-seo-checklist), [quanto costa migrare](/it/blog/costo-migrazione-shopify) e [come scegliere un’agenzia](/it/blog/scegliere-agenzia-migrazione-shopify).',
+      text: 'Siamo noprob agency e facciamo questi passaggi con il nostro [servizio di migrazione da Magento a Shopify](/it/sprint-migrazione-shopify), lo Shopify Launch Sprint. Il metodo è lo stesso su ogni store: inventario, decisioni per iscritto, mappa dei redirect testata. Questo articolo copre solo ciò che è specifico di Magento 2 e Adobe Commerce. Per le parti uguali su ogni piattaforma leggi la [guida alla migrazione a Shopify](/it/migrazione-shopify), la [checklist SEO](/it/blog/migrazione-shopify-seo-checklist), [quanto costa migrare](/it/blog/costo-migrazione-shopify) e [come scegliere un’agenzia](/it/blog/scegliere-agenzia-migrazione-shopify).',
     },
     {
       type: 'paragraph',
@@ -452,6 +470,24 @@ const article: Article = {
         'Importare prima i prodotti, poi i clienti, poi gli ordini storici, come consiglia la [guida alla migrazione di Shopify](https://help.shopify.com/it/manual/migrating-to-shopify). Le password non si spostano in forma utilizzabile ([guida Shopify su Magento](https://www.shopify.com/enterprise/blog/magento-to-shopify-migration)): prevedi email di attivazione.',
         'Caricare il CSV dei redirect ed eseguire gli ordini di prova.',
         'Passaggio: importare ciò che è cambiato dal primo import, spostare il dominio, controllare il tracking, scansionare di nuovo l’elenco dei vecchi URL e seguire Search Console.',
+      ],
+    },
+    { type: 'h2', text: 'Checklist della migrazione da Magento a Shopify' },
+    {
+      type: 'paragraph',
+      text: 'La checklist della migrazione da Magento a Shopify ha otto controlli, in quest’ordine. Ognuno viene da una sezione qui sopra, quindi puoi usarla come elenco di lavoro per il tuo store.',
+    },
+    {
+      type: 'list',
+      items: [
+        'Elenca ogni modulo da app/code e composer.json, con il suo compito in una frase.',
+        'Dai a ogni modulo uno dei quattro esiti: funzione nativa, app, codice nello store o dismissione.',
+        'Esporta i dati delle app che sostituirai, come recensioni e punti fedeltà.',
+        'Fai corrispondere ogni tipo di prodotto (configurabile, raggruppato, bundle) e tieni solo gli attributi che il cliente vede o usa per filtrare.',
+        'Decidi ogni store view e website: un mercato su un solo store o uno store separato.',
+        'Scegli Shopify o Plus dai requisiti su B2B, multi-store e checkout.',
+        'Esporta la tabella url_rewrite per store, aggiungi una scansione, le pagine di Search Console e i backlink, e scrivi il CSV dei redirect.',
+        'Importa prima i prodotti, poi i clienti, poi gli ordini, esegui gli ordini di prova, controlla il tracking e solo allora sposta il dominio.',
       ],
     },
     { type: 'h2', text: 'Come lavoriamo una migrazione da Magento a Shopify?' },

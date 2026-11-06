@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.154.0 (6 Nov 2026)
+
+- **Magento to Shopify migration**: the article ranks around position 21-39 for "magento to shopify migration", "magento shopify migration" and "magento to shopify migration checklist". Title now opens with the query (EN "Magento to Shopify Migration: What Changes", IT "Migrazione da Magento a Shopify: cosa cambia"), a new 8-point checklist section built from the article's own content, and a descriptive link to the Sprint, IT and EN.
+
 ### Changelog v1.153.0 (6 Nov 2026)
 
 - **Descriptive anchors toward the Sprint**: every one of the 160 internal links to the Sprint used the anchor "Shopify Launch Sprint", while Search Console sends service queries ("shopify migration services", "shopify migration agency", "shopify migration cost") to the articles and the Sprint page gets almost no impressions. One body link per article now says what the Sprint is ("Shopify migration service", "WooCommerce to Shopify migration service", IT "servizio di migrazione a Shopify") in the agency, Shopify Plus, cost, WooCommerce, BigCommerce and SEO checklist articles and in the migration guide, IT and EN. New rule in the blog post runbook of `AGENT.md`.
