@@ -13,8 +13,11 @@ Gabri, 6 novembre 2026. Nuova direzione di Antonio: **X e Threads per primi, Lin
 5. **Programmazione in blocco**: 4 settimane pronte da pubblicare in fila (testi in `social/private/bozze/2026-11-09-quattro-settimane.md`).
 6. **LLC e fisco**: solo la sua esperienza personale di gestire una LLC USA vivendo a Lisbona. Mai "come pagare meno tasse", mai niente che sembri pianificazione fiscale, mai l'Italia come base.
 
+### Insight di Antonio (6 novembre 2026, dopo)
+Umili e genuini, mai fare i fighi; riflessioni e pain in cui la gente si ritrova; nessun nome di cliente, mai; i suoi progetti solo quando li conferma lui. Dettagli in `voce-antonio.md`.
+
 ### Il mix di ogni settimana
-- **X, 5 post**: un cliente o una migrazione (in percentuale), uno su AI o agenti, un prodotto (SaaS, eCommerce, dashboard, Still Life AI), uno personale (corsa, Muay Thai, musica, Lisbona, LLC), uno a rotazione.
+- **X, 5 post**: un pain del mondo eCommerce (migrazione, dati, redesign, Black Friday), uno su AI vissuta da lui, uno sul fare impresa (carte, fare tutto da soli), uno personale (mezza maratona del 29 novembre come contatore, Muay Thai, vinili, Lisbona), uno a rotazione. I suoi prodotti solo se confermati.
 - **Threads, 3 post**: più personali e leggeri, spesso con un video corto.
 - I dettagli personali (orari, abitudini, cosa fa con la musica) si confermano con Antonio prima di pubblicare: nelle bozze sono segnati (P).
 
@@ -22,15 +25,15 @@ Gabri, 6 novembre 2026. Nuova direzione di Antonio: **X e Threads per primi, Lin
 
 | Settimana | X | Threads |
 |---|---|---|
-| 9-13 nov | Nazzi +105% · il manager agente · i 500 redirect · TrueToSize · corsa e Muay Thai | Lisbona e gli agenti · il computer lento in chiamata · venerdì guantoni |
-| 16-20 nov | Cumini +67,7% e +35,3% di ritorno · l'AI che scrive piatto è "behind on updates" · dashboard Velmara · la LLC e le carte · il suo eCommerce | dopo la corsa · fake shop, real dashboard · il suo brand |
-| 23-27 nov | Black Friday si decide prima · il blocco peso, due mesi contro dieci minuti · tracking Cumini 31 → 92 · la musica · DDglobal +55% di clic | Lisbona a fine novembre · la musica · Black Friday e Muay Thai |
-| 30 nov - 4 dic | il SaaS sopra l'agenzia · il 20% umano · il tool che teneva il vecchio oggetto · Nazzi senza Meta +46% · "a machine of knowledge" | un mese pieno · Still Life AI · imparare tutto insieme |
+| 9-13 nov | la paura della migrazione · sentirsi indietro con l'AI · i 500 redirect · il redesign contro la velocità · mezza maratona, contatore 1 | la lista più lunga della settimana · il computer lento in chiamata · 16 giorni alla mezza |
+| 16-20 nov | tre numeri di vendite diversi · l'AI che scrive piatto · fare tutto da soli · le carte · mezza maratona, contatore 2 | tre dashboard · il collega che risponde subito · 9 giorni alla mezza |
+| 23-27 nov | la paura del Black Friday · il blocco peso, due mesi contro dieci minuti · il pain dello sconto · i vinili · "next year" | Black Friday e dashboard · un disco sul piatto · 2 giorni alla mezza, poi il giorno della gara |
+| 30 nov - 4 dic | com'è andata la mezza · il 20% umano · quando l'automazione tace · TrueToSize · imparare tutto insieme | finita · dicembre già · stanco ma bene |
 
 ## Proposta: la pagina "now" di Antonio (da valutare, non costruita)
 
 - **Dominio**: `antoniomanitta.com` (oggi libero secondo whois, 6 nov 2026); in alternativa `antonio.noprob.agency`. Va nella bio di X e Threads, i post ci puntano.
-- **Struttura**, una pagina sola: Now (il mese in 3 righe), Building (agenzia e Sprint, il SaaS, l'eCommerce, Still Life AI, con lo stato), Clients (casi solo in percentuale da `docs/dati-verificati.md`), The team (gli 8 agenti, cosa hanno fatto nella settimana in aggregato), Body (corsa e Muay Thai), Music, Lisbon.
+- **Struttura**, una pagina sola: Now (il mese in 3 righe), Building (agenzia e Sprint, il SaaS, l'eCommerce, Still Life AI, con lo stato), Clients (risultati solo in percentuale, senza nomi), The team (gli 8 agenti, cosa hanno fatto nella settimana in aggregato), Body (corsa e Muay Thai), Music, Lisbon.
 - **Come si aggiorna**: statica, Gabri la aggiorna ogni venerdì dagli aggregati di Claudio e dalle note di Antonio; niente CRM, niente cifre assolute dei clienti, niente dettagli fiscali.
 
 ## Account
@@ -67,7 +70,7 @@ Ogni serie è un filo che il pubblico può seguire (pattern 3 della ricerca).
 | **The agency run by agents** | Il diario della settimana: 1-2 numeri aggregati, una cosa che si è rotta e come si è sistemata | ogni venerdì, numerato | post o screenshot su X, video corto su Threads |
 | **Built with agents** | Demo dei prodotti: TrueToSize, dashboard demo Velmara, Still Life AI, Askify | 1 a settimana | video dello schermo |
 | **Until last year** | Prima e dopo dell'AI nel suo lavoro, dalle sue parole | 1 a settimana | post singolo |
-| **Shopify, numbers in hand** | I casi con percentuali verificate (Cumini, Nazzi, DDglobal) e il suo perché | 1 a settimana | post con grafico in indice |
+| **Shopify, numbers in hand** | Un risultato in percentuale, senza nome del cliente, solo quando serve | raro | post con grafico in indice |
 | **The book** | Il making of del libro sugli agenti | 1 al mese, dopo l'ok di Antonio | thread o screenshot |
 | **His take** | Un suo pensiero spicy e pro AI | quando c'è | post singolo |
 
@@ -81,25 +84,6 @@ Ogni serie è un filo che il pubblico può seguire (pattern 3 della ricerca).
 | X4 | Thread "come l'ho fatto io" | 4-7 post | X, al massimo uno a settimana |
 | X5 | Diario del venerdì | 2-4 frasi | X e Threads |
 | X6 | Esperimento con l'AI che chiama il pubblico a partecipare | 1-2 frasi | X, ogni tanto |
-
-## Le prime due settimane (superate dal calendario di 4 settimane qui sopra)
-
-Testi in `social/private/bozze/2026-11-09-prime-due-settimane.md`, archiviati.
-
-| Data | X | Threads |
-|---|---|---|
-| lun 9 nov | Il post fissato: un'agenzia Shopify con una squadra di agenti, da oggi in pubblico (organigramma) | Lo stesso, più corto |
-| mar 10 nov | Thread: presenta la squadra, un agente per post | |
-| mer 11 nov | Until last year: i 500 redirect a mano contro l'AI | Il computer lento in chiamata perché la squadra lavora in tempo reale (video dello schermo) |
-| gio 12 nov | Cumini: vendite online +67,7%, clienti di ritorno +35,3% | |
-| ven 13 nov | Diario n. 1: i numeri della settimana e il tool che teneva il vecchio oggetto | Il check-in del venerdì |
-| lun 16 nov | TrueToSize: il codice sceglie la taglia, l'AI scrive la frase (video) | Lo stesso video, più corto |
-| mar 17 nov | Chi dice che l'AI scrive piatto è "behind on updates": il mio agente ha letto 1.184 mie email | |
-| mer 18 nov | La dashboard demo su un negozio inventato, Velmara (video) | Fake shop, real dashboard |
-| gio 19 nov | Nazzi: due settimane con Meta spento, vendite +46%, scontrino +33% | |
-| ven 20 nov | Diario n. 2 e il blocco peso: due mesi l'anno scorso, dieci minuti oggi | Lo stesso, in tre frasi |
-
-Riserve: WordPress, il 20% umano, il libro, Still Life AI, questa ricerca (testi nelle bozze).
 
 ## Da X a LinkedIn (più avanti)
 
@@ -125,7 +109,7 @@ Riserve: WordPress, il 20% umano, il libro, Still Life AI, questa ricerca (testi
 - Mai CRM, strumenti di outreach (nemmeno il nome), caselle email, dati o nomi di lead.
 - Mai token, chiavi, `.env`, terminali con variabili d'ambiente, URL con parametri.
 - Dati dei clienti solo dalla demo Velmara o dai grafici in indice già pubblici.
-- Nomi di clienti solo se il caso è già pubblicato su noprob.agency.
+- Mai nomi di clienti, nemmeno dei casi pubblicati sul sito.
 - Niente notifiche o schede del browser con nomi.
 - Ritagliare barre degli indirizzi e nomi di file che parlano di clienti.
 

@@ -24,6 +24,7 @@ Manager: Claudio (`/claudio`).
 - 📣 Mai pubblicare, programmare, commentare, rispondere o mandare DM. Mai creare account: se serve un account, chiedilo ad Antonio.
 - 🌍 Residenza: Antonio è italiano, vive a Lisbona, la società è NOPROB AGENCY LLC (USA). Mai farlo passare come basato od operativo in Italia. Lisbona si può dire.
 - 🔢 Numeri dei clienti solo da `docs/dati-verificati.md`, come percentuali o rapporti; numeri della squadra solo aggregati e confermati da Claudio. Mai fatturati, ordini, clic in valore assoluto.
+- 🙏 Umile e genuino, mai fare i fighi: riflessioni e pain in cui la gente si ritrova. **Mai nomi di clienti** nei post; i progetti di Antonio solo quando li conferma lui.
 - 🔒 Mai dati di lead o clienti, nomi di prospect, email, screenshot del CRM o degli strumenti di outreach, token o credenziali nelle immagini. Il repo è pubblico: il grezzo sta in `social/private/`.
 - 🙅 Mai negativi su di noi: niente lacune, scuse, "non ancora", "siamo piccoli". Gli errori si raccontano come esperimenti con la soluzione.
 - 🧭 Tono: il suo pensiero in prima persona, giocoso, spicy, mai arrogante, **mai consigli**, sempre pro AI (chi si lamenta è "behind on updates", tra virgolette).
