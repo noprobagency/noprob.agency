@@ -232,6 +232,43 @@ Per essere visibili in più ricerche, ogni prodotto del listino può avere il su
 - **Sviluppo Shopify**: €1.850 al mese per 3 mesi (prezzo attuale del listino), pagina `/shopify-development`.
 - **AI Accelerator**: €1.100 una tantum (prezzo attuale del listino), pagina `/ai-accelerator`.
 
+## Profilo da esperto (Qwoted, Featured, podcast)
+
+Scritto il 6 novembre 2026 per le piattaforme dove i giornalisti cercano esperti (R-56 di Francesca). In terza persona, come chiedono queste piattaforme. Un numero per testo.
+
+- Nome e ruolo: Antonio Manitta, Founder, noprob agency
+- Località: Lisbon, Portugal
+- Titolo breve EN: Shopify migration specialist and founder of noprob agency
+- Titolo breve IT: Specialista di migrazioni su Shopify, fondatore di noprob agency
+- Bio EN:
+
+> Antonio Manitta is the founder of noprob agency, a Shopify technical partner for fashion, supplement and DTC brands. Since 2022 he has moved stores from WooCommerce, PrestaShop, Magento and custom platforms to Shopify, and he leads the Shopify Launch Sprint, a 14 day migration with a public price and 4 written guarantees. He works on the parts of a migration that decide whether a brand keeps its traffic, the 301 redirect map, server side tracking and the checkout, and on how AI agents and answer engines change the way shoppers find a store. Cumini, a luxury fashion boutique he moved to Shopify, grew online sales by 67.7% in the 12 months after the migration. Antonio is Italian and lives in Lisbon.
+
+- Bio IT:
+
+> Antonio Manitta è il fondatore di noprob agency, partner tecnico Shopify per brand di moda, integratori e DTC. Dal 2022 porta su Shopify store da WooCommerce, PrestaShop, Magento e piattaforme su misura, e guida lo Shopify Launch Sprint, una migrazione in 14 giorni con prezzo pubblico e 4 garanzie scritte. Lavora sulle parti di una migrazione che decidono se un brand tiene il suo traffico, la mappa dei redirect 301, il tracciamento server side e il checkout, e su come agenti AI e motori di risposta cambiano il modo in cui i clienti trovano uno store. Cumini, boutique di moda luxury che ha portato su Shopify, ha fatto +67,7% di vendite online nei 12 mesi dopo la migrazione. Antonio è italiano e vive a Lisbona.
+
+- Temi (tag): Shopify, Shopify migration, WooCommerce to Shopify, Magento to Shopify, eCommerce SEO, 301 redirects, site migration, server side tracking, DTC, eCommerce replatforming, AI agents for eCommerce, generative engine optimization, agentic commerce
+- Link: sito https://noprob.agency, pagina autore https://noprob.agency/about (IT https://noprob.agency/it/chi-siamo), foto `backlink/assets/antonio-manitta.jpg`
+- Risorse da offrire ai giornalisti: il template CSV dei redirect 301 (EN https://noprob.agency/blog/shopify-301-redirects, IT https://noprob.agency/it/blog/redirect-301-shopify) e la checklist SEO della migrazione (EN https://noprob.agency/blog/shopify-migration-seo-checklist, IT https://noprob.agency/it/blog/migrazione-shopify-seo-checklist)
+
+## Candidatura Storetasker
+
+Storetasker è una rete di esperti a numero chiuso (circa il 5% dei candidati entra). La candidatura è personale, a nome di Antonio come Shopify developer e migration expert.
+
+- Ruolo: Full stack Shopify developer, migrations
+- Esperienza: Shopify dal 2022, con un team di specialisti dietro
+- Presentazione EN (sotto 600 caratteri):
+
+> I run noprob agency and I take brands from WooCommerce, PrestaShop, Magento and custom platforms to Shopify. My core project is a 14 day migration with a fixed calendar, a one to one 301 redirect map for every indexed URL, server side tracking from day one and 90 days of support after the go live. I work best with fashion, supplement and DTC brands that already sell and cannot afford to lose traffic or orders during the switch. I stay the single point of contact from the first call to the last check in Search Console.
+
+- Progetti da mostrare (casi studio pubblici): Cumini `/use-cases/cumini-luxury-fashion-ecommerce`, Nazzi `/use-cases/integratori-nazzi-dtc-shopify`, DDglobal `/use-cases/ddglobal-store-migrazione-ai-ecommerce-b2b`
+- Tariffa: la stessa di Contra, 75 a 100 USD l'ora; progetti a prezzo fisso dal listino
+
+## Risposte nella Shopify Community
+
+Regole (6 novembre 2026, dai thread letti): la community nasconde le risposte promozionali (anche quelle dei tool di migrazione), quindi niente firma commerciale né offerta. Si risponde solo se si aggiunge qualcosa che il thread non ha già detto, in prima persona con la voce di Antonio, e il link al template dei redirect o alla checklist SEO solo se risponde proprio a quella domanda. Al massimo un link per risposta. Le bozze stanno in `backlink/data/community/` (gitignored) e si pubblicano dall'account di Antonio.
+
 ## Asset
 
 | Asset | File |

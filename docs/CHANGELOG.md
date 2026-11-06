@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.152.0 (6 Nov 2026)
+
+- **Marco, texts for PR platforms, Storetasker and the Shopify Community**: `backlink/scheda.md` gets Antonio's expert profile for Qwoted, Featured and podcasts (bio IT and EN, topics, resources to offer journalists such as the 301 redirect template and the migration SEO checklist), the Storetasker application text and the rules for answers in the Shopify Community (no promotion, one link at most, only when it answers the question).
+
 ### Changelog v1.151.0 (6 Nov 2026)
 
 - **Gabri's voice, no advice and always pro AI**: after Antonio's second feedback, `linkedin/voce-antonio.md` and `linkedin/piano.md` ask for his own thought said straight in the first person, playful and never arrogant, with no advice or imperatives to the reader, and always on the side of AI.
