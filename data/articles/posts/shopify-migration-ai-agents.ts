@@ -40,7 +40,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'I have done several migrations to Shopify with zero minutes offline, and I am a developer by training (degree in Computer Science). At noprob agency we work every day with AI agents built on Claude Code, and the [Shopify Launch Sprint](/shopify-migration-sprint) moves a store to Shopify in 14 days with our Custom AI System. This article explains the method behind it, so you can judge any migration offer, ours included.',
+      text: 'I have done several migrations to Shopify with zero minutes offline, and I am a developer by training (degree in Computer Science). At noprob agency we work every day with AI agents built on Claude Code, and the Shopify Launch Sprint, our [Shopify migration service with AI agents](/shopify-migration-sprint), moves a store to Shopify in 14 days with our Custom AI System. This article explains the method behind it, so you can judge any migration offer, ours included.',
     },
     {
       type: 'paragraph',
@@ -294,7 +294,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Ho fatto diverse migrazioni a Shopify con 0 minuti offline e sono sviluppatore di formazione (laurea in Informatica). In noprob agency lavoriamo ogni giorno con agenti AI costruiti su Claude Code, e lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) porta uno store su Shopify in 14 giorni con il nostro Custom AI System. Questo articolo spiega il metodo che c’è dietro, così puoi giudicare qualsiasi offerta di migrazione, la nostra compresa.',
+      text: 'Ho fatto diverse migrazioni a Shopify con 0 minuti offline e sono sviluppatore di formazione (laurea in Informatica). In noprob agency lavoriamo ogni giorno con agenti AI costruiti su Claude Code, e lo Shopify Launch Sprint, il nostro [servizio di migrazione a Shopify con agenti AI](/it/sprint-migrazione-shopify), porta uno store su Shopify in 14 giorni con il nostro Custom AI System. Questo articolo spiega il metodo che c’è dietro, così puoi giudicare qualsiasi offerta di migrazione, la nostra compresa.',
     },
     {
       type: 'paragraph',

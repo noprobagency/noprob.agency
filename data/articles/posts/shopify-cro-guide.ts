@@ -325,7 +325,7 @@ const article: Article = {
     { type: 'h2', text: 'Shopify CRO during a migration, and after' },
     {
       type: 'paragraph',
-      text: 'During a migration, the [Shopify Launch Sprint](/shopify-migration-sprint) **covers the purchase flow**: search, product page, cart and checkout are analyzed step by step and rebuilt with our checklist. It moves your store to Shopify in 14 days with our Custom AI System, with go-live between day 15 and day 30, 90 days of support and 4 written guarantees. One of them is about conversion: "Checkout converting less than before at 90 days? We optimize it for free until it beats it." For the whole process, read the [Shopify migration guide](/shopify-migration).',
+      text: 'During a migration, the Shopify Launch Sprint, our [fixed-price Shopify migration service](/shopify-migration-sprint), **covers the purchase flow**: search, product page, cart and checkout are analyzed step by step and rebuilt with our checklist. It moves your store to Shopify in 14 days with our Custom AI System, with go-live between day 15 and day 30, 90 days of support and 4 written guarantees. One of them is about conversion: "Checkout converting less than before at 90 days? We optimize it for free until it beats it." For the whole process, read the [Shopify migration guide](/shopify-migration).',
     },
     {
       type: 'paragraph',
@@ -607,7 +607,7 @@ const article: Article = {
     { type: 'h2', text: 'CRO per Shopify durante una migrazione e dopo' },
     {
       type: 'paragraph',
-      text: "Durante una migrazione, lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) **copre il flusso d'acquisto**: ricerca, scheda prodotto, carrello e checkout vengono analizzati passo per passo e ricostruiti con la nostra checklist. Porta il tuo store su Shopify in 14 giorni con il nostro Custom AI System, con go-live tra il giorno 15 e il 30, 90 giorni di supporto e 4 garanzie scritte. Una di queste riguarda la conversione: \"Il checkout converte meno di prima a 90 giorni? Lo ottimizziamo gratis finché non supera.\" Per tutto il processo, leggi la [guida alla migrazione a Shopify](/it/migrazione-shopify).",
+      text: "Durante una migrazione, lo Shopify Launch Sprint, il nostro [servizio di migrazione a Shopify a prezzo fisso](/it/sprint-migrazione-shopify), **copre il flusso d'acquisto**: ricerca, scheda prodotto, carrello e checkout vengono analizzati passo per passo e ricostruiti con la nostra checklist. Porta il tuo store su Shopify in 14 giorni con il nostro Custom AI System, con go-live tra il giorno 15 e il 30, 90 giorni di supporto e 4 garanzie scritte. Una di queste riguarda la conversione: \"Il checkout converte meno di prima a 90 giorni? Lo ottimizziamo gratis finché non supera.\" Per tutto il processo, leggi la [guida alla migrazione a Shopify](/it/migrazione-shopify).",
     },
     {
       type: 'paragraph',

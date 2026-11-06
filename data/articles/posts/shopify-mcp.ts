@@ -287,7 +287,7 @@ const article: Article = {
     { type: 'h2', text: 'How does this fit with the Shopify Launch Sprint and the AI Accelerator?' },
     {
       type: 'paragraph',
-      text: 'In the [Shopify Launch Sprint](/shopify-migration-sprint), **the Custom AI System leaves the store ready for AI agents, with clean and mapped data.** “Ready for AI agents” and “data mapped in detail” are two of its six superpowers, and they are what the catalog, cart and Ask servers read. The Sprint takes 14 days, with go-live between day 15 and 30 and 90 days of support. If you are still on another platform, start from our [guide to migrating to Shopify](/shopify-migration). If your store is already on Shopify, the [AI Accelerator](/ai-accelerator) is the lighter route.',
+      text: 'In the Shopify Launch Sprint, our [Shopify migration service](/shopify-migration-sprint), **the Custom AI System leaves the store ready for AI agents, with clean and mapped data.** “Ready for AI agents” and “data mapped in detail” are two of its six superpowers, and they are what the catalog, cart and Ask servers read. The Sprint takes 14 days, with go-live between day 15 and 30 and 90 days of support. If you are still on another platform, start from our [guide to migrating to Shopify](/shopify-migration). If your store is already on Shopify, the [AI Accelerator](/ai-accelerator) is the lighter route.',
     },
     { type: 'h2', text: 'Frequently asked questions' },
     { type: 'h3', text: 'What is MCP in Shopify?' },
@@ -519,7 +519,7 @@ const article: Article = {
     { type: 'h2', text: 'Come si collega tutto questo allo Shopify Launch Sprint e all’AI Accelerator?' },
     {
       type: 'paragraph',
-      text: 'Nello [Shopify Launch Sprint](/it/sprint-migrazione-shopify) **il Custom AI System lascia lo store pronto per gli agenti AI, con dati puliti e mappati.** “Pronto per gli agenti AI” e “dati mappati al dettaglio” sono due dei suoi sei superpoteri, e sono ciò che leggono i server di catalogo, carrello e Ask. Lo Sprint dura 14 giorni, con go-live tra il giorno 15 e il 30 e 90 giorni di supporto. Se sei ancora su un’altra piattaforma, parti dalla nostra [guida alla migrazione a Shopify](/it/migrazione-shopify). Se il tuo store è già su Shopify, la strada più leggera è l’[AI Accelerator](/it/ai-accelerator).',
+      text: 'Nello Shopify Launch Sprint, il nostro [servizio di migrazione a Shopify](/it/sprint-migrazione-shopify), **il Custom AI System lascia lo store pronto per gli agenti AI, con dati puliti e mappati.** “Pronto per gli agenti AI” e “dati mappati al dettaglio” sono due dei suoi sei superpoteri, e sono ciò che leggono i server di catalogo, carrello e Ask. Lo Sprint dura 14 giorni, con go-live tra il giorno 15 e il 30 e 90 giorni di supporto. Se sei ancora su un’altra piattaforma, parti dalla nostra [guida alla migrazione a Shopify](/it/migrazione-shopify). Se il tuo store è già su Shopify, la strada più leggera è l’[AI Accelerator](/it/ai-accelerator).',
     },
     { type: 'h2', text: 'Domande frequenti' },
     { type: 'h3', text: 'Cos’è MCP in Shopify?' },

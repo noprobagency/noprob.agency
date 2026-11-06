@@ -382,7 +382,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '**2. Decide how the storefront is built before touching anything else.** You have three routes: a free template such as Dawn or Horizon to validate the idea, a paid template from the Shopify Theme Store, or a storefront written for your store only. The first two start fast but carry code and apps you do not use; the third is what we build in the [Shopify Launch Sprint](/shopify-migration-sprint) with our Custom AI System, where many jobs become code instead of another monthly app. Choose by volume and ambition, not by price alone.',
+      text: '**2. Decide how the storefront is built before touching anything else.** You have three routes: a free template such as Dawn or Horizon to validate the idea, a paid template from the Shopify Theme Store, or a storefront written for your store only. The first two start fast but carry code and apps you do not use; the third is what we build with our Custom AI System in the Shopify Launch Sprint, our [Shopify migration service](/shopify-migration-sprint), where many jobs become code instead of another monthly app. Choose by volume and ambition, not by price alone.',
     },
     {
       type: 'paragraph',
@@ -768,7 +768,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '**2. Decidi come si costruisce la vetrina prima di toccare altro.** Le strade sono tre: un template gratuito come Dawn o Horizon per partire e validare, un template a pagamento dal Theme Store di Shopify, oppure una vetrina scritta solo per il tuo store. Le prime due partono in fretta ma portano codice e app che non usi; la terza è quella che costruiamo nello [Shopify Launch Sprint](/it/sprint-migrazione-shopify) con il nostro Custom AI System, dove molti compiti diventano codice invece di un\'altra app a canone mensile. Scegli per volumi e ambizione, non solo per prezzo.',
+      text: '**2. Decidi come si costruisce la vetrina prima di toccare altro.** Le strade sono tre: un template gratuito come Dawn o Horizon per partire e validare, un template a pagamento dal Theme Store di Shopify, oppure una vetrina scritta solo per il tuo store. Le prime due partono in fretta ma portano codice e app che non usi; la terza è quella che costruiamo con il nostro Custom AI System nello Shopify Launch Sprint, il nostro [servizio di migrazione a Shopify](/it/sprint-migrazione-shopify), dove molti compiti diventano codice invece di un\'altra app a canone mensile. Scegli per volumi e ambizione, non solo per prezzo.',
     },
     {
       type: 'paragraph',

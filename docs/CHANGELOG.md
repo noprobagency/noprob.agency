@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.158.0 (6 Nov 2026)
+
+- SEO: six more articles (CRO, MCP, 301 redirects, Shopify vs WooCommerce, migration with AI agents, how Shopify works) get one body link to the Shopify Launch Sprint with a descriptive anchor, IT and EN. Calendar rows 52 and 53.
+
 ### Changelog v1.157.0 (6 Nov 2026)
 
 - **Links inside bold text**: the inline parser of the article renderer did not parse a bold span again, so a link inside **bold** showed as raw markdown. Found in production on GEO vs SEO, GEO for Shopify, AI for eCommerce and AI agents for Shopify (IT and EN, 8 links, 4 of them to the Sprint). The bold span is now parsed again.
