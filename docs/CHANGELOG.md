@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.159.0 (6 Nov 2026)
+
+- Social (Gabri): new direction from Antonio, X and Threads first, LinkedIn later as a derivative. New `social/` folder: research on how 15 builders started on X (first 90 days, first traction, what the audience answers) and how Threads differs, inventory of projects with what can be shown and what stays private, voice for X and Threads, plan with account and bio proposals, series, formats, the first two weeks, screenshot checklist and LinkedIn reuse rule. `linkedin/` files marked as archive, `/gabri` skill rewritten for the new channels, `social/private/` gitignored.
+
 ### Changelog v1.158.0 (6 Nov 2026)
 
 - SEO: six more articles (CRO, MCP, 301 redirects, Shopify vs WooCommerce, migration with AI agents, how Shopify works) get one body link to the Shopify Launch Sprint with a descriptive anchor, IT and EN. Calendar rows 52 and 53.

@@ -1,0 +1,115 @@
+# Piano X e Threads di Antonio
+
+Gabri, 6 novembre 2026. Nuova direzione di Antonio: **X e Threads per primi, LinkedIn solo dopo e come derivato**. Sempre in inglese. Un build in public vero di tutti i suoi progetti e prodotti. Voce: `voce-antonio.md`. Ricerca: `ricerca.md`. Progetti: `progetti.md`. Il piano LinkedIn del 5 novembre è archiviato in `linkedin/`. Pubblica sempre Antonio; Gabri non crea account e non pubblica.
+
+## Account
+
+### X
+- **Handle**: `@antoniomanitta` esiste già (dal 2011, 14 follower, 78 post, località "milano", bio sullo snowboard). Se è il suo, si riusa: va cambiata **subito la località in Lisbon** (regola sulla residenza), la bio e il nome. Se non è suo, alternative in ordine: `@antonio_manitta`, `@manittaantonio` (oggi liberi su X, da riverificare quando li crea).
+- **Nome visualizzato**: "Antonio Manitta".
+- **Bio**, tre proposte (sotto i 160 caratteri):
+  1. "Running a Shopify agency with a team of AI agents. Building it in public, numbers included. Lisbon."
+  2. "eCommerce manager building noprob, a Shopify agency run with AI agents, plus a few products. Everything in public. Lisbon 🇵🇹"
+  3. "Shopify sites, AI agents, side products. I share what works, what breaks and the numbers. noprob.agency · Lisbon"
+- **Link**: noprob.agency. **Post fissato**: quello di lunedì 9 novembre.
+- **Foto**: la stessa di LinkedIn. **Copertina**: l'organigramma degli agenti.
+
+### Threads
+- L'handle di Threads è lo stesso di Instagram, quindi decide Antonio quale account usare. `@antoniomanitta` oggi non risulta su Threads.
+- Bio: la proposta 1 più corta ("Shopify agency run with AI agents. Building in public from Lisbon 🙂").
+
+## Regole del piano
+
+- **X è il canale principale**: numeri, traguardi, opinioni, demo dei prodotti.
+- **Threads è il dietro le quinte leggero**: lo schermo, la giornata, Lisbona, un video corto con poche parole. Si prende il materiale di X e lo si rende più caldo, non si incolla.
+- **Ritmo**: su X **un post al giorno dal lunedì al venerdì**, al massimo un thread a settimana; su Threads **3 post a settimana** (lunedì, mercoledì, venerdì). Mattina, ora di Lisbona.
+- **20 minuti al giorno di risposte** su X ad altri builder (AI, Shopify, indie). Nella ricerca, nei primi 90 giorni tutti rispondono quasi quanto postano: è da lì che arrivano i primi follower. Le risposte le scrive Antonio; Gabri al massimo propone 3-5 post a cui rispondere.
+- **L'inizio è muto**: nei 15 profili il primo post da 100 like arriva in mediana dopo circa 5 mesi. Si misura la costanza e le risposte, non i like del singolo post.
+- **Niente consigli, sempre pro AI, mai arrogante** (vedi voce).
+
+## Le serie
+
+Ogni serie è un filo che il pubblico può seguire (pattern 3 della ricerca).
+
+| Serie | Cosa | Quando | Formato |
+|---|---|---|---|
+| **The agency run by agents** | Il diario della settimana: 1-2 numeri aggregati, una cosa che si è rotta e come si è sistemata | ogni venerdì, numerato | post o screenshot su X, video corto su Threads |
+| **Built with agents** | Demo dei prodotti: TrueToSize, dashboard demo Velmara, Still Life AI, Askify | 1 a settimana | video dello schermo |
+| **Until last year** | Prima e dopo dell'AI nel suo lavoro, dalle sue parole | 1 a settimana | post singolo |
+| **Shopify, numbers in hand** | I casi con percentuali verificate (Cumini, Nazzi, DDglobal) e il suo perché | 1 a settimana | post con grafico in indice |
+| **The book** | Il making of del libro sugli agenti | 1 al mese, dopo l'ok di Antonio | thread o screenshot |
+| **His take** | Un suo pensiero spicy e pro AI | quando c'è | post singolo |
+
+## Formati
+
+| # | Formato | Lunghezza | Dove |
+|---|---|---|---|
+| X1 | Post singolo, il fatto o il suo pensiero | 1-3 frasi, sotto i 280 caratteri | X |
+| X2 | Post con screenshot o grafico vero | una o due frasi | X, Threads |
+| X3 | Video dello schermo, 10-30 secondi | 5-25 parole | Threads per primo, poi X |
+| X4 | Thread "come l'ho fatto io" | 4-7 post | X, al massimo uno a settimana |
+| X5 | Diario del venerdì | 2-4 frasi | X e Threads |
+| X6 | Esperimento con l'AI che chiama il pubblico a partecipare | 1-2 frasi | X, ogni tanto |
+
+## Le prime due settimane (9-20 novembre 2026)
+
+Testi interi in `social/private/bozze/2026-11-09-prime-due-settimane.md`.
+
+| Data | X | Threads |
+|---|---|---|
+| lun 9 nov | Il post fissato: un'agenzia Shopify con una squadra di agenti, da oggi in pubblico (organigramma) | Lo stesso, più corto |
+| mar 10 nov | Thread: presenta la squadra, un agente per post | |
+| mer 11 nov | Until last year: i 500 redirect a mano contro l'AI | Il computer lento in chiamata perché la squadra lavora in tempo reale (video dello schermo) |
+| gio 12 nov | Cumini: vendite online +67,7%, clienti di ritorno +35,3% | |
+| ven 13 nov | Diario n. 1: i numeri della settimana e il tool che teneva il vecchio oggetto | Il check-in del venerdì |
+| lun 16 nov | TrueToSize: il codice sceglie la taglia, l'AI scrive la frase (video) | Lo stesso video, più corto |
+| mar 17 nov | Chi dice che l'AI scrive piatto è "behind on updates": il mio agente ha letto 1.184 mie email | |
+| mer 18 nov | La dashboard demo su un negozio inventato, Velmara (video) | Fake shop, real dashboard |
+| gio 19 nov | Nazzi: due settimane con Meta spento, vendite +46%, scontrino +33% | |
+| ven 20 nov | Diario n. 2 e il blocco peso: due mesi l'anno scorso, dieci minuti oggi | Lo stesso, in tre frasi |
+
+Riserve: WordPress, il 20% umano, il libro, Still Life AI, questa ricerca (testi nelle bozze).
+
+## Da X a LinkedIn (più avanti)
+
+- **Quando**: dopo 4-6 settimane di X, quando ci sono post con dati veri di risposta.
+- **Cosa**: i post di X con più **salvataggi e risposte** (non like) del mese. Uno a settimana.
+- **Come**: si riscrive, non si incolla. 60-120 parole, con mezza frase di contesto in più, nella voce archiviata in `linkedin/voce-antonio.md` (tono del 6 novembre: niente consigli, pro AI). I thread diventano un testo unico o un carosello. Niente gergo di X ("ship", "MRR" senza spiegazione).
+- **Mai lo stesso giorno** di X. Il diario del venerdì resta su X e Threads.
+
+## Checklist prima di pubblicare
+
+1. **Una sola idea**, detta nella prima riga.
+2. **Suona come lui** (`voce-antonio.md`): prima persona, nessun consiglio, giocoso, pro AI, al massimo una faccina in fondo.
+3. **Vero**: ogni fatto dalle sue parole, email o appunti; ogni numero da `docs/dati-verificati.md` o confermato da Claudio (aggregati della squadra). Clienti solo in percentuale o rapporto.
+4. **Niente contro di noi**: nessuna lacuna o scusa; gli errori sono esperimenti con la soluzione.
+5. **Residenza**: niente che lo faccia sembrare basato in Italia.
+6. **Garanzie e offerta** (se citate) alla lettera da `content/zero-loss-migration.en.ts`.
+7. **Niente trattini lunghi** né frasi prese dai profili della ricerca.
+8. **Lunghezza**: X sotto i 280 caratteri a post; Threads sotto le 25 parole.
+9. **Screenshot e video** (vedi sotto).
+10. **Ok di Antonio** sulla versione finale. Pubblica lui.
+
+### Checklist screenshot e video
+- Mai CRM, strumenti di outreach (nemmeno il nome), caselle email, dati o nomi di lead.
+- Mai token, chiavi, `.env`, terminali con variabili d'ambiente, URL con parametri.
+- Dati dei clienti solo dalla demo Velmara o dai grafici in indice già pubblici.
+- Nomi di clienti solo se il caso è già pubblicato su noprob.agency.
+- Niente notifiche o schede del browser con nomi.
+- Ritagliare barre degli indirizzi e nomi di file che parlano di clienti.
+
+## Cosa serve da Antonio
+
+1. **Account**: `@antoniomanitta` su X è il suo? Se sì, località in Lisbon e bio; se no, quale handle crea. Quale account Instagram usa per Threads.
+2. **Bio**: quale delle tre (o una sua).
+3. **Ok sui temi delicati**: dire che le bozze le scrive un agente (thread del 10 novembre); parlare del libro prima dell'uscita.
+4. **Numeri da confermare**: "8 agenti con nome"; il blocco peso (due mesi contro dieci minuti); i numeri del diario del venerdì, che Claudio passa ogni settimana.
+5. **Il materiale visivo**: 3-4 video dello schermo da 10-30 secondi (la squadra al lavoro, la dashboard demo, TrueToSize), oppure l'ok perché Gabri li prepari dalle demo.
+
+## Costi
+
+| Data | Cosa | Spesa |
+|---|---|---|
+| 6 nov 2026 | Ricerca su X (treg, AnyAPI: profili, scansione per semestri, primi 90 giorni e primi 12 mesi di 15 profili) | circa $0,30 |
+| 6 nov 2026 | Ricerca su Threads (treg, ScrapeCreators: post recenti di 15 profili, 6 ricerche) e controllo handle | circa $0,05 |
+| 5 nov 2026 | Archivio LinkedIn (profili Fletch e profilo di Antonio) | circa $2 |

@@ -62,3 +62,5 @@ manager/data
 manager/data/
 # LinkedIn (Gabri): raw posts, emails and lead texts, local only
 linkedin/private/
+# Social (Gabri, X e Threads): raw posts, bozze, local only
+social/private/
