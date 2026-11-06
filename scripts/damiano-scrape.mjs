@@ -223,12 +223,12 @@ async function discover(query, offset) {
       // A location Hunter does not support ("This region isn't supported", 400, not billed)
       // counts as an empty page: the query is marked done and the run goes on.
       if (/query_failed/.test(text)) {
-        console.log(`hunter refused the query, skipped: ${query}`)
+        console.error(`hunter refused the query, skipped: ${query}`)
         return { data: [] }
       }
       const transient = /too_many_requests|rate limit| 429|ConnectError/i.test(text)
       if (!transient || attempt >= 8) throw err
-      console.log(`hunter unavailable, retry ${attempt} in ${attempt} min`)
+      console.error(`hunter unavailable, retry ${attempt} in ${attempt} min`)
       await new Promise((r) => setTimeout(r, attempt * 60000))
     }
   }
