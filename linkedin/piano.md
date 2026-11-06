@@ -6,7 +6,7 @@ Gabri, 5 novembre 2026. Profilo personale di Antonio Manitta, post in inglese. V
 
 - **2-3 post a settimana**: martedì e giovedì fissi, venerdì quando c'è un terzo post. Mattina, ora di Lisbona.
 - **Corti**: 15-120 parole. Oltre solo se il formato lo dichiara.
-- **Spicy e autentici, ma scialli**: una presa di posizione chiara per post, detta con calma e con il suo contesto, presa dalle sue opinioni vere (appunti di Veronica, email, chiamate). Mai tono da guru, mai inventata.
+- **Spicy, giocosi, pro AI**: il suo pensiero dritto in prima persona, uno per post, preso dalle sue opinioni vere (appunti di Veronica, email, chiamate). Mai consigli, mai arrogante, mai inventato.
 - **Temi, in ordine di peso**: Shopify (circa 1 post su 2), eCommerce e performance, AI, fashion, personale (1 ogni due settimane, solo se Antonio ha risposto a uno spunto).
 - **CTA**: quasi mai. Al massimo una domanda vera in fondo. Il link allo Sprint solo nel primo commento e al massimo un post su quattro.
 
@@ -17,7 +17,7 @@ Gabri, 5 novembre 2026. Profilo personale di Antonio Manitta, post in inglese. V
 | F1 | Una riga sopra uno screenshot vero (PageSpeed, grafico in indice, un errore di checkout) | 5-30 parole | performance, casi |
 | F2 | Prima e dopo: "Until last year… / Now…" | 40-80 parole | AI, migrazioni |
 | F3 | Dialogo breve, cose sentite davvero in chiamata, senza nomi | 30-80 parole | humor sul mestiere |
-| F4 | Opinione controcorrente, una frase forte e 3-5 righe di perché | 60-120 parole | Shopify, piattaforme, agenzie |
+| F4 | Il suo pensiero controcorrente in prima persona, con un perché corto, senza consigli | 40-100 parole | Shopify, piattaforme, agenzie |
 | F5 | Numero vero di un caso (solo `docs/dati-verificati.md`, in percentuale o indice) con il perché | 50-110 parole | fashion, DTC |
 | F6 | Domanda alla community, posizione sua in due righe | 20-50 parole | settimane calde (Black Friday) |
 | F7 | Storia personale, solo dalle sue risposte agli spunti | 80-150 parole | personale |
@@ -31,7 +31,7 @@ Black Friday è il 27 novembre 2026: le settimane 2 e 3 ci girano intorno.
 | mar 10 nov | performance | F1 | The redesign is not the lever | Da 15 secondi a 2 cambia i numeri, da bianco a nero no. Screenshot di un PageSpeed senza nome del sito. |
 | gio 12 nov | Shopify | F4 | I stopped taking WordPress projects | Scelta sua, non previsione: migrare costa meno tempo che mantenere WooCommerce. Niente attacchi a chi lo usa. |
 | ven 13 nov | AI, personale | F7 | Yes, AI wrote that email | A un lead ha confessato che l'email l'aveva scritta l'AI. Perché non lo nasconde. **Serve il suo ok**. |
-| mar 17 nov | Shopify | F4 | Don't migrate on Black Friday. Decide on Black Friday. | Prima si cambia, meglio è: se decidi oggi, fra un anno vedi i risultati. Rispetto per l'alta stagione. |
+| mar 17 nov | Shopify | F4 | Black Friday is when I hear "next year" the most | Per lui prima si cambia, meglio è: chi decide oggi vede i risultati fra un anno. Detto come suo pensiero, con il sorriso, senza dire a nessuno cosa fare. |
 | gio 19 nov | fashion | F5 | A luxury boutique, 12 months after Shopify | Cumini: +67,7% di vendite online nei 12 mesi dopo la migrazione. Il perché: prima si sposta quello che già funziona. Grafico in indice della landing. |
 | ven 20 nov | performance | F3 | "Can we change the colours?" | Dialogo: il founder chiede il restyling, lui chiede prima i secondi di caricamento. |
 | mar 24 nov | eCommerce, dati | F4 | Black Friday with half your sales invisible | Tracking non server side: la cassa che batte lo scontrino solo a una parte dei clienti. Le campagne imparano dai dati che vedono. |
@@ -60,7 +60,7 @@ Gabri non inventa storie: le prende dalle sue risposte. Antonio risponde con un 
 
 1. **Una sola idea**, detta nella prima riga. La prima riga regge da sola, senza "ecco perché" o "thread".
 2. **Sotto le 120 parole** (o il limite del formato). Tagliato tutto quello che si può tagliare.
-3. **Suona come lui**: riletto contro `voce-antonio.md` (tono tranquillo, frasi che scorrono, niente imperativi a raffica, contesto e non bianco o nero, "I", al massimo una faccina in fondo).
+3. **Suona come lui**: riletto contro `voce-antonio.md` (il suo pensiero in prima persona, nessun consiglio né imperativo, giocoso e mai arrogante, pro AI, frasi che scorrono, al massimo una faccina in fondo).
 4. **Vero**: ogni fatto viene dalle sue risposte, email o appunti; ogni numero da `docs/dati-verificati.md`, clienti solo in percentuale o indice.
 5. **Niente contro di noi**: nessuna lacuna, scusa o "non ancora". Le critiche vanno a piattaforme, abitudini e hype, mai a clienti, lead o colleghi con nome.
 6. **Residenza**: niente che lo faccia sembrare basato in Italia.

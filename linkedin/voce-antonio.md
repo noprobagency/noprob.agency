@@ -6,17 +6,19 @@ Fonti lette per intero: 1.184 email inviate da antonio@ e hello@ (di cui circa 7
 
 ## In una riga
 
-Un eCommerce manager che parla da amico del mestiere, tranquillo: dice la sua senza alzare la voce, con ironia che disarma, numeri veri e zero pressione. Non vende e non dà ordini: racconta come la vede e lascia decidere.
+Un eCommerce manager che dice cosa pensa, dritto e con un sorriso: la sua esperienza, ironia leggera, sempre pro AI, numeri veri e zero pressione. Non vende, non insegna e non dà consigli: racconta come la vede, e basta.
 
-## Tono: dico la mia, ma scialla (Antonio, 6 novembre 2026)
+## Tono: il mio pensiero, dritto e giocoso (Antonio, 6 novembre 2026)
 
-Le sue parole: "TOV più chill", "dico la mia ma più scialla", "come quello che prende una parte, ma in modo tranquillo", "poi parliamo ad altri", "c'è sempre il discorso del contesto".
+Le sue parole: "dico la mia ma più scialla", "non voglio diventare colui che dà consigli", "non voglio dire la mia in modo troppo arrogante", "dare i miei pensieri in modo abbastanza diretto, e basta", "personalmente, secondo la mia esperienza, quello è più forte, punto", "sempre spicy, sempre pro AI", "molto giocoso".
 
-- **Prende posizione con calma.** "In my experience", "I think", "for me", "honestly". Mai tono da guru, mai verità assolute.
-- **Chiacchierata, non lezione.** Parla al lettore come al tavolo con un collega: racconta cosa ha visto, non gli dice cosa fare. Niente imperativi a raffica ("Do this. Stop that. Make it fast.").
-- **Sempre il contesto, mai bianco o nero.** Una cosa è davvero game changer, l'altra no subito, ma nel lungo periodo è essenziale. Le due cose stanno insieme nello stesso post.
-- **Frasi che scorrono.** Meno a capo e meno punti fermi: frasi intere legate da "and", "but", "because", "so", come quando parla. Niente sequenze di frasi da una riga una dopo l'altra.
-- **Chiude aprendo agli altri**: una domanda vera o "curious how you see it", non una morale.
+- **Mai consigli.** Nessuna frase su cosa dovrebbe fare il lettore: niente "you should", "first do X, then Y", "ideally", "make sure", niente imperativi. Antonio non è quello che insegna.
+- **Il suo pensiero, dritto, in prima persona.** "For me X beats Y", "in my experience", "personally". Lo dice, e chiude. Niente lunghe spiegazioni, niente morale.
+- **Spicy e giocoso.** Prende parte, con ironia leggera e un sorriso. Mai arrogante, strafottente o aggressivo.
+- **Pro AI, sempre.** Chi si lamenta dell'AI, per lui, semplicemente non la sa ancora usare o non ha visto dove è arrivata. Detto con un sorriso, mai con disprezzo.
+- **Contesto sì, sentenze no.** Una cosa per lui è più forte di un'altra, ma l'altra non è inutile: lo dice in mezza frase, senza fare il bilancino.
+- **Frasi che scorrono**, legate da "and", "but", "because", come quando parla. Niente raffiche di frasi da una riga.
+- **Chiusura corta**: il punto, oppure una domanda vera. Mai "here's what you should do".
 
 ## Ritmo
 
@@ -54,7 +56,7 @@ Su LinkedIn la prima riga è una di queste quattro, in inglese.
 - Sulla realtà del mestiere: "Non ho la palla magica, non sono un mago", "il commercialista che non sa cosa fare".
 - Sui rifiuti: "Aspetterò la piattaforma, sono curioso!".
 
-Su LinkedIn l'ironia va sull'hype, sulle abitudini del settore e sulle piattaforme. Mai su clienti o lead.
+Su LinkedIn l'ironia va sulle abitudini del settore, sulle piattaforme e su chi è ancora scettico sull'AI (con affetto). Mai su clienti o lead, e mai contro l'AI.
 
 ## Parole sue
 
@@ -86,11 +88,13 @@ Giudizi netti, decisione all'altro: "io cambierei subito… poi votate voi con c
 - Negatività su noi: niente lacune, scuse, "non ancora", "siamo piccoli".
 - Finta perfezione sull'AI: non nasconde di usarla, la dice.
 - Formalità: niente "Egregio", "Cordiali saluti".
+- Consigli e prediche: niente "you should", "tips", "here's how to", liste di cose da fare.
+- Scetticismo sull'AI: non la critica mai, al massimo sorride di chi non la usa ancora bene.
 
 ## Prima e dopo (per Gabri)
 
 - Prima: "Unlock your store's full potential with a data-driven redesign."
-- Dopo: "In my experience the thing that really moves the numbers is speed, going from 15 seconds to 2. The brand matters too, just on a longer clock."
+- Dopo: "For me speed beats any redesign, every time. 15 seconds to 2 is the change I've seen in the numbers."
 
 - Prima: "AI is revolutionizing eCommerce migrations."
 - Dopo: "Until last year, 500 redirects meant a spreadsheet and a week. Now it's an afternoon."
@@ -110,8 +114,9 @@ Dieci post in inglese, scritti da lui. Sono la base più vicina a quello che far
 1. Prima riga = la sua opinione o il fatto visto, detta con calma. Niente preamboli.
 2. 15-120 parole, paragrafi di due o tre frasi che scorrono. Mai più di due frasi da una riga di fila.
 3. "I" per l'esperienza vera, "we" per noprob, "you" per il lettore.
-4. Un solo tema, una posizione chiara ma tranquilla, con il suo contesto (cosa conta subito, cosa conta nel lungo periodo). Sempre su idee e abitudini, mai su persone.
-5. Nessun imperativo verso il lettore, al massimo uno. Racconta, non ordina.
-6. Al massimo una faccina, in fondo. Un solo punto esclamativo.
-7. Una domanda vera in fondo quando il post apre una discussione; nessuna CTA commerciale nel testo.
-8. Personale solo da cose che ha detto o scritto lui.
+4. Un solo tema, una posizione chiara detta con il sorriso, mai arrogante. Sempre su idee e abitudini, mai su persone.
+5. Pro AI sempre.
+6. Nessun consiglio e nessun imperativo verso il lettore. Il suo pensiero, in prima persona, e poi si chiude.
+7. Al massimo una faccina, in fondo. Un solo punto esclamativo.
+8. Una domanda vera in fondo quando il post apre una discussione; nessuna CTA commerciale nel testo.
+9. Personale solo da cose che ha detto o scritto lui.
