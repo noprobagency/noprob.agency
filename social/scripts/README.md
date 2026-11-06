@@ -2,7 +2,7 @@
 
 Dal 6 novembre 2026, per ordine di Antonio, i post approvati escono da soli ogni giorno. Nessuna AI nel giro: uno script legge la coda e pubblica il post del giorno.
 
-- **Script**: `pubblica.py x|threads [--dry-run]`. La copia che gira sta in `~/Library/Application Support/noprob-gabri/`, insieme a `coda.json` (la coda, privata) e `log.txt`. `social/private/coda.json` nella worktree è un link a quella coda.
+- **Script**: `pubblica.py x|threads [--dry-run]`. La copia che gira sta in `~/Library/Application Support/noprob-gabri/` con `log.txt`. La coda è nel repo privato del CRM, `gabri/coda.json`: lo script fa pull prima di leggere e la aggiorna con il commit del diario. Claudio la legge ogni giorno e manda ad Antonio su Telegram i post di oggi e di domani, anche a Mac spento.
 - **Orari** (launchd, ora di Lisbona): X alle 9:30, Threads alle 18:30, tutti i giorni. Se in coda non c'è niente per oggi, non pubblica. Se il Mac dorme, parte al risveglio; se resta spento tutto il giorno, il post salta.
 - **X**: con treg (`x.x.post.create`, account @ManittaHello collegato da Antonio), circa $0,015 a post, solo testo.
 - **Threads**: API di Meta, token nel Portachiavi (`gabri-threads-token`), account @west_marney. Lo script rinnova il token quando mancano meno di 10 giorni alla scadenza.

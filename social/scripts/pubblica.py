@@ -18,9 +18,9 @@ import urllib.request
 
 HOME = os.path.expanduser("~")
 RUN = os.path.join(HOME, "Library/Application Support/noprob-gabri")
-CODA = os.path.join(RUN, "coda.json")
 LOG = os.path.join(RUN, "log.txt")
 CRM = os.path.join(HOME, "Documents/noprobagency/cold-email/data/crm")
+CODA = os.path.join(CRM, "gabri/coda.json")  # in the private CRM repo, read by Claudio for Telegram
 TREG = os.path.join(HOME, ".local/bin/treg")
 GRAPH = "https://graph.threads.net/v1.0"
 
@@ -96,6 +96,7 @@ def diario(msg):
 def main():
     canale = sys.argv[1]
     dry = "--dry-run" in sys.argv
+    subprocess.run(["git", "-C", CRM, "pull", "-q", "--rebase"], timeout=60)
     coda = json.load(open(CODA))
     today = datetime.date.today().isoformat()
     todo = [p for p in coda["post"] if p["data"] == today and p["canale"] == canale]
@@ -126,6 +127,7 @@ def main():
         return
     p.update(stato="pubblicato", id=pid, url=url, pubblicato_alle=datetime.datetime.now().isoformat(timespec="minutes"))
     json.dump(coda, open(CODA, "w"), indent=1, ensure_ascii=False)
+    subprocess.run(["git", "-C", CRM, "add", CODA])
     log(f"{canale}: pubblicato '{p['tema']}' {url}")
     diario(f"Pubblicato su {'X' if canale == 'x' else 'Threads'}: {p['tema']}. {url}")
 
