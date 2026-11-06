@@ -55,5 +55,9 @@ Stati: `da fare`, `in corso`, `fatto (data, PR)`, `bloccato (motivo)`.
 | 45 | 4 nov | Articolo nuovo "Shopify Plus migration", EN e IT: cambio di piano o migrazione, checkout, cosa è solo Plus, costi; `/blog/shopify-plus` ricentrato su quando conviene (misura 2 nov) | shopify plus migration, migrate to shopify plus | team | fatto (4 nov, PR #199) |
 | 46 | 4 nov | Link interni con anchor "migrazione Shopify" dai due articoli IT in alto (costo, agenzia) e dalle versioni EN verso la guida alla migrazione (misura 2 nov) | migrazione shopify | team | fatto (4 nov, PR #198) |
 | 47 | 4 nov | Garanzie dello Sprint alla lettera in articoli e pagina ambassador (ordine di Antonio via Claudio) | | team | fatto (4 nov, PR #200) |
+| 48 | 6 nov | Indicizzazione senza estensione Chrome: sitemap rinviata via API Search Console (treg) e IndexNow a ogni giro del task; Chrome solo come acceleratore | | Francesca | fatto (6 nov, nessuna PR) |
+| 49 | 6 nov | Anchor descrittive verso lo Sprint ("Shopify migration service", "servizio di migrazione a Shopify") in 6 articoli e nella guida, regola nel runbook (misura 6 nov: Sprint con 3 impressioni in un mese) | shopify migration services, shopify migration agency | team | fatto (6 nov, PR #213) |
+| 50 | 6 nov | Articolo Magento: title sulla query, checklist della migrazione, link descrittivo allo Sprint (misura 6 nov) | magento to shopify migration | team | fatto (6 nov, PR #215) |
+| 51 | 6 nov | Articolo GEO vs SEO: title, H1 e lede su "GEO vs SEO for eCommerce" (posizione 8), link descrittivo allo Sprint (misura 6 nov) | geo vs seo for ecommerce | team | fatto (6 nov, PR #216) |
 
 Misura: `/seo monitora`, la lancia Antonio, idealmente una volta a settimana.
