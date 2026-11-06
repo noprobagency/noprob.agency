@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.156.0 (6 Nov 2026)
+
+- **GEO vs SEO for eCommerce**: the article sits at position 8 for "geo vs seo for ecommerce". Title, H1 and lede now carry the query (IT "GEO vs SEO per l'eCommerce"), and the body link to the Sprint has a descriptive anchor. Calendar rows 48-51 for today's work (indexing via the Search Console API, Sprint anchors, Magento, GEO).
+
 ### Changelog v1.155.0 (6 Nov 2026)
 
 - **Damiano, Hunter messages on stderr**: the two Hunter messages (query refused, retry after a rate limit) went to stdout, mixed into the JSON summary. In the cloud job the summary line failed to parse and the `hunter retries` count was always 0, because it reads the progress log. They now go to stderr with the other progress lines.

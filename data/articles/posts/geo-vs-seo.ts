@@ -3,10 +3,10 @@ import type { Article } from '../index'
 const article: Article = {
   slug: 'geo-vs-seo',
   slugIt: 'geo-vs-seo',
-  title: 'GEO vs SEO for Shopify Stores: What Changes and What to Do First',
-  titleIt: 'GEO vs SEO per uno store Shopify: cosa cambia e cosa fare prima',
-  seoTitle: 'GEO vs SEO for Shopify Stores: What to Do First',
-  seoTitleIt: 'GEO vs SEO per Shopify: cosa fare prima',
+  title: 'GEO vs SEO for eCommerce: What Changes for Shopify Stores and What to Do First',
+  titleIt: 'GEO vs SEO per l’eCommerce: cosa cambia per uno store Shopify e cosa fare prima',
+  seoTitle: 'GEO vs SEO for eCommerce: What to Do First',
+  seoTitleIt: 'GEO vs SEO per l’eCommerce: cosa fare prima',
   seoDescription:
     'GEO vs SEO for a Shopify store: what each task does for Google and for ChatGPT, Perplexity and AI Overviews, and the order to do them in.',
   seoDescriptionIt:
@@ -16,16 +16,16 @@ const article: Article = {
   excerptIt:
     'GEO vs SEO per uno store Shopify, attività per attività: dati prodotto, schema, recensioni, feed, llms.txt e menzioni su altri siti, con l’effetto di ciascuna su Google e sulle risposte AI, e la regola su cosa fare prima.',
   ledeEn:
-    'GEO vs SEO, for a Shopify store, is not a choice between two jobs. It is one list of tasks, and each task helps Google, the AI assistants or both. Here is the list, task by task, and the order we would do it in.',
+    'GEO vs SEO for eCommerce is not a choice between two jobs: for a Shopify store it is one list of tasks, and each task helps Google, the AI assistants or both. Here is the list, task by task, and the order we would do it in.',
   ledeIt:
-    'GEO vs SEO, per uno store Shopify, non è una scelta tra due lavori. È un’unica lista di attività, e ognuna aiuta Google, gli assistenti AI o tutti e due. Ecco la lista, attività per attività, e l’ordine in cui la faremmo.',
+    'GEO vs SEO per l’eCommerce non è una scelta tra due lavori: per uno store Shopify è un’unica lista di attività, e ognuna aiuta Google, gli assistenti AI o tutti e due. Ecco la lista, attività per attività, e l’ordine in cui la faremmo.',
   image: '/images/blog/geo-vs-seo-cover.png',
   imageAlt: 'Copertina astratta, sfondo sabbia sfumato, con un’onda di puntini di dimensione variabile',
   imageAltEn: 'Abstract cover, softly graded sand background with a wave of dots changing size',
   articleType: 'BlogPosting',
   date: '2026-10-29',
   datePublishedIso: '2026-10-29T09:00:00+00:00',
-  dateModifiedIso: '2026-10-29T09:00:00+00:00',
+  dateModifiedIso: '2026-11-06T12:00:00+00:00',
   wordCount: 2200,
   articleSection: 'AI search and GEO',
   readingTimeMinutes: 9,
@@ -181,7 +181,7 @@ const article: Article = {
     { type: 'h2', text: 'How do we build both into a Shopify store?' },
     {
       type: 'paragraph',
-      text: '**In the [Shopify Launch Sprint](/shopify-migration-sprint), our Custom AI System builds the data side into the store from day one: product data, structured data and an automatic GEO layer, in a store ready for AI agents.** Every new product is born with schema and data. A migration is also the riskiest moment for SEO, so the redirects come first: see our [guide to migrating to Shopify](/shopify-migration). The Sprint takes 14 days, go-live is between day 15 and 30, and 90 days of support follow.',
+      text: '**In the Shopify Launch Sprint, our [Shopify migration service](/shopify-migration-sprint), the Custom AI System builds the data side into the store from day one: product data, structured data and an automatic GEO layer, in a store ready for AI agents.** Every new product is born with schema and data. A migration is also the riskiest moment for SEO, so the redirects come first: see our [guide to migrating to Shopify](/shopify-migration). The Sprint takes 14 days, go-live is between day 15 and 30, and 90 days of support follow.',
     },
     {
       type: 'paragraph',
@@ -379,7 +379,7 @@ const article: Article = {
     { type: 'h2', text: 'Come costruiamo entrambe in uno store Shopify?' },
     {
       type: 'paragraph',
-      text: '**Nello [Shopify Launch Sprint](/it/sprint-migrazione-shopify) il nostro Custom AI System costruisce la parte di dati nello store fin dal primo giorno: dati prodotto, dati strutturati e un livello GEO automatico, in uno store pronto per gli agenti AI.** Ogni nuovo prodotto nasce con schema e dati. Una migrazione è anche il momento più rischioso per la SEO, quindi i redirect vengono prima: vedi la nostra [guida alla migrazione a Shopify](/it/migrazione-shopify). Lo Sprint dura 14 giorni, il go-live è tra il giorno 15 e il 30, e seguono 90 giorni di supporto.',
+      text: '**Nello Shopify Launch Sprint, il nostro [servizio di migrazione a Shopify](/it/sprint-migrazione-shopify), il Custom AI System costruisce la parte di dati nello store fin dal primo giorno: dati prodotto, dati strutturati e un livello GEO automatico, in uno store pronto per gli agenti AI.** Ogni nuovo prodotto nasce con schema e dati. Una migrazione è anche il momento più rischioso per la SEO, quindi i redirect vengono prima: vedi la nostra [guida alla migrazione a Shopify](/it/migrazione-shopify). Lo Sprint dura 14 giorni, il go-live è tra il giorno 15 e il 30, e seguono 90 giorni di supporto.',
     },
     {
       type: 'paragraph',
