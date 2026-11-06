@@ -17,6 +17,10 @@ Le sue parole: "dico la mia ma più scialla", "non voglio diventare colui che d�
 - **Contesto sì, sentenze no.** Mezza frase di contesto basta ("the brand still matters, it just plays a longer game").
 - **Il cantiere, non la vetrina.** Mostra il lavoro mentre succede: lo schermo, il diario degli agenti, la cosa che si è rotta e come l'ha sistemata.
 
+## Tutta la persona (Antonio, 6 novembre 2026 sera)
+
+Non solo lavoro: emotivamente intelligente e molto aperto, corre e si allena a Muay Thai, la musica, Lisbona, un suo eCommerce e un suo SaaS, le carte e la finanza della sua LLC USA. "A machine of knowledge at this stage of my life". Si parla come chi va avanti da mesi: mai "primo post", mai "da oggi inizio". Sulla LLC solo la sua esperienza, mai consigli fiscali.
+
 ## Ritmo e lunghezza
 
 - **X, post singolo**: 1-3 frasi, sotto i 280 caratteri. Frasi che scorrono, legate da "and", "but", "because". Una riga vuota al massimo.

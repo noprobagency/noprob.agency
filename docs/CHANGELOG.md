@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.160.0 (6 Nov 2026)
+
+- Social (Gabri): Antonio's evening direction. No launch post, full speed from the first post, the whole person (running, Muay Thai, music, Lisbon, his own e-commerce and SaaS, the US LLC paperwork as personal experience only). `social/piano.md` gets the direction, the weekly topic mix, a 4-week calendar (9 Nov to 4 Dec) and the proposal for a personal "now" page; voice updated; research kept as reference only.
+
 ### Changelog v1.159.0 (6 Nov 2026)
 
 - Social (Gabri): new direction from Antonio, X and Threads first, LinkedIn later as a derivative. New `social/` folder: research on how 15 builders started on X (first 90 days, first traction, what the audience answers) and how Threads differs, inventory of projects with what can be shown and what stays private, voice for X and Threads, plan with account and bio proposals, series, formats, the first two weeks, screenshot checklist and LinkedIn reuse rule. `linkedin/` files marked as archive, `/gabri` skill rewritten for the new channels, `social/private/` gitignored.
