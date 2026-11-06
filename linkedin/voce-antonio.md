@@ -1,5 +1,7 @@
 # La voce di Antonio
 
+> **Archivio (6 novembre 2026).** Antonio ha cambiato direzione: X e Threads per primi, LinkedIn solo più avanti come derivato. Il piano attivo è in `social/`. Questo file resta come riferimento per il comando `/gabri linkedin`.
+
 Guida di Gabri per i post LinkedIn di Antonio Manitta, 5 novembre 2026. Vince su `riferimenti.md`: dai riferimenti si prende il mestiere del post, la voce resta questa.
 
 Fonti lette per intero: 1.184 email inviate da antonio@ e hello@ (di cui circa 70 scritte davvero da lui, a mano, pesate di più; il resto sono campagne a template e report), le sue risposte ai lead nel CRM, la sequenza v2 che ha scritto lui (`lib/cold-email/sequence.mjs`), le interviste di Veronica (chiamata di vendita del 29 ottobre 2026 e appunti), la skill `seo-voce`, il copy del sito, i suoi 10 post LinkedIn (febbraio e marzo 2026, profilo `antoniomanitta`). Grezzi in `linkedin/private/`. Gli esempi sotto sono frasi sue, senza destinatari.

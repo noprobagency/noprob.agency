@@ -1,5 +1,7 @@
 # Riferimenti LinkedIn: i tre profili Fletch
 
+> **Archivio (6 novembre 2026).** Antonio ha cambiato direzione: X e Threads per primi, LinkedIn solo più avanti come derivato. Il piano attivo è in `social/`. Questo file resta come riferimento per il comando `/gabri linkedin`.
+
 Analisi di Gabri, 5 novembre 2026. Servono a capire **come** si fa un post che si legge e si commenta, non **cosa** dire: Antonio resta se stesso. Mai copiare frasi, battute o strutture riconoscibili di questi post.
 
 Fonte: tutti i post pubblici accessibili, scaricati con treg (provider Fetchin, `fetchinio.linkedin.user.posts`). Grezzi in `linkedin/private/` (gitignored). Le misure sotto sono sugli ultimi 6 mesi (maggio → novembre 2026), dove non è scritto altro. "Interazioni" = reazioni più commenti, mediana.

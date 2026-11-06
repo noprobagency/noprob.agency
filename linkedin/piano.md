@@ -1,5 +1,7 @@
 # Piano LinkedIn di Antonio
 
+> **Archivio (6 novembre 2026).** Antonio ha cambiato direzione: X e Threads per primi, LinkedIn solo più avanti come derivato. Il piano attivo è in `social/`. Questo file resta come riferimento per il comando `/gabri linkedin`.
+
 Gabri, 5 novembre 2026. Profilo personale di Antonio Manitta, post in inglese. Voce: `voce-antonio.md`. Riferimenti: `riferimenti.md`. Pubblica sempre Antonio.
 
 ## Regole del piano
