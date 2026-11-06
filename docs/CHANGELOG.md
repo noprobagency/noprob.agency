@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.164.0 (6 Nov 2026)
+
+- Social (Gabri): the post queue moves to the private CRM repo (`gabri/coda.json`), so Claudio can send Antonio today's and tomorrow's posts on Telegram even with the Mac off; the publishing script pulls it before posting and commits it with the diary entry.
+
 ### Changelog v1.163.0 (6 Nov 2026)
 
 - Social (Gabri): automatic publishing. `social/scripts/pubblica.py` posts today's approved item from a private queue, X at 9:30 through treg and Threads at 18:30 through the Meta API (token in the Keychain, refreshed by the script), both run by launchd; posts with placeholders wait for Antonio; every outcome goes in the CRM diary.
