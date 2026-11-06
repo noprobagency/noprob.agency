@@ -58,6 +58,6 @@ Stati: `da fare`, `in corso`, `fatto (data, PR)`, `bloccato (motivo)`.
 | 48 | 6 nov | Indicizzazione senza estensione Chrome: sitemap rinviata via API Search Console (treg) e IndexNow a ogni giro del task; Chrome solo come acceleratore | | Francesca | fatto (6 nov, nessuna PR) |
 | 49 | 6 nov | Anchor descrittive verso lo Sprint ("Shopify migration service", "servizio di migrazione a Shopify") in 6 articoli e nella guida, regola nel runbook (misura 6 nov: Sprint con 3 impressioni in un mese) | shopify migration services, shopify migration agency | team | fatto (6 nov, PR #213) |
 | 50 | 6 nov | Articolo Magento: title sulla query, checklist della migrazione, link descrittivo allo Sprint (misura 6 nov) | magento to shopify migration | team | fatto (6 nov, PR #215) |
-| 51 | 6 nov | Articolo GEO vs SEO: title, H1 e lede su "GEO vs SEO for eCommerce" (posizione 8), link descrittivo allo Sprint (misura 6 nov) | geo vs seo for ecommerce | team | fatto (6 nov, PR #216) |
+| 51 | 6 nov | Articolo GEO vs SEO: title, H1 e lede su "GEO vs SEO for eCommerce" (posizione 8), link descrittivo allo Sprint (misura 6 nov) | geo vs seo for ecommerce | team | fatto (6 nov, PR #217) |
 
 Misura: `/seo monitora`, la lancia Antonio, idealmente una volta a settimana.
