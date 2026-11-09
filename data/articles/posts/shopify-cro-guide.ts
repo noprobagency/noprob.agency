@@ -25,14 +25,14 @@ const article: Article = {
   articleType: 'Article',
   date: '2026-05-06',
   datePublishedIso: '2026-05-06T14:00:00+02:00',
-  dateModifiedIso: '2026-11-04T20:00:00+00:00',
-  wordCount: 2783,
+  dateModifiedIso: '2026-11-09T11:00:00+00:00',
+  wordCount: 2950,
   articleSection: 'CRO',
   readingTimeMinutes: 11,
   keywordsEn:
-    'shopify cro, shopify conversion rate optimization, ecommerce cro, product page optimization, how to increase shopify conversion rate, ecommerce cro tips',
+    'shopify cro, shopify conversion rate optimization, ecommerce cro, product page optimization, how to increase shopify conversion rate, ecommerce cro tips, shopify cro services',
   keywordsIt:
-    "cro ecommerce, cos'è il cro, ottimizzare tasso conversione, scheda prodotto ecommerce, conversioni shopify, cro shopify, cro per shopify",
+    "cro ecommerce, cos'è il cro, ottimizzare tasso conversione, scheda prodotto ecommerce, conversioni shopify, cro shopify, cro per shopify, servizio cro shopify",
   faqEn: [
     {
       question: 'What is Shopify CRO?',
@@ -58,6 +58,11 @@ const article: Article = {
       question: 'How do I increase my Shopify conversion rate quickly?',
       answer:
         'Cut the claims to the three strongest, add a photo with a hand using the product, move reviews up the page and send review requests only after the product has been used.',
+    },
+    {
+      question: 'What should a Shopify CRO service include?',
+      answer:
+        'A ranked list of changes to product page, cart and checkout, each tied to your data or a named study, the changes shipped on the store, and a way to measure them. Ask who implements the work: a report you apply yourself is a different service.',
     },
     {
       question: 'How does CRO compare to investing in advertising?',
@@ -90,6 +95,11 @@ const article: Article = {
       question: 'Come aumento in fretta il tasso di conversione su Shopify?',
       answer:
         "Riduci i claim ai tre più forti, aggiungi una foto con una mano che usa il prodotto, porta le recensioni più in alto nella pagina e chiedi la recensione solo dopo che il prodotto è stato usato.",
+    },
+    {
+      question: 'Cosa deve includere un servizio CRO per Shopify?',
+      answer:
+        'Una lista ordinata di modifiche a scheda prodotto, carrello e checkout, ognuna legata ai tuoi dati o a uno studio citato, le modifiche messe online e un modo per misurarle. Chiedi chi le implementa: un report da applicare da solo è un altro servizio.',
     },
     {
       question: 'Quanto impatta il CRO rispetto a investire in advertising?',
@@ -322,6 +332,20 @@ const article: Article = {
       type: 'paragraph',
       text: 'Verify the timing of your post-purchase email flow. If you are sending review requests right after delivery, you are collecting feedback before the product has been used.',
     },
+    { type: 'h2', text: 'What should a Shopify CRO service deliver?' },
+    {
+      type: 'paragraph',
+      text: 'A Shopify CRO service should deliver a ranked list of changes to the pages that decide a purchase, each tied to your store’s data or to a named study, the changes actually shipped, and a way to tell whether they worked. Before you hire one, ask four questions:',
+    },
+    {
+      type: 'list',
+      items: [
+        '**Which page do you start from, and why?** The answer should come from where your shoppers drop between product page, cart and checkout, not from a template.',
+        '**Where does each recommendation come from?** Your analytics, a test, or a study you can read, as in this guide.',
+        '**How will you measure it?** A reliable A/B test usually needs several thousand sessions per variant. With less traffic, ask how they will compare before and after instead.',
+        '**Who ships the changes?** Ask whether theme, copy and app changes are included, or whether you receive a report to implement yourself.',
+      ],
+    },
     { type: 'h2', text: 'Shopify CRO during a migration, and after' },
     {
       type: 'paragraph',
@@ -329,7 +353,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'If you are already on Shopify and want conversion work every month, the [Data-Driven Team](/data-driven-team) does it, as for [Cumini](/use-cases/cumini-luxury-fashion-ecommerce).',
+      text: 'If you are already on Shopify and want conversion work every month, the Data-Driven Team, our [dedicated Shopify CRO team](/data-driven-team), does it, as for [Cumini](/use-cases/cumini-luxury-fashion-ecommerce).',
     },
     {
       type: 'paragraph',
@@ -360,6 +384,11 @@ const article: Article = {
     {
       type: 'paragraph',
       text: 'Cut the claims to the three strongest, add a photo with a hand using the product, move reviews up the page and send review requests only after the product has been used.',
+    },
+    { type: 'h3', text: 'What should a Shopify CRO service include?' },
+    {
+      type: 'paragraph',
+      text: 'A ranked list of changes to product page, cart and checkout, each tied to your data or a named study, the changes shipped on the store, and a way to measure them. Ask who implements the work: a report you apply yourself is a different service.',
     },
     { type: 'h3', text: 'How does CRO compare to investing in advertising?' },
     {
@@ -604,6 +633,20 @@ const article: Article = {
       type: 'paragraph',
       text: 'Verifica il timing delle email post-acquisto. Se stai mandando richieste di recensione subito dopo la consegna, stai raccogliendo feedback prima che il prodotto sia stato usato.',
     },
+    { type: 'h2', text: 'Cosa deve consegnare un servizio CRO per Shopify?' },
+    {
+      type: 'paragraph',
+      text: 'Un servizio CRO per Shopify deve consegnare una lista ordinata di modifiche alle pagine che decidono l’acquisto, ognuna legata ai dati del tuo store o a uno studio citato, le modifiche messe davvero online e un modo per capire se hanno funzionato. Prima di sceglierne uno, fai quattro domande:',
+    },
+    {
+      type: 'list',
+      items: [
+        '**Da quale pagina partite, e perché?** La risposta deve venire da dove i tuoi clienti abbandonano tra scheda prodotto, carrello e checkout, non da un modello.',
+        '**Da dove viene ogni raccomandazione?** Dai tuoi dati, da un test o da uno studio che puoi leggere, come in questa guida.',
+        '**Come lo misurate?** Un test A/B affidabile richiede di solito alcune migliaia di sessioni per variante. Con meno traffico, chiedi come confronteranno il prima e il dopo.',
+        '**Chi mette online le modifiche?** Chiedi se tema, testi e app sono inclusi, o se ricevi un report da applicare da solo.',
+      ],
+    },
     { type: 'h2', text: 'CRO per Shopify durante una migrazione e dopo' },
     {
       type: 'paragraph',
@@ -611,7 +654,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Se sei già su Shopify e vuoi lavorare sulla conversione ogni mese, lo fa il [Data-Driven Team](/it/team-ecommerce-dedicato), come per [Cumini](/it/casi-studio/cumini-luxury-fashion-ecommerce).',
+      text: 'Se sei già su Shopify e vuoi lavorare sulla conversione ogni mese, lo fa il Data-Driven Team, il nostro [team dedicato al CRO per Shopify](/it/team-ecommerce-dedicato), come per [Cumini](/it/casi-studio/cumini-luxury-fashion-ecommerce).',
     },
     {
       type: 'paragraph',
@@ -642,6 +685,11 @@ const article: Article = {
     {
       type: 'paragraph',
       text: 'Riduci i claim ai tre più forti, aggiungi una foto con una mano che usa il prodotto, porta le recensioni più in alto nella pagina e chiedi la recensione solo dopo che il prodotto è stato usato.',
+    },
+    { type: 'h3', text: 'Cosa deve includere un servizio CRO per Shopify?' },
+    {
+      type: 'paragraph',
+      text: 'Una lista ordinata di modifiche a scheda prodotto, carrello e checkout, ognuna legata ai tuoi dati o a uno studio citato, le modifiche messe online e un modo per misurarle. Chiedi chi le implementa: un report da applicare da solo è un altro servizio.',
     },
     { type: 'h3', text: 'Quanto impatta il CRO rispetto a investire in advertising?' },
     {
