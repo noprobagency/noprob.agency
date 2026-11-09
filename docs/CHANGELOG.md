@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.166.0 (9 Nov 2026)
+
+- SEO: the Magento to Shopify article now answers how to import products (CSV, app or API, with Shopify's bulk options per data type), covers Magento 1 and adds two FAQs, IT and EN, from Search Console queries of the last 28 days. Sources in docs/dati-verificati.md.
+
 ### Changelog v1.165.0 (6 Nov 2026)
 
 - Cold outreach opt-outs: whoever says no on the direct channel (antonio@) now blocks the whole store in the shared opt-out list (email and @domain, never a private mailbox domain), so Ada's LinkedIn lists, which often have only the website, stop that store too. The 3-hourly opt-out sweep in the cloud now covers Dante's list (hello@) as well, not only at the 8:30 review.

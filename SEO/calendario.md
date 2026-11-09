@@ -60,6 +60,6 @@ Stati: `da fare`, `in corso`, `fatto (data, PR)`, `bloccato (motivo)`.
 | 50 | 6 nov | Articolo Magento: title sulla query, checklist della migrazione, link descrittivo allo Sprint (misura 6 nov) | magento to shopify migration | team | fatto (6 nov, PR #215) |
 | 51 | 6 nov | Articolo GEO vs SEO: title, H1 e lede su "GEO vs SEO for eCommerce" (posizione 8), link descrittivo allo Sprint (misura 6 nov) | geo vs seo for ecommerce | team | fatto (6 nov, PR #217) |
 | 52 | 6 nov | Anchor descrittive verso lo Sprint, seconda tornata: 6 articoli che non ne avevano (CRO, MCP, redirect 301, Shopify vs WooCommerce, migrazione con agenti, come funziona Shopify), anchor variate | shopify migration service | team | fatto (6 nov, PR #219) |
-| 53 | 6 nov | Rimisura delle posizioni con un altro provider SERP (crawl4ai ha dato SERP incomplete il 6 nov) | | analista | in corso |
+| 53 | 6 nov | Rimisura delle posizioni con un altro provider SERP (crawl4ai ha dato SERP incomplete il 6 nov) | | analista | fatto (6 nov, nessuna PR: dati SERP inaffidabili, le posizioni si leggono da Search Console) |
 
 Misura: `/seo monitora`, la lancia Antonio, idealmente una volta a settimana.

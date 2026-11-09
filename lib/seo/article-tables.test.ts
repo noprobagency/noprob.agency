@@ -41,7 +41,7 @@ describe('article tables', () => {
     }
   })
 
-  it('exist in the nine articles that compare things side by side', () => {
+  it('exist in the ten articles that compare things side by side', () => {
     const withTables = articles.filter((a) => tables(a.content).length > 0).map((a) => a.slug)
     expect(withTables.sort()).toEqual(
       [
@@ -50,6 +50,7 @@ describe('article tables', () => {
         'claude-duet-shopify',
         'claude-shopify',
         'geo-vs-seo',
+        'magento-to-shopify-migration',
         'shopify-flow-ai',
         'shopify-mcp',
         'shopify-migration-ai-agents',
