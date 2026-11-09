@@ -2,19 +2,27 @@ import type { Locale } from '@/lib/i18n'
 import { ZL_TIERS } from '@/content/zero-loss-migration'
 
 /**
- * Copy module for the private Ambassador playbook.
+ * Copy module for the private Ambassador and White Label playbook.
  * Routes: it -> /it/ambassador, en -> /ambassador (noindex, not in sitemap).
  *
- * The page is shared by hand with potential referral partners: no CTAs, no
- * form. Money figures are derived from the Shopify Launch Sprint tiers
- * (`ZL_TIERS` in content/zero-loss-migration.shared.ts), so the commission
- * math always matches the public price of the landing.
+ * The page is shared by hand with referral partners (Ambassador) and with
+ * agencies that resell the Sprint under their own brand (White Label). Money
+ * figures are derived from the Shopify Launch Sprint tiers (`ZL_TIERS` in
+ * content/zero-loss-migration.shared.ts), so the math always matches the
+ * public price of the landing.
  */
 
 export const AMBASSADOR_TERMS = {
-  rate: 0.2,
+  /**
+   * Partner share of the tier price, rounded DOWN to the hundred:
+   * €5.800 -> €1.000, €8.800 -> €1.500, €12.800 -> €2.200.
+   */
+  rate: 0.175,
+  roundTo: 100,
   referralValidityMonths: 6,
   payoutDays: 30,
+  /** White label: months after the project in which we never approach the agency's client. */
+  whiteLabelNonSolicitMonths: 24,
   contactEmail: 'antonio@noprob.agency',
   whatsappDisplay: '+39 320 406 3459',
   whatsappUrl: 'https://wa.me/393204063459',
@@ -23,9 +31,23 @@ export const AMBASSADOR_TERMS = {
 /** The Sprint price tiers (by company revenue) are the single source of truth. */
 export const AMBASSADOR_TIERS = ZL_TIERS
 
-/** 20% of the Sprint price of a tier (VAT excluded). */
+/**
+ * Fixed partner amount for a Sprint tier price (VAT excluded): the ambassador
+ * commission and, in the white label program, the minimum agency margin.
+ */
 export function ambassadorCommission(price: number): number {
-  return Math.round(price * AMBASSADOR_TERMS.rate)
+  const { rate, roundTo } = AMBASSADOR_TERMS
+  return Math.floor((price * rate + 1e-9) / roundTo) * roundTo
+}
+
+/** White label: what the agency pays us for a tier (public price minus the partner amount). */
+export function whiteLabelPartnerPrice(price: number): number {
+  return price - ambassadorCommission(price)
+}
+
+/** White label: one of the 4 installments the agency pays us. */
+export function whiteLabelInstallment(price: number): number {
+  return whiteLabelPartnerPrice(price) / 4
 }
 
 export function formatEur(value: number, locale: Locale): string {
@@ -48,7 +70,57 @@ export type AmbassadorCopy = {
     tocLabel: string
     toc: { id: string; label: string }[]
   }
+  programs: {
+    label: string
+    heading: string
+    headingEm: string
+    intro: string
+    items: {
+      tag: string
+      title: string
+      forWho: string
+      points: string[]
+      earn: string
+      href: string
+      linkLabel: string
+    }[]
+  }
   summary: { label: string; heading: string; headingEm: string; steps: Item[] }
+  whiteLabel: {
+    label: string
+    heading: string
+    headingEm: string
+    intro: string
+    forWhoTitle: string
+    forWho: string[]
+    receiveTitle: string
+    receive: string[]
+    stepsTitle: string
+    steps: Item[]
+    earnTitle: string
+    earnIntro: string
+    publicLabel: string
+    partnerLabel: string
+    marginLabel: string
+    tiers: { label: string; publicPrice: string; partnerPrice: string; under: string; margin: string }[]
+    earnPoints: string[]
+    splitTitle: string
+    ourSideTitle: string
+    ourSide: string[]
+    yourSideTitle: string
+    yourSide: string[]
+    brandTitle: string
+    brand: string[]
+    guaranteesTitle: string
+    guarantees: string
+    faqTitle: string
+    faq: { question: string; answer: string }[]
+    ctaTitle: string
+    cta: string
+    ctaSubject: string
+    ctaEmailLabel: string
+    ctaWhatsappLabel: string
+  }
   commission: {
     label: string
     heading: string
@@ -210,30 +282,38 @@ const MIN = TIER1.price
 const COMMISSION = ambassadorCommission(TIER1.price)
 const C2 = ambassadorCommission(TIER2.price)
 const C3 = ambassadorCommission(TIER3.price)
+const WL1 = whiteLabelPartnerPrice(TIER1.price)
+const WL2 = whiteLabelPartnerPrice(TIER2.price)
+const WL3 = whiteLabelPartnerPrice(TIER3.price)
+const NS = T.whiteLabelNonSolicitMonths
+/** Illustrative resale price for the white label example (not a price we publish). */
+const EXAMPLE_RESALE = 7000
 
 const itEur = (n: number) => formatEur(n, 'it')
 const enEur = (n: number) => formatEur(n, 'en')
 
 const it: AmbassadorCopy = {
-  metaTitle: 'Programma Ambassador: Shopify Launch Sprint',
+  metaTitle: 'Ambassador e White Label: Shopify Launch Sprint',
   metaDescription:
-    'Il playbook per gli ambassador di noprob: lo Shopify Launch Sprint, il target, il pitch e il 20% di commissione su ogni migrazione portata.',
+    'Segnali una migrazione Shopify o la rivendi con il tuo marchio: lo Shopify Launch Sprint, il target, il pitch e da €1.000 a migrazione per te.',
   hero: {
-    label: 'programma ambassador',
-    badge: 'Programma referral per partner e consulenti',
-    titlePart1: 'Porta una migrazione Shopify. ',
-    titleEm: 'Guadagni il 20%.',
+    label: 'ambassador e white label',
+    badge: 'Per consulenti, partner e agenzie',
+    titlePart1: 'Segnala o rivendi una migrazione Shopify. ',
+    titleEm: `Guadagni da ${itEur(COMMISSION)}.`,
     lead:
-      'Questo è il playbook completo per collaborare con me come ambassador: cosa vendiamo, a chi, quanto costa, come presentarlo e quanto guadagni per ogni cliente che arriva da te. Tutto scritto, niente sorprese.',
+      'Questo è il playbook completo per lavorare con me in due modi. Ambassador: mi segnali un eCommerce e incassi una commissione fissa. White Label: la tua agenzia vende la migrazione con il suo marchio e noi la realizziamo dietro le quinte. Cosa vendiamo, a chi, quanto costa, come presentarlo e quanto guadagni. Tutto scritto, niente sorprese.',
     stats: [
-      { value: '20%', label: 'di commissione su ogni migrazione chiusa' },
-      { value: itEur(COMMISSION), label: `quello che guadagni sullo scaglione base (Sprint da ${itEur(MIN)}); fino a ${itEur(C3)} sugli scaglioni più alti` },
-      { value: '1ª rata', label: 'la commissione è confermata al primo pagamento del cliente' },
+      { value: itEur(COMMISSION), label: `commissione ambassador sullo scaglione base, fino a ${itEur(C3)} sugli scaglioni più alti` },
+      { value: `${itEur(COMMISSION)}+`, label: 'margine minimo per l’agenzia in white label, più tutto il ricarico che decidi tu' },
+      { value: '14 giorni', label: 'dal kickoff allo store pronto, con il tuo marchio o con il nostro' },
     ],
     tocLabel: 'In questo documento',
     toc: [
-      { id: 'come-funziona', label: 'Come funziona' },
+      { id: 'programmi', label: 'Ambassador o White Label' },
+      { id: 'come-funziona', label: 'Come funziona l’Ambassador' },
       { id: 'commissioni', label: 'Commissioni' },
+      { id: 'white-label', label: 'White Label per agenzie' },
       { id: 'offerta', label: 'L’offerta' },
       { id: 'materiali', label: 'Materiali' },
       { id: 'prezzo', label: 'Prezzo e costi' },
@@ -249,9 +329,196 @@ const it: AmbassadorCopy = {
       { id: 'faq', label: 'Domande frequenti' },
     ],
   },
+  programs: {
+    label: 'due programmi',
+    heading: 'Segnali o rivendi: ',
+    headingEm: 'scegli tu.',
+    intro:
+      'Stesso servizio, stessa qualità, stesso calendario di 14 giorni. Cambia chi parla con il cliente e quanto guadagni.',
+    items: [
+      {
+        tag: 'Ambassador',
+        title: 'Segnali, al resto pensiamo noi',
+        forWho: 'Per consulenti, freelance, fornitori e imprenditori che conoscono eCommerce pronti a passare a Shopify.',
+        points: [
+          'Mi presenti il cliente o chiudi tu la vendita',
+          'Il cliente firma con noi, al prezzo pubblico dello Sprint',
+          'Parla con noi e vede il nostro marchio',
+          'Nessun impegno dopo la segnalazione',
+        ],
+        earn: `Commissione fissa: ${itEur(COMMISSION)}, ${itEur(C2)} o ${itEur(C3)} per migrazione`,
+        href: '#come-funziona',
+        linkLabel: 'Come funziona l’Ambassador',
+      },
+      {
+        tag: 'White Label',
+        title: 'Rivendi con il tuo marchio',
+        forWho: 'Per agenzie che seguono eCommerce e vogliono offrire la migrazione a Shopify senza un team dedicato.',
+        points: [
+          'Vendi la migrazione come servizio della tua agenzia',
+          'Il cliente firma e paga te, al prezzo che decidi tu',
+          'Il cliente parla con te: noi lavoriamo dietro le quinte',
+          'Il cliente resta tuo, prima, durante e dopo',
+        ],
+        earn: `Margine da ${itEur(COMMISSION)} a ${itEur(C3)} per migrazione, più il tuo ricarico`,
+        href: '#white-label',
+        linkLabel: 'Come funziona il White Label',
+      },
+    ],
+  },
+  whiteLabel: {
+    label: 'white label per agenzie',
+    heading: 'La migrazione Shopify, ',
+    headingEm: 'con il marchio della tua agenzia.',
+    intro:
+      'I tuoi clienti eCommerce ti chiedono di passare a Shopify. Con il White Label la migrazione diventa un servizio della tua agenzia: tu vendi, tieni la relazione e decidi il prezzo, noi realizziamo lo Shopify Launch Sprint completo con il tuo nome. Stesso calendario di 14 giorni, stesse 4 garanzie scritte, nessun team da assumere.',
+    forWhoTitle: 'Per chi è',
+    forWho: [
+      'Agenzie di advertising, SEO, email marketing e social con clienti eCommerce',
+      'Web agency che lavorano su WooCommerce, PrestaShop o Magento e ricevono richieste Shopify',
+      'Agenzie Shopify che vogliono più capacità sulle migrazioni senza assumere',
+      'Consulenti eCommerce che seguono i clienti nel tempo e vogliono offrire anche il passaggio a Shopify',
+    ],
+    receiveTitle: 'Cosa ricevi',
+    receive: [
+      'Lo Shopify Launch Sprint completo: dati, store, redirect, tracking, checkout, go-live e 90 giorni di supporto',
+      'Tutti i documenti con il marchio della tua agenzia: Data Migration Report, Redirect Map, Tracking Spec, Go-live Checklist, report del giorno 90',
+      'Loom settimanali e aggiornamenti pensati per essere girati al tuo cliente così come sono',
+      'Se serve, il team partecipa alle videochiamate come team tecnico della tua agenzia',
+      'Se hai un account Shopify Partner, lavoriamo come collaboratori dal tuo account',
+      'Un canale diretto con Antonio per ogni progetto, per te e per il tuo account manager',
+      'Accordo di riservatezza firmato prima del primo progetto',
+    ],
+    stepsTitle: 'Come funziona, passo per passo',
+    steps: [
+      {
+        title: 'Firmiamo l’accordo white label',
+        description:
+          'Una videochiamata per conoscerci, poi un accordo semplice con prezzi partner, riservatezza e regole sul cliente. Una volta sola, vale per tutti i progetti.',
+      },
+      {
+        title: 'Mi mandi il sito del cliente',
+        description:
+          'Prima che tu faccia l’offerta ti confermo scaglione, eventuali add-on e fattibilità. Così vendi un prezzo sicuro, senza sorprese.',
+      },
+      {
+        title: 'Vendi con il tuo marchio',
+        description:
+          'Proposta, contratto e fattura al cliente sono tuoi, al prezzo che decidi tu. Puoi usare questo playbook e la nostra struttura di offerta come base.',
+      },
+      {
+        title: 'Kickoff e sprint di 14 giorni',
+        description:
+          'Il cliente consegna gli accessi, noi lavoriamo con un team intero in parallelo. Ti aggiorniamo a ogni passaggio del calendario, tu aggiorni il cliente come preferisci.',
+      },
+      {
+        title: 'Go-live tra il giorno 15 e il 30',
+        description:
+          'La data la sceglie il cliente con te. Cambio DNS, redirect attivi, presidio di 48 ore, store che non si ferma un secondo.',
+      },
+      {
+        title: '90 giorni di supporto, poi il cliente resta tuo',
+        description:
+          'Supporto, monitoraggio e report del giorno 90 con il tuo marchio. Dopo, il cliente lo segui tu: advertising, email, CRO, restyling.',
+      },
+    ],
+    earnTitle: 'Quanto guadagni',
+    earnIntro:
+      'Il tuo margine minimo è uguale alla commissione ambassador, e puoi alzarlo quanto vuoi: decidi tu il prezzo al cliente, purché non sia sotto il prezzo pubblico dello Sprint.',
+    publicLabel: 'Prezzo pubblico minimo',
+    partnerLabel: 'Paghi a noi',
+    marginLabel: 'Il tuo margine minimo',
+    tiers: [
+      { label: 'Fatturato del cliente sotto €2M', publicPrice: itEur(TIER1.price), partnerPrice: itEur(WL1), under: `4 rate da ${itEur(whiteLabelInstallment(TIER1.price))}, IVA esclusa`, margin: `${itEur(COMMISSION)}+` },
+      { label: 'Fatturato tra €2M e €20M', publicPrice: itEur(TIER2.price), partnerPrice: itEur(WL2), under: `4 rate da ${itEur(whiteLabelInstallment(TIER2.price))}, IVA esclusa`, margin: `${itEur(C2)}+` },
+      { label: 'Fatturato oltre €20M', publicPrice: itEur(TIER3.price), partnerPrice: itEur(WL3), under: `4 rate da ${itEur(whiteLabelInstallment(TIER3.price))}, IVA esclusa`, margin: `${itEur(C3)}+` },
+    ],
+    earnPoints: [
+      'Paghi a noi in 4 rate, con lo stesso calendario dello Sprint: la prima al kickoff, la seconda al go-live, la terza e la quarta nei mesi di supporto.',
+      `Esempio: vendi lo scaglione base a ${itEur(EXAMPLE_RESALE)}. Paghi a noi ${itEur(WL1)}, a te restano ${itEur(EXAMPLE_RESALE - WL1)}.`,
+      'Gli add-on a prezzo fisso (prodotti, lingue o gestionale oltre i limiti dello scaglione) li ricevi per iscritto prima della tua offerta, così li inserisci nel tuo prezzo.',
+      'Piano Shopify e app li paga il cliente direttamente a Shopify, come nello Sprint.',
+      'Il consiglio delle agenzie che lo fanno bene: proponi insieme alla migrazione il tuo servizio continuativo per dopo i 90 giorni (advertising, email, CRO). Il cliente arriva su uno store nuovo con dati puliti, ed è il momento migliore per farlo crescere con te.',
+    ],
+    splitTitle: 'Chi fa cosa',
+    ourSideTitle: 'Noi',
+    ourSide: [
+      'Realizziamo lo Sprint completo: dati, store, redirect, tracking, checkout',
+      'Gestiamo go-live e 90 giorni di supporto',
+      'Prepariamo documenti, Loom e report con il tuo marchio',
+      'Rispondiamo a te del risultato, con le 4 garanzie scritte nel nostro contratto',
+      `Non contattiamo il tuo cliente e non gli vendiamo nulla, durante il progetto e per ${NS} mesi dopo`,
+    ],
+    yourSideTitle: 'Tu',
+    yourSide: [
+      'Vendi, firmi il contratto con il cliente e lo fatturi',
+      'Tieni la relazione e le comunicazioni con il cliente',
+      'Raccogli accessi e approvazioni del cliente (circa 8 ore del suo tempo in tutto)',
+      'Decidi il prezzo, purché non sotto il prezzo pubblico dello scaglione',
+      'Aggiungi i tuoi servizi prima, durante e dopo, come preferisci',
+    ],
+    brandTitle: 'Il tuo marchio, la tua relazione',
+    brand: [
+      'Il nostro marchio non compare: né nei documenti, né nello store, né nelle comunicazioni al cliente.',
+      'Riservatezza reciproca: il prezzo partner e il tuo margine restano tra noi.',
+      'Se preferisci, puoi anche presentarci come partner tecnico: decidi tu, progetto per progetto.',
+    ],
+    guaranteesTitle: 'Le 4 garanzie scritte, nel contratto con la tua agenzia',
+    guarantees:
+      'Store pronto al giorno 14 o ti rimborsiamo la prima rata. Traffico organico sotto la baseline a 90 giorni dal go-live? Lavoriamo gratis finché non torna. Store offline al lancio per colpa nostra? Una rata la paghiamo noi. Il checkout converte meno di prima a 90 giorni? Lo ottimizziamo gratis finché non supera.',
+    faqTitle: 'Le domande delle agenzie',
+    faq: [
+      {
+        question: 'Il mio cliente saprà che ci siete voi?',
+        answer:
+          'No, se non vuoi. Lavoriamo con il marchio della tua agenzia e tutte le comunicazioni passano da te. Se preferisci presentarci come partner tecnico, si può fare.',
+      },
+      {
+        question: 'Posso decidere io il prezzo?',
+        answer:
+          'Sì. L’unico vincolo è non scendere sotto il prezzo pubblico dello scaglione del cliente. Sopra, il ricarico è tutto tuo.',
+      },
+      {
+        question: 'Chi risponde se qualcosa va storto?',
+        answer:
+          'Noi, verso di te. Le 4 garanzie dello Sprint sono scritte nel contratto tra noi e la tua agenzia.',
+      },
+      {
+        question: 'Devo essere Shopify Partner?',
+        answer:
+          'No, ma conviene. Se lo store nasce dal tuo account Shopify Partner e poi lo trasferiamo al cliente, i compensi che Shopify riconosce ai partner per i negozi che portano restano alla tua agenzia, secondo le regole del programma. Lo store è sempre di proprietà del cliente.',
+      },
+      {
+        question: 'Posso vendere anche altri servizi allo stesso cliente?',
+        answer:
+          'Certo: advertising, email, SEO, restyling. La migrazione è un progetto con un inizio e una fine, il cliente resta tuo.',
+      },
+      {
+        question: 'Il cliente è già su Shopify: vale?',
+        answer:
+          'Per ora il programma copre le migrazioni da altre piattaforme. Se hai un progetto diverso, parliamone comunque.',
+      },
+      {
+        question: 'Quanti progetti posso portare?',
+        answer:
+          'Nessun limite di progetti: l’unico limite sono gli slot, perché seguiamo pochi progetti alla volta per farli bene. Prima di firmare con il cliente ti confermo la data di kickoff.',
+      },
+      {
+        question: 'Posso fare sia Ambassador sia White Label?',
+        answer:
+          'Sì, cliente per cliente. Se vuoi solo segnalare, è Ambassador. Se vuoi vendere con il tuo marchio, è White Label.',
+      },
+    ],
+    ctaTitle: 'Vuoi offrire la migrazione Shopify con il tuo marchio?',
+    cta:
+      'Scrivimi due righe sulla tua agenzia e sui clienti che segui. Ti rispondo io, Antonio, e fissiamo una videochiamata per l’accordo.',
+    ctaSubject: 'White Label: nome della tua agenzia',
+    ctaEmailLabel: 'Scrivimi per email',
+    ctaWhatsappLabel: 'Scrivimi su WhatsApp',
+  },
   summary: {
-    label: 'in breve',
-    heading: 'Come funziona, ',
+    label: 'ambassador',
+    heading: 'Come funziona l’Ambassador, ',
     headingEm: 'in 4 punti.',
     steps: [
       {
@@ -270,8 +537,8 @@ const it: AmbassadorCopy = {
           'In quel momento la tua commissione è confermata. Da lì in poi il progetto è una mia responsabilità.',
       },
       {
-        title: 'Incassi il 20%',
-        description: `Il 20% del prezzo dello Sprint: da ${itEur(COMMISSION)} a ${itEur(C3)} per ogni migrazione, in base allo scaglione del cliente.`,
+        title: `Incassi da ${itEur(COMMISSION)}`,
+        description: `Una commissione fissa per ogni migrazione, in base allo scaglione del cliente: ${itEur(COMMISSION)}, ${itEur(C2)} o ${itEur(C3)}.`,
       },
     ],
   },
@@ -279,12 +546,12 @@ const it: AmbassadorCopy = {
     label: 'commissioni',
     heading: 'Quanto guadagni ',
     headingEm: 'e quando.',
-    rateLabel: '20%',
-    rateNote: `del prezzo dello Sprint, su ogni migrazione chiusa: ${itEur(COMMISSION)} sullo scaglione base, ${itEur(C2)} e ${itEur(C3)} sugli altri due.`,
+    rateLabel: itEur(COMMISSION),
+    rateNote: `di commissione fissa su ogni migrazione chiusa sullo scaglione base, ${itEur(C2)} e ${itEur(C3)} sugli altri due.`,
     formula: {
       before: 'Esempio: il prezzo minimo dell’',
       linkLabel: 'offerta',
-      after: ` parte da ${itEur(MIN)} (aziende sotto €2M di fatturato, 4 rate da ${itEur(TIER1.installment)}). Per ogni chiusura, il 20% sono ${itEur(COMMISSION)} in fattura.`,
+      after: ` parte da ${itEur(MIN)} (aziende sotto €2M di fatturato, 4 rate da ${itEur(TIER1.installment)}). Per ogni chiusura, ${itEur(COMMISSION)} in fattura per te.`,
     },
     simulationTitle: 'Simulazione sullo scaglione base',
     simulationNote: 'Commissioni una tantum, una per ogni migrazione chiusa.',
@@ -294,7 +561,7 @@ const it: AmbassadorCopy = {
       { count: 5, label: '5 migrazioni' },
       { count: 10, label: '10 migrazioni' },
     ],
-    tierNote: `Sugli scaglioni più alti la commissione sale: ${itEur(C2)} per un’azienda tra €2M e €20M di fatturato (Sprint da ${itEur(TIER2.price)}), ${itEur(C3)} sopra i €20M (Sprint da ${itEur(TIER3.price)}). Gli add-on a prezzo fisso (prodotti, lingue o gestionale oltre i limiti dello scaglione) entrano nel calcolo.`,
+    tierNote: `Sugli scaglioni più alti la commissione sale: ${itEur(C2)} per un’azienda tra €2M e €20M di fatturato (Sprint da ${itEur(TIER2.price)}), ${itEur(C3)} sopra i €20M (Sprint da ${itEur(TIER3.price)}). Importi fissi e chiari, decisi prima: li conosci già quando presenti il cliente.`,
     rules: [
       {
         title: 'Quando è confermata',
@@ -311,9 +578,9 @@ const it: AmbassadorCopy = {
         description: `In un’unica soluzione, entro ${T.payoutDays} giorni dall’incasso della prima rata.`,
       },
       {
-        title: 'Su cosa si calcola',
+        title: 'Quanto vale, esattamente',
         description:
-          'Sul prezzo dello Sprint pagato dal cliente (scaglione più eventuali add-on a prezzo fisso), IVA esclusa. Sono esclusi i costi esterni: piano Shopify e app.',
+          `È un importo fisso per scaglione, IVA esclusa: ${itEur(COMMISSION)}, ${itEur(C2)} o ${itEur(C3)}. Add-on, piano Shopify e app non cambiano la tua commissione.`,
       },
       {
         title: `Prezzo pubblico, da ${itEur(MIN)}`,
@@ -331,7 +598,7 @@ const it: AmbassadorCopy = {
     heading: 'Cosa vendi: ',
     headingEm: 'lo Shopify Launch Sprint.',
     intro:
-      'Per ora il programma copre un solo servizio: lo Shopify Launch Sprint, la migrazione di un eCommerce esistente su Shopify in 14 giorni. Non è “rifacciamo il sito”: è lo stesso store, replicato 1:1 su Shopify senza perdere vendite, clienti e posizionamento, più veloce e con un checkout costruito per vendere di più. Un team intero su ogni area nello stesso momento (sviluppo, SEO, tracciamento, checkout), un solo interlocutore per il cliente, poi 90 giorni di supporto dopo il go-live.',
+      'Entrambi i programmi coprono un solo servizio: lo Shopify Launch Sprint, la migrazione di un eCommerce esistente su Shopify in 14 giorni. Non è “rifacciamo il sito”: è lo stesso store, replicato 1:1 su Shopify senza perdere vendite, clienti e posizionamento, più veloce e con un checkout costruito per vendere di più. Un team intero su ogni area nello stesso momento (sviluppo, SEO, tracciamento, checkout), un solo interlocutore per il cliente, poi 90 giorni di supporto dopo il go-live.',
     includedTitle: 'Cosa è incluso',
     included: [
       'Data Migration Report: prodotti, varianti, clienti e storico ordini riconciliati al 100%',
@@ -823,32 +1090,34 @@ const it: AmbassadorCopy = {
     ],
     closing: 'Hai una domanda che non trovi qui? Scrivimi: la aggiungo a questo documento.',
     signature: 'Antonio Manitta, Founder di noprob agency',
-    updated: 'Ultimo aggiornamento: ottobre 2026',
+    updated: 'Ultimo aggiornamento: novembre 2026',
     terms:
       'Le condizioni possono essere aggiornate. Per ogni segnalazione valgono quelle in vigore nel giorno in cui la ricevo.',
   },
 }
 
 const en: AmbassadorCopy = {
-  metaTitle: 'Ambassador Program: Shopify Launch Sprint',
+  metaTitle: 'Ambassador and White Label: Shopify Launch Sprint',
   metaDescription:
-    'The noprob ambassador playbook: the Shopify Launch Sprint, the target, the pitch and a 20% commission on every migration you bring.',
+    'Refer a Shopify migration or resell it under your own brand: the Shopify Launch Sprint, the target, the pitch and from €1,000 per migration for you.',
   hero: {
-    label: 'ambassador program',
-    badge: 'Referral program for partners and consultants',
-    titlePart1: 'Bring a Shopify migration. ',
-    titleEm: 'Earn 20%.',
+    label: 'ambassador and white label',
+    badge: 'For consultants, partners and agencies',
+    titlePart1: 'Refer or resell a Shopify migration. ',
+    titleEm: `Earn from ${enEur(COMMISSION)}.`,
     lead:
-      'This is the complete playbook for working with me as an ambassador: what we sell, to whom, what it costs, how to pitch it and how much you earn for every client who comes through you. All in writing, no surprises.',
+      'This is the complete playbook for working with me in two ways. Ambassador: you refer an eCommerce to me and earn a fixed commission. White Label: your agency sells the migration under its own brand and we deliver it behind the scenes. What we sell, to whom, what it costs, how to pitch it and how much you earn. All in writing, no surprises.',
     stats: [
-      { value: '20%', label: 'commission on every closed migration' },
-      { value: enEur(COMMISSION), label: `what you earn on the base tier (Sprint from ${enEur(MIN)}); up to ${enEur(C3)} on the higher tiers` },
-      { value: '1st payment', label: 'your commission is confirmed when the client pays the first installment' },
+      { value: enEur(COMMISSION), label: `ambassador commission on the base tier, up to ${enEur(C3)} on the higher tiers` },
+      { value: `${enEur(COMMISSION)}+`, label: 'minimum agency margin in white label, plus all the markup you decide' },
+      { value: '14 days', label: 'from kickoff to a store ready to publish, under your brand or ours' },
     ],
     tocLabel: 'In this document',
     toc: [
-      { id: 'come-funziona', label: 'How it works' },
+      { id: 'programmi', label: 'Ambassador or White Label' },
+      { id: 'come-funziona', label: 'How Ambassador works' },
       { id: 'commissioni', label: 'Commission' },
+      { id: 'white-label', label: 'White Label for agencies' },
       { id: 'offerta', label: 'The offer' },
       { id: 'materiali', label: 'Materials' },
       { id: 'prezzo', label: 'Price and costs' },
@@ -864,9 +1133,196 @@ const en: AmbassadorCopy = {
       { id: 'faq', label: 'FAQ' },
     ],
   },
+  programs: {
+    label: 'two programs',
+    heading: 'Refer or resell: ',
+    headingEm: 'your call.',
+    intro:
+      'Same service, same quality, same 14-day calendar. What changes is who talks to the client and how much you earn.',
+    items: [
+      {
+        tag: 'Ambassador',
+        title: 'You refer, we handle the rest',
+        forWho: 'For consultants, freelancers, suppliers and business owners who know eCommerce stores ready to move to Shopify.',
+        points: [
+          'You introduce the client to me or close the sale yourself',
+          'The client signs with us, at the public Sprint price',
+          'They talk to us and see our brand',
+          'No commitment after the referral',
+        ],
+        earn: `Fixed commission: ${enEur(COMMISSION)}, ${enEur(C2)} or ${enEur(C3)} per migration`,
+        href: '#come-funziona',
+        linkLabel: 'How Ambassador works',
+      },
+      {
+        tag: 'White Label',
+        title: 'Resell under your own brand',
+        forWho: 'For agencies that work with eCommerce clients and want to offer the move to Shopify without a dedicated team.',
+        points: [
+          'You sell the migration as your agency’s service',
+          'The client signs with and pays you, at the price you set',
+          'The client talks to you: we work behind the scenes',
+          'The client stays yours, before, during and after',
+        ],
+        earn: `Margin from ${enEur(COMMISSION)} to ${enEur(C3)} per migration, plus your markup`,
+        href: '#white-label',
+        linkLabel: 'How White Label works',
+      },
+    ],
+  },
+  whiteLabel: {
+    label: 'white label for agencies',
+    heading: 'The Shopify migration, ',
+    headingEm: 'under your agency’s brand.',
+    intro:
+      'Your eCommerce clients ask you to move them to Shopify. With White Label the migration becomes a service of your agency: you sell, own the relationship and set the price, we deliver the full Shopify Launch Sprint under your name. Same 14-day calendar, same 4 written guarantees, no team to hire.',
+    forWhoTitle: 'Who it’s for',
+    forWho: [
+      'Advertising, SEO, email marketing and social agencies with eCommerce clients',
+      'Web agencies working on WooCommerce, PrestaShop or Magento that get Shopify requests',
+      'Shopify agencies that want more capacity on migrations without hiring',
+      'eCommerce consultants who follow clients over time and want to offer the move to Shopify too',
+    ],
+    receiveTitle: 'What you get',
+    receive: [
+      'The full Shopify Launch Sprint: data, store, redirects, tracking, checkout, go-live and 90 days of support',
+      'Every document under your agency’s brand: Data Migration Report, Redirect Map, Tracking Spec, Go-live Checklist, day-90 report',
+      'Weekly Looms and updates made to be forwarded to your client as they are',
+      'When needed, the team joins video calls as your agency’s technical team',
+      'If you have a Shopify Partner account, we work as collaborators from your account',
+      'A direct line to Antonio on every project, for you and your account manager',
+      'A confidentiality agreement signed before the first project',
+    ],
+    stepsTitle: 'How it works, step by step',
+    steps: [
+      {
+        title: 'We sign the white label agreement',
+        description:
+          'A video call to get to know each other, then a simple agreement with partner prices, confidentiality and client rules. Once, valid for every project.',
+      },
+      {
+        title: 'You send me the client’s site',
+        description:
+          'Before you make your offer I confirm the tier, any add-ons and feasibility. So you sell a safe price, with no surprises.',
+      },
+      {
+        title: 'You sell under your brand',
+        description:
+          'Proposal, contract and invoice to the client are yours, at the price you set. You can use this playbook and our offer structure as a base.',
+      },
+      {
+        title: 'Kickoff and 14-day sprint',
+        description:
+          'The client hands over the accesses, we work with a whole team in parallel. We update you at every step of the calendar, you update the client however you like.',
+      },
+      {
+        title: 'Go-live between day 15 and 30',
+        description:
+          'The client picks the date with you. DNS switch, redirects live, 48 hours of monitoring, a store that doesn’t stop for a second.',
+      },
+      {
+        title: '90 days of support, then the client stays yours',
+        description:
+          'Support, monitoring and the day-90 report under your brand. After that you follow the client: advertising, email, CRO, redesign.',
+      },
+    ],
+    earnTitle: 'How much you earn',
+    earnIntro:
+      'Your minimum margin equals the ambassador commission, and you can raise it as much as you like: you set the price to the client, as long as it isn’t below the public Sprint price.',
+    publicLabel: 'Minimum public price',
+    partnerLabel: 'You pay us',
+    marginLabel: 'Your minimum margin',
+    tiers: [
+      { label: 'Client revenue under €2M', publicPrice: enEur(TIER1.price), partnerPrice: enEur(WL1), under: `4 installments of ${enEur(whiteLabelInstallment(TIER1.price))}, VAT excluded`, margin: `${enEur(COMMISSION)}+` },
+      { label: 'Revenue between €2M and €20M', publicPrice: enEur(TIER2.price), partnerPrice: enEur(WL2), under: `4 installments of ${enEur(whiteLabelInstallment(TIER2.price))}, VAT excluded`, margin: `${enEur(C2)}+` },
+      { label: 'Revenue above €20M', publicPrice: enEur(TIER3.price), partnerPrice: enEur(WL3), under: `4 installments of ${enEur(whiteLabelInstallment(TIER3.price))}, VAT excluded`, margin: `${enEur(C3)}+` },
+    ],
+    earnPoints: [
+      'You pay us in 4 installments, on the same calendar as the Sprint: the first at kickoff, the second at go-live, the third and fourth during the support months.',
+      `Example: you sell the base tier at ${enEur(EXAMPLE_RESALE)}. You pay us ${enEur(WL1)}, you keep ${enEur(EXAMPLE_RESALE - WL1)}.`,
+      'Fixed-price add-ons (products, languages or ERP beyond the tier caps) come to you in writing before your offer, so you include them in your price.',
+      'The client pays the Shopify plan and apps directly to Shopify, as in the Sprint.',
+      'The tip from agencies that do it well: sell your ongoing service for after the 90 days (advertising, email, CRO) together with the migration. The client lands on a new store with clean data, the best moment to grow it with you.',
+    ],
+    splitTitle: 'Who does what',
+    ourSideTitle: 'Us',
+    ourSide: [
+      'We deliver the full Sprint: data, store, redirects, tracking, checkout',
+      'We run go-live and 90 days of support',
+      'We prepare documents, Looms and reports under your brand',
+      'We answer to you for the result, with the 4 guarantees written in our contract',
+      `We don’t contact your client or sell them anything, during the project and for ${NS} months after`,
+    ],
+    yourSideTitle: 'You',
+    yourSide: [
+      'You sell, sign the contract with the client and invoice them',
+      'You own the relationship and the communication with the client',
+      'You collect the client’s accesses and approvals (about 8 hours of their time in total)',
+      'You set the price, as long as it isn’t below the public price of the tier',
+      'You add your own services before, during and after, as you prefer',
+    ],
+    brandTitle: 'Your brand, your relationship',
+    brand: [
+      'Our brand doesn’t appear: not in the documents, not in the store, not in the client communication.',
+      'Mutual confidentiality: the partner price and your margin stay between us.',
+      'If you prefer, you can also present us as your technical partner: your call, project by project.',
+    ],
+    guaranteesTitle: 'The 4 written guarantees, in the contract with your agency',
+    guarantees:
+      'Store ready on day 14 or we refund the first installment. Organic traffic below the baseline 90 days after go-live? We work for free until it comes back. Store offline at launch because of us? We pay one installment. Checkout converting less than before at 90 days? We optimize it for free until it beats it.',
+    faqTitle: 'Questions from agencies',
+    faq: [
+      {
+        question: 'Will my client know you’re behind it?',
+        answer:
+          'Not unless you want them to. We work under your agency’s brand and all communication goes through you. If you prefer to present us as your technical partner, that works too.',
+      },
+      {
+        question: 'Can I set the price myself?',
+        answer:
+          'Yes. The only rule is not going below the public price of the client’s tier. Above it, the markup is all yours.',
+      },
+      {
+        question: 'Who answers if something goes wrong?',
+        answer:
+          'We do, to you. The 4 Sprint guarantees are written in the contract between us and your agency.',
+      },
+      {
+        question: 'Do I need to be a Shopify Partner?',
+        answer:
+          'No, but it pays. If the store is created from your Shopify Partner account and then transferred to the client, the earnings Shopify grants partners for the stores they bring stay with your agency, under the program rules. The store is always owned by the client.',
+      },
+      {
+        question: 'Can I sell other services to the same client?',
+        answer:
+          'Of course: advertising, email, SEO, redesign. The migration is a project with a start and an end, the client stays yours.',
+      },
+      {
+        question: 'The client is already on Shopify: does it count?',
+        answer:
+          'For now the program covers migrations from other platforms. If you have a different project, let’s talk about it anyway.',
+      },
+      {
+        question: 'How many projects can I bring?',
+        answer:
+          'No limit on projects: the only limit is capacity, because we take on a few projects at a time to do them well. Before you sign with the client I confirm the kickoff date.',
+      },
+      {
+        question: 'Can I do both Ambassador and White Label?',
+        answer:
+          'Yes, client by client. If you only want to refer, it’s Ambassador. If you want to sell under your brand, it’s White Label.',
+      },
+    ],
+    ctaTitle: 'Want to offer the Shopify migration under your brand?',
+    cta:
+      'Write me a couple of lines about your agency and the clients you work with. I, Antonio, will reply and we’ll set up a video call for the agreement.',
+    ctaSubject: 'White Label: your agency name',
+    ctaEmailLabel: 'Email me',
+    ctaWhatsappLabel: 'Message me on WhatsApp',
+  },
   summary: {
-    label: 'in short',
-    heading: 'How it works, ',
+    label: 'ambassador',
+    heading: 'How Ambassador works, ',
     headingEm: 'in 4 steps.',
     steps: [
       {
@@ -885,8 +1341,8 @@ const en: AmbassadorCopy = {
           'At that moment your commission is confirmed. From there on, the project is my responsibility.',
       },
       {
-        title: 'You earn 20%',
-        description: `20% of the Sprint price: from ${enEur(COMMISSION)} to ${enEur(C3)} per migration, depending on the client’s tier.`,
+        title: `You earn from ${enEur(COMMISSION)}`,
+        description: `A fixed commission for every migration, based on the client’s tier: ${enEur(COMMISSION)}, ${enEur(C2)} or ${enEur(C3)}.`,
       },
     ],
   },
@@ -894,12 +1350,12 @@ const en: AmbassadorCopy = {
     label: 'commission',
     heading: 'How much you earn ',
     headingEm: 'and when.',
-    rateLabel: '20%',
-    rateNote: `of the Sprint price, on every closed migration: ${enEur(COMMISSION)} on the base tier, ${enEur(C2)} and ${enEur(C3)} on the other two.`,
+    rateLabel: enEur(COMMISSION),
+    rateNote: `fixed commission on every closed migration on the base tier, ${enEur(C2)} and ${enEur(C3)} on the other two.`,
     formula: {
       before: 'Example: the minimum price of the ',
       linkLabel: 'offer',
-      after: ` starts at ${enEur(MIN)} (companies under €2M in revenue, 4 installments of ${enEur(TIER1.installment)}). For every close, 20% is ${enEur(COMMISSION)} on your invoice.`,
+      after: ` starts at ${enEur(MIN)} (companies under €2M in revenue, 4 installments of ${enEur(TIER1.installment)}). For every close, ${enEur(COMMISSION)} on your invoice.`,
     },
     simulationTitle: 'Simulation on the base tier',
     simulationNote: 'One-off commissions, one for each closed migration.',
@@ -909,7 +1365,7 @@ const en: AmbassadorCopy = {
       { count: 5, label: '5 migrations' },
       { count: 10, label: '10 migrations' },
     ],
-    tierNote: `On the higher tiers the commission goes up: ${enEur(C2)} for a company between €2M and €20M in revenue (Sprint from ${enEur(TIER2.price)}), ${enEur(C3)} above €20M (Sprint from ${enEur(TIER3.price)}). Fixed-price add-ons (products, languages or ERP beyond the tier caps) count towards it.`,
+    tierNote: `On the higher tiers the commission goes up: ${enEur(C2)} for a company between €2M and €20M in revenue (Sprint from ${enEur(TIER2.price)}), ${enEur(C3)} above €20M (Sprint from ${enEur(TIER3.price)}). Fixed, clear amounts, set in advance: you know them before you introduce the client.`,
     rules: [
       {
         title: 'When it’s confirmed',
@@ -926,9 +1382,9 @@ const en: AmbassadorCopy = {
         description: `In a single payment, within ${T.payoutDays} days of receiving the first installment.`,
       },
       {
-        title: 'What it’s calculated on',
+        title: 'What it’s worth, exactly',
         description:
-          'On the Sprint price paid by the client (tier plus any fixed-price add-ons), VAT excluded. External costs are excluded: Shopify plan and apps.',
+          `A fixed amount per tier, VAT excluded: ${enEur(COMMISSION)}, ${enEur(C2)} or ${enEur(C3)}. Add-ons, Shopify plan and apps don’t change your commission.`,
       },
       {
         title: `Public price, from ${enEur(MIN)}`,
@@ -946,7 +1402,7 @@ const en: AmbassadorCopy = {
     heading: 'What you sell: ',
     headingEm: 'the Shopify Launch Sprint.',
     intro:
-      'For now the program covers one service only: the Shopify Launch Sprint, moving an existing eCommerce to Shopify in 14 days. It’s not “we’ll rebuild your site”: it’s the same store, replicated 1:1 on Shopify without losing sales, customers or rankings, faster and with a checkout built to sell more. A whole team on every area at the same time (development, SEO, tracking, checkout), one point of contact for the client, then 90 days of support after go-live.',
+      'Both programs cover one service only: the Shopify Launch Sprint, moving an existing eCommerce to Shopify in 14 days. It’s not “we’ll rebuild your site”: it’s the same store, replicated 1:1 on Shopify without losing sales, customers or rankings, faster and with a checkout built to sell more. A whole team on every area at the same time (development, SEO, tracking, checkout), one point of contact for the client, then 90 days of support after go-live.',
     includedTitle: 'What’s included',
     included: [
       'Data Migration Report: products, variants, customers and order history reconciled 100%',
@@ -1436,7 +1892,7 @@ const en: AmbassadorCopy = {
     ],
     closing: 'Got a question you can’t find here? Write to me: I’ll add it to this document.',
     signature: 'Antonio Manitta, Founder of noprob agency',
-    updated: 'Last updated: October 2026',
+    updated: 'Last updated: November 2026',
     terms:
       'Terms may be updated. Each referral is governed by the terms in force on the day I receive it.',
   },
