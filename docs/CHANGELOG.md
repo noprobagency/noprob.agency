@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.167.0 (9 Nov 2026)
+
+- **Damiano, new searches after the old ones ran out**: the other 92 Italian provincial capitals for the 10 verticals (920 searches), then the pages past the 10th of the searches that stopped there. Finding companies is free on Hunter, the target and the spend cap per run stay as they were; the international round keeps its 10 pages.
+
 ### Changelog v1.166.0 (9 Nov 2026)
 
 - SEO: the Magento to Shopify article now answers how to import products (CSV, app or API, with Shopify's bulk options per data type), covers Magento 1 and adds two FAQs, IT and EN, from Search Console queries of the last 28 days. Sources in docs/dati-verificati.md.
