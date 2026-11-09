@@ -299,6 +299,9 @@ Controllato il 29 ottobre 2026 su ogni pagina indicata. Una riga per fatto; dove
 - CSV di Shopify con le intestazioni Redirect from e Redirect to; si reindirizza solo da URL rotti; percorsi fissi /products, /collections, /collections/all; prefissi riservati /apps, /application, /cart, /carts, /orders, /services, /shop; .html non reindirizzabile allo stesso URL senza .html; tag di collezione non reindirizzabili; query string non sempre funzionanti: https://help.shopify.com/en/manual/online-store/menus-and-links/url-redirect
 - Basi predefinite di WooCommerce `product` e `product-category`: https://github.com/woocommerce/woocommerce/blob/trunk/plugins/woocommerce/includes/wc-core-functions.php
 - Suffisso configurabile degli URL Magento: https://experienceleague.adobe.com/en/docs/commerce-admin/catalog/catalog/catalog-urls
+- Fine del supporto Adobe a Magento 1 il 30 giugno 2020, con più responsabilità su sicurezza e PCI per chi resta (fonte secondaria che riporta l'avviso di Adobe, controllo del 9 nov 2026): https://www.helpnetsecurity.com/2020/06/29/magento-1-eol/
+- Opzioni di migrazione massiva per tipo di dato (prodotti e clienti via CSV, storico ordini solo app o API): https://help.shopify.com/en/manual/migrating-to-shopify/store-importer (versione italiana: https://help.shopify.com/it/manual/migrating-to-shopify)
+- CSV, app o API in base al catalogo; le app richiedono comunque validazione e test: https://www.shopify.com/enterprise/blog/magento-to-shopify-migration
 - Rotte PrestaShop in `Dispatcher.php`, tag 8.2.0: https://github.com/PrestaShop/PrestaShop/blob/8.2.0/classes/Dispatcher.php
 - Redirect da impostare prima di spostare il dominio: https://help.shopify.com/en/manual/migrating-to-shopify/migrating-from-woocommerce
 - `UrlRedirectImport` riporta righe create, aggiornate e fallite: https://shopify.dev/docs/api/admin-graphql/latest/objects/UrlRedirectImport

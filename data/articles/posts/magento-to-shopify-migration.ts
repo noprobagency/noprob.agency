@@ -25,14 +25,14 @@ const article: Article = {
   articleType: 'BlogPosting',
   date: '2026-10-23',
   datePublishedIso: '2026-10-23T13:40:00+01:00',
-  dateModifiedIso: '2026-11-06T12:00:00+00:00',
-  wordCount: 2565,
-  readingTimeMinutes: 9,
+  dateModifiedIso: '2026-11-09T10:30:00+00:00',
+  wordCount: 2850,
+  readingTimeMinutes: 10,
   articleSection: 'Shopify migration',
   keywordsEn:
-    'migrate from magento to shopify, magento to shopify migration, migrating from magento to shopify, adobe commerce to shopify, magento to shopify plus, magento 2 to shopify',
+    'migrate from magento to shopify, magento to shopify migration, migrating from magento to shopify, adobe commerce to shopify, magento to shopify plus, magento 2 to shopify, magento 1 to shopify, magento to shopify product migration',
   keywordsIt:
-    'migrazione magento shopify, da magento a shopify, migrare da magento a shopify, adobe commerce a shopify, magento 2 shopify, da magento a shopify plus',
+    'migrazione magento shopify, da magento a shopify, migrare da magento a shopify, adobe commerce a shopify, magento 2 shopify, da magento a shopify plus, magento 1 shopify, importare prodotti da magento a shopify',
   faqEn: [
     {
       question: 'Will I lose my Google rankings migrating from Magento to Shopify?',
@@ -63,6 +63,16 @@ const article: Article = {
       question: 'How do I replace Magento store views and websites on Shopify?',
       answer:
         'Language and currency store views usually become Shopify Markets on one store. Websites with separate catalogs or prices under the same brand may need separate stores, which is where Plus and its expansion stores come in.',
+    },
+    {
+      question: 'Is there an app to migrate from Magento to Shopify?',
+      answer:
+        'Yes. The Shopify App Store has migration apps that move products, customers and historical orders, and they suit a medium catalog with standard product types. Validate the mapping before the run and test the output: configurable products, attribute sets and store views do not map one to one.',
+    },
+    {
+      question: 'Can I migrate from Magento 1 to Shopify?',
+      answer:
+        'Yes, with the same method as Magento 2: export the data, clean it, load products, then customers, then orders, inventory the modules and write the redirect map. Adobe ended support for Magento 1 on 30 June 2020.',
     },
     {
       question: 'How long does a Magento to Shopify migration take?',
@@ -100,6 +110,16 @@ const article: Article = {
       question: 'Come si sostituiscono store view e website di Magento su Shopify?',
       answer:
         'Le store view per lingua e valuta di solito diventano Shopify Markets su un solo store. I website con cataloghi o prezzi separati sotto lo stesso brand possono richiedere store distinti, ed è qui che entrano Plus e gli expansion store.',
+    },
+    {
+      question: 'Esiste un’app per migrare da Magento a Shopify?',
+      answer:
+        'Sì. Sullo Shopify App Store ci sono app di migrazione che spostano prodotti, clienti e storico ordini, adatte a un catalogo medio con tipi di prodotto standard. Valida la mappatura prima dell’esecuzione e testa il risultato: prodotti configurabili, attribute set e store view non si traducono uno a uno.',
+    },
+    {
+      question: 'Posso migrare da Magento 1 a Shopify?',
+      answer:
+        'Sì, con lo stesso metodo di Magento 2: esporti i dati, li pulisci, carichi prodotti, poi clienti, poi ordini, fai l’inventario dei moduli e scrivi la mappa dei redirect. Adobe ha chiuso il supporto a Magento 1 il 30 giugno 2020.',
     },
     {
       question: 'Quanto dura una migrazione da Magento a Shopify?',
@@ -159,6 +179,31 @@ const article: Article = {
     {
       type: 'paragraph',
       text: 'Attribute sets are the other half: Magento attribute sets and custom attributes become [metafields and metaobjects](https://help.shopify.com/en/manual/custom-data). Our rule: keep the attributes a customer sees or filters by, and drop the rest. Navigation is decided here too: Shopify’s storefront filters are built from product data, so Magento’s layered navigation is rebuilt on the attributes you keep.',
+    },
+    { type: 'h2', text: 'How do you import Magento products into Shopify: CSV, app or API?' },
+    {
+      type: 'paragraph',
+      text: 'You import Magento products into Shopify in one of three ways: a product CSV, a migration app from the Shopify App Store, or a custom migration through Shopify’s APIs. [Shopify’s Magento guide](https://www.shopify.com/enterprise/blog/magento-to-shopify-migration) matches the method to the store: CSV for a small catalog with simple pricing, an app for a medium catalog with standard product types, and the API with a partner for heavy customization or ERP sync. [Shopify’s migration documentation](https://help.shopify.com/en/manual/migrating-to-shopify/store-importer) lists what each route can carry:',
+    },
+    {
+      type: 'table',
+      caption: 'Bulk migration options for each type of data, according to Shopify',
+      headers: ['Data', 'Bulk migration options'],
+      rows: [
+        ['Products', 'Product CSV, migration apps'],
+        ['Customers', 'Customer CSV, migration apps, Customer API'],
+        ['Historical orders', 'Migration apps, Order API, Transaction API'],
+        ['Gift cards and store credit', 'Migration apps, GiftCard API'],
+        ['Blog posts and pages', 'Migration apps, Blog, Article and Page APIs'],
+      ],
+    },
+    {
+      type: 'paragraph',
+      text: 'Two things follow. Historical orders are not on the CSV route, so a store that needs them plans for an app or the API. And an app still needs checking: Shopify’s guide says to validate the data mappings before the run and test the output. On Magento we check configurable products, attribute sets and store view content first, because those are the structures that do not map one to one.',
+    },
+    {
+      type: 'paragraph',
+      text: 'Still on Magento 1? The destination and the method are the same. Adobe [ended support for Magento 1 on 30 June 2020](https://www.helpnetsecurity.com/2020/06/29/magento-1-eol/) and warned that stores still running it take on more responsibility for security and PCI compliance. Export the data, clean it, then load products, customers and orders in that order; the module inventory and the redirect map below apply as they are.',
     },
     { type: 'h2', text: 'What happens to store views, websites and customer groups?' },
     {
@@ -309,6 +354,16 @@ const article: Article = {
       type: 'paragraph',
       text: 'Language and currency store views usually become Shopify Markets on one store. Websites with separate catalogs or prices under the same brand may need separate stores, which is where Plus and its expansion stores come in.',
     },
+    { type: 'h3', text: 'Is there an app to migrate from Magento to Shopify?' },
+    {
+      type: 'paragraph',
+      text: 'Yes. The Shopify App Store has migration apps that move products, customers and historical orders, and they suit a medium catalog with standard product types. Validate the mapping before the run and test the output: configurable products, attribute sets and store views do not map one to one.',
+    },
+    { type: 'h3', text: 'Can I migrate from Magento 1 to Shopify?' },
+    {
+      type: 'paragraph',
+      text: 'Yes, with the same method as Magento 2: export the data, clean it, load products, then customers, then orders, inventory the modules and write the redirect map. Adobe ended support for Magento 1 on 30 June 2020.',
+    },
     { type: 'h3', text: 'How long does a Magento to Shopify migration take?' },
     {
       type: 'paragraph',
@@ -384,6 +439,31 @@ const article: Article = {
     {
       type: 'paragraph',
       text: 'Gli attribute set sono l’altra metà: attribute set e attributi personalizzati diventano [metafield e metaobject](https://help.shopify.com/it/manual/custom-data). La nostra regola: tieni gli attributi che il cliente vede o usa per filtrare, e butta il resto. Anche la navigazione si decide qui: i filtri della vetrina Shopify nascono dai dati di prodotto, quindi la navigazione a livelli di Magento si ricostruisce sugli attributi che tieni.',
+    },
+    { type: 'h2', text: 'Come si importano i prodotti da Magento a Shopify: CSV, app o API?' },
+    {
+      type: 'paragraph',
+      text: 'I prodotti Magento si importano su Shopify in tre modi: un CSV di prodotto, un’app di migrazione dallo Shopify App Store, oppure una migrazione su misura tramite le API di Shopify. La [guida di Shopify su Magento](https://www.shopify.com/enterprise/blog/magento-to-shopify-migration) abbina il metodo allo store: CSV per un catalogo piccolo con prezzi semplici, app per un catalogo medio con tipi di prodotto standard, API con un partner per personalizzazioni pesanti o sincronizzazione col gestionale. La [documentazione di Shopify sulla migrazione](https://help.shopify.com/it/manual/migrating-to-shopify) elenca cosa può portare ogni strada:',
+    },
+    {
+      type: 'table',
+      caption: 'Opzioni di migrazione massiva per tipo di dato, secondo Shopify',
+      headers: ['Dato', 'Opzioni di migrazione massiva'],
+      rows: [
+        ['Prodotti', 'CSV prodotti, app di migrazione'],
+        ['Clienti', 'CSV clienti, app di migrazione, Customer API'],
+        ['Storico ordini', 'App di migrazione, Order API, Transaction API'],
+        ['Gift card e credito store', 'App di migrazione, GiftCard API'],
+        ['Articoli del blog e pagine', 'App di migrazione, API Blog, Article e Page'],
+      ],
+    },
+    {
+      type: 'paragraph',
+      text: 'Ne seguono due cose. Lo storico ordini non passa dal CSV, quindi chi ne ha bisogno mette in conto un’app o le API. E un’app va comunque controllata: la guida di Shopify dice di validare la mappatura dei dati prima dell’esecuzione e di testare il risultato. Su Magento controlliamo per primi prodotti configurabili, attribute set e contenuti delle store view, perché sono le strutture che non si traducono uno a uno.',
+    },
+    {
+      type: 'paragraph',
+      text: 'Sei ancora su Magento 1? Destinazione e metodo sono gli stessi. Adobe ha [chiuso il supporto a Magento 1 il 30 giugno 2020](https://www.helpnetsecurity.com/2020/06/29/magento-1-eol/) e ha avvertito che chi resta su quella versione si assume più responsabilità su sicurezza e conformità PCI. Esporta i dati, puliscili, poi carica prodotti, clienti e ordini in quest’ordine; l’inventario dei moduli e la mappa dei redirect qui sotto valgono uguali.',
     },
     { type: 'h2', text: 'Che fine fanno store view, website e gruppi clienti?' },
     {
@@ -533,6 +613,16 @@ const article: Article = {
     {
       type: 'paragraph',
       text: 'Le store view per lingua e valuta di solito diventano Shopify Markets su un solo store. I website con cataloghi o prezzi separati sotto lo stesso brand possono richiedere store distinti, ed è qui che entrano Plus e gli expansion store.',
+    },
+    { type: 'h3', text: 'Esiste un’app per migrare da Magento a Shopify?' },
+    {
+      type: 'paragraph',
+      text: 'Sì. Sullo Shopify App Store ci sono app di migrazione che spostano prodotti, clienti e storico ordini, adatte a un catalogo medio con tipi di prodotto standard. Valida la mappatura prima dell’esecuzione e testa il risultato: prodotti configurabili, attribute set e store view non si traducono uno a uno.',
+    },
+    { type: 'h3', text: 'Posso migrare da Magento 1 a Shopify?' },
+    {
+      type: 'paragraph',
+      text: 'Sì, con lo stesso metodo di Magento 2: esporti i dati, li pulisci, carichi prodotti, poi clienti, poi ordini, fai l’inventario dei moduli e scrivi la mappa dei redirect. Adobe ha chiuso il supporto a Magento 1 il 30 giugno 2020.',
     },
     { type: 'h3', text: 'Quanto dura una migrazione da Magento a Shopify?' },
     {
