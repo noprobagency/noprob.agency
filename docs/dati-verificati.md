@@ -170,7 +170,8 @@ vanno corrette qui e nel copy.
 | Servizio | Prezzo | Dove |
 | --- | --- | --- |
 | Shopify Launch Sprint | €5.800 (sotto €2M di fatturato), €8.800 (€2M-20M), €12.800 (oltre €20M), in 4 rate | `content/zero-loss-migration.shared.ts` (`ZL_TIERS`), landing, pagina migrazione, llms.txt, ambassador |
-| Commissione ambassador | 20% del prezzo dello Sprint: €1.160 / €1.760 / €2.560 | `lib/i18n/ambassador.ts` (derivata da `ZL_TIERS`) |
+| Commissione ambassador (dal 9 novembre 2026) | importo fisso per scaglione: €1.000 / €1.500 / €2.200 (17,5% del prezzo dello Sprint arrotondato per difetto al centinaio; prima 20%: €1.160 / €1.760 / €2.560) | `lib/i18n/ambassador.ts` (`ambassadorCommission`, derivata da `ZL_TIERS`) |
+| White Label per agenzie (dal 9 novembre 2026) | prezzo partner = prezzo pubblico meno la commissione ambassador: €4.800 / €7.300 / €10.600 in 4 rate (€1.200 / €1.825 / €2.650); margine minimo dell'agenzia €1.000 / €1.500 / €2.200, rivendita mai sotto il prezzo pubblico; esempio in pagina: rivendita a €7.000 sullo scaglione base, margine €2.200; nessun contatto diretto col cliente dell'agenzia per 24 mesi; compensi Shopify al partner per gli store creati dal suo account e trasferiti al cliente (citati senza numeri): https://help.shopify.com/partners/how-to-earn | `lib/i18n/ambassador.ts` (`whiteLabelPartnerPrice`, `whiteLabelInstallment`, `AMBASSADOR_TERMS.whiteLabelNonSolicitMonths`) |
 | Sviluppo Shopify | €1.600 (primi 10 progetti), €1.850 (11-20, attuale), €2.100 (21-30), €2.400 (dal 31°) al mese × 3 mesi | `lib/i18n/sviluppo.ts`, card prezzi della home in `lib/i18n/index.ts`, JSON-LD, llms.txt |
 | AI Accelerator | €750 (pilota, chiuso), €1.100 (attuale, fino al 15° cliente), €2.500 (16-30), €4.000 (dal 31°) una tantum | `lib/i18n/aiAccelerator.ts`, JSON-LD |
 | Data-Driven Team | su misura, primo sprint di 30 giorni a metà prezzo | `lib/i18n/dataTeam.ts`, `teamRoadmap.ts` |

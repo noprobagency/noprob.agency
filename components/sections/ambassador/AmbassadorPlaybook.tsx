@@ -14,9 +14,11 @@ import {
 } from '@/lib/i18n/ambassador'
 
 /**
- * Ambassador playbook (IT `/it/ambassador`, EN `/ambassador`), linked from the
- * footer, noindex. A long, text-first document split into boxed sections. No
- * CTAs, no form: the offer it describes is the Shopify Launch Sprint.
+ * Ambassador and White Label playbook (IT `/it/ambassador`, EN `/ambassador`),
+ * linked from the footer, noindex. A long, text-first document split into boxed
+ * sections. The offer it describes is the Shopify Launch Sprint, either referred
+ * (Ambassador) or resold under an agency's brand (White Label). The only CTA is
+ * the email / WhatsApp contact at the end of the White Label section.
  */
 
 const CARD_BASE = 'rounded-card shadow-card p-6 min-[810px]:p-8'
@@ -196,6 +198,46 @@ export default function AmbassadorPlaybook({ locale = 'it' }: { locale?: Locale 
         </div>
       </section>
 
+      {/* Two programs */}
+      <Section
+        id="programmi"
+        label={d.programs.label}
+        heading={d.programs.heading}
+        headingEm={d.programs.headingEm}
+        intro={d.programs.intro}
+      >
+        <div className="grid gap-4 min-[810px]:grid-cols-2">
+          {d.programs.items.map((program, idx) => (
+            <article key={program.tag} className={cn(idx === 0 ? CARD_GREEN : CARD_PURPLE, 'flex flex-col')}>
+              <span
+                className={cn(
+                  'inline-flex self-start rounded-[8px] px-3 py-[5px] font-sans text-[12px] font-bold tracking-[0.04em] text-np-dark',
+                  idx === 0 ? 'bg-np-mark-green' : 'bg-np-mark-purple'
+                )}
+              >
+                {program.tag}
+              </span>
+              <h3 className="mt-3 font-serif text-[24px] font-medium tracking-[-0.04em] text-noprob-text">
+                {program.title}
+              </h3>
+              <p className={cn(BODY, 'mt-1 text-noprob-grey')}>{program.forWho}</p>
+              <div className="mt-4">
+                <CheckList items={program.points} />
+              </div>
+              <p className="mt-5 rounded-[10px] bg-white px-4 py-3 font-sans text-body-sm font-semibold text-noprob-text">
+                {program.earn}
+              </p>
+              <a
+                href={program.href}
+                className="mt-4 inline-block font-sans text-body-sm font-semibold text-noprob-text underline underline-offset-4"
+              >
+                {program.linkLabel} ↓
+              </a>
+            </article>
+          ))}
+        </div>
+      </Section>
+
       {/* In short */}
       <Section id="come-funziona" label={d.summary.label} heading={d.summary.heading} headingEm={d.summary.headingEm}>
         <div className="grid gap-4 min-[810px]:grid-cols-2">
@@ -257,6 +299,156 @@ export default function AmbassadorPlaybook({ locale = 'it' }: { locale?: Locale 
             </article>
           ))}
         </div>
+      </Section>
+
+      {/* White Label */}
+      <Section
+        id="white-label"
+        label={d.whiteLabel.label}
+        heading={d.whiteLabel.heading}
+        headingEm={d.whiteLabel.headingEm}
+        intro={d.whiteLabel.intro}
+      >
+        <div className="grid gap-4 min-[810px]:grid-cols-2">
+          <article className={CARD}>
+            <h3 className={CARD_TITLE}>{d.whiteLabel.forWhoTitle}</h3>
+            <div className="mt-4">
+              <CheckList items={d.whiteLabel.forWho} />
+            </div>
+          </article>
+          <article className={CARD_PURPLE}>
+            <h3 className={CARD_TITLE}>{d.whiteLabel.receiveTitle}</h3>
+            <div className="mt-4">
+              <CheckList items={d.whiteLabel.receive} />
+            </div>
+          </article>
+        </div>
+
+        <article className={CARD}>
+          <h3 className={CARD_TITLE}>{d.whiteLabel.stepsTitle}</h3>
+          <ol className="mt-4 grid gap-3 min-[810px]:grid-cols-2">
+            {d.whiteLabel.steps.map((step, i) => (
+              <li key={step.title} className="flex gap-3 rounded-[12px] bg-noprob-card-soft p-4">
+                <Num n={i + 1} />
+                <div className="flex flex-col gap-1">
+                  <span className="font-sans text-body-sm font-semibold text-noprob-text">{step.title}</span>
+                  <p className={BODY}>{step.description}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </article>
+
+        <article className={CARD}>
+          <h3 className={CARD_TITLE}>{d.whiteLabel.earnTitle}</h3>
+          <p className={cn(BODY, 'mt-2')}>{d.whiteLabel.earnIntro}</p>
+          <ol className="mt-4 flex flex-col divide-y divide-np-border">
+            {d.whiteLabel.tiers.map((tier, i) => (
+              <li key={tier.label} className="flex flex-col gap-3 py-4">
+                <div className="flex flex-col gap-[2px]">
+                  <span className="font-sans text-[12px] font-bold tracking-[0.04em] text-noprob-grey">
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  <span className="font-sans text-body-sm font-semibold text-noprob-text">{tier.label}</span>
+                </div>
+                <dl className="grid grid-cols-3 gap-2">
+                  <div className="rounded-[10px] bg-noprob-card-soft p-3">
+                    <dt className="font-sans text-[12px] font-medium text-noprob-grey">{d.whiteLabel.publicLabel}</dt>
+                    <dd className="mt-1 font-display text-[20px] font-bold tracking-[-0.04em] text-np-dark min-[810px]:text-[26px]">
+                      {tier.publicPrice}
+                    </dd>
+                  </div>
+                  <div className="rounded-[10px] bg-noprob-card-soft p-3">
+                    <dt className="font-sans text-[12px] font-medium text-noprob-grey">{d.whiteLabel.partnerLabel}</dt>
+                    <dd className="mt-1 font-display text-[20px] font-bold tracking-[-0.04em] text-np-dark min-[810px]:text-[26px]">
+                      {tier.partnerPrice}
+                    </dd>
+                    <p className="mt-1 font-sans text-[12px] font-medium text-noprob-grey">{tier.under}</p>
+                  </div>
+                  <div className="rounded-[10px] bg-np-mark-green p-3">
+                    <dt className="font-sans text-[12px] font-medium text-np-dark">{d.whiteLabel.marginLabel}</dt>
+                    <dd className="mt-1 font-display text-[20px] font-bold tracking-[-0.04em] text-np-dark min-[810px]:text-[26px]">
+                      {tier.margin}
+                    </dd>
+                  </div>
+                </dl>
+              </li>
+            ))}
+          </ol>
+          <div className="mt-4">
+            <CheckList items={d.whiteLabel.earnPoints} />
+          </div>
+        </article>
+
+        <div className="grid gap-4 min-[810px]:grid-cols-2">
+          <article className={CARD_GREEN}>
+            <h3 className={CARD_TITLE}>
+              {d.whiteLabel.splitTitle}: {d.whiteLabel.ourSideTitle}
+            </h3>
+            <div className="mt-4">
+              <CheckList items={d.whiteLabel.ourSide} />
+            </div>
+          </article>
+          <article className={CARD_YELLOW}>
+            <h3 className={CARD_TITLE}>
+              {d.whiteLabel.splitTitle}: {d.whiteLabel.yourSideTitle}
+            </h3>
+            <div className="mt-4">
+              <CheckList items={d.whiteLabel.yourSide} tone="dark" />
+            </div>
+          </article>
+        </div>
+
+        <div className="grid gap-4 min-[810px]:grid-cols-2">
+          <article className={CARD}>
+            <h3 className={CARD_TITLE}>{d.whiteLabel.brandTitle}</h3>
+            <div className="mt-4">
+              <CheckList items={d.whiteLabel.brand} />
+            </div>
+          </article>
+          <article className={`${CARD_BASE} border-[6px] border-np-dark bg-np-dark`}>
+            <h3 className="text-np-h3 text-white">{d.whiteLabel.guaranteesTitle}</h3>
+            <p className={cn(BODY_DARK, 'mt-2')}>{d.whiteLabel.guarantees}</p>
+          </article>
+        </div>
+
+        <article className={CARD}>
+          <h3 className={CARD_TITLE}>{d.whiteLabel.faqTitle}</h3>
+          <dl className="mt-4 grid gap-3 min-[810px]:grid-cols-2">
+            {d.whiteLabel.faq.map((item) => (
+              <div key={item.question} className="rounded-[12px] bg-noprob-card-soft p-4">
+                <dt className="font-serif text-[18px] font-medium italic tracking-[-0.03em] text-noprob-text">
+                  {item.question}
+                </dt>
+                <dd className={cn(BODY, 'mt-2')}>{item.answer}</dd>
+              </div>
+            ))}
+          </dl>
+        </article>
+
+        <article className={cn(CARD_GREEN, 'flex flex-col items-center gap-3 text-center')}>
+          <h3 className="font-serif text-[26px] font-medium tracking-[-0.04em] text-noprob-text">
+            {d.whiteLabel.ctaTitle}
+          </h3>
+          <p className={cn(BODY, 'max-w-[560px]')}>{d.whiteLabel.cta}</p>
+          <div className="mt-2 flex flex-wrap justify-center gap-3">
+            <a
+              href={`mailto:${T.contactEmail}?subject=${encodeURIComponent(d.whiteLabel.ctaSubject)}`}
+              className="inline-flex items-center rounded-pill bg-np-dark px-5 py-3 font-sans text-body-sm font-semibold text-white transition-opacity hover:opacity-90"
+            >
+              {d.whiteLabel.ctaEmailLabel}
+            </a>
+            <a
+              href={T.whatsappUrl}
+              target="_blank"
+              rel="nofollow noopener noreferrer"
+              className="inline-flex items-center rounded-pill border border-np-dark bg-white px-5 py-3 font-sans text-body-sm font-semibold text-np-dark transition-colors hover:bg-np-dark hover:text-white"
+            >
+              {d.whiteLabel.ctaWhatsappLabel}
+            </a>
+          </div>
+          <p className="font-sans text-[12px] font-medium text-noprob-grey">{T.contactEmail}</p>
+        </article>
       </Section>
 
       {/* Offer */}
