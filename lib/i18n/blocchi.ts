@@ -108,6 +108,7 @@ const it: BlocchiCopy = {
       { label: 'Sviluppo Shopify', route: 'sviluppoShopify' },
       { label: 'Data-Driven Team', route: 'dataDrivenTeam' },
       { label: 'AI Accelerator', route: 'aiAccelerator' },
+      { label: 'Agenti AI per eCommerce', route: 'agentsEcommerce' },
     ],
     guides: [
       { label: 'Guida alla migrazione Shopify', route: 'migrazioneShopify' },
@@ -216,6 +217,7 @@ const en: BlocchiCopy = {
       { label: 'Shopify Development', route: 'sviluppoShopify' },
       { label: 'Data-Driven Team', route: 'dataDrivenTeam' },
       { label: 'AI Accelerator', route: 'aiAccelerator' },
+      { label: 'AI Agents for eCommerce', route: 'agentsEcommerce' },
     ],
     guides: [
       { label: 'Shopify Migration Guide', route: 'migrazioneShopify' },

@@ -5,7 +5,7 @@ import { ROUTE_PATHS, type RouteKey } from '@/lib/i18n/routes'
  * the copy of a page changes, so `lastmod` in the sitemap means something
  * instead of moving at every deploy.
  */
-export const CONTENT_LAST_MODIFIED = '2026-10-29'
+export const CONTENT_LAST_MODIFIED = '2026-11-10'
 
 export type RouteConfig = {
   key: RouteKey
@@ -27,6 +27,7 @@ const ROUTE_DEFS: Array<{ key: RouteKey; hasIt: boolean }> = [
   { key: 'migrazioneShopify', hasIt: true },
   { key: 'zeroLossMigration', hasIt: true },
   { key: 'aiAccelerator', hasIt: true },
+  { key: 'agentsEcommerce', hasIt: true },
   { key: 'blog', hasIt: true },
   { key: 'contacts', hasIt: true },
   { key: 'privacyPolicy', hasIt: true },

@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.172.0 (10 Nov 2026)
+
+- New service page AI Agents for eCommerce (/ai-agents-for-ecommerce, /it/agenti-ai-per-ecommerce), no price, call to action to a call: an agent integrated into the store, or the store set up so agents can watch sales, ads, stock, customer care and SEO. Added to the Services menu, footer, sitemap and llms.txt. The Shopify AI agent article is retitled so it does not compete with the page.
+
 ### Changelog v1.171.0 (10 Nov 2026)
 
 - SEO: the United States become the first priority. New US section in SEO/piano.md and calendar reordered on buyer keywords from treg and Search Console; the Shopify development page H1 now names Shopify development services, IT and EN.
