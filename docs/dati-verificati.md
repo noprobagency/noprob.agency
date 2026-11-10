@@ -199,23 +199,33 @@ Costo mensile reale di uno store B2C strutturato: 100-1.100 € al mese, pubblic
 
 ### CRO (shopify-cro-guide)
 
-La guida cita 11 studi peer-reviewed: le righe sotto, escluse Littledata e Spiegel.
+La guida cita 21 studi peer-reviewed (10 aggiunti il 10 novembre 2026, 11 già presenti e riallineati alla verifica sulle fonti); Littledata e Spiegel non sono studi e non si contano. Una riga per fonte: autori, anno, rivista, DOI, cosa citiamo, tipo di studio.
 
 | Dato | Valore | Fonte | Nota |
 |---|---|---|---|
-| Conversione Shopify | mediana 1,4%, top 20% sopra 2,7%, top 10% sopra 3,7% | Littledata, littledata.io/average/shopify-conversion-rate, 436 store, 90 giorni al 24 ott 2026 | Sostituisce 1,4-1,8%, 3,2% e 4,7% senza fonte |
+| Conversione Shopify | mediana 1,4%, top 20% sopra 2,7%, top 10% sopra 3,7% | Littledata, littledata.io/average/shopify-conversion-rate, 436 store, 90 giorni al 24 ott 2026 | Non è uno studio; sostituisce 1,4-1,8%, 3,2% e 4,7% senza fonte |
 | Stelle: massima probabilità d'acquisto | tra 4,2 e 4,5 | Spiegel Research Center (Northwestern), PDF su spiegel.medill.northwestern.edu | Rapporto di un centro di ricerca, non rivista; l'articolo lo dice |
-| Tre claim | picco di persuasione a 3, scetticismo dal 4° | Shu e Carlson, Journal of Marketing 2014, doi 10.1509/jm.11.0504 | Tolto "10,4%" |
-| Varianti esaurite visibili | circa +31% di partecipanti che dicono di comprare in un esperimento; effetto a U rovesciata | Tian, Chen, Xu, Int. J. Research in Marketing 2022, doi 10.1016/j.ijresmar.2021.04.002 | 31% da riassunto secondario; tolta la soglia 10-30% |
-| Formato dinamico | oltre +79% nella scelta dell'opzione edonica in uno studio | Roggeveen, Grewal, Townsend, Krishnan, Journal of Marketing 2015, doi 10.1509/jm.13.0521 | Cifra da scheda bibliografica; prima era "disponibilità a pagare +79%" |
-| Spazio tra i prodotti | stessi articoli su spazio doppio, acquirenti raddoppiati (gioielleria) | Sevilla e Townsend, Journal of Marketing Research 2016, doi 10.1509/jmr.13.0601 | Da riassunto secondario; tolto "+11,4%" |
-| Design strutturato o no | fino a +39% di clic (test Facebook) | Affonso e Janiszewski, Journal of Marketing 2023, comunicato AMA | Cifra da riassunto secondario |
+| Tre claim | picco di persuasione a 3, scetticismo dal 4° | Shu e Carlson, Journal of Marketing 2014, doi 10.1509/jm.11.0504 | Quattro esperimenti; tolti "10,4%" e la regola "forti e deboli" |
+| Varianti esaurite visibili | effetto a U rovesciata, senza cifra | Tian, Chen, Xu, Int. J. Research in Marketing 2022, doi 10.1016/j.ijresmar.2021.04.002 | Cinque esperimenti; tolti il 31% e la soglia 10-30% |
+| Formato dinamico | oltre +79% nella scelta dell'opzione edonica sull'insieme degli esperimenti; disponibilità a pagare senza cifra | Roggeveen, Grewal, Townsend, Krishnan, Journal of Marketing 2015, doi 10.1509/jm.13.0521 | Esperimenti; cifra dall'abstract; tolta la regola sui prodotti funzionali |
+| Spazio tra i prodotti | effetto dello spazio su valore, estetica, prestigio e vendite, senza cifre | Sevilla e Townsend, Journal of Marketing Research 2016, doi 10.1509/jmr.13.0601 | Tolti "raddoppiato", la gioielleria e "+11,4%" |
+| Design strutturato o no | la coerenza tra struttura visiva e tipo di marchio (utilitaristico o edonico) migliora i risultati; nessuna cifra | Affonso e Janiszewski, Journal of Marketing 2023, doi 10.1177/00222429221142281, comunicato AMA | Laboratorio, campo e dati di settore; effetto da abstract secondario |
 | Messaggi razionali in alto | qualitativo | Cian, Krishna, Schwarz, Journal of Consumer Research 2015, doi 10.1093/jcr/ucv046 | |
-| Mano che tocca il prodotto | qualitativo (effetto aptico vicario) | Luangrath, Peck, Hedgcock, Xu, Journal of Marketing Research 2022, doi 10.1177/00222437211059540 | Tolti +16% e +32,5% |
-| Sguardo del modello | +30% di vendite (annuncio Facebook di un cappello) | To e Patrick, Journal of Consumer Research 2021, doi 10.1093/jcr/ucaa063 | Cifra da riassunto secondario; tolto "+19%" |
-| CTA con quantità | tassi d'acquisto più alti, effetto maggiore per offerte meno attraenti | Duke e Amir, Marketing Science 2023, doi 10.1287/mksc.2022.1364 | Tolti +14%, +28% e "37 esperimenti" |
-| Retargeting | subito dopo l'abbandono può peggiorare; da 1 a 3 giorni effetto positivo | Li, Luo, Lu, Moriguchi, Journal of Marketing 2020, comunicato AMA | Tolta la finestra "24-72 ore" come numero secco |
+| Mano che tocca il prodotto | qualitativo (senso di possesso, effetto aptico vicario) | Luangrath, Peck, Hedgcock, Xu, Journal of Marketing Research 2022, doi 10.1177/00222437211059540 | Otto studi; tolti +16%, +32,5% e le condizioni non verificate |
+| Sguardo del modello | sguardo distolto per annunci emotivi, diretto per informativi, senza cifre | To e Patrick, Journal of Consumer Research 2021, doi 10.1093/jcr/ucaa063 | Tolti il cappello, +30% e +19% |
+| CTA con quantità | 36 esperimenti di laboratorio aggregati, +14 punti percentuali negli acquisti; test sul campo con +12% di conversione | Duke e Amir, Marketing Science 2023, doi 10.1287/mksc.2022.1364 | Cifre dal working paper degli autori (MSI), dichiarato nell'articolo; tolto "più forte per offerte meno attraenti" |
+| Retargeting | email entro un'ora 13,4% di acquisti contro 16,7% del controllo (moda giapponese); dopo 24-72 ore gli acquisti salgono | Li, Luo, Lu, Moriguchi, Journal of Marketing 2021 (online 2020), doi 10.1177/0022242920959043 | Tre esperimenti sul campo, oltre 64.000 clienti; tolti "carrelli più grandi" e il link AMA |
 | Prima recensione | -0,29 stelle dopo un anno se la prima è negativa | Park, Shin, Xie, Marketing Science 2021, doi 10.1287/mksc.2020.1264 | 0,29 dal comunicato dell'Università della South Carolina |
+| Percorso d'acquisto per tipo di acquisto | edonici con social e pagine prodotto; utilitari con recensioni di terzi, ricerca, offerte, pagine concorrenti | Li, Abbasi, Cheema, Abraham, Journal of Marketing 2020, doi 10.1177/0022242920911628 | Osservazionale: clickstream e sondaggio, 20 categorie, 40 rivenditori |
+| Conteggi di acquisti e visualizzazioni | i conteggi aiutano ma non sempre; rendimenti decrescenti; visualizzazioni dannose oltre una soglia | Das, Spence, Agarwal, Int. J. Research in Marketing 2021, doi 10.1016/j.ijresmar.2021.01.001 | Cinque esperimenti; nessuna cifra |
+| Prezzo in basso | prezzo percepito più basso, intenzione e vendite maggiori | Barone, Coulter, Li, Journal of Retailing 2020, doi 10.1016/j.jretai.2020.02.003 | Esperimenti di laboratorio e in negozio; nessuna cifra |
+| Sconto in valuta o in percentuale | sui prezzi alti vince la valuta | González, Esteva, Roggeveen, Grewal, Journal of Business Research 2016, doi 10.1016/j.jbusres.2015.08.014 | Tre esperimenti; nessuna cifra (tolta la quota 100) |
+| Scadenze | l'effetto visto offline può non emergere online | Hmurovic, Lamberton, Goldsmith, Journal of Marketing Research 2023, doi 10.1177/00222437221118856 | Meta-analisi ed esperimenti; nessuna cifra |
+| Resi gratuiti | scontrino +9,15%, varietà +8,74%, resi +7,86%; costo superiore al profitto | Patel, Baldauf, Karlsson, Oghazi, Journal of Operations Management 2021, doi 10.1002/joom.1135 | Dati d'ordine di un rivenditore di moda svedese, resi gratuiti solo in Danimarca, differenza nelle differenze; effetto di lungo periodo solo ipotizzato |
+| Rimborso istantaneo | più soddisfazione, nessun aumento significativo dell'intenzione di reso | Martínez-López, Feng, Li, López-López, Journal of Retailing and Consumer Services 2022, doi 10.1016/j.jretconser.2022.103067 | Due esperimenti a scenario |
+| Richiesta di recensione | promemoria immediato riduce le recensioni, ritardato le aumenta | Jung, Ryu, Han, Cho, Journal of Marketing 2023, doi 10.1177/00222429221143329 | Due esperimenti sul campo in Corea (viaggi, abbigliamento); nessuna cifra |
+| Biglietto scritto a mano | alza la spesa solo tra i clienti fedeli; incentivi aggiuntivi attenuano | Kim, Choi, Kim, Journal of Interactive Marketing 2022, doi 10.1177/10949968221102306 | Esperimento sul campo randomizzato con follow-up; nessuna cifra |
+| Invito al referral | un invito prosociale aumenta avvio e referral riusciti | Jung, Bapna, Golden, Sun, Information Systems Research 2020, doi 10.1287/isre.2019.0873 | Esperimenti sul campo randomizzati con incentivo fisso; nessuna cifra |
 
 Tolti perché non ritrovati con titolo e rivista: effetto "riflesso lucido" (+23% attrattività, +32% intenzione, "Journal of Consumer Research 2022"), sfondo contestuale per l'abbigliamento femminile, recensione negativa irrilevante (+16%), rallentatore (+22% vendite, +18% clic). Test A/B: "qualche centinaio di sessioni" sostituito da "alcune migliaia di sessioni per variante" (indicazione di pratica, non di una fonte).
 
@@ -427,6 +437,101 @@ Fatti usati in `data/articles/posts/shopify-plus-migration.ts`, `shopify-plus.ts
 - Stessa checklist: ordini importati fanno partire le notifiche di nuovo ordine, si disattivano da Settings > Notifications o tramite Plus Support; gift card subito prima del lancio, non modificabili né eliminabili; ordini almeno nella finestra di reso, "import orders from the past 2-5 years"; aziende e location a mano o in blocco "using Matrixify, a third-party app", cataloghi a mano o via CSV
 - Metodi di migrazione: copia e incolla, CSV, app, Partner, soluzione custom con API: https://help.shopify.com/en/manual/migrating-to-shopify (versione IT linkata: https://help.shopify.com/it/manual/migrating-to-shopify)
 - Sprint, risposta alla candidatura entro 48 ore (già pubblicata sulla landing): `content/zero-loss-migration.en.ts`, `content/zero-loss-migration.it.ts`
+
+## Shopify Partner Program per agenzie (shopify-partner-program, lettura 10 nov 2026)
+
+- Shopify dichiara 1,3 miliardi di dollari pagati ai partner nel 2025, da app, temi, creazione di store, referral e altro. | https://www.shopify.com/partners
+- Referral POS Pro: 500 dollari una tantum, con merchant nuovo, attivo 10 o più giorni al mese per 2 mesi e oltre 1.000 dollari mensili. | https://help.shopify.com/en/partners/partner-program/how-to-earn
+- Il referral affiliato è tracciato per 30 giorni dal clic; con prova gratuita, fino a 400 giorni. | https://www.shopify.com/affiliates
+- Guida Q4 2026: cinque tier (Registered, Select, Plus, Premier, Platinum), aggiornati trimestralmente; prossimo aggiornamento 1° gennaio 2027. | https://cdn.shopify.com/static/partner-resources/shopify-partner-program-guide-service-track.pdf
+- Soglie ricavi da nuovi merchant e co-sell: Select 100.000, Plus 500.000, Premier 2 milioni, Platinum 5 milioni di dollari. | https://cdn.shopify.com/static/partner-resources/shopify-partner-program-guide-service-track.pdf
+- Soglie ricavi da merchant esistenti: Select 500.000, Plus 2,5 milioni, Premier 10 milioni, Platinum 25 milioni; vale la più forte delle due dimensioni. | https://cdn.shopify.com/static/partner-resources/shopify-partner-program-guide-service-track.pdf
+- Merchant richiesti: Select 1 Plus o 10 standard; Plus 2 Plus o 40 standard; Premier 4 Plus; Platinum 6 Plus. | https://cdn.shopify.com/static/partner-resources/shopify-partner-program-guide-service-track.pdf
+- Select, Plus e Premier vengono ritirati il 1° gennaio 2027; Platinum, oggi il tier più alto, nel 2027 sta sotto Diamond. | https://help.shopify.com/en/partners/partner-program/about
+Fatti usati in `data/articles/posts/shopify-partner-program.ts`. Pagine ufficiali di Shopify lette il 10 novembre 2026; cifre in dollari. Tier, soglie e importi cambiano (prossimo aggiornamento dei tier il 1 gennaio 2027): si ricontrollano prima di riusarli.
+
+### Programma e iscrizione
+- Programma aperto, basato sulle performance, per agenzie, consulenze e system integrator: https://help.shopify.com/en/partners/help-support/faq/partner-program
+- 1,3 miliardi di dollari pagati ai partner nel 2025; tre percorsi (app, store, servizi): https://www.shopify.com/partners
+- Requisiti dai termini: maggiore età, finalità professionale, nome legale, email valida; Shopify può respingere la domanda; chi lavora per un datore di lavoro registra il Partner a nome suo; un login per utente; ruoli Referral Partner e Developer; il Referral Partner dichiara il compenso (regole FTC); la designazione di tier è revocabile; il bounty affiliato è descritto in modo diverso: https://www.shopify.com/partners/terms
+- Iscrizione in quattro passi; dev store e client transfer store gratuiti; l'affiliazione richiede un'approvazione separata: https://help.shopify.com/en/partners/partner-program/getting-started
+- Livelli 2027 per i servizi: Registered come ingresso, poi Silver (25.000 dollari, 1 shop, 1 anno), Gold (5 milioni, 5 shop, 4 anni), Platinum (50 milioni, 20 shop), Diamond (500 milioni, 25 shop); Select, Plus e Premier ritirati; la tecnologia passa dall'App Store; aggiornamento giornaliero, minimo sei mesi nel livello; shop attribuiti per 4 anni, su qualsiasi piano, dev e test esclusi; chi è solo collaboratore o referral non attribuisce: https://help.shopify.com/en/partners/partner-program/about
+- Dichiararsi Shopify Partner richiede il permesso; badge entro 48 ore: https://help.shopify.com/en/partners/partner-program/shopify-branding
+- L'iscrizione è gratuita (invito del blog Shopify del 16 giugno 2023): https://www.shopify.com/partners/blog/shopify-referral-commission-guide
+- Registrazione app una tantum di 19 dollari, app custom esenti: https://shopify.dev/docs/apps/launch/distribution/revenue-share
+- Guida ai tier per i servizi, quarto trimestre 2026: cinque tier, soglie su merchant nuovi o co-venduti e su merchant esistenti, Directory da Plus: https://cdn.shopify.com/static/partner-resources/shopify-partner-program-guide-service-track.pdf
+- Tier 2027 nel Dev Dashboard dal 4 novembre 2026, Partner Directory rinnovata il 9 novembre 2026; blog e Help Center non coincidono sul conteggio degli shop, l'articolo lo dice: https://www.shopify.com/partners/blog/shopify-partner-program-tiers
+
+### Guadagni
+- Lancio di uno store: 20% del canone base più 0,1% del GMV per 4 anni (Basic, Grow, Advanced, Plus); GMV al netto dei resi, solo consumer, B2B escluso, tetto 100 milioni con azzeramento; store creati prima del 10 agosto con 20% perpetuo; Plus co-venduto 15% poi 20% più 0,1%; la quota va a chi ha costruito e trasferito lo store e non si divide; niente commissione sul proprio store; referral Plus ed Enterprise 2.500 dollari (anche upgrade, entro 90 giorni, oltre 5.000 di GMV); POS Payments 20% del profitto per 4 anni; B2B Payments e Shop Pay fuori da Shopify; pagamenti due volte al mese, minimo 25 dollari: https://help.shopify.com/en/partners/help-support/faq/earnings
+- Starter e Lite senza revenue share; POS Pro 500 dollari a condizioni; gli importi restano a discrezione di Shopify: https://help.shopify.com/en/partners/partner-program/how-to-earn
+- Affiliati: 150 e 25 dollari; Basic, Grow e Advanced a prezzo pieno, Plus, Enterprise e Retail esclusi: https://help.shopify.com/en/affiliates/earnings
+- Tracciamento affiliati a 30 giorni, fino a 400 con prova gratuita: https://www.shopify.com/affiliates
+- La commissione sugli store costruiti si ottiene solo con il trasferimento: https://help.shopify.com/en/partners/manage-clients-stores
+
+### Dashboard e store
+- Partner Dashboard (referral, lead, temi, Directory) e Dev Dashboard: https://help.shopify.com/en/partners/manage-account/dashboard
+- Dev store: massimo 250, niente transazioni reali, protetto da password, non trasferibile: https://shopify.dev/docs/apps/build/dev-dashboard/development-stores
+- Client transfer store: nasce nell'organizzazione, passa al cliente, prima niente transazioni né app custom: https://help.shopify.com/en/partners/manage-clients-stores/client-transfer-stores
+- Trasferimento: email del cliente, scadenza dopo sette giorni, prima disattivare Payments, Balance, Credit e Capital: https://shopify.dev/docs/apps/build/dev-dashboard/stores/client-transfer-stores
+- Si lavora con l'account collaboratore, mai con le credenziali del cliente: https://help.shopify.com/en/partners/manage-clients-stores/working-on-client-stores
+
+### Nostri
+- €1.000 a progetto (commissione ambassador, Listino); Sprint di 14 giorni e 4 garanzie (Garanzie dello Sprint); iscritti al Partner Program (dichiarazione di Antonio, 28 ottobre 2026).
+- Esempio di calcolo dell'articolo, ipotesi nostre dichiarate (5 store, 500.000 dollari di GMV per store): 0,1% di 500.000 = 500 dollari; per 5 store 2.500; due referral Plus 5.000; quattro affiliati a 150 dollari 600.
+
+## White label Shopify per agenzie (white-label-shopify-agencies, lettura 10 nov 2026)
+
+Fatti usati in `data/articles/posts/white-label-shopify-agencies.ts`. Pagine lette il 10 novembre 2026; nessuna cifra di compenso (solo il meccanismo). Contratti e termini cambiano: si ricontrollano prima di riusarli.
+
+### Definizione e contratti
+- L'espressione "white label" non compare nel Partner Program Agreement: https://www.shopify.com/partners/terms
+- Le linee guida sul brand Shopify non parlano di white label (citate come "linee guida", senza link): https://help.shopify.com/en/partners/partner-program/shopify-branding
+- Il Partner risponde di dipendenti, agenti e subappaltatori e resta obbligato anche se subappalta (A.2.5.6, A.2.5.7); accede agli store solo per lavori autorizzati dal merchant (A.2.5.10); non può imitare Shopify né travisare l'affiliazione; le informazioni riservate possono passare ai subappaltatori che ne hanno bisogno, con riservatezza almeno equivalente (A.6.2); l'accordo con il merchant e i rimedi per il mancato pagamento sono compito del partner, Shopify non interviene (Parte B, sez. 6): https://www.shopify.com/partners/terms
+- Uno store ha un solo Store Owner (2.1) che risponde di dipendenti, agenti e subappaltatori (2.2.2); termini aggiornati al 20 ottobre 2026, segnalati come cambiati rispetto alla lettura precedente: https://www.shopify.com/legal/terms
+
+### Accesso collaboratore
+- Account collaboratore consigliato; il partner non chiede né usa le credenziali del merchant; l'account staff resta una via di riserva: https://help.shopify.com/en/partners/manage-clients-stores/working-on-client-stores
+- Richiesta dal Dev Dashboard con URL myshopify, codice di 4 cifre e permessi; con l'app già installata il codice non serve; al massimo 2 richieste pendenti per store: https://shopify.dev/docs/apps/build/dev-dashboard/stores/collaborations
+- Il codice sta in Settings, Users, Security e uno nuovo invalida i precedenti; approva lo Store Owner o un amministratore, che assegna solo i permessi necessari; i collaboratori non consumano il limite utenti e non accedono al POS; l'accesso scade dopo 90 giorni senza login; 2FA obbligatoria; il nome rimosso resta nel registro attività e nelle cronologie ordini: https://help.shopify.com/en/manual/your-account/users/security/collaborator-accounts
+- Al merchant si mostrano anzianità, fascia di collaborazioni attive, paese di iscrizione e la richiesta: https://help.shopify.com/en/partners/manage-clients-stores/working-on-client-stores
+
+### Trasferimento e proprietà
+- Client transfer store e dev store: stesse regole della sezione sul Partner Program (non trasferibile il dev store, nessuna transazione reale prima del passaggio): https://help.shopify.com/en/partners/manage-clients-stores/client-transfer-stores e https://shopify.dev/docs/apps/build/dev-dashboard/development-stores
+- Trasferimento dal Dev Dashboard con email del cliente, che accetta e sceglie il piano; l'entità del partner non si trasferisce mai; la discordanza di Shopify sull'accesso dopo il trasferimento, segnalata come cambiata, non è stata usata: https://shopify.dev/docs/apps/build/dev-dashboard/stores/client-transfer-stores
+- Su store in collaborazione il partner non può trasferire la proprietà, deve avviarla il merchant, e non si trasferisce a un account collaboratore: https://shopify.dev/docs/apps/build/dev-dashboard/stores/collaborations e la pagina dei collaboratori sopra
+- Cambio di titolare: verso un utente esistente da Settings, Users; verso un esterno da Settings, General, con accettazione via email; il precedente proprietario conserva i permessi sullo store e perde quelli di organizzazione: https://help.shopify.com/en/manual/your-account/manage-orgs-and-stores/change-transfer-ownership
+
+### Compensi (solo meccanismo)
+- Programma aperto e basato sulle performance: https://help.shopify.com/en/partners/help-support/faq/partner-program
+- La revenue share spetta a chi ha costruito e trasferito lo store, non si divide tra agenzie, resta legata allo store di fatturazione originario: https://help.shopify.com/en/partners/help-support/faq/earnings
+- La commissione sugli store costruiti passa solo dal trasferimento: https://help.shopify.com/en/partners/manage-clients-stores
+- Erogazioni a discrezione di Shopify, importi modificabili: https://help.shopify.com/en/partners/partner-program/how-to-earn
+
+### Fonti generali (non sul white label)
+- Stati Uniti: un'opera su commissione è "made for hire" solo se rientra in nove categorie e c'è un accordo scritto firmato: https://www.copyright.gov/circs/circ30.pdf
+- Unione europea, linee guida EDPB su titolare e responsabile: il responsabile non coinvolge un altro responsabile senza autorizzazione scritta del titolare, e il sub-responsabile assume gli stessi obblighi per contratto (par. 128-129): https://www.edpb.europa.eu/system/files/2023-10/EDPB_guidelines_202007_controllerprocessor_final_en.pdf
+
+### Nostri
+- Iscritti al Partner Program (dichiarazione di Antonio, 28 ottobre 2026); Sprint di 14 giorni, go-live al giorno 15-30, 90 giorni di supporto, 4 garanzie, prezzo pubblico per fatturato in 4 rate (Listino); da €1.000 a progetto (commissione ambassador, Listino).
+
+## Creatività pubblicitarie (ad-creative-research, lettura 10 nov 2026)
+
+Gli 11 studi di `data/articles/posts/ad-creative-research.ts`. Una riga per fonte: autori, anno, rivista, DOI, cosa citiamo, tipo di studio. Le cifre non verificate sull'originale sono omesse nell'articolo.
+
+- Affonso e Janiszewski, 2023, Journal of Marketing, doi 10.1177/00222429221142281: solo la direzione (design strutturato per marchi utilitaristici, non strutturato per edonici); laboratorio, campo su annunci e dati di settore; nessuna cifra.
+- Casado-Aranda, Sánchez-Fernández, Viedma-del-Jesús, 2022, Journal of Interactive Marketing, doi 10.1177/10949968221087259: banner edonici attivano ricompensa ed emozione, utilitaristici ragionamento e controllo; i dati neurali spiegano il 9-18% del comportamento online oltre il dichiarato; fMRI, verificato solo sull'abstract.
+- Zarantonello, Jedidi, Schmitt, 2013, International Journal of Research in Marketing, doi 10.1016/j.ijresmar.2012.09.001: via esperienziale nei mercati sviluppati, funzionale relativamente più forte negli emergenti; 256 test di spot TV di una multinazionale in 23 paesi.
+- Hartmann, Heitmann, Schamp, Netzer, 2021, Journal of Marketing Research, doi 10.1177/00222437211037258: mano con il prodotto e intenzione espressa, selfie con il volto e like; osservazionale su oltre 250.000 post di 185 marchi; cifre omesse perché ambigue.
+- Sharma e Estes, 2024, International Journal of Research in Marketing, doi 10.1016/j.ijresmar.2024.02.001: immagini che evocano un odore migliorano valutazioni e scelte solo se l'odore conta, un cattivo odore danneggia; sette studi più quattro supplementari.
+- Roggeveen, Grewal, Townsend, Krishnan, 2015, Journal of Marketing, doi 10.1509/jm.13.0521: video contro immagine ferma, scelta dell'opzione edonica oltre +79% sull'insieme degli esperimenti (cifra dell'abstract); esperimenti.
+- Yoon, Bang, Choi, Kim, 2020, International Journal of Advertising, doi 10.1080/02650487.2020.1766233: ritmo lento verso benefici e qualità, rapido verso caratteristiche e prezzo; quattro studi su spot TV, misurano preferenze e non vendite.
+- Shu e Carlson, 2014, Journal of Marketing, doi 10.1509/jm.11.0504: impressione 4,37 con tre affermazioni contro 3,96 con quattro; 521 studenti; il +10,4% non è usato perché calcolato da noi.
+- Pezzuti, Leonhardt, Warren, 2021, Journal of Interactive Marketing, doi 10.1016/j.intmar.2020.06.005: parole di certezza e coinvolgimento passano dal potere percepito del brand, con la credenza individuale nella distanza di potere come moderatore; studi sperimentali.
+- Pezzuti e Leonhardt, 2023, Journal of the Academy of Marketing Science, doi 10.1007/s11747-022-00894-3: negazioni e coinvolgimento su 53 milioni di interazioni, più forte con alto bisogno di status; osservazionale più esperimenti; cifra del 17,6% omessa perché non verificata.
+- Mead, Richerson, Li, 2020, Journal of Retailing, doi 10.1016/j.jretai.2019.10.002: font inclinati a destra aumentano intenzioni di visita e acquisto e clic solo negli annunci promozionali, soprattutto tra chi cerca offerte; esperimenti; cifra del 35° non citata.
+
+Scartati: uno studio con repliche fallite e studi con cifre solo calcolate o senza la manipolazione verificata.
 
 ## Garanzie dello Sprint (testo da citare alla lettera)
 

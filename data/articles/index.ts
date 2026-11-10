@@ -1,3 +1,6 @@
+import shopifyPartnerProgram from './posts/shopify-partner-program'
+import whiteLabelShopifyAgencies from './posts/white-label-shopify-agencies'
+import adCreativeResearch from './posts/ad-creative-research'
 import shopifyCroGuide from './posts/shopify-cro-guide'
 import howShopifyWorks from './posts/how-shopify-works'
 import ecommerceGrowthStrategyLongTerm from './posts/ecommerce-growth-strategy-long-term'
@@ -42,6 +45,7 @@ export type ArticleSection =
   | { type: 'image'; src: string; alt?: string; width?: number; height?: number; maxWidth?: string }
   | { type: 'metrics'; merValue: string; growthValue?: string; note?: string }
   | { type: 'cta' }
+  | { type: 'partnerBanner' }
 
 export type Article = {
   slug: string
@@ -90,6 +94,9 @@ export type Article = {
 
 /** One article per file in ./posts; a new article = a new file + one import line here. */
 export const articles: Article[] = [
+  shopifyPartnerProgram,
+  whiteLabelShopifyAgencies,
+  adCreativeResearch,
   shopifyPlusMigration,
   aiAgentsForShopify,
   aiAgentIntegrationEcommerce,

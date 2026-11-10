@@ -34,6 +34,10 @@ Stati: `da fare`, `in corso`, `fatto (data, PR)`, `bloccato (motivo)`.
 | 57 | 10 nov | Landing "AI Agents for eCommerce", EN e IT, senza prezzo, CTA a una call (D-79, chiude A-20) | ai agents for ecommerce (US 210, CPC $31,66) | team | fatto (10 nov, questa PR) |
 | 58 | 10 nov | Articolo di supporto alla landing: integrazione di un agente nello store, EN poi IT | ai agent integration (US 1.000, KD 0) | team | fatto (10 nov, questa PR) |
 | 59 | 10 nov | `/shopify-development`: H1 e copy su "Shopify development services" | shopify development services (US 720, KD 24) | Francesca | fatto (10 nov, questa PR) |
+| 64 | 10 nov | Banner partner riutilizzabile negli articoli e articolo sul programma partner | shopify partner program (US 1.300, KD 19) | team | fatto (10 nov, questa PR) |
+| 65 | 10 nov | Articolo white label per agenzie | white label web development (US 260), white label shopify | team | fatto (10 nov, questa PR) |
+| 66 | 10 nov | Guida CRO da 11 a 21 studi verificati su fonte primaria | ecommerce conversion rate optimization (US 590, KD 27) | team | fatto (10 nov, questa PR) |
+| 67 | 10 nov | Articolo ad creative con 11 studi verificati | ad creative (US 880, KD 25) | team | fatto (10 nov, questa PR) |
 | 60 | nov | `/about` e home su "Shopify experts": titolo, H1 e blocco chi ci lavora, senza nuove affermazioni | shopify experts (US 1.000, KD 13), hire shopify expert (210, KD 15) | team | da fare |
 | 61 | nov | Sprint e guida alla migrazione: rinforzo su "Shopify migration services" e link interni da compratore | shopify migration services (US 260, KD 4) | team | da fare |
 | 62 | nov | Pagina "Shopify Plus agency" solo con prove verificate su Plus (`docs/dati-verificati.md`) | shopify plus agency (US 590, KD 16), shopify plus development company (110) | team | da fare |

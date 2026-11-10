@@ -38,6 +38,8 @@ const CLUSTER_SLUGS: Record<ClusterId, string[]> = {
     'shopify-vs-woocommerce',
     'how-shopify-works',
     'shopify-301-redirects',
+    'shopify-partner-program',
+    'white-label-shopify-agencies',
   ],
   'ai-agents': [
     'ai-agents-for-shopify',
@@ -54,7 +56,7 @@ const CLUSTER_SLUGS: Record<ClusterId, string[]> = {
     'ai-for-ecommerce',
   ],
   'ai-search': ['geo-for-shopify', 'geo-vs-seo', 'agentic-commerce-shopify', 'chatgpt-shopping-shopify'],
-  growth: ['shopify-cro-guide', 'ecommerce-growth-strategy-long-term'],
+  growth: ['shopify-cro-guide', 'ecommerce-growth-strategy-long-term', 'ad-creative-research'],
 }
 
 export const CLUSTERS: Cluster[] = CATEGORIES.map((category) => ({
@@ -98,6 +100,9 @@ export const ARTICLE_PILLS: Record<string, Record<Locale, string>> = {
   'shopify-migration-ai-agents': { en: 'Migration', it: 'Migrazione' },
   'bigcommerce-vs-shopify': { en: 'Comparison', it: 'Confronto' },
   'shopify-301-redirects': { en: 'SEO', it: 'SEO' },
+  'shopify-partner-program': { en: 'Partners', it: 'Partner' },
+  'white-label-shopify-agencies': { en: 'White label', it: 'White label' },
+  'ad-creative-research': { en: 'Research', it: 'Ricerca' },
 }
 
 export function getCluster(slug: string): Cluster | undefined {

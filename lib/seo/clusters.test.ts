@@ -86,6 +86,7 @@ describe('blog categories', () => {
       ].sort()
     )
     expect(byId.shopify).toContain('shopify-301-redirects')
+    expect(byId.shopify).toEqual(expect.arrayContaining(['shopify-partner-program', 'white-label-shopify-agencies']))
     expect(byId['ai-agents']).toEqual(
       [
         'ai-agents-for-shopify',
@@ -105,7 +106,7 @@ describe('blog categories', () => {
     expect(byId['ai-search']).toEqual(
       ['agentic-commerce-shopify', 'chatgpt-shopping-shopify', 'geo-for-shopify', 'geo-vs-seo'].sort()
     )
-    expect(byId.growth).toEqual(['ecommerce-growth-strategy-long-term', 'shopify-cro-guide'])
+    expect(byId.growth).toEqual(['ad-creative-research', 'ecommerce-growth-strategy-long-term', 'shopify-cro-guide'])
   })
 
   it('have page copy (title, description, H1 and intro) in both locales', () => {

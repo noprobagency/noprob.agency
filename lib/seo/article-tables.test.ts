@@ -41,7 +41,7 @@ describe('article tables', () => {
     }
   })
 
-  it('exist in the eleven articles that compare things side by side', () => {
+  it('exist in the twelve articles that compare things side by side', () => {
     const withTables = articles.filter((a) => tables(a.content).length > 0).map((a) => a.slug)
     expect(withTables.sort()).toEqual(
       [
@@ -56,6 +56,7 @@ describe('article tables', () => {
         'shopify-mcp',
         'shopify-migration-ai-agents',
         'shopify-plus-migration',
+        'white-label-shopify-agencies',
       ].sort(),
     )
   })
