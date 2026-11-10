@@ -22,7 +22,7 @@ export const zeroLossIt: ZlCopy = {
   },
   hero: {
     eyebrow: 'Shopify Launch Sprint',
-    h1: 'Il tuo eCommerce su Shopify in 14 giorni. Più posizioni su Google, più vendite, più AI.',
+    h1: 'La tua migrazione a Shopify in 14 giorni. Più posizioni su Google, più vendite, più AI.',
     proofNote: 'Caso Nazzi: +105% di vendite online in 85 giorni',
     paragraph:
       'In 14 giorni un team completo porta il tuo store su Shopify, con il nostro Custom AI System: più veloce, pronto per gli agenti AI, costruito per vendere. Poi 90 giorni su SEO, conversioni e AOV, misurati in dashboard. Prezzo fisso, zero sorprese.',
