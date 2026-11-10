@@ -2,7 +2,7 @@
 
 Lista ordinata del lavoro di Francesca. Le date sono **indicative**: Antonio lancia ogni voce dalla chat con `/seo prossima`, quando vuole, e Francesca prende sempre la prima voce `da fare`. Ogni contenuto è un articolo del blog, unico, con cover standard e, quando possibile, un'intervista ad Antonio. L'ordine può cambiare se i dati lo chiedono (si aggiorna qui, in una PR). Dettagli e motivi in [piano.md](piano.md).
 
-Da novembre l'ordine segue la roadmap AI e agenti del 28 ottobre (`piano.md`): i numeri restano quelli di sempre, **conta l'ordine delle righe** (si prende la prima `da fare` dall'alto). Le keyword "da misurare" si misurano con treg nel brief (circa $0,02).
+Dal 10 novembre la priorità numero uno sono le ricerche negli Stati Uniti con intento da compratore (`piano.md`, "Priorità USA"): l'inglese guida, l'italiano segue. Prima di questa data l'ordine seguiva la roadmap AI e agenti del 28 ottobre (`piano.md`): i numeri restano quelli di sempre, **conta l'ordine delle righe** (si prende la prima `da fare` dall'alto). Le keyword "da misurare" si misurano con treg nel brief (circa $0,02).
 
 Stati: `da fare`, `in corso`, `fatto (data, PR)`, `bloccato (motivo)`.
 
@@ -31,6 +31,13 @@ Stati: `da fare`, `in corso`, `fatto (data, PR)`, `bloccato (motivo)`.
 | 22 | gennaio | "Quanto costa migrare a Shopify" (prezzo pubblico dello Sprint per fascia) | shopify migration cost, costo migrazione shopify | team | fatto (27 ott, v1.77.0) |
 | 23 | gennaio | Confronto onesto delle agenzie per la migrazione a Shopify (idea di Marco) | shopify migration experts, shopify migration services | team | fatto (27 ott, v1.76.0) |
 | 24 | gennaio | Guida "Da BigCommerce a Shopify" (solo fonti ufficiali) | migrate bigcommerce to shopify | team | fatto (27 ott, v1.78.0) |
+| 57 | 10 nov | Landing "AI Agents for eCommerce", EN e IT, senza prezzo, CTA a una call (D-79, chiude A-20) | ai agents for ecommerce (US 210, CPC $31,66) | team | in corso |
+| 58 | 10 nov | Articolo di supporto alla landing: integrazione di un agente nello store, EN poi IT | ai agent integration (US 1.000, KD 0) | team | da fare |
+| 59 | 10 nov | `/shopify-development`: H1 e copy su "Shopify development services" | shopify development services (US 720, KD 24) | Francesca | fatto (10 nov, questa PR) |
+| 60 | nov | `/about` e home su "Shopify experts": titolo, H1 e blocco chi ci lavora, senza nuove affermazioni | shopify experts (US 1.000, KD 13), hire shopify expert (210, KD 15) | team | da fare |
+| 61 | nov | Sprint e guida alla migrazione: rinforzo su "Shopify migration services" e link interni da compratore | shopify migration services (US 260, KD 4) | team | da fare |
+| 62 | nov | Pagina "Shopify Plus agency" solo con prove verificate su Plus (`docs/dati-verificati.md`) | shopify plus agency (US 590, KD 16), shopify plus development company (110) | team | da fare |
+| 63 | da decidere con Antonio | Nuova offerta "Shopify SEO agency": serve il sì su offerta e prove | shopify seo agency (US 1.000, KD 0, CPC $30,37) | Antonio | da decidere |
 | 25 | quando sbloccata | "Cos'è un Custom AI System per Shopify" (`docs/articoli-da-scrivere.md`) | | team | bloccato (servono i dati di velocità prima e dopo di Nazzi e Cumini) |
 | 26 | 28 ott | Revisione completa del sito (4 revisori) e implementazione con le decisioni di Antonio | | team | fatto (28 ott, v1.80.0 - v1.82.0) |
 | 27 | 28 ott | "Shopify Plus: quando conviene e come migrare" (R-37) | shopify plus, shopify plus agency | team | fatto (28 ott, v1.82.0) |

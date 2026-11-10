@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.171.0 (10 Nov 2026)
+
+- SEO: the United States become the first priority. New US section in SEO/piano.md and calendar reordered on buyer keywords from treg and Search Console; the Shopify development page H1 now names Shopify development services, IT and EN.
+
 ### Changelog v1.170.0 (10 Nov 2026)
 
 - SEO: the Sprint hero H1 now says Your Shopify migration in 14 days, IT and EN, so the page's main heading carries the term its buyers search. Offer, price and guarantees unchanged.

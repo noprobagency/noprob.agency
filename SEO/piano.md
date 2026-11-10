@@ -12,6 +12,33 @@ Roadmap di Francesca. Cosa si fa e in che ordine è in [calendario.md](calendari
 - Roadmap AI e agenti: 28 ottobre 2026 ($0,47), qui sotto. Il calendario da novembre segue quest'ordine.
 - Da qui si lavora per voci del calendario, lanciate da Antonio con `/seo prossima`.
 
+## Priorità USA (Antonio, 10 novembre 2026)
+
+Posizionamento e keyword negli Stati Uniti sono la priorità numero uno di noprob. L'inglese guida, l'italiano è la versione derivata e resta allineata. Dati in `SEO/data/us-keyword-2026-11-10.json` ($0,20). Le nostre posizioni si leggono solo da Search Console.
+
+**Dove siamo.** Negli USA, ultimi 28 giorni: 1.688 impressioni e nessun clic. Le query da compratore sono ancora poche e fuori dalle prime posizioni.
+
+**Ricerche da compratore, per volume mensile US.**
+
+| Keyword | Volume | KD | CPC | Pagina |
+|---|---|---|---|---|
+| shopify experts | 1.000 | 13 | $56,64 | home e `/about` (voce 60) |
+| shopify seo agency | 1.000 | 0 | $30,37 | da decidere con Antonio (voce 63) |
+| shopify development services | 720 | 24 | $36,68 | `/shopify-development` (voce 59) |
+| shopify plus agency | 590 | 16 | $22,06 | solo con prove su Plus (voce 62) |
+| ai agent development company | 590 | 9 | $43,27 | landing agenti (voce 57) |
+| shopify development agency | 480 | 31 | $40,56 | `/shopify-development` |
+| hire shopify developer | 390 | 46 | $72,03 | `/shopify-development` |
+| shopify migration services | 260 | 4 | $28,02 | Sprint (voce 61) |
+| hire shopify expert | 210 | 15 | $52,78 | home e `/about` |
+| ai agents for ecommerce | 210 | 0 | $31,66 | landing agenti (voce 57) |
+
+**Agenti.** La landing commerciale prende "ai agents for ecommerce"; l'articolo di supporto prende "ai agent integration" (1.000, KD 0); `/blog/ai-agents-for-shopify` resta la guida informativa su "shopify ai agent" e chatbot contro agente; `/ai-accelerator` resta il programma di 30 giorni.
+
+**Tecnica.** Hreflang corretti (en, it, x-default sulla versione inglese): si resta su `en` e non `en-US`, perché il pubblico comprende anche UK e Australia. JSON-LD con areaServed già su Stati Uniti, Regno Unito, Australia.
+
+**Regola.** Mai presentare noprob come basata in Italia. Nessuna pagina senza dati verificati.
+
 ## Decisioni di Antonio (27 ottobre 2026)
 
 - Il sito resta com'è: agenzia Shopify con più servizi, lo Sprint come offerta da spingere. Niente cambi drastici di struttura né di offerta. Una verticalizzazione (forse un'offerta CRO o un agent per Shopify) si decide più avanti.
