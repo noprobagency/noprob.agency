@@ -4,13 +4,13 @@ const article: Article = {
   slug: "ai-agents-for-shopify",
   slugIt: "agenti-ai-shopify",
   title:
-    "AI Agents for Ecommerce: Is Your Shopify AI Agent a Chatbot, a Workflow or an Agent?",
+    "Is Your Shopify AI Agent a Chatbot, a Workflow or an Agent?",
   titleIt:
     "Agenti AI per Shopify: chatbot, workflow o agente? Come riconoscerli sul tuo store",
-  seoTitle: "AI Agents for Ecommerce: Shopify AI Agent Guide",
+  seoTitle: "Shopify AI Agent, Chatbot or Workflow? The Guide",
   seoTitleIt: "Agenti AI per Shopify: chatbot, workflow, agente",
   seoDescription:
-    "AI agents for ecommerce explained for Shopify: tell a chatbot, a workflow and a Shopify AI agent apart, what to hand over, what to keep, what to ask vendors.",
+    "Shopify AI agents explained: tell a chatbot, a workflow and a real agent apart, what to hand over, what to keep, what to ask vendors.",
   seoDescriptionIt:
     "Agenti AI per Shopify: come distinguere chatbot, workflow e agente AI su uno store, cosa affidare, cosa no e le domande da fare a un fornitore.",
   excerpt:
@@ -27,7 +27,7 @@ const article: Article = {
   articleType: "BlogPosting",
   date: "2026-10-29",
   datePublishedIso: "2026-10-29T09:00:00+00:00",
-  dateModifiedIso: "2026-10-29T09:00:00+00:00",
+  dateModifiedIso: "2026-11-10T12:00:00+00:00",
   wordCount: 2900,
   articleSection: "AI agents",
   readingTimeMinutes: 12,
@@ -42,7 +42,7 @@ const article: Article = {
     },
     {
       type: "paragraph",
-      text: "We are noprob agency. We work every day with AI agents built on Claude Code: they write and test the code of the stores we build with the [Shopify Launch Sprint](/shopify-migration-sprint), and they read store data for us. This page is the map for our series on agents: the criterion to tell the three forms apart, the questions to ask a vendor, what to hand to an agent and what to keep, and the five patterns behind most of what is for sale. Each section points to the article that goes deeper.",
+      text: "We are noprob agency. We work every day with AI agents built on Claude Code: they write and test the code of the stores we build with the [Shopify Launch Sprint](/shopify-migration-sprint), and they read store data for us. If you want one built into your store, see our [AI agents for eCommerce](/ai-agents-for-ecommerce) service. This page is the map for our series on agents: the criterion to tell the three forms apart, the questions to ask a vendor, what to hand to an agent and what to keep, and the five patterns behind most of what is for sale. Each section points to the article that goes deeper.",
     },
     {
       type: "h2",
@@ -295,7 +295,7 @@ const article: Article = {
     },
     {
       type: "paragraph",
-      text: "Siamo noprob agency. Lavoriamo ogni giorno con agenti AI costruiti su Claude Code: scrivono e testano il codice degli store che costruiamo con lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) e leggono i dati dello store per noi. Questa pagina è la mappa della nostra serie sugli agenti: il criterio per distinguere le tre forme, le domande da fare a un fornitore, cosa affidare a un agente e cosa tenere, e i cinque pattern dietro quasi tutto ciò che si vende. Ogni sezione rimanda all’articolo che va più a fondo.",
+      text: "Siamo noprob agency. Lavoriamo ogni giorno con agenti AI costruiti su Claude Code: scrivono e testano il codice degli store che costruiamo con lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) e leggono i dati dello store per noi. Se ne vuoi uno costruito dentro il tuo store, guarda il nostro servizio di [agenti AI per eCommerce](/it/agenti-ai-per-ecommerce). Questa pagina è la mappa della nostra serie sugli agenti: il criterio per distinguere le tre forme, le domande da fare a un fornitore, cosa affidare a un agente e cosa tenere, e i cinque pattern dietro quasi tutto ciò che si vende. Ogni sezione rimanda all’articolo che va più a fondo.",
     },
     {
       type: "h2",

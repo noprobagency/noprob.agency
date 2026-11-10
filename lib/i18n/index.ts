@@ -204,6 +204,7 @@ export type Dictionary = {
     sviluppoShopify: { title: string; description: string }
     migrazioneShopify: { title: string; description: string }
     aiAccelerator: { title: string; description: string }
+    agentsEcommerce: { title: string; description: string }
   }
   about: {
     hero: {
@@ -254,6 +255,7 @@ const en: Dictionary = {
     },
     serviceItems: [
       { label: 'AI Accelerator', href: '/ai-accelerator' },
+      { label: 'AI Agents for eCommerce', href: '/ai-agents-for-ecommerce' },
       { label: 'Shopify Development', href: '/shopify-development' },
       { label: 'Data-Driven Team', href: '/data-driven-team' },
       { label: 'Shopify Migration in 14 Days', href: '/shopify-migration-sprint' },
@@ -671,6 +673,7 @@ const en: Dictionary = {
     sviluppoShopify: { title: 'Shopify Development Services', description: 'Shopify development services to build your eCommerce from design to tracking, optimized to convert from day one. Lifetime maintenance included.' },
     migrazioneShopify: { title: 'How to Migrate to Shopify: The Complete Guide', description: 'Migrate to Shopify with confidence: platforms, what gets moved, 301 redirects and SEO, tracking, timeline, risks and cost, with published case studies.' },
     aiAccelerator: { title: 'AI Accelerator for eCommerce: Growth with AI', description: '30 days one-to-one for established eCommerce brands: we find your growth opportunities, rank them and switch on your first AI solutions. Fixed price.' },
+    agentsEcommerce: { title: 'AI Agents for eCommerce: Built Into Your Store', description: 'Custom AI agents for eCommerce, built into your store. We handle the AI agent integration or set your store up so agents can watch it. Book a call.' },
   },
   about: {
     hero: {
@@ -730,6 +733,7 @@ const it: Dictionary = {
     },
     serviceItems: [
       { label: 'AI Accelerator', href: '/it/ai-accelerator' },
+      { label: 'Agenti AI per eCommerce', href: '/it/agenti-ai-per-ecommerce' },
       { label: 'Sviluppo Shopify', href: '/it/sviluppo-shopify' },
       { label: 'Data-Driven Team', href: '/it/team-ecommerce-dedicato' },
       { label: 'Migrazione Shopify in 14 giorni', href: '/it/sprint-migrazione-shopify' },
@@ -1146,6 +1150,7 @@ const it: Dictionary = {
     sviluppoShopify: { title: 'Sviluppo Shopify: creiamo il tuo eCommerce', description: 'Sviluppiamo il tuo eCommerce su Shopify dal design al tracciamento, ottimizzato per convertire dal primo giorno. Manutenzione a vita inclusa.' },
     migrazioneShopify: { title: 'Migrazione a Shopify: la guida completa', description: 'Migrazione a Shopify passo per passo: piattaforme, cosa si sposta, redirect 301 e SEO, tracking, tempi, rischi e costi, con casi pubblicati.' },
     aiAccelerator: { title: 'AI Accelerator per eCommerce: cresci con l’AI', description: '30 giorni one-to-one per eCommerce già avviati: troviamo le tue opportunità di crescita, le mettiamo in fila e attiviamo le prime soluzioni AI. Prezzo fisso.' },
+    agentsEcommerce: { title: 'Agenti AI per eCommerce: dentro il tuo store', description: 'Agenti AI per eCommerce su misura: integrazione di agenti AI nel tuo store, o store impostato perché gli agenti lo tengano d’occhio. Prenota una videochiamata.' },
   },
   about: {
     hero: {

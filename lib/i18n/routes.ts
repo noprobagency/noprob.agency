@@ -10,6 +10,7 @@ export type RouteKey =
   | 'sviluppoShopify'
   | 'migrazioneShopify'
   | 'aiAccelerator'
+  | 'agentsEcommerce'
   | 'aiThankYou'
   | 'ambassador'
   | 'zeroLossMigration'
@@ -31,6 +32,8 @@ export const ROUTE_PATHS: Record<RouteKey, { en: string; it: string }> = {
   migrazioneShopify: { en: '/shopify-migration', it: '/it/migrazione-shopify' },
   // Product name, same slug in both locales.
   aiAccelerator:    { en: '/ai-accelerator',     it: '/it/ai-accelerator' },
+  // AI agents for eCommerce landing (indexable, call CTA, no price).
+  agentsEcommerce:  { en: '/ai-agents-for-ecommerce', it: '/it/agenti-ai-per-ecommerce' },
   // Booking step after a successful AI Accelerator application (noindex).
   aiThankYou:       { en: '/ai-accelerator/thank-you', it: '/it/ai-accelerator/grazie' },
   // Private ambassador playbook (noindex, not in the sitemap).
