@@ -23,7 +23,7 @@ Posizionamento e keyword negli Stati Uniti sono la priorità numero uno di nopro
 | Keyword | Volume | KD | CPC | Pagina |
 |---|---|---|---|---|
 | shopify experts | 1.000 | 13 | $56,64 | home e `/about` (voce 60) |
-| shopify seo agency | 1.000 | 0 | $30,37 | da decidere con Antonio (voce 63) |
+| shopify seo agency | 1.000 | 0 | $30,37 | landing `/shopify-seo-agency` (voce 63) |
 | shopify development services | 720 | 24 | $36,68 | `/shopify-development` (voce 59) |
 | shopify plus agency | 590 | 16 | $22,06 | solo con prove su Plus (voce 62) |
 | ai agent development company | 590 | 9 | $43,27 | landing agenti (voce 57) |

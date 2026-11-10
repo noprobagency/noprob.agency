@@ -37,7 +37,7 @@ Stati: `da fare`, `in corso`, `fatto (data, PR)`, `bloccato (motivo)`.
 | 60 | nov | `/about` e home su "Shopify experts": titolo, H1 e blocco chi ci lavora, senza nuove affermazioni | shopify experts (US 1.000, KD 13), hire shopify expert (210, KD 15) | team | da fare |
 | 61 | nov | Sprint e guida alla migrazione: rinforzo su "Shopify migration services" e link interni da compratore | shopify migration services (US 260, KD 4) | team | da fare |
 | 62 | nov | Pagina "Shopify Plus agency" solo con prove verificate su Plus (`docs/dati-verificati.md`) | shopify plus agency (US 590, KD 16), shopify plus development company (110) | team | da fare |
-| 63 | da decidere con Antonio | Nuova offerta "Shopify SEO agency": serve il sì su offerta e prove | shopify seo agency (US 1.000, KD 0, CPC $30,37) | Antonio | da decidere |
+| 63 | 10 nov | Landing "Shopify SEO Agency", EN e IT, senza prezzo, CTA a una call (sì di Antonio del 10 nov) | shopify seo agency (US 1.000, KD 0, CPC $30,37) | team | fatto (10 nov, questa PR) |
 | 25 | quando sbloccata | "Cos'è un Custom AI System per Shopify" (`docs/articoli-da-scrivere.md`) | | team | bloccato (servono i dati di velocità prima e dopo di Nazzi e Cumini) |
 | 26 | 28 ott | Revisione completa del sito (4 revisori) e implementazione con le decisioni di Antonio | | team | fatto (28 ott, v1.80.0 - v1.82.0) |
 | 27 | 28 ott | "Shopify Plus: quando conviene e come migrare" (R-37) | shopify plus, shopify plus agency | team | fatto (28 ott, v1.82.0) |

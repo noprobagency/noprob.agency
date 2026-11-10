@@ -26,6 +26,7 @@ export function breadcrumbJsonLd(items: BreadcrumbItem[]) {
 const NAV_LABEL_ROUTE: Partial<Record<RouteKey, RouteKey>> = {
   aiAccelerator: 'aiAccelerator',
   agentsEcommerce: 'agentsEcommerce',
+  shopifySeo: 'shopifySeo',
   useCases: 'useCases',
   sviluppoShopify: 'sviluppoShopify',
   dataDrivenTeam: 'dataDrivenTeam',
