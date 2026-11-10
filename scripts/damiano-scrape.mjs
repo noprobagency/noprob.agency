@@ -101,6 +101,17 @@ const REGIONS = [
   'Trentino-Alto Adige', 'Friuli-Venezia Giulia', 'Liguria', 'Umbria', 'Abruzzo', 'Sardinia', 'Calabria', 'Basilicata', 'Molise', "Valle d'Aosta",
 ]
 const CITIES = ['Milan', 'Rome', 'Turin', 'Florence', 'Naples', 'Bologna', 'Verona', 'Padua', 'Bergamo', 'Brescia', 'Bari', 'Vicenza', 'Treviso', 'Modena', 'Parma']
+// When regions and cities ran dry (7 Nov 2026): the other 92 provincial capitals, biggest
+// markets first. Hunter filters by city, so the capital's name works where a province's does not.
+const PROVINCES = [
+  'Venice', 'Genoa', 'Monza', 'Varese', 'Como', 'Reggio Emilia', 'Ravenna', 'Rimini', 'Prato', 'Lucca', 'Pisa', 'Arezzo', 'Siena', 'Perugia',
+  'Ancona', 'Pesaro', 'Macerata', 'Fermo', 'Ascoli Piceno', 'Palermo', 'Catania', 'Messina', 'Salerno', 'Caserta', 'Cagliari', 'Sassari', 'Trieste', 'Udine',
+  'Pordenone', 'Trento', 'Bolzano', 'Cuneo', 'Alessandria', 'Novara', 'Asti', 'Biella', 'Vercelli', 'Verbania', 'Aosta', 'Lecco', 'Cremona', 'Mantua',
+  'Pavia', 'Lodi', 'Sondrio', 'Belluno', 'Rovigo', 'Gorizia', 'La Spezia', 'Savona', 'Imperia', 'Ferrara', 'Forli', 'Piacenza', 'Livorno', 'Grosseto',
+  'Massa', 'Pistoia', 'Terni', 'Latina', 'Frosinone', 'Viterbo', 'Rieti', 'Pescara', 'Chieti', 'Teramo', "L'Aquila", 'Campobasso', 'Isernia', 'Avellino',
+  'Benevento', 'Lecce', 'Taranto', 'Brindisi', 'Foggia', 'Barletta', 'Matera', 'Potenza', 'Cosenza', 'Catanzaro', 'Reggio Calabria', 'Crotone', 'Vibo Valentia',
+  'Agrigento', 'Caltanissetta', 'Enna', 'Ragusa', 'Syracuse', 'Trapani', 'Nuoro', 'Oristano', 'Carbonia',
+]
 const REGION_VERTICALS = [
   'fashion, clothing and footwear brands', 'bags, leather goods and accessories brands', 'jewelry, watches and eyewear brands',
   'cosmetics, skincare and perfume brands', 'wine, spirits and craft beer producers', 'gourmet food, coffee, pasta and sweets producers',
@@ -109,7 +120,7 @@ const REGION_VERTICALS = [
 ]
 const LOCAL_QUERIES = [
   ...REGIONS.flatMap((r) => REGION_VERTICALS.map((v) => `Italian ${v} headquartered in ${r}, Italy, selling online with an ecommerce website`)),
-  ...CITIES.flatMap((c) => REGION_VERTICALS.map((v) => `${v} based in ${c}, Italy, with an online store`)),
+  ...[...CITIES, ...PROVINCES].flatMap((c) => REGION_VERTICALS.map((v) => `${v} based in ${c}, Italy, with an online store`)),
 ]
 const QUERIES = INTL
   ? INTL_QUERIES
@@ -119,6 +130,9 @@ const QUERIES = INTL
       ...LOCAL_QUERIES,
     ].map((q) => ({ q, market: 'IT' }))
 const PAGES = 10
+// Hunter answers up to offset 9,900. Italy reads every query's first 10 pages, then goes back
+// for the pages past the 10th (9 Nov 2026), where about a quarter of the companies are new.
+const DEEP_PAGES = 100
 
 const STORE_PLATFORMS = new Set(['magento', 'woocommerce', 'prestashop', 'shopware', 'salesforce-commerce-cloud', 'bigcommerce'])
 
@@ -235,26 +249,28 @@ async function discover(query, offset) {
 }
 
 async function discoverPage() {
-  for (const { q, market } of QUERIES) {
-    for (let page = 0; page < PAGES; page++) {
-      const key = `${q}#${page * 100}`
-      if (state.queries[key] != null) {
-        if (state.queries[key] < 100) break
-        continue
-      }
-      const r = await discover(q, page * 100)
-      const rows = r?.data || []
-      state.queries[key] = rows.length
-      const fresh = []
-      for (const row of rows) {
-        const domain = row.domain?.toLowerCase().replace(/^www\./, '')
-        if (domain && !state.companies[domain]) {
-          state.companies[domain] = { domain, name: row.organization, query: q, market }
-          fresh.push(domain)
+  for (const limit of INTL ? [PAGES] : [PAGES, DEEP_PAGES]) {
+    for (const { q, market } of QUERIES) {
+      for (let page = 0; page < limit; page++) {
+        const key = `${q}#${page * 100}`
+        if (state.queries[key] != null) {
+          if (state.queries[key] < 100) break
+          continue
         }
+        const r = await discover(q, page * 100)
+        const rows = r?.data || []
+        state.queries[key] = rows.length
+        const fresh = []
+        for (const row of rows) {
+          const domain = row.domain?.toLowerCase().replace(/^www\./, '')
+          if (domain && !state.companies[domain]) {
+            state.companies[domain] = { domain, name: row.organization, query: q, market }
+            fresh.push(domain)
+          }
+        }
+        save()
+        return fresh
       }
-      save()
-      return fresh
     }
   }
   return null
