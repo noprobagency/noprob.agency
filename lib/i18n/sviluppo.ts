@@ -80,7 +80,7 @@ const it: SviluppoCopy = {
     ],
     doodle: 'Costruito su misura per il tuo brand',
     trustLabel: 'Scelti da brand di Moda, Integratori e DTC eCommerce',
-    titlePart1: 'Sviluppiamo il tuo eCommerce su Shopify, pronto a ',
+    titlePart1: 'Sviluppo Shopify su misura, pronto a ',
     titlePart2: 'convertire',
     descriptionPart1:
       'Costruiamo il tuo store dalle fondamenta: design su misura, tracciamento completo, SEO e performance. Tu pensi al brand. ',
@@ -339,7 +339,7 @@ const en: SviluppoCopy = {
     ],
     doodle: 'Built to match your brand',
     trustLabel: 'Chosen by Fashion, Supplements and DTC brands',
-    titlePart1: 'We build your Shopify eCommerce, ready to ',
+    titlePart1: 'Shopify development services, built to ',
     titlePart2: 'convert',
     descriptionPart1:
       'We build your store from the ground up: custom design, full tracking, SEO and performance. You focus on the brand. ',
