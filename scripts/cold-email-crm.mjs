@@ -23,7 +23,7 @@ const today = new Date().toLocaleDateString('en-CA', { timeZone: 'Europe/Lisbon'
 
 const nextDate = (l) => {
   const next = STEPS[l.sequence.sent.length]
-  if (l.segment !== 'target' || l.sequence.stoppedAt || !next) return null
+  if (l.segment !== 'target' || l.sequence.stoppedAt || l.sequence.oneShot || !next) return null
   return l.sequence.sent.length ? addWorkingDays(l.sequence.sent[0].date, next.day) : null
 }
 

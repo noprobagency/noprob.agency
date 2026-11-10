@@ -86,6 +86,7 @@ describe('sequence', () => {
     expect(dueStep(sent, '2026-10-28')).toBe(null)
     expect(dueStep(sent, '2026-10-29')?.key).toBe('e2')
     expect(dueStep({ ...sent, sequence: { ...sent.sequence, stoppedAt: '2026-10-27' } }, '2026-10-29')).toBe(null)
+    expect(dueStep({ ...sent, sequence: { ...sent.sequence, oneShot: true } }, '2026-10-29')).toBe(null)
   })
 })
 

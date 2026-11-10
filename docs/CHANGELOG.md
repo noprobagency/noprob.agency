@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.176.0 (10 Nov 2026)
+
+- Cold email: a lead marked `sequence.oneShot` gets no follow-ups, while its replies and opt-outs are still read by the daily run. For single hand-approved emails.
+
 ### Changelog v1.175.0 (10 Nov 2026)
 
 - SEO: two articles for agencies (Shopify Partner Program, White Label Shopify) with a reusable partner banner that says partners earn from €1,000 per project; the CRO guide grows to 21 peer-reviewed studies and a new ad creative article covers 11, each checked against the primary source, with the figures that could not be confirmed removed.
