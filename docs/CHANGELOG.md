@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.169.0 (10 Nov 2026)
+
+- SEO: the Shopify CRO guide now answers what a CRO service should deliver (four questions before hiring one, one FAQ), IT and EN, and the Data-Driven Team link uses a descriptive anchor. No new figures.
+
 ### Changelog v1.168.0 (9 Nov 2026)
 
 - **Ambassador page: White Label for agencies.** The playbook at `/ambassador` and `/it/ambassador` now covers two programs: Ambassador (refer) and White Label (an agency resells the Shopify Launch Sprint under its own brand and we deliver it behind the scenes). New sections: the two programs compared, the full White Label offer (who it's for, what the agency gets, 6 steps, partner prices and minimum margin per tier, who does what, brand and confidentiality, the 4 guarantees quoted word for word, agency FAQ, email/WhatsApp CTA), IT and EN.
