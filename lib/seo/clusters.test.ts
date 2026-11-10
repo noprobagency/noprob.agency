@@ -89,6 +89,7 @@ describe('blog categories', () => {
     expect(byId['ai-agents']).toEqual(
       [
         'ai-agents-for-shopify',
+        'ai-agent-integration-ecommerce',
         'build-ai-agent-shopify',
         'claude-shopify',
         'claude-duet-shopify',

@@ -41,6 +41,7 @@ const CLUSTER_SLUGS: Record<ClusterId, string[]> = {
   ],
   'ai-agents': [
     'ai-agents-for-shopify',
+    'ai-agent-integration-ecommerce',
     'build-ai-agent-shopify',
     'claude-shopify',
     'claude-duet-shopify',
@@ -84,6 +85,7 @@ export const ARTICLE_PILLS: Record<string, Record<Locale, string>> = {
   'shopify-cro-guide': { en: 'CRO', it: 'CRO' },
   'ecommerce-growth-strategy-long-term': { en: 'Strategy', it: 'Strategia' },
   'ai-agents-for-shopify': { en: 'AI agents', it: 'Agenti AI' },
+  'ai-agent-integration-ecommerce': { en: 'AI agents', it: 'Agenti AI' },
   'build-ai-agent-shopify': { en: 'Guide', it: 'Guida' },
   'claude-shopify': { en: 'Claude', it: 'Claude' },
   'claude-duet-shopify': { en: 'Claude', it: 'Claude' },
