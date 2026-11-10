@@ -28,6 +28,7 @@ const ROUTE_DEFS: Array<{ key: RouteKey; hasIt: boolean }> = [
   { key: 'zeroLossMigration', hasIt: true },
   { key: 'aiAccelerator', hasIt: true },
   { key: 'agentsEcommerce', hasIt: true },
+  { key: 'shopifySeo', hasIt: true },
   { key: 'blog', hasIt: true },
   { key: 'contacts', hasIt: true },
   { key: 'privacyPolicy', hasIt: true },

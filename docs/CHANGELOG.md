@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.174.0 (10 Nov 2026)
+
+- New service page Shopify SEO Agency (/shopify-seo-agency, /it/agenzia-seo-shopify) for stores already on Shopify, no price, call to action to a call. Added to the Services menu, footer, sitemap and llms.txt.
+
 ### Changelog v1.173.0 (10 Nov 2026)
 
 - New article AI Agent Integration for Ecommerce (what to connect, what to approve, what to test), English first and Italian derived, supporting the AI Agents for eCommerce page with three descriptive links.
