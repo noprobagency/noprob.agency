@@ -61,5 +61,8 @@ Stati: `da fare`, `in corso`, `fatto (data, PR)`, `bloccato (motivo)`.
 | 51 | 6 nov | Articolo GEO vs SEO: title, H1 e lede su "GEO vs SEO for eCommerce" (posizione 8), link descrittivo allo Sprint (misura 6 nov) | geo vs seo for ecommerce | team | fatto (6 nov, PR #217) |
 | 52 | 6 nov | Anchor descrittive verso lo Sprint, seconda tornata: 6 articoli che non ne avevano (CRO, MCP, redirect 301, Shopify vs WooCommerce, migrazione con agenti, come funziona Shopify), anchor variate | shopify migration service | team | fatto (6 nov, PR #219) |
 | 53 | 6 nov | Rimisura delle posizioni con un altro provider SERP (crawl4ai ha dato SERP incomplete il 6 nov) | | analista | fatto (6 nov, nessuna PR: dati SERP inaffidabili, le posizioni si leggono da Search Console) |
+| 54 | 9 nov | Articolo Magento: import prodotti con CSV, app o API, Magento 1, 2 FAQ | magento to shopify product migration | Francesca | fatto (9 nov, PR #228) |
+| 55 | 9 nov | Guida CRO: cosa deve consegnare un servizio CRO, 1 FAQ | shopify cro services | Francesca | fatto (10 nov, PR #229) |
+| 56 | 10 nov | H1 della pagina Sprint con la parola migrazione | shopify migration | Francesca | fatto (10 nov, questa PR) |
 
 Misura: `/seo monitora`, la lancia Antonio, idealmente una volta a settimana.
