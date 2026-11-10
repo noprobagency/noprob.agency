@@ -4,6 +4,7 @@ import type { ReactNode } from 'react'
 
 import type { ArticleSection } from '@/data/articles'
 import type { Locale } from '@/lib/i18n'
+import { getPartnerBannerCopy } from '@/lib/i18n/partnerBanner'
 import { ROUTE_PATHS } from '@/lib/i18n/routes'
 
 import ArticleTable from './ArticleTable'
@@ -208,6 +209,25 @@ export function renderSection(section: ArticleSection, idx: number, locale: Loca
             data-tracking="use_case_cta_contact"
           >
             {copy.secondary}
+          </Link>
+        </aside>
+      )
+    }
+    case 'partnerBanner': {
+      const copy = getPartnerBannerCopy(locale)
+      return (
+        <aside key={idx} className="my-[48px] rounded-[12px] border border-black/10 bg-white px-6 py-6 min-[810px]:px-8">
+          <p className="font-sans text-[13px] font-semibold tracking-[-0.01em] text-[#7c7c7c]">{copy.eyebrow}</p>
+          <h3 className="mt-2 font-sans text-[22px] font-semibold leading-[1.25em] tracking-[-0.03em] text-black">
+            {copy.heading}
+          </h3>
+          <p className="mt-2 font-sans text-[16px] leading-[1.55em] tracking-[-0.02em] text-[#1c1c1c]">{copy.body}</p>
+          <Link
+            href={ROUTE_PATHS.ambassador[locale]}
+            className="mt-4 inline-block rounded-[12px] bg-[#1A1A1A] px-5 py-3 font-sans text-[15px] font-semibold text-white no-underline"
+            data-tracking="article_partner_banner"
+          >
+            {copy.button}
           </Link>
         </aside>
       )
