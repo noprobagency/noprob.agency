@@ -32,7 +32,7 @@ Stati: `da fare`, `in corso`, `fatto (data, PR)`, `bloccato (motivo)`.
 | 23 | gennaio | Confronto onesto delle agenzie per la migrazione a Shopify (idea di Marco) | shopify migration experts, shopify migration services | team | fatto (27 ott, v1.76.0) |
 | 24 | gennaio | Guida "Da BigCommerce a Shopify" (solo fonti ufficiali) | migrate bigcommerce to shopify | team | fatto (27 ott, v1.78.0) |
 | 57 | 10 nov | Landing "AI Agents for eCommerce", EN e IT, senza prezzo, CTA a una call (D-79, chiude A-20) | ai agents for ecommerce (US 210, CPC $31,66) | team | fatto (10 nov, questa PR) |
-| 58 | 10 nov | Articolo di supporto alla landing: integrazione di un agente nello store, EN poi IT | ai agent integration (US 1.000, KD 0) | team | da fare |
+| 58 | 10 nov | Articolo di supporto alla landing: integrazione di un agente nello store, EN poi IT | ai agent integration (US 1.000, KD 0) | team | fatto (10 nov, questa PR) |
 | 59 | 10 nov | `/shopify-development`: H1 e copy su "Shopify development services" | shopify development services (US 720, KD 24) | Francesca | fatto (10 nov, questa PR) |
 | 60 | nov | `/about` e home su "Shopify experts": titolo, H1 e blocco chi ci lavora, senza nuove affermazioni | shopify experts (US 1.000, KD 13), hire shopify expert (210, KD 15) | team | da fare |
 | 61 | nov | Sprint e guida alla migrazione: rinforzo su "Shopify migration services" e link interni da compratore | shopify migration services (US 260, KD 4) | team | da fare |

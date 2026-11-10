@@ -41,10 +41,11 @@ describe('article tables', () => {
     }
   })
 
-  it('exist in the ten articles that compare things side by side', () => {
+  it('exist in the eleven articles that compare things side by side', () => {
     const withTables = articles.filter((a) => tables(a.content).length > 0).map((a) => a.slug)
     expect(withTables.sort()).toEqual(
       [
+        'ai-agent-integration-ecommerce',
         'ai-customer-service-shopify',
         'bigcommerce-vs-shopify',
         'claude-duet-shopify',

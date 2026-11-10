@@ -18,6 +18,7 @@ import shopifyMigrationCost from './posts/shopify-migration-cost'
 import bigcommerceToShopifyMigration from './posts/bigcommerce-to-shopify-migration'
 import shopifyPlus from './posts/shopify-plus'
 import aiAgentsForShopify from './posts/ai-agents-for-shopify'
+import aiAgentIntegrationEcommerce from './posts/ai-agent-integration-ecommerce'
 import buildAiAgentShopify from './posts/build-ai-agent-shopify'
 import claudeShopify from './posts/claude-shopify'
 import claudeDuetShopify from './posts/claude-duet-shopify'
@@ -91,6 +92,7 @@ export type Article = {
 export const articles: Article[] = [
   shopifyPlusMigration,
   aiAgentsForShopify,
+  aiAgentIntegrationEcommerce,
   buildAiAgentShopify,
   claudeShopify,
   claudeDuetShopify,
