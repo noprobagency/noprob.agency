@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.177.0 (11 Nov 2026)
+
+- **Damiano, a run always writes its lists**: when a Hunter rate-limit wait ran past the deadline, the discovery call threw and the run crashed before writing the queue and the summary. Two Mac runs on 10 Nov saved the state but left their new leads out of the queue. Discovery now stops cleanly and the lists are written.
+
 ### Changelog v1.176.0 (10 Nov 2026)
 
 - Cold email: a lead marked `sequence.oneShot` gets no follow-ups, while its replies and opt-outs are still read by the daily run. For single hand-approved emails.
