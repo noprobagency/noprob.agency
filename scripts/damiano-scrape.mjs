@@ -522,7 +522,14 @@ if (!EXPORT_ONLY && !supply?.paused) {
 
   // Pass 2: new Hunter pages until the target or the budget.
   while (leads().length < TARGET && !over()) {
-    const batch = await discoverPage()
+    // A Hunter wait that runs past the deadline throws here: stop discovering, still write the lists.
+    let batch
+    try {
+      batch = await discoverPage()
+    } catch (err) {
+      console.error(`discovery stopped: ${err.message.split('\n')[0]}`)
+      break
+    }
     if (batch === null) {
       console.error('every Hunter query exhausted')
       break
