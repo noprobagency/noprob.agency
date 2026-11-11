@@ -4,6 +4,12 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.178.0 (11 Nov 2026)
+
+- Social (Gabri): Antonio's tone rule in `social/voce-antonio.md` and the skill: a real question in every post to generate replies, humble and friendly, never aggressive; one post a day; mix 60% AI and work, 20% running, 20% other; double-check every text before proposing or queueing it.
+- Social (Gabri): real posts from his Strava runs, with privacy limits on maps and locations; the old calendar in `social/piano.md` points to the live queue in the CRM repo.
+- Social (Gabri): the publishing script retries a network error (no DNS when the Mac wakes) up to 3 times, 3 minutes apart, re-reading the queue first so a post is never published twice.
+
 ### Changelog v1.177.0 (11 Nov 2026)
 
 - **Damiano, a run always writes its lists**: when a Hunter rate-limit wait ran past the deadline, the discovery call threw and the run crashed before writing the queue and the summary. Two Mac runs on 10 Nov saved the state but left their new leads out of the queue. Discovery now stops cleanly and the lists are written.

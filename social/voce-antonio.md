@@ -26,6 +26,18 @@ Vince su tutto il resto di questo file.
 - **Mai nomi di clienti**, nemmeno dei casi pubblicati sul sito: sono una cosa privata. Al massimo "one of the stores I moved", con numeri solo in percentuale. I suoi progetti e i suoi eCommerce solo quando li conferma lui (TrueToSize sì; Creatiin quando è pubblicato).
 - Le "chicche" che Antonio passa nel tempo vanno in `social/private/chicche.md` e diventano post.
 
+## Domande amichevoli (Antonio, 9 novembre 2026)
+
+Vince su tutto il resto di questo file. L'obiettivo dei post è generare interazioni.
+- **Una domanda vera in ogni post**, tagliente nel senso che tocca un punto reale: di quelle a cui viene voglia di rispondere.
+- **Sempre umile e friendly, mai aggressivo o presuntuoso.** La domanda include anche lui ("I'm asking myself too", "it was usually me"). Mai "hot take", "change my mind", "what's your excuse", mai dare del pigro o dell'incapace a chi legge.
+- **Mix fisso:** 60% AI e lavoro, 20% corsa, 20% altro (Antonio, 9 novembre).
+- **Uno al giorno basta**: una domanda al giorno, la stessa su X e Threads nei giorni con entrambi.
+- **Doppio controllo** su ogni testo prima di proporlo o metterlo in coda: regole, numeri in `docs/dati-verificati.md`, date e giorni, tono rispetto a questa sezione.
+- I post con risultati e più autentici si scrivono insieme ad Antonio.
+- **Post reali:** le sue corse con i numeri veri da Strava, e ogni tanto un post con contesto su quello che sta facendo. Sempre con una domanda, mai per mettersi in mostra.
+- **Corse, cosa non si pubblica:** mai mappa o screenshot con il percorso (mostra da dove parte), mai il quartiere o i posti abituali, mai dove sarà a una certa ora. Infortuni e dati di salute solo se lui lo conferma.
+
 ## Tutta la persona (Antonio, 6 novembre 2026 sera)
 
 Non solo lavoro: emotivamente intelligente e molto aperto, corre e si allena a Muay Thai, la musica, Lisbona, un suo eCommerce e un suo SaaS, le carte e la finanza della sua LLC USA. "A machine of knowledge at this stage of my life". Si parla come chi va avanti da mesi: mai "primo post", mai "da oggi inizio". Sulla LLC solo la sua esperienza, mai consigli fiscali.

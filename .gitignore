@@ -64,3 +64,4 @@ manager/data/
 linkedin/private/
 # Social (Gabri, X e Threads): raw posts, bozze, local only
 social/private/
+__pycache__/
