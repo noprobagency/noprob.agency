@@ -6,6 +6,7 @@ Dal 6 novembre 2026, per ordine di Antonio, i post approvati escono da soli ogni
 - **Orari** (launchd, ora di Lisbona): X alle 9:30, Threads alle 18:30, tutti i giorni. Se in coda non c'è niente per oggi, non pubblica. Se il Mac dorme, parte al risveglio; se resta spento tutto il giorno, il post salta.
 - **X**: con treg (`x.x.post.create`, account @ManittaHello collegato da Antonio), circa $0,015 a post, solo testo.
 - **Threads**: API di Meta, token nel Portachiavi (`gabri-threads-token`), account @west_marney. Lo script rinnova il token quando mancano meno di 10 giorni alla scadenza.
+- **Errori di rete** (Mac appena sveglio, niente DNS): 3 tentativi a 3 minuti di distanza, poi una riga di errore nel log e nel diario. Prima di ogni nuovo tentativo rilegge la coda e non ripubblica un post già segnato come pubblicato; si ritenta solo quando la richiesta non è mai partita.
 - **Fermi**: un post con [quadre] nel testo o con stato diverso da `da_pubblicare` non esce; lo script lo scrive nel diario.
 - **Diario**: ogni post pubblicato, fermo o fallito diventa una riga `HH:MM · GABRI` nel diario del CRM, con commit e push.
 

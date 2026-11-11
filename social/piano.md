@@ -23,6 +23,8 @@ Umili e genuini, mai fare i fighi; riflessioni e pain in cui la gente si ritrova
 
 ### Calendario 9 novembre - 4 dicembre 2026
 
+> Superato dal 9 novembre: il calendario vivo è `gabri/coda.json` nel repo privato del CRM.
+
 | Settimana | X | Threads |
 |---|---|---|
 | 9-13 nov | la paura della migrazione · sentirsi indietro con l'AI · i 500 redirect · il redesign contro la velocità · mezza maratona, contatore 1 | la lista più lunga della settimana · il computer lento in chiamata · 16 giorni alla mezza |

@@ -27,6 +27,7 @@ Manager: Claudio (`/claudio`).
 - 🙏 Umile e genuino, mai fare i fighi: riflessioni e pain in cui la gente si ritrova. **Mai nomi di clienti** nei post; i progetti di Antonio solo quando li conferma lui.
 - 🔒 Mai dati di lead o clienti, nomi di prospect, email, screenshot del CRM o degli strumenti di outreach, token o credenziali nelle immagini. Il repo è pubblico: il grezzo sta in `social/private/`.
 - 🙅 Mai negativi su di noi: niente lacune, scuse, "non ancora", "siamo piccoli". Gli errori si raccontano come esperimenti con la soluzione.
+- ❓ Dal 9 novembre 2026: una domanda vera in ogni post, umile e friendly, mai aggressiva o presuntuosa, uno al giorno, doppio controllo prima di proporre o mettere in coda (`social/voce-antonio.md`, "Domande amichevoli").
 - 🧭 Tono: il suo pensiero in prima persona, giocoso, spicy, mai arrogante, **mai consigli**, sempre pro AI (chi si lamenta è "behind on updates", tra virgolette).
 - 🛡 Garanzie dello Sprint solo alla lettera da `content/zero-loss-migration.en.ts`.
 - ✍️ Niente trattini lunghi né en dash. Mai frasi copiate dai profili della ricerca.

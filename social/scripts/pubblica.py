@@ -10,6 +10,7 @@ Usage: pubblica.py x|threads [--dry-run]
 import datetime
 import json
 import os
+import socket
 import subprocess
 import sys
 import time
@@ -23,6 +24,12 @@ CRM = os.path.join(HOME, "Documents/noprobagency/cold-email/data/crm")
 CODA = os.path.join(CRM, "gabri/coda.json")  # in the private CRM repo, read by Claudio for Telegram
 TREG = os.path.join(HOME, ".local/bin/treg")
 GRAPH = "https://graph.threads.net/v1.0"
+TENTATIVI = 3  # attempts on a network error, then an error line in the log (Claudio, 11 Nov 2026)
+PAUSA = 180    # seconds between attempts
+# Errors where the request never left the Mac (no DNS, no network): retrying cannot double-post.
+RETE = ("nodename", "servname", "getaddrinfo", "name resolution", "could not resolve",
+        "temporary failure in name", "connection refused", "network is unreachable",
+        "no route to host", "dial tcp")
 
 
 def log(msg):
@@ -51,8 +58,11 @@ def post_x(text, handle):
     r = subprocess.run([TREG, "call", "x.x.post.create", "--method", "POST",
                         "--data", json.dumps({"text": text})],
                        capture_output=True, text=True, timeout=120)
-    out = json.loads(r.stdout)
-    pid = out["data"]["id"]
+    try:
+        out = json.loads(r.stdout)
+        pid = out["data"]["id"]
+    except (ValueError, KeyError, TypeError):
+        raise RuntimeError(f"treg: {(r.stderr or r.stdout).strip()[:300]}")
     return pid, f"https://x.com/{handle}/status/{pid}"
 
 
@@ -75,8 +85,18 @@ def post_threads(text):
     c = http("POST", f"{GRAPH}/me/threads", {"media_type": "TEXT", "text": text, "access_token": tok})
     time.sleep(5)
     p = http("POST", f"{GRAPH}/me/threads_publish", {"creation_id": c["id"], "access_token": tok})
-    link = http("GET", f"{GRAPH}/{p['id']}", {"fields": "permalink", "access_token": tok})
+    try:  # the post is out: a failure here must never trigger a retry
+        link = http("GET", f"{GRAPH}/{p['id']}", {"fields": "permalink", "access_token": tok})
+    except Exception:
+        link = {}
     return p["id"], link.get("permalink", "")
+
+
+def errore_di_rete(e):
+    if isinstance(e, urllib.error.HTTPError):
+        return False
+    testo = str(getattr(e, "reason", e)).lower()
+    return isinstance(getattr(e, "reason", None), socket.gaierror) or any(m in testo for m in RETE)
 
 
 def diario(msg):
@@ -115,16 +135,28 @@ def main():
     if dry:
         log(f"{canale}: DRY RUN, pubblicherei '{p['tema']}': {p['testo'][:80]}")
         return
-    try:
-        if canale == "x":
-            pid, url = post_x(p["testo"], coda["account"]["x"])
-        else:
-            refresh_threads_token(coda)
-            pid, url = post_threads(p["testo"])
-    except Exception as e:
-        log(f"{canale}: ERRORE {e}")
-        diario(f"{canale}: pubblicazione di oggi fallita ({p['tema']}): {str(e)[:120]}")
-        return
+    for n in range(1, TENTATIVI + 1):
+        try:
+            if canale == "x":
+                pid, url = post_x(p["testo"], coda["account"]["x"])
+            else:
+                refresh_threads_token(coda)
+                pid, url = post_threads(p["testo"])
+            break
+        except Exception as e:
+            if n < TENTATIVI and errore_di_rete(e):
+                log(f"{canale}: errore di rete, tentativo {n} di {TENTATIVI}, riprovo tra {PAUSA // 60} minuti: {e}")
+                time.sleep(PAUSA)
+                subprocess.run(["git", "-C", CRM, "pull", "-q", "--rebase"], timeout=60)
+                coda = json.load(open(CODA))
+                p = [q for q in coda["post"] if q["data"] == today and q["canale"] == canale][0]
+                if p["stato"] == "pubblicato":  # never publish twice
+                    log(f"{canale}: risulta già pubblicato in coda, non riprovo ({p.get('url')})")
+                    return
+                continue
+            log(f"{canale}: ERRORE dopo {n} tentativi: {e}")
+            diario(f"{canale}: pubblicazione di oggi fallita dopo {n} tentativi ({p['tema']}): {str(e)[:120]}")
+            return
     p.update(stato="pubblicato", id=pid, url=url, pubblicato_alle=datetime.datetime.now().isoformat(timespec="minutes"))
     json.dump(coda, open(CODA, "w"), indent=1, ensure_ascii=False)
     subprocess.run(["git", "-C", CRM, "add", CODA])
