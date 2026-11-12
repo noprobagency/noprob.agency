@@ -122,13 +122,74 @@ const LOCAL_QUERIES = [
   ...REGIONS.flatMap((r) => REGION_VERTICALS.map((v) => `Italian ${v} headquartered in ${r}, Italy, selling online with an ecommerce website`)),
   ...[...CITIES, ...PROVINCES].flatMap((c) => REGION_VERTICALS.map((v) => `${v} based in ${c}, Italy, with an online store`)),
 ]
+// A-22, Antonio 12 Nov 2026: every query above ran dry, so a mass restart by sector, in his
+// order (supplements, perfume, food, clothing), then a wide round on new consumer fronts.
+// Hunter turns a query into keywords matched with "any": generic words (ecommerce, online
+// store, brands) pull in Italy's biggest companies, already read. So each query is one narrow
+// term, in English and in Italian, read to its last page (most have 500-1,500 companies).
+// Regions come last, for terms past Hunter's 9,900 limit. Every company keeps the sector and
+// the query it came from, so replies can be read by sector.
+const SECTORS = [
+  { sector: 'integratori', en: ['dietary supplements', 'sports nutrition', 'protein supplements', 'nutraceuticals', 'herbal products', 'herbalist shop', 'parapharmacy', 'online pharmacy', 'vitamins', 'superfood', 'probiotics', 'collagen supplements'], it: ['integratori alimentari', 'erboristeria', 'parafarmacia', 'farmacia online', 'nutrizione sportiva', 'prodotti fitoterapici'] },
+  { sector: 'profumeria', en: ['perfumery', 'niche perfume', 'fragrances', 'home fragrance', 'eau de parfum', 'perfume shop', 'scented candles'], it: ['profumeria', 'profumi artistici', 'profumi per ambiente', 'candele profumate'] },
+  { sector: 'food', en: ['gourmet food', 'delicatessen', 'typical regional products', 'pastry and chocolate makers', 'coffee roaster', 'winery', 'olive oil producer', 'cheese producer', 'cured meats', 'pasta maker', 'honey producer', 'truffle products', 'craft brewery', 'liqueur and spirits distillery', 'artisan bakery', 'tea shop', 'balsamic vinegar'], it: ['prodotti tipici', 'pasticceria', 'torrefazione', 'cantina vinicola', 'frantoio', 'caseificio', 'salumificio', 'pastificio', 'dolciaria', 'enoteca online', 'gastronomia'] },
+  { sector: 'abbigliamento', en: ['menswear', 'womenswear', 'kidswear', 'baby clothing', 'sportswear', 'activewear', 'lingerie', 'underwear', 'swimwear', 'knitwear', 'cashmere', 'denim', 'streetwear', 'bridal wear', 'footwear', 'handbags', 'leather goods', 'fashion accessories', 'hats', 'socks and hosiery', 'ties and scarves', 'clothing boutique'], it: ['abbigliamento uomo', 'abbigliamento donna', 'abbigliamento bambino', 'intimo', 'moda mare', 'maglieria', 'calzature', 'pelletteria', 'borse', 'boutique'] },
+]
+const WIDE = [
+  { sector: 'animali', en: ['pet shop', 'pet food', 'pet accessories'], it: ['negozio animali', 'articoli per animali'] },
+  { sector: 'bambini', en: ['baby products', 'nursery products', 'toy shop'], it: ['prima infanzia', 'giocattoli'] },
+  { sector: 'bici', en: ['bike shop', 'bicycle manufacturer', 'e-bike', 'cycling apparel'], it: ['biciclette', 'ciclismo'] },
+  { sector: 'giardino', en: ['garden center', 'gardening tools', 'plant nursery'], it: ['giardinaggio', 'vivaio'] },
+  { sector: 'ottica', en: ['optician', 'eyewear', 'sunglasses', 'contact lenses'], it: ['ottica', 'occhiali'] },
+  { sector: 'artigianato', en: ['handmade products', 'artisan crafts', 'ceramics', 'glassware', 'woodworking'], it: ['artigianato', 'ceramiche', 'vetro di Murano'] },
+  { sector: 'strumenti musicali', en: ['musical instruments', 'guitar shop', 'piano dealer'], it: ['strumenti musicali'] },
+  { sector: 'cartoleria', en: ['stationery', 'paper goods', 'gift shop', 'fountain pens'], it: ['cartoleria', 'articoli da regalo'] },
+  { sector: 'cosmetica', en: ['natural cosmetics', 'organic skincare', 'hair care products', 'makeup'], it: ['cosmetici naturali', 'cosmesi bio'] },
+  { sector: 'casa', en: ['kitchenware', 'housewares', 'home textiles', 'tableware', 'mattresses'], it: ['casalinghi', 'biancheria per la casa', 'materassi'] },
+  { sector: 'hobby', en: ['model making', 'hobby shop', 'craft supplies', 'board games'], it: ['modellismo', 'giochi da tavolo'] },
+  { sector: 'gioielli', en: ['handmade jewelry', 'silver jewelry', 'watch shop'], it: ['gioielli artigianali', 'oreficeria'] },
+  { sector: 'pesca e caccia', en: ['fishing tackle', 'hunting gear'], it: ['articoli da pesca'] },
+  { sector: 'elettronica', en: ['consumer electronics shop', 'phone accessories'], it: ['elettronica di consumo'] },
+]
+const sectorQueries = (list, places) => list.flatMap(({ sector, en, it }) => places({ en, it }).map((q) => ({ q, sector })))
+const national = ({ en, it }) => [...en.map((t) => `${t} companies in Italy`), ...it.map((t) => `${t} in Italia`)]
+const regional = ({ en }) => REGIONS.flatMap((r) => en.map((t) => `${t} companies in ${r}, Italy`))
+const SECTOR_QUERIES = [...sectorQueries(SECTORS, national), ...sectorQueries(WIDE, national), ...sectorQueries(SECTORS, regional)]
 const QUERIES = INTL
   ? INTL_QUERIES
   : [
-      ...FIRST,
-      ...SIZES.flatMap((s) => VERTICALS.map((v) => `Italian ${v} headquartered in Italy selling online with an ecommerce website, ${s} employees`)),
-      ...LOCAL_QUERIES,
-    ].map((q) => ({ q, market: 'IT' }))
+      ...SECTOR_QUERIES,
+      ...[
+        ...FIRST,
+        ...SIZES.flatMap((s) => VERTICALS.map((v) => `Italian ${v} headquartered in Italy selling online with an ecommerce website, ${s} employees`)),
+        ...LOCAL_QUERIES,
+      ].map((q) => ({ q })),
+    ].map((r) => ({ ...r, market: 'IT' }))
+// The sector of a company found before A-22, read from its query, else from its industry.
+const SECTOR_OF = [
+  [/supplement|nutrition|nutraceut|parapharm|pharmac|herbal|health food|organic food|integrator|erborist/i, 'integratori'],
+  [/cosmetic|skincare|makeup|hair care|barber|beauty|personal care/i, 'cosmetica'],
+  [/perfum|fragranc|profum/i, 'profumeria'],
+  [/craft beer/i, 'food'],
+  [/wine|winer|food|coffee|pasta|sweets|chocolate|olive|gourmet|spirits|beer|beverage|dairy|bakery|confection|farming|vino|olio|caff|dolci/i, 'food'],
+  [/garden|giardin/i, 'giardino'],
+  [/fashion|cloth|apparel|footwear|shoe|lingerie|swimwear|underwear|leather|bags|knitwear|textile|abbigliam|moda|intimo/i, 'abbigliamento'],
+  [/jewel|watch/i, 'gioielli'],
+  [/eyewear|optic|ottic/i, 'ottica'],
+  [/child|kids|toy|baby|bambin/i, 'bambini'],
+  [/\bpet\b|animal/i, 'animali'],
+  [/sport|outdoor|fitness|ski/i, 'sport'],
+  [/cycling|bike|bicycle/i, 'bici'],
+  [/home|furniture|lighting|bedding|kitchen|tableware|furnish|arred/i, 'casa'],
+  [/musical/i, 'strumenti musicali'],
+  [/stationery|paper|gift|cartoler/i, 'cartoleria'],
+  [/craft|artisan|artigian|handmade/i, 'artigianato'],
+]
+const sectorOf = (c) => {
+  if (c.sector) return c.sector
+  for (const text of [c.query, c.industry]) for (const [re, s] of SECTOR_OF) if (re.test(text || '')) return s
+  return 'generico'
+}
 const PAGES = 10
 // Hunter answers up to offset 9,900. Italy reads every query's first 10 pages, then goes back
 // for the pages past the 10th (9 Nov 2026), where about a quarter of the companies are new.
@@ -158,7 +219,12 @@ const ROLE_SEARCHES = INTL
   : ['founder', 'CEO', 'owner', 'amministratore', 'general manager', 'e-commerce manager']
 // Consumer brands only: Hunter drifts into agencies, SaaS and B2B manufacturers whose
 // WordPress has a WooCommerce plugin. The industry comes free with the people search.
-const FIT_INDUSTRY = /retail|apparel|fashion|luxury|jewel|cosmetic|personal care|beauty|food|beverage|wine|winer|spirits|wellness|sporting goods|sports equipment|furniture|home furnish|consumer|footwear|toy|pet |e-?commerce|internet marketplace|textile|eyewear|leather/i
+// A-22 (12 Nov 2026) adds the industries of the new sectors: supplement makers are often
+// filed as pharmaceutical manufacturing, wine and oil producers as farming. The store check
+// still drops any site without a real cart.
+const FIT_INDUSTRY = /retail|apparel|fashion|luxury|jewel|cosmetic|personal care|beauty|food|beverage|wine|winer|spirits|wellness|sporting goods|sports equipment|furniture|home furnish|consumer|footwear|toy|pet |e-?commerce|internet marketplace|textile|eyewear|leather|pharmac|nutrition|fragrance|perfum|musical instrument|arts.{1,5}crafts|stationery|garden|bicycle|optical|farming|dairy|bakery|confection|coffee/i
+// Stores already worked before the industries above were added get one more look.
+const FIT_VERSION = 2
 // B2B industries that pass the words above (Ada's and the Fable review's discards).
 const B2B_INDUSTRY = /office equipment|office furniture|wholesale|food production/i
 // Employee bands come as "20 - 99" or "< 5"; unknown sizes pass. Intl only, Ada's 5-999.
@@ -191,7 +257,8 @@ const IN_FLIGHT_MICRO = 60000
 const DEADLINE = Date.now() + Number(opt('minutes', 120)) * 60000
 const over = () => state.spentMicro >= BUDGET_MICRO - IN_FLIGHT_MICRO || Date.now() >= DEADLINE
 
-async function treg(id, body, headers = {}) {
+// owner: the company a paid call is for, so the spend can be read by sector.
+async function treg(id, body, headers = {}, owner = null) {
   if (over()) throw new Error('budget reached')
   const h = Object.entries(headers).flatMap(([k, v]) => ['--header', `${k}: ${v}`])
   const { stdout } = await run('treg', ['--json', 'call', id, '--method', 'POST', '--data', JSON.stringify(body), ...h], {
@@ -200,6 +267,7 @@ async function treg(id, body, headers = {}) {
   })
   const res = JSON.parse(stdout)
   state.spentMicro += res._treg?.charged_micro || 0
+  if (owner) owner.spentMicro = (owner.spentMicro || 0) + (res._treg?.charged_micro || 0)
   state.calls += 1
   if (res._treg?.http_status >= 400) throw new Error(`${id} ${res._treg.http_status}`)
   return res.result
@@ -250,7 +318,7 @@ async function discover(query, offset) {
 
 async function discoverPage() {
   for (const limit of INTL ? [PAGES] : [PAGES, DEEP_PAGES]) {
-    for (const { q, market } of QUERIES) {
+    for (const { q, market, sector } of QUERIES) {
       for (let page = 0; page < limit; page++) {
         const key = `${q}#${page * 100}`
         if (state.queries[key] != null) {
@@ -264,7 +332,7 @@ async function discoverPage() {
         for (const row of rows) {
           const domain = row.domain?.toLowerCase().replace(/^www\./, '')
           if (domain && !state.companies[domain]) {
-            state.companies[domain] = { domain, name: row.organization, query: q, market }
+            state.companies[domain] = { domain, name: row.organization, query: q, market, ...(sector && { sector }) }
             fresh.push(domain)
           }
         }
@@ -369,7 +437,7 @@ async function people(c, { roles = true } = {}) {
 async function findEmail(c, p) {
   p.tried = true
   const body = { first_name: p.first, last_name: p.last, domain: c.domain, ...(p.linkedin ? { linkedin_url: p.linkedin } : {}) }
-  const r = await treg('treg.people.email.find', body, { 'X-Treg-Route-Verify': 'true', 'X-Treg-Route-Max-Cost': '0.05' })
+  const r = await treg('treg.people.email.find', body, { 'X-Treg-Route-Verify': 'true', 'X-Treg-Route-Max-Cost': '0.05' }, c)
   p.email = r?.output?.email || null
   p.verdict = r?._treg?.verification?.verdict || (p.email ? 'unverified' : 'not_found')
   p.emailBy = r?._treg?.served_by || null
@@ -512,12 +580,14 @@ if (!EXPORT_ONLY && !supply?.paused) {
         else await work(c, opts)
         c.done = true
         c.workV = PEOPLE_VERSION
+        c.fitV = FIT_VERSION
       } catch (err) {
         console.error(`${d}: ${err.message.split('\n')[0]}`)
       }
       save()
     })
-  await pass(Object.keys(state.companies).filter((d) => (isStore(state.companies[d]) || isShopify(state.companies[d])) && state.companies[d].workV !== PEOPLE_VERSION))
+  const rework = (c) => c.workV !== PEOPLE_VERSION || (!c.lead && c.fitV !== FIT_VERSION && fits(c))
+  await pass(Object.keys(state.companies).filter((d) => (isStore(state.companies[d]) || isShopify(state.companies[d])) && rework(state.companies[d])))
   log('existing stores re-worked')
 
   // Pass 2: new Hunter pages until the target or the budget.
@@ -561,6 +631,8 @@ const company = (c) => ({
   companyLinkedin: c.companyLinkedin || null,
   nameMatches: siteMatchesCompany(c.name, normaliseUrl(c.domain)),
   consumerBrand: fits(c),
+  sector: sectorOf(c),
+  query: c.query || null,
 })
 const others = (c, skip) =>
   (c.people || [])
@@ -612,6 +684,7 @@ const shopifyRows = Object.values(
 // The cloud review reads the stock from the summary: an export or a run without --add keeps the last one.
 const lastSupply = supply || previousRows(join(OUT, 'summary.json'))?.supply
 const all = Object.values(state.companies)
+const leadDomains = new Set(leadRows.map((l) => l.domain))
 const tried = all.flatMap((c) => c.people || []).filter((p) => p.tried)
 const summary = {
   date: new Date().toISOString(),
@@ -632,6 +705,19 @@ const summary = {
   spentUsd: +(state.spentMicro / 1e6).toFixed(4),
   costPerLeadUsd: leadRows.length ? +(state.spentMicro / 1e6 / leadRows.length).toFixed(4) : null,
   tregCalls: state.calls,
+  // Per sector: leads ready, Shopify stores in the reserve, spend tracked since 12 Nov 2026.
+  bySector: Object.entries(
+    all.reduce((m, c) => {
+      const s = (m[sectorOf(c)] ||= { leads: 0, shopify: 0, spentUsd: 0 })
+      if (leadDomains.has(c.domain)) s.leads++
+      if (isShopify(c)) s.shopify++
+      s.spentUsd = +(s.spentUsd + (c.spentMicro || 0) / 1e6).toFixed(4)
+      return m
+    }, {}),
+  )
+    .filter(([, v]) => v.leads || v.shopify || v.spentUsd)
+    .sort((a, b) => b[1].leads - a[1].leads)
+    .reduce((m, [k, v]) => ((m[k] = v), m), {}),
   ...(lastSupply && { supply: lastSupply }),
 }
 writeFileSync(join(OUT, 'leads.json'), JSON.stringify(leadRows, null, 2))
@@ -639,6 +725,14 @@ writeFileSync(join(OUT, 'leads.json'), JSON.stringify(leadRows, null, 2))
 if (!INTL) writeFileSync(join(OUT, 'coda.json'), JSON.stringify({ updatedAt: new Date().toISOString(), leads: leadRows }, null, 1))
 writeFileSync(join(OUT, 'shopify.json'), JSON.stringify(shopifyRows, null, 2))
 writeFileSync(join(OUT, 'summary.json'), JSON.stringify(summary, null, 2))
+// Sector and query of every store that got a lead, a paid try or a Shopify row: replies are
+// matched to it by domain (Dante's used list, Gojiberry, the direct channel).
+if (!INTL) {
+  const tags = Object.fromEntries(
+    all.filter((c) => c.lead || c.platform === 'shopify' || (c.people || []).some((p) => p.tried)).map((c) => [c.domain, { sector: sectorOf(c), query: c.query || null }]),
+  )
+  writeFileSync(join(OUT, 'settori.json'), JSON.stringify(tags, null, 1))
+}
 // The CRM section damiano/ reads data/damiano.json from the crm-noprobagency checkout.
 const crm = opt('crm', null)
 if (crm && !INTL) writeFileSync(join(crm, 'data/damiano.json'), JSON.stringify({ summary, leads: leadRows, shopify: shopifyRows }))
