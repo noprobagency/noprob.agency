@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.179.0 (12 Nov 2026)
+
+- Cold email: Damiano's leads go to hello@ only when hello@ has room today. When follow-ups fill the day, the review imports nothing, instead of parking 49 leads a day in Gojiberry review and draining Damiano's stock.
+
 ### Changelog v1.178.0 (11 Nov 2026)
 
 - Social (Gabri): Antonio's tone rule in `social/voce-antonio.md` and the skill: a real question in every post to generate replies, humble and friendly, never aggressive; one post a day; mix 60% AI and work, 20% running, 20% other; double-check every text before proposing or queueing it.
