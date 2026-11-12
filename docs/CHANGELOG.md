@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.180.0 (12 Nov 2026)
+
+- **Damiano, the Shopify reserve only grows and the export keeps the stock**: `--export` rebuilt `shopify.json` from the state alone, so stores found by a side batch (15 of the 55 Shopify stores of the Friuli batch) or contacted since dropped out of the reserve, and it rewrote `summary.json` without the `supply` block the cloud review reads. The reserve now merges the previous rows (state rows refresh them, nothing is removed) and a run without `--add` keeps the last `supply`.
+
 ### Changelog v1.179.0 (12 Nov 2026)
 
 - Cold email: Damiano's leads go to hello@ only when hello@ has room today. When follow-ups fill the day, the review imports nothing, instead of parking 49 leads a day in Gojiberry review and draining Damiano's stock.
