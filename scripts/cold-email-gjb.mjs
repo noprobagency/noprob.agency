@@ -99,6 +99,12 @@ if (!cloud && existsSync(`${crmDamiano}/coda.json`)) {
     console.error(`CRM pull failed, Damiano queue as last pulled: ${err.message.split('\n')[0]}`)
   }
 }
+const seat = ((await api('GET', '/v1/email-seat')) || []).find((s) => s.email === DANTE.mailbox)
+// Fill hello@ every day: what the queue (follow-ups due, approved leads waiting) leaves
+// of the daily limit goes to new leads. Gojiberry holds anything over the limit for the
+// next day, so a busy day only shifts a follow-up by a day.
+const queued = ((await api('GET', `/v1/campaign/${DANTE.campaign}/email-queue`)) || []).length
+const cap = Math.max(0, (seat?.dailyEmailMax ?? 2) - (seat?.dailyEmailCount ?? 0) - queued)
 const damiano = !cloud && existsSync(`${crmDamiano}/coda.json`) ? { queue: `${crmDamiano}/coda.json`, used: `${crmDamiano}/usati.json` } : DAMIANO
 if (!cloud && existsSync(damiano.queue)) {
   const readUsed = (f) => (existsSync(f) ? JSON.parse(readFileSync(f, 'utf8')) : {})
@@ -107,10 +113,12 @@ if (!cloud && existsSync(damiano.queue)) {
   const emails = new Set([...db.leads.map((l) => l.email), ...contacts.map((c) => (c.email || '').toLowerCase())].filter(Boolean))
   let rows = pickQueue(JSON.parse(readFileSync(damiano.queue, 'utf8')).leads || [], { used, domains, emails, suppressed })
   // Only approved leads count: a long review backlog of Gojiberry's own finds never
-  // holds Damiano's verified leads back.
+  // holds Damiano's verified leads back. With no room today (follow-ups fill hello@)
+  // nothing is imported: the leads would only wait in review and drain Damiano's stock.
   const helloSupply = contacts.filter((c) => c.readyForCampaign && !inDante(c)).length
-  if (helloSupply < FEED.helloDay) {
-    for (const r of helloTake(rows, helloSupply)) {
+  const helloRoom = Math.min(cap, FEED.helloDay)
+  if (helloSupply < helloRoom) {
+    for (const r of helloTake(rows, helloSupply + FEED.helloDay - helloRoom)) {
       try {
         if (!dry) await api('POST', '/v1/contact', helloPayload(r, DANTE.list))
         used[domainOf(r.domain)] = { channel: 'hello@', date: today }
@@ -151,12 +159,6 @@ if (!cloud && existsSync(damiano.queue)) {
   }
 }
 
-const seat = ((await api('GET', '/v1/email-seat')) || []).find((s) => s.email === DANTE.mailbox)
-// Fill hello@ every day: what the queue (follow-ups due, approved leads waiting) leaves
-// of the daily limit goes to new leads. Gojiberry holds anything over the limit for the
-// next day, so a busy day only shifts a follow-up by a day.
-const queued = ((await api('GET', `/v1/campaign/${DANTE.campaign}/email-queue`)) || []).length
-const cap = Math.max(0, (seat?.dailyEmailMax ?? 2) - (seat?.dailyEmailCount ?? 0) - queued)
 
 const fresh = contacts.filter((c) => !processed.has(c.id) && !started(c) && !c.rejectedAt && !c.state)
 const urls = [...new Set(fresh.map((c) => normaliseUrl(c.website)).filter(Boolean))]
