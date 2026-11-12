@@ -4,6 +4,11 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.181.0 (12 Nov 2026)
+
+- **Damiano restarts by sector (A-22, Antonio 12 Nov)**: new Hunter searches in Antonio's order (supplements and nutrition, perfume, food, clothing), then a wide round (pets, kids, bikes, garden, optics, crafts, musical instruments, stationery, natural cosmetics, housewares, hobby, jewelry, fishing, electronics). Each query is one narrow term in English or Italian, because Hunter matches keywords with "any" and generic words only returned big companies already read; regions follow for the four priority sectors. Non-Shopify stores only, same filters, same $0.65 per run.
+- Every lead and Shopify row now carries `sector` and `query`; `settori.json` maps every worked store to them, so replies can be read by sector, and `summary.json` has `bySector` (leads, Shopify stores, spend since today). Supplement makers filed as pharmaceutical manufacturing and producers filed as farming now count as consumer, and stores dropped before for that get one more look. The Shopify reserve still buys no emails.
+
 ### Changelog v1.180.0 (12 Nov 2026)
 
 - **Damiano, the Shopify reserve only grows and the export keeps the stock**: `--export` rebuilt `shopify.json` from the state alone, so stores found by a side batch (15 of the 55 Shopify stores of the Friuli batch) or contacted since dropped out of the reserve, and it rewrote `summary.json` without the `supply` block the cloud review reads. The reserve now merges the previous rows (state rows refresh them, nothing is removed) and a run without `--add` keeps the last `supply`.
