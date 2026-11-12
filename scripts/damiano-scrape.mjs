@@ -596,12 +596,21 @@ const leadRows = leads()
     }),
   }))
   .sort((a, b) => b.score - a.score)
-const shopifyRows = Object.values(state.companies)
+// The Shopify reserve only grows: Antonio keeps every Shopify contact for later. A store the
+// state no longer lists (contacted since, found by a side batch like Friuli) keeps its last row;
+// one the state still lists is refreshed.
+const previousRows = (f) => (existsSync(f) ? JSON.parse(readFileSync(f, 'utf8')) : null)
+const freshShopify = Object.values(state.companies)
   .filter(isShopify)
   .map((c) => {
     const ranked = (c.people || []).filter((p) => p.rank != null).sort((a, b) => a.rank - b.rank)
     return { ...company(c), contact: ranked[0]?.name || null, title: ranked[0]?.title || null, linkedin: ranked[0]?.linkedin || null, others: ranked.slice(1, 4).map((p) => ({ name: p.name, title: p.title, linkedin: p.linkedin })) }
   })
+const shopifyRows = Object.values(
+  Object.fromEntries([...(previousRows(join(OUT, 'shopify.json')) || []), ...freshShopify].map((r) => [r.domain, r])),
+)
+// The cloud review reads the stock from the summary: an export or a run without --add keeps the last one.
+const lastSupply = supply || previousRows(join(OUT, 'summary.json'))?.supply
 const all = Object.values(state.companies)
 const tried = all.flatMap((c) => c.people || []).filter((p) => p.tried)
 const summary = {
@@ -623,7 +632,7 @@ const summary = {
   spentUsd: +(state.spentMicro / 1e6).toFixed(4),
   costPerLeadUsd: leadRows.length ? +(state.spentMicro / 1e6 / leadRows.length).toFixed(4) : null,
   tregCalls: state.calls,
-  ...(supply && { supply }),
+  ...(lastSupply && { supply: lastSupply }),
 }
 writeFileSync(join(OUT, 'leads.json'), JSON.stringify(leadRows, null, 2))
 // The queue Dante's 8:00 review reads; Damiano is its only writer.
