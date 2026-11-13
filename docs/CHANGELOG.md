@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.182.0 (13 Nov 2026)
+
+- **CRM registry shows every opt-out**: the registry read `suppressed.txt` lines with their `# comment` and treated `@domain` lines as single emails, so stores with a comment line or more than one contact kept "caldo" or "nuovo" on the CRM page. It now parses the file like the senders do and an `@domain` line marks the whole store as opt-out. Display only: the sending engines already read the file correctly.
+
 ### Changelog v1.181.0 (12 Nov 2026)
 
 - **Damiano restarts by sector (A-22, Antonio 12 Nov)**: new Hunter searches in Antonio's order (supplements and nutrition, perfume, food, clothing), then a wide round (pets, kids, bikes, garden, optics, crafts, musical instruments, stationery, natural cosmetics, housewares, hobby, jewelry, fishing, electronics). Each query is one narrow term in English or Italian, because Hunter matches keywords with "any" and generic words only returned big companies already read; regions follow for the four priority sectors. Non-Shopify stores only, same filters, same $0.65 per run.

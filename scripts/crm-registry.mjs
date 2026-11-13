@@ -157,10 +157,12 @@ for (const l of read('docs/cold/damiano/shopify.json', [])) {
 // 5. Opt-outs win over everything
 if (existsSync('docs/cold/suppressed.txt')) {
   for (const line of readFileSync('docs/cold/suppressed.txt', 'utf8').split('\n')) {
-    const v = line.trim().toLowerCase(); if (!v || v.startsWith('#')) continue
+    // Same parsing as the senders (lib/cold-email/suppression.mjs): "# comment" anywhere on the line.
+    const v = line.replace(/#.*/, '').trim().toLowerCase(); if (!v) continue
+    const wholeDomain = v.startsWith('@') || !v.includes('@')
     const d = domainOf(v.includes('@') ? v.split('@')[1] : v)
-    if (d && stores.has(d) && v.includes('@') === false) Object.assign(stores.get(d), { status: 'opt-out' })
-    if (d && stores.has(d) && v.includes('@')) { const s = stores.get(d); if ([...s.contacts.keys()].includes(v) || s.contacts.size <= 1) s.status = 'opt-out' }
+    if (d && stores.has(d) && wholeDomain) Object.assign(stores.get(d), { status: 'opt-out' })
+    if (d && stores.has(d) && !wholeDomain) { const s = stores.get(d); if ([...s.contacts.keys()].includes(v) || s.contacts.size <= 1) s.status = 'opt-out' }
   }
 }
 
