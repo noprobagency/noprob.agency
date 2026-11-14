@@ -1,5 +1,7 @@
 # Pubblicazione automatica di Gabri
 
+> **Fermata il 14 novembre 2026** da Antonio: job launchd cancellati dal Mac, si pubblica solo a mano. Il resto di questa pagina è storia.
+
 Dal 6 novembre 2026, per ordine di Antonio, i post approvati escono da soli ogni giorno. Nessuna AI nel giro: uno script legge la coda e pubblica il post del giorno.
 
 - **Script**: `pubblica.py x|threads [--dry-run]`. La copia che gira sta in `~/Library/Application Support/noprob-gabri/` con `log.txt`. La coda è nel repo privato del CRM, `gabri/coda.json`: lo script fa pull prima di leggere e la aggiorna con il commit del diario. Claudio la legge ogni giorno e manda ad Antonio su Telegram i post di oggi e di domani, anche a Mac spento.
