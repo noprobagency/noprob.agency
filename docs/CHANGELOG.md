@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.183.0 (14 Nov 2026)
+
+- Social (Gabri): automatic publishing on X and Threads stopped by Antonio; the skill and the scripts README now say Gabri only prepares texts and Antonio posts by hand.
+
 ### Changelog v1.182.0 (13 Nov 2026)
 
 - **CRM registry shows every opt-out**: the registry read `suppressed.txt` lines with their `# comment` and treated `@domain` lines as single emails, so stores with a comment line or more than one contact kept "caldo" or "nuovo" on the CRM page. It now parses the file like the senders do and an `@domain` line marks the whole store as opt-out. Display only: the sending engines already read the file correctly.
