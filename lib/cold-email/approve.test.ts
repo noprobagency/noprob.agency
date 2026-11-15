@@ -27,7 +27,7 @@ describe('Dante lead review', () => {
   })
 
   it('approves family brands whose domain carries the owner surname', () => {
-    expect(review(lead({ lastName: 'Bernabei', company: 'Bernabei', website: 'https://www.bernabei.it' }), woo, taken).action).toBe('approve')
+    expect(review(lead({ lastName: 'Zanettix', company: 'Zanettix', website: 'https://www.zanettix.it' }), woo, taken).action).toBe('approve')
     expect(review(lead({ lastName: 'Rossi', company: 'Acme', website: 'https://www.rossi.it' }), woo, taken).reason).toBe('no store site')
   })
 
@@ -59,8 +59,8 @@ describe('Dante lead review', () => {
 
 describe('company name for the subject', () => {
   it('drops legal suffixes, domain endings and capitals', () => {
-    expect(cleanCompany('UNOAERRE INDUSTRIES SPA')).toBe('Unoaerre Industries')
-    expect(cleanCompany('Tsunami Nutrition S.r.l.')).toBe('Tsunami Nutrition')
+    expect(cleanCompany('ACMEORO INDUSTRIES SPA')).toBe('Acmeoro Industries')
+    expect(cleanCompany('Lampo Nutrition S.r.l.')).toBe('Lampo Nutrition')
     expect(cleanCompany('Zicaffè SpA')).toBe('Zicaffè')
     expect(cleanCompany('Semprefarmacia.it')).toBe('Semprefarmacia')
     expect(cleanCompany('Würth MODYF Italy')).toBe('Würth MODYF')

@@ -132,9 +132,9 @@ describe('lead hygiene', () => {
 
   it('cleans brands and writes English to foreign stores', async () => {
     const { cleanBrand } = await import('./leads.mjs')
-    expect(cleanBrand('Motivi (Miroglio)')).toBe('Motivi')
-    expect(cleanBrand('SatÃ¹')).toBe('Satù')
-    expect(fromCrm(prospect({ domain: 'peachyden.co.uk', email: 'hello@peachyden.co.uk' }), 'no_reply', { platform: 'other' }).lang).toBe('en')
+    expect(cleanBrand('Lunare (Gruppo Astro)')).toBe('Lunare')
+    expect(cleanBrand('CaffÃ¨ Blu')).toBe('Caffè Blu')
+    expect(fromCrm(prospect({ domain: 'example-shop.co.uk', email: 'hello@example-shop.co.uk' }), 'no_reply', { platform: 'other' }).lang).toBe('en')
     expect(firstNameOf('MW', 'mw@x.com')).toBe(null)
   })
 })
