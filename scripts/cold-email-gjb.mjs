@@ -162,6 +162,7 @@ if (!cloud && existsSync(damiano.queue)) {
     const live = await pool(take.map((r) => `https://${domainOf(r.domain)}`), 12, (u) => fetchPlatform(u))
     for (const r of take) {
       const lead = fromDamiano(r, live.get(`https://${domainOf(r.domain)}`))
+      lead.brand = cleanCompany(lead.brand) // as a person writes it: no SRL, no caps
       if (lead.segment === 'review' && process.env.CI) continue // site blocked from the cloud: stays in the queue
       if (!dry) db.leads.push(lead)
       used[lead.domain] = { channel: 'antonio@', date: today }

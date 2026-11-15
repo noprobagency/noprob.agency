@@ -25,14 +25,17 @@
 
 import { execFileSync, spawn } from 'node:child_process'
 import { appendFileSync, existsSync, readFileSync, writeFileSync } from 'node:fs'
-import { SENDER, accessToken, buildRaw, gmail, messageId, threadOutcome } from '../lib/cold-email/gmail.mjs'
+import { SENDER, accessToken, buildRaw, gmail, lastReplyText, messageId, threadOutcome } from '../lib/cold-email/gmail.mjs'
+import { isBareNo } from '../lib/cold/optout.mjs'
+import { fetchPlatform } from '../lib/cold/fetch-platform.mjs'
+import { cleanCompany } from '../lib/cold-email/approve.mjs'
 import { gojiberryDomains, gojiberryOn, gojiberryQueuedToday, gojiberryRemaining, loadGojiberryDomains, saveGojiberryDomains } from '../lib/cold-email/gojiberry.mjs'
 import { excludeDomains, stopStore } from '../lib/cold-email/leads.mjs'
 import { appendSuppressed, applySuppressed, readSuppressed, refusals } from '../lib/cold-email/suppression.mjs'
 import { publishTaken, takenBody } from '../lib/cold-email/taken.mjs'
 import { SEQUENCE_VERSION, dueDate, dueStep, interleaveLines, lineOf, render } from '../lib/cold-email/sequence.mjs'
 import { US_VERSION, US_ZONE, usHours, usReady } from '../lib/cold-email/sequence-us.mjs'
-import { V3_VERSION, measureDato, pagespeedKey, renderV3First } from '../lib/cold-email/sequence-v3.mjs'
+import { V3_VERSION, measureDato, pagespeedKey, renderV3First, v3FollowUpBody } from '../lib/cold-email/sequence-v3.mjs'
 
 const DIR = 'cold-email/data'
 const LEADS = `${DIR}/leads.json`
@@ -68,7 +71,7 @@ const db = JSON.parse(readFileSync(LEADS, 'utf8'))
 const save = () => {
   if (!dry) writeFileSync(LEADS, JSON.stringify({ ...db, updatedAt: new Date().toISOString() }, null, 2))
 }
-const stats = { v3: 0, replies: 0, optouts: 0, bounces: 0, sent: { e1: 0, e2: 0, e3: 0, e4: 0, e5: 0 }, skipped: 0, recent: 0 }
+const stats = { shopify: 0, v3: 0, replies: 0, optouts: 0, bounces: 0, sent: { e1: 0, e2: 0, e3: 0, e4: 0, e5: 0 }, skipped: 0, recent: 0 }
 
 // Mailboxes: antonio@ always, plus config.mailboxes (e.g. hello@ with its own Keychain token).
 // Every lead keeps the mailbox of its first email (sequence.mailbox, antonio@ when unset):
@@ -99,7 +102,13 @@ for (const lead of db.leads) {
   const warm = lead.segment === 'warm'
   if (!seq.threadId || !(warm || (lead.segment === 'target' && !seq.stoppedAt))) continue
   let outcome = threadOutcome(await box.api.thread(seq.threadId))
-  if (outcome === 'reply') outcome = threadOutcome(await box.api.threadFull(seq.threadId))
+  if (outcome === 'reply' || outcome === 'optout') {
+    const full = await box.api.threadFull(seq.threadId)
+    outcome = threadOutcome(full)
+    // After the v3 e4 ("Sapete da quale pagina...?") a bare "no" answers the question: Antonio reads it.
+    const lastSent = seq.sent.at(-1)
+    if (outcome === 'optout' && lastSent?.step === 'e4' && lastSent.copy === V3_VERSION && isBareNo(lastReplyText(full))) outcome = 'reply'
+  }
   if (!outcome || (warm && outcome !== 'optout')) continue
   seq.stoppedAt ||= today
   seq.stopReason = outcome
@@ -223,14 +232,30 @@ if (approved.it || approved.us) {
     }
     // Italy v3 (D-100): a first email opens with one fact about the homepage when a rule fires;
     // otherwise the lead keeps the v2 first email. Measured once, saved on the lead.
+    // A store can move to Shopify while in sequence: checked live before every email, it goes to the Shopify reserve.
+    const live = await fetchPlatform(`https://${lead.domain}`).catch(() => null)
+    if (live?.platform === 'shopify') {
+      Object.assign(lead, { segment: 'shopify', reason: 'on Shopify', platform: 'shopify' })
+      stats.shopify++
+      continue
+    }
+    // First emails carry the company name as a person writes it (no SRL, no caps).
+    if (step.key === 'e1') lead.brand = cleanCompany(lead.brand)
     let v3 = null
     if (step.key === 'e1' && lineOf(lead) === 'it' && config.approvedV3 === V3_VERSION) {
       if (!lead.datoAt) {
-        const dato = await measureDato(lead.domain, pageKey).catch(() => null)
-        Object.assign(lead, { dato: dato?.frase || null, datoRule: dato?.rule || 'none', datoAt: new Date().toISOString() })
+        const dato = await measureDato(lead.domain, pageKey).catch(() => ({ error: 'exception' }))
+        // A temporary error (site or PageSpeed down) is retried on the next runs, up to 3 times.
+        if (dato && 'error' in dato && (lead.datoTries || 0) < 2) {
+          lead.datoTries = (lead.datoTries || 0) + 1
+          continue
+        }
+        const ok = dato && 'frase' in dato ? dato : null
+        Object.assign(lead, { dato: ok?.frase || null, datoRule: ok?.rule || 'none', datoAt: new Date().toISOString() })
       }
       if (lead.dato) v3 = renderV3First(lead, lead.dato)
     }
+    const copyV3 = Boolean(v3) || (step.key !== 'e1' && lineOf(lead) === 'it' && lead.lang === 'it' && config.approvedV3 === V3_VERSION && Boolean(v3FollowUpBody(lead, step.key)))
     const { subject, body } = v3 || render(lead, step.key, { v3: config.approvedV3 === V3_VERSION })
     if (dry) {
       console.log(`[dry] ${m.email.split('@')[0]}@ ${step.key} -> ${lead.email} · ${subject}`)
@@ -253,7 +278,7 @@ if (approved.it || approved.us) {
       if (v3) stats.v3++
       seq.mailbox = m.key
     }
-    seq.sent.push({ step: step.key, date: today, id: res.id })
+    seq.sent.push({ step: step.key, date: today, id: res.id, ...(copyV3 ? { copy: V3_VERSION } : {}) })
     if (step.key === 'e1') {
       storesToday.add(lead.domain)
       firsts++
@@ -271,6 +296,7 @@ if (approved.it || approved.us) {
   }
   stats.skipped = Math.max(0, due.length - stats.recent - sent)
   if (stats.v3) note += ` · prime v3 ${stats.v3}`
+  if (stats.shopify) note += ` · passati a Shopify ${stats.shopify}`
   if (MAILBOXES.length > 1) note += ` · per casella ${MAILBOXES.map((m) => `${m.email.split('@')[0]}@ ${m.sent}`).join(', ')}`
   save()
 }
