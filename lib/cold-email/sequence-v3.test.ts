@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { fraseDato, renderV3First, v3Subject } from './sequence-v3.mjs'
-import { render } from './sequence.mjs'
+import { dueStep, render } from './sequence.mjs'
 
 describe('Italy v3 first email', () => {
   it('picks the first rule that fires, in order', () => {
@@ -24,5 +24,22 @@ describe('Italy v3 first email', () => {
   it('keeps the v3 subject on v2 follow-ups of a v3 thread', () => {
     const lead = { segment: 'target', lang: 'it', brand: 'Acme', firstName: 'Sara', platform: 'woocommerce', sequence: { version: 'v3', sent: [{ step: 'e1', date: '2026-11-16' }] } }
     expect(render(lead, 'e2').subject).toBe(`Re: ${v3Subject('Acme')}`)
+  })
+})
+
+describe('v3 follow-ups', () => {
+  const base = { segment: 'target', lang: 'it', brand: 'Acme', firstName: 'Sara', platform: 'woocommerce' }
+  it('a v3 thread has two follow-ups on days 3 and 7', () => {
+    const l = { ...base, sequence: { version: 'v3', sent: [{ step: 'e1', date: '2026-11-16' }], stoppedAt: null } }
+    expect(dueStep(l, '2026-11-19')?.key).toBe('e2')
+    expect(render(l, 'e2', { v3: true }).body).toBe('Ciao Sara, non vi interessa? 🙂\n\nIl documento su Acme ve lo preparo volentieri, basta un sì.\n\nAntonio')
+    const three = { ...l, sequence: { ...l.sequence, sent: [...l.sequence.sent, { step: 'e2', date: '2026-11-19' }, { step: 'e3', date: '2026-11-25' }] } }
+    expect(dueStep(three, '2026-12-30')).toBe(null)
+  })
+  it('v2 threads get the rewritten e2-e5 only once approved', () => {
+    const l = { ...base, sequence: { version: 'v2', sent: [{ step: 'e1', date: '2026-11-02' }] } }
+    expect(render(l, 'e4', { v3: true }).body).toContain('Sapete da quale pagina di Acme')
+    expect(render(l, 'e4').body).not.toContain('Sapete da quale pagina')
+    expect(render({ ...l, firstName: null }, 'e5', { v3: true }).body.startsWith('Ciao, ultima volta')).toBe(true)
   })
 })
