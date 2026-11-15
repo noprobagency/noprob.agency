@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.205.0 (15 Nov 2026)
+
+- Cold email, US line: a Damiano US row with no `finding` lands in `review` with reason "senza aggancio" instead of `target`, so it does not count as stock and Damiano's run restarts when needed (Claudio, 15/11).
+
 ### Changelog v1.204.0 (15 Nov 2026)
 
 - CRM, from the review of 15/11. The registry puts each direct lead on its own mailbox (antonio@ or hello@), in the store rows and in the daily sent counts. Gojiberry contacts with any campaign step count as in sequence even when imported. On hello@ a no or a bounce is never warm. Tests and comments use made-up stores instead of real leads.
