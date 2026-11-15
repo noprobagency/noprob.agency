@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.189.0 (15 Nov 2026)
+
+- Ada, US stores not on Shopify (D-99): `scripts/ada-us-finding.mjs` writes on each lead the one fact that opens the email (`finding`, `findingRule`, `findingSource`, `findingAt`). Five rules in order: mobile LCP over 4 s, homepage images over 3 MB, no meta description, no H1, mobile CLS over 0.25. A lead with no rule gets no automatic email; Shopify stores and opt-outs are skipped. The lab rules use the PageSpeed key (env `PAGESPEED_API_KEY`, the same `pagespeed.env` Damiano reads, or Keychain `pagespeed-api`); without it only the HTML rules run. Rules in `lib/cold/us-finding.mjs`, with tests.
+
 ### Changelog v1.188.0 (15 Nov 2026)
 
 - Cold email, US line: a lead starts only with `finding` (written by Ada), and US emails go out only from 8:00 to 18:00 New York time, in the Mac's afternoon runs. `--until-zone us` spreads `--until` on New York time.
