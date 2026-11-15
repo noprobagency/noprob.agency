@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.189.0 (15 Nov 2026)
+
+- Cold email, US line: Ada's copy (email 1 and follow-up) and the CAN-SPAM footer of the LLC are in `sequence-us.mjs`. Nothing is sent until `approvedUs` is set in the CRM config, on Antonio's direct ok.
+
 ### Changelog v1.188.0 (15 Nov 2026)
 
 - Cold email, US line: a lead starts only with `finding` (written by Ada), and US emails go out only from 8:00 to 18:00 New York time, in the Mac's afternoon runs. `--until-zone us` spreads `--until` on New York time.
