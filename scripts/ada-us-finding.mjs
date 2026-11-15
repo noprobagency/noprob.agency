@@ -2,6 +2,7 @@
 // Ada, US stores not on Shopify (D-99): writes on each lead the one fact that opens
 // the email ({finding}), with rule, source and date. A lead without a finding gets
 // no automatic email. Skips stores on Shopify and anyone in the shared opt-out list.
+// Every row gets findingAt, even when skipped, so the engine sees the batch as finished.
 // PageSpeed key: env PAGESPEED_API_KEY, the pagespeed.env file Damiano reads, or Keychain "pagespeed-api"; without
 // it only the free HTML rules run (description, H1).
 // Usage: node scripts/ada-us-finding.mjs <leads.json> [--dry] [--force]
@@ -54,10 +55,10 @@ const work = []
 await each(leads, 4, async (lead) => {
   const domain = domainOf(lead)
   if (!domain || (lead.findingAt && !force)) { stats.skipped++; return }
-  if (isSuppressed({ email: lead.email, website: `https://${domain}` }, suppressed)) { lead.finding = null; lead.findingRule = 'suppressed'; stats.suppressed++; return }
+  if (isSuppressed({ email: lead.email, website: `https://${domain}` }, suppressed)) { Object.assign(lead, { finding: null, findingRule: 'suppressed', findingAt: new Date().toISOString() }); stats.suppressed++; return }
   const home = await fetchHome(domain)
-  if (!home) { stats.unreachable++; return }
-  if (detectPlatform(home.html, {}).platform === 'shopify') { lead.finding = null; lead.findingRule = 'shopify'; stats.shopify++; return }
+  if (!home) { Object.assign(lead, { finding: null, findingRule: 'unreachable', findingAt: new Date().toISOString() }); stats.unreachable++; return }
+  if (detectPlatform(home.html, {}).platform === 'shopify') { Object.assign(lead, { finding: null, findingRule: 'shopify', findingAt: new Date().toISOString() }); stats.shopify++; return }
   work.push({ lead, home, first: await pagespeed(home.url, KEY), at: Date.now() })
 })
 

@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.212.0 (16 Nov 2026)
+
+- Ada, US finding: every row gets `findingAt`, also when the site does not answer, is on Shopify or is opted out, so the engine sees the batch as finished (two unreachable rows had kept batch 2 out).
+
 ### Changelog v1.211.0 (15 Nov 2026)
 
 - Cold email: the runner reads Damiano's US batches in docs/cold/damiano/us/lotti whatever their name (<day>-<n>.json). The old shared folder still needs the us- prefix.
