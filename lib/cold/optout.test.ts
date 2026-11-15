@@ -52,3 +52,13 @@ describe('parseSuppressed', () => {
     expect(parseSuppressed(text)).toEqual(['anna@acme.com', '@shop.it'])
   })
 })
+
+describe('review of 15/11', () => {
+  it('reads "lasciamo stare" as a no and tells a bare no apart', async () => {
+    const { isOptOut, isBareNo } = await import('./optout.mjs')
+    expect(isOptOut('Lasciamo stare, grazie')).toBe(true)
+    expect(isOptOut('lasciate perdere')).toBe(true)
+    expect(isBareNo('No.')).toBe(true)
+    expect(isBareNo('No, non lo sappiamo. Ci mandi il documento?')).toBe(false)
+  })
+})

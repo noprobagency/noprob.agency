@@ -38,8 +38,19 @@ describe('v3 follow-ups', () => {
   })
   it('v2 threads get the rewritten e2-e5 only once approved', () => {
     const l = { ...base, sequence: { version: 'v2', sent: [{ step: 'e1', date: '2026-11-02' }] } }
-    expect(render(l, 'e4', { v3: true }).body).toContain('Sapete da quale pagina di Acme')
+    // The first v3 follow-up of a v2 thread is the one that offers the document.
+    expect(render(l, 'e4', { v3: true }).body).toContain('vi è arrivata la mia email')
+    const after = { ...l, sequence: { ...l.sequence, sent: [...l.sequence.sent, { step: 'e2', date: '2026-11-05', copy: 'v3' }] } }
+    expect(render(after, 'e4', { v3: true }).body).toContain('Sapete da quale pagina di Acme')
     expect(render(l, 'e4').body).not.toContain('Sapete da quale pagina')
-    expect(render({ ...l, firstName: null }, 'e5', { v3: true }).body.startsWith('Ciao, ultima volta')).toBe(true)
+    expect(render({ ...after, firstName: null }, 'e5', { v3: true }).body.startsWith('Ciao, ultima volta')).toBe(true)
+  })
+})
+
+describe('engine review of 15/11', () => {
+  it('caps the speed at 20 seconds', () => {
+    expect(fraseDato({ lcpMs: 28400 })?.frase).toContain('segna oltre 20 secondi')
+    expect(fraseDato({ lcpMs: 21000 })?.frase).toContain('segna oltre 20 secondi')
+    expect(fraseDato({ lcpMs: 19500 })?.frase).toContain('segna circa 19 secondi')
   })
 })
