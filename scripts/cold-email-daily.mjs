@@ -29,8 +29,10 @@ import { SENDER, accessToken, buildRaw, gmail, lastReplyText, messageId, threadO
 import { isBareNo } from '../lib/cold/optout.mjs'
 import { fetchPlatform } from '../lib/cold/fetch-platform.mjs'
 import { cleanCompany } from '../lib/cold-email/approve.mjs'
+import { importUsRows, lotDone, mtimeOf, outOfTarget, readImported, readLot, saveImported, usLotFiles } from '../lib/cold-email/us-lots.mjs'
+import { pool } from '../lib/cold/fetch-platform.mjs'
 import { gojiberryDomains, gojiberryOn, gojiberryQueuedToday, gojiberryRemaining, loadGojiberryDomains, saveGojiberryDomains } from '../lib/cold-email/gojiberry.mjs'
-import { excludeDomains, stopStore } from '../lib/cold-email/leads.mjs'
+import { domainOf, excludeDomains, stopStore } from '../lib/cold-email/leads.mjs'
 import { appendSuppressed, applySuppressed, readSuppressed, refusals } from '../lib/cold-email/suppression.mjs'
 import { publishTaken, takenBody } from '../lib/cold-email/taken.mjs'
 import { SEQUENCE_VERSION, dueDate, dueStep, interleaveLines, lineOf, render } from '../lib/cold-email/sequence.mjs'
@@ -146,8 +148,26 @@ db.leads = applySuppressed(db.leads, readSuppressed())
 if (!dry) appendSuppressed(refusals(db.leads), 'no / opt-out')
 save()
 
-// 3. Sends, within each mailbox's budget
 let note = ''
+// 2b. US batches finished by Ada's finding script go into leads.json (this run owns it).
+// Mac only: the sites are checked live, and datacenter addresses are often blocked.
+if (!process.env.CI) {
+  const imported = readImported()
+  for (const file of usLotFiles()) {
+    const rows = readLot(file)
+    if (!lotDone(rows) || imported[file] === mtimeOf(file)) continue
+    const live = await pool([...new Set(rows.map((r) => `https://${domainOf(r.domain)}`))], 12, (u) => fetchPlatform(u))
+    const n = importUsRows(db, rows, { suppressed: [...readSuppressed()].map((s) => String(s).toLowerCase()), gojiberry: new Set([...loadGojiberryDomains()].map(domainOf)), live, lcpApproved: config.usLcpApproved === true, clean: cleanCompany, excluded: outOfTarget() })
+    note += ` · lotto USA ${file.split('/').pop()} (nuovi ${n.added}, aggiornati ${n.updated}, pronti ${n.ready}, LCP in attesa ${n.lcpWaiting})`
+    if (!dry) {
+      imported[file] = mtimeOf(file)
+      saveImported(imported)
+    }
+  }
+  save()
+}
+
+// 3. Sends, within each mailbox's budget
 const pageKey = pagespeedKey()
 // The mailbox budget covers every email; dailyCap limits only new first emails, so
 // follow-ups keep their days even when a big batch reaches the same step together.

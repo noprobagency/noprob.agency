@@ -187,6 +187,25 @@ if (!cloud && existsSync(damiano.queue)) {
 }
 
 
+// US batches (D-99): Ada's finding script runs on every unfinished batch, in the background
+// (PageSpeed waits 60 s between runs); the daily run imports the batch once it is done.
+if (!cloud && !dry) {
+  const { lotDone, readLot, usLotFiles } = await import('../lib/cold-email/us-lots.mjs')
+  const { spawn } = await import('node:child_process')
+  const running = (() => {
+    try {
+      return execFileSync('pgrep', ['-fl', 'ada-us-finding'], { encoding: 'utf8' })
+    } catch {
+      return ''
+    }
+  })()
+  for (const file of usLotFiles()) {
+    if (lotDone(readLot(file)) || running.includes(file)) continue
+    spawn('node', ['scripts/ada-us-finding.mjs', file], { detached: true, stdio: 'ignore' }).unref()
+    console.error(`US finding started on ${file}`)
+  }
+}
+
 const fresh = contacts.filter((c) => !processed.has(c.id) && !started(c) && !c.rejectedAt && !c.state)
 const urls = [...new Set(fresh.map((c) => normaliseUrl(c.website)).filter(Boolean))]
 const checks = await pool(urls, 12, (u) => fetchPlatform(u))
