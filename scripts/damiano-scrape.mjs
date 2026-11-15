@@ -252,7 +252,9 @@ const FIT_INDUSTRY = /retail|apparel|fashion|luxury|jewel|cosmetic|personal care
 // Stores already worked before the industries above were added get one more look.
 const FIT_VERSION = 2
 // B2B industries that pass the words above (Ada's and the Fable review's discards).
-const B2B_INDUSTRY = /office equipment|office furniture|wholesale|food production/i
+// US review (16 Nov 2026): associations, brokers and services (fuel, transport, insurance) are no store.
+const B2B_INDUSTRY = /office equipment|office furniture|wholesale|food production|civic|social organi|non-?profit|membership|insurance|broker|transportation|truck|freight|logistic|oil and gas|fuel|utilities|real estate|financial services/i
+const NOT_STORE_NAME = /\b(association|assn|society|council|chamber|federation|brokers?|brokerage|insurance|propane|fuel|oil co|trucking|freight|logistics|transport)\b/i
 // Employee bands come as "20 - 99" or "< 5"; unknown sizes pass. Intl only, Ada's 5-999.
 const sizeFits = (c) => {
   if (!INTL || US || !c.employees) return true
@@ -260,8 +262,9 @@ const sizeFits = (c) => {
   const low = parseInt(c.employees, 10)
   return Number.isNaN(low) || (low >= 5 && low < 1000)
 }
-const fits = (c) => FIT_INDUSTRY.test(c.industry || '') && !B2B_INDUSTRY.test(c.industry || '') && sizeFits(c)
-const SKIP_TITLE = /intern|stagi|tirocin|assistant|assistente|customer (service|care)|magazzin|warehouse|student/i
+const fits = (c) => FIT_INDUSTRY.test(c.industry || '') && !B2B_INDUSTRY.test(c.industry || '') && !NOT_STORE_NAME.test(`${c.name || ''} ${c.legalName || ''}`) && sizeFits(c)
+// "former", "ex-", "retired": someone who left the company (US review, 16 Nov 2026).
+const SKIP_TITLE = /intern|stagi|tirocin|assistant|assistente|customer (service|care)|magazzin|warehouse|student|\bformer\b|\bex-|\bretired\b|\bpast\b/i
 const rankOf = (title = '') => {
   if (!title || SKIP_TITLE.test(title)) return null
   for (const [re, r] of INTL ? INTL_RANKS : RANKS) if (re.test(title)) return r
@@ -424,8 +427,18 @@ async function html(url) {
     clearTimeout(timer)
   }
 }
+const STORE_V = 2
+const NOT_COLD_TEXT = /\b(cbd|cannabis|marijuana|thc|delta[- ]?8|kratom|firearms?|handguns?|ammunition|ammo|gun ?shop|armeria|armi da fuoco)\b/i
+// Country domains other than .us; .co, .io, .ai, .me, .tv and the like are used as generic ones.
+const GENERIC_CC = new Set(['us', 'co', 'io', 'ai', 'me', 'tv', 'ly', 'fm', 'gg', 'so', 'sh', 'to', 'ws'])
+const FOREIGN_TLD = (d) => {
+  const tld = d.toLowerCase().split('.').pop()
+  return tld.length === 2 && !GENERIC_CC.has(tld)
+}
+const CA_ADDRESS = /\b(Ontario|British Columbia|Alberta|Qu[eé]bec|Manitoba|Saskatchewan|Nova Scotia|New Brunswick|ON|BC|AB|QC|MB|SK|NS|NB)[, ]+[ABCEGHJ-NPRSTVXY]\d[ABCEGHJ-NPRSTV-Z] ?\d[ABCEGHJ-NPRSTV-Z]\d\b/
+const US_ADDRESS = /\b(A[KLRZ]|C[AOT]|D[CE]|FL|GA|HI|I[ADLN]|K[SY]|LA|M[ADEINOST]|N[CDEHJMVY]|O[HKR]|PA|RI|S[CD]|T[NX]|UT|V[AT]|W[AIVY]|Alabama|Arizona|California|Colorado|Florida|Georgia|Illinois|Michigan|New York|Ohio|Pennsylvania|Texas|Virginia|Washington),? \d{5}(-\d{4})?\b/
 async function storeCheck(c) {
-  if (c.store) return c.store
+  if (c.store?.v === STORE_V) return c.store
   const home = await html(`https://${c.domain}/`)
   // Not cached: a site that blocks this run (often GitHub's IPs) is tried again next time.
   if (home === null) return { drop: 'unreachable' }
@@ -440,7 +453,14 @@ async function storeCheck(c) {
       break
     }
   }
-  c.store = { cart, b2b, shopPath, drop: !cart ? 'no-cart' : b2b >= 2 && cart < 3 ? 'b2b' : null, at: new Date().toISOString() }
+  // US review (16 Nov 2026): cannabis, CBD or weapons on the homepage stay out of cold; a US
+  // store must be in the US (no foreign country domain, no Canadian address without a US one).
+  const notCold = NOT_COLD_TEXT.test(home)
+  const foreign = US && (FOREIGN_TLD(c.domain) || (CA_ADDRESS.test(home) && !US_ADDRESS.test(home)))
+  const drop = !cart ? 'no-cart' : notCold ? 'not-cold' : foreign ? 'not-us' : b2b >= 2 && cart < 3 ? 'b2b' : null
+  // A franchise brand's site: its "owner" is often the owner of one location (see branchOwner).
+  const franchise = /own a franchise|franchis(e|ing) (opportunit|inquir|info)|become a franchisee/i.test(home)
+  c.store = { v: STORE_V, cart, b2b, shopPath, drop, franchise, at: new Date().toISOString() }
   save()
   return c.store
 }
@@ -544,13 +564,25 @@ async function speedCheck(c) {
 const contact = (p) => ({ name: p.name, first: p.first, last: p.last, title: p.title, email: p.email || null, linkedin: p.linkedin, country: p.country || null, rank: p.rank })
 
 /** Best verified contact plus a second one: upgrades an older lead when a higher role turns up. */
+// US review (16 Nov 2026): the owner of one franchise location is not the brand's decision
+// maker ("Co-Owner Pinspiration Jacksonville", "Franchisee", "Store owner").
+const branchOwner = (c, title = '') => {
+  if (/franchis|area developer|\blocation\b|\bbranch\b|store #/i.test(title)) return true
+  if (!c.store?.franchise) return false
+  const brand = (c.name || '').trim().toLowerCase()
+  const t = title.toLowerCase()
+  const at = brand.length >= 4 ? t.indexOf(brand) : -1
+  if (at === -1) return false
+  const rest = t.slice(at + brand.length).replace(/\b(inc|llc|ltd|co|corp|corporation|company|group|brands?|usa|america|international|the|and|of)\b/g, '')
+  return /[a-z]{3,}/.test(rest)
+}
 async function work(c, { second = true } = {}) {
   const found = await people(c)
   // Marked tried by a call that failed before 15 Nov 2026 (no verdict): try again.
   for (const p of found) if (p.tried && p.verdict === undefined) p.tried = false
   if (!fits(c)) return
   if ((await storeCheck(c)).drop) return
-  let ranked = found.filter((p) => p.rank != null).sort((a, b) => a.rank - b.rank)
+  let ranked = found.filter((p) => p.rank != null && !(US && branchOwner(c, p.title))).sort((a, b) => a.rank - b.rank)
   if (INTL) {
     // Ada needs the profile URL, someone in the store's market, and nobody she already has.
     const codes = MARKETS.find((m) => m.market === c.market)?.codes || []
@@ -650,7 +682,7 @@ const onDomain = (c) => {
   return Boolean(host) && (host === dom || host.endsWith(`.${dom}`))
 }
 const mailOk = (c) => !PEC.test(c.lead.email || '') && (!c.lead.email ? INTL && !US : onDomain(c))
-const ready = (c) => mailOk(c) && c.store && !c.store.drop && !NOT_COLD.test(`${c.domain} ${c.name || ''}`) && (US ? !PRIVATE_MAILBOX.test(c.lead.email || '') && (!c.country || c.country === 'US') : INTL || (!PRIVATE_MAILBOX.test(c.lead.email || '') && (!c.country || c.country === 'IT')))
+const ready = (c) => mailOk(c) && !(US && branchOwner(c, c.lead.title)) && c.store && !c.store.drop && !NOT_COLD.test(`${c.domain} ${c.name || ''}`) && (US ? !PRIVATE_MAILBOX.test(c.lead.email || '') && (!c.country || c.country === 'US') : INTL || (!PRIVATE_MAILBOX.test(c.lead.email || '') && (!c.country || c.country === 'IT')))
 // The saved lead is checked against the current ranks: a role Ada stopped taking drops out.
 const candidates = () => Object.values(state.companies).filter((c) => c.lead && (!INTL || rankOf(c.lead.title)) && fits(c) && reachable(c) && fresh(c.domain))
 const leads = () => candidates().filter(ready)
@@ -659,7 +691,7 @@ const isShopify = (c) => c.platform === 'shopify' && reachable(c) && fresh(c.dom
 
 compact()
 // Pass 0: store check on leads found before it existed (free).
-if (!EXPORT_ONLY) await pool(candidates().filter((c) => !c.store), 10, storeCheck)
+if (!EXPORT_ONLY) await pool(candidates().filter((c) => c.store?.v !== STORE_V), 10, storeCheck)
 
 // D-61: the daily run (--add) pauses at zero spend while Italy has stock. One stock since
 // 15 Nov 2026: every lead goes to Dante's direct engine, at most 55 first emails a day.
