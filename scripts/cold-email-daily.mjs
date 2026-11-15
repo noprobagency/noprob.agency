@@ -184,6 +184,9 @@ if (approved.it || approved.us) {
   const due = db.leads
     .map((lead) => ({ lead, step: dueStep(lead, today) }))
     .filter((d) => d.step && approved[lineOf(d.lead)])
+    // The v2 e3 names two clients, against the rule (revision of 15/11): it waits until the
+    // rewritten v3 follow-ups are on (approvedV3), which have no names.
+    .filter((d) => !(d.step.key === 'e3' && lineOf(d.lead) === 'it' && d.lead.sequence.version !== V3_VERSION && !(config.approvedV3 === V3_VERSION && d.lead.lang === 'it')))
     .sort((a, b) => priority(a.lead) - priority(b.lead) || (a.step.key === 'e1' ? 0 : dueDate(a.lead, a.step).localeCompare(dueDate(b.lead, b.step))))
   // Follow-ups first; then first emails of Italy and USA in turns, so both lines start every day.
   due.splice(0, due.length, ...due.filter((d) => d.step.key !== 'e1'), ...interleaveLines(due.filter((d) => d.step.key === 'e1')))
