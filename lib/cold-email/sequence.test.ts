@@ -228,9 +228,16 @@ describe('US line', () => {
     expect(usHours(new Date('2026-11-16T14:00:00Z'))).toBe(true)
     expect(usHours(new Date('2026-11-16T09:20:00Z'))).toBe(false)
   })
-  it('sends nothing until copy and footer are approved', () => {
-    expect(usReady()).toBe(false)
-    expect(() => render(us, 'e1')).toThrow(/not approved/)
+  it('renders the approved copy with the footer', () => {
+    expect(usReady()).toBe(true)
+    const e1 = render(us, 'e1')
+    expect(e1.subject).toBe('Acme')
+    expect(e1.body).toContain('Hey Sam! 🙂')
+    expect(e1.body).toContain('one thing jumped out: slow mobile.')
+    expect(e1.body).toContain('Sheridan, WY 82801')
+    expect(e1.body).not.toMatch(/https?:/)
+    expect(render({ ...us, firstName: null }, 'e2')).toMatchObject({ subject: 'Re: Acme' })
+    expect(render({ ...us, firstName: null }, 'e2').body).toContain('Hey there, happy to send')
   })
   it('renders approved copy with the footer, follow-up in the same thread', () => {
     const copy = { e1: (v: { brand: string }) => ({ subject: `${v.brand} question`, lines: ['Hi!'] }), e2: (v: { brand: string }) => ({ subject: `${v.brand} question`, lines: ['Again'] }) }
