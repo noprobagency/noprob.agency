@@ -32,6 +32,7 @@ import { appendSuppressed, applySuppressed, readSuppressed, refusals } from '../
 import { publishTaken, takenBody } from '../lib/cold-email/taken.mjs'
 import { SEQUENCE_VERSION, dueDate, dueStep, interleaveLines, lineOf, render } from '../lib/cold-email/sequence.mjs'
 import { US_VERSION, US_ZONE, usHours, usReady } from '../lib/cold-email/sequence-us.mjs'
+import { V3_VERSION, measureDato, pagespeedKey, renderV3First } from '../lib/cold-email/sequence-v3.mjs'
 
 const DIR = 'cold-email/data'
 const LEADS = `${DIR}/leads.json`
@@ -67,7 +68,7 @@ const db = JSON.parse(readFileSync(LEADS, 'utf8'))
 const save = () => {
   if (!dry) writeFileSync(LEADS, JSON.stringify({ ...db, updatedAt: new Date().toISOString() }, null, 2))
 }
-const stats = { replies: 0, optouts: 0, bounces: 0, sent: { e1: 0, e2: 0, e3: 0, e4: 0, e5: 0 }, skipped: 0, recent: 0 }
+const stats = { v3: 0, replies: 0, optouts: 0, bounces: 0, sent: { e1: 0, e2: 0, e3: 0, e4: 0, e5: 0 }, skipped: 0, recent: 0 }
 
 // Mailboxes: antonio@ always, plus config.mailboxes (e.g. hello@ with its own Keychain token).
 // Every lead keeps the mailbox of its first email (sequence.mailbox, antonio@ when unset):
@@ -131,6 +132,7 @@ save()
 
 // 3. Sends, within each mailbox's budget
 let note = ''
+const pageKey = pagespeedKey()
 // The mailbox budget covers every email; dailyCap limits only new first emails, so
 // follow-ups keep their days even when a big batch reaches the same step together.
 // Ada's campaign sends from antonio@ too (from 9:00, up to its warm-up limit): the
@@ -206,9 +208,20 @@ if (approved.it || approved.us) {
         continue
       }
     }
-    const { subject, body } = render(lead, step.key)
+    // Italy v3 (D-100): a first email opens with one fact about the homepage when a rule fires;
+    // otherwise the lead keeps the v2 first email. Measured once, saved on the lead.
+    let v3 = null
+    if (step.key === 'e1' && lineOf(lead) === 'it' && config.approvedV3 === V3_VERSION) {
+      if (!lead.datoAt) {
+        const dato = await measureDato(lead.domain, pageKey).catch(() => null)
+        Object.assign(lead, { dato: dato?.frase || null, datoRule: dato?.rule || 'none', datoAt: new Date().toISOString() })
+      }
+      if (lead.dato) v3 = renderV3First(lead, lead.dato)
+    }
+    const { subject, body } = v3 || render(lead, step.key)
     if (dry) {
       console.log(`[dry] ${m.email.split('@')[0]}@ ${step.key} -> ${lead.email} · ${subject}`)
+      if (v3) stats.v3++
       if (step.key === 'e1') {
         storesToday.add(lead.domain)
         firsts++
@@ -223,7 +236,8 @@ if (approved.it || approved.us) {
     if (step.key === 'e1') {
       seq.threadId = res.threadId
       seq.messageId = messageId(await m.api.thread(res.threadId))
-      seq.version = lineOf(lead) === 'us' ? US_VERSION : SEQUENCE_VERSION
+      seq.version = lineOf(lead) === 'us' ? US_VERSION : v3 ? V3_VERSION : SEQUENCE_VERSION
+      if (v3) stats.v3++
       seq.mailbox = m.key
     }
     seq.sent.push({ step: step.key, date: today, id: res.id })
@@ -243,6 +257,7 @@ if (approved.it || approved.us) {
     }
   }
   stats.skipped = Math.max(0, due.length - stats.recent - sent)
+  if (stats.v3) note += ` · prime v3 ${stats.v3}`
   if (MAILBOXES.length > 1) note += ` · per casella ${MAILBOXES.map((m) => `${m.email.split('@')[0]}@ ${m.sent}`).join(', ')}`
   save()
 }
