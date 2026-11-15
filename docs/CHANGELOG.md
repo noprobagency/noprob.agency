@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.188.0 (15 Nov 2026)
+
+- Cold email, US line: a lead starts only with `finding` (written by Ada), and US emails go out only from 8:00 to 18:00 New York time, in the Mac's afternoon runs. `--until-zone us` spreads `--until` on New York time.
+
 ### Changelog v1.187.0 (15 Nov 2026)
 
 - Cold email: second line in the direct engine for US stores not on Shopify (D-99), in `lib/cold-email/sequence-us.mjs`. It has 1 email and 1 follow-up in English, with a CAN-SPAM footer. It stays off until Ada's copy and the footer are filled in and `approvedUs` matches. Follow-ups still go first, then first emails of Italy and USA in turns, on the same mailboxes and limits. Damiano's rows with country US land on the US line.

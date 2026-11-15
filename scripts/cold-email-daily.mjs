@@ -31,7 +31,7 @@ import { excludeDomains, stopStore } from '../lib/cold-email/leads.mjs'
 import { appendSuppressed, applySuppressed, readSuppressed, refusals } from '../lib/cold-email/suppression.mjs'
 import { publishTaken, takenBody } from '../lib/cold-email/taken.mjs'
 import { SEQUENCE_VERSION, dueDate, dueStep, interleaveLines, lineOf, render } from '../lib/cold-email/sequence.mjs'
-import { US_VERSION, usReady } from '../lib/cold-email/sequence-us.mjs'
+import { US_VERSION, US_ZONE, usHours, usReady } from '../lib/cold-email/sequence-us.mjs'
 
 const DIR = 'cold-email/data'
 const LEADS = `${DIR}/leads.json`
@@ -55,9 +55,10 @@ if (!dry && process.platform === 'darwin') spawn('caffeinate', ['-i', '-w', Stri
 const today = new Date().toLocaleDateString('en-CA', { timeZone: 'Europe/Lisbon' })
 const until = args.includes('--until') ? args[args.indexOf('--until') + 1] : null
 
-/** Minutes left until HH:MM on the recipients' clock (Europe/Rome). */
+/** Minutes left until HH:MM on the recipients' clock (Europe/Rome, or New York for the US line with --until-zone us). */
 function minutesUntil(hhmm) {
-  const [h, m] = new Date().toLocaleTimeString('en-GB', { timeZone: 'Europe/Rome', hour12: false }).split(':').map(Number)
+  const zone = args.includes('--until-zone') && args[args.indexOf('--until-zone') + 1] === 'us' ? US_ZONE : 'Europe/Rome'
+  const [h, m] = new Date().toLocaleTimeString('en-GB', { timeZone: zone, hour12: false }).split(':').map(Number)
   const [eh, em] = hhmm.split(':').map(Number)
   return eh * 60 + em - (h * 60 + m)
 }
@@ -161,9 +162,11 @@ for (const m of MAILBOXES) {
   m.sent = 0
 }
 // Each line sends only its approved copy: Italy (SEQUENCE_VERSION) and USA (US_VERSION).
-const approved = { it: config.approved === SEQUENCE_VERSION, us: usReady() && config.approvedUs === US_VERSION }
+// US emails go out only in New York working hours (the afternoon runs of the Mac).
+const usApproved = usReady() && config.approvedUs === US_VERSION
+const approved = { it: config.approved === SEQUENCE_VERSION, us: usApproved && usHours() }
 if (!approved.it) note += ` · Italia ferma (sequenza ${SEQUENCE_VERSION} non approvata)`
-if (!approved.us && db.leads.some((l) => lineOf(l) === 'us' && l.segment === 'target')) note += ` · USA ferma (sequenza ${US_VERSION} non approvata)`
+if (!usApproved && db.leads.some((l) => lineOf(l) === 'us' && l.segment === 'target')) note += ` · USA ferma (sequenza ${US_VERSION} non approvata)`
 if (approved.it || approved.us) {
   const priority = (l) => (l.sequence.sent.length ? 0 : l.php ? 1 : ['woocommerce', 'magento', 'prestashop', 'shopware', 'wordpress'].includes(l.platform) ? 2 : 3)
   const due = db.leads

@@ -1,6 +1,6 @@
 {
   "name": "noprob-agency",
-  "version": "1.187.0",
+  "version": "1.188.0",
   "private": true,
   "packageManager": "pnpm@10.33.0",
   "scripts": {
