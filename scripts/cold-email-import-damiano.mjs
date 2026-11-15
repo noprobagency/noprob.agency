@@ -15,7 +15,7 @@
 // Usage: node scripts/cold-email-import-damiano.mjs --direct <file> | --hello <file> [--dry]
 
 import { execFileSync } from 'node:child_process'
-import { readFileSync, writeFileSync } from 'node:fs'
+import { existsSync, lstatSync, readFileSync, writeFileSync } from 'node:fs'
 import { fetchPlatform, pool } from '../lib/cold/fetch-platform.mjs'
 import { LISTS, api, listContacts } from '../lib/cold/gojiberry.mjs'
 import { normaliseUrl } from '../lib/cold/detect-platform.mjs'
@@ -23,7 +23,11 @@ import { domainOf, fromDamiano } from '../lib/cold-email/leads.mjs'
 import { helloPayload } from '../lib/cold-email/damiano.mjs'
 import { readSuppressed } from '../lib/cold-email/suppression.mjs'
 
-const LEADS = 'cold-email/data/leads.json'
+// The live queue is the CRM's state/leads.json: on the Mac runner cold-email/data is a
+// symlink to it. In a plain checkout cold-email/data/leads.json is an old copy, so --direct
+// refuses unless COLD_CRM_PATH is set or cold-email/data is that symlink (15/11).
+const LEADS = process.env.COLD_CRM_PATH ? `${process.env.COLD_CRM_PATH}/state/leads.json` : 'cold-email/data/leads.json'
+const liveQueue = () => Boolean(process.env.COLD_CRM_PATH) || (existsSync('cold-email/data') && lstatSync('cold-email/data').isSymbolicLink())
 const DANTE_LIST = 65682
 const OTHER_LISTS = [LISTS.en, LISTS.it, DANTE_LIST, 66757, LISTS.shopify]
 
@@ -33,6 +37,10 @@ const channel = args.includes('--direct') ? 'direct' : args.includes('--hello') 
 const file = channel && args[args.indexOf(`--${channel}`) + 1]
 if (!file) {
   console.error('Usage: node scripts/cold-email-import-damiano.mjs --direct <file> | --hello <file> [--dry]')
+  process.exit(1)
+}
+if (!dry && channel === 'direct' && !liveQueue()) {
+  console.error('Not the live queue: run from the Mac runner clone, or set COLD_CRM_PATH to the CRM checkout.')
   process.exit(1)
 }
 try {
