@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.206.0 (16 Nov 2026)
+
+- Damiano, Claudio's US review. Titles with "former", "ex-", "retired" or "past" are out. A homepage that mentions cannabis, CBD, THC, delta-8, kratom or weapons stays out of cold. A US store needs no foreign country domain (`.ca`) and no Canadian address without a US one. Associations, brokers and services (fuel, transport, insurance) are no store. The owner of one franchise location is not the brand's decision maker. Stores checked before are checked again, for free. On batches 1 and 2 the rules flag 20 of 178.
+
 ### Changelog v1.205.0 (15 Nov 2026)
 
 - Cold email, US line: a Damiano US row with no `finding` lands in `review` with reason "senza aggancio" instead of `target`, so it does not count as stock and Damiano's run restarts when needed (Claudio, 15/11).
