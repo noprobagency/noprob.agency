@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.199.0 (15 Nov 2026)
+
+- Ada, US finding: the speed sentence says "to show its main content" instead of "to load its main image", because the largest element on a page is not always an image (Claudio's review).
+
 ### Changelog v1.198.0 (15 Nov 2026)
 
 - Cold email: Gojiberry can no longer stop the direct engine. After `gojiberryUntil` in the config (25/11, D-93), no script calls it and no mailbox keeps room for its campaigns. Before that date a failing call is skipped. The daily run holds 25 emails instead of the whole mailbox, and the review still moves Damiano's leads to the direct channel. The last list of Gojiberry stores is saved, so those stores stay blocked.
