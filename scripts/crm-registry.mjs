@@ -44,6 +44,8 @@ const domainOf = (s) => {
   d = d.replace(/^www\./, '').replace(/\/.*$/, '')
   return /^[a-z0-9.-]+\.[a-z]{2,}$/.test(d) ? d : null
 }
+const fromDamiano = (c) => /Lotto Damiano/.test(c.note || '') || /^fonte: Damiano/.test(c.user_note || '')
+const damDomains = new Set(Object.values(lists.lists).flat().filter(fromDamiano).map((c) => domainOf(c.website) || domainOf(c.companyUrl) || domainOf(c.email?.split('@')[1])).filter(Boolean))
 const stores = new Map()
 const store = (domain) => {
   if (!stores.has(domain)) stores.set(domain, { domain, brand: null, platform: null, channel: 'nessuno', status: 'nuovo', sources: new Set(), contacts: new Map(), steps: null, total: null, last: null, next: null, detail: null, antonio: null })
@@ -80,7 +82,7 @@ for (const l of direct) {
   if (!d) continue
   const s = store(d)
   s.brand ||= l.brand; s.platform ||= l.platform
-  s.sources.add(l.source === 'gojiberry-dante' ? 'gojiberry-41228' : 'crm-v2')
+  s.sources.add(l.source === 'gojiberry-dante' ? 'gojiberry-41228' : l.source === 'damiano' || (!l.source && l.sequence?.oneShot) ? 'damiano' : 'crm-v2')
   addContact(s, { name: l.contact, email: l.email })
   const sent = l.sequence?.sent || []
   const st = seqStatus(l.segment, l.reason, sent, l.sequence?.stopReason, stepsOf(l).length)
@@ -93,7 +95,7 @@ for (const l of read('cold-email/data/dante.json', { leads: [] }).leads) {
   const d = domainOf(l.domain) || domainOf(l.email?.split('@')[1])
   if (!d) continue
   const s = store(d)
-  s.brand ||= l.brand; s.platform ||= l.platform; s.sources.add('gojiberry-41228')
+  s.brand ||= l.brand; s.platform ||= l.platform; s.sources.add(damDomains.has(d) ? 'damiano' : 'gojiberry-41228')
   addContact(s, { name: l.contact, email: l.email })
   const sent = l.sent || []
   const st = seqStatus(l.segment, l.reason, sent, l.stopReason, l.total || 3)
@@ -101,12 +103,12 @@ for (const l of read('cold-email/data/dante.json', { leads: [] }).leads) {
 }
 
 // 3. Gojiberry lists (Ada's LinkedIn flow, Dante's list, Shopify reserve, overflow)
-const stepsOf = (c) => (Array.isArray(c.campaignStatus) ? c.campaignStatus : c.campaignStatus ? [c.campaignStatus] : [])
+const gjbStepsOf = (c) => (Array.isArray(c.campaignStatus) ? c.campaignStatus : c.campaignStatus ? [c.campaignStatus] : [])
 const gjbStatus = (c) => {
   if (c.unsubscribed || c.redListed) return 'opt-out'
   if (c.rejectedAt || c.blocked) return 'escluso'
   if (c.bounced) return 'escluso'
-  if (stepsOf(c).some((x) => x.state === 'answered' || x.state === 'accepted' && x.type === 'message')) return 'risposto'
+  if (gjbStepsOf(c).some((x) => x.state === 'answered' || x.state === 'accepted' && x.type === 'message')) return 'risposto'
   if (c.hasStartedCampaign) return 'in-sequenza'
   if (c.readyForCampaign) return 'approvato'
   return 'da-rivedere'
@@ -117,7 +119,7 @@ for (const [id, cs] of Object.entries(lists.lists)) {
     const d = domainOf(c.website) || domainOf(c.companyUrl) || domainOf(c.email?.split('@')[1])
     if (!d) continue
     const s = store(d)
-    s.brand ||= c.company; s.sources.add(source)
+    s.brand ||= c.company; s.sources.add(fromDamiano(c) ? 'damiano' : source)
     addContact(s, { name: c.fullName || [c.firstName, c.lastName].filter(Boolean).join(' '), title: c.jobTitle, email: c.email, linkedin: c.profileUrl })
     const st = channel === 'riserva-shopify' ? 'nuovo' : gjbStatus(c)
     const steps = Array.isArray(c.campaignStatus) ? c.campaignStatus.length : c.campaignStatus ? 1 : 0
@@ -174,9 +176,9 @@ const count = (f) => rows.reduce((m, r) => { const k = f(r); m[k] = (m[k] || 0) 
 // Emails of hello@ come from the Gojiberry steps themselves (type email, state sent or answered),
 // so the count is live and not the 8:30 export; Ada's LinkedIn actions the same way.
 const lisbonDay = (iso) => new Date(iso).toLocaleDateString('en-CA', { timeZone: 'Europe/Lisbon' })
-const gjbSteps = (listId, type) => (lists.lists[listId] || []).flatMap(stepsOf).filter((x) => x.type === type && ['sent', 'answered'].includes(x.state)).map((x) => lisbonDay(x.createdAt))
+const gjbSteps = (listId, type) => (lists.lists[listId] || []).flatMap(gjbStepsOf).filter((x) => x.type === type && ['sent', 'answered'].includes(x.state)).map((x) => lisbonDay(x.createdAt))
 const helloSteps = gjbSteps('65682', 'email')
-const adaSteps = (lists.lists['63200'] || []).flatMap(stepsOf).filter((x) => ['invitation', 'message'].includes(x.type) && x.state === 'sent').map((x) => lisbonDay(x.createdAt))
+const adaSteps = (lists.lists['63200'] || []).flatMap(gjbStepsOf).filter((x) => ['invitation', 'message'].includes(x.type) && x.state === 'sent').map((x) => lisbonDay(x.createdAt))
 const sentOn = (day, channel) => {
   if (channel === 'antonio@') return direct.filter((l) => (l.sequence?.sent || []).some((x) => x.date === day)).length
   return helloSteps.filter((d) => d === day).length

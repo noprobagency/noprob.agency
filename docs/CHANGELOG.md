@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.202.0 (15 Nov 2026)
+
+- CRM registry: `scripts/crm-registry.mjs` runs again (the local `stepsOf` clashed with the imported one, renamed `gjbStepsOf`) and tags Damiano's leads as `damiano` on antonio@ (`source`), on hello@ and in Ada's list (note "Lotto Damiano" or "fonte: Damiano") instead of `crm-v2` or the Gojiberry agent.
+
 ### Changelog v1.201.0 (15 Nov 2026)
 
 - Cold email: the v2 e3 named two clients, against the rule, so it waits. It goes out only once the rewritten v3 follow-ups, which have no names, are on with `approvedV3`. A dry run for 17/11 confirms that none of the 12 e3 due that day goes out.
