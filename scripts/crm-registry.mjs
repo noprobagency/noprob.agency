@@ -87,7 +87,8 @@ for (const l of direct) {
   const sent = l.sequence?.sent || []
   const st = seqStatus(l.segment, l.reason, sent, l.sequence?.stopReason, stepsOf(l).length)
   const next = l.segment === 'target' && !l.sequence?.stopReason && sent.length && stepsOf(l)[sent.length] ? addWorkingDays(sent[0].date, stepsOf(l)[sent.length].day) : null
-  claim(s, st === 'riserva' ? 'riserva-shopify' : 'antonio@', st === 'riserva' ? 'nuovo' : st, { steps: sent.length, total: stepsOf(l).length, last: sent.at(-1)?.date || null, next, detail: l.segment === 'warm' ? l.note || l.crm?.reply || null : l.reason || l.sequence?.stopReason || null })
+  // The direct engine sends from antonio@ and hello@: each lead keeps its first email's mailbox.
+  claim(s, st === 'riserva' ? 'riserva-shopify' : l.sequence?.mailbox === 'hello' ? 'hello@' : 'antonio@', st === 'riserva' ? 'nuovo' : st, { steps: sent.length, total: stepsOf(l).length, last: sent.at(-1)?.date || null, next, detail: l.segment === 'warm' ? l.note || l.crm?.reply || null : l.reason || l.sequence?.stopReason || null })
 }
 
 // 2. Dante, hello@ (export of the 8:30 review, same shape as the CRM email page)
@@ -109,7 +110,8 @@ const gjbStatus = (c) => {
   if (c.rejectedAt || c.blocked) return 'escluso'
   if (c.bounced) return 'escluso'
   if (gjbStepsOf(c).some((x) => x.state === 'answered' || x.state === 'accepted' && x.type === 'message')) return 'risposto'
-  if (c.hasStartedCampaign) return 'in-sequenza'
+  // hasStartedCampaign stays false for imported contacts: any campaign step counts.
+  if (c.hasStartedCampaign || gjbStepsOf(c).length) return 'in-sequenza'
   if (c.readyForCampaign) return 'approvato'
   return 'da-rivedere'
 }
@@ -180,8 +182,9 @@ const gjbSteps = (listId, type) => (lists.lists[listId] || []).flatMap(gjbStepsO
 const helloSteps = gjbSteps('65682', 'email')
 const adaSteps = (lists.lists['63200'] || []).flatMap(gjbStepsOf).filter((x) => ['invitation', 'message'].includes(x.type) && x.state === 'sent').map((x) => lisbonDay(x.createdAt))
 const sentOn = (day, channel) => {
-  if (channel === 'antonio@') return direct.filter((l) => (l.sequence?.sent || []).some((x) => x.date === day)).length
-  return helloSteps.filter((d) => d === day).length
+  const directOn = (box) => direct.filter((l) => (l.sequence?.mailbox === 'hello' ? 'hello' : 'antonio') === box && (l.sequence?.sent || []).some((x) => x.date === day)).length
+  if (channel === 'antonio@') return directOn('antonio')
+  return helloSteps.filter((d) => d === day).length + directOn('hello')
 }
 // Emails sent per working day, last 15 days: the one trend Antonio looks at
 const days = []
