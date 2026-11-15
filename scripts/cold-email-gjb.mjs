@@ -158,7 +158,7 @@ if (!cloud && existsSync(damiano.queue)) {
   }
   const ready = db.leads.filter((l) => l.segment === 'target' && !l.sequence.sent.length && !l.sequence.stoppedAt).length
   if (ready < FEED.directDay && !dailyRunning) {
-    const take = directTake(rows, ready)
+    const take = directTake(rows, ready, helloImport ? FEED.helloReserve : 0)
     const live = await pool(take.map((r) => `https://${domainOf(r.domain)}`), 12, (u) => fetchPlatform(u))
     for (const r of take) {
       const lead = fromDamiano(r, live.get(`https://${domainOf(r.domain)}`))
