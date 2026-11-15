@@ -9,7 +9,7 @@
 import { execFileSync } from 'node:child_process'
 import { existsSync, readFileSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
-import { fetchHome, htmlSignals, pagespeed, pickFinding, stableLcp } from '../lib/cold/us-finding.mjs'
+import { fetchHome, freshRun, htmlSignals, pagespeed, pickFinding, stableLcp } from '../lib/cold/us-finding.mjs'
 import { detectPlatform } from '../lib/cold/detect-platform.mjs'
 import { isSuppressed, parseSuppressed } from '../lib/cold/sweep.mjs'
 
@@ -40,28 +40,51 @@ const doc = JSON.parse(readFileSync(file, 'utf8'))
 const leads = Array.isArray(doc) ? doc : doc.leads || []
 const suppressed = parseSuppressed(readFileSync('docs/cold/suppressed.txt', 'utf8'))
 const domainOf = (l) => (l.domain || l.website || '').toLowerCase().replace(/^https?:\/\//, '').replace(/^www\./, '').replace(/[/?#].*$/, '')
-const stats = { done: 0, finding: 0, none: 0, shopify: 0, suppressed: 0, unreachable: 0, skipped: 0 }
+const stats = { done: 0, finding: 0, none: 0, shopify: 0, suppressed: 0, unreachable: 0, skipped: 0, lcpCached: 0 }
+const wait = (ms) => new Promise((r) => setTimeout(r, ms))
 
-for (const lead of leads) {
+/** Runs fn over items, `n` at a time. */
+async function each(items, n, fn) {
+  const queue = [...items]
+  await Promise.all(Array.from({ length: Math.min(n, queue.length) }, async () => { while (queue.length) await fn(queue.shift()) }))
+}
+
+// Phase 1: homepage, platform, opt-out and a first PageSpeed run on the final URL (after redirects)
+const work = []
+await each(leads, 4, async (lead) => {
   const domain = domainOf(lead)
-  if (!domain || (lead.findingAt && !force)) { stats.skipped++; continue }
-  if (isSuppressed({ email: lead.email, website: `https://${domain}` }, suppressed)) { lead.finding = null; lead.findingRule = 'suppressed'; stats.suppressed++; continue }
-  const html = await fetchHome(domain)
-  if (html === null) { stats.unreachable++; continue }
-  if (detectPlatform(html, {}).platform === 'shopify') { lead.finding = null; lead.findingRule = 'shopify'; stats.shopify++; continue }
-  const lab = await pagespeed(domain, KEY)
-  // LCP only when a second run confirms it (stableLcp); image weight comes from the first run
-  if (lab && lab.lcpMs > 4000) lab.lcpMs = stableLcp(lab.lcpMs, (await pagespeed(domain, KEY))?.lcpMs)
-  else if (lab) lab.lcpMs = null
-  const pick = pickFinding({ ...htmlSignals(html), ...(lab || {}) })
-  lead.finding = pick ? pick.finding : null
-  lead.findingRule = pick ? pick.rule : 'none'
-  lead.findingSource = lab ? 'pagespeed-mobile+html' : 'html'
-  lead.findingAt = new Date().toISOString()
+  if (!domain || (lead.findingAt && !force)) { stats.skipped++; return }
+  if (isSuppressed({ email: lead.email, website: `https://${domain}` }, suppressed)) { lead.finding = null; lead.findingRule = 'suppressed'; stats.suppressed++; return }
+  const home = await fetchHome(domain)
+  if (!home) { stats.unreachable++; return }
+  if (detectPlatform(home.html, {}).platform === 'shopify') { lead.finding = null; lead.findingRule = 'shopify'; stats.shopify++; return }
+  work.push({ lead, home, first: await pagespeed(home.url, KEY), at: Date.now() })
+})
+
+// Phase 2: PageSpeed LCP swings, so a slow first run counts only if a fresh second run,
+// at least 60 s later and with a different fetchTime (not Google's cache), is slow too.
+await each(work, 4, async (w) => {
+  let lcpMs = null
+  if (w.first?.lcpMs > 4000) {
+    const left = 60_000 - (Date.now() - w.at)
+    if (left > 0) await wait(left)
+    const second = await pagespeed(w.home.url, KEY)
+    if (freshRun(w.first, second)) lcpMs = stableLcp(w.first.lcpMs, second.lcpMs)
+    else stats.lcpCached++
+  }
+  const lab = w.first ? { ...w.first, lcpMs } : null
+  const pick = pickFinding({ ...htmlSignals(w.home.html), ...(lab || {}) })
+  Object.assign(w.lead, {
+    finding: pick ? pick.finding : null,
+    findingRule: pick ? pick.rule : 'none',
+    findingSource: lab ? 'pagespeed-mobile+html' : 'html',
+    findingUrl: w.home.url,
+    findingAt: new Date().toISOString(),
+  })
   stats.done++
   if (pick) stats.finding++
   else stats.none++
-}
+})
 
 if (!dry) writeFileSync(file, `${JSON.stringify(doc, null, 2)}\n`)
-console.log(`${dry ? '(dry) ' : ''}leads ${leads.length} · with finding ${stats.finding} · no rule ${stats.none} · Shopify ${stats.shopify} · opt-out ${stats.suppressed} · unreachable ${stats.unreachable} · already done ${stats.skipped} · PageSpeed ${KEY ? 'on' : 'off (HTML rules only)'}`)
+console.log(`${dry ? '(dry) ' : ''}leads ${leads.length} · with finding ${stats.finding} · no rule ${stats.none} · Shopify ${stats.shopify} · opt-out ${stats.suppressed} · unreachable ${stats.unreachable} · already done ${stats.skipped} · LCP second run cached ${stats.lcpCached} · PageSpeed ${KEY ? 'on' : 'off (HTML rules only)'}`)

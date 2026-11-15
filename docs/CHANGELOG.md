@@ -4,6 +4,12 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.206.0 (15 Nov 2026)
+
+- US line, from Claudio's review: the second PageSpeed run waits at least 60 s and counts only with a new `fetchTime` (Google answered 20 of 32 second runs from cache); both runs use the final URL after redirects, with a 90 s timeout and two retries on 429. The script works in two phases, four stores at a time.
+- `cold-email-import-damiano.mjs --direct` refuses to write outside the live queue (CRM `state/leads.json`): it needs `COLD_CRM_PATH` or `cold-email/data` as the runner's symlink. Batch 1 had landed in the old copy of a plain checkout.
+- US store names lose Inc/LLC/Ltd/Co/Corp and ALL CAPS ("R A DAFFER CHURCH ORGANS INC" becomes "R A Daffer Church Organs"). No US emails on 26 and 27 November (Thanksgiving).
+
 ### Changelog v1.205.0 (15 Nov 2026)
 
 - Cold email, US line: a Damiano US row with no `finding` lands in `review` with reason "senza aggancio" instead of `target`, so it does not count as stock and Damiano's run restarts when needed (Claudio, 15/11).

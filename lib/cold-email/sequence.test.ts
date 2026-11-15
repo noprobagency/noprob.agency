@@ -160,6 +160,10 @@ describe('leads from Damiano batches', () => {
     expect(fromDamiano(usRow, { platform: 'woocommerce', status: 200 })).toMatchObject({ line: 'us', lang: 'en', finding: 'your homepage has no main heading', findingRule: 'h1' })
     expect(fromDamiano({ ...row, finding: 'x' }, { platform: 'woocommerce', status: 200 }).finding).toBeUndefined()
     expect(fromDamiano({ ...row, market: 'US' }, { platform: 'woocommerce', status: 200 })).toMatchObject({ segment: 'review', reason: 'senza aggancio' })
+    const { usBrand } = await import('./leads.mjs')
+    expect(usBrand('R A DAFFER CHURCH ORGANS INC')).toBe('R A Daffer Church Organs')
+    expect(usBrand('Peachtree Playthings, LLC')).toBe('Peachtree Playthings')
+    expect(usBrand('Guffey’s of Atlanta')).toBe('Guffey’s of Atlanta')
     expect(fromDamiano(row, { platform: 'other', status: 403 })).toMatchObject({ segment: 'review', platform: 'woocommerce' })
   })
 })
@@ -247,6 +251,11 @@ describe('US line', () => {
     const copy = { e1: (v: { brand: string }) => ({ subject: `${v.brand} question`, lines: ['Hi!'] }), e2: (v: { brand: string }) => ({ subject: `${v.brand} question`, lines: ['Again'] }) }
     expect(renderUs(us, 'e1', copy, 'Footer')).toEqual({ subject: 'Acme question', body: 'Hi!\n\nAntonio\n\nFooter' })
     expect(renderUs(us, 'e2', copy, 'Footer').subject).toBe('Re: Acme question')
+  })
+  it('sends nothing on the US line on Thanksgiving and the day after', () => {
+    expect(dueStep(us, '2026-11-26')).toBeNull()
+    expect(dueStep(us, '2026-11-27')).toBeNull()
+    expect(dueStep(us, '2026-11-25')?.key).toBe('e1')
   })
   it('alternates first emails of the two lines', () => {
     const d = (line: string, n: number) => ({ lead: { line, n } })
