@@ -1,7 +1,7 @@
 import { describe, expect, it, vi } from 'vitest'
 import { excludeDomains, firstNameOf, fromCrm, stopStore } from './leads.mjs'
 import { STEPS, addWorkingDays, dueStep, interleaveLines, render } from './sequence.mjs'
-import { renderUs, usReady } from './sequence-us.mjs'
+import { renderUs, usHours, usReady } from './sequence-us.mjs'
 
 const prospect = (over = {}) => ({
   id: 'p1',
@@ -214,7 +214,7 @@ describe('network retry', () => {
 })
 
 describe('US line', () => {
-  const us = { segment: 'target', line: 'us', lang: 'en', brand: 'Acme', firstName: 'Sam', sequence: { step: 0, sent: [] as { step: string; date: string }[], threadId: null, stoppedAt: null } }
+  const us = { segment: 'target', line: 'us', lang: 'en', brand: 'Acme', firstName: 'Sam', finding: 'slow mobile', sequence: { step: 0, sent: [] as { step: string; date: string }[], threadId: null, stoppedAt: null } }
   it('has two steps and stops after the follow-up', () => {
     expect(dueStep(us, '2026-11-16')?.key).toBe('e1')
     const one = { ...us, sequence: { ...us.sequence, sent: [{ step: 'e1', date: '2026-11-16' }] } }
@@ -222,6 +222,11 @@ describe('US line', () => {
     expect(dueStep(one, '2026-11-20')?.key).toBe('e2')
     const two = { ...us, sequence: { ...us.sequence, sent: [{ step: 'e1', date: '2026-11-16' }, { step: 'e2', date: '2026-11-20' }] } }
     expect(dueStep(two, '2026-12-01')).toBe(null)
+  })
+  it('waits for the finding and New York hours', () => {
+    expect(dueStep({ ...us, finding: undefined }, '2026-11-16')).toBe(null)
+    expect(usHours(new Date('2026-11-16T14:00:00Z'))).toBe(true)
+    expect(usHours(new Date('2026-11-16T09:20:00Z'))).toBe(false)
   })
   it('sends nothing until copy and footer are approved', () => {
     expect(usReady()).toBe(false)
