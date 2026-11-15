@@ -9,7 +9,7 @@
 import { execFileSync } from 'node:child_process'
 import { existsSync, readFileSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
-import { STEPS, addWorkingDays } from '../lib/cold-email/sequence.mjs'
+import { addWorkingDays, stepsOf } from '../lib/cold-email/sequence.mjs'
 
 const args = process.argv.slice(2)
 const repo = args.find((a) => !a.startsWith('--'))
@@ -22,14 +22,14 @@ const { leads } = JSON.parse(readFileSync('cold-email/data/leads.json', 'utf8'))
 const today = new Date().toLocaleDateString('en-CA', { timeZone: 'Europe/Lisbon' })
 
 const nextDate = (l) => {
-  const next = STEPS[l.sequence.sent.length]
+  const next = stepsOf(l)[l.sequence.sent.length]
   if (l.segment !== 'target' || l.sequence.stoppedAt || l.sequence.oneShot || !next) return null
   return l.sequence.sent.length ? addWorkingDays(l.sequence.sent[0].date, next.day) : null
 }
 
 const direct = leads.map((l) => ({
   channel: l.sequence.mailbox === 'hello' ? 'hello@' : 'antonio@',
-  total: STEPS.length,
+  total: stepsOf(l).length,
   brand: l.brand,
   domain: l.domain,
   contact: l.contact,

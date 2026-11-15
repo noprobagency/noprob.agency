@@ -30,7 +30,8 @@ import { gojiberryDomains, gojiberryQueuedToday, gojiberryRemaining } from '../l
 import { excludeDomains, stopStore } from '../lib/cold-email/leads.mjs'
 import { appendSuppressed, applySuppressed, readSuppressed, refusals } from '../lib/cold-email/suppression.mjs'
 import { publishTaken, takenBody } from '../lib/cold-email/taken.mjs'
-import { SEQUENCE_VERSION, dueDate, dueStep, render } from '../lib/cold-email/sequence.mjs'
+import { SEQUENCE_VERSION, dueDate, dueStep, interleaveLines, lineOf, render } from '../lib/cold-email/sequence.mjs'
+import { US_VERSION, usReady } from '../lib/cold-email/sequence-us.mjs'
 
 const DIR = 'cold-email/data'
 const LEADS = `${DIR}/leads.json`
@@ -159,14 +160,18 @@ for (const m of MAILBOXES) {
   m.room = m.api ? Math.max(0, m.max - m.reserve - m.sentToday - m.gojiberry) : 0
   m.sent = 0
 }
-if (config.approved !== SEQUENCE_VERSION) {
-  note += ` · invii fermi (sequenza ${SEQUENCE_VERSION} non approvata)`
-} else {
+// Each line sends only its approved copy: Italy (SEQUENCE_VERSION) and USA (US_VERSION).
+const approved = { it: config.approved === SEQUENCE_VERSION, us: usReady() && config.approvedUs === US_VERSION }
+if (!approved.it) note += ` · Italia ferma (sequenza ${SEQUENCE_VERSION} non approvata)`
+if (!approved.us && db.leads.some((l) => lineOf(l) === 'us' && l.segment === 'target')) note += ` · USA ferma (sequenza ${US_VERSION} non approvata)`
+if (approved.it || approved.us) {
   const priority = (l) => (l.sequence.sent.length ? 0 : l.php ? 1 : ['woocommerce', 'magento', 'prestashop', 'shopware', 'wordpress'].includes(l.platform) ? 2 : 3)
   const due = db.leads
     .map((lead) => ({ lead, step: dueStep(lead, today) }))
-    .filter((d) => d.step)
+    .filter((d) => d.step && approved[lineOf(d.lead)])
     .sort((a, b) => priority(a.lead) - priority(b.lead) || (a.step.key === 'e1' ? 0 : dueDate(a.lead, a.step).localeCompare(dueDate(b.lead, b.step))))
+  // Follow-ups first; then first emails of Italy and USA in turns, so both lines start every day.
+  due.splice(0, due.length, ...due.filter((d) => d.step.key !== 'e1'), ...interleaveLines(due.filter((d) => d.step.key === 'e1')))
 
   // At most one first email per store a day, even with several people of the same store.
   const storesToday = new Set(db.leads.filter((l) => l.sequence.sent.some((x) => x.step === 'e1' && x.date === today)).map((l) => l.domain))
@@ -215,7 +220,7 @@ if (config.approved !== SEQUENCE_VERSION) {
     if (step.key === 'e1') {
       seq.threadId = res.threadId
       seq.messageId = messageId(await m.api.thread(res.threadId))
-      seq.version = SEQUENCE_VERSION
+      seq.version = lineOf(lead) === 'us' ? US_VERSION : SEQUENCE_VERSION
       seq.mailbox = m.key
     }
     seq.sent.push({ step: step.key, date: today, id: res.id })

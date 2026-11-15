@@ -1,6 +1,7 @@
 import { describe, expect, it, vi } from 'vitest'
 import { excludeDomains, firstNameOf, fromCrm, stopStore } from './leads.mjs'
-import { STEPS, addWorkingDays, dueStep, render } from './sequence.mjs'
+import { STEPS, addWorkingDays, dueStep, interleaveLines, render } from './sequence.mjs'
+import { renderUs, usReady } from './sequence-us.mjs'
 
 const prospect = (over = {}) => ({
   id: 'p1',
@@ -209,5 +210,30 @@ describe('network retry', () => {
     expect(await api.thread('t1')).toEqual({ id: 't1' })
     await expect(api.thread('t2')).rejects.toThrow('Daily user sending limit')
     vi.unstubAllGlobals()
+  })
+})
+
+describe('US line', () => {
+  const us = { segment: 'target', line: 'us', lang: 'en', brand: 'Acme', firstName: 'Sam', sequence: { step: 0, sent: [] as { step: string; date: string }[], threadId: null, stoppedAt: null } }
+  it('has two steps and stops after the follow-up', () => {
+    expect(dueStep(us, '2026-11-16')?.key).toBe('e1')
+    const one = { ...us, sequence: { ...us.sequence, sent: [{ step: 'e1', date: '2026-11-16' }] } }
+    expect(dueStep(one, '2026-11-19')).toBe(null)
+    expect(dueStep(one, '2026-11-20')?.key).toBe('e2')
+    const two = { ...us, sequence: { ...us.sequence, sent: [{ step: 'e1', date: '2026-11-16' }, { step: 'e2', date: '2026-11-20' }] } }
+    expect(dueStep(two, '2026-12-01')).toBe(null)
+  })
+  it('sends nothing until copy and footer are approved', () => {
+    expect(usReady()).toBe(false)
+    expect(() => render(us, 'e1')).toThrow(/not approved/)
+  })
+  it('renders approved copy with the footer, follow-up in the same thread', () => {
+    const copy = { e1: (v: { brand: string }) => ({ subject: `${v.brand} question`, lines: ['Hi!'] }), e2: (v: { brand: string }) => ({ subject: `${v.brand} question`, lines: ['Again'] }) }
+    expect(renderUs(us, 'e1', copy, 'Footer')).toEqual({ subject: 'Acme question', body: 'Hi!\n\nAntonio\n\nFooter' })
+    expect(renderUs(us, 'e2', copy, 'Footer').subject).toBe('Re: Acme question')
+  })
+  it('alternates first emails of the two lines', () => {
+    const d = (line: string, n: number) => ({ lead: { line, n } })
+    expect(interleaveLines([d('it', 1), d('it', 2), d('it', 3), d('us', 1)]).map((x) => `${x.lead.line}${x.lead.n}`)).toEqual(['it1', 'us1', 'it2', 'it3'])
   })
 })

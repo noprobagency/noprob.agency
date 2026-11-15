@@ -13,7 +13,7 @@
 import { execFileSync } from 'node:child_process'
 import { existsSync, readFileSync, readdirSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
-import { STEPS, addWorkingDays } from '../lib/cold-email/sequence.mjs'
+import { addWorkingDays, stepsOf } from '../lib/cold-email/sequence.mjs'
 
 const args = process.argv.slice(2)
 const repo = args.find((a) => !a.startsWith('--'))
@@ -83,9 +83,9 @@ for (const l of direct) {
   s.sources.add(l.source === 'gojiberry-dante' ? 'gojiberry-41228' : 'crm-v2')
   addContact(s, { name: l.contact, email: l.email })
   const sent = l.sequence?.sent || []
-  const st = seqStatus(l.segment, l.reason, sent, l.sequence?.stopReason, STEPS.length)
-  const next = l.segment === 'target' && !l.sequence?.stopReason && sent.length && STEPS[sent.length] ? addWorkingDays(sent[0].date, STEPS[sent.length].day) : null
-  claim(s, st === 'riserva' ? 'riserva-shopify' : 'antonio@', st === 'riserva' ? 'nuovo' : st, { steps: sent.length, total: STEPS.length, last: sent.at(-1)?.date || null, next, detail: l.segment === 'warm' ? l.note || l.crm?.reply || null : l.reason || l.sequence?.stopReason || null })
+  const st = seqStatus(l.segment, l.reason, sent, l.sequence?.stopReason, stepsOf(l).length)
+  const next = l.segment === 'target' && !l.sequence?.stopReason && sent.length && stepsOf(l)[sent.length] ? addWorkingDays(sent[0].date, stepsOf(l)[sent.length].day) : null
+  claim(s, st === 'riserva' ? 'riserva-shopify' : 'antonio@', st === 'riserva' ? 'nuovo' : st, { steps: sent.length, total: stepsOf(l).length, last: sent.at(-1)?.date || null, next, detail: l.segment === 'warm' ? l.note || l.crm?.reply || null : l.reason || l.sequence?.stopReason || null })
 }
 
 // 2. Dante, hello@ (export of the 8:30 review, same shape as the CRM email page)
