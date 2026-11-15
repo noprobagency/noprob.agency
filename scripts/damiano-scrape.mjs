@@ -678,7 +678,23 @@ const checkSupply = () => {
   console.error(`supply · ${gate.days} days at ${gate.perDay} a day · ${gate.paused ? 'paused, no spend' : 'running'}`)
   return gate
 }
-const supply = !EXPORT_ONLY && !INTL && opt('add', null) != null ? checkSupply() : null
+// US (Claudio, 15 Nov 2026): the same gate. The stock is every US store handed to Ada or
+// ready to hand, less those whose first email is out; days at --us-per-day first emails
+// (15, up to ~27 when Italy slows). A run only below 10 days, so the balance lasts.
+const checkUsSupply = () => {
+  const sent = new Set(
+    readRows('cold-email/data/leads.json')
+      .filter((l) => l.line === 'us' && l.sequence?.sent?.some((x) => x.step === 'e1'))
+      .map((l) => l.domain),
+  )
+  const used = existsSync(USED_FILE) ? JSON.parse(readFileSync(USED_FILE, 'utf8')) : {}
+  const stock = new Set([...Object.keys(used).filter((d) => used[d].channel === 'ada-us'), ...leads().map((c) => c.domain)].filter((d) => !sent.has(d)))
+  const days = Number(opt('us-days', 10))
+  const gate = supplyGate({ leads: stock.size, readyFirst: 0, yield: 1, limits: { perDay: Number(opt('us-per-day', 15)), pauseDays: days, resumeDays: days } })
+  console.error(`US supply · ${gate.days} days at ${gate.perDay} a day · ${gate.paused ? 'paused, no spend' : 'running'}`)
+  return gate
+}
+const supply = EXPORT_ONLY || opt('add', null) == null ? null : US ? checkUsSupply() : !INTL ? checkSupply() : null
 
 if (!EXPORT_ONLY && !supply?.paused) {
   if (opt('add', null) != null) TARGET = leads().length + Number(opt('add'))
