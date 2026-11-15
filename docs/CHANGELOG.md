@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.185.0 (15 Nov 2026)
+
+- Docs: the cold email README states the direction of 15/11. Damiano's leads only, the direct engine on two mailboxes, no Gojiberry after 25/11.
+
 ### Changelog v1.184.0 (15 Nov 2026)
 
 - Cold email: the direct engine sends from several mailboxes. `config.mailboxes` adds hello@ next to antonio@ with its own Keychain token. A lead keeps the mailbox of its first email for follow-ups and replies, and new first emails go to the mailbox with most room. Each mailbox sends its share in every hourly run. A Gojiberry campaign still running on the same mailbox keeps today's queue free. Our own emails from any noprob.agency mailbox are ignored when reading a thread.

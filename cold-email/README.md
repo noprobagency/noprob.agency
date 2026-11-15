@@ -2,11 +2,13 @@
 
 Canale di acquisizione a freddo **solo email**, da antonio@noprob.agency, in parallelo e separato da Gojiberry (LinkedIn + email, vedi [docs/COLD-OUTREACH.md](../docs/COLD-OUTREACH.md)). Obiettivo: store che **non** sono su Shopify, offerta Shopify Launch Sprint. Gli store già su Shopify restano da parte per una campagna futura. Aggiornato: 23 ottobre 2026.
 
+**Direzione dal 15/11/2026 (D-86, D-93):** Dante manda solo lead di Damiano, ogni giorno, con questo motore diretto su due caselle, antonio@ e hello@ (`config.mailboxes`), dal 16/11. Gojiberry non prende più lead: l'agente 41228 è in pausa, `helloImport` è false e i lead già nella campagna 46398 finiscono lì i follow-up. Dopo il 25/11 niente Gojiberry. La sezione su Dante e Gojiberry più sotto è storia.
+
 ## Regole di questo canale
 
 Valgono qui e solo qui; Gojiberry tiene le sue.
 
-1. **Mittente**: antonio@noprob.agency (non è la casella personale di Antonio, che è hello@antoniomanitta.it). hello@noprob.agency è pronta come seconda casella per quando il volume sale.
+1. **Mittenti**: antonio@noprob.agency e hello@noprob.agency (nessuna delle due è la casella personale di Antonio, che è hello@antoniomanitta.it). Ogni lead resta nella casella della sua prima email; le nuove prime email vanno dove c'è spazio.
 2. **Sequenza di 5 email** nello stesso thread, giorni lavorativi 0, 3, 7, 12, 18. Si ferma per sempre alla prima risposta umana o al primo bounce; le risposte automatiche (fuori ufficio) non la fermano.
 3. **Chi dice no non si riscrive mai, su nessun canale** (regola del legale): segmento `suppressed`. Lista condivisa con Gojiberry `docs/cold/suppressed.txt` (gitignored, una email o `@dominio` per riga): lo script non scrive a nessuno che ci sia dentro e ci aggiunge chi dice no qui; lo sweep orario di Gojiberry la legge. Ogni prima email chiude con la riga "PS se non ti interessa scrivimi no e chiudo qui".
 4. **Mai due canali sullo stesso store**: ogni domani lo script legge (solo GET) le liste Sprint di Gojiberry, Ada 63200 e Leonardo 64866, e salta i domini che Gojiberry sta già lavorando. Questo canale non scrive mai su Gojiberry.
