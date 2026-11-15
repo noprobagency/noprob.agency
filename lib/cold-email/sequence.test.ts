@@ -159,6 +159,7 @@ describe('leads from Damiano batches', () => {
     const usRow = { ...row, market: 'US', finding: 'your homepage has no main heading', findingRule: 'h1', findingSource: 'html', findingAt: '2026-11-15T19:00:00Z' }
     expect(fromDamiano(usRow, { platform: 'woocommerce', status: 200 })).toMatchObject({ line: 'us', lang: 'en', finding: 'your homepage has no main heading', findingRule: 'h1' })
     expect(fromDamiano({ ...row, finding: 'x' }, { platform: 'woocommerce', status: 200 }).finding).toBeUndefined()
+    expect(fromDamiano({ ...row, market: 'US' }, { platform: 'woocommerce', status: 200 })).toMatchObject({ segment: 'review', reason: 'senza aggancio' })
     expect(fromDamiano(row, { platform: 'other', status: 403 })).toMatchObject({ segment: 'review', platform: 'woocommerce' })
   })
 })
