@@ -156,6 +156,9 @@ describe('leads from Damiano batches', () => {
     const row = { brand: 'Acme', domain: 'www.acme.it', platform: 'woocommerce', php: null, name: 'Sara Rossi', title: 'CEO', email: 'Sara@acme.it', industry: 'Fashion' }
     expect(fromDamiano(row, { platform: 'woocommerce', php: '7.4.33', status: 200 })).toMatchObject({ segment: 'target', domain: 'acme.it', firstName: 'Sara', category: 'fashion', php: '7.4.33', source: 'damiano' })
     expect(fromDamiano(row, { platform: 'shopify', status: 200 }).segment).toBe('shopify')
+    const usRow = { ...row, market: 'US', finding: 'your homepage has no main heading', findingRule: 'h1', findingSource: 'html', findingAt: '2026-11-15T19:00:00Z' }
+    expect(fromDamiano(usRow, { platform: 'woocommerce', status: 200 })).toMatchObject({ line: 'us', lang: 'en', finding: 'your homepage has no main heading', findingRule: 'h1' })
+    expect(fromDamiano({ ...row, finding: 'x' }, { platform: 'woocommerce', status: 200 }).finding).toBeUndefined()
     expect(fromDamiano(row, { platform: 'other', status: 403 })).toMatchObject({ segment: 'review', platform: 'woocommerce' })
   })
 })
