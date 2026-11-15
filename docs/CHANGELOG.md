@@ -9,6 +9,14 @@ old entries, add a new one on top.
 - US line, from Claudio's review: the second PageSpeed run waits at least 60 s and counts only with a new `fetchTime` (Google answered 20 of 32 second runs from cache); both runs use the final URL after redirects, with a 90 s timeout and two retries on 429. The script works in two phases, four stores at a time.
 - `cold-email-import-damiano.mjs --direct` refuses to write outside the live queue (CRM `state/leads.json`): it needs `COLD_CRM_PATH` or `cold-email/data` as the runner's symlink. Batch 1 had landed in the old copy of a plain checkout.
 - US store names lose Inc/LLC/Ltd/Co/Corp and ALL CAPS ("R A DAFFER CHURCH ORGANS INC" becomes "R A Daffer Church Organs"). No US emails on 26 and 27 November (Thanksgiving).
+- Cold email, engine review of 15/11:
+  - The platform is checked live before every email, and a store now on Shopify goes to the reserve.
+  - The speed is capped at "oltre 20 secondi".
+  - A temporary site or PageSpeed error is retried up to 3 runs instead of being fixed on the lead.
+  - "Lasciamo stare" and "lasciate perdere" count as a no. A bare "no" after the v3 e4 question goes to Antonio and is not an opt-out.
+  - A v1/v2 thread's first v3 follow-up is the one that offers the document.
+  - First emails and Damiano's imports use the company name as a person writes it.
+
 ### Changelog v1.206.0 (16 Nov 2026)
 
 - Damiano, Claudio's US review. Titles with "former", "ex-", "retired" or "past" are out. A homepage that mentions cannabis, CBD, THC, delta-8, kratom or weapons stays out of cold. A US store needs no foreign country domain (`.ca`) and no Canadian address without a US one. Associations, brokers and services (fuel, transport, insurance) are no store. The owner of one franchise location is not the brand's decision maker. Stores checked before are checked again, for free. On batches 1 and 2 the rules flag 20 of 178.
