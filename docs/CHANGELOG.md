@@ -4,6 +4,18 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.210.0 (15 Nov 2026)
+
+- Docs: changelog entry for v1.209.0, which went in without one.
+
+### Changelog v1.209.0 (15 Nov 2026)
+
+- Cold email, US batches in the runner (D-99).
+  - The morning review starts Ada's finding script in the background on every unfinished batch in docs/cold/damiano/us/lotti.
+  - The daily run then imports every finished batch into leads.json, and imports it again when a new finding pass changes the file.
+  - Opt-outs, known stores, stores in Gojiberry and Damiano's out-of-target lists stay out.
+  - LCP facts wait in review until `usLcpApproved`.
+
 ### Changelog v1.207.0 (15 Nov 2026)
 
 - US line, from Claudio's review: the second PageSpeed run waits at least 60 s and counts only with a new `fetchTime` (Google answered 20 of 32 second runs from cache); both runs use the final URL after redirects, with a 90 s timeout and two retries on 429. The script works in two phases, four stores at a time.
