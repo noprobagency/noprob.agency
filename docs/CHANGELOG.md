@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.211.0 (15 Nov 2026)
+
+- Cold email: the runner reads Damiano's US batches in docs/cold/damiano/us/lotti whatever their name (<day>-<n>.json). The old shared folder still needs the us- prefix.
+
 ### Changelog v1.210.0 (15 Nov 2026)
 
 - Docs: changelog entry for v1.209.0, which went in without one.
