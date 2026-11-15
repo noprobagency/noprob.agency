@@ -15,6 +15,14 @@
 // URL, no paid email find (add --email to pay for one), the person's country must match
 // the market, 5-999 employees, and every store already in a Gojiberry list is skipped.
 //
+// --market us (D-99, 15 Nov 2026): US stores NOT on Shopify for Ada, the same chain as
+// Italy (platform checked live, real cart, decision maker, paid verified email), from
+// structured Hunter filters (US, 1-200 people, consumer industries, store technology,
+// WooCommerce first). Contacts must be in the US with a company mailbox. Every lead gets
+// a speed figure for the email hook: Google PageSpeed mobile when PAGESPEED_API_KEY is set
+// (env or ~/Library/Application Support/noprob-agenti/pagespeed.env), else the DataForSEO
+// page audit (HTML weight, fetch time, on-page score, $0.00015). Writes docs/cold/damiano/us.
+//
 // Usage: node scripts/damiano-scrape.mjs --target 500 [--budget 7] [--out docs/cold/damiano] [--crm <crm checkout>]
 //        node scripts/damiano-scrape.mjs --market intl --target 200   (writes docs/cold/damiano/intl)
 //        node scripts/damiano-scrape.mjs --add 50 --spend 0.65        (daily cloud run, crm-noprobagency)
@@ -46,10 +54,12 @@ let TARGET = Number(opt('target', 50))
 let BUDGET_MICRO = Number(opt('budget', 5)) * 1e6
 // --export rewrites the lists from the saved state, with no calls at all.
 const EXPORT_ONLY = args.includes('--export')
-const INTL = opt('market', 'it') === 'intl'
+const US = opt('market', 'it') === 'us'
+// US shares Ada's intl machinery (market codes, her Gojiberry lists, her import fields).
+const INTL = opt('market', 'it') === 'intl' || US
 // In intl mode the email is optional: Ada is LinkedIn-first and Gojiberry finds it later.
-const PAY_EMAIL = !INTL || args.includes('--email')
-const OUT = opt('out', INTL ? 'docs/cold/damiano/intl' : 'docs/cold/damiano')
+const PAY_EMAIL = !INTL || US || args.includes('--email')
+const OUT = opt('out', US ? 'docs/cold/damiano/us' : INTL ? 'docs/cold/damiano/intl' : 'docs/cold/damiano')
 const STATE_FILE = join(OUT, 'state.json')
 const PEOPLE_VERSION = 2 // bump to redo the free people searches on cached companies
 
@@ -155,7 +165,23 @@ const sectorQueries = (list, places) => list.flatMap(({ sector, en, it }) => pla
 const national = ({ en, it }) => [...en.map((t) => `${t} companies in Italy`), ...it.map((t) => `${t} in Italia`)]
 const regional = ({ en }) => REGIONS.flatMap((r) => en.map((t) => `${t} companies in ${r}, Italy`))
 const SECTOR_QUERIES = [...sectorQueries(SECTORS, national), ...sectorQueries(WIDE, national), ...sectorQueries(SECTORS, regional)]
-const QUERIES = INTL
+// US (D-99): structured filters, one query per industry and platform, WooCommerce first.
+const US_INDUSTRIES = [
+  'Retail', 'Retail Apparel and Fashion', 'Online and Mail Order Retail', 'Personal Care Product Manufacturing',
+  'Food and Beverage Manufacturing', 'Sporting Goods Manufacturing', 'Apparel Manufacturing',
+  'Furniture and Home Furnishings Manufacturing', 'Retail Luxury Goods and Jewelry', 'Cosmetics',
+  'Food and Beverage Retail', 'Wellness and Fitness Services',
+]
+const US_QUERIES = ['woocommerce', 'bigcommerce', 'magento', 'prestashop'].flatMap((tech) =>
+  US_INDUSTRIES.map((industry) => ({
+    q: { headquarters_location: { include: [{ country: 'US' }] }, headcount: ['1-10', '11-50', '51-200'], industry: { include: [industry] }, technology: { include: [tech] } },
+    market: 'US',
+    sector: `${tech} · ${industry}`,
+  })),
+)
+const QUERIES = US
+  ? US_QUERIES
+  : INTL
   ? INTL_QUERIES
   : [
       ...SECTOR_QUERIES,
@@ -229,7 +255,7 @@ const FIT_VERSION = 2
 const B2B_INDUSTRY = /office equipment|office furniture|wholesale|food production/i
 // Employee bands come as "20 - 99" or "< 5"; unknown sizes pass. Intl only, Ada's 5-999.
 const sizeFits = (c) => {
-  if (!INTL || !c.employees) return true
+  if (!INTL || US || !c.employees) return true
   if (/^</.test(c.employees)) return false
   const low = parseInt(c.employees, 10)
   return Number.isNaN(low) || (low >= 5 && low < 1000)
@@ -258,8 +284,9 @@ const DEADLINE = Date.now() + Number(opt('minutes', 120)) * 60000
 const over = () => state.spentMicro >= BUDGET_MICRO - IN_FLIGHT_MICRO || Date.now() >= DEADLINE
 
 // owner: the company a paid call is for, so the spend can be read by sector.
-async function treg(id, body, headers = {}, owner = null) {
-  if (over()) throw new Error('budget reached')
+// force: a sub-cent call (the US speed audit) that may use the reserve kept for calls in flight.
+async function treg(id, body, headers = {}, owner = null, force = false) {
+  if (over() && !(force && state.spentMicro < BUDGET_MICRO)) throw new Error('budget reached')
   const h = Object.entries(headers).flatMap(([k, v]) => ['--header', `${k}: ${v}`])
   const { stdout } = await run('treg', ['--json', 'call', id, '--method', 'POST', '--data', JSON.stringify(body), ...h], {
     maxBuffer: 20 * 1024 * 1024,
@@ -299,7 +326,8 @@ function knownDomains() {
 async function discover(query, offset) {
   for (let attempt = 1; ; attempt++) {
     try {
-      return await treg('hunter.x.discover-companies', { query, limit: 100, offset })
+      // A structured query (US) is Hunter's own filters; a string is natural language.
+      return await treg('hunter.x.discover-companies', { ...(typeof query === 'string' ? { query } : query), limit: 100, offset })
     } catch (err) {
       const text = `${err.message} ${err.stdout || ''}`
       // A location Hunter does not support ("This region isn't supported", 400, not billed)
@@ -320,7 +348,7 @@ async function discoverPage() {
   for (const limit of INTL ? [PAGES] : [PAGES, DEEP_PAGES]) {
     for (const { q, market, sector } of QUERIES) {
       for (let page = 0; page < limit; page++) {
-        const key = `${q}#${page * 100}`
+        const key = `${typeof q === 'string' ? q : JSON.stringify(q)}#${page * 100}`
         if (state.queries[key] != null) {
           if (state.queries[key] < 100) break
           continue
@@ -332,7 +360,7 @@ async function discoverPage() {
         for (const row of rows) {
           const domain = row.domain?.toLowerCase().replace(/^www\./, '')
           if (domain && !state.companies[domain]) {
-            state.companies[domain] = { domain, name: row.organization, query: q, market, ...(sector && { sector }) }
+            state.companies[domain] = { domain, name: row.organization, query: typeof q === 'string' ? q : sector, market, ...(sector && { sector }) }
             fresh.push(domain)
           }
         }
@@ -445,6 +473,46 @@ async function findEmail(c, p) {
   return p.verdict === 'valid' ? p : null
 }
 
+// Speed figure for the email hook (US): Google PageSpeed mobile with Antonio's key, free;
+// without it the DataForSEO audit, which measures the HTML only (no rendering, $0.00015).
+const SPEED_ENV = join(process.env.HOME || '', 'Library/Application Support/noprob-agenti/pagespeed.env')
+const PSI_KEY =
+  process.env.PAGESPEED_API_KEY ||
+  (existsSync(SPEED_ENV) ? readFileSync(SPEED_ENV, 'utf8').match(/^\s*PAGESPEED_API_KEY\s*=\s*["']?([^"'\s]+)/m)?.[1] : null) ||
+  null
+async function speedCheck(c) {
+  if (c.speed?.source === 'pagespeed' || (c.speed && !PSI_KEY)) return c.speed
+  const url = `https://${c.domain}/`
+  if (PSI_KEY) {
+    try {
+      const q = new URLSearchParams({ url, strategy: 'mobile', category: 'performance', key: PSI_KEY })
+      const res = await fetch(`https://www.googleapis.com/pagespeedonline/v5/runPagespeed?${q}`, { signal: AbortSignal.timeout(90000) })
+      const lh = res.ok ? (await res.json()).lighthouseResult : null
+      if (lh?.categories?.performance) {
+        c.speed = {
+          source: 'pagespeed',
+          mobileScore: Math.round(lh.categories.performance.score * 100),
+          lcpSeconds: +((lh.audits?.['largest-contentful-paint']?.numericValue || 0) / 1000).toFixed(1),
+          at: new Date().toISOString().slice(0, 10),
+        }
+        save()
+        return c.speed
+      }
+    } catch {}
+  }
+  if (c.speed) return c.speed
+  try {
+    const r = await treg('dataforseo.web.page.audit', [{ url }], {}, c, true)
+    const it = r?.tasks?.[0]?.result?.[0]?.items?.[0]
+    if (it?.status_code === 200)
+      c.speed = { source: 'dataforseo', htmlKb: Math.round((it.size || 0) / 1024), fetchMs: it.page_timing?.duration_time ?? null, onpageScore: it.onpage_score ?? null, at: new Date().toISOString().slice(0, 10) }
+    save()
+  } catch (err) {
+    console.error(`${c.domain} speed: ${err.message.split('\n')[0]}`)
+  }
+  return c.speed
+}
+
 const contact = (p) => ({ name: p.name, first: p.first, last: p.last, title: p.title, email: p.email || null, linkedin: p.linkedin, country: p.country || null, rank: p.rank })
 
 /** Best verified contact plus a second one: upgrades an older lead when a higher role turns up. */
@@ -456,7 +524,7 @@ async function work(c, { second = true } = {}) {
   if (INTL) {
     // Ada needs the profile URL, someone in the store's market, and nobody she already has.
     const codes = MARKETS.find((m) => m.market === c.market)?.codes || []
-    ranked = ranked.filter((p) => p.linkedin && codes.includes(p.country || c.country) && !knownProfiles.has(profileKey(p.linkedin)))
+    ranked = ranked.filter((p) => (US || p.linkedin) && codes.includes(p.country || c.country) && !(p.linkedin && knownProfiles.has(profileKey(p.linkedin))))
     if (!PAY_EMAIL) {
       const [primary, backup] = ranked
       c.lead = primary ? { ...contact(primary), second: backup ? contact(backup) : null, bestRankFound: primary.rank } : null
@@ -535,7 +603,7 @@ const fresh = (d) => !known.has(d)
 const PRIVATE_MAILBOX = /@(gmail|googlemail|hotmail|yahoo|libero|outlook|icloud|tiscali|alice|virgilio|live|msn|email)\./i
 // CBD and cannabis stay out of cold (Claudio, 2 Nov): on Shopify they need a third-party gateway.
 const NOT_COLD = /cbd|cannabi|canapa/i
-const ready = (c) => c.store && !c.store.drop && !NOT_COLD.test(`${c.domain} ${c.name || ''}`) && (INTL || (!PRIVATE_MAILBOX.test(c.lead.email || '') && (!c.country || c.country === 'IT')))
+const ready = (c) => c.store && !c.store.drop && !NOT_COLD.test(`${c.domain} ${c.name || ''}`) && (US ? !PRIVATE_MAILBOX.test(c.lead.email || '') && (!c.country || c.country === 'US') : INTL || (!PRIVATE_MAILBOX.test(c.lead.email || '') && (!c.country || c.country === 'IT')))
 // The saved lead is checked against the current ranks: a role Ada stopped taking drops out.
 const candidates = () => Object.values(state.companies).filter((c) => c.lead && (!INTL || rankOf(c.lead.title)) && fits(c) && reachable(c) && fresh(c.domain))
 const leads = () => candidates().filter(ready)
@@ -610,8 +678,14 @@ if (!EXPORT_ONLY && !supply?.paused) {
     log(`page done, ${Object.keys(state.companies).length} companies`)
   }
 
+  // US: the speed figure on every ready lead (the reserve kept for calls in flight covers it).
+  if (US) {
+    await pool(leads().filter((c) => !c.speed || (PSI_KEY && c.speed.source !== 'pagespeed')).map((c) => c.domain), 4, (d) => speedCheck(state.companies[d]))
+    log('speed figures added')
+  }
+
   // Pass 3: second verified contact for leads that have one person only, while the budget lasts.
-  if (PAY_EMAIL) {
+  if (PAY_EMAIL && !US) {
     await pass(leads().filter((c) => !c.lead.second).map((c) => c.domain), { second: true, seconds: true })
     log('second contacts added')
   }
@@ -633,6 +707,7 @@ const company = (c) => ({
   consumerBrand: fits(c),
   sector: sectorOf(c),
   query: c.query || null,
+  ...(US && { speed: c.speed || null }),
 })
 const others = (c, skip) =>
   (c.people || [])
