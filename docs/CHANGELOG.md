@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.197.0 (15 Nov 2026)
+
+- Verified data: Antonio's statements of 15 Nov (7 years as eCommerce manager leading a team of 7, the two sentences he wrote in the Italian v3 email) and the PageSpeed method for the cold email finding, in `docs/dati-verificati.md`.
+
 ### Changelog v1.196.0 (15 Nov 2026)
 
 - Cold email, Italy v3 follow-ups (D-100). A v3 thread gets 2 short follow-ups, on days 3 and 7. Threads opened with v1 or v2 get Antonio's rewritten e2-e5, on the same days and with the same subject. They switch on with `approvedV3`, together with the v3 first email.
