@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.190.0 (15 Nov 2026)
+
+- Cold email, US line: Ada's copy approved by Antonio (D-99) in `US_COPY` (email 1 with the store's finding, one-line follow-up in the same thread, no links) and the CAN-SPAM footer in `US_FOOTER` (LLC postal address and opt-out). The line still sends only when `approvedUs` in the config equals `US_VERSION`.
+
 ### Changelog v1.189.0 (15 Nov 2026)
 
 - Ada, US stores not on Shopify (D-99): `scripts/ada-us-finding.mjs` writes on each lead the one fact that opens the email (`finding`, `findingRule`, `findingSource`, `findingAt`). Five rules in order: mobile LCP over 4 s, homepage images over 3 MB, no meta description, no H1, mobile CLS over 0.25. A lead with no rule gets no automatic email; Shopify stores and opt-outs are skipped. The lab rules use the PageSpeed key (env `PAGESPEED_API_KEY`, the same `pagespeed.env` Damiano reads, or Keychain `pagespeed-api`); without it only the HTML rules run. Rules in `lib/cold/us-finding.mjs`, with tests.

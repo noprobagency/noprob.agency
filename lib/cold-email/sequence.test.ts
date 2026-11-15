@@ -228,9 +228,18 @@ describe('US line', () => {
     expect(usHours(new Date('2026-11-16T14:00:00Z'))).toBe(true)
     expect(usHours(new Date('2026-11-16T09:20:00Z'))).toBe(false)
   })
-  it('sends nothing until copy and footer are approved', () => {
-    expect(usReady()).toBe(false)
-    expect(() => render(us, 'e1')).toThrow(/not approved/)
+  it('has the approved copy and the CAN-SPAM footer in place', () => {
+    expect(usReady()).toBe(true)
+    const e1 = renderUs({ ...us, firstName: 'Jen', finding: 'your homepage has no main heading' }, 'e1')
+    expect(e1.subject).toBe(us.brand)
+    expect(e1.body).toContain('Hey Jen! 🙂')
+    expect(e1.body).toContain('one thing jumped out: your homepage has no main heading.')
+    expect(e1.body).toContain('30 N Gould St Ste R, Sheridan, WY 82801, USA')
+    expect(e1.body).toContain('Reply "no"')
+    expect(e1.body).not.toMatch(/https?:|noprob\.agency/)
+    const e2 = renderUs({ ...us, firstName: null }, 'e2')
+    expect(e2.subject).toBe(`Re: ${us.brand}`)
+    expect(e2.body.startsWith(`Hey, happy to send that report for ${us.brand}`)).toBe(true)
   })
   it('renders approved copy with the footer, follow-up in the same thread', () => {
     const copy = { e1: (v: { brand: string }) => ({ subject: `${v.brand} question`, lines: ['Hi!'] }), e2: (v: { brand: string }) => ({ subject: `${v.brand} question`, lines: ['Again'] }) }

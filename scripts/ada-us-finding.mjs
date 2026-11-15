@@ -54,7 +54,8 @@ for (const lead of leads) {
   lead.findingSource = lab ? 'pagespeed-mobile+html' : 'html'
   lead.findingAt = new Date().toISOString()
   stats.done++
-  pick ? stats.finding++ : stats.none++
+  if (pick) stats.finding++
+  else stats.none++
 }
 
 if (!dry) writeFileSync(file, `${JSON.stringify(leads, null, 2)}\n`)
