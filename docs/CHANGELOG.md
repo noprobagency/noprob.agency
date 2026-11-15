@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.191.0 (15 Nov 2026)
+
+- Ada, US finding: the speed rule now names its source and caps the figure ("Google's mobile speed test shows your homepage taking about N seconds to load its main image", "over 20 seconds" above 20). PageSpeed simulates a slow mobile connection, so a bare "on a phone, about 54 seconds" read as absurd to an owner on a fast phone.
+
 ### Changelog v1.190.0 (15 Nov 2026)
 
 - Cold email, US line: Ada's copy (email 1 and follow-up) and the CAN-SPAM footer of the LLC are in `sequence-us.mjs`. Nothing is sent until `approvedUs` is set in the CRM config, on Antonio's direct ok.

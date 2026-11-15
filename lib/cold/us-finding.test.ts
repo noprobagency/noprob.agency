@@ -5,8 +5,12 @@ describe('pickFinding', () => {
   it('uses a slow mobile LCP first, rounded down', () => {
     expect(pickFinding({ lcpMs: 9672, imageBytes: 8_238_012, hasDescription: true })).toEqual({
       rule: 'lcp',
-      finding: 'on a phone, your homepage takes about 9 seconds to show its main image',
+      finding: "Google's mobile speed test shows your homepage taking about 9 seconds to load its main image",
     })
+  })
+
+  it('caps a freak lab run at over 20 seconds', () => {
+    expect(pickFinding({ lcpMs: 54_300 })?.finding).toBe("Google's mobile speed test shows your homepage taking over 20 seconds to load its main image")
   })
 
   it('falls back to image weight when the page is fast', () => {
