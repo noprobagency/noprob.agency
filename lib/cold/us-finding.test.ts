@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { htmlSignals, pickFinding } from './us-finding.mjs'
+import { htmlSignals, pickFinding, stableLcp } from './us-finding.mjs'
 
 describe('pickFinding', () => {
   it('uses a slow mobile LCP first, rounded down', () => {
@@ -35,5 +35,14 @@ describe('htmlSignals', () => {
   it('reads the meta description and the H1', () => {
     expect(htmlSignals('<meta name="description" content="Fresh coffee"><h1>Coffee</h1>')).toEqual({ hasDescription: true, hasH1: true })
     expect(htmlSignals('<meta name="description" content=""><h2>x</h2>')).toEqual({ hasDescription: false, hasH1: false })
+  })
+})
+
+describe('stableLcp', () => {
+  it('counts only when two runs in a row are over 4 s, and quotes the lower one', () => {
+    expect(stableLcp(20_000, 9_000)).toBe(9_000)
+    expect(stableLcp(20_000, 3_000)).toBeNull()
+    expect(stableLcp(5_000, null)).toBeNull()
+    expect(stableLcp(2_000, 2_500)).toBeNull()
   })
 })

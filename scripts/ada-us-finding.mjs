@@ -9,7 +9,7 @@
 import { execFileSync } from 'node:child_process'
 import { existsSync, readFileSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
-import { fetchHome, htmlSignals, pagespeed, pickFinding } from '../lib/cold/us-finding.mjs'
+import { fetchHome, htmlSignals, pagespeed, pickFinding, stableLcp } from '../lib/cold/us-finding.mjs'
 import { detectPlatform } from '../lib/cold/detect-platform.mjs'
 import { isSuppressed, parseSuppressed } from '../lib/cold/sweep.mjs'
 
@@ -48,6 +48,9 @@ for (const lead of leads) {
   if (html === null) { stats.unreachable++; continue }
   if (detectPlatform(html, {}).platform === 'shopify') { lead.finding = null; lead.findingRule = 'shopify'; stats.shopify++; continue }
   const lab = await pagespeed(domain, KEY)
+  // LCP only when a second run confirms it (stableLcp); image weight comes from the first run
+  if (lab && lab.lcpMs > 4000) lab.lcpMs = stableLcp(lab.lcpMs, (await pagespeed(domain, KEY))?.lcpMs)
+  else if (lab) lab.lcpMs = null
   const pick = pickFinding({ ...htmlSignals(html), ...(lab || {}) })
   lead.finding = pick ? pick.finding : null
   lead.findingRule = pick ? pick.rule : 'none'
