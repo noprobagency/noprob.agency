@@ -26,7 +26,7 @@
 import { execFileSync, spawn } from 'node:child_process'
 import { appendFileSync, existsSync, readFileSync, writeFileSync } from 'node:fs'
 import { SENDER, accessToken, buildRaw, gmail, messageId, threadOutcome } from '../lib/cold-email/gmail.mjs'
-import { gojiberryDomains, gojiberryQueuedToday, gojiberryRemaining } from '../lib/cold-email/gojiberry.mjs'
+import { gojiberryDomains, gojiberryOn, gojiberryQueuedToday, gojiberryRemaining, loadGojiberryDomains, saveGojiberryDomains } from '../lib/cold-email/gojiberry.mjs'
 import { excludeDomains, stopStore } from '../lib/cold-email/leads.mjs'
 import { appendSuppressed, applySuppressed, readSuppressed, refusals } from '../lib/cold-email/suppression.mjs'
 import { publishTaken, takenBody } from '../lib/cold-email/taken.mjs'
@@ -118,12 +118,19 @@ for (const lead of db.leads) {
 }
 save()
 
-// 2. Gojiberry domains, read only
-try {
-  db.leads = excludeDomains(db.leads, await gojiberryDomains(), 'in Gojiberry')
-} catch (err) {
-  console.error(`Gojiberry check skipped: ${err.message}`)
+// 2. Gojiberry domains, read only (until config.gojiberryUntil). A Gojiberry error never stops this run.
+const gojiberry = gojiberryOn(config, today)
+// Off or failing, the last list saved still keeps its stores out.
+let inGojiberry = null
+if (gojiberry) {
+  try {
+    inGojiberry = await gojiberryDomains()
+    if (!dry) saveGojiberryDomains(inGojiberry)
+  } catch (err) {
+    console.error(`Gojiberry check failed, last saved list used: ${err.message}`)
+  }
 }
+db.leads = excludeDomains(db.leads, inGojiberry || loadGojiberryDomains(), 'in Gojiberry')
 
 // Shared opt-out list: the file wins over any sequence, our refusals go in.
 db.leads = applySuppressed(db.leads, readSuppressed())
@@ -141,7 +148,9 @@ const pageKey = pagespeedKey()
 // that campaign's queue for today free.
 for (const m of MAILBOXES) {
   m.sentToday = m.api ? ((await m.api.search(`in:sent after:${today.replaceAll('-', '/')}`)).messages || []).length : 0
-  if (m.key === 'antonio') {
+  if (m.key === 'antonio' && !gojiberry) {
+    m.gojiberry = 0
+  } else if (m.key === 'antonio') {
     const ada = await gojiberryRemaining(SENDER.email, config.adaCampaign, { live: config.adaEmailsLive }).catch((err) => {
       console.error(`Gojiberry seat check failed, 25 kept free: ${err.message}`)
       return { reserve: 25, live: config.adaEmailsLive }
@@ -153,12 +162,13 @@ for (const m of MAILBOXES) {
       note += ' · Ada ha email in coda: da oggi le riservo fino a 25 al giorno'
     }
   } else {
-    m.gojiberry = m.gojiberryCampaign
-      ? await gojiberryQueuedToday(m.email, m.gojiberryCampaign).catch((err) => {
-          console.error(`${m.email}: Gojiberry check failed, mailbox kept free: ${err.message}`)
-          return m.max
-        })
-      : 0
+    m.gojiberry =
+      gojiberry && m.gojiberryCampaign
+        ? await gojiberryQueuedToday(m.email, m.gojiberryCampaign).catch((err) => {
+            console.error(`${m.email}: Gojiberry check failed, 25 kept free: ${err.message}`)
+            return 25
+          })
+        : 0
   }
   m.room = m.api ? Math.max(0, m.max - m.reserve - m.sentToday - m.gojiberry) : 0
   m.sent = 0
@@ -274,7 +284,7 @@ if (!dry) {
   // there never stops this run.
   if (existsSync(config.crmPath)) {
     try {
-      execFileSync('node', ['scripts/crm-registry.mjs', config.crmPath, '--gojiberry', '--push'], { stdio: 'inherit' })
+      execFileSync('node', ['scripts/crm-registry.mjs', config.crmPath, ...(gojiberry ? ['--gojiberry'] : []), '--push'], { stdio: 'inherit' })
     } catch (err) {
       console.error(`CRM registry not rebuilt: ${err.message.split('\n')[0]}`)
     }

@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.198.0 (15 Nov 2026)
+
+- Cold email: Gojiberry can no longer stop the direct engine. After `gojiberryUntil` in the config (25/11, D-93), no script calls it and no mailbox keeps room for its campaigns. Before that date a failing call is skipped. The daily run holds 25 emails instead of the whole mailbox, and the review still moves Damiano's leads to the direct channel. The last list of Gojiberry stores is saved, so those stores stay blocked.
+
 ### Changelog v1.197.0 (15 Nov 2026)
 
 - Verified data: Antonio's statements of 15 Nov (7 years as eCommerce manager leading a team of 7, the two sentences he wrote in the Italian v3 email) and the PageSpeed method for the cold email finding, in `docs/dati-verificati.md`.

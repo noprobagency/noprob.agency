@@ -30,7 +30,8 @@ import { appendFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } fr
 import { dirname } from 'node:path'
 import { fetchPlatform, pool } from '../lib/cold/fetch-platform.mjs'
 import { normaliseUrl } from '../lib/cold/detect-platform.mjs'
-import { LISTS, api, listContacts } from '../lib/cold/gojiberry.mjs'
+import { LISTS, api as gojiberryApi, listContacts as gojiberryList } from '../lib/cold/gojiberry.mjs'
+import { gojiberryOn, loadGojiberryDomains } from '../lib/cold-email/gojiberry.mjs'
 import { optoutSweep } from '../lib/cold/sweep.mjs'
 import { cleanCompany, review, storeVerdict } from '../lib/cold-email/approve.mjs'
 import { storeCheck } from '../lib/cold/store-check.mjs'
@@ -48,13 +49,33 @@ const STATE = process.env.COLD_STATE || 'cold-email/data/gjb-state.json'
 const LOG = process.env.COLD_LOG || 'cold-email/data/log.md'
 const dry = process.argv.includes('--dry')
 
+// Gojiberry until config.gojiberryUntil; after that, and whenever it fails, the run skips
+// it and still moves Damiano's leads to the direct channel (D-93).
+const gojiberry = gojiberryOn(existsSync(DIRECT.config) ? JSON.parse(readFileSync(DIRECT.config, 'utf8')) : {}, new Date().toLocaleDateString('en-CA', { timeZone: 'Europe/Lisbon' }))
+let gojiberryDown = !gojiberry
+/** @template T @param {() => Promise<T>} fn @param {T} fallback @returns {Promise<T>} */
+async function gj(fn, fallback) {
+  if (gojiberryDown) return fallback
+  try {
+    return await fn()
+  } catch (err) {
+    console.error(`Gojiberry skipped from here on: ${err.message.split('\n')[0]}`)
+    gojiberryDown = true
+    return fallback
+  }
+}
+/** @param {string} method @param {string} path @param {any} [body] */
+const api = (method, path, body) => gj(() => gojiberryApi(method, path, body), null)
+/** @param {number} listId */
+const listContacts = (listId) => gj(() => gojiberryList(listId), [])
+
 const state = existsSync(STATE) ? JSON.parse(readFileSync(STATE, 'utf8')) : { processed: [], held: [] }
 const processed = new Set(state.processed)
 const held = new Map((state.held || []).map((h) => [h.id, h]))
 
 // Opt-outs first: anyone who replied no (or unsubscribed) on Dante's list is excluded and
 // lands in docs/cold/suppressed.txt, the same sweep Ada runs hourly on her lists.
-const sweep = cloud ? { excluded: 0, startedAt: state.lastSweep } : await optoutSweep({ lists: [DANTE.list], since: state.lastSweep, dry })
+const sweep = cloud ? { excluded: 0, startedAt: state.lastSweep } : await gj(() => optoutSweep({ lists: [DANTE.list], since: state.lastSweep, dry }), { excluded: 0, startedAt: state.lastSweep })
 
 // Stores another channel already has
 const websites = async (listId) => (await listContacts(listId)).map((c) => domainOf(normaliseUrl(c.website))).filter(Boolean)
@@ -104,12 +125,14 @@ const seat = ((await api('GET', '/v1/email-seat')) || []).find((s) => s.email ==
 // of the daily limit goes to new leads. Gojiberry holds anything over the limit for the
 // next day, so a busy day only shifts a follow-up by a day.
 const queued = ((await api('GET', `/v1/campaign/${DANTE.campaign}/email-queue`)) || []).length
-const cap = Math.max(0, (seat?.dailyEmailMax ?? 2) - (seat?.dailyEmailCount ?? 0) - queued)
+const cap = gojiberryDown ? 0 : Math.max(0, (seat?.dailyEmailMax ?? 2) - (seat?.dailyEmailCount ?? 0) - queued)
 const damiano = !cloud && existsSync(`${crmDamiano}/coda.json`) ? { queue: `${crmDamiano}/coda.json`, used: `${crmDamiano}/usati.json` } : DAMIANO
 if (!cloud && existsSync(damiano.queue)) {
   const readUsed = (f) => (existsSync(f) ? JSON.parse(readFileSync(f, 'utf8')) : {})
   const used = { ...readUsed(DAMIANO.used), ...readUsed(damiano.used) }
   const domains = new Set([...linkedin, ...db.leads.map((l) => l.domain), ...contacts.map((c) => domainOf(normaliseUrl(c.website))), ...(await websites(DIRECT.list)), ...(await websites(LISTS.shopify))].filter(Boolean))
+  // Without Gojiberry, the stores it last had (saved by the daily run) stay blocked.
+  if (gojiberryDown) for (const w of loadGojiberryDomains()) domains.add(domainOf(normaliseUrl(w)))
   const emails = new Set([...db.leads.map((l) => l.email), ...contacts.map((c) => (c.email || '').toLowerCase())].filter(Boolean))
   let rows = pickQueue(JSON.parse(readFileSync(damiano.queue, 'utf8')).leads || [], { used, domains, emails, suppressed })
   // Only approved leads count: a long review backlog of Gojiberry's own finds never
@@ -120,7 +143,7 @@ if (!cloud && existsSync(damiano.queue)) {
   // config.json `helloImport: false` keeps Damiano's leads off hello@ (D-86: hello@ goes to
   // Ada's startups until 25/11, then leaves Gojiberry); they reach the direct channel instead.
   const helloImport = (existsSync(DIRECT.config) ? JSON.parse(readFileSync(DIRECT.config, 'utf8')).helloImport : undefined) !== false
-  if (helloImport && helloSupply < helloRoom) {
+  if (helloImport && !gojiberryDown && helloSupply < helloRoom) {
     for (const r of helloTake(rows, helloSupply + FEED.helloDay - helloRoom)) {
       try {
         if (!dry) await api('POST', '/v1/contact', helloPayload(r, DANTE.list))
@@ -262,7 +285,7 @@ if (!dry && !cloud) {
   // there never stops this run.
   if (existsSync(crmPath)) {
     try {
-      execFileSync('node', ['scripts/crm-registry.mjs', crmPath, '--gojiberry', '--push'], { stdio: 'inherit' })
+      execFileSync('node', ['scripts/crm-registry.mjs', crmPath, ...(gojiberryDown ? [] : ['--gojiberry']), '--push'], { stdio: 'inherit' })
     } catch (err) {
       console.error(`CRM registry not rebuilt: ${err.message.split('\n')[0]}`)
     }
