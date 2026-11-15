@@ -1,5 +1,8 @@
 import { describe, expect, it } from 'vitest'
-import { importUsRows, lotDone } from './us-lots.mjs'
+import { mkdirSync, mkdtempSync, writeFileSync } from 'node:fs'
+import { tmpdir } from 'node:os'
+import { join } from 'node:path'
+import { importUsRows, lotDone, usLotFiles } from './us-lots.mjs'
 
 const row = (over = {}) => ({ domain: 'acme-us.com', email: 'sam@acme-us.com', name: 'Sam Lee', brand: 'Acme US', platform: 'woocommerce', market: 'US', finding: 'the images on your homepage weigh over 5 MB, which slows it down on phones', findingRule: 'images', findingAt: '2026-11-16T10:00:00Z', ...over })
 const ctx = (over = {}) => ({ suppressed: /** @type {string[]} */ ([]), gojiberry: new Set<string>(), live: new Map<string, unknown>([['https://acme-us.com', { platform: 'woocommerce', status: 200 }]]), lcpApproved: false, clean: (s: string) => s, ...over })
@@ -20,5 +23,17 @@ describe('US batches', () => {
     const db = { leads: [{ domain: 'acme-us.com', email: 'sam@acme-us.com', line: 'us', segment: 'review', reason: 'fuori target', sequence: { sent: [] } }] }
     expect(importUsRows(db, [row()], ctx()).known).toBe(1)
     expect(db.leads[0].reason).toBe('fuori target')
+  })
+})
+
+describe('US batch files', () => {
+  it("reads Damiano's US folder without the us- prefix", () => {
+    const root = mkdtempSync(join(tmpdir(), 'lots-'))
+    mkdirSync(join(root, 'us/lotti'), { recursive: true })
+    mkdirSync(join(root, 'lotti'))
+    writeFileSync(join(root, 'us/lotti/2026-11-16-1.json'), '[]')
+    writeFileSync(join(root, 'lotti/2026-11-16-1.json'), '[]')
+    writeFileSync(join(root, 'lotti/us-2026-11-15-1.json'), '[]')
+    expect(usLotFiles([join(root, 'us/lotti'), join(root, 'lotti')]).map((f) => f.slice(root.length))).toEqual(['/lotti/us-2026-11-15-1.json', '/us/lotti/2026-11-16-1.json'])
   })
 })
