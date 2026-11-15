@@ -6,7 +6,8 @@
 //      moves it to `suppressed`); out of office does not
 //   2. skips domains that Gojiberry is working (read only) and anyone in the shared
 //      opt-out list docs/cold/suppressed.txt; appends who said no here to that list
-//   3. sends the emails due today, follow-ups first, within the mailbox budget
+//   3. sends the emails due today, follow-ups first, within each mailbox's budget
+//      (antonio@, plus config.mailboxes such as hello@: a lead keeps the mailbox of its first email)
 //      (antonio@ max 55 a day across Gojiberry, this channel and manual emails:
 //      already sent today, what Ada's Gojiberry campaign still plans to send today and a
 //      manual reserve are subtracted); dailyCap limits only
@@ -25,7 +26,7 @@
 import { execFileSync, spawn } from 'node:child_process'
 import { appendFileSync, existsSync, readFileSync, writeFileSync } from 'node:fs'
 import { SENDER, accessToken, buildRaw, gmail, messageId, threadOutcome } from '../lib/cold-email/gmail.mjs'
-import { gojiberryDomains, gojiberryRemaining } from '../lib/cold-email/gojiberry.mjs'
+import { gojiberryDomains, gojiberryQueuedToday, gojiberryRemaining } from '../lib/cold-email/gojiberry.mjs'
 import { excludeDomains, stopStore } from '../lib/cold-email/leads.mjs'
 import { appendSuppressed, applySuppressed, readSuppressed, refusals } from '../lib/cold-email/suppression.mjs'
 import { publishTaken, takenBody } from '../lib/cold-email/taken.mjs'
@@ -66,21 +67,36 @@ const save = () => {
 }
 const stats = { replies: 0, optouts: 0, bounces: 0, sent: { e1: 0, e2: 0, e3: 0, e4: 0, e5: 0 }, skipped: 0, recent: 0 }
 
+// Mailboxes: antonio@ always, plus config.mailboxes (e.g. hello@ with its own Keychain token).
+// Every lead keeps the mailbox of its first email (sequence.mailbox, antonio@ when unset):
+// its follow-ups and replies stay in that thread. New first emails go where there is room.
+const MAILBOXES = [
+  { key: 'antonio', email: SENDER.email, max: config.mailboxMax, reserve: config.manualReserve },
+  ...(config.mailboxes || []).map((m) => ({ reserve: 0, ...m })),
+]
 // A dry run works without Gmail too: it only lists what would be sent.
-const api = await accessToken().then(gmail, (err) => {
-  if (!dry) throw err
-  console.error(`[dry] ${err.message}: thread check skipped`)
-  return null
-})
+for (const m of MAILBOXES) {
+  m.api = await accessToken(m.token).then(
+    (t) => gmail(t, { entry: m.token }),
+    (err) => {
+      if (!dry && m.key === 'antonio') throw err
+      console.error(`${m.email}: ${err.message}: casella saltata`)
+      return null
+    },
+  )
+}
+const boxOf = (lead) => MAILBOXES.find((m) => m.key === (lead.sequence.mailbox || 'antonio'))
 
 // 1. Replies and bounces on running threads
-for (const lead of api ? db.leads : []) {
+for (const lead of db.leads) {
   const seq = lead.sequence
+  const box = boxOf(lead)
+  if (!box?.api) continue
   // Warm leads stay under watch: a later message can still ask to be removed.
   const warm = lead.segment === 'warm'
   if (!seq.threadId || !(warm || (lead.segment === 'target' && !seq.stoppedAt))) continue
-  let outcome = threadOutcome(await api.thread(seq.threadId))
-  if (outcome === 'reply') outcome = threadOutcome(await api.threadFull(seq.threadId))
+  let outcome = threadOutcome(await box.api.thread(seq.threadId))
+  if (outcome === 'reply') outcome = threadOutcome(await box.api.threadFull(seq.threadId))
   if (!outcome || (warm && outcome !== 'optout')) continue
   seq.stoppedAt ||= today
   seq.stopReason = outcome
@@ -111,24 +127,38 @@ db.leads = applySuppressed(db.leads, readSuppressed())
 if (!dry) appendSuppressed(refusals(db.leads), 'no / opt-out')
 save()
 
-// 3. Sends, within the mailbox budget
+// 3. Sends, within each mailbox's budget
 let note = ''
-const sentToday = api ? ((await api.search(`in:sent after:${today.replaceAll('-', '/')}`)).messages || []).length : 0
 // The mailbox budget covers every email; dailyCap limits only new first emails, so
 // follow-ups keep their days even when a big batch reaches the same step together.
 // Ada's campaign sends from antonio@ too (from 9:00, up to its warm-up limit): the
 // emails it has queued for today are kept free, the rest of the mailbox is ours.
-const ada = await gojiberryRemaining(SENDER.email, config.adaCampaign, { live: config.adaEmailsLive }).catch((err) => {
-  console.error(`Gojiberry seat check failed, 25 kept free: ${err.message}`)
-  return { reserve: 25, live: config.adaEmailsLive }
-})
-const gojiberryLeft = ada.reserve
-if (ada.live && !config.adaEmailsLive && !dry) {
-  const saved = JSON.parse(readFileSync(CONFIG, 'utf8'))
-  writeFileSync(CONFIG, `${JSON.stringify({ ...saved, adaEmailsLive: true }, null, 2)}\n`)
-  note += ' · Ada ha email in coda: da oggi le riservo fino a 25 al giorno'
+// A mailbox with a Gojiberry campaign of its own (hello@, until its follow-ups end) keeps
+// that campaign's queue for today free.
+for (const m of MAILBOXES) {
+  m.sentToday = m.api ? ((await m.api.search(`in:sent after:${today.replaceAll('-', '/')}`)).messages || []).length : 0
+  if (m.key === 'antonio') {
+    const ada = await gojiberryRemaining(SENDER.email, config.adaCampaign, { live: config.adaEmailsLive }).catch((err) => {
+      console.error(`Gojiberry seat check failed, 25 kept free: ${err.message}`)
+      return { reserve: 25, live: config.adaEmailsLive }
+    })
+    m.gojiberry = ada.reserve
+    if (ada.live && !config.adaEmailsLive && !dry) {
+      const saved = JSON.parse(readFileSync(CONFIG, 'utf8'))
+      writeFileSync(CONFIG, `${JSON.stringify({ ...saved, adaEmailsLive: true }, null, 2)}\n`)
+      note += ' · Ada ha email in coda: da oggi le riservo fino a 25 al giorno'
+    }
+  } else {
+    m.gojiberry = m.gojiberryCampaign
+      ? await gojiberryQueuedToday(m.email, m.gojiberryCampaign).catch((err) => {
+          console.error(`${m.email}: Gojiberry check failed, mailbox kept free: ${err.message}`)
+          return m.max
+        })
+      : 0
+  }
+  m.room = m.api ? Math.max(0, m.max - m.reserve - m.sentToday - m.gojiberry) : 0
+  m.sent = 0
 }
-const mailbox = Math.max(0, config.mailboxMax - config.manualReserve - sentToday - gojiberryLeft)
 if (config.approved !== SEQUENCE_VERSION) {
   note += ` · invii fermi (sequenza ${SEQUENCE_VERSION} non approvata)`
 } else {
@@ -145,36 +175,48 @@ if (config.approved !== SEQUENCE_VERSION) {
   const firstsToday = db.leads.filter((l) => l.sequence.sent.some((x) => x.step === 'e1' && x.date === today)).length
   const capLeft = Math.max(0, cap - firstsToday)
   const wanted = followUps + Math.min(capLeft, due.length - followUps)
-  const budget = Math.ceil(Math.min(mailbox, wanted) / slots)
-  if (Math.min(mailbox, wanted) < wanted) note += ` · budget casella ${mailbox} (già inviate oggi da antonio@ ${sentToday}, riservate a Gojiberry ${gojiberryLeft})`
+  const room = MAILBOXES.reduce((n, m) => n + m.room, 0)
+  // Each mailbox sends its own share of the day in this run, so both send all day long.
+  for (const m of MAILBOXES) m.run = Math.ceil(m.room / slots)
+  const left = () => MAILBOXES.reduce((n, m) => n + Math.max(0, m.run - m.sent), 0)
+  if (room < wanted) note += ` · budget ${MAILBOXES.map((m) => `${m.email.split('@')[0]}@ ${m.room} (già inviate oggi ${m.sentToday}, riservate a Gojiberry ${m.gojiberry})`).join(', ')}`
   let sent = 0
   let firsts = 0
   for (const { lead, step } of due) {
-    if (sent >= budget) break
+    if (!left()) break
+    // A follow-up stays in its thread's mailbox; a first email takes the mailbox with most room.
+    const m = step.key === 'e1' ? MAILBOXES.filter((x) => x.run > x.sent).sort((a, b) => b.run - b.sent - (a.run - a.sent))[0] : boxOf(lead)
+    if (!m || m.sent >= m.run) continue
     if (step.key === 'e1' && (firsts >= capLeft || storesToday.has(lead.domain))) continue
-    // Never a first email to a store Antonio wrote to by hand in the last 60 days.
-    if (step.key === 'e1' && api && (await api.search(`in:sent to:(${lead.email} OR ${lead.domain}) newer_than:60d`)).messages?.length) {
-      Object.assign(lead, { segment: 'review', reason: 'contacted by hand in the last 60 days' })
-      stats.recent++
-      continue
+    // Never a first email to a store Antonio wrote to by hand in the last 60 days, from any mailbox.
+    if (step.key === 'e1') {
+      let recent = false
+      for (const x of MAILBOXES) if (x.api && (await x.api.search(`in:sent to:(${lead.email} OR ${lead.domain}) newer_than:60d`)).messages?.length) recent = true
+      if (recent) {
+        Object.assign(lead, { segment: 'review', reason: 'contacted by hand in the last 60 days' })
+        stats.recent++
+        continue
+      }
     }
     const { subject, body } = render(lead, step.key)
     if (dry) {
-      console.log(`[dry] ${step.key} -> ${lead.email} · ${subject}`)
+      console.log(`[dry] ${m.email.split('@')[0]}@ ${step.key} -> ${lead.email} · ${subject}`)
       if (step.key === 'e1') {
         storesToday.add(lead.domain)
         firsts++
       }
       stats.sent[step.key]++
+      m.sent++
       sent++
       continue
     }
     const seq = lead.sequence
-    const res = await api.send(buildRaw({ to: lead.email, subject, body, inReplyTo: seq.messageId }), seq.threadId)
+    const res = await m.api.send(buildRaw({ to: lead.email, subject, body, inReplyTo: seq.messageId, from: m.email }), seq.threadId)
     if (step.key === 'e1') {
       seq.threadId = res.threadId
-      seq.messageId = messageId(await api.thread(res.threadId))
+      seq.messageId = messageId(await m.api.thread(res.threadId))
       seq.version = SEQUENCE_VERSION
+      seq.mailbox = m.key
     }
     seq.sent.push({ step: step.key, date: today, id: res.id })
     if (step.key === 'e1') {
@@ -182,16 +224,18 @@ if (config.approved !== SEQUENCE_VERSION) {
       firsts++
     }
     stats.sent[step.key]++
+    m.sent++
     sent++
     save()
-    if (sent < budget) {
+    if (left()) {
       const [min, max] = config.gapSeconds
-      const left = until ? minutesUntil(until) : 0
-      const seconds = left > 0 ? ((left * 60) / (budget - sent)) * (0.6 + Math.random() * 0.8) : min + Math.random() * (max - min)
+      const minutes = until ? minutesUntil(until) : 0
+      const seconds = minutes > 0 ? ((minutes * 60) / left()) * (0.6 + Math.random() * 0.8) : min + Math.random() * (max - min)
       await new Promise((r) => setTimeout(r, seconds * 1000))
     }
   }
   stats.skipped = Math.max(0, due.length - stats.recent - sent)
+  if (MAILBOXES.length > 1) note += ` · per casella ${MAILBOXES.map((m) => `${m.email.split('@')[0]}@ ${m.sent}`).join(', ')}`
   save()
 }
 

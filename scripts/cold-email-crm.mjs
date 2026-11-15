@@ -28,7 +28,7 @@ const nextDate = (l) => {
 }
 
 const direct = leads.map((l) => ({
-  channel: 'antonio@',
+  channel: l.sequence.mailbox === 'hello' ? 'hello@' : 'antonio@',
   total: STEPS.length,
   brand: l.brand,
   domain: l.domain,
