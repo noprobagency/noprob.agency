@@ -117,7 +117,10 @@ if (!cloud && existsSync(damiano.queue)) {
   // nothing is imported: the leads would only wait in review and drain Damiano's stock.
   const helloSupply = contacts.filter((c) => c.readyForCampaign && !inDante(c)).length
   const helloRoom = Math.min(cap, FEED.helloDay)
-  if (helloSupply < helloRoom) {
+  // config.json `helloImport: false` keeps Damiano's leads off hello@ (D-86: hello@ goes to
+  // Ada's startups until 25/11, then leaves Gojiberry); they reach the direct channel instead.
+  const helloImport = (existsSync(DIRECT.config) ? JSON.parse(readFileSync(DIRECT.config, 'utf8')).helloImport : undefined) !== false
+  if (helloImport && helloSupply < helloRoom) {
     for (const r of helloTake(rows, helloSupply + FEED.helloDay - helloRoom)) {
       try {
         if (!dry) await api('POST', '/v1/contact', helloPayload(r, DANTE.list))
