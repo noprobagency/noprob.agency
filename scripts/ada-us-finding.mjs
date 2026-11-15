@@ -35,7 +35,9 @@ function key() {
 }
 
 const KEY = key()
-const leads = JSON.parse(readFileSync(file, 'utf8'))
+// A plain array, or one of Damiano's batches ({ createdAt, market, count, leads })
+const doc = JSON.parse(readFileSync(file, 'utf8'))
+const leads = Array.isArray(doc) ? doc : doc.leads || []
 const suppressed = parseSuppressed(readFileSync('docs/cold/suppressed.txt', 'utf8'))
 const domainOf = (l) => (l.domain || l.website || '').toLowerCase().replace(/^https?:\/\//, '').replace(/^www\./, '').replace(/[/?#].*$/, '')
 const stats = { done: 0, finding: 0, none: 0, shopify: 0, suppressed: 0, unreachable: 0, skipped: 0 }
@@ -61,5 +63,5 @@ for (const lead of leads) {
   else stats.none++
 }
 
-if (!dry) writeFileSync(file, `${JSON.stringify(leads, null, 2)}\n`)
+if (!dry) writeFileSync(file, `${JSON.stringify(doc, null, 2)}\n`)
 console.log(`${dry ? '(dry) ' : ''}leads ${leads.length} · with finding ${stats.finding} · no rule ${stats.none} · Shopify ${stats.shopify} · opt-out ${stats.suppressed} · unreachable ${stats.unreachable} · already done ${stats.skipped} · PageSpeed ${KEY ? 'on' : 'off (HTML rules only)'}`)

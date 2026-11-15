@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.194.0 (15 Nov 2026)
+
+- Ada, US finding: `scripts/ada-us-finding.mjs` also reads Damiano's batch files (`{ createdAt, market, count, leads }`) and writes the batch back whole.
+
 ### Changelog v1.193.0 (15 Nov 2026)
 
 - Ada, US finding: the speed rule needs two PageSpeed runs in a row over 4 s and quotes the lower one (`stableLcp`); otherwise it falls through to image weight, description or H1, which are stable. Rule decided by Claudio after Dante saw the same store at 20 s and then 3 s.
