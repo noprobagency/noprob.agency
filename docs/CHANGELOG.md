@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.200.0 (15 Nov 2026)
+
+- Damiano, Claudio's review of 15/11. An email find is marked tried only once it answers, and people tried by a failed call get another go. The run stops while the treg balance is still over $1. A ready lead needs an address on the store's own domain and no PEC (36 left the Italian queue). The supply gate counts one Italian stock at 55 first emails a day, so Italy runs slow and the spend goes to the US. With `helloImport` false the direct channel keeps no LinkedIn reserve. Duplicates come from `state/gojiberry-domains.json` instead of Gojiberry. The state file is compacted, with no indent and only the platform kept for sites that are not stores. US runs hand Ada a batch in `lotti/` and record it in `usati.json`.
+
 ### Changelog v1.199.0 (15 Nov 2026)
 
 - Ada, US finding: the speed sentence says "to show its main content" instead of "to load its main image", because the largest element on a page is not always an image (Claudio's review).

@@ -33,14 +33,14 @@
 // diretto); Dante's review imports from it when a mailbox runs low.
 
 import { execFile } from 'node:child_process'
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
+import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { promisify } from 'node:util'
 import { normaliseUrl, phpStatus, siteMatchesCompany } from '../lib/cold/detect-platform.mjs'
 import { fetchPlatform, pool } from '../lib/cold/fetch-platform.mjs'
 import { listContacts } from '../lib/cold/gojiberry.mjs'
 import { peopleRows } from '../lib/cold/people-rows.mjs'
-import { reviewYields, SUPPLY, supplyGate } from '../lib/cold/supply-gate.mjs'
+import { reviewYield, SUPPLY, supplyGate } from '../lib/cold/supply-gate.mjs'
 
 const run = promisify(execFile)
 const args = process.argv.slice(2)
@@ -273,7 +273,17 @@ const reachable = (c) => c.status >= 200 && c.status < 400
 const state = existsSync(STATE_FILE)
   ? JSON.parse(readFileSync(STATE_FILE, 'utf8'))
   : { companies: {}, queries: {}, spentMicro: 0, calls: 0 }
-const save = () => writeFileSync(STATE_FILE, JSON.stringify(state, null, 1))
+// Review 15 Nov 2026: the state reached 40 MB. A company that is no store (other, WordPress,
+// Wix, unreachable...) keeps only what stops it being read again; the file has no indent.
+const LIGHT = new Set(['domain', 'name', 'query', 'market', 'sector', 'platform', 'status', 'checkedAt'])
+const compact = () => {
+  for (const [d, c] of Object.entries(state.companies)) {
+    if (!c.platform || c.lead || c.platform === 'shopify' || STORE_PLATFORMS.has(c.platform)) continue
+    for (const k of Object.keys(c)) if (!LIGHT.has(k)) delete c[k]
+    state.companies[d] = c
+  }
+}
+const save = () => writeFileSync(STATE_FILE, JSON.stringify(state))
 if (opt('spend', null) != null) BUDGET_MICRO = state.spentMicro + Number(opt('spend')) * 1e6
 // Up to 6 calls run at once and each can cost ~$0.01: stop that much early so the run
 // ends under the budget, not just past it.
@@ -281,12 +291,28 @@ const IN_FLIGHT_MICRO = 60000
 // A run that reaches neither the target nor the budget still ends and writes its lists,
 // before the workflow's 150 minute limit cuts it off.
 const DEADLINE = Date.now() + Number(opt('minutes', 120)) * 60000
-const over = () => state.spentMicro >= BUDGET_MICRO - IN_FLIGHT_MICRO || Date.now() >= DEADLINE
+// Review 15 Nov 2026: stop while the treg balance is still over $1, instead of running it dry
+// and losing contacts to failed calls. Read once at the start (free); the run's own spend
+// counts down from it.
+const BALANCE_FLOOR_MICRO = Number(opt('balance-floor', 1)) * 1e6
+let balanceStartMicro = Infinity
+if (!EXPORT_ONLY) {
+  try {
+    const { stdout } = await run('treg', ['--json', 'balance'], { timeout: 60000 })
+    balanceStartMicro = JSON.parse(stdout).balance_micro ?? Infinity
+  } catch (err) {
+    console.error(`treg balance not read (${err.message.split('\n')[0]}), budget only`)
+  }
+}
+const RUN_START_MICRO = state.spentMicro
+const spentThisRun = () => state.spentMicro - RUN_START_MICRO
+const lowBalance = () => balanceStartMicro - spentThisRun() <= BALANCE_FLOOR_MICRO + IN_FLIGHT_MICRO
+const over = () => state.spentMicro >= BUDGET_MICRO - IN_FLIGHT_MICRO || Date.now() >= DEADLINE || lowBalance()
 
 // owner: the company a paid call is for, so the spend can be read by sector.
 // force: a sub-cent call (the US speed audit) that may use the reserve kept for calls in flight.
 async function treg(id, body, headers = {}, owner = null, force = false) {
-  if (over() && !(force && state.spentMicro < BUDGET_MICRO)) throw new Error('budget reached')
+  if (over() && !(force && state.spentMicro < BUDGET_MICRO && !lowBalance())) throw new Error('budget reached')
   const h = Object.entries(headers).flatMap(([k, v]) => ['--header', `${k}: ${v}`])
   const { stdout } = await run('treg', ['--json', 'call', id, '--method', 'POST', '--data', JSON.stringify(body), ...h], {
     maxBuffer: 20 * 1024 * 1024,
@@ -462,10 +488,12 @@ async function people(c, { roles = true } = {}) {
   return c.people
 }
 
+// Review 15 Nov 2026: tried only once an answer came back. A failed call (no balance, a
+// timeout) leaves the person to try again next run instead of burning the contact.
 async function findEmail(c, p) {
-  p.tried = true
   const body = { first_name: p.first, last_name: p.last, domain: c.domain, ...(p.linkedin ? { linkedin_url: p.linkedin } : {}) }
   const r = await treg('treg.people.email.find', body, { 'X-Treg-Route-Verify': 'true', 'X-Treg-Route-Max-Cost': '0.05' }, c)
+  p.tried = true
   p.email = r?.output?.email || null
   p.verdict = r?._treg?.verification?.verdict || (p.email ? 'unverified' : 'not_found')
   p.emailBy = r?._treg?.served_by || null
@@ -518,6 +546,8 @@ const contact = (p) => ({ name: p.name, first: p.first, last: p.last, title: p.t
 /** Best verified contact plus a second one: upgrades an older lead when a higher role turns up. */
 async function work(c, { second = true } = {}) {
   const found = await people(c)
+  // Marked tried by a call that failed before 15 Nov 2026 (no verdict): try again.
+  for (const p of found) if (p.tried && p.verdict === undefined) p.tried = false
   if (!fits(c)) return
   if ((await storeCheck(c)).drop) return
   let ranked = found.filter((p) => p.rank != null).sort((a, b) => a.rank - b.rank)
@@ -571,7 +601,15 @@ const known = knownDomains()
 // Their stores and LinkedIn profiles are never handed out again.
 const profileKey = (url) => String(url).toLowerCase().replace(/^https?:\/\/(www\.)?/, '').replace(/\/+$/, '')
 const knownProfiles = new Set()
-try {
+// Review 15 Nov 2026: the CRM keeps the stores of those lists in state/gojiberry-domains.json
+// (Gojiberry closes on 25 Nov), read here instead of calling Gojiberry; the call is the fallback.
+const GJB_FILE = 'cold-email/data/gojiberry-domains.json'
+const gjbFile = existsSync(GJB_FILE) ? JSON.parse(readFileSync(GJB_FILE, 'utf8')) : null
+for (const w of gjbFile?.domains || []) {
+  const host = String(w).toLowerCase().replace(/^(https?:\/+)+/, '').replace(/^www\./, '').split(/[/?#]/)[0]
+  if (host.includes('.')) known.add(host)
+}
+if (!gjbFile) try {
   for (const id of [63200, 64866, 65682, 66757, 64769]) {
     for (const c of await listContacts(id)) {
       if (c.website) {
@@ -603,33 +641,41 @@ const fresh = (d) => !known.has(d)
 const PRIVATE_MAILBOX = /@(gmail|googlemail|hotmail|yahoo|libero|outlook|icloud|tiscali|alice|virgilio|live|msn|email)\./i
 // CBD and cannabis stay out of cold (Claudio, 2 Nov): on Shopify they need a third-party gateway.
 const NOT_COLD = /cbd|cannabi|canapa/i
-const ready = (c) => c.store && !c.store.drop && !NOT_COLD.test(`${c.domain} ${c.name || ''}`) && (US ? !PRIVATE_MAILBOX.test(c.lead.email || '') && (!c.country || c.country === 'US') : INTL || (!PRIVATE_MAILBOX.test(c.lead.email || '') && (!c.country || c.country === 'IT')))
+// Review 15 Nov 2026: no certified mail (PEC), and the address must be on the store's own
+// domain (or a subdomain of it): an address at another company is not this store's lead.
+const PEC = /@([a-z0-9-]+\.)*(pec|legalmail|postacert|arubapec|pecimprese|cert)\.|@pec[a-z0-9-]*\./i
+const onDomain = (c) => {
+  const host = (c.lead.email || '').split('@')[1]?.toLowerCase()
+  const dom = c.domain.toLowerCase()
+  return Boolean(host) && (host === dom || host.endsWith(`.${dom}`))
+}
+const mailOk = (c) => !PEC.test(c.lead.email || '') && (!c.lead.email ? INTL && !US : onDomain(c))
+const ready = (c) => mailOk(c) && c.store && !c.store.drop && !NOT_COLD.test(`${c.domain} ${c.name || ''}`) && (US ? !PRIVATE_MAILBOX.test(c.lead.email || '') && (!c.country || c.country === 'US') : INTL || (!PRIVATE_MAILBOX.test(c.lead.email || '') && (!c.country || c.country === 'IT')))
 // The saved lead is checked against the current ranks: a role Ada stopped taking drops out.
 const candidates = () => Object.values(state.companies).filter((c) => c.lead && (!INTL || rankOf(c.lead.title)) && fits(c) && reachable(c) && fresh(c.domain))
 const leads = () => candidates().filter(ready)
 const isStore = (c) => STORE_PLATFORMS.has(c.platform) && reachable(c) && fresh(c.domain)
 const isShopify = (c) => c.platform === 'shopify' && reachable(c) && fresh(c.domain)
 
+compact()
 // Pass 0: store check on leads found before it existed (free).
 if (!EXPORT_ONLY) await pool(candidates().filter((c) => !c.store), 10, storeCheck)
 
-// D-61: the daily run (--add) pauses at zero spend while both channels have stock.
+// D-61: the daily run (--add) pauses at zero spend while Italy has stock. One stock since
+// 15 Nov 2026: every lead goes to Dante's direct engine, at most 55 first emails a day.
 const readRows = (f) => (existsSync(f) ? JSON.parse(readFileSync(f, 'utf8')).leads || [] : [])
 const checkSupply = () => {
-  const ready = leads()
   const directLeads = readRows('cold-email/data/leads.json')
-  const used = existsSync(USED_FILE) ? JSON.parse(readFileSync(USED_FILE, 'utf8')) : {}
   const gate = supplyGate({
-    hello: ready.filter((c) => c.lead.linkedin).length,
-    direct: ready.filter((c) => !c.lead.linkedin).length,
+    leads: leads().length,
     readyFirst: directLeads.filter((l) => l.segment === 'target' && !l.sequence?.sent?.length && !l.sequence?.stoppedAt).length,
-    yields: reviewYields({ used, danteLeads: readRows('cold-email/data/dante.json'), directLeads }),
+    yield: reviewYield({ directLeads }),
     wasPaused: Boolean(state.supplyPaused),
     limits: { pauseDays: Number(opt('pause-days', SUPPLY.pauseDays)), resumeDays: Number(opt('resume-days', SUPPLY.resumeDays)) },
   })
   state.supplyPaused = gate.paused
   save()
-  console.error(`supply · hello ${gate.helloDays} days · direct ${gate.directDays} days · ${gate.paused ? 'paused, no spend' : 'running'}`)
+  console.error(`supply · ${gate.days} days at ${gate.perDay} a day · ${gate.paused ? 'paused, no spend' : 'running'}`)
   return gate
 }
 const supply = !EXPORT_ONLY && !INTL && opt('add', null) != null ? checkSupply() : null
@@ -654,7 +700,8 @@ if (!EXPORT_ONLY && !supply?.paused) {
       }
       save()
     })
-  const rework = (c) => c.workV !== PEOPLE_VERSION || (!c.lead && c.fitV !== FIT_VERSION && fits(c))
+  const noVerdict = (c) => !c.lead && (c.people || []).some((p) => p.tried && p.verdict === undefined)
+  const rework = (c) => c.workV !== PEOPLE_VERSION || (!c.lead && c.fitV !== FIT_VERSION && fits(c)) || noVerdict(c)
   await pass(Object.keys(state.companies).filter((d) => (isStore(state.companies[d]) || isShopify(state.companies[d])) && rework(state.companies[d])))
   log('existing stores re-worked')
 
@@ -807,6 +854,20 @@ if (!INTL) {
     all.filter((c) => c.lead || c.platform === 'shopify' || (c.people || []).some((p) => p.tried)).map((c) => [c.domain, { sector: sectorOf(c), query: c.query || null }]),
   )
   writeFileSync(join(OUT, 'settori.json'), JSON.stringify(tags, null, 1))
+}
+// US (D-99): every run hands Ada its new ready leads as a batch, lotti/<day>-<n>.json, and
+// records them in usati.json, so no store reaches her twice (the next run skips them).
+if (US && !EXPORT_ONLY && leadRows.length) {
+  const day = new Date().toISOString().slice(0, 10)
+  const dir = join(OUT, 'lotti')
+  mkdirSync(dir, { recursive: true })
+  const n = readdirSync(dir).filter((f) => f.startsWith(day)).length + 1
+  const name = `${day}-${n}`
+  writeFileSync(join(dir, `${name}.json`), JSON.stringify({ createdAt: new Date().toISOString(), for: 'ada', market: 'US', count: leadRows.length, leads: leadRows }, null, 1))
+  const used = existsSync(USED_FILE) ? JSON.parse(readFileSync(USED_FILE, 'utf8')) : {}
+  for (const l of leadRows) used[l.domain] = { channel: 'ada-us', date: day, lotto: name }
+  writeFileSync(USED_FILE, JSON.stringify(used, null, 1))
+  console.error(`batch ${name}: ${leadRows.length} leads for Ada`)
 }
 // The CRM section damiano/ reads data/damiano.json from the crm-noprobagency checkout.
 const crm = opt('crm', null)

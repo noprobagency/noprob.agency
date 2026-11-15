@@ -38,4 +38,7 @@ describe('channel top-up', () => {
     expect(take).toHaveLength(35)
     expect(take.filter((r) => r.linkedin)).toHaveLength(30)
   })
+  it('takes the LinkedIn rows too when hello@ keeps no reserve', () => {
+    expect(directTake(rows(74, 5), 0, 0)).toHaveLength(60)
+  })
 })
