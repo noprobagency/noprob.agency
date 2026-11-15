@@ -12,6 +12,10 @@ old entries, add a new one on top.
 
 - Cold email, Italy v3 first email (D-100), in Antonio's own words. It opens with one fact about the store's homepage from five rules. LCP counts only with two PageSpeed runs over 4 s, and a lead with no fact keeps the v2 email. The fact is measured once and saved on the lead. Follow-ups stay v2 and keep the v3 subject in v3 threads. It stays off until `approvedV3` is set in the CRM config.
 
+### Changelog v1.195.0 (15 Nov 2026)
+
+- Ada, US finding: the speed sentence says "to show its main content" instead of "to load its main image", because the largest element on a page is not always an image (Claudio's review).
+
 ### Changelog v1.194.0 (15 Nov 2026)
 
 - Ada, US finding: `scripts/ada-us-finding.mjs` also reads Damiano's batch files (`{ createdAt, market, count, leads }`) and writes the batch back whole.
