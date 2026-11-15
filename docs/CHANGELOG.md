@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.203.0 (15 Nov 2026)
+
+- Damiano: the US run has the same stock gate as Italy. The stock is the US stores handed to Ada or ready to hand, less those whose first email is out, at 15 first emails a day (`--us-per-day`). A run spends only below 10 days (`--us-days`), so the treg balance lasts until the top-up.
+
 ### Changelog v1.202.0 (15 Nov 2026)
 
 - CRM registry: `scripts/crm-registry.mjs` runs again (the local `stepsOf` clashed with the imported one, renamed `gjbStepsOf`) and tags Damiano's leads as `damiano` on antonio@ (`source`), on hello@ and in Ada's list (note "Lotto Damiano" or "fonte: Damiano") instead of `crm-v2` or the Gojiberry agent.
