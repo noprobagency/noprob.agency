@@ -218,7 +218,7 @@ if (approved.it || approved.us) {
       }
       if (lead.dato) v3 = renderV3First(lead, lead.dato)
     }
-    const { subject, body } = v3 || render(lead, step.key)
+    const { subject, body } = v3 || render(lead, step.key, { v3: config.approvedV3 === V3_VERSION })
     if (dry) {
       console.log(`[dry] ${m.email.split('@')[0]}@ ${step.key} -> ${lead.email} · ${subject}`)
       if (v3) stats.v3++
