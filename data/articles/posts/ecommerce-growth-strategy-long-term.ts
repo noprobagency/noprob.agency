@@ -219,7 +219,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: "The platform is the literal foundation. Changing it every 2-3 years is the fastest way to reset years of optimization. The rule I give my clients: pick a serious platform (for structured B2C, Shopify remains the most rational choice) and don't change it for at least 5 years.",
+      text: "**The platform is the literal foundation.** Changing it every 2-3 years is the fastest way to reset years of optimization. The rule I give my clients: pick a serious platform (for structured B2C, Shopify remains the most rational choice) and don't change it for at least 5 years.",
     },
     {
       type: 'paragraph',
@@ -235,7 +235,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: "You can't optimize what you don't measure. And most eCommerce stores have partial or broken tracking, especially after iOS 14 and tighter browser privacy rules.",
+      text: "**You can't optimize what you don't measure.** And most eCommerce stores have partial or broken tracking, especially after iOS 14 and tighter browser privacy rules.",
     },
     {
       type: 'paragraph',
@@ -251,7 +251,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: "Your team can be in-house or external, as long as the people stay the same for years. A media buyer who has run your ads for 3 years knows the campaign angles, the audiences that work, the peak periods for your audience. A new media buyer starts from zero and costs you 3-6 months of ramp-up.",
+      text: "**Your team can be in-house or external, as long as the people stay the same for years.** A media buyer who has run your ads for 3 years knows the campaign angles, the audiences that work, the peak periods for your audience. A new media buyer starts from zero and costs you 3-6 months of ramp-up.",
     },
     {
       type: 'paragraph',
@@ -263,7 +263,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Every quarter founders are bombarded with new industry "must-haves": new social channel, new automation platform, new growth framework. Most are distractions.',
+      text: '**Every quarter founders are bombarded with new industry "must-haves": new social channel, new automation platform, new growth framework.** Most are distractions.',
     },
     {
       type: 'paragraph',
@@ -318,7 +318,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'No, because "keeping the strategy" does not mean "not changing anything". It means keeping the foundations stable (platform, core team, processes) and iterating on top continuously. Competitors who change everything every quarter are burning energy, not building competitive advantage.',
+      text: '**No, because "keeping the strategy" does not mean "not changing anything".** It means keeping the foundations stable (platform, core team, processes) and iterating on top continuously. Competitors who change everything every quarter are burning energy, not building competitive advantage.',
     },
     {
       type: 'h3',
@@ -326,7 +326,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: "The first measurable improvements arrive in 3-6 months on tactical KPIs like conversion rate, AOV, and retention. Structural results on total revenue require 12-18 months. It's slower than viral tricks, but it compounds: each month that passes the advantage grows, it does not reset.",
+      text: "**The first measurable improvements arrive in 3-6 months on tactical KPIs like conversion rate, AOV, and retention.** Structural results on total revenue require 12-18 months. It's slower than viral tricks, but it compounds: each month that passes the advantage grows, it does not reset.",
     },
     {
       type: 'h3',
@@ -334,7 +334,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: "Make this list: in the last 12 months, how many times did you change core team members, platform, ad strategy, tracking setup, agency? If you changed more than 2 things, you're paying a cost you probably don't see on the P&L but that exists.",
+      text: "**Make this list: in the last 12 months, how many times did you change core team members, platform, ad strategy, tracking setup, agency?** If you changed more than 2 things, you're paying a cost you probably don't see on the P&L but that exists.",
     },
     {
       type: 'h3',
@@ -350,7 +350,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'In the short term it seems to cost the same. In the long term it costs much less. Continuous changes generate recurring costs of onboarding, ramp-up, and knowledge loss that you never see aggregated on the balance sheet. Keeping a stable team costs less and produces better results.',
+      text: '**In the short term it seems to cost the same.** In the long term it costs much less. Continuous changes generate recurring costs of onboarding, ramp-up, and knowledge loss that you never see aggregated on the balance sheet. Keeping a stable team costs less and produces better results.',
     },
     {
       type: 'h2',
@@ -358,7 +358,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Sustainable eCommerce growth is boring. No growth hack changes the game: it takes a stable team, a stable platform, stable processes, and continuous optimization on top.',
+      text: '**Sustainable eCommerce growth is boring.** No growth hack changes the game: it takes a stable team, a stable platform, stable processes, and continuous optimization on top.',
     },
     {
       type: 'paragraph',
@@ -583,7 +583,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'La piattaforma è la fondamenta letterale. Cambiarla ogni 2-3 anni è il modo più rapido per resettare anni di ottimizzazione. La regola che do ai miei clienti: scegli una piattaforma seria (per i B2C strutturati Shopify rimane la scelta più razionale) e non cambiarla per almeno 5 anni.',
+      text: '**La piattaforma è la fondamenta letterale.** Cambiarla ogni 2-3 anni è il modo più rapido per resettare anni di ottimizzazione. La regola che do ai miei clienti: scegli una piattaforma seria (per i B2C strutturati Shopify rimane la scelta più razionale) e non cambiarla per almeno 5 anni.',
     },
     {
       type: 'paragraph',
@@ -599,7 +599,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Non puoi ottimizzare ciò che non misuri. E la maggior parte degli eCommerce ha tracking parziale o rotto, soprattutto dopo iOS 14 e le regole sulla privacy dei browser sempre più strette.',
+      text: '**Non puoi ottimizzare ciò che non misuri.** E la maggior parte degli eCommerce ha tracking parziale o rotto, soprattutto dopo iOS 14 e le regole sulla privacy dei browser sempre più strette.',
     },
     {
       type: 'paragraph',
@@ -615,7 +615,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Il tuo team può essere dipendente o esterno, purché le persone restino le stesse per anni. Una media buyer che gestisce le tue ads da 3 anni conosce tagli di campagna, audience che funzionano, periodi caldi del tuo target. Una nuova media buyer parte da zero e ti costa 3-6 mesi di ramp-up.',
+      text: '**Il tuo team può essere dipendente o esterno, purché le persone restino le stesse per anni.** Una media buyer che gestisce le tue ads da 3 anni conosce tagli di campagna, audience che funzionano, periodi caldi del tuo target. Una nuova media buyer parte da zero e ti costa 3-6 mesi di ramp-up.',
     },
     {
       type: 'paragraph',
@@ -627,7 +627,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Ogni trimestre i founder vengono bombardati da nuove "must-have" del settore: nuovo canale social, nuova piattaforma di automation, nuovo framework di growth. Per la maggior parte sono distrazioni.',
+      text: '**Ogni trimestre i founder vengono bombardati da nuove "must-have" del settore: nuovo canale social, nuova piattaforma di automation, nuovo framework di growth.** Per la maggior parte sono distrazioni.',
     },
     {
       type: 'paragraph',
@@ -682,7 +682,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'No, perché "mantenere la strategia" non significa "non cambiare nulla". Significa mantenere stabili le fondamenta (piattaforma, team core, processi) e iterare sopra in modo continuo. I competitor che cambiano tutto ogni trimestre stanno bruciando energia, non costruendo vantaggio competitivo.',
+      text: '**No, perché "mantenere la strategia" non significa "non cambiare nulla".** Significa mantenere stabili le fondamenta (piattaforma, team core, processi) e iterare sopra in modo continuo. I competitor che cambiano tutto ogni trimestre stanno bruciando energia, non costruendo vantaggio competitivo.',
     },
     {
       type: 'h3',
@@ -690,7 +690,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'I primi miglioramenti misurabili arrivano in 3-6 mesi sui KPI tattici come conversion rate, AOV e retention. I risultati strutturali sul fatturato totale richiedono 12-18 mesi. È più lento dei trucchi virali, ma è composto: ogni mese che passa il vantaggio cresce, non si resetta.',
+      text: '**I primi miglioramenti misurabili arrivano in 3-6 mesi sui KPI tattici come conversion rate, AOV e retention.** I risultati strutturali sul fatturato totale richiedono 12-18 mesi. È più lento dei trucchi virali, ma è composto: ogni mese che passa il vantaggio cresce, non si resetta.',
     },
     {
       type: 'h3',
@@ -698,7 +698,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Fai questa lista: negli ultimi 12 mesi, quante volte hai cambiato membri del team core, piattaforma, strategia ads, setup di tracciamento, agenzia? Se hai cambiato più di 2 cose, stai pagando un costo che probabilmente non vedi nel P&L ma che esiste.',
+      text: '**Fai questa lista: negli ultimi 12 mesi, quante volte hai cambiato membri del team core, piattaforma, strategia ads, setup di tracciamento, agenzia?** Se hai cambiato più di 2 cose, stai pagando un costo che probabilmente non vedi nel P&L ma che esiste.',
     },
     {
       type: 'h3',
@@ -714,7 +714,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Nel breve sembra costare uguale. Nel lungo costa molto meno. I cambi continui generano costi ricorrenti di onboarding, ramp-up e perdita di know-how che non vedi mai aggregati nel bilancio. Mantenere un team stabile costa meno e produce risultati migliori.',
+      text: '**Nel breve sembra costare uguale.** Nel lungo costa molto meno. I cambi continui generano costi ricorrenti di onboarding, ramp-up e perdita di know-how che non vedi mai aggregati nel bilancio. Mantenere un team stabile costa meno e produce risultati migliori.',
     },
     {
       type: 'h2',
@@ -722,7 +722,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: "La crescita eCommerce sostenibile è noiosa. Nessun growth hack cambia il gioco: servono un team stabile, una piattaforma stabile, processi stabili e un'ottimizzazione continua sopra.",
+      text: "**La crescita eCommerce sostenibile è noiosa.** Nessun growth hack cambia il gioco: servono un team stabile, una piattaforma stabile, processi stabili e un'ottimizzazione continua sopra.",
     },
     {
       type: 'paragraph',

@@ -100,7 +100,7 @@ const article: Article = {
   content: [
     {
       type: 'paragraph',
-      text: '**Shopify 301 redirects send visitors and Google from an old URL to its new address, and on a migration you load hundreds of them at once from a CSV with two columns: Redirect from and Redirect to.** The file takes minutes to import. The map behind it is where the work is. This guide gives you the five steps we use to build that map, the limits Shopify enforces, the checks to run after go-live and a [free CSV template](/downloads/shopify-301-redirect-map-template.csv) in Shopify’s import format.',
+      text: 'Shopify 301 redirects send visitors and Google from an old URL to its new address, and on a migration you load hundreds of them at once from a CSV with two columns: Redirect from and Redirect to. The file takes minutes to import. The map behind it is where the work is. This guide gives you the five steps we use to build that map, the limits Shopify enforces, the checks to run after go-live and a [free CSV template](/downloads/shopify-301-redirect-map-template.csv) in Shopify’s import format.',
     },
     {
       type: 'paragraph',
@@ -116,7 +116,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '**The Shopify import file is a CSV with two headers, Redirect from and Redirect to, and one redirect per row.** Shopify’s sample file, linked from its [URL redirects help page](https://help.shopify.com/en/manual/online-store/menus-and-links/url-redirect), has exactly those two headers and one example row that sends /example_product.php to /products/example-product. The examples on the page use paths that start with a slash, and the help page says to use a relative URL for your primary domain and a full URL only for external destinations.',
+      text: 'The Shopify import file is a CSV with two headers, Redirect from and Redirect to, and one redirect per row. Shopify’s sample file, linked from its [URL redirects help page](https://help.shopify.com/en/manual/online-store/menus-and-links/url-redirect), has exactly those two headers and one example row that sends /example_product.php to /products/example-product. The examples on the page use paths that start with a slash, and the help page says to use a relative URL for your primary domain and a full URL only for external destinations.',
     },
     {
       type: 'paragraph',
@@ -125,12 +125,12 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**Old URL** and **new URL**: the two columns that become the import file.',
-        '**Page type:** product, category, page, post, brand, other.',
-        '**Source:** where you found the URL (sitemap, Search Console, crawl, backlinks, archive).',
-        '**Traffic or links:** why the row matters, so you know where to look twice.',
-        '**Decision:** keep, merge or retire.',
-        '**Checked:** the date and who checked it.',
+        'Old URL and new URL: the two columns that become the import file.',
+        'Page type: product, category, page, post, brand, other.',
+        'Source: where you found the URL (sitemap, Search Console, crawl, backlinks, archive).',
+        'Traffic or links: why the row matters, so you know where to look twice.',
+        'Decision: keep, merge or retire.',
+        'Checked: the date and who checked it.',
       ],
     },
     { type: 'h2', text: 'How do you build the redirect map in five steps?' },
@@ -144,7 +144,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'The sitemap shows what the old store wanted Google to see; Google remembers more. So you combine sources, remove duplicates and keep the source in a column.',
+      text: '**The sitemap shows what the old store wanted Google to see; Google remembers more.** So you combine sources, remove duplicates and keep the source in a column.',
     },
     {
       type: 'list',
@@ -188,16 +188,16 @@ const article: Article = {
     { type: 'h3', text: 'Step 3: Decide the cases with no equivalent' },
     {
       type: 'paragraph',
-      text: '**When an old page has no twin on the new store, send it to the closest page that serves the same visitor, and if no such page exists, let it return 404.** Google warns that sending many old URLs to one irrelevant destination, such as the home page, can confuse users and may be treated as a soft 404. These are the calls I recommend:',
+      text: 'When an old page has no twin on the new store, send it to the closest page that serves the same visitor, and if no such page exists, let it return 404. Google warns that sending many old URLs to one irrelevant destination, such as the home page, can confuse users and may be treated as a soft 404. These are the calls I recommend:',
     },
     {
       type: 'list',
       items: [
-        '**Discontinued product:** the collection it lived in, or a replacement only if it solves the same need.',
-        '**Two categories merged:** the surviving collection.',
-        '**Tag, filter, pagination, author and attachment pages:** the nearest collection if they have links or traffic, otherwise no row.',
-        '**Old campaign pages:** the page that carries the offer today, or no row.',
-        '**Pages you retire on purpose:** no row. A 404 is an honest answer, and writing "retire" in the Decision column keeps it a decision instead of an omission.',
+        'Discontinued product: the collection it lived in, or a replacement only if it solves the same need.',
+        'Two categories merged: the surviving collection.',
+        'Tag, filter, pagination, author and attachment pages: the nearest collection if they have links or traffic, otherwise no row.',
+        'Old campaign pages: the page that carries the offer today, or no row.',
+        'Pages you retire on purpose: no row. A 404 is an honest answer, and writing "retire" in the Decision column keeps it a decision instead of an omission.',
       ],
     },
     { type: 'h3', text: 'Step 4: Import the file in Shopify' },
@@ -279,13 +279,13 @@ const article: Article = {
     { type: 'h2', text: 'What did this look like on a real migration?' },
     {
       type: 'paragraph',
-      text: 'On Nazzi, a WooCommerce store, we checked 215 archived URLs against the new store after go-live and delivered the CSV of 301 redirects, ready to import in Shopify ([case study](/use-cases/integratori-nazzi-dtc-shopify)). The map was not finished when the file was imported: testing the old addresses one by one is a separate job from building it, and it is what makes the list of redirects reliable.',
+      text: '**On Nazzi, a WooCommerce store, we checked 215 archived URLs against the new store after go-live and delivered the CSV of 301 redirects, ready to import in Shopify ([case study](/use-cases/integratori-nazzi-dtc-shopify)).** The map was not finished when the file was imported: testing the old addresses one by one is a separate job from building it, and it is what makes the list of redirects reliable.',
     },
     { type: 'h2', text: 'Frequently asked questions' },
     { type: 'h3', text: 'What does a 301 redirect do on Shopify?' },
     {
       type: 'paragraph',
-      text: 'A 301 redirect is a permanent redirect: it sends visitors and search engines from an old URL to a new one and says the move is for good. Google recommends permanent server-side redirects when URLs change, with one destination for each old URL. In Shopify you create them under Content > Menus > View URL Redirects.',
+      text: '**A 301 redirect is a permanent redirect: it sends visitors and search engines from an old URL to a new one and says the move is for good.** Google recommends permanent server-side redirects when URLs change, with one destination for each old URL. In Shopify you create them under Content > Menus > View URL Redirects.',
     },
     {
       type: 'h3',
@@ -293,12 +293,12 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Prepare a CSV with the headers Redirect from and Redirect to and one redirect per row. Then open View URL Redirects, click Import, add the file, upload it, review the import and click Import redirects. Our [free template](/downloads/shopify-301-redirect-map-template.csv) is already in this format.',
+      text: '**Prepare a CSV with the headers Redirect from and Redirect to and one redirect per row.** Then open View URL Redirects, click Import, add the file, upload it, review the import and click Import redirects. Our [free template](/downloads/shopify-301-redirect-map-template.csv) is already in this format.',
     },
     { type: 'h3', text: 'Why are my Shopify redirects not working?' },
     {
       type: 'paragraph',
-      text: 'The most common cause is that the old URL still loads a valid page: Shopify only redirects from broken URLs. Other causes are a reserved path such as /cart or /shop, a fixed path such as /collections, a query string in the source URL, or a browser that cached an earlier 301. Test in a private window and check the row for these cases.',
+      text: '**The most common cause is that the old URL still loads a valid page: Shopify only redirects from broken URLs.** Other causes are a reserved path such as /cart or /shop, a fixed path such as /collections, a query string in the source URL, or a browser that cached an earlier 301. Test in a private window and check the row for these cases.',
     },
     {
       type: 'h3',
@@ -311,12 +311,12 @@ const article: Article = {
     { type: 'h3', text: 'How long should I keep 301 redirects?' },
     {
       type: 'paragraph',
-      text: 'Google’s guide says to keep them for as long as possible, generally at least one year. From a visitor’s point of view you can keep them indefinitely, so my advice is never to delete a redirect that still receives clicks.',
+      text: '**Google’s guide says to keep them for as long as possible, generally at least one year.** From a visitor’s point of view you can keep them indefinitely, so my advice is never to delete a redirect that still receives clicks.',
     },
     { type: 'h3', text: 'Can an AI agent build the redirect map?' },
     {
       type: 'paragraph',
-      text: 'It can propose most of the rows, especially the ambiguous ones, but it should not approve them. Rules and scripts handle the clean patterns, the agent suggests targets from a closed list of real URLs, and a separate review plus a human sample decide what is imported.',
+      text: '**It can propose most of the rows, especially the ambiguous ones, but it should not approve them.** Rules and scripts handle the clean patterns, the agent suggests targets from a closed list of real URLs, and a separate review plus a human sample decide what is imported.',
     },
     {
       type: 'paragraph',
@@ -326,7 +326,7 @@ const article: Article = {
   contentIt: [
     {
       type: 'paragraph',
-      text: '**I redirect 301 su Shopify mandano visitatori e Google da un vecchio URL al nuovo indirizzo, e in una migrazione se ne caricano centinaia in una volta da un CSV con due colonne: Redirect from e Redirect to.** Il file si importa in minuti. Il lavoro vero è la mappa che c’è dietro. Questa guida ti dà i cinque passi che usiamo per costruirla, i limiti che Shopify impone, i controlli da fare dopo il go-live e un [template CSV gratuito](/downloads/mappa-redirect-301-shopify-template.csv) nel formato di importazione di Shopify.',
+      text: 'I redirect 301 su Shopify mandano visitatori e Google da un vecchio URL al nuovo indirizzo, e in una migrazione se ne caricano centinaia in una volta da un CSV con due colonne: Redirect from e Redirect to. Il file si importa in minuti. Il lavoro vero è la mappa che c’è dietro. Questa guida ti dà i cinque passi che usiamo per costruirla, i limiti che Shopify impone, i controlli da fare dopo il go-live e un [template CSV gratuito](/downloads/mappa-redirect-301-shopify-template.csv) nel formato di importazione di Shopify.',
     },
     {
       type: 'paragraph',
@@ -342,7 +342,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '**Il file di importazione di Shopify è un CSV con due intestazioni, Redirect from e Redirect to, e un redirect per riga.** Il file di esempio di Shopify, collegato dalla sua [pagina di aiuto sui redirect URL](https://help.shopify.com/en/manual/online-store/menus-and-links/url-redirect), ha esattamente quelle due intestazioni e una riga d’esempio che manda /example_product.php su /products/example-product. Gli esempi della pagina usano percorsi che iniziano con la barra, e la pagina dice di usare un URL relativo per il dominio principale e un URL completo solo per le destinazioni esterne.',
+      text: 'Il file di importazione di Shopify è un CSV con due intestazioni, Redirect from e Redirect to, e un redirect per riga. Il file di esempio di Shopify, collegato dalla sua [pagina di aiuto sui redirect URL](https://help.shopify.com/en/manual/online-store/menus-and-links/url-redirect), ha esattamente quelle due intestazioni e una riga d’esempio che manda /example_product.php su /products/example-product. Gli esempi della pagina usano percorsi che iniziano con la barra, e la pagina dice di usare un URL relativo per il dominio principale e un URL completo solo per le destinazioni esterne.',
     },
     {
       type: 'paragraph',
@@ -351,12 +351,12 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**Vecchio URL** e **nuovo URL**: le due colonne che diventano il file di importazione.',
-        '**Tipo di pagina:** prodotto, categoria, pagina, articolo, marchio, altro.',
-        '**Fonte:** dove hai trovato l’URL (sitemap, Search Console, crawl, backlink, archivio).',
-        '**Traffico o link:** perché la riga conta, così sai dove guardare due volte.',
-        '**Decisione:** tieni, unisci o ritira.',
-        '**Controllato:** la data e chi ha controllato.',
+        'Vecchio URL e nuovo URL: le due colonne che diventano il file di importazione.',
+        'Tipo di pagina: prodotto, categoria, pagina, articolo, marchio, altro.',
+        'Fonte: dove hai trovato l’URL (sitemap, Search Console, crawl, backlink, archivio).',
+        'Traffico o link: perché la riga conta, così sai dove guardare due volte.',
+        'Decisione: tieni, unisci o ritira.',
+        'Controllato: la data e chi ha controllato.',
       ],
     },
     {
@@ -373,7 +373,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'La sitemap mostra ciò che il vecchio store voleva far vedere a Google; Google ricorda di più. Quindi si combinano le fonti, si tolgono i doppioni e si tiene la fonte in una colonna.',
+      text: '**La sitemap mostra ciò che il vecchio store voleva far vedere a Google; Google ricorda di più.** Quindi si combinano le fonti, si tolgono i doppioni e si tiene la fonte in una colonna.',
     },
     {
       type: 'list',
@@ -417,16 +417,16 @@ const article: Article = {
     { type: 'h3', text: 'Passo 3: decidi i casi senza equivalente' },
     {
       type: 'paragraph',
-      text: '**Quando una vecchia pagina non ha un gemello sul nuovo store, mandala alla pagina più vicina che serve lo stesso visitatore, e se non esiste lascia che risponda 404.** Google avverte che mandare molti vecchi URL a un’unica destinazione non pertinente, come la home page, può confondere gli utenti e può essere trattato come soft 404. Queste sono le scelte che ti consiglio:',
+      text: 'Quando una vecchia pagina non ha un gemello sul nuovo store, mandala alla pagina più vicina che serve lo stesso visitatore, e se non esiste lascia che risponda 404. Google avverte che mandare molti vecchi URL a un’unica destinazione non pertinente, come la home page, può confondere gli utenti e può essere trattato come soft 404. Queste sono le scelte che ti consiglio:',
     },
     {
       type: 'list',
       items: [
-        '**Prodotto fuori produzione:** la collezione in cui stava, o un sostituto solo se risponde allo stesso bisogno.',
-        '**Due categorie unite:** la collezione che resta.',
-        '**Pagine di tag, filtri, paginazione, autore e allegati:** la collezione più vicina se hanno link o traffico, altrimenti nessuna riga.',
-        '**Vecchie pagine di campagna:** la pagina che oggi porta l’offerta, oppure nessuna riga.',
-        '**Pagine che ritiri apposta:** nessuna riga. Un 404 è una risposta onesta, e scrivere "ritira" nella colonna Decisione lo tiene una decisione e non una dimenticanza.',
+        'Prodotto fuori produzione: la collezione in cui stava, o un sostituto solo se risponde allo stesso bisogno.',
+        'Due categorie unite: la collezione che resta.',
+        'Pagine di tag, filtri, paginazione, autore e allegati: la collezione più vicina se hanno link o traffico, altrimenti nessuna riga.',
+        'Vecchie pagine di campagna: la pagina che oggi porta l’offerta, oppure nessuna riga.',
+        'Pagine che ritiri apposta: nessuna riga. Un 404 è una risposta onesta, e scrivere "ritira" nella colonna Decisione lo tiene una decisione e non una dimenticanza.',
       ],
     },
     { type: 'h3', text: 'Passo 4: importa il file in Shopify' },
@@ -508,23 +508,23 @@ const article: Article = {
     { type: 'h2', text: 'Come è andata in una migrazione vera?' },
     {
       type: 'paragraph',
-      text: 'Su Nazzi, uno store WooCommerce, abbiamo controllato 215 URL archiviati sul nuovo store dopo il go-live e consegnato il CSV dei redirect 301, pronto da importare in Shopify ([caso studio](/it/casi-studio/integratori-nazzi-dtc-shopify)). La mappa non era finita quando il file è stato importato: collaudare i vecchi indirizzi uno per uno è un lavoro separato dal costruirla, ed è ciò che rende affidabile l’elenco dei redirect.',
+      text: '**Su Nazzi, uno store WooCommerce, abbiamo controllato 215 URL archiviati sul nuovo store dopo il go-live e consegnato il CSV dei redirect 301, pronto da importare in Shopify ([caso studio](/it/casi-studio/integratori-nazzi-dtc-shopify)).** La mappa non era finita quando il file è stato importato: collaudare i vecchi indirizzi uno per uno è un lavoro separato dal costruirla, ed è ciò che rende affidabile l’elenco dei redirect.',
     },
     { type: 'h2', text: 'Domande frequenti' },
     { type: 'h3', text: 'A cosa serve un redirect 301 su Shopify?' },
     {
       type: 'paragraph',
-      text: 'Un redirect 301 è un reindirizzamento permanente: manda visitatori e motori di ricerca da un vecchio URL a uno nuovo e dice che lo spostamento è definitivo. Google consiglia redirect permanenti lato server quando gli URL cambiano, con una destinazione per ogni vecchio URL. In Shopify si creano in Content > Menus > View URL Redirects.',
+      text: '**Un redirect 301 è un reindirizzamento permanente: manda visitatori e motori di ricerca da un vecchio URL a uno nuovo e dice che lo spostamento è definitivo.** Google consiglia redirect permanenti lato server quando gli URL cambiano, con una destinazione per ogni vecchio URL. In Shopify si creano in Content > Menus > View URL Redirects.',
     },
     { type: 'h3', text: 'Come importo i redirect 301 su Shopify con un CSV?' },
     {
       type: 'paragraph',
-      text: 'Prepara un CSV con le intestazioni Redirect from e Redirect to e un redirect per riga. Poi apri View URL Redirects, clicca Import, aggiungi il file, caricalo, controlla l’importazione e clicca Import redirects. Il nostro [template gratuito](/downloads/mappa-redirect-301-shopify-template.csv) è già in questo formato.',
+      text: '**Prepara un CSV con le intestazioni Redirect from e Redirect to e un redirect per riga.** Poi apri View URL Redirects, clicca Import, aggiungi il file, caricalo, controlla l’importazione e clicca Import redirects. Il nostro [template gratuito](/downloads/mappa-redirect-301-shopify-template.csv) è già in questo formato.',
     },
     { type: 'h3', text: 'Perché i miei redirect su Shopify non funzionano?' },
     {
       type: 'paragraph',
-      text: 'La causa più comune è che il vecchio URL carica ancora una pagina valida: Shopify reindirizza solo da URL rotti. Le altre sono un percorso riservato come /cart o /shop, un percorso fisso come /collections, una query string nell’URL di partenza o un browser che ha in cache un 301 precedente. Prova in una finestra privata e controlla la riga per questi casi.',
+      text: '**La causa più comune è che il vecchio URL carica ancora una pagina valida: Shopify reindirizza solo da URL rotti.** Le altre sono un percorso riservato come /cart o /shop, un percorso fisso come /collections, una query string nell’URL di partenza o un browser che ha in cache un 301 precedente. Prova in una finestra privata e controlla la riga per questi casi.',
     },
     {
       type: 'h3',
@@ -537,12 +537,12 @@ const article: Article = {
     { type: 'h3', text: 'Per quanto tempo vanno tenuti i redirect 301?' },
     {
       type: 'paragraph',
-      text: 'La guida di Google dice di tenerli il più a lungo possibile, in genere almeno un anno. Dal punto di vista del visitatore si possono tenere per sempre, quindi il mio consiglio è di non cancellare mai un redirect che riceve ancora clic.',
+      text: '**La guida di Google dice di tenerli il più a lungo possibile, in genere almeno un anno.** Dal punto di vista del visitatore si possono tenere per sempre, quindi il mio consiglio è di non cancellare mai un redirect che riceve ancora clic.',
     },
     { type: 'h3', text: 'Un agente AI può costruire la mappa dei redirect?' },
     {
       type: 'paragraph',
-      text: 'Può proporre la maggior parte delle righe, soprattutto quelle ambigue, ma non deve approvarle. Regole e script gestiscono gli schemi puliti, l’agente suggerisce le destinazioni da un elenco chiuso di URL veri, e una revisione separata più un campione controllato da una persona decidono cosa si importa.',
+      text: '**Può proporre la maggior parte delle righe, soprattutto quelle ambigue, ma non deve approvarle.** Regole e script gestiscono gli schemi puliti, l’agente suggerisce le destinazioni da un elenco chiuso di URL veri, e una revisione separata più un campione controllato da una persona decidono cosa si importa.',
     },
     {
       type: 'paragraph',

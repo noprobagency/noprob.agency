@@ -130,7 +130,7 @@ const article: Article = {
   content: [
     {
       type: 'paragraph',
-      text: '**ChatGPT shopping** lets people ask ChatGPT what to buy and get product results with prices, images and merchants. If you run a Shopify store, your products can show up there without you building anything, because Shopify passes eligible products to ChatGPT through its Shopify Catalog. That is how you sell on ChatGPT with Shopify. The rest of this guide covers what happens behind it and what you control.',
+      text: 'ChatGPT shopping lets people ask ChatGPT what to buy and get product results with prices, images and merchants. If you run a Shopify store, your products can show up there without you building anything, because Shopify passes eligible products to ChatGPT through its Shopify Catalog. That is how you sell on ChatGPT with Shopify. The rest of this guide covers what happens behind it and what you control.',
     },
     {
       type: 'paragraph',
@@ -172,9 +172,9 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**Nothing to switch on or off.** The route Shopify describes sends the shopper to your checkout, in ChatGPT’s in-app browser; on desktop ChatGPT links out to your store in a new tab. Your payment methods, pricing logic and checkout customizations carry over ([Shopify](https://www.shopify.com/news/agentic-commerce-momentum)).',
-        '**The checkout spec is documented but not open to everyone.** OpenAI’s developer documentation still describes the checkout flow, and says onboarding product feeds in ChatGPT is currently available to approved partners ([OpenAI](https://developers.openai.com/commerce/guides/get-started)).',
-        '**More control means an app.** Merchants who want a deeper integration can build a custom app inside ChatGPT; CNBC reports that Walmart launched one that day, with account linking and Walmart payments.',
+        'Nothing to switch on or off. The route Shopify describes sends the shopper to your checkout, in ChatGPT’s in-app browser; on desktop ChatGPT links out to your store in a new tab. Your payment methods, pricing logic and checkout customizations carry over ([Shopify](https://www.shopify.com/news/agentic-commerce-momentum)).',
+        'The checkout spec is documented but not open to everyone. OpenAI’s developer documentation still describes the checkout flow, and says onboarding product feeds in ChatGPT is currently available to approved partners ([OpenAI](https://developers.openai.com/commerce/guides/get-started)).',
+        'More control means an app. Merchants who want a deeper integration can build a custom app inside ChatGPT; CNBC reports that Walmart launched one that day, with account linking and Walmart payments.',
       ],
     },
     { type: 'h2', text: 'How does the Agentic Commerce Protocol (ACP) work?' },
@@ -192,7 +192,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '**What is an ACP payment?** A payment where the agent never holds the card number: it passes a single-use token, scoped in Stripe’s version to a specific merchant and cart ([Stripe](https://stripe.com/newsroom/news/stripe-openai-instant-checkout)). The merchant stays the merchant of record, and refunds and chargebacks stay with the merchant ([OpenAI](https://developers.openai.com/commerce/guides/production)). The specification is open source under the Apache License 2.0 ([agenticcommerce.dev](https://www.agenticcommerce.dev)), in beta, and the latest released version on [GitHub](https://github.com/agentic-commerce-protocol/agentic-commerce-protocol) is 2026-04-17. On Shopify you implement none of it: Catalog and your own checkout take its place. How ACP compares with the Universal Commerce Protocol that Google and Shopify built is in [agentic commerce on Shopify](/blog/agentic-commerce-shopify).',
+      text: 'What is an ACP payment? A payment where the agent never holds the card number: it passes a single-use token, scoped in Stripe’s version to a specific merchant and cart ([Stripe](https://stripe.com/newsroom/news/stripe-openai-instant-checkout)). The merchant stays the merchant of record, and refunds and chargebacks stay with the merchant ([OpenAI](https://developers.openai.com/commerce/guides/production)). The specification is open source under the Apache License 2.0 ([agenticcommerce.dev](https://www.agenticcommerce.dev)), in beta, and the latest released version on [GitHub](https://github.com/agentic-commerce-protocol/agentic-commerce-protocol) is 2026-04-17. On Shopify you implement none of it: Catalog and your own checkout take its place. How ACP compares with the Universal Commerce Protocol that Google and Shopify built is in [agentic commerce on Shopify](/blog/agentic-commerce-shopify).',
     },
     { type: 'h2', text: 'How do products from a Shopify store get into ChatGPT?' },
     {
@@ -236,32 +236,32 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '**Titles and descriptions.** Write the title the way a person asks for the product: type, brand, the attribute that matters. Describe in plain sentences what it is, who it is for, what it is made of and how it is used.',
+      text: 'Titles and descriptions. Write the title the way a person asks for the product: type, brand, the attribute that matters. Describe in plain sentences what it is, who it is for, what it is made of and how it is used.',
     },
     {
       type: 'paragraph',
-      text: '**Attributes and variants.** Shopify Catalog infers categories, extracts attributes and consolidates variants, and lets you group by standard attributes and metafields. OpenAI’s [product feed specification](https://developers.openai.com/commerce/specs/file-upload/products) shows what an AI shopping system expects: brand, GTIN, MPN, color, size, material, gender, age group, dimensions, weight, condition. Fill the ones that apply, and never invent a GTIN.',
+      text: 'Attributes and variants. Shopify Catalog infers categories, extracts attributes and consolidates variants, and lets you group by standard attributes and metafields. OpenAI’s [product feed specification](https://developers.openai.com/commerce/specs/file-upload/products) shows what an AI shopping system expects: brand, GTIN, MPN, color, size, material, gender, age group, dimensions, weight, condition. Fill the ones that apply, and never invent a GTIN.',
     },
     {
       type: 'paragraph',
-      text: '**Images.** One image is the minimum. Add a clean main shot, then context and detail, with alt text that says what is shown.',
+      text: 'Images. One image is the minimum. Add a clean main shot, then context and detail, with alt text that says what is shown.',
     },
     {
       type: 'paragraph',
-      text: '**Price and availability.** Both can weigh on which merchant is listed first (see above), so they must be true. Shopify keeps prices and inventory current across agents, but only from what is in your admin. If stock comes from an ERP, the sync is the real source of truth.',
+      text: 'Price and availability. Both can weigh on which merchant is listed first (see above), so they must be true. Shopify keeps prices and inventory current across agents, but only from what is in your admin. If stock comes from an ERP, the sync is the real source of truth.',
     },
     {
       type: 'paragraph',
-      text: '**Reviews and policies.** OpenAI’s feed lists review count, star rating and return policy as recommended fields. Collect real reviews, show them on the product page, and publish shipping, returns, privacy and terms.',
+      text: 'Reviews and policies. OpenAI’s feed lists review count, star rating and return policy as recommended fields. Collect real reviews, show them on the product page, and publish shipping, returns, privacy and terms.',
     },
     {
       type: 'paragraph',
-      text: '**Structured data.** Keep Product markup (price, availability, brand, identifiers, ratings) correct, following [Google Search Central](https://developers.google.com/search/docs/appearance/structured-data/product). None of the OpenAI or Shopify pages we read says ChatGPT reads your JSON-LD. We keep it right because Google reads it, and the visible page, the catalog and the markup must say the same thing. On AI answers in general, see [GEO for Shopify](/blog/geo-for-shopify).',
+      text: 'Structured data. Keep Product markup (price, availability, brand, identifiers, ratings) correct, following [Google Search Central](https://developers.google.com/search/docs/appearance/structured-data/product). None of the OpenAI or Shopify pages we read says ChatGPT reads your JSON-LD. We keep it right because Google reads it, and the visible page, the catalog and the markup must say the same thing. On AI answers in general, see [GEO for Shopify](/blog/geo-for-shopify).',
     },
     { type: 'h2', text: 'Which OpenAI crawlers should your robots.txt allow?' },
     {
       type: 'paragraph',
-      text: 'For shopping visibility, keep OAI-SearchBot allowed, because it is the bot that surfaces sites in ChatGPT search, and treat GPTBot, which is about training, as a separate decision. The robots.txt rules, bot by bot, are in [GEO for Shopify](/blog/geo-for-shopify), and how GEO differs from SEO in [GEO vs SEO](/blog/geo-vs-seo).',
+      text: '**For shopping visibility, keep OAI-SearchBot allowed, because it is the bot that surfaces sites in ChatGPT search, and treat GPTBot, which is about training, as a separate decision.** The robots.txt rules, bot by bot, are in [GEO for Shopify](/blog/geo-for-shopify), and how GEO differs from SEO in [GEO vs SEO](/blog/geo-vs-seo).',
     },
     { type: 'h2', text: 'How do you check whether your products appear in ChatGPT?' },
     {
@@ -279,17 +279,17 @@ const article: Article = {
     { type: 'h2', text: 'What do shoppers ask ChatGPT before they pay?' },
     {
       type: 'paragraph',
-      text: '**Can ChatGPT make purchases? On a Shopify store, ChatGPT helps the shopper choose and sends them to your checkout to pay, so the questions asked before paying decide whether the shopper clicks.** Some retailers go further with an app inside ChatGPT: Walmart’s supports account linking and Walmart payments ([CNBC](https://www.cnbc.com/2026/03/24/openai-revamps-shopping-experience-in-chatgpt-after-instant-checkout.html)). Each question has a place in your store where the answer must live:',
+      text: '**Can ChatGPT make purchases?** On a Shopify store, ChatGPT helps the shopper choose and sends them to your checkout to pay, so the questions asked before paying decide whether the shopper clicks. Some retailers go further with an app inside ChatGPT: Walmart’s supports account linking and Walmart payments ([CNBC](https://www.cnbc.com/2026/03/24/openai-revamps-shopping-experience-in-chatgpt-after-instant-checkout.html)). Each question has a place in your store where the answer must live:',
     },
     {
       type: 'list',
       items: [
-        '**“Does it ship to me, and what does it cost?”** Shipping destinations and rates, on a real page and in the knowledge base.',
-        '**“Can I return it?”** Return window, return shipping and refund method, on a real page and in the knowledge base.',
-        '**“Is it in stock in my size?”** Availability at variant level, in sync with your ERP or warehouse system.',
-        '**“What is it made of?”** Material, ingredients and compatibility as structured fields.',
-        '**“Is the price final?”** The same price in catalog, page and checkout, with tax and shipping visible before payment.',
-        '**“Can I trust this store?”** Real reviews, contact details and published policies.',
+        '“Does it ship to me, and what does it cost?” Shipping destinations and rates, on a real page and in the knowledge base.',
+        '“Can I return it?” Return window, return shipping and refund method, on a real page and in the knowledge base.',
+        '“Is it in stock in my size?” Availability at variant level, in sync with your ERP or warehouse system.',
+        '“What is it made of?” Material, ingredients and compatibility as structured fields.',
+        '“Is the price final?” The same price in catalog, page and checkout, with tax and shipping visible before payment.',
+        '“Can I trust this store?” Real reviews, contact details and published policies.',
       ],
     },
     {
@@ -300,18 +300,18 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**Check eligibility.** Sales channels, then Agentic: the Fall ’26 Edition of 28 October 2026 added a view that shows whether your store qualifies for Catalog, with links to fixes ([Shopify](https://www.shopify.com/news/fall-26-edition-merchant)).',
-        '**Publish the facts agents ask about.** In the knowledge base on the same page, review return windows, shipping destinations and gift services. Shopify drafts them, and nothing reaches an agent without your sign-off.',
-        '**Fix the product data** as in the section above: titles, attributes, variants, images, price, availability.',
-        '**Walk the purchase as a shopper.** Open your product from a ChatGPT result and go through checkout up to the payment step, on mobile and desktop.',
-        '**Keep OAI-SearchBot allowed** in robots.txt, and measure with AI channel attribution in the admin orders and referrals from chatgpt.com.',
-        '**Skip** a separate product feed, an Instant Checkout integration, and anyone selling a ChatGPT ranking.',
+        'Check eligibility. Sales channels, then Agentic: the Fall ’26 Edition of 28 October 2026 added a view that shows whether your store qualifies for Catalog, with links to fixes ([Shopify](https://www.shopify.com/news/fall-26-edition-merchant)).',
+        'Publish the facts agents ask about. In the knowledge base on the same page, review return windows, shipping destinations and gift services. Shopify drafts them, and nothing reaches an agent without your sign-off.',
+        'Fix the product data as in the section above: titles, attributes, variants, images, price, availability.',
+        'Walk the purchase as a shopper. Open your product from a ChatGPT result and go through checkout up to the payment step, on mobile and desktop.',
+        'Keep OAI-SearchBot allowed in robots.txt, and measure with AI channel attribution in the admin orders and referrals from chatgpt.com.',
+        'Skip a separate product feed, an Instant Checkout integration, and anyone selling a ChatGPT ranking.',
       ],
     },
     { type: 'h2', text: 'What do we do in the Sprint to get a store ready for AI agents?' },
     {
       type: 'paragraph',
-      text: 'A shopping assistant can only repeat what your store hands it. In the [Shopify Launch Sprint](/shopify-migration-sprint) the Custom AI System rebuilds your store so that it hands over clean product data, with prices and availability that match what the product page says. The wider readiness plan is in [agentic commerce for Shopify](/blog/agentic-commerce-shopify).',
+      text: '**A shopping assistant can only repeat what your store hands it.** In the [Shopify Launch Sprint](/shopify-migration-sprint) the Custom AI System rebuilds your store so that it hands over clean product data, with prices and availability that match what the product page says. The wider readiness plan is in [agentic commerce for Shopify](/blog/agentic-commerce-shopify).',
     },
     {
       type: 'paragraph',
@@ -328,19 +328,19 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '**Do not pay for a promised ChatGPT ranking.** Shopify says inclusion is no guarantee and each channel decides its own ranking, so nobody has a ranking to sell you.',
+      text: 'Do not pay for a promised ChatGPT ranking. Shopify says inclusion is no guarantee and each channel decides its own ranking, so nobody has a ranking to sell you.',
     },
     {
       type: 'paragraph',
-      text: '**Your checkout decides what the traffic is worth.** If the shopper lands on your store, your conversion rate sets the value. That is why the [CRO guide](/blog/shopify-cro-guide) matters as much as the catalog. For AI inside your own admin, see [Shopify Magic and Sidekick](/blog/shopify-magic-sidekick) and [AI for ecommerce](/blog/ai-for-ecommerce).',
+      text: 'Your checkout decides what the traffic is worth. If the shopper lands on your store, your conversion rate sets the value. That is why the [CRO guide](/blog/shopify-cro-guide) matters as much as the catalog. For AI inside your own admin, see [Shopify Magic and Sidekick](/blog/shopify-magic-sidekick) and [AI for ecommerce](/blog/ai-for-ecommerce).',
     },
     {
       type: 'paragraph',
-      text: '**ChatGPT also works the other way round.** Shopify connectors now let you manage products, inventory and orders from [nine agents, ChatGPT and Claude among them](https://www.shopify.com/news/fall-26-edition-merchant): a different job from selling to shoppers, covered in [Claude and Claude Code on Shopify](/blog/claude-shopify), [Shopify MCP explained](/blog/shopify-mcp) and [AI agents for Shopify](/blog/ai-agents-for-shopify).',
+      text: 'ChatGPT also works the other way round. Shopify connectors now let you manage products, inventory and orders from [nine agents, ChatGPT and Claude among them](https://www.shopify.com/news/fall-26-edition-merchant): a different job from selling to shoppers, covered in [Claude and Claude Code on Shopify](/blog/claude-shopify), [Shopify MCP explained](/blog/shopify-mcp) and [AI agents for Shopify](/blog/ai-agents-for-shopify).',
     },
     {
       type: 'paragraph',
-      text: '**Do not build a ChatGPT integration yourself.** OpenAI’s own feed onboarding is limited to approved partners, and on Shopify the connection is already made. Fix the data and wait.',
+      text: 'Do not build a ChatGPT integration yourself. OpenAI’s own feed onboarding is limited to approved partners, and on Shopify the connection is already made. Fix the data and wait.',
     },
     { type: 'h2', text: 'What to watch next as of October 2026' },
     {
@@ -360,42 +360,42 @@ const article: Article = {
     { type: 'h3', text: 'Can I sell on ChatGPT with Shopify?' },
     {
       type: 'paragraph',
-      text: 'Yes, through Shopify Catalog if your store and products are eligible. As of October 2026 shoppers buy on your own checkout ([Shopify Help Center](https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts)), it is [live for merchants that sell to US buyers](https://www.shopify.com/blog/how-agentic-commerce-works), and appearing is not guaranteed.',
+      text: '**Yes, through Shopify Catalog if your store and products are eligible.** As of October 2026 shoppers buy on your own checkout ([Shopify Help Center](https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts)), it is [live for merchants that sell to US buyers](https://www.shopify.com/blog/how-agentic-commerce-works), and appearing is not guaranteed.',
     },
     { type: 'h3', text: 'What happened to ChatGPT Instant Checkout?' },
     {
       type: 'paragraph',
-      text: 'On [24 March 2026](https://www.cnbc.com/2026/03/24/openai-revamps-shopping-experience-in-chatgpt-after-instant-checkout.html) OpenAI stepped back from the first version of Instant Checkout, the feature for paying inside ChatGPT. It now lets merchants use their own checkout and focuses on product discovery. For Shopify stores, ChatGPT sends the shopper to your checkout in an in-app browser ([Shopify](https://www.shopify.com/news/agentic-commerce-momentum)).',
+      text: '**On [24 March 2026](https://www.cnbc.com/2026/03/24/openai-revamps-shopping-experience-in-chatgpt-after-instant-checkout.html) OpenAI stepped back from the first version of Instant Checkout, the feature for paying inside ChatGPT.** It now lets merchants use their own checkout and focuses on product discovery. For Shopify stores, ChatGPT sends the shopper to your checkout in an in-app browser ([Shopify](https://www.shopify.com/news/agentic-commerce-momentum)).',
     },
     { type: 'h3', text: 'What is the Agentic Commerce Protocol (ACP)?' },
     {
       type: 'paragraph',
-      text: 'ACP is an open standard, maintained by OpenAI and Stripe, that lets an AI agent such as ChatGPT run a checkout on a merchant’s own systems through a product feed, a checkout session and a delegated payment token. On Shopify you do not implement it, because Catalog and your own checkout take its place.',
+      text: '**ACP is an open standard, maintained by OpenAI and Stripe, that lets an AI agent such as ChatGPT run a checkout on a merchant’s own systems through a product feed, a checkout session and a delegated payment token.** On Shopify you do not implement it, because Catalog and your own checkout take its place.',
     },
     { type: 'h3', text: 'Does selling through ChatGPT cost extra on Shopify?' },
     {
       type: 'paragraph',
-      text: 'Shopify says selling to ChatGPT users through Agentic Storefronts has [no transaction fees beyond standard processing rates](https://www.shopify.com/news/agentic-commerce-momentum) (announcement of 24 March 2026). Earlier press coverage of a fee on ChatGPT checkout sales came before that announcement. Read the supplemental terms you accept.',
+      text: '**Shopify says selling to ChatGPT users through Agentic Storefronts has [no transaction fees beyond standard processing rates](https://www.shopify.com/news/agentic-commerce-momentum) (announcement of 24 March 2026).** Earlier press coverage of a fee on ChatGPT checkout sales came before that announcement. Read the supplemental terms you accept.',
     },
     { type: 'h3', text: 'Do I need to build a product feed for ChatGPT?' },
     {
       type: 'paragraph',
-      text: 'Not on Shopify: Shopify Catalog does it. OpenAI’s direct feed is limited to approved partners.',
+      text: '**Not on Shopify: Shopify Catalog does it.** OpenAI’s direct feed is limited to approved partners.',
     },
     { type: 'h3', text: 'Should I block GPTBot in robots.txt?' },
     {
       type: 'paragraph',
-      text: 'GPTBot is about training. You can disallow it and still allow OAI-SearchBot, which helps sites appear in ChatGPT search.',
+      text: '**GPTBot is about training.** You can disallow it and still allow OAI-SearchBot, which helps sites appear in ChatGPT search.',
     },
     { type: 'h3', text: 'How do I know whether ChatGPT shows my products?' },
     {
       type: 'paragraph',
-      text: 'Use the Shopify admin, ask ChatGPT your customers’ questions and watch referrals from chatgpt.com. One answer is not a ranking.',
+      text: '**Use the Shopify admin, ask ChatGPT your customers’ questions and watch referrals from chatgpt.com.** One answer is not a ranking.',
     },
     { type: 'h3', text: 'Can ChatGPT make purchases?' },
     {
       type: 'paragraph',
-      text: 'On a Shopify store, ChatGPT helps the shopper choose and sends them to your checkout to pay. Some retailers add an app inside ChatGPT with their own payments.',
+      text: '**On a Shopify store, ChatGPT helps the shopper choose and sends them to your checkout to pay.** Some retailers add an app inside ChatGPT with their own payments.',
     },
     { type: 'h3', text: 'Which guarantees does the Shopify Launch Sprint include?' },
     {
@@ -405,7 +405,7 @@ const article: Article = {
     { type: 'h2', text: 'A final note' },
     {
       type: 'paragraph',
-      text: 'We update this page when OpenAI or Shopify change what they say. Last checked on 29 October 2026.',
+      text: '**We update this page when OpenAI or Shopify change what they say.** Last checked on 29 October 2026.',
     },
     {
       type: 'paragraph',
@@ -419,7 +419,7 @@ const article: Article = {
   contentIt: [
     {
       type: 'paragraph',
-      text: 'Il **ChatGPT shopping** permette di chiedere a ChatGPT cosa comprare e ricevere prodotti con prezzi, immagini e venditori. Se hai uno store Shopify, i tuoi prodotti possono comparire senza che tu costruisca nulla, perché Shopify passa i prodotti idonei a ChatGPT tramite Shopify Catalog. Questo è come vendere su ChatGPT con Shopify. Il resto della guida spiega cosa succede dietro le quinte e cosa controlli tu.',
+      text: 'Il ChatGPT shopping permette di chiedere a ChatGPT cosa comprare e ricevere prodotti con prezzi, immagini e venditori. Se hai uno store Shopify, i tuoi prodotti possono comparire senza che tu costruisca nulla, perché Shopify passa i prodotti idonei a ChatGPT tramite Shopify Catalog. Questo è come vendere su ChatGPT con Shopify. Il resto della guida spiega cosa succede dietro le quinte e cosa controlli tu.',
     },
     {
       type: 'paragraph',
@@ -461,9 +461,9 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**Niente da attivare o disattivare.** Il percorso descritto da Shopify manda il cliente al tuo checkout, nel browser interno di ChatGPT; su desktop ChatGPT rimanda al tuo store in una nuova scheda. Metodi di pagamento, logiche di prezzo e personalizzazioni del checkout restano ([Shopify](https://www.shopify.com/news/agentic-commerce-momentum)).',
-        '**La specifica di checkout è documentata ma non aperta a tutti.** La documentazione per sviluppatori di OpenAI descrive ancora il flusso di checkout e dice che l’onboarding dei feed prodotti in ChatGPT è per ora disponibile ai partner approvati ([OpenAI](https://developers.openai.com/commerce/guides/get-started)).',
-        '**Più controllo significa un’app.** Chi vuole un’integrazione più profonda può costruire un’app dentro ChatGPT; CNBC riporta che Walmart ne ha lanciata una quel giorno, con collegamento account e pagamenti Walmart.',
+        'Niente da attivare o disattivare. Il percorso descritto da Shopify manda il cliente al tuo checkout, nel browser interno di ChatGPT; su desktop ChatGPT rimanda al tuo store in una nuova scheda. Metodi di pagamento, logiche di prezzo e personalizzazioni del checkout restano ([Shopify](https://www.shopify.com/news/agentic-commerce-momentum)).',
+        'La specifica di checkout è documentata ma non aperta a tutti. La documentazione per sviluppatori di OpenAI descrive ancora il flusso di checkout e dice che l’onboarding dei feed prodotti in ChatGPT è per ora disponibile ai partner approvati ([OpenAI](https://developers.openai.com/commerce/guides/get-started)).',
+        'Più controllo significa un’app. Chi vuole un’integrazione più profonda può costruire un’app dentro ChatGPT; CNBC riporta che Walmart ne ha lanciata una quel giorno, con collegamento account e pagamenti Walmart.',
       ],
     },
     { type: 'h2', text: 'Come funziona l’Agentic Commerce Protocol (ACP)?' },
@@ -481,7 +481,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '**Cos’è un pagamento ACP?** Un pagamento in cui l’agente non ha mai il numero della carta: passa un token monouso, che nella versione di Stripe vale per un merchant e un carrello specifici ([Stripe](https://stripe.com/newsroom/news/stripe-openai-instant-checkout)). Il merchant resta il merchant of record, e rimborsi e chargeback restano suoi ([OpenAI](https://developers.openai.com/commerce/guides/production)). La specifica è open source con licenza Apache 2.0 ([agenticcommerce.dev](https://www.agenticcommerce.dev)), in beta, e l’ultima versione rilasciata su [GitHub](https://github.com/agentic-commerce-protocol/agentic-commerce-protocol) è la 2026-04-17. Su Shopify non implementi nulla: al suo posto ci sono Catalog e il tuo checkout. Il confronto con l’Universal Commerce Protocol costruito da Google e Shopify è in [agentic commerce su Shopify](/it/blog/agentic-commerce-shopify).',
+      text: 'Cos’è un pagamento ACP? Un pagamento in cui l’agente non ha mai il numero della carta: passa un token monouso, che nella versione di Stripe vale per un merchant e un carrello specifici ([Stripe](https://stripe.com/newsroom/news/stripe-openai-instant-checkout)). Il merchant resta il merchant of record, e rimborsi e chargeback restano suoi ([OpenAI](https://developers.openai.com/commerce/guides/production)). La specifica è open source con licenza Apache 2.0 ([agenticcommerce.dev](https://www.agenticcommerce.dev)), in beta, e l’ultima versione rilasciata su [GitHub](https://github.com/agentic-commerce-protocol/agentic-commerce-protocol) è la 2026-04-17. Su Shopify non implementi nulla: al suo posto ci sono Catalog e il tuo checkout. Il confronto con l’Universal Commerce Protocol costruito da Google e Shopify è in [agentic commerce su Shopify](/it/blog/agentic-commerce-shopify).',
     },
     { type: 'h2', text: 'Come arrivano i prodotti di uno store Shopify su ChatGPT?' },
     {
@@ -525,32 +525,32 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '**Titoli e descrizioni.** Scrivi il titolo come una persona chiede il prodotto: tipo, marca, attributo che conta. Descrivi in frasi semplici cos’è, a chi serve, di cosa è fatto e come si usa.',
+      text: 'Titoli e descrizioni. Scrivi il titolo come una persona chiede il prodotto: tipo, marca, attributo che conta. Descrivi in frasi semplici cos’è, a chi serve, di cosa è fatto e come si usa.',
     },
     {
       type: 'paragraph',
-      text: '**Attributi e varianti.** Shopify Catalog deduce le categorie, estrae gli attributi, unisce le varianti e ti lascia raggruppare per attributi standard e metafield. La [specifica del feed prodotti di OpenAI](https://developers.openai.com/commerce/specs/file-upload/products) mostra cosa si aspetta un sistema di acquisto AI: marca, GTIN, MPN, colore, taglia, materiale, genere, fascia d’età, dimensioni, peso, condizione. Compila quelli che servono e non inventare mai un GTIN.',
+      text: 'Attributi e varianti. Shopify Catalog deduce le categorie, estrae gli attributi, unisce le varianti e ti lascia raggruppare per attributi standard e metafield. La [specifica del feed prodotti di OpenAI](https://developers.openai.com/commerce/specs/file-upload/products) mostra cosa si aspetta un sistema di acquisto AI: marca, GTIN, MPN, colore, taglia, materiale, genere, fascia d’età, dimensioni, peso, condizione. Compila quelli che servono e non inventare mai un GTIN.',
     },
     {
       type: 'paragraph',
-      text: '**Immagini.** Una è il minimo. Aggiungi una foto principale pulita, poi contesto e dettaglio, con un testo alternativo che dice cosa si vede.',
+      text: 'Immagini. Una è il minimo. Aggiungi una foto principale pulita, poi contesto e dettaglio, con un testo alternativo che dice cosa si vede.',
     },
     {
       type: 'paragraph',
-      text: '**Prezzo e disponibilità.** Entrambi possono pesare su quale venditore compare per primo (vedi sopra), quindi devono essere veri. Shopify tiene aggiornati prezzi e giacenze sugli agenti, ma solo partendo da ciò che c’è nel tuo admin. Se le giacenze arrivano da un gestionale, la sincronizzazione è la vera fonte.',
+      text: 'Prezzo e disponibilità. Entrambi possono pesare su quale venditore compare per primo (vedi sopra), quindi devono essere veri. Shopify tiene aggiornati prezzi e giacenze sugli agenti, ma solo partendo da ciò che c’è nel tuo admin. Se le giacenze arrivano da un gestionale, la sincronizzazione è la vera fonte.',
     },
     {
       type: 'paragraph',
-      text: '**Recensioni e policy.** Il feed OpenAI indica numero di recensioni, valutazione e politica di reso tra i campi consigliati. Raccogli recensioni vere, mostrale nella scheda prodotto e pubblica spedizioni, resi, privacy e termini.',
+      text: 'Recensioni e policy. Il feed OpenAI indica numero di recensioni, valutazione e politica di reso tra i campi consigliati. Raccogli recensioni vere, mostrale nella scheda prodotto e pubblica spedizioni, resi, privacy e termini.',
     },
     {
       type: 'paragraph',
-      text: '**Dati strutturati.** Tieni corretto il markup Product (prezzo, disponibilità, marca, identificativi, valutazioni) seguendo [Google Search Central](https://developers.google.com/search/docs/appearance/structured-data/product). Nessuna pagina OpenAI o Shopify che abbiamo letto dice che ChatGPT legge il tuo JSON-LD. Lo teniamo giusto perché lo legge Google, e pagina, catalogo e markup devono dire la stessa cosa. Sulle risposte AI in generale c’è la guida alla [GEO per Shopify](/it/blog/geo-seo-shopify).',
+      text: 'Dati strutturati. Tieni corretto il markup Product (prezzo, disponibilità, marca, identificativi, valutazioni) seguendo [Google Search Central](https://developers.google.com/search/docs/appearance/structured-data/product). Nessuna pagina OpenAI o Shopify che abbiamo letto dice che ChatGPT legge il tuo JSON-LD. Lo teniamo giusto perché lo legge Google, e pagina, catalogo e markup devono dire la stessa cosa. Sulle risposte AI in generale c’è la guida alla [GEO per Shopify](/it/blog/geo-seo-shopify).',
     },
     { type: 'h2', text: 'Quali crawler OpenAI deve consentire il tuo robots.txt?' },
     {
       type: 'paragraph',
-      text: 'Per la visibilità negli acquisti, tieni consentito OAI-SearchBot, perché è il bot che fa comparire i siti nella ricerca di ChatGPT, e tratta GPTBot, che riguarda l’addestramento, come una decisione separata. Le regole del robots.txt, bot per bot, sono nella guida alla [GEO per Shopify](/it/blog/geo-seo-shopify), e la differenza tra GEO e SEO in [GEO vs SEO](/it/blog/geo-vs-seo).',
+      text: '**Per la visibilità negli acquisti, tieni consentito OAI-SearchBot, perché è il bot che fa comparire i siti nella ricerca di ChatGPT, e tratta GPTBot, che riguarda l’addestramento, come una decisione separata.** Le regole del robots.txt, bot per bot, sono nella guida alla [GEO per Shopify](/it/blog/geo-seo-shopify), e la differenza tra GEO e SEO in [GEO vs SEO](/it/blog/geo-vs-seo).',
     },
     { type: 'h2', text: 'Come verifichi se i tuoi prodotti compaiono su ChatGPT?' },
     {
@@ -568,17 +568,17 @@ const article: Article = {
     { type: 'h2', text: 'Cosa chiedono i clienti a ChatGPT prima di pagare?' },
     {
       type: 'paragraph',
-      text: '**ChatGPT può fare acquisti? In uno store Shopify, ChatGPT aiuta chi compra a scegliere e lo manda al tuo checkout per pagare, quindi sono le domande che si fanno prima di pagare a decidere se il cliente clicca.** Alcuni rivenditori vanno oltre con un’app dentro ChatGPT: quella di Walmart supporta collegamento account e pagamenti Walmart ([CNBC](https://www.cnbc.com/2026/03/24/openai-revamps-shopping-experience-in-chatgpt-after-instant-checkout.html)). Ogni domanda ha un posto nello store in cui la risposta deve stare:',
+      text: '**ChatGPT può fare acquisti?** In uno store Shopify, ChatGPT aiuta chi compra a scegliere e lo manda al tuo checkout per pagare, quindi sono le domande che si fanno prima di pagare a decidere se il cliente clicca. Alcuni rivenditori vanno oltre con un’app dentro ChatGPT: quella di Walmart supporta collegamento account e pagamenti Walmart ([CNBC](https://www.cnbc.com/2026/03/24/openai-revamps-shopping-experience-in-chatgpt-after-instant-checkout.html)). Ogni domanda ha un posto nello store in cui la risposta deve stare:',
     },
     {
       type: 'list',
       items: [
-        '**“Spedisce da me e quanto costa?”** Destinazioni e tariffe di spedizione, in una pagina vera e nella knowledge base.',
-        '**“Posso rendere?”** Periodo di reso, spedizione di ritorno e metodo di rimborso, in una pagina vera e nella knowledge base.',
-        '**“È disponibile nella mia taglia?”** Disponibilità a livello di variante, allineata al gestionale o al magazzino.',
-        '**“Di cosa è fatto?”** Materiale, ingredienti e compatibilità come campi strutturati.',
-        '**“Il prezzo è quello finale?”** Lo stesso prezzo in catalogo, pagina e checkout, con tasse e spedizione visibili prima del pagamento.',
-        '**“Mi posso fidare di questo store?”** Recensioni vere, contatti e policy pubblicate.',
+        '“Spedisce da me e quanto costa?” Destinazioni e tariffe di spedizione, in una pagina vera e nella knowledge base.',
+        '“Posso rendere?” Periodo di reso, spedizione di ritorno e metodo di rimborso, in una pagina vera e nella knowledge base.',
+        '“È disponibile nella mia taglia?” Disponibilità a livello di variante, allineata al gestionale o al magazzino.',
+        '“Di cosa è fatto?” Materiale, ingredienti e compatibilità come campi strutturati.',
+        '“Il prezzo è quello finale?” Lo stesso prezzo in catalogo, pagina e checkout, con tasse e spedizione visibili prima del pagamento.',
+        '“Mi posso fidare di questo store?” Recensioni vere, contatti e policy pubblicate.',
       ],
     },
     {
@@ -589,18 +589,18 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**Controlla l’idoneità.** Canali di vendita, poi Agentic: la Fall ’26 Edition del 28 ottobre 2026 ha aggiunto una vista che mostra se il tuo store è idoneo a Catalog, con i link alle correzioni ([Shopify](https://www.shopify.com/news/fall-26-edition-merchant)).',
-        '**Pubblica i fatti che chiedono gli agenti.** Nella knowledge base della stessa pagina rivedi periodo di reso, paesi di spedizione e servizi regalo. Li bozza Shopify, e nulla arriva a un agente senza la tua approvazione.',
-        '**Sistema i dati prodotto** come nella sezione qui sopra: titoli, attributi, varianti, immagini, prezzo, disponibilità.',
-        '**Percorri l’acquisto come un cliente.** Apri il tuo prodotto da un risultato di ChatGPT e arriva fino al passaggio del pagamento, da mobile e da desktop.',
-        '**Tieni consentito OAI-SearchBot** nel robots.txt, e misura con l’attribuzione del canale AI negli ordini dell’admin e i referral da chatgpt.com.',
-        '**Salta** un feed prodotti separato, un’integrazione di Instant Checkout e chiunque venda una posizione su ChatGPT.',
+        'Controlla l’idoneità. Canali di vendita, poi Agentic: la Fall ’26 Edition del 28 ottobre 2026 ha aggiunto una vista che mostra se il tuo store è idoneo a Catalog, con i link alle correzioni ([Shopify](https://www.shopify.com/news/fall-26-edition-merchant)).',
+        'Pubblica i fatti che chiedono gli agenti. Nella knowledge base della stessa pagina rivedi periodo di reso, paesi di spedizione e servizi regalo. Li bozza Shopify, e nulla arriva a un agente senza la tua approvazione.',
+        'Sistema i dati prodotto come nella sezione qui sopra: titoli, attributi, varianti, immagini, prezzo, disponibilità.',
+        'Percorri l’acquisto come un cliente. Apri il tuo prodotto da un risultato di ChatGPT e arriva fino al passaggio del pagamento, da mobile e da desktop.',
+        'Tieni consentito OAI-SearchBot nel robots.txt, e misura con l’attribuzione del canale AI negli ordini dell’admin e i referral da chatgpt.com.',
+        'Salta un feed prodotti separato, un’integrazione di Instant Checkout e chiunque venda una posizione su ChatGPT.',
       ],
     },
     { type: 'h2', text: 'Cosa facciamo nello Sprint per preparare lo store agli agenti AI?' },
     {
       type: 'paragraph',
-      text: 'Un assistente di acquisto può ripetere solo ciò che il tuo store gli consegna. Nello [Shopify Launch Sprint](/it/sprint-migrazione-shopify) il Custom AI System ricostruisce il tuo store perché consegni dati prodotto puliti, con prezzi e disponibilità coerenti con quanto dice la scheda prodotto. Il piano di preparazione più ampio è in [agentic commerce per Shopify](/it/blog/agentic-commerce-shopify).',
+      text: '**Un assistente di acquisto può ripetere solo ciò che il tuo store gli consegna.** Nello [Shopify Launch Sprint](/it/sprint-migrazione-shopify) il Custom AI System ricostruisce il tuo store perché consegni dati prodotto puliti, con prezzi e disponibilità coerenti con quanto dice la scheda prodotto. Il piano di preparazione più ampio è in [agentic commerce per Shopify](/it/blog/agentic-commerce-shopify).',
     },
     {
       type: 'paragraph',
@@ -617,19 +617,19 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '**Non pagare chi promette una posizione su ChatGPT.** Shopify dice che l’inclusione non è una garanzia e che ogni canale decide da sé l’ordine, quindi nessuno ha una posizione da venderti.',
+      text: 'Non pagare chi promette una posizione su ChatGPT. Shopify dice che l’inclusione non è una garanzia e che ogni canale decide da sé l’ordine, quindi nessuno ha una posizione da venderti.',
     },
     {
       type: 'paragraph',
-      text: '**Il tuo checkout decide quanto vale il traffico.** Se il cliente arriva sul tuo store, conta il tasso di conversione. Per questo la [guida al CRO](/it/blog/cro-ecommerce) conta quanto il catalogo. Per l’AI dentro il tuo admin vedi [Shopify Magic e Sidekick](/it/blog/shopify-magic-sidekick) e [AI per eCommerce](/it/blog/ai-per-ecommerce).',
+      text: 'Il tuo checkout decide quanto vale il traffico. Se il cliente arriva sul tuo store, conta il tasso di conversione. Per questo la [guida al CRO](/it/blog/cro-ecommerce) conta quanto il catalogo. Per l’AI dentro il tuo admin vedi [Shopify Magic e Sidekick](/it/blog/shopify-magic-sidekick) e [AI per eCommerce](/it/blog/ai-per-ecommerce).',
     },
     {
       type: 'paragraph',
-      text: '**ChatGPT funziona anche al contrario.** I connettori Shopify ora ti fanno gestire prodotti, giacenze e ordini da [nove agenti, tra cui ChatGPT e Claude](https://www.shopify.com/news/fall-26-edition-merchant): un lavoro diverso dal vendere a chi compra, che trovi in [Claude e Claude Code su Shopify](/it/blog/claude-shopify), [Shopify MCP spiegato](/it/blog/shopify-mcp) e [Agenti AI per Shopify](/it/blog/agenti-ai-shopify).',
+      text: 'ChatGPT funziona anche al contrario. I connettori Shopify ora ti fanno gestire prodotti, giacenze e ordini da [nove agenti, tra cui ChatGPT e Claude](https://www.shopify.com/news/fall-26-edition-merchant): un lavoro diverso dal vendere a chi compra, che trovi in [Claude e Claude Code su Shopify](/it/blog/claude-shopify), [Shopify MCP spiegato](/it/blog/shopify-mcp) e [Agenti AI per Shopify](/it/blog/agenti-ai-shopify).',
     },
     {
       type: 'paragraph',
-      text: '**Non costruirti da solo un’integrazione con ChatGPT.** L’onboarding dei feed di OpenAI è limitato ai partner approvati e su Shopify il collegamento c’è già. Sistema i dati e aspetta.',
+      text: 'Non costruirti da solo un’integrazione con ChatGPT. L’onboarding dei feed di OpenAI è limitato ai partner approvati e su Shopify il collegamento c’è già. Sistema i dati e aspetta.',
     },
     { type: 'h2', text: 'Cosa tenere d’occhio a ottobre 2026' },
     {
@@ -649,17 +649,17 @@ const article: Article = {
     { type: 'h3', text: 'Posso vendere su ChatGPT con Shopify?' },
     {
       type: 'paragraph',
-      text: 'Sì, tramite Shopify Catalog, se store e prodotti sono idonei. A ottobre 2026 il cliente compra nel tuo checkout ([Centro assistenza Shopify](https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts)), è [attivo per i merchant che vendono a clienti statunitensi](https://www.shopify.com/blog/how-agentic-commerce-works) e comparire non è garantito.',
+      text: '**Sì, tramite Shopify Catalog, se store e prodotti sono idonei.** A ottobre 2026 il cliente compra nel tuo checkout ([Centro assistenza Shopify](https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts)), è [attivo per i merchant che vendono a clienti statunitensi](https://www.shopify.com/blog/how-agentic-commerce-works) e comparire non è garantito.',
     },
     { type: 'h3', text: 'Cosa è successo a ChatGPT Instant Checkout?' },
     {
       type: 'paragraph',
-      text: 'Il [24 marzo 2026](https://www.cnbc.com/2026/03/24/openai-revamps-shopping-experience-in-chatgpt-after-instant-checkout.html) OpenAI ha fatto un passo indietro sulla prima versione di Instant Checkout, la funzione per pagare dentro ChatGPT. Ora lascia ai merchant il proprio checkout e si concentra sulla scoperta dei prodotti. Per gli store Shopify, ChatGPT manda il cliente al tuo checkout in un browser interno ([Shopify](https://www.shopify.com/news/agentic-commerce-momentum)).',
+      text: '**Il [24 marzo 2026](https://www.cnbc.com/2026/03/24/openai-revamps-shopping-experience-in-chatgpt-after-instant-checkout.html) OpenAI ha fatto un passo indietro sulla prima versione di Instant Checkout, la funzione per pagare dentro ChatGPT.** Ora lascia ai merchant il proprio checkout e si concentra sulla scoperta dei prodotti. Per gli store Shopify, ChatGPT manda il cliente al tuo checkout in un browser interno ([Shopify](https://www.shopify.com/news/agentic-commerce-momentum)).',
     },
     { type: 'h3', text: 'Cos’è l’Agentic Commerce Protocol (ACP)?' },
     {
       type: 'paragraph',
-      text: 'ACP è uno standard aperto, mantenuto da OpenAI e Stripe, che permette a un agente AI come ChatGPT di eseguire un checkout sui sistemi del merchant con un feed prodotti, una sessione di checkout e un token di pagamento delegato. Su Shopify non lo implementi tu, perché al suo posto ci sono Catalog e il tuo checkout.',
+      text: '**ACP è uno standard aperto, mantenuto da OpenAI e Stripe, che permette a un agente AI come ChatGPT di eseguire un checkout sui sistemi del merchant con un feed prodotti, una sessione di checkout e un token di pagamento delegato.** Su Shopify non lo implementi tu, perché al suo posto ci sono Catalog e il tuo checkout.',
     },
     { type: 'h3', text: 'Vendere tramite ChatGPT costa di più su Shopify?' },
     {
@@ -669,22 +669,22 @@ const article: Article = {
     { type: 'h3', text: 'Devo creare un feed prodotti per ChatGPT?' },
     {
       type: 'paragraph',
-      text: 'Su Shopify no: ci pensa Shopify Catalog. Il feed diretto di OpenAI è limitato ai partner approvati.',
+      text: '**Su Shopify no: ci pensa Shopify Catalog.** Il feed diretto di OpenAI è limitato ai partner approvati.',
     },
     { type: 'h3', text: 'Devo bloccare GPTBot nel robots.txt?' },
     {
       type: 'paragraph',
-      text: 'GPTBot riguarda l’addestramento. Puoi bloccarlo e consentire comunque OAI-SearchBot, che aiuta i siti a comparire nella ricerca di ChatGPT.',
+      text: '**GPTBot riguarda l’addestramento.** Puoi bloccarlo e consentire comunque OAI-SearchBot, che aiuta i siti a comparire nella ricerca di ChatGPT.',
     },
     { type: 'h3', text: 'Come capisco se ChatGPT mostra i miei prodotti?' },
     {
       type: 'paragraph',
-      text: 'Usa l’admin Shopify, fai a ChatGPT le domande dei tuoi clienti e guarda i referral da chatgpt.com. Una risposta non è una classifica.',
+      text: '**Usa l’admin Shopify, fai a ChatGPT le domande dei tuoi clienti e guarda i referral da chatgpt.com.** Una risposta non è una classifica.',
     },
     { type: 'h3', text: 'ChatGPT può fare acquisti?' },
     {
       type: 'paragraph',
-      text: 'In uno store Shopify, ChatGPT aiuta chi compra a scegliere e lo manda al tuo checkout per pagare. Alcuni rivenditori aggiungono un’app dentro ChatGPT con pagamenti propri.',
+      text: '**In uno store Shopify, ChatGPT aiuta chi compra a scegliere e lo manda al tuo checkout per pagare.** Alcuni rivenditori aggiungono un’app dentro ChatGPT con pagamenti propri.',
     },
     { type: 'h3', text: 'Quali garanzie include lo Shopify Launch Sprint?' },
     {
@@ -694,7 +694,7 @@ const article: Article = {
     { type: 'h2', text: 'Una nota finale' },
     {
       type: 'paragraph',
-      text: 'Aggiorniamo questa pagina quando OpenAI o Shopify cambiano ciò che dicono. Ultima verifica il 29 ottobre 2026.',
+      text: '**Aggiorniamo questa pagina quando OpenAI o Shopify cambiano ciò che dicono.** Ultima verifica il 29 ottobre 2026.',
     },
     {
       type: 'paragraph',

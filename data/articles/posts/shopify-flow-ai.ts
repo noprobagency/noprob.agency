@@ -36,7 +36,7 @@ const article: Article = {
   content: [
     {
       type: 'paragraph',
-      text: '**The best Shopify Flow examples are dull on purpose: one trigger, one condition, one action, no surprises.** Below are ten you can copy, with the exact trigger and action names from Shopify’s documentation, and three where an AI step earns its place. First, the rule that decides whether you need Flow at all or something bigger.',
+      text: 'The best Shopify Flow examples are dull on purpose: one trigger, one condition, one action, no surprises. Below are ten you can copy, with the exact trigger and action names from Shopify’s documentation, and three where an AI step earns its place. First, the rule that decides whether you need Flow at all or something bigger.',
     },
     {
       type: 'paragraph',
@@ -45,7 +45,7 @@ const article: Article = {
     { type: 'h2', text: 'When is a Shopify Flow workflow enough, and when do you need an agent?' },
     {
       type: 'paragraph',
-      text: '**A workflow is enough when you can write every path before the first run. You need an agent when the next step depends on what the previous step found.** Anthropic draws the same line in [Building effective agents](https://www.anthropic.com/engineering/building-effective-agents): workflows follow paths fixed in advance by code, while agents decide their own steps and tool use as they go. Its advice is to look for “the simplest solution possible” and add complexity only when needed.',
+      text: '**A workflow is enough when you can write every path before the first run.** You need an agent when the next step depends on what the previous step found. Anthropic draws the same line in [Building effective agents](https://www.anthropic.com/engineering/building-effective-agents): workflows follow paths fixed in advance by code, while agents decide their own steps and tool use as they go. Its advice is to look for “the simplest solution possible” and add complexity only when needed.',
     },
     {
       type: 'paragraph',
@@ -54,10 +54,10 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**Can you write every branch before the first run?** If yes, it is Flow. If you keep writing “it depends”, it is not.',
-        '**Is the input a field or a sentence?** Status, total, tag and quantity are fields: use a plain condition. A free-text note is a sentence: a model can label it, still inside a workflow.',
-        '**What does a wrong decision cost?** Money, stock or a customer’s trust means a person approves. Tags, notes and drafts can be wrong and cost nothing.',
-        '**Does the next step depend on what you discover on the way?** Look up the order, read the returns policy, then decide what to say: that is an agent.',
+        'Can you write every branch before the first run? If yes, it is Flow. If you keep writing “it depends”, it is not.',
+        'Is the input a field or a sentence? Status, total, tag and quantity are fields: use a plain condition. A free-text note is a sentence: a model can label it, still inside a workflow.',
+        'What does a wrong decision cost? Money, stock or a customer’s trust means a person approves. Tags, notes and drafts can be wrong and cost nothing.',
+        'Does the next step depend on what you discover on the way? Look up the order, read the returns policy, then decide what to say: that is an agent.',
       ],
     },
     {
@@ -103,70 +103,70 @@ const article: Article = {
       headers: ['Workflow', 'Trigger', 'Condition', 'Action', 'AI step'],
       rows: [
         [
-          '**1. VIP tag**',
+          '1. VIP tag',
           'Order paid.',
           'Order total above the threshold you choose.',
           'Add customer tags (“vip”).',
           'None. A prompt like “tag customers as VIP when they place an order over $200” is also the example Shopify itself uses to show [Sidekick building a flow](https://www.shopify.com/blog/flow-automation-updates-2025).',
         ],
         [
-          '**2. Low-stock alert**',
+          '2. Low-stock alert',
           'Product variant inventory quantity changed.',
           'Quantity at or below your threshold and the prior quantity above it, so you get one email and not one per sale.',
           'Send internal email.',
           'None.',
         ],
         [
-          '**3. Hide and republish**',
+          '3. Hide and republish',
           'Product variant out of stock.',
           'The product has nothing left to sell.',
           'Unpublish product. The mirror workflow starts from Product variant back in stock and ends with Publish product.',
           'None.',
         ],
         [
-          '**4. Risky order triage**',
+          '4. Risky order triage',
           'Order risk analyzed.',
           'The risk recommendation is Cancel or Investigate.',
           'Add order tags, Hold fulfillment order, Send internal email.',
           'None, on purpose. A person decides whether to cancel.',
         ],
         [
-          '**5. Return requested**',
+          '5. Return requested',
           'Return requested.',
           'The customer has the “vip” tag from workflow 1.',
           'Add order tags (“return-open”), Send internal email to support with priority.',
           'None.',
         ],
         [
-          '**6. Subscription payment failed**',
+          '6. Subscription payment failed',
           'Subscription billing attempt failure.',
           '-',
           'Add customer tags (“payment-failed”), Send internal email.',
           'None. Only for stores with subscriptions.',
         ],
         [
-          '**7. Order note triage**',
+          '7. Order note triage',
           'Order created.',
           'The order note is Not empty and exists.',
           'Add order tags (“note-to-read”) and Send internal email first, then Send HTTP request with the note, Run code to read the reply, Add order tags with the label.',
           'Sorts the note into a closed list such as gift message, address change, delivery request, other.',
         ],
         [
-          '**8. Draft copy for a new product**',
+          '8. Draft copy for a new product',
           'Product created.',
           'The description is Empty or does not exist.',
           'Add product tags (“needs-copy”), Send HTTP request with title, type and attributes, Run code, Update product metafield (a draft field).',
           'Writes a draft that a person reads and pastes. It never publishes. Same rule as for Sidekick: clean data in, human review out.',
         ],
         [
-          '**9. Customer drifting away**',
+          '9. Customer drifting away',
           'Customer joined segment (a segment you built for customers who have not ordered in a while).',
           '-',
           'Add customer tags, Send HTTP request, Run code, Update customer note, Send internal email.',
           'Writes a draft message in the customer note. The person who knows the customer sends it, or does not.',
         ],
         [
-          '**10. Watch your workflows**',
+          '10. Watch your workflows',
           'Workflow error occurred.',
           '-',
           'Send internal email, or Send Shopify alert for errors.',
@@ -182,14 +182,14 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**Do the essential actions first.** If the request fails (a Fail setting, an unexpected response code or a timeout), [the run fails and later actions do not run](https://help.shopify.com/en/manual/shopify-flow/reference/actions/send-http-request). Tag and notify before you ask a model anything.',
-        '**Call your own endpoint, not the model directly.** Send HTTP request needs a URL, headers and a body. An endpoint you control holds the prompt, the validation and the logs in one place, and you can change the model without touching Flow.',
-        '**Keep the key in a secret.** Flow stores secrets on its Settings page, [hides them in the interface and redacts them from run logs](https://help.shopify.com/en/manual/shopify-flow/reference/actions/send-http-request). Creating a secret or turning on a workflow that uses one needs the [Manage connections and secrets permission](https://help.shopify.com/en/manual/shopify-flow/reference/actions/send-http-request).',
-        '**Send only what the model needs.** For an order note, send the note, not the name, email or address. Customer text can contain personal data, so read your provider’s data terms. The risks are in [AI agent security on Shopify](/blog/ai-agent-security-shopify).',
-        '**Ask for a closed list and JSON.** Something like: “Classify this note into one label from this list: gift message, address change, delivery request, other. Reply with JSON only: {"label": "..."}.” A closed list is easy to check; a free sentence is not.',
-        '**Validate in Run code.** Parse the body with JSON.parse, and if the label is not in your list, return “other”. Never trust the reply to be well formed.',
-        '**Choose the error settings on purpose.** [Retry keeps trying for up to 24 hours](https://help.shopify.com/en/manual/shopify-flow/reference/actions/send-http-request) on 5XX and 429 responses. For a label that would arrive a day late, Ignore is the better choice.',
-        '**Keep your tag vocabulary small.** Shopify warns that [conditions on tags may fail past 250 tags](https://help.shopify.com/en/manual/shopify-flow/create-workflow) on one order, product or customer, and that some order fields fill in later, so test before you turn the workflow on.',
+        'Do the essential actions first. If the request fails (a Fail setting, an unexpected response code or a timeout), [the run fails and later actions do not run](https://help.shopify.com/en/manual/shopify-flow/reference/actions/send-http-request). Tag and notify before you ask a model anything.',
+        'Call your own endpoint, not the model directly. Send HTTP request needs a URL, headers and a body. An endpoint you control holds the prompt, the validation and the logs in one place, and you can change the model without touching Flow.',
+        'Keep the key in a secret. Flow stores secrets on its Settings page, [hides them in the interface and redacts them from run logs](https://help.shopify.com/en/manual/shopify-flow/reference/actions/send-http-request). Creating a secret or turning on a workflow that uses one needs the [Manage connections and secrets permission](https://help.shopify.com/en/manual/shopify-flow/reference/actions/send-http-request).',
+        'Send only what the model needs. For an order note, send the note, not the name, email or address. Customer text can contain personal data, so read your provider’s data terms. The risks are in [AI agent security on Shopify](/blog/ai-agent-security-shopify).',
+        'Ask for a closed list and JSON. Something like: “Classify this note into one label from this list: gift message, address change, delivery request, other. Reply with JSON only: {"label": "..."}.” A closed list is easy to check; a free sentence is not.',
+        'Validate in Run code. Parse the body with JSON.parse, and if the label is not in your list, return “other”. Never trust the reply to be well formed.',
+        'Choose the error settings on purpose. [Retry keeps trying for up to 24 hours](https://help.shopify.com/en/manual/shopify-flow/reference/actions/send-http-request) on 5XX and 429 responses. For a label that would arrive a day late, Ignore is the better choice.',
+        'Keep your tag vocabulary small. Shopify warns that [conditions on tags may fail past 250 tags](https://help.shopify.com/en/manual/shopify-flow/create-workflow) on one order, product or customer, and that some order fields fill in later, so test before you turn the workflow on.',
       ],
     },
     { type: 'h2', text: 'What should never be a Flow workflow with AI inside?' },
@@ -213,7 +213,7 @@ const article: Article = {
     { type: 'h2', text: 'Where do you start this week?' },
     {
       type: 'paragraph',
-      text: '**Start with the workflow that watches the others, then add one rule per day.**',
+      text: 'Start with the workflow that watches the others, then add one rule per day.',
     },
     {
       type: 'list',
@@ -229,12 +229,12 @@ const article: Article = {
     { type: 'h3', text: 'What is Shopify Flow?' },
     {
       type: 'paragraph',
-      text: 'Shopify Flow is a free automation app that watches your store for an event (the trigger), checks a condition and then runs one or more actions. It is built for fixed rules, not open-ended decisions.',
+      text: '**Shopify Flow is a free automation app that watches your store for an event (the trigger), checks a condition and then runs one or more actions.** It is built for fixed rules, not open-ended decisions.',
     },
     { type: 'h3', text: 'Is Shopify Flow free, and which plans have it?' },
     {
       type: 'paragraph',
-      text: 'Yes, on Basic, Grow, Advanced and Plus. Send HTTP request needs Grow, Advanced or Plus, and tasks from custom partner apps need Plus.',
+      text: '**Yes, on Basic, Grow, Advanced and Plus.** Send HTTP request needs Grow, Advanced or Plus, and tasks from custom partner apps need Plus.',
     },
     { type: 'h3', text: 'Does Shopify Flow have AI?' },
     {
@@ -249,12 +249,12 @@ const article: Article = {
     { type: 'h3', text: 'Can Shopify Flow call ChatGPT or Claude?' },
     {
       type: 'paragraph',
-      text: 'Yes, through Send HTTP request, with a 30-second wait at most. Run code reads the reply but cannot make network calls.',
+      text: '**Yes, through Send HTTP request, with a 30-second wait at most.** Run code reads the reply but cannot make network calls.',
     },
     { type: 'h3', text: 'When do I need an agent instead of a workflow?' },
     {
       type: 'paragraph',
-      text: 'When you cannot write every branch in advance. If a fixed rule solves it, use Flow.',
+      text: '**When you cannot write every branch in advance.** If a fixed rule solves it, use Flow.',
     },
     {
       type: 'paragraph',
@@ -268,7 +268,7 @@ const article: Article = {
   contentIt: [
     {
       type: 'paragraph',
-      text: '**Gli esempi di Shopify Flow che funzionano sono noiosi di proposito: un trigger, una condizione, un’azione, nessuna sorpresa.** Qui sotto ne trovi dieci da copiare, con i nomi esatti di trigger e azioni dalla documentazione di Shopify, e tre in cui un passaggio AI si guadagna il posto. Prima la regola che decide se ti serve Flow o qualcosa di più grande.',
+      text: 'Gli esempi di Shopify Flow che funzionano sono noiosi di proposito: un trigger, una condizione, un’azione, nessuna sorpresa. Qui sotto ne trovi dieci da copiare, con i nomi esatti di trigger e azioni dalla documentazione di Shopify, e tre in cui un passaggio AI si guadagna il posto. Prima la regola che decide se ti serve Flow o qualcosa di più grande.',
     },
     {
       type: 'paragraph',
@@ -277,7 +277,7 @@ const article: Article = {
     { type: 'h2', text: 'Quando basta un workflow di Shopify Flow e quando serve un agente?' },
     {
       type: 'paragraph',
-      text: '**Un workflow basta quando puoi scrivere ogni percorso prima della prima esecuzione. Serve un agente quando il passo successivo dipende da quello che ha trovato il precedente.** Anthropic traccia la stessa linea in [Building effective agents](https://www.anthropic.com/engineering/building-effective-agents): i workflow seguono percorsi fissati in anticipo dal codice, gli agenti decidono da soli i passi e l’uso degli strumenti. Il suo consiglio è cercare “the simplest solution possible” e aggiungere complessità solo quando serve.',
+      text: '**Un workflow basta quando puoi scrivere ogni percorso prima della prima esecuzione.** Serve un agente quando il passo successivo dipende da quello che ha trovato il precedente. Anthropic traccia la stessa linea in [Building effective agents](https://www.anthropic.com/engineering/building-effective-agents): i workflow seguono percorsi fissati in anticipo dal codice, gli agenti decidono da soli i passi e l’uso degli strumenti. Il suo consiglio è cercare “the simplest solution possible” e aggiungere complessità solo quando serve.',
     },
     {
       type: 'paragraph',
@@ -286,10 +286,10 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**Riesci a scrivere ogni ramo prima della prima esecuzione?** Se sì, è Flow. Se continui a scrivere “dipende”, non lo è.',
-        '**L’input è un campo o una frase?** Stato, totale, tag e quantità sono campi: basta una condizione. Una nota in testo libero è una frase: un modello può darle un’etichetta, restando dentro un workflow.',
-        '**Quanto costa una decisione sbagliata?** Se in gioco ci sono soldi, magazzino o la fiducia di un cliente, approva una persona. Tag, note e bozze possono sbagliare senza costare nulla.',
-        '**Il passo successivo dipende da ciò che scopri strada facendo?** Cercare l’ordine, leggere la policy dei resi e poi decidere cosa dire: quello è un agente.',
+        'Riesci a scrivere ogni ramo prima della prima esecuzione? Se sì, è Flow. Se continui a scrivere “dipende”, non lo è.',
+        'L’input è un campo o una frase? Stato, totale, tag e quantità sono campi: basta una condizione. Una nota in testo libero è una frase: un modello può darle un’etichetta, restando dentro un workflow.',
+        'Quanto costa una decisione sbagliata? Se in gioco ci sono soldi, magazzino o la fiducia di un cliente, approva una persona. Tag, note e bozze possono sbagliare senza costare nulla.',
+        'Il passo successivo dipende da ciò che scopri strada facendo? Cercare l’ordine, leggere la policy dei resi e poi decidere cosa dire: quello è un agente.',
       ],
     },
     {
@@ -335,70 +335,70 @@ const article: Article = {
       headers: ['Workflow', 'Trigger', 'Condizione', 'Azione', 'Passaggio AI'],
       rows: [
         [
-          '**1. Tag VIP**',
+          '1. Tag VIP',
           'Order paid.',
           'Totale dell’ordine sopra la soglia che scegli.',
           'Add customer tags (“vip”).',
           'Nessuno. Un prompt come “tagga come VIP i clienti che fanno un ordine sopra 200 dollari” è anche l’esempio che Shopify stessa usa per mostrare [Sidekick che costruisce un flusso](https://www.shopify.com/blog/flow-automation-updates-2025).',
         ],
         [
-          '**2. Avviso scorte basse**',
+          '2. Avviso scorte basse',
           'Product variant inventory quantity changed.',
           'Quantità pari o sotto la soglia e quantità precedente sopra, così ricevi una sola email e non una per ogni vendita.',
           'Send internal email.',
           'Nessuno.',
         ],
         [
-          '**3. Nascondi e ripubblica**',
+          '3. Nascondi e ripubblica',
           'Product variant out of stock.',
           'Il prodotto non ha più nulla da vendere.',
           'Unpublish product. Il workflow speculare parte da Product variant back in stock e finisce con Publish product.',
           'Nessuno.',
         ],
         [
-          '**4. Smistamento ordini a rischio**',
+          '4. Smistamento ordini a rischio',
           'Order risk analyzed.',
           'La raccomandazione di rischio è Cancel o Investigate.',
           'Add order tags, Hold fulfillment order, Send internal email.',
           'Nessuno, di proposito. Se annullare lo decide una persona.',
         ],
         [
-          '**5. Reso richiesto**',
+          '5. Reso richiesto',
           'Return requested.',
           'Il cliente ha il tag “vip” del workflow 1.',
           'Add order tags (“return-open”), Send internal email all’assistenza con priorità.',
           'Nessuno.',
         ],
         [
-          '**6. Pagamento dell’abbonamento fallito**',
+          '6. Pagamento dell’abbonamento fallito',
           'Subscription billing attempt failure.',
           '-',
           'Add customer tags (“payment-failed”), Send internal email.',
           'Nessuno. Solo per store con abbonamenti.',
         ],
         [
-          '**7. Smistamento della nota d’ordine**',
+          '7. Smistamento della nota d’ordine',
           'Order created.',
           'La nota dell’ordine è Not empty and exists.',
           'Prima Add order tags (“note-to-read”) e Send internal email, poi Send HTTP request con la nota, Run code per leggere la risposta, Add order tags con l’etichetta.',
           'Ordina la nota in un elenco chiuso, per esempio messaggio regalo, cambio indirizzo, richiesta di consegna, altro.',
         ],
         [
-          '**8. Bozza di testo per un nuovo prodotto**',
+          '8. Bozza di testo per un nuovo prodotto',
           'Product created.',
           'La descrizione è Empty or does not exist.',
           'Add product tags (“needs-copy”), Send HTTP request con titolo, tipo e attributi, Run code, Update product metafield (un campo bozza).',
           'Scrive una bozza che una persona legge e incolla. Non pubblica mai. Vale la regola di Sidekick: dati puliti in ingresso, revisione umana in uscita.',
         ],
         [
-          '**9. Cliente che si allontana**',
+          '9. Cliente che si allontana',
           'Customer joined segment (un segmento che hai creato per i clienti che non ordinano da un po’).',
           '-',
           'Add customer tags, Send HTTP request, Run code, Update customer note, Send internal email.',
           'Scrive una bozza di messaggio nella nota del cliente. La invia, o non la invia, la persona che conosce il cliente.',
         ],
         [
-          '**10. Controlla i tuoi workflow**',
+          '10. Controlla i tuoi workflow',
           'Workflow error occurred.',
           '-',
           'Send internal email, oppure Send Shopify alert for errors.',
@@ -414,14 +414,14 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**Fai prima le azioni essenziali.** Se la richiesta fallisce (impostazione Fail, codice di risposta inatteso o timeout), [l’esecuzione fallisce e le azioni successive non partono](https://help.shopify.com/en/manual/shopify-flow/reference/actions/send-http-request). Tagga e avvisa prima di chiedere qualcosa a un modello.',
-        '**Chiama un tuo endpoint, non il modello direttamente.** Send HTTP request vuole URL, header e corpo. Un endpoint che controlli tu tiene prompt, validazione e log in un posto solo, e puoi cambiare modello senza toccare Flow.',
-        '**Tieni la chiave in un secret.** Flow conserva i secret nella pagina Settings, [li nasconde nell’interfaccia e li oscura nei log delle esecuzioni](https://help.shopify.com/en/manual/shopify-flow/reference/actions/send-http-request). Creare un secret o attivare un workflow che lo usa richiede il [permesso Manage connections and secrets](https://help.shopify.com/en/manual/shopify-flow/reference/actions/send-http-request).',
-        '**Manda solo ciò che serve al modello.** Per una nota d’ordine manda la nota, non nome, email o indirizzo. Il testo dei clienti può contenere dati personali, quindi leggi i termini sui dati del tuo fornitore. I rischi sono in [sicurezza degli agenti AI su Shopify](/it/blog/sicurezza-agenti-ai-shopify).',
-        '**Chiedi un elenco chiuso e JSON.** Per esempio: “Classifica questa nota con una sola etichetta di questo elenco: messaggio regalo, cambio indirizzo, richiesta di consegna, altro. Rispondi solo con JSON: {"label": "..."}.” Un elenco chiuso si controlla; una frase libera no.',
-        '**Valida in Run code.** Leggi il corpo con JSON.parse e, se l’etichetta non è nel tuo elenco, restituisci “altro”. Non fidarti mai che la risposta sia ben formata.',
-        '**Scegli le impostazioni di errore con cura.** [Retry riprova fino a 24 ore](https://help.shopify.com/en/manual/shopify-flow/reference/actions/send-http-request) sulle risposte 5XX e 429. Per un’etichetta che arriverebbe con un giorno di ritardo, meglio Ignore.',
-        '**Tieni piccolo il vocabolario dei tag.** Shopify avverte che le [condizioni sui tag possono fallire oltre i 250 tag](https://help.shopify.com/en/manual/shopify-flow/create-workflow) su un ordine, un prodotto o un cliente, e che alcuni campi dell’ordine si riempiono dopo, quindi prova prima di attivare il workflow.',
+        'Fai prima le azioni essenziali. Se la richiesta fallisce (impostazione Fail, codice di risposta inatteso o timeout), [l’esecuzione fallisce e le azioni successive non partono](https://help.shopify.com/en/manual/shopify-flow/reference/actions/send-http-request). Tagga e avvisa prima di chiedere qualcosa a un modello.',
+        'Chiama un tuo endpoint, non il modello direttamente. Send HTTP request vuole URL, header e corpo. Un endpoint che controlli tu tiene prompt, validazione e log in un posto solo, e puoi cambiare modello senza toccare Flow.',
+        'Tieni la chiave in un secret. Flow conserva i secret nella pagina Settings, [li nasconde nell’interfaccia e li oscura nei log delle esecuzioni](https://help.shopify.com/en/manual/shopify-flow/reference/actions/send-http-request). Creare un secret o attivare un workflow che lo usa richiede il [permesso Manage connections and secrets](https://help.shopify.com/en/manual/shopify-flow/reference/actions/send-http-request).',
+        'Manda solo ciò che serve al modello. Per una nota d’ordine manda la nota, non nome, email o indirizzo. Il testo dei clienti può contenere dati personali, quindi leggi i termini sui dati del tuo fornitore. I rischi sono in [sicurezza degli agenti AI su Shopify](/it/blog/sicurezza-agenti-ai-shopify).',
+        'Chiedi un elenco chiuso e JSON. Per esempio: “Classifica questa nota con una sola etichetta di questo elenco: messaggio regalo, cambio indirizzo, richiesta di consegna, altro. Rispondi solo con JSON: {"label": "..."}.” Un elenco chiuso si controlla; una frase libera no.',
+        'Valida in Run code. Leggi il corpo con JSON.parse e, se l’etichetta non è nel tuo elenco, restituisci “altro”. Non fidarti mai che la risposta sia ben formata.',
+        'Scegli le impostazioni di errore con cura. [Retry riprova fino a 24 ore](https://help.shopify.com/en/manual/shopify-flow/reference/actions/send-http-request) sulle risposte 5XX e 429. Per un’etichetta che arriverebbe con un giorno di ritardo, meglio Ignore.',
+        'Tieni piccolo il vocabolario dei tag. Shopify avverte che le [condizioni sui tag possono fallire oltre i 250 tag](https://help.shopify.com/en/manual/shopify-flow/create-workflow) su un ordine, un prodotto o un cliente, e che alcuni campi dell’ordine si riempiono dopo, quindi prova prima di attivare il workflow.',
       ],
     },
     { type: 'h2', text: 'Cosa non deve mai essere un workflow di Flow con l’AI dentro?' },
@@ -445,7 +445,7 @@ const article: Article = {
     { type: 'h2', text: 'Da dove parti questa settimana?' },
     {
       type: 'paragraph',
-      text: '**Parti dal workflow che controlla gli altri, poi aggiungi una regola al giorno.**',
+      text: 'Parti dal workflow che controlla gli altri, poi aggiungi una regola al giorno.',
     },
     {
       type: 'list',
@@ -461,17 +461,17 @@ const article: Article = {
     { type: 'h3', text: 'Cos’è Shopify Flow?' },
     {
       type: 'paragraph',
-      text: 'Shopify Flow è un’app di automazione gratuita che aspetta un evento nel tuo store (il trigger), verifica una condizione e poi esegue una o più azioni. È fatta per regole fisse, non per decisioni aperte.',
+      text: '**Shopify Flow è un’app di automazione gratuita che aspetta un evento nel tuo store (il trigger), verifica una condizione e poi esegue una o più azioni.** È fatta per regole fisse, non per decisioni aperte.',
     },
     { type: 'h3', text: 'Shopify Flow è gratis e su quali piani c’è?' },
     {
       type: 'paragraph',
-      text: 'Sì, su Basic, Grow, Advanced e Plus. Send HTTP request richiede Grow, Advanced o Plus, e le attività di app partner personalizzate richiedono Plus.',
+      text: '**Sì, su Basic, Grow, Advanced e Plus.** Send HTTP request richiede Grow, Advanced o Plus, e le attività di app partner personalizzate richiedono Plus.',
     },
     { type: 'h3', text: 'Shopify Flow ha l’AI?' },
     {
       type: 'paragraph',
-      text: 'Non come azione: al 29 ottobre 2026 il riferimento delle azioni di Shopify non ne elenca. Sidekick costruisce workflow e Send HTTP request chiama un modello esterno.',
+      text: '**Non come azione: al 29 ottobre 2026 il riferimento delle azioni di Shopify non ne elenca.** Sidekick costruisce workflow e Send HTTP request chiama un modello esterno.',
     },
     { type: 'h3', text: 'Sidekick può costruire un workflow di Flow?' },
     {
@@ -481,12 +481,12 @@ const article: Article = {
     { type: 'h3', text: 'Shopify Flow può chiamare ChatGPT o Claude?' },
     {
       type: 'paragraph',
-      text: 'Sì, con Send HTTP request, che aspetta al massimo 30 secondi. Run code legge la risposta ma non può fare chiamate di rete.',
+      text: '**Sì, con Send HTTP request, che aspetta al massimo 30 secondi.** Run code legge la risposta ma non può fare chiamate di rete.',
     },
     { type: 'h3', text: 'Quando mi serve un agente al posto di un workflow?' },
     {
       type: 'paragraph',
-      text: 'Quando non riesci a scrivere ogni ramo in anticipo. Se una regola fissa risolve il problema, usa Flow.',
+      text: '**Quando non riesci a scrivere ogni ramo in anticipo.** Se una regola fissa risolve il problema, usa Flow.',
     },
     {
       type: 'paragraph',

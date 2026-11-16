@@ -90,7 +90,7 @@ const article: Article = {
   content: [
     {
       type: 'paragraph',
-      text: '**Wix or Shopify comes down to one question: is your site the product, or is your store?** If visitors come mainly to read, book or look at a few things you sell, Wix is enough. If the catalog, the checkout and repeat orders are the business, Shopify is the better base, and a Wix to Shopify move takes less time than most people fear.',
+      text: 'Wix or Shopify comes down to one question: is your site the product, or is your store? If visitors come mainly to read, book or look at a few things you sell, Wix is enough. If the catalog, the checkout and repeat orders are the business, Shopify is the better base, and a Wix to Shopify move takes less time than most people fear.',
     },
     {
       type: 'paragraph',
@@ -240,22 +240,22 @@ const article: Article = {
     { type: 'h3', text: 'Is Wix or Shopify better for an online store?' },
     {
       type: 'paragraph',
-      text: 'Wix is better when the website is the main product and you sell a few items on the side, with bookings or content. Shopify is better when the store is the business: a real catalog, variants, several markets, wholesale customers, ads and integrations. If you are unsure, count the hours you spend on workarounds in the store each week.',
+      text: '**Wix is better when the website is the main product and you sell a few items on the side, with bookings or content.** Shopify is better when the store is the business: a real catalog, variants, several markets, wholesale customers, ads and integrations. If you are unsure, count the hours you spend on workarounds in the store each week.',
     },
     { type: 'h3', text: 'Can you move from Wix to Shopify without losing SEO?' },
     {
       type: 'paragraph',
-      text: 'You can keep most of your search visibility if every old URL that ranks or has links gets a 301 redirect to its new Shopify address before the domain switch. Titles, meta descriptions and blog posts must be moved by hand. Expect small movements in the first weeks and check them in Search Console.',
+      text: '**You can keep most of your search visibility if every old URL that ranks or has links gets a 301 redirect to its new Shopify address before the domain switch.** Titles, meta descriptions and blog posts must be moved by hand. Expect small movements in the first weeks and check them in Search Console.',
     },
     { type: 'h3', text: 'Can I export my Wix products and customers to Shopify?' },
     {
       type: 'paragraph',
-      text: 'Yes for physical products and contacts: Wix exports both as CSV files and Shopify imports them by CSV or with its free Store Migration app. Digital products, reviews and blog posts cannot be exported from Wix, and past orders need a third-party app.',
+      text: '**Yes for physical products and contacts: Wix exports both as CSV files and Shopify imports them by CSV or with its free Store Migration app.** Digital products, reviews and blog posts cannot be exported from Wix, and past orders need a third-party app.',
     },
     { type: 'h3', text: 'How long does it take to move from Wix to Shopify?' },
     {
       type: 'paragraph',
-      text: 'It depends on catalog size, how much of the design you rebuild and how many redirects you map. With the Shopify Launch Sprint the store is ready on day 14 and go-live falls between day 15 and 30.',
+      text: '**It depends on catalog size, how much of the design you rebuild and how many redirects you map.** With the Shopify Launch Sprint the store is ready on day 14 and go-live falls between day 15 and 30.',
     },
     { type: 'h3', text: 'Does my Wix blog move to Shopify?' },
     {
@@ -265,7 +265,7 @@ const article: Article = {
     { type: 'h2', text: 'How to know it is time to leave Wix' },
     {
       type: 'paragraph',
-      text: 'A Wix site with a small shop can stay on Wix; a store that runs on ads, variants, several markets or wholesale is ready for Shopify. Move when you notice you are working for the platform.',
+      text: '**A Wix site with a small shop can stay on Wix; a store that runs on ads, variants, several markets or wholesale is ready for Shopify.** Move when you notice you are working for the platform.',
     },
     {
       type: 'paragraph',
@@ -273,7 +273,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '**Next step.** Send us your store: [apply to the Shopify Launch Sprint](/shopify-migration-sprint) and we reply within 48 hours with your tier, the price and the first available kickoff date.',
+      text: 'Next step. Send us your store: [apply to the Shopify Launch Sprint](/shopify-migration-sprint) and we reply within 48 hours with your tier, the price and the first available kickoff date.',
     },
     {
       type: 'paragraph',
@@ -283,7 +283,7 @@ const article: Article = {
   contentIt: [
     {
       type: 'paragraph',
-      text: '**Wix o Shopify si decide con una domanda: il prodotto è il tuo sito o il tuo store?** Se i visitatori arrivano soprattutto per leggere, prenotare o guardare qualche articolo in vendita, Wix basta. Se il catalogo, il checkout e gli ordini ripetuti sono l’attività, Shopify è la base migliore, e passare da Wix a Shopify richiede meno tempo di quanto si teme.',
+      text: 'Wix o Shopify si decide con una domanda: il prodotto è il tuo sito o il tuo store? Se i visitatori arrivano soprattutto per leggere, prenotare o guardare qualche articolo in vendita, Wix basta. Se il catalogo, il checkout e gli ordini ripetuti sono l’attività, Shopify è la base migliore, e passare da Wix a Shopify richiede meno tempo di quanto si teme.',
     },
     {
       type: 'paragraph',
@@ -301,9 +301,9 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**Prima il sito.** Offri servizi, un portfolio o corsi, contano prenotazioni e contenuti, e accanto vendi una manciata di prodotti. Wix va bene.',
-        '**Prima lo store.** La tua settimana è fatta di catalogo, varianti, magazzino, regole di spedizione, codici sconto, email e advertising. Shopify va bene.',
-        '**Prima il sito, ma lo store cresce.** Sei partito su Wix e ora lo store porta ordini veri. La settimana in cui apri un foglio di calcolo per gestire ordini o prodotti è quella in cui guardare Shopify.',
+        'Prima il sito. Offri servizi, un portfolio o corsi, contano prenotazioni e contenuti, e accanto vendi una manciata di prodotti. Wix va bene.',
+        'Prima lo store. La tua settimana è fatta di catalogo, varianti, magazzino, regole di spedizione, codici sconto, email e advertising. Shopify va bene.',
+        'Prima il sito, ma lo store cresce. Sei partito su Wix e ora lo store porta ordini veri. La settimana in cui apri un foglio di calcolo per gestire ordini o prodotti è quella in cui guardare Shopify.',
       ],
     },
     {
@@ -398,7 +398,7 @@ const article: Article = {
     { type: 'h2', text: 'Cosa succede al blog e alle impostazioni SEO?' },
     {
       type: 'paragraph',
-      text: '**Metti in conto di spostare il blog a mano, perché il centro assistenza di Wix indica che gli articoli [non si possono esportare verso altre piattaforme](https://support.wix.com/en/article/wix-blog-request-exporting-blog-posts-to-other-platforms).** Quella pagina è una richiesta di funzione e può cambiare: guarda prima il tuo account.',
+      text: 'Metti in conto di spostare il blog a mano, perché il centro assistenza di Wix indica che gli articoli [non si possono esportare verso altre piattaforme](https://support.wix.com/en/article/wix-blog-request-exporting-blog-posts-to-other-platforms). Quella pagina è una richiesta di funzione e può cambiare: guarda prima il tuo account.',
     },
     {
       type: 'paragraph',
@@ -423,7 +423,7 @@ const article: Article = {
     { type: 'h2', text: 'Come lavoriamo una migrazione da Wix a Shopify?' },
     {
       type: 'paragraph',
-      text: '**Lavoriamo un passaggio da Wix a Shopify con il metodo di ogni Sprint: un inventario di prodotti, pagine e URL, una mappa dei redirect controllata sul sito live, una prova generale prima di spostare il dominio, e il tracking misurato prima e dopo.** [Integratori DTC Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify) veniva da WooCommerce e [Cumini](/it/casi-studio/cumini-luxury-fashion-ecommerce) da una piattaforma proprietaria legata al gestionale. Su Cumini l’audit del tracking è passato da 31/100 a 92/100 dopo il passaggio.',
+      text: 'Lavoriamo un passaggio da Wix a Shopify con il metodo di ogni Sprint: un inventario di prodotti, pagine e URL, una mappa dei redirect controllata sul sito live, una prova generale prima di spostare il dominio, e il tracking misurato prima e dopo. [Integratori DTC Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify) veniva da WooCommerce e [Cumini](/it/casi-studio/cumini-luxury-fashion-ecommerce) da una piattaforma proprietaria legata al gestionale. Su Cumini l’audit del tracking è passato da 31/100 a 92/100 dopo il passaggio.',
     },
     {
       type: 'paragraph',
@@ -433,22 +433,22 @@ const article: Article = {
     { type: 'h3', text: 'È meglio Wix o Shopify per uno store online?' },
     {
       type: 'paragraph',
-      text: 'Wix è meglio quando il sito web è il prodotto principale e vendi qualche articolo a margine, con prenotazioni o contenuti. Shopify è meglio quando lo store è l’attività: un catalogo vero, varianti, più mercati, clienti all’ingrosso, advertising e integrazioni. Se hai dubbi, conta le ore a settimana che spendi in soluzioni di ripiego nello store.',
+      text: '**Wix è meglio quando il sito web è il prodotto principale e vendi qualche articolo a margine, con prenotazioni o contenuti.** Shopify è meglio quando lo store è l’attività: un catalogo vero, varianti, più mercati, clienti all’ingrosso, advertising e integrazioni. Se hai dubbi, conta le ore a settimana che spendi in soluzioni di ripiego nello store.',
     },
     { type: 'h3', text: 'Si può passare da Wix a Shopify senza perdere la SEO?' },
     {
       type: 'paragraph',
-      text: 'Si può mantenere gran parte della visibilità se ogni vecchio URL che si posiziona o riceve link ha un redirect 301 verso il nuovo indirizzo Shopify prima del cambio di dominio. Titoli, meta description e articoli del blog vanno spostati a mano. Aspettati piccole oscillazioni nelle prime settimane e controllale in Search Console.',
+      text: '**Si può mantenere gran parte della visibilità se ogni vecchio URL che si posiziona o riceve link ha un redirect 301 verso il nuovo indirizzo Shopify prima del cambio di dominio.** Titoli, meta description e articoli del blog vanno spostati a mano. Aspettati piccole oscillazioni nelle prime settimane e controllale in Search Console.',
     },
     { type: 'h3', text: 'Posso esportare prodotti e clienti da Wix a Shopify?' },
     {
       type: 'paragraph',
-      text: 'Sì per i prodotti fisici e i contatti: Wix li esporta in CSV e Shopify li importa da CSV o con la sua app gratuita Store Migration. Prodotti digitali, recensioni e articoli del blog non si esportano da Wix, e lo storico degli ordini richiede un’app di terze parti.',
+      text: '**Sì per i prodotti fisici e i contatti: Wix li esporta in CSV e Shopify li importa da CSV o con la sua app gratuita Store Migration.** Prodotti digitali, recensioni e articoli del blog non si esportano da Wix, e lo storico degli ordini richiede un’app di terze parti.',
     },
     { type: 'h3', text: 'Quanto tempo serve per passare da Wix a Shopify?' },
     {
       type: 'paragraph',
-      text: 'Dipende da catalogo, da quanto del design si ricostruisce e da quanti redirect vanno mappati. Con lo Shopify Launch Sprint lo store è pronto al giorno 14 e il go-live avviene tra il giorno 15 e il 30.',
+      text: '**Dipende da catalogo, da quanto del design si ricostruisce e da quanti redirect vanno mappati.** Con lo Shopify Launch Sprint lo store è pronto al giorno 14 e il go-live avviene tra il giorno 15 e il 30.',
     },
     { type: 'h3', text: 'Il blog di Wix passa su Shopify?' },
     {
@@ -458,7 +458,7 @@ const article: Article = {
     { type: 'h2', text: 'Come capire che è ora di lasciare Wix' },
     {
       type: 'paragraph',
-      text: 'Un sito Wix con un piccolo negozio può restare su Wix; uno store che vive di advertising, varianti, più mercati o ingrosso è pronto per Shopify. Passa quando ti accorgi che lavori per la piattaforma.',
+      text: '**Un sito Wix con un piccolo negozio può restare su Wix; uno store che vive di advertising, varianti, più mercati o ingrosso è pronto per Shopify.** Passa quando ti accorgi che lavori per la piattaforma.',
     },
     {
       type: 'paragraph',
@@ -466,7 +466,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '**Prossimo passo.** Mandaci il tuo store: [candidati allo Shopify Launch Sprint](/it/sprint-migrazione-shopify) e rispondiamo entro 48 ore con la tua fascia, il prezzo e la prima data di kickoff disponibile.',
+      text: 'Prossimo passo. Mandaci il tuo store: [candidati allo Shopify Launch Sprint](/it/sprint-migrazione-shopify) e rispondiamo entro 48 ore con la tua fascia, il prezzo e la prima data di kickoff disponibile.',
     },
     {
       type: 'paragraph',

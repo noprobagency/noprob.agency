@@ -412,10 +412,10 @@ export const cumini: UseCase = {
     {
       type: 'list',
       items: [
-        'vendite online: **+67,7%**',
-        'ordini: **+49,4%**',
-        'scontrino medio: **+12,2%**',
-        'clienti che tornano a comprare: **+35,3%**',
+        'vendite online: +67,7%',
+        'ordini: +49,4%',
+        'scontrino medio: +12,2%',
+        'clienti che tornano a comprare: +35,3%',
       ],
     },
     {
@@ -872,10 +872,10 @@ export const cumini: UseCase = {
     {
       type: 'list',
       items: [
-        'online sales: **+67.7%**',
-        'orders: **+49.4%**',
-        'average order value: **+12.2%**',
-        'returning customers: **+35.3%**',
+        'online sales: +67.7%',
+        'orders: +49.4%',
+        'average order value: +12.2%',
+        'returning customers: +35.3%',
       ],
     },
     {

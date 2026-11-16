@@ -109,7 +109,7 @@ const article: Article = {
     { type: 'h2', text: 'Already on Shopify: is upgrading to Shopify Plus a migration at all?' },
     {
       type: 'paragraph',
-      text: '**No. From Advanced, upgrading to Shopify Plus is a plan change, not a migration, and the features take effect immediately.** Shopify’s [article on the upgrade](https://www.shopify.com/enterprise/blog/upgrade-to-shopify-plus), updated on 23 September 2026, says a business can move from Advanced to Plus "without rebuilding its existing store": you select Plus under Settings > Plan. So if someone quotes you a "migration" from Advanced to Plus, ask what exactly is being moved.',
+      text: 'No. From Advanced, upgrading to Shopify Plus is a plan change, not a migration, and the features take effect immediately. Shopify’s [article on the upgrade](https://www.shopify.com/enterprise/blog/upgrade-to-shopify-plus), updated on 23 September 2026, says a business can move from Advanced to Plus "without rebuilding its existing store": you select Plus under Settings > Plan. So if someone quotes you a "migration" from Advanced to Plus, ask what exactly is being moved.',
     },
     {
       type: 'paragraph',
@@ -286,17 +286,17 @@ const article: Article = {
     { type: 'h3', text: 'The migration, paid to whoever moves the store' },
     {
       type: 'paragraph',
-      text: 'From Advanced to Plus there is no migration bill, because the store stays where it is. From another platform, ours is public: the Shopify Launch Sprint costs €5,800 under €2M in revenue, €8,800 between €2M and €20M and €12,800 above €20M, VAT excluded, in 4 installments. To read other people’s quotes, our article on [Shopify migration cost](/blog/shopify-migration-cost) has the eight lines to look for.',
+      text: '**From Advanced to Plus there is no migration bill, because the store stays where it is.** From another platform, ours is public: the Shopify Launch Sprint costs €5,800 under €2M in revenue, €8,800 between €2M and €20M and €12,800 above €20M, VAT excluded, in 4 installments. To read other people’s quotes, our article on [Shopify migration cost](/blog/shopify-migration-cost) has the eight lines to look for.',
     },
     { type: 'h3', text: 'The Plus work on top' },
     {
       type: 'paragraph',
-      text: 'Extensions, Functions, B2B setup, expansion stores. This bill is defined project by project, starting from the list you wrote for the checkout, so ask for a price against each line of that list. A single total tells you little.',
+      text: '**Extensions, Functions, B2B setup, expansion stores.** This bill is defined project by project, starting from the list you wrote for the checkout, so ask for a price against each line of that list. A single total tells you little.',
     },
     { type: 'h3', text: 'Apart from the bills: the contract' },
     {
       type: 'paragraph',
-      text: 'Plus runs on a term of 1 or 3 years, and Shopify’s [pricing page](https://www.shopify.com/pricing) says "you can cancel when your term commitment expires". Renewal and downgrade, if you are eligible, are done from the admin and [take effect on the renewal date](https://help.shopify.com/en/manual/your-account/manage-orgs-and-stores/manage-pricing-plan/renew-downgrade-plus-plan), not immediately. And "You can’t cancel your Shopify Plus agreement from the Shopify admin": that goes through your Customer Success Manager or Plus Support. Read currency, term and fees before you sign.',
+      text: '**Plus runs on a term of 1 or 3 years, and Shopify’s [pricing page](https://www.shopify.com/pricing) says "you can cancel when your term commitment expires".** Renewal and downgrade, if you are eligible, are done from the admin and [take effect on the renewal date](https://help.shopify.com/en/manual/your-account/manage-orgs-and-stores/manage-pricing-plan/renew-downgrade-plus-plan), not immediately. And "You can’t cancel your Shopify Plus agreement from the Shopify admin": that goes through your Customer Success Manager or Plus Support. Read currency, term and fees before you sign.',
     },
     { type: 'h2', text: 'Upgrade to Plus first, or migrate first?' },
     {
@@ -325,27 +325,27 @@ const article: Article = {
     { type: 'h3', text: 'Do I need a Shopify Plus Partner to migrate?' },
     {
       type: 'paragraph',
-      text: 'No, a Partner is one option. Shopify’s [migration guide](https://help.shopify.com/en/manual/migrating-to-shopify) lists Partners next to copy and paste, CSV files, apps and custom API work, and its Plus plan page counts Shopify Plus Partners among the possible extra costs. What you need is someone who can show you the work on checkout, data and redirects.',
+      text: '**No, a Partner is one option.** Shopify’s [migration guide](https://help.shopify.com/en/manual/migrating-to-shopify) lists Partners next to copy and paste, CSV files, apps and custom API work, and its Plus plan page counts Shopify Plus Partners among the possible extra costs. What you need is someone who can show you the work on checkout, data and redirects.',
     },
     { type: 'h3', text: 'How long does it take to go from Advanced to Plus?' },
     {
       type: 'paragraph',
-      text: 'The plan change itself is immediate: Shopify says the new plan’s features take effect immediately once you select Plus under Settings > Plan. The time goes into what comes around it: the quote, the contract and the features you then have to configure, which depend on your list.',
+      text: '**The plan change itself is immediate: Shopify says the new plan’s features take effect immediately once you select Plus under Settings > Plan.** The time goes into what comes around it: the quote, the contract and the features you then have to configure, which depend on your list.',
     },
     { type: 'h3', text: 'Does upgrading to Shopify Plus affect SEO?' },
     {
       type: 'paragraph',
-      text: 'Shopify’s upgrade article does not cover SEO, so this is our judgment: a plan change on its own is not a site move, because Shopify describes the step from Advanced as a plan change without rebuilding the store. The risk comes back when the same project changes the Shopify theme or the URLs. If URLs change, [Google’s site move guide](https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes) applies.',
+      text: '**Shopify’s upgrade article does not cover SEO, so this is our judgment: a plan change on its own is not a site move, because Shopify describes the step from Advanced as a plan change without rebuilding the store.** The risk comes back when the same project changes the Shopify theme or the URLs. If URLs change, [Google’s site move guide](https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes) applies.',
     },
     { type: 'h3', text: 'What happened to Shopify Scripts?' },
     {
       type: 'paragraph',
-      text: 'Shopify Scripts was deprecated on 30 June 2026. The Scripts customizations report in Apps > Script Editor tells you what to recreate, and you recreate it with apps based on Functions or with your own Functions. Custom apps with Functions need Plus.',
+      text: '**Shopify Scripts was deprecated on 30 June 2026. The Scripts customizations report in Apps > Script Editor tells you what to recreate, and you recreate it with apps based on Functions or with your own Functions.** Custom apps with Functions need Plus.',
     },
     { type: 'h3', text: 'Can I try Shopify Plus before I commit?' },
     {
       type: 'paragraph',
-      text: 'Yes, if you are eligible, with a paid trial of 1 to 2 months at $399, €384 or £344 a month. It leaves out expansion stores, unlimited staging stores, organization settings, Test Drive and bot protection. If you take no action by the end, your store is automatically enrolled in a full Plus plan.',
+      text: '**Yes, if you are eligible, with a paid trial of 1 to 2 months at $399, €384 or £344 a month.** It leaves out expansion stores, unlimited staging stores, organization settings, Test Drive and bot protection. If you take no action by the end, your store is automatically enrolled in a full Plus plan.',
     },
     { type: 'h3', text: 'Is there a minimum revenue for Shopify Plus?' },
     {
@@ -373,7 +373,7 @@ const article: Article = {
     { type: 'h2', text: 'Sei già su Shopify: passare a Shopify Plus è davvero una migrazione?' },
     {
       type: 'paragraph',
-      text: '**No. Da Advanced, passare a Shopify Plus è un cambio di piano, non una migrazione, e le funzioni si attivano subito.** L’[articolo di Shopify sull’upgrade](https://www.shopify.com/enterprise/blog/upgrade-to-shopify-plus), aggiornato il 23 settembre 2026, dice che da Advanced si passa a Plus "without rebuilding its existing store", senza ricostruire lo store: selezioni Plus in Settings > Plan. Quindi se qualcuno ti preventiva una "migrazione" da Advanced a Plus, chiedi cosa sta spostando di preciso.',
+      text: 'No. Da Advanced, passare a Shopify Plus è un cambio di piano, non una migrazione, e le funzioni si attivano subito. L’[articolo di Shopify sull’upgrade](https://www.shopify.com/enterprise/blog/upgrade-to-shopify-plus), aggiornato il 23 settembre 2026, dice che da Advanced si passa a Plus "without rebuilding its existing store", senza ricostruire lo store: selezioni Plus in Settings > Plan. Quindi se qualcuno ti preventiva una "migrazione" da Advanced a Plus, chiedi cosa sta spostando di preciso.',
     },
     {
       type: 'paragraph',
@@ -550,17 +550,17 @@ const article: Article = {
     { type: 'h3', text: 'La migrazione, che paghi a chi sposta lo store' },
     {
       type: 'paragraph',
-      text: 'Da Advanced a Plus non c’è un conto di migrazione, perché lo store resta dov’è. Da un’altra piattaforma, il nostro è pubblico: lo Shopify Launch Sprint costa €5.800 sotto i €2M di fatturato, €8.800 tra €2M e €20M e €12.800 sopra i €20M, IVA esclusa, in 4 rate. Per leggere i preventivi degli altri, il nostro articolo sul [costo della migrazione a Shopify](/it/blog/costo-migrazione-shopify) ha le otto voci da cercare.',
+      text: '**Da Advanced a Plus non c’è un conto di migrazione, perché lo store resta dov’è.** Da un’altra piattaforma, il nostro è pubblico: lo Shopify Launch Sprint costa €5.800 sotto i €2M di fatturato, €8.800 tra €2M e €20M e €12.800 sopra i €20M, IVA esclusa, in 4 rate. Per leggere i preventivi degli altri, il nostro articolo sul [costo della migrazione a Shopify](/it/blog/costo-migrazione-shopify) ha le otto voci da cercare.',
     },
     { type: 'h3', text: 'Il lavoro su Plus che ci va sopra' },
     {
       type: 'paragraph',
-      text: 'Estensioni, Functions, configurazione B2B, expansion store. Questo conto si definisce progetto per progetto, a partire dall’elenco che hai scritto per il checkout: chiedi un prezzo per ogni riga di quell’elenco. Un totale unico ti dice poco.',
+      text: '**Estensioni, Functions, configurazione B2B, expansion store.** Questo conto si definisce progetto per progetto, a partire dall’elenco che hai scritto per il checkout: chiedi un prezzo per ogni riga di quell’elenco. Un totale unico ti dice poco.',
     },
     { type: 'h3', text: 'A parte i conti: il contratto' },
     {
       type: 'paragraph',
-      text: 'Plus ha un termine di 1 o 3 anni, e la [pagina prezzi](https://www.shopify.com/pricing) di Shopify dice "you can cancel when your term commitment expires": disdici quando il termine scade. Rinnovo e downgrade, se sei idoneo, si fanno dall’admin e [hanno effetto alla data di rinnovo](https://help.shopify.com/en/manual/your-account/manage-orgs-and-stores/manage-pricing-plan/renew-downgrade-plus-plan), non subito. E "You can’t cancel your Shopify Plus agreement from the Shopify admin": la disdetta passa dal tuo Customer Success Manager o da Plus Support. Leggi valuta, termine e fee prima di firmare.',
+      text: '**Plus ha un termine di 1 o 3 anni, e la [pagina prezzi](https://www.shopify.com/pricing) di Shopify dice "you can cancel when your term commitment expires": disdici quando il termine scade.** Rinnovo e downgrade, se sei idoneo, si fanno dall’admin e [hanno effetto alla data di rinnovo](https://help.shopify.com/en/manual/your-account/manage-orgs-and-stores/manage-pricing-plan/renew-downgrade-plus-plan), non subito. E "You can’t cancel your Shopify Plus agreement from the Shopify admin": la disdetta passa dal tuo Customer Success Manager o da Plus Support. Leggi valuta, termine e fee prima di firmare.',
     },
     { type: 'h2', text: 'Prima Plus o prima la migrazione?' },
     {
@@ -589,12 +589,12 @@ const article: Article = {
     { type: 'h3', text: 'Serve uno Shopify Plus Partner per migrare?' },
     {
       type: 'paragraph',
-      text: 'No, un Partner è una delle opzioni. La [guida alla migrazione di Shopify](https://help.shopify.com/it/manual/migrating-to-shopify) elenca i Partner accanto a copia e incolla, file CSV, app e lavoro custom via API, e la pagina del piano Plus indica gli Shopify Plus Partner tra i possibili costi aggiuntivi. Ti serve qualcuno che sappia mostrarti il lavoro su checkout, dati e redirect.',
+      text: '**No, un Partner è una delle opzioni.** La [guida alla migrazione di Shopify](https://help.shopify.com/it/manual/migrating-to-shopify) elenca i Partner accanto a copia e incolla, file CSV, app e lavoro custom via API, e la pagina del piano Plus indica gli Shopify Plus Partner tra i possibili costi aggiuntivi. Ti serve qualcuno che sappia mostrarti il lavoro su checkout, dati e redirect.',
     },
     { type: 'h3', text: 'Quanto ci vuole a passare da Advanced a Plus?' },
     {
       type: 'paragraph',
-      text: 'Il cambio di piano in sé è immediato: Shopify dice che le funzioni del nuovo piano si attivano subito quando selezioni Plus in Settings > Plan. Il tempo va in ciò che c’è intorno: preventivo, contratto e funzioni che poi devi configurare, che dipendono dal tuo elenco.',
+      text: '**Il cambio di piano in sé è immediato: Shopify dice che le funzioni del nuovo piano si attivano subito quando selezioni Plus in Settings > Plan.** Il tempo va in ciò che c’è intorno: preventivo, contratto e funzioni che poi devi configurare, che dipendono dal tuo elenco.',
     },
     { type: 'h3', text: 'Passare a Shopify Plus tocca la SEO?' },
     {
@@ -604,17 +604,17 @@ const article: Article = {
     { type: 'h3', text: 'Che fine hanno fatto gli Shopify Scripts?' },
     {
       type: 'paragraph',
-      text: 'Shopify Scripts è stato deprecato il 30 giugno 2026. Il report Scripts customizations in Apps > Script Editor ti dice cosa ricreare, e lo ricrei con app basate su Functions o con Functions tue. Le app personalizzate con Functions richiedono Plus.',
+      text: '**Shopify Scripts è stato deprecato il 30 giugno 2026. Il report Scripts customizations in Apps > Script Editor ti dice cosa ricreare, e lo ricrei con app basate su Functions o con Functions tue.** Le app personalizzate con Functions richiedono Plus.',
     },
     { type: 'h3', text: 'Posso provare Shopify Plus prima di impegnarmi?' },
     {
       type: 'paragraph',
-      text: 'Sì, se sei idoneo, con una prova a pagamento da 1 a 2 mesi a $399, €384 o £344 al mese. Non include expansion store, staging illimitati, impostazioni di organizzazione, Test Drive e protezione dai bot. Se non fai nulla entro la fine, lo store passa in automatico al piano Plus pieno.',
+      text: '**Sì, se sei idoneo, con una prova a pagamento da 1 a 2 mesi a $399, €384 o £344 al mese.** Non include expansion store, staging illimitati, impostazioni di organizzazione, Test Drive e protezione dai bot. Se non fai nulla entro la fine, lo store passa in automatico al piano Plus pieno.',
     },
     { type: 'h3', text: 'Esiste un fatturato minimo per Shopify Plus?' },
     {
       type: 'paragraph',
-      text: 'Shopify non ne pubblica uno. Sales guarda volumi, configurazione dei pagamenti ed esigenze operative prima di darti il prezzo esatto, e sulle attività più complesse può aggiungersi una variable platform fee.',
+      text: '**Shopify non ne pubblica uno.** Sales guarda volumi, configurazione dei pagamenti ed esigenze operative prima di darti il prezzo esatto, e sulle attività più complesse può aggiungersi una variable platform fee.',
     },
     {
       type: 'paragraph',

@@ -49,7 +49,7 @@ const article: Article = {
     { type: 'h2', text: 'Can AI agents migrate a store to Shopify?' },
     {
       type: 'paragraph',
-      text: 'Agents can do most of the typing in a migration, but not the deciding. Shopify lists [five ways to move a store](https://help.shopify.com/en/manual/migrating-to-shopify): copy and paste, CSV import, migration apps, a Shopify Partner, or a custom solution built on the Shopify API. An agent is a faster worker that uses those same channels (CSV files, the API, apps) as tools, under rules you set.',
+      text: '**Agents can do most of the typing in a migration, but not the deciding.** Shopify lists [five ways to move a store](https://help.shopify.com/en/manual/migrating-to-shopify): copy and paste, CSV import, migration apps, a Shopify Partner, or a custom solution built on the Shopify API. An agent is a faster worker that uses those same channels (CSV files, the API, apps) as tools, under rules you set.',
     },
     {
       type: 'paragraph',
@@ -58,7 +58,7 @@ const article: Article = {
     { type: 'h2', text: 'Which AI patterns do you use in a migration?' },
     {
       type: 'paragraph',
-      text: 'Four patterns cover almost everything: prompt chaining, tool use, reflection with a separate checker, and planning. Anthropic’s guide [Building effective agents](https://www.anthropic.com/engineering/building-effective-agents) draws the line that matters: a workflow follows paths written in advance, while an agent decides its own steps and tools as it goes. My choice for a migration is a workflow wherever the steps are known, and an agent only where the path depends on what it finds.',
+      text: '**Four patterns cover almost everything: prompt chaining, tool use, reflection with a separate checker, and planning.** Anthropic’s guide [Building effective agents](https://www.anthropic.com/engineering/building-effective-agents) draws the line that matters: a workflow follows paths written in advance, while an agent decides its own steps and tools as it goes. My choice for a migration is a workflow wherever the steps are known, and an agent only where the path depends on what it finds.',
     },
     {
       type: 'list',
@@ -76,12 +76,12 @@ const article: Article = {
     { type: 'h2', text: 'What does the agent do in each phase of a Shopify migration?' },
     {
       type: 'paragraph',
-      text: 'A migration has six phases, and in each one the agent takes the volume while a person keeps the decision. For every phase below you get what the agent does, what a person decides, and the check that tells you it worked.',
+      text: '**A migration has six phases, and in each one the agent takes the volume while a person keeps the decision.** For every phase below you get what the agent does, what a person decides, and the check that tells you it worked.',
     },
     { type: 'h3', text: '1. Inventory' },
     {
       type: 'paragraph',
-      text: 'In the inventory the agent lists everything the old store holds: products, collections, pages, articles, customers, orders, apps, redirects and URLs. It reads exports, the sitemap and the platform data. Google’s [guide to site moves with URL changes](https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes) names more places where URLs hide: server logs, analytics and Search Console.',
+      text: '**In the inventory the agent lists everything the old store holds: products, collections, pages, articles, customers, orders, apps, redirects and URLs.** It reads exports, the sitemap and the platform data. Google’s [guide to site moves with URL changes](https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes) names more places where URLs hide: server logs, analytics and Search Console.',
     },
     {
       type: 'list',
@@ -94,7 +94,7 @@ const article: Article = {
     { type: 'h3', text: '2. Catalog cleanup and mapping' },
     {
       type: 'paragraph',
-      text: 'Catalog mapping turns old fields into Shopify fields, and it is the best use of a prompt chain. Shopify’s [product CSV](https://help.shopify.com/en/manual/products/import-export/using-csv) has precise rules: a product is identified by its handle, variants take up to 3 options, and if the option columns are missing on an update, the existing variants are deleted. Rules like these are why a mapping table is written and checked before any import.',
+      text: '**Catalog mapping turns old fields into Shopify fields, and it is the best use of a prompt chain.** Shopify’s [product CSV](https://help.shopify.com/en/manual/products/import-export/using-csv) has precise rules: a product is identified by its handle, variants take up to 3 options, and if the option columns are missing on an update, the existing variants are deleted. Rules like these are why a mapping table is written and checked before any import.',
     },
     {
       type: 'list',
@@ -111,7 +111,7 @@ const article: Article = {
     { type: 'h3', text: '3. The 301 redirect map' },
     {
       type: 'paragraph',
-      text: 'The redirect map links every old URL to the page that replaces it, and it decides how much search traffic survives the move. [Google asks for a complete mapping and for permanent redirects](https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes) from each old URL to its new one, kept short (no long chains) and never dumped on the home page.',
+      text: '**The redirect map links every old URL to the page that replaces it, and it decides how much search traffic survives the move.** [Google asks for a complete mapping and for permanent redirects](https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes) from each old URL to its new one, kept short (no long chains) and never dumped on the home page.',
     },
     {
       type: 'list',
@@ -128,7 +128,7 @@ const article: Article = {
     { type: 'h3', text: '4. Data migration' },
     {
       type: 'paragraph',
-      text: 'Data migration moves products, customers and orders into Shopify in the right order, first on a development store and then on the live one. [Shopify’s migration page](https://help.shopify.com/en/manual/migrating-to-shopify) says to import products first, then customers, then historical orders, and it lists blogs and pages among the content that can move.',
+      text: '**Data migration moves products, customers and orders into Shopify in the right order, first on a development store and then on the live one.** [Shopify’s migration page](https://help.shopify.com/en/manual/migrating-to-shopify) says to import products first, then customers, then historical orders, and it lists blogs and pages among the content that can move.',
     },
     {
       type: 'list',
@@ -141,7 +141,7 @@ const article: Article = {
     { type: 'h3', text: '5. Tracking' },
     {
       type: 'paragraph',
-      text: 'Tracking has to work on day one, because after the switch you cannot rebuild numbers you did not record. This is a comparison job, and agents are good at comparing.',
+      text: '**Tracking has to work on day one, because after the switch you cannot rebuild numbers you did not record.** This is a comparison job, and agents are good at comparing.',
     },
     {
       type: 'list',
@@ -154,7 +154,7 @@ const article: Article = {
     { type: 'h3', text: '6. QA before and after go-live' },
     {
       type: 'paragraph',
-      text: 'QA runs twice, on the copy before go-live and on the live store after it, and in both cases the checker is not the one who did the work. [Shopify advises placing test orders before launch](https://help.shopify.com/en/manual/migrating-to-shopify) to check successful and failed payments, refunds, cancellations and fulfillment.',
+      text: '**QA runs twice, on the copy before go-live and on the live store after it, and in both cases the checker is not the one who did the work.** [Shopify advises placing test orders before launch](https://help.shopify.com/en/manual/migrating-to-shopify) to check successful and failed payments, refunds, cancellations and fulfillment.',
     },
     {
       type: 'list',
@@ -210,7 +210,7 @@ const article: Article = {
     { type: 'h2', text: 'What should always stay with a person in a migration?' },
     {
       type: 'paragraph',
-      text: 'Decisions, approvals and irreversible actions stay with a person, always. Decisions: what moves, the URL structure, which old page deserves a redirect, which tools the store keeps. Approvals: the mapping table, the redirect sample, the run on the live store, go-live. Irreversible actions: overwriting live products, deleting anything, switching the domain, closing the old store, sending an email to your customers.',
+      text: '**Decisions, approvals and irreversible actions stay with a person, always.** Decisions: what moves, the URL structure, which old page deserves a redirect, which tools the store keeps. Approvals: the mapping table, the redirect sample, the run on the live store, go-live. Irreversible actions: overwriting live products, deleting anything, switching the domain, closing the old store, sending an email to your customers.',
     },
     {
       type: 'paragraph',
@@ -232,7 +232,7 @@ const article: Article = {
     { type: 'h2', text: 'How do you migrate from Magento or WooCommerce to Shopify with the help of AI?' },
     {
       type: 'paragraph',
-      text: 'You follow the same six phases and change only the source: where the data lives and what the old URLs look like. On Magento the catalog is usually the heavy part (configurable products, many attribute sets, several store views), so mapping and the redirect map take the most care. On WooCommerce a lot lives in plugins and in permalink structures, so the inventory of plugins and of the data they own comes first.',
+      text: '**You follow the same six phases and change only the source: where the data lives and what the old URLs look like.** On Magento the catalog is usually the heavy part (configurable products, many attribute sets, several store views), so mapping and the redirect map take the most care. On WooCommerce a lot lives in plugins and in permalink structures, so the inventory of plugins and of the data they own comes first.',
     },
     {
       type: 'paragraph',
@@ -241,7 +241,7 @@ const article: Article = {
     { type: 'h2', text: 'How does this method work in the Shopify Launch Sprint?' },
     {
       type: 'paragraph',
-      text: 'The Shopify Launch Sprint applies this method: development with AI agents, a 1:1 redirect map tested automatically and a reconciliation at 100%. Every URL with traffic gets its 1:1 redirect, tested automatically before and after go-live. Products, variants, customers and order history are reconciled at 100%, with every count from the old platform compared with Shopify. Our specialists keep the decisions.',
+      text: '**The Shopify Launch Sprint applies this method: development with AI agents, a 1:1 redirect map tested automatically and a reconciliation at 100%.** Every URL with traffic gets its 1:1 redirect, tested automatically before and after go-live. Products, variants, customers and order history are reconciled at 100%, with every count from the old platform compared with Shopify. Our specialists keep the decisions.',
     },
     {
       type: 'paragraph',
@@ -256,27 +256,27 @@ const article: Article = {
     { type: 'h3', text: 'Which parts of a Shopify migration can be automated?' },
     {
       type: 'paragraph',
-      text: 'Most of the volume: the inventory, catalog cleanup and mapping, the first draft of the 301 redirect map, batched imports on a development store, the reconciliation report, tracking comparisons and the QA checks. The decisions and the irreversible steps are not automated.',
+      text: '**Most of the volume: the inventory, catalog cleanup and mapping, the first draft of the 301 redirect map, batched imports on a development store, the reconciliation report, tracking comparisons and the QA checks.** The decisions and the irreversible steps are not automated.',
     },
     { type: 'h3', text: 'Is it safe to give an AI agent access to my store?' },
     {
       type: 'paragraph',
-      text: 'It is safe when access is limited: read-only on the old store, a development store for writes, one approved run on the live store, a log of every action. Treat imported content as data, never as instructions, as OWASP recommends for indirect prompt injection.',
+      text: '**It is safe when access is limited: read-only on the old store, a development store for writes, one approved run on the live store, a log of every action.** Treat imported content as data, never as instructions, as OWASP recommends for indirect prompt injection.',
     },
     { type: 'h3', text: 'Do I still need a migration app or a CSV?' },
     {
       type: 'paragraph',
-      text: 'The agent works through those same channels. Shopify lists CSV import, migration apps, a Partner and a custom solution on the Shopify API as the ways to move a store, and an agent uses them as tools. What it adds is speed, consistency and checks.',
+      text: '**The agent works through those same channels.** Shopify lists CSV import, migration apps, a Partner and a custom solution on the Shopify API as the ways to move a store, and an agent uses them as tools. What it adds is speed, consistency and checks.',
     },
     { type: 'h3', text: 'How does AI help with SEO redirects in a migration?' },
     {
       type: 'paragraph',
-      text: 'It sorts every old URL by type, matches it to the new page, tests that each old URL answers 404 on the new store and that each target answers 200, and writes the CSV. A person decides the pages with no equivalent and checks a sample by hand.',
+      text: '**It sorts every old URL by type, matches it to the new page, tests that each old URL answers 404 on the new store and that each target answers 200, and writes the CSV.** A person decides the pages with no equivalent and checks a sample by hand.',
     },
     { type: 'h3', text: 'How long does a migration to Shopify with AI take?' },
     {
       type: 'paragraph',
-      text: 'It depends on catalog, integrations and design. The Shopify Launch Sprint runs on a fixed 14-day calendar, with go-live between day 15 and 30 and 90 days of support after it.',
+      text: '**It depends on catalog, integrations and design.** The Shopify Launch Sprint runs on a fixed 14-day calendar, with go-live between day 15 and 30 and 90 days of support after it.',
     },
     {
       type: 'paragraph',
@@ -303,7 +303,7 @@ const article: Article = {
     { type: 'h2', text: 'Gli agenti AI possono migrare uno store su Shopify?' },
     {
       type: 'paragraph',
-      text: 'Gli agenti possono fare gran parte della digitazione in una migrazione, ma non il decidere. Shopify elenca [cinque modi per spostare uno store](https://help.shopify.com/en/manual/migrating-to-shopify): copia e incolla, import CSV, app di migrazione, un Shopify Partner o una soluzione su misura con le API di Shopify. Un agente è un lavoratore più veloce che usa quegli stessi canali (file CSV, API, app) come strumenti, con le regole che gli dai tu.',
+      text: '**Gli agenti possono fare gran parte della digitazione in una migrazione, ma non il decidere.** Shopify elenca [cinque modi per spostare uno store](https://help.shopify.com/en/manual/migrating-to-shopify): copia e incolla, import CSV, app di migrazione, un Shopify Partner o una soluzione su misura con le API di Shopify. Un agente è un lavoratore più veloce che usa quegli stessi canali (file CSV, API, app) come strumenti, con le regole che gli dai tu.',
     },
     {
       type: 'paragraph',
@@ -312,7 +312,7 @@ const article: Article = {
     { type: 'h2', text: 'Quali pattern AI si usano in una migrazione?' },
     {
       type: 'paragraph',
-      text: 'Quattro pattern coprono quasi tutto: prompt chaining, tool use, reflection con un controllo separato e planning. La guida di Anthropic [Building effective agents](https://www.anthropic.com/engineering/building-effective-agents) traccia la linea che conta: un workflow segue percorsi scritti in anticipo, un agente decide da solo passi e strumenti mentre procede. Per una migrazione scelgo un workflow dove i passi sono noti e un agente solo dove il percorso dipende da ciò che trova.',
+      text: '**Quattro pattern coprono quasi tutto: prompt chaining, tool use, reflection con un controllo separato e planning.** La guida di Anthropic [Building effective agents](https://www.anthropic.com/engineering/building-effective-agents) traccia la linea che conta: un workflow segue percorsi scritti in anticipo, un agente decide da solo passi e strumenti mentre procede. Per una migrazione scelgo un workflow dove i passi sono noti e un agente solo dove il percorso dipende da ciò che trova.',
     },
     {
       type: 'list',
@@ -330,12 +330,12 @@ const article: Article = {
     { type: 'h2', text: 'Cosa fa l’agente in ogni fase di una migrazione a Shopify?' },
     {
       type: 'paragraph',
-      text: 'Una migrazione ha sei fasi, e in ognuna l’agente prende il volume mentre una persona tiene la decisione. Per ogni fase qui sotto trovi cosa fa l’agente, cosa decide una persona e il controllo che dice se ha funzionato.',
+      text: '**Una migrazione ha sei fasi, e in ognuna l’agente prende il volume mentre una persona tiene la decisione.** Per ogni fase qui sotto trovi cosa fa l’agente, cosa decide una persona e il controllo che dice se ha funzionato.',
     },
     { type: 'h3', text: '1. Inventario' },
     {
       type: 'paragraph',
-      text: 'Nell’inventario l’agente elenca tutto ciò che contiene il vecchio store: prodotti, collezioni, pagine, articoli, clienti, ordini, app, redirect e URL. Legge gli export, la sitemap e i dati della piattaforma. La [guida di Google allo spostamento di un sito con cambi di URL](https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes) indica altri posti dove si nascondono gli URL: log del server, analytics e Search Console.',
+      text: '**Nell’inventario l’agente elenca tutto ciò che contiene il vecchio store: prodotti, collezioni, pagine, articoli, clienti, ordini, app, redirect e URL.** Legge gli export, la sitemap e i dati della piattaforma. La [guida di Google allo spostamento di un sito con cambi di URL](https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes) indica altri posti dove si nascondono gli URL: log del server, analytics e Search Console.',
     },
     {
       type: 'list',
@@ -348,7 +348,7 @@ const article: Article = {
     { type: 'h3', text: '2. Pulizia e mappatura del catalogo' },
     {
       type: 'paragraph',
-      text: 'La mappatura del catalogo trasforma i vecchi campi in campi Shopify ed è l’uso migliore di una catena di prompt. Il [CSV dei prodotti](https://help.shopify.com/en/manual/products/import-export/using-csv) di Shopify ha regole precise: un prodotto si identifica con il suo handle, le varianti hanno fino a 3 opzioni e, se in un aggiornamento mancano le colonne delle opzioni, le varianti esistenti vengono eliminate. Regole così sono il motivo per cui una tabella di mappatura si scrive e si controlla prima di qualsiasi import.',
+      text: '**La mappatura del catalogo trasforma i vecchi campi in campi Shopify ed è l’uso migliore di una catena di prompt.** Il [CSV dei prodotti](https://help.shopify.com/en/manual/products/import-export/using-csv) di Shopify ha regole precise: un prodotto si identifica con il suo handle, le varianti hanno fino a 3 opzioni e, se in un aggiornamento mancano le colonne delle opzioni, le varianti esistenti vengono eliminate. Regole così sono il motivo per cui una tabella di mappatura si scrive e si controlla prima di qualsiasi import.',
     },
     {
       type: 'list',
@@ -365,7 +365,7 @@ const article: Article = {
     { type: 'h3', text: '3. La mappa dei redirect 301' },
     {
       type: 'paragraph',
-      text: 'La mappa dei redirect collega ogni vecchio URL alla pagina che lo sostituisce e decide quanto traffico di ricerca sopravvive allo spostamento. [Google chiede una mappatura completa e redirect permanenti](https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes) da ogni vecchio URL al nuovo, brevi (niente lunghe catene) e mai riversati sulla home.',
+      text: '**La mappa dei redirect collega ogni vecchio URL alla pagina che lo sostituisce e decide quanto traffico di ricerca sopravvive allo spostamento.** [Google chiede una mappatura completa e redirect permanenti](https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes) da ogni vecchio URL al nuovo, brevi (niente lunghe catene) e mai riversati sulla home.',
     },
     {
       type: 'list',
@@ -382,7 +382,7 @@ const article: Article = {
     { type: 'h3', text: '4. Migrazione dei dati' },
     {
       type: 'paragraph',
-      text: 'La migrazione dei dati porta prodotti, clienti e ordini su Shopify nell’ordine giusto, prima su uno store di sviluppo e poi su quello vero. [La pagina di Shopify sulla migrazione](https://help.shopify.com/en/manual/migrating-to-shopify) dice di importare prima i prodotti, poi i clienti, poi gli ordini storici, e tra i contenuti che si possono spostare elenca blog e pagine.',
+      text: '**La migrazione dei dati porta prodotti, clienti e ordini su Shopify nell’ordine giusto, prima su uno store di sviluppo e poi su quello vero.** [La pagina di Shopify sulla migrazione](https://help.shopify.com/en/manual/migrating-to-shopify) dice di importare prima i prodotti, poi i clienti, poi gli ordini storici, e tra i contenuti che si possono spostare elenca blog e pagine.',
     },
     {
       type: 'list',
@@ -395,7 +395,7 @@ const article: Article = {
     { type: 'h3', text: '5. Tracking' },
     {
       type: 'paragraph',
-      text: 'Il tracking deve funzionare dal primo giorno, perché dopo il passaggio non puoi ricostruire numeri che non hai registrato. È un lavoro di confronto, e gli agenti confrontano bene.',
+      text: '**Il tracking deve funzionare dal primo giorno, perché dopo il passaggio non puoi ricostruire numeri che non hai registrato.** È un lavoro di confronto, e gli agenti confrontano bene.',
     },
     {
       type: 'list',
@@ -408,7 +408,7 @@ const article: Article = {
     { type: 'h3', text: '6. QA prima e dopo il go live' },
     {
       type: 'paragraph',
-      text: 'Il QA si fa due volte, sulla copia prima del go live e sullo store online dopo, e in entrambi i casi chi controlla non è chi ha fatto il lavoro. [Shopify consiglia di fare ordini di prova prima del lancio](https://help.shopify.com/en/manual/migrating-to-shopify) per verificare pagamenti riusciti e falliti, rimborsi, annullamenti ed evasione.',
+      text: '**Il QA si fa due volte, sulla copia prima del go live e sullo store online dopo, e in entrambi i casi chi controlla non è chi ha fatto il lavoro.** [Shopify consiglia di fare ordini di prova prima del lancio](https://help.shopify.com/en/manual/migrating-to-shopify) per verificare pagamenti riusciti e falliti, rimborsi, annullamenti ed evasione.',
     },
     {
       type: 'list',
@@ -464,7 +464,7 @@ const article: Article = {
     { type: 'h2', text: 'Cosa deve restare sempre a una persona in una migrazione?' },
     {
       type: 'paragraph',
-      text: 'Decisioni, approvazioni e azioni irreversibili restano sempre a una persona. Decisioni: cosa si sposta, la struttura degli URL, quale vecchia pagina merita un redirect, quali strumenti tiene lo store. Approvazioni: la tabella di mappatura, il campione dei redirect, l’esecuzione sullo store vero, il go live. Azioni irreversibili: sovrascrivere prodotti online, cancellare qualsiasi cosa, spostare il dominio, chiudere il vecchio store, mandare un’email ai tuoi clienti.',
+      text: '**Decisioni, approvazioni e azioni irreversibili restano sempre a una persona.** Decisioni: cosa si sposta, la struttura degli URL, quale vecchia pagina merita un redirect, quali strumenti tiene lo store. Approvazioni: la tabella di mappatura, il campione dei redirect, l’esecuzione sullo store vero, il go live. Azioni irreversibili: sovrascrivere prodotti online, cancellare qualsiasi cosa, spostare il dominio, chiudere il vecchio store, mandare un’email ai tuoi clienti.',
     },
     {
       type: 'paragraph',
@@ -486,7 +486,7 @@ const article: Article = {
     { type: 'h2', text: 'Come migro da Magento o WooCommerce a Shopify con l’aiuto dell’AI?' },
     {
       type: 'paragraph',
-      text: 'Segui le stesse sei fasi e cambia solo la fonte: dove stanno i dati e che aspetto hanno i vecchi URL. Su Magento il catalogo di solito è la parte pesante (prodotti configurabili, molti set di attributi, più viste dello store), quindi mappatura e mappa dei redirect richiedono più cura. Su WooCommerce molto vive nei plugin e nella struttura dei permalink, quindi viene prima l’inventario dei plugin e dei dati che possiedono.',
+      text: '**Segui le stesse sei fasi e cambia solo la fonte: dove stanno i dati e che aspetto hanno i vecchi URL.** Su Magento il catalogo di solito è la parte pesante (prodotti configurabili, molti set di attributi, più viste dello store), quindi mappatura e mappa dei redirect richiedono più cura. Su WooCommerce molto vive nei plugin e nella struttura dei permalink, quindi viene prima l’inventario dei plugin e dei dati che possiedono.',
     },
     {
       type: 'paragraph',
@@ -495,7 +495,7 @@ const article: Article = {
     { type: 'h2', text: 'Come funziona questo metodo nello Shopify Launch Sprint?' },
     {
       type: 'paragraph',
-      text: 'Lo Shopify Launch Sprint applica questo metodo: sviluppo con agenti AI, redirect map 1:1 collaudata in automatico e riconciliazione al 100%. Ogni URL con traffico ha il suo redirect 1:1, testato in automatico prima e dopo il go live. Prodotti, varianti, clienti e storico ordini sono riconciliati al 100%, con ogni conteggio della piattaforma vecchia confrontato con Shopify. I nostri specialisti tengono le decisioni.',
+      text: '**Lo Shopify Launch Sprint applica questo metodo: sviluppo con agenti AI, redirect map 1:1 collaudata in automatico e riconciliazione al 100%.** Ogni URL con traffico ha il suo redirect 1:1, testato in automatico prima e dopo il go live. Prodotti, varianti, clienti e storico ordini sono riconciliati al 100%, con ogni conteggio della piattaforma vecchia confrontato con Shopify. I nostri specialisti tengono le decisioni.',
     },
     {
       type: 'paragraph',
@@ -515,22 +515,22 @@ const article: Article = {
     { type: 'h3', text: 'È sicuro dare a un agente AI l’accesso al mio store?' },
     {
       type: 'paragraph',
-      text: 'È sicuro quando l’accesso è limitato: sola lettura sul vecchio store, uno store di sviluppo per le scritture, un’unica esecuzione approvata sullo store vero, un registro di ogni azione. Tratta i contenuti importati come dati, mai come istruzioni, come raccomanda OWASP per la prompt injection indiretta.',
+      text: '**È sicuro quando l’accesso è limitato: sola lettura sul vecchio store, uno store di sviluppo per le scritture, un’unica esecuzione approvata sullo store vero, un registro di ogni azione.** Tratta i contenuti importati come dati, mai come istruzioni, come raccomanda OWASP per la prompt injection indiretta.',
     },
     { type: 'h3', text: 'Mi serve ancora un’app di migrazione o un CSV?' },
     {
       type: 'paragraph',
-      text: 'L’agente lavora attraverso quegli stessi canali. Shopify elenca import CSV, app di migrazione, un Partner e una soluzione su misura con le API di Shopify come modi per spostare uno store, e un agente li usa come strumenti. Quello che aggiunge è velocità, coerenza e controlli.',
+      text: '**L’agente lavora attraverso quegli stessi canali.** Shopify elenca import CSV, app di migrazione, un Partner e una soluzione su misura con le API di Shopify come modi per spostare uno store, e un agente li usa come strumenti. Quello che aggiunge è velocità, coerenza e controlli.',
     },
     { type: 'h3', text: 'Come aiuta l’AI con i redirect SEO in una migrazione?' },
     {
       type: 'paragraph',
-      text: 'Ordina ogni vecchio URL per tipo, lo abbina alla nuova pagina, verifica che ogni vecchio URL risponda 404 sul nuovo store e che ogni destinazione risponda 200, e scrive il CSV. Una persona decide le pagine senza equivalente e controlla un campione a mano.',
+      text: '**Ordina ogni vecchio URL per tipo, lo abbina alla nuova pagina, verifica che ogni vecchio URL risponda 404 sul nuovo store e che ogni destinazione risponda 200, e scrive il CSV.** Una persona decide le pagine senza equivalente e controlla un campione a mano.',
     },
     { type: 'h3', text: 'Quanto dura una migrazione a Shopify con l’AI?' },
     {
       type: 'paragraph',
-      text: 'Dipende da catalogo, integrazioni e design. Lo Shopify Launch Sprint segue un calendario fisso di 14 giorni, con go live tra il giorno 15 e il 30 e 90 giorni di supporto dopo.',
+      text: '**Dipende da catalogo, integrazioni e design.** Lo Shopify Launch Sprint segue un calendario fisso di 14 giorni, con go live tra il giorno 15 e il 30 e 90 giorni di supporto dopo.',
     },
     {
       type: 'paragraph',

@@ -36,7 +36,7 @@ const article: Article = {
   content: [
     {
       type: 'paragraph',
-      text: '**GEO, short for generative engine optimization (you will also see it called GEO SEO, AI SEO or LLM SEO), is the work of making your pages easy for ChatGPT, Perplexity, Copilot and Google’s AI answers to find, understand and cite.** For a Shopify store that means two things at once: pages that answer questions, and product data a machine can read without guessing.',
+      text: 'GEO, short for generative engine optimization (you will also see it called GEO SEO, AI SEO or LLM SEO), is the work of making your pages easy for ChatGPT, Perplexity, Copilot and Google’s AI answers to find, understand and cite. For a Shopify store that means two things at once: pages that answer questions, and product data a machine can read without guessing.',
     },
     {
       type: 'paragraph',
@@ -75,12 +75,12 @@ const article: Article = {
     { type: 'h2', text: 'What did we do on noprob.agency, and what can we show?' },
     {
       type: 'paragraph',
-      text: '**On our own site we did four things you can inspect right now: an llms.txt file, robots rules that name AI crawlers, JSON-LD on every page type, and sections that open with their own answer.**',
+      text: 'On our own site we did four things you can inspect right now: an llms.txt file, robots rules that name AI crawlers, JSON-LD on every page type, and sections that open with their own answer.',
     },
     { type: 'h3', text: 'The llms.txt file' },
     {
       type: 'paragraph',
-      text: 'Our [llms.txt](https://noprob.agency/llms.txt) is a plain text file at the root of the domain, following the [llms.txt proposal](https://llmstxt.org). It is written to be quoted, in this order:',
+      text: '**Our [llms.txt](https://noprob.agency/llms.txt) is a plain text file at the root of the domain, following the [llms.txt proposal](https://llmstxt.org).** It is written to be quoted, in this order:',
     },
     {
       type: 'list',
@@ -102,7 +102,7 @@ const article: Article = {
     { type: 'h3', text: 'Robots rules for AI crawlers' },
     {
       type: 'paragraph',
-      text: 'Our `robots.txt` allows everything except `/api/` and `/admin/`, and then names six AI user agents explicitly: GPTBot, ChatGPT-User, ClaudeBot, anthropic-ai, PerplexityBot and Google-Extended. The wildcard rule already allows them all. The explicit lines document intent and survive the day someone adds a blanket block. One detail from [OpenAI’s crawler documentation](https://developers.openai.com/api/docs/bots): the bot that decides whether you appear in ChatGPT search is OAI-SearchBot, separate from GPTBot, which relates to training. Ours is covered by the wildcard; if you write explicit lines, include it.',
+      text: '**Our `robots.txt` allows everything except `/api/` and `/admin/`, and then names six AI user agents explicitly: GPTBot, ChatGPT-User, ClaudeBot, anthropic-ai, PerplexityBot and Google-Extended.** The wildcard rule already allows them all. The explicit lines document intent and survive the day someone adds a blanket block. One detail from [OpenAI’s crawler documentation](https://developers.openai.com/api/docs/bots): the bot that decides whether you appear in ChatGPT search is OAI-SearchBot, separate from GPTBot, which relates to training. Ours is covered by the wildcard; if you write explicit lines, include it.',
     },
     { type: 'h3', text: 'JSON-LD on every page type' },
     {
@@ -112,7 +112,7 @@ const article: Article = {
     { type: 'h3', text: 'Sections that open with the answer' },
     {
       type: 'paragraph',
-      text: 'Every H2 on this page is a question, and the first sentence under it answers it before any context. That is the cheapest GEO change there is, and it costs nothing but editing.',
+      text: '**Every H2 on this page is a question, and the first sentence under it answers it before any context.** That is the cheapest GEO change there is, and it costs nothing but editing.',
     },
     { type: 'h2', text: 'How do you do GEO on a Shopify store?' },
     {
@@ -122,15 +122,15 @@ const article: Article = {
     { type: 'h3', text: 'Product pages and product data' },
     {
       type: 'paragraph',
-      text: 'Shoppers ask AI for products by attribute, so the product page is where a store wins or loses. What to do:',
+      text: '**Shoppers ask AI for products by attribute, so the product page is where a store wins or loses.** What to do:',
     },
     {
       type: 'list',
       items: [
-        '**Write the facts as text:** material, dimensions, fit, ingredients, who it is for, how to use it, what is in the box, care, shipping and returns. Not only in images or in accordions that load late.',
-        '**Use Shopify’s structure:** product type, variants, standard attributes and metafields. Shopify’s own [Agentic Storefronts announcement](https://www.shopify.com/news/winter-26-edition-agentic-storefronts) says merchants define their product schema with standard attributes and metafields, which is what lets agents describe items accurately.',
-        '**Make the markup match the page.** Shopify’s Liquid [structured_data filter](https://shopify.dev/docs/api/liquid/filters/structured_data) turns a product into schema.org Product markup (ProductGroup when it has variants), so check that your theme or app actually outputs it. Then check that price, availability and brand equal what the shopper sees; Google’s [Product structured data](https://developers.google.com/search/docs/appearance/structured-data/product) page lists the properties.',
-        '**Keep real reviews in the page itself,** on the product, not in a pop-up.',
+        'Write the facts as text: material, dimensions, fit, ingredients, who it is for, how to use it, what is in the box, care, shipping and returns. Not only in images or in accordions that load late.',
+        'Use Shopify’s structure: product type, variants, standard attributes and metafields. Shopify’s own [Agentic Storefronts announcement](https://www.shopify.com/news/winter-26-edition-agentic-storefronts) says merchants define their product schema with standard attributes and metafields, which is what lets agents describe items accurately.',
+        'Make the markup match the page. Shopify’s Liquid [structured_data filter](https://shopify.dev/docs/api/liquid/filters/structured_data) turns a product into schema.org Product markup (ProductGroup when it has variants), so check that your theme or app actually outputs it. Then check that price, availability and brand equal what the shopper sees; Google’s [Product structured data](https://developers.google.com/search/docs/appearance/structured-data/product) page lists the properties.',
+        'Keep real reviews in the page itself, on the product, not in a pop-up.',
       ],
     },
     {
@@ -210,15 +210,15 @@ const article: Article = {
     },
     { type: 'h2', text: 'Frequently asked questions' },
     { type: 'h3', text: 'What is GEO (generative engine optimization)?' },
-    { type: 'paragraph', text: 'GEO is the practice of making your pages and data easy for AI assistants such as ChatGPT, Perplexity, Copilot and Google’s AI answers to find, understand and cite. It is also called GEO SEO, AI SEO or LLM SEO. It builds on classic SEO rather than replacing it.' },
+    { type: 'paragraph', text: '**GEO is the practice of making your pages and data easy for AI assistants such as ChatGPT, Perplexity, Copilot and Google’s AI answers to find, understand and cite.** It is also called GEO SEO, AI SEO or LLM SEO. It builds on classic SEO rather than replacing it.' },
     { type: 'h3', text: 'What is the difference between GEO and SEO?' },
-    { type: 'paragraph', text: 'Most of the work is shared: crawlable, indexed, original, well-structured pages. What changes is the target. SEO competes for a ranking and a click; GEO competes to be quoted inside an answer, often from a single passage or from product data, and it is harder to measure.' },
+    { type: 'paragraph', text: '**Most of the work is shared: crawlable, indexed, original, well-structured pages.** What changes is the target. SEO competes for a ranking and a click; GEO competes to be quoted inside an answer, often from a single passage or from product data, and it is harder to measure.' },
     { type: 'h3', text: 'Do I need an llms.txt file on Shopify?' },
     { type: 'paragraph', text: 'No. Google says Google Search does not use llms.txt, and Shopify already serves a platform-generated one on the stores we checked. Check yourstore.com/llms.txt first and put your effort into product data and answer-first content.' },
     { type: 'h3', text: 'How do I get my Shopify products into ChatGPT, Perplexity and Copilot?' },
-    { type: 'paragraph', text: 'Turn on Agentic Storefronts in the Shopify admin, choose the AI platforms you want, and make your catalog data complete: attributes, variants, metafields, accurate prices and availability. Shopify Catalog then syndicates the data, and you remain the merchant of record.' },
+    { type: 'paragraph', text: '**Turn on Agentic Storefronts in the Shopify admin, choose the AI platforms you want, and make your catalog data complete: attributes, variants, metafields, accurate prices and availability.** Shopify Catalog then syndicates the data, and you remain the merchant of record.' },
     { type: 'h3', text: 'Should I block GPTBot or other AI crawlers?' },
-    { type: 'paragraph', text: 'It is a business decision. GPTBot relates to training, while OAI-SearchBot decides whether you appear in ChatGPT search answers, and OpenAI lets you set them independently. If you want to be cited, do not block the search crawlers. We allow all of them.' },
+    { type: 'paragraph', text: '**It is a business decision.** GPTBot relates to training, while OAI-SearchBot decides whether you appear in ChatGPT search answers, and OpenAI lets you set them independently. If you want to be cited, do not block the search crawlers. We allow all of them.' },
     { type: 'h3', text: 'Can I measure traffic and sales from ChatGPT and Perplexity?' },
     { type: 'paragraph', text: 'Partly. Shopify attributes orders to the AI channel when you use Agentic Storefronts, and analytics shows referrals from chatgpt.com or perplexity.ai. Some visits carry no referrer, so you will undercount. Add a monthly manual check of fixed prompts.' },
     {
@@ -233,7 +233,7 @@ const article: Article = {
   contentIt: [
     {
       type: 'paragraph',
-      text: '**La GEO (generative engine optimization), che in italiano trovi anche come GEO SEO, AI SEO o SEO per AI, è il lavoro che rende le tue pagine facili da trovare, capire e citare per ChatGPT, Perplexity, Copilot e le risposte AI di Google.** Per uno store Shopify significa due cose insieme: pagine che rispondono alle domande e dati prodotto che una macchina legge senza dover indovinare.',
+      text: 'La GEO (generative engine optimization), che in italiano trovi anche come GEO SEO, AI SEO o SEO per AI, è il lavoro che rende le tue pagine facili da trovare, capire e citare per ChatGPT, Perplexity, Copilot e le risposte AI di Google. Per uno store Shopify significa due cose insieme: pagine che rispondono alle domande e dati prodotto che una macchina legge senza dover indovinare.',
     },
     {
       type: 'paragraph',
@@ -272,12 +272,12 @@ const article: Article = {
     { type: 'h2', text: 'Cosa abbiamo fatto su noprob.agency e cosa possiamo mostrare?' },
     {
       type: 'paragraph',
-      text: '**Sul nostro sito abbiamo fatto quattro cose che puoi verificare adesso: un file llms.txt, regole robots che nominano i crawler AI, JSON-LD su ogni tipo di pagina e sezioni che aprono con la propria risposta.**',
+      text: 'Sul nostro sito abbiamo fatto quattro cose che puoi verificare adesso: un file llms.txt, regole robots che nominano i crawler AI, JSON-LD su ogni tipo di pagina e sezioni che aprono con la propria risposta.',
     },
     { type: 'h3', text: 'Il file llms.txt' },
     {
       type: 'paragraph',
-      text: 'Il nostro [llms.txt](https://noprob.agency/llms.txt) è un file di testo nella radice del dominio, che segue la [proposta llms.txt](https://llmstxt.org). È scritto per essere citato, in quest’ordine:',
+      text: '**Il nostro [llms.txt](https://noprob.agency/llms.txt) è un file di testo nella radice del dominio, che segue la [proposta llms.txt](https://llmstxt.org).** È scritto per essere citato, in quest’ordine:',
     },
     {
       type: 'list',
@@ -299,7 +299,7 @@ const article: Article = {
     { type: 'h3', text: 'Regole robots per i crawler AI' },
     {
       type: 'paragraph',
-      text: 'Il nostro `robots.txt` permette tutto tranne `/api/` e `/admin/`, poi nomina esplicitamente sei user agent AI: GPTBot, ChatGPT-User, ClaudeBot, anthropic-ai, PerplexityBot e Google-Extended. In realtà la regola generale li permette già tutti. Le righe esplicite documentano l’intenzione e resistono al giorno in cui qualcuno aggiunge un blocco generico. Un dettaglio dalla [documentazione dei crawler di OpenAI](https://developers.openai.com/api/docs/bots): il bot che decide se compari nella ricerca di ChatGPT è OAI-SearchBot, distinto da GPTBot, che riguarda l’addestramento. Il nostro è coperto dalla regola generale; se scrivi righe esplicite, includilo.',
+      text: '**Il nostro `robots.txt` permette tutto tranne `/api/` e `/admin/`, poi nomina esplicitamente sei user agent AI: GPTBot, ChatGPT-User, ClaudeBot, anthropic-ai, PerplexityBot e Google-Extended.** In realtà la regola generale li permette già tutti. Le righe esplicite documentano l’intenzione e resistono al giorno in cui qualcuno aggiunge un blocco generico. Un dettaglio dalla [documentazione dei crawler di OpenAI](https://developers.openai.com/api/docs/bots): il bot che decide se compari nella ricerca di ChatGPT è OAI-SearchBot, distinto da GPTBot, che riguarda l’addestramento. Il nostro è coperto dalla regola generale; se scrivi righe esplicite, includilo.',
     },
     { type: 'h3', text: 'JSON-LD su ogni tipo di pagina' },
     {
@@ -309,7 +309,7 @@ const article: Article = {
     { type: 'h3', text: 'Sezioni che aprono con la risposta' },
     {
       type: 'paragraph',
-      text: 'Ogni H2 di questa pagina è una domanda e la prima frase sotto risponde, prima di qualsiasi contesto. È la modifica di GEO SEO più economica che esista e costa solo il tempo di rilettura.',
+      text: '**Ogni H2 di questa pagina è una domanda e la prima frase sotto risponde, prima di qualsiasi contesto.** È la modifica di GEO SEO più economica che esista e costa solo il tempo di rilettura.',
     },
     { type: 'h2', text: 'Come si fa SEO per AI su uno store Shopify?' },
     {
@@ -319,15 +319,15 @@ const article: Article = {
     { type: 'h3', text: 'Schede prodotto e dati prodotto' },
     {
       type: 'paragraph',
-      text: 'Chi chiede un prodotto a un’AI lo descrive per caratteristiche, quindi la scheda prodotto è dove uno store vince o perde. Cosa fare:',
+      text: '**Chi chiede un prodotto a un’AI lo descrive per caratteristiche, quindi la scheda prodotto è dove uno store vince o perde.** Cosa fare:',
     },
     {
       type: 'list',
       items: [
-        '**Scrivi i fatti come testo:** materiale, misure, vestibilità, ingredienti, a chi è rivolto, come si usa, cosa c’è nella confezione, cura, spedizione e resi. Non solo in immagini o in fisarmoniche che si caricano in ritardo.',
-        '**Usa la struttura di Shopify:** tipo di prodotto, varianti, attributi standard e metafield. Lo stesso [annuncio di Shopify sugli Agentic Storefronts](https://www.shopify.com/news/winter-26-edition-agentic-storefronts) dice che i merchant definiscono il proprio schema prodotto con attributi standard e metafield, ed è ciò che permette agli agenti di descrivere gli articoli in modo accurato.',
-        '**Fai coincidere il markup con la pagina.** Il [filtro Liquid structured_data](https://shopify.dev/docs/api/liquid/filters/structured_data) di Shopify trasforma un prodotto in markup schema.org Product (ProductGroup se ha varianti): verifica che il tuo tema o la tua app lo produca davvero. Poi controlla che prezzo, disponibilità e marca siano uguali a ciò che vede chi compra; la pagina di Google sui [dati strutturati Product](https://developers.google.com/search/docs/appearance/structured-data/product) elenca le proprietà.',
-        '**Tieni recensioni vere dentro la pagina,** sulla scheda prodotto, non in un pop-up.',
+        'Scrivi i fatti come testo: materiale, misure, vestibilità, ingredienti, a chi è rivolto, come si usa, cosa c’è nella confezione, cura, spedizione e resi. Non solo in immagini o in fisarmoniche che si caricano in ritardo.',
+        'Usa la struttura di Shopify: tipo di prodotto, varianti, attributi standard e metafield. Lo stesso [annuncio di Shopify sugli Agentic Storefronts](https://www.shopify.com/news/winter-26-edition-agentic-storefronts) dice che i merchant definiscono il proprio schema prodotto con attributi standard e metafield, ed è ciò che permette agli agenti di descrivere gli articoli in modo accurato.',
+        'Fai coincidere il markup con la pagina. Il [filtro Liquid structured_data](https://shopify.dev/docs/api/liquid/filters/structured_data) di Shopify trasforma un prodotto in markup schema.org Product (ProductGroup se ha varianti): verifica che il tuo tema o la tua app lo produca davvero. Poi controlla che prezzo, disponibilità e marca siano uguali a ciò che vede chi compra; la pagina di Google sui [dati strutturati Product](https://developers.google.com/search/docs/appearance/structured-data/product) elenca le proprietà.',
+        'Tieni recensioni vere dentro la pagina, sulla scheda prodotto, non in un pop-up.',
       ],
     },
     {
@@ -407,13 +407,13 @@ const article: Article = {
     },
     { type: 'h2', text: 'Domande frequenti' },
     { type: 'h3', text: 'Cos’è la GEO (generative engine optimization)?' },
-    { type: 'paragraph', text: 'La GEO è il lavoro che rende pagine e dati facili da trovare, capire e citare per assistenti AI come ChatGPT, Perplexity, Copilot e le risposte AI di Google. Si chiama anche GEO SEO, AI SEO o SEO per AI. Si appoggia alla SEO classica, non la sostituisce.' },
+    { type: 'paragraph', text: '**La GEO è il lavoro che rende pagine e dati facili da trovare, capire e citare per assistenti AI come ChatGPT, Perplexity, Copilot e le risposte AI di Google.** Si chiama anche GEO SEO, AI SEO o SEO per AI. Si appoggia alla SEO classica, non la sostituisce.' },
     { type: 'h3', text: 'Che differenza c’è tra GEO e SEO?' },
-    { type: 'paragraph', text: 'Gran parte del lavoro è comune: pagine scansionabili, indicizzate, originali e ben strutturate. Cambia il bersaglio. La SEO compete per una posizione e un clic; la GEO compete per essere citata dentro una risposta, spesso da un solo passaggio o dai dati prodotto, ed è più difficile da misurare.' },
+    { type: 'paragraph', text: '**Gran parte del lavoro è comune: pagine scansionabili, indicizzate, originali e ben strutturate.** Cambia il bersaglio. La SEO compete per una posizione e un clic; la GEO compete per essere citata dentro una risposta, spesso da un solo passaggio o dai dati prodotto, ed è più difficile da misurare.' },
     { type: 'h3', text: 'Serve un file llms.txt su Shopify?' },
     { type: 'paragraph', text: 'No. Google dice che Google Search non usa llms.txt e Shopify serve già un file generato dalla piattaforma sugli store che abbiamo controllato. Guarda prima tuostore.com/llms.txt e metti l’impegno su dati prodotto e contenuti che aprono con la risposta.' },
     { type: 'h3', text: 'Come porto i miei prodotti Shopify su ChatGPT, Perplexity e Copilot?' },
-    { type: 'paragraph', text: 'Attiva gli Agentic Storefronts nell’admin di Shopify, scegli le piattaforme AI che vuoi e completa i dati del catalogo: attributi, varianti, metafield, prezzi e disponibilità corretti. Shopify Catalog distribuisce poi i dati e resti tu il merchant of record.' },
+    { type: 'paragraph', text: '**Attiva gli Agentic Storefronts nell’admin di Shopify, scegli le piattaforme AI che vuoi e completa i dati del catalogo: attributi, varianti, metafield, prezzi e disponibilità corretti.** Shopify Catalog distribuisce poi i dati e resti tu il merchant of record.' },
     { type: 'h3', text: 'Devo bloccare GPTBot o gli altri crawler AI?' },
     { type: 'paragraph', text: 'È una scelta aziendale. GPTBot riguarda l’addestramento, mentre OAI-SearchBot decide se compari nelle risposte della ricerca di ChatGPT, e OpenAI permette di impostarli in modo indipendente. Se vuoi essere citato, non bloccare i crawler di ricerca. Noi li permettiamo tutti.' },
     { type: 'h3', text: 'Posso misurare visite e vendite da ChatGPT e Perplexity?' },

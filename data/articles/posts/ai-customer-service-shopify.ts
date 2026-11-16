@@ -36,7 +36,7 @@ const article: Article = {
   content: [
     {
       type: 'paragraph',
-      text: '**A Shopify AI chatbot you can leave alone with customers does four things and refuses a fifth: it answers “where is my order”, explains your policies, answers product and size questions, opens a return request, and never decides a refund or an exception.** The rest of this article is how to make that last line hold in code, where a prompt alone cannot enforce it.',
+      text: 'A Shopify AI chatbot you can leave alone with customers does four things and refuses a fifth: it answers “where is my order”, explains your policies, answers product and size questions, opens a return request, and never decides a refund or an exception. The rest of this article is how to make that last line hold in code, where a prompt alone cannot enforce it.',
     },
     {
       type: 'paragraph',
@@ -59,7 +59,7 @@ const article: Article = {
     { type: 'h3', text: '1. The router: order, return, product or other' },
     {
       type: 'paragraph',
-      text: 'The router reads the message and decides which road it takes: order, return, product, or “other”. It can be a rule (the message contains an order number), a small classifier, or a language model that writes one label. Rules are instant and free but read signs, not meaning: a furious complaint also contains an order number. A model understands the complaint, at the price of one more call. A common mix: rules for the obvious cases, a model for the rest.',
+      text: '**The router reads the message and decides which road it takes: order, return, product, or “other”.** It can be a rule (the message contains an order number), a small classifier, or a language model that writes one label. Rules are instant and free but read signs, not meaning: a furious complaint also contains an order number. A model understands the complaint, at the price of one more call. A common mix: rules for the obvious cases, a model for the rest.',
     },
     {
       type: 'paragraph',
@@ -68,7 +68,7 @@ const article: Article = {
     { type: 'h3', text: '2. The knowledge base: policy, shipping, sizes' },
     {
       type: 'paragraph',
-      text: 'The knowledge base is the set of documents the assistant reads before it answers, so it quotes your policy instead of inventing one. Keep it in two layers: a short instruction file that is always loaded (who the assistant is, who it works for, what it never does, where to look for the rest) and separate documents it opens only when needed: returns, shipping times by country, size charts, warranty text.',
+      text: '**The knowledge base is the set of documents the assistant reads before it answers, so it quotes your policy instead of inventing one.** Keep it in two layers: a short instruction file that is always loaded (who the assistant is, who it works for, what it never does, where to look for the rest) and separate documents it opens only when needed: returns, shipping times by country, size charts, warranty text.',
     },
     {
       type: 'paragraph',
@@ -77,7 +77,7 @@ const article: Article = {
     { type: 'h3', text: '3. Read-only tools: the order lookup' },
     {
       type: 'paragraph',
-      text: 'A tool is a function the assistant can call, and the first one it needs is “look up this order”. Give it read access only. Shopify decides what an app may do through access scopes, and the Admin API mutation that creates refunds, [refundCreate](https://shopify.dev/docs/api/admin-graphql/latest/mutations/refundCreate), sits behind the orders access scope. An assistant whose app was only ever granted the read side cannot refund anything, however persuasive the customer is. To open returns it needs only the write_returns scope, never the orders scope that refundCreate requires. That is a constraint in code, worth more than ten lines of “never promise refunds” in a prompt. [OWASP](https://genai.owasp.org/llmrisk/llm062025-excessive-agency/) lists the same remedies under excessive agency: fewer tools, narrower permissions and human approval for high-impact actions.',
+      text: '**A tool is a function the assistant can call, and the first one it needs is “look up this order”.** Give it read access only. Shopify decides what an app may do through access scopes, and the Admin API mutation that creates refunds, [refundCreate](https://shopify.dev/docs/api/admin-graphql/latest/mutations/refundCreate), sits behind the orders access scope. An assistant whose app was only ever granted the read side cannot refund anything, however persuasive the customer is. To open returns it needs only the write_returns scope, never the orders scope that refundCreate requires. That is a constraint in code, worth more than ten lines of “never promise refunds” in a prompt. [OWASP](https://genai.owasp.org/llmrisk/llm062025-excessive-agency/) lists the same remedies under excessive agency: fewer tools, narrower permissions and human approval for high-impact actions.',
     },
     {
       type: 'paragraph',
@@ -108,7 +108,7 @@ const article: Article = {
     { type: 'h3', text: '5. The check before sending' },
     {
       type: 'paragraph',
-      text: 'The last part is a second reader that checks the draft against written criteria before the customer sees it. “Reread this, is it fine?” is not a criterion: the model will say the reply is clear and polite, and it will be right. The defects are a fact nobody supplied and a promise nobody may make. Give the checker the tool results and three questions: is every fact in the reply present in the tool results or the documents? Does the reply promise something a person decides, such as a refund, a discount or a date? If the customer is upset, does the reply acknowledge it?',
+      text: '**The last part is a second reader that checks the draft against written criteria before the customer sees it.** “Reread this, is it fine?” is not a criterion: the model will say the reply is clear and polite, and it will be right. The defects are a fact nobody supplied and a promise nobody may make. Give the checker the tool results and three questions: is every fact in the reply present in the tool results or the documents? Does the reply promise something a person decides, such as a refund, a discount or a date? If the customer is upset, does the reply acknowledge it?',
     },
     {
       type: 'paragraph',
@@ -228,7 +228,7 @@ const article: Article = {
     { type: 'h3', text: 'Can an AI chatbot process refunds on Shopify?' },
     {
       type: 'paragraph',
-      text: 'Technically it can, if its app has permission to call the refund mutation. It should not. A refund moves money and cannot be undone, so the assistant should open a return request and let a person approve it and issue the refund.',
+      text: '**Technically it can, if its app has permission to call the refund mutation.** It should not. A refund moves money and cannot be undone, so the assistant should open a return request and let a person approve it and issue the refund.',
     },
     { type: 'h3', text: 'Does Shopify Inbox have AI?' },
     {
@@ -238,12 +238,12 @@ const article: Article = {
     { type: 'h3', text: 'When should the chatbot hand the conversation to a person?' },
     {
       type: 'paragraph',
-      text: 'On refunds, exceptions, damaged items, complaints, legal or personal-data requests, and whenever the router does not recognize the request. Send the case with a short summary so the customer does not have to repeat themselves.',
+      text: '**On refunds, exceptions, damaged items, complaints, legal or personal-data requests, and whenever the router does not recognize the request.** Send the case with a short summary so the customer does not have to repeat themselves.',
     },
     { type: 'h3', text: 'Do I need a custom AI assistant or is an app enough?' },
     {
       type: 'paragraph',
-      text: 'An app is enough when your questions are repetitive and your policy is simple. A custom assistant pays off when exceptions, several data sources or several languages make the rules too specific for an app’s settings.',
+      text: '**An app is enough when your questions are repetitive and your policy is simple.** A custom assistant pays off when exceptions, several data sources or several languages make the rules too specific for an app’s settings.',
     },
     {
       type: 'paragraph',
@@ -257,7 +257,7 @@ const article: Article = {
   contentIt: [
     {
       type: 'paragraph',
-      text: '**Un chatbot ecommerce con AI che puoi lasciare da solo con i clienti fa quattro cose e ne rifiuta una: risponde a “dov’è il mio ordine”, spiega le tue policy, risponde su prodotti e taglie, apre la richiesta di reso, e non decide mai un rimborso o un’eccezione.** Il resto dell’articolo spiega come far reggere quest’ultimo limite nel codice, dove un prompt da solo non basta.',
+      text: 'Un chatbot ecommerce con AI che puoi lasciare da solo con i clienti fa quattro cose e ne rifiuta una: risponde a “dov’è il mio ordine”, spiega le tue policy, risponde su prodotti e taglie, apre la richiesta di reso, e non decide mai un rimborso o un’eccezione. Il resto dell’articolo spiega come far reggere quest’ultimo limite nel codice, dove un prompt da solo non basta.',
     },
     {
       type: 'paragraph',
@@ -275,12 +275,12 @@ const article: Article = {
     { type: 'h2', text: 'Come è fatto un chatbot ecommerce con AI? Cinque pezzi' },
     {
       type: 'paragraph',
-      text: '**L’assistente è una catena di cinque pezzi: un router che smista il messaggio, una base di conoscenza in cui cerca, strumenti di sola lettura per gli ordini, una richiesta di reso che aspetta l’approvazione e un controllo della risposta prima dell’invio.** Ogni pezzo c’è perché quello prima non basta. Se ne togli uno, di solito sai dire quale errore avrebbe evitato.',
+      text: 'L’assistente è una catena di cinque pezzi: un router che smista il messaggio, una base di conoscenza in cui cerca, strumenti di sola lettura per gli ordini, una richiesta di reso che aspetta l’approvazione e un controllo della risposta prima dell’invio. Ogni pezzo c’è perché quello prima non basta. Se ne togli uno, di solito sai dire quale errore avrebbe evitato.',
     },
     { type: 'h3', text: '1. Il router: ordine, reso, prodotto o altro' },
     {
       type: 'paragraph',
-      text: 'Il router legge il messaggio e decide su quale strada va: ordine, reso, prodotto oppure “altro”. Può essere una regola (nel messaggio c’è un numero d’ordine), un piccolo classificatore o un modello linguistico che scrive un’etichetta. Le regole sono istantanee e gratuite ma leggono i segni, non il senso: anche un reclamo furioso contiene un numero d’ordine. Un modello capisce il reclamo, al prezzo di una chiamata in più. Mix comune: regole per i casi ovvi, modello per il resto.',
+      text: '**Il router legge il messaggio e decide su quale strada va: ordine, reso, prodotto oppure “altro”.** Può essere una regola (nel messaggio c’è un numero d’ordine), un piccolo classificatore o un modello linguistico che scrive un’etichetta. Le regole sono istantanee e gratuite ma leggono i segni, non il senso: anche un reclamo furioso contiene un numero d’ordine. Un modello capisce il reclamo, al prezzo di una chiamata in più. Mix comune: regole per i casi ovvi, modello per il resto.',
     },
     {
       type: 'paragraph',
@@ -289,7 +289,7 @@ const article: Article = {
     { type: 'h3', text: '2. La base di conoscenza: policy, spedizioni, taglie' },
     {
       type: 'paragraph',
-      text: 'La base di conoscenza è l’insieme di documenti che l’assistente legge prima di rispondere, così cita la tua policy invece di inventarne una. Tienila su due livelli: un file di istruzioni breve, sempre caricato (chi è l’assistente, per chi lavora, cosa non fa mai, dove trovare il resto) e documenti separati che apre solo quando servono: resi, tempi di spedizione per paese, guide alle taglie, testo della garanzia.',
+      text: '**La base di conoscenza è l’insieme di documenti che l’assistente legge prima di rispondere, così cita la tua policy invece di inventarne una.** Tienila su due livelli: un file di istruzioni breve, sempre caricato (chi è l’assistente, per chi lavora, cosa non fa mai, dove trovare il resto) e documenti separati che apre solo quando servono: resi, tempi di spedizione per paese, guide alle taglie, testo della garanzia.',
     },
     {
       type: 'paragraph',
@@ -298,7 +298,7 @@ const article: Article = {
     { type: 'h3', text: '3. Strumenti di sola lettura: la ricerca dell’ordine' },
     {
       type: 'paragraph',
-      text: 'Uno strumento è una funzione che l’assistente può chiamare, e il primo che gli serve è “cerca questo ordine”. Dagli solo accesso in lettura. Shopify decide cosa può fare un’app con gli access scope, e la mutation dell’Admin API che crea i rimborsi, [refundCreate](https://shopify.dev/docs/api/admin-graphql/latest/mutations/refundCreate), sta dietro lo scope degli ordini. Un assistente la cui app ha ricevuto solo il lato lettura non può rimborsare niente, per quanto sia convincente il cliente. Per aprire i resi gli serve solo lo scope write_returns, mai lo scope degli ordini che richiede refundCreate. È un vincolo nel codice, e vale più di dieci righe di “non promettere rimborsi” in un prompt. [OWASP](https://genai.owasp.org/llmrisk/llm062025-excessive-agency/) elenca gli stessi rimedi sotto “excessive agency”: meno strumenti, permessi più stretti e approvazione umana per le azioni ad alto impatto.',
+      text: '**Uno strumento è una funzione che l’assistente può chiamare, e il primo che gli serve è “cerca questo ordine”.** Dagli solo accesso in lettura. Shopify decide cosa può fare un’app con gli access scope, e la mutation dell’Admin API che crea i rimborsi, [refundCreate](https://shopify.dev/docs/api/admin-graphql/latest/mutations/refundCreate), sta dietro lo scope degli ordini. Un assistente la cui app ha ricevuto solo il lato lettura non può rimborsare niente, per quanto sia convincente il cliente. Per aprire i resi gli serve solo lo scope write_returns, mai lo scope degli ordini che richiede refundCreate. È un vincolo nel codice, e vale più di dieci righe di “non promettere rimborsi” in un prompt. [OWASP](https://genai.owasp.org/llmrisk/llm062025-excessive-agency/) elenca gli stessi rimedi sotto “excessive agency”: meno strumenti, permessi più stretti e approvazione umana per le azioni ad alto impatto.',
     },
     {
       type: 'paragraph',
@@ -329,7 +329,7 @@ const article: Article = {
     { type: 'h3', text: '5. Il controllo prima dell’invio' },
     {
       type: 'paragraph',
-      text: 'L’ultimo pezzo è una seconda lettura che confronta la bozza con criteri scritti, prima che la veda il cliente. “Rileggi, va bene?” non è un criterio: il modello dirà che la risposta è chiara e cortese, e avrà ragione. I difetti sono un fatto che nessuno ha fornito e una promessa che nessuno può fare. Dai al controllore i risultati degli strumenti e tre domande: ogni fatto della risposta è nei risultati o nei documenti? La risposta promette qualcosa che decide una persona, come un rimborso, uno sconto o una data? Se il cliente è scontento, la risposta lo riconosce?',
+      text: '**L’ultimo pezzo è una seconda lettura che confronta la bozza con criteri scritti, prima che la veda il cliente.** “Rileggi, va bene?” non è un criterio: il modello dirà che la risposta è chiara e cortese, e avrà ragione. I difetti sono un fatto che nessuno ha fornito e una promessa che nessuno può fare. Dai al controllore i risultati degli strumenti e tre domande: ogni fatto della risposta è nei risultati o nei documenti? La risposta promette qualcosa che decide una persona, come un rimborso, uno sconto o una data? Se il cliente è scontento, la risposta lo riconosce?',
     },
     {
       type: 'paragraph',
@@ -429,7 +429,7 @@ const article: Article = {
     { type: 'h2', text: 'Resi in Italia: cosa dice la legge e cosa significa per l’assistente' },
     {
       type: 'paragraph',
-      text: '**Per un acquisto online, il Codice del consumo dà al consumatore quattordici giorni per recedere ([art. 52](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-09-06;206~art52)), e basta una dichiarazione esplicita, non serve un modulo ([art. 54](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-09-06;206~art54)), salvo le eccezioni dell’[art. 59](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-09-06;206~art59) (per esempio i beni su misura o chiaramente personalizzati).** Questa parte vale per chi vende ai consumatori in Italia e non è consulenza legale: verifica le tue condizioni con chi ti segue sul piano legale. Le norme sono pubblicate su [Normattiva](https://www.normattiva.it/), il portale ufficiale della normativa italiana.',
+      text: 'Per un acquisto online, il Codice del consumo dà al consumatore quattordici giorni per recedere ([art. 52](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-09-06;206~art52)), e basta una dichiarazione esplicita, non serve un modulo ([art. 54](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-09-06;206~art54)), salvo le eccezioni dell’[art. 59](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-09-06;206~art59) (per esempio i beni su misura o chiaramente personalizzati). Questa parte vale per chi vende ai consumatori in Italia e non è consulenza legale: verifica le tue condizioni con chi ti segue sul piano legale. Le norme sono pubblicate su [Normattiva](https://www.normattiva.it/), il portale ufficiale della normativa italiana.',
     },
     {
       type: 'list',
@@ -466,7 +466,7 @@ const article: Article = {
     { type: 'h3', text: 'Un chatbot AI può eseguire rimborsi su Shopify?' },
     {
       type: 'paragraph',
-      text: 'Tecnicamente sì, se la sua app ha il permesso di chiamare la mutation dei rimborsi. Non dovrebbe. Un rimborso sposta denaro e non si annulla, quindi l’assistente deve aprire una richiesta di reso e lasciare a una persona l’approvazione e l’emissione del rimborso.',
+      text: '**Tecnicamente sì, se la sua app ha il permesso di chiamare la mutation dei rimborsi.** Non dovrebbe. Un rimborso sposta denaro e non si annulla, quindi l’assistente deve aprire una richiesta di reso e lasciare a una persona l’approvazione e l’emissione del rimborso.',
     },
     { type: 'h3', text: 'Shopify Inbox ha funzioni AI?' },
     {
@@ -476,17 +476,17 @@ const article: Article = {
     { type: 'h3', text: 'Quando il chatbot deve passare la conversazione a una persona?' },
     {
       type: 'paragraph',
-      text: 'Su rimborsi, eccezioni, prodotti danneggiati, reclami, richieste legali o sui dati personali, e ogni volta che il router non riconosce la richiesta. Manda la pratica con un breve riepilogo, così il cliente non deve ripetersi.',
+      text: '**Su rimborsi, eccezioni, prodotti danneggiati, reclami, richieste legali o sui dati personali, e ogni volta che il router non riconosce la richiesta.** Manda la pratica con un breve riepilogo, così il cliente non deve ripetersi.',
     },
     { type: 'h3', text: 'Quanto tempo ha un cliente per restituire un acquisto online in Italia?' },
     {
       type: 'paragraph',
-      text: 'Per un contratto a distanza il Codice del consumo (art. 52) prevede quattordici giorni per recedere; per i beni decorrono da quando il consumatore ne prende possesso. Il recesso si può comunicare con qualsiasi dichiarazione esplicita (art. 54). Verifica le tue condizioni con chi ti segue sul piano legale.',
+      text: '**Per un contratto a distanza il Codice del consumo (art. 52) prevede quattordici giorni per recedere; per i beni decorrono da quando il consumatore ne prende possesso.** Il recesso si può comunicare con qualsiasi dichiarazione esplicita (art. 54). Verifica le tue condizioni con chi ti segue sul piano legale.',
     },
     { type: 'h3', text: 'Serve un assistente AI su misura o basta un’app?' },
     {
       type: 'paragraph',
-      text: 'Basta un’app quando le domande sono ripetitive e la policy è semplice. Un assistente su misura conviene quando eccezioni, più fonti di dati o più lingue rendono le regole troppo specifiche per le impostazioni di un’app.',
+      text: '**Basta un’app quando le domande sono ripetitive e la policy è semplice.** Un assistente su misura conviene quando eccezioni, più fonti di dati o più lingue rendono le regole troppo specifiche per le impostazioni di un’app.',
     },
     {
       type: 'paragraph',

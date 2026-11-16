@@ -230,12 +230,12 @@ const article: Article = {
     { type: 'h3', text: 'What is handled separately' },
     {
       type: 'paragraph',
-      text: 'The Shopify plan and the apps are paid directly to Shopify. Custom design and rebranding, advertising, email marketing and CRM, product photography, copywriting, translations, marketplaces, POS and complex B2B portals are done with dedicated partners after go-live. The Sprint is built for stores coming from another platform.',
+      text: '**The Shopify plan and the apps are paid directly to Shopify.** Custom design and rebranding, advertising, email marketing and CRM, product photography, copywriting, translations, marketplaces, POS and complex B2B portals are done with dedicated partners after go-live. The Sprint is built for stores coming from another platform.',
     },
     { type: 'h3', text: 'The risk side: four written guarantees and 90 days of support' },
     {
       type: 'paragraph',
-      text: 'A guarantee says who pays if the lines above fail. Ours are measured by a results dashboard that you receive on day 1, and written on one page of the contract:',
+      text: '**A guarantee says who pays if the lines above fail.** Ours are measured by a results dashboard that you receive on day 1, and written on one page of the contract:',
     },
     {
       type: 'list',
@@ -267,31 +267,31 @@ const article: Article = {
     { type: 'h3', text: 'What is the cheapest way to migrate to Shopify?' },
     {
       type: 'paragraph',
-      text: 'Doing it yourself with Shopify’s import tools or a migration app. The cost is mostly your time. The risk sits in the lines those tools do not cover: redirects, tracking and testing. It works best for small catalogs with little organic traffic to protect.',
+      text: '**Doing it yourself with Shopify’s import tools or a migration app.** The cost is mostly your time. The risk sits in the lines those tools do not cover: redirects, tracking and testing. It works best for small catalogs with little organic traffic to protect.',
     },
     { type: 'h3', text: 'Why do Shopify migration quotes vary so much?' },
     {
       type: 'paragraph',
-      text: 'Because they usually cover different scopes. A quote that leaves out redirects, tracking, QA or support is not cheaper, it is shorter. Add the missing lines to every quote before you compare totals.',
+      text: '**Because they usually cover different scopes.** A quote that leaves out redirects, tracking, QA or support is not cheaper, it is shorter. Add the missing lines to every quote before you compare totals.',
     },
     { type: 'h3', text: 'Which costs are not in a Shopify migration quote?' },
     {
       type: 'paragraph',
-      text: 'The Shopify plan, monthly app fees, payment fees, your team’s time, and the cost of a migration that goes wrong, in lost sales and lost rankings. Check the first three on Shopify’s pricing page and in your payment provider’s terms.',
+      text: '**The Shopify plan, monthly app fees, payment fees, your team’s time, and the cost of a migration that goes wrong, in lost sales and lost rankings.** Check the first three on Shopify’s pricing page and in your payment provider’s terms.',
     },
     { type: 'h3', text: 'How much does the Shopify Launch Sprint cost?' },
     {
       type: 'paragraph',
-      text: '€5,800 for companies under €2M in revenue, €8,800 between €2M and €20M, €12,800 above €20M, VAT excluded, in four installments. It includes the migration, the 1:1 redirect map, tracking, QA, a 14-day calendar, 90 days of support and 4 written guarantees. The Shopify plan and apps are paid directly to Shopify.',
+      text: '**€5,800 for companies under €2M in revenue, €8,800 between €2M and €20M, €12,800 above €20M, VAT excluded, in four installments.** It includes the migration, the 1:1 redirect map, tracking, QA, a 14-day calendar, 90 days of support and 4 written guarantees. The Shopify plan and apps are paid directly to Shopify.',
     },
     { type: 'h3', text: 'Is a fixed-price migration safer than an hourly one?' },
     {
       type: 'paragraph',
-      text: 'Only if the scope is written down. With a fixed price and a clear scope, the provider carries the overrun. With an hourly estimate, you do. A fixed price with vague scope and open extras is an hourly quote in disguise.',
+      text: '**Only if the scope is written down.** With a fixed price and a clear scope, the provider carries the overrun. With an hourly estimate, you do. A fixed price with vague scope and open extras is an hourly quote in disguise.',
     },
     {
       type: 'paragraph',
-      text: '**Next step.** Send us your store: [apply to the Shopify Launch Sprint](/shopify-migration-sprint) and we reply within 48 hours with your tier, the price and the first available kickoff date.',
+      text: 'Next step. Send us your store: [apply to the Shopify Launch Sprint](/shopify-migration-sprint) and we reply within 48 hours with your tier, the price and the first available kickoff date.',
     },
     {
       type: 'paragraph',
@@ -310,7 +310,7 @@ const article: Article = {
     { type: 'h2', text: 'Quanto costa migrare a Shopify?' },
     {
       type: 'paragraph',
-      text: '**Una migrazione a Shopify costa quanto costa il suo perimetro: il tuo tempo se usi uno strumento di importazione, e un prezzo pubblico fisso di €5.800, €8.800 o €12.800 (IVA esclusa, in 4 rate, per fascia di fatturato) se scegli lo Shopify Launch Sprint.** In mezzo, freelance e pacchetti parziali prezzano lavori diversi sotto la stessa parola, "migrazione".',
+      text: 'Una migrazione a Shopify costa quanto costa il suo perimetro: il tuo tempo se usi uno strumento di importazione, e un prezzo pubblico fisso di €5.800, €8.800 o €12.800 (IVA esclusa, in 4 rate, per fascia di fatturato) se scegli lo Shopify Launch Sprint. In mezzo, freelance e pacchetti parziali prezzano lavori diversi sotto la stessa parola, "migrazione".',
     },
     {
       type: 'paragraph',
@@ -431,12 +431,12 @@ const article: Article = {
     { type: 'h3', text: 'Cosa si gestisce a parte' },
     {
       type: 'paragraph',
-      text: 'Il piano Shopify e le app si pagano direttamente a Shopify. Design su misura e rebranding, advertising, email marketing e CRM, fotografia, copywriting, traduzioni, marketplace, POS e portali B2B complessi si fanno con partner dedicati dopo il go-live. Lo Sprint è pensato per chi arriva da un’altra piattaforma.',
+      text: '**Il piano Shopify e le app si pagano direttamente a Shopify.** Design su misura e rebranding, advertising, email marketing e CRM, fotografia, copywriting, traduzioni, marketplace, POS e portali B2B complessi si fanno con partner dedicati dopo il go-live. Lo Sprint è pensato per chi arriva da un’altra piattaforma.',
     },
     { type: 'h3', text: 'Il lato del rischio: quattro garanzie scritte e 90 giorni di supporto' },
     {
       type: 'paragraph',
-      text: 'Una garanzia dice chi paga se le voci sopra falliscono. Le nostre sono misurate da una dashboard dei risultati che ricevi il giorno 1, e scritte su una pagina del contratto:',
+      text: '**Una garanzia dice chi paga se le voci sopra falliscono.** Le nostre sono misurate da una dashboard dei risultati che ricevi il giorno 1, e scritte su una pagina del contratto:',
     },
     {
       type: 'list',
@@ -468,31 +468,31 @@ const article: Article = {
     { type: 'h3', text: 'Qual è il modo più economico per migrare a Shopify?' },
     {
       type: 'paragraph',
-      text: 'Farlo da soli con gli strumenti di importazione di Shopify o con un’app di migrazione. Il costo è soprattutto il tuo tempo. Il rischio sta nelle voci che quegli strumenti non coprono: redirect, tracking e collaudo. Funziona meglio con cataloghi piccoli e poco traffico organico da proteggere.',
+      text: '**Farlo da soli con gli strumenti di importazione di Shopify o con un’app di migrazione.** Il costo è soprattutto il tuo tempo. Il rischio sta nelle voci che quegli strumenti non coprono: redirect, tracking e collaudo. Funziona meglio con cataloghi piccoli e poco traffico organico da proteggere.',
     },
     { type: 'h3', text: 'Perché i preventivi di migrazione a Shopify sono così diversi?' },
     {
       type: 'paragraph',
-      text: 'Perché di solito coprono perimetri diversi. Un preventivo senza redirect, tracking, collaudo o supporto non costa meno, è più corto. Aggiungi le voci mancanti a ogni preventivo prima di confrontare i totali.',
+      text: '**Perché di solito coprono perimetri diversi.** Un preventivo senza redirect, tracking, collaudo o supporto non costa meno, è più corto. Aggiungi le voci mancanti a ogni preventivo prima di confrontare i totali.',
     },
     { type: 'h3', text: 'Quali costi non sono nel preventivo di una migrazione a Shopify?' },
     {
       type: 'paragraph',
-      text: 'Il piano Shopify, le app a canone mensile, le commissioni di pagamento, il tempo del tuo team e il costo di una migrazione andata male, in vendite e posizionamenti persi. Per i primi tre controlla la pagina prezzi di Shopify e i termini del tuo fornitore di pagamenti.',
+      text: '**Il piano Shopify, le app a canone mensile, le commissioni di pagamento, il tempo del tuo team e il costo di una migrazione andata male, in vendite e posizionamenti persi.** Per i primi tre controlla la pagina prezzi di Shopify e i termini del tuo fornitore di pagamenti.',
     },
     { type: 'h3', text: 'Quanto costa lo Shopify Launch Sprint?' },
     {
       type: 'paragraph',
-      text: '€5.800 per aziende sotto i €2M di fatturato, €8.800 tra €2M e €20M, €12.800 oltre i €20M, IVA esclusa, in quattro rate. Include la migrazione, la mappa dei redirect 1:1, il tracking, il collaudo, un calendario di 14 giorni, 90 giorni di supporto e 4 garanzie scritte. Piano Shopify e app si pagano direttamente a Shopify.',
+      text: '**€5.800 per aziende sotto i €2M di fatturato, €8.800 tra €2M e €20M, €12.800 oltre i €20M, IVA esclusa, in quattro rate.** Include la migrazione, la mappa dei redirect 1:1, il tracking, il collaudo, un calendario di 14 giorni, 90 giorni di supporto e 4 garanzie scritte. Piano Shopify e app si pagano direttamente a Shopify.',
     },
     { type: 'h3', text: 'Una migrazione a prezzo fisso è più sicura di una a ore?' },
     {
       type: 'paragraph',
-      text: 'Solo se il perimetro è scritto. Con prezzo fisso e perimetro chiaro, lo sforamento lo paga chi fornisce il servizio. Con una stima a ore lo paghi tu. Un prezzo fisso con perimetro vago ed extra aperti è un preventivo a ore travestito.',
+      text: '**Solo se il perimetro è scritto.** Con prezzo fisso e perimetro chiaro, lo sforamento lo paga chi fornisce il servizio. Con una stima a ore lo paghi tu. Un prezzo fisso con perimetro vago ed extra aperti è un preventivo a ore travestito.',
     },
     {
       type: 'paragraph',
-      text: '**Prossimo passo.** Mandaci il tuo store: [candidati allo Shopify Launch Sprint](/it/sprint-migrazione-shopify) e rispondiamo entro 48 ore con la tua fascia, il prezzo e la prima data di kickoff disponibile.',
+      text: 'Prossimo passo. Mandaci il tuo store: [candidati allo Shopify Launch Sprint](/it/sprint-migrazione-shopify) e rispondiamo entro 48 ore con la tua fascia, il prezzo e la prima data di kickoff disponibile.',
     },
     {
       type: 'paragraph',

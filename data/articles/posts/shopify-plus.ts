@@ -158,22 +158,22 @@ const article: Article = {
     { type: 'h3', text: 'Data' },
     {
       type: 'paragraph',
-      text: 'Customers, orders and products move as usual. With B2B, add companies, locations, price lists and the buyers attached to them, because these usually live in an ERP or a spreadsheet, not in the old store. Ask for a reconciliation report that compares counts between old and new and explains every difference. On the Cumini case, the starting platform was proprietary and tied to the ERP: in a project like that, the first job is to map what the ERP owns ([case study](/use-cases/cumini-luxury-fashion-ecommerce)).',
+      text: '**Customers, orders and products move as usual.** With B2B, add companies, locations, price lists and the buyers attached to them, because these usually live in an ERP or a spreadsheet, not in the old store. Ask for a reconciliation report that compares counts between old and new and explains every difference. On the Cumini case, the starting platform was proprietary and tied to the ERP: in a project like that, the first job is to map what the ERP owns ([case study](/use-cases/cumini-luxury-fashion-ecommerce)).',
     },
     { type: 'h3', text: 'Checkout' },
     {
       type: 'paragraph',
-      text: 'Checkout is where Plus changes the build. Shopify’s direction is checkout extensibility and [Shopify Functions](https://shopify.dev/docs/apps/build/functions), replacing the older ways of customizing the checkout, so a rule from your old platform becomes an extension, a Function or an app. Read the current status in Shopify’s documentation, because dates move; our [Shopify Plus migration](/blog/shopify-plus-migration) article has the dates, each linked to its page. In the migration, list every checkout behavior of the old store (fields, shipping rules, payment rules, discounts), decide for each whether it is still needed, then choose how to build it. Often a good part of that list can simply go.',
+      text: '**Checkout is where Plus changes the build.** Shopify’s direction is checkout extensibility and [Shopify Functions](https://shopify.dev/docs/apps/build/functions), replacing the older ways of customizing the checkout, so a rule from your old platform becomes an extension, a Function or an app. Read the current status in Shopify’s documentation, because dates move; our [Shopify Plus migration](/blog/shopify-plus-migration) article has the dates, each linked to its page. In the migration, list every checkout behavior of the old store (fields, shipping rules, payment rules, discounts), decide for each whether it is still needed, then choose how to build it. Often a good part of that list can simply go.',
     },
     { type: 'h3', text: 'Apps' },
     {
       type: 'paragraph',
-      text: 'Old platforms rely on plugins for things Shopify does natively, and Plus adds more native tools. Audit every plugin and ask: replaced by a Shopify feature, replaced by an app, or built? Each app is a monthly fee and a possible slowdown, and this is where our Custom AI System helps: code written for your store only, with no dead code and no app where a few lines do the job. Use a Plus staging store to test the stack before launch.',
+      text: '**Old platforms rely on plugins for things Shopify does natively, and Plus adds more native tools.** Audit every plugin and ask: replaced by a Shopify feature, replaced by an app, or built? Each app is a monthly fee and a possible slowdown, and this is where our Custom AI System helps: code written for your store only, with no dead code and no app where a few lines do the job. Use a Plus staging store to test the stack before launch.',
     },
     { type: 'h3', text: 'B2B' },
     {
       type: 'paragraph',
-      text: 'B2B is a project inside the project. Company accounts, catalogs, payment terms and the way orders reach the ERP each need a decision. Our view: do not mix a B2B portal and a platform migration into one go-live if you can avoid it: one risk at a time. Migrate the store with its redirects and tracking intact, then build the complex B2B layer on a store that is already live and measured.',
+      text: '**B2B is a project inside the project.** Company accounts, catalogs, payment terms and the way orders reach the ERP each need a decision. Our view: do not mix a B2B portal and a platform migration into one go-live if you can avoid it: one risk at a time. Migrate the store with its redirects and tracking intact, then build the complex B2B layer on a store that is already live and measured.',
     },
     {
       type: 'paragraph',
@@ -204,16 +204,16 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**14 days** from kickoff to a store ready for launch, built with our Custom AI System, with go-live between day 15 and day 30.',
-        '**What the price covers:** data with a reconciliation report, a 1:1 replica of your store, apps and integrations, a 1:1 redirect map tested automatically before and after go-live, tracking, QA and project management.',
-        '**Plus-specific builds** (custom checkout logic, company accounts and catalogs, expansion stores) are scoped with you on a video call before you sign.',
-        '**90 days after go-live** we work as your eCommerce manager on SEO, conversion, average order value and tracking. Maintenance (security, updates, instructions, technical support) stays included.',
-        '**4 written guarantees.** Store ready on day 14 or we refund the first installment. Organic traffic below the baseline 90 days after go-live? We work for free until it comes back. Store offline at launch because of us? We pay one installment. Checkout converting less than before at 90 days? We optimize it for free until it beats it.',
+        '14 days from kickoff to a store ready for launch, built with our Custom AI System, with go-live between day 15 and day 30.',
+        'What the price covers: data with a reconciliation report, a 1:1 replica of your store, apps and integrations, a 1:1 redirect map tested automatically before and after go-live, tracking, QA and project management.',
+        'Plus-specific builds (custom checkout logic, company accounts and catalogs, expansion stores) are scoped with you on a video call before you sign.',
+        '90 days after go-live we work as your eCommerce manager on SEO, conversion, average order value and tracking. Maintenance (security, updates, instructions, technical support) stays included.',
+        '4 written guarantees. Store ready on day 14 or we refund the first installment. Organic traffic below the baseline 90 days after go-live? We work for free until it comes back. Store offline at launch because of us? We pay one installment. Checkout converting less than before at 90 days? We optimize it for free until it beats it.',
       ],
     },
     {
       type: 'paragraph',
-      text: 'The price follows revenue. The tier above €20M is **€12,800, VAT excluded, in four installments**; the other tiers are €5,800 under €2M and €8,800 between €2M and €20M. The Shopify plan, Plus included, is paid directly to Shopify.',
+      text: 'The price follows revenue. The tier above €20M is €12,800, VAT excluded, in four installments; the other tiers are €5,800 under €2M and €8,800 between €2M and €20M. The Shopify plan, Plus included, is paid directly to Shopify.',
     },
     {
       type: 'paragraph',
@@ -223,12 +223,12 @@ const article: Article = {
     { type: 'h3', text: 'What is Shopify Plus?' },
     {
       type: 'paragraph',
-      text: 'Shopify Plus is Shopify’s plan above the standard ones. Per Shopify’s documentation it adds advanced checkout customization, expansion stores, extended API resources, unlimited staff and priority support, on the same platform.',
+      text: '**Shopify Plus is Shopify’s plan above the standard ones.** Per Shopify’s documentation it adds advanced checkout customization, expansion stores, extended API resources, unlimited staff and priority support, on the same platform.',
     },
     { type: 'h3', text: 'How much does Shopify Plus cost?' },
     {
       type: 'paragraph',
-      text: 'From €2,100 a month on a 3-year term, as shown on [Shopify’s pricing page](https://www.shopify.com/pricing) on 4 November 2026. Plans and prices change, so check the page the day you decide. To judge it, list the Plus features you will use in the first 90 days and compare the plan with the cost of building the same thing another way.',
+      text: '**From €2,100 a month on a 3-year term, as shown on [Shopify’s pricing page](https://www.shopify.com/pricing) on 4 November 2026. Plans and prices change, so check the page the day you decide.** To judge it, list the Plus features you will use in the first 90 days and compare the plan with the cost of building the same thing another way.',
     },
     { type: 'h3', text: 'Do I need Shopify Plus to sell B2B?' },
     {
@@ -243,12 +243,12 @@ const article: Article = {
     { type: 'h3', text: 'Should I move to Shopify Plus before or after the migration?' },
     {
       type: 'paragraph',
-      text: 'Before, if checkout logic, B2B or expansion stores are part of day one, otherwise you build twice. After, if they are not: migrate, launch, measure, then upgrade when a limit costs you something you can name.',
+      text: '**Before, if checkout logic, B2B or expansion stores are part of day one, otherwise you build twice.** After, if they are not: migrate, launch, measure, then upgrade when a limit costs you something you can name.',
     },
     { type: 'h3', text: 'How much does the Shopify Launch Sprint cost for a larger store?' },
     {
       type: 'paragraph',
-      text: 'The tier above €20M in revenue is €12,800, VAT excluded, in four installments. The other tiers are €5,800 under €2M and €8,800 between €2M and €20M. The Shopify plan is paid directly to Shopify.',
+      text: '**The tier above €20M in revenue is €12,800, VAT excluded, in four installments.** The other tiers are €5,800 under €2M and €8,800 between €2M and €20M. The Shopify plan is paid directly to Shopify.',
     },
     {
       type: 'paragraph',
@@ -316,22 +316,22 @@ const article: Article = {
     { type: 'h3', text: 'Dati' },
     {
       type: 'paragraph',
-      text: 'Clienti, ordini e prodotti si spostano come al solito. Con il B2B aggiungi aziende, sedi, listini e gli acquirenti collegati, perché di solito stanno in un gestionale o in un foglio di calcolo, non nel vecchio store. Chiedi un report di riconciliazione che confronti i conteggi tra vecchio e nuovo e spieghi ogni differenza. Nel caso Cumini la piattaforma di partenza era proprietaria e legata al gestionale: in un progetto così, il primo lavoro è mappare ciò che il gestionale possiede ([caso studio](/it/casi-studio/cumini-luxury-fashion-ecommerce)).',
+      text: '**Clienti, ordini e prodotti si spostano come al solito.** Con il B2B aggiungi aziende, sedi, listini e gli acquirenti collegati, perché di solito stanno in un gestionale o in un foglio di calcolo, non nel vecchio store. Chiedi un report di riconciliazione che confronti i conteggi tra vecchio e nuovo e spieghi ogni differenza. Nel caso Cumini la piattaforma di partenza era proprietaria e legata al gestionale: in un progetto così, il primo lavoro è mappare ciò che il gestionale possiede ([caso studio](/it/casi-studio/cumini-luxury-fashion-ecommerce)).',
     },
     { type: 'h3', text: 'Checkout' },
     {
       type: 'paragraph',
-      text: 'Il checkout è dove Plus cambia la costruzione. La direzione di Shopify sono le checkout extensibility e le [Shopify Functions](https://shopify.dev/docs/apps/build/functions), che sostituiscono i vecchi modi di personalizzare il checkout: una regola della vecchia piattaforma diventa un’estensione, una Function o un’app. Leggi lo stato aggiornato nella documentazione di Shopify, perché le date si spostano; il nostro articolo sulla [migrazione a Shopify Plus](/it/blog/migrazione-shopify-plus) ha le date, ognuna con il link alla sua pagina. Nella migrazione, elenca ogni comportamento del checkout del vecchio store (campi, regole di spedizione, regole di pagamento, sconti), decidi per ciascuno se serve ancora, poi scegli come costruirlo. Spesso una buona parte dell’elenco può semplicemente sparire.',
+      text: '**Il checkout è dove Plus cambia la costruzione.** La direzione di Shopify sono le checkout extensibility e le [Shopify Functions](https://shopify.dev/docs/apps/build/functions), che sostituiscono i vecchi modi di personalizzare il checkout: una regola della vecchia piattaforma diventa un’estensione, una Function o un’app. Leggi lo stato aggiornato nella documentazione di Shopify, perché le date si spostano; il nostro articolo sulla [migrazione a Shopify Plus](/it/blog/migrazione-shopify-plus) ha le date, ognuna con il link alla sua pagina. Nella migrazione, elenca ogni comportamento del checkout del vecchio store (campi, regole di spedizione, regole di pagamento, sconti), decidi per ciascuno se serve ancora, poi scegli come costruirlo. Spesso una buona parte dell’elenco può semplicemente sparire.',
     },
     { type: 'h3', text: 'App' },
     {
       type: 'paragraph',
-      text: 'Le vecchie piattaforme si affidano a plugin per cose che Shopify fa in modo nativo, e Plus aggiunge altri strumenti nativi. Fai un audit di ogni plugin e chiediti: sostituito da una funzione di Shopify, da un’app o costruito? Ogni app è un canone mensile e un possibile rallentamento, ed è qui che aiuta il nostro Custom AI System: codice scritto solo per il tuo store, senza codice morto e senza app dove bastano poche righe. Usa uno store di staging Plus per provare l’insieme prima del lancio.',
+      text: '**Le vecchie piattaforme si affidano a plugin per cose che Shopify fa in modo nativo, e Plus aggiunge altri strumenti nativi.** Fai un audit di ogni plugin e chiediti: sostituito da una funzione di Shopify, da un’app o costruito? Ogni app è un canone mensile e un possibile rallentamento, ed è qui che aiuta il nostro Custom AI System: codice scritto solo per il tuo store, senza codice morto e senza app dove bastano poche righe. Usa uno store di staging Plus per provare l’insieme prima del lancio.',
     },
     { type: 'h3', text: 'B2B' },
     {
       type: 'paragraph',
-      text: 'Il B2B è un progetto dentro il progetto. Account aziendali, cataloghi, termini di pagamento e il modo in cui gli ordini arrivano al gestionale richiedono ciascuno una decisione. La nostra opinione: se puoi, non unire un portale B2B e una migrazione di piattaforma in un solo go-live: un rischio alla volta. Migra lo store con redirect e tracking intatti, poi costruisci il livello B2B complesso su uno store già online e misurato.',
+      text: '**Il B2B è un progetto dentro il progetto.** Account aziendali, cataloghi, termini di pagamento e il modo in cui gli ordini arrivano al gestionale richiedono ciascuno una decisione. La nostra opinione: se puoi, non unire un portale B2B e una migrazione di piattaforma in un solo go-live: un rischio alla volta. Migra lo store con redirect e tracking intatti, poi costruisci il livello B2B complesso su uno store già online e misurato.',
     },
     {
       type: 'paragraph',
@@ -362,16 +362,16 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**14 giorni** dal kickoff a uno store pronto per il lancio, costruito con il nostro Custom AI System, con go-live tra il giorno 15 e il giorno 30.',
-        '**Cosa copre il prezzo:** dati con report di riconciliazione, una replica 1:1 del tuo store, app e integrazioni, una mappa dei redirect 1:1 collaudata in automatico prima e dopo il go-live, tracking, collaudo e gestione del progetto.',
-        '**Le costruzioni specifiche di Plus** (logiche di checkout personalizzate, account aziendali e cataloghi, negozi di espansione) si definiscono con te in videochiamata prima che tu firmi.',
-        '**90 giorni dopo il go-live** lavoriamo da eCommerce manager su SEO, conversione, scontrino medio e tracking. La manutenzione (sicurezza, aggiornamenti, istruzioni, supporto tecnico) resta inclusa.',
-        '**4 garanzie scritte.** Store pronto al giorno 14 o ti rimborsiamo la prima rata. Traffico organico sotto la baseline a 90 giorni dal go-live? Lavoriamo gratis finché non torna. Store offline al lancio per colpa nostra? Una rata la paghiamo noi. Il checkout converte meno di prima a 90 giorni? Lo ottimizziamo gratis finché non supera.',
+        '14 giorni dal kickoff a uno store pronto per il lancio, costruito con il nostro Custom AI System, con go-live tra il giorno 15 e il giorno 30.',
+        'Cosa copre il prezzo: dati con report di riconciliazione, una replica 1:1 del tuo store, app e integrazioni, una mappa dei redirect 1:1 collaudata in automatico prima e dopo il go-live, tracking, collaudo e gestione del progetto.',
+        'Le costruzioni specifiche di Plus (logiche di checkout personalizzate, account aziendali e cataloghi, negozi di espansione) si definiscono con te in videochiamata prima che tu firmi.',
+        '90 giorni dopo il go-live lavoriamo da eCommerce manager su SEO, conversione, scontrino medio e tracking. La manutenzione (sicurezza, aggiornamenti, istruzioni, supporto tecnico) resta inclusa.',
+        '4 garanzie scritte. Store pronto al giorno 14 o ti rimborsiamo la prima rata. Traffico organico sotto la baseline a 90 giorni dal go-live? Lavoriamo gratis finché non torna. Store offline al lancio per colpa nostra? Una rata la paghiamo noi. Il checkout converte meno di prima a 90 giorni? Lo ottimizziamo gratis finché non supera.',
       ],
     },
     {
       type: 'paragraph',
-      text: 'Il prezzo segue il fatturato. La fascia sopra i €20M è **€12.800, IVA esclusa, in quattro rate**; le altre sono €5.800 sotto i €2M e €8.800 tra €2M e €20M. Il piano Shopify, Plus compreso, si paga direttamente a Shopify.',
+      text: 'Il prezzo segue il fatturato. La fascia sopra i €20M è €12.800, IVA esclusa, in quattro rate; le altre sono €5.800 sotto i €2M e €8.800 tra €2M e €20M. Il piano Shopify, Plus compreso, si paga direttamente a Shopify.',
     },
     {
       type: 'paragraph',
@@ -381,12 +381,12 @@ const article: Article = {
     { type: 'h3', text: 'Che cos’è Shopify Plus?' },
     {
       type: 'paragraph',
-      text: 'Shopify Plus è il piano di Shopify sopra quelli standard. Secondo la documentazione di Shopify aggiunge personalizzazione avanzata del checkout, negozi di espansione, risorse API estese, staff illimitato e supporto prioritario, sulla stessa piattaforma.',
+      text: '**Shopify Plus è il piano di Shopify sopra quelli standard.** Secondo la documentazione di Shopify aggiunge personalizzazione avanzata del checkout, negozi di espansione, risorse API estese, staff illimitato e supporto prioritario, sulla stessa piattaforma.',
     },
     { type: 'h3', text: 'Quanto costa Shopify Plus?' },
     {
       type: 'paragraph',
-      text: 'Da €2.100 al mese con termine di 3 anni, come mostrato sulla [pagina prezzi di Shopify](https://www.shopify.com/pricing) il 4 novembre 2026. Piani e prezzi cambiano, quindi controlla la pagina il giorno in cui decidi. Per valutarlo, elenca le funzioni Plus che userai nei primi 90 giorni e confronta il piano con il costo di ottenere la stessa cosa in un altro modo.',
+      text: '**Da €2.100 al mese con termine di 3 anni, come mostrato sulla [pagina prezzi di Shopify](https://www.shopify.com/pricing) il 4 novembre 2026. Piani e prezzi cambiano, quindi controlla la pagina il giorno in cui decidi.** Per valutarlo, elenca le funzioni Plus che userai nei primi 90 giorni e confronta il piano con il costo di ottenere la stessa cosa in un altro modo.',
     },
     { type: 'h3', text: 'Serve Shopify Plus per vendere B2B?' },
     {
@@ -401,12 +401,12 @@ const article: Article = {
     { type: 'h3', text: 'Conviene passare a Shopify Plus prima o dopo la migrazione?' },
     {
       type: 'paragraph',
-      text: 'Prima, se logica del checkout, B2B o negozi di espansione fanno parte del giorno uno, altrimenti costruisci due volte. Dopo, se non ne fanno parte: migri, vai online, misuri, poi passi a Plus quando un limite ti costa qualcosa che sai nominare.',
+      text: '**Prima, se logica del checkout, B2B o negozi di espansione fanno parte del giorno uno, altrimenti costruisci due volte.** Dopo, se non ne fanno parte: migri, vai online, misuri, poi passi a Plus quando un limite ti costa qualcosa che sai nominare.',
     },
     { type: 'h3', text: 'Quanto costa lo Shopify Launch Sprint per uno store più grande?' },
     {
       type: 'paragraph',
-      text: 'La fascia sopra i €20M di fatturato è €12.800, IVA esclusa, in quattro rate. Le altre fasce sono €5.800 sotto i €2M e €8.800 tra €2M e €20M. Il piano Shopify si paga direttamente a Shopify.',
+      text: '**La fascia sopra i €20M di fatturato è €12.800, IVA esclusa, in quattro rate.** Le altre fasce sono €5.800 sotto i €2M e €8.800 tra €2M e €20M. Il piano Shopify si paga direttamente a Shopify.',
     },
     {
       type: 'paragraph',
