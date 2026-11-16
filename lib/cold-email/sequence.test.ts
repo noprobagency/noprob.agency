@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from 'vitest'
 import { excludeDomains, firstNameOf, fromCrm, stopStore } from './leads.mjs'
-import { STEPS, addWorkingDays, dueStep, interleaveLines, render } from './sequence.mjs'
+import { STEPS, addWorkingDays, dueStep, followUpCap, interleaveLines, orderFirsts, render } from './sequence.mjs'
 import { renderUs, usHours, usReady } from './sequence-us.mjs'
 
 const prospect = (over = {}) => ({
@@ -260,5 +260,16 @@ describe('US line', () => {
   it('alternates first emails of the two lines', () => {
     const d = (line: string, n: number) => ({ lead: { line, n } })
     expect(interleaveLines([d('it', 1), d('it', 2), d('it', 3), d('us', 1)]).map((x) => `${x.lead.line}${x.lead.n}`)).toEqual(['it1', 'us1', 'it2', 'it3'])
+  })
+  it('puts US first emails first in New York hours (D-102)', () => {
+    const d = (line: string, n: number) => ({ lead: { line, n } })
+    const items = [d('it', 1), d('it', 2), d('us', 1), d('us', 2)]
+    expect(orderFirsts(items, { usFirst: true }).map((x) => `${x.lead.line}${x.lead.n}`)).toEqual(['us1', 'us2', 'it1', 'it2'])
+    expect(orderFirsts(items).map((x) => `${x.lead.line}${x.lead.n}`)).toEqual(['it1', 'us1', 'it2', 'us2'])
+  })
+  it('gives follow-ups at most half of a run while first emails wait (D-102)', () => {
+    expect(followUpCap(7, true)).toBe(3)
+    expect(followUpCap(1, true)).toBe(0)
+    expect(followUpCap(7, false)).toBe(7)
   })
 })

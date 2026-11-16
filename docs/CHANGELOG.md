@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.214.0 (16 Nov 2026)
+
+- Cold email (D-102): when first emails are waiting, follow-ups take at most half of each mailbox's share in a run; the rest goes to first emails, and follow-ups over the half go after them, so no slot is lost. In New York hours US first emails go before Italy. dailyCap 55 and 50 per mailbox unchanged.
+
 ### Changelog v1.213.0 (16 Nov 2026)
 
 - Cold email: the v3 fact is measured again (`fetchHome` now returns the page and its final URL, and the second LCP run follows Ada's rule). On 16/11 the old call failed on every store, so no v3 first email went out. A PageSpeed or code error no longer blocks the day: after 3 in a row the run sends the v2 first email and measures later.
