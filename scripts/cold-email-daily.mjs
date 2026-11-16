@@ -35,7 +35,7 @@ import { gojiberryDomains, gojiberryOn, gojiberryQueuedToday, gojiberryRemaining
 import { domainOf, excludeDomains, stopStore } from '../lib/cold-email/leads.mjs'
 import { appendSuppressed, applySuppressed, readSuppressed, refusals } from '../lib/cold-email/suppression.mjs'
 import { publishTaken, takenBody } from '../lib/cold-email/taken.mjs'
-import { SEQUENCE_VERSION, dueDate, dueStep, interleaveLines, lineOf, render } from '../lib/cold-email/sequence.mjs'
+import { SEQUENCE_VERSION, dueDate, dueStep, followUpCap, lineOf, orderFirsts, render } from '../lib/cold-email/sequence.mjs'
 import { US_VERSION, US_ZONE, usHours, usReady } from '../lib/cold-email/sequence-us.mjs'
 import { V3_VERSION, measureDato, pagespeedKey, renderV3First, v3FollowUpBody } from '../lib/cold-email/sequence-v3.mjs'
 
@@ -219,7 +219,8 @@ if (approved.it || approved.us) {
     .filter((d) => !(d.step.key === 'e3' && lineOf(d.lead) === 'it' && d.lead.sequence.version !== V3_VERSION && !(config.approvedV3 === V3_VERSION && d.lead.lang === 'it')))
     .sort((a, b) => priority(a.lead) - priority(b.lead) || (a.step.key === 'e1' ? 0 : dueDate(a.lead, a.step).localeCompare(dueDate(b.lead, b.step))))
   // Follow-ups first; then first emails of Italy and USA in turns, so both lines start every day.
-  due.splice(0, due.length, ...due.filter((d) => d.step.key !== 'e1'), ...interleaveLines(due.filter((d) => d.step.key === 'e1')))
+  // In New York hours US first emails go first (D-102).
+  due.splice(0, due.length, ...due.filter((d) => d.step.key !== 'e1'), ...orderFirsts(due.filter((d) => d.step.key === 'e1'), { usFirst: approved.us }))
 
   // At most one first email per store a day, even with several people of the same store.
   const storesToday = new Set(db.leads.filter((l) => l.sequence.sent.some((x) => x.step === 'e1' && x.date === today)).map((l) => l.domain))
@@ -231,15 +232,26 @@ if (approved.it || approved.us) {
   const room = MAILBOXES.reduce((n, m) => n + m.room, 0)
   // Each mailbox sends its own share of the day in this run, so both send all day long.
   for (const m of MAILBOXES) m.run = Math.ceil(m.room / slots)
+  // D-102: with first emails waiting, follow-ups take at most half of each mailbox's run;
+  // the ones over that wait until after the first emails, so a free slot is never lost.
+  const firstsWaiting = capLeft > 0 && due.length > followUps
+  for (const m of MAILBOXES) Object.assign(m, { fuCap: followUpCap(m.run, firstsWaiting), fu: 0 })
+  /** @type {{lead: any, step: any, late?: boolean}[]} */
+  const order = [...due]
   const left = () => MAILBOXES.reduce((n, m) => n + Math.max(0, m.run - m.sent), 0)
   if (room < wanted) note += ` · budget ${MAILBOXES.map((m) => `${m.email.split('@')[0]}@ ${m.room} (già inviate oggi ${m.sentToday}, riservate a Gojiberry ${m.gojiberry})`).join(', ')}`
   let sent = 0
   let firsts = 0
-  for (const { lead, step } of due) {
+  for (let i = 0; i < order.length; i++) {
+    const { lead, step, late } = order[i]
     if (!left()) break
     // A follow-up stays in its thread's mailbox; a first email takes the mailbox with most room.
     const m = step.key === 'e1' ? MAILBOXES.filter((x) => x.run > x.sent).sort((a, b) => b.run - b.sent - (a.run - a.sent))[0] : boxOf(lead)
     if (!m || m.sent >= m.run) continue
+    if (step.key !== 'e1' && !late && m.fu >= m.fuCap) {
+      order.push({ lead, step, late: true })
+      continue
+    }
     if (step.key === 'e1' && (firsts >= capLeft || storesToday.has(lead.domain))) continue
     // Never a first email to a store Antonio wrote to by hand in the last 60 days, from any mailbox.
     if (step.key === 'e1') {
@@ -296,6 +308,7 @@ if (approved.it || approved.us) {
         firsts++
       }
       stats.sent[step.key]++
+      if (step.key !== 'e1') m.fu++
       m.sent++
       sent++
       continue
@@ -315,6 +328,7 @@ if (approved.it || approved.us) {
       firsts++
     }
     stats.sent[step.key]++
+    if (step.key !== 'e1') m.fu++
     m.sent++
     sent++
     save()
