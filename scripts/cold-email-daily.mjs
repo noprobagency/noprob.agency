@@ -169,6 +169,7 @@ if (!process.env.CI) {
 
 // 3. Sends, within each mailbox's budget
 const pageKey = pagespeedKey()
+let datoErrors = 0
 // The mailbox budget covers every email; dailyCap limits only new first emails, so
 // follow-ups keep their days even when a big batch reaches the same step together.
 // Ada's campaign sends from antonio@ too (from 9:00, up to its warm-up limit): the
@@ -262,14 +263,24 @@ if (approved.it || approved.us) {
     // First emails carry the company name as a person writes it (no SRL, no caps).
     if (step.key === 'e1') lead.brand = cleanCompany(lead.brand)
     let v3 = null
-    if (step.key === 'e1' && lineOf(lead) === 'it' && config.approvedV3 === V3_VERSION) {
+    if (step.key === 'e1' && lineOf(lead) === 'it' && config.approvedV3 === V3_VERSION && datoErrors < 3) {
       if (!lead.datoAt) {
-        const dato = await measureDato(lead.domain, pageKey).catch(() => ({ error: 'exception' }))
-        // A temporary error (site or PageSpeed down) is retried on the next runs, up to 3 times.
-        if (dato && 'error' in dato && (lead.datoTries || 0) < 2) {
-          lead.datoTries = (lead.datoTries || 0) + 1
-          continue
-        }
+        const dato = await measureDato(lead.domain, pageKey).catch((err) => {
+          console.error(`dato ${lead.domain}: ${err.message}`)
+          return { error: 'exception' }
+        })
+        // A site down is retried on the next runs (up to 3); a PageSpeed or code error never
+        // blocks the day: after 3 in a row this run sends the v2 first email and measures later.
+        if (dato && 'error' in dato) {
+          if (dato.error === 'site' && (lead.datoTries || 0) < 2) {
+            lead.datoTries = (lead.datoTries || 0) + 1
+            continue
+          }
+          if (dato.error !== 'site') {
+            datoErrors++ // no datoAt: measured again on a later run
+            continue
+          }
+        } else datoErrors = 0
         const ok = dato && 'frase' in dato ? dato : null
         Object.assign(lead, { dato: ok?.frase || null, datoRule: ok?.rule || 'none', datoAt: new Date().toISOString() })
       }
