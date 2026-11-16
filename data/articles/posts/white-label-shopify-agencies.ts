@@ -104,7 +104,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'We are noprob agency, and this guide is for small agencies, web agencies and performance agencies that get Shopify requests and do not want to hire for them. Two rules for reading it. The facts come from Shopify’s own pages, linked next to each one. Commercial practice (what to write down, how to price, what to tell the client) has no official source, so we write it as our opinion and mark it: “in our view” or “we recommend”.',
+      text: 'We are noprob agency, and this guide is for small agencies, web agencies and performance agencies that get Shopify requests and do not want to hire for them. The facts come from Shopify’s own pages, linked next to each one. Commercial practice (what to write down, how to price, what to tell the client) has no official source, so we write it as our opinion and mark it: “in our view” or “we recommend”.',
     },
     { type: 'h2', text: 'What does white label Shopify development mean?' },
     {
@@ -117,12 +117,12 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Offers of white label web development or white label web design services cover many kinds of sites. On Shopify the work happens inside the client’s own store, in the client’s own account, so access and ownership follow Shopify’s procedures. The next sections cover them.',
+      text: 'Offers of white label web development or white label web design services cover many kinds of sites. On Shopify the work happens inside the client’s own store, in the client’s own account, so access and ownership follow Shopify’s procedures.',
     },
     { type: 'h2', text: 'When does white label Shopify make sense for an agency, and when does it not?' },
     {
       type: 'paragraph',
-      text: '**In our view it makes sense when you own the client relationship and the project has an edge: a start, an end and a scope you can write on one page.** This section is opinion. The Shopify facts come in the sections after it.',
+      text: '**In our view it makes sense when you own the client relationship and the project has an edge: a start, an end and a scope you can write on one page.**',
     },
     { type: 'paragraph', text: 'It tends to work when:' },
     {
@@ -150,7 +150,7 @@ const article: Article = {
     { type: 'h2', text: 'How does a builder get access to a client’s Shopify store?' },
     {
       type: 'paragraph',
-      text: '**Through a collaborator account that the client approves, not through a shared login.** Shopify’s page on [working on client stores](https://help.shopify.com/en/partners/manage-clients-stores/working-on-client-stores) recommends the collaborator account and says a partner cannot ask for or use the merchant’s credentials. A staff account, created by the merchant, is the fallback when the collaborator account is not enough.',
+      text: '**Through a collaborator account that the client approves.** Shopify’s page on [working on client stores](https://help.shopify.com/en/partners/manage-clients-stores/working-on-client-stores) recommends the collaborator account and says a partner cannot ask for or use the merchant’s credentials, so a shared login is out. A staff account, created by the merchant, is the fallback when the collaborator account is not enough.',
     },
     {
       type: 'paragraph',
@@ -227,12 +227,12 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'In our view this belongs in the contract, not in a footnote. Decide before day one who builds the store, from which Partner account, and who receives the compensation. And do not build your price counting on it: Shopify can change the amounts.',
+      text: 'In our view this belongs in the contract. Decide before day one who builds the store, from which Partner account, and who receives the compensation. And do not build your price counting on it: Shopify can change the amounts.',
     },
     { type: 'h2', text: 'What should you put in writing before the first white label project?' },
     {
       type: 'paragraph',
-      text: '**Put in writing who works for whom, what “done” means, how access starts and ends, who owns the code and what happens when someone does not pay.** This is our recommendation, not a legal template. Shopify and a few other sources give hints on some of the points, linked below.',
+      text: '**Put in writing who works for whom, what “done” means, how access starts and ends, who owns the code and what happens when someone does not pay.** This is our recommendation. Shopify and a few other sources give hints on some of the points, linked below.',
     },
     {
       type: 'list',
@@ -280,7 +280,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Shopify’s own compensation (previous sections) is a possible extra, not a base for the price. Nothing in this guide promises a result: your margin depends on what you charge and what you deliver. To see how a finished migration reads from the client’s side, open the [Nazzi case study](/use-cases/integratori-nazzi-dtc-shopify). Your client will ask the questions in [how to choose a Shopify migration agency](/blog/choose-shopify-migration-agency), so it helps to have the answers.',
+      text: 'Shopify’s own compensation (previous sections) is a possible extra, so do not use it as the base for your price. Nothing in this guide promises a result: your margin depends on what you charge and what you deliver. To see how a finished migration reads from the client’s side, open the [Nazzi case study](/use-cases/integratori-nazzi-dtc-shopify). Your client will ask the questions in [how to choose a Shopify migration agency](/blog/choose-shopify-migration-agency), so it helps to have the answers.',
     },
     { type: 'h2', text: 'How does noprob agency work with agencies?' },
     {
@@ -335,7 +335,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Siamo noprob agency, e questa guida è per le piccole agenzie, le web agency e le performance agency che ricevono richieste Shopify e non vogliono assumere per farle. Due regole per leggerla. I fatti arrivano dalle pagine di Shopify, linkate accanto a ciascuno. Le pratiche commerciali (cosa scrivere, come fissare il prezzo, cosa dire al cliente) non hanno una fonte ufficiale, quindi le scriviamo come nostra opinione e lo segnaliamo: “secondo noi” o “ti consigliamo”.',
+      text: 'Siamo noprob agency, e questa guida è per le piccole agenzie, le web agency e le performance agency che ricevono richieste Shopify e non vogliono assumere per farle. I fatti arrivano dalle pagine di Shopify, linkate accanto a ciascuno. Le pratiche commerciali (cosa scrivere, come fissare il prezzo, cosa dire al cliente) non hanno una fonte ufficiale, quindi le scriviamo come nostra opinione e lo segnaliamo: “secondo noi” o “ti consigliamo”.',
     },
     { type: 'h2', text: 'Cosa significa sviluppo Shopify in white label?' },
     {
@@ -348,12 +348,12 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Le offerte di sviluppo web o di servizi di web design in white label riguardano molti tipi di sito. Su Shopify il lavoro si fa dentro lo store del cliente, nel suo account, quindi accessi e proprietà seguono le procedure di Shopify. Le prossime sezioni le spiegano.',
+      text: 'Le offerte di sviluppo web o di servizi di web design in white label riguardano molti tipi di sito. Su Shopify il lavoro si fa dentro lo store del cliente, nel suo account, quindi accessi e proprietà seguono le procedure di Shopify.',
     },
     { type: 'h2', text: 'Quando conviene a un’agenzia il white label Shopify, e quando no?' },
     {
       type: 'paragraph',
-      text: '**Secondo noi conviene quando la relazione con il cliente è tua e il progetto ha dei confini: un inizio, una fine e un perimetro che sta in una pagina.** Questa sezione è opinione. I fatti su Shopify arrivano nelle sezioni dopo.',
+      text: '**Secondo noi conviene quando la relazione con il cliente è tua e il progetto ha dei confini: un inizio, una fine e un perimetro che sta in una pagina.**',
     },
     { type: 'paragraph', text: 'Di solito funziona quando:' },
     {
@@ -381,7 +381,7 @@ const article: Article = {
     { type: 'h2', text: 'Come ottiene l’accesso allo store Shopify del cliente chi costruisce?' },
     {
       type: 'paragraph',
-      text: '**Con un account collaboratore che il cliente approva, non con un login condiviso.** La pagina di Shopify su [come lavorare sugli store dei clienti](https://help.shopify.com/en/partners/manage-clients-stores/working-on-client-stores) consiglia l’account collaboratore e dice che un partner non può chiedere né usare le credenziali del merchant. L’account staff, creato dal merchant, è la via di riserva quando il collaboratore non basta.',
+      text: '**Con un account collaboratore che il cliente approva.** La pagina di Shopify su [come lavorare sugli store dei clienti](https://help.shopify.com/en/partners/manage-clients-stores/working-on-client-stores) consiglia l’account collaboratore e dice che un partner non può chiedere né usare le credenziali del merchant, quindi il login condiviso è escluso. L’account staff, creato dal merchant, è la via di riserva quando il collaboratore non basta.',
     },
     {
       type: 'paragraph',
@@ -458,12 +458,12 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Secondo noi questo va nel contratto, non in una nota a piè di pagina. Decidete prima del giorno uno chi costruisce lo store, da quale account Partner e chi riceve il compenso. E non costruire il prezzo contandoci: Shopify può cambiare gli importi.',
+      text: 'Secondo noi questo va nel contratto. Decidi prima del giorno uno chi costruisce lo store, da quale account Partner e chi riceve il compenso. E non costruire il prezzo contandoci: Shopify può cambiare gli importi.',
     },
     { type: 'h2', text: 'Cosa mettere per iscritto prima del primo progetto white label?' },
     {
       type: 'paragraph',
-      text: '**Scrivi chi lavora per chi, cosa vuol dire “finito”, come iniziano e finiscono gli accessi, di chi è il codice e cosa succede se qualcuno non paga.** È un nostro consiglio, non un modello legale. Shopify e qualche altra fonte danno indicazioni su alcuni punti, linkate qui sotto.',
+      text: '**Scrivi chi lavora per chi, cosa vuol dire “finito”, come iniziano e finiscono gli accessi, di chi è il codice e cosa succede se qualcuno non paga.** È un nostro consiglio. Shopify e qualche altra fonte danno indicazioni su alcuni punti, linkate qui sotto.',
     },
     {
       type: 'list',
@@ -511,7 +511,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'I compensi di Shopify (sezioni precedenti) sono un possibile extra, non la base del prezzo. Niente in questa guida promette un risultato: il tuo margine dipende da ciò che fai pagare e da ciò che consegni. Per vedere come appare una migrazione finita dal lato del cliente, apri il [caso studio Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify). Il tuo cliente ti farà le domande di [come scegliere un’agenzia di migrazione a Shopify](/it/blog/scegliere-agenzia-migrazione-shopify), quindi conviene avere le risposte.',
+      text: 'I compensi di Shopify (sezioni precedenti) sono un possibile extra, quindi non usarli come base del prezzo. Niente in questa guida promette un risultato: il tuo margine dipende da ciò che fai pagare e da ciò che consegni. Per vedere come appare una migrazione finita dal lato del cliente, apri il [caso studio Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify). Il tuo cliente ti farà le domande di [come scegliere un’agenzia di migrazione a Shopify](/it/blog/scegliere-agenzia-migrazione-shopify), quindi conviene avere le risposte.',
     },
     { type: 'h2', text: 'Come lavora noprob agency con le agenzie?' },
     {

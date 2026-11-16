@@ -16,9 +16,9 @@ const article: Article = {
   excerptIt:
     'L’integrazione di agenti AI in un eCommerce si riduce a quattro decisioni: cosa vede l’agente, quale accesso ottiene (prima in sola lettura), chi approva le azioni irreversibili e come lo testi su casi veri.',
   ledeEn:
-    'AI agent integration is not a widget you add to a page. It is four decisions about data, access, approval and tests. Here is what to ask for before you buy or build.',
+    'AI agent integration comes down to four decisions about data, access, approval and tests. Here is what to ask for before you buy or build.',
   ledeIt:
-    'Integrare un agente AI non vuol dire aggiungere un widget a una pagina. Sono quattro decisioni su dati, accessi, approvazione e test. Ecco cosa chiedere prima di comprare o costruire.',
+    'Integrare un agente AI si riduce a quattro decisioni su dati, accessi, approvazione e test. Ecco cosa chiedere prima di comprare o costruire.',
   image: '/images/blog/ai-agent-integration-ecommerce-cover.png',
   imageAlt: 'Copertina astratta con puntini beige che si dissolvono in modo radiale su sfondo sabbia sfumato, senza testo',
   imageAltEn: 'Abstract cover with beige dots fading out radially on a soft sand gradient background, no text',
@@ -153,7 +153,7 @@ const article: Article = {
     { type: 'h2', text: 'Which access should you give an AI agent, and why read-only first?' },
     {
       type: 'paragraph',
-      text: '**Give it read-only access to the sources of its first job, through its own account, and add write permissions one at a time.** A wrong read costs a wrong answer. A wrong write costs a wrong store.',
+      text: '**Give it read-only access to the sources of its first job, through its own account, and add write permissions one at a time.** A wrong read gives you a wrong answer; a wrong write changes the store.',
     },
     {
       type: 'paragraph',
@@ -194,7 +194,7 @@ const article: Article = {
     { type: 'h2', text: 'Where does human approval go?' },
     {
       type: 'paragraph',
-      text: '**At the action, not at the answer: the agent may read and draft freely, and anything that moves money, makes a promise or cannot be undone stops at a person who sees the evidence.** Two sources say the same. The [OWASP AI Agent Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/AI_Agent_Security_Cheat_Sheet.html) asks for approval on high-impact and irreversible actions, and the [MCP specification](https://modelcontextprotocol.io/specification/2026-07-28/server/tools) says there should always be a person who can deny a tool call.',
+      text: '**Put it at the action: the agent may read and draft freely, and anything that moves money, makes a promise or cannot be undone stops at a person who sees the evidence.** Two sources say the same. The [OWASP AI Agent Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/AI_Agent_Security_Cheat_Sheet.html) asks for approval on high-impact and irreversible actions, and the [MCP specification](https://modelcontextprotocol.io/specification/2026-07-28/server/tools) says there should always be a person who can deny a tool call.',
     },
     {
       type: 'paragraph',
@@ -218,7 +218,7 @@ const article: Article = {
     { type: 'h2', text: 'How do you measure whether an integrated AI agent works?' },
     {
       type: 'paragraph',
-      text: '**Write test cases from real situations, run them before launch and after every change, and compare the results with how the task went before.** Anthropic’s guide to [evals for AI agents](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents) sets the bar low on purpose: “20-50 simple tasks drawn from real failures is a great start.” [OpenAI’s evaluation guidance](https://developers.openai.com/api/docs/guides/evaluation-best-practices) adds what to cover: typical, edge and adversarial cases, not a judgment by feel.',
+      text: '**Write test cases from real situations, run them before launch and after every change, and compare the results with how the task went before.** Anthropic’s guide to [evals for AI agents](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents) sets the bar low on purpose: “20-50 simple tasks drawn from real failures is a great start.” [OpenAI’s evaluation guidance](https://developers.openai.com/api/docs/guides/evaluation-best-practices) adds what to cover: typical, edge and adversarial cases.',
     },
     { type: 'paragraph', text: 'Write each case with four fields:' },
     {
@@ -240,7 +240,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '**Integrating an agent gives one job to one agent that works for you inside the store. Preparing the whole store makes your data, access and rules ready for any agent, yours or your customer’s.** The first is a project. The second is a base.',
+      text: '**Integrating an agent gives one job to one agent that works for you inside the store. Preparing the whole store makes your data, access and rules ready for any agent, yours or your customer’s.**',
     },
     {
       type: 'table',
@@ -258,7 +258,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'The second direction is no longer theoretical. Shopify’s [Agentic Storefronts](https://www.shopify.com/news/winter-26-edition-agentic-storefronts) publish a catalog to ChatGPT, Perplexity and Microsoft Copilot from one configuration, and the merchant stays the merchant of record. [Digital Commerce 360](https://www.digitalcommerce360.com/2026/08/06/how-shopify-is-approaching-agentic-ai-2026/) reports that Shopify’s president said on the earnings call that traffic and orders from AI to Shopify stores tripled year over year in the second quarter of 2026.',
+      text: 'The second direction already exists. Shopify’s [Agentic Storefronts](https://www.shopify.com/news/winter-26-edition-agentic-storefronts) publish a catalog to ChatGPT, Perplexity and Microsoft Copilot from one configuration, and the merchant stays the merchant of record. [Digital Commerce 360](https://www.digitalcommerce360.com/2026/08/06/how-shopify-is-approaching-agentic-ai-2026/) reports that Shopify’s president said on the earnings call that traffic and orders from AI to Shopify stores tripled year over year in the second quarter of 2026.',
     },
     {
       type: 'paragraph',
@@ -365,7 +365,7 @@ const article: Article = {
     { type: 'h2', text: 'Che accessi dare a un agente AI, e perché prima in sola lettura?' },
     {
       type: 'paragraph',
-      text: '**Dagli accesso in sola lettura alle fonti del suo primo compito, con un account suo, e aggiungi i permessi di scrittura uno alla volta.** Una lettura sbagliata costa una risposta sbagliata. Una scrittura sbagliata costa uno store sbagliato.',
+      text: '**Dagli accesso in sola lettura alle fonti del suo primo compito, con un account suo, e aggiungi i permessi di scrittura uno alla volta.** Una lettura sbagliata dà una risposta sbagliata; una scrittura sbagliata cambia lo store.',
     },
     {
       type: 'paragraph',
@@ -406,7 +406,7 @@ const article: Article = {
     { type: 'h2', text: 'Dove va l’approvazione di una persona?' },
     {
       type: 'paragraph',
-      text: '**Sull’azione, non sulla risposta: l’agente può leggere e scrivere bozze liberamente, e tutto ciò che muove denaro, fa una promessa o non si può annullare si ferma davanti a una persona che vede le prove.** Due fonti dicono la stessa cosa. L’[OWASP AI Agent Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/AI_Agent_Security_Cheat_Sheet.html) chiede l’approvazione per le azioni ad alto impatto e irreversibili, e la [specifica MCP](https://modelcontextprotocol.io/specification/2026-07-28/server/tools) dice che ci deve sempre essere una persona che può negare una chiamata a uno strumento.',
+      text: '**Metti l’approvazione sull’azione: l’agente può leggere e scrivere bozze liberamente, e tutto ciò che muove denaro, fa una promessa o non si può annullare si ferma davanti a una persona che vede le prove.** Due fonti dicono la stessa cosa. L’[OWASP AI Agent Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/AI_Agent_Security_Cheat_Sheet.html) chiede l’approvazione per le azioni ad alto impatto e irreversibili, e la [specifica MCP](https://modelcontextprotocol.io/specification/2026-07-28/server/tools) dice che ci deve sempre essere una persona che può negare una chiamata a uno strumento.',
     },
     {
       type: 'paragraph',
@@ -430,7 +430,7 @@ const article: Article = {
     { type: 'h2', text: 'Come si misura se un agente AI integrato funziona?' },
     {
       type: 'paragraph',
-      text: '**Scrivi casi di prova da situazioni vere, falli girare prima del lancio e dopo ogni modifica, e confronta i risultati con come andava il compito prima.** La guida di Anthropic alle [valutazioni degli agenti AI](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents) mette l’asticella bassa di proposito: “20-50 simple tasks drawn from real failures is a great start”, cioè 20-50 compiti semplici presi da errori reali sono un ottimo inizio. Le [indicazioni di OpenAI sulla valutazione](https://developers.openai.com/api/docs/guides/evaluation-best-practices) aggiungono cosa coprire: casi tipici, limite e avversari, non un giudizio a sensazione.',
+      text: '**Scrivi casi di prova da situazioni vere, falli girare prima del lancio e dopo ogni modifica, e confronta i risultati con come andava il compito prima.** La guida di Anthropic alle [valutazioni degli agenti AI](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents) mette l’asticella bassa di proposito: “20-50 simple tasks drawn from real failures is a great start”, cioè 20-50 compiti semplici presi da errori reali sono un ottimo inizio. Le [indicazioni di OpenAI sulla valutazione](https://developers.openai.com/api/docs/guides/evaluation-best-practices) aggiungono cosa coprire: casi tipici, limite e avversari.',
     },
     { type: 'paragraph', text: 'Scrivi ogni caso con quattro campi:' },
     {
@@ -452,7 +452,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '**Integrare un agente affida un compito a un agente che lavora per te dentro lo store. Preparare l’intero store rende dati, accessi e regole pronti per qualsiasi agente, il tuo o quello dei tuoi clienti.** Il primo è un progetto. Il secondo è una base.',
+      text: '**Integrare un agente affida un compito a un agente che lavora per te dentro lo store. Preparare l’intero store rende dati, accessi e regole pronti per qualsiasi agente, il tuo o quello dei tuoi clienti.**',
     },
     {
       type: 'table',
@@ -470,7 +470,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'La seconda direzione non è più teoria. Gli [Agentic Storefronts](https://www.shopify.com/news/winter-26-edition-agentic-storefronts) di Shopify pubblicano un catalogo su ChatGPT, Perplexity e Microsoft Copilot da un’unica configurazione, e il merchant resta merchant of record. [Digital Commerce 360](https://www.digitalcommerce360.com/2026/08/06/how-shopify-is-approaching-agentic-ai-2026/) riporta che il presidente di Shopify ha detto nella presentazione dei risultati trimestrali che traffico e ordini dall’AI verso gli store Shopify sono triplicati su base annua nel secondo trimestre 2026.',
+      text: 'La seconda direzione esiste già. Gli [Agentic Storefronts](https://www.shopify.com/news/winter-26-edition-agentic-storefronts) di Shopify pubblicano un catalogo su ChatGPT, Perplexity e Microsoft Copilot da un’unica configurazione, e il merchant resta merchant of record. [Digital Commerce 360](https://www.digitalcommerce360.com/2026/08/06/how-shopify-is-approaching-agentic-ai-2026/) riporta che il presidente di Shopify ha detto nella presentazione dei risultati trimestrali che traffico e ordini dall’AI verso gli store Shopify sono triplicati su base annua nel secondo trimestre 2026.',
     },
     {
       type: 'paragraph',

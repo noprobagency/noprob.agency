@@ -136,7 +136,7 @@ const article: Article = {
     { type: "h3", text: "Instructions and limits" },
     {
       type: "paragraph",
-      text: "Write down the role, the tone, the policies, what the agent must never do, when it must hand over to a person, the refund amount above which a human decides, and the maximum number of steps per request. These are files in a repository, versioned like code, not a prompt someone pastes into a box.",
+      text: "Write down the role, the tone, the policies, what the agent must never do, when it must hand over to a person, the refund amount above which a human decides, and the maximum number of steps per request. These are files in a repository, versioned like code.",
     },
     { type: "h3", text: "Evaluation" },
     {
@@ -169,7 +169,7 @@ const article: Article = {
     { type: "h3", text: "The Custom AI System" },
     {
       type: "paragraph",
-      text: "The Custom AI System is the store itself, written from scratch for your shop and ready for AI agents, with an automatic GEO layer and data mapped in detail. It does not replace the three routes above: it makes every one of them start from data that is already clean. It comes with the Shopify Launch Sprint.",
+      text: "The Custom AI System is the store itself, written from scratch for your shop and ready for AI agents, with an automatic GEO layer and data mapped in detail. It sits under the three routes above and makes each of them start from data that is already clean. It comes with the Shopify Launch Sprint.",
     },
     { type: "h2", text: "How much does an AI agent for a Shopify store cost?" },
     {
@@ -189,7 +189,7 @@ const article: Article = {
     { type: "h3", text: "What does the model cost?" },
     {
       type: "paragraph",
-      text: "Official prices, checked on 29 October 2026, per million tokens (input / output). On [Anthropic’s pricing page](https://platform.claude.com/docs/en/about-claude/pricing): Claude Haiku 5.5 $0.10 / $0.50 (prompts up to 100,000 tokens), Claude Sonnet 5.5 $2 / $10, Claude Fable 5.1 $10 / $50. On [OpenAI’s pricing page](https://developers.openai.com/api/docs/pricing): gpt-6-luna $0.10 / $0.50, gpt-6-astra $10 / $50. Between a small and a top model of the same maker the input price differs by 100 times at both makers, so “always the most powerful model” is a spending decision, not a safety measure. Prices change often: check the pages before you budget.",
+      text: "Official prices, checked on 29 October 2026, per million tokens (input / output). On [Anthropic’s pricing page](https://platform.claude.com/docs/en/about-claude/pricing): Claude Haiku 5.5 $0.10 / $0.50 (prompts up to 100,000 tokens), Claude Sonnet 5.5 $2 / $10, Claude Fable 5.1 $10 / $50. On [OpenAI’s pricing page](https://developers.openai.com/api/docs/pricing): gpt-6-luna $0.10 / $0.50, gpt-6-astra $10 / $50. Between a small and a top model of the same maker the input price differs by 100 times at both makers, so “always the most powerful model” is a spending decision. Prices change often: check the pages before you budget.",
     },
     {
       type: "paragraph",
@@ -207,7 +207,7 @@ const article: Article = {
     { type: "h2", text: "Where should you start this week?" },
     {
       type: "paragraph",
-      text: "**Start with the numbers and the smallest route, not with a tool.** In this order:",
+      text: "**Start with the numbers and the smallest route, and pick the tool last.** In this order:",
     },
     {
       type: "list",
@@ -252,7 +252,7 @@ const article: Article = {
     { type: "h3", text: "Are AI agents worth it for a small store?" },
     {
       type: "paragraph",
-      text: "It depends on the numbers, not on the size. A store with few requests rarely gains from an agent, while one where support fills a person’s day usually does, mostly through workflows and a few agent steps. Run the two questions in this guide before you spend anything.",
+      text: "It depends on the numbers. A store with few requests rarely gains from an agent, while one where support fills a person’s day usually does, mostly through workflows and a few agent steps. Run the two questions in this guide before you spend anything.",
     },
     {
       type: "paragraph",
@@ -365,7 +365,7 @@ const article: Article = {
     { type: "h3", text: "Istruzioni e limiti" },
     {
       type: "paragraph",
-      text: "Scrivi il ruolo, il tono, le policy, cosa l’agente non deve mai fare, quando deve passare a una persona, l’importo di rimborso oltre il quale decide un umano e il numero massimo di passi per richiesta. Sono file in un repository, versionati come il codice, non un prompt che qualcuno incolla in una casella.",
+      text: "Scrivi il ruolo, il tono, le policy, cosa l’agente non deve mai fare, quando deve passare a una persona, l’importo di rimborso oltre il quale decide un umano e il numero massimo di passi per richiesta. Sono file in un repository, versionati come il codice.",
     },
     { type: "h3", text: "Valutazione" },
     {
@@ -398,7 +398,7 @@ const article: Article = {
     { type: "h3", text: "Il Custom AI System" },
     {
       type: "paragraph",
-      text: "Il Custom AI System è lo store stesso, scritto da zero per il tuo negozio e pronto per gli agenti AI, con un livello GEO automatico e dati mappati nel dettaglio. Non sostituisce le tre strade qui sopra: fa sì che ognuna parta da dati già puliti. Arriva con lo Shopify Launch Sprint.",
+      text: "Il Custom AI System è lo store stesso, scritto da zero per il tuo negozio e pronto per gli agenti AI, con un livello GEO automatico e dati mappati nel dettaglio. Sta sotto le tre strade qui sopra e fa partire ognuna da dati già puliti. Arriva con lo Shopify Launch Sprint.",
     },
     { type: "h2", text: "Quanto costa un agente AI per uno store Shopify?" },
     {
@@ -418,7 +418,7 @@ const article: Article = {
     { type: "h3", text: "Quanto costa il modello?" },
     {
       type: "paragraph",
-      text: "Prezzi ufficiali, controllati il 29 ottobre 2026, per milione di token (input / output). Sulla [pagina prezzi di Anthropic](https://platform.claude.com/docs/en/about-claude/pricing): Claude Haiku 5.5 $0,10 / $0,50 (prompt fino a 100.000 token), Claude Sonnet 5.5 $2 / $10, Claude Fable 5.1 $10 / $50. Sulla [pagina prezzi di OpenAI](https://developers.openai.com/api/docs/pricing): gpt-6-luna $0,10 / $0,50, gpt-6-astra $10 / $50. Tra un modello piccolo e uno di punta dello stesso produttore il prezzo in ingresso cambia di 100 volte per entrambi, quindi “sempre il modello più potente” è una scelta di spesa, non una garanzia. I prezzi cambiano spesso: controlla le pagine prima di fare il budget.",
+      text: "Prezzi ufficiali, controllati il 29 ottobre 2026, per milione di token (input / output). Sulla [pagina prezzi di Anthropic](https://platform.claude.com/docs/en/about-claude/pricing): Claude Haiku 5.5 $0,10 / $0,50 (prompt fino a 100.000 token), Claude Sonnet 5.5 $2 / $10, Claude Fable 5.1 $10 / $50. Sulla [pagina prezzi di OpenAI](https://developers.openai.com/api/docs/pricing): gpt-6-luna $0,10 / $0,50, gpt-6-astra $10 / $50. Tra un modello piccolo e uno di punta dello stesso produttore il prezzo in ingresso cambia di 100 volte per entrambi, quindi “sempre il modello più potente” è una scelta di spesa. I prezzi cambiano spesso: controlla le pagine prima di fare il budget.",
     },
     {
       type: "paragraph",
@@ -436,7 +436,7 @@ const article: Article = {
     { type: "h2", text: "Da dove cominciare questa settimana?" },
     {
       type: "paragraph",
-      text: "**Comincia dai numeri e dalla strada più piccola, non da uno strumento.** In quest’ordine:",
+      text: "**Comincia dai numeri e dalla strada più piccola, e scegli lo strumento per ultimo.** In quest’ordine:",
     },
     {
       type: "list",
@@ -484,7 +484,7 @@ const article: Article = {
     { type: "h3", text: "Un agente AI vale la pena per un piccolo eCommerce?" },
     {
       type: "paragraph",
-      text: "Dipende dai numeri, non dalle dimensioni. Uno store con poche richieste raramente guadagna da un agente, mentre uno in cui l’assistenza riempie la giornata di una persona di solito sì, soprattutto con workflow e qualche passo da agente. Fai le due domande di questa guida prima di spendere qualcosa.",
+      text: "Dipende dai numeri. Uno store con poche richieste raramente guadagna da un agente, mentre uno in cui l’assistenza riempie la giornata di una persona di solito sì, soprattutto con workflow e qualche passo da agente. Fai le due domande di questa guida prima di spendere qualcosa.",
     },
     {
       type: "paragraph",
@@ -524,7 +524,7 @@ const article: Article = {
     {
       question: "Are AI agents worth it for a small store?",
       answer:
-        "It depends on the numbers, not on the size. A store with few requests rarely gains from an agent, while one where support fills a person’s day usually does, mostly through workflows and a few agent steps. Run the two questions in this guide before you spend anything.",
+        "It depends on the numbers. A store with few requests rarely gains from an agent, while one where support fills a person’s day usually does, mostly through workflows and a few agent steps. Run the two questions in this guide before you spend anything.",
     },
   ],
   faqIt: [
@@ -556,7 +556,7 @@ const article: Article = {
     {
       question: "Un agente AI vale la pena per un piccolo eCommerce?",
       answer:
-        "Dipende dai numeri, non dalle dimensioni. Uno store con poche richieste raramente guadagna da un agente, mentre uno in cui l’assistenza riempie la giornata di una persona di solito sì, soprattutto con workflow e qualche passo da agente. Fai le due domande di questa guida prima di spendere qualcosa.",
+        "Dipende dai numeri. Uno store con poche richieste raramente guadagna da un agente, mentre uno in cui l’assistenza riempie la giornata di una persona di solito sì, soprattutto con workflow e qualche passo da agente. Fai le due domande di questa guida prima di spendere qualcosa.",
     },
   ],
 };

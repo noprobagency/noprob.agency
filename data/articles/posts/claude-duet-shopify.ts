@@ -106,7 +106,7 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**Claude Duet, the founder’s assistant.** Morning brief, inbox, calendar, supplier and customer follow-ups, invoices, weekly numbers. It talks to you, not to your catalog.',
+        '**Claude Duet, the founder’s assistant.** Morning brief, inbox, calendar, supplier and customer follow-ups, invoices, weekly numbers. It talks to you and stays away from your catalog.',
         '**Claude connected to Shopify, the analyst.** It reads orders, products and sales, answers questions and drafts. We cover the connection in [Claude and Claude Code on Shopify](/blog/claude-shopify).',
         '**Claude Code, the builder.** [Claude Code](https://code.claude.com/docs/en/overview) reads a codebase, edits files, runs commands and connects tools through MCP. For a store that means code changes, feeds, redirect maps and scripts, worked on a copy and reviewed before anything goes live.',
         '**Custom agents, for jobs that repeat.** When a job runs the same way every day, such as checking catalog data or sorting returns, it becomes an agent with narrow tools. See [AI agents for Shopify](/blog/ai-agents-for-shopify) and [how to build one](/blog/build-ai-agent-shopify).',
@@ -172,7 +172,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'The Friday rule matters most. An agent improves through the instructions you write after a mistake, not through the mistake itself. Keep one document with those rules and hand it to Duet and to Claude Code.',
+      text: 'The Friday rule matters most: an agent improves through the instructions you write after a mistake. Keep one document with those rules and hand it to Duet and to Claude Code.',
     },
     { type: 'h2', text: 'What are the limits of Claude Duet, written as safety rules?' },
     {
@@ -193,7 +193,7 @@ const article: Article = {
     { type: 'h2', text: 'How do you start this week?' },
     {
       type: 'paragraph',
-      text: '**Start with access and roles, not with automation.** In this order:',
+      text: '**Start with access and roles, and leave automation for later.** In this order:',
     },
     {
       type: 'list',
@@ -319,7 +319,7 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**Claude Duet, l’assistente del founder.** Riepilogo del mattino, posta, calendario, solleciti a fornitori e clienti, fatture, numeri settimanali. Parla con te, non con il tuo catalogo.',
+        '**Claude Duet, l’assistente del founder.** Riepilogo del mattino, posta, calendario, solleciti a fornitori e clienti, fatture, numeri settimanali. Parla con te e non tocca il tuo catalogo.',
         '**Claude collegato a Shopify, l’analista.** Legge ordini, prodotti e vendite, risponde alle domande e scrive bozze. La connessione la spieghiamo in [Claude e Claude Code su Shopify](/it/blog/claude-shopify).',
         '**Claude Code, il costruttore.** [Claude Code](https://code.claude.com/docs/en/overview) legge un codebase, modifica file, esegue comandi e collega strumenti tramite MCP. Per uno store significa modifiche al codice del sito, feed, mappe di redirect e script, lavorati su una copia e rivisti prima che vada online qualcosa.',
         '**Agenti su misura, per i lavori che si ripetono.** Quando un lavoro gira sempre uguale, come il controllo dei dati del catalogo o lo smistamento dei resi, diventa un agente con strumenti stretti. Vedi [agenti AI per Shopify](/it/blog/agenti-ai-shopify) e [come crearne uno](/it/blog/creare-agente-ai-shopify).',
@@ -385,7 +385,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'La regola del venerdì è la più importante. Un agente migliora con le istruzioni che scrivi dopo un errore, non con l’errore in sé. Tieni un solo documento con quelle regole e consegnalo a Duet e a Claude Code.',
+      text: 'La regola del venerdì è la più importante: un agente migliora con le istruzioni che scrivi dopo un errore. Tieni un solo documento con quelle regole e consegnalo a Duet e a Claude Code.',
     },
     { type: 'h2', text: 'Quali sono i limiti di Claude Duet, scritti come regole di sicurezza?' },
     {
@@ -406,7 +406,7 @@ const article: Article = {
     { type: 'h2', text: 'Come parti questa settimana?' },
     {
       type: 'paragraph',
-      text: '**Parti dall’accesso e dai ruoli, non dall’automazione.** In quest’ordine:',
+      text: '**Parti dall’accesso e dai ruoli, e lascia l’automazione per dopo.** In quest’ordine:',
     },
     {
       type: 'list',

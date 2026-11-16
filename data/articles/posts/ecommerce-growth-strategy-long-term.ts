@@ -10,7 +10,7 @@ const article: Article = {
   seoDescription:
     'eCommerce brands that truly grow do not chase trends: stable teams, solid technical foundations and real KPIs. What the data says about long-term growth.',
   excerpt: "eCommerce brands that truly grow don't chase trends. They build a growth strategy that compounds over the long term: stable teams, solid technical foundations, real KPIs. What the data really says.",
-  ledeEn: "The secret of eCommerce brands that actually grow isn't growth hacks. It's the foundations that compound over time.",
+  ledeEn: 'eCommerce brands that actually grow build on foundations that compound over time.',
   image: '/images/blog/strategia-ecommerce-long-term-cover.png',
   imageAlt: 'Copertina sulla strategia eCommerce di lungo periodo: sfondo menta sfumato con una griglia sfalsata di puntini',
   imageAltEn: 'Cover of the long-term eCommerce growth strategy article: softly graded mint background with an offset dot grid',
@@ -47,7 +47,7 @@ const article: Article = {
   content: [
     {
       type: 'paragraph',
-      text: "**A long-term eCommerce growth strategy is four decisions kept stable for years (platform, tracking, team and a roadmap built on real problems) with small optimizations on top every week.** That is what separates brands that grow predictably from brands that restart every quarter.",
+      text: "A long-term eCommerce growth strategy is four decisions kept stable for years (platform, tracking, team and a roadmap built on real problems) with small optimizations on top every week. That is what separates brands that grow predictably from brands that restart every quarter.",
     },
     {
       type: 'paragraph',
@@ -63,11 +63,11 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: "A working **eCommerce strategy** isn't the one chasing every new thing. It's the one building foundations that hold for years and adapting on top without breaking what works.",
+      text: 'A working eCommerce strategy builds foundations that hold for years and adapts on top without breaking what works.',
     },
     {
       type: 'paragraph',
-      text: "I say this because I see it in my clients' data. And because serious research from McKinsey, Bain, Gallup, and Harvard Business Review confirms it. Real numbers, not slogans.",
+      text: "I say this because I see it in my clients' data. And because serious research from McKinsey, Bain, Gallup, and Harvard Business Review confirms it.",
     },
     {
       type: 'paragraph',
@@ -97,11 +97,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Here are the real numbers.',
-    },
-    {
-      type: 'paragraph',
-      text: 'Gallup estimates that replacing a single employee costs **from half to twice their annual salary** ([Gallup](https://www.gallup.com/workplace/247391/fixable-problem-costs-businesses-trillion.aspx)). For executive roles the Center for American Progress puts it as high as 213% ([Center for American Progress](https://www.americanprogress.org/article/there-are-significant-business-costs-to-replacing-employees/)).',
+      text: 'Gallup estimates that replacing a single employee costs from half to twice their annual salary ([Gallup](https://www.gallup.com/workplace/247391/fixable-problem-costs-businesses-trillion.aspx)). For executive roles the Center for American Progress puts it as high as 213% ([Center for American Progress](https://www.americanprogress.org/article/there-are-significant-business-costs-to-replacing-employees/)).',
     },
     {
       type: 'paragraph',
@@ -109,15 +105,11 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: "It's not just the hire. It's the **time-to-ramp-up**. In our experience a new team member needs 3-6 months to reach full operational capacity. For those months the role is structurally underperforming. If you swap 2 key roles in a year, you've lost a full quarter of operational capacity.",
+      text: "The hire is only part of it. The bigger cost is the time-to-ramp-up. In our experience a new team member needs 3-6 months to reach full operational capacity. For those months the role is structurally underperforming. If you swap 2 key roles in a year, you've lost a full quarter of operational capacity.",
     },
     {
       type: 'paragraph',
-      text: 'And what about tracking, processes, brand knowledge?',
-    },
-    {
-      type: 'paragraph',
-      text: "A new developer doesn't know why certain pixels were set up the way they are. A new media buyer doesn't know which campaign angles historically perform on your target. A new strategist has to learn the brand positioning from scratch. Every change resets the context.",
+      text: "Tracking, processes and brand knowledge go the same way. A new developer doesn't know why certain pixels were set up the way they are. A new media buyer doesn't know which campaign angles historically perform on your target. A new strategist has to learn the brand positioning from scratch. Every change resets the context.",
     },
     {
       type: 'paragraph',
@@ -129,7 +121,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'The numbers tell you this: every unnecessary change is burned capital. The right question is not "how do I find someone who does better". It is "how do I make sure the people who are working keep working and improving".',
+      text: 'Every unnecessary change is burned capital. So ask how to make sure the people who are working keep working and improving, before asking how to find someone who does better.',
     },
     {
       type: 'h2',
@@ -141,22 +133,18 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'The results, after 13-14 years of observation.',
-    },
-    {
-      type: 'paragraph',
-      text: 'The long-term focused companies had:',
+      text: 'After 13-14 years of observation, the long-term focused companies had:',
     },
     {
       type: 'list',
       items: [
-        'Cumulative revenue growth **47% higher** than the short-term ones',
-        'Cumulative earnings growth **36% higher**',
+        'Cumulative revenue growth 47% higher than the short-term ones',
+        'Cumulative earnings growth 36% higher',
       ],
     },
     {
       type: 'paragraph',
-      text: "This isn't marketing. It's a real dataset of 615 companies tracked over 13 years, published by the McKinsey Global Institute.",
+      text: 'The dataset is real: 615 companies tracked over 13 years, published by the McKinsey Global Institute.',
     },
     {
       type: 'paragraph',
@@ -164,7 +152,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'I see this myself in the projects I run. When I help a client reduce non-structural changes and focus on weekly improvements (speed, conversion rate, accurate tracking, user experience), the numbers become more stable and predictable. No more "spike and collapse", just a rising curve.',
+      text: 'I see this myself in the projects I run. When I help a client reduce non-structural changes and focus on weekly improvements (speed, conversion rate, accurate tracking, user experience), the numbers become more stable and predictable, with a rising curve instead of "spike and collapse".',
     },
     {
       type: 'paragraph',
@@ -176,7 +164,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: "Trend chasing presents itself as dynamism. It's just reactivity. Real eCommerce strategy is the ability to hold the course when the market wobbles.",
+      text: 'Trend chasing looks like dynamism but is mostly reactivity. A real eCommerce strategy holds the course when the market wobbles.',
     },
     {
       type: 'h2',
@@ -197,13 +185,13 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        'Acquiring a new customer costs **5-25 times more** than retaining an existing one ([Harvard Business Review](https://hbr.org/2014/10/the-value-of-keeping-the-right-customers))',
+        'Acquiring a new customer costs 5-25 times more than retaining an existing one ([Harvard Business Review](https://hbr.org/2014/10/the-value-of-keeping-the-right-customers))',
         'Retention compounds: every returning customer skips the acquisition cost you paid the first time',
       ],
     },
     {
       type: 'paragraph',
-      text: "For an eCommerce this translates to a simple truth: margin isn't made on the first purchase, it's made from the second onward.",
+      text: 'For an eCommerce this means most of the margin comes from the second purchase onward.',
     },
     {
       type: 'paragraph',
@@ -211,7 +199,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: "And here we come back to long-term thinking: retention isn't something built in a quarterly campaign. It requires months of consistent optimization, of automation flows tested and refined, of continuous customer segment analysis. If every 6 months you change email marketer and start from zero, you'll never build a serious retention program.",
+      text: "And here we come back to long-term thinking: retention is built over months: automation flows tested and refined, customer segments analyzed continuously. If every 6 months you change email marketer and start from zero, you'll never build a serious retention program.",
     },
     {
       type: 'paragraph',
@@ -235,11 +223,11 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: "This doesn't mean accepting limitations. It means investing energy into optimizing the existing setup (performance, conversion rate, mobile UX) instead of migrating every 18 months. For a complete view on why Shopify is the most rational choice for structured B2C brands, read our [practitioner's guide to how Shopify works](/blog/how-shopify-works). If the platform is the weak foundation, change it once and properly: [how we migrate to Shopify](/shopify-migration), with platform guides for [WooCommerce](/blog/woocommerce-to-shopify-migration), [Magento](/blog/magento-to-shopify-migration), [PrestaShop](/blog/prestashop-to-shopify-migration) and [BigCommerce](/blog/bigcommerce-to-shopify-migration).",
+      text: "Put your energy into optimizing the existing setup (performance, conversion rate, mobile UX) instead of migrating every 18 months. For a complete view on why Shopify is the most rational choice for structured B2C brands, read our [practitioner's guide to how Shopify works](/blog/how-shopify-works). If the platform is the weak foundation, change it once and properly: [how we migrate to Shopify](/shopify-migration), with platform guides for [WooCommerce](/blog/woocommerce-to-shopify-migration), [Magento](/blog/magento-to-shopify-migration), [PrestaShop](/blog/prestashop-to-shopify-migration) and [BigCommerce](/blog/bigcommerce-to-shopify-migration).",
     },
     {
       type: 'paragraph',
-      text: 'At noprob.agency we built the [Data-Driven Team](/data-driven-team) precisely for this: a stable technical team that handles the platform, optimizations, tracking, and emergencies on an ongoing basis. Not an external vendor that rotates, but an extension of your in-house team.',
+      text: 'At noprob.agency we built the [Data-Driven Team](/data-driven-team) precisely for this: a stable technical team that handles the platform, optimizations, tracking, and emergencies on an ongoing basis. It works as an extension of your in-house team, with no vendor rotating in and out.',
     },
     {
       type: 'h3',
@@ -251,7 +239,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'The **essential eCommerce KPIs** to monitor every week are few: AOV (Average Order Value), conversion rate by traffic source, retention rate, checkout drop-off, margin per product. Not 30 metrics. The 5-6 that actually move the business.',
+      text: 'The essential eCommerce KPIs to monitor every week are few: AOV (Average Order Value), conversion rate by traffic source, retention rate, checkout drop-off, margin per product. Five or six metrics are enough, the ones that actually move the business.',
     },
     {
       type: 'paragraph',
@@ -263,11 +251,11 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: "It doesn't matter if your team is in-house or external. What matters is that the people are the same for years. A media buyer who has run your ads for 3 years knows the campaign angles, the audiences that work, the peak periods for your audience. A new media buyer starts from zero and costs you 3-6 months of ramp-up.",
+      text: "Your team can be in-house or external, as long as the people stay the same for years. A media buyer who has run your ads for 3 years knows the campaign angles, the audiences that work, the peak periods for your audience. A new media buyer starts from zero and costs you 3-6 months of ramp-up.",
     },
     {
       type: 'paragraph',
-      text: 'For many structured B2C brands the best model is a dedicated external team. It costs less than a complete in-house team and is more stable than a freelancer who moves on to other projects. The key is choosing a partner who works to build a long relationship, not to close a project and move on.',
+      text: 'For many structured B2C brands the best model is a dedicated external team. It costs less than a complete in-house team and is more stable than a freelancer who moves on to other projects. Choose a partner who wants a long relationship and does not close a project and move on.',
     },
     {
       type: 'h3',
@@ -280,10 +268,6 @@ const article: Article = {
     {
       type: 'paragraph',
       text: 'A serious eCommerce roadmap starts from the real problems of the business: where do you lose conversions? Which funnel step has the highest drop-off? Where are your lowest margins? From there you identify 2-3 quarterly priorities and work on them in a focused way.',
-    },
-    {
-      type: 'paragraph',
-      text: 'Everything else is noise.',
     },
     {
       type: 'h2',
@@ -307,14 +291,14 @@ const article: Article = {
         'Migration to Shopify in May 2025, connected to the stores’ ERP',
         'Full server-side tracking (audit score 92/100)',
         'Same partner and the same direction for all 4 years',
-        'Online sales in the 12 months after the migration: **+67.7%** on the 12 months before',
-        'Orders: **+49.4%**, average order value: **+12.2%** in the same comparison',
+        'Online sales in the 12 months after the migration: +67.7% on the 12 months before',
+        'Orders: +49.4%, average order value: +12.2% in the same comparison',
         'Six figure months: one before Shopify, four after',
       ],
     },
     {
       type: 'paragraph',
-      text: "What happened isn't magic. It's consistency. Same team, same methodology, for 4 years. While other brands keep changing agencies and complaining about flat growth, they were accumulating optimizations that compounded.",
+      text: 'What happened is consistency: same team, same methodology, for 4 years. While other brands keep changing agencies and complaining about flat growth, they were accumulating optimizations that compounded.',
     },
     {
       type: 'paragraph',
@@ -322,7 +306,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: "This is the concrete proof of what I wrote above: long-term thinking in eCommerce isn't theory, it's the factor that makes the difference between brands that grow and brands that go in circles.",
+      text: 'This case backs what I wrote above: long-term thinking separates the brands that grow from the brands that go in circles.',
     },
     {
       type: 'h2',
@@ -374,15 +358,11 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: "The truth most articles avoid saying is this: sustainable eCommerce growth is boring. There's no growth hack that changes the game. There is a stable team, stable platform, stable processes, and continuous optimization on top.",
+      text: 'Sustainable eCommerce growth is boring. No growth hack changes the game: it takes a stable team, a stable platform, stable processes, and continuous optimization on top.',
     },
     {
       type: 'paragraph',
-      text: "The long-term companies in the McKinsey sample delivered +47% in revenue over 13 years. Bain's 5% rule shows that small retention improvements generate huge profit differences. Gallup's turnover data shows that every team change costs more than you think.",
-    },
-    {
-      type: 'paragraph',
-      text: 'The numbers always come back to the same point: whoever stands still in the right place beats whoever runs in the wrong place.',
+      text: "The long-term companies in the McKinsey sample grew cumulative revenue 47% more than the short-term ones over 13 years. Bain's 5% rule shows that small retention improvements generate huge profit differences. Gallup's turnover data shows that every team change costs more than you think.",
     },
     {
       type: 'paragraph',
@@ -404,7 +384,7 @@ const article: Article = {
   slugIt: 'strategia-ecommerce-long-term',
   titleIt: 'Strategia eCommerce: perché pensare a lungo termine batte la rincorsa ai trend',
   excerptIt: 'I brand eCommerce che crescono davvero non rincorrono trend. Costruiscono strategia long-term, team stabili e fondamenta tecniche. Cosa dicono i dati.',
-  ledeIt: 'Il segreto dei brand eCommerce che crescono davvero non sono i growth hack. Sono le fondamenta che si compongono nel tempo.',
+  ledeIt: 'I brand eCommerce che crescono davvero si appoggiano a fondamenta che si compongono nel tempo.',
   keywordsIt: 'strategia ecommerce, strategia di crescita ecommerce, kpi ecommerce, retention ecommerce, team ecommerce stabile',
   faqIt: [
     {
@@ -431,7 +411,7 @@ const article: Article = {
   contentIt: [
     {
       type: 'paragraph',
-      text: '**Una strategia di crescita eCommerce a lungo termine sono quattro decisioni tenute stabili per anni (piattaforma, tracking, team e una roadmap costruita sui problemi reali) con piccole ottimizzazioni sopra ogni settimana.** È ciò che separa i brand che crescono in modo prevedibile da quelli che ripartono ogni trimestre.',
+      text: 'Una strategia di crescita eCommerce a lungo termine sono quattro decisioni tenute stabili per anni (piattaforma, tracking, team e una roadmap costruita sui problemi reali) con piccole ottimizzazioni sopra ogni settimana. È ciò che separa i brand che crescono in modo prevedibile da quelli che ripartono ogni trimestre.',
     },
     {
       type: 'paragraph',
@@ -447,11 +427,11 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Una **strategia eCommerce** funzionante non è quella che insegue ogni novità. È quella che costruisce fondamenta che reggono per anni e si adatta sopra senza distruggere ciò che funziona.',
+      text: 'Una strategia eCommerce funzionante costruisce fondamenta che reggono per anni e si adatta sopra senza distruggere ciò che funziona.',
     },
     {
       type: 'paragraph',
-      text: 'Lo dico perché lo vedo nei dati dei miei clienti. E perché lo confermano studi seri di McKinsey, Bain, Gallup e Harvard Business Review. Numeri reali, non slogan.',
+      text: 'Lo dico perché lo vedo nei dati dei miei clienti. E perché lo confermano studi seri di McKinsey, Bain, Gallup e Harvard Business Review.',
     },
     {
       type: 'paragraph',
@@ -481,11 +461,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'I numeri reali sono questi.',
-    },
-    {
-      type: 'paragraph',
-      text: 'Secondo Gallup sostituire un singolo dipendente costa **da metà a due volte il suo stipendio annuo** ([Gallup](https://www.gallup.com/workplace/247391/fixable-problem-costs-businesses-trillion.aspx)). Per i ruoli executive il Center for American Progress arriva fino al 213% ([Center for American Progress](https://www.americanprogress.org/article/there-are-significant-business-costs-to-replacing-employees/)).',
+      text: 'Secondo Gallup sostituire un singolo dipendente costa da metà a due volte il suo stipendio annuo ([Gallup](https://www.gallup.com/workplace/247391/fixable-problem-costs-businesses-trillion.aspx)). Per i ruoli executive il Center for American Progress arriva fino al 213% ([Center for American Progress](https://www.americanprogress.org/article/there-are-significant-business-costs-to-replacing-employees/)).',
     },
     {
       type: 'paragraph',
@@ -493,15 +469,11 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: "Non è solo l'assunzione. È il **time-to-ramp-up**. Per nostra esperienza un nuovo membro del team impiega 3-6 mesi per arrivare a piena operatività. Per quei mesi il rendimento del ruolo è strutturalmente sotto. Se cambi 2 figure chiave in un anno, hai perso un trimestre intero di operatività piena.",
+      text: "L'assunzione è solo una parte. Il costo più grande è il time-to-ramp-up. Per nostra esperienza un nuovo membro del team impiega 3-6 mesi per arrivare a piena operatività. Per quei mesi il rendimento del ruolo è strutturalmente sotto. Se cambi 2 figure chiave in un anno, hai perso un trimestre intero di operatività piena.",
     },
     {
       type: 'paragraph',
-      text: 'E sul tracking, sui processi, sulle conoscenze del brand?',
-    },
-    {
-      type: 'paragraph',
-      text: 'Un developer nuovo non sa perché certi pixel sono stati impostati così. Una nuova media buyer non conosce i tagli di campagne che storicamente performano sul tuo target. Un nuovo strategist deve capire da zero il posizionamento del brand. Ogni cambio resetta il contesto.',
+      text: 'Tracking, processi e conoscenza del brand seguono la stessa strada. Un developer nuovo non sa perché certi pixel sono stati impostati così. Una nuova media buyer non conosce i tagli di campagne che storicamente performano sul tuo target. Un nuovo strategist deve capire da zero il posizionamento del brand. Ogni cambio resetta il contesto.',
     },
     {
       type: 'paragraph',
@@ -513,7 +485,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'I numeri ti dicono questo: ogni cambio inutile è capitale bruciato. La domanda corretta non è "come trovo qualcuno che fa meglio". È "come faccio sì che chi sta funzionando continui a funzionare e migliorare".',
+      text: 'Ogni cambio inutile è capitale bruciato. Prima di chiederti come trovare qualcuno che fa meglio, chiediti come far sì che chi sta funzionando continui a funzionare e migliorare.',
     },
     {
       type: 'h2',
@@ -525,22 +497,18 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'I risultati, dopo 13-14 anni di osservazione.',
-    },
-    {
-      type: 'paragraph',
-      text: 'Le aziende long-term focused hanno avuto:',
+      text: 'Dopo 13-14 anni di osservazione, le aziende long-term focused hanno avuto:',
     },
     {
       type: 'list',
       items: [
-        'Crescita cumulata dei ricavi del **47% in più** rispetto alle short-term',
-        'Crescita cumulata degli utili del **36% in più**',
+        'Crescita cumulata dei ricavi del 47% in più rispetto alle short-term',
+        'Crescita cumulata degli utili del 36% in più',
       ],
     },
     {
       type: 'paragraph',
-      text: 'Non è marketing. È un dataset reale su 615 aziende osservate per 13 anni, pubblicato dal McKinsey Global Institute.',
+      text: 'Il dataset è reale: 615 aziende osservate per 13 anni, pubblicato dal McKinsey Global Institute.',
     },
     {
       type: 'paragraph',
@@ -548,7 +516,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Lo vedo io stesso nei progetti che gestisco. Quando aiuto un cliente a ridurre i cambi non strutturali e a focalizzarsi su miglioramenti settimanali (velocità, conversion rate, tracking accurato, user experience), i numeri diventano più stabili e prevedibili. Non più "spike e collasso", ma curva crescente.',
+      text: 'Lo vedo io stesso nei progetti che gestisco. Quando aiuto un cliente a ridurre i cambi non strutturali e a focalizzarsi su miglioramenti settimanali (velocità, conversion rate, tracking accurato, user experience), i numeri diventano più stabili e prevedibili, con una curva crescente al posto di "spike e collasso".',
     },
     {
       type: 'paragraph',
@@ -560,7 +528,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'La rincorsa ai trend si presenta come dinamismo. È reattività. La strategia eCommerce vera è la capacità di tenere la rotta quando il mercato traballa.',
+      text: 'La rincorsa ai trend sembra dinamismo ma è soprattutto reattività. Una strategia eCommerce vera tiene la rotta quando il mercato traballa.',
     },
     {
       type: 'h2',
@@ -581,13 +549,13 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        'Acquisire un nuovo cliente costa **5-25 volte di più** che fidelizzarne uno esistente ([Harvard Business Review](https://hbr.org/2014/10/the-value-of-keeping-the-right-customers))',
+        'Acquisire un nuovo cliente costa 5-25 volte di più che fidelizzarne uno esistente ([Harvard Business Review](https://hbr.org/2014/10/the-value-of-keeping-the-right-customers))',
         'La retention si compone: ogni cliente di ritorno salta il costo di acquisizione che hai pagato la prima volta',
       ],
     },
     {
       type: 'paragraph',
-      text: 'Per un eCommerce questo si traduce in una verità semplice: il margine non si fa sul primo acquisto, si fa dal secondo in poi.',
+      text: 'Per un eCommerce questo significa che gran parte del margine arriva dal secondo acquisto in poi.',
     },
     {
       type: 'paragraph',
@@ -595,7 +563,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'E qui torniamo al long-term thinking: la retention non è qualcosa che si costruisce in una campagna trimestrale. Richiede mesi di ottimizzazione consistente, di flussi automation testati e affinati, di analisi continua dei segmenti di clientela. Se ogni 6 mesi cambi email marketer e si riparte da zero, non costruirai mai un programma di retention serio.',
+      text: 'E qui torniamo al long-term thinking: la retention si costruisce in mesi: flussi automation testati e affinati, segmenti di clientela analizzati di continuo. Se ogni 6 mesi cambi email marketer e si riparte da zero, non costruirai mai un programma di retention serio.',
     },
     {
       type: 'paragraph',
@@ -619,11 +587,11 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: "Questo non significa accettare limitazioni. Significa investire le energie nell'ottimizzare il setup esistente (performance, conversion rate, mobile UX) invece che nel migrare ogni 18 mesi. Per capire perché Shopify è la scelta più razionale per i B2C strutturati, leggi la nostra [guida completa a Shopify](/it/blog/cose-shopify). Se la piattaforma è la fondamenta debole, cambiala una volta sola e fatta bene: [come migriamo a Shopify](/it/migrazione-shopify), con le guide per piattaforma su [WooCommerce](/it/blog/migrazione-woocommerce-shopify), [Magento](/it/blog/migrazione-magento-shopify), [PrestaShop](/it/blog/migrazione-prestashop-shopify) e [BigCommerce](/it/blog/migrazione-bigcommerce-shopify).",
+      text: "Metti le energie nell'ottimizzare il setup esistente (performance, conversion rate, mobile UX) invece che nel migrare ogni 18 mesi. Per capire perché Shopify è la scelta più razionale per i B2C strutturati, leggi la nostra [guida completa a Shopify](/it/blog/cose-shopify). Se la piattaforma è la fondamenta debole, cambiala una volta sola e fatta bene: [come migriamo a Shopify](/it/migrazione-shopify), con le guide per piattaforma su [WooCommerce](/it/blog/migrazione-woocommerce-shopify), [Magento](/it/blog/migrazione-magento-shopify), [PrestaShop](/it/blog/migrazione-prestashop-shopify) e [BigCommerce](/it/blog/migrazione-bigcommerce-shopify).",
     },
     {
       type: 'paragraph',
-      text: "A noprob.agency abbiamo costruito il [Data-Driven Team](/it/team-ecommerce-dedicato) proprio per questo: un team tecnico stabile che gestisce la piattaforma, le ottimizzazioni, il tracking e le emergenze in modo continuativo. Non un fornitore esterno che cambia, ma un'estensione del tuo team interno.",
+      text: "A noprob.agency abbiamo costruito il [Data-Driven Team](/it/team-ecommerce-dedicato) proprio per questo: un team tecnico stabile che gestisce la piattaforma, le ottimizzazioni, il tracking e le emergenze in modo continuativo. Lavora come un'estensione del tuo team interno, senza un fornitore che entra e esce.",
     },
     {
       type: 'h3',
@@ -635,7 +603,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'I **KPI eCommerce essenziali** da monitorare ogni settimana sono pochi: AOV (Average Order Value), conversion rate per sorgente di traffico, retention rate, drop-off del checkout, margine per prodotto. Non 30 metriche. Quelle 5-6 che muovono davvero i conti.',
+      text: 'I KPI eCommerce essenziali da monitorare ogni settimana sono pochi: AOV (Average Order Value), conversion rate per sorgente di traffico, retention rate, drop-off del checkout, margine per prodotto. Bastano cinque o sei metriche, quelle che muovono davvero i conti.',
     },
     {
       type: 'paragraph',
@@ -647,11 +615,11 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Non importa se il tuo team è dipendente o esterno. Importa che le persone siano le stesse per anni. Una media buyer che gestisce le tue ads da 3 anni conosce tagli di campagna, audience che funzionano, periodi caldi del tuo target. Una nuova media buyer parte da zero e ti costa 3-6 mesi di ramp-up.',
+      text: 'Il tuo team può essere dipendente o esterno, purché le persone restino le stesse per anni. Una media buyer che gestisce le tue ads da 3 anni conosce tagli di campagna, audience che funzionano, periodi caldi del tuo target. Una nuova media buyer parte da zero e ti costa 3-6 mesi di ramp-up.',
     },
     {
       type: 'paragraph',
-      text: "Per molti brand B2C strutturati il modello migliore è un team esterno dedicato. Costa meno di un team interno completo, ed è più stabile di un freelancer che passa ad altri progetti. La chiave è scegliere un partner che lavori per costruire una relazione lunga, non per chiudere un progetto e passare al successivo.",
+      text: "Per molti brand B2C strutturati il modello migliore è un team esterno dedicato. Costa meno di un team interno completo, ed è più stabile di un freelancer che passa ad altri progetti. Scegli un partner che vuole una relazione lunga e non chiude un progetto per passare al successivo.",
     },
     {
       type: 'h3',
@@ -664,10 +632,6 @@ const article: Article = {
     {
       type: 'paragraph',
       text: 'Una roadmap eCommerce seria parte dai problemi reali dello store: dove perdi conversioni? Quale step del funnel ha il drop-off più alto? Dove hai i margini più bassi? Da lì identifichi 2-3 priorità trimestrali e ci lavori in modo focalizzato.',
-    },
-    {
-      type: 'paragraph',
-      text: 'Tutto il resto è rumore.',
     },
     {
       type: 'h2',
@@ -691,14 +655,14 @@ const article: Article = {
         'Migrazione a Shopify a maggio 2025, collegata al gestionale dei negozi',
         'Tracking server-side completo (tracking score 92/100)',
         'Stesso partner e stessa regia per tutti i 4 anni',
-        'Vendite online nei 12 mesi dopo la migrazione: **+67,7%** sui 12 mesi prima',
-        'Ordini: **+49,4%**, scontrino medio: **+12,2%** nello stesso confronto',
+        'Vendite online nei 12 mesi dopo la migrazione: +67,7% sui 12 mesi prima',
+        'Ordini: +49,4%, scontrino medio: +12,2% nello stesso confronto',
         'Mesi a sei cifre: uno prima di Shopify, quattro dopo',
       ],
     },
     {
       type: 'paragraph',
-      text: 'Quello che è successo non è magia. È costanza. Lo stesso team, con la stessa metodologia, per 4 anni. Mentre altri brand cambiano agenzia di continuo e si lamentano di crescita piatta, loro accumulavano ottimizzazioni che si componevano.',
+      text: 'Quello che è successo è costanza: lo stesso team, con la stessa metodologia, per 4 anni. Mentre altri brand cambiano agenzia di continuo e si lamentano di crescita piatta, loro accumulavano ottimizzazioni che si componevano.',
     },
     {
       type: 'paragraph',
@@ -706,7 +670,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: "Questa è la prova concreta di quello che ho scritto sopra: il long-term thinking nell'eCommerce non è teoria, è il fattore che fa la differenza tra brand che crescono e brand che girano in circolo.",
+      text: 'Questo caso conferma quello che ho scritto sopra: il long-term thinking separa i brand che crescono da quelli che girano in circolo.',
     },
     {
       type: 'h2',
@@ -758,15 +722,11 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: "La verità che la maggior parte degli articoli evita di dire è questa: la crescita eCommerce sostenibile è noiosa. Non c'è un growth hack che cambia il gioco. C'è team stabile, piattaforma stabile, processi stabili, e un'ottimizzazione continua sopra.",
+      text: "La crescita eCommerce sostenibile è noiosa. Nessun growth hack cambia il gioco: servono un team stabile, una piattaforma stabile, processi stabili e un'ottimizzazione continua sopra.",
     },
     {
       type: 'paragraph',
-      text: 'Le aziende long-term del campione McKinsey hanno fatto +47% di ricavi in 13 anni. La regola del 5% di Bain mostra che piccoli miglioramenti di retention generano enormi differenze nel profitto. I dati Gallup sul turnover mostrano che ogni cambio di team costa più di quanto pensi.',
-    },
-    {
-      type: 'paragraph',
-      text: 'I numeri tornano sempre allo stesso punto: chi sta fermo nel posto giusto vince su chi corre nel posto sbagliato.',
+      text: 'Le aziende long-term del campione McKinsey hanno fatto crescere i ricavi cumulati del 47% in più delle short-term in 13 anni. La regola del 5% di Bain mostra che piccoli miglioramenti di retention generano enormi differenze nel profitto. I dati Gallup sul turnover mostrano che ogni cambio di team costa più di quanto pensi.',
     },
     {
       type: 'paragraph',

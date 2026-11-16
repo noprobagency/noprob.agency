@@ -252,7 +252,7 @@ const it: AiCopy = {
     headingEm: 'nessun sistema',
     headingEnd: '.',
     intro:
-      'Sai che il tuo eCommerce può fare di più. Ogni settimana esce un tool nuovo, intanto schede prodotto, email e assistenza clienti si fanno ancora a mano. Il problema non è la mancanza di strumenti: è non sapere da dove partire.',
+      'Sai che il tuo eCommerce può fare di più. Ogni settimana esce un tool nuovo, intanto schede prodotto, email e assistenza clienti si fanno ancora a mano. Quello che manca è un punto da cui partire.',
     items: [
       {
         title: 'Tutto urgente, niente priorità',
@@ -274,8 +274,8 @@ const it: AiCopy = {
   },
   solution: {
     label: 'la soluzione',
-    headingPart1: 'Un partner AI, ',
-    headingEm: 'non un guru',
+    headingPart1: 'Un partner AI ',
+    headingEm: 'al tuo fianco',
     headingEnd: '.',
     intro:
       'Entriamo nel tuo eCommerce come partner, studiamo con te dati e processi e portiamo l’AI dove genera un risultato misurabile: tempo recuperato o fatturato in più.',
@@ -285,15 +285,15 @@ const it: AiCopy = {
         description: 'Partiamo da catalogo, clienti e processi. Solo dopo scegliamo gli strumenti.',
       },
       {
-        title: 'Dati, non teoria',
-        description: 'Ogni scelta nasce dai numeri del tuo store e dal lavoro reale del team, non da una tendenza.',
+        title: 'Si parte dai dati',
+        description: 'Ogni scelta nasce dai numeri del tuo store e dal lavoro reale del team.',
       },
       {
         title: 'Marketing, vendite e AI insieme',
         description: 'Un solo partner per ads, email, sito, dati e automazioni.',
       },
       {
-        title: 'Autonomia, non dipendenza',
+        title: 'Il team resta autonomo',
         description: 'A fine mese il team va avanti da solo, con priorità chiare e procedure scritte.',
       },
     ],
@@ -303,7 +303,7 @@ const it: AiCopy = {
     headingPart1: 'Per chi vuole crescere, ma ',
     headingEm: 'non sa da dove partire',
     headingEnd: '.',
-    intro: 'Il tuo lavoro è far crescere l’eCommerce, non inseguire gli aggiornamenti dell’AI.',
+    intro: 'Hai un eCommerce da far crescere e non hai tempo di inseguire ogni aggiornamento dell’AI.',
     cards: [
       {
         title: 'Founder e titolari',
@@ -351,7 +351,7 @@ const it: AiCopy = {
       '4 videochiamate da 60 minuti, una a settimana. In mezzo, contatto diretto e un task manager condiviso.',
     goalBox: {
       title: 'L’obiettivo del mese',
-      text: 'Mappare con te numeri, processi e opportunità del tuo eCommerce, metterli in ordine di priorità e attivare con l’AI le prime soluzioni sulla più importante. Prima capiamo cosa conta, poi agiamo.',
+      text: 'Mappare con te numeri, processi e opportunità del tuo eCommerce, metterli in ordine di priorità e attivare con l’AI le prime soluzioni sulla più importante.',
     },
     phaseLabel: 'Fase',
     phases: [
@@ -396,12 +396,12 @@ const it: AiCopy = {
       title: 'Perché un mese e non una videochiamata?',
       text: 'Perché le opportunità giuste per l’AI si trovano solo vedendo il tuo eCommerce lavorare, settimana dopo settimana. L’implementazione è la parte veloce.',
     },
-    tagline: 'Non ti lasciamo una lista di tool. Ti lasciamo un sistema.',
+    tagline: 'A fine mese hai un sistema di lavoro che il tuo team usa anche senza di noi.',
   },
   deliverables: {
     label: 'cosa ricevi',
-    headingPart1: 'Tre strumenti di lavoro, ',
-    headingEm: 'non un PDF nel cassetto',
+    headingPart1: 'Tre strumenti di lavoro ',
+    headingEm: 'da usare ogni giorno',
     headingEnd: '.',
     cards: [
       {
@@ -417,7 +417,7 @@ const it: AiCopy = {
       {
         title: 'Context Document del tuo eCommerce',
         description:
-          'Brand, catalogo e clienti descritti per ChatGPT, Claude e simili: risposte su misura, non generiche. Resta a te.',
+          'Brand, catalogo e clienti descritti per ChatGPT, Claude e simili, così le risposte partono dal tuo caso. Resta a te.',
       },
     ],
     extra: 'In più: fino a 2 quick win già attive nel lavoro quotidiano.',
@@ -446,8 +446,8 @@ const it: AiCopy = {
   },
   contrast: {
     label: 'la differenza',
-    headingPart1: 'Stessi strumenti. ',
-    headingEm: 'Risultato opposto',
+    headingPart1: 'Stessi strumenti, ',
+    headingEm: 'risultati diversi',
     headingEnd: '.',
     intro: 'L’AI è la stessa per tutti. Cambia come la usi.',
     left: {
@@ -468,7 +468,7 @@ const it: AiCopy = {
         'Ore recuperate ogni settimana',
       ],
     },
-    closing: 'Stessa AI. La differenza è il metodo.',
+    closing: 'Con lo stesso strumento, il metodo decide quante ore recuperi.',
   },
   who: {
     label: 'chi ti segue',
@@ -482,8 +482,8 @@ const it: AiCopy = {
     imageAlt: 'Antonio Manitta, fondatore di NoProb Agency',
   },
   caseStudyHeading: {
-    part1: 'Cosa succede quando la tecnologia incontra ',
-    em: 'l’esecuzione',
+    part1: 'Un caso ',
+    em: 'reale',
     end: '.',
   },
   pricing: {
@@ -517,8 +517,8 @@ const it: AiCopy = {
   },
   after: {
     label: 'e dopo?',
-    headingPart1: 'Il mese finisce. ',
-    headingEm: 'Il percorso no',
+    headingPart1: 'Finito il mese, ',
+    headingEm: 'scegli tu come continuare',
     headingEnd: '.',
     intro: 'L’audit non ti lega a niente: alla fine sei autonomo. Se vuoi, andiamo avanti insieme.',
     cards: [
@@ -544,7 +544,7 @@ const it: AiCopy = {
     label: 'domande frequenti',
     heading: 'Le risposte alle ',
     headingEm: 'domande più comuni',
-    subheading: 'Senza giri di parole.',
+    subheading: 'Cosa ci chiedono prima di candidarsi.',
     items: [
       {
         question: 'Lavorate anche con startup o privati?',
@@ -653,7 +653,7 @@ const it: AiCopy = {
   },
   thankYou: {
     metaTitle: 'Candidatura ricevuta · AI Accelerator',
-    eyebrow: 'Candidatura ricevuta ⚡',
+    eyebrow: 'Candidatura ricevuta',
     titlePart1: 'Ultimo passo: ',
     titleEm: 'fissa la pre-call',
     titleEnd: '.',
@@ -698,7 +698,7 @@ const en: AiCopy = {
     headingEm: 'no system',
     headingEnd: '.',
     intro:
-      'You know your eCommerce can do more. A new tool launches every week, while product pages, emails and customer service are still done by hand. The problem isn’t a lack of tools: it’s not knowing where to start.',
+      'You know your eCommerce can do more. A new tool launches every week, while product pages, emails and customer service are still done by hand. What’s missing is a place to start.',
     items: [
       {
         title: 'Everything urgent, no priorities',
@@ -720,8 +720,8 @@ const en: AiCopy = {
   },
   solution: {
     label: 'the solution',
-    headingPart1: 'An AI partner, ',
-    headingEm: 'not a guru',
+    headingPart1: 'An AI partner ',
+    headingEm: 'by your side',
     headingEnd: '.',
     intro:
       'We step into your eCommerce as a partner, study data and processes with you, and bring AI where it drives a measurable result: time saved or extra revenue.',
@@ -731,15 +731,15 @@ const en: AiCopy = {
         description: 'We start from your catalog, customers and processes. Only then do we pick the tools.',
       },
       {
-        title: 'Data, not theory',
-        description: 'Every choice comes from your store’s numbers and your team’s real work, not from a trend.',
+        title: 'We start from the data',
+        description: 'Every choice comes from your store’s numbers and your team’s real work.',
       },
       {
         title: 'Marketing, sales and AI together',
         description: 'One partner for ads, email, website, data and automation.',
       },
       {
-        title: 'Autonomy, not dependency',
+        title: 'Your team stays autonomous',
         description: 'By the end of the month your team moves on its own, with clear priorities and written procedures.',
       },
     ],
@@ -749,7 +749,7 @@ const en: AiCopy = {
     headingPart1: 'For brands that want to grow, but ',
     headingEm: 'don’t know where to start',
     headingEnd: '.',
-    intro: 'Your job is growing your eCommerce, not keeping up with AI updates.',
+    intro: 'You have an eCommerce to grow and no time to chase every AI update.',
     cards: [
       {
         title: 'Founders and owners',
@@ -796,7 +796,7 @@ const en: AiCopy = {
     intro: '4 video calls of 60 minutes, one per week. In between, direct contact and a shared task manager.',
     goalBox: {
       title: 'The goal of the month',
-      text: 'Map your eCommerce’s numbers, processes and opportunities with you, rank them by priority and switch on the first AI solutions on the most important one. First we understand what matters, then we act.',
+      text: 'Map your eCommerce’s numbers, processes and opportunities with you, rank them by priority and switch on the first AI solutions on the most important one.',
     },
     phaseLabel: 'Phase',
     phases: [
@@ -841,12 +841,12 @@ const en: AiCopy = {
       title: 'Why a month and not a single call?',
       text: 'Because the right opportunities for AI only show up when you watch your eCommerce work, week after week. Implementation is the fast part.',
     },
-    tagline: 'We don’t leave you a list of tools. We leave you a system.',
+    tagline: 'By the end of the month you have a working system your team keeps using without us.',
   },
   deliverables: {
     label: 'what you get',
-    headingPart1: 'Three working tools, ',
-    headingEm: 'not a PDF in a drawer',
+    headingPart1: 'Three working tools ',
+    headingEm: 'you use every day',
     headingEnd: '.',
     cards: [
       {
@@ -862,7 +862,7 @@ const en: AiCopy = {
       {
         title: 'Your eCommerce Context Document',
         description:
-          'Brand, catalog and customers described for ChatGPT, Claude and similar tools: tailored answers, not generic ones. It stays yours.',
+          'Brand, catalog and customers described for ChatGPT, Claude and similar tools, so answers start from your case. It stays yours.',
       },
     ],
     extra: 'Plus: up to 2 quick wins already running in your daily work.',
@@ -887,12 +887,12 @@ const en: AiCopy = {
       'AI licenses and subscriptions',
       'Pre-recorded courses',
     ],
-    note: 'Every next step, we evaluate together with a separate proposal.',
+    note: 'We assess every next step together and quote it in a separate proposal.',
   },
   contrast: {
     label: 'the difference',
-    headingPart1: 'Same tools. ',
-    headingEm: 'Opposite results',
+    headingPart1: 'Same tools, ',
+    headingEm: 'different results',
     headingEnd: '.',
     intro: 'AI is the same for everyone. What changes is how you use it.',
     left: {
@@ -913,7 +913,7 @@ const en: AiCopy = {
         'Hours saved every week',
       ],
     },
-    closing: 'Same AI. The difference is the method.',
+    closing: 'With the same tool, the method decides how many hours you save.',
   },
   who: {
     label: 'who you’ll work with',
@@ -927,8 +927,8 @@ const en: AiCopy = {
     imageAlt: 'Antonio Manitta, founder of NoProb Agency',
   },
   caseStudyHeading: {
-    part1: 'What happens when technology meets ',
-    em: 'execution',
+    part1: 'A ',
+    em: 'real case',
     end: '.',
   },
   pricing: {
@@ -961,8 +961,8 @@ const en: AiCopy = {
   },
   after: {
     label: 'what’s next?',
-    headingPart1: 'The month ends. ',
-    headingEm: 'The journey doesn’t',
+    headingPart1: 'When the month ends, ',
+    headingEm: 'you choose what comes next',
     headingEnd: '.',
     intro: 'The audit doesn’t tie you to anything: by the end you’re autonomous. If you want, we keep going together.',
     cards: [
@@ -988,7 +988,7 @@ const en: AiCopy = {
     label: 'FAQ',
     heading: 'Answers to the ',
     headingEm: 'most common questions',
-    subheading: 'Straight answers.',
+    subheading: 'What people ask us before applying.',
     items: [
       {
         question: 'Do you work with startups or individuals?',
@@ -1096,7 +1096,7 @@ const en: AiCopy = {
   },
   thankYou: {
     metaTitle: 'Application received · AI Accelerator',
-    eyebrow: 'Application received ⚡',
+    eyebrow: 'Application received',
     titlePart1: 'Last step: ',
     titleEm: 'book your intro call',
     titleEnd: '.',

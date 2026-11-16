@@ -16,9 +16,9 @@ const article: Article = {
   excerptIt:
     'Una migrazione da Magento a Shopify si decide dove Magento non si traduce uno a uno: tipi di prodotto, store view, gruppi clienti, estensioni e URL rewrite. Con la mappa dei redirect, l’inventario delle estensioni e il calendario dello Sprint.',
   ledeEn:
-    'Moving from Magento 2 or Adobe Commerce to Shopify is mostly a translation job. Here is what translates, what does not, and the method we use.',
+    'Moving from Magento 2 or Adobe Commerce to Shopify is mostly a translation job. This article sorts what translates from what does not and shows the method we use.',
   ledeIt:
-    'Passare da Magento 2 o Adobe Commerce a Shopify è soprattutto un lavoro di traduzione. Cosa si traduce, cosa no, e il metodo con cui lo facciamo.',
+    'Passare da Magento 2 o Adobe Commerce a Shopify è soprattutto un lavoro di traduzione. Qui separiamo ciò che si traduce da ciò che no e spieghiamo il metodo con cui lo facciamo.',
   image: '/images/blog/magento-to-shopify-migration-cover.png',
   imageAlt: 'Copertina astratta, sfondo menta, con una dissolvenza radiale di puntini più grandi ai bordi',
   imageAltEn: 'Abstract cover, mint background with a radial fade of dots growing toward the edges',
@@ -143,7 +143,7 @@ const article: Article = {
     { type: 'h2', text: 'Why do stores migrate from Magento to Shopify?' },
     {
       type: 'paragraph',
-      text: 'Stores migrate from Magento to Shopify mostly because of what it takes to keep Magento running, not because of what it can do. Magento, in its Open Source or Adobe Commerce form, is flexible and powerful. The cost sits around it:',
+      text: 'Stores migrate from Magento to Shopify mostly because of what it takes to keep Magento running. Magento, in its Open Source or Adobe Commerce form, is flexible and powerful. The cost sits around it:',
     },
     {
       type: 'list',
@@ -155,12 +155,12 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Our view: the license is rarely the real number, the people are. A store that needs a developer on call just to stay safe is paying for maintenance instead of growth.',
+      text: 'Our view: the people cost more than the license. A store that needs a developer on call just to stay safe spends that money on maintenance.',
     },
     { type: 'h2', text: 'When is staying on Magento the better call?' },
     {
       type: 'paragraph',
-      text: 'Staying on Magento is the better call when the logic in your custom modules is your competitive edge and rebuilding it would cost more than the maintenance you would save: deep B2B pricing and approval rules tied to an ERP, or websites with genuinely different catalogs. Shopify can reach much of this with B2B, Markets, Shopify Functions and apps, but that is a rebuild of the logic, not a transfer.',
+      text: 'Staying on Magento is the better call when the logic in your custom modules is your competitive edge and rebuilding it would cost more than the maintenance you would save: deep B2B pricing and approval rules tied to an ERP, or websites with genuinely different catalogs. Shopify can reach much of this with B2B, Markets, Shopify Functions and apps, but you rebuild that logic on the Shopify side.',
     },
     { type: 'h2', text: 'How do Magento product types map to Shopify?' },
     {
@@ -372,7 +372,7 @@ const article: Article = {
     { type: 'h2', text: 'The two hard parts of leaving Magento: modules and URLs' },
     {
       type: 'paragraph',
-      text: 'Moving from Magento is a translation job with two hard parts: the logic hidden in modules and the URLs Google already knows. Both are found by an inventory, not by a quote.',
+      text: 'Moving from Magento is a translation job with two hard parts: the logic hidden in modules and the URLs Google already knows. An inventory finds both before anyone quotes a price.',
     },
     {
       type: 'paragraph',
@@ -403,7 +403,7 @@ const article: Article = {
     { type: 'h2', text: 'Perché si passa da Magento a Shopify?' },
     {
       type: 'paragraph',
-      text: 'Si passa da Magento a Shopify soprattutto per quello che serve a tenere in piedi Magento, non per quello che sa fare. Magento, Open Source o Adobe Commerce, è flessibile e potente. Il costo sta intorno:',
+      text: 'Si passa da Magento a Shopify soprattutto per quello che serve a tenere in piedi Magento. Magento, Open Source o Adobe Commerce, è flessibile e potente. Il costo sta intorno:',
     },
     {
       type: 'list',
@@ -415,12 +415,12 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'La nostra opinione: la licenza raramente è il numero vero, lo sono le persone. Uno store che ha bisogno di uno sviluppatore a disposizione solo per restare sicuro paga manutenzione, non crescita.',
+      text: 'La nostra opinione: le persone costano più della licenza. Uno store che ha bisogno di uno sviluppatore a disposizione solo per restare sicuro spende quei soldi in manutenzione.',
     },
     { type: 'h2', text: 'Quando conviene restare su Magento?' },
     {
       type: 'paragraph',
-      text: 'Conviene restare su Magento quando la logica dei moduli personalizzati è il tuo vantaggio competitivo e rifarla costerebbe più della manutenzione che risparmi: prezzi B2B profondi e regole legate al gestionale, o website con cataloghi davvero diversi. Shopify arriva a gran parte di questo con B2B, Markets, Functions e app, ma è una ricostruzione, non un trasferimento.',
+      text: 'Conviene restare su Magento quando la logica dei moduli personalizzati è il tuo vantaggio competitivo e rifarla costerebbe più della manutenzione che risparmi: prezzi B2B profondi e regole legate al gestionale, o website con cataloghi davvero diversi. Shopify arriva a gran parte di questo con B2B, Markets, Functions e app, ma quella logica si ricostruisce lato Shopify.',
     },
     { type: 'h2', text: 'Come si traducono i tipi di prodotto di Magento su Shopify?' },
     {
@@ -632,7 +632,7 @@ const article: Article = {
     { type: 'h2', text: 'Le due parti difficili di lasciare Magento: moduli e URL' },
     {
       type: 'paragraph',
-      text: 'Lasciare Magento è un lavoro di traduzione con due parti difficili: la logica nei moduli e gli URL che Google conosce già. Si trovano con un inventario, non con un preventivo.',
+      text: 'Lasciare Magento è un lavoro di traduzione con due parti difficili: la logica nei moduli e gli URL che Google conosce già. Un inventario le trova entrambe, prima di qualsiasi preventivo.',
     },
     {
       type: 'paragraph',

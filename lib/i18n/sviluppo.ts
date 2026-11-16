@@ -93,7 +93,7 @@ const it: SviluppoCopy = {
     heading: 'Partire su Shopify è facile.',
     headingEm: 'Farlo bene no.',
     description:
-      'Troppi store nascono come vetrine: belli da vedere ma che non convertono. Senza tracciamento, senza SEO, senza una struttura pensata per scalare.',
+      'Troppi store nascono come vetrine: belli da vedere, ma senza tracciamento, senza SEO e senza una struttura pensata per scalare, quindi non convertono.',
     items: [
       {
         title: 'Un sito vetrina non vende',
@@ -103,12 +103,12 @@ const it: SviluppoCopy = {
       {
         title: 'Tracciamento assente dal giorno uno',
         description:
-          'Campagne lanciate alla cieca, dati inaffidabili, budget sprecato. Senza misurare nulla, ogni decisione è una scommessa.',
+          'Campagne lanciate alla cieca su dati inaffidabili, con budget sprecato. Se non misuri nulla, ogni decisione è una scommessa.',
       },
       {
         title: 'Nessuno che governa il progetto',
         description:
-          'Freelancer scollegati, nessuna visione tecnica d’insieme, decisioni prese senza dati. Il risultato è un patchwork che nessuno controlla.',
+          'Freelancer scollegati, nessuna visione tecnica d’insieme e decisioni prese senza dati: ne esce un patchwork che nessuno controlla.',
       },
     ],
   },
@@ -125,12 +125,12 @@ const it: SviluppoCopy = {
       {
         title: 'Ogni aspetto al massimo',
         description:
-          'Tracciamento server-side, SEO base, performance e CRO inclusi nello sviluppo. Non come extra a pagamento, ma di serie.',
+          'Tracciamento server-side, SEO base, performance e CRO inclusi nello sviluppo, di serie e senza extra a pagamento.',
       },
       {
         title: 'Manutenzione a vita',
         description:
-          'Non costruiamo e spariamo. Sicurezza, aggiornamenti, istruzioni d’uso e supporto tecnico restano inclusi per sempre, senza che tu debba ricominciare.',
+          'Sicurezza, aggiornamenti, istruzioni d’uso e supporto tecnico restano inclusi per sempre, così non devi ricominciare da capo.',
       },
     ],
   },
@@ -139,7 +139,7 @@ const it: SviluppoCopy = {
     headingPart1: '3 mesi per ',
     headingEm: 'costruire tutto.',
     description:
-      'Tre fasi, un ordine logico. Il tempo per impostare ogni dettaglio nel modo giusto.\nIl flusso che usiamo su ogni progetto.',
+      'Tre fasi in ordine logico, con il tempo di impostare ogni dettaglio nel modo giusto.\nÈ il flusso che usiamo su ogni progetto.',
     phases: [
       {
         number: '01',
@@ -166,15 +166,15 @@ const it: SviluppoCopy = {
     fourMonths: {
       title: 'Perché 3 mesi per costruire tutto?',
       description:
-        'Tre mesi non è quanto ci mettiamo a mettere online un sito. È il tempo che dedichiamo a costruirlo bene: strategia, sviluppo, lancio e ottimizzazione. E poi restiamo, con la manutenzione a vita inclusa.',
+        'In tre mesi facciamo strategia, sviluppo, lancio e ottimizzazione, e li facciamo bene. Poi restiamo, con la manutenzione a vita inclusa.',
     },
-    closingLine: 'Non un team che consegna e sparisce.\nUn team che resta nel tempo.',
+    closingLine: 'Dopo la consegna il team resta.\nLa manutenzione a vita è inclusa.',
   },
   whyUs: {
     label: 'perché noi',
     heading: 'Perché il nostro modello funziona meglio',
     description:
-      'Un confronto diretto tra l’approccio noprob e le agenzie tradizionali o i freelancer. Perché una struttura unica costruisce eCommerce che reggono nel tempo.',
+      'Un confronto diretto tra l’approccio noprob e le agenzie tradizionali o i freelancer. Una struttura unica costruisce eCommerce che reggono nel tempo.',
     agencyLabel: 'Altre<br />Agenzie',
     agencyItems: [
       'Risposte lente e coordinamento poco chiaro',
@@ -191,7 +191,7 @@ const it: SviluppoCopy = {
       'Manutenzione a vita su ogni progetto',
     ],
     featuresDescription:
-      'Non ci limitiamo a consegnare uno store, costruiamo infrastrutture eCommerce su cui i brand possono contare nel tempo. Ecco perché i clienti restano con noi.',
+      'Costruiamo infrastrutture eCommerce su cui i brand possono contare nel tempo, e per questo i clienti restano con noi.',
     features: [
       'Specializzati in verticali fashion, beauty e DTC',
       'Manutenzione a vita su ogni build',
@@ -206,7 +206,7 @@ const it: SviluppoCopy = {
   },
   pricing: {
     label: 'prezzo',
-    heading: 'Un progetto, non un servizio.\nLo paghi mentre lo costruiamo.',
+    heading: 'Paghi il progetto\nmentre lo costruiamo.',
     subheading:
       'Niente esborso da migliaia di euro in anticipo: paghi mese per mese, mentre vedi lo store prendere forma. Il prezzo parte basso e sale man mano che acquisiamo nuovi progetti. Più aspetti, più costa.',
     tiers: [
@@ -289,7 +289,7 @@ const it: SviluppoCopy = {
       {
         question: 'Lavorate con chi parte da zero?',
         answer:
-          'Sì, è il nostro focus su questa pagina: costruiamo l’intero eCommerce dalle fondamenta, dal design al lancio. Sei nel posto giusto se stai avviando il brand o vuoi finalmente farlo bene.',
+          'Sì: costruiamo l’intero eCommerce dalle fondamenta, dal design al lancio, sia che tu stia avviando il brand sia che voglia finalmente farlo bene.',
       },
       {
         question: 'Cosa include lo sviluppo?',
@@ -304,7 +304,7 @@ const it: SviluppoCopy = {
       {
         question: 'Quanto dura il progetto?',
         answer:
-          'Tre mesi strutturati: analisi e strategia, sviluppo e design, lancio e ottimizzazione. Il tempo giusto per costruire tutto bene e seguirlo nel dettaglio.',
+          'Tre mesi strutturati: analisi e strategia, sviluppo e design, lancio e ottimizzazione, con il team che segue ogni fase nel dettaglio.',
       },
       {
         question: 'Come funziona il pagamento?',
@@ -352,7 +352,7 @@ const en: SviluppoCopy = {
     heading: 'Launching on Shopify is easy.',
     headingEm: 'Doing it right is not.',
     description:
-      'Too many stores are born as showcases: nice to look at but they don’t convert. No tracking, no SEO, no structure built to scale.',
+      'Too many stores launch as showcases: nice to look at, but with no tracking, no SEO and no structure built to scale, they don’t convert.',
     items: [
       {
         title: 'A showcase store doesn’t sell',
@@ -362,12 +362,12 @@ const en: SviluppoCopy = {
       {
         title: 'No tracking from day one',
         description:
-          'Campaigns launched blind, unreliable data, wasted budget. With nothing measured, every decision is a gamble.',
+          'Campaigns launched blind on unreliable data, with budget wasted. If you measure nothing, every decision is a gamble.',
       },
       {
         title: 'No one owns the project',
         description:
-          'Disconnected freelancers, no overall technical vision, decisions made without data. The result is a patchwork no one controls.',
+          'Disconnected freelancers, no overall technical vision and decisions made without data: you end up with a patchwork no one controls.',
       },
     ],
   },
@@ -384,12 +384,12 @@ const en: SviluppoCopy = {
       {
         title: 'Every aspect at its best',
         description:
-          'Server-side tracking, base SEO, performance and CRO included in the build. Not paid extras, but standard.',
+          'Server-side tracking, base SEO, performance and CRO included in the build as standard, with no paid extras.',
       },
       {
         title: 'Lifetime maintenance',
         description:
-          'We don’t build and disappear. Security, updates, how-to guidance and technical support stay included for good, so you never start over.',
+          'Security, updates, how-to guidance and technical support stay included for good, so you never start over.',
       },
     ],
   },
@@ -398,7 +398,7 @@ const en: SviluppoCopy = {
     headingPart1: '3 months to ',
     headingEm: 'build it all.',
     description:
-      'Three phases, one logical order. The time to set every detail the right way.\nThe flow we use on every project.',
+      'Three phases in a logical order, with the time to set every detail the right way.\nIt is the flow we use on every project.',
     phases: [
       {
         number: '01',
@@ -425,15 +425,15 @@ const en: SviluppoCopy = {
     fourMonths: {
       title: 'Why 3 months to build it all?',
       description:
-        'Three months isn’t how long it takes us to put a site online. It’s the time we dedicate to building it right: strategy, development, launch and optimization. And then we stay, with lifetime maintenance included.',
+        'In three months we do strategy, development, launch and optimization, and we do them properly. Then we stay, with lifetime maintenance included.',
     },
-    closingLine: 'Not a team that delivers and disappears.\nA team that stays over time.',
+    closingLine: 'After delivery the team stays.\nLifetime maintenance is included.',
   },
   whyUs: {
     label: 'why us',
-    heading: 'Why Our Model Works Better',
+    heading: 'Why our model works better',
     description:
-      'A direct comparison between the noprob approach and traditional agencies or freelancers. Why a single structure builds eCommerce that lasts.',
+      'A direct comparison between the noprob approach and traditional agencies or freelancers. A single structure builds eCommerce that lasts.',
     agencyLabel: 'Other<br />Agency',
     agencyItems: [
       'Slow response times and unclear coordination',
@@ -450,7 +450,7 @@ const en: SviluppoCopy = {
       'Lifetime maintenance on every project',
     ],
     featuresDescription:
-      'We don’t just deliver a store, we build eCommerce infrastructures brands can rely on over time. That’s why clients stay with us.',
+      'We build eCommerce infrastructures brands can rely on over time, and that’s why clients stay with us.',
     features: [
       'Specialized in fashion, beauty and DTC verticals',
       'Lifetime maintenance on every build',
@@ -465,7 +465,7 @@ const en: SviluppoCopy = {
   },
   pricing: {
     label: 'pricing',
-    heading: 'A project, not a service.\nYou pay as we build it.',
+    heading: 'You pay for the project\nas we build it.',
     subheading:
       'No thousands of euros upfront: you pay month by month as you watch the store take shape. The price starts low and rises as we take on new projects. The longer you wait, the more it costs.',
     tiers: [
@@ -548,7 +548,7 @@ const en: SviluppoCopy = {
       {
         question: 'Do you work with people starting from scratch?',
         answer:
-          'Yes, that’s our focus on this page: we build the entire eCommerce from the ground up, from design to launch. You’re in the right place if you’re launching the brand or finally want to do it right.',
+          'Yes: we build the entire eCommerce from the ground up, from design to launch, whether you’re launching the brand or finally want to do it right.',
       },
       {
         question: 'What does development include?',
@@ -563,7 +563,7 @@ const en: SviluppoCopy = {
       {
         question: 'How long does the project take?',
         answer:
-          'Three structured months: analysis and strategy, development and design, launch and optimization. The right time to build everything well and follow it in detail.',
+          'Three structured months: analysis and strategy, development and design, launch and optimization, with the team following every phase in detail.',
       },
       {
         question: 'How does payment work?',

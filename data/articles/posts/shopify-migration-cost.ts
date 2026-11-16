@@ -16,9 +16,9 @@ const article: Article = {
   excerptIt:
     'Da cosa dipende il costo di una migrazione a Shopify, quali costi non compaiono mai nel preventivo, tre modi di comprarla e come confrontare i preventivi voce per voce. Con il nostro prezzo pubblico.',
   ledeEn:
-    'A quote is a list of jobs, not a number. Here are the eight lines to look for, the costs nobody puts in writing, and our own price, published in full.',
+    'A quote is a list of jobs with a total at the bottom. Here are the eight lines to look for, the costs nobody puts in writing, and our own price, published in full.',
   ledeIt:
-    'Un preventivo è un elenco di lavori, non un numero. Ecco le otto voci da cercare, i costi che nessuno scrive e il nostro prezzo, pubblicato per intero.',
+    'Un preventivo è un elenco di lavori con un totale in fondo. Ecco le otto voci da cercare, i costi che nessuno scrive e il nostro prezzo, pubblicato per intero.',
   image: '/images/blog/shopify-migration-cost-cover.png',
   imageAlt: 'Copertina astratta, sfondo verde salvia, con una griglia regolare di puntini',
   imageAltEn: 'Abstract cover, sage green background with a regular dot grid',
@@ -100,7 +100,7 @@ const article: Article = {
   content: [
     {
       type: 'paragraph',
-      text: 'Shopify migration cost is the sum of three things: the quote for the move, the monthly bill that starts after it, and what you lose if the move goes wrong. Most quotes show only the first. This article is about reading all three, and comparing quotes by what they cover, not by the total.',
+      text: 'Shopify migration cost is the sum of three things: the quote for the move, the monthly bill that starts after it, and what you lose if the move goes wrong. Most quotes show only the first. This article reads all three and compares quotes line by line, before you look at the total.',
     },
     {
       type: 'paragraph',
@@ -113,7 +113,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'So the useful question is not "how much" but "for what": break the work into lines, see what each one delivers, add the costs that sit outside the quote, then compare.',
+      text: 'So ask what you are paying for: break the work into lines, see what each one delivers, add the costs that sit outside the quote, then compare.',
     },
     { type: 'h2', text: 'What are the eight lines of a migration quote?' },
     {
@@ -154,12 +154,12 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Do the arithmetic on the last one: what would a week offline cost you, or a quarter of weaker rankings? The quote is usually the smaller risk, so the question is not only "how much" but "who pays if it fails".',
+      text: 'Do the arithmetic on the last one: what would a week offline cost you, or a quarter of weaker rankings? The quote is usually the smaller risk, so ask "who pays if it fails" as well as "how much".',
     },
     { type: 'h2', text: 'What are the three ways to buy a migration?' },
     {
       type: 'paragraph',
-      text: '**You can do it yourself with tools, hire a freelancer, or buy a fixed-scope project from an agency; they differ less in price than in who carries the risk.** None of them is tied to a platform: the eight lines are the same whether you leave WooCommerce, PrestaShop, Magento or a custom platform.',
+      text: '**You can do it yourself with tools, hire a freelancer, or buy a fixed-scope project from an agency; the main difference is who carries the risk.** None of them is tied to a platform: the eight lines are the same whether you leave WooCommerce, PrestaShop, Magento or a custom platform.',
     },
     {
       type: 'list',
@@ -176,7 +176,7 @@ const article: Article = {
     { type: 'h2', text: 'How do you read a migration quote, and what should you ask?' },
     {
       type: 'paragraph',
-      text: '**Read a quote for what each line delivers, what it excludes and who pays if it fails, not for the total.** Put every quote in the same grid and fill it in. Treat a vague answer to any row as a price you have not seen yet:',
+      text: '**Read a quote line by line: what each line delivers, what it excludes and who pays if it fails.** Put every quote in the same grid and fill it in, and look at the total last. Treat a vague answer to any row as a price you have not seen yet:',
     },
     {
       type: 'list',
@@ -211,7 +211,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'The first installment is paid at kickoff, the second at go-live, the third and fourth during the support months. We price by revenue because revenue and complexity tend to travel together. Each tier has limits on products, languages and connected ERP; beyond them, fixed-price add-ons apply, and we tell you on a call before you sign. Never an open quote.',
+      text: 'The first installment is paid at kickoff, the second at go-live, the third and fourth during the support months. We price by revenue because revenue and complexity tend to travel together. Each tier has limits on products, languages and connected ERP; beyond them, fixed-price add-ons apply, and we tell you on a call before you sign, so the quote is never open.',
     },
     { type: 'h3', text: 'What the price covers, line by line' },
     {
@@ -235,7 +235,7 @@ const article: Article = {
     { type: 'h3', text: 'The risk side: four written guarantees and 90 days of support' },
     {
       type: 'paragraph',
-      text: 'A guarantee is a price on risk: it tells you who pays if the lines above fail. Ours are measured by a results dashboard that you receive on day 1, and written on one page of the contract:',
+      text: 'A guarantee says who pays if the lines above fail. Ours are measured by a results dashboard that you receive on day 1, and written on one page of the contract:',
     },
     {
       type: 'list',
@@ -301,7 +301,7 @@ const article: Article = {
   contentIt: [
     {
       type: 'paragraph',
-      text: 'Il costo della migrazione a Shopify è la somma di tre cose: il preventivo per il passaggio, il canone mensile che parte dopo e ciò che perdi se il passaggio va male. La maggior parte dei preventivi mostra solo la prima. Qui si leggono tutte e tre, e si confrontano i preventivi per ciò che coprono, non per il totale.',
+      text: 'Il costo della migrazione a Shopify è la somma di tre cose: il preventivo per il passaggio, il canone mensile che parte dopo e ciò che perdi se il passaggio va male. La maggior parte dei preventivi mostra solo la prima. Qui le leggiamo tutte e tre e confrontiamo i preventivi voce per voce, prima di guardare il totale.',
     },
     {
       type: 'paragraph',
@@ -314,7 +314,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Quindi la domanda utile non è "quanto" ma "per cosa": scomponi il lavoro in voci, vedi cosa consegna ciascuna, aggiungi i costi che stanno fuori dal preventivo, poi confronta.',
+      text: 'Quindi chiediti per cosa paghi: scomponi il lavoro in voci, vedi cosa consegna ciascuna, aggiungi i costi che stanno fuori dal preventivo, poi confronta.',
     },
     { type: 'h2', text: 'Quali sono le otto voci di un preventivo di migrazione?' },
     {
@@ -355,12 +355,12 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Fai il conto sull’ultimo punto: quanto ti costerebbe una settimana offline, o un trimestre di posizionamenti più deboli? Il preventivo di solito è il rischio più piccolo, quindi la domanda non è solo "quanto" ma "chi paga se va male".',
+      text: 'Fai il conto sull’ultimo punto: quanto ti costerebbe una settimana offline, o un trimestre di posizionamenti più deboli? Il preventivo di solito è il rischio più piccolo, quindi chiedi anche "chi paga se va male", oltre a "quanto".',
     },
     { type: 'h2', text: 'Quali sono i tre modi di comprare una migrazione?' },
     {
       type: 'paragraph',
-      text: '**Puoi farla da solo con gli strumenti, affidarti a un freelance o comprare un progetto a perimetro fisso da un’agenzia; la differenza sta meno nel prezzo che in chi si prende il rischio.** Nessuno dei tre dipende dalla piattaforma: le otto voci sono le stesse sia che tu lasci WooCommerce, PrestaShop, Magento o una piattaforma proprietaria.',
+      text: '**Puoi farla da solo con gli strumenti, affidarti a un freelance o comprare un progetto a perimetro fisso da un’agenzia; la differenza principale è chi si prende il rischio.** Nessuno dei tre dipende dalla piattaforma: le otto voci sono le stesse sia che tu lasci WooCommerce, PrestaShop, Magento o una piattaforma proprietaria.',
     },
     {
       type: 'list',
@@ -377,7 +377,7 @@ const article: Article = {
     { type: 'h2', text: 'Come si legge un preventivo di migrazione e cosa chiedere?' },
     {
       type: 'paragraph',
-      text: '**Leggi un preventivo per ciò che consegna ogni voce, per ciò che esclude e per chi paga se fallisce, non per il totale.** Metti ogni preventivo nella stessa griglia. Una risposta vaga a una riga è un prezzo che non hai ancora visto:',
+      text: '**Leggi un preventivo voce per voce: cosa consegna ciascuna, cosa esclude e chi paga se fallisce.** Metti ogni preventivo nella stessa griglia e guarda il totale per ultimo. Una risposta vaga a una riga è un prezzo che non hai ancora visto:',
     },
     {
       type: 'list',
@@ -412,7 +412,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'La prima rata si paga al kickoff, la seconda al go-live, la terza e la quarta durante i mesi di supporto. Prezziamo in base al fatturato perché fatturato e complessità tendono ad andare insieme. Ogni fascia ha dei limiti su prodotti, lingue e gestionale collegato; oltre, si applicano extra a prezzo fisso, e ti diciamo in videochiamata prima che tu firmi. Mai un preventivo aperto.',
+      text: 'La prima rata si paga al kickoff, la seconda al go-live, la terza e la quarta durante i mesi di supporto. Prezziamo in base al fatturato perché fatturato e complessità tendono ad andare insieme. Ogni fascia ha dei limiti su prodotti, lingue e gestionale collegato; oltre, si applicano extra a prezzo fisso, e ti diciamo in videochiamata prima che tu firmi, quindi il preventivo non resta mai aperto.',
     },
     { type: 'h3', text: 'Cosa copre il prezzo, voce per voce' },
     {
@@ -436,7 +436,7 @@ const article: Article = {
     { type: 'h3', text: 'Il lato del rischio: quattro garanzie scritte e 90 giorni di supporto' },
     {
       type: 'paragraph',
-      text: 'Una garanzia è un prezzo sul rischio: ti dice chi paga se le voci sopra falliscono. Le nostre sono misurate da una dashboard dei risultati che ricevi il giorno 1, e scritte su una pagina del contratto:',
+      text: 'Una garanzia dice chi paga se le voci sopra falliscono. Le nostre sono misurate da una dashboard dei risultati che ricevi il giorno 1, e scritte su una pagina del contratto:',
     },
     {
       type: 'list',

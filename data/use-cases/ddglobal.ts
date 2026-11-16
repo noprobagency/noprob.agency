@@ -36,14 +36,14 @@ export const ddglobal: UseCase = {
     { type: 'paragraph', text: 'Online dal: 29 agosto 2026' },
     {
       type: 'paragraph',
-      text: '**In breve.** Abbiamo portato il catalogo di DDglobal Store dal vecchio WordPress a un sito nuovo, con una migrazione fatta con l’AI. Il sito si modifica e si ottimizza molto più in fretta, e nel primo mese le sessioni sono diventate 4 volte quelle di inizio anno.',
+      text: 'In breve: abbiamo portato il catalogo di DDglobal Store dal vecchio WordPress a un sito nuovo, con una migrazione fatta con l’AI. Il sito si modifica e si ottimizza molto più in fretta, e nel primo mese le sessioni sono diventate 4 volte quelle di inizio anno.',
     },
     {
       type: 'list',
       items: [
-        'sessioni nel primo mese dopo il lancio: **4 volte** la media di inizio anno',
-        'posizione media su Google migliorata del **16%**, impressioni **2,7 volte** lo stesso periodo del 2025',
-        'catalogo in **italiano e inglese**, leggibile anche dagli assistenti AI',
+        'sessioni nel primo mese dopo il lancio: 4 volte la media di inizio anno',
+        'posizione media su Google migliorata del 16%, impressioni 2,7 volte lo stesso periodo del 2025',
+        'catalogo in italiano e inglese, leggibile anche dagli assistenti AI',
       ],
     },
     { type: 'h2', text: 'Il punto di partenza' },
@@ -53,7 +53,7 @@ export const ddglobal: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'In un catalogo senza carrello il sito fa il lavoro del primo commerciale: deve far trovare il materiale giusto in pochi clic, mettere subito a disposizione la scheda tecnica e rendere semplice il contatto con l’ufficio vendite. Il traguardo non è l’ordine online, è la richiesta di un professionista che ha già capito cosa gli serve.',
+      text: 'In un catalogo senza carrello il sito fa il lavoro del primo commerciale: deve far trovare il materiale giusto in pochi clic, mettere subito a disposizione la scheda tecnica e rendere semplice il contatto con l’ufficio vendite. Il traguardo è la richiesta di un professionista che ha già capito cosa gli serve.',
     },
     {
       type: 'paragraph',
@@ -102,7 +102,7 @@ export const ddglobal: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Otto mesi di linea piatta, poi il salto. Nel primo mese dopo il lancio le sessioni sono state 4 volte la media di inizio anno, e su Google la posizione media è migliorata del 16%, con le impressioni a 2,7 volte lo stesso periodo del 2025.',
+      text: 'Dopo otto mesi di linea piatta, nel primo mese dopo il lancio le sessioni sono state 4 volte la media di inizio anno, e su Google la posizione media è migliorata del 16%, con le impressioni a 2,7 volte lo stesso periodo del 2025.',
     },
     { type: 'h3', text: 'Sessioni: il salto dopo il lancio' },
     {
@@ -127,11 +127,11 @@ export const ddglobal: UseCase = {
     { type: 'h2', text: 'Cosa insegna questo caso' },
     {
       type: 'paragraph',
-      text: 'Una migrazione non serve solo a chi vende con il carrello. Per un’azienda B2B il sito è il primo commerciale: se è veloce da migliorare, ordinato e leggibile da Google e dagli assistenti AI, lavora per te ogni giorno. Con l’AI questo passaggio è alla portata di ogni catalogo.',
+      text: 'Una migrazione ha senso anche senza carrello. Per un’azienda B2B il sito è il primo commerciale: se è veloce da migliorare, ordinato e leggibile da Google e dagli assistenti AI, lavora per te ogni giorno. Con l’AI questo passaggio è alla portata di ogni catalogo.',
     },
     {
       type: 'paragraph',
-      text: 'La velocità è la leva che resta. Quando una modifica non richiede un intervento tecnico, si possono fare più test, e un sito che si testa di più migliora di più. È lo stesso principio dello Shopify Launch Sprint: un team che lavora in parallelo, un calendario fisso e dati misurati dal primo giorno.',
+      text: 'Quando una modifica non richiede un intervento tecnico, si possono fare più test, e un sito che si testa di più migliora di più. È lo stesso principio dello Shopify Launch Sprint: un team che lavora in parallelo, un calendario fisso e dati misurati dal primo giorno.',
     },
     { type: 'h2', text: 'Questo modello funziona per te?' },
     {
@@ -190,14 +190,14 @@ export const ddglobal: UseCase = {
     { type: 'paragraph', text: 'Live since: August 29, 2026' },
     {
       type: 'paragraph',
-      text: '**In short.** We moved the DDglobal Store catalog from the old WordPress to a new site, with a migration done with AI. The site is now much faster to change and optimize, and in the first month sessions became 4 times the early year level.',
+      text: 'In short: we moved the DDglobal Store catalog from the old WordPress to a new site, with a migration done with AI. The site is now much faster to change and optimize, and in the first month sessions became 4 times the early year level.',
     },
     {
       type: 'list',
       items: [
-        'sessions in the first month after launch: **4 times** the early year average',
-        'average Google position improved by **16%**, impressions **2.7 times** the same period of 2025',
-        'catalog in **Italian and English**, readable by AI assistants too',
+        'sessions in the first month after launch: 4 times the early year average',
+        'average Google position improved by 16%, impressions 2.7 times the same period of 2025',
+        'catalog in Italian and English, readable by AI assistants too',
       ],
     },
     { type: 'h2', text: 'The starting point' },
@@ -207,7 +207,7 @@ export const ddglobal: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'In a catalog without a cart the website does the job of the first salesperson: it has to help people find the right material in a few clicks, put the data sheet at hand and make contact with the sales office simple. The goal is not the online order, it is the request from a professional who already knows what they need.',
+      text: 'In a catalog without a cart the website does the job of the first salesperson: it has to help people find the right material in a few clicks, put the data sheet at hand and make contact with the sales office simple. The goal is the request from a professional who already knows what they need.',
     },
     {
       type: 'paragraph',
@@ -256,7 +256,7 @@ export const ddglobal: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Eight months of flat line, then the jump. In the first month after launch sessions were 4 times the early year average, and on Google the average position improved by 16%, with impressions at 2.7 times the same period of 2025.',
+      text: 'After eight months of flat line, sessions in the first month after launch were 4 times the early year average, and on Google the average position improved by 16%, with impressions at 2.7 times the same period of 2025.',
     },
     { type: 'h3', text: 'Sessions: the jump after launch' },
     {
@@ -281,11 +281,11 @@ export const ddglobal: UseCase = {
     { type: 'h2', text: 'What this case teaches' },
     {
       type: 'paragraph',
-      text: 'A migration is not only for those who sell with a cart. For a B2B company the website is the first salesperson: if it is fast to improve, organized and readable by Google and AI assistants, it works for you every day. With AI this step is within reach of every catalog.',
+      text: 'A migration makes sense without a cart too. For a B2B company the website is the first salesperson: if it is fast to improve, organized and readable by Google and AI assistants, it works for you every day. With AI this step is within reach of every catalog.',
     },
     {
       type: 'paragraph',
-      text: 'Speed is the lever that stays. When a change does not need a technical intervention, you can run more tests, and a site that is tested more improves more. It is the same principle as the Shopify Launch Sprint: a team working in parallel, a fixed calendar and data measured from day one.',
+      text: 'When a change does not need a technical intervention, you can run more tests, and a site that is tested more improves more. It is the same principle as the Shopify Launch Sprint: a team working in parallel, a fixed calendar and data measured from day one.',
     },
     { type: 'h2', text: 'Does this model work for you?' },
     {

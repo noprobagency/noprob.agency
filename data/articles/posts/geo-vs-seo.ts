@@ -16,9 +16,9 @@ const article: Article = {
   excerptIt:
     'GEO vs SEO per uno store Shopify, attività per attività: dati prodotto, schema, recensioni, feed, llms.txt e menzioni su altri siti, con l’effetto di ciascuna su Google e sulle risposte AI, e la regola su cosa fare prima.',
   ledeEn:
-    'GEO vs SEO for eCommerce is not a choice between two jobs: for a Shopify store it is one list of tasks, and each task helps Google, the AI assistants or both. Here is the list, task by task, and the order we would do it in.',
+    'GEO vs SEO for eCommerce is one list of tasks for a Shopify store, and each task helps Google, the AI assistants or both. Here is the list, task by task, and the order we would do it in.',
   ledeIt:
-    'GEO vs SEO per l’eCommerce non è una scelta tra due lavori: per uno store Shopify è un’unica lista di attività, e ognuna aiuta Google, gli assistenti AI o tutti e due. Ecco la lista, attività per attività, e l’ordine in cui la faremmo.',
+    'GEO vs SEO per l’eCommerce, su uno store Shopify, è un’unica lista di attività, e ognuna aiuta Google, gli assistenti AI o tutti e due. Ecco la lista, attività per attività, e l’ordine in cui la faremmo.',
   image: '/images/blog/geo-vs-seo-cover.png',
   imageAlt: 'Copertina astratta, sfondo sabbia sfumato, con un’onda di puntini di dimensione variabile',
   imageAltEn: 'Abstract cover, softly graded sand background with a wave of dots changing size',
@@ -73,7 +73,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'The other assistants have their own gate. [OpenAI’s crawler documentation](https://developers.openai.com/api/docs/bots) says a site that opts out of OAI-SearchBot will not appear in ChatGPT search answers, and that each crawler setting is independent of the others. So “SEO is dead” is the wrong reading. The right one: a closed door in your robots.txt now costs you in more than one place.',
+      text: 'The other assistants have their own gate. [OpenAI’s crawler documentation](https://developers.openai.com/api/docs/bots) says a site that opts out of OAI-SearchBot will not appear in ChatGPT search answers, and that each crawler setting is independent of the others. So SEO is not dead. A closed door in your robots.txt now costs you in more than one place.',
     },
     {
       type: 'h2',
@@ -120,7 +120,7 @@ const article: Article = {
         [
           '**7. Mentions on other sites** (directories, press, partner listings, customer reviews, forums)',
           'Links from them are a ranking signal.',
-          'Assistants tend to lean on what third parties say about you, so a brand that others name is easier to name. Google adds a warning: seeking inauthentic mentions is not as helpful as it might seem. Earn them, do not manufacture them.',
+          'Assistants tend to lean on what third parties say about you, so a brand that others name is easier to name. Google adds a warning: seeking inauthentic mentions is not as helpful as it might seem. Earn them.',
         ],
         [
           '**8. llms.txt**',
@@ -131,7 +131,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Look at the pattern. Tasks 1 to 6 do something for Google and for the assistants. Task 7 is slow and partly out of your hands. Task 8 does nothing for Google at all. That already gives you the order of work.',
+      text: 'Tasks 1 to 6 do something for Google and for the assistants. Task 7 is slow and partly out of your hands. Task 8 does nothing for Google at all, which already gives you the order of work.',
     },
     { type: 'h2', text: 'What should a Shopify store do first: SEO or GEO?' },
     {
@@ -185,7 +185,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'On [Nazzi](/use-cases/integratori-nazzi-dtc-shopify), a supplement brand moved from WooCommerce, we published a discovery sitemap for agents. Separately, Search Console shows Google clicks in the 28 days to 9 October 2026 at 2.7 times the same days of 2025. Both channels rest on the same foundations. If your store is already on Shopify, the [AI Accelerator](/ai-accelerator) is the lighter route: 30 days one-to-one to find the growth opportunities of your store and switch on the first AI solutions with your team.',
+      text: 'On [Nazzi](/use-cases/integratori-nazzi-dtc-shopify), a supplement brand moved from WooCommerce, we published a discovery sitemap for agents. Separately, Search Console shows Google clicks in the 28 days to 9 October 2026 at 2.7 times the same days of 2025. If your store is already on Shopify, the [AI Accelerator](/ai-accelerator) is the lighter route: 30 days one-to-one to find the growth opportunities of your store and switch on the first AI solutions with your team.',
     },
     {
       type: 'paragraph',
@@ -271,7 +271,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Gli altri assistenti hanno la loro porta. La [documentazione dei crawler di OpenAI](https://developers.openai.com/api/docs/bots) dice che un sito che esclude OAI-SearchBot non compare nelle risposte della ricerca di ChatGPT, e che ogni impostazione dei crawler è indipendente dalle altre. Quindi “la SEO è morta” è la lettura sbagliata. Quella giusta: una porta chiusa nel robots.txt ora costa in più di un posto.',
+      text: 'Gli altri assistenti hanno la loro porta. La [documentazione dei crawler di OpenAI](https://developers.openai.com/api/docs/bots) dice che un sito che esclude OAI-SearchBot non compare nelle risposte della ricerca di ChatGPT, e che ogni impostazione dei crawler è indipendente dalle altre. Quindi la SEO non è morta. Una porta chiusa nel robots.txt ora costa in più di un posto.',
     },
     {
       type: 'h2',
@@ -318,7 +318,7 @@ const article: Article = {
         [
           '**7. Menzioni su altri siti** (directory, stampa, elenchi dei partner, recensioni dei clienti, forum)',
           'I link da quei siti sono un segnale di posizionamento.',
-          'Gli assistenti tendono ad appoggiarsi su ciò che dicono di te i terzi, quindi un brand nominato da altri è più facile da nominare. Google avverte: cercare menzioni non autentiche non aiuta quanto sembra. Falle arrivare, non fabbricarle.',
+          'Gli assistenti tendono ad appoggiarsi su ciò che dicono di te i terzi, quindi un brand nominato da altri è più facile da nominare. Google avverte: cercare menzioni non autentiche non aiuta quanto sembra. Falle arrivare.',
         ],
         [
           '**8. llms.txt**',
@@ -329,7 +329,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Guarda lo schema. Le attività da 1 a 6 fanno qualcosa per Google e per gli assistenti. La 7 è lenta e in parte fuori dal tuo controllo. La 8 non fa nulla per Google. Questo ti dà già l’ordine del lavoro.',
+      text: 'Le attività da 1 a 6 fanno qualcosa per Google e per gli assistenti. La 7 è lenta e in parte fuori dal tuo controllo. La 8 non fa nulla per Google, e questo ti dà già l’ordine del lavoro.',
     },
     { type: 'h2', text: 'Cosa deve fare prima uno store Shopify: SEO o GEO?' },
     {
@@ -383,7 +383,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Su [Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify), un brand di integratori passato da WooCommerce, abbiamo pubblicato una sitemap di discovery per gli agenti. Separatamente, Search Console mostra i clic da Google nei 28 giorni fino al 9 ottobre 2026 a 2,7 volte gli stessi giorni del 2025. Entrambi i canali poggiano sulle stesse fondamenta. Se il tuo store è già su Shopify, l’[AI Accelerator](/it/ai-accelerator) è la strada più leggera: 30 giorni uno a uno per trovare le opportunità di crescita del tuo store e attivare con il tuo team le prime soluzioni AI.',
+      text: 'Su [Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify), un brand di integratori passato da WooCommerce, abbiamo pubblicato una sitemap di discovery per gli agenti. Separatamente, Search Console mostra i clic da Google nei 28 giorni fino al 9 ottobre 2026 a 2,7 volte gli stessi giorni del 2025. Se il tuo store è già su Shopify, l’[AI Accelerator](/it/ai-accelerator) è la strada più leggera: 30 giorni uno a uno per trovare le opportunità di crescita del tuo store e attivare con il tuo team le prime soluzioni AI.',
     },
     {
       type: 'paragraph',

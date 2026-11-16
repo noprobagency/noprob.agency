@@ -40,7 +40,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'We are noprob agency and we sell the [Shopify Launch Sprint](/shopify-migration-sprint). We also work every day with AI agents built on Claude Code, so this piece is about limits, not fear: an agent is worth having on a store, with the right locks. Below: how the attack works, the three things that make it dangerous, what goes in the prompt and what the system must block, and a checklist you can run on your own store.',
+      text: 'We are noprob agency and we sell the [Shopify Launch Sprint](/shopify-migration-sprint). We also work every day with AI agents built on Claude Code, so this piece is about limits: an agent is worth having on a store, with the right locks.',
     },
     { type: 'h2', text: 'What is prompt injection, and why does a Shopify store care?' },
     {
@@ -63,11 +63,11 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**Product reviews,** from whichever app collects them.',
-        '**Messages:** the contact form, support email, chat, social inboxes.',
-        '**Customer notes:** the note a shopper types at checkout, the reason given for a return.',
-        '**Imported content:** product descriptions and attributes that arrive from a supplier file or a marketplace feed.',
-        '**Web pages** an agent opens on its own to check something.',
+        'Product reviews, from whichever app collects them.',
+        'Messages: the contact form, support email, chat, social inboxes.',
+        'Customer notes: the note a shopper types at checkout, the reason given for a return.',
+        'Imported content: product descriptions and attributes that arrive from a supplier file or a marketplace feed.',
+        'Web pages an agent opens on its own to check something.',
       ],
     },
     { type: 'h2', text: 'Which three things make an AI agent dangerous?' },
@@ -119,7 +119,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'The rule we use: if it is about an action, take away the tool or check it in code. If it is about a sentence, write the instruction and add a check; where a wrong sentence costs too much, let the code write it. OWASP’s guidance for LLM01 says the same in its own terms: define the model’s role in the prompt, handle privileged functions in code rather than through the model, require human approval for high-risk actions, and mark external content as untrusted. A prompt that tells the model to treat tool results as data is a useful extra layer. It is not the lock.',
+      text: 'The rule we use: if it is about an action, take away the tool or check it in code. If it is about a sentence, write the instruction and add a check; where a wrong sentence costs too much, let the code write it. OWASP’s guidance for LLM01 says the same in its own terms: define the model’s role in the prompt, handle privileged functions in code rather than through the model, require human approval for high-risk actions, and mark external content as untrusted. A prompt that tells the model to treat tool results as data is a useful extra layer, but it does not replace the lock.',
     },
     { type: 'h2', text: 'How do you limit what an AI agent can do on Shopify?' },
     {
@@ -174,7 +174,7 @@ const article: Article = {
         '**No tool for money.** Refunds, cancellations and discount codes go to a queue that a person approves.',
         '**Fixed exits.** The email tool sends only to the address on the order. No free web addresses.',
         '**Reader and actor apart.** The agent that reads reviews and messages has no tools; the one with tools never sees the raw text.',
-        '**Say what is data.** Tell the model that reviews, messages and tool results are untrusted. It helps; it is not the lock.',
+        '**Say what is data.** Tell the model that reviews, messages and tool results are untrusted. It helps as one more layer.',
         '**Check the answer.** Every number, date and code in a reply must appear in the tool results. Sensitive promises are written by code.',
         '**Less data in the window.** Pass fields, not records, and mask what the task does not need.',
         '**Log every tool call,** and set an alert on unusual volume, such as fifty order lookups in a minute.',
@@ -234,7 +234,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Siamo noprob agency e vendiamo lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify). Lavoriamo ogni giorno con agenti AI costruiti su Claude Code, quindi questo pezzo parla di limiti, non di paura: un agente su uno store vale la pena averlo, con le serrature giuste. Qui trovi come funziona l’attacco, le tre cose che lo rendono pericoloso, cosa va nel prompt e cosa deve bloccare il sistema, e una checklist da eseguire sul tuo store.',
+      text: 'Siamo noprob agency e vendiamo lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify). Lavoriamo ogni giorno con agenti AI costruiti su Claude Code, quindi questo pezzo parla di limiti: un agente su uno store vale la pena averlo, con le serrature giuste.',
     },
     { type: 'h2', text: 'Cos’è la prompt injection e perché riguarda uno store Shopify?' },
     {
@@ -257,11 +257,11 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**Recensioni dei prodotti,** da qualunque app le raccolga.',
-        '**Messaggi:** il modulo di contatto, l’email dell’assistenza, la chat, le inbox dei social.',
-        '**Note dei clienti:** la nota scritta al checkout, il motivo indicato per un reso.',
-        '**Contenuti importati:** descrizioni e attributi dei prodotti che arrivano da un file del fornitore o da un feed di marketplace.',
-        '**Pagine web** che un agente apre da solo per controllare qualcosa.',
+        'Recensioni dei prodotti, da qualunque app le raccolga.',
+        'Messaggi: il modulo di contatto, l’email dell’assistenza, la chat, le inbox dei social.',
+        'Note dei clienti: la nota scritta al checkout, il motivo indicato per un reso.',
+        'Contenuti importati: descrizioni e attributi dei prodotti che arrivano da un file del fornitore o da un feed di marketplace.',
+        'Pagine web che un agente apre da solo per controllare qualcosa.',
       ],
     },
     { type: 'h2', text: 'Quali tre cose rendono pericoloso un agente AI?' },
@@ -313,7 +313,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'La regola che usiamo: se riguarda un’azione, togli lo strumento o controllalo nel codice. Se riguarda una frase, scrivi l’istruzione e aggiungi un controllo; dove una frase sbagliata costa troppo, la scrive il codice. Le indicazioni OWASP per LLM01 dicono lo stesso con le loro parole: definisci il ruolo del modello nel prompt, gestisci le funzioni privilegiate nel codice e non attraverso il modello, richiedi l’approvazione umana per le azioni ad alto rischio e segna come non fidato il contenuto esterno. Un prompt che dice al modello di trattare i risultati degli strumenti come dati è un livello in più utile. Non è la serratura.',
+      text: 'La regola che usiamo: se riguarda un’azione, togli lo strumento o controllalo nel codice. Se riguarda una frase, scrivi l’istruzione e aggiungi un controllo; dove una frase sbagliata costa troppo, la scrive il codice. Le indicazioni OWASP per LLM01 dicono lo stesso con le loro parole: definisci il ruolo del modello nel prompt, gestisci le funzioni privilegiate nel codice e non attraverso il modello, richiedi l’approvazione umana per le azioni ad alto rischio e segna come non fidato il contenuto esterno. Un prompt che dice al modello di trattare i risultati degli strumenti come dati è un livello in più utile, ma non sostituisce la serratura.',
     },
     { type: 'h2', text: 'Come si limita ciò che un agente AI può fare su Shopify?' },
     {
@@ -368,7 +368,7 @@ const article: Article = {
         '**Nessuno strumento per i soldi.** Rimborsi, annullamenti e codici sconto vanno in una coda che approva una persona.',
         '**Uscite fisse.** Lo strumento email invia solo all’indirizzo che c’è sull’ordine. Niente indirizzi web liberi.',
         '**Lettore ed esecutore separati.** L’agente che legge recensioni e messaggi non ha strumenti; quello con gli strumenti non vede mai il testo grezzo.',
-        '**Di’ cosa sono dati.** Spiega al modello che recensioni, messaggi e risultati degli strumenti sono non fidati. Aiuta; non è la serratura.',
+        '**Di’ cosa sono dati.** Spiega al modello che recensioni, messaggi e risultati degli strumenti sono non fidati. Aiuta, come livello in più.',
         '**Controlla la risposta.** Ogni numero, data e codice di una risposta deve comparire nei risultati degli strumenti. Le promesse delicate le scrive il codice.',
         '**Meno dati nella finestra.** Passa campi, non schede complete, e nascondi ciò che il compito non richiede.',
         '**Registra ogni chiamata agli strumenti** e imposta un avviso sui volumi insoliti, per esempio cinquanta ricerche di ordini in un minuto.',

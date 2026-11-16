@@ -36,7 +36,7 @@ const article: Article = {
   content: [
     {
       type: 'paragraph',
-      text: '**AI for ecommerce works today where the job is repetitive, structured and checkable: catalog content, customer service triage, data analysis, lifecycle email and software development. It still fails where it runs unsupervised, invents facts, or has to sound like your brand without context.** We are noprob agency, we build stores with the [Shopify Launch Sprint](/shopify-migration-sprint), and we use AI every day: AI agents write and test the code of the stores we build, and agents and dashboards read store data for us. This article comes from that work, not from a survey.',
+      text: '**AI for ecommerce works today where the job is repetitive, structured and checkable: catalog content, customer service triage, data analysis, lifecycle email and software development. It still fails where it runs unsupervised, invents facts, or has to sound like your brand without context.** We are noprob agency, we build stores with the [Shopify Launch Sprint](/shopify-migration-sprint), and we use AI every day: AI agents write and test the code of the stores we build, and agents and dashboards read store data for us. This article comes from that work.',
     },
     { type: 'h2', text: 'Where does AI actually pay off in an ecommerce store?' },
     {
@@ -46,7 +46,7 @@ const article: Article = {
     { type: 'h3', text: '1. Product content and catalog enrichment' },
     {
       type: 'paragraph',
-      text: 'This is the safest first use. A catalog is data: titles, attributes, variants, alt text, translations. AI is good at filling gaps and keeping hundreds of items consistent, and every output can be checked against the source. The condition is that it drafts from your data and not from its imagination: give it the real attributes, your brand rules and a few approved examples, and never let it add a claim you did not supply. In the AI Accelerator we write a Context Document for this: your brand, catalog and customers described for ChatGPT, Claude and similar tools, so the answers fit your store instead of sounding generic. It stays yours.',
+      text: 'This is the safest first use. A catalog is data: titles, attributes, variants, alt text, translations. AI is good at filling gaps and keeping hundreds of items consistent, and every output can be checked against the source. The condition is that it drafts from your data: give it the real attributes, your brand rules and a few approved examples, and never let it add a claim you did not supply. In the AI Accelerator we write a Context Document for this: your brand, catalog and customers described for ChatGPT, Claude and similar tools, so the answers fit your store instead of sounding generic. It stays yours.',
     },
     { type: 'h3', text: '2. Customer service triage' },
     {
@@ -61,7 +61,7 @@ const article: Article = {
     { type: 'h3', text: '4. Development speed with AI agents' },
     {
       type: 'paragraph',
-      text: 'This is where we feel it most. The Custom AI System is code written from scratch for one store and designed for the AI agents that work on it, so new features, tests and changes ship faster. Here is where it helps. A first draft is cheap for everyone now. The difference is reviewing, testing and shipping safely, and every change still gets read by a person before it reaches your checkout.',
+      text: 'This is where we feel it most. The Custom AI System is code written from scratch for one store and designed for the AI agents that work on it, so new features, tests and changes ship faster. A first draft is cheap for everyone now. What matters is reviewing, testing and shipping safely, and every change still gets read by a person before it reaches your checkout.',
     },
     { type: 'h3', text: '5. Email and flows' },
     {
@@ -81,7 +81,7 @@ const article: Article = {
     { type: 'h2', text: 'Where does AI still fail in ecommerce?' },
     {
       type: 'paragraph',
-      text: '**AI fails in ecommerce when nobody checks it, when it works on wrong data, and when a rule or a law applies.** Four failures we plan for, and one piece of hype.',
+      text: '**AI fails in ecommerce when nobody checks it, when it works on wrong data, and when a rule or a law applies.** We plan for four failures, and there is one piece of hype we leave out.',
     },
     { type: 'h3', text: 'Unsupervised content' },
     {
@@ -91,12 +91,12 @@ const article: Article = {
     { type: 'h3', text: 'Brand voice' },
     {
       type: 'paragraph',
-      text: 'Without context every store sounds the same: a model has read the whole internet and none of your customer emails. The fix is input, not a cleverer prompt: a Context Document, examples of your best descriptions, a list of words you never use. Even then, keep a person on the pages that carry the brand, such as the home page, the about page and the hero collections.',
+      text: 'Without context every store sounds the same: a model has read the whole internet and none of your customer emails. The fix is better input: a Context Document, examples of your best descriptions, a list of words you never use. Even then, keep a person on the pages that carry the brand, such as the home page, the about page and the hero collections.',
     },
     { type: 'h3', text: 'Wrong data' },
     {
       type: 'paragraph',
-      text: 'Prices, stock, variants and discount rules are where AI quietly does damage. If the feed says a product is in stock and it is not, AI repeats the mistake at scale, in places you cannot see, such as assistants and ads. Clean the source first. This is why our Custom AI System reconciles counts and totals of products, customers and orders before anything is switched on.',
+      text: 'Prices, stock, variants and discount rules are where AI does damage without anyone noticing. If the feed says a product is in stock and it is not, AI repeats the mistake at scale, in places you cannot see, such as assistants and ads. Clean the source first. This is why our Custom AI System reconciles counts and totals of products, customers and orders before anything is switched on.',
     },
     { type: 'h3', text: 'Compliance and privacy' },
     {
@@ -106,40 +106,40 @@ const article: Article = {
     { type: 'h3', text: 'What we treat as hype' },
     {
       type: 'paragraph',
-      text: 'Fully autonomous stores. An “AI marketer” with write access to your budget, your prices or your refunds. Any promise of a fixed percentage uplift from installing an app. Any average return quoted for AI in ecommerce needs a method behind it. The right framing is narrower: this task took this many hours, now it takes fewer, and a person still approves it.',
+      text: 'We treat as hype fully autonomous stores, an “AI marketer” with write access to your budget, your prices or your refunds, and any promise of a fixed percentage uplift from installing an app. Any average return quoted for AI in ecommerce needs a method behind it. A fair claim is narrower: this task took this many hours, now it takes fewer, and a person still approves it.',
     },
     { type: 'h2', text: 'How do you start with AI in an ecommerce store in 30 days?' },
     {
       type: 'paragraph',
-      text: '**Start with one problem you can measure, run it for a month with a person approving the output, and write down the procedure.** No platform and no big project. This is the shape of our month, and you can run it yourself:',
+      text: '**Start with one problem you can measure, run it for a month with a person approving the output, and write down the procedure.** You do not need a platform or a big project. This is the shape of our month, and you can run it yourself:',
     },
     {
       type: 'list',
       items: [
-        '**Week 1, context and a log.** Write the Context Document: voice, catalog structure, customers, what you never say. For five working days the team notes every repetitive task and how long it takes. That log is your baseline.',
-        '**Week 2, where sales leak.** Look at acquisition, product pages, conversion, email and repeat purchase. Check that tracking is trustworthy before you read any report.',
-        '**Week 3, one or two quick wins.** Usually one in catalog or customer service. Write the procedure (tool, prompt, check), run it on a small batch and compare with the baseline.',
-        '**Week 4, priorities and roadmap.** Rank what you found by impact, set a 90-day roadmap and decide what stays manual.',
+        'Week 1, context and a log. Write the Context Document: voice, catalog structure, customers, what you never say. For five working days the team notes every repetitive task and how long it takes. That log is your baseline.',
+        'Week 2, where sales leak. Look at acquisition, product pages, conversion, email and repeat purchase. Check that tracking is trustworthy before you read any report.',
+        'Week 3, one or two quick wins. Usually one in catalog or customer service. Write the procedure (tool, prompt, check), run it on a small batch and compare with the baseline.',
+        'Week 4, priorities and roadmap. Rank what you found by impact, set a 90-day roadmap and decide what stays manual.',
       ],
     },
     {
       type: 'paragraph',
-      text: 'That is the shape of our [AI Accelerator](/ai-accelerator): 30 days one-to-one for established ecommerce stores, four video calls of 60 minutes, one a week, up to two quick wins switched on with you, and three deliverables that stay yours (priorities and roadmap, operating protocols, the Context Document). Fixed price, no automatic renewal, no lock-in, and a free pre-call to check the fit before you commit. Quoted separately: development beyond the quick wins, campaign management, content production and AI licenses, as a proposal after the month. Built for established ecommerce stores.',
+      text: 'That is the shape of our [AI Accelerator](/ai-accelerator): 30 days one-to-one for established ecommerce stores, four video calls of 60 minutes, one a week, up to two quick wins switched on with you, and three deliverables that stay yours (priorities and roadmap, operating protocols, the Context Document). Fixed price, no automatic renewal, no lock-in, and a free pre-call to check the fit before you commit. Quoted separately: development beyond the quick wins, campaign management, content production and AI licenses, as a proposal after the month.',
     },
     { type: 'h2', text: 'How do you measure whether AI is working?' },
     {
       type: 'paragraph',
-      text: '**Measure each use against a baseline you took before you started, with one number per use.** Not an “AI ROI”, which mixes too many things to mean anything.',
+      text: '**Measure each use against a baseline you took before you started, with one number per use.** Skip the “AI ROI”: it mixes too many things to mean anything.',
     },
     {
       type: 'list',
       items: [
-        '**Time:** hours per week on the logged task, before and after.',
-        '**Quality:** the share of AI drafts a person accepts without edits, and the errors found in review.',
-        '**Service:** first response time and the share of tickets answered from a draft.',
-        '**Product pages and search:** conversion on the pages you changed against similar pages you left alone, over the same weeks.',
-        '**Email:** revenue per flow against the previous period.',
-        '**AI visibility:** a fixed list of prompts you run by hand every month, as described in the [GEO guide](/blog/geo-for-shopify).',
+        'Time: hours per week on the logged task, before and after.',
+        'Quality: the share of AI drafts a person accepts without edits, and the errors found in review.',
+        'Service: first response time and the share of tickets answered from a draft.',
+        'Product pages and search: conversion on the pages you changed against similar pages you left alone, over the same weeks.',
+        'Email: revenue per flow against the previous period.',
+        'AI visibility: a fixed list of prompts you run by hand every month, as described in the [GEO guide](/blog/geo-for-shopify).',
       ],
     },
     {
@@ -157,7 +157,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Among our published case studies are [Integratori DTC Nazzi](/use-cases/integratori-nazzi-dtc-shopify), moved from WooCommerce, and [Cumini](/use-cases/cumini-luxury-fashion-ecommerce), moved from a proprietary platform tied to its ERP. Their pages show the migration results. The summary of this article is the same: AI is a strong tool in the hands of a team with clean data, a procedure and someone who checks.',
+      text: 'Among our published case studies are [Integratori DTC Nazzi](/use-cases/integratori-nazzi-dtc-shopify), moved from WooCommerce, and [Cumini](/use-cases/cumini-luxury-fashion-ecommerce), moved from a proprietary platform tied to its ERP. Their pages show the migration results, and the same holds for AI: it is a strong tool in the hands of a team with clean data, a procedure and someone who checks.',
     },
     {
       type: 'paragraph',
@@ -177,7 +177,7 @@ const article: Article = {
     { type: 'h3', text: 'Will AI replace ecommerce staff?' },
     {
       type: 'paragraph',
-      text: 'In our work it removes repetitive tasks, not decisions. People still set the strategy, approve what goes live, handle sensitive customers and own the brand.',
+      text: 'In our work it takes over repetitive tasks, and the decisions stay with people: they set the strategy, approve what goes live, handle sensitive customers and own the brand.',
     },
     { type: 'h3', text: 'Is AI-generated product content bad for SEO?' },
     {
@@ -196,7 +196,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '**Next step.** For a live store, book the free pre-call for the [AI Accelerator](/ai-accelerator): we check the fit before you commit. If you are changing platform, [apply to the Shopify Launch Sprint](/shopify-migration-sprint) and we reply within 48 hours with your tier, the price and the first available kickoff date.',
+      text: 'Next step: for a live store, book the free pre-call for the [AI Accelerator](/ai-accelerator): we check the fit before you commit. If you are changing platform, [apply to the Shopify Launch Sprint](/shopify-migration-sprint) and we reply within 48 hours with your tier, the price and the first available kickoff date.',
     },
     {
       type: 'paragraph',
@@ -217,7 +217,7 @@ const article: Article = {
     {
       question: 'Will AI replace ecommerce staff?',
       answer:
-        'In our work it removes repetitive tasks, not decisions. People still set the strategy, approve what goes live, handle sensitive customers and own the brand.',
+        'In our work it takes over repetitive tasks, and the decisions stay with people: they set the strategy, approve what goes live, handle sensitive customers and own the brand.',
     },
     {
       question: 'Is AI-generated product content bad for SEO?',
@@ -238,7 +238,7 @@ const article: Article = {
   contentIt: [
     {
       type: 'paragraph',
-      text: '**L’AI per eCommerce funziona oggi dove il lavoro è ripetitivo, strutturato e verificabile: contenuti del catalogo, smistamento dell’assistenza clienti, analisi dei dati, email di lifecycle e sviluppo software. Fallisce ancora dove lavora senza supervisione, inventa fatti o deve suonare come il tuo brand senza contesto.** Siamo noprob agency, costruiamo store con lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) e usiamo l’intelligenza artificiale ogni giorno: gli agenti AI scrivono e testano il codice degli store che costruiamo, e agenti e dashboard leggono i dati degli store al posto nostro. Questo articolo nasce da quel lavoro, non da un sondaggio.',
+      text: '**L’AI per eCommerce funziona oggi dove il lavoro è ripetitivo, strutturato e verificabile: contenuti del catalogo, smistamento dell’assistenza clienti, analisi dei dati, email di lifecycle e sviluppo software. Fallisce ancora dove lavora senza supervisione, inventa fatti o deve suonare come il tuo brand senza contesto.** Siamo noprob agency, costruiamo store con lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) e usiamo l’intelligenza artificiale ogni giorno: gli agenti AI scrivono e testano il codice degli store che costruiamo, e agenti e dashboard leggono i dati degli store al posto nostro. Questo articolo nasce da quel lavoro.',
     },
     { type: 'h2', text: 'Dove l’AI rende davvero in un eCommerce?' },
     {
@@ -248,7 +248,7 @@ const article: Article = {
     { type: 'h3', text: '1. Contenuti prodotto e arricchimento del catalogo' },
     {
       type: 'paragraph',
-      text: 'È il primo uso più sicuro. Un catalogo è fatto di dati: titoli, attributi, varianti, testi alternativi, traduzioni. L’AI è brava a colmare i vuoti e a tenere coerenti centinaia di articoli, e ogni output si controlla sulla fonte. La condizione è che scriva dai tuoi dati e non dalla sua fantasia: dagli gli attributi veri, le regole del brand e qualche esempio approvato, e non lasciarle mai aggiungere una promessa che non hai fornito tu. Nell’AI Accelerator scriviamo per questo un Context Document: brand, catalogo e clienti descritti per ChatGPT, Claude e simili, così le risposte calzano sul tuo store invece di suonare generiche. Resta tuo.',
+      text: 'È il primo uso più sicuro. Un catalogo è fatto di dati: titoli, attributi, varianti, testi alternativi, traduzioni. L’AI è brava a colmare i vuoti e a tenere coerenti centinaia di articoli, e ogni output si controlla sulla fonte. La condizione è che scriva dai tuoi dati: dagli gli attributi veri, le regole del brand e qualche esempio approvato, e non lasciarle mai aggiungere una promessa che non hai fornito tu. Nell’AI Accelerator scriviamo per questo un Context Document: brand, catalogo e clienti descritti per ChatGPT, Claude e simili, così le risposte calzano sul tuo store invece di suonare generiche. Resta tuo.',
     },
     { type: 'h3', text: '2. Smistamento dell’assistenza clienti' },
     {
@@ -263,7 +263,7 @@ const article: Article = {
     { type: 'h3', text: '4. Velocità di sviluppo con gli agenti AI' },
     {
       type: 'paragraph',
-      text: 'Qui è dove la sentiamo di più. Il Custom AI System è codice scritto da zero per un solo store e progettato per gli agenti AI che ci lavorano, così nuove funzioni, test e modifiche vanno online più in fretta. Ecco dove aiuta. Una prima bozza oggi costa poco a tutti. La differenza è rivedere, testare e rilasciare in sicurezza, e ogni modifica viene letta da una persona prima di arrivare al tuo checkout.',
+      text: 'Qui è dove la sentiamo di più. Il Custom AI System è codice scritto da zero per un solo store e progettato per gli agenti AI che ci lavorano, così nuove funzioni, test e modifiche vanno online più in fretta. Una prima bozza oggi costa poco a tutti. Conta rivedere, testare e rilasciare in sicurezza, e ogni modifica viene letta da una persona prima di arrivare al tuo checkout.',
     },
     { type: 'h3', text: '5. Email e flussi' },
     {
@@ -283,7 +283,7 @@ const article: Article = {
     { type: 'h2', text: 'Dove l’AI fallisce ancora in un eCommerce?' },
     {
       type: 'paragraph',
-      text: '**L’AI fallisce in un eCommerce quando nessuno la controlla, quando lavora su dati sbagliati e quando si applica una regola o una legge.** Quattro fallimenti che mettiamo in conto e una dose di hype.',
+      text: '**L’AI fallisce in un eCommerce quando nessuno la controlla, quando lavora su dati sbagliati e quando si applica una regola o una legge.** Mettiamo in conto quattro fallimenti, e c’è una dose di hype che lasciamo fuori.',
     },
     { type: 'h3', text: 'Contenuti senza supervisione' },
     {
@@ -293,7 +293,7 @@ const article: Article = {
     { type: 'h3', text: 'Voce del brand' },
     {
       type: 'paragraph',
-      text: 'Senza contesto tutti gli store suonano uguali: un modello ha letto tutto internet e nessuna delle email dei tuoi clienti. La soluzione è l’input, non un prompt più furbo: un Context Document, esempi delle tue descrizioni migliori, un elenco di parole che non usi mai. Anche così, tieni una persona sulle pagine che portano il brand, come home, chi siamo e collezioni principali.',
+      text: 'Senza contesto tutti gli store suonano uguali: un modello ha letto tutto internet e nessuna delle email dei tuoi clienti. La soluzione è un input migliore: un Context Document, esempi delle tue descrizioni migliori, un elenco di parole che non usi mai. Anche così, tieni una persona sulle pagine che portano il brand, come home, chi siamo e collezioni principali.',
     },
     { type: 'h3', text: 'Dati sbagliati' },
     {
@@ -308,40 +308,40 @@ const article: Article = {
     { type: 'h3', text: 'Cosa consideriamo hype' },
     {
       type: 'paragraph',
-      text: 'Store completamente autonomi. Un “AI marketer” con accesso in scrittura a budget, prezzi o rimborsi. Qualsiasi promessa di un aumento percentuale fisso installando un’app. Qualunque ritorno medio citato per l’AI negli eCommerce ha bisogno di un metodo dietro. La formulazione giusta è più stretta: questo compito richiedeva tante ore, ora ne richiede meno, e una persona lo approva ancora.',
+      text: 'Consideriamo hype gli store completamente autonomi, un “AI marketer” con accesso in scrittura a budget, prezzi o rimborsi e qualsiasi promessa di un aumento percentuale fisso installando un’app. Qualunque ritorno medio citato per l’AI negli eCommerce ha bisogno di un metodo dietro. Una frase onesta è più stretta: questo compito richiedeva tante ore, ora ne richiede meno, e una persona lo approva ancora.',
     },
     { type: 'h2', text: 'Come si parte con l’AI in un eCommerce in 30 giorni?' },
     {
       type: 'paragraph',
-      text: '**Parti da un problema che puoi misurare, fallo girare un mese con una persona che approva l’output e scrivi la procedura.** Nessuna piattaforma e nessun grande progetto. Questa è la forma del nostro mese, e puoi farlo anche da solo:',
+      text: '**Parti da un problema che puoi misurare, fallo girare un mese con una persona che approva l’output e scrivi la procedura.** Non serve una piattaforma né un grande progetto. Questa è la forma del nostro mese, e puoi farlo anche da solo:',
     },
     {
       type: 'list',
       items: [
-        '**Settimana 1, contesto e registro.** Scrivi il Context Document: voce, struttura del catalogo, clienti, cosa non dici mai. Per cinque giorni lavorativi il team annota ogni attività ripetitiva e quanto dura. Quel registro è la tua base di partenza.',
-        '**Settimana 2, dove si perdono vendite.** Guarda acquisizione, schede prodotto, conversione, email e riacquisto. Verifica che il tracking sia affidabile prima di leggere qualsiasi report.',
-        '**Settimana 3, una o due quick win.** Di solito una sul catalogo o sull’assistenza. Scrivi la procedura (strumento, prompt, controllo), provala su un piccolo lotto e confronta con la base di partenza.',
-        '**Settimana 4, priorità e roadmap.** Ordina ciò che hai trovato per impatto, definisci una roadmap a 90 giorni e decidi cosa resta manuale.',
+        'Settimana 1, contesto e registro. Scrivi il Context Document: voce, struttura del catalogo, clienti, cosa non dici mai. Per cinque giorni lavorativi il team annota ogni attività ripetitiva e quanto dura. Quel registro è la tua base di partenza.',
+        'Settimana 2, dove si perdono vendite. Guarda acquisizione, schede prodotto, conversione, email e riacquisto. Verifica che il tracking sia affidabile prima di leggere qualsiasi report.',
+        'Settimana 3, una o due quick win. Di solito una sul catalogo o sull’assistenza. Scrivi la procedura (strumento, prompt, controllo), provala su un piccolo lotto e confronta con la base di partenza.',
+        'Settimana 4, priorità e roadmap. Ordina ciò che hai trovato per impatto, definisci una roadmap a 90 giorni e decidi cosa resta manuale.',
       ],
     },
     {
       type: 'paragraph',
-      text: 'È la forma del nostro [AI Accelerator](/it/ai-accelerator): 30 giorni one-to-one per eCommerce già avviati, quattro videochiamate da 60 minuti, una a settimana, fino a due quick win attivate insieme a te e tre deliverable che restano tuoi (documento delle priorità e roadmap, protocolli operativi, Context Document). Prezzo fisso, nessun rinnovo automatico, nessun vincolo, e una pre-call gratuita per verificare il fit prima di impegnarti. A parte: sviluppo oltre le quick win, gestione delle campagne, produzione di contenuti e licenze AI, con una proposta dopo il mese. Pensato per eCommerce già avviati.',
+      text: 'È la forma del nostro [AI Accelerator](/it/ai-accelerator): 30 giorni one-to-one per eCommerce già avviati, quattro videochiamate da 60 minuti, una a settimana, fino a due quick win attivate insieme a te e tre deliverable che restano tuoi (documento delle priorità e roadmap, protocolli operativi, Context Document). Prezzo fisso, nessun rinnovo automatico, nessun vincolo, e una pre-call gratuita per verificare il fit prima di impegnarti. A parte: sviluppo oltre le quick win, gestione delle campagne, produzione di contenuti e licenze AI, con una proposta dopo il mese.',
     },
     { type: 'h2', text: 'Come si misura se l’AI sta funzionando?' },
     {
       type: 'paragraph',
-      text: '**Misura ogni uso contro una base di partenza presa prima di iniziare, con un numero per ogni uso.** Non un “ROI dell’AI”, che mescola troppe cose per voler dire qualcosa.',
+      text: '**Misura ogni uso contro una base di partenza presa prima di iniziare, con un numero per ogni uso.** Lascia perdere il “ROI dell’AI”: mescola troppe cose per voler dire qualcosa.',
     },
     {
       type: 'list',
       items: [
-        '**Tempo:** ore a settimana sul compito registrato, prima e dopo.',
-        '**Qualità:** la quota di bozze AI che una persona accetta senza modifiche e gli errori trovati in revisione.',
-        '**Assistenza:** tempo di prima risposta e quota di ticket risolti partendo da una bozza.',
-        '**Schede prodotto e ricerca:** conversione sulle pagine modificate contro pagine simili lasciate com’erano, nelle stesse settimane.',
-        '**Email:** entrate per flusso rispetto al periodo precedente.',
-        '**Visibilità nell’AI:** un elenco fisso di prompt che esegui a mano ogni mese, come descritto nella [guida alla GEO](/it/blog/geo-seo-shopify).',
+        'Tempo: ore a settimana sul compito registrato, prima e dopo.',
+        'Qualità: la quota di bozze AI che una persona accetta senza modifiche e gli errori trovati in revisione.',
+        'Assistenza: tempo di prima risposta e quota di ticket risolti partendo da una bozza.',
+        'Schede prodotto e ricerca: conversione sulle pagine modificate contro pagine simili lasciate com’erano, nelle stesse settimane.',
+        'Email: entrate per flusso rispetto al periodo precedente.',
+        'Visibilità nell’AI: un elenco fisso di prompt che esegui a mano ogni mese, come descritto nella [guida alla GEO](/it/blog/geo-seo-shopify).',
       ],
     },
     {
@@ -359,7 +359,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Tra i nostri casi studio pubblicati ci sono [Integratori DTC Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify), passato da WooCommerce, e [Cumini](/it/casi-studio/cumini-luxury-fashion-ecommerce), passato da una piattaforma proprietaria legata al gestionale. Le loro pagine mostrano i risultati della migrazione. La sintesi di questo articolo è la stessa: l’AI è uno strumento forte in mano a un team con dati puliti, una procedura e qualcuno che controlla.',
+      text: 'Tra i nostri casi studio pubblicati ci sono [Integratori DTC Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify), passato da WooCommerce, e [Cumini](/it/casi-studio/cumini-luxury-fashion-ecommerce), passato da una piattaforma proprietaria legata al gestionale. Le loro pagine mostrano i risultati della migrazione, e lo stesso vale per l’AI: è uno strumento forte in mano a un team con dati puliti, una procedura e qualcuno che controlla.',
     },
     {
       type: 'paragraph',
@@ -379,7 +379,7 @@ const article: Article = {
     { type: 'h3', text: 'L’AI sostituirà chi lavora in un eCommerce?' },
     {
       type: 'paragraph',
-      text: 'Nel nostro lavoro toglie compiti ripetitivi, non decisioni. Le persone definiscono la strategia, approvano ciò che va online, gestiscono i clienti delicati e proteggono il brand.',
+      text: 'Nel nostro lavoro si prende i compiti ripetitivi e le decisioni restano alle persone: definiscono la strategia, approvano ciò che va online, gestiscono i clienti delicati e proteggono il brand.',
     },
     { type: 'h3', text: 'I contenuti prodotto scritti con l’AI fanno male alla SEO?' },
     {
@@ -398,7 +398,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '**Prossimo passo.** Per uno store già online, prenota la pre-call gratuita per l’[AI Accelerator](/it/ai-accelerator): verifichiamo insieme il fit prima che tu ti impegni. Se stai cambiando piattaforma, [candidati allo Shopify Launch Sprint](/it/sprint-migrazione-shopify) e rispondiamo entro 48 ore con la tua fascia, il prezzo e la prima data di kickoff disponibile.',
+      text: 'Prossimo passo: per uno store già online, prenota la pre-call gratuita per l’[AI Accelerator](/it/ai-accelerator): verifichiamo insieme il fit prima che tu ti impegni. Se stai cambiando piattaforma, [candidati allo Shopify Launch Sprint](/it/sprint-migrazione-shopify) e rispondiamo entro 48 ore con la tua fascia, il prezzo e la prima data di kickoff disponibile.',
     },
     {
       type: 'paragraph',
@@ -419,7 +419,7 @@ const article: Article = {
     {
       question: 'L’AI sostituirà chi lavora in un eCommerce?',
       answer:
-        'Nel nostro lavoro toglie compiti ripetitivi, non decisioni. Le persone definiscono la strategia, approvano ciò che va online, gestiscono i clienti delicati e proteggono il brand.',
+        'Nel nostro lavoro si prende i compiti ripetitivi e le decisioni restano alle persone: definiscono la strategia, approvano ciò che va online, gestiscono i clienti delicati e proteggono il brand.',
     },
     {
       question: 'I contenuti prodotto scritti con l’AI fanno male alla SEO?',

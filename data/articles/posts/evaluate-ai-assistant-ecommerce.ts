@@ -36,11 +36,11 @@ const article: Article = {
   content: [
     {
       type: 'paragraph',
-      text: '**To evaluate an AI assistant for your store, write down a fixed set of test cases from real customer messages, state for each what must be true and what counts as an error, and run the whole set before launch and after every change.** That is AI agent evaluation in practice for a Shopify store, and it needs a spreadsheet, not a framework.',
+      text: '**To evaluate an AI assistant for your store, write down a fixed set of test cases from real customer messages, state for each what must be true and what counts as an error, and run the whole set before launch and after every change.** That is AI agent evaluation in practice for a Shopify store, and a spreadsheet is enough to run it.',
     },
     {
       type: 'paragraph',
-      text: 'We are noprob agency, we sell the [Shopify Launch Sprint](/shopify-migration-sprint) and we work every day with AI agents built on Claude Code. Our guide to [AI customer service for Shopify](/blog/ai-customer-service-shopify) covers what an assistant should do with orders and returns. This piece covers the next question: how do you know it does it well? The cases and the method are ours, built from scratch for a Shopify store; the sources are linked where we lean on them.',
+      text: 'We are noprob agency, we sell the [Shopify Launch Sprint](/shopify-migration-sprint) and we work every day with AI agents built on Claude Code. Our guide to [AI customer service for Shopify](/blog/ai-customer-service-shopify) covers what an assistant should do with orders and returns. This piece covers the next question: how do you know it does it well? The cases and the method are ours, built from scratch for a Shopify store.',
     },
     { type: 'h2', text: 'Why is trying the assistant a few times not enough?' },
     {
@@ -54,7 +54,7 @@ const article: Article = {
     { type: 'h2', text: 'Where do the test cases come from?' },
     {
       type: 'paragraph',
-      text: '**They come from your own customer messages, not from your imagination.** A first set takes an afternoon:',
+      text: '**They come from your own customer messages.** A first set takes an afternoon:',
     },
     {
       type: 'list',
@@ -67,7 +67,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'The rule that matters most: **write what must be true, not the exact words.** “Your 30-day return window ended on 3 October” and “Sorry, the 30 days to return have passed” are both fine. “We will refund you” is not. A case that fixes the wording breaks every time the model phrases it differently.',
+      text: 'The rule that matters most: **write what must be true and let the wording vary.** “Your 30-day return window ended on 3 October” and “Sorry, the 30 days to return have passed” are both fine. “We will refund you” is not. A case that fixes the wording breaks every time the model phrases it differently.',
     },
     { type: 'h2', text: 'Which 12 test cases should every store assistant pass?' },
     {
@@ -194,7 +194,7 @@ const article: Article = {
     { type: 'h3', text: 'First, code checks' },
     {
       type: 'paragraph',
-      text: 'Anything that can be written as a rule goes here, because a rule is cheap and always gives the same grade. Did the assistant call the refund tool? Is the date in its answer present in the order data it received? Did it hand over when asked? Is the answer in the right language? Words like “refund” or “discount” work as a tripwire that sends the answer to the next step, not as a verdict: “I cannot promise a refund” contains the word and is correct.',
+      text: 'Anything that can be written as a rule goes here, because a rule is cheap and always gives the same grade. Did the assistant call the refund tool? Is the date in its answer present in the order data it received? Did it hand over when asked? Is the answer in the right language? Words like “refund” or “discount” only flag an answer for the next step. They cannot decide the grade, because “I cannot promise a refund” contains the word and is correct.',
     },
     { type: 'h3', text: 'Second, a model as judge' },
     {
@@ -212,7 +212,7 @@ const article: Article = {
       items: [
         '**Run every case three times.** Answers vary between runs, and Anthropic runs multiple trials for the same reason. Three is our rule of thumb for a small set.',
         '**A case passes only if all its runs pass.** One good run out of three is a fail.',
-        '**Blocking cases must all pass.** No averages, no discussion.',
+        '**Blocking cases must all pass.** Averages do not apply to them.',
         '**For the other cases, write the threshold down before the first run,** so you do not choose it after seeing the result.',
         '**Keep one row per case per run:** pass or fail, the answer, the date and the version of the instructions. Without that history you cannot tell better from different.',
       ],
@@ -322,11 +322,11 @@ const article: Article = {
   contentIt: [
     {
       type: 'paragraph',
-      text: '**Per valutare un assistente AI per il tuo store scrivi un set fisso di casi di prova presi dai messaggi veri dei clienti, indichi per ognuno cosa deve essere vero e cosa è un errore, e fai girare tutto il set prima del lancio e dopo ogni modifica.** È il test chatbot nella pratica, per uno store Shopify, e serve un foglio di calcolo, non un framework.',
+      text: '**Per valutare un assistente AI per il tuo store scrivi un set fisso di casi di prova presi dai messaggi veri dei clienti, indichi per ognuno cosa deve essere vero e cosa è un errore, e fai girare tutto il set prima del lancio e dopo ogni modifica.** È il test chatbot nella pratica, per uno store Shopify, e per cominciare basta un foglio di calcolo.',
     },
     {
       type: 'paragraph',
-      text: 'Siamo noprob agency, vendiamo lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) e lavoriamo ogni giorno con agenti AI costruiti su Claude Code. La nostra guida all’[assistente AI per ordini e resi su Shopify](/it/blog/assistente-ai-ordini-resi-shopify) dice cosa dovrebbe fare un assistente. Questo articolo risponde alla domanda dopo: come sai che lo fa bene? I casi e il metodo sono nostri, costruiti da zero per uno store Shopify; le fonti sono linkate dove le usiamo.',
+      text: 'Siamo noprob agency, vendiamo lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) e lavoriamo ogni giorno con agenti AI costruiti su Claude Code. La nostra guida all’[assistente AI per ordini e resi su Shopify](/it/blog/assistente-ai-ordini-resi-shopify) dice cosa dovrebbe fare un assistente. Questo articolo risponde alla domanda dopo: come sai che lo fa bene? I casi e il metodo sono nostri, costruiti da zero per uno store Shopify.',
     },
     { type: 'h2', text: 'Perché non basta provare l’assistente qualche volta?' },
     {
@@ -340,7 +340,7 @@ const article: Article = {
     { type: 'h2', text: 'Da dove vengono i casi di prova?' },
     {
       type: 'paragraph',
-      text: '**Vengono dai messaggi veri dei tuoi clienti, non dalla fantasia.** Un primo set richiede un pomeriggio:',
+      text: '**Vengono dai messaggi veri dei tuoi clienti.** Un primo set richiede un pomeriggio:',
     },
     {
       type: 'list',
@@ -353,7 +353,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'La regola che conta di più: **scrivi cosa deve essere vero, non le parole esatte.** «Il termine di reso di 30 giorni è scaduto il 3 ottobre» e «Mi dispiace, i 30 giorni per il reso sono passati» vanno bene tutte e due. «Ti rimborsiamo» no. Un caso che fissa le parole si rompe ogni volta che il modello le dice in un altro modo.',
+      text: 'La regola che conta di più: **scrivi cosa deve essere vero e lascia libere le parole.** «Il termine di reso di 30 giorni è scaduto il 3 ottobre» e «Mi dispiace, i 30 giorni per il reso sono passati» vanno bene tutte e due. «Ti rimborsiamo» no. Un caso che fissa le parole si rompe ogni volta che il modello le dice in un altro modo.',
     },
     { type: 'h2', text: 'Quali 12 casi di prova deve superare ogni assistente di uno store?' },
     {
@@ -480,7 +480,7 @@ const article: Article = {
     { type: 'h3', text: 'Prima, i controlli con il codice' },
     {
       type: 'paragraph',
-      text: 'Qui va tutto ciò che si scrive come regola, perché una regola costa poco e dà sempre lo stesso voto. L’assistente ha chiamato lo strumento di rimborso? La data nella risposta compare nei dati d’ordine che ha ricevuto? Ha passato la mano quando glielo hanno chiesto? La risposta è nella lingua giusta? Parole come «rimborso» o «sconto» servono da campanello che manda la risposta al passo successivo, non da verdetto: «non posso promettere un rimborso» contiene la parola ed è corretta.',
+      text: 'Qui va tutto ciò che si scrive come regola, perché una regola costa poco e dà sempre lo stesso voto. L’assistente ha chiamato lo strumento di rimborso? La data nella risposta compare nei dati d’ordine che ha ricevuto? Ha passato la mano quando glielo hanno chiesto? La risposta è nella lingua giusta? Parole come «rimborso» o «sconto» servono solo a segnalare la risposta per il passo successivo. Non decidono il voto, perché «non posso promettere un rimborso» contiene la parola ed è corretta.',
     },
     { type: 'h3', text: 'Poi, un modello come giudice' },
     {
@@ -498,7 +498,7 @@ const article: Article = {
       items: [
         '**Fai girare ogni caso tre volte.** Le risposte variano da una prova all’altra, e Anthropic ripete le prove per lo stesso motivo. Tre è la nostra regola pratica per un set piccolo.',
         '**Un caso passa solo se passano tutte le sue prove.** Una riuscita su tre è un caso non superato.',
-        '**I casi bloccanti devono passare tutti.** Niente medie, niente trattative.',
+        '**I casi bloccanti devono passare tutti.** Per loro le medie non contano.',
         '**Per gli altri scrivi la soglia prima della prima prova,** così non la scegli dopo aver visto il risultato.',
         '**Tieni una riga per caso per prova:** esito, risposta, data e versione delle istruzioni. Senza questo storico non distingui il meglio dal diverso.',
       ],

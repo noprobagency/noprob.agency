@@ -149,7 +149,7 @@ const article: Article = {
         'Export Search Console performance by page and by query. Check the property returns real history.',
         'Crawl the old site and save the file: status, title, meta description, H1, canonical, word count and internal links per URL.',
         'Export organic revenue by landing page from analytics, not just sessions.',
-        'Audit the tracking before you touch anything. A baseline you cannot trust is not a baseline.',
+        'Audit the tracking before you touch anything: numbers from broken tracking give you nothing to compare against.',
       ],
     },
     { type: 'h3', text: '2. Build the URL inventory from several sources, not one' },
@@ -309,11 +309,11 @@ const article: Article = {
     { type: 'h3', text: 'What it looked like on Nazzi and Cumini' },
     {
       type: 'paragraph',
-      text: 'The comparison that tells you whether the checklist worked is not against last year but against the weeks right before go-live, because that isolates the move itself. On Integratori DTC Nazzi (WooCommerce to Shopify), the 28 days to 9 October against the 28 days before go-live show clicks up 41%, impressions at 2.2x and average position improved by 21%. That is the number to put in your 90-day review: the year-on-year view is in the [migration guide](/shopify-migration) and the [Nazzi case study](/use-cases/integratori-nazzi-dtc-shopify).',
+      text: 'To see whether the checklist worked, compare against the weeks right before go-live, because that isolates the move itself. On Integratori DTC Nazzi (WooCommerce to Shopify), the 28 days to 9 October against the 28 days before go-live show clicks up 41%, impressions at 2.2x and average position improved by 21%. That is the number to put in your 90-day review: the year-on-year view is in the [migration guide](/shopify-migration) and the [Nazzi case study](/use-cases/integratori-nazzi-dtc-shopify).',
     },
     {
       type: 'paragraph',
-      text: 'Cumini moved from a proprietary platform tied to its ERP. From June 2025 to May 2026 its online sales were up 67.7% on the previous 12 months, and the tracking score went from 31/100 to 92/100 between the audits before and after. That is the result of the whole project, not of SEO alone. See the [Cumini case study](/use-cases/cumini-luxury-fashion-ecommerce).',
+      text: 'Cumini moved from a proprietary platform tied to its ERP. From June 2025 to May 2026 its online sales were up 67.7% on the previous 12 months, and the tracking score went from 31/100 to 92/100 between the audits before and after. That is the result of the whole project, with SEO as one part of it. See the [Cumini case study](/use-cases/cumini-luxury-fashion-ecommerce).',
     },
     {
       type: 'paragraph',
@@ -381,7 +381,7 @@ const article: Article = {
         'Esporta da Search Console le prestazioni per pagina e per query. Verifica che la proprietà abbia uno storico vero.',
         'Fai il crawl del vecchio sito e salva il file: stato, title, meta description, H1, canonical, parole e link interni per URL.',
         'Esporta da analytics il fatturato organico per pagina di destinazione, non solo le sessioni.',
-        'Fai un audit del tracking prima di toccare altro: una baseline di cui non ti fidi non è una baseline.',
+        'Fai un audit del tracking prima di toccare altro: con numeri di un tracking rotto non hai nulla con cui confrontarti.',
       ],
     },
     { type: 'h3', text: '2. Costruisci l’inventario degli URL da più fonti, non da una' },
@@ -541,11 +541,11 @@ const article: Article = {
     { type: 'h3', text: 'Com’è andata su Nazzi e Cumini' },
     {
       type: 'paragraph',
-      text: 'Il confronto che ti dice se la checklist ha funzionato non è con l’anno scorso ma con le settimane subito prima del go-live, perché isola il passaggio in sé. Su Integratori DTC Nazzi (da WooCommerce a Shopify), i 28 giorni al 9 ottobre rispetto ai 28 giorni prima del go-live mostrano clic +41%, impressioni 2,2 volte e posizione media migliorata del 21%. È il numero da mettere nella revisione dei 90 giorni: il confronto con l’anno prima è nella [guida alla migrazione](/it/migrazione-shopify) e nel [caso studio Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify).',
+      text: 'Per vedere se la checklist ha funzionato confronta con le settimane subito prima del go-live, perché isola il passaggio in sé. Su Integratori DTC Nazzi (da WooCommerce a Shopify), i 28 giorni al 9 ottobre rispetto ai 28 giorni prima del go-live mostrano clic +41%, impressioni 2,2 volte e posizione media migliorata del 21%. È il numero da mettere nella revisione dei 90 giorni: il confronto con l’anno prima è nella [guida alla migrazione](/it/migrazione-shopify) e nel [caso studio Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify).',
     },
     {
       type: 'paragraph',
-      text: 'Cumini veniva da una piattaforma proprietaria legata al gestionale. Da giugno 2025 a maggio 2026 le sue vendite online sono salite del 67,7% sui 12 mesi precedenti, e il punteggio del tracking è passato da 31/100 a 92/100 tra l’audit prima e dopo. È il risultato dell’intero progetto, non della sola SEO. Vedi il [caso studio Cumini](/it/casi-studio/cumini-luxury-fashion-ecommerce).',
+      text: 'Cumini veniva da una piattaforma proprietaria legata al gestionale. Da giugno 2025 a maggio 2026 le sue vendite online sono salite del 67,7% sui 12 mesi precedenti, e il punteggio del tracking è passato da 31/100 a 92/100 tra l’audit prima e dopo. È il risultato dell’intero progetto, di cui la SEO è una parte. Vedi il [caso studio Cumini](/it/casi-studio/cumini-luxury-fashion-ecommerce).',
     },
     {
       type: 'paragraph',

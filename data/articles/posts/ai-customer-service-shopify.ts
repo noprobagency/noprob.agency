@@ -16,9 +16,9 @@ const article: Article = {
   excerptIt:
     'Un assistente AI che puoi lasciare ai clienti smista il messaggio, cerca nei documenti giusti, legge gli ordini senza modificarli, apre la richiesta di reso e lascia i rimborsi a una persona. Ecco lo schema, la tabella delle decisioni e le opzioni reali su Shopify.',
   ledeEn:
-    'A Shopify AI chatbot for orders and returns is not one prompt. It is five parts, and the last decision, the refund, stays with a person. Here is how it is built, what each part does and where the assistant must stop.',
+    'A Shopify AI chatbot for orders and returns is built from five parts, and the last decision, the refund, stays with a person. Here is how it is built, what each part does and where the assistant must stop.',
   ledeIt:
-    'Un chatbot ecommerce con AI per ordini e resi su Shopify non è un prompt solo. Sono cinque pezzi, e l’ultima decisione, il rimborso, resta a una persona. Ecco come è fatto, cosa fa ogni pezzo e dove l’assistente deve fermarsi.',
+    'Un chatbot ecommerce con AI per ordini e resi su Shopify è fatto di cinque pezzi, e l’ultima decisione, il rimborso, resta a una persona. Ecco come è fatto, cosa fa ogni pezzo e dove l’assistente deve fermarsi.',
   image: '/images/blog/ai-customer-service-shopify-cover.png',
   imageAlt: 'Copertina astratta, sfondo rosa cipria sfumato, con una griglia regolare di puntini',
   imageAltEn: 'Abstract cover, softly graded blush pink background with a regular dot grid',
@@ -36,7 +36,7 @@ const article: Article = {
   content: [
     {
       type: 'paragraph',
-      text: '**A Shopify AI chatbot you can leave alone with customers does four things and refuses a fifth: it answers “where is my order”, explains your policies, answers product and size questions, opens a return request, and never decides a refund or an exception.** That last line is the whole design. Everything else in this article is how to build it so the line holds in code, not just in a prompt.',
+      text: '**A Shopify AI chatbot you can leave alone with customers does four things and refuses a fifth: it answers “where is my order”, explains your policies, answers product and size questions, opens a return request, and never decides a refund or an exception.** The rest of this article is how to make that last line hold in code, where a prompt alone cannot enforce it.',
     },
     {
       type: 'paragraph',
@@ -49,7 +49,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'In practice, a store gets four kinds of message. Where is my order. I want to send something back. I have a question about a product, a size or the shipping. And everything else: a complaint, a gift, a question nobody planned for. The first three are where an assistant earns its keep. The fourth is where it has to know it is out of its depth.',
+      text: 'In practice, a store gets four kinds of message: where is my order, I want to send something back, a question about a product, a size or the shipping, and everything else (a complaint, a gift, a question nobody planned for). An assistant earns its keep on the first three and has to recognize when the fourth is beyond it.',
     },
     { type: 'h2', text: 'How is a Shopify AI chatbot built? Five parts' },
     {
@@ -63,7 +63,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Two details matter more than the choice of router. First, **the “other” road must exist and must lead to a person.** Without it, a message like “do you ship to Madeira?” gets forced onto the nearest road, or stalls silently while the customer waits. Count what lands there: it shows you the next road to build. Second, the router may ask a question. “I’m not sure about this jacket” could be a return, a complaint or a size question; one line, “Do you want to send it back, or is something wrong with it?”, is cheaper than guessing.',
+      text: 'Two details matter more than the choice of router. First, the “other” road must exist and must lead to a person. Without it, a message like “do you ship to Madeira?” gets forced onto the nearest road, or stalls silently while the customer waits. Count what lands there: it shows you the next road to build. Second, the router may ask a question. “I’m not sure about this jacket” could be a return, a complaint or a size question; one line, “Do you want to send it back, or is something wrong with it?”, is cheaper than guessing.',
     },
     { type: 'h3', text: '2. The knowledge base: policy, shipping, sizes' },
     {
@@ -86,10 +86,10 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**Input.** Does the order exist, and does it belong to the person writing? Match order number and email, or use a signed-in customer. When the customer gives no number, models tend to fill the gap with a plausible one, so the system must refuse to guess.',
-        '**Outcome.** Read what came back. If the tool returned an error, the customer is never told “done”.',
-        '**Errors and waits.** How many retries, and what the customer sees when the order system does not answer, is decided in advance, with a limit.',
-        '**Confirmation for what cannot be undone.** Anything irreversible waits for a person (next part).',
+        'Input. Does the order exist, and does it belong to the person writing? Match order number and email, or use a signed-in customer. When the customer gives no number, models tend to fill the gap with a plausible one, so the system must refuse to guess.',
+        'Outcome. Read what came back. If the tool returned an error, the customer is never told “done”.',
+        'Errors and waits. How many retries, and what the customer sees when the order system does not answer, is decided in advance, with a limit.',
+        'Confirmation for what cannot be undone. Anything irreversible waits for a person (next part).',
       ],
     },
     {
@@ -124,42 +124,42 @@ const article: Article = {
       headers: ['Request', 'What the AI does', 'What a person decides'],
       rows: [
         [
-          '**“Where is my order?”**',
+          '“Where is my order?”',
           'The AI reads the order and the tracking and replies with what the data says.',
           'A person steps in only if the carrier shows the parcel lost or stuck.',
         ],
         [
-          '**Product, size and shipping questions**',
+          'Product, size and shipping questions',
           'The AI answers from product data, the size chart and the shipping page. If the sources disagree or say nothing, it says it will check and passes the question on.',
           '-',
         ],
         [
-          '**Return within policy**',
+          'Return within policy',
           'The AI checks the order against your policy, opens a return request and sends the instructions.',
           'A person approves the request.',
         ],
         [
-          '**Return outside policy, gift, no order number**',
+          'Return outside policy, gift, no order number',
           'The AI explains the policy without promising anything and hands over a summary.',
           'A person decides the exception.',
         ],
         [
-          '**Refund**',
+          'Refund',
           'The AI never executes or promises it; it says a person confirms.',
           'A person approves and issues it.',
         ],
         [
-          '**Damaged or defective item**',
+          'Damaged or defective item',
           'The AI collects order, photos and a description, and opens the case.',
           'A person decides between repair, replacement and refund.',
         ],
         [
-          '**Complaint, legal threat, chargeback, request about personal data**',
+          'Complaint, legal threat, chargeback, request about personal data',
           '-',
           'Straight to a person, with the conversation attached.',
         ],
         [
-          '**Discounts, price matching, anything “just this once”**',
+          'Discounts, price matching, anything “just this once”',
           '-',
           'A person, always.',
         ],
@@ -167,7 +167,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Notice what the matrix does not contain: any case where the AI “almost” decides. When a case is borderline, it is a person’s case. Anthropic, in its guide to [building effective agents](https://www.anthropic.com/engineering/building-effective-agents), calls customer support a natural fit for agents and says to start with the simplest solution. In a store that means a router, two or three fixed roads for the most frequent requests, and a reliable road to a person.',
+      text: 'No row has the AI “almost” deciding: a borderline case belongs to a person. Anthropic, in its guide to [building effective agents](https://www.anthropic.com/engineering/building-effective-agents), calls customer support a natural fit for agents and says to start with the simplest solution. In a store that means a router, two or three fixed roads for the most frequent requests, and a reliable road to a person.',
     },
     { type: 'h2', text: 'Which Shopify AI chatbot options exist before you build?' },
     {
@@ -177,9 +177,9 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**Shopify Inbox.** Shopify’s guide describes it as free and AI-assisted, with instant answers, automated first replies and conversation labels. In the [instant answers](https://help.shopify.com/en/manual/inbox/chat-settings-and-appearance/instant-answers) documentation, the “Track my order” option requires the customer to sign in to review an existing order, and AI-generated instant answer suggestions are only available in English. [Suggested replies](https://help.shopify.com/en/manual/inbox/chat-settings-and-appearance/shopify-magic) are a writing aid for staff: they appear in the composer, the team reviews them before sending, and they do not drive the automatic replies. Shopify adds that you are responsible for the accuracy of what you publish.',
-        '**Helpdesk apps with an AI agent.** [Gorgias](https://www.gorgias.com/) presents an AI Agent plus a helpdesk, with a Shopify integration that pulls orders, customers and products into the ticket, order actions such as cancelling an order, and escalation to your team with context. [Tidio](https://apps.shopify.com/tidio-chat) offers an AI agent called Lyro that answers FAQs and order status questions, with Shopify actions on its paid plan. Shopify’s guide also lists Gladly, Reamaze, Rep AI and Moose, with prices that change often: check each vendor.',
-        '**An assistant built for your store.** Same five parts as above, written around your policy, your data and your approval queue. More on when it pays off below.',
+        'Shopify Inbox. Shopify’s guide describes it as free and AI-assisted, with instant answers, automated first replies and conversation labels. In the [instant answers](https://help.shopify.com/en/manual/inbox/chat-settings-and-appearance/instant-answers) documentation, the “Track my order” option requires the customer to sign in to review an existing order, and AI-generated instant answer suggestions are only available in English. [Suggested replies](https://help.shopify.com/en/manual/inbox/chat-settings-and-appearance/shopify-magic) are a writing aid for staff: they appear in the composer, the team reviews them before sending, and they do not drive the automatic replies. Shopify adds that you are responsible for the accuracy of what you publish.',
+        'Helpdesk apps with an AI agent. [Gorgias](https://www.gorgias.com/) presents an AI Agent plus a helpdesk, with a Shopify integration that pulls orders, customers and products into the ticket, order actions such as cancelling an order, and escalation to your team with context. [Tidio](https://apps.shopify.com/tidio-chat) offers an AI agent called Lyro that answers FAQs and order status questions, with Shopify actions on its paid plan. Shopify’s guide also lists Gladly, Reamaze, Rep AI and Moose, with prices that change often: check each vendor.',
+        'An assistant built for your store. Same five parts as above, written around your policy, your data and your approval queue. More on when it pays off below.',
       ],
     },
     {
@@ -257,7 +257,7 @@ const article: Article = {
   contentIt: [
     {
       type: 'paragraph',
-      text: '**Un chatbot ecommerce con AI che puoi lasciare da solo con i clienti fa quattro cose e ne rifiuta una: risponde a “dov’è il mio ordine”, spiega le tue policy, risponde su prodotti e taglie, apre la richiesta di reso, e non decide mai un rimborso o un’eccezione.** Quest’ultima riga è tutto il progetto. Il resto dell’articolo spiega come costruirlo perché il limite regga nel codice, non solo in un prompt.',
+      text: '**Un chatbot ecommerce con AI che puoi lasciare da solo con i clienti fa quattro cose e ne rifiuta una: risponde a “dov’è il mio ordine”, spiega le tue policy, risponde su prodotti e taglie, apre la richiesta di reso, e non decide mai un rimborso o un’eccezione.** Il resto dell’articolo spiega come far reggere quest’ultimo limite nel codice, dove un prompt da solo non basta.',
     },
     {
       type: 'paragraph',
@@ -270,7 +270,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'In pratica uno store riceve quattro tipi di messaggio. Dov’è il mio ordine. Voglio restituire un prodotto. Ho una domanda su un prodotto, una taglia o la spedizione. E tutto il resto: un reclamo, un regalo, una domanda che nessuno aveva previsto. I primi tre sono il terreno dove un assistente rende. Il quarto è dove deve sapere di non farcela.',
+      text: 'In pratica uno store riceve quattro tipi di messaggio: dov’è il mio ordine, voglio restituire un prodotto, una domanda su un prodotto, una taglia o la spedizione, e tutto il resto (un reclamo, un regalo, una domanda che nessuno aveva previsto). L’assistente rende sui primi tre e deve riconoscere quando il quarto è fuori dalla sua portata.',
     },
     { type: 'h2', text: 'Come è fatto un chatbot ecommerce con AI? Cinque pezzi' },
     {
@@ -284,7 +284,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Due dettagli contano più della scelta del router. Il primo: **la strada “altro” deve esistere e portare a una persona.** Senza, un messaggio come “spedite a Madeira?” viene spinto sulla strada meno lontana, oppure si ferma in silenzio mentre il cliente aspetta. Conta cosa ci finisce: ti indica la prossima strada da costruire. Il secondo: il router può fare una domanda. “Non sono convinto di questa giacca” può essere un reso, un reclamo o una domanda sulla taglia; una riga, “Vuoi rimandarla indietro o c’è qualcosa che non va?”, costa meno di indovinare.',
+      text: 'Due dettagli contano più della scelta del router. Il primo: la strada “altro” deve esistere e portare a una persona. Senza, un messaggio come “spedite a Madeira?” viene spinto sulla strada meno lontana, oppure si ferma in silenzio mentre il cliente aspetta. Conta cosa ci finisce: ti indica la prossima strada da costruire. Il secondo: il router può fare una domanda. “Non sono convinto di questa giacca” può essere un reso, un reclamo o una domanda sulla taglia; una riga, “Vuoi rimandarla indietro o c’è qualcosa che non va?”, costa meno di indovinare.',
     },
     { type: 'h3', text: '2. La base di conoscenza: policy, spedizioni, taglie' },
     {
@@ -307,10 +307,10 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**Ingresso.** L’ordine esiste ed è di chi scrive? Confronta numero d’ordine ed email, oppure usa un cliente con login. Quando il cliente non dà il numero, i modelli tendono a riempire il vuoto con uno plausibile: il sistema deve rifiutarsi di indovinare.',
-        '**Esito.** Leggi cosa è tornato. Se lo strumento ha dato errore, al cliente non si scrive mai “fatto”.',
-        '**Errori e attese.** Quante volte riprovare, e cosa vede il cliente se il sistema ordini non risponde, si decide prima, con un limite.',
-        '**Conferma per ciò che non si annulla.** Ogni azione irreversibile aspetta una persona (punto successivo).',
+        'Ingresso. L’ordine esiste ed è di chi scrive? Confronta numero d’ordine ed email, oppure usa un cliente con login. Quando il cliente non dà il numero, i modelli tendono a riempire il vuoto con uno plausibile: il sistema deve rifiutarsi di indovinare.',
+        'Esito. Leggi cosa è tornato. Se lo strumento ha dato errore, al cliente non si scrive mai “fatto”.',
+        'Errori e attese. Quante volte riprovare, e cosa vede il cliente se il sistema ordini non risponde, si decide prima, con un limite.',
+        'Conferma per ciò che non si annulla. Ogni azione irreversibile aspetta una persona (punto successivo).',
       ],
     },
     {
@@ -345,42 +345,42 @@ const article: Article = {
       headers: ['Richiesta', 'Cosa fa l’AI', 'Cosa decide una persona'],
       rows: [
         [
-          '**“Dov’è il mio ordine?”**',
+          '“Dov’è il mio ordine?”',
           'L’AI legge ordine e tracking e risponde con ciò che dicono i dati.',
           'Una persona interviene solo se il corriere segna il pacco smarrito o fermo.',
         ],
         [
-          '**Domande su prodotto, taglie e spedizione**',
+          'Domande su prodotto, taglie e spedizione',
           'L’AI risponde da dati prodotto, guida taglie e pagina spedizioni. Se le fonti si contraddicono o tacciono, dice che verifica e passa la domanda.',
           '-',
         ],
         [
-          '**Reso entro la policy**',
+          'Reso entro la policy',
           'L’AI controlla l’ordine rispetto alla policy, apre la richiesta di reso e manda le istruzioni.',
           'Una persona approva la richiesta.',
         ],
         [
-          '**Reso fuori policy, regalo, senza numero d’ordine**',
+          'Reso fuori policy, regalo, senza numero d’ordine',
           'L’AI spiega la policy senza promettere nulla e passa un riepilogo.',
           'Una persona decide l’eccezione.',
         ],
         [
-          '**Rimborso**',
+          'Rimborso',
           'L’AI non lo esegue né lo promette; dice che lo conferma una persona.',
           'Una persona lo approva e lo emette.',
         ],
         [
-          '**Prodotto danneggiato o difettoso**',
+          'Prodotto danneggiato o difettoso',
           'L’AI raccoglie ordine, foto e descrizione e apre la pratica.',
           'Una persona decide tra riparazione, sostituzione e rimborso.',
         ],
         [
-          '**Reclamo, minaccia legale, chargeback, richiesta sui dati personali**',
+          'Reclamo, minaccia legale, chargeback, richiesta sui dati personali',
           '-',
           'Direttamente a una persona, con la conversazione allegata.',
         ],
         [
-          '**Sconti, allineamento prezzo, qualsiasi “solo per questa volta”**',
+          'Sconti, allineamento prezzo, qualsiasi “solo per questa volta”',
           '-',
           'Sempre una persona.',
         ],
@@ -388,7 +388,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Guarda cosa non c’è nella matrice: nessun caso in cui l’AI decide “quasi”. Se un caso è al limite, è il caso di una persona. Anthropic, nella sua guida a [come costruire agenti efficaci](https://www.anthropic.com/engineering/building-effective-agents) definisce l’assistenza clienti un terreno naturale per gli agenti e consiglia di partire dalla soluzione più semplice. In uno store vuol dire un router, due o tre strade fisse per le richieste più frequenti e una strada affidabile verso una persona.',
+      text: 'In nessuna riga l’AI decide “quasi”: un caso al limite è il caso di una persona. Anthropic, nella sua guida a [come costruire agenti efficaci](https://www.anthropic.com/engineering/building-effective-agents) definisce l’assistenza clienti un terreno naturale per gli agenti e consiglia di partire dalla soluzione più semplice. In uno store vuol dire un router, due o tre strade fisse per le richieste più frequenti e una strada affidabile verso una persona.',
     },
     { type: 'h2', text: 'Chatbot ecommerce su Shopify: quali opzioni ci sono prima di costruire?' },
     {
@@ -398,9 +398,9 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**Shopify Inbox.** La guida di Shopify lo descrive come gratuito e assistito dall’AI, con risposte istantanee, prime risposte automatiche ed etichette alle conversazioni. Nella documentazione sulle [risposte istantanee](https://help.shopify.com/en/manual/inbox/chat-settings-and-appearance/instant-answers), l’opzione “Track my order” richiede che il cliente acceda al suo account per vedere un ordine esistente, e i suggerimenti di risposte istantanee generati dall’AI sono disponibili solo in inglese. Le [risposte suggerite](https://help.shopify.com/en/manual/inbox/chat-settings-and-appearance/shopify-magic) sono un aiuto alla scrittura per il personale: compaiono nel campo di composizione, il team le rilegge prima di inviarle e non guidano le risposte automatiche. Shopify aggiunge che sei responsabile dell’accuratezza di ciò che pubblichi.',
-        '**App di helpdesk con agente AI.** [Gorgias](https://www.gorgias.com/) presenta un AI Agent con un helpdesk, un’integrazione con Shopify che porta ordini, clienti e prodotti nel ticket, azioni sugli ordini come l’annullamento e l’escalation al team con il contesto. [Tidio](https://apps.shopify.com/tidio-chat) offre un agente AI chiamato Lyro che risponde alle FAQ e allo stato ordine, con azioni Shopify nel piano a pagamento. La guida di Shopify cita anche Gladly, Reamaze, Rep AI e Moose, con prezzi che cambiano spesso: controllali presso ogni fornitore.',
-        '**Un assistente costruito per il tuo store.** Gli stessi cinque pezzi di sopra, scritti attorno alla tua policy, ai tuoi dati e alla tua coda di approvazione. Sotto, quando conviene.',
+        'Shopify Inbox. La guida di Shopify lo descrive come gratuito e assistito dall’AI, con risposte istantanee, prime risposte automatiche ed etichette alle conversazioni. Nella documentazione sulle [risposte istantanee](https://help.shopify.com/en/manual/inbox/chat-settings-and-appearance/instant-answers), l’opzione “Track my order” richiede che il cliente acceda al suo account per vedere un ordine esistente, e i suggerimenti di risposte istantanee generati dall’AI sono disponibili solo in inglese. Le [risposte suggerite](https://help.shopify.com/en/manual/inbox/chat-settings-and-appearance/shopify-magic) sono un aiuto alla scrittura per il personale: compaiono nel campo di composizione, il team le rilegge prima di inviarle e non guidano le risposte automatiche. Shopify aggiunge che sei responsabile dell’accuratezza di ciò che pubblichi.',
+        'App di helpdesk con agente AI. [Gorgias](https://www.gorgias.com/) presenta un AI Agent con un helpdesk, un’integrazione con Shopify che porta ordini, clienti e prodotti nel ticket, azioni sugli ordini come l’annullamento e l’escalation al team con il contesto. [Tidio](https://apps.shopify.com/tidio-chat) offre un agente AI chiamato Lyro che risponde alle FAQ e allo stato ordine, con azioni Shopify nel piano a pagamento. La guida di Shopify cita anche Gladly, Reamaze, Rep AI e Moose, con prezzi che cambiano spesso: controllali presso ogni fornitore.',
+        'Un assistente costruito per il tuo store. Gli stessi cinque pezzi di sopra, scritti attorno alla tua policy, ai tuoi dati e alla tua coda di approvazione. Sotto, quando conviene.',
       ],
     },
     {
@@ -434,9 +434,9 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**Quattordici giorni.** L’[art. 52 del Codice del consumo](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-09-06;206~art52) prevede “un periodo di quattordici giorni per recedere da un contratto a distanza”; per i beni il termine decorre dal giorno in cui il consumatore (o un terzo da lui designato, diverso dal vettore) ne prende possesso fisico.',
-        '**Una dichiarazione basta.** L’[art. 54](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-09-06;206~art54) permette di usare il modulo tipo oppure “qualsiasi altra dichiarazione esplicita”, purché inviata prima della scadenza del termine.',
-        '**Difetto di conformità.** È un’altra cosa dal recesso. L’[art. 135-bis](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-09-06;206~art135bis) dice che il consumatore può scegliere tra riparazione e sostituzione, salvo che il rimedio sia impossibile o costi al venditore in modo sproporzionato; per i contratti conclusi dal 31 luglio 2026 il venditore deve anche informarlo di questa scelta.',
+        'Quattordici giorni. L’[art. 52 del Codice del consumo](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-09-06;206~art52) prevede “un periodo di quattordici giorni per recedere da un contratto a distanza”; per i beni il termine decorre dal giorno in cui il consumatore (o un terzo da lui designato, diverso dal vettore) ne prende possesso fisico.',
+        'Una dichiarazione basta. L’[art. 54](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-09-06;206~art54) permette di usare il modulo tipo oppure “qualsiasi altra dichiarazione esplicita”, purché inviata prima della scadenza del termine.',
+        'Difetto di conformità. Non coincide con il recesso. L’[art. 135-bis](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-09-06;206~art135bis) dice che il consumatore può scegliere tra riparazione e sostituzione, salvo che il rimedio sia impossibile o costi al venditore in modo sproporzionato; per i contratti conclusi dal 31 luglio 2026 il venditore deve anche informarlo di questa scelta.',
       ],
     },
     {

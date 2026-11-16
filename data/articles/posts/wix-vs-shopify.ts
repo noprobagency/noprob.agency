@@ -94,7 +94,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'We are noprob agency. We build and migrate Shopify stores with the [Shopify Launch Sprint](/shopify-migration-sprint), and we have more than 7 years of eCommerce projects behind us. Among our published case studies are Nazzi, from WooCommerce, and Cumini, from a proprietary platform tied to the ERP. What follows about Wix comes from Wix’s and Shopify’s official documentation and from how we run any migration. Part one is the decision, part two is the move.',
+      text: 'We are noprob agency. We build and migrate Shopify stores with the [Shopify Launch Sprint](/shopify-migration-sprint), and we have more than 7 years of eCommerce projects behind us. Among our published case studies are Nazzi, from WooCommerce, and Cumini, from a proprietary platform tied to the ERP. What follows about Wix comes from Wix’s and Shopify’s official documentation and from how we run any migration.',
     },
     {
       type: 'paragraph',
@@ -115,7 +115,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'In our experience Wix is a site builder that added a store, and Shopify is a store system that added pages. That is not a verdict on quality, it is where each product started.',
+      text: 'In our experience Wix is a site builder that added a store, and Shopify is a store system that added pages. Each product kept the shape of where it started.',
     },
     { type: 'h2', text: 'When is Wix enough for an online store?' },
     {
@@ -157,7 +157,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Wix keeps adding commerce features, so check its current documentation for each point. The sign is not “Wix cannot”, it is “we keep paying in hours”. Tick one and fix that one first. Tick three or more and it is time to price the move.',
+      text: 'Wix keeps adding commerce features, so check its current documentation for each point. The sign to look for is “we keep paying in hours”. Tick one and fix that one first. Tick three or more and it is time to price the move.',
     },
     { type: 'h2', text: 'What do you lose by moving from Wix to Shopify?' },
     {
@@ -185,14 +185,14 @@ const article: Article = {
         '**Customers.** Wix [exports contacts to CSV](https://support.wix.com/en/article/exporting-your-contacts), only from the site owner’s account. Its Google format does not support subscription status as a standard field, so use the regular CSV and check that consent travels with each contact: if you cannot prove it, do not email them.',
         '**Orders.** Shopify points to third-party apps for past orders (it names Cart2Cart, LitExtension and EZ Importer). Import the history only if you need it for returns or reporting, and keep the Wix export as an archive either way.',
         '**Reviews.** Shopify’s guide says reviews cannot be exported from Wix. Plan to ask for new ones with a review app.',
-        '**Pages and design.** Rebuilt on Shopify. A Wix design does not convert into Shopify storefront code, so treat it as a redesign, not a copy.',
+        '**Pages and design.** Rebuilt on Shopify. A Wix design does not convert into Shopify storefront code, so plan it as a redesign.',
         '**SEO settings.** Page titles, meta descriptions, image alt text and social previews are written again. Shopify’s guide lists meta descriptions as a manual task.',
       ],
     },
     { type: 'h2', text: 'How do you keep your URLs and rankings when you leave Wix?' },
     {
       type: 'paragraph',
-      text: '**Crawl the old site first, map every URL that ranks or has links to its new Shopify address, and load the map as 301 redirects before the domain switch.** Shopify’s guide says Wix product URLs follow the pattern /product-page/name by default and should redirect to the matching /products/handle. Check your Wix site’s URLs for blog posts, categories and other pages: the crawl shows the real pattern, and each one goes to its Shopify counterpart (/blogs/ for posts, collections for categories). Every site has exceptions.',
+      text: '**Crawl the old site first, map every URL that ranks or has links to its new Shopify address, and load the map as 301 redirects before the domain switch.** Shopify’s guide says Wix product URLs follow the pattern /product-page/name by default and should redirect to the matching /products/handle. Check your Wix site’s URLs for blog posts, categories and other pages: the crawl shows the real pattern, and each one goes to its Shopify counterpart (/blogs/ for posts, collections for categories).',
     },
     {
       type: 'paragraph',
@@ -265,7 +265,7 @@ const article: Article = {
     { type: 'h2', text: 'How to know it is time to leave Wix' },
     {
       type: 'paragraph',
-      text: 'A Wix site with a small shop can stay on Wix; a store that runs on ads, variants, several markets or wholesale is ready for Shopify. The moment to move is when you notice you are working for the platform, not the other way round.',
+      text: 'A Wix site with a small shop can stay on Wix; a store that runs on ads, variants, several markets or wholesale is ready for Shopify. Move when you notice you are working for the platform.',
     },
     {
       type: 'paragraph',
@@ -287,7 +287,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Siamo noprob agency. Costruiamo e migriamo store Shopify con lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify), e abbiamo oltre 7 anni di progetti eCommerce alle spalle. Tra i nostri casi pubblicati ci sono Nazzi, da WooCommerce, e Cumini, da una piattaforma proprietaria legata al gestionale. Su Wix ci basiamo sulla documentazione ufficiale di Wix e di Shopify e su come conduciamo ogni migrazione. La prima parte è la decisione, la seconda il passaggio.',
+      text: 'Siamo noprob agency. Costruiamo e migriamo store Shopify con lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify), e abbiamo oltre 7 anni di progetti eCommerce alle spalle. Tra i nostri casi pubblicati ci sono Nazzi, da WooCommerce, e Cumini, da una piattaforma proprietaria legata al gestionale. Su Wix ci basiamo sulla documentazione ufficiale di Wix e di Shopify e su come conduciamo ogni migrazione.',
     },
     {
       type: 'paragraph',
@@ -308,7 +308,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Per la nostra esperienza Wix è un costruttore di siti che ha aggiunto uno store, e Shopify è un sistema per store che ha aggiunto le pagine. Non è un giudizio di qualità: è il punto da cui è partito ciascuno.',
+      text: 'Per la nostra esperienza Wix è un costruttore di siti che ha aggiunto uno store, e Shopify è un sistema per store che ha aggiunto le pagine. Ognuno ha mantenuto la forma del punto da cui è partito.',
     },
     { type: 'h2', text: 'Quando Wix basta per uno store online?' },
     {
@@ -350,7 +350,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Wix aggiunge di continuo funzioni di commercio, quindi controlla la sua documentazione attuale per ogni punto. Il segnale non è “Wix non può”, è “continuiamo a pagare in ore”. Se ne riconosci uno, correggi quello. Se ne riconosci tre o più, è il momento di fare un preventivo del passaggio.',
+      text: 'Wix aggiunge di continuo funzioni di commercio, quindi controlla la sua documentazione attuale per ogni punto. Il segnale da cercare è “continuiamo a pagare in ore”. Se ne riconosci uno, correggi quello. Se ne riconosci tre o più, è il momento di fare un preventivo del passaggio.',
     },
     { type: 'h2', text: 'Cosa perdi passando da Wix a Shopify?' },
     {
@@ -378,14 +378,14 @@ const article: Article = {
         '**Clienti.** Wix [esporta i contatti in CSV](https://support.wix.com/en/article/exporting-your-contacts), solo dall’account del proprietario del sito. Il formato Google non supporta lo stato di iscrizione come campo standard, quindi usa il CSV normale e verifica che il consenso viaggi con ogni contatto: se non puoi dimostrarlo, non scrivere a quelle persone.',
         '**Ordini.** Shopify indica app di terze parti per lo storico (cita Cart2Cart, LitExtension ed EZ Importer). Importa lo storico solo se ti serve per resi o report, e conserva comunque l’esportazione di Wix come archivio.',
         '**Recensioni.** La guida di Shopify dice che le recensioni non si possono esportare da Wix. Metti in conto di chiederne di nuove con un’app per le recensioni.',
-        '**Pagine e design.** Si ricostruiscono su Shopify. Un design di Wix non si converte in codice dello storefront Shopify, quindi trattalo come un rifacimento, non come una copia.',
+        '**Pagine e design.** Si ricostruiscono su Shopify. Un design di Wix non si converte in codice dello storefront Shopify, quindi mettilo in conto come un rifacimento.',
         '**Impostazioni SEO.** Titoli di pagina, meta description, testi alternativi delle immagini e anteprime social si riscrivono. La guida di Shopify indica le meta description come attività manuale.',
       ],
     },
     { type: 'h2', text: 'Come si mantengono URL e posizionamenti lasciando Wix?' },
     {
       type: 'paragraph',
-      text: '**Scansiona prima il vecchio sito, associa ogni URL che si posiziona o riceve link al suo nuovo indirizzo Shopify e carica la mappa come redirect 301 prima del cambio di dominio.** La guida di Shopify dice che gli URL prodotto di Wix seguono per impostazione predefinita lo schema /product-page/nome e vanno rediretti sul corrispondente /products/handle. Controlla gli URL del tuo sito Wix per articoli, categorie e altre pagine: la scansione mostra lo schema reale e ognuno va sul suo equivalente Shopify (/blogs/ per gli articoli, le collezioni per le categorie). Ogni sito ha eccezioni.',
+      text: '**Scansiona prima il vecchio sito, associa ogni URL che si posiziona o riceve link al suo nuovo indirizzo Shopify e carica la mappa come redirect 301 prima del cambio di dominio.** La guida di Shopify dice che gli URL prodotto di Wix seguono per impostazione predefinita lo schema /product-page/nome e vanno rediretti sul corrispondente /products/handle. Controlla gli URL del tuo sito Wix per articoli, categorie e altre pagine: la scansione mostra lo schema reale e ognuno va sul suo equivalente Shopify (/blogs/ per gli articoli, le collezioni per le categorie).',
     },
     {
       type: 'paragraph',
@@ -458,7 +458,7 @@ const article: Article = {
     { type: 'h2', text: 'Come capire che è ora di lasciare Wix' },
     {
       type: 'paragraph',
-      text: 'Un sito Wix con un piccolo negozio può restare su Wix; uno store che vive di advertising, varianti, più mercati o ingrosso è pronto per Shopify. Il momento di passare è quando ti accorgi che lavori per la piattaforma e non il contrario.',
+      text: 'Un sito Wix con un piccolo negozio può restare su Wix; uno store che vive di advertising, varianti, più mercati o ingrosso è pronto per Shopify. Passa quando ti accorgi che lavori per la piattaforma.',
     },
     {
       type: 'paragraph',

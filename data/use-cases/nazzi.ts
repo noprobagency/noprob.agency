@@ -45,11 +45,11 @@ export const nazzi: UseCase = {
     { type: 'paragraph', text: 'Online su Shopify dal: 19 luglio 2026' },
     {
       type: 'paragraph',
-      text: '**In breve.** Il brand Integratori DTC Nazzi è passato da WooCommerce a Shopify il 19 luglio 2026 con NoProb Agency. Nei primi 85 giorni le vendite online sono cresciute del 105% rispetto agli stessi giorni del 2025, i clienti di ritorno sono più che raddoppiati e i clic da Google negli ultimi 28 giorni sono 2,7 volte quelli di un anno prima. Tutti i numeri sono confronti percentuali su dati Shopify, Meta e Google Search Console: le fonti sono in fondo alla pagina.',
+      text: 'In breve: il brand Integratori DTC Nazzi è passato da WooCommerce a Shopify il 19 luglio 2026 con NoProb Agency. Nei primi 85 giorni le vendite online sono cresciute del 105% rispetto agli stessi giorni del 2025, i clienti di ritorno sono più che raddoppiati e i clic da Google negli ultimi 28 giorni sono 2,7 volte quelli di un anno prima. Tutti i numeri sono confronti percentuali su dati Shopify, Meta e Google Search Console: le fonti sono in fondo alla pagina.',
     },
     {
       type: 'paragraph',
-      text: 'Cambiare piattaforma fa paura per un motivo preciso: hai costruito qualcosa e non vuoi perderlo. Clienti, posizioni su Google, abitudini di chi compra. Questo caso studio racconta come abbiamo fatto la migrazione da WooCommerce a Shopify per Integratori DTC Nazzi, e cosa è successo dopo.',
+      text: 'Cambiare piattaforma fa paura perché hai costruito qualcosa e non vuoi perderlo: clienti, posizioni su Google, abitudini di chi compra. Qui raccontiamo come abbiamo fatto la migrazione da WooCommerce a Shopify per Integratori DTC Nazzi, e cosa è successo dopo.',
     },
     {
       type: 'paragraph',
@@ -58,11 +58,11 @@ export const nazzi: UseCase = {
     {
       type: 'list',
       items: [
-        'vendite online: **+105%**',
-        'ordini: **+77%**',
-        'scontrino medio: **+16%**',
-        'clienti che tornano a comprare: **2,25 volte** quelli dell’anno prima',
-        'clic da Google negli ultimi 28 giorni: **2,7 volte** lo stesso periodo del 2025',
+        'vendite online: +105%',
+        'ordini: +77%',
+        'scontrino medio: +16%',
+        'clienti che tornano a comprare: 2,25 volte quelli dell’anno prima',
+        'clic da Google negli ultimi 28 giorni: 2,7 volte lo stesso periodo del 2025',
       ],
     },
     { type: 'h2', text: 'Il punto di partenza' },
@@ -72,7 +72,7 @@ export const nazzi: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Un prodotto con una storia così online ha un vantaggio enorme: le persone lo cercano. Il lavoro è farsi trovare, e poi farsi scegliere.',
+      text: 'Un prodotto con una storia così online ha già un vantaggio: le persone lo cercano. Il lavoro è farsi trovare e poi farsi scegliere.',
     },
     {
       type: 'paragraph',
@@ -104,7 +104,7 @@ export const nazzi: UseCase = {
     { type: 'h3', text: '2025: far tornare chi ha già comprato' },
     {
       type: 'paragraph',
-      text: 'Nel 2025 abbiamo spostato il peso sull’email marketing con Klaviyo: campagne stagionali, promozioni per i clienti abituali, follow up dopo l’acquisto. Meno rumore, più relazione.',
+      text: 'Nel 2025 abbiamo spostato il peso sull’email marketing con Klaviyo: campagne stagionali, promozioni per i clienti abituali, follow up dopo l’acquisto.',
     },
     {
       type: 'paragraph',
@@ -133,21 +133,21 @@ export const nazzi: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Il nuovo sito racconta la farmacia per quello che è: formule preparate dai farmacisti, notificate al Ministero della Salute, spedizione gratuita sopra i 50 euro e un farmacista vero su WhatsApp. Non è un catalogo. È il banco della farmacia, portato online.',
+      text: 'Il nuovo sito racconta la farmacia per quello che è: formule preparate dai farmacisti, notificate al Ministero della Salute, spedizione gratuita sopra i 50 euro e un farmacista vero su WhatsApp. È il banco della farmacia, portato online.',
     },
     { type: 'paragraph', text: 'Il 19 luglio 2026 il nuovo store è andato online.' },
     { type: 'h3', text: 'Come abbiamo protetto la SEO nella migrazione' },
     {
       type: 'paragraph',
-      text: 'In una migrazione il rischio vero non è il design. È perdere quello che Google ha imparato del tuo sito in anni. Per Integratori DTC Nazzi abbiamo lavorato su quattro fronti.',
+      text: 'In una migrazione il rischio più grosso è perdere quello che Google ha imparato del tuo sito in anni. Per Integratori DTC Nazzi abbiamo lavorato su quattro fronti.',
     },
     {
       type: 'list',
       items: [
-        '**Contenuti.** Abbiamo portato su Shopify il blog: oggi la sitemap dello store conta oltre 140 articoli sulla salute, portati dal vecchio sito.',
-        '**Redirect 301.** Gli indirizzi vecchi di prodotti, categorie e articoli vengono reindirizzati ai nuovi URL Shopify. Dopo il go live abbiamo controllato uno per uno 215 indirizzi del vecchio sito archiviati online e preparato i redirect per quelli che non portavano ancora alla pagina giusta.',
-        '**Storico.** Ordini e clienti dal 2023 sono passati su Shopify: niente è ripartito da zero, né per le email né per le analisi.',
-        '**Agenti AI.** Lo store pubblica la sitemap che Shopify prepara per gli assistenti AI (agentic discovery), così il catalogo è leggibile anche fuori da Google.',
+        'Contenuti: abbiamo portato su Shopify il blog, e oggi la sitemap dello store conta oltre 140 articoli sulla salute, arrivati dal vecchio sito.',
+        'Redirect 301: gli indirizzi vecchi di prodotti, categorie e articoli vengono reindirizzati ai nuovi URL Shopify. Dopo il go live abbiamo controllato uno per uno 215 indirizzi del vecchio sito archiviati online e preparato i redirect per quelli che non portavano ancora alla pagina giusta.',
+        'Storico: ordini e clienti dal 2023 sono passati su Shopify, così niente è ripartito da zero, né per le email né per le analisi.',
+        'Agenti AI: lo store pubblica la sitemap che Shopify prepara per gli assistenti AI (agentic discovery), così il catalogo è leggibile anche fuori da Google.',
       ],
     },
     { type: 'h3', text: 'Le prime due settimane senza pubblicità' },
@@ -157,7 +157,7 @@ export const nazzi: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Rispetto agli stessi giorni del 2025, sulla vecchia piattaforma, le vendite sono cresciute del 46% e lo scontrino medio del 33%. Senza un euro di advertising.',
+      text: 'Rispetto agli stessi giorni del 2025, sulla vecchia piattaforma, le vendite sono cresciute del 46% e lo scontrino medio del 33%, senza un euro di advertising.',
     },
     {
       type: 'paragraph',
@@ -196,7 +196,7 @@ export const nazzi: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Il dato che ci piace di più però è un altro: i clienti che tornano. In questi tre mesi sono stati più del doppio dell’anno prima. Il lavoro del 2025 sulle email e quello del 2026 sul sito si stanno sommando.',
+      text: 'Il dato che ci piace di più sono i clienti che tornano. In questi tre mesi sono stati più del doppio dell’anno prima. Il lavoro del 2025 sulle email e quello del 2026 sul sito si stanno sommando.',
     },
     {
       type: 'paragraph',
@@ -215,7 +215,7 @@ export const nazzi: UseCase = {
     { type: 'h2', text: 'Cosa insegna questo caso sulla migrazione a Shopify' },
     {
       type: 'paragraph',
-      text: 'Una migrazione fatta bene non si misura il giorno del lancio. Si misura nei mesi dopo: se Google ti ritrova, se i clienti tornano, se i numeri reggono anche con le campagne spente.',
+      text: 'Una migrazione fatta bene si misura nei mesi dopo il lancio: se Google ti ritrova, se i clienti tornano, se i numeri reggono anche con le campagne spente.',
     },
     {
       type: 'paragraph',
@@ -236,7 +236,7 @@ export const nazzi: UseCase = {
     { type: 'h2', text: 'Questo modello funziona per te?' },
     {
       type: 'paragraph',
-      text: 'Se hai un prodotto vero, che le persone cercano, ma uno store su WooCommerce che non ti segue più, sai di cosa parliamo. Il punto non è cambiare piattaforma. È farlo senza perdere quello che hai costruito, e usare il cambio per crescere.',
+      text: 'Se hai un prodotto vero, che le persone cercano, ma uno store su WooCommerce che non ti segue più, sai di cosa parliamo. L’obiettivo è cambiare piattaforma senza perdere quello che hai costruito, e usare il cambio per crescere.',
     },
     {
       type: 'paragraph',
@@ -286,11 +286,11 @@ export const nazzi: UseCase = {
     { type: 'paragraph', text: 'Live on Shopify since: July 19, 2026' },
     {
       type: 'paragraph',
-      text: '**In short.** Supplement DTC Nazzi moved from WooCommerce to Shopify on July 19, 2026 with NoProb Agency. In the first 85 days online sales grew 105% compared with the same days of 2025, returning customers more than doubled and Google clicks in the last 28 days are 2.7 times those of a year earlier. Every number is a percentage comparison on Shopify, Meta and Google Search Console data: sources are at the bottom of the page.',
+      text: 'In short: Supplement DTC Nazzi moved from WooCommerce to Shopify on July 19, 2026 with NoProb Agency. In the first 85 days online sales grew 105% compared with the same days of 2025, returning customers more than doubled and Google clicks in the last 28 days are 2.7 times those of a year earlier. Every number is a percentage comparison on Shopify, Meta and Google Search Console data: sources are at the bottom of the page.',
     },
     {
       type: 'paragraph',
-      text: 'Changing platform is scary for one simple reason: you built something and you do not want to lose it. Customers, Google rankings, the habits of the people who buy from you. This case study tells how we migrated Supplement DTC Nazzi from WooCommerce to Shopify, and what happened next.',
+      text: 'Changing platform is scary because you built something and you do not want to lose it: customers, Google rankings, the habits of the people who buy from you. Here we tell how we migrated Supplement DTC Nazzi from WooCommerce to Shopify, and what happened next.',
     },
     {
       type: 'paragraph',
@@ -299,11 +299,11 @@ export const nazzi: UseCase = {
     {
       type: 'list',
       items: [
-        'online sales: **+105%**',
-        'orders: **+77%**',
-        'average order value: **+16%**',
-        'returning customers: **2.25 times** the year before',
-        'clicks from Google in the last 28 days: **2.7 times** the same period of 2025',
+        'online sales: +105%',
+        'orders: +77%',
+        'average order value: +16%',
+        'returning customers: 2.25 times the year before',
+        'clicks from Google in the last 28 days: 2.7 times the same period of 2025',
       ],
     },
     { type: 'h2', text: 'The starting point' },
@@ -313,7 +313,7 @@ export const nazzi: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'A product with a story like this has a huge advantage online: people search for it. The job is to be found, and then to be chosen.',
+      text: 'A product with a story like this already has an advantage online: people search for it. The job is to be found and then to be chosen.',
     },
     {
       type: 'paragraph',
@@ -342,7 +342,7 @@ export const nazzi: UseCase = {
     { type: 'h3', text: '2025: bringing back the people who already bought' },
     {
       type: 'paragraph',
-      text: 'In 2025 we moved the weight to email marketing with Klaviyo: seasonal campaigns, offers for regular customers, follow ups after the purchase. Less noise, more relationship.',
+      text: 'In 2025 we moved the weight to email marketing with Klaviyo: seasonal campaigns, offers for regular customers, follow ups after the purchase.',
     },
     {
       type: 'paragraph',
@@ -371,21 +371,21 @@ export const nazzi: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'The new site tells the pharmacy for what it is: formulas prepared by pharmacists, notified to the Ministry of Health, free shipping over €50 and a real pharmacist on WhatsApp. It is not a catalog. It is the pharmacy counter, brought online.',
+      text: 'The new site tells the pharmacy for what it is: formulas prepared by pharmacists, notified to the Ministry of Health, free shipping over €50 and a real pharmacist on WhatsApp. It is the pharmacy counter, brought online.',
     },
     { type: 'paragraph', text: 'On July 19, 2026 the new store went live.' },
     { type: 'h3', text: 'How we protected SEO during the migration' },
     {
       type: 'paragraph',
-      text: 'In a migration the real risk is not the design. It is losing what Google has learned about your site over the years. For Supplement DTC Nazzi we worked on four fronts.',
+      text: 'In a migration the biggest risk is losing what Google has learned about your site over the years. For Supplement DTC Nazzi we worked on four fronts.',
     },
     {
       type: 'list',
       items: [
-        '**Content.** We moved the blog to Shopify: today the store sitemap lists over 140 health articles, brought over from the old site.',
-        '**301 redirects.** Old product, category and article addresses are redirected to the new Shopify URLs. After go live we checked one by one 215 archived addresses of the old site and prepared redirects for the ones that did not lead to the right page yet.',
-        '**History.** Orders and customers since 2023 moved to Shopify: nothing started from zero, neither for email nor for analysis.',
-        '**AI agents.** The store publishes the sitemap Shopify prepares for AI assistants (agentic discovery), so the catalog is readable outside Google too.',
+        'Content: we moved the blog to Shopify, and today the store sitemap lists over 140 health articles, brought over from the old site.',
+        '301 redirects: old product, category and article addresses are redirected to the new Shopify URLs. After go live we checked one by one 215 archived addresses of the old site and prepared redirects for the ones that did not lead to the right page yet.',
+        'History: orders and customers since 2023 moved to Shopify, so nothing started from zero, neither for email nor for analysis.',
+        'AI agents: the store publishes the sitemap Shopify prepares for AI assistants (agentic discovery), so the catalog is readable outside Google too.',
       ],
     },
     { type: 'h3', text: 'The first two weeks without advertising' },
@@ -395,7 +395,7 @@ export const nazzi: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Compared with the same days of 2025, on the old platform, sales grew 46% and average order value 33%. Without a single euro of advertising.',
+      text: 'Compared with the same days of 2025, on the old platform, sales grew 46% and average order value 33%, without a single euro of advertising.',
     },
     {
       type: 'paragraph',
@@ -434,7 +434,7 @@ export const nazzi: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'The number we like most is another one: returning customers. In these three months they were more than double the year before. The 2025 work on email and the 2026 work on the site are adding up.',
+      text: 'The number we like most is returning customers. In these three months they were more than double the year before. The 2025 work on email and the 2026 work on the site are adding up.',
     },
     { type: 'paragraph', text: 'By mid October 2026 the store has already sold 20% more than the whole of 2025.' },
     { type: 'h3', text: 'The quiz: advice like at the counter' },
@@ -450,7 +450,7 @@ export const nazzi: UseCase = {
     { type: 'h2', text: 'What this case teaches about migrating to Shopify' },
     {
       type: 'paragraph',
-      text: 'A good migration is not measured on launch day. It is measured in the months after: whether Google finds you again, whether customers come back, whether the numbers hold even with the campaigns off.',
+      text: 'A good migration is measured in the months after launch: whether Google finds you again, whether customers come back, whether the numbers hold even with the campaigns off.',
     },
     {
       type: 'paragraph',
@@ -471,7 +471,7 @@ export const nazzi: UseCase = {
     { type: 'h2', text: 'Does this model work for you?' },
     {
       type: 'paragraph',
-      text: 'If you have a real product that people search for, but a WooCommerce store that no longer keeps up with you, you know what we mean. The point is not to change platform. It is to do it without losing what you built, and to use the change to grow.',
+      text: 'If you have a real product that people search for, but a WooCommerce store that no longer keeps up with you, you know what we mean. The goal is to change platform without losing what you built, and to use the change to grow.',
     },
     {
       type: 'paragraph',

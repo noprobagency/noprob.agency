@@ -108,7 +108,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'This article decides. If you have already decided and want the how, read the [BigCommerce to Shopify migration guide](/blog/bigcommerce-to-shopify-migration).',
+      text: 'If you have already decided and want the how, read the [BigCommerce to Shopify migration guide](/blog/bigcommerce-to-shopify-migration).',
     },
     { type: 'h2', text: 'Which is better, BigCommerce or Shopify?' },
     {
@@ -147,7 +147,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'On Shopify the plan is a feature choice, not a sales threshold: you move up for staff, locations, B2B catalogs or checkout, and Plus is a decision, not an automatic jump. **My rule: on BigCommerce price the plan you will need in twelve months; on Shopify price the features you will need.**',
+      text: 'On Shopify the plan is a feature choice, not a sales threshold: you move up for staff, locations, B2B catalogs or checkout, and moving to Plus is a decision you make. **My rule: on BigCommerce price the plan you will need in twelve months; on Shopify price the features you will need.**',
     },
     { type: 'h2', text: 'What are the transaction fees on BigCommerce and Shopify?' },
     {
@@ -163,7 +163,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'The honest summary: choose the payment provider you want, then read what each platform adds on top. Card rates depend on country and provider, so check availability for yours. On a €10 sale on Shopify Basic with Shopify Payments the fee is [1.8% + €0.30](https://www.shopify.com/pricing), which is €0.48; with another gateway Shopify adds [2%](https://www.shopify.com/pricing), or €0.20, and the gateway charges its own fee.',
+      text: 'Choose the payment provider you want, then read what each platform adds on top. Card rates depend on country and provider, so check availability for yours. On a €10 sale on Shopify Basic with Shopify Payments the fee is [1.8% + €0.30](https://www.shopify.com/pricing), which is €0.48; with another gateway Shopify adds [2%](https://www.shopify.com/pricing), or €0.20, and the gateway charges its own fee.',
     },
     { type: 'h2', text: 'BigCommerce vs Shopify at a glance' },
     {
@@ -224,7 +224,7 @@ const article: Article = {
     { type: 'h2', text: 'Which ecosystem is bigger: apps and agencies?' },
     {
       type: 'paragraph',
-      text: '**Shopify’s ecosystem is much larger: its [App Store](https://apps.shopify.com/) lists over 16,000 apps and BigCommerce’s [marketplace](https://www.bigcommerce.com/apps/) over 1,200, both on their own pages on 29 October 2026.** That is a fact, but not a verdict.',
+      text: '**Shopify’s ecosystem is much larger: its [App Store](https://apps.shopify.com/) lists over 16,000 apps and BigCommerce’s [marketplace](https://www.bigcommerce.com/apps/) over 1,200, both on their own pages on 29 October 2026.**',
     },
     {
       type: 'paragraph',
@@ -301,7 +301,7 @@ const article: Article = {
         '**B2B Edition runs your sales:** quotes, invoices on net terms and the buyer portal are in daily use and your buyers like them.',
         '**You have an API-first build** that your team maintains and that performs well: rebuilding it costs more than it saves.',
         '**The numbers work:** at your sales level the plan, the payment fees and the extra storefronts cost less than the same store on Shopify with its apps. Do the math in the sheet below.',
-        '**The store converts and the team is happy.** If you cannot say in one sentence what hurts today, do not migrate. A migration is a project, not a reward.',
+        '**The store converts and the team is happy.** If you cannot say in one sentence what hurts today, do not migrate.',
       ],
     },
     { type: 'h2', text: 'When should you move to Shopify?' },
@@ -405,7 +405,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Questo articolo serve a decidere. Se hai già deciso e vuoi sapere come si fa, leggi la [guida alla migrazione da BigCommerce a Shopify](/it/blog/migrazione-bigcommerce-shopify).',
+      text: 'Se hai già deciso e vuoi sapere come si fa, leggi la [guida alla migrazione da BigCommerce a Shopify](/it/blog/migrazione-bigcommerce-shopify).',
     },
     { type: 'h2', text: 'Meglio BigCommerce o Shopify?' },
     {
@@ -444,7 +444,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Su Shopify il piano è una scelta di funzioni, non una soglia di vendite: sali per staff, sedi, cataloghi B2B o checkout, e Plus è una decisione, non un salto automatico. **La mia regola: su BigCommerce calcola il piano che ti servirà tra dodici mesi; su Shopify calcola le funzioni che ti servono.**',
+      text: 'Su Shopify il piano è una scelta di funzioni, non una soglia di vendite: sali per staff, sedi, cataloghi B2B o checkout, e passare a Plus è una decisione che prendi tu. **La mia regola: su BigCommerce calcola il piano che ti servirà tra dodici mesi; su Shopify calcola le funzioni che ti servono.**',
     },
     { type: 'h2', text: 'Quali sono le commissioni sulle transazioni di BigCommerce e Shopify?' },
     {
@@ -460,7 +460,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Il riassunto onesto: scegli il provider di pagamento che vuoi, poi leggi cosa aggiunge ciascuna piattaforma. Le tariffe delle carte dipendono da paese e provider, quindi verifica la disponibilità nel tuo. Su una vendita da 10 € sul Basic di Shopify con Shopify Payments la commissione è [1,8% + 0,30 €](https://www.shopify.com/pricing), cioè 0,48 €; con un altro gateway Shopify aggiunge il [2%](https://www.shopify.com/pricing), cioè 0,20 €, e il gateway applica la sua commissione.',
+      text: 'Scegli il provider di pagamento che vuoi, poi leggi cosa aggiunge ciascuna piattaforma. Le tariffe delle carte dipendono da paese e provider, quindi verifica la disponibilità nel tuo. Su una vendita da 10 € sul Basic di Shopify con Shopify Payments la commissione è [1,8% + 0,30 €](https://www.shopify.com/pricing), cioè 0,48 €; con un altro gateway Shopify aggiunge il [2%](https://www.shopify.com/pricing), cioè 0,20 €, e il gateway applica la sua commissione.',
     },
     { type: 'h2', text: 'BigCommerce vs Shopify in sintesi' },
     {
@@ -521,7 +521,7 @@ const article: Article = {
     { type: 'h2', text: 'Quale ecosistema è più grande: app e agenzie?' },
     {
       type: 'paragraph',
-      text: '**L’ecosistema di Shopify è molto più grande: il suo [App Store](https://apps.shopify.com/) elenca oltre 16.000 app e il [marketplace](https://www.bigcommerce.com/apps/) di BigCommerce oltre 1.200, secondo le loro pagine del 29 ottobre 2026.** È un fatto, non un verdetto.',
+      text: '**L’ecosistema di Shopify è molto più grande: il suo [App Store](https://apps.shopify.com/) elenca oltre 16.000 app e il [marketplace](https://www.bigcommerce.com/apps/) di BigCommerce oltre 1.200, secondo le loro pagine del 29 ottobre 2026.**',
     },
     {
       type: 'paragraph',
@@ -598,7 +598,7 @@ const article: Article = {
         '**B2B Edition regge le tue vendite:** preventivi, fatture a pagamento dilazionato e portale buyer sono in uso ogni giorno e i tuoi buyer li apprezzano.',
         '**Hai una build API-first** che il tuo team mantiene e che funziona bene: ricostruirla costa più di quanto fa risparmiare.',
         '**I numeri tornano:** al tuo livello di vendite piano, commissioni di pagamento e storefront aggiuntivi costano meno dello stesso store su Shopify con le sue app. Fai i conti nel foglio qui sotto.',
-        '**Lo store converte e il team è contento.** Se non sai dire in una frase cosa fa male oggi, non migrare. Una migrazione è un progetto, non un premio.',
+        '**Lo store converte e il team è contento.** Se non sai dire in una frase cosa fa male oggi, non migrare.',
       ],
     },
     { type: 'h2', text: 'Quando conviene passare a Shopify?' },

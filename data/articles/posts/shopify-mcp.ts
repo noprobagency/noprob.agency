@@ -12,9 +12,9 @@ const article: Article = {
   seoDescriptionIt:
     'Shopify MCP spiegato a chi gestisce uno store: quali server esistono, cosa fa ciascuno, cosa serve per collegarli e quali permessi dare all’AI.',
   excerpt:
-    'Shopify MCP is not one server but a family. A plain-language map for merchants and eCommerce leads: the connector for your own store, the developer tools, the agent servers, what you need to connect them and the permissions to give.',
+    'Shopify MCP is a family of servers. A plain-language map for merchants and eCommerce leads: the connector for your own store, the developer tools, the agent servers, what you need to connect them and the permissions to give.',
   excerptIt:
-    'Shopify MCP non è un server solo ma una famiglia. Una mappa in parole semplici per chi gestisce uno store: il connettore per il tuo store, gli strumenti per sviluppatori, i server per gli agenti, cosa serve per collegarli e i permessi da dare.',
+    'Shopify MCP è una famiglia di server. Una mappa in parole semplici per chi gestisce uno store: il connettore per il tuo store, gli strumenti per sviluppatori, i server per gli agenti, cosa serve per collegarli e i permessi da dare.',
   ledeEn:
     'Shopify MCP is a family of servers, and most guides are written for developers. Here is which one does what for your store, what you need to connect it and where the risks are.',
   ledeIt:
@@ -100,7 +100,7 @@ const article: Article = {
   content: [
     {
       type: 'paragraph',
-      text: '**Shopify MCP is the set of servers that let an AI tool such as Claude read and act on a Shopify store through the Model Context Protocol (MCP).** There is no single “Shopify MCP”. There is one for merchants who manage their own store from a chat, one for developers, and a group of agent servers that let shopping assistants search a catalog and build a cart. This guide is for a merchant or eCommerce lead, and it follows Shopify’s documentation as of 29 October 2026.',
+      text: '**Shopify MCP is the set of servers that let an AI tool such as Claude read and act on a Shopify store through the Model Context Protocol (MCP).** Shopify offers several of them: one for merchants who manage their own store from a chat, one for developers, and a group of agent servers that let shopping assistants search a catalog and build a cart. This guide is for a merchant or eCommerce lead, and it follows Shopify’s documentation as of 29 October 2026.',
     },
     {
       type: 'paragraph',
@@ -117,7 +117,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'What MCP does not do: decide the rules. It standardizes the plug, not who may call what, which actions need your confirmation or what happens when the model gets it wrong. That part stays yours. The [MCP specification](https://modelcontextprotocol.io/specification/2026-07-28/server/tools) itself says there should always be a human who can deny a tool call.',
+      text: 'MCP does not decide the rules. It standardizes the plug. Who may call what, which actions need your confirmation and what happens when the model gets it wrong all stay with you. The [MCP specification](https://modelcontextprotocol.io/specification/2026-07-28/server/tools) itself says there should always be a human who can deny a tool call.',
     },
     { type: 'h2', text: 'Which Shopify MCP servers exist today?' },
     {
@@ -201,7 +201,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'What it cannot do, even with write access: refunds, order cancellation or capture, marking an order paid, returns, gift cards, and changes to plan, payments, taxes or domains. It cannot edit or delete your live theme, and it asks you to confirm before publishing a theme or making certain Admin API changes. Those limits are a feature. They are the reason we are comfortable suggesting it to a store owner.',
+      text: 'What it cannot do, even with write access: refunds, order cancellation or capture, marking an order paid, returns, gift cards, and changes to plan, payments, taxes or domains. It cannot edit or delete your live theme, and it asks you to confirm before publishing a theme or making certain Admin API changes. Those limits are why we are comfortable suggesting it to a store owner.',
     },
     {
       type: 'paragraph',
@@ -210,7 +210,7 @@ const article: Article = {
     { type: 'h2', text: 'What do Dev MCP and the AI Toolkit do?' },
     {
       type: 'paragraph',
-      text: '**Dev MCP and the AI Toolkit give an AI coding assistant Shopify’s current documentation and checks, so it writes Liquid, GraphQL and extensions against the real schema instead of its memory.** They are for the person building the store, not for the person selling in it.',
+      text: '**Dev MCP and the AI Toolkit give an AI coding assistant Shopify’s current documentation and checks, so it writes Liquid, GraphQL and extensions against the real schema instead of its memory.** They are for the person building the store; if you only sell in it, you can skip them.',
     },
     {
       type: 'paragraph',
@@ -231,7 +231,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'For you, the work is data, not connection: complete attributes, accurate prices and stock, readable policies. That is the same work as in [GEO for Shopify](/blog/geo-for-shopify), and it is easiest during a migration, when every product is touched anyway: see our [guide to migrating to Shopify](/shopify-migration). On [Nazzi’s store](/use-cases/integratori-nazzi-dtc-shopify) we published a sitemap for agentic discovery. If you want your own assistant on top of these servers, the choice between chatbot, workflow and agent is in [AI agents for Shopify](/blog/ai-agents-for-shopify).',
+      text: 'For you, the work is the data: complete attributes, accurate prices and stock, readable policies. That is the same work as in [GEO for Shopify](/blog/geo-for-shopify), and it is easiest during a migration, when every product is touched anyway: see our [guide to migrating to Shopify](/shopify-migration). On [Nazzi’s store](/use-cases/integratori-nazzi-dtc-shopify) we published a sitemap for agentic discovery. If you want your own assistant on top of these servers, the choice between chatbot, workflow and agent is in [AI agents for Shopify](/blog/ai-agents-for-shopify).',
     },
     { type: 'h2', text: 'What do you need to connect a Shopify MCP server?' },
     {
@@ -332,7 +332,7 @@ const article: Article = {
   contentIt: [
     {
       type: 'paragraph',
-      text: '**Shopify MCP è l’insieme dei server che permettono a uno strumento AI come Claude di leggere e agire su uno store Shopify attraverso il Model Context Protocol (MCP).** Non esiste un unico “Shopify MCP”. Ce n’è uno per chi gestisce il proprio store da una chat, uno per gli sviluppatori e un gruppo di server per agenti che fanno cercare un catalogo e creare un carrello agli assistenti d’acquisto. Questa guida è per chi gestisce uno store o guida l’eCommerce e segue la documentazione di Shopify al 29 ottobre 2026.',
+      text: '**Shopify MCP è l’insieme dei server che permettono a uno strumento AI come Claude di leggere e agire su uno store Shopify attraverso il Model Context Protocol (MCP).** Shopify ne offre più d’uno: uno per chi gestisce il proprio store da una chat, uno per gli sviluppatori e un gruppo di server per agenti che fanno cercare un catalogo e creare un carrello agli assistenti d’acquisto. Questa guida è per chi gestisce uno store o guida l’eCommerce e segue la documentazione di Shopify al 29 ottobre 2026.',
     },
     {
       type: 'paragraph',
@@ -349,7 +349,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Cosa MCP non fa: decidere le regole. Standardizza la presa, non chi può chiamare cosa, quali azioni richiedono la tua conferma o cosa succede quando il modello sbaglia. Quella parte resta tua. La stessa [specifica di MCP](https://modelcontextprotocol.io/specification/2026-07-28/server/tools) dice che ci dovrebbe sempre essere una persona in grado di negare una chiamata a uno strumento.',
+      text: 'MCP non decide le regole. Standardizza la presa. Chi può chiamare cosa, quali azioni richiedono la tua conferma e cosa succede quando il modello sbaglia restano a te. La stessa [specifica di MCP](https://modelcontextprotocol.io/specification/2026-07-28/server/tools) dice che ci dovrebbe sempre essere una persona in grado di negare una chiamata a uno strumento.',
     },
     { type: 'h2', text: 'Quali server Shopify MCP esistono oggi?' },
     {
@@ -433,7 +433,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Cosa non può fare, nemmeno con accesso in scrittura: rimborsi, annullamento o cattura degli ordini, segnare un ordine come pagato, resi, gift card e modifiche a piano, pagamenti, tasse o domini. Non può modificare né eliminare il tema pubblicato e chiede conferma prima di pubblicare un tema o di fare certe modifiche tramite Admin API. Questi limiti sono un pregio: sono il motivo per cui ci sentiamo di consigliarlo a chi gestisce uno store.',
+      text: 'Cosa non può fare, nemmeno con accesso in scrittura: rimborsi, annullamento o cattura degli ordini, segnare un ordine come pagato, resi, gift card e modifiche a piano, pagamenti, tasse o domini. Non può modificare né eliminare il tema pubblicato e chiede conferma prima di pubblicare un tema o di fare certe modifiche tramite Admin API. Questi limiti sono il motivo per cui ci sentiamo di consigliarlo a chi gestisce uno store.',
     },
     {
       type: 'paragraph',
@@ -442,7 +442,7 @@ const article: Article = {
     { type: 'h2', text: 'A cosa servono Dev MCP e AI Toolkit?' },
     {
       type: 'paragraph',
-      text: '**Dev MCP e AI Toolkit danno a un assistente AI per il codice la documentazione e i controlli aggiornati di Shopify, così scrive Liquid, GraphQL ed estensioni sullo schema vero invece che a memoria.** Sono per chi costruisce lo store, non per chi ci vende.',
+      text: '**Dev MCP e AI Toolkit danno a un assistente AI per il codice la documentazione e i controlli aggiornati di Shopify, così scrive Liquid, GraphQL ed estensioni sullo schema vero invece che a memoria.** Sono per chi costruisce lo store; se ci vendi soltanto, puoi saltarli.',
     },
     {
       type: 'paragraph',
@@ -463,7 +463,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Per te il lavoro è sui dati, non sulla connessione: attributi completi, prezzi e scorte corretti, policy leggibili. È lo stesso lavoro di [GEO SEO per Shopify](/it/blog/geo-seo-shopify), ed è più semplice durante una migrazione, quando ogni prodotto viene toccato comunque: vedi la nostra [guida alla migrazione a Shopify](/it/migrazione-shopify). Su [Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify) abbiamo pubblicato una sitemap per l’agentic discovery. Se vuoi un tuo assistente sopra questi server, la scelta tra chatbot, workflow e agente è in [agenti AI per Shopify](/it/blog/agenti-ai-shopify).',
+      text: 'Per te il lavoro è sui dati: attributi completi, prezzi e scorte corretti, policy leggibili. È lo stesso lavoro di [GEO SEO per Shopify](/it/blog/geo-seo-shopify), ed è più semplice durante una migrazione, quando ogni prodotto viene toccato comunque: vedi la nostra [guida alla migrazione a Shopify](/it/migrazione-shopify). Su [Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify) abbiamo pubblicato una sitemap per l’agentic discovery. Se vuoi un tuo assistente sopra questi server, la scelta tra chatbot, workflow e agente è in [agenti AI per Shopify](/it/blog/agenti-ai-shopify).',
     },
     { type: 'h2', text: 'Cosa serve per collegare un server Shopify MCP?' },
     {

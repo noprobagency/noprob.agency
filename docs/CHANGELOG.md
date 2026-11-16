@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1 212.1.0 (16 Nov 2026)
+
+- **Humanizer pass on the whole site**: 19 parallel passes with the humanizer skill over every public text (home and global copy, migration guide, Sprint landing, AI Accelerator, development and SEO pages, AI agents, data team, blocks, ambassador, `llms.txt`, the three case studies and all 37 blog articles, IT and EN), in Antonio's voice (`SEO/data/interviste/voce-di-antonio.md`). Targeted edits only: "not X but Y" contrasts roughly halved (80 to 39), dramatic closers and fragments, aphorisms, staged openers, self-describing sentences and decorative bold (about 900 fewer) removed. Facts, numbers, links, slugs, SEO titles, FAQ questions, the Sprint offer and the mandatory closing line unchanged (checked file by file against main); legal pages untouched (Francesca).
+
 ### Changelog v1.212.0 (16 Nov 2026)
 
 - Ada, US finding: every row gets `findingAt`, also when the site does not answer, is on Shopify or is opted out, so the engine sees the batch as finished (two unreachable rows had kept batch 2 out).

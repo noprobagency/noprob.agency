@@ -113,12 +113,12 @@ const article: Article = {
     { type: 'h2', text: 'Squarespace or Shopify: design platform or commerce platform?' },
     {
       type: 'paragraph',
-      text: 'Squarespace is the better home for a brand whose pages do the selling; Shopify is the better home for a brand whose catalog and operations do. The difference is not the look, because both can look excellent. It is what happens on the day you have hundreds of products, three countries to ship to and someone packing boxes.',
+      text: 'Squarespace is the better home for a brand whose pages do the selling; Shopify is the better home for a brand whose catalog and operations do. Both can look excellent. The difference shows on the day you have hundreds of products, three countries to ship to and someone packing boxes.',
     },
     { type: 'h2', text: 'What does Squarespace do better than Shopify?' },
     {
       type: 'paragraph',
-      text: 'Squarespace makes a coherent, beautiful site faster and with less to manage. Layout, typography and the blog sit in the same editor, so a founder with taste can ship a good page in an afternoon, with no developer and no app to choose. Shopify can match the result, but someone has to build it: its strength is the machinery behind the page, not the editor in front of it.',
+      text: 'Squarespace makes a coherent, beautiful site faster and with less to manage. Layout, typography and the blog sit in the same editor, so a founder with taste can ship a good page in an afternoon, with no developer and no app to choose. Shopify can match the result, but someone has to build it: its strength is the machinery behind the page.',
     },
     {
       type: 'paragraph',
@@ -161,12 +161,12 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'One yes is a nuisance. Three yes is a platform problem. That rule is ours, not Squarespace’s or Shopify’s, and it is a judgment call: a brand with two yeses and a strong content engine may still be right to stay.',
+      text: 'One yes is a nuisance. Three yeses are a platform problem. That rule is ours and it is a judgment call: a brand with two yeses and a strong content engine may still be right to stay.',
     },
     { type: 'h2', text: 'Can a Shopify store keep the look of your Squarespace site?' },
     {
       type: 'paragraph',
-      text: 'Yes, if the front end is rebuilt from your design instead of picked from a catalog. Design-led brands are right to fear a migration that swaps their look for a generic template. The answer is not to stay put: it is to treat the look as a specification. Four steps:',
+      text: 'Yes, if the front end is rebuilt from your design instead of picked from a catalog. Design-led brands are right to fear a migration that swaps their look for a generic template. The way through is to treat the look as a specification. Four steps:',
     },
     {
       type: 'list',
@@ -179,7 +179,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'A migration is not a redesign. The Sprint is not a restyling: it is your store, faster and shorter to buy from. If you want a new look, that is a separate and later decision. We have run this design step on a WooCommerce store and on a proprietary platform; the step is the same, only the source differs.',
+      text: 'The Sprint moves your store as it is, faster and shorter to buy from. If you want a new look, that is a separate and later decision. We have run this design step on a WooCommerce store and on a proprietary platform; the step is the same, only the source differs.',
     },
     { type: 'h2', text: 'Which Squarespace content leaves with you, and which stays behind?' },
     {
@@ -225,7 +225,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'The results belong to those two brands; what we bring to yours is the method: the data reconciled before anything else, the store rebuilt 1:1, every URL redirected and tested. Everything specific to Squarespace in this article, the formats and the gaps, comes from the Squarespace and Shopify documentation linked above, so you can check it yourself.',
+      text: 'The results belong to those two brands. To yours we bring the same method: the data reconciled first, the store rebuilt 1:1, every URL redirected and tested. Everything specific to Squarespace in this article, the formats and the gaps, comes from the Squarespace and Shopify documentation linked above, so you can check it yourself.',
     },
     {
       type: 'paragraph',
@@ -265,7 +265,7 @@ const article: Article = {
     { type: 'h2', text: 'Keep the look, change the engine' },
     {
       type: 'paragraph',
-      text: 'Brands rarely leave Squarespace because it is bad. They leave because the shop grew into a business and the site stayed a site. The look you built is an asset worth carrying over, and carrying it over is a build job, not a template choice.',
+      text: 'Brands usually leave Squarespace when the shop has become the main business and the site has stayed a site. The look you built is worth carrying over, and a template cannot do that: it takes a build, rewriting the front end from your design.',
     },
     {
       type: 'paragraph',
@@ -296,12 +296,12 @@ const article: Article = {
     { type: 'h2', text: 'Squarespace o Shopify: piattaforma di design o piattaforma di commercio?' },
     {
       type: 'paragraph',
-      text: 'Squarespace è la casa migliore per un brand che vende con le sue pagine; Shopify è la casa migliore per un brand che vende con il catalogo e con le operazioni. La differenza non è l’aspetto, perché entrambi possono essere bellissimi. È cosa succede il giorno in cui hai centinaia di prodotti, tre paesi in cui spedire e qualcuno che prepara i pacchi.',
+      text: 'Squarespace è la casa migliore per un brand che vende con le sue pagine; Shopify è la casa migliore per un brand che vende con il catalogo e con le operazioni. Entrambi possono essere bellissimi. La differenza si vede il giorno in cui hai centinaia di prodotti, tre paesi in cui spedire e qualcuno che prepara i pacchi.',
     },
     { type: 'h2', text: 'Cosa fa meglio Squarespace rispetto a Shopify?' },
     {
       type: 'paragraph',
-      text: 'Squarespace fa un sito coerente e bello più in fretta e con meno da gestire. Layout, tipografia e blog stanno nello stesso editor, quindi un founder con gusto pubblica una bella pagina in un pomeriggio, senza sviluppatore e senza scegliere app. Shopify può eguagliare il risultato, ma qualcuno lo deve costruire: la sua forza è il meccanismo dietro la pagina, non l’editor davanti.',
+      text: 'Squarespace fa un sito coerente e bello più in fretta e con meno da gestire. Layout, tipografia e blog stanno nello stesso editor, quindi un founder con gusto pubblica una bella pagina in un pomeriggio, senza sviluppatore e senza scegliere app. Shopify può eguagliare il risultato, ma qualcuno lo deve costruire: la sua forza è il meccanismo dietro la pagina.',
     },
     {
       type: 'paragraph',
@@ -344,12 +344,12 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Un sì è un fastidio. Tre sì sono un problema di piattaforma. Questa regola è nostra, non di Squarespace né di Shopify, ed è un giudizio: un brand con due sì e un forte motore di contenuti può avere ragione a restare.',
+      text: 'Un sì è un fastidio. Tre sì sono un problema di piattaforma. Questa regola è nostra ed è un giudizio: un brand con due sì e un forte motore di contenuti può avere ragione a restare.',
     },
     { type: 'h2', text: 'Uno store Shopify può mantenere il design del tuo sito Squarespace?' },
     {
       type: 'paragraph',
-      text: 'Sì, se il front end viene ricostruito dal tuo design invece di essere scelto da un catalogo. Chi cura il design fa bene a temere una migrazione che scambia il suo stile con un modello generico. La risposta non è restare dove sei: è trattare lo stile come una specifica. Quattro passi:',
+      text: 'Sì, se il front end viene ricostruito dal tuo design invece di essere scelto da un catalogo. Chi cura il design fa bene a temere una migrazione che scambia il suo stile con un modello generico. La strada è trattare lo stile come una specifica. Quattro passi:',
     },
     {
       type: 'list',
@@ -362,7 +362,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Una migrazione non è un redesign. Lo Sprint non è un restyling: è il tuo store, più veloce e più corto da comprare. Se vuoi un nuovo stile, è una decisione separata e successiva. Questo passaggio sul design l’abbiamo fatto su uno store WooCommerce e su una piattaforma proprietaria; il passaggio è lo stesso, cambia solo la sorgente.',
+      text: 'Lo Sprint sposta il tuo store così com’è, più veloce e più corto da comprare. Se vuoi un nuovo stile, è una decisione separata e successiva. Questo passaggio sul design l’abbiamo fatto su uno store WooCommerce e su una piattaforma proprietaria; il passaggio è lo stesso, cambia solo la sorgente.',
     },
     { type: 'h2', text: 'Quali contenuti di Squarespace vengono con te e quali restano lì?' },
     {
@@ -408,7 +408,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'I risultati sono di quei due brand; al tuo portiamo il metodo: i dati riconciliati prima di tutto, lo store ricostruito 1:1, ogni URL rediretto e testato. Tutto ciò che in questo articolo è specifico di Squarespace, formati e lacune, viene dalla documentazione di Squarespace e di Shopify linkata sopra, così puoi verificarlo da solo.',
+      text: 'I risultati sono di quei due brand. Al tuo portiamo lo stesso metodo: i dati riconciliati per primi, lo store ricostruito 1:1, ogni URL rediretto e testato. Tutto ciò che in questo articolo è specifico di Squarespace, formati e lacune, viene dalla documentazione di Squarespace e di Shopify linkata sopra, così puoi verificarlo da solo.',
     },
     {
       type: 'paragraph',
@@ -448,7 +448,7 @@ const article: Article = {
     { type: 'h2', text: 'Tieni il design, cambia il motore' },
     {
       type: 'paragraph',
-      text: 'Raramente i brand lasciano Squarespace perché è scadente. Lo lasciano perché il negozio è cresciuto fino a diventare l’attività e il sito è rimasto un sito. Il design che hai costruito vale la pena portarlo con te, e farlo è un lavoro di sviluppo, non la scelta di un modello.',
+      text: 'I brand di solito lasciano Squarespace quando il negozio è diventato l’attività principale e il sito è rimasto un sito. Il design che hai costruito vale la pena portarlo con te, e un modello pronto non lo fa: serve una build, che riscrive il front end a partire dal tuo design.',
     },
     {
       type: 'paragraph',

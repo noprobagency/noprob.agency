@@ -108,7 +108,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'We are noprob agency, enrolled in the Shopify Partner Program. We do not speak for Shopify: what follows is Shopify’s published rules, read and put in order, plus one worked example that is our arithmetic.',
+      text: 'We are noprob agency, enrolled in the Shopify Partner Program. We do not speak for Shopify. The rules below are Shopify’s published ones; the worked example is our arithmetic.',
     },
     { type: 'h2', text: 'How do you become a Shopify Partner?' },
     {
@@ -118,10 +118,10 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**Create the account** and accept the Partner Program Agreement.',
-        '**Choose how to earn:** stores for merchants, apps, themes or affiliation, which needs its own approval.',
-        '**Set up the organization:** verify your business email, enter the company details on the Organization page of the Dev Dashboard and add a payout method.',
-        '**Build a first client transfer store** from the Dev Dashboard to learn the platform and start a portfolio.',
+        'Create the account and accept the Partner Program Agreement.',
+        'Choose how to earn: stores for merchants, apps, themes or affiliation, which needs its own approval.',
+        'Set up the organization: verify your business email, enter the company details on the Organization page of the Dev Dashboard and add a payout method.',
+        'Build a first client transfer store from the Dev Dashboard to learn the platform and start a portfolio.',
       ],
     },
     {
@@ -259,7 +259,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Read it for what it is: a recurring extra on top of what you charge for the build, which grows with the number of stores that stay and sell. It is not a salary.',
+      text: 'It is a recurring extra on top of what you charge for the build, and it grows with the number of stores that stay and sell.',
     },
     { type: 'h2', text: 'What if your agency brings only a few stores a year?' },
     {
@@ -318,7 +318,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Siamo noprob agency, iscritta al programma partner Shopify. Non parliamo a nome di Shopify: quello che segue sono le regole pubblicate da Shopify, lette e messe in ordine, più un esempio di calcolo che è aritmetica nostra.',
+      text: 'Siamo noprob agency, iscritta al programma partner Shopify. Non parliamo a nome di Shopify. Le regole qui sotto sono quelle pubblicate da Shopify; l’esempio di calcolo è aritmetica nostra.',
     },
     { type: 'h2', text: 'Come si diventa partner Shopify?' },
     {
@@ -328,10 +328,10 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**Crea l’account** e accetta il Partner Program Agreement.',
-        '**Scegli come guadagnare:** store per merchant, app, temi o affiliazione, che richiede una sua approvazione.',
-        '**Imposta l’organizzazione:** verifica l’email aziendale, inserisci i dati dell’azienda nella pagina Organization del Dev Dashboard e aggiungi un metodo di pagamento.',
-        '**Crea un primo client transfer store** dal Dev Dashboard per conoscere la piattaforma e iniziare un portfolio.',
+        'Crea l’account e accetta il Partner Program Agreement.',
+        'Scegli come guadagnare: store per merchant, app, temi o affiliazione, che richiede una sua approvazione.',
+        'Imposta l’organizzazione: verifica l’email aziendale, inserisci i dati dell’azienda nella pagina Organization del Dev Dashboard e aggiungi un metodo di pagamento.',
+        'Crea un primo client transfer store dal Dev Dashboard per conoscere la piattaforma e iniziare un portfolio.',
       ],
     },
     {
@@ -469,7 +469,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Leggilo per quello che è: un extra ricorrente sopra quello che fatturi per la costruzione, che cresce con il numero di store che restano e vendono. Non è uno stipendio.',
+      text: 'È un extra ricorrente sopra quello che fatturi per la costruzione, e cresce con il numero di store che restano e vendono.',
     },
     { type: 'h2', text: 'E se la tua agenzia porta pochi store all’anno?' },
     {

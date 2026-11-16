@@ -199,7 +199,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'The safe verbs for an AI step are tag, note, draft and notify. If you catch yourself wanting more, you have found a task that probably needs an agent with proper tools and limits, not a longer workflow. That is a build in its own right, and it starts with [how to build an AI agent for your store](/blog/build-ai-agent-shopify).',
+      text: 'The safe verbs for an AI step are tag, note, draft and notify. If you catch yourself wanting more, you have found a task that probably needs an agent with proper tools and limits. That is a build in its own right, and it starts with [how to build an AI agent for your store](/blog/build-ai-agent-shopify).',
     },
     { type: 'h2', text: 'Does your store data support these workflows?' },
     {
@@ -431,7 +431,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'I verbi sicuri per un passaggio AI sono taggare, annotare, preparare una bozza, avvisare. Se ti accorgi di volerne di più, hai trovato un compito che probabilmente richiede un agente con strumenti e limiti fatti bene, non un workflow più lungo. È un progetto a parte, e parte da [come creare un agente AI per il tuo store](/it/blog/creare-agente-ai-shopify).',
+      text: 'I verbi sicuri per un passaggio AI sono taggare, annotare, preparare una bozza, avvisare. Se ti accorgi di volerne di più, hai trovato un compito che probabilmente richiede un agente con strumenti e limiti fatti bene. È un progetto a parte, e parte da [come creare un agente AI per il tuo store](/it/blog/creare-agente-ai-shopify).',
     },
     { type: 'h2', text: 'I dati del tuo store reggono questi workflow?' },
     {
@@ -521,7 +521,7 @@ const article: Article = {
     {
       question: 'Can Shopify Flow call ChatGPT or Claude?',
       answer:
-        'It can call any model that has a web endpoint through Send HTTP request: you set the URL, headers and body and use the reply in later steps. Flow waits 30 seconds at most, and Run code cannot make network calls, so the reply is read there, not fetched there.',
+        'It can call any model that has a web endpoint through Send HTTP request: you set the URL, headers and body and use the reply in later steps. Flow waits 30 seconds at most, and Run code cannot make network calls, so it can only read the reply.',
     },
     {
       question: 'When do I need an agent instead of a workflow?',
@@ -553,7 +553,7 @@ const article: Article = {
     {
       question: 'Shopify Flow può chiamare ChatGPT o Claude?',
       answer:
-        'Può chiamare qualsiasi modello con un endpoint web tramite Send HTTP request: imposti URL, header e corpo e usi la risposta nei passi successivi. Flow aspetta al massimo 30 secondi e Run code non può fare chiamate di rete, quindi la risposta si legge lì, non si scarica lì.',
+        'Può chiamare qualsiasi modello con un endpoint web tramite Send HTTP request: imposti URL, header e corpo e usi la risposta nei passi successivi. Flow aspetta al massimo 30 secondi e Run code non può fare chiamate di rete, quindi può solo leggere la risposta.',
     },
     {
       question: 'Quando mi serve un agente al posto di un workflow?',

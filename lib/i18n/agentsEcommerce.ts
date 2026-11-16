@@ -57,7 +57,7 @@ const en: AgentsCopy = {
     eyebrow: 'AI agents for eCommerce',
     h1: 'AI agents for eCommerce, built into your store',
     paragraph:
-      'We build AI agents for eCommerce brands in two ways: we integrate one agent into your store, or we set up your whole store so agents can watch sales, ads, stock, customer support and SEO. It is custom work on your data, your access and your rules, not a chatbot sold off the shelf.',
+      'We build AI agents for eCommerce brands in two ways: we integrate one agent into your store, or we set up your whole store so agents can watch sales, ads, stock, customer support and SEO. The work is custom, built on your data, your access and your rules.',
     ctaPrimary: 'Book a call',
     ctaSecondary: 'See the two ways we work',
   },
@@ -89,7 +89,7 @@ const en: AgentsCopy = {
   paths: {
     heading: 'Two ways to work with us',
     intro:
-      'Both start from your store, not from a template. We look at your data, your access and who is responsible for what, then we build the version that fits.',
+      'Both start from your store. We look at your data, your access and who is responsible for what, then we build the version that fits.',
     items: [
       {
         title: 'Integrate an agent into your store',
@@ -231,7 +231,7 @@ const en: AgentsCopy = {
   },
   finalCta: {
     heading: 'Tell us which task you want off your team’s plate',
-    body: 'On the call we look at your store, pick the first task and tell you which of the two ways fits. No template, no package: a plan for your store.',
+    body: 'On the call we look at your store, pick the first task and tell you which of the two ways fits. You leave the call with a plan written for your store.',
     button: 'Book a call',
     secondary:
       'Want the background first? Read [AI agents for Shopify](/blog/ai-agents-for-shopify).',
@@ -243,7 +243,7 @@ const it: AgentsCopy = {
     eyebrow: 'Agenti AI per eCommerce',
     h1: 'Agenti AI per eCommerce, costruiti dentro il tuo store',
     paragraph:
-      'Costruiamo agenti AI per brand eCommerce in due modi: integriamo un agente nel tuo store, oppure impostiamo l’intero store perché gli agenti possano tenere d’occhio vendite, ads, stock, customer care e SEO. È lavoro su misura, sui tuoi dati, sui tuoi accessi e sulle tue regole, non un chatbot venduto a pacchetto.',
+      'Costruiamo agenti AI per brand eCommerce in due modi: integriamo un agente nel tuo store, oppure impostiamo l’intero store perché gli agenti possano tenere d’occhio vendite, ads, stock, customer care e SEO. Il lavoro è su misura, costruito sui tuoi dati, sui tuoi accessi e sulle tue regole.',
     ctaPrimary: 'Prenota una videochiamata',
     ctaSecondary: 'Vedi le due strade',
   },
@@ -275,7 +275,7 @@ const it: AgentsCopy = {
   paths: {
     heading: 'Due modi di lavorare con noi',
     intro:
-      'Partono entrambi dal tuo store, non da un modello. Guardiamo i tuoi dati, i tuoi accessi e chi è responsabile di cosa, poi costruiamo la versione che ti serve.',
+      'Partono entrambi dal tuo store. Guardiamo i tuoi dati, i tuoi accessi e chi è responsabile di cosa, poi costruiamo la versione che ti serve.',
     items: [
       {
         title: 'Integriamo un agente nel tuo store',
@@ -419,7 +419,7 @@ const it: AgentsCopy = {
   },
   finalCta: {
     heading: 'Dicci quale lavoro vuoi togliere al tuo team',
-    body: 'In videochiamata guardiamo il tuo store, scegliamo il primo compito e ti diciamo quale delle due strade ti serve. Nessun modello, nessun pacchetto: un piano per il tuo store.',
+    body: 'In videochiamata guardiamo il tuo store, scegliamo il primo compito e ti diciamo quale delle due strade ti serve. Esci dalla videochiamata con un piano scritto per il tuo store.',
     button: 'Prenota una videochiamata',
     secondary:
       'Vuoi prima il contesto? Leggi gli [agenti AI per Shopify](/it/blog/agenti-ai-shopify).',

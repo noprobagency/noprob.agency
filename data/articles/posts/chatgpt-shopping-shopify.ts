@@ -130,11 +130,11 @@ const article: Article = {
   content: [
     {
       type: 'paragraph',
-      text: '**ChatGPT shopping** lets people ask ChatGPT what to buy and get product results with prices, images and merchants. If you run a Shopify store, your products can show up there without you building anything, because Shopify passes eligible products to ChatGPT through its Shopify Catalog. That is the short answer to how you sell on ChatGPT with Shopify. This guide covers the longer one: what actually happens and what you control.',
+      text: '**ChatGPT shopping** lets people ask ChatGPT what to buy and get product results with prices, images and merchants. If you run a Shopify store, your products can show up there without you building anything, because Shopify passes eligible products to ChatGPT through its Shopify Catalog. That is how you sell on ChatGPT with Shopify. The rest of this guide covers what happens behind it and what you control.',
     },
     {
       type: 'paragraph',
-      text: 'The page is dated on purpose. How ChatGPT handles shopping changed between 2025 and 2026, and many articles still describe the old version. Everything below is checked against official OpenAI and Shopify pages as of 29 October 2026, and press coverage is labeled as press. We are noprob agency: we build Shopify stores and run the [Shopify Launch Sprint](/shopify-migration-sprint). We build the stores and the data that AI agents read, and everything about ChatGPT below is traced to its source.',
+      text: 'The page is dated on purpose. How ChatGPT handles shopping changed between 2025 and 2026, and many articles still describe the old version. Everything below is checked against official OpenAI and Shopify pages as of 29 October 2026, and press coverage is labeled as press. We are noprob agency: we build Shopify stores and run the [Shopify Launch Sprint](/shopify-migration-sprint). The data AI agents read is part of that work.',
     },
     { type: 'paragraph', text: 'The short version:' },
     {
@@ -205,7 +205,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Shopify decides what goes in. ChatGPT decides what shows. Shopify says each channel decides how to rank, word and display products, and that inclusion does not guarantee an appearance or a position ([Shopify Catalog documentation](https://help.shopify.com/en/manual/promoting-marketing/seo/shopify-catalog)). So you cannot buy a place. You can be a complete, available, fairly priced source.',
+      text: 'Shopify decides what goes in. ChatGPT decides what shows. Shopify says each channel decides how to rank, word and display products, and that inclusion does not guarantee an appearance or a position ([Shopify Catalog documentation](https://help.shopify.com/en/manual/promoting-marketing/seo/shopify-catalog)). What you can do is be a complete, available, fairly priced source.',
     },
     { type: 'h2', text: 'Is your Shopify store eligible for ChatGPT shopping?' },
     {
@@ -328,7 +328,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '**Do not pay for a promised ChatGPT ranking.** Shopify says inclusion is no guarantee and each channel decides its own ranking. There is no lever to sell.',
+      text: '**Do not pay for a promised ChatGPT ranking.** Shopify says inclusion is no guarantee and each channel decides its own ranking, so nobody has a ranking to sell you.',
     },
     {
       type: 'paragraph',
@@ -419,11 +419,11 @@ const article: Article = {
   contentIt: [
     {
       type: 'paragraph',
-      text: 'Il **ChatGPT shopping** permette di chiedere a ChatGPT cosa comprare e ricevere prodotti con prezzi, immagini e venditori. Se hai uno store Shopify, i tuoi prodotti possono comparire senza che tu costruisca nulla, perché Shopify passa i prodotti idonei a ChatGPT tramite Shopify Catalog. È la risposta breve a come vendere su ChatGPT con Shopify. La guida dà quella lunga: cosa succede e cosa controlli.',
+      text: 'Il **ChatGPT shopping** permette di chiedere a ChatGPT cosa comprare e ricevere prodotti con prezzi, immagini e venditori. Se hai uno store Shopify, i tuoi prodotti possono comparire senza che tu costruisca nulla, perché Shopify passa i prodotti idonei a ChatGPT tramite Shopify Catalog. Questo è come vendere su ChatGPT con Shopify. Il resto della guida spiega cosa succede dietro le quinte e cosa controlli tu.',
     },
     {
       type: 'paragraph',
-      text: 'La pagina è datata di proposito. Il modo in cui ChatGPT gestisce gli acquisti è cambiato tra il 2025 e il 2026 e molti articoli descrivono ancora la versione vecchia. Quello che leggi è verificato su pagine ufficiali OpenAI e Shopify al 29 ottobre 2026, e la stampa è indicata come stampa. Siamo noprob agency: costruiamo store Shopify e facciamo lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify). Costruiamo gli store e i dati che leggono gli agenti AI, e tutto ciò che riguarda ChatGPT qui sotto è riportato alla sua fonte.',
+      text: 'La pagina è datata di proposito. Il modo in cui ChatGPT gestisce gli acquisti è cambiato tra il 2025 e il 2026 e molti articoli descrivono ancora la versione vecchia. Quello che leggi è verificato su pagine ufficiali OpenAI e Shopify al 29 ottobre 2026, e la stampa è indicata come stampa. Siamo noprob agency: costruiamo store Shopify e facciamo lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify). I dati che leggono gli agenti AI fanno parte di quel lavoro.',
     },
     { type: 'paragraph', text: 'In breve:' },
     {
@@ -494,7 +494,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Shopify decide cosa entra, ChatGPT cosa mostrare: per Shopify ogni canale decide come ordinare, descrivere e mostrare i prodotti, e l’inclusione non garantisce né la comparsa né una posizione ([documentazione di Shopify Catalog](https://help.shopify.com/en/manual/promoting-marketing/seo/shopify-catalog)). Un posto non si compra: si può solo essere una fonte completa, disponibile e con un prezzo corretto.',
+      text: 'Shopify decide cosa entra, ChatGPT cosa mostrare: per Shopify ogni canale decide come ordinare, descrivere e mostrare i prodotti, e l’inclusione non garantisce né la comparsa né una posizione ([documentazione di Shopify Catalog](https://help.shopify.com/en/manual/promoting-marketing/seo/shopify-catalog)). Ti resta una sola mossa: essere una fonte completa, disponibile e con un prezzo corretto.',
     },
     { type: 'h2', text: 'Il tuo store Shopify è idoneo al ChatGPT shopping?' },
     {
@@ -617,7 +617,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '**Non pagare chi promette una posizione su ChatGPT.** Shopify dice che l’inclusione non è una garanzia e che ogni canale decide da sé l’ordine. Non esiste una leva da vendere.',
+      text: '**Non pagare chi promette una posizione su ChatGPT.** Shopify dice che l’inclusione non è una garanzia e che ogni canale decide da sé l’ordine, quindi nessuno ha una posizione da venderti.',
     },
     {
       type: 'paragraph',

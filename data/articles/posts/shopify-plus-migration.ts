@@ -100,11 +100,11 @@ const article: Article = {
   content: [
     {
       type: 'paragraph',
-      text: 'A Shopify Plus migration is one of two jobs, and they have little in common. If your store is already on Shopify, you start from a plan change. If it is on another platform, you are moving the whole store and then building the Plus work on top. Two jobs, two budgets, two kinds of provider, one name. Work out which one you have before you read a quote.',
+      text: 'A Shopify Plus migration is one of two jobs, and they have little in common. If your store is already on Shopify, you start from a plan change. If it is on another platform, you are moving the whole store and then building the Plus work on top. The budget and the kind of provider change with the job, so work out which one you have before you read a quote.',
     },
     {
       type: 'paragraph',
-      text: 'We are noprob agency and we sell the [Shopify Launch Sprint](/shopify-migration-sprint), a migration to Shopify at a public price. Everything here about Shopify’s plan, contract and features comes from Shopify’s own pages, linked and read on 4 November 2026. You will find the two routes, where checkout customization stands today, what is really Plus only, and the three bills. The method for the move itself is in our [Shopify migration guide](/shopify-migration). Whether Plus is right for you at all is in [Shopify Plus: when it pays off](/blog/shopify-plus).',
+      text: 'We are noprob agency and we sell the [Shopify Launch Sprint](/shopify-migration-sprint), a migration to Shopify at a public price. Everything here about Shopify’s plan, contract and features comes from Shopify’s own pages, linked and read on 4 November 2026. The method for the move itself is in our [Shopify migration guide](/shopify-migration). Whether Plus is right for you at all is in [Shopify Plus: when it pays off](/blog/shopify-plus).',
     },
     { type: 'h2', text: 'Already on Shopify: is upgrading to Shopify Plus a migration at all?' },
     {
@@ -122,13 +122,13 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**Expansion stores:** create them and license them.',
-        '**Checkout:** build or install the extensions.',
-        '**Launchpad:** install it.',
-        '**Users and groups:** set them up.',
-        '**B2B:** create the catalogs.',
-        '**Testing:** create the staging stores and turn on test drives.',
-        '**Integrations:** update them.',
+        'Expansion stores: create them and license them.',
+        'Checkout: build or install the extensions.',
+        'Launchpad: install it.',
+        'Users and groups: set them up.',
+        'B2B: create the catalogs.',
+        'Testing: create the staging stores and turn on test drives.',
+        'Integrations: update them.',
       ],
     },
     {
@@ -146,7 +146,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'I work conservatively here: first a pure migration, from A to B, with no drastic changes. It is not a redesign: I take what already works and move it. The redesign can come later, with a designer.',
+      text: 'I work conservatively here: first a pure migration, from A to B, with no drastic changes. I take what already works and move it, and the redesign can come later, with a designer.',
     },
     {
       type: 'paragraph',
@@ -155,10 +155,10 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**New-order notifications.** Imported orders trigger them. Turn them off in Settings > Notifications or through Plus Support before you import, or they fire for every order you bring across.',
-        '**Gift cards.** Move them right before launch, because they cannot be edited or deleted. Move them earlier and the balances keep changing on the old store while the new one stands still.',
-        '**Orders.** Import at least the ones inside your return window. Shopify recommends going further: "import orders from the past 2-5 years".',
-        '**B2B.** Companies and locations go in by hand or in bulk "using Matrixify, a third-party app"; catalogs by hand or via CSV.',
+        'New-order notifications. Imported orders trigger them. Turn them off in Settings > Notifications or through Plus Support before you import, or they fire for every order you bring across.',
+        'Gift cards. Move them right before launch, because they cannot be edited or deleted. Move them earlier and the balances keep changing on the old store while the new one stands still.',
+        'Orders. Import at least the ones inside your return window. Shopify recommends going further: "import orders from the past 2-5 years".',
+        'B2B. Companies and locations go in by hand or in bulk "using Matrixify, a third-party app"; catalogs by hand or via CSV.',
       ],
     },
     { type: 'h2', text: 'What happens to your checkout when you migrate to Shopify Plus?' },
@@ -169,10 +169,10 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**Information, shipping and payment steps:** [checkout.liquid](https://shopify.dev/docs/storefronts/themes/architecture/layouts/checkout-liquid) "is now unsupported".',
-        '**28 August 2025:** checkout.liquid and additional scripts were sunset for the Thank you and Order status pages. Script tags on those pages ended the same day for Plus stores.',
-        '**30 June 2026:** [Shopify Scripts was deprecated](https://help.shopify.com/en/manual/checkout-settings/script-editor/migrating). The Scripts customizations report in Apps > Script Editor tells you what to recreate, with apps based on Functions or with your own Functions.',
-        '**26 August 2026:** [the deadline to upgrade](https://help.shopify.com/en/manual/checkout-settings/customize-checkout-configurations/upgrade-thank-you-order-status) the Thank you and Order status pages; stores that had not done it were upgraded automatically. Script tags on those pages ended that day for non-Plus stores.',
+        'Information, shipping and payment steps: [checkout.liquid](https://shopify.dev/docs/storefronts/themes/architecture/layouts/checkout-liquid) "is now unsupported".',
+        '28 August 2025: checkout.liquid and additional scripts were sunset for the Thank you and Order status pages. Script tags on those pages ended the same day for Plus stores.',
+        '30 June 2026: [Shopify Scripts was deprecated](https://help.shopify.com/en/manual/checkout-settings/script-editor/migrating). The Scripts customizations report in Apps > Script Editor tells you what to recreate, with apps based on Functions or with your own Functions.',
+        '26 August 2026: [the deadline to upgrade](https://help.shopify.com/en/manual/checkout-settings/customize-checkout-configurations/upgrade-thank-you-order-status) the Thank you and Order status pages; stores that had not done it were upgraded automatically. Script tags on those pages ended that day for non-Plus stores.',
       ],
     },
     {
@@ -223,7 +223,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Start from your list, not from the table. Write each behavior of the old checkout on one line, with the reason it exists: "above a given weight the order stops and the buyer asks for a quote". Then ask whether it still earns its place. What survives goes into the table, and that list is the real scope of your Plus work.',
+      text: 'Before you use the table, write each behavior of the old checkout on one line, with the reason it exists: "above a given weight the order stops and the buyer asks for a quote". Then ask whether it still earns its place. What survives goes into the table, and that list is the scope of your Plus work.',
     },
     { type: 'h2', text: 'What is really Plus only, and what is the catch with each feature?' },
     {
@@ -263,7 +263,7 @@ const article: Article = {
     { type: 'h2', text: 'How much does a Shopify Plus migration cost?' },
     {
       type: 'paragraph',
-      text: '**Three separate bills: the Shopify plan, the migration work and the Plus work on top.** Keep them apart, because a quote that mixes them cannot be compared with anything. Every figure here has a source you can open. That is why you will not find a market range: the ones circulating online come without a source. After the three bills, the contract gets its own space: it is not a fourth bill, it decides how long you pay the first one.',
+      text: '**Three separate bills: the Shopify plan, the migration work and the Plus work on top.** Keep them apart, because a quote that mixes them cannot be compared with anything. Every figure here has a source you can open. That is why you will not find a market range: the ones circulating online come without a source. The contract comes after the three bills and decides how long you pay the first one.',
     },
     { type: 'h3', text: 'The plan, paid to Shopify' },
     {
@@ -311,15 +311,15 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**Price:** €5,800 under €2M in revenue, €8,800 between €2M and €20M, €12,800 above €20M, VAT excluded, in 4 installments.',
-        '**The Sprint covers the move to Shopify:** your store replicated 1:1, data, apps and integrations, redirects, tracking and QA. **Plus-specific builds** (checkout, B2B, expansion stores) are scoped separately with you on a video call before you sign: [what they cover](/blog/shopify-plus).',
-        '**The Shopify plan,** Plus included, is paid directly to Shopify.',
-        '**Two of the four guarantees, word for word:** "Store ready on day 14 or we refund the first installment." and "Checkout converting less than before at 90 days? We optimize it for free until it beats it."',
+        'Price: €5,800 under €2M in revenue, €8,800 between €2M and €20M, €12,800 above €20M, VAT excluded, in 4 installments.',
+        'The Sprint covers the move to Shopify: your store replicated 1:1, data, apps and integrations, redirects, tracking and QA. Plus-specific builds (checkout, B2B, expansion stores) are scoped separately with you on a video call before you sign: [what they cover](/blog/shopify-plus).',
+        'The Shopify plan, Plus included, is paid directly to Shopify.',
+        'Two of the four guarantees, word for word: "Store ready on day 14 or we refund the first installment." and "Checkout converting less than before at 90 days? We optimize it for free until it beats it."',
       ],
     },
     {
       type: 'paragraph',
-      text: 'We start from your product and from the hardest part of your store, not from the platform. When a request is unusual, we replicate that part on a development store to show it can be done. Then accesses, exports, 14 days. You see the store ready, you confirm it, we switch. Most of a migration can be foreseen, and what comes up along the way is the job. Among our published case studies are [Integratori DTC Nazzi](/use-cases/integratori-nazzi-dtc-shopify), from WooCommerce, and [Cumini](/use-cases/cumini-luxury-fashion-ecommerce), from a proprietary platform tied to the ERP. To compare providers, our guide to [choosing a Shopify migration agency](/blog/choose-shopify-migration-agency) has the questions to ask.',
+      text: 'We start from your product and the hardest part of your store. When a request is unusual, we replicate that part on a development store to show it can be done. Then accesses, exports, 14 days. You see the store ready, you confirm it, we switch. Most of a migration can be foreseen, and what comes up along the way is the job. Among our published case studies are [Integratori DTC Nazzi](/use-cases/integratori-nazzi-dtc-shopify), from WooCommerce, and [Cumini](/use-cases/cumini-luxury-fashion-ecommerce), from a proprietary platform tied to the ERP. To compare providers, our guide to [choosing a Shopify migration agency](/blog/choose-shopify-migration-agency) has the questions to ask.',
     },
     { type: 'h2', text: 'Frequently asked questions' },
     { type: 'h3', text: 'Do I need a Shopify Plus Partner to migrate?' },
@@ -354,7 +354,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '**Next step.** Coming from another platform? Send us your store: [apply to the Shopify Launch Sprint](/shopify-migration-sprint) and we reply within 48 hours with your tier, the price and the first available kickoff date.',
+      text: 'Coming from another platform? Send us your store: [apply to the Shopify Launch Sprint](/shopify-migration-sprint) and we reply within 48 hours with your tier, the price and the first available kickoff date.',
     },
     {
       type: 'paragraph',
@@ -364,11 +364,11 @@ const article: Article = {
   contentIt: [
     {
       type: 'paragraph',
-      text: 'Una migrazione a Shopify Plus è uno di due lavori, e hanno poco in comune. Se il tuo store è già su Shopify, parti da un cambio di piano. Se è su un’altra piattaforma, sposti tutto lo store e poi ci aggiungi il lavoro su Plus. Due lavori, due budget, due tipi di fornitore, un solo nome. Capisci qual è il tuo prima di leggere un preventivo.',
+      text: 'Una migrazione a Shopify Plus è uno di due lavori, e hanno poco in comune. Se il tuo store è già su Shopify, parti da un cambio di piano. Se è su un’altra piattaforma, sposti tutto lo store e poi ci aggiungi il lavoro su Plus. Budget e tipo di fornitore cambiano con il lavoro, quindi capisci qual è il tuo prima di leggere un preventivo.',
     },
     {
       type: 'paragraph',
-      text: 'Siamo noprob agency e vendiamo lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify), una migrazione a Shopify a prezzo pubblico. Tutto ciò che qui riguarda piano, contratto e funzioni viene dalle pagine di Shopify, linkate e lette il 4 novembre 2026. Trovi i due percorsi, a che punto è la personalizzazione del checkout, cosa è davvero solo Plus e i tre conti da fare. Il metodo per il passaggio è nella nostra [guida alla migrazione a Shopify](/it/migrazione-shopify). Se Plus ti serva davvero lo trovi in [Shopify Plus: quando conviene](/it/blog/shopify-plus).',
+      text: 'Siamo noprob agency e vendiamo lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify), una migrazione a Shopify a prezzo pubblico. Tutto ciò che qui riguarda piano, contratto e funzioni viene dalle pagine di Shopify, linkate e lette il 4 novembre 2026. Il metodo per il passaggio è nella nostra [guida alla migrazione a Shopify](/it/migrazione-shopify). Se Plus ti serve davvero lo trovi in [Shopify Plus: quando conviene](/it/blog/shopify-plus).',
     },
     { type: 'h2', text: 'Sei già su Shopify: passare a Shopify Plus è davvero una migrazione?' },
     {
@@ -386,13 +386,13 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**Expansion store:** da creare, ciascuno con la sua licenza del tema Shopify.',
-        '**Checkout:** estensioni da costruire o installare.',
-        '**Launchpad:** da installare.',
-        '**Utenti e gruppi:** da impostare.',
-        '**B2B:** cataloghi da creare.',
-        '**Test:** store di staging da creare e test drive da attivare.',
-        '**Integrazioni:** da aggiornare.',
+        'Expansion store: da creare, ciascuno con la sua licenza del tema Shopify.',
+        'Checkout: estensioni da costruire o installare.',
+        'Launchpad: da installare.',
+        'Utenti e gruppi: da impostare.',
+        'B2B: cataloghi da creare.',
+        'Test: store di staging da creare e test drive da attivare.',
+        'Integrazioni: da aggiornare.',
       ],
     },
     {
@@ -410,7 +410,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Qui agisco in modo conservativo: prima una migrazione pura, da A a B, senza cambi drastici. Non è un redesign: prendo quello che già funziona e lo sposto. Il restyling si fa dopo, con un designer.',
+      text: 'Qui agisco in modo conservativo: prima una migrazione pura, da A a B, senza cambi drastici. Prendo quello che già funziona e lo sposto, e il restyling viene dopo, con un designer.',
     },
     {
       type: 'paragraph',
@@ -419,10 +419,10 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**Notifiche di nuovo ordine.** Gli ordini importati le fanno partire. Disattivale in Settings > Notifications o tramite Plus Support prima di importare, altrimenti scattano per ogni ordine che porti dentro.',
-        '**Gift card.** Spostale subito prima del lancio, perché non si possono modificare né eliminare. Se le sposti prima, i saldi continuano a cambiare sul vecchio store mentre sul nuovo restano fermi.',
-        '**Ordini.** Importa almeno quelli dentro la finestra di reso. Shopify consiglia di andare oltre: "import orders from the past 2-5 years", cioè gli ultimi 2-5 anni.',
-        '**B2B.** Aziende e sedi si caricano a mano o in blocco "using Matrixify, a third-party app", cioè con Matrixify, un’app di terzi; i cataloghi a mano o via CSV.',
+        'Notifiche di nuovo ordine. Gli ordini importati le fanno partire. Disattivale in Settings > Notifications o tramite Plus Support prima di importare, altrimenti scattano per ogni ordine che porti dentro.',
+        'Gift card. Spostale subito prima del lancio, perché non si possono modificare né eliminare. Se le sposti prima, i saldi continuano a cambiare sul vecchio store mentre sul nuovo restano fermi.',
+        'Ordini. Importa almeno quelli dentro la finestra di reso. Shopify consiglia di andare oltre: "import orders from the past 2-5 years", cioè gli ultimi 2-5 anni.',
+        'B2B. Aziende e sedi si caricano a mano o in blocco "using Matrixify, a third-party app", cioè con Matrixify, un’app di terzi; i cataloghi a mano o via CSV.',
       ],
     },
     { type: 'h2', text: 'Cosa succede al checkout quando migri a Shopify Plus?' },
@@ -433,10 +433,10 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**Passaggi informazioni, spedizione e pagamento:** [checkout.liquid](https://shopify.dev/docs/storefronts/themes/architecture/layouts/checkout-liquid) "is now unsupported", non è più supportato.',
-        '**28 agosto 2025:** checkout.liquid e gli additional scripts sono stati dismessi sulle pagine Thank you e Order status. Gli script tag su quelle pagine si sono fermati lo stesso giorno per gli store Plus.',
-        '**30 giugno 2026:** [Shopify Scripts è stato deprecato](https://help.shopify.com/en/manual/checkout-settings/script-editor/migrating). Il report Scripts customizations in Apps > Script Editor ti dice cosa ricreare, con app basate su Functions o con Functions tue.',
-        '**26 agosto 2026:** [la scadenza per aggiornare](https://help.shopify.com/en/manual/checkout-settings/customize-checkout-configurations/upgrade-thank-you-order-status) le pagine Thank you e Order status; gli store che non l’avevano fatto sono stati aggiornati in automatico. Gli script tag su quelle pagine si sono fermati quel giorno per gli store non Plus.',
+        'Passaggi informazioni, spedizione e pagamento: [checkout.liquid](https://shopify.dev/docs/storefronts/themes/architecture/layouts/checkout-liquid) "is now unsupported", non è più supportato.',
+        '28 agosto 2025: checkout.liquid e gli additional scripts sono stati dismessi sulle pagine Thank you e Order status. Gli script tag su quelle pagine si sono fermati lo stesso giorno per gli store Plus.',
+        '30 giugno 2026: [Shopify Scripts è stato deprecato](https://help.shopify.com/en/manual/checkout-settings/script-editor/migrating). Il report Scripts customizations in Apps > Script Editor ti dice cosa ricreare, con app basate su Functions o con Functions tue.',
+        '26 agosto 2026: [la scadenza per aggiornare](https://help.shopify.com/en/manual/checkout-settings/customize-checkout-configurations/upgrade-thank-you-order-status) le pagine Thank you e Order status; gli store che non l’avevano fatto sono stati aggiornati in automatico. Gli script tag su quelle pagine si sono fermati quel giorno per gli store non Plus.',
       ],
     },
     {
@@ -487,7 +487,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Parti dal tuo elenco, non dalla tabella. Scrivi ogni comportamento del vecchio checkout in una riga, con il motivo per cui esiste: "sopra un certo peso l’ordine si ferma e il cliente chiede un preventivo". Poi chiediti se serve ancora. Ciò che resta entra nella tabella, e quell’elenco è il vero perimetro del tuo lavoro su Plus.',
+      text: 'Prima di usare la tabella, scrivi ogni comportamento del vecchio checkout in una riga, con il motivo per cui esiste: "sopra un certo peso l’ordine si ferma e il cliente chiede un preventivo". Poi chiediti se serve ancora. Ciò che resta entra nella tabella, e quell’elenco è il perimetro del tuo lavoro su Plus.',
     },
     { type: 'h2', text: 'Cosa è davvero solo Plus, e qual è il vincolo di ogni funzione?' },
     {
@@ -527,7 +527,7 @@ const article: Article = {
     { type: 'h2', text: 'Quanto costa una migrazione a Shopify Plus?' },
     {
       type: 'paragraph',
-      text: '**Tre conti separati: il piano Shopify, il lavoro di migrazione e il lavoro su Plus che ci va sopra.** Tienili distinti, perché un preventivo che li mescola non si confronta con niente. Ogni cifra qui ha una fonte che puoi aprire. Per questo non trovi una forchetta di mercato: quelle che girano online non hanno una fonte. Dopo i tre conti, il contratto ha uno spazio a parte: non è un quarto conto, decide per quanto paghi il primo.',
+      text: '**Tre conti separati: il piano Shopify, il lavoro di migrazione e il lavoro su Plus che ci va sopra.** Tienili distinti, perché un preventivo che li mescola non si confronta con niente. Ogni cifra qui ha una fonte che puoi aprire. Per questo non trovi una forchetta di mercato: quelle che girano online non hanno una fonte. Il contratto viene dopo i tre conti e decide per quanto tempo paghi il primo.',
     },
     { type: 'h3', text: 'Il piano, che paghi a Shopify' },
     {
@@ -575,15 +575,15 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**Prezzo:** €5.800 sotto i €2M di fatturato, €8.800 tra €2M e €20M, €12.800 sopra i €20M, IVA esclusa, in 4 rate.',
-        '**Lo Sprint copre il passaggio a Shopify:** lo store replicato 1:1, dati, app e integrazioni, redirect, tracking e collaudo. **I lavori specifici di Plus** (checkout, B2B, expansion store) si definiscono a parte con te in videochiamata, prima che tu firmi: [cosa comprendono](/it/blog/shopify-plus).',
-        '**Il piano Shopify,** Plus compreso, si paga direttamente a Shopify.',
-        '**Due delle quattro garanzie, alla lettera:** "Store pronto al giorno 14 o ti rimborsiamo la prima rata." e "Il checkout converte meno di prima a 90 giorni? Lo ottimizziamo gratis finché non supera."',
+        'Prezzo: €5.800 sotto i €2M di fatturato, €8.800 tra €2M e €20M, €12.800 sopra i €20M, IVA esclusa, in 4 rate.',
+        'Lo Sprint copre il passaggio a Shopify: lo store replicato 1:1, dati, app e integrazioni, redirect, tracking e collaudo. I lavori specifici di Plus (checkout, B2B, expansion store) si definiscono a parte con te in videochiamata, prima che tu firmi: [cosa comprendono](/it/blog/shopify-plus).',
+        'Il piano Shopify, Plus compreso, si paga direttamente a Shopify.',
+        'Due delle quattro garanzie, alla lettera: "Store pronto al giorno 14 o ti rimborsiamo la prima rata." e "Il checkout converte meno di prima a 90 giorni? Lo ottimizziamo gratis finché non supera."',
       ],
     },
     {
       type: 'paragraph',
-      text: 'Partiamo dal tuo prodotto e dalla parte più difficile del tuo store, non dalla piattaforma. Quando una richiesta è insolita, replichiamo quella parte su uno store di sviluppo per mostrarti che si può fare. Poi accessi, export, 14 giorni. Vedi lo store pronto, confermi, si cambia. Gran parte di una migrazione si prevede, e ciò che esce fuori lungo la strada è il lavoro. Tra i nostri casi studio pubblicati ci sono [Integratori DTC Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify), da WooCommerce, e [Cumini](/it/casi-studio/cumini-luxury-fashion-ecommerce), da una piattaforma proprietaria legata al gestionale. Per confrontare i fornitori, la guida su [come scegliere un’agenzia di migrazione Shopify](/it/blog/scegliere-agenzia-migrazione-shopify) ha le domande da fare.',
+      text: 'Partiamo dal tuo prodotto e dalla parte più difficile del tuo store. Quando una richiesta è insolita, replichiamo quella parte su uno store di sviluppo per mostrarti che si può fare. Poi accessi, export, 14 giorni. Vedi lo store pronto, confermi, si cambia. Gran parte di una migrazione si prevede, e ciò che esce fuori lungo la strada è il lavoro. Tra i nostri casi studio pubblicati ci sono [Integratori DTC Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify), da WooCommerce, e [Cumini](/it/casi-studio/cumini-luxury-fashion-ecommerce), da una piattaforma proprietaria legata al gestionale. Per confrontare i fornitori, la guida su [come scegliere un’agenzia di migrazione Shopify](/it/blog/scegliere-agenzia-migrazione-shopify) ha le domande da fare.',
     },
     { type: 'h2', text: 'Domande frequenti' },
     { type: 'h3', text: 'Serve uno Shopify Plus Partner per migrare?' },
@@ -618,7 +618,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '**Prossimo passo.** Arrivi da un’altra piattaforma? Mandaci il tuo store: [candidati allo Shopify Launch Sprint](/it/sprint-migrazione-shopify) e rispondiamo entro 48 ore con la tua fascia, il prezzo e la prima data di kickoff disponibile.',
+      text: 'Arrivi da un’altra piattaforma? Mandaci il tuo store: [candidati allo Shopify Launch Sprint](/it/sprint-migrazione-shopify) e rispondiamo entro 48 ore con la tua fascia, il prezzo e la prima data di kickoff disponibile.',
     },
     {
       type: 'paragraph',

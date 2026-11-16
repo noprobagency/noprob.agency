@@ -302,7 +302,7 @@ const it: AmbassadorCopy = {
     titlePart1: 'Segnala o rivendi una migrazione Shopify. ',
     titleEm: `Guadagni da ${itEur(COMMISSION)}.`,
     lead:
-      'Questo è il playbook completo per lavorare con me in due modi. Ambassador: mi segnali un eCommerce e incassi una commissione fissa. White Label: la tua agenzia vende la migrazione con il suo marchio e noi la realizziamo dietro le quinte. Cosa vendiamo, a chi, quanto costa, come presentarlo e quanto guadagni. Tutto scritto, niente sorprese.',
+      'Questo playbook spiega come lavorare con me in due modi. Ambassador: mi segnali un eCommerce e incassi una commissione fissa. White Label: la tua agenzia vende la migrazione con il suo marchio e noi la realizziamo dietro le quinte. Trovi cosa vendiamo, a chi, quanto costa, come presentarlo e quanto guadagni, tutto per iscritto.',
     stats: [
       { value: itEur(COMMISSION), label: `commissione ambassador sullo scaglione base, fino a ${itEur(C3)} sugli scaglioni più alti` },
       { value: `${itEur(COMMISSION)}+`, label: 'margine minimo per l’agenzia in white label, più tutto il ricarico che decidi tu' },
@@ -334,7 +334,7 @@ const it: AmbassadorCopy = {
     heading: 'Segnali o rivendi: ',
     headingEm: 'scegli tu.',
     intro:
-      'Stesso servizio, stessa qualità, stesso calendario di 14 giorni. Cambia chi parla con il cliente e quanto guadagni.',
+      'Il servizio e il calendario di 14 giorni sono gli stessi. Cambia chi parla con il cliente e quanto guadagni.',
     items: [
       {
         tag: 'Ambassador',
@@ -399,7 +399,7 @@ const it: AmbassadorCopy = {
       {
         title: 'Mi mandi il sito del cliente',
         description:
-          'Prima che tu faccia l’offerta ti confermo scaglione, eventuali add-on e fattibilità. Così vendi un prezzo sicuro, senza sorprese.',
+          'Prima che tu faccia l’offerta ti confermo scaglione, eventuali add-on e fattibilità, così il prezzo che proponi è quello giusto.',
       },
       {
         title: 'Vendi con il tuo marchio',
@@ -584,7 +584,7 @@ const it: AmbassadorCopy = {
       },
       {
         title: `Prezzo pubblico, da ${itEur(MIN)}`,
-        description: `Il prezzo dello Sprint è pubblico e dipende dal fatturato dell’azienda: ${itEur(TIER1.price)}, ${itEur(TIER2.price)} o ${itEur(TIER3.price)}, IVA esclusa, in 4 rate. Nessuno sconto, nessun preventivo: non si tratta né al ribasso né al rialzo.`,
+        description: `Il prezzo dello Sprint è pubblico e dipende dal fatturato dell’azienda: ${itEur(TIER1.price)}, ${itEur(TIER2.price)} o ${itEur(TIER3.price)}, IVA esclusa, in 4 rate. Niente sconti e niente preventivi su misura: il prezzo è quello in pagina.`,
       },
       {
         title: 'Come ti pago',
@@ -598,7 +598,7 @@ const it: AmbassadorCopy = {
     heading: 'Cosa vendi: ',
     headingEm: 'lo Shopify Launch Sprint.',
     intro:
-      'Entrambi i programmi coprono un solo servizio: lo Shopify Launch Sprint, la migrazione di un eCommerce esistente su Shopify in 14 giorni. Non è “rifacciamo il sito”: è lo stesso store, replicato 1:1 su Shopify senza perdere vendite, clienti e posizionamento, più veloce e con un checkout costruito per vendere di più. Un team intero su ogni area nello stesso momento (sviluppo, SEO, tracciamento, checkout), un solo interlocutore per il cliente, poi 90 giorni di supporto dopo il go-live.',
+      'Entrambi i programmi coprono un solo servizio: lo Shopify Launch Sprint, la migrazione di un eCommerce esistente su Shopify in 14 giorni. Lo Sprint replica lo stesso store 1:1 su Shopify, senza perdere vendite, clienti e posizionamento, più veloce e con un checkout costruito per vendere di più. Un team intero lavora su ogni area nello stesso momento (sviluppo, SEO, tracciamento, checkout), il cliente ha un solo interlocutore e dopo il go-live arrivano 90 giorni di supporto.',
     includedTitle: 'Cosa è incluso',
     included: [
       'Data Migration Report: prodotti, varianti, clienti e storico ordini riconciliati al 100%',
@@ -656,7 +656,7 @@ const it: AmbassadorCopy = {
       'Quattro rate: la prima al kickoff, la seconda al go-live, la terza e la quarta nei mesi di supporto. Nessun esborso unico in anticipo.',
       '4 garanzie scritte nel contratto. Store pronto al giorno 14 o ti rimborsiamo la prima rata. Traffico organico sotto la baseline a 90 giorni dal go-live? Lavoriamo gratis finché non torna. Store offline al lancio per colpa nostra? Una rata la paghiamo noi. Il checkout converte meno di prima a 90 giorni? Lo ottimizziamo gratis finché non supera.',
       'Nessuno sconto, nessun preventivo: il cliente vede il suo scaglione in pagina, prima di parlarci.',
-      'Sopra i limiti dello scaglione (prodotti, lingue, gestionale) ci sono add-on a prezzo fisso, comunicati per iscritto prima della firma. Mai un preventivo libero.',
+      'Sopra i limiti dello scaglione (prodotti, lingue, gestionale) ci sono add-on a prezzo fisso, comunicati per iscritto prima della firma, senza preventivi liberi.',
     ],
     externalTitle: 'Costi esterni',
     external:
@@ -664,14 +664,14 @@ const it: AmbassadorCopy = {
     externalLinkLabel: 'Prezzi aggiornati dei piani Shopify',
     argumentTitle: 'Un argomento di vendita in più',
     argument:
-      'Prezzo fisso e pubblico, garanzie scritte, calendario di 14 giorni: il cliente sa prima di parlarci quanto spende, quando ha lo store e cosa succede se qualcosa non va. È il contrario del preventivo da aspettare.',
+      'Prezzo fisso e pubblico, garanzie scritte, calendario di 14 giorni: il cliente sa prima di parlarci quanto spende, quando ha lo store e cosa succede se qualcosa non va, senza aspettare un preventivo.',
   },
   target: {
     label: 'il cliente giusto',
     heading: 'Chi è in target ',
     headingEm: '(e chi no).',
     intro:
-      'La commissione vale solo per clienti in target. Non contano il settore né il paese: conta che l’eCommerce sia già avviato e che la migrazione abbia senso per lui. La valutazione finale la faccio io, dopo aver visto lo store.',
+      'La commissione vale solo per clienti in target. Settore e paese non contano. Serve un eCommerce già avviato, per cui la migrazione abbia senso. La valutazione finale la faccio io, dopo aver visto lo store.',
     yesTitle: 'In target',
     yes: [
       'eCommerce già avviato, online da tempo, con vendite regolari ogni mese',
@@ -755,7 +755,7 @@ const it: AmbassadorCopy = {
     headingEm: 'un cliente in target.',
     idealTitle: 'Il contatto ideale: chi ha già deciso di migrare',
     ideal:
-      'I contatti migliori sono quelli che vogliono già passare a Shopify e stanno cercando un partner che lo faccia. Conoscono già i costi e i vantaggi di Shopify: non devi convincerli di niente, devi solo presentare le persone giuste. Se puoi scegliere dove cercare, cerca soprattutto loro.',
+      'I contatti migliori sono quelli che vogliono già passare a Shopify e stanno cercando un partner che lo faccia. Conoscono già costi e vantaggi di Shopify, quindi basta presentare le persone giuste. Se puoi scegliere dove cercare, cerca soprattutto loro.',
     signalsTitle: 'Segnali da cogliere',
     signals: [
       'Sta raccogliendo preventivi per passare a Shopify',
@@ -791,7 +791,7 @@ const it: AmbassadorCopy = {
     whoTitle: 'Chi c’è dietro',
     partnerAlt: 'Shopify Partners',
     partnerText:
-      'Siamo Shopify Partner e lavoriamo solo su Shopify, ogni giorno. È la prima cosa da dire: il cliente non parla con un’agenzia generalista, ma con specialisti della piattaforma su cui vuole andare.',
+      'Siamo Shopify Partner e lavoriamo solo su Shopify, ogni giorno. È la prima cosa da dire: il cliente parla con specialisti della piattaforma su cui vuole andare.',
     authorityStats: [
       { value: 'Team', label: 'di specialisti in Shopify, marketing, advertising e SEO' },
       { value: '7+ anni', label: 'di progetti eCommerce' },
@@ -801,7 +801,7 @@ const it: AmbassadorCopy = {
     antonio: {
       name: 'Antonio Manitta',
       role: 'Founder di noprob e referente unico del progetto',
-      bio: 'Il cliente ha un solo interlocutore dall’inizio alla fine: Antonio. Non un commerciale, ma il project manager ed esperto eCommerce che segue il progetto su tutto, dalla prima analisi al monitoraggio dopo il lancio.',
+      bio: 'Il cliente ha un solo interlocutore dall’inizio alla fine: Antonio, project manager ed esperto eCommerce, che segue il progetto dalla prima analisi al monitoraggio dopo il lancio.',
       points: [
         'Laureato in informatica',
         'Da oltre 7 anni lavora su progetti eCommerce',
@@ -812,7 +812,7 @@ const it: AmbassadorCopy = {
     team: {
       title: 'Un team di specialisti in Shopify, marketing, advertising e SEO',
       description:
-        'Dietro Antonio c’è un team completo che copre ogni area della migrazione. Quando serve qualcosa, non si cerca il freelance giusto: c’è già qualcuno nel team che lo fa. E chi sviluppa SaaS e applicazioni proprie ha competenze tecniche che vanno ben oltre il classico sito costruito su un template.',
+        'Dietro Antonio c’è un team completo che copre ogni area della migrazione: quando serve una figura in più, è già nel team. E chi sviluppa SaaS e applicazioni proprie ha competenze tecniche che vanno oltre il classico sito costruito su un template.',
       skills: [
         'Sviluppo Shopify',
         'SEO e redirect',
@@ -875,7 +875,7 @@ const it: AmbassadorCopy = {
       {
         question: '“E dopo i 90 giorni?”',
         answer:
-          'Lo store è del cliente, solido, con dati puliti. Può continuare da solo, con un pacchetto ore o con il team per advertising, email e CRO. Nessun vincolo.',
+          'Lo store è del cliente, solido, con dati puliti. Può continuare da solo, con un pacchetto ore o con il team per advertising, email e CRO, senza vincoli.',
       },
     ],
   },
@@ -1106,7 +1106,7 @@ const en: AmbassadorCopy = {
     titlePart1: 'Refer or resell a Shopify migration. ',
     titleEm: `Earn from ${enEur(COMMISSION)}.`,
     lead:
-      'This is the complete playbook for working with me in two ways. Ambassador: you refer an eCommerce to me and earn a fixed commission. White Label: your agency sells the migration under its own brand and we deliver it behind the scenes. What we sell, to whom, what it costs, how to pitch it and how much you earn. All in writing, no surprises.',
+      'This playbook explains how to work with me in two ways. Ambassador: you refer an eCommerce to me and earn a fixed commission. White Label: your agency sells the migration under its own brand and we deliver it behind the scenes. You find what we sell, to whom, what it costs, how to pitch it and how much you earn, all in writing.',
     stats: [
       { value: enEur(COMMISSION), label: `ambassador commission on the base tier, up to ${enEur(C3)} on the higher tiers` },
       { value: `${enEur(COMMISSION)}+`, label: 'minimum agency margin in white label, plus all the markup you decide' },
@@ -1138,7 +1138,7 @@ const en: AmbassadorCopy = {
     heading: 'Refer or resell: ',
     headingEm: 'your call.',
     intro:
-      'Same service, same quality, same 14-day calendar. What changes is who talks to the client and how much you earn.',
+      'The service and the 14-day calendar are the same. What changes is who talks to the client and how much you earn.',
     items: [
       {
         tag: 'Ambassador',
@@ -1203,7 +1203,7 @@ const en: AmbassadorCopy = {
       {
         title: 'You send me the client’s site',
         description:
-          'Before you make your offer I confirm the tier, any add-ons and feasibility. So you sell a safe price, with no surprises.',
+          'Before you make your offer I confirm the tier, any add-ons and feasibility, so the price you quote is the right one.',
       },
       {
         title: 'You sell under your brand',
@@ -1388,7 +1388,7 @@ const en: AmbassadorCopy = {
       },
       {
         title: `Public price, from ${enEur(MIN)}`,
-        description: `The Sprint price is public and depends on the company’s revenue: ${enEur(TIER1.price)}, ${enEur(TIER2.price)} or ${enEur(TIER3.price)}, VAT excluded, in 4 installments. No discounts, no quotes: it isn’t negotiated down or up.`,
+        description: `The Sprint price is public and depends on the company’s revenue: ${enEur(TIER1.price)}, ${enEur(TIER2.price)} or ${enEur(TIER3.price)}, VAT excluded, in 4 installments. No discounts and no custom quotes: the price is the one on the page.`,
       },
       {
         title: 'How I pay you',
@@ -1402,7 +1402,7 @@ const en: AmbassadorCopy = {
     heading: 'What you sell: ',
     headingEm: 'the Shopify Launch Sprint.',
     intro:
-      'Both programs cover one service only: the Shopify Launch Sprint, moving an existing eCommerce to Shopify in 14 days. It’s not “we’ll rebuild your site”: it’s the same store, replicated 1:1 on Shopify without losing sales, customers or rankings, faster and with a checkout built to sell more. A whole team on every area at the same time (development, SEO, tracking, checkout), one point of contact for the client, then 90 days of support after go-live.',
+      'Both programs cover one service only: the Shopify Launch Sprint, moving an existing eCommerce to Shopify in 14 days. The Sprint replicates the same store 1:1 on Shopify without losing sales, customers or rankings, faster and with a checkout built to sell more. A whole team works on every area at the same time (development, SEO, tracking, checkout), the client has one point of contact, and after go-live comes 90 days of support.',
     includedTitle: 'What’s included',
     included: [
       'Data Migration Report: products, variants, customers and order history reconciled 100%',
@@ -1460,7 +1460,7 @@ const en: AmbassadorCopy = {
       'Four installments: the first at kickoff, the second at go-live, the third and fourth during the support months. No single payment up front.',
       '4 guarantees written in the contract. Store ready on day 14 or we refund the first installment. Organic traffic below the baseline 90 days after go-live? We work for free until it comes back. Store offline at launch because of us? We pay one installment. Checkout converting less than before at 90 days? We optimize it for free until it beats it.',
       'No discounts, no quotes: the client sees their tier on the page, before talking to us.',
-      'Beyond the tier caps (products, languages, ERP) there are fixed-price add-ons, confirmed in writing before signing. Never an open quote.',
+      'Beyond the tier caps (products, languages, ERP) there are fixed-price add-ons, confirmed in writing before signing, with no open quotes.',
     ],
     externalTitle: 'External costs',
     external:
@@ -1468,14 +1468,14 @@ const en: AmbassadorCopy = {
     externalLinkLabel: 'Current Shopify plan prices',
     argumentTitle: 'One more selling point',
     argument:
-      'Fixed public price, written guarantees, a 14-day calendar: the client knows before talking to us how much they spend, when they get the store and what happens if something goes wrong. It’s the opposite of waiting for a quote.',
+      'Fixed public price, written guarantees, a 14-day calendar: the client knows before talking to us how much they spend, when they get the store and what happens if something goes wrong, without waiting for a quote.',
   },
   target: {
     label: 'the right client',
     heading: 'Who is in target ',
     headingEm: '(and who isn’t).',
     intro:
-      'The commission only applies to clients in target. Industry and country don’t matter: what matters is that the eCommerce is established and the migration makes sense for it. I make the final call after looking at the store.',
+      'The commission only applies to clients in target. Industry and country don’t matter. The eCommerce has to be established, and the migration has to make sense for it. I make the final call after looking at the store.',
     yesTitle: 'In target',
     yes: [
       'An established eCommerce, online for a while, with regular sales every month',
@@ -1559,7 +1559,7 @@ const en: AmbassadorCopy = {
     headingEm: 'a client in target.',
     idealTitle: 'The ideal contact: someone who has already decided to migrate',
     ideal:
-      'The best contacts are those who already want to move to Shopify and are looking for a partner to do it. They already know the costs and the benefits of Shopify: you don’t need to convince them of anything, you just introduce the right people. If you can choose where to look, look for them first.',
+      'The best contacts are those who already want to move to Shopify and are looking for a partner to do it. They already know the costs and benefits of Shopify, so all you do is introduce the right people. If you can choose where to look, look for them first.',
     signalsTitle: 'Signals to look for',
     signals: [
       'They’re collecting quotes to move to Shopify',
@@ -1595,7 +1595,7 @@ const en: AmbassadorCopy = {
     whoTitle: 'Who’s behind it',
     partnerAlt: 'Shopify Partners',
     partnerText:
-      'We’re Shopify Partners and we work only on Shopify, every day. It’s the first thing to say: the client isn’t talking to a generalist agency, but to specialists in the platform they want to move to.',
+      'We’re Shopify Partners and we work only on Shopify, every day. It’s the first thing to say: the client talks to specialists in the platform they want to move to.',
     authorityStats: [
       { value: 'Team', label: 'of Shopify, marketing, advertising and SEO specialists' },
       { value: '7+ years', label: 'of eCommerce projects' },
@@ -1605,7 +1605,7 @@ const en: AmbassadorCopy = {
     antonio: {
       name: 'Antonio Manitta',
       role: 'Founder of noprob and single point of contact for the project',
-      bio: 'The client has one point of contact from start to finish: Antonio. Not a salesperson, but the project manager and eCommerce expert who oversees everything, from the first analysis to post-launch monitoring.',
+      bio: 'The client has one point of contact from start to finish: Antonio, the project manager and eCommerce expert who oversees the project from the first analysis to post-launch monitoring.',
       points: [
         'Degree in Computer Science',
         'Over 7 years working on eCommerce projects',
@@ -1616,7 +1616,7 @@ const en: AmbassadorCopy = {
     team: {
       title: 'A team of Shopify, marketing, advertising and SEO specialists',
       description:
-        'Behind Antonio there’s a full team covering every area of the migration. When something’s needed, nobody goes looking for the right freelancer: someone on the team already does it. And a team that builds its own SaaS and apps has technical skills that go far beyond the typical template-based site.',
+        'Behind Antonio there’s a full team covering every area of the migration: when you need one more specialist, they’re already on the team. And a team that builds its own SaaS and apps has technical skills that go beyond the typical template-based site.',
       skills: [
         'Shopify development',
         'SEO and redirects',
@@ -1679,7 +1679,7 @@ const en: AmbassadorCopy = {
       {
         question: '“And after the 90 days?”',
         answer:
-          'The store is the client’s, solid, with clean data. They can carry on alone, with a bundle of hours or with the team for advertising, email and CRO. No lock-in.',
+          'The store is the client’s, solid, with clean data. They can carry on alone, with a bundle of hours or with the team for advertising, email and CRO, with no lock-in.',
       },
     ],
   },

@@ -16,9 +16,9 @@ const article: Article = {
   excerptIt:
     "Cos'è Shopify, come funziona davvero e per chi è adatto. La guida scritta da un Shopify Partner con oltre 7 anni di progetti eCommerce.",
   ledeEn:
-    "Written from the inside: what Shopify actually does, where it works exceptionally well, where it has limits, and when it makes sense to move to it.",
+    "What Shopify does, where it works well, where it has limits and when moving to it pays off, from people who work on Shopify stores every day.",
   ledeIt:
-    "La guida scritta da chi gestisce Shopify ogni giorno per brand fashion, integratori e DTC. Cosa fa davvero, dove funziona, dove ha limiti, quando ha senso migrare.",
+    "Scritta da chi lavora ogni giorno su Shopify per brand fashion, integratori e DTC: cosa fa davvero, dove funziona, dove ha limiti e quando ha senso migrare.",
   image: '/images/blog/cose-shopify-cover.png',
   imageAlt: 'Copertina della guida a Shopify: sfondo blu notte sfumato con una dissolvenza radiale di puntini',
   imageAltEn: 'Cover of the how Shopify works guide: softly graded navy background with a radial fade of dots',
@@ -140,7 +140,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Founded in Canada in 2006, Shopify now powers millions of merchants worldwide. Its user base spans early-stage DTC brands, established fashion retailers, supplement companies, and luxury boutiques, all of which need a stable platform without building an internal technical team.',
+      text: 'Founded in Canada in 2006, Shopify now powers millions of merchants worldwide, from early-stage DTC brands to fashion retailers, supplement companies and luxury boutiques that need a stable platform without building an internal technical team.',
     },
     { type: 'h2', text: 'How Shopify Works: The Technical Reality' },
     {
@@ -150,7 +150,7 @@ const article: Article = {
     { type: 'h3', text: 'The SaaS architecture explained simply' },
     {
       type: 'paragraph',
-      text: "Shopify is not software you install. It is a service you access through a browser, the way you use Google Drive or any cloud tool. Everything runs on Shopify's servers: your website, product images, orders, and customer data.",
+      text: "Shopify is a service you use through a browser, the way you use Google Drive or any cloud tool. Everything runs on Shopify's servers: your website, product images, orders, and customer data.",
     },
     {
       type: 'paragraph',
@@ -167,7 +167,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'The Shopify admin panel is considered the most intuitive in the market. This is not a marketing claim. It is consistently reported by merchants who have come from more complex platforms: doing the core things does not require a manual.',
+      text: 'The Shopify admin is built for people who are not developers: the core tasks do not require a manual.',
     },
     {
       type: 'paragraph',
@@ -225,7 +225,7 @@ const article: Article = {
     { type: 'h2', text: 'Shopify vs the Alternatives' },
     {
       type: 'paragraph',
-      text: 'The real question is almost never "what is Shopify" but "Shopify or something else?" Here is the comparison we make when a brand comes to us with an existing platform.',
+      text: 'By the time a brand reads this far, the question is usually Shopify or something else. Here is the comparison we make when a brand comes to us with an existing platform.',
     },
     { type: 'h3', text: 'Shopify vs WooCommerce' },
     {
@@ -238,7 +238,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'The most common reason brands migrate from WooCommerce to Shopify is not missing features. It is time lost managing plugin conflicts and technical maintenance instead of doing marketing and selling.',
+      text: 'Brands usually migrate from WooCommerce to Shopify because of the time they lose to plugin conflicts and technical maintenance, time that could go to marketing and selling.',
     },
     {
       type: 'paragraph',
@@ -268,12 +268,12 @@ const article: Article = {
     { type: 'h2', text: 'When Migrating to Shopify Makes Sense' },
     {
       type: 'paragraph',
-      text: 'This is the question I hear most often, and it deserves a direct answer rather than a generic benefits list.',
+      text: 'I hear this question more than any other, so here is a direct answer.',
     },
     { type: 'paragraph', text: 'Migration makes sense when:' },
     {
       type: 'paragraph',
-      text: '**Technical constraints are blocking commercial decisions.** If every site change requires a ticket, if A/B testing is not possible, if the checkout cannot be optimized, if loading new products is slow and manual: these are not minor inconveniences. Every week with a store that does not convert well is revenue lost.',
+      text: '**Technical constraints are blocking commercial decisions.** If every site change requires a ticket, if A/B testing is not possible, if the checkout cannot be optimized, if loading new products is slow and manual: every week with a store that does not convert well is revenue lost.',
     },
     {
       type: 'paragraph',
@@ -289,7 +289,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'We migrated them to Shopify in May 2025, built a complete server-side tracking setup that took the tracking audit score to 92/100, and stabilized the technical team around the new stack. In the 12 months after the migration, online sales grew **67.7%** compared with the 12 months before ([full case study](/use-cases/cumini-luxury-fashion-ecommerce)). The same happens coming from WooCommerce: [Supplement DTC Nazzi](/use-cases/integratori-nazzi-dtc-shopify) sold 105% more online in its first 85 days on Shopify. That result did not come from a single campaign or growth hack. It came from a technical foundation that finally allowed us to do the work properly.',
+      text: 'We migrated them to Shopify in May 2025, built a complete server-side tracking setup that took the tracking audit score to 92/100, and stabilized the technical team around the new stack. In the 12 months after the migration, online sales grew **67.7%** compared with the 12 months before ([full case study](/use-cases/cumini-luxury-fashion-ecommerce)). The same happens coming from WooCommerce: [Supplement DTC Nazzi](/use-cases/integratori-nazzi-dtc-shopify) sold 105% more online in its first 85 days on Shopify. The result came from a technical foundation that finally let us do the work properly.',
     },
     {
       type: 'paragraph',
@@ -298,7 +298,7 @@ const article: Article = {
     { type: 'h2', text: 'Is Shopify Worth It? The Honest Assessment' },
     {
       type: 'paragraph',
-      text: 'This is a legitimate question, and the answer depends on what you are comparing it to.',
+      text: 'The answer depends on what you compare it to.',
     },
     {
       type: 'paragraph',
@@ -323,7 +323,7 @@ const article: Article = {
       items: [
         'Fastest time from setup to selling among major platforms',
         'No technical maintenance burden: security, updates, and hosting included',
-        'Best-in-class mobile experience out of the box',
+        'Strong mobile experience out of the box',
         'Deep ecosystem of marketing integrations',
         'Shopify Payments eliminates payment gateway complexity',
         'Scales from early-stage to enterprise without platform migration',
@@ -342,7 +342,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Understanding both sides is important before committing. Shopify gives the most when the store sells to consumers, the checkout follows standard ecommerce patterns and the ERP connects through a connector layer.',
+      text: 'Shopify gives the most when the store sells to consumers, the checkout follows standard ecommerce patterns and the ERP connects through a connector layer.',
     },
     { type: 'h2', text: 'Who Is Shopify For, and Who Is It Not For?' },
     {
@@ -374,7 +374,7 @@ const article: Article = {
     { type: 'h2', text: 'How to Get Started: 5 Steps That Actually Matter' },
     {
       type: 'paragraph',
-      text: 'If Shopify is the right fit for your situation, here is the practical approach. Not the optimistic tutorial version.',
+      text: 'If Shopify is the right fit for your situation, these are the steps I would take, in this order, without the optimistic tutorial version.',
     },
     {
       type: 'paragraph',
@@ -417,7 +417,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'For a structured brand with a technical partner managing platform, optimizations, and tracking, the cost is higher. But the right comparison is not against zero: it is against the cost of an in-house developer, self-managing WooCommerce, or paying a generalist agency for each individual change.',
+      text: 'For a structured brand with a technical partner managing platform, optimizations, and tracking, the cost is higher. But the right comparison is the cost of an in-house developer, self-managing WooCommerce or paying a generalist agency for each individual change.',
     },
     {
       type: 'paragraph',
@@ -457,15 +457,15 @@ const article: Article = {
     { type: 'h2', text: 'A Final Note' },
     {
       type: 'paragraph',
-      text: 'Seven years of this work has taught me one thing clearly: the wrong platform holds a business back more than most founders realize. Every week with a platform that cannot be optimized is revenue that compounds in the wrong direction.',
+      text: 'Seven years of this work taught me one thing: the wrong platform holds a business back more than most founders realize. Every week on a platform you cannot optimize costs you revenue.',
     },
     {
       type: 'paragraph',
-      text: 'Shopify is not the answer for every situation. But for B2C brands that want to build a solid, scalable online store integrated with modern marketing tools, it is the most rational choice for the large majority of cases.',
+      text: 'Shopify does not fit every situation, but for B2C brands that want a solid, scalable online store integrated with modern marketing tools, it is the most rational choice in most cases.',
     },
     {
       type: 'paragraph',
-      text: 'The useful question is not "what is Shopify" but "is Shopify the right fit for my specific situation?" If you have an existing ecommerce on another platform and are evaluating migration, or if you are starting from scratch with a serious project, we can help you make that assessment with your numbers.',
+      text: 'The useful question is whether Shopify fits your specific situation. If you have an existing ecommerce on another platform and are evaluating migration, or if you are starting from scratch with a serious project, we can help you make that assessment with your numbers.',
     },
     {
       type: 'paragraph',
@@ -532,7 +532,7 @@ const article: Article = {
     { type: 'h3', text: "L'architettura SaaS spiegata senza tecnicismi" },
     {
       type: 'paragraph',
-      text: 'Shopify non è un software che installi sul tuo computer o sul tuo server. È un servizio che usi da browser, come Gmail o Google Drive. Tutto gira sui server di Shopify: il tuo sito, le immagini dei prodotti, gli ordini, i dati dei clienti.',
+      text: 'Shopify è un servizio che usi da browser, come Gmail o Google Drive. Tutto gira sui server di Shopify: il tuo sito, le immagini dei prodotti, gli ordini, i dati dei clienti.',
     },
     {
       type: 'paragraph',
@@ -549,7 +549,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'L\'interfaccia è considerata la più intuitiva del mercato. Questo non è marketing: è uno dei motivi principali per cui merchant che vengono da piattaforme più complesse riportano un sollievo immediato. Fare le cose fondamentali non richiede un manuale.',
+      text: 'L\'admin di Shopify è pensato per chi non è uno sviluppatore: per le cose fondamentali non serve un manuale.',
     },
     {
       type: 'paragraph',
@@ -611,7 +611,7 @@ const article: Article = {
     { type: 'h2', text: 'Shopify vs le alternative' },
     {
       type: 'paragraph',
-      text: 'La domanda vera non è mai "cos\'è Shopify" ma "Shopify o qualcos\'altro?". Ecco il confronto che facciamo quando un cliente arriva con una piattaforma esistente.',
+      text: 'A questo punto la domanda è quasi sempre: Shopify o qualcos\'altro? Ecco il confronto che facciamo quando un cliente arriva con una piattaforma esistente.',
     },
     { type: 'h3', text: 'Shopify vs WooCommerce' },
     {
@@ -620,11 +620,11 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'La nostra valutazione sincera: per brand B2C con focus sulla crescita, Shopify vince quasi sempre. WooCommerce ha senso in casi specifici: budget molto limitato, team tecnico interno dedicato, o esigenze di personalizzazione profonda che l\'ecosistema Shopify non copre.',
+      text: 'La nostra valutazione: per brand B2C con focus sulla crescita, Shopify vince quasi sempre. WooCommerce ha senso in casi specifici: budget molto limitato, team tecnico interno dedicato, o esigenze di personalizzazione profonda che l\'ecosistema Shopify non copre.',
     },
     {
       type: 'paragraph',
-      text: 'Il motivo più frequente per cui i clienti migrano da WooCommerce a Shopify non è la mancanza di funzionalità. È il tempo che passa a gestire aggiornamenti, crash di plugin e problemi tecnici invece di fare marketing e vendere.',
+      text: 'I clienti migrano da WooCommerce a Shopify soprattutto per il tempo che passano a gestire aggiornamenti, crash di plugin e problemi tecnici invece di fare marketing e vendere.',
     },
     {
       type: 'paragraph',
@@ -654,12 +654,12 @@ const article: Article = {
     { type: 'h2', text: 'Quando ha senso migrare su Shopify' },
     {
       type: 'paragraph',
-      text: 'Questa è la domanda che mi viene fatta più spesso, e merita una risposta diretta invece di una lista generica di benefici.',
+      text: 'È la domanda che mi fanno più spesso, quindi ti do una risposta diretta.',
     },
     { type: 'paragraph', text: 'Ha senso migrare quando:' },
     {
       type: 'paragraph',
-      text: '**Il tecnico blocca il commerciale.** Se ogni modifica al sito richiede un ticket, se non puoi fare A/B test, se il checkout non si riesce a ottimizzare, se caricare nuovi prodotti è lento e complicato: questi non sono problemi minori. Ogni settimana che passi con un sito che non converte bene è fatturato perso.',
+      text: '**Il tecnico blocca il commerciale.** Se ogni modifica al sito richiede un ticket, se non puoi fare A/B test, se il checkout non si riesce a ottimizzare, se caricare nuovi prodotti è lento e complicato: ogni settimana che passi con un sito che non converte bene è fatturato perso.',
     },
     {
       type: 'paragraph',
@@ -675,7 +675,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Li abbiamo migrati su Shopify a maggio 2025, costruito un tracking server-side completo (tracking score 92/100 nell’audit), stabilizzato il team tecnico. Nei 12 mesi dopo la migrazione le vendite online sono cresciute del **67,7%** rispetto ai 12 mesi prima ([caso studio completo](/it/casi-studio/cumini-luxury-fashion-ecommerce)). Lo stesso succede partendo da WooCommerce: [Integratori DTC Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify) ha venduto online il 105% in più nei primi 85 giorni su Shopify. Non è stato un risultato istantaneo. È stato costruito su una fondamenta tecnica che finalmente permetteva di lavorare.',
+      text: 'Li abbiamo migrati su Shopify a maggio 2025, costruito un tracking server-side completo (tracking score 92/100 nell’audit), stabilizzato il team tecnico. Nei 12 mesi dopo la migrazione le vendite online sono cresciute del **67,7%** rispetto ai 12 mesi prima ([caso studio completo](/it/casi-studio/cumini-luxury-fashion-ecommerce)). Lo stesso succede partendo da WooCommerce: [Integratori DTC Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify) ha venduto online il 105% in più nei primi 85 giorni su Shopify. Il risultato è arrivato da una base tecnica che finalmente permetteva di lavorare.',
     },
     {
       type: 'paragraph',
@@ -728,7 +728,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Conoscere entrambi i lati serve prima di impegnarsi. Shopify rende di più quando lo store vende a consumatori, il checkout segue gli schemi standard dell’eCommerce e il gestionale si collega tramite un connettore.',
+      text: 'Shopify rende di più quando lo store vende a consumatori, il checkout segue gli schemi standard dell’eCommerce e il gestionale si collega tramite un connettore.',
     },
     { type: 'h2', text: 'Per chi è adatto Shopify (e per chi no)' },
     {
@@ -760,7 +760,7 @@ const article: Article = {
     { type: 'h2', text: 'Come iniziare con Shopify: i 5 passi reali' },
     {
       type: 'paragraph',
-      text: 'Se hai deciso che Shopify è la piattaforma giusta, questi sono i passi concreti. Non la versione ottimistica dei tutorial ufficiali, quelli che mostrano uno store pronto in 15 minuti.',
+      text: 'Se hai deciso che Shopify è la piattaforma giusta, questi sono i passi concreti, senza la versione ottimistica dei tutorial ufficiali che mostrano uno store pronto in 15 minuti.',
     },
     {
       type: 'paragraph',
@@ -776,7 +776,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '**4. Cura il catalogo come investimento, non come compito.** La qualità della scheda prodotto è il fattore che impatta più direttamente sulle conversioni. Titoli chiari, descrizioni che parlano al beneficio e non solo alle specifiche tecniche, almeno quattro-sei foto per prodotto, varianti ben configurate. Se hai un catalogo ampio, pianifica questa fase con attenzione prima di affidarla a qualcuno. Per una guida completa su come ottimizzare le pagine prodotto per le conversioni, leggi la nostra [guida al CRO per eCommerce](/it/blog/cro-ecommerce).',
+      text: '**4. Cura il catalogo come un investimento.** La qualità della scheda prodotto è il fattore che impatta più direttamente sulle conversioni. Titoli chiari, descrizioni che parlano al beneficio e non solo alle specifiche tecniche, almeno quattro-sei foto per prodotto, varianti ben configurate. Se hai un catalogo ampio, pianifica questa fase con attenzione prima di affidarla a qualcuno. Per una guida completa su come ottimizzare le pagine prodotto per le conversioni, leggi la nostra [guida al CRO per eCommerce](/it/blog/cro-ecommerce).',
     },
     {
       type: 'paragraph',
@@ -811,7 +811,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Per un brand strutturato con un partner tecnico che gestisce piattaforma, ottimizzazioni e tracking, il range sale. Ma il confronto corretto non è con il costo zero di non avere un partner: è con il costo di assumere un developer interno, gestire WooCommerce, o pagare un\'agenzia generalista per ogni singola modifica.',
+      text: 'Per un brand strutturato con un partner tecnico che gestisce piattaforma, ottimizzazioni e tracking, il range sale. Ma il confronto corretto è con il costo di assumere un developer interno, gestire WooCommerce, o pagare un\'agenzia generalista per ogni singola modifica.',
     },
     {
       type: 'paragraph',
@@ -856,11 +856,11 @@ const article: Article = {
     { type: 'h2', text: 'Una nota finale' },
     {
       type: 'paragraph',
-      text: 'Shopify non è la risposta per ogni situazione. Ma per i brand B2C che vogliono costruire un eCommerce solido, scalabile e integrato con gli strumenti di marketing moderni, è difficile trovare un\'alternativa che offra lo stesso equilibrio tra semplicità operativa e potenziale di crescita.',
+      text: 'Shopify non si adatta a ogni situazione, ma per i brand B2C che vogliono costruire un eCommerce solido, scalabile e integrato con gli strumenti di marketing moderni, è difficile trovare un\'alternativa che offra lo stesso equilibrio tra semplicità operativa e potenziale di crescita.',
     },
     {
       type: 'paragraph',
-      text: 'La domanda più utile non è "cos\'è Shopify" ma "Shopify è adatto al mio specifico caso?". La risposta dipende dal settore, dal volume attuale, dalle esigenze tecniche e da quanto si vuole investire nella gestione mensile.',
+      text: 'La domanda più utile è se Shopify è adatto al tuo caso specifico. La risposta dipende dal settore, dal volume attuale, dalle esigenze tecniche e da quanto si vuole investire nella gestione mensile.',
     },
     {
       type: 'paragraph',
@@ -868,7 +868,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: "Una cosa che ho imparato in sette anni di questo lavoro: la piattaforma sbagliata frena molto più di quanto si pensi. La piattaforma giusta, da sola, non risolve tutto. Ma crea le condizioni perché il resto funzioni.",
+      text: "In sette anni di questo lavoro ho imparato che la piattaforma sbagliata frena molto più di quanto si pensi. La piattaforma giusta crea le condizioni perché il resto funzioni.",
     },
     {
       type: 'paragraph',

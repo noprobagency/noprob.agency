@@ -123,11 +123,11 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'WooCommerce is a free plugin that runs on WordPress, on a server you choose. The host, WordPress itself, WooCommerce, the theme and every extension each have their own update cycle, and the PHP version is a setting you own. WooCommerce’s own [server recommendations](https://woocommerce.com/document/server-requirements/) say that older PHP versions still work but have reached end of life and may expose the site to security vulnerabilities, and the WordPress documentation on [hardening WordPress](https://developer.wordpress.org/advanced-administration/security/hardening/) tells you to keep WordPress and plugins updated. None of this is a flaw. It is the price of control.',
+      text: 'WooCommerce is a free plugin that runs on WordPress, on a server you choose. The host, WordPress itself, WooCommerce, the theme and every extension each have their own update cycle, and the PHP version is a setting you own. WooCommerce’s own [server recommendations](https://woocommerce.com/document/server-requirements/) say that older PHP versions still work but have reached end of life and may expose the site to security vulnerabilities, and the WordPress documentation on [hardening WordPress](https://developer.wordpress.org/advanced-administration/security/hardening/) tells you to keep WordPress and plugins updated. That is the price of control.',
     },
     {
       type: 'paragraph',
-      text: 'It is also not abstract. If your site runs on PHP, which WooCommerce does, [CERT-EU advisory 2026-018](https://cert.europa.eu/publications/security-advisories/2026-018/) describes two critical flaws (CVSS 9.2) that allow remote code execution without authentication. They are fixed in PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35, while PHP 8.1 and earlier get no official fix. Whether a given store is exposed depends on the version and configuration of its server, so the first question for whoever maintains a WooCommerce store is which PHP version it runs. On Shopify that question does not exist: the runtime is not yours to patch.',
+      text: 'Here is a concrete case. If your site runs on PHP, which WooCommerce does, [CERT-EU advisory 2026-018](https://cert.europa.eu/publications/security-advisories/2026-018/) describes two critical flaws (CVSS 9.2) that allow remote code execution without authentication. They are fixed in PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35, while PHP 8.1 and earlier get no official fix. Whether a given store is exposed depends on the version and configuration of its server, so the first question for whoever maintains a WooCommerce store is which PHP version it runs. On Shopify that question does not exist: the runtime is not yours to patch.',
     },
     {
       type: 'paragraph',
@@ -144,7 +144,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Shopify removes the platform layer from that list, but not all breakage. Apps are the weak point: a heavy app or leftover code from one you removed can slow the store, and theme edits can break a section. A move creates its own problems too. When we launched Nazzi on Shopify, we checked tracking after the campaigns restarted and aligned the pixel and Google configuration on 20 August. What matters is who is on call when it happens.',
+      text: 'Shopify removes the platform layer from that list, but not all breakage. Apps are the weak point: a heavy app or leftover code from one you removed can slow the store, and theme edits can break a section. A move creates its own problems too. When we launched Nazzi on Shopify, we checked tracking after the campaigns restarted and aligned the pixel and Google configuration on 20 August. So ask who is on call when it happens.',
     },
     { type: 'h2', text: 'How fast can you change things?' },
     {
@@ -187,7 +187,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'The market moves both ways. According to [Store Leads](https://storeleads.app/reports/shopify), 27,247 merchants moved to Shopify from other platforms in the 90 days to 9 October 2026, and 9,204 of them came from WooCommerce, the largest single source. That is a gross flow: in the same period Store Leads counts 17,922 stores leaving Shopify, so the net gain is 9,325. Read it as a sign that WooCommerce is where many stores start and outgrow their setup, not as proof that one platform is right for you. The practical side is in our [WooCommerce to Shopify migration guide](/blog/woocommerce-to-shopify-migration).',
+      text: 'The market moves both ways. According to [Store Leads](https://storeleads.app/reports/shopify), 27,247 merchants moved to Shopify from other platforms in the 90 days to 9 October 2026, and 9,204 of them came from WooCommerce, the largest single source. That is a gross flow: in the same period Store Leads counts 17,922 stores leaving Shopify, so the net gain is 9,325. Read it as a sign that WooCommerce is where many stores start and outgrow their setup. The practical side is in our [WooCommerce to Shopify migration guide](/blog/woocommerce-to-shopify-migration).',
     },
     { type: 'h2', text: 'What our move at Nazzi shows' },
     {
@@ -280,11 +280,11 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'WooCommerce è un plugin gratuito che gira su WordPress, su un server che scegli tu. L’hosting, WordPress, WooCommerce, il tema e ogni estensione hanno ciascuno il proprio ciclo di aggiornamenti, e la versione di PHP è un’impostazione che governi tu. Le [raccomandazioni sul server](https://woocommerce.com/document/server-requirements/) di WooCommerce stesso dicono che le versioni vecchie di PHP funzionano ancora ma sono a fine vita e possono esporre il sito a vulnerabilità, e la documentazione di WordPress sull’[hardening](https://developer.wordpress.org/advanced-administration/security/hardening/) chiede di tenere aggiornati WordPress e i plugin. Non è un difetto. È il prezzo del controllo.',
+      text: 'WooCommerce è un plugin gratuito che gira su WordPress, su un server che scegli tu. L’hosting, WordPress, WooCommerce, il tema e ogni estensione hanno ciascuno il proprio ciclo di aggiornamenti, e la versione di PHP è un’impostazione che governi tu. Le [raccomandazioni sul server](https://woocommerce.com/document/server-requirements/) di WooCommerce stesso dicono che le versioni vecchie di PHP funzionano ancora ma sono a fine vita e possono esporre il sito a vulnerabilità, e la documentazione di WordPress sull’[hardening](https://developer.wordpress.org/advanced-administration/security/hardening/) chiede di tenere aggiornati WordPress e i plugin. È il prezzo del controllo.',
     },
     {
       type: 'paragraph',
-      text: 'E non è un discorso astratto. Se il tuo sito gira su PHP, come WooCommerce, l’[advisory CERT-EU 2026-018](https://cert.europa.eu/publications/security-advisories/2026-018/) descrive due falle critiche (CVSS 9,2) che permettono l’esecuzione di codice da remoto senza autenticazione. Sono corrette in PHP 8.5.12, 8.4.27, 8.3.36 e 8.2.35, mentre per PHP 8.1 e precedenti non c’è una correzione ufficiale. Se un certo store sia esposto dipende dalla versione e dalla configurazione del suo server, quindi la prima domanda a chi mantiene uno store WooCommerce è quale versione di PHP usa. Su Shopify quella domanda non esiste: l’ambiente di esecuzione non è una cosa che devi aggiornare tu.',
+      text: 'Un caso concreto. Se il tuo sito gira su PHP, come WooCommerce, l’[advisory CERT-EU 2026-018](https://cert.europa.eu/publications/security-advisories/2026-018/) descrive due falle critiche (CVSS 9,2) che permettono l’esecuzione di codice da remoto senza autenticazione. Sono corrette in PHP 8.5.12, 8.4.27, 8.3.36 e 8.2.35, mentre per PHP 8.1 e precedenti non c’è una correzione ufficiale. Se un certo store sia esposto dipende dalla versione e dalla configurazione del suo server, quindi la prima domanda a chi mantiene uno store WooCommerce è quale versione di PHP usa. Su Shopify quella domanda non esiste: l’ambiente di esecuzione non è una cosa che devi aggiornare tu.',
     },
     {
       type: 'paragraph',
@@ -301,7 +301,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Shopify toglie dalla lista il livello della piattaforma, ma non ogni guasto. Le app sono il punto debole: un’app pesante, o il codice rimasto di una che hai tolto, può rallentare lo store, e le modifiche al tema possono rompere una sezione. Anche il passaggio ha i suoi problemi. Quando abbiamo lanciato Nazzi su Shopify, abbiamo controllato il tracciamento dopo la ripartenza delle campagne e il 20 agosto abbiamo allineato la configurazione di pixel e Google. Conta chi è reperibile quando succede.',
+      text: 'Shopify toglie dalla lista il livello della piattaforma, ma non ogni guasto. Le app sono il punto debole: un’app pesante, o il codice rimasto di una che hai tolto, può rallentare lo store, e le modifiche al tema possono rompere una sezione. Anche il passaggio ha i suoi problemi. Quando abbiamo lanciato Nazzi su Shopify, abbiamo controllato il tracciamento dopo la ripartenza delle campagne e il 20 agosto abbiamo allineato la configurazione di pixel e Google. Chiediti chi è reperibile quando succede.',
     },
     { type: 'h2', text: 'Quanto sei veloce a cambiare le cose?' },
     {
@@ -344,7 +344,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Il mercato si muove in entrambe le direzioni. Secondo [Store Leads](https://storeleads.app/reports/shopify), nei 90 giorni al 9 ottobre 2026 sono passati a Shopify da altre piattaforme 27.247 merchant, e 9.204 arrivavano da WooCommerce, la prima fonte in assoluto. È un flusso lordo: nello stesso periodo Store Leads conta 17.922 store che lasciano Shopify, quindi il saldo netto è +9.325. Leggilo come il segnale che WooCommerce è il punto di partenza di tanti store che poi superano la configurazione iniziale, non come la prova che una piattaforma sia giusta per te. La parte pratica è nella nostra [guida alla migrazione da WooCommerce a Shopify](/it/blog/migrazione-woocommerce-shopify).',
+      text: 'Il mercato si muove in entrambe le direzioni. Secondo [Store Leads](https://storeleads.app/reports/shopify), nei 90 giorni al 9 ottobre 2026 sono passati a Shopify da altre piattaforme 27.247 merchant, e 9.204 arrivavano da WooCommerce, la prima fonte in assoluto. È un flusso lordo: nello stesso periodo Store Leads conta 17.922 store che lasciano Shopify, quindi il saldo netto è +9.325. Leggilo come il segnale che WooCommerce è il punto di partenza di tanti store che poi superano la configurazione iniziale. La parte pratica è nella nostra [guida alla migrazione da WooCommerce a Shopify](/it/blog/migrazione-woocommerce-shopify).',
     },
     { type: 'h2', text: 'Cosa mostra il nostro passaggio di Nazzi' },
     {

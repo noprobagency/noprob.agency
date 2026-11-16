@@ -104,7 +104,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'We are noprob agency. In the Shopify Launch Sprint, our [Shopify migration service](/shopify-migration-sprint), the 1:1 redirect map is tested automatically before and after go-live, so this is a process we run, not a theory. Our [migration SEO checklist](/blog/shopify-migration-seo-checklist) says what to check across a whole move; this article is the process for producing the one document that checklist depends on. For the full path of a migration, read the [Shopify migration guide](/shopify-migration).',
+      text: 'We are noprob agency. In the Shopify Launch Sprint, our [Shopify migration service](/shopify-migration-sprint), the 1:1 redirect map is tested automatically before and after go-live, so this is a process we run. Our [migration SEO checklist](/blog/shopify-migration-seo-checklist) says what to check across a whole move; this article is the process for producing the one document that checklist depends on. For the full path of a migration, read the [Shopify migration guide](/shopify-migration).',
     },
     {
       type: 'h2',
@@ -274,12 +274,12 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Why separate? Whoever wrote a row tends to repeat its own logic when it reads the row again, and that holds for a model as for a person. Independence is what finds errors. The same method, applied to the whole migration, is in [Migrating to Shopify with AI agents](/blog/shopify-migration-ai-agents). If you want to build agents like these for your own team, that is the work of the [AI Accelerator](/ai-accelerator).',
+      text: 'Why separate? Whoever wrote a row tends to repeat its own logic when it reads the row again, and that holds for a model as for a person, so a second pass that never sees the first one’s reasoning catches errors the first cannot. The same method, applied to the whole migration, is in [Migrating to Shopify with AI agents](/blog/shopify-migration-ai-agents). If you want to build agents like these for your own team, that is the work of the [AI Accelerator](/ai-accelerator).',
     },
     { type: 'h2', text: 'What did this look like on a real migration?' },
     {
       type: 'paragraph',
-      text: 'On Nazzi, a WooCommerce store, we checked 215 archived URLs against the new store after go-live and delivered the CSV of 301 redirects, ready to import in Shopify ([case study](/use-cases/integratori-nazzi-dtc-shopify)). The lesson is the one in step 5: the map is not finished when the file is imported. Testing the old addresses one by one is a separate job from building the map, and it is what turns a list of redirects into a result you can trust.',
+      text: 'On Nazzi, a WooCommerce store, we checked 215 archived URLs against the new store after go-live and delivered the CSV of 301 redirects, ready to import in Shopify ([case study](/use-cases/integratori-nazzi-dtc-shopify)). The map was not finished when the file was imported: testing the old addresses one by one is a separate job from building it, and it is what makes the list of redirects reliable.',
     },
     { type: 'h2', text: 'Frequently asked questions' },
     { type: 'h3', text: 'What does a 301 redirect do on Shopify?' },
@@ -330,7 +330,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Siamo noprob agency. Nello Shopify Launch Sprint, il nostro [servizio di migrazione a Shopify](/it/sprint-migrazione-shopify), la mappa dei redirect 1:1 viene collaudata in automatico prima e dopo il go-live, quindi questo è un processo che eseguiamo, non una teoria. La nostra [checklist SEO per la migrazione](/it/blog/migrazione-shopify-seo-checklist) dice cosa controllare in tutto il passaggio; questo articolo è il processo per produrre l’unico documento da cui quella checklist dipende. Per il percorso completo di una migrazione leggi la [guida alla migrazione a Shopify](/it/migrazione-shopify).',
+      text: 'Siamo noprob agency. Nello Shopify Launch Sprint, il nostro [servizio di migrazione a Shopify](/it/sprint-migrazione-shopify), la mappa dei redirect 1:1 viene collaudata in automatico prima e dopo il go-live, quindi questo è un processo che eseguiamo noi. La nostra [checklist SEO per la migrazione](/it/blog/migrazione-shopify-seo-checklist) dice cosa controllare in tutto il passaggio; questo articolo è il processo per produrre l’unico documento da cui quella checklist dipende. Per il percorso completo di una migrazione leggi la [guida alla migrazione a Shopify](/it/migrazione-shopify).',
     },
     {
       type: 'h2',
@@ -402,7 +402,7 @@ const article: Article = {
       type: 'list',
       items: [
         '**WooCommerce.** /product/camicia-blu-cotone va su /products/camicia-blu-cotone e /product-category/camicie su /collections/camicie. Quelle due basi, product e product-category, sono i valori predefiniti nel [codice sorgente di WooCommerce](https://github.com/woocommerce/woocommerce/blob/trunk/plugins/woocommerce/includes/wc-core-functions.php), ma uno store può cambiarle. Gli articoli stanno alla radice del dominio (o sotto una data) e vanno su /blogs/news/. Di più in [da WooCommerce a Shopify](/it/blog/migrazione-woocommerce-shopify).',
-        '**Magento.** /camicia-blu-cotone.html va su /products/camicia-blu-cotone, e così lo stesso prodotto con il percorso di categoria come /uomo/camicie/camicia-blu-cotone-cotone.html. Le categorie come /uomo/camicie.html vanno su una collezione. Il [suffisso è configurabile](https://experienceleague.adobe.com/en/docs/commerce-admin/catalog/catalog/catalog-urls), e i percorsi di sistema come /catalog/product/view/id/34 hanno una riga solo se Search Console mostra impressioni. Di più in [da Magento a Shopify](/it/blog/migrazione-magento-shopify).',
+        '**Magento.** /camicia-blu-cotone.html va su /products/camicia-blu-cotone, e così lo stesso prodotto con il percorso di categoria come /uomo/camicie/camicia-blu-cotone.html. Le categorie come /uomo/camicie.html vanno su una collezione. Il [suffisso è configurabile](https://experienceleague.adobe.com/en/docs/commerce-admin/catalog/catalog/catalog-urls), e i percorsi di sistema come /catalog/product/view/id/34 hanno una riga solo se Search Console mostra impressioni. Di più in [da Magento a Shopify](/it/blog/migrazione-magento-shopify).',
         '**PrestaShop.** Lo schema predefinito del prodotto è {category:/}{id}-{rewrite}.html, quindi /camicie/7-camicia-blu-cotone.html va su /products/camicia-blu-cotone; le categorie (/12-camicie) vanno alle collezioni, le pagine CMS (/content/4-spedizioni) a /pages/, i marchi (/brand/3-acme) a una collezione per fornitore. Gli schemi sono nel [Dispatcher.php di PrestaShop](https://github.com/PrestaShop/PrestaShop/blob/8.2.0/classes/Dispatcher.php). L’ID nell’indirizzo è una chiave affidabile per il collegamento. Di più in [da PrestaShop a Shopify](/it/blog/migrazione-prestashop-shopify).',
       ],
     },
@@ -503,12 +503,12 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Perché separata? Chi ha scritto una riga tende a ripetere la propria logica quando la rilegge, e vale per un modello come per una persona. È l’indipendenza che trova gli errori. Lo stesso metodo, applicato a tutta la migrazione, è in [Migrare a Shopify con gli agenti AI](/it/blog/migrazione-shopify-agenti-ai). Se vuoi costruire agenti come questi per il tuo team, è il lavoro dell’[AI Accelerator](/it/ai-accelerator).',
+      text: 'Perché separata? Chi ha scritto una riga tende a ripetere la propria logica quando la rilegge, e vale per un modello come per una persona, quindi un secondo passaggio che non vede mai il ragionamento del primo trova errori che il primo non vede. Lo stesso metodo, applicato a tutta la migrazione, è in [Migrare a Shopify con gli agenti AI](/it/blog/migrazione-shopify-agenti-ai). Se vuoi costruire agenti come questi per il tuo team, è il lavoro dell’[AI Accelerator](/it/ai-accelerator).',
     },
     { type: 'h2', text: 'Come è andata in una migrazione vera?' },
     {
       type: 'paragraph',
-      text: 'Su Nazzi, uno store WooCommerce, abbiamo controllato 215 URL archiviati sul nuovo store dopo il go-live e consegnato il CSV dei redirect 301, pronto da importare in Shopify ([caso studio](/it/casi-studio/integratori-nazzi-dtc-shopify)). La lezione è quella del passo 5: la mappa non è finita quando il file è importato. Collaudare i vecchi indirizzi uno per uno è un lavoro separato dal costruire la mappa, ed è ciò che trasforma un elenco di redirect in un risultato di cui fidarsi.',
+      text: 'Su Nazzi, uno store WooCommerce, abbiamo controllato 215 URL archiviati sul nuovo store dopo il go-live e consegnato il CSV dei redirect 301, pronto da importare in Shopify ([caso studio](/it/casi-studio/integratori-nazzi-dtc-shopify)). La mappa non era finita quando il file è stato importato: collaudare i vecchi indirizzi uno per uno è un lavoro separato dal costruirla, ed è ciò che rende affidabile l’elenco dei redirect.',
     },
     { type: 'h2', text: 'Domande frequenti' },
     { type: 'h3', text: 'A cosa serve un redirect 301 su Shopify?' },
