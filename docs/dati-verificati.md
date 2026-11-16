@@ -136,6 +136,7 @@ vanno corrette qui e nel copy.
 
 - 7+ anni di progetti eCommerce (Antonio)
 - 7 anni da eCommerce manager alla guida di un team di 7 persone (Antonio, 15 nov 2026). Nelle email a freddo si scrive senza numeri sul team ("eCommerce manager da 7 anni", "years as an eCommerce manager leading a team")
+- Gestisce negozi online anche da 20 milioni di euro l'anno, come eCommerce manager (Antonio, 16 nov 2026). Usata solo nelle email a freddo agli eCommerce portoghesi di Catarina (D-103): "I run online stores, some up to €20M a year"; sul sito no
 - "Lavoro con molti negozi come il vostro" e "di solito è un lavoro che i clienti mi pagano" (Antonio, 15 nov 2026, scritte da lui nella prima email Italia v3)
 - Dato del sito nelle email a freddo: misurato dal test Google PageSpeed da cellulare il giorno dell'invio; la velocità (LCP) si cita solo se due prove di fila superano 4 s (Claudio, 15 nov 2026)
 - diverse migrazioni a Shopify, 0 minuti offline (Antonio, 28 ott 2026: al posto di "oltre 10" e di "due migrazioni"; i casi pubblicati sono Nazzi e Cumini, altri in pubblicazione)
