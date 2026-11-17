@@ -44,7 +44,7 @@ export type BlocchiCopy = {
   trustpilot: { label: string; linkLabel: string }
   founder: {
     sprint: { heading: string; text: string; role: string }
-    about: { heading: string; text: string; role: string; cta: string }
+    about: { heading: string; text: string; role: string; cta: string; links: { label: string; routeKey: 'sviluppoShopify' | 'useCases' }[] }
     imageAlt: string
     name: string
   }
@@ -135,6 +135,10 @@ const it: BlocchiCopy = {
       role: 'Fondatore di noprob agency',
       text: 'Antonio Manitta è il fondatore di noprob agency e il tuo referente in ogni progetto. Sviluppatore di formazione, poi eCommerce manager, ha oltre 7 anni di progetti eCommerce alle spalle. Segue Cumini da oltre 4 anni e ha guidato la migrazione di Integratori DTC Nazzi da WooCommerce a Shopify. noprob agency è nata nel 2022 e lavora su Shopify con un team di specialisti in Shopify, marketing, advertising e SEO, un Custom AI System proprio e un prezzo pubblico per le migrazioni.',
       cta: 'Scopri lo Shopify Launch Sprint',
+      links: [
+        { label: 'Sviluppo Shopify', routeKey: 'sviluppoShopify' },
+        { label: 'Casi studio Shopify', routeKey: 'useCases' },
+      ],
     },
   },
   useCases: {
@@ -245,6 +249,10 @@ const en: BlocchiCopy = {
       role: 'Founder of noprob agency',
       text: 'Antonio Manitta is the founder of noprob agency and your point of contact on every project. A developer by training, then eCommerce manager, he has 7+ years of eCommerce projects behind him. He has worked with Cumini for over 4 years and led the WooCommerce to Shopify migration of Supplement DTC Nazzi. noprob agency was founded in 2022 and works on Shopify with a team of specialists in Shopify, marketing, advertising and SEO, its own Custom AI System and a public price for migrations.',
       cta: 'See the Shopify Launch Sprint',
+      links: [
+        { label: 'Shopify development services', routeKey: 'sviluppoShopify' },
+        { label: 'Shopify case studies', routeKey: 'useCases' },
+      ],
     },
   },
   useCases: {

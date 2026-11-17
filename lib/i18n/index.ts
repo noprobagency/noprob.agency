@@ -82,6 +82,8 @@ export type Dictionary = {
     label: string
     heading: string
     subheading: string
+    /** Row of descriptive internal links under the plan cards. */
+    servicesLinks: { label: string; links: { label: string; href: string }[] }
     plans: {
       badge: string
       name: string
@@ -270,10 +272,10 @@ const en: Dictionary = {
     trustpilotHref: 'https://www.trustpilot.com/review/noprob.agency',
     line1: 'Your brand is premium.',
     line2: 'Your Shopify',
-    line3pre: 'partner should be ',
+    line3pre: 'experts should be ',
     line3em: 'too',
     description:
-      'We migrate, build and grow your eCommerce on Shopify: your store ready in 14 days at a public price, a custom build, or a dedicated team for development, marketing and strategy.',
+      'We are a team of Shopify experts. We migrate, build and grow your eCommerce on Shopify: your store ready in 14 days at a public price, a custom build, or a dedicated team for development, marketing and strategy.',
     ctaPrimary: 'Migrate to Shopify in 14 days',
     ctaPrimaryHref: '/shopify-migration-sprint',
     ctaSecondary: 'Book a call',
@@ -347,6 +349,15 @@ const en: Dictionary = {
     heading: 'Three ways to work with us',
     subheading:
       'Whether your eCommerce is already growing or still to be built, pick the plan that matches where you are.',
+    servicesLinks: {
+      label: 'Our services:',
+      links: [
+        { label: 'Shopify migration services', href: '/shopify-migration-sprint' },
+        { label: 'Shopify development services', href: '/shopify-development' },
+        { label: 'Shopify SEO agency', href: '/shopify-seo-agency' },
+        { label: 'AI agents for eCommerce', href: '/ai-agents-for-ecommerce' },
+      ],
+    },
     plans: [
       {
         badge: 'Need to migrate to Shopify?',
@@ -666,30 +677,30 @@ const en: Dictionary = {
     cookiePolicy: 'Cookie Policy',
   },
   seo: {
-    home: { title: 'Shopify Migration & Development Agency | noprob agency™', description: 'Shopify Partner for fashion, supplement and DTC brands: Shopify migration, store ready in 14 days at a public price, plus development and dedicated teams.' },
-    about: { title: 'About Us: Shopify Migration & Development', description: 'Meet noprob agency: Antonio Manitta and a team of Shopify, marketing, advertising and SEO specialists, with 7+ years of eCommerce projects.' },
+    home: { title: 'Shopify Experts for Migration and Development | noprob agency™', description: 'Shopify experts for fashion, supplement and DTC brands: migration to Shopify in 14 days at a public price, custom development and dedicated teams.' },
+    about: { title: 'Shopify Experts for Hire: Antonio and the Team', description: 'Hire Shopify experts who answer for the result: Antonio Manitta and a team of Shopify, marketing, advertising and SEO specialists. 7+ years of eCommerce.' },
     contacts: { title: 'Contact Us & Book a Call', description: 'Talk to an eCommerce expert at noprob agency: a call to migrate to Shopify, build your store or start a dedicated team. We reply within 48 hours.' },
     blog: { title: 'Shopify, AI and eCommerce Guides', description: 'Guides on Shopify, AI and eCommerce: migrating to Shopify, AI agents, AI search and GEO, and growth. Written by the noprob agency team.' },
     useCases: { title: 'Shopify Case Studies: Migration Results', description: 'Three case studies with sourced numbers: WooCommerce to Shopify, a custom platform to Shopify, an AI migration of a B2B catalog. Results as % and ratios.' },
     dataDrivenTeam: { title: 'Dedicated eCommerce Team on Retainer', description: 'Your dedicated eCommerce team on retainer. One point of contact, a full team behind you. For Shopify brands that want to scale without hiring in-house.' },
-    sviluppoShopify: { title: 'Shopify Development Services', description: 'Shopify development services to build your eCommerce from design to tracking, optimized to convert from day one. Lifetime maintenance included.' },
-    migrazioneShopify: { title: 'How to Migrate to Shopify: The Complete Guide', description: 'Migrate to Shopify with confidence: platforms, what gets moved, 301 redirects and SEO, tracking, timeline, risks and cost, with published case studies.' },
+    sviluppoShopify: { title: 'Shopify Development Services at a Fixed Price', description: 'Shopify development services from a Shopify development agency: custom design, tracking, SEO and speed, built in 3 months at a fixed monthly price.' },
+    migrazioneShopify: { title: 'Shopify Migration: How to Migrate to Shopify', description: 'Shopify migration step by step: platforms, what gets moved, 301 redirects and SEO, tracking, timeline, risks and cost, with two published case studies.' },
     aiAccelerator: { title: 'AI Accelerator for eCommerce: Growth with AI', description: '30 days one-to-one for established eCommerce brands: we find your growth opportunities, rank them and switch on your first AI solutions. Fixed price.' },
-    agentsEcommerce: { title: 'AI Agents for eCommerce: Built Into Your Store', description: 'Custom AI agents for eCommerce, built into your store. We handle the AI agent integration or set your store up so agents can watch it. Book a call.' },
-    shopifySeo: { title: 'Shopify SEO Agency: SEO for Your Store', description: 'Shopify SEO agency for stores already on Shopify. Our Shopify SEO services cover technical SEO, collections, content and AI visibility. Book a call.' },
+    agentsEcommerce: { title: 'AI Agents for eCommerce: Built Into Your Store', description: 'AI agents for eCommerce, built into your store: custom AI agent development, integration and human approvals, by a team that runs on agents daily. Book a call.' },
+    shopifySeo: { title: 'Shopify SEO Agency: Technical SEO and AI Search', description: 'Shopify SEO agency for stores already on Shopify: technical SEO, collections, content with verified data and visibility in AI answers. Book a call.' },
   },
   about: {
     hero: {
       trustLabel: 'Chosen by Fashion, Supplements and DTC brands',
-      h1pre: 'Your technical partner that makes eCommerce ',
+      h1pre: 'Shopify experts who make eCommerce ',
       h1em: 'simple',
-      body1: 'A 7/7 team of developers, designers and strategists helping Shopify brands scale without stress.',
-      body2: 'We become part of your project at 360\u00b0.',
+      body1: 'noprob agency, founded in 2022, is a team of Shopify experts: specialists in Shopify, marketing, advertising and SEO, with 7+ years of eCommerce projects behind us. We are enrolled in the Shopify Partner Program and have 10 five-star reviews on Trustpilot.',
+      body2: 'Antonio Manitta leads the team: a Computer Science graduate and developer by training, with 7 years as an eCommerce manager leading a team. We work with AI agents built on Claude Code every day, and we join your project at 360\u00b0.',
     },
     principles: {
       heading: 'We choose who we work with. Every project has to meet these three principles:',
-      card1Title: 'Seamless Integration & Proven Team',
-      card1Body: 'We plug directly into your structure with aligned workflows and vetted specialists. You work with a tight-knit, stable team built on long-term growth partnerships. When needed, we also source the right talent for your exact eCommerce needs.',
+      card1Title: 'Shopify Experts for Hire, One Proven Team',
+      card1Body: 'When you hire our Shopify experts, they plug directly into your structure with aligned workflows. You work with a tight-knit, stable team of vetted specialists, built on long-term growth partnerships. When needed, we also source the right talent for your exact eCommerce needs.',
       card2Title: 'Long-Term Vision & Strategic Focus',
       card2Body: 'We\u2019re built for Fashion, Supplements and DTC brands. We aim for stable growth and data-led decisions, with the same strategic partner beside you over time. We measure ourselves on the results of the brands we work with.',
       card3Title: 'Substance, Stability & Experience',
@@ -749,11 +760,11 @@ const it: Dictionary = {
     trustpilotRating: '10 recensioni a 5 stelle su Trustpilot',
     trustpilotHref: 'https://www.trustpilot.com/review/noprob.agency',
     line1: 'Il tuo brand è premium.',
-    line2: 'Anche il tuo partner',
-    line3pre: 'Shopify deve ',
+    line2: 'Anche i tuoi esperti',
+    line3pre: 'Shopify devono ',
     line3em: 'esserlo',
     description:
-      'Portiamo il tuo eCommerce su Shopify, lo costruiamo e lo facciamo crescere: store pronto in 14 giorni a prezzo pubblico, sviluppo su misura o team dedicato in sviluppo, marketing e strategia.',
+      'Siamo un team di esperti Shopify. Portiamo il tuo eCommerce su Shopify, lo costruiamo e lo facciamo crescere: store pronto in 14 giorni a prezzo pubblico, sviluppo su misura o team dedicato in sviluppo, marketing e strategia.',
     ctaPrimary: 'Migra a Shopify in 14 giorni',
     ctaPrimaryHref: '/it/sprint-migrazione-shopify',
     ctaSecondary: 'Prenota una videochiamata',
@@ -826,6 +837,15 @@ const it: Dictionary = {
     label: 'Prezzi',
     heading: 'Tre modi di lavorare con noi',
     subheading: 'Che il tuo eCommerce stia già crescendo o sia ancora da costruire, trovi il piano adatto a dove sei.',
+    servicesLinks: {
+      label: 'I nostri servizi:',
+      links: [
+        { label: 'Migrazione a Shopify', href: '/it/sprint-migrazione-shopify' },
+        { label: 'Sviluppo Shopify', href: '/it/sviluppo-shopify' },
+        { label: 'Agenzia SEO Shopify', href: '/it/agenzia-seo-shopify' },
+        { label: 'Agenti AI per eCommerce', href: '/it/agenti-ai-per-ecommerce' },
+      ],
+    },
     plans: [
       {
         badge: 'Devi migrare a Shopify?',
@@ -1145,30 +1165,30 @@ const it: Dictionary = {
     cookiePolicy: 'Cookie Policy',
   },
   seo: {
-    home: { title: 'Agenzia Shopify: migrazione e sviluppo | noprob agency™', description: 'Partner tecnico Shopify per brand fashion, integratori e DTC: migrazione a Shopify con store pronto in 14 giorni a prezzo pubblico, sviluppo e team dedicati.' },
-    about: { title: 'Chi siamo: migrazione e sviluppo Shopify', description: 'Il team noprob agency: Antonio Manitta e specialisti in Shopify, marketing, advertising e SEO, con oltre 7 anni di progetti eCommerce.' },
+    home: { title: 'Agenzia Shopify: migrazione e sviluppo | noprob agency™', description: 'Esperti Shopify per brand fashion, integratori e DTC: migrazione a Shopify con store pronto in 14 giorni a prezzo pubblico, sviluppo e team dedicati.' },
+    about: { title: 'Esperti Shopify: Antonio Manitta e il team', description: 'Gli esperti Shopify di noprob agency: Antonio Manitta e specialisti in Shopify, marketing, advertising e SEO, con oltre 7 anni di progetti eCommerce.' },
     contacts: { title: 'Contatti: prenota una videochiamata', description: 'Parla con un esperto eCommerce: videochiamata per migrare a Shopify, costruire il tuo store o attivare un team dedicato. Rispondiamo entro 48 ore.' },
     blog: { title: 'Guide su Shopify, AI ed eCommerce', description: 'Guide su Shopify, AI ed eCommerce: migrare a Shopify, agenti AI, ricerca AI e GEO, crescita. Scritte dal team di noprob agency.' },
     useCases: { title: 'Casi studio Shopify: risultati di migrazione', description: 'Tre casi studio con numeri e fonti: WooCommerce a Shopify, piattaforma proprietaria a Shopify, migrazione AI di un catalogo B2B. Risultati in % e rapporti.' },
     dataDrivenTeam: { title: 'Team eCommerce dedicato per Shopify', description: 'Il tuo team eCommerce dedicato per Shopify: un solo referente, sviluppo, marketing e dati. Il primo sprint di 30 giorni a metà prezzo, poi decidi tu.' },
-    sviluppoShopify: { title: 'Sviluppo Shopify: creiamo il tuo eCommerce', description: 'Sviluppiamo il tuo eCommerce su Shopify dal design al tracciamento, ottimizzato per convertire dal primo giorno. Manutenzione a vita inclusa.' },
-    migrazioneShopify: { title: 'Migrazione a Shopify: la guida completa', description: 'Migrazione a Shopify passo per passo: piattaforme, cosa si sposta, redirect 301 e SEO, tracking, tempi, rischi e costi, con casi pubblicati.' },
+    sviluppoShopify: { title: 'Sviluppo Shopify: store su misura a prezzo fisso', description: 'Sviluppo Shopify da un’agenzia di sviluppo Shopify: design su misura, tracking, SEO e velocità, costruito in 3 mesi a prezzo fisso mensile.' },
+    migrazioneShopify: { title: 'Migrazione a Shopify: come migrare, la guida', description: 'Migrare a Shopify passo per passo: piattaforme, cosa si sposta, redirect 301 e SEO, tracking, tempi, rischi e costi della migrazione, con due casi pubblicati.' },
     aiAccelerator: { title: 'AI Accelerator per eCommerce: cresci con l’AI', description: '30 giorni one-to-one per eCommerce già avviati: troviamo le tue opportunità di crescita, le mettiamo in fila e attiviamo le prime soluzioni AI. Prezzo fisso.' },
-    agentsEcommerce: { title: 'Agenti AI per eCommerce: dentro il tuo store', description: 'Agenti AI per eCommerce su misura: integrazione di agenti AI nel tuo store, o store impostato perché gli agenti lo tengano d’occhio. Prenota una videochiamata.' },
-    shopifySeo: { title: 'Agenzia SEO Shopify: SEO per il tuo store', description: 'Agenzia SEO Shopify per store già su Shopify. I nostri servizi SEO per Shopify: SEO tecnica, collezioni, contenuti, visibilità AI. Prenota una videochiamata.' },
+    agentsEcommerce: { title: 'Agenti AI per eCommerce: dentro il tuo store', description: 'Agenti AI per eCommerce nel tuo store: sviluppo di agenti AI su misura, integrazione e approvazione umana, da un team che usa agenti ogni giorno.' },
+    shopifySeo: { title: 'Agenzia SEO Shopify: SEO tecnica e ricerca AI', description: 'Agenzia SEO Shopify per store già su Shopify: SEO tecnica, collezioni, contenuti con dati verificati e visibilità nelle risposte AI. Prenota una videochiamata.' },
   },
   about: {
     hero: {
       trustLabel: 'Scelti da brand di Moda, Integratori e DTC eCommerce',
-      h1pre: "Il tuo partner tecnico che rende l\u2019eCommerce ",
+      h1pre: "Esperti Shopify che rendono l\u2019eCommerce ",
       h1em: 'semplice',
-      body1: 'Un team 7/7 di sviluppatori, designer e strategist che aiuta i brand Shopify a scalare senza stress.',
-      body2: 'Diventiamo parte del tuo progetto a 360\u00b0.',
+      body1: 'noprob agency, fondata nel 2022, \u00e8 un team di esperti Shopify: specialisti in Shopify, marketing, advertising e SEO, con oltre 7 anni di progetti eCommerce alle spalle. Siamo iscritti al Shopify Partner Program e abbiamo 10 recensioni a 5 stelle su Trustpilot.',
+      body2: 'Il team lo guida Antonio Manitta: laureato in Informatica e sviluppatore di formazione, con 7 anni da eCommerce manager alla guida di un team. Lavoriamo ogni giorno con agenti AI costruiti su Claude Code ed entriamo nel tuo progetto a 360\u00b0.',
     },
     principles: {
       heading: 'Scegliamo con chi lavorare. Ogni progetto deve rispettare questi tre principi:',
-      card1Title: 'Integrazione fluida e team consolidato',
-      card1Body: 'Ci integriamo direttamente nella tua struttura con workflow allineati e specialisti verificati. Lavori con un team stabile e coeso, costruito su partnership di crescita di lungo periodo. Quando serve, attiviamo anche il talento giusto per le esigenze specifiche del tuo eCommerce.',
+      card1Title: 'Esperti Shopify, un team consolidato',
+      card1Body: 'Quando scegli i nostri esperti Shopify, entrano direttamente nella tua struttura con workflow allineati. Lavori con un team stabile e coeso di specialisti verificati, costruito su partnership di crescita di lungo periodo. Quando serve, attiviamo anche il talento giusto per le esigenze specifiche del tuo eCommerce.',
       card2Title: 'Visione a lungo termine e focus strategico',
       card2Body: 'Siamo costruiti per brand Fashion, Integratori e DTC. Puntiamo su una crescita stabile e su decisioni guidate dai dati, con lo stesso partner strategico al tuo fianco nel tempo. Ci misuriamo sui risultati dei brand che seguiamo.',
       card3Title: 'Sostanza, stabilit\u00e0 ed esperienza',

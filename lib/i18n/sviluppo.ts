@@ -172,10 +172,10 @@ const it: SviluppoCopy = {
   },
   whyUs: {
     label: 'perché noi',
-    heading: 'Perché il nostro modello funziona meglio',
+    heading: 'Perché un’agenzia di sviluppo Shopify invece di freelancer separati',
     description:
       'Un confronto diretto tra l’approccio noprob e le agenzie tradizionali o i freelancer. Una struttura unica costruisce eCommerce che reggono nel tempo.',
-    agencyLabel: 'Altre<br />Agenzie',
+    agencyLabel: 'Freelancer o<br />altre agenzie',
     agencyItems: [
       'Risposte lente e coordinamento poco chiaro',
       'Sviluppano siti vetrina, senza strategia di conversione',
@@ -289,12 +289,12 @@ const it: SviluppoCopy = {
       {
         question: 'Lavorate con chi parte da zero?',
         answer:
-          'Sì: costruiamo l’intero eCommerce dalle fondamenta, dal design al lancio, sia che tu stia avviando il brand sia che voglia finalmente farlo bene.',
+          'Sì: costruiamo l’intero eCommerce dalle fondamenta, dal design al lancio, sia che tu stia avviando il brand sia che voglia finalmente farlo bene. Vendi già su un’altra piattaforma? I nostri [servizi di migrazione a Shopify](/it/sprint-migrazione-shopify) portano il tuo store su Shopify in 14 giorni.',
       },
       {
-        question: 'Cosa include lo sviluppo?',
+        question: 'Cosa includono i vostri servizi di sviluppo Shopify?',
         answer:
-          'Design su misura, sviluppo dello store, tracciamento server-side (GA4 e Meta CAPI), SEO base on-page, performance e CRO. A parte: fotografia prodotto, contenuti e gestione influencer.',
+          'I nostri servizi di sviluppo Shopify includono design su misura, sviluppo dello store, tracciamento server-side (GA4 e Meta CAPI), SEO base on-page, performance e CRO. A parte: fotografia prodotto, contenuti e gestione influencer. Il lavoro sulla ricerca che continua dopo il lancio è un servizio a sé, seguito dalla nostra [agenzia SEO Shopify](/it/agenzia-seo-shopify).',
       },
       {
         question: 'Cosa include la manutenzione a vita e quanto costa dopo i 3 mesi?',
@@ -431,10 +431,10 @@ const en: SviluppoCopy = {
   },
   whyUs: {
     label: 'why us',
-    heading: 'Why our model works better',
+    heading: 'Why a Shopify development agency instead of separate freelancers',
     description:
       'A direct comparison between the noprob approach and traditional agencies or freelancers. A single structure builds eCommerce that lasts.',
-    agencyLabel: 'Other<br />Agency',
+    agencyLabel: 'Freelancers or<br />other agencies',
     agencyItems: [
       'Slow response times and unclear coordination',
       'They build showcase sites, with no conversion strategy',
@@ -548,12 +548,12 @@ const en: SviluppoCopy = {
       {
         question: 'Do you work with people starting from scratch?',
         answer:
-          'Yes: we build the entire eCommerce from the ground up, from design to launch, whether you’re launching the brand or finally want to do it right.',
+          'Yes: we build the entire eCommerce from the ground up, from design to launch, whether you’re launching the brand or finally want to do it right. Already selling on another platform? Our [Shopify migration services](/shopify-migration-sprint) move your store to Shopify in 14 days.',
       },
       {
-        question: 'What does development include?',
+        question: 'What do your Shopify development services include?',
         answer:
-          'Custom design, store development, server-side tracking (GA4 and Meta CAPI), base on-page SEO, performance and CRO. Handled separately: product photography, content and influencer management.',
+          'Our Shopify development services include custom design, store development, server-side tracking (GA4 and Meta CAPI), base on-page SEO, performance and CRO. Handled separately: product photography, content and influencer management. Search work that continues after launch is its own service, run by our [Shopify SEO agency](/shopify-seo-agency) team.',
       },
       {
         question: 'What does lifetime maintenance cover, and what does it cost after the 3 months?',

@@ -59,7 +59,7 @@ const en: ShopifySeoCopy = {
     eyebrow: 'Shopify SEO agency',
     h1: 'Shopify SEO agency: search work built for your store',
     paragraph:
-      'We are a Shopify SEO agency for eCommerce brands that already sell on Shopify. Our Shopify SEO services cover technical SEO, collections and product pages, blog content, visibility in AI answers, and redirects that protect your search traffic when you restructure, all measured in Google Search Console. There is no package and no price list: we look at your store first and define the work together on a call.',
+      'noprob agency is a Shopify SEO agency that works with eCommerce brands already selling on Shopify. Our Shopify SEO services cover technical SEO, collections and product pages, blog content, visibility in AI answers, and redirects that protect your search traffic when you restructure, all measured in Google Search Console. There is no package and no price list: we look at your store first and define the work together on a call.',
     ctaPrimary: 'Book a call',
     ctaSecondary: 'See what the work covers',
   },
@@ -143,7 +143,7 @@ const en: ShopifySeoCopy = {
       },
       {
         title: 'Visibility in AI answers (GEO)',
-        body: 'AI-driven traffic and orders to Shopify stores tripled year on year in the second quarter of 2026, according to [Digital Commerce 360](https://www.digitalcommerce360.com/2026/08/06/how-shopify-is-approaching-agentic-ai-2026/), which attributes it to Shopify’s president. So the store has to be easy for assistants to read and quote.',
+        body: 'AI-driven traffic and orders to Shopify stores tripled year on year in the second quarter of 2026, according to [Digital Commerce 360](https://www.digitalcommerce360.com/2026/08/06/how-shopify-is-approaching-agentic-ai-2026/), which attributes it to Shopify’s president. So the store has to be easy for assistants to read and quote. What changes compared with classic SEO is in [GEO vs SEO for eCommerce](/blog/geo-vs-seo), and the steps for a store are in [GEO for Shopify](/blog/geo-for-shopify).',
         bullets: [
           'Pages that open with a direct, citable answer',
           'Clear entities: brand, products, policies, shipping',
@@ -153,7 +153,7 @@ const en: ShopifySeoCopy = {
       },
       {
         title: 'Redirects, traffic protection and measurement',
-        body: 'When you restructure collections, handles or templates inside Shopify, the redirect map decides how much of your search traffic carries over. Search Console is where we measure it. How we plan redirects is in our [Shopify migration guide](/shopify-migration).',
+        body: 'When you restructure collections, handles or templates inside Shopify, the redirect map decides how much of your search traffic carries over. Search Console is where we measure it. How we plan redirects is in our [Shopify migration guide](/shopify-migration), and the checks for each phase are in the [Shopify migration SEO checklist](/blog/shopify-migration-seo-checklist).',
         bullets: [
           'Map of old addresses to new ones, with 301 redirects',
           'Check of the old addresses after the change',
@@ -226,6 +226,10 @@ const en: ShopifySeoCopy = {
         a: 'With Google Search Console, which shows how your store performs in Google search. We report clicks, impressions and average position as percentage changes over a stated period, so you can compare them with your own data.',
       },
       {
+        q: 'How do you report Shopify SEO results?',
+        a: 'Every report has two parts: the changes we made in your store, and what Google Search Console shows for the same period. Clicks, impressions and average position are written as percentage changes, with the comparison period next to each figure, so you can check them against your own data.',
+      },
+      {
         q: 'Our store is not on Shopify yet. Can you help?',
         a: 'This service is for stores already on Shopify. If you still have to move, the [Shopify Launch Sprint](/shopify-migration-sprint) moves your store to Shopify in 14 days with our Custom AI System, and it protects your search traffic during the move. One of its 4 written guarantees reads: “Organic traffic below the baseline 90 days after go-live? We work for free until it comes back.” That guarantee belongs to the Sprint.',
       },
@@ -253,7 +257,7 @@ const it: ShopifySeoCopy = {
     eyebrow: 'Agenzia SEO Shopify',
     h1: 'Agenzia SEO Shopify: il lavoro sulla ricerca costruito per il tuo store',
     paragraph:
-      'Siamo un’agenzia SEO Shopify per brand eCommerce che vendono già su Shopify. I nostri servizi SEO per Shopify coprono SEO tecnica, collezioni e schede prodotto, contenuti del blog, visibilità nelle risposte AI e redirect che proteggono il traffico dalla ricerca quando ristrutturi, tutto misurato in Google Search Console. Non c’è un pacchetto né un listino: guardiamo prima il tuo store e definiamo il lavoro insieme in videochiamata.',
+      'noprob agency è un’agenzia SEO Shopify che lavora con brand eCommerce già in vendita su Shopify. I nostri servizi SEO per Shopify coprono SEO tecnica, collezioni e schede prodotto, contenuti del blog, visibilità nelle risposte AI e redirect che proteggono il traffico dalla ricerca quando ristrutturi, tutto misurato in Google Search Console. Non c’è un pacchetto né un listino: guardiamo prima il tuo store e definiamo il lavoro insieme in videochiamata.',
     ctaPrimary: 'Prenota una videochiamata',
     ctaSecondary: 'Vedi cosa copre il lavoro',
   },
@@ -337,7 +341,7 @@ const it: ShopifySeoCopy = {
       },
       {
         title: 'Visibilità nelle risposte AI (GEO)',
-        body: 'Traffico e ordini AI-driven verso gli store Shopify sono triplicati su base annua nel secondo trimestre 2026, secondo [Digital Commerce 360](https://www.digitalcommerce360.com/2026/08/06/how-shopify-is-approaching-agentic-ai-2026/), che lo attribuisce al presidente di Shopify. Quindi lo store deve essere facile da leggere e citare per gli assistenti.',
+        body: 'Traffico e ordini AI-driven verso gli store Shopify sono triplicati su base annua nel secondo trimestre 2026, secondo [Digital Commerce 360](https://www.digitalcommerce360.com/2026/08/06/how-shopify-is-approaching-agentic-ai-2026/), che lo attribuisce al presidente di Shopify. Quindi lo store deve essere facile da leggere e citare per gli assistenti. Cosa cambia rispetto alla SEO classica è in [GEO vs SEO per l’eCommerce](/it/blog/geo-vs-seo), e i passi per uno store sono in [GEO SEO per Shopify](/it/blog/geo-seo-shopify).',
         bullets: [
           'Pagine che si aprono con una risposta diretta e citabile',
           'Entità chiare: brand, prodotti, policy, spedizioni',
@@ -347,7 +351,7 @@ const it: ShopifySeoCopy = {
       },
       {
         title: 'Redirect, protezione del traffico e misura',
-        body: 'Quando ristrutturi collezioni, handle o template dentro Shopify, la mappa dei redirect decide quanto del traffico dalla ricerca si conserva. Search Console è dove lo misuriamo. Come pianifichiamo i redirect è nella nostra [guida alla migrazione a Shopify](/it/migrazione-shopify).',
+        body: 'Quando ristrutturi collezioni, handle o template dentro Shopify, la mappa dei redirect decide quanto del traffico dalla ricerca si conserva. Search Console è dove lo misuriamo. Come pianifichiamo i redirect è nella nostra [guida alla migrazione a Shopify](/it/migrazione-shopify), e i controlli di ogni fase sono nella [checklist SEO della migrazione a Shopify](/it/blog/migrazione-shopify-seo-checklist).',
         bullets: [
           'Mappa dei vecchi indirizzi verso i nuovi, con redirect 301',
           'Controllo dei vecchi indirizzi dopo il cambio',
@@ -418,6 +422,10 @@ const it: ShopifySeoCopy = {
       {
         q: 'Come misurate i risultati?',
         a: 'Con Google Search Console, che mostra come va il tuo store nella ricerca Google. Riportiamo clic, impressioni e posizione media come variazioni percentuali su un periodo dichiarato, così le confronti con i tuoi dati.',
+      },
+      {
+        q: 'Come riportate i risultati SEO su Shopify?',
+        a: 'Ogni report ha due parti: le modifiche che abbiamo fatto nel tuo store e ciò che Google Search Console mostra per lo stesso periodo. Clic, impressioni e posizione media sono scritti come variazioni percentuali, con il periodo di confronto accanto a ogni cifra, così puoi verificarli con i tuoi dati.',
       },
       {
         q: 'Il nostro store non è ancora su Shopify. Potete aiutarci?',
