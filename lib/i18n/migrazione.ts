@@ -130,11 +130,11 @@ const it: MigrazioneCopy = {
     sections: [
       {
         type: 'paragraph',
-        text: 'Una migrazione a Shopify significa spostare il tuo eCommerce (prodotti, clienti, ordini, contenuti e URL) dalla piattaforma attuale a Shopify, mantenendo ciò che già funziona: il posizionamento su Google, i dati dei clienti e il tracciamento. Questa guida è per founder e responsabili eCommerce che stanno valutando il passaggio, o che hanno già deciso e vogliono sapere cosa succede davvero, in quale ordine e dove si rischia.',
+        text: 'Una migrazione a Shopify (detta anche replatforming) sposta il tuo eCommerce, con prodotti, clienti, ordini, contenuti e URL, dalla piattaforma attuale a Shopify, mantenendo ciò che già funziona: il posizionamento su Google, i dati dei clienti e il tracciamento. Questa guida spiega come migrare a Shopify. È per founder e responsabili eCommerce che stanno valutando il passaggio, o che hanno già deciso e vogliono sapere cosa succede davvero, in quale ordine e dove si rischia.',
       },
       {
         type: 'paragraph',
-        text: 'La scrive noprob agency, un team che fa migrazioni a Shopify. Spieghiamo l’intero processo, comprese le parti che puoi fare da solo. Il metodo dello Sprint è lo stesso qualunque sia la piattaforma di partenza: stesse fasi, stessa mappa dei redirect, stessi controlli.',
+        text: 'La scrive noprob agency, un team che fa migrazioni a Shopify. Spieghiamo l’intero processo, comprese le parti che puoi fare da solo. Il metodo dello Sprint è lo stesso qualunque sia la piattaforma di partenza: stesse fasi, stessa mappa dei redirect, stessi controlli. Se apri uno store nuovo e non hai ancora niente da spostare, è una costruzione da zero, e la copre il nostro servizio di [sviluppo Shopify](/it/sviluppo-shopify).',
       },
       { type: 'paragraph', text: '**In questa guida**' },
       {
@@ -147,8 +147,9 @@ const it: MigrazioneCopy = {
           'Quanto dura una migrazione',
           'Rischi e come evitarli',
           'Quanto costa',
-          'La checklist di migrazione',
+          'Cosa controllare prima, durante e dopo il passaggio',
           'Casi studio: WooCommerce e piattaforma proprietaria',
+          'Servizi di migrazione a Shopify: quando affidarla',
           'Guide per piattaforma e prossimi passi',
         ],
       },
@@ -172,6 +173,10 @@ const it: MigrazioneCopy = {
       {
         type: 'paragraph',
         text: 'Lo Sprint copre la migrazione da WooCommerce, Magento, PrestaShop, BigCommerce, Wix, Squarespace, piattaforme proprietarie e gestionali, con le stesse fasi (audit, mappa dei redirect 301, migrazione dei dati, QA). Tra i nostri casi pubblicati, due sono in fondo alla guida: WooCommerce (Integratori DTC Nazzi) e piattaforma proprietaria collegata a un gestionale (Cumini). Il primo passo è sempre l’audit del tuo store.',
+      },
+      {
+        type: 'paragraph',
+        text: 'Se la destinazione è Shopify Plus, leggi [migrazione a Shopify Plus](/it/blog/migrazione-shopify-plus): è uno di due lavori, un upgrade da un altro piano Shopify o un cambio di piattaforma.',
       },
       { type: 'h2', text: 'Cosa si sposta davvero in una migrazione a Shopify?' },
       {
@@ -224,7 +229,11 @@ const it: MigrazioneCopy = {
       },
       {
         type: 'paragraph',
-        text: 'Il passo passo completo è nella nostra [checklist SEO della migrazione a Shopify](/it/blog/migrazione-shopify-seo-checklist).',
+        text: 'Il passo passo completo è nella nostra [checklist SEO della migrazione a Shopify](/it/blog/migrazione-shopify-seo-checklist). Per la mappa dei redirect, con il formato CSV che Shopify importa e gli schemi di URL di WooCommerce, Magento e PrestaShop, leggi [redirect 301 su Shopify](/it/blog/redirect-301-shopify).',
+      },
+      {
+        type: 'paragraph',
+        text: 'Quando lo store è online e i redirect tengono, la SEO diventa un lavoro continuo su collezioni, contenuti e risposte AI. Lo fa la nostra [agenzia SEO Shopify](/it/agenzia-seo-shopify), per store già su Shopify.',
       },
       { type: 'h2', text: 'Come si gestiscono tracking e dati?' },
       {
@@ -262,6 +271,10 @@ const it: MigrazioneCopy = {
       {
         type: 'paragraph',
         text: 'Lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) comprime questo percorso in un calendario fisso: lo store è pronto al giorno 14, il go-live avviene tra il giorno 15 e il 30 nella data che scegli tu, e seguono 90 giorni di supporto. Lavora con un team completo, il nostro Custom AI System e un solo referente.',
+      },
+      {
+        type: 'paragraph',
+        text: 'Quali di queste fasi possono fare gli agenti AI, e quali controlla ancora una persona, è in [migrazione Shopify con gli agenti AI](/it/blog/migrazione-shopify-agenti-ai).',
       },
       { type: 'h2', text: 'Quali sono i rischi di una migrazione e come si evitano?' },
       {
@@ -303,10 +316,10 @@ const it: MigrazioneCopy = {
         type: 'paragraph',
         text: 'Cosa muove il prezzo e come confrontare i preventivi: [costo della migrazione a Shopify](/it/blog/costo-migrazione-shopify). Se stai scegliendo a chi affidarla: [come scegliere un’agenzia di migrazione Shopify](/it/blog/scegliere-agenzia-migrazione-shopify).',
       },
-      { type: 'h2', text: 'La checklist di migrazione a Shopify' },
+      { type: 'h2', text: 'Cosa controllare prima, durante e dopo il passaggio' },
       {
         type: 'paragraph',
-        text: 'Questa checklist riassume i controlli da fare prima, durante e dopo la migrazione:',
+        text: 'Questi sono i dodici controlli da fare prima, durante e dopo il passaggio, nell’ordine in cui li incontri. La versione lunga, divisa in tre fasi con i passi SEO, è la nostra [checklist della migrazione a Shopify](/it/blog/migrazione-shopify-seo-checklist).',
       },
       {
         type: 'list',
@@ -340,6 +353,11 @@ const it: MigrazioneCopy = {
         type: 'paragraph',
         text: 'Moda luxury multibrand, online su Shopify dal 19 maggio 2025, prima su una piattaforma proprietaria collegata al gestionale. Nei 12 mesi successivi, rispetto ai 12 precedenti: vendite nette +67,7%, ordini +49,4%, scontrino medio +12,2%. Il punteggio del tracking è passato da 31/100 a 92/100. Leggi il [caso studio Cumini](/it/casi-studio/cumini-luxury-fashion-ecommerce).',
       },
+      { type: 'h2', text: 'Servizi di migrazione a Shopify: quando affidarla' },
+      {
+        type: 'paragraph',
+        text: 'Affida la migrazione quando lo store vende già e un errore ti costerebbe ordini o traffico dalla ricerca: di solito è così appena entrano in gioco un gestionale, integrazioni su misura o un catalogo grande. I nostri [servizi di migrazione a Shopify](/it/sprint-migrazione-shopify) sono lo Shopify Launch Sprint: migrazione a Shopify in 14 giorni con il nostro Custom AI System, go-live tra il giorno 15 e il 30, 90 giorni di supporto e 4 garanzie scritte, a un prezzo pubblico in base al fatturato di €5.800, €8.800 o €12.800, IVA esclusa, in 4 rate.',
+      },
       { type: 'h2', text: 'Guide per piattaforma e prossimi passi' },
       { type: 'paragraph', text: 'Ogni piattaforma di partenza ha la sua guida pratica. Scegli quella da cui parti, oppure vai ai confronti, ai costi e alla checklist SEO:' },
       {
@@ -351,7 +369,10 @@ const it: MigrazioneCopy = {
           '[Migrazione da BigCommerce a Shopify](/it/blog/migrazione-bigcommerce-shopify)',
           '[Wix o Shopify: quale scegliere e come passare](/it/blog/wix-o-shopify)',
           '[Squarespace o Shopify: quale scegliere e come passare](/it/blog/squarespace-o-shopify)',
+          '[Migrazione a Shopify Plus: upgrade o cambio piattaforma](/it/blog/migrazione-shopify-plus)',
           '[Checklist SEO della migrazione a Shopify](/it/blog/migrazione-shopify-seo-checklist)',
+          '[Redirect 301 su Shopify: la mappa e il template CSV](/it/blog/redirect-301-shopify)',
+          '[Migrazione Shopify con gli agenti AI](/it/blog/migrazione-shopify-agenti-ai)',
           '[Quanto costa migrare a Shopify](/it/blog/costo-migrazione-shopify)',
           '[Come scegliere un’agenzia di migrazione Shopify](/it/blog/scegliere-agenzia-migrazione-shopify)',
         ],
@@ -421,10 +442,10 @@ const en: MigrazioneCopy = {
   hero: {
     trustRatingLabel: '10 five-star reviews on',
     trustSectors: 'Chosen by Fashion, Supplements and DTC brands',
-    titlePart1: 'How to Migrate to ',
+    titlePart1: 'Shopify migration: how to migrate to ',
     titleEm1: 'Shopify',
-    titleMid: ': The ',
-    titleEm2: 'Complete Guide',
+    titleMid: ', the ',
+    titleEm2: 'complete guide',
     titlePart2: '',
     subtitle:
       'Everything that changes when you move to Shopify: platforms, data, SEO and 301 redirects, tracking, timeline, risks and cost, with real case studies.',
@@ -436,11 +457,11 @@ const en: MigrazioneCopy = {
     sections: [
       {
         type: 'paragraph',
-        text: 'To migrate to Shopify means moving your online store (products, customers, orders, content and URLs) from your current platform to Shopify, while keeping what already works: your Google rankings, your customer data and your tracking. This guide is for founders and eCommerce managers who are deciding whether to move, or who have decided and want to know what actually happens, in what order, and where it goes wrong.',
+        text: 'A Shopify migration (also called replatforming) moves your online store, with its products, customers, orders, content and URLs, from your current platform to Shopify, while keeping what already works: your Google rankings, your customer data and your tracking. This guide explains how to migrate to Shopify. It is for founders and eCommerce managers who are deciding whether to move, or who have decided and want to know what actually happens, in what order, and where it goes wrong.',
       },
       {
         type: 'paragraph',
-        text: 'It is written by noprob agency, a team that migrates stores to Shopify. We explain the whole process, including the parts you can do yourself. The Sprint method is the same whatever the starting platform: same phases, same redirect map, same checks.',
+        text: 'It is written by noprob agency, a team that migrates stores to Shopify. We explain the whole process, including the parts you can do yourself. The Sprint method is the same whatever the starting platform: same phases, same redirect map, same checks. If you are opening a new store and have nothing to move yet, that is a build, and our [Shopify development services](/shopify-development) cover it.',
       },
       { type: 'paragraph', text: '**In this guide**' },
       {
@@ -453,8 +474,9 @@ const en: MigrazioneCopy = {
           'How long a migration takes',
           'Risks and how to avoid them',
           'What it costs',
-          'The migration checklist',
+          'What to check before, during and after the move',
           'Case studies: WooCommerce and a proprietary platform',
+          'Shopify migration services: when to hand it over',
           'Platform guides and next steps',
         ],
       },
@@ -478,6 +500,10 @@ const en: MigrazioneCopy = {
       {
         type: 'paragraph',
         text: 'The Sprint covers migration from WooCommerce, Magento, PrestaShop, BigCommerce, Wix, Squarespace, proprietary platforms and ERPs, with the same phases (audit, 301 redirect map, data migration, QA). Among our published case studies, two are at the end of this guide: WooCommerce (Supplement DTC Nazzi) and a proprietary platform tied to an ERP (Cumini). The first step is always an audit of your store.',
+      },
+      {
+        type: 'paragraph',
+        text: 'If the destination is Shopify Plus, read [Shopify Plus migration](/blog/shopify-plus-migration): it is one of two jobs, an upgrade from another Shopify plan or a replatform from another platform.',
       },
       { type: 'h2', text: 'What actually gets migrated to Shopify?' },
       {
@@ -530,7 +556,11 @@ const en: MigrazioneCopy = {
       },
       {
         type: 'paragraph',
-        text: 'The full step-by-step is in our [Shopify migration SEO checklist](/blog/shopify-migration-seo-checklist).',
+        text: 'The full step-by-step is in our [Shopify migration SEO checklist](/blog/shopify-migration-seo-checklist). For the redirect map itself, with the CSV format Shopify imports and the URL patterns of WooCommerce, Magento and PrestaShop, read [Shopify 301 redirects](/blog/shopify-301-redirects).',
+      },
+      {
+        type: 'paragraph',
+        text: 'Once the store is live and the redirects hold, SEO turns into ongoing work on collections, content and AI answers. Our [Shopify SEO agency](/shopify-seo-agency) service does that for stores already on Shopify.',
       },
       { type: 'h2', text: 'How do you handle tracking and data?' },
       {
@@ -568,6 +598,10 @@ const en: MigrazioneCopy = {
       {
         type: 'paragraph',
         text: 'The [Shopify Launch Sprint](/shopify-migration-sprint) compresses this path into a fixed calendar: the store is ready on day 14, go-live happens between day 15 and 30 on the date you choose, and 90 days of support follow. It runs with a full team, our Custom AI System and one point of contact.',
+      },
+      {
+        type: 'paragraph',
+        text: 'Which of these phases AI agents can take on, and which ones a person still checks, is in [migrate to Shopify with AI agents](/blog/shopify-migration-ai-agents).',
       },
       { type: 'h2', text: 'What are the risks of migrating to Shopify and how do you avoid them?' },
       {
@@ -609,10 +643,10 @@ const en: MigrazioneCopy = {
         type: 'paragraph',
         text: 'What drives the price and how to compare quotes: [Shopify migration cost](/blog/shopify-migration-cost). If you are choosing who does it: [how to choose a Shopify migration agency](/blog/choose-shopify-migration-agency).',
       },
-      { type: 'h2', text: 'The Shopify migration checklist' },
+      { type: 'h2', text: 'What to check before, during and after the move' },
       {
         type: 'paragraph',
-        text: 'This checklist sums up the checks to run before, during and after the migration:',
+        text: 'These are the twelve checks to run before, during and after the move, in the order you meet them. The longer version, split into three phases with the SEO steps, is our [Shopify migration checklist](/blog/shopify-migration-seo-checklist).',
       },
       {
         type: 'list',
@@ -646,6 +680,11 @@ const en: MigrazioneCopy = {
         type: 'paragraph',
         text: 'Luxury multibrand fashion, on Shopify since 19 May 2025, before that on a proprietary platform tied to its management system. In the 12 months after, against the 12 before: net sales +67.7%, orders +49.4%, average order value +12.2%. The tracking score went from 31/100 to 92/100. Read the [Cumini case study](/use-cases/cumini-luxury-fashion-ecommerce).',
       },
+      { type: 'h2', text: 'Shopify migration services: when to hand it over' },
+      {
+        type: 'paragraph',
+        text: 'Hand the migration over when the store already sells and a mistake would cost you orders or search traffic, which is usually the case once an ERP, custom integrations or a large catalog are involved. Our [Shopify migration services](/shopify-migration-sprint) run as the Shopify Launch Sprint: migration to Shopify in 14 days with our Custom AI System, go-live between day 15 and 30, 90 days of support and 4 written guarantees, at a public price by revenue of €5,800, €8,800 or €12,800, VAT excluded, in 4 installments.',
+      },
       { type: 'h2', text: 'Platform guides and next steps' },
       { type: 'paragraph', text: 'Every starting platform has its own hands-on guide. Pick the one you are coming from, or go to the comparisons, the costs and the SEO checklist:' },
       {
@@ -657,7 +696,10 @@ const en: MigrazioneCopy = {
           '[BigCommerce to Shopify migration](/blog/bigcommerce-to-shopify-migration)',
           '[Wix or Shopify: which to pick and how to move](/blog/wix-vs-shopify)',
           '[Squarespace or Shopify: which to pick and how to move](/blog/squarespace-vs-shopify)',
+          '[Shopify Plus migration: upgrade or replatform](/blog/shopify-plus-migration)',
           '[Shopify migration SEO checklist](/blog/shopify-migration-seo-checklist)',
+          '[Shopify 301 redirects: the map and the CSV template](/blog/shopify-301-redirects)',
+          '[Migrate to Shopify with AI agents](/blog/shopify-migration-ai-agents)',
           '[Shopify migration cost](/blog/shopify-migration-cost)',
           '[How to choose a Shopify migration agency](/blog/choose-shopify-migration-agency)',
         ],

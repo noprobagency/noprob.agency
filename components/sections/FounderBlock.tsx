@@ -58,6 +58,21 @@ export default function FounderBlock({
                 {aboutCta}
               </Link>
             ) : null}
+            {variant === 'about' ? (
+              <p className="font-sans text-[14px] font-medium leading-[1.6em] tracking-[-0.02em] text-np-grey">
+                {founder.about.links.map((link, i) => (
+                  <span key={link.routeKey}>
+                    {i > 0 ? ' · ' : null}
+                    <Link
+                      href={ROUTE_PATHS[link.routeKey][locale]}
+                      className="text-np-dark underline underline-offset-2 transition-opacity hover:opacity-70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-np-dark"
+                    >
+                      {link.label}
+                    </Link>
+                  </span>
+                ))}
+              </p>
+            ) : null}
           </div>
         </article>
       </div>
