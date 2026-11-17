@@ -53,13 +53,13 @@ const en: CategoriesCopy = {
         'The questions people ask before they commit to Shopify: how it works, what it costs, when Shopify Plus pays off and how it compares with WooCommerce, plus the SEO checklist for a migration and how to choose the agency that runs it. Short answer first, then the detail, with prices and numbers we can source. If you are ready to move, the [Shopify Launch Sprint](/shopify-migration-sprint) has a fixed calendar and a public price.',
     },
     'ai-agents': {
-      metaTitle: 'AI Agents for eCommerce and Shopify',
+      metaTitle: 'AI Agent Guides for Shopify Stores',
       metaDescription:
         'AI agents on Shopify: chatbot or agent, Shopify MCP, Claude and Claude Duet, Flow, security, customer care and testing. Where they pay, where a person decides.',
-      h1: 'AI agents for ',
-      h1Em: 'eCommerce stores',
+      h1: 'AI agent guides for ',
+      h1Em: 'Shopify stores',
       intro:
-        'We work with AI agents built on Claude Code every day, and these guides show where agents pay off in a Shopify store and where a person still decides. Start from the difference between a chatbot, a workflow and an agent, then go deeper: Shopify MCP, Claude and Claude Duet, Shopify Flow, Magic and Sidekick, security, the order and returns assistant, how to test it and what it costs. If your store is live on Shopify, the [AI Accelerator](/ai-accelerator) switches on the first AI solutions in 30 days.',
+        'We build [AI agents for eCommerce](/ai-agents-for-ecommerce) and work with agents built on Claude Code every day, and these guides show where agents pay off in a Shopify store and where a person still decides. Start from the difference between a chatbot, a workflow and an agent, then go deeper: Shopify MCP, Claude and Claude Duet, Shopify Flow, Magic and Sidekick, security, the order and returns assistant, how to test it and what it costs. If your store is live on Shopify, the [AI Accelerator](/ai-accelerator) switches on the first AI solutions in 30 days.',
     },
     'ai-search': {
       metaTitle: 'AI Search and GEO for Shopify',
@@ -88,13 +88,13 @@ const it: CategoriesCopy = {
   allArticlesLink: 'Tutti gli articoli',
   pages: {
     migrate: {
-      metaTitle: 'Migrare a Shopify: guide per piattaforma',
+      metaTitle: 'Guide da WooCommerce, Magento e altre a Shopify',
       metaDescription:
         'Guide per migrare a Shopify da WooCommerce, Magento, PrestaShop, BigCommerce, Wix o Squarespace: cosa si sposta, cosa si ricostruisce, cosa reindirizzare.',
       h1: 'Migrare a Shopify: ',
       h1Em: 'guide per piattaforma',
       intro:
-        'Una guida per piattaforma: cosa si sposta, cosa ricostruiamo e cosa reindirizziamo quando lasci WooCommerce, Magento, PrestaShop, BigCommerce, Wix o Squarespace. Nascono dalle migrazioni che seguiamo, con la documentazione ufficiale di ciascuna piattaforma come fonte. Se vuoi prima il quadro completo, leggi la [guida alla migrazione](/it/migrazione-shopify); quando sei pronto a muoverti, lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) la fa in 14 giorni.',
+        'Una guida per piattaforma: cosa si sposta, cosa ricostruiamo e cosa reindirizziamo quando lasci WooCommerce, Magento, PrestaShop, BigCommerce, Wix o Squarespace. Nascono dalle migrazioni che seguiamo, con la documentazione ufficiale di ciascuna piattaforma come fonte. Se vuoi prima il quadro completo su come [migrare a Shopify](/it/migrazione-shopify), leggi la guida completa; quando sei pronto a muoverti, lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) fa la migrazione in 14 giorni.',
     },
     shopify: {
       metaTitle: 'Guide Shopify: costi, piani e come scegliere',
@@ -106,13 +106,13 @@ const it: CategoriesCopy = {
         'Le domande che ci si fa prima di scegliere Shopify: come funziona, quanto costa, quando conviene Shopify Plus e come si confronta con WooCommerce, più la checklist SEO della migrazione e come scegliere l’agenzia che la segue. Prima la risposta breve, poi il dettaglio, con prezzi e numeri di cui indichiamo la fonte. Se sei pronto a muoverti, lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) ha calendario fisso e prezzo pubblico.',
     },
     'ai-agents': {
-      metaTitle: 'Agenti AI per eCommerce e Shopify',
+      metaTitle: 'Guide agli agenti AI per store Shopify',
       metaDescription:
         'Agenti AI su Shopify: chatbot o agente, Shopify MCP, Claude e Claude Duet, Flow, sicurezza, assistenza clienti e test. Dove rendono, dove decide una persona.',
-      h1: 'Agenti AI per ',
-      h1Em: 'eCommerce',
+      h1: 'Guide agli agenti AI per ',
+      h1Em: 'store Shopify',
       intro:
-        'Lavoriamo ogni giorno con agenti AI costruiti su Claude Code, e queste guide mostrano dove gli agenti rendono in uno store Shopify e dove decide ancora una persona. Parti dalla differenza tra chatbot, workflow e agente, poi vai a fondo: Shopify MCP, Claude e Claude Duet, Shopify Flow, Magic e Sidekick, sicurezza, l’assistente per ordini e resi, come testarlo e quanto costa. Se il tuo store è già su Shopify, l’[AI Accelerator](/it/ai-accelerator) attiva le prime soluzioni AI in 30 giorni.',
+        'Costruiamo [agenti AI per eCommerce](/it/agenti-ai-per-ecommerce) e lavoriamo ogni giorno con agenti costruiti su Claude Code, e queste guide mostrano dove gli agenti rendono in uno store Shopify e dove decide ancora una persona. Parti dalla differenza tra chatbot, workflow e agente, poi vai a fondo: Shopify MCP, Claude e Claude Duet, Shopify Flow, Magic e Sidekick, sicurezza, l’assistente per ordini e resi, come testarlo e quanto costa. Se il tuo store è già su Shopify, l’[AI Accelerator](/it/ai-accelerator) attiva le prime soluzioni AI in 30 giorni.',
     },
     'ai-search': {
       metaTitle: 'Ricerca AI e GEO per Shopify',

@@ -135,7 +135,7 @@ Restano online perché sono esperienza diretta, ma non hanno una fonte esterna. 
 vanno corrette qui e nel copy.
 
 - 7+ anni di progetti eCommerce (Antonio)
-- 7 anni da eCommerce manager alla guida di un team di 7 persone (Antonio, 15 nov 2026). Nelle email a freddo si scrive senza numeri sul team ("eCommerce manager da 7 anni", "years as an eCommerce manager leading a team")
+- 7 anni da eCommerce manager alla guida di un team di 7 persone (Antonio, 15 nov 2026). Nelle email a freddo si scrive senza numeri sul team ("eCommerce manager da 7 anni", "years as an eCommerce manager leading a team"). Sul sito, dal 17 nov 2026 (pacchetto SEO A, `/about`): "7 years as an eCommerce manager leading a team" / "7 anni da eCommerce manager alla guida di un team", senza il numero di persone
 - Gestisce negozi online anche da 20 milioni di euro l'anno, come eCommerce manager (Antonio, 16 nov 2026). Usata solo nelle email a freddo agli eCommerce portoghesi di Catarina (D-103): "I run online stores, some up to €20M a year"; sul sito no
 - "Lavoro con molti negozi come il vostro" e "di solito è un lavoro che i clienti mi pagano" (Antonio, 15 nov 2026, scritte da lui nella prima email Italia v3)
 - Dato del sito nelle email a freddo: misurato dal test Google PageSpeed da cellulare il giorno dell'invio; la velocità (LCP) si cita solo se due prove di fila superano 4 s (Claudio, 15 nov 2026)
@@ -539,6 +539,39 @@ Gli 11 studi di `data/articles/posts/ad-creative-research.ts`. Una riga per font
 - Mead, Richerson, Li, 2020, Journal of Retailing, doi 10.1016/j.jretai.2019.10.002: font inclinati a destra aumentano intenzioni di visita e acquisto e clic solo negli annunci promozionali, soprattutto tra chi cerca offerte; esperimenti; cifra del 35° non citata.
 
 Scartati: uno studio con repliche fallite e studi con cifre solo calcolate o senza la manipolazione verificata.
+
+## Migrazione dei dati a Shopify (shopify-data-migration, lettura 17 nov 2026)
+
+Pagine ufficiali di Shopify lette il 17 novembre 2026; tra virgolette il testo della pagina. Limiti e strumenti cambiano: si ricontrollano prima di riusarli.
+
+- Ordine di import: "Import your products first, then your customers, and then any historical orders"; il resto in qualsiasi ordine: https://help.shopify.com/en/manual/migrating-to-shopify e https://help.shopify.com/en/manual/migrating-to-shopify/migrate-data
+- Via CSV si spostano prodotti e clienti ("some data can't be migrated this way"); ordini storici con app di migrazione, Order API o Transaction API; gift card, buoni e crediti con app di migrazione o GiftCard API; blog con app, Blog API o Blog Article API; pagine con app o Page API, le policy "can likely be copied and pasted"; ordini storici = ordini già evasi: https://help.shopify.com/en/manual/migrating-to-shopify/migrate-data
+- Ordini importati: chi riceve le notifiche di nuovo ordine "will receive a new order email for each imported order"; si spengono prima dell'import e si riaccendono dopo: stessa pagina
+- CSV prodotti massimo 15 MB: https://help.shopify.com/en/manual/products/import-export/import-products ; CSV clienti "15 MB or smaller": https://help.shopify.com/en/manual/customers/import-export-customers
+- Password dei clienti: "you can't migrate customer passwords from another online store using a CSV"; "you need to invite your customers to create new passwords so that they can register their accounts": https://help.shopify.com/en/manual/customers/import-export-customers
+- Nuovi account cliente: accesso con email e codice monouso di 6 cifre, senza password: https://help.shopify.com/en/manual/customers/customer-accounts
+- Account cliente legacy deprecati il 26 febbraio 2026: "no longer available to new stores and existing stores not using it"; data finale di chiusura "will be announced later in 2026": https://shopify.dev/changelog/posts/legacy-customer-accounts-are-deprecated
+- Redirect URL: massimo 100.000, 20.000.000 su Plus; import da CSV in Content > Menus > URL redirects > Import: https://help.shopify.com/en/manual/online-store/menus-and-links/url-redirect ; "set up URL redirects before transferring your domain": https://help.shopify.com/en/manual/migrating-to-shopify
+- Store Migration app di Shopify: gratuita, sposta "product and customer data", da CSV o collegando l'account su Square, WooCommerce, Etsy, Wix, Amazon, eBay, Clover, Lightspeed R/X (Vend): https://apps.shopify.com/store-migration
+- Import in blocco asincrono con le bulk operations della Admin API: https://shopify.dev/docs/api/usage/bulk-operations/imports
+- I metafield estendono il modello dati di prodotti, clienti e ordini: https://help.shopify.com/en/manual/custom-data/metafields
+- Checklist di lancio Plus (già sopra): ordini degli ultimi 2-5 anni, notifiche sugli ordini importati, gift card subito prima del lancio, Matrixify citata come app di terzi per i dati B2B
+
+## Shopify vs Magento (shopify-vs-magento, lettura 17 nov 2026)
+
+Pagine ufficiali di Adobe (Experience League) e Shopify lette il 17 novembre 2026; tra virgolette il testo della pagina. Il prezzo della licenza di Adobe Commerce non è stato verificato su una pagina ufficiale: non si scrive nessuna cifra. L'avviso CERT-EU su PHP non si usa in questo articolo.
+
+- Ciclo di vita: "Adobe offers a three-year standard support window from the General Availability (GA) date for each version". Date (GA / fine supporto standard / fine supporto esteso / fine periodo solo sicurezza): 2.4.9 12 mag 2026 / 31 mag 2029 / TBD; 2.4.8 8 apr 2025 / 31 mag 2028 / TBD; 2.4.7 9 apr 2024 / 31 mag 2027 / 31 mag 2028; 2.4.6 14 mar 2023 / 11 ago 2026 / 31 ago 2027 / 31 mag 2028; 2.4.5 9 ago 2022 / 12 ago 2025 / 11 ago 2026 / 31 mag 2027; 2.4.4 12 apr 2022 / 12 apr 2025 / 14 apr 2026 / 31 mag 2027. Il periodo solo sicurezza "provides limited isolated security fixes only (no quality fixes)" e "will not be extended beyond the published dates": https://experienceleague.adobe.com/en/docs/commerce-operations/release/planning/lifecycle-policy
+- Requisiti on-premises: 2.4.9 con PHP 8.5, MySQL 8.4 o MariaDB 12.3, OpenSearch 3, RabbitMQ 4.3, Valkey 9, Varnish 8, Composer 2.10; 2.4.8-p5 con PHP 8.4 o 8.3, OpenSearch 3 o Elasticsearch 8, MySQL 8.4 o MariaDB 11.4/11.8; "Adobe supports only the system requirement combinations listed": https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements
+- Tre modelli: on-premises ("running everything themselves"), Adobe Commerce on Cloud infrastructure ("Adobe-managed cloud infrastructure (PaaS)"), Adobe Commerce as a Cloud Service ("a fully managed SaaS approach"): https://experienceleague.adobe.com/en/docs/commerce-learn/tutorials/getting-started/capabilities/adobes-available-commerce-options
+- Cloud infrastructure: Adobe rilascia gli aggiornamenti del codice core, "applying patches is the merchant's responsibility": https://experienceleague.adobe.com/en/docs/commerce-operations/security-and-compliance/shared-responsibility
+- Magento Open Source: file sorgente con licenza OSL 3.0, repository ufficiale magento/magento2: https://github.com/magento/magento2
+- Gerarchia: "Every Adobe Commerce and Magento Open Source installation has a hierarchy of websites, stores, and store views"; modello global, website, store, store view; il website configura le funzioni, lo store la categoria radice, la store view traduzioni e simbolo di valuta: https://experienceleague.adobe.com/en/docs/commerce-admin/start/setup/websites-stores-views
+- Tipi di prodotto: simple, configurable, grouped, virtual, bundle, downloadable, gift card (gift card "Adobe Commerce only"): https://experienceleague.adobe.com/en/docs/commerce-admin/catalog/products/product-create
+- B2B di Adobe Commerce: estensione ("the B2B extension in your Adobe Commerce store") con company account, shared catalog, negotiable quote, requisition list, Quick Order, approvazione degli ordini d'acquisto: https://experienceleague.adobe.com/en/docs/commerce-admin/b2b/introduction
+- Shopify, prodotti: "You can create up to 2,048 variants for a product"; "Each product can have up to three options": https://help.shopify.com/en/manual/products/variants/add-variants
+- Pagina di confronto di Shopify: TCO "on average, 29% better than Adobe Commerce's, based on research commissioned by Shopify", studio di una società di consulenza indipendente, Nord America, dicembre 2023 - gennaio 2024. Si cita solo come dichiarazione di Shopify: https://www.shopify.com/compare/shopify-vs-adobe
+- Piani Plus, B2B su tutti i piani, expansion store, Scripts, Functions: sezione "Shopify Plus migration" sopra
 
 ## Garanzie dello Sprint (testo da citare alla lettera)
 

@@ -28,6 +28,8 @@ const CLUSTER_SLUGS: Record<ClusterId, string[]> = {
     'squarespace-vs-shopify',
     'shopify-migration-ai-agents',
     'bigcommerce-vs-shopify',
+    'shopify-vs-magento',
+    'shopify-data-migration',
   ],
   shopify: [
     'shopify-migration-cost',
@@ -40,6 +42,7 @@ const CLUSTER_SLUGS: Record<ClusterId, string[]> = {
     'shopify-301-redirects',
     'shopify-partner-program',
     'white-label-shopify-agencies',
+    'hire-shopify-expert',
   ],
   'ai-agents': [
     'ai-agents-for-shopify',
@@ -75,6 +78,9 @@ export const ARTICLE_PILLS: Record<string, Record<Locale, string>> = {
   'shopify-migration-cost': { en: 'Costs', it: 'Costi' },
   'shopify-plus': { en: 'Shopify Plus', it: 'Shopify Plus' },
   'shopify-plus-migration': { en: 'Plus migration', it: 'Migrazione Plus' },
+  'shopify-vs-magento': { en: 'Comparison', it: 'Confronto' },
+  'hire-shopify-expert': { en: 'Guide', it: 'Guida' },
+  'shopify-data-migration': { en: 'Migration', it: 'Migrazione' },
   'shopify-migration-seo-checklist': { en: 'SEO', it: 'SEO' },
   'choose-shopify-migration-agency': { en: 'Guide', it: 'Guida' },
   'shopify-vs-woocommerce': { en: 'Comparison', it: 'Confronto' },

@@ -93,7 +93,7 @@ const en: AgentsCopy = {
     items: [
       {
         title: 'Integrate an agent into your store',
-        body: 'We take one job in your store and build an agent that does it, connected to your data and to the people who own the outcome.',
+        body: 'We take one job in your store and build an agent that does it, connected to your data and to the people who own the outcome. What to connect, what to approve and what to test is in [AI agent integration for eCommerce](/blog/ai-agent-integration-ecommerce).',
         bullets: [
           'One defined task, for example order questions, returns, catalog cleanup or reporting',
           'Connected to your store with only the access that task needs',
@@ -158,7 +158,7 @@ const en: AgentsCopy = {
     ],
   },
   method: {
-    heading: 'How we build AI agents for your store',
+    heading: 'AI agent development for your store: how we build',
     steps: [
       {
         title: 'Access and data first',
@@ -201,7 +201,11 @@ const en: AgentsCopy = {
     items: [
       {
         q: 'How much does an AI agent for eCommerce cost?',
-        a: 'There is no price list, because the work depends on your store: the data, the access and the task. We define scope and cost on a call, after we have seen your store.',
+        a: 'There is no price list, because the work depends on your store: the data, the access and the task. We define scope and cost on a call, after we have seen your store. The items that make up the cost of a build are in [how to build an AI agent for Shopify](/blog/build-ai-agent-shopify).',
+      },
+      {
+        q: 'Is noprob agency an AI agent development company?',
+        a: 'Yes. noprob agency builds custom AI agents for eCommerce stores: one agent integrated into your store, or the whole store set up so agents can watch sales, ads, stock, customer support and SEO. Every agent starts with read-only access, and a person approves the actions that cannot be undone. We work every day with AI agents built on Claude Code.',
       },
       {
         q: 'Is it a chatbot?',
@@ -279,7 +283,7 @@ const it: AgentsCopy = {
     items: [
       {
         title: 'Integriamo un agente nel tuo store',
-        body: 'Prendiamo un lavoro del tuo store e costruiamo un agente che lo svolge, collegato ai tuoi dati e alle persone che rispondono del risultato.',
+        body: 'Prendiamo un lavoro del tuo store e costruiamo un agente che lo svolge, collegato ai tuoi dati e alle persone che rispondono del risultato. Cosa collegare, cosa approvare e cosa testare è in [integrazione di agenti AI in un eCommerce](/it/blog/integrazione-agenti-ai-ecommerce).',
         bullets: [
           'Un compito definito, per esempio domande sugli ordini, resi, pulizia del catalogo o reportistica',
           'Collegato al tuo store con i soli accessi che quel compito richiede',
@@ -346,7 +350,7 @@ const it: AgentsCopy = {
     ],
   },
   method: {
-    heading: 'Come costruiamo gli agenti AI per il tuo store',
+    heading: 'Sviluppo di agenti AI per il tuo store: come costruiamo',
     steps: [
       {
         title: 'Prima accessi e dati',
@@ -389,7 +393,11 @@ const it: AgentsCopy = {
     items: [
       {
         q: 'Quanto costa un agente AI per eCommerce?',
-        a: 'Non c’è un listino, perché il lavoro dipende dal tuo store: i dati, gli accessi e il compito. Definiamo ambito e costo in videochiamata, dopo aver visto il tuo store.',
+        a: 'Non c’è un listino, perché il lavoro dipende dal tuo store: i dati, gli accessi e il compito. Definiamo ambito e costo in videochiamata, dopo aver visto il tuo store. Le voci che compongono il costo di una costruzione sono in [come creare un agente AI per Shopify](/it/blog/creare-agente-ai-shopify).',
+      },
+      {
+        q: 'noprob agency è un’azienda che sviluppa agenti AI?',
+        a: 'Sì. noprob agency costruisce agenti AI su misura per store eCommerce: un agente integrato nel tuo store, oppure l’intero store impostato perché gli agenti possano tenere d’occhio vendite, ads, stock, customer care e SEO. Ogni agente parte con accesso in sola lettura, e una persona approva le azioni che non si possono annullare. Lavoriamo ogni giorno con agenti AI costruiti su Claude Code.',
       },
       {
         q: 'È un chatbot?',

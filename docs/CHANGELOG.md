@@ -4,7 +4,7 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
-### Changelog v1.217.0 (17 Nov 2026)
+### Changelog v1.219.0 (17 Nov 2026)
 
 - **SEO, articles in striking distance** (Francesca, package B of `SEO/data/strategia-2026-11-17.md`, from Search Console 28 days): 12 articles reworked in EN and IT, written by Fable and Sonnet subagents, humanizer pass, reviewer pass.
   - Shopify Plus migration and Shopify Plus split by intent: the migration article keeps the migration queries (new checklist, services section, 2 FAQ); Shopify Plus becomes pricing, Plus vs Advanced and when it pays off.
@@ -15,6 +15,14 @@ old entries, add a new one on top.
   - GEO vs SEO: SEO, GEO and AEO table. Shopify CRO: fashion and beauty section and FAQ.
   - Internal links to `/shopify-seo-agency`, `/shopify-development`, `/ai-agents-for-ecommerce`, `/blog/shopify-plus-migration` and `/it/migrazione-shopify`; `llms.txt` titles updated.
   - SEO titles kept within 48 characters (the template adds the brand).
+
+### Changelog v1.218.0 (17 Nov 2026)
+
+- **SEO package C, three new articles** (strategy of 17 Nov 2026, C1-C3), IT and EN in one file each, written in Antonio's voice, humanizer pass, reviewed until pass. `/blog/shopify-vs-magento` (IT `/it/blog/shopify-o-magento`): the comparison decided on what does not map one to one (product types, store views, extensions, B2B), Adobe's support dates for every 2.4 version, the stack a merchant runs, Shopify Plus vs Adobe Commerce, when to stay on Magento; no license figure for Adobe Commerce. `/blog/hire-shopify-expert` (IT `/it/blog/esperto-shopify`): freelancer, agency or dedicated team, our public prices as a yardstick, eight tests, a one-week trial task, what goes in writing, links to home, about, development, SEO agency and data team. `/blog/shopify-data-migration` (IT `/it/blog/migrazione-dati-shopify`): what moves by CSV, app or API, the official import order, passwords and gift cards, and the reconciliation table behind the Data Migration Report. Dotted covers, `data/articles/index.ts`, clusters (two in "Migrate to Shopify", one in "Shopify guides"), table and cluster tests, `llms.txt`. `docs/dati-verificati.md`: new sections "Migrazione dei dati a Shopify" and "Shopify vs Magento" with the official Shopify and Adobe pages read on 17 Nov 2026 (Francesca).
+
+### Changelog v1.217.0 (17 Nov 2026)
+
+- **SEO package A, commercial pages** (strategy of 17 Nov 2026, calendar items 60 and 61), IT and EN. Home: title "Shopify Experts for Migration and Development", H1 "Your brand is premium. Your Shopify experts should be too.", hero opens with "We are a team of Shopify experts", new "Our services" row of descriptive links under the pricing cards (Sprint, development, SEO agency, AI agents). About: title "Shopify Experts for Hire: Antonio and the Team", H1 "Shopify experts who make eCommerce simple", citable who-we-are copy from verified data (founded 2022, Partner Program, 7+ years of eCommerce projects, 7 years as an eCommerce manager leading a team, 10 five-star Trustpilot reviews), links to development and case studies. Sprint: "Shopify migration services" description and hero, two new FAQs (what the services include, who the migration experts are), "replatforming" in the platforms FAQ; title, H1 and offer unchanged. Migration guide: title "Shopify Migration: How to Migrate to Shopify", new H1, "replatforming" in the opening, checklist H2 renamed with a link to the checklist article, new short "Shopify migration services" section, links to Plus migration, 301 redirects, AI agents migration, SEO agency and development. Development: title, H2 and FAQ on "Shopify development services/agency", links to Sprint and SEO agency. SEO agency: title, defining sentence, new reporting FAQ, links to GEO articles and the checklist. AI agents: description, H2 "AI agent development", new FAQ, links to the integration and build articles; AI agents category retitled "AI agent guides for Shopify stores" with a link to the landing; IT `migrate` category retitled toward platforms with a "migrare a Shopify" link to the guide. Titles fit the 65-character test with the brand suffix. `docs/dati-verificati.md`: "7 years as an eCommerce manager leading a team" allowed on the site, without the team size (Francesca).
 
 ### Changelog v1.216.0 (17 Nov 2026)
 

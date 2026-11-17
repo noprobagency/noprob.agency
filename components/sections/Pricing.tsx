@@ -178,6 +178,23 @@ export default function Pricing({
 
           {children}
 
+          {!standalone && (
+            <p className="mt-8 text-center font-sans text-[14px] font-medium leading-[1.8em] tracking-[-0.02em] text-white/75">
+              {t.pricing.servicesLinks.label}{' '}
+              {t.pricing.servicesLinks.links.map((link, i) => (
+                <span key={link.href}>
+                  {i > 0 ? ' · ' : null}
+                  <Link
+                    href={link.href}
+                    className="text-[#f9f9f9] underline underline-offset-2 transition-opacity hover:opacity-70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                  >
+                    {link.label}
+                  </Link>
+                </span>
+              ))}
+            </p>
+          )}
+
           <Testimonials locale={locale} />
         </div>
       </div>
