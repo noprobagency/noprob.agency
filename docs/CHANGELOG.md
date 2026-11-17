@@ -4,9 +4,17 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
-### Changelog v1.214.0 (16 Nov 2026)
+### Changelog v1.216.0 (17 Nov 2026)
 
 - **Humanizer pass on the whole site**: 19 parallel passes with the humanizer skill over every public text (home and global copy, migration guide, Sprint landing, AI Accelerator, development and SEO pages, AI agents, data team, blocks, ambassador, `llms.txt`, the three case studies and all 37 blog articles, IT and EN), in Antonio's voice (`SEO/data/interviste/voce-di-antonio.md`). Targeted edits only: "not X but Y" contrasts roughly halved (80 to 39), dramatic closers and fragments, aphorisms, staged openers, self-describing sentences removed. One bold rule everywhere in articles and case studies (`SEO/strumenti/grassetti.py`, written in `seo-voce`): the first sentence of the first paragraph under each heading stays bold as the citable answer, short list labels stay bold only when every item has one, no bold anywhere else. Facts, numbers, links, slugs, SEO titles, FAQ questions, the Sprint offer and the mandatory closing line unchanged (checked file by file against main); legal pages untouched (Francesca).
+
+### Changelog v1.215.0 (16 Nov 2026)
+
+- Verified data: Antonio's statement that he runs online stores up to €20M a year as eCommerce manager, for Catarina's cold emails to Portuguese eCommerce only (D-103), not for the site.
+
+### Changelog v1.214.0 (16 Nov 2026)
+
+- Cold email (D-102): when first emails are waiting, follow-ups take at most half of each mailbox's share in a run; the rest goes to first emails, and follow-ups over the half go after them, so no slot is lost. In New York hours US first emails go before Italy. dailyCap 55 and 50 per mailbox unchanged.
 
 ### Changelog v1.213.0 (16 Nov 2026)
 
