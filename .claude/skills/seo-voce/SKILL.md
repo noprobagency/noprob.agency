@@ -56,6 +56,13 @@ Antonio sta scrivendo un libro sugli agenti AI (`~/agentic-book`, capitoli in `m
 - Dal libro si prendono solo fonti già verificate (`docs/fonti.md`), mai i punti `[DA VERIFICARE]`; i dettagli di Shopify si controllano sulla documentazione ufficiale.
 - Gli articoli della linea AI e agenti linkano anche l'AI Accelerator (IT `/it/ai-accelerator`, EN `/ai-accelerator`), dopo lo Sprint.
 
+## Grassetti (Antonio, 16 novembre 2026)
+
+- Articoli: nel primo paragrafo dopo ogni H2 o H3, la prima frase (la risposta) va in grassetto, una per sezione. Gli altri paragrafi non hanno grassetto.
+- Liste: in grassetto solo un'etichetta corta (fino a 6 parole, chiusa da due punti o punto) e solo se ce l'hanno tutte le voci della lista; altrimenti nessun grassetto.
+- Mai grassetto in mezzo al testo, sui numeri, nelle celle delle tabelle o su frasi intere di una lista.
+- Lo script `SEO/strumenti/grassetti.py` applica la regola agli articoli e ai casi studio (`python3 SEO/strumenti/grassetti.py data/articles/posts/*.ts`).
+
 ## Articolo del blog (schema)
 
 - Voce in un file `data/articles/posts/<slug>.ts` (un articolo per file, più una riga di import in `data/articles/index.ts`) con: `slug` (EN) e `slugIt`, `title`/`titleIt`, `seoTitle`/`seoTitleIt` (sotto 65 caratteri, senza il brand: lo aggiunge il template), `seoDescription`/`seoDescriptionIt` (sotto 160), `excerpt`/`excerptIt`, `ledeEn`/`ledeIt`, `content`/`contentIt` (sezioni tipizzate, guarda un articolo esistente), `faqEn`/`faqIt`, `keywordsEn`/`keywordsIt`, `articleSection`, `date`, `datePublishedIso`, `dateModifiedIso`, `readingTimeMinutes`, `wordCount`, `image` (cover standard in `public/images/blog/[slug]-cover.{svg,png}` 1200x630: sfondo a colore con pattern a puntini, senza testo, generata dal tecnico con lo script delle cover), `imageAlt`.

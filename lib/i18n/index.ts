@@ -285,11 +285,11 @@ const en: Dictionary = {
     label: 'Problem',
     heading: 'Forget the',
     headingStrike: 'All in one marketing agency',
-    body: 'Sure, everyone wants a killer eCommerce. But if you trust the hype, you end up juggling bug fixes, random data, and support that vanishes. Solid quality in every basic area beats magic tricks in just one spot.',
+    body: 'Everyone wants a killer eCommerce. Trust the hype and you end up chasing bugs, working with random data and waiting on support that has vanished. Solid basics in every area beat one clever trick.',
     items: [
       {
         title: 'Fragmented Tech Stack',
-        description: 'Multiple vendors, endless handoffs, constant chaos. No single expert fully responsible or a manager.',
+        description: 'Multiple vendors, endless handoffs, constant chaos. No single expert owns the whole picture.',
       },
       {
         title: 'Blind decisions',
@@ -297,26 +297,26 @@ const en: Dictionary = {
       },
       {
         title: 'Patchwork \u201cSupport\u201d',
-        description: 'Marketing agencies improvise fixes and rush development, causing bugs and lost quality. We fix that.',
+        description: 'Marketing agencies improvise fixes and rush development, which causes bugs and lowers quality.',
       },
     ],
   },
   solution: {
     label: 'Solution',
-    headingPre: 'Stop settling.\nYour eCommerce deserves a ',
+    headingPre: 'Your eCommerce needs\na ',
     headingMark: 'true technical partner',
     items: [
       {
         title: 'Tech Integration\nZero Chaos',
-        description: 'All-in-one partner. Full-stack team: development, design, data and strategy. Everything managed for you.',
+        description: 'One partner and a full-stack team for development, design, data and strategy. We manage all of it.',
       },
       {
         title: 'Real Support\nReal Results',
-        description: 'Response in minutes, not days. Proactive problem-solvers in Branding & Dev. We support your growth',
+        description: 'Response in minutes, not days. Branding and development specialists work on your store proactively and stay with you as it grows.',
       },
       {
         title: 'Clean Data That\nDrives Growth',
-        description: 'Professional tracking, complete analytics, actionable dashboards. Decisions on real numbers, not hope.',
+        description: 'Tracking set up properly, complete analytics and dashboards you can act on, so every decision rests on real numbers.',
       },
     ],
   },
@@ -326,7 +326,7 @@ const en: Dictionary = {
     headingBuilt: 'Real stores built and grown with us',
     category: 'eCommerce Luxury Fashion Retail',
     description:
-      'Started with no tech team or structure. Built, launched, and scaled eCommerce with a dedicated team, turning a marginal channel into a key driver of brand growth.',
+      'They started with no tech team or structure. With a dedicated team we built, launched and scaled their eCommerce, and online went from a marginal channel to a main driver of the brand’s growth.',
     metric: '\u2191 67.7% online sales after moving to Shopify',
     metricNote: 'In the 12 months after the migration, compared with the 12 months before',
     cta: 'Read the Cumini case study',
@@ -344,9 +344,9 @@ const en: Dictionary = {
   },
   pricing: {
     label: 'Pricing',
-    heading: 'Smart plans for serious eCommerce brands',
+    heading: 'Three ways to work with us',
     subheading:
-      'Whether your eCommerce is running and growing or you need to build it from scratch, our tech team will guide you every step of the way.',
+      'Whether your eCommerce is already growing or still to be built, pick the plan that matches where you are.',
     plans: [
       {
         badge: 'Need to migrate to Shopify?',
@@ -422,7 +422,7 @@ const en: Dictionary = {
       titlePart1: "Let's rebuild your messy eCommerce with ",
       titlePart2: 'noprob',
       descriptionPart1:
-        'We recreate your eCommerce from the ground up, creating a fast, stable, and conversion-ready store. You focus on growth. ',
+        'We rebuild your eCommerce from the ground up into a fast, stable store that is ready to convert. You focus on growth. ',
       descriptionPart2: 'We take care of the technical work.',
       cta: 'I want a rebuild',
       trustedCount: 'Chosen by Fashion, Supplements and DTC brands',
@@ -437,15 +437,15 @@ const en: Dictionary = {
         {
           title: 'Endless dev tickets, zero ownership',
           description:
-            "Most brands rely on dirty data. Tracking is broken, decisions are random, growth isn't sustainable.",
+            'Most brands work with dirty data: tracking is broken, so decisions are close to random and growth cannot last.',
         },
         {
-          title: "Tracking data? Broken. You're scaling blind.",
+          title: "Broken tracking means you're scaling blind",
           description:
             'On Cumini, the tracking audit went from 31/100 to 92/100 after the migration.',
         },
         {
-          title: "No one's really responsible. Your team knows it",
+          title: 'Nobody owns the result, and your team knows it',
           description:
             "Agencies rush fixes and cause bugs. Your team doesn't trust the process anymore.",
         },
@@ -453,31 +453,31 @@ const en: Dictionary = {
     },
     solution: {
       label: 'Solution',
-      headingPart1: "You don't need another agency. You need a true ",
+      headingPart1: 'Your eCommerce needs a true ',
       headingPart2: 'Technical Growth Partner',
       items: [
         {
           title: 'Unified team, led by performance',
           description:
-            'Full-stack team for dev, CRO, and analytics. Guided by an eCommerce Manager focused on results, not just delivery.',
+            'Full-stack team for dev, CRO and analytics, guided by an eCommerce Manager focused on results.',
         },
         {
           title: 'Fixed cost, full-stack execution',
           description:
-            'Response in minutes, not days. No delays, no scopes. Just work that moves fast.',
+            'Response in minutes, not days, and work that moves fast without endless scoping.',
         },
         {
-          title: 'Analytics that actually guide decisions',
+          title: 'Analytics that guide decisions',
           description:
-            'Clean tracking, real dashboards, zero guesswork. We turn insights into action.',
+            'Clean tracking and real dashboards, so you stop guessing. We turn what the data shows into action.',
         },
       ],
     },
     whyUs: {
       label: 'why us',
-      heading: 'Why Our Model Works Better',
+      heading: 'Why our model works better',
       description:
-        'A direct comparison between the noprob approach and traditional agencies or freelancers. The goal is to reinforce trust and show why your structure delivers better long-term results.',
+        'How the noprob approach compares with traditional agencies and freelancers, and why our structure gives better results over the long term.',
       agencyLabel: 'Other<br />Agency',
       agencyItems: [
         'Slow response times and unclear coordination',
@@ -494,7 +494,7 @@ const en: Dictionary = {
         "Modular team built around your brand's real goals",
       ],
       featuresDescription:
-        "We don't just deliver tasks, we build eCommerce infrastructures brands can rely on. Below are some of the reasons clients stay with us for the long haul.",
+        'We build eCommerce infrastructure that brands can rely on, and that is why clients stay with us for the long haul.',
       features: [
         'Specialized in fashion, beauty & DTC verticals',
         'Lifetime maintenance on all builds',
@@ -503,7 +503,7 @@ const en: Dictionary = {
         'Optional NDA for full confidentiality',
         'Performance-first mindset, tech built to convert',
         'Fully independent team, zero onboarding on your side',
-        'Access to industry-leading tools, dashboards & reporting',
+        'Access to professional tools, dashboards & reporting',
         'Every collaboration structured for long-term brand growth',
       ],
     },
@@ -521,7 +521,7 @@ const en: Dictionary = {
       titlePart2: 'Get a dedicated eCommerce',
       titleEm: 'Growth Team.',
       description:
-        'Hiring one person gets you one skill. With us you get a full team, led by an eCommerce Manager who coordinates everything. One point of contact, every skill your growth needs.',
+        'Hiring one person gets you one skill. With us you get a full team, led by an eCommerce Manager who coordinates everything: one point of contact for every skill your growth needs.',
       cta: 'Apply for your eCommerce team',
       trustedCount: 'Chosen by Fashion, Supplements and DTC brands',
     },
@@ -554,10 +554,10 @@ const en: Dictionary = {
       heading: 'What if you had',
       headingMark: 'one partner?',
       description:
-        'A complete eCommerce team, led by an eCommerce Manager who becomes your point of reference. We do not hand off tasks and disappear: we join the project as partners and stay.',
+        'A complete eCommerce team, led by an eCommerce Manager who becomes your point of reference. We join the project as partners and stay for the long run.',
       items: [
         {
-          title: 'A partner, not a vendor',
+          title: 'A partner who answers for the result',
           description:
             'We become your eCommerce team. One point of contact accountable for the whole project, from strategy to execution.',
         },
@@ -569,16 +569,16 @@ const en: Dictionary = {
         {
           title: 'Driven by data',
           description:
-            'Custom dashboards, sheets and CRM with every metric that matters. We always know when we are profitable and where to act. Clear goals, continuous review.',
+            'Custom dashboards, sheets and CRM with every metric that matters. We always know when we are profitable and where to act, with clear goals and continuous review.',
         },
       ],
     },
   },
   faq: {
     label: 'FAQs',
-    heading: 'Everything you ',
-    headingEm: 'need to know',
-    subheading: 'The Agency that turns data and vision into high-performing eCommerce.',
+    heading: 'The questions ',
+    headingEm: 'we hear most',
+    subheading: 'Short answers on the Sprint, the team and how we work.',
     items: [
       {
         question: 'How long does a Shopify migration with you take, and what does it cost?',
@@ -592,17 +592,17 @@ const en: Dictionary = {
       {
         question: 'What does support and maintenance include, and how often do you intervene?',
         answer:
-          'Support is 7/7 with response in minutes, not days. We handle everything from bug fixes to performance optimization, proactively managing your eCommerce infrastructure.',
+          'Support is 7/7 with response in minutes, not days. We handle everything from bug fixes to performance optimization and look after your eCommerce infrastructure proactively.',
       },
       {
         question: 'How do you approach data and KPI management?',
         answer:
-          'We implement professional tracking from day one: GA4, Meta Pixel, server-side Conversions API, and custom dashboards. Every decision is based on real numbers, not assumptions.',
+          'We implement professional tracking from day one: GA4, Meta Pixel, server-side Conversions API, and custom dashboards. Every decision is based on real numbers.',
       },
       {
         question: 'What are the contract terms and flexibility options?',
         answer:
-          'We offer flexible monthly retainers with fixed, predictable costs. No hidden fees, no surprise invoices. You can scale your team up or down based on your needs.',
+          'We offer flexible monthly retainers with fixed, predictable costs. There are no hidden fees or surprise invoices. You can scale your team up or down based on your needs.',
       },
       {
         question: 'What\u2019s the difference between Data-Driven Team and Shopify Development?',
@@ -632,7 +632,7 @@ const en: Dictionary = {
       {
         question: 'What does your team\u2019s work cover?',
         answer:
-          'Included: development, design, data and analytics, paid advertising management, email marketing and SEO. Branding, photography and shoots are coordinated with partners under the same direction. Handled separately: influencer management. We focus on what drives technical and revenue growth.',
+          'Included: development, design, data and analytics, paid advertising management, email marketing and SEO. Branding, photography and shoots are coordinated with partners under the same direction. Handled separately: influencer management.',
       },
     ],
   },
@@ -683,17 +683,17 @@ const en: Dictionary = {
       trustLabel: 'Chosen by Fashion, Supplements and DTC brands',
       h1pre: 'Your technical partner that makes eCommerce ',
       h1em: 'simple',
-      body1: 'A 7/7 team of developers, designers, and strategists combining code, data, and creativity to help Shopify brands scale without stress.',
-      body2: 'We are not an agency you \u201cdelegate execution\u201d to, we become part of your project at 360\u00b0.',
+      body1: 'A 7/7 team of developers, designers and strategists helping Shopify brands scale without stress.',
+      body2: 'We become part of your project at 360\u00b0.',
     },
     principles: {
-      heading: "We don\u2019t work with just anyone. Every project must align with these three core principles:",
+      heading: 'We choose who we work with. Every project has to meet these three principles:',
       card1Title: 'Seamless Integration & Proven Team',
-      card1Body: 'We plug directly into your structure with aligned workflows, vetted specialists, and a methodology that delivers. You\u2019ll work with a tight-knit, stable team shaped by long-term growth partnerships. When needed, we also source the right talent for your exact eCommerce needs.',
+      card1Body: 'We plug directly into your structure with aligned workflows and vetted specialists. You work with a tight-knit, stable team built on long-term growth partnerships. When needed, we also source the right talent for your exact eCommerce needs.',
       card2Title: 'Long-Term Vision & Strategic Focus',
-      card2Body: "We\u2019re built for Fashion, Supplements, and DTC brands. Our approach values quality over noise: stable growth, data-led decisions, and a consistent strategic partner over time. We measure ourselves on one thing: the results of the brands we work with.",
+      card2Body: 'We\u2019re built for Fashion, Supplements and DTC brands. We aim for stable growth and data-led decisions, with the same strategic partner beside you over time. We measure ourselves on the results of the brands we work with.',
       card3Title: 'Substance, Stability & Experience',
-      card3Body1: 'With 7+ years of international execution and a model based on predictable, fixed costs, we help you scale without margin surprises. No fluff, just infrastructure, strategy, and industry-native talent.',
+      card3Body1: 'With 7+ years of international execution and a model based on predictable, fixed costs, we help you scale without margin surprises. We bring infrastructure, strategy and people who know your industry.',
       card3Body2: 'That\u2019s why we work exclusively with a highly selected group of brands.',
     },
     testimonials: {
@@ -765,7 +765,7 @@ const it: Dictionary = {
     label: 'Problema',
     heading: 'Dimentica',
     headingStrike: 'l\u2019agenzia marketing all-in-one',
-    body: 'Certo, tutti vogliono un eCommerce che spacca. Ma se ti fidi dell\u2019hype, finisci a rincorrere bug, dati inutili e un supporto che sparisce. Una base solida in ogni area conta pi\u00f9 di un singolo trucco che brilla.',
+    body: 'Tutti vogliono un eCommerce che spacca. Se ti fidi dell\u2019hype, finisci a rincorrere bug, a lavorare con dati inutili e ad aspettare un supporto sparito. Una base solida in ogni area vale pi\u00f9 di un singolo trucco che brilla.',
     items: [
       {
         title: 'Stack Tecnologico Frammentato',
@@ -777,26 +777,26 @@ const it: Dictionary = {
       },
       {
         title: 'Supporto \u201cpatchwork\u201d',
-        description: 'Le agenzie improvvisano fix e forzano i tempi di sviluppo, generando bug e perdita di qualit\u00e0. Noi lo risolviamo.',
+        description: 'Le agenzie improvvisano fix e forzano i tempi di sviluppo, generando bug e perdita di qualit\u00e0.',
       },
     ],
   },
   solution: {
     label: 'Soluzione',
-    headingPre: 'Smettila di accontentarti.\nIl tuo eCommerce merita un ',
+    headingPre: 'Il tuo eCommerce ha bisogno\ndi un ',
     headingMark: 'vero partner tecnico',
     items: [
       {
         title: 'Integrazione Tech. Zero Caos',
-        description: 'Un unico partner. Team full-stack: sviluppo, design, dati e strategia. Tutto gestito per te.',
+        description: 'Un unico partner e un team full-stack per sviluppo, design, dati e strategia. Gestiamo tutto noi.',
       },
       {
         title: 'Supporto Reale, Risultati Reali',
-        description: 'Risposta in minuti, non giorni. Problem-solver proattivi in Branding & Dev. Siamo al tuo fianco nella crescita.',
+        description: 'Risposta in minuti, non giorni. Gli specialisti di branding e sviluppo lavorano in modo proattivo e restano al tuo fianco mentre lo store cresce.',
       },
       {
         title: 'Dati Puliti che Guidano la Crescita',
-        description: 'Tracking professionale, analytics completa, dashboard azionabili. Decisioni basate su numeri veri, non speranze.',
+        description: 'Tracking fatto bene, analytics completa e dashboard che puoi usare subito: ogni decisione parte da numeri veri.',
       },
     ],
   },
@@ -806,7 +806,7 @@ const it: Dictionary = {
     headingBuilt: 'Store reali costruiti e cresciuti con noi',
     category: 'eCommerce Fashion Retail di Lusso',
     description:
-      'Partiti senza team tecnico n\u00e9 struttura. Costruito, lanciato e scalato un eCommerce con un team dedicato, trasformando un canale marginale in un driver chiave della crescita del brand.',
+      'Siamo partiti senza team tecnico n\u00e9 struttura. Con un team dedicato abbiamo costruito, lanciato e fatto crescere l\u2019eCommerce: da canale marginale \u00e8 diventato uno dei motori della crescita del brand.',
     metric: '\u2191 67,7% vendite online dopo la migrazione a Shopify',
     metricNote: 'Nei 12 mesi dopo la migrazione, rispetto ai 12 mesi prima',
     cta: 'Leggi il caso studio Cumini',
@@ -824,8 +824,8 @@ const it: Dictionary = {
   },
   pricing: {
     label: 'Prezzi',
-    heading: 'Piani intelligenti per brand eCommerce seri',
-    subheading: 'Che il tuo eCommerce stia crescendo o sia ancora tutto da costruire, il nostro team tecnico ti guida a ogni passo.',
+    heading: 'Tre modi di lavorare con noi',
+    subheading: 'Che il tuo eCommerce stia già crescendo o sia ancora da costruire, trovi il piano adatto a dove sei.',
     plans: [
       {
         badge: 'Devi migrare a Shopify?',
@@ -901,7 +901,7 @@ const it: Dictionary = {
       titlePart1: 'Ricostruiamo il tuo eCommerce caotico con ',
       titlePart2: 'noprob',
       descriptionPart1:
-        'Ricostruiamo il tuo eCommerce dalle fondamenta, creando uno store veloce, stabile e pronto a convertire. Tu concentrati sulla crescita. ',
+        'Ricostruiamo il tuo eCommerce dalle fondamenta, per avere uno store veloce, stabile e pronto a convertire. Tu concentrati sulla crescita. ',
       descriptionPart2: 'Noi ci occupiamo del lavoro tecnico.',
       cta: 'Voglio un rebuild',
       trustedCount: 'Scelti da brand di Moda, Integratori e DTC eCommerce',
@@ -916,15 +916,15 @@ const it: Dictionary = {
         {
           title: 'Ticket infiniti, nessuna responsabilità',
           description:
-            'La maggior parte dei brand lavora su dati sporchi. Il tracking è rotto, le decisioni sono casuali, la crescita non è sostenibile.',
+            'La maggior parte dei brand lavora su dati sporchi: con il tracking rotto le decisioni diventano casuali e la crescita non regge.',
         },
         {
-          title: 'Tracking rotto? Stai scalando alla cieca.',
+          title: 'Con il tracking rotto stai scalando alla cieca',
           description:
             'Su Cumini l’audit del tracking è passato da 31/100 a 92/100 dopo il passaggio.',
         },
         {
-          title: 'Responsabile? Nessuno lo è davvero.',
+          title: 'Nessuno risponde del risultato, e il tuo team lo sa',
           description:
             'Le agenzie forzano i tempi di sviluppo e generano bug. Il tuo team non si fida più del processo.',
         },
@@ -932,7 +932,7 @@ const it: Dictionary = {
     },
     solution: {
       label: 'soluzione',
-      headingPart1: "Non hai bisogno di un'altra agenzia. Ti serve un vero ",
+      headingPart1: 'Al tuo eCommerce serve un vero ',
       headingPart2: 'Partner Tecnico per la Crescita',
       items: [
         {
@@ -943,12 +943,12 @@ const it: Dictionary = {
         {
           title: 'Costo fisso, esecuzione full-stack',
           description:
-            'Risposta in minuti, non giorni. Niente ritardi, niente scope infiniti. Solo lavoro che procede veloce.',
+            'Risposta in minuti, non giorni, e un lavoro che procede veloce senza scope infiniti.',
         },
         {
           title: 'Analytics che guidano le decisioni',
           description:
-            'Tracking pulito, dashboard reali, zero supposizioni. Trasformiamo i dati in azioni concrete.',
+            'Tracking pulito e dashboard reali, così smetti di tirare a indovinare. Trasformiamo i dati in azioni concrete.',
         },
       ],
     },
@@ -956,7 +956,7 @@ const it: Dictionary = {
       label: 'perché noi',
       heading: 'Perché il nostro modello funziona meglio',
       description:
-        "Un confronto diretto tra l'approccio noprob e le agenzie tradizionali o i freelancer. L'obiettivo è mostrare perché la nostra struttura offre risultati migliori a lungo termine.",
+        'Come lavora noprob a confronto con le agenzie tradizionali e i freelancer, e perché la nostra struttura dà risultati migliori nel lungo periodo.',
       agencyLabel: 'Altre<br />Agenzie',
       agencyItems: [
         'Risposte lente e coordinamento poco chiaro',
@@ -973,7 +973,7 @@ const it: Dictionary = {
         'Team modulare costruito sui tuoi obiettivi reali',
       ],
       featuresDescription:
-        "Non ci limitiamo a consegnare task, costruiamo infrastrutture eCommerce su cui i brand possono contare. Ecco perché i nostri clienti restano con noi a lungo.",
+        'Costruiamo infrastrutture eCommerce su cui i brand possono contare, ed è per questo che i nostri clienti restano con noi a lungo.',
       features: [
         'Specializzati in verticali fashion, beauty & DTC',
         'Manutenzione a vita su ogni build',
@@ -982,7 +982,7 @@ const it: Dictionary = {
         'Optional NDA per la massima riservatezza',
         'Mindset performance-first, tech costruito per convertire',
         'Team completamente indipendente, zero onboarding lato tuo',
-        'Accesso a strumenti, dashboard e report leader di settore',
+        'Accesso a strumenti, dashboard e report professionali',
         'Ogni collaborazione strutturata per la crescita del brand',
       ],
     },
@@ -1000,7 +1000,7 @@ const it: Dictionary = {
       titlePart2: 'dedicato alla',
       titleEm: 'crescita',
       description:
-        'Assumere una persona ti dà una competenza sola. Con noi hai un team completo, guidato da un eCommerce Manager che coordina tutto. Un solo interlocutore, tutte le competenze che servono per crescere.',
+        'Assumere una persona ti dà una competenza sola. Con noi hai un team completo, guidato da un eCommerce Manager che coordina tutto: un solo interlocutore per tutte le competenze che servono per crescere.',
       cta: 'Candidati per il tuo team eCommerce',
       trustedCount: 'Scelti da brand di Moda, Integratori e DTC eCommerce',
     },
@@ -1033,10 +1033,10 @@ const it: Dictionary = {
       heading: 'E se avessi un',
       headingMark: 'unico partner?',
       description:
-        'Un team eCommerce completo, coordinato da un eCommerce Manager che diventa il tuo punto di riferimento. Non consegniamo task e spariamo: entriamo nel progetto come partner e restiamo.',
+        'Un team eCommerce completo, coordinato da un eCommerce Manager che diventa il tuo punto di riferimento. Entriamo nel progetto come partner e restiamo.',
       items: [
         {
-          title: 'Un partner, non un fornitore',
+          title: 'Un partner che risponde del risultato',
           description:
             'Diventiamo il tuo team eCommerce. Un solo interlocutore che risponde di tutto il progetto, dalla strategia all’esecuzione.',
         },
@@ -1048,16 +1048,16 @@ const it: Dictionary = {
         {
           title: 'Tutto guidato dai dati',
           description:
-            'Dashboard, fogli e CRM su misura con ogni metrica che conta. Sappiamo sempre quando siamo in profitto e dove intervenire. Obiettivi chiari, revisione continua.',
+            'Dashboard, fogli e CRM su misura con ogni metrica che conta. Sappiamo sempre quando siamo in profitto e dove intervenire, con obiettivi chiari e revisione continua.',
         },
       ],
     },
   },
   faq: {
     label: 'FAQ',
-    heading: 'Tutto quello che ',
-    headingEm: 'devi sapere',
-    subheading: 'L\u2019agenzia che trasforma dati e visione in eCommerce ad alte prestazioni.',
+    heading: 'Le domande ',
+    headingEm: 'che ci fanno di pi\u00f9',
+    subheading: 'Risposte brevi su Sprint, team e modo di lavorare.',
     items: [
       {
         question: 'Quanto dura e quanto costa una migrazione a Shopify con voi?',
@@ -1071,17 +1071,17 @@ const it: Dictionary = {
       {
         question: 'Cosa include il supporto e la manutenzione, e con quale frequenza intervenite?',
         answer:
-          'Il supporto \u00e8 attivo 7/7 con risposta in minuti, non giorni. Gestiamo tutto, dai bug fix all\u2019ottimizzazione delle performance, amministrando proattivamente la tua infrastruttura eCommerce.',
+          'Il supporto \u00e8 attivo 7/7 con risposta in minuti, non giorni. Gestiamo tutto, dai bug fix all\u2019ottimizzazione delle performance, e ci occupiamo in modo proattivo della tua infrastruttura eCommerce.',
       },
       {
         question: 'Come gestite i dati e i KPI?',
         answer:
-          'Implementiamo tracking professionale dal giorno uno: GA4, Meta Pixel, Conversions API server-side e dashboard personalizzate. Ogni decisione si basa su numeri reali, non su ipotesi.',
+          'Implementiamo tracking professionale dal giorno uno: GA4, Meta Pixel, Conversions API server-side e dashboard personalizzate. Ogni decisione si basa su numeri reali.',
       },
       {
         question: 'Quali sono i termini contrattuali e le opzioni di flessibilit\u00e0?',
         answer:
-          'Offriamo retainer mensili flessibili con costi fissi e prevedibili. Zero commissioni nascoste, zero fatture a sorpresa. Puoi scalare il team verso l\u2019alto o il basso in base alle tue esigenze.',
+          'Offriamo retainer mensili flessibili con costi fissi e prevedibili. Niente commissioni nascoste né fatture a sorpresa. Puoi scalare il team verso l\u2019alto o il basso in base alle tue esigenze.',
       },
       {
         question: 'Qual \u00e8 la differenza tra Data-Driven Team e Sviluppo Shopify?',
@@ -1111,7 +1111,7 @@ const it: Dictionary = {
       {
         question: 'Cosa copre il lavoro del vostro team?',
         answer:
-          'Incluso: sviluppo, design, dati e analytics, gestione advertising a pagamento, email marketing e SEO. Branding, fotografia e shooting li coordiniamo con partner nella stessa regia. A parte: gestione influencer. Ci concentriamo su ci\u00f2 che genera crescita tecnica e di fatturato.',
+          'Incluso: sviluppo, design, dati e analytics, gestione advertising a pagamento, email marketing e SEO. Branding, fotografia e shooting li coordiniamo con partner nella stessa regia. A parte: gestione influencer.',
       },
     ],
   },
@@ -1162,17 +1162,17 @@ const it: Dictionary = {
       trustLabel: 'Scelti da brand di Moda, Integratori e DTC eCommerce',
       h1pre: "Il tuo partner tecnico che rende l\u2019eCommerce ",
       h1em: 'semplice',
-      body1: 'Un team 7/7 di sviluppatori, designer e strategist che unisce codice, dati e creativit\u00e0 per aiutare i brand Shopify a scalare senza stress.',
-      body2: 'Non siamo un\u2019agenzia a cui \u201cdelegare l\u2019esecuzione\u201d, diventiamo parte del tuo progetto a 360\u00b0.',
+      body1: 'Un team 7/7 di sviluppatori, designer e strategist che aiuta i brand Shopify a scalare senza stress.',
+      body2: 'Diventiamo parte del tuo progetto a 360\u00b0.',
     },
     principles: {
-      heading: 'Non lavoriamo con chiunque. Ogni progetto deve essere allineato a questi tre principi:',
+      heading: 'Scegliamo con chi lavorare. Ogni progetto deve rispettare questi tre principi:',
       card1Title: 'Integrazione fluida e team consolidato',
-      card1Body: 'Ci integriamo direttamente nella tua struttura con workflow allineati, specialisti verificati e una metodologia che funziona. Lavorerai con un team stabile e coeso, costruito su partnership di crescita di lungo periodo. Quando serve, attiviamo anche il talento giusto per le esigenze specifiche del tuo eCommerce.',
+      card1Body: 'Ci integriamo direttamente nella tua struttura con workflow allineati e specialisti verificati. Lavori con un team stabile e coeso, costruito su partnership di crescita di lungo periodo. Quando serve, attiviamo anche il talento giusto per le esigenze specifiche del tuo eCommerce.',
       card2Title: 'Visione a lungo termine e focus strategico',
-      card2Body: 'Siamo costruiti per brand Fashion, Integratori e DTC. Il nostro approccio valorizza la qualit\u00e0 sopra il rumore: crescita stabile, decisioni guidate dai dati, un partner strategico costante nel tempo. Ci misuriamo su una cosa sola: i risultati dei brand che seguiamo.',
+      card2Body: 'Siamo costruiti per brand Fashion, Integratori e DTC. Puntiamo su una crescita stabile e su decisioni guidate dai dati, con lo stesso partner strategico al tuo fianco nel tempo. Ci misuriamo sui risultati dei brand che seguiamo.',
       card3Title: 'Sostanza, stabilit\u00e0 ed esperienza',
-      card3Body1: 'Con oltre 7 anni di esecuzione internazionale e un modello basato su costi fissi e prevedibili, ti aiutiamo a scalare senza sorprese sui margini. Niente fuffa, solo infrastruttura, strategia e talenti nativi del settore.',
+      card3Body1: 'Con oltre 7 anni di esecuzione internazionale e un modello basato su costi fissi e prevedibili, ti aiutiamo a scalare senza sorprese sui margini. Portiamo infrastruttura, strategia e persone che conoscono il tuo settore.',
       card3Body2: 'Per questo lavoriamo esclusivamente con un gruppo selezionato di brand.',
     },
     testimonials: {

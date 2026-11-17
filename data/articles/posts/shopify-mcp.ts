@@ -12,9 +12,9 @@ const article: Article = {
   seoDescriptionIt:
     'Shopify MCP spiegato a chi gestisce uno store: quali server esistono, cosa fa ciascuno, cosa serve per collegarli e quali permessi dare all’AI.',
   excerpt:
-    'Shopify MCP is not one server but a family. A plain-language map for merchants and eCommerce leads: the connector for your own store, the developer tools, the agent servers, what you need to connect them and the permissions to give.',
+    'Shopify MCP is a family of servers. A plain-language map for merchants and eCommerce leads: the connector for your own store, the developer tools, the agent servers, what you need to connect them and the permissions to give.',
   excerptIt:
-    'Shopify MCP non è un server solo ma una famiglia. Una mappa in parole semplici per chi gestisce uno store: il connettore per il tuo store, gli strumenti per sviluppatori, i server per gli agenti, cosa serve per collegarli e i permessi da dare.',
+    'Shopify MCP è una famiglia di server. Una mappa in parole semplici per chi gestisce uno store: il connettore per il tuo store, gli strumenti per sviluppatori, i server per gli agenti, cosa serve per collegarli e i permessi da dare.',
   ledeEn:
     'Shopify MCP is a family of servers, and most guides are written for developers. Here is which one does what for your store, what you need to connect it and where the risks are.',
   ledeIt:
@@ -100,7 +100,7 @@ const article: Article = {
   content: [
     {
       type: 'paragraph',
-      text: '**Shopify MCP is the set of servers that let an AI tool such as Claude read and act on a Shopify store through the Model Context Protocol (MCP).** There is no single “Shopify MCP”. There is one for merchants who manage their own store from a chat, one for developers, and a group of agent servers that let shopping assistants search a catalog and build a cart. This guide is for a merchant or eCommerce lead, and it follows Shopify’s documentation as of 29 October 2026.',
+      text: 'Shopify MCP is the set of servers that let an AI tool such as Claude read and act on a Shopify store through the Model Context Protocol (MCP). Shopify offers several of them: one for merchants who manage their own store from a chat, one for developers, and a group of agent servers that let shopping assistants search a catalog and build a cart. This guide is for a merchant or eCommerce lead, and it follows Shopify’s documentation as of 29 October 2026.',
     },
     {
       type: 'paragraph',
@@ -117,7 +117,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'What MCP does not do: decide the rules. It standardizes the plug, not who may call what, which actions need your confirmation or what happens when the model gets it wrong. That part stays yours. The [MCP specification](https://modelcontextprotocol.io/specification/2026-07-28/server/tools) itself says there should always be a human who can deny a tool call.',
+      text: 'MCP does not decide the rules. It standardizes the plug. Who may call what, which actions need your confirmation and what happens when the model gets it wrong all stay with you. The [MCP specification](https://modelcontextprotocol.io/specification/2026-07-28/server/tools) itself says there should always be a human who can deny a tool call.',
     },
     { type: 'h2', text: 'Which Shopify MCP servers exist today?' },
     {
@@ -129,43 +129,43 @@ const article: Article = {
       headers: ['Server', 'What it does', 'Who uses it', 'What you need'],
       rows: [
         [
-          '**Shopify connector (Claude and other AI tools)**',
+          'Shopify connector (Claude and other AI tools)',
           'Lets you manage your own store from a chat (products, collections, inventory, discounts, orders, analytics).',
           'Merchants and eCommerce leads.',
           'Access to the Shopify admin, an account with the AI tool and your approval of the data access it requests.',
         ],
         [
-          '**Dev MCP and AI Toolkit**',
+          'Dev MCP and AI Toolkit',
           'Give an AI coding assistant Shopify’s current documentation, API schemas and code checks.',
           'Developers and agencies.',
           'Node.js and one command or plugin install; Dev MCP needs no authentication.',
         ],
         [
-          '**Storefront Catalog MCP**',
+          'Storefront Catalog MCP',
           'Searches and looks up one store’s products and physical locations; no tool changes anything.',
           'Builders of shopping assistants and on-site agents.',
           'As a merchant, Shopify’s page describes no setup; the agent must present an agent profile.',
         ],
         [
-          '**Global Catalog MCP**',
+          'Global Catalog MCP',
           'Searches products across Shopify merchants from one endpoint.',
           'Agents that compare stores.',
           'As a merchant, no opt-in step is described; what you control is the quality of your product data.',
         ],
         [
-          '**Cart MCP and Checkout MCP**',
+          'Cart MCP and Checkout MCP',
           'Build a cart over several turns ([Cart MCP](https://shopify.dev/docs/agents/carts-and-checkout/cart-mcp)), then turn it into a checkout ([Checkout MCP](https://shopify.dev/docs/agents/carts-and-checkout/checkout-mcp)).',
           'Agents shopping for a buyer.',
           'The agent needs a profile, and Checkout also needs a token or a signed request.',
         ],
         [
-          '**Ask MCP and Order MCP**',
+          'Ask MCP and Order MCP',
           '[Ask](https://shopify.dev/docs/agents/ask) answers questions on policies such as returns and shipping, and Shopify marks it as a draft capability; [Order](https://shopify.dev/docs/agents/orders/order-mcp) reads the current state of an order, only for orders placed through the agent.',
           'Support and order-status assistants.',
           'The agent’s profile, and for Order a token with the order-read scope.',
         ],
         [
-          '**Customer Accounts MCP**',
+          'Customer Accounts MCP',
           'Handles tasks for a logged-in customer, such as order status and account preferences.',
           'Developers of assistants for existing customers.',
           'A custom domain, approval for protected customer data and customer account login.',
@@ -201,7 +201,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'What it cannot do, even with write access: refunds, order cancellation or capture, marking an order paid, returns, gift cards, and changes to plan, payments, taxes or domains. It cannot edit or delete your live theme, and it asks you to confirm before publishing a theme or making certain Admin API changes. Those limits are a feature. They are the reason we are comfortable suggesting it to a store owner.',
+      text: 'What it cannot do, even with write access: refunds, order cancellation or capture, marking an order paid, returns, gift cards, and changes to plan, payments, taxes or domains. It cannot edit or delete your live theme, and it asks you to confirm before publishing a theme or making certain Admin API changes. Those limits are why we are comfortable suggesting it to a store owner.',
     },
     {
       type: 'paragraph',
@@ -210,7 +210,7 @@ const article: Article = {
     { type: 'h2', text: 'What do Dev MCP and the AI Toolkit do?' },
     {
       type: 'paragraph',
-      text: '**Dev MCP and the AI Toolkit give an AI coding assistant Shopify’s current documentation and checks, so it writes Liquid, GraphQL and extensions against the real schema instead of its memory.** They are for the person building the store, not for the person selling in it.',
+      text: '**Dev MCP and the AI Toolkit give an AI coding assistant Shopify’s current documentation and checks, so it writes Liquid, GraphQL and extensions against the real schema instead of its memory.** They are for the person building the store; if you only sell in it, you can skip them.',
     },
     {
       type: 'paragraph',
@@ -231,7 +231,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'For you, the work is data, not connection: complete attributes, accurate prices and stock, readable policies. That is the same work as in [GEO for Shopify](/blog/geo-for-shopify), and it is easiest during a migration, when every product is touched anyway: see our [guide to migrating to Shopify](/shopify-migration). On [Nazzi’s store](/use-cases/integratori-nazzi-dtc-shopify) we published a sitemap for agentic discovery. If you want your own assistant on top of these servers, the choice between chatbot, workflow and agent is in [AI agents for Shopify](/blog/ai-agents-for-shopify).',
+      text: 'For you, the work is the data: complete attributes, accurate prices and stock, readable policies. That is the same work as in [GEO for Shopify](/blog/geo-for-shopify), and it is easiest during a migration, when every product is touched anyway: see our [guide to migrating to Shopify](/shopify-migration). On [Nazzi’s store](/use-cases/integratori-nazzi-dtc-shopify) we published a sitemap for agentic discovery. If you want your own assistant on top of these servers, the choice between chatbot, workflow and agent is in [AI agents for Shopify](/blog/ai-agents-for-shopify).',
     },
     { type: 'h2', text: 'What do you need to connect a Shopify MCP server?' },
     {
@@ -256,13 +256,13 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**Start read-only.** In the connector, orders, customers and analytics already are. Keep it that way for the first weeks and use it to ask questions.',
-        '**Give the connection its own staff account** with only the permissions the job needs. The connector’s reach follows the staff account it uses.',
-        '**Write only where you can undo.** Product drafts and unpublished themes yes; prices on the whole catalog in one go, no. [Shopify notes](https://help.shopify.com/en/manual/ai-powered-tools/connecting-ai-tools/shopify-connector-for-claude) that a large batch changes items one at a time and can stop partway.',
-        '**Keep money out of reach.** Refunds, cancellations and returns are blocked in the connector. If you build your own, do the same and require a human approval, as the MCP specification recommends.',
-        '**Watch the update calls.** [Cart MCP](https://shopify.dev/docs/agents/carts-and-checkout/cart-mcp) says update_cart replaces the cart’s full state and removes any field you omit; [Checkout MCP](https://shopify.dev/docs/agents/carts-and-checkout/checkout-mcp) says the same of update_checkout. An agent that sends half a cart deletes the other half.',
-        '**Treat everything the agent reads as untrusted.** Reviews, product text and customer messages can carry instructions. [OWASP](https://genai.owasp.org/llmrisk/llm01-prompt-injection/) lists prompt injection as a top risk for LLM apps and recommends least-privilege access and human approval for high-risk actions. The full picture is in [AI agent security for Shopify](/blog/ai-agent-security-shopify).',
-        '**Check the output, and know where the data goes.** Shopify’s [considerations page](https://help.shopify.com/en/manual/ai-powered-tools/connecting-ai-tools/considerations) says you are responsible for wrong changes and that the data you share is processed by the AI tool’s company under its own terms.',
+        'Start read-only. In the connector, orders, customers and analytics already are. Keep it that way for the first weeks and use it to ask questions.',
+        'Give the connection its own staff account with only the permissions the job needs. The connector’s reach follows the staff account it uses.',
+        'Write only where you can undo. Product drafts and unpublished themes yes; prices on the whole catalog in one go, no. [Shopify notes](https://help.shopify.com/en/manual/ai-powered-tools/connecting-ai-tools/shopify-connector-for-claude) that a large batch changes items one at a time and can stop partway.',
+        'Keep money out of reach. Refunds, cancellations and returns are blocked in the connector. If you build your own, do the same and require a human approval, as the MCP specification recommends.',
+        'Watch the update calls. [Cart MCP](https://shopify.dev/docs/agents/carts-and-checkout/cart-mcp) says update_cart replaces the cart’s full state and removes any field you omit; [Checkout MCP](https://shopify.dev/docs/agents/carts-and-checkout/checkout-mcp) says the same of update_checkout. An agent that sends half a cart deletes the other half.',
+        'Treat everything the agent reads as untrusted. Reviews, product text and customer messages can carry instructions. [OWASP](https://genai.owasp.org/llmrisk/llm01-prompt-injection/) lists prompt injection as a top risk for LLM apps and recommends least-privilege access and human approval for high-risk actions. The full picture is in [AI agent security for Shopify](/blog/ai-agent-security-shopify).',
+        'Check the output, and know where the data goes. Shopify’s [considerations page](https://help.shopify.com/en/manual/ai-powered-tools/connecting-ai-tools/considerations) says you are responsible for wrong changes and that the data you share is processed by the AI tool’s company under its own terms.',
       ],
     },
     {
@@ -287,23 +287,23 @@ const article: Article = {
     { type: 'h2', text: 'How does this fit with the Shopify Launch Sprint and the AI Accelerator?' },
     {
       type: 'paragraph',
-      text: 'In the Shopify Launch Sprint, our [Shopify migration service](/shopify-migration-sprint), **the Custom AI System leaves the store ready for AI agents, with clean and mapped data.** “Ready for AI agents” and “data mapped in detail” are two of its six superpowers, and they are what the catalog, cart and Ask servers read. The Sprint takes 14 days, with go-live between day 15 and 30 and 90 days of support. If you are still on another platform, start from our [guide to migrating to Shopify](/shopify-migration). If your store is already on Shopify, the [AI Accelerator](/ai-accelerator) is the lighter route.',
+      text: '**In the Shopify Launch Sprint, our [Shopify migration service](/shopify-migration-sprint), the Custom AI System leaves the store ready for AI agents, with clean and mapped data.** “Ready for AI agents” and “data mapped in detail” are two of its six superpowers, and they are what the catalog, cart and Ask servers read. The Sprint takes 14 days, with go-live between day 15 and 30 and 90 days of support. If you are still on another platform, start from our [guide to migrating to Shopify](/shopify-migration). If your store is already on Shopify, the [AI Accelerator](/ai-accelerator) is the lighter route.',
     },
     { type: 'h2', text: 'Frequently asked questions' },
     { type: 'h3', text: 'What is MCP in Shopify?' },
     {
       type: 'paragraph',
-      text: 'MCP (Model Context Protocol) is an open standard that lets an AI app such as Claude call tools on an outside system in a uniform way. In Shopify it means servers that let an AI tool read and, with your approval, change your store, or let shopping assistants search a catalog and build a cart.',
+      text: '**MCP (Model Context Protocol) is an open standard that lets an AI app such as Claude call tools on an outside system in a uniform way.** In Shopify it means servers that let an AI tool read and, with your approval, change your store, or let shopping assistants search a catalog and build a cart.',
     },
     { type: 'h3', text: 'Is Shopify MCP free?' },
     {
       type: 'paragraph',
-      text: 'Shopify’s help center says there is no extra Shopify fee for the connector: you pay your Shopify plan and the subscription of your AI tool. Shopify’s pages for the developer and agent servers mention no fee, but any assistant you build pays its own AI model costs.',
+      text: '**Shopify’s help center says there is no extra Shopify fee for the connector: you pay your Shopify plan and the subscription of your AI tool.** Shopify’s pages for the developer and agent servers mention no fee, but any assistant you build pays its own AI model costs.',
     },
     { type: 'h3', text: 'Which Shopify MCP server do I need?' },
     {
       type: 'paragraph',
-      text: 'If you run a store and want to manage it from a chat, the Shopify connector for Claude or another AI tool. If you or your agency write code, Dev MCP and the AI Toolkit. If you build an assistant that serves shoppers, the catalog, cart, checkout, Ask, order and customer account servers.',
+      text: '**If you run a store and want to manage it from a chat, the Shopify connector for Claude or another AI tool.** If you or your agency write code, Dev MCP and the AI Toolkit. If you build an assistant that serves shoppers, the catalog, cart, checkout, Ask, order and customer account servers.',
     },
     { type: 'h3', text: 'Can I use Shopify MCP with Claude or Claude Code?' },
     {
@@ -313,12 +313,12 @@ const article: Article = {
     { type: 'h3', text: 'Is it safe to connect an AI tool to my Shopify store?' },
     {
       type: 'paragraph',
-      text: 'It is safe if you control the permissions. Start read-only, use a staff account with only the access the job needs, keep refunds and other money actions out of reach, and review every change. Shopify’s connector already blocks refunds, order cancellation and live theme edits.',
+      text: '**It is safe if you control the permissions.** Start read-only, use a staff account with only the access the job needs, keep refunds and other money actions out of reach, and review every change. Shopify’s connector already blocks refunds, order cancellation and live theme edits.',
     },
     { type: 'h3', text: 'Does the old Storefront MCP endpoint still work?' },
     {
       type: 'paragraph',
-      text: 'Not for catalog and cart. Shopify’s migration page says the catalog and cart tools on the old /api/mcp endpoint were removed and replaced by UCP-based tools at /api/ucp/mcp. The Customer Accounts MCP server is unchanged.',
+      text: '**Not for catalog and cart.** Shopify’s migration page says the catalog and cart tools on the old /api/mcp endpoint were removed and replaced by UCP-based tools at /api/ucp/mcp. The Customer Accounts MCP server is unchanged.',
     },
     {
       type: 'paragraph',
@@ -332,7 +332,7 @@ const article: Article = {
   contentIt: [
     {
       type: 'paragraph',
-      text: '**Shopify MCP è l’insieme dei server che permettono a uno strumento AI come Claude di leggere e agire su uno store Shopify attraverso il Model Context Protocol (MCP).** Non esiste un unico “Shopify MCP”. Ce n’è uno per chi gestisce il proprio store da una chat, uno per gli sviluppatori e un gruppo di server per agenti che fanno cercare un catalogo e creare un carrello agli assistenti d’acquisto. Questa guida è per chi gestisce uno store o guida l’eCommerce e segue la documentazione di Shopify al 29 ottobre 2026.',
+      text: 'Shopify MCP è l’insieme dei server che permettono a uno strumento AI come Claude di leggere e agire su uno store Shopify attraverso il Model Context Protocol (MCP). Shopify ne offre più d’uno: uno per chi gestisce il proprio store da una chat, uno per gli sviluppatori e un gruppo di server per agenti che fanno cercare un catalogo e creare un carrello agli assistenti d’acquisto. Questa guida è per chi gestisce uno store o guida l’eCommerce e segue la documentazione di Shopify al 29 ottobre 2026.',
     },
     {
       type: 'paragraph',
@@ -349,7 +349,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Cosa MCP non fa: decidere le regole. Standardizza la presa, non chi può chiamare cosa, quali azioni richiedono la tua conferma o cosa succede quando il modello sbaglia. Quella parte resta tua. La stessa [specifica di MCP](https://modelcontextprotocol.io/specification/2026-07-28/server/tools) dice che ci dovrebbe sempre essere una persona in grado di negare una chiamata a uno strumento.',
+      text: 'MCP non decide le regole. Standardizza la presa. Chi può chiamare cosa, quali azioni richiedono la tua conferma e cosa succede quando il modello sbaglia restano a te. La stessa [specifica di MCP](https://modelcontextprotocol.io/specification/2026-07-28/server/tools) dice che ci dovrebbe sempre essere una persona in grado di negare una chiamata a uno strumento.',
     },
     { type: 'h2', text: 'Quali server Shopify MCP esistono oggi?' },
     {
@@ -361,43 +361,43 @@ const article: Article = {
       headers: ['Server', 'A cosa serve', 'Chi lo usa', 'Cosa ti serve'],
       rows: [
         [
-          '**Connettore Shopify (Claude e altri strumenti AI)**',
+          'Connettore Shopify (Claude e altri strumenti AI)',
           'Gestire il tuo store da una chat (prodotti, collezioni, inventario, sconti, ordini, analytics).',
           'Chi gestisce lo store e chi guida l’eCommerce.',
           'Accesso all’admin di Shopify, un account sullo strumento AI e la tua approvazione dell’accesso ai dati che richiede.',
         ],
         [
-          '**Dev MCP e AI Toolkit**',
+          'Dev MCP e AI Toolkit',
           'Danno a un assistente AI per il codice la documentazione aggiornata di Shopify, gli schemi delle API e i controlli sul codice.',
           'Sviluppatori e agenzie.',
           'Node.js e un comando o l’installazione di un plugin; Dev MCP non richiede autenticazione.',
         ],
         [
-          '**Storefront Catalog MCP**',
+          'Storefront Catalog MCP',
           'Cercare e consultare i prodotti di un solo store e i suoi punti vendita fisici; nessuno strumento modifica qualcosa.',
           'Chi costruisce assistenti d’acquisto e agenti sul sito.',
           'Come merchant la pagina di Shopify non descrive nessuna configurazione; è l’agente che deve presentare un profilo agente.',
         ],
         [
-          '**Global Catalog MCP**',
+          'Global Catalog MCP',
           'Cercare prodotti tra tutti i merchant Shopify da un unico endpoint.',
           'Gli agenti che confrontano gli store.',
           'Come merchant non è descritto nessun passaggio di adesione; quello che controlli tu è la qualità dei dati prodotto.',
         ],
         [
-          '**Cart MCP e Checkout MCP**',
+          'Cart MCP e Checkout MCP',
           'Costruire un carrello in più passaggi ([Cart MCP](https://shopify.dev/docs/agents/carts-and-checkout/cart-mcp)) e poi trasformarlo in checkout ([Checkout MCP](https://shopify.dev/docs/agents/carts-and-checkout/checkout-mcp)).',
           'Gli agenti che comprano per conto di un cliente.',
           'All’agente serve un profilo, e per il checkout anche un token o una richiesta firmata.',
         ],
         [
-          '**Ask MCP e Order MCP**',
+          'Ask MCP e Order MCP',
           '[Ask](https://shopify.dev/docs/agents/ask) risponde alle domande sulle policy, come resi e spedizioni, e Shopify lo indica come funzione in bozza; [Order](https://shopify.dev/docs/agents/orders/order-mcp) legge lo stato attuale di un ordine, solo per gli ordini fatti tramite l’agente.',
           'Assistenti di supporto e di stato ordine.',
           'Il profilo dell’agente e, per Order, un token con il permesso di lettura degli ordini.',
         ],
         [
-          '**Customer Accounts MCP**',
+          'Customer Accounts MCP',
           'Operazioni per un cliente che ha fatto l’accesso, come stato ordine e preferenze dell’account.',
           'Chi sviluppa assistenti per i clienti già registrati.',
           'Un dominio personalizzato, l’approvazione per i dati protetti dei clienti e l’accesso agli account cliente.',
@@ -433,7 +433,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Cosa non può fare, nemmeno con accesso in scrittura: rimborsi, annullamento o cattura degli ordini, segnare un ordine come pagato, resi, gift card e modifiche a piano, pagamenti, tasse o domini. Non può modificare né eliminare il tema pubblicato e chiede conferma prima di pubblicare un tema o di fare certe modifiche tramite Admin API. Questi limiti sono un pregio: sono il motivo per cui ci sentiamo di consigliarlo a chi gestisce uno store.',
+      text: 'Cosa non può fare, nemmeno con accesso in scrittura: rimborsi, annullamento o cattura degli ordini, segnare un ordine come pagato, resi, gift card e modifiche a piano, pagamenti, tasse o domini. Non può modificare né eliminare il tema pubblicato e chiede conferma prima di pubblicare un tema o di fare certe modifiche tramite Admin API. Questi limiti sono il motivo per cui ci sentiamo di consigliarlo a chi gestisce uno store.',
     },
     {
       type: 'paragraph',
@@ -442,7 +442,7 @@ const article: Article = {
     { type: 'h2', text: 'A cosa servono Dev MCP e AI Toolkit?' },
     {
       type: 'paragraph',
-      text: '**Dev MCP e AI Toolkit danno a un assistente AI per il codice la documentazione e i controlli aggiornati di Shopify, così scrive Liquid, GraphQL ed estensioni sullo schema vero invece che a memoria.** Sono per chi costruisce lo store, non per chi ci vende.',
+      text: '**Dev MCP e AI Toolkit danno a un assistente AI per il codice la documentazione e i controlli aggiornati di Shopify, così scrive Liquid, GraphQL ed estensioni sullo schema vero invece che a memoria.** Sono per chi costruisce lo store; se ci vendi soltanto, puoi saltarli.',
     },
     {
       type: 'paragraph',
@@ -463,7 +463,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Per te il lavoro è sui dati, non sulla connessione: attributi completi, prezzi e scorte corretti, policy leggibili. È lo stesso lavoro di [GEO SEO per Shopify](/it/blog/geo-seo-shopify), ed è più semplice durante una migrazione, quando ogni prodotto viene toccato comunque: vedi la nostra [guida alla migrazione a Shopify](/it/migrazione-shopify). Su [Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify) abbiamo pubblicato una sitemap per l’agentic discovery. Se vuoi un tuo assistente sopra questi server, la scelta tra chatbot, workflow e agente è in [agenti AI per Shopify](/it/blog/agenti-ai-shopify).',
+      text: 'Per te il lavoro è sui dati: attributi completi, prezzi e scorte corretti, policy leggibili. È lo stesso lavoro di [GEO SEO per Shopify](/it/blog/geo-seo-shopify), ed è più semplice durante una migrazione, quando ogni prodotto viene toccato comunque: vedi la nostra [guida alla migrazione a Shopify](/it/migrazione-shopify). Su [Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify) abbiamo pubblicato una sitemap per l’agentic discovery. Se vuoi un tuo assistente sopra questi server, la scelta tra chatbot, workflow e agente è in [agenti AI per Shopify](/it/blog/agenti-ai-shopify).',
     },
     { type: 'h2', text: 'Cosa serve per collegare un server Shopify MCP?' },
     {
@@ -488,13 +488,13 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**Parti in sola lettura.** Nel connettore ordini, clienti e analytics lo sono già. Tienili così per le prime settimane e usali per fare domande.',
-        '**Dai alla connessione un account staff dedicato** con solo i permessi che servono al lavoro. Ciò che il connettore può fare segue l’account staff che usa.',
-        '**Scrivi solo dove puoi tornare indietro.** Bozze di prodotto e temi non pubblicati sì; i prezzi di tutto il catalogo in un colpo solo, no. [Shopify ricorda](https://help.shopify.com/en/manual/ai-powered-tools/connecting-ai-tools/shopify-connector-for-claude) che un lotto grande cambia gli elementi uno alla volta e può fermarsi a metà.',
-        '**Tieni i soldi fuori portata.** Rimborsi, annullamenti e resi sono bloccati nel connettore. Se costruisci qualcosa di tuo, fai lo stesso e richiedi l’approvazione di una persona, come raccomanda la specifica di MCP.',
-        '**Attenzione alle chiamate di aggiornamento.** [Cart MCP](https://shopify.dev/docs/agents/carts-and-checkout/cart-mcp) dice che update_cart sostituisce l’intero stato del carrello e rimuove i campi omessi; [Checkout MCP](https://shopify.dev/docs/agents/carts-and-checkout/checkout-mcp) dice lo stesso di update_checkout. Un agente che invia metà carrello cancella l’altra metà.',
-        '**Tratta tutto ciò che l’agente legge come non fidato.** Recensioni, testi dei prodotti e messaggi dei clienti possono contenere istruzioni. [OWASP](https://genai.owasp.org/llmrisk/llm01-prompt-injection/) mette la prompt injection tra i rischi principali delle app basate su LLM e raccomanda accesso con privilegio minimo e approvazione umana per le azioni ad alto rischio. Il quadro completo è in [sicurezza degli agenti AI su Shopify](/it/blog/sicurezza-agenti-ai-shopify).',
-        '**Controlla il risultato e sappi dove vanno i dati.** La [pagina delle considerazioni](https://help.shopify.com/en/manual/ai-powered-tools/connecting-ai-tools/considerations) di Shopify dice che sei responsabile delle modifiche sbagliate e che i dati che condividi sono trattati dall’azienda dello strumento AI secondo le sue condizioni.',
+        'Parti in sola lettura. Nel connettore ordini, clienti e analytics lo sono già. Tienili così per le prime settimane e usali per fare domande.',
+        'Dai alla connessione un account staff dedicato con solo i permessi che servono al lavoro. Ciò che il connettore può fare segue l’account staff che usa.',
+        'Scrivi solo dove puoi tornare indietro. Bozze di prodotto e temi non pubblicati sì; i prezzi di tutto il catalogo in un colpo solo, no. [Shopify ricorda](https://help.shopify.com/en/manual/ai-powered-tools/connecting-ai-tools/shopify-connector-for-claude) che un lotto grande cambia gli elementi uno alla volta e può fermarsi a metà.',
+        'Tieni i soldi fuori portata. Rimborsi, annullamenti e resi sono bloccati nel connettore. Se costruisci qualcosa di tuo, fai lo stesso e richiedi l’approvazione di una persona, come raccomanda la specifica di MCP.',
+        'Attenzione alle chiamate di aggiornamento. [Cart MCP](https://shopify.dev/docs/agents/carts-and-checkout/cart-mcp) dice che update_cart sostituisce l’intero stato del carrello e rimuove i campi omessi; [Checkout MCP](https://shopify.dev/docs/agents/carts-and-checkout/checkout-mcp) dice lo stesso di update_checkout. Un agente che invia metà carrello cancella l’altra metà.',
+        'Tratta tutto ciò che l’agente legge come non fidato. Recensioni, testi dei prodotti e messaggi dei clienti possono contenere istruzioni. [OWASP](https://genai.owasp.org/llmrisk/llm01-prompt-injection/) mette la prompt injection tra i rischi principali delle app basate su LLM e raccomanda accesso con privilegio minimo e approvazione umana per le azioni ad alto rischio. Il quadro completo è in [sicurezza degli agenti AI su Shopify](/it/blog/sicurezza-agenti-ai-shopify).',
+        'Controlla il risultato e sappi dove vanno i dati. La [pagina delle considerazioni](https://help.shopify.com/en/manual/ai-powered-tools/connecting-ai-tools/considerations) di Shopify dice che sei responsabile delle modifiche sbagliate e che i dati che condividi sono trattati dall’azienda dello strumento AI secondo le sue condizioni.',
       ],
     },
     {
@@ -519,23 +519,23 @@ const article: Article = {
     { type: 'h2', text: 'Come si collega tutto questo allo Shopify Launch Sprint e all’AI Accelerator?' },
     {
       type: 'paragraph',
-      text: 'Nello Shopify Launch Sprint, il nostro [servizio di migrazione a Shopify](/it/sprint-migrazione-shopify), **il Custom AI System lascia lo store pronto per gli agenti AI, con dati puliti e mappati.** “Pronto per gli agenti AI” e “dati mappati al dettaglio” sono due dei suoi sei superpoteri, e sono ciò che leggono i server di catalogo, carrello e Ask. Lo Sprint dura 14 giorni, con go-live tra il giorno 15 e il 30 e 90 giorni di supporto. Se sei ancora su un’altra piattaforma, parti dalla nostra [guida alla migrazione a Shopify](/it/migrazione-shopify). Se il tuo store è già su Shopify, la strada più leggera è l’[AI Accelerator](/it/ai-accelerator).',
+      text: '**Nello Shopify Launch Sprint, il nostro [servizio di migrazione a Shopify](/it/sprint-migrazione-shopify), il Custom AI System lascia lo store pronto per gli agenti AI, con dati puliti e mappati.** “Pronto per gli agenti AI” e “dati mappati al dettaglio” sono due dei suoi sei superpoteri, e sono ciò che leggono i server di catalogo, carrello e Ask. Lo Sprint dura 14 giorni, con go-live tra il giorno 15 e il 30 e 90 giorni di supporto. Se sei ancora su un’altra piattaforma, parti dalla nostra [guida alla migrazione a Shopify](/it/migrazione-shopify). Se il tuo store è già su Shopify, la strada più leggera è l’[AI Accelerator](/it/ai-accelerator).',
     },
     { type: 'h2', text: 'Domande frequenti' },
     { type: 'h3', text: 'Cos’è MCP in Shopify?' },
     {
       type: 'paragraph',
-      text: 'MCP (Model Context Protocol) è uno standard aperto che permette a un’app AI come Claude di usare strumenti di un sistema esterno sempre nello stesso modo. In Shopify sono i server che fanno leggere e, con la tua approvazione, modificare lo store a uno strumento AI, o che fanno cercare un catalogo e creare un carrello agli assistenti d’acquisto.',
+      text: '**MCP (Model Context Protocol) è uno standard aperto che permette a un’app AI come Claude di usare strumenti di un sistema esterno sempre nello stesso modo.** In Shopify sono i server che fanno leggere e, con la tua approvazione, modificare lo store a uno strumento AI, o che fanno cercare un catalogo e creare un carrello agli assistenti d’acquisto.',
     },
     { type: 'h3', text: 'Shopify MCP è gratis?' },
     {
       type: 'paragraph',
-      text: 'Il centro assistenza di Shopify dice che per il connettore non c’è un costo Shopify aggiuntivo: paghi il tuo piano Shopify e l’abbonamento dello strumento AI. Le pagine dei server per sviluppatori e per agenti non indicano costi, ma ogni assistente che costruisci paga i costi del proprio modello AI.',
+      text: '**Il centro assistenza di Shopify dice che per il connettore non c’è un costo Shopify aggiuntivo: paghi il tuo piano Shopify e l’abbonamento dello strumento AI.** Le pagine dei server per sviluppatori e per agenti non indicano costi, ma ogni assistente che costruisci paga i costi del proprio modello AI.',
     },
     { type: 'h3', text: 'Quale server Shopify MCP mi serve?' },
     {
       type: 'paragraph',
-      text: 'Se gestisci uno store e vuoi lavorarci da una chat, il connettore Shopify per Claude o per un altro strumento AI. Se tu o la tua agenzia scrivete codice, Dev MCP e AI Toolkit. Se costruisci un assistente per i clienti, i server di catalogo, carrello, checkout, Ask, ordini e account cliente.',
+      text: '**Se gestisci uno store e vuoi lavorarci da una chat, il connettore Shopify per Claude o per un altro strumento AI.** Se tu o la tua agenzia scrivete codice, Dev MCP e AI Toolkit. Se costruisci un assistente per i clienti, i server di catalogo, carrello, checkout, Ask, ordini e account cliente.',
     },
     { type: 'h3', text: 'Posso usare Shopify MCP con Claude o Claude Code?' },
     {
@@ -545,12 +545,12 @@ const article: Article = {
     { type: 'h3', text: 'È sicuro collegare uno strumento AI al mio store Shopify?' },
     {
       type: 'paragraph',
-      text: 'È sicuro se controlli i permessi. Parti in sola lettura, usa un account staff con solo l’accesso che serve al lavoro, tieni fuori portata rimborsi e altre azioni sui soldi, e controlla ogni modifica. Il connettore di Shopify blocca già rimborsi, annullamento degli ordini e modifiche al tema pubblicato.',
+      text: '**È sicuro se controlli i permessi.** Parti in sola lettura, usa un account staff con solo l’accesso che serve al lavoro, tieni fuori portata rimborsi e altre azioni sui soldi, e controlla ogni modifica. Il connettore di Shopify blocca già rimborsi, annullamento degli ordini e modifiche al tema pubblicato.',
     },
     { type: 'h3', text: 'Il vecchio endpoint Storefront MCP funziona ancora?' },
     {
       type: 'paragraph',
-      text: 'Non per catalogo e carrello. La pagina di migrazione di Shopify dice che gli strumenti di catalogo e carrello sul vecchio endpoint /api/mcp sono stati rimossi e sostituiti da strumenti basati su UCP su /api/ucp/mcp. Il server Customer Accounts MCP è invariato.',
+      text: '**Non per catalogo e carrello.** La pagina di migrazione di Shopify dice che gli strumenti di catalogo e carrello sul vecchio endpoint /api/mcp sono stati rimossi e sostituiti da strumenti basati su UCP su /api/ucp/mcp. Il server Customer Accounts MCP è invariato.',
     },
     {
       type: 'paragraph',

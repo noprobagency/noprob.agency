@@ -106,19 +106,19 @@ const article: Article = {
     },
     {
       type: "paragraph",
-      text: "We are noprob agency and we sell the [Shopify Launch Sprint](/shopify-migration-sprint), so here is where we stand. We work every day with agents built on Claude Code: the Custom AI System lists development with AI agents among its six superpowers, and this site is built and maintained that way. What follows keeps two things apart: what the documentation says (linked) and the rules we apply (marked as ours). Tool names and limits move fast, so check the linked pages before you rely on a detail.",
+      text: "We are noprob agency and we sell the [Shopify Launch Sprint](/shopify-migration-sprint), so here is where we stand. We work every day with agents built on Claude Code: the Custom AI System lists development with AI agents among its six superpowers, and this site is built and maintained that way. Facts from the documentation carry a link, and the rules we apply are marked as ours. Tool names and limits move fast, so check the linked pages before you rely on a detail.",
     },
     { type: "h2", text: "Which of the three setups do you need?" },
     {
       type: "paragraph",
-      text: "**You need the connector if you want to ask questions about your store, Claude Code if you build on Shopify, and an agent if the same task comes back every week.** That is the whole map.",
+      text: "**You need the connector if you want to ask questions about your store, Claude Code if you build on Shopify, and an agent if the same task comes back every week.**",
     },
     {
       type: "list",
       items: [
-        "**Claude app with the Shopify connector.** For founders and store managers. You talk to your store in plain language: reports, catalog, inventory, discounts. It needs a staff account and your approval in the Shopify admin.",
-        "**Claude Code with the Shopify AI Toolkit.** For developers and agencies. It works inside your code folder: Liquid theme, apps, Functions, checkout extensions. It needs Node.js, a terminal and a development store.",
-        "**An agent built on Claude.** For teams with a repeated job, like checking a list every morning. It needs a defined task, narrow tools and an approval step. It costs design time up front.",
+        "Claude app with the Shopify connector. For founders and store managers. You talk to your store in plain language: reports, catalog, inventory, discounts. It needs a staff account and your approval in the Shopify admin.",
+        "Claude Code with the Shopify AI Toolkit. For developers and agencies. It works inside your code folder: Liquid theme, apps, Functions, checkout extensions. It needs Node.js, a terminal and a development store.",
+        "An agent built on Claude. For teams with a repeated job, like checking a list every morning. It needs a defined task, narrow tools and an approval step. It costs design time up front.",
       ],
     },
     {
@@ -155,11 +155,11 @@ const article: Article = {
     {
       type: "list",
       items: [
-        "**Read only:** orders (recent orders or a single one), customers, and analytics through ShopifyQL-based queries. Shopify suggests short questions, one at a time.",
-        "**Read and write:** products (create, update, search, set draft, active or archived), collections, inventory by variant and location, and percentage-off discount codes.",
-        "**Write with your confirmation:** pages and menus, publishing an unpublished theme (after your confirmation), and discount codes, where you confirm the start date and the eligible customers.",
-        "**Themes:** it edits unpublished themes only. To change your storefront, you duplicate the theme in the admin, let the tool edit the copy and publish it yourself.",
-        "**Cannot do, even with write access:** change your plan, payments, taxes or domains; edit, publish or delete the live theme; refund, cancel or capture orders, mark them paid or process returns; create or adjust gift cards; edit existing customer records or existing discount codes.",
+        "Read only: orders (recent orders or a single one), customers, and analytics through ShopifyQL-based queries. Shopify suggests short questions, one at a time.",
+        "Read and write: products (create, update, search, set draft, active or archived), collections, inventory by variant and location, and percentage-off discount codes.",
+        "Write with your confirmation: pages and menus, publishing an unpublished theme (after your confirmation), and discount codes, where you confirm the start date and the eligible customers.",
+        "Themes: it edits unpublished themes only. To change your storefront, you duplicate the theme in the admin, let the tool edit the copy and publish it yourself.",
+        "Cannot do, even with write access: change your plan, payments, taxes or domains; edit, publish or delete the live theme; refund, cancel or capture orders, mark them paid or process returns; create or adjust gift cards; edit existing customer records or existing discount codes.",
       ],
     },
     {
@@ -192,11 +192,11 @@ const article: Article = {
     {
       type: "list",
       items: [
-        "**Access follows the person.** Staff authorize according to their own admin permissions, and a tool never does more than the user who connects it. Our practice: connect with a staff account whose permissions fit the task, not with the owner.",
-        "**Two levels.** Read-only lets the tool view data; write lets it edit and act on your behalf. If a tool later asks for a higher level, you are prompted and you can decline.",
-        "**Use the official integration.** Shopify says not to create an API access token or build your own integration for these tools.",
-        "**Data leaves Shopify.** Once shared with the AI tool it is governed by that provider’s terms and privacy policy. Decide what customer data you put in front of it.",
-        "**Revoking is uninstalling.** You can remove the integration from the admin at any time.",
+        "Access follows the person. Staff authorize according to their own admin permissions, and a tool never does more than the user who connects it. Our practice: connect with a staff account whose permissions fit the task, not with the owner.",
+        "Two levels. Read-only lets the tool view data; write lets it edit and act on your behalf. If a tool later asks for a higher level, you are prompted and you can decline.",
+        "Use the official integration. Shopify says not to create an API access token or build your own integration for these tools.",
+        "Data leaves Shopify. Once shared with the AI tool it is governed by that provider’s terms and privacy policy. Decide what customer data you put in front of it.",
+        "Revoking is uninstalling. You can remove the integration from the admin at any time.",
       ],
     },
     {
@@ -211,9 +211,9 @@ const article: Article = {
     {
       type: "list",
       items: [
-        "**Docs and API schemas:** it looks up the right Shopify API surface instead of relying on the model’s memory.",
-        "**Code validation:** it checks GraphQL queries, Liquid templates and Shopify extensions against Shopify’s schemas.",
-        "**Store management:** it prepares and runs supported store tasks through the Shopify CLI’s authenticated store context, and you decide when a task runs.",
+        "Docs and API schemas: it looks up the right Shopify API surface instead of relying on the model’s memory.",
+        "Code validation: it checks GraphQL queries, Liquid templates and Shopify extensions against Shopify’s schemas.",
+        "Store management: it prepares and runs supported store tasks through the Shopify CLI’s authenticated store context, and you decide when a task runs.",
       ],
     },
     {
@@ -223,9 +223,9 @@ const article: Article = {
     {
       type: "list",
       items: [
-        "**Plugin (recommended):** `claude plugin install shopify-ai-toolkit@claude-plugins-official`. It bundles everything and updates itself.",
-        "**Agent skills:** `npx skills add Shopify/shopify-ai-toolkit`, for when you want to manage skills yourself. These do not update automatically.",
-        "**Dev MCP server:** `claude mcp add --transport stdio shopify-dev-mcp -- npx -y @shopify/dev-mcp@latest`, then restart. Shopify says it runs locally and needs no authentication.",
+        "Plugin (recommended): `claude plugin install shopify-ai-toolkit@claude-plugins-official`. It bundles everything and updates itself.",
+        "Agent skills: `npx skills add Shopify/shopify-ai-toolkit`, for when you want to manage skills yourself. These do not update automatically.",
+        "Dev MCP server: `claude mcp add --transport stdio shopify-dev-mcp -- npx -y @shopify/dev-mcp@latest`, then restart. Shopify says it runs locally and needs no authentication.",
       ],
     },
     {
@@ -245,22 +245,22 @@ const article: Article = {
       headers: ["Aspect", "Connector", "Toolkit"],
       rows: [
         [
-          "**Who uses it**",
+          "Who uses it",
           "A merchant or store manager.",
           "A developer or an agency.",
         ],
         [
-          "**What it does**",
+          "What it does",
           "Reports, products, collections, inventory, discounts, unpublished themes.",
           "Documentation lookup, code validation, and store tasks through the Shopify CLI.",
         ],
         [
-          "**What it needs**",
+          "What it needs",
           "A Shopify staff account and your approval in the admin.",
           "Node.js 18 or higher, a supported tool and, for store tasks, a store you have access to.",
         ],
         [
-          "**Where it stops**",
+          "Where it stops",
           "The guardrails listed above, such as no refunds and no live theme.",
           "Shopify only promises that access is limited by what you approve and by your user permissions. The connector’s guardrails are the connector’s, so with Claude Code you build the narrow access yourself.",
         ],
@@ -268,7 +268,7 @@ const article: Article = {
     },
     {
       type: "paragraph",
-      text: "The last line is the one to remember. If you give Claude Code a store through the CLI with write access, nobody has pre-removed the refund button from its reach. Your own rules are the guardrail.",
+      text: "The last line is the one to remember. If you give Claude Code a store through the CLI with write access, nobody has pre-removed the refund button from its reach, so your own rules are the guardrail.",
     },
     {
       type: "h2",
@@ -281,9 +281,9 @@ const article: Article = {
     {
       type: "list",
       items: [
-        "**Theme code.** Liquid sections and snippets, written and validated against Shopify’s schemas. In our Custom AI System the theme code is written from scratch for your store only, with no dead code and no app slowing it down, and agents are part of how we develop it.",
-        "**Shopify Functions.** [Functions](https://shopify.dev/docs/apps/build/functions) customize Shopify’s backend logic: discounts, payment and delivery options, checkout validation. Shopify notes that custom apps using Function APIs require a Shopify Plus plan, while public apps from the App Store work on any plan.",
-        '**Extension migrations.** Shopify’s toolkit page uses this as its example: moving checkout and customer account extensions built on API versions before 2025-10 to Polaris web components, with a prompt as plain as "Migrate the extensions/my-checkout-extension extension to API version 2026-04". Shopify adds that you still review and test the result.',
+        "Theme code. Liquid sections and snippets, written and validated against Shopify’s schemas. In our Custom AI System the theme code is written from scratch for your store only, with no dead code and no app slowing it down, and agents are part of how we develop it.",
+        "Shopify Functions. [Functions](https://shopify.dev/docs/apps/build/functions) customize Shopify’s backend logic: discounts, payment and delivery options, checkout validation. Shopify notes that custom apps using Function APIs require a Shopify Plus plan, while public apps from the App Store work on any plan.",
+        'Extension migrations. Shopify’s toolkit page uses this as its example: moving checkout and customer account extensions built on API versions before 2025-10 to Polaris web components, with a prompt as plain as "Migrate the extensions/my-checkout-extension extension to API version 2026-04". Shopify adds that you still review and test the result.',
       ],
     },
     {
@@ -301,11 +301,11 @@ const article: Article = {
     {
       type: "list",
       items: [
-        "**Read tools by default.** The agent lists, searches and compares. Reading is always allowed; writing is a separate decision.",
-        "**Writes go through a proposal.** The agent states what it wants to change and why, a person approves, and only then does a narrow tool execute.",
-        '**Narrow tools.** "Set this product to draft" is a tool you can approve. "Run any mutation" is a blank check. The connector itself asks for confirmation before changes made through its GraphQL tools, and we go one step narrower.',
-        '**A trail.** Every proposal, approval and action is logged, so you can answer "who changed this and why" a month later.',
-        "**Start where mistakes are cheap.** Drafts, tags, product copy, internal reports. Prices, refunds and customer messages come last, if at all.",
+        "Read tools by default. The agent lists, searches and compares. Reading is always allowed; writing is a separate decision.",
+        "Writes go through a proposal. The agent states what it wants to change and why, a person approves, and only then does a narrow tool execute.",
+        'Narrow tools. "Set this product to draft" is a tool you can approve. "Run any mutation" is a blank check. The connector itself asks for confirmation before changes made through its GraphQL tools, and we go one step narrower.',
+        'A trail. Every proposal, approval and action is logged, so you can answer "who changed this and why" a month later.',
+        "Start where mistakes are cheap. Drafts, tags, product copy, internal reports. Prices, refunds and customer messages come last, if at all.",
       ],
     },
     {
@@ -314,7 +314,7 @@ const article: Article = {
     },
     {
       type: "paragraph",
-      text: "In migrations this is where agents earn their place: repeated checks that a person then approves. We describe the method in [migrating to Shopify with AI agents](/blog/shopify-migration-ai-agents), and the complete path is in our [Shopify migration guide](/shopify-migration). On Nazzi, the redirect work covered 215 archived WooCommerce URLs, and the delivery was the CSV of 301 redirects ([case study](/use-cases/integratori-nazzi-dtc-shopify)). That is the kind of work where an agent checks and a person signs off. On Cumini the store came from a proprietary platform tied to the ERP, and the solution was integrated with the ERP ([case study](/use-cases/cumini-luxury-fashion-ecommerce)).",
+      text: "In migrations this is where agents earn their place: repeated checks that a person then approves. We describe the method in [migrating to Shopify with AI agents](/blog/shopify-migration-ai-agents), and the complete path is in our [Shopify migration guide](/shopify-migration). On Nazzi, the redirect work covered 215 archived WooCommerce URLs, and the delivery was the CSV of 301 redirects ([case study](/use-cases/integratori-nazzi-dtc-shopify)). On Cumini the store came from a proprietary platform tied to the ERP, and the solution was integrated with the ERP ([case study](/use-cases/cumini-luxury-fashion-ecommerce)).",
     },
     { type: "h2", text: "Checklist: connect Claude to a live store safely" },
     {
@@ -324,12 +324,12 @@ const article: Article = {
     {
       type: "list",
       items: [
-        "**Name the job.** One sentence: what do you want Claude to answer or change, and who checks it?",
-        "**Pick the account.** Connect with a staff account whose permissions match the job, not the owner account.",
-        "**Start read-only.** Remember that narrowing later means uninstalling and approving again.",
-        "**Ask one question at a time** and check each answer against the admin for the first week.",
-        "**Write access for one named task,** and read every confirmation. Theme changes only on a duplicate that you publish yourself.",
-        "**Keep customer text away from write sessions,** and uninstall the integration when the job is done.",
+        "Name the job. One sentence: what do you want Claude to answer or change, and who checks it?",
+        "Pick the account. Connect with a staff account whose permissions match the job, not the owner account.",
+        "Start read-only. Remember that narrowing later means uninstalling and approving again.",
+        "Ask one question at a time and check each answer against the admin for the first week.",
+        "Write access for one named task, and read every confirmation. Theme changes only on a duplicate that you publish yourself.",
+        "Keep customer text away from write sessions, and uninstall the integration when the job is done.",
       ],
     },
     {
@@ -382,19 +382,19 @@ const article: Article = {
     },
     {
       type: "paragraph",
-      text: "Siamo noprob agency e vendiamo lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify), quindi ti diciamo da dove parliamo. Lavoriamo ogni giorno con agenti costruiti su Claude Code: il Custom AI System include lo sviluppo con agenti AI tra i suoi sei superpoteri e anche questo sito è costruito e curato così. Quello che segue tiene separate due cose: ciò che dice la documentazione (con il link) e le regole che applichiamo noi (segnalate come nostre). Nomi e limiti cambiano in fretta: prima di fare affidamento su un dettaglio, controlla le pagine linkate.",
+      text: "Siamo noprob agency e vendiamo lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify), quindi ti diciamo da dove parliamo. Lavoriamo ogni giorno con agenti costruiti su Claude Code: il Custom AI System include lo sviluppo con agenti AI tra i suoi sei superpoteri e anche questo sito è costruito e curato così. I fatti della documentazione hanno il link, e le regole che applichiamo noi sono segnalate come nostre. Nomi e limiti cambiano in fretta: prima di fare affidamento su un dettaglio, controlla le pagine linkate.",
     },
     { type: "h2", text: "Quale delle tre configurazioni ti serve?" },
     {
       type: "paragraph",
-      text: "**Ti serve il connettore se vuoi fare domande al tuo store, Claude Code se sviluppi su Shopify e un agente se lo stesso compito torna ogni settimana.** La mappa è tutta qui.",
+      text: "**Ti serve il connettore se vuoi fare domande al tuo store, Claude Code se sviluppi su Shopify e un agente se lo stesso compito torna ogni settimana.**",
     },
     {
       type: "list",
       items: [
-        "**App Claude con il connettore Shopify.** Per founder e responsabili di store. Parli con il tuo store in linguaggio naturale: report, catalogo, inventario, sconti. Servono un account staff e la tua approvazione nell’admin di Shopify.",
-        "**Claude Code con lo Shopify AI Toolkit.** Per sviluppatori e agenzie. Lavora dentro la tua cartella di codice: tema Liquid, app, Functions, estensioni del checkout. Servono Node.js, un terminale e uno store di sviluppo.",
-        "**Un agente costruito su Claude.** Per i team con un compito che si ripete, come controllare una lista ogni mattina. Servono un compito definito, strumenti stretti e un passaggio di approvazione. Costa tempo di progettazione all’inizio.",
+        "App Claude con il connettore Shopify. Per founder e responsabili di store. Parli con il tuo store in linguaggio naturale: report, catalogo, inventario, sconti. Servono un account staff e la tua approvazione nell’admin di Shopify.",
+        "Claude Code con lo Shopify AI Toolkit. Per sviluppatori e agenzie. Lavora dentro la tua cartella di codice: tema Liquid, app, Functions, estensioni del checkout. Servono Node.js, un terminale e uno store di sviluppo.",
+        "Un agente costruito su Claude. Per i team con un compito che si ripete, come controllare una lista ogni mattina. Servono un compito definito, strumenti stretti e un passaggio di approvazione. Costa tempo di progettazione all’inizio.",
       ],
     },
     {
@@ -431,11 +431,11 @@ const article: Article = {
     {
       type: "list",
       items: [
-        "**Sola lettura:** ordini (quelli recenti o uno singolo), clienti e analytics tramite query basate su ShopifyQL. Shopify consiglia domande brevi, una alla volta.",
-        "**Lettura e scrittura:** prodotti (crea, aggiorna, cerca, imposta bozza, attivo o archiviato), collezioni, inventario per variante e sede e codici sconto in percentuale.",
-        "**Scrittura con la tua conferma:** pagine e menu, pubblicazione di un tema non pubblicato (dopo la tua conferma) e codici sconto, dove confermi la data di inizio e i clienti ammessi.",
-        "**Temi:** modifica solo temi non pubblicati. Per cambiare la vetrina duplichi il tema nell’admin, lasci che lo strumento modifichi la copia e lo pubblichi tu.",
-        "**Non può fare, nemmeno con permessi di scrittura:** cambiare piano, pagamenti, tasse o domini; modificare, pubblicare o eliminare il tema online; rimborsare, annullare o catturare ordini, segnarli come pagati o gestire resi; creare o modificare gift card; modificare clienti esistenti o codici sconto esistenti.",
+        "Sola lettura: ordini (quelli recenti o uno singolo), clienti e analytics tramite query basate su ShopifyQL. Shopify consiglia domande brevi, una alla volta.",
+        "Lettura e scrittura: prodotti (crea, aggiorna, cerca, imposta bozza, attivo o archiviato), collezioni, inventario per variante e sede e codici sconto in percentuale.",
+        "Scrittura con la tua conferma: pagine e menu, pubblicazione di un tema non pubblicato (dopo la tua conferma) e codici sconto, dove confermi la data di inizio e i clienti ammessi.",
+        "Temi: modifica solo temi non pubblicati. Per cambiare la vetrina duplichi il tema nell’admin, lasci che lo strumento modifichi la copia e lo pubblichi tu.",
+        "Non può fare, nemmeno con permessi di scrittura: cambiare piano, pagamenti, tasse o domini; modificare, pubblicare o eliminare il tema online; rimborsare, annullare o catturare ordini, segnarli come pagati o gestire resi; creare o modificare gift card; modificare clienti esistenti o codici sconto esistenti.",
       ],
     },
     {
@@ -474,11 +474,11 @@ const article: Article = {
     {
       type: "list",
       items: [
-        "**L’accesso segue la persona.** Lo staff autorizza in base ai propri permessi nell’admin, e uno strumento non fa mai più dell’utente che lo collega. La nostra pratica: collega con un account staff con i permessi adatti al compito, non con quello del proprietario.",
-        "**Due livelli.** La sola lettura permette di vedere i dati; la scrittura permette di modificare e di agire per tuo conto. Se uno strumento chiede poi un livello più alto, ti viene richiesto e puoi rifiutare.",
-        "**Usa l’integrazione ufficiale.** Shopify dice di non creare un token di accesso API né di costruire un’integrazione propria per questi strumenti.",
-        "**I dati escono da Shopify.** Una volta condivisi con lo strumento AI sono regolati dai termini e dall’informativa privacy di quel fornitore. Decidi quali dati dei clienti mettergli davanti.",
-        "**Revocare significa disinstallare.** Puoi rimuovere l’integrazione dall’admin in qualsiasi momento.",
+        "L’accesso segue la persona. Lo staff autorizza in base ai propri permessi nell’admin, e uno strumento non fa mai più dell’utente che lo collega. La nostra pratica: collega con un account staff con i permessi adatti al compito, non con quello del proprietario.",
+        "Due livelli. La sola lettura permette di vedere i dati; la scrittura permette di modificare e di agire per tuo conto. Se uno strumento chiede poi un livello più alto, ti viene richiesto e puoi rifiutare.",
+        "Usa l’integrazione ufficiale. Shopify dice di non creare un token di accesso API né di costruire un’integrazione propria per questi strumenti.",
+        "I dati escono da Shopify. Una volta condivisi con lo strumento AI sono regolati dai termini e dall’informativa privacy di quel fornitore. Decidi quali dati dei clienti mettergli davanti.",
+        "Revocare significa disinstallare. Puoi rimuovere l’integrazione dall’admin in qualsiasi momento.",
       ],
     },
     {
@@ -493,9 +493,9 @@ const article: Article = {
     {
       type: "list",
       items: [
-        "**Documentazione e schemi API:** cerca la superficie API giusta di Shopify invece di affidarsi alla memoria del modello.",
-        "**Validazione del codice:** controlla query GraphQL, template Liquid ed estensioni Shopify contro gli schemi di Shopify.",
-        "**Gestione dello store:** prepara ed esegue attività supportate sullo store tramite il contesto autenticato di Shopify CLI, e sei tu a decidere quando parte un’attività.",
+        "Documentazione e schemi API: cerca la superficie API giusta di Shopify invece di affidarsi alla memoria del modello.",
+        "Validazione del codice: controlla query GraphQL, template Liquid ed estensioni Shopify contro gli schemi di Shopify.",
+        "Gestione dello store: prepara ed esegue attività supportate sullo store tramite il contesto autenticato di Shopify CLI, e sei tu a decidere quando parte un’attività.",
       ],
     },
     {
@@ -505,9 +505,9 @@ const article: Article = {
     {
       type: "list",
       items: [
-        "**Plugin (consigliato):** `claude plugin install shopify-ai-toolkit@claude-plugins-official`. Raccoglie tutto e si aggiorna da solo.",
-        "**Agent skills:** `npx skills add Shopify/shopify-ai-toolkit`, se vuoi gestire le skill da solo. Non si aggiornano in automatico.",
-        "**Server Dev MCP:** `claude mcp add --transport stdio shopify-dev-mcp -- npx -y @shopify/dev-mcp@latest`, poi riavvia. Shopify dice che gira in locale e non richiede autenticazione.",
+        "Plugin (consigliato): `claude plugin install shopify-ai-toolkit@claude-plugins-official`. Raccoglie tutto e si aggiorna da solo.",
+        "Agent skills: `npx skills add Shopify/shopify-ai-toolkit`, se vuoi gestire le skill da solo. Non si aggiornano in automatico.",
+        "Server Dev MCP: `claude mcp add --transport stdio shopify-dev-mcp -- npx -y @shopify/dev-mcp@latest`, poi riavvia. Shopify dice che gira in locale e non richiede autenticazione.",
       ],
     },
     {
@@ -527,22 +527,22 @@ const article: Article = {
       headers: ["Aspetto", "Connettore", "Toolkit"],
       rows: [
         [
-          "**Chi lo usa**",
+          "Chi lo usa",
           "Un merchant o un responsabile di store.",
           "Uno sviluppatore o un’agenzia.",
         ],
         [
-          "**Cosa fa**",
+          "Cosa fa",
           "Report, prodotti, collezioni, inventario, sconti, temi non pubblicati.",
           "Ricerca nella documentazione, validazione del codice e attività sullo store tramite Shopify CLI.",
         ],
         [
-          "**Cosa richiede**",
+          "Cosa richiede",
           "Un account staff Shopify e la tua approvazione nell’admin.",
           "Node.js 18 o superiore, uno strumento supportato e, per le attività sullo store, uno store a cui hai accesso.",
         ],
         [
-          "**Dove si ferma**",
+          "Dove si ferma",
           "I limiti elencati sopra, come niente rimborsi e niente tema online.",
           "Shopify promette soltanto che l’accesso è limitato da ciò che approvi e dai tuoi permessi utente. I limiti del connettore sono del connettore, quindi con Claude Code l’accesso stretto lo costruisci tu.",
         ],
@@ -550,7 +550,7 @@ const article: Article = {
     },
     {
       type: "paragraph",
-      text: "L’ultima riga è quella da ricordare. Se dai a Claude Code uno store tramite la CLI con accesso in scrittura, nessuno ha già tolto il pulsante del rimborso dalla sua portata. La guardia sono le tue regole.",
+      text: "L’ultima riga è quella da ricordare. Se dai a Claude Code uno store tramite la CLI con accesso in scrittura, nessuno ha già tolto il pulsante del rimborso dalla sua portata, quindi la guardia sono le tue regole.",
     },
     {
       type: "h2",
@@ -563,9 +563,9 @@ const article: Article = {
     {
       type: "list",
       items: [
-        "**Codice del tema.** Sezioni e snippet Liquid, scritti e validati contro gli schemi di Shopify. Nel nostro Custom AI System il codice del tema è scritto da zero solo per il tuo store, senza codice morto e senza app che lo rallentano, e gli agenti sono parte del modo in cui lo sviluppiamo.",
-        "**Shopify Functions.** Le [Functions](https://shopify.dev/docs/apps/build/functions) personalizzano la logica backend di Shopify: sconti, opzioni di pagamento e consegna, validazione del checkout. Shopify precisa che le app personalizzate che usano le API delle Functions richiedono il piano Shopify Plus, mentre le app pubbliche dell’App Store funzionano su qualsiasi piano.",
-        '**Migrazioni di estensioni.** È l’esempio della pagina del toolkit di Shopify: spostare estensioni di checkout e account cliente costruite su versioni API precedenti a 2025-10 ai componenti web Polaris, con una richiesta semplice come "Migrate the extensions/my-checkout-extension extension to API version 2026-04". Shopify aggiunge che il risultato va comunque rivisto e testato.',
+        "Codice del tema. Sezioni e snippet Liquid, scritti e validati contro gli schemi di Shopify. Nel nostro Custom AI System il codice del tema è scritto da zero solo per il tuo store, senza codice morto e senza app che lo rallentano, e gli agenti sono parte del modo in cui lo sviluppiamo.",
+        "Shopify Functions. Le [Functions](https://shopify.dev/docs/apps/build/functions) personalizzano la logica backend di Shopify: sconti, opzioni di pagamento e consegna, validazione del checkout. Shopify precisa che le app personalizzate che usano le API delle Functions richiedono il piano Shopify Plus, mentre le app pubbliche dell’App Store funzionano su qualsiasi piano.",
+        'Migrazioni di estensioni. È l’esempio della pagina del toolkit di Shopify: spostare estensioni di checkout e account cliente costruite su versioni API precedenti a 2025-10 ai componenti web Polaris, con una richiesta semplice come "Migrate the extensions/my-checkout-extension extension to API version 2026-04". Shopify aggiunge che il risultato va comunque rivisto e testato.',
       ],
     },
     {
@@ -583,11 +583,11 @@ const article: Article = {
     {
       type: "list",
       items: [
-        "**Strumenti di lettura di default.** L’agente elenca, cerca e confronta. Leggere è sempre permesso; scrivere è una decisione a parte.",
-        "**Le scritture passano da una proposta.** L’agente dice cosa vuole cambiare e perché, una persona approva, e solo dopo uno strumento stretto esegue.",
-        '**Strumenti stretti.** "Imposta questo prodotto in bozza" è uno strumento che puoi approvare. "Esegui qualsiasi mutation" è un assegno in bianco. Lo stesso connettore chiede conferma prima delle modifiche fatte con i suoi strumenti GraphQL, e noi andiamo un passo più stretti.',
-        '**Una traccia.** Proposta, approvazione e azione sono registrate, così sai rispondere a "chi ha cambiato questo e perché" un mese dopo.',
-        "**Parti dove sbagliare costa poco.** Bozze, tag, testi dei prodotti, report interni. Prezzi, rimborsi e messaggi ai clienti vengono per ultimi, se vengono.",
+        "Strumenti di lettura di default. L’agente elenca, cerca e confronta. Leggere è sempre permesso; scrivere è una decisione a parte.",
+        "Le scritture passano da una proposta. L’agente dice cosa vuole cambiare e perché, una persona approva, e solo dopo uno strumento stretto esegue.",
+        'Strumenti stretti. "Imposta questo prodotto in bozza" è uno strumento che puoi approvare. "Esegui qualsiasi mutation" è un assegno in bianco. Lo stesso connettore chiede conferma prima delle modifiche fatte con i suoi strumenti GraphQL, e noi andiamo un passo più stretti.',
+        'Una traccia. Proposta, approvazione e azione sono registrate, così sai rispondere a "chi ha cambiato questo e perché" un mese dopo.',
+        "Parti dove sbagliare costa poco. Bozze, tag, testi dei prodotti, report interni. Prezzi, rimborsi e messaggi ai clienti vengono per ultimi, se vengono.",
       ],
     },
     {
@@ -596,7 +596,7 @@ const article: Article = {
     },
     {
       type: "paragraph",
-      text: "Nelle migrazioni è qui che gli agenti si guadagnano il posto: controlli ripetuti che una persona poi approva. Il metodo è descritto in [migrare a Shopify con gli agenti AI](/it/blog/migrazione-shopify-agenti-ai) e il percorso completo è nella nostra [guida alla migrazione a Shopify](/it/migrazione-shopify). Su Nazzi il lavoro sui redirect ha riguardato 215 URL WooCommerce archiviati e la consegna è stata il CSV dei redirect 301 ([caso studio](/it/casi-studio/integratori-nazzi-dtc-shopify)). È il tipo di lavoro in cui un agente controlla e una persona firma. Su Cumini lo store arrivava da una piattaforma proprietaria legata al gestionale e la soluzione è stata integrata con il gestionale ([caso studio](/it/casi-studio/cumini-luxury-fashion-ecommerce)).",
+      text: "Nelle migrazioni è qui che gli agenti si guadagnano il posto: controlli ripetuti che una persona poi approva. Il metodo è descritto in [migrare a Shopify con gli agenti AI](/it/blog/migrazione-shopify-agenti-ai) e il percorso completo è nella nostra [guida alla migrazione a Shopify](/it/migrazione-shopify). Su Nazzi il lavoro sui redirect ha riguardato 215 URL WooCommerce archiviati e la consegna è stata il CSV dei redirect 301 ([caso studio](/it/casi-studio/integratori-nazzi-dtc-shopify)). Su Cumini lo store arrivava da una piattaforma proprietaria legata al gestionale e la soluzione è stata integrata con il gestionale ([caso studio](/it/casi-studio/cumini-luxury-fashion-ecommerce)).",
     },
     {
       type: "h2",
@@ -609,12 +609,12 @@ const article: Article = {
     {
       type: "list",
       items: [
-        "**Dai un nome al lavoro.** Una frase: cosa vuoi che Claude risponda o cambi, e chi lo controlla?",
-        "**Scegli l’account.** Collega con un account staff con permessi adatti al lavoro, non con quello del proprietario.",
-        "**Parti in sola lettura.** Ricorda che restringere dopo significa disinstallare e approvare di nuovo.",
-        "**Fai una domanda alla volta** e controlla ogni risposta nell’admin per la prima settimana.",
-        "**Scrittura per un compito con un nome,** e leggi ogni conferma. Modifiche al tema solo su un duplicato che pubblichi tu.",
-        "**Tieni il testo dei clienti lontano dalle sessioni di scrittura** e disinstalla l’integrazione quando il lavoro è finito.",
+        "Dai un nome al lavoro. Una frase: cosa vuoi che Claude risponda o cambi, e chi lo controlla?",
+        "Scegli l’account. Collega con un account staff con permessi adatti al lavoro, non con quello del proprietario.",
+        "Parti in sola lettura. Ricorda che restringere dopo significa disinstallare e approvare di nuovo.",
+        "Fai una domanda alla volta e controlla ogni risposta nell’admin per la prima settimana.",
+        "Scrittura per un compito con un nome, e leggi ogni conferma. Modifiche al tema solo su un duplicato che pubblichi tu.",
+        "Tieni il testo dei clienti lontano dalle sessioni di scrittura e disinstalla l’integrazione quando il lavoro è finito.",
       ],
     },
     {

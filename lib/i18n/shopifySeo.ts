@@ -80,7 +80,7 @@ const en: ShopifySeoCopy = {
         problem:
           'A product can be reached from its own page and from the collection it sits in, so the same page can exist under two addresses. Themes from the Shopify Theme Store handle the canonical tags on their own.',
         whatWeDo:
-          'On custom templates and customized designs we check that the canonical tags work and that internal links use the main URL, so Google reads one page, not two.',
+          'On custom templates and customized designs we check that the canonical tags work and that internal links use the main URL, so Google reads a single page.',
       },
       {
         label: 'Variants',
@@ -241,7 +241,7 @@ const en: ShopifySeoCopy = {
   },
   finalCta: {
     heading: 'Tell us which pages should be bringing you more search traffic',
-    body: 'On the call we look at your Shopify store, tell you where the SEO work would start and agree the scope. No package and no template: a plan for your store.',
+    body: 'On the call we look at your Shopify store, tell you where the SEO work would start and agree the scope. The plan is written for your store, with no package or template.',
     button: 'Book a call',
     secondary:
       'Not on Shopify yet? See the [Shopify Launch Sprint](/shopify-migration-sprint).',
@@ -274,7 +274,7 @@ const it: ShopifySeoCopy = {
         problem:
           'Un prodotto si raggiunge dalla sua pagina e dalla collezione in cui si trova, quindi la stessa pagina può esistere con due indirizzi. I temi dello Shopify Theme Store gestiscono da soli i tag canonical.',
         whatWeDo:
-          'Su template personalizzati e design modificati verifichiamo che i tag canonical funzionino e che i link interni usino l’URL principale, così Google legge una pagina, non due.',
+          'Su template personalizzati e design modificati verifichiamo che i tag canonical funzionino e che i link interni usino l’URL principale, così Google legge una sola pagina.',
       },
       {
         label: 'Varianti',
@@ -435,7 +435,7 @@ const it: ShopifySeoCopy = {
   },
   finalCta: {
     heading: 'Dicci quali pagine dovrebbero portarti più traffico dalla ricerca',
-    body: 'In videochiamata guardiamo il tuo store Shopify, ti diciamo da dove partirebbe il lavoro SEO e concordiamo l’ambito. Nessun pacchetto, nessun modello: un piano per il tuo store.',
+    body: 'In videochiamata guardiamo il tuo store Shopify, ti diciamo da dove partirebbe il lavoro SEO e concordiamo l’ambito. Il piano è scritto per il tuo store, senza pacchetti né modelli.',
     button: 'Prenota una videochiamata',
     secondary:
       'Non sei ancora su Shopify? Guarda lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify).',

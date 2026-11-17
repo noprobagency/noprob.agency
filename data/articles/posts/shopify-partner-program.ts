@@ -100,7 +100,7 @@ const article: Article = {
   content: [
     {
       type: 'paragraph',
-      text: '**The Shopify Partner Program is Shopify’s open, performance-based program for agencies, consultancies and system integrators that offer services to merchants, and it pays partners through revenue share on the stores they launch, referral fees and affiliate commissions.** Shopify describes it that way in its [Partner Program FAQ](https://help.shopify.com/en/partners/help-support/faq/partner-program), and says it paid [$1.3 billion to partners in 2025](https://www.shopify.com/partners) across apps, themes, store builds, referrals and more.',
+      text: 'The Shopify Partner Program is Shopify’s open, performance-based program for agencies, consultancies and system integrators that offer services to merchants, and it pays partners through revenue share on the stores they launch, referral fees and affiliate commissions. Shopify describes it that way in its [Partner Program FAQ](https://help.shopify.com/en/partners/help-support/faq/partner-program), and says it paid [$1.3 billion to partners in 2025](https://www.shopify.com/partners) across apps, themes, store builds, referrals and more.',
     },
     {
       type: 'paragraph',
@@ -108,7 +108,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'We are noprob agency, enrolled in the Shopify Partner Program. We do not speak for Shopify: what follows is Shopify’s published rules, read and put in order, plus one worked example that is our arithmetic.',
+      text: 'We are noprob agency, enrolled in the Shopify Partner Program. We do not speak for Shopify. The rules below are Shopify’s published ones; the worked example is our arithmetic.',
     },
     { type: 'h2', text: 'How do you become a Shopify Partner?' },
     {
@@ -118,10 +118,10 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**Create the account** and accept the Partner Program Agreement.',
-        '**Choose how to earn:** stores for merchants, apps, themes or affiliation, which needs its own approval.',
-        '**Set up the organization:** verify your business email, enter the company details on the Organization page of the Dev Dashboard and add a payout method.',
-        '**Build a first client transfer store** from the Dev Dashboard to learn the platform and start a portfolio.',
+        'Create the account and accept the Partner Program Agreement.',
+        'Choose how to earn: stores for merchants, apps, themes or affiliation, which needs its own approval.',
+        'Set up the organization: verify your business email, enter the company details on the Organization page of the Dev Dashboard and add a payout method.',
+        'Build a first client transfer store from the Dev Dashboard to learn the platform and start a portfolio.',
       ],
     },
     {
@@ -232,10 +232,10 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**Build in a client transfer store, not a dev store.** A [client transfer store](https://help.shopify.com/en/partners/manage-clients-stores/client-transfer-stores) is created in your organization and passes to the client at launch. Before the transfer it has no real transactions and no custom or draft apps.',
-        '**A dev store cannot be handed over.** It is for building and testing, with a [limit of 250 per organization](https://shopify.dev/docs/apps/build/dev-dashboard/development-stores), no real transactions and a password. It cannot be transferred to a client or converted into a production store.',
-        '**The commission follows the transfer.** The [commission on stores you build](https://help.shopify.com/en/partners/manage-clients-stores) comes only from transferring a client transfer store to the merchant.',
-        '**The transfer has steps.** You enter the client’s email, the client accepts and picks a plan, and a pending transfer [expires after seven days](https://shopify.dev/docs/apps/build/dev-dashboard/stores/client-transfer-stores). Turn off Shopify Payments, Balance, Credit and Capital first, or the transfer fails.',
+        'Build in a client transfer store, not a dev store. A [client transfer store](https://help.shopify.com/en/partners/manage-clients-stores/client-transfer-stores) is created in your organization and passes to the client at launch. Before the transfer it has no real transactions and no custom or draft apps.',
+        'A dev store cannot be handed over. It is for building and testing, with a [limit of 250 per organization](https://shopify.dev/docs/apps/build/dev-dashboard/development-stores), no real transactions and a password. It cannot be transferred to a client or converted into a production store.',
+        'The commission follows the transfer. The [commission on stores you build](https://help.shopify.com/en/partners/manage-clients-stores) comes only from transferring a client transfer store to the merchant.',
+        'The transfer has steps. You enter the client’s email, the client accepts and picks a plan, and a pending transfer [expires after seven days](https://shopify.dev/docs/apps/build/dev-dashboard/stores/client-transfer-stores). Turn off Shopify Payments, Balance, Credit and Capital first, or the transfer fails.',
       ],
     },
     {
@@ -259,7 +259,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Read it for what it is: a recurring extra on top of what you charge for the build, which grows with the number of stores that stay and sell. It is not a salary.',
+      text: 'It is a recurring extra on top of what you charge for the build, and it grows with the number of stores that stay and sell.',
     },
     { type: 'h2', text: 'What if your agency brings only a few stores a year?' },
     {
@@ -274,27 +274,27 @@ const article: Article = {
     { type: 'h3', text: 'What is the Shopify Partner Program?' },
     {
       type: 'paragraph',
-      text: 'It is Shopify’s open, performance-based program for agencies, consultancies and system integrators that offer services to merchants. Partners earn through revenue share on the stores they launch, referral fees and, with a separate approved application, affiliate commissions.',
+      text: '**It is Shopify’s open, performance-based program for agencies, consultancies and system integrators that offer services to merchants.** Partners earn through revenue share on the stores they launch, referral fees and, with a separate approved application, affiliate commissions.',
     },
     { type: 'h3', text: 'How do you become a Shopify Partner?' },
     {
       type: 'paragraph',
-      text: 'Create a Partner account, accept the Partner Program Agreement and choose how you want to earn. Then verify your business email, add your company details and a payout method. You start at the Registered tier, and Shopify can decline an application.',
+      text: '**Create a Partner account, accept the Partner Program Agreement and choose how you want to earn.** Then verify your business email, add your company details and a payout method. You start at the Registered tier, and Shopify can decline an application.',
     },
     { type: 'h3', text: 'How much does a Shopify Partner earn per store?' },
     {
       type: 'paragraph',
-      text: 'For stores launched since August 10, 2026 on Basic, Grow, Advanced and Plus, Shopify’s earnings FAQ lists 20% of the base fee plus 0.1% of eligible online sales (GMV), for 4 years. Starter and Lite pay no revenue share, and Shopify can change amounts.',
+      text: '**For stores launched since August 10, 2026 on Basic, Grow, Advanced and Plus, Shopify’s earnings FAQ lists 20% of the base fee plus 0.1% of eligible online sales (GMV), for 4 years.** Starter and Lite pay no revenue share, and Shopify can change amounts.',
     },
     { type: 'h3', text: 'How does the Shopify referral program pay?' },
     {
       type: 'paragraph',
-      text: 'A referral that closes on Plus or Enterprise pays a one-time $2,500 if conditions are met. A POS Pro referral pays $500. The affiliate program pays $150 per referral in the US, Canada and Europe, and $25 in Africa, India, Latin America and the rest of Asia.',
+      text: '**A referral that closes on Plus or Enterprise pays a one-time $2,500 if conditions are met.** A POS Pro referral pays $500. The affiliate program pays $150 per referral in the US, Canada and Europe, and $25 in Africa, India, Latin America and the rest of Asia.',
     },
     { type: 'h3', text: 'What are the Shopify Partner tiers in 2027?' },
     {
       type: 'paragraph',
-      text: 'From January 1, 2027 the tiers are Registered, Silver, Gold, Platinum and Diamond. Each above Registered needs both attributed sales (GMV) and a number of shops: Silver is $25,000 and 1 shop, Gold $5 million and 5 shops.',
+      text: '**From January 1, 2027 the tiers are Registered, Silver, Gold, Platinum and Diamond.** Each above Registered needs both attributed sales (GMV) and a number of shops: Silver is $25,000 and 1 shop, Gold $5 million and 5 shops.',
     },
     { type: 'h3', text: 'Can an agency earn on migrations beyond the Shopify Partner Program?' },
     {
@@ -310,7 +310,7 @@ const article: Article = {
   contentIt: [
     {
       type: 'paragraph',
-      text: '**Il programma partner Shopify è il programma aperto e basato sulle performance di Shopify per agenzie, consulenze e system integrator che offrono servizi ai merchant, e paga i partner con la revenue share sugli store che lanciano, le commissioni di referral e le commissioni da affiliato.** Così lo descrive Shopify nelle sue [FAQ sul Partner Program](https://help.shopify.com/en/partners/help-support/faq/partner-program), e dichiara di aver pagato [1,3 miliardi di dollari ai partner nel 2025](https://www.shopify.com/partners) tra app, temi, creazione di store, referral e altro.',
+      text: 'Il programma partner Shopify è il programma aperto e basato sulle performance di Shopify per agenzie, consulenze e system integrator che offrono servizi ai merchant, e paga i partner con la revenue share sugli store che lanciano, le commissioni di referral e le commissioni da affiliato. Così lo descrive Shopify nelle sue [FAQ sul Partner Program](https://help.shopify.com/en/partners/help-support/faq/partner-program), e dichiara di aver pagato [1,3 miliardi di dollari ai partner nel 2025](https://www.shopify.com/partners) tra app, temi, creazione di store, referral e altro.',
     },
     {
       type: 'paragraph',
@@ -318,7 +318,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Siamo noprob agency, iscritta al programma partner Shopify. Non parliamo a nome di Shopify: quello che segue sono le regole pubblicate da Shopify, lette e messe in ordine, più un esempio di calcolo che è aritmetica nostra.',
+      text: 'Siamo noprob agency, iscritta al programma partner Shopify. Non parliamo a nome di Shopify. Le regole qui sotto sono quelle pubblicate da Shopify; l’esempio di calcolo è aritmetica nostra.',
     },
     { type: 'h2', text: 'Come si diventa partner Shopify?' },
     {
@@ -328,10 +328,10 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**Crea l’account** e accetta il Partner Program Agreement.',
-        '**Scegli come guadagnare:** store per merchant, app, temi o affiliazione, che richiede una sua approvazione.',
-        '**Imposta l’organizzazione:** verifica l’email aziendale, inserisci i dati dell’azienda nella pagina Organization del Dev Dashboard e aggiungi un metodo di pagamento.',
-        '**Crea un primo client transfer store** dal Dev Dashboard per conoscere la piattaforma e iniziare un portfolio.',
+        'Crea l’account e accetta il Partner Program Agreement.',
+        'Scegli come guadagnare: store per merchant, app, temi o affiliazione, che richiede una sua approvazione.',
+        'Imposta l’organizzazione: verifica l’email aziendale, inserisci i dati dell’azienda nella pagina Organization del Dev Dashboard e aggiungi un metodo di pagamento.',
+        'Crea un primo client transfer store dal Dev Dashboard per conoscere la piattaforma e iniziare un portfolio.',
       ],
     },
     {
@@ -366,13 +366,13 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**Starter e Lite non pagano niente.** Non [danno diritto alla revenue share](https://help.shopify.com/en/partners/partner-program/how-to-earn).',
-        '**Cosa conta come GMV.** Vendite online consumer al netto dei resi. Il B2B è escluso, e c’è un [tetto di 100 milioni all’anno](https://help.shopify.com/en/partners/help-support/faq/earnings), azzerato a ogni anniversario.',
-        '**Gli store più vecchi tengono i vecchi termini.** Gli store lanciati prima del 10 agosto 2026 su Basic, Grow e Advanced [conservano il 20% perpetuo](https://help.shopify.com/en/partners/help-support/faq/earnings), senza durata di 4 anni e senza quota GMV.',
-        '**Plus è cambiato.** Sui nuovi accordi Plus co-venduti la quota passa da un [15% perpetuo al 20% più lo 0,1% del GMV per 4 anni](https://help.shopify.com/en/partners/help-support/faq/earnings).',
-        '**Chi viene pagato.** L’agenzia che ha costruito e trasferito lo store oppure, sui Plus co-venduti, il Launch Partner con uno Statement of Work firmato prima della chiusura del deal.',
-        '**Niente divisioni.** La revenue share [non si divide tra agenzie](https://help.shopify.com/en/partners/help-support/faq/earnings) sullo stesso store e resta legata allo store di fatturazione originario.',
-        '**Mai sul tuo store.** Guadagnare revenue share sul proprio store è considerato frode e porta all’esclusione dal programma, secondo le [stesse FAQ](https://help.shopify.com/en/partners/help-support/faq/earnings).',
+        'Starter e Lite non pagano niente. Non [danno diritto alla revenue share](https://help.shopify.com/en/partners/partner-program/how-to-earn).',
+        'Cosa conta come GMV. Vendite online consumer al netto dei resi. Il B2B è escluso, e c’è un [tetto di 100 milioni all’anno](https://help.shopify.com/en/partners/help-support/faq/earnings), azzerato a ogni anniversario.',
+        'Gli store più vecchi tengono i vecchi termini. Gli store lanciati prima del 10 agosto 2026 su Basic, Grow e Advanced [conservano il 20% perpetuo](https://help.shopify.com/en/partners/help-support/faq/earnings), senza durata di 4 anni e senza quota GMV.',
+        'Plus è cambiato. Sui nuovi accordi Plus co-venduti la quota passa da un [15% perpetuo al 20% più lo 0,1% del GMV per 4 anni](https://help.shopify.com/en/partners/help-support/faq/earnings).',
+        'Chi viene pagato. L’agenzia che ha costruito e trasferito lo store oppure, sui Plus co-venduti, il Launch Partner con uno Statement of Work firmato prima della chiusura del deal.',
+        'Niente divisioni. La revenue share [non si divide tra agenzie](https://help.shopify.com/en/partners/help-support/faq/earnings) sullo stesso store e resta legata allo store di fatturazione originario.',
+        'Mai sul tuo store. Guadagnare revenue share sul proprio store è considerato frode e porta all’esclusione dal programma, secondo le [stesse FAQ](https://help.shopify.com/en/partners/help-support/faq/earnings).',
       ],
     },
     {
@@ -442,10 +442,10 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**Costruisci in un client transfer store, non in un dev store.** Un [client transfer store](https://help.shopify.com/en/partners/manage-clients-stores/client-transfer-stores) nasce nella tua organizzazione e passa al cliente al lancio. Prima del trasferimento non ha transazioni reali né app custom o draft.',
-        '**Un dev store non si può consegnare.** Serve a costruire e testare, con un [limite di 250 per organizzazione](https://shopify.dev/docs/apps/build/dev-dashboard/development-stores), niente transazioni reali e una password. Non si può trasferire a un cliente né convertire in store di produzione.',
-        '**La commissione segue il trasferimento.** La [commissione sugli store che costruisci](https://help.shopify.com/en/partners/manage-clients-stores) arriva solo trasferendo un client transfer store al merchant.',
-        '**Il trasferimento ha dei passi.** Inserisci l’email del cliente, il cliente accetta e sceglie il piano, e un trasferimento in sospeso [scade dopo sette giorni](https://shopify.dev/docs/apps/build/dev-dashboard/stores/client-transfer-stores). Prima disattiva Shopify Payments, Balance, Credit e Capital, altrimenti il trasferimento fallisce.',
+        'Costruisci in un client transfer store, non in un dev store. Un [client transfer store](https://help.shopify.com/en/partners/manage-clients-stores/client-transfer-stores) nasce nella tua organizzazione e passa al cliente al lancio. Prima del trasferimento non ha transazioni reali né app custom o draft.',
+        'Un dev store non si può consegnare. Serve a costruire e testare, con un [limite di 250 per organizzazione](https://shopify.dev/docs/apps/build/dev-dashboard/development-stores), niente transazioni reali e una password. Non si può trasferire a un cliente né convertire in store di produzione.',
+        'La commissione segue il trasferimento. La [commissione sugli store che costruisci](https://help.shopify.com/en/partners/manage-clients-stores) arriva solo trasferendo un client transfer store al merchant.',
+        'Il trasferimento ha dei passi. Inserisci l’email del cliente, il cliente accetta e sceglie il piano, e un trasferimento in sospeso [scade dopo sette giorni](https://shopify.dev/docs/apps/build/dev-dashboard/stores/client-transfer-stores). Prima disattiva Shopify Payments, Balance, Credit e Capital, altrimenti il trasferimento fallisce.',
       ],
     },
     {
@@ -460,16 +460,16 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**Quota GMV:** lo 0,1% di 500.000 dollari fa 500 dollari a store all’anno, quindi 2.500 dollari all’anno su 5 store, per 4 anni su ciascuno.',
-        '**Quota sul canone base:** il 20% del canone base di ogni store, per 4 anni. La lasciamo fuori perché dipende dal piano di ogni store.',
-        '**Due referral Plus che si chiudono:** 2 x 2.500 fa 5.000 dollari una tantum.',
-        '**Quattro referral da affiliato negli Stati Uniti:** 4 x 150 fa 600 dollari.',
-        '**Livelli nel 2027:** 5 shop raggiungono il numero di shop di Gold, e un solo store supera il GMV di Silver sulla carta. I 5 milioni di Gold sono una prova a parte.',
+        'Quota GMV: lo 0,1% di 500.000 dollari fa 500 dollari a store all’anno, quindi 2.500 dollari all’anno su 5 store, per 4 anni su ciascuno.',
+        'Quota sul canone base: il 20% del canone base di ogni store, per 4 anni. La lasciamo fuori perché dipende dal piano di ogni store.',
+        'Due referral Plus che si chiudono: 2 x 2.500 fa 5.000 dollari una tantum.',
+        'Quattro referral da affiliato negli Stati Uniti: 4 x 150 fa 600 dollari.',
+        'Livelli nel 2027: 5 shop raggiungono il numero di shop di Gold, e un solo store supera il GMV di Silver sulla carta. I 5 milioni di Gold sono una prova a parte.',
       ],
     },
     {
       type: 'paragraph',
-      text: 'Leggilo per quello che è: un extra ricorrente sopra quello che fatturi per la costruzione, che cresce con il numero di store che restano e vendono. Non è uno stipendio.',
+      text: 'È un extra ricorrente sopra quello che fatturi per la costruzione, e cresce con il numero di store che restano e vendono.',
     },
     { type: 'h2', text: 'E se la tua agenzia porta pochi store all’anno?' },
     {
@@ -484,27 +484,27 @@ const article: Article = {
     { type: 'h3', text: 'Cos’è il programma partner Shopify?' },
     {
       type: 'paragraph',
-      text: 'È il programma aperto e basato sulle performance di Shopify per agenzie, consulenze e system integrator che offrono servizi ai merchant. I partner guadagnano con la revenue share sugli store che lanciano, con le commissioni di referral e, con una domanda separata approvata, con le commissioni da affiliato.',
+      text: '**È il programma aperto e basato sulle performance di Shopify per agenzie, consulenze e system integrator che offrono servizi ai merchant.** I partner guadagnano con la revenue share sugli store che lanciano, con le commissioni di referral e, con una domanda separata approvata, con le commissioni da affiliato.',
     },
     { type: 'h3', text: 'Come si diventa partner Shopify?' },
     {
       type: 'paragraph',
-      text: 'Crei un account Partner, accetti il Partner Program Agreement e scegli come vuoi guadagnare. Poi verifichi l’email aziendale, inserisci i dati dell’azienda e un metodo di pagamento. Parti dal livello Registered, e Shopify può respingere una domanda.',
+      text: '**Crei un account Partner, accetti il Partner Program Agreement e scegli come vuoi guadagnare.** Poi verifichi l’email aziendale, inserisci i dati dell’azienda e un metodo di pagamento. Parti dal livello Registered, e Shopify può respingere una domanda.',
     },
     { type: 'h3', text: 'Quanto guadagna un partner Shopify per ogni store?' },
     {
       type: 'paragraph',
-      text: 'Per gli store lanciati dal 10 agosto 2026 su Basic, Grow, Advanced e Plus, le FAQ sui guadagni di Shopify indicano il 20% del canone base più lo 0,1% delle vendite online idonee (GMV), per 4 anni. Starter e Lite non danno revenue share, e Shopify può cambiare gli importi.',
+      text: '**Per gli store lanciati dal 10 agosto 2026 su Basic, Grow, Advanced e Plus, le FAQ sui guadagni di Shopify indicano il 20% del canone base più lo 0,1% delle vendite online idonee (GMV), per 4 anni.** Starter e Lite non danno revenue share, e Shopify può cambiare gli importi.',
     },
     { type: 'h3', text: 'Come paga il programma di referral di Shopify?' },
     {
       type: 'paragraph',
-      text: 'Un referral che si chiude su Plus o Enterprise paga 2.500 dollari una tantum, se le condizioni sono rispettate. Un referral POS Pro paga 500 dollari. Il programma affiliati paga 150 dollari a referral in Stati Uniti, Canada ed Europa, e 25 dollari in Africa, India, America Latina e resto dell’Asia.',
+      text: '**Un referral che si chiude su Plus o Enterprise paga 2.500 dollari una tantum, se le condizioni sono rispettate.** Un referral POS Pro paga 500 dollari. Il programma affiliati paga 150 dollari a referral in Stati Uniti, Canada ed Europa, e 25 dollari in Africa, India, America Latina e resto dell’Asia.',
     },
     { type: 'h3', text: 'Quali sono i livelli partner Shopify nel 2027?' },
     {
       type: 'paragraph',
-      text: 'Dal 1° gennaio 2027 i livelli sono Registered, Silver, Gold, Platinum e Diamond. Ogni livello sopra Registered richiede sia vendite attribuite (GMV) sia un numero di shop: Silver 25.000 dollari e 1 shop, Gold 5 milioni e 5 shop.',
+      text: '**Dal 1° gennaio 2027 i livelli sono Registered, Silver, Gold, Platinum e Diamond.** Ogni livello sopra Registered richiede sia vendite attribuite (GMV) sia un numero di shop: Silver 25.000 dollari e 1 shop, Gold 5 milioni e 5 shop.',
     },
     { type: 'h3', text: 'Un’agenzia può guadagnare sulle migrazioni oltre il programma partner Shopify?' },
     {

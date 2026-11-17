@@ -110,11 +110,11 @@ const article: Article = {
   content: [
     {
       type: 'paragraph',
-      text: '**Ecommerce conversion rate optimization on Shopify (Shopify CRO) is the work of getting a larger share of your store’s visitors to buy, and how to increase conversion rate is a question for evidence, not for opinion.** This guide follows a shopper from the first visit to the second order and keeps only what peer-reviewed research has measured, from the Journal of Marketing to Marketing Science. Every study comes with authors, journal, year, what was tested and a link to the DOI. Where a point comes from our own work with brands rather than a paper, we say so.',
+      text: 'Ecommerce conversion rate optimization on Shopify (Shopify CRO) is the work of getting a larger share of your store’s visitors to buy, and how to increase conversion rate is a question you answer with evidence. This guide follows a shopper from the first visit to the second order and keeps only what peer-reviewed research has measured, from the Journal of Marketing to Marketing Science. Every study comes with authors, journal, year, what was tested and a link to the DOI. Where a point comes from our own work with brands rather than a paper, we say so.',
     },
     {
       type: 'paragraph',
-      text: 'Most CRO guides say the same things: optimize your button color, add social proof, reduce checkout steps. That advice is not wrong, it is incomplete. The studies here are not all equal either: some are experiments on one product, some measure purchase intentions, some use real order data. We say which is which, because a result should not travel further than the study that produced it.',
+      text: 'Most CRO guides say the same things: optimize your button color, add social proof, reduce checkout steps. That advice is fine as far as it goes. The studies here are not all equal either: some are experiments on one product, some measure purchase intentions, some use real order data. We say which is which, because a result should not travel further than the study that produced it.',
     },
     {
       type: 'paragraph',
@@ -139,10 +139,10 @@ const article: Article = {
       type: 'paragraph',
       text: '**The median Shopify store converts 1.4% of visitors; the top 20% exceed 2.7% and the top 10% exceed 3.7%.** These are [Littledata](https://www.littledata.io/average/shopify-conversion-rate) figures for 436 Shopify stores over the 90 days to 24 October 2026. Fashion converts less than supplements or food because the decision takes longer, so compare yourself with your sector.',
     },
-    { type: 'h2', text: 'What Shopify CRO Actually Is (And Why Most Guides Get It Wrong)' },
+    { type: 'h2', text: 'What Shopify CRO is, and why most guides get it wrong' },
     {
       type: 'paragraph',
-      text: '**Shopify CRO (conversion rate optimization) is the systematic process of increasing the percentage of visitors who complete a desired action on your Shopify store: a purchase, a signup, or an add to cart.**',
+      text: 'Shopify CRO (conversion rate optimization) is the systematic process of increasing the percentage of visitors who complete a desired action on your Shopify store: a purchase, a signup, or an add to cart.',
     },
     {
       type: 'paragraph',
@@ -150,11 +150,11 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'The problem with most CRO guides is not that they give wrong advice. It is that they present opinions as universal best practices without asking whether they apply to your specific product type, positioning, and audience.',
+      text: 'Most CRO guides present opinions as universal best practices without asking whether they apply to your specific product type, positioning, and audience.',
     },
     {
       type: 'paragraph',
-      text: 'Academic research on ecommerce conversions exists and it is rigorous. The problem is that researchers do not write marketing blogs. Their findings stay in papers, and the market continues to run on anecdotal advice.',
+      text: 'Academic research on ecommerce conversions is rigorous, but researchers do not write marketing blogs. Their findings stay in papers, and the market keeps running on anecdotal advice.',
     },
     {
       type: 'paragraph',
@@ -163,12 +163,12 @@ const article: Article = {
     { type: 'h2', text: 'How to increase conversion rate: follow the buying journey' },
     {
       type: 'paragraph',
-      text: '**To increase conversion rate, work in the order the shopper moves: how they arrive, what the product page shows, what proof they see, how price and offer are framed, what happens if they want to return, and what you do after they leave or buy.** The sections below follow that order, and each study sits where it acts on the shopper.',
+      text: 'To increase conversion rate, work in the order the shopper moves: how they arrive, what the product page shows, what proof they see, how price and offer are framed, what happens if they want to return, and what you do after they leave or buy. The sections below follow that order, and each study sits where it acts on the shopper.',
     },
-    { type: 'h2', text: 'The Foundations: Before You Touch Any Page' },
+    { type: 'h2', text: 'The foundations: before you touch any page' },
     {
       type: 'paragraph',
-      text: 'Every optimization built without these foundations is built on sand. This applies to any store, regardless of platform.',
+      text: '**Skip these and every optimization you build later rests on guesses.** This applies to any store, whatever the platform.',
     },
     {
       type: 'paragraph',
@@ -177,20 +177,20 @@ const article: Article = {
     { type: 'h3', text: 'The rule of three (with the data behind it)' },
     {
       type: 'paragraph',
-      text: 'How many benefits are you communicating for your brand or product? If the answer is "all of them," you are likely reducing conversions.',
+      text: '**How many benefits are you communicating for your brand or product?** If the answer is "all of them," you are likely reducing conversions.',
     },
     {
       type: 'paragraph',
-      text: 'Shu and Carlson ([Journal of Marketing, 2014](https://doi.org/10.1509/jm.11.0504)) ran four experiments and found that **when the source is seen as trying to persuade, impressions peak at three positive claims**: from the fourth, skepticism grows. Without a perceived intent to persuade, the peak disappears.',
+      text: 'Shu and Carlson ([Journal of Marketing, 2014](https://doi.org/10.1509/jm.11.0504)) ran four experiments and found that when the source is seen as trying to persuade, impressions peak at three positive claims: from the fourth, skepticism grows. Without a perceived intent to persuade, the peak disappears.',
     },
     {
       type: 'paragraph',
-      text: '**Our take:** pick your three strongest benefits and cut the rest. If you have twelve in mind, you are communicating for yourself, not for the customer. The experiments measured impressions of claims, not store sales, so treat three as a starting point to test on your own pages.',
+      text: 'Our take: pick your three strongest benefits and cut the rest. If you have twelve in mind, you are communicating for yourself, not for the customer. The experiments measured impressions of claims, not store sales, so treat three as a starting point to test on your own pages.',
     },
     { type: 'h3', text: 'Structured vs unstructured design: it depends on your brand' },
     {
       type: 'paragraph',
-      text: "There is one aspect of design that most CRO guides never discuss. The type of visual layout, namely straight lines and symmetry (structured) versus organic shapes and asymmetry (unstructured), is not just an aesthetic choice. It is a question of alignment with your brand's positioning.",
+      text: "**Most CRO guides never discuss one aspect of design: the type of visual layout, namely straight lines and symmetry (structured) versus organic shapes and asymmetry (unstructured).** It has to match your brand's positioning.",
     },
     {
       type: 'paragraph',
@@ -200,19 +200,19 @@ const article: Article = {
       type: 'paragraph',
       text: 'An additional rule from Cian, Krishna and Schwarz ([Journal of Consumer Research, 2015](https://doi.org/10.1093/jcr/ucv046)): position rational messages (functionality, data, specifications) in the upper part of the page. Emotional messages (lifestyle, aspiration, storytelling) belong lower. People associate up with rationality and down with emotion, and each type of message works better in its place.',
     },
-    { type: 'h2', text: 'Arrival: Where Shoppers Look Before They Buy' },
+    { type: 'h2', text: 'Arrival: where shoppers look before they buy' },
     {
       type: 'paragraph',
       text: '**Shoppers buying for pleasure and shoppers buying for function take different paths to the product page.** Li, Abbasi, Cheema and Abraham ([Journal of Marketing, 2020](https://doi.org/10.1177/0022242920911628)) combined clickstream data with a survey across 20 product categories and 40 retailers. Pleasure-led purchases went through social media and product pages; utilitarian ones went through third-party reviews, search, deals and competitors’ pages. The study is observational: it describes the channels shoppers used, not what causes a sale.',
     },
     {
       type: 'paragraph',
-      text: '**Our take:** before rewriting a product page, decide which kind of purchase it serves. A pleasure-led product has to earn the sale on the page itself; a practical one gets compared, so make the comparison easy to do on your page.',
+      text: 'Our take: before rewriting a product page, decide which kind of purchase it serves. A pleasure-led product has to earn the sale on the page itself; a practical one gets compared, so make the comparison easy to do on your page.',
     },
-    { type: 'h2', text: 'What Research Says About the Product Page' },
+    { type: 'h2', text: 'What research says about the product page' },
     {
       type: 'paragraph',
-      text: 'The product page is where the buying decision happens. Not the homepage, not the collection page. If you have one place to focus CRO energy, it is here.',
+      text: '**The buying decision happens on the product page, more than on the homepage or the collection page.** If you have one place to focus CRO energy, it is here.',
     },
     {
       type: 'paragraph',
@@ -225,7 +225,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '**Our take:** a moderate share of sold-out options helps, too many reverse the effect, so keep sold-out variants a clear minority and hide the excess. The experiments measured choices, not sales, so check the result on your own catalog.',
+      text: 'Our take: a moderate share of sold-out options helps, too many reverse the effect, so keep sold-out variants a clear minority and hide the excess. The experiments measured choices, not sales, so check the result on your own catalog.',
     },
     { type: 'h3', text: 'When to use video (and when not to)' },
     {
@@ -234,7 +234,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '**Our take:** the finding concerns options bought for pleasure. If you sell fashion or lifestyle products, video and GIF on the product page are worth testing first. For a functional product, this study does not show a lift, so test before you invest.',
+      text: 'Our take: the finding concerns options bought for pleasure. If you sell fashion or lifestyle products, video and GIF on the product page are worth testing first. For a functional product, this study does not show a lift, so test before you invest.',
     },
     { type: 'h3', text: 'Product photography details that move conversion' },
     {
@@ -243,20 +243,20 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '**Our take:** padding between product cards is one of the cheapest things to test on a collection page. Whether the effect holds for a grid on screen is for your own test to say.',
+      text: 'Our take: padding between product cards is one of the cheapest things to test on a collection page. Whether the effect holds for a grid on screen is for your own test to say.',
     },
     { type: 'h3', text: 'The hand touching the product' },
     {
       type: 'paragraph',
-      text: 'Luangrath, Peck, Hedgcock and Xu ([Journal of Marketing Research, 2022](https://doi.org/10.1177/00222437211059540)) ran eight studies (images, GIFs, virtual reality) showing a **vicarious haptic effect**: seeing a hand touching a product increases the viewer’s sense of ownership and the product’s evaluation. The effect was stronger with high physiological arousal in virtual reality.',
+      text: 'Luangrath, Peck, Hedgcock and Xu ([Journal of Marketing Research, 2022](https://doi.org/10.1177/00222437211059540)) ran eight studies (images, GIFs, virtual reality) showing a vicarious haptic effect: seeing a hand touching a product increases the viewer’s sense of ownership and the product’s evaluation. The effect was stronger with high physiological arousal in virtual reality.',
     },
     {
       type: 'paragraph',
-      text: '**Our take:** for products that are worn, held or handled, a lifestyle photo with a hand touching the product is worth a place in the gallery.',
+      text: 'Our take: for products that are worn, held or handled, a lifestyle photo with a hand touching the product is worth a place in the gallery.',
     },
     {
       type: 'paragraph',
-      text: '**Model gaze direction.** To and Patrick (University of Houston, [Journal of Consumer Research, 2021](https://doi.org/10.1093/jcr/ucaa063)) ran five experiments, including a field test on Facebook with a real brand and laboratory studies: a model looking away from the camera improved emotional ads, while direct eye contact improved informational ones. The distinction is emotional versus informational messages, and the studies tested ads.',
+      text: 'Model gaze direction. To and Patrick (University of Houston, [Journal of Consumer Research, 2021](https://doi.org/10.1093/jcr/ucaa063)) ran five experiments, including a field test on Facebook with a real brand and laboratory studies: a model looking away from the camera improved emotional ads, while direct eye contact improved informational ones. The distinction is emotional versus informational messages, and the studies tested ads.',
     },
     { type: 'h3', text: 'Multiple quantity CTAs' },
     {
@@ -265,13 +265,13 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '**Our take:** a single "add to cart" button makes the shopper decide twice, whether to buy and how many; quantity buttons move the attention to the second question. Try it where people naturally buy more than one unit: supplements, candles, food.',
+      text: 'Our take: a single "add to cart" button makes the shopper decide twice, whether to buy and how many; quantity buttons move the attention to the second question. Try it where people naturally buy more than one unit: supplements, candles, food.',
     },
-    { type: 'h2', text: 'Social Proof: Where Most Stores Get It Wrong' },
+    { type: 'h2', text: 'Social proof: where most stores get it wrong' },
     { type: 'h3', text: 'The perfect rating problem' },
     {
       type: 'paragraph',
-      text: 'Counter-intuitive but verified: the Spiegel Research Center at Northwestern University, analysing PowerReviews data, found that purchase likelihood peaks between 4.2 and 4.5 stars and falls as ratings approach 5.0 ([Spiegel Research Center](https://spiegel.medill.northwestern.edu/wp-content/uploads/sites/2/2021/04/Spiegel-research-reveals-4.5-stars-are-better-than-5-The-Medill-IMC-Spiegel-Research-Center.pdf), a university research center report rather than a journal article). Perfect ratings appear too good to be true. A slightly imperfect but high score is more credible than a perfect one.',
+      text: 'Counter-intuitive but verified: the Spiegel Research Center at Northwestern University, analysing PowerReviews data, found that purchase likelihood peaks between 4.2 and 4.5 stars and falls as ratings approach 5.0 ([Spiegel Research Center](https://spiegel.medill.northwestern.edu/wp-content/uploads/sites/2/2021/04/Spiegel-research-reveals-4.5-stars-are-better-than-5-The-Medill-IMC-Spiegel-Research-Center.pdf), a university research center report rather than a journal article). Perfect ratings look too good to be true, so a slightly imperfect but high score is more credible.',
     },
     {
       type: 'paragraph',
@@ -284,30 +284,30 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '**Our take:** show purchases before views, and test whether a number helps on each product instead of adding it everywhere.',
+      text: 'Our take: show purchases before views, and test whether a number helps on each product instead of adding it everywhere.',
     },
     { type: 'h3', text: 'How to distribute social proof down the page' },
     {
       type: 'paragraph',
-      text: 'From our direct experience with the brands we work with: only 15% of visitors scroll far enough to reach the review section at the bottom of a product page. If all your social proof is concentrated there, 85% of visitors never see it.',
+      text: '**From our direct experience with the brands we work with: only 15% of visitors scroll far enough to reach the review section at the bottom of a product page.** If all your social proof is concentrated there, 85% of visitors never see it.',
     },
     { type: 'paragraph', text: 'The correct distribution down a product page:' },
     {
       type: 'list',
       items: [
-        '**Stars and review count**: immediately below the product name, before any copy',
-        '**Media and press logo strip**: right after the ATF section',
-        '**Two or three editorially selected pullquotes**: mid-page, after the benefits',
-        '**Expert or authority endorsements**: after the technical specifications',
-        '**Customer UGC photos and videos**: before the comparison section',
-        '**Full review widget with filters**: at the bottom for those who want detail',
+        '**Stars and review count:** immediately below the product name, before any copy',
+        '**Media and press logo strip:** right after the ATF section',
+        '**Two or three editorially selected pullquotes:** mid-page, after the benefits',
+        '**Expert or authority endorsements:** after the technical specifications',
+        '**Customer UGC photos and videos:** before the comparison section',
+        '**Full review widget with filters:** at the bottom for those who want detail',
       ],
     },
     {
       type: 'paragraph',
-      text: '**Our take:** choose the reviews to highlight by the objections they answer, not by enthusiasm. "I had tried four similar products without results, this one worked within two weeks" says more than "fantastic product, highly recommend it."',
+      text: 'Our take: choose the reviews to highlight by the objections they answer, not by enthusiasm. "I had tried four similar products without results, this one worked within two weeks" says more than "fantastic product, highly recommend it."',
     },
-    { type: 'h2', text: 'Price and Offers: How the Number Is Shown' },
+    { type: 'h2', text: 'Price and offers: how the number is shown' },
     { type: 'h3', text: 'Where the price sits' },
     {
       type: 'paragraph',
@@ -315,7 +315,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '**Our take:** the on-screen version is a test to run, not a promise. It also sits in tension with the rule above that puts rational messages high on the page, so test the price position on its own.',
+      text: 'Our take: the on-screen version is a test to run. It also sits in tension with the rule above that puts rational messages high on the page, so test the price position on its own.',
     },
     { type: 'h3', text: 'Discount in currency or in percent' },
     {
@@ -324,7 +324,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '**Our take:** on your most expensive products, test the discount in currency against the percentage before you set one convention for the whole sale.',
+      text: 'Our take: on your most expensive products, test the discount in currency against the percentage before you set one convention for the whole sale.',
     },
     { type: 'h3', text: 'Countdowns and deadlines' },
     {
@@ -333,62 +333,62 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '**Our take:** do not install a countdown timer by default. Give the deadline a real reason and measure it against the same page without it.',
+      text: 'Our take: do not install a countdown timer by default. Give the deadline a real reason and measure it against the same page without it.',
     },
-    { type: 'h2', text: 'Cart and Returns: What a Refund Policy Does to the Basket' },
+    { type: 'h2', text: 'Cart and returns: what a refund policy does to the basket' },
     {
       type: 'paragraph',
       text: '**In one fashion retailer, free returns raised the basket and cost more than the extra profit.** Patel, Baldauf, Karlsson and Oghazi ([Journal of Operations Management, 2021](https://doi.org/10.1002/joom.1135)) used order data from a Swedish fashion retailer that offered free returns only in Denmark, and compared before and after with a difference-in-differences design. Basket value rose 9.15%, the variety of items 8.74% and returns 7.86%. The cost exceeded the additional profit; the long-term effect was not measured, only hypothesized.',
     },
     {
       type: 'paragraph',
-      text: '**An instant refund raised satisfaction without a significant rise in the intention to return.** Martínez-López, Feng, Li and López-López ([Journal of Retailing and Consumer Services, 2022](https://doi.org/10.1016/j.jretconser.2022.103067)) ran two scenario experiments on an online panel. These are imagined scenarios, not real purchases.',
+      text: 'An instant refund raised satisfaction without a significant rise in the intention to return. Martínez-López, Feng, Li and López-López ([Journal of Retailing and Consumer Services, 2022](https://doi.org/10.1016/j.jretconser.2022.103067)) ran two scenario experiments on an online panel. These are imagined scenarios, not real purchases.',
     },
     {
       type: 'paragraph',
-      text: '**Our take:** free returns is a margin decision, so put its cost on paper before promising it. Refund speed is a different lever, and the scenario data say it is worth a test.',
+      text: 'Our take: free returns is a margin decision, so put its cost on paper before promising it. Refund speed is a different lever, and the scenario data say it is worth a test.',
     },
-    { type: 'h2', text: 'After the Visit: Retargeting, Reviews and Repeat Orders' },
+    { type: 'h2', text: 'After the visit: retargeting, reviews and repeat orders' },
     {
       type: 'paragraph',
-      text: '**Retargeting too soon.** Li, Luo, Lu and Moriguchi ([Journal of Marketing, 2021](https://doi.org/10.1177/0022242920959043)) ran three field experiments with over 64,000 customers. In the first, on a Japanese online fashion store, an email within an hour reduced purchases compared with the control group (13.4% against 16.7%), while a message 24 to 72 hours later increased them.',
-    },
-    {
-      type: 'paragraph',
-      text: '**Review requests sent too early.** Jung, Ryu, Han and Cho ([Journal of Marketing, 2023](https://doi.org/10.1177/00222429221143329)) ran two field experiments in Korea, in travel and apparel: an immediate reminder reduced the number of reviews, a delayed one increased it.',
+      text: 'Retargeting too soon. Li, Luo, Lu and Moriguchi ([Journal of Marketing, 2021](https://doi.org/10.1177/0022242920959043)) ran three field experiments with over 64,000 customers. In the first, on a Japanese online fashion store, an email within an hour reduced purchases compared with the control group (13.4% against 16.7%), while a message 24 to 72 hours later increased them.',
     },
     {
       type: 'paragraph',
-      text: '**Our take:** the right delay depends on how long the product takes to show its worth: longer for supplements and skincare than for a shirt.',
+      text: 'Review requests sent too early. Jung, Ryu, Han and Cho ([Journal of Marketing, 2023](https://doi.org/10.1177/00222429221143329)) ran two field experiments in Korea, in travel and apparel: an immediate reminder reduced the number of reviews, a delayed one increased it.',
     },
     {
       type: 'paragraph',
-      text: '**Ignoring the first review.** Park, Shin and Xie ([Marketing Science, 2021](https://doi.org/10.1287/mksc.2020.1264)) compared identical products on Amazon and Best Buy and showed that a negative first review lowers the average rating: after one year it is **0.29 stars lower** than for products whose first review was positive. When you launch a product, the first reviews are not a minor detail: they are a lever that compounds over time.',
+      text: 'Our take: the right delay depends on how long the product takes to show its worth: longer for supplements and skincare than for a shirt.',
     },
     {
       type: 'paragraph',
-      text: '**Handwritten notes.** Kim, Choi and Kim ([Journal of Interactive Marketing, 2022](https://doi.org/10.1177/10949968221102306)) ran a randomized field experiment with an online retailer and a follow-up experiment: a handwritten note raised spending only among loyal customers, and additional incentives weakened the effect.',
+      text: 'Ignoring the first review. Park, Shin and Xie ([Marketing Science, 2021](https://doi.org/10.1287/mksc.2020.1264)) compared identical products on Amazon and Best Buy and showed that a negative first review lowers the average rating: after one year it is 0.29 stars lower than for products whose first review was positive. When you launch a product, the first reviews are a lever that compounds over time.',
     },
     {
       type: 'paragraph',
-      text: '**Our take:** if you write notes by hand, put them in the parcels of your repeat customers and leave the discount code out.',
+      text: 'Handwritten notes. Kim, Choi and Kim ([Journal of Interactive Marketing, 2022](https://doi.org/10.1177/10949968221102306)) ran a randomized field experiment with an online retailer and a follow-up experiment: a handwritten note raised spending only among loyal customers, and additional incentives weakened the effect.',
     },
     {
       type: 'paragraph',
-      text: '**Referral invitations.** Jung, Bapna, Golden and Sun ([Information Systems Research, 2020](https://doi.org/10.1287/isre.2019.0873)) ran randomized field experiments with a fixed incentive: an invitation framed as prosocial increased both the start of referrals and the number of successful referrals, compared with selfish or equitable invitations.',
+      text: 'Our take: if you write notes by hand, put them in the parcels of your repeat customers and leave the discount code out.',
     },
     {
       type: 'paragraph',
-      text: '**Our take:** same reward, different wording. Test the invitation text before you raise the incentive.',
+      text: 'Referral invitations. Jung, Bapna, Golden and Sun ([Information Systems Research, 2020](https://doi.org/10.1287/isre.2019.0873)) ran randomized field experiments with a fixed incentive: an invitation framed as prosocial increased both the start of referrals and the number of successful referrals, compared with selfish or equitable invitations.',
     },
-    { type: 'h2', text: 'Shopify Quick Wins to Implement Today' },
+    {
+      type: 'paragraph',
+      text: 'Our take: same reward, different wording. Test the invitation text before you raise the incentive.',
+    },
+    { type: 'h2', text: 'Shopify quick wins to implement today' },
     {
       type: 'paragraph',
       text: 'If you want a starting point for Shopify CRO without a full audit:',
     },
     {
       type: 'paragraph',
-      text: 'Check how many features you are communicating in the homepage hero and product descriptions. If it is more than three, cut. This is not reducing your message: it is concentrating it.',
+      text: 'Check how many features you are communicating in the homepage hero and product descriptions. If it is more than three, cut. A shorter message lands harder.',
     },
     {
       type: 'paragraph',
@@ -405,21 +405,21 @@ const article: Article = {
     { type: 'h2', text: 'What should a Shopify CRO service deliver?' },
     {
       type: 'paragraph',
-      text: 'A Shopify CRO service should deliver a ranked list of changes to the pages that decide a purchase, each tied to your store’s data or to a named study, the changes actually shipped, and a way to tell whether they worked. Before you hire one, ask four questions:',
+      text: '**A Shopify CRO service should deliver a ranked list of changes to the pages that decide a purchase, each tied to your store’s data or to a named study, the changes actually shipped, and a way to tell whether they worked.** Before you hire one, ask four questions:',
     },
     {
       type: 'list',
       items: [
-        '**Which page do you start from, and why?** The answer should come from where your shoppers drop between product page, cart and checkout, not from a template.',
-        '**Where does each recommendation come from?** Your analytics, a test, or a study you can read, as in this guide.',
-        '**How will you measure it?** A reliable A/B test usually needs several thousand sessions per variant. With less traffic, ask how they will compare before and after instead.',
-        '**Who ships the changes?** Ask whether design, copy and app changes are included, or whether you receive a report to implement yourself.',
+        'Which page do you start from, and why? The answer should come from where your shoppers drop between product page, cart and checkout, not from a template.',
+        'Where does each recommendation come from? Your analytics, a test, or a study you can read, as in this guide.',
+        'How will you measure it? A reliable A/B test usually needs several thousand sessions per variant. With less traffic, ask how they will compare before and after instead.',
+        'Who ships the changes? Ask whether design, copy and app changes are included, or whether you receive a report to implement yourself.',
       ],
     },
     { type: 'h2', text: 'Shopify CRO during a migration, and after' },
     {
       type: 'paragraph',
-      text: 'During a migration, the Shopify Launch Sprint, our [fixed-price Shopify migration service](/shopify-migration-sprint), **covers the purchase flow**: search, product page, cart and checkout are analyzed step by step and rebuilt with our checklist. It moves your store to Shopify in 14 days with our Custom AI System, with go-live between day 15 and day 30, 90 days of support and 4 written guarantees. One of them is about conversion: "Checkout converting less than before at 90 days? We optimize it for free until it beats it." For the whole process, read the [Shopify migration guide](/shopify-migration).',
+      text: 'During a migration, the Shopify Launch Sprint, our [fixed-price Shopify migration service](/shopify-migration-sprint), covers the purchase flow: search, product page, cart and checkout are analyzed step by step and rebuilt with our checklist. It moves your store to Shopify in 14 days with our Custom AI System, with go-live between day 15 and day 30, 90 days of support and 4 written guarantees. One of them is about conversion: "Checkout converting less than before at 90 days? We optimize it for free until it beats it." For the whole process, read the [Shopify migration guide](/shopify-migration).',
     },
     {
       type: 'paragraph',
@@ -433,17 +433,17 @@ const article: Article = {
     { type: 'h3', text: 'What is Shopify CRO?' },
     {
       type: 'paragraph',
-      text: 'Shopify CRO (conversion rate optimization) is eCommerce CRO applied to a Shopify store: the process of increasing the percentage of visitors who complete a purchase or another desired action. It involves working systematically on site elements (product pages, checkout, navigation, copy, images) to reduce barriers to purchase and increase trust signals, based on data and testing rather than assumptions.',
+      text: '**Shopify CRO (conversion rate optimization) is eCommerce CRO applied to a Shopify store: the process of increasing the percentage of visitors who complete a purchase or another desired action.** It involves working systematically on site elements (product pages, checkout, navigation, copy, images) to reduce barriers to purchase and increase trust signals, based on data and testing rather than assumptions.',
     },
     { type: 'h3', text: 'What is a good Shopify conversion rate in 2026?' },
     {
       type: 'paragraph',
-      text: 'The median Shopify store converts 1.4% of visitors. Stores in the top 20% exceed 2.7%, and the top 10% exceed 3.7% (Littledata, 436 Shopify stores, 90 days to 24 October 2026). These benchmarks vary by industry: fashion typically has lower rates than supplements or food because the decision cycle is longer. Comparing yourself to your sector is more useful than comparing to the overall median.',
+      text: '**The median Shopify store converts 1.4% of visitors.** Stores in the top 20% exceed 2.7%, and the top 10% exceed 3.7% (Littledata, 436 Shopify stores, 90 days to 24 October 2026). These benchmarks vary by industry: fashion typically has lower rates than supplements or food because the decision cycle is longer. Comparing yourself to your sector is more useful than comparing to the overall median.',
     },
     { type: 'h3', text: 'Where should I start with Shopify CRO?' },
     {
       type: 'paragraph',
-      text: 'Start with the product page. It is where purchase intent either converts into a transaction or becomes an abandonment. Before optimizing homepage or checkout, verify that your product page has: a benefit-oriented headline, quality images showing variants and details, social proof visible above the fold, a clear CTA, and correct mobile layout. Only then move to other elements.',
+      text: '**Start with the product page.** It is where purchase intent either converts into a transaction or becomes an abandonment. Before optimizing homepage or checkout, verify that your product page has: a benefit-oriented headline, quality images showing variants and details, social proof visible above the fold, a clear CTA, and correct mobile layout. Only then move to other elements.',
     },
     { type: 'h3', text: 'Does CRO help stores with low traffic?' },
     {
@@ -458,12 +458,12 @@ const article: Article = {
     { type: 'h3', text: 'What should a Shopify CRO service include?' },
     {
       type: 'paragraph',
-      text: 'A ranked list of changes to product page, cart and checkout, each tied to your data or a named study, the changes shipped on the store, and a way to measure them. Ask who implements the work: a report you apply yourself is a different service.',
+      text: '**A ranked list of changes to product page, cart and checkout, each tied to your data or a named study, the changes shipped on the store, and a way to measure them.** Ask who implements the work: a report you apply yourself is a different service.',
     },
     { type: 'h3', text: 'How does CRO compare to investing in advertising?' },
     {
       type: 'paragraph',
-      text: 'Advertising brings traffic. CRO determines how much of that traffic converts. Doubling your advertising budget at a 1% conversion rate delivers the same orders as unchanged advertising at a 2% rate, with twice the spend. Every improvement in conversion rate multiplies the value of every euro spent on advertising. The two work in parallel, not as alternatives.',
+      text: '**Advertising brings traffic.** CRO determines how much of that traffic converts. Doubling your advertising budget at a 1% conversion rate delivers the same orders as unchanged advertising at a 2% rate, with twice the spend. Every improvement in conversion rate multiplies the value of every euro spent on advertising. The two work in parallel, not as alternatives.',
     },
     {
       type: 'paragraph',
@@ -481,11 +481,11 @@ const article: Article = {
   contentIt: [
     {
       type: 'paragraph',
-      text: '**L’ottimizzazione del tasso di conversione per eCommerce su Shopify (CRO per Shopify) è il lavoro di far comprare una quota più alta dei visitatori del tuo store, e come aumentare il tasso di conversione è una domanda da risolvere con le prove, non con le opinioni.** Questa guida segue un cliente dalla prima visita al secondo ordine e tiene solo ciò che la ricerca peer-reviewed ha misurato, dal Journal of Marketing a Marketing Science. Ogni studio ha autori, rivista, anno, cosa è stato testato e il link al DOI. Dove un punto viene dal nostro lavoro con i brand e non da un paper, lo scriviamo.',
+      text: 'L’ottimizzazione del tasso di conversione per eCommerce su Shopify (CRO per Shopify) è il lavoro di far comprare una quota più alta dei visitatori del tuo store, e come aumentare il tasso di conversione è una domanda a cui si risponde con le prove. Questa guida segue un cliente dalla prima visita al secondo ordine e tiene solo ciò che la ricerca peer-reviewed ha misurato, dal Journal of Marketing a Marketing Science. Ogni studio ha autori, rivista, anno, cosa è stato testato e il link al DOI. Dove un punto viene dal nostro lavoro con i brand e non da un paper, lo scriviamo.',
     },
     {
       type: 'paragraph',
-      text: 'La maggior parte delle guide CRO dice le stesse cose: ottimizza il bottone, aggiungi social proof, riduci i passaggi del checkout. Non è sbagliato, è incompleto. Nemmeno gli studi qui sono tutti uguali: alcuni sono esperimenti su un solo prodotto, altri misurano intenzioni d’acquisto, altri usano dati reali di ordini. Diciamo quale è quale, perché un risultato non deve andare oltre lo studio che l’ha prodotto.',
+      text: 'La maggior parte delle guide CRO dice le stesse cose: ottimizza il bottone, aggiungi social proof, riduci i passaggi del checkout. Va bene, fin dove arriva. Nemmeno gli studi qui sono tutti uguali: alcuni sono esperimenti su un solo prodotto, altri misurano intenzioni d’acquisto, altri usano dati reali di ordini. Diciamo quale è quale, perché un risultato non deve andare oltre lo studio che l’ha prodotto.',
     },
     {
       type: 'paragraph',
@@ -513,7 +513,7 @@ const article: Article = {
     { type: 'h2', text: 'Cos’è il CRO per Shopify e perché la maggior parte delle guide lo spiega male' },
     {
       type: 'paragraph',
-      text: '**Il CRO per Shopify (Conversion Rate Optimization) è il processo sistematico di aumentare la percentuale di visitatori che compiono un’azione desiderata sul tuo store Shopify: che sia un acquisto, una registrazione o l’aggiunta al carrello.**',
+      text: 'Il CRO per Shopify (Conversion Rate Optimization) è il processo sistematico di aumentare la percentuale di visitatori che compiono un’azione desiderata sul tuo store Shopify: che sia un acquisto, una registrazione o l’aggiunta al carrello.',
     },
     {
       type: 'paragraph',
@@ -521,11 +521,11 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Il problema con la maggior parte delle guide CRO non è che dicano cose sbagliate. È che presentano opinioni come best practice universali, senza chiedersi se funzionino per il tuo specifico tipo di prodotto, il tuo posizionamento e il tuo pubblico.',
+      text: 'La maggior parte delle guide CRO presenta opinioni come best practice universali, senza chiedersi se funzionino per il tuo specifico tipo di prodotto, il tuo posizionamento e il tuo pubblico.',
     },
     {
       type: 'paragraph',
-      text: 'La ricerca accademica sulle conversioni eCommerce esiste ed è solida. Il problema è che i ricercatori non scrivono thread sui social. Risultato: le loro scoperte restano nei paper, e il mercato continua a girare su consigli aneddotici.',
+      text: 'La ricerca accademica sulle conversioni eCommerce è solida, ma i ricercatori non scrivono thread sui social. Le loro scoperte restano nei paper e il mercato continua a girare su consigli aneddotici.',
     },
     {
       type: 'paragraph',
@@ -534,12 +534,12 @@ const article: Article = {
     { type: 'h2', text: 'Come aumentare il tasso di conversione: segui il percorso d’acquisto' },
     {
       type: 'paragraph',
-      text: '**Per aumentare il tasso di conversione lavora nell’ordine in cui si muove chi compra: come arriva, cosa mostra la pagina prodotto, quali prove vede, come sono presentati prezzo e offerta, cosa succede se vuole fare un reso e cosa fai dopo che se ne va o compra.** Le sezioni che seguono rispettano quell’ordine, e ogni studio sta dove agisce sul cliente.',
+      text: 'Per aumentare il tasso di conversione lavora nell’ordine in cui si muove chi compra: come arriva, cosa mostra la pagina prodotto, quali prove vede, come sono presentati prezzo e offerta, cosa succede se vuole fare un reso e cosa fai dopo che se ne va o compra. Le sezioni che seguono rispettano quell’ordine, e ogni studio sta dove agisce sul cliente.',
     },
     { type: 'h2', text: 'Prima di toccare qualsiasi pagina: le fondamenta' },
     {
       type: 'paragraph',
-      text: 'Ogni ottimizzazione costruita senza queste fondamenta è costruita sulla sabbia. Vale per qualsiasi store, indipendentemente dalla piattaforma.',
+      text: '**Senza queste fondamenta ogni ottimizzazione si regge su ipotesi.** Vale per qualsiasi store, su qualsiasi piattaforma.',
     },
     {
       type: 'paragraph',
@@ -548,20 +548,20 @@ const article: Article = {
     { type: 'h3', text: 'La regola del 3 (supportata da ricerca peer-reviewed)' },
     {
       type: 'paragraph',
-      text: 'Quanti benefit comunichi per il tuo brand o prodotto? Se la risposta è “tutti quelli che abbiamo”, stai probabilmente riducendo le conversioni.',
+      text: '**Quanti benefit comunichi per il tuo brand o prodotto?** Se la risposta è “tutti quelli che abbiamo”, stai probabilmente riducendo le conversioni.',
     },
     {
       type: 'paragraph',
-      text: 'Shu e Carlson ([Journal of Marketing, 2014](https://doi.org/10.1509/jm.11.0504)) hanno condotto quattro esperimenti e trovato che **quando la fonte è percepita come intenzionata a persuadere, le impressioni raggiungono il picco con tre affermazioni positive**: dalla quarta cresce lo scetticismo. Senza un intento persuasivo percepito, il picco scompare.',
+      text: 'Shu e Carlson ([Journal of Marketing, 2014](https://doi.org/10.1509/jm.11.0504)) hanno condotto quattro esperimenti e trovato che quando la fonte è percepita come intenzionata a persuadere, le impressioni raggiungono il picco con tre affermazioni positive: dalla quarta cresce lo scetticismo. Senza un intento persuasivo percepito, il picco scompare.',
     },
     {
       type: 'paragraph',
-      text: '**La nostra lettura:** scegli i tre benefici più forti e taglia il resto. Se ne hai dodici in mente, stai comunicando per te stesso, non per il cliente. Gli esperimenti hanno misurato le impressioni sui claim, non le vendite di uno store: considera il tre come punto di partenza da testare sulle tue pagine.',
+      text: 'La nostra lettura: scegli i tre benefici più forti e taglia il resto. Se ne hai dodici in mente, stai comunicando per te stesso, non per il cliente. Gli esperimenti hanno misurato le impressioni sui claim, non le vendite di uno store: considera il tre come punto di partenza da testare sulle tue pagine.',
     },
     { type: 'h3', text: 'Design strutturato o non strutturato: dipende dal tuo brand' },
     {
       type: 'paragraph',
-      text: 'C’è un aspetto del design che la maggior parte delle guide CRO non menziona mai. Il tipo di layout visivo, ovvero linee rette e simmetria (strutturato) versus forme organiche e asimmetria (non strutturato), non è una questione estetica. È una questione di corrispondenza con il posizionamento del brand.',
+      text: '**La maggior parte delle guide CRO non menziona mai un aspetto del design: il tipo di layout visivo, ovvero linee rette e simmetria (strutturato) contro forme organiche e asimmetria (non strutturato).** Deve corrispondere al posizionamento del brand.',
     },
     {
       type: 'paragraph',
@@ -578,12 +578,12 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '**La nostra lettura:** prima di riscrivere una pagina prodotto, decidi che tipo di acquisto serve. Un prodotto da piacere deve guadagnarsi la vendita sulla pagina stessa; uno pratico viene confrontato, quindi rendi facile fare il confronto sulla tua pagina.',
+      text: 'La nostra lettura: prima di riscrivere una pagina prodotto, decidi che tipo di acquisto serve. Un prodotto da piacere deve guadagnarsi la vendita sulla pagina stessa; uno pratico viene confrontato, quindi rendi facile fare il confronto sulla tua pagina.',
     },
     { type: 'h2', text: 'Cosa dice la ricerca sulla pagina prodotto' },
     {
       type: 'paragraph',
-      text: 'La pagina prodotto è il momento in cui l’utente decide. Non la homepage, non la collection page. Se hai un solo posto dove concentrare l’energia CRO, è qui.',
+      text: '**L’utente decide sulla pagina prodotto, più che sulla homepage o sulla collection page.** Se hai un solo posto dove concentrare l’energia CRO, è qui.',
     },
     {
       type: 'paragraph',
@@ -596,7 +596,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '**La nostra lettura:** una quota moderata di opzioni esaurite aiuta, troppe invertono l’effetto, quindi tieni le varianti esaurite come netta minoranza e nascondi l’eccesso. Gli esperimenti misurano scelte, non vendite: controlla il risultato sul tuo catalogo.',
+      text: 'La nostra lettura: una quota moderata di opzioni esaurite aiuta, troppe invertono l’effetto, quindi tieni le varianti esaurite come netta minoranza e nascondi l’eccesso. Gli esperimenti misurano scelte, non vendite: controlla il risultato sul tuo catalogo.',
     },
     { type: 'h3', text: 'Video vs immagini statiche: non è uguale per tutti' },
     {
@@ -605,29 +605,29 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '**La nostra lettura:** il risultato riguarda opzioni acquistate per piacere. Se vendi fashion o prodotti lifestyle, video e GIF sulla pagina prodotto sono da testare per primi. Per un prodotto funzionale questo studio non mostra un aumento: testa prima di investire.',
+      text: 'La nostra lettura: il risultato riguarda opzioni acquistate per piacere. Se vendi fashion o prodotti lifestyle, video e GIF sulla pagina prodotto sono da testare per primi. Per un prodotto funzionale questo studio non mostra un aumento: testa prima di investire.',
     },
     { type: 'h3', text: 'Come fotografare il prodotto: i dettagli che cambiano le vendite' },
     {
       type: 'paragraph',
-      text: '**Spazio tra i prodotti.** Sevilla (Università della Georgia) e Townsend (Università di Miami) ([Journal of Marketing Research, 2016](https://doi.org/10.1509/jmr.13.0601)) hanno condotto studi di laboratorio e sul campo su più categorie di prodotto: più spazio tra i prodotti ha aumentato valore percepito, appeal estetico, prestigio del negozio e vendite.',
+      text: 'Spazio tra i prodotti. Sevilla (Università della Georgia) e Townsend (Università di Miami) ([Journal of Marketing Research, 2016](https://doi.org/10.1509/jmr.13.0601)) hanno condotto studi di laboratorio e sul campo su più categorie di prodotto: più spazio tra i prodotti ha aumentato valore percepito, appeal estetico, prestigio del negozio e vendite.',
     },
     {
       type: 'paragraph',
-      text: '**La nostra lettura:** il padding tra le product card è una delle cose più economiche da testare in una collection page. Se l’effetto vale anche per una griglia su schermo lo dirà il tuo test.',
+      text: 'La nostra lettura: il padding tra le product card è una delle cose più economiche da testare in una collection page. Se l’effetto vale anche per una griglia su schermo lo dirà il tuo test.',
     },
     { type: 'h3', text: 'La mano che tocca il prodotto' },
     {
       type: 'paragraph',
-      text: 'Luangrath, Peck, Hedgcock e Xu ([Journal of Marketing Research, 2022](https://doi.org/10.1177/00222437211059540)) hanno condotto otto studi (immagini, GIF, realtà virtuale) che mostrano un **effetto aptico vicario**: vedere una mano che tocca un prodotto aumenta il senso di possesso di chi guarda e la valutazione del prodotto. L’effetto era più forte con alta attivazione fisiologica nella realtà virtuale.',
+      text: 'Luangrath, Peck, Hedgcock e Xu ([Journal of Marketing Research, 2022](https://doi.org/10.1177/00222437211059540)) hanno condotto otto studi (immagini, GIF, realtà virtuale) che mostrano un effetto aptico vicario: vedere una mano che tocca un prodotto aumenta il senso di possesso di chi guarda e la valutazione del prodotto. L’effetto era più forte con alta attivazione fisiologica nella realtà virtuale.',
     },
     {
       type: 'paragraph',
-      text: '**La nostra lettura:** per prodotti che si indossano, si tengono o si maneggiano, una foto lifestyle con una mano che tocca il prodotto merita un posto in galleria.',
+      text: 'La nostra lettura: per prodotti che si indossano, si tengono o si maneggiano, una foto lifestyle con una mano che tocca il prodotto merita un posto in galleria.',
     },
     {
       type: 'paragraph',
-      text: '**La direzione dello sguardo del modello.** To e Patrick (Università di Houston, [Journal of Consumer Research, 2021](https://doi.org/10.1093/jcr/ucaa063)) hanno condotto cinque esperimenti, tra cui un test sul campo su Facebook con un marchio reale e studi di laboratorio: un modello che guarda lontano dalla camera ha migliorato gli annunci emotivi, lo sguardo diretto quelli informativi. La distinzione è tra messaggi emotivi e informativi, e gli studi hanno testato annunci.',
+      text: 'La direzione dello sguardo del modello. To e Patrick (Università di Houston, [Journal of Consumer Research, 2021](https://doi.org/10.1093/jcr/ucaa063)) hanno condotto cinque esperimenti, tra cui un test sul campo su Facebook con un marchio reale e studi di laboratorio: un modello che guarda lontano dalla camera ha migliorato gli annunci emotivi, lo sguardo diretto quelli informativi. La distinzione è tra messaggi emotivi e informativi, e gli studi hanno testato annunci.',
     },
     { type: 'h3', text: 'I CTA multipli per quantità' },
     {
@@ -636,13 +636,13 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '**La nostra lettura:** un bottone singolo “aggiungi al carrello” fa decidere due volte, se comprare e quanto; i bottoni per quantità spostano l’attenzione sulla seconda domanda. Provalo dove si compra naturalmente più di un’unità: integratori, candele, food.',
+      text: 'La nostra lettura: un bottone singolo “aggiungi al carrello” fa decidere due volte, se comprare e quanto; i bottoni per quantità spostano l’attenzione sulla seconda domanda. Provalo dove si compra naturalmente più di un’unità: integratori, candele, food.',
     },
     { type: 'h2', text: 'Social proof: dove la maggior parte sbaglia' },
     { type: 'h3', text: 'Le stelle perfette che non convincono' },
     {
       type: 'paragraph',
-      text: 'Controintuitivo ma verificato: lo Spiegel Research Center della Northwestern University, analizzando i dati di PowerReviews, ha trovato che la probabilità d’acquisto raggiunge il picco tra 4,2 e 4,5 stelle e scende avvicinandosi a 5,0 ([Spiegel Research Center](https://spiegel.medill.northwestern.edu/wp-content/uploads/sites/2/2021/04/Spiegel-research-reveals-4.5-stars-are-better-than-5-The-Medill-IMC-Spiegel-Research-Center.pdf), un rapporto di un centro di ricerca universitario, non un articolo di rivista). Le valutazioni perfette sembrano troppo belle per essere vere. Un punteggio imperfetto ma alto è più credibile di uno perfetto.',
+      text: 'Controintuitivo ma verificato: lo Spiegel Research Center della Northwestern University, analizzando i dati di PowerReviews, ha trovato che la probabilità d’acquisto raggiunge il picco tra 4,2 e 4,5 stelle e scende avvicinandosi a 5,0 ([Spiegel Research Center](https://spiegel.medill.northwestern.edu/wp-content/uploads/sites/2/2021/04/Spiegel-research-reveals-4.5-stars-are-better-than-5-The-Medill-IMC-Spiegel-Research-Center.pdf), un rapporto di un centro di ricerca universitario, non un articolo di rivista). Le valutazioni perfette sembrano troppo belle per essere vere, quindi un punteggio un po’ imperfetto ma alto è più credibile.',
     },
     {
       type: 'paragraph',
@@ -655,28 +655,28 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '**La nostra lettura:** mostra gli acquisti prima delle visualizzazioni, e verifica se il numero aiuta su ogni prodotto invece di aggiungerlo ovunque.',
+      text: 'La nostra lettura: mostra gli acquisti prima delle visualizzazioni, e verifica se il numero aiuta su ogni prodotto invece di aggiungerlo ovunque.',
     },
     { type: 'h3', text: 'Come distribuire la social proof lungo la pagina' },
     {
       type: 'paragraph',
-      text: 'Un dato operativo importante che viene dalla nostra esperienza diretta con i brand che seguiamo: solo il **15% dei visitatori arriva fino alla sezione recensioni** in fondo alla pagina prodotto. Se tutta la tua prova sociale è concentrata lì, l’85% delle persone non la vede mai.',
+      text: '**Un dato operativo importante che viene dalla nostra esperienza diretta con i brand che seguiamo: solo il 15% dei visitatori arriva fino alla sezione recensioni in fondo alla pagina prodotto.** Se tutta la tua prova sociale è concentrata lì, l’85% delle persone non la vede mai.',
     },
     { type: 'paragraph', text: 'La distribuzione corretta lungo una pagina prodotto è:' },
     {
       type: 'list',
       items: [
-        '**Stelle e numero di recensioni**: immediatamente sotto il nome prodotto, prima di qualsiasi copy',
-        '**Logo strip media e press**: subito dopo la sezione ATF',
-        '**Due o tre pullquote selezionati editorialmente**: a metà pagina, dopo i benefici',
-        '**Endorsement da esperti o autorità**: dopo le specifiche tecniche',
-        '**UGC foto e video clienti**: prima del confronto con alternative',
-        '**Widget recensioni completo con filtri**: in fondo, per chi vuole approfondire',
+        '**Stelle e numero di recensioni:** immediatamente sotto il nome prodotto, prima di qualsiasi copy',
+        '**Logo strip media e press:** subito dopo la sezione ATF',
+        '**Due o tre pullquote selezionati editorialmente:** a metà pagina, dopo i benefici',
+        '**Endorsement da esperti o autorità:** dopo le specifiche tecniche',
+        '**UGC foto e video clienti:** prima del confronto con alternative',
+        '**Widget recensioni completo con filtri:** in fondo, per chi vuole approfondire',
       ],
     },
     {
       type: 'paragraph',
-      text: '**La nostra lettura:** scegli le recensioni da mettere in evidenza per le obiezioni a cui rispondono, non per l’entusiasmo. “Avevo provato quattro prodotti simili senza risultati, questo ha funzionato entro due settimane” dice più di “prodotto fantastico, lo consiglio a tutti”.',
+      text: 'La nostra lettura: scegli le recensioni da mettere in evidenza per le obiezioni a cui rispondono, non per l’entusiasmo. “Avevo provato quattro prodotti simili senza risultati, questo ha funzionato entro due settimane” dice più di “prodotto fantastico, lo consiglio a tutti”.',
     },
     { type: 'h2', text: 'Prezzo e offerte: come si mostra il numero' },
     { type: 'h3', text: 'Dove sta il prezzo' },
@@ -686,7 +686,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '**La nostra lettura:** la versione su schermo è un test da fare, non una promessa. Inoltre è in tensione con la regola sopra che mette in alto i messaggi razionali, quindi testa la posizione del prezzo da sola.',
+      text: 'La nostra lettura: la versione su schermo è un test da fare. Inoltre è in tensione con la regola sopra che mette in alto i messaggi razionali, quindi testa la posizione del prezzo da sola.',
     },
     { type: 'h3', text: 'Sconto in valuta o in percentuale' },
     {
@@ -695,7 +695,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '**La nostra lettura:** sui tuoi prodotti più costosi, testa lo sconto in valuta contro la percentuale prima di fissare una sola convenzione per tutti i saldi.',
+      text: 'La nostra lettura: sui tuoi prodotti più costosi, testa lo sconto in valuta contro la percentuale prima di fissare una sola convenzione per tutti i saldi.',
     },
     { type: 'h3', text: 'Countdown e scadenze' },
     {
@@ -704,7 +704,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '**La nostra lettura:** non installare un countdown per default. Dai alla scadenza una ragione vera e misurala contro la stessa pagina senza.',
+      text: 'La nostra lettura: non installare un countdown per default. Dai alla scadenza una ragione vera e misurala contro la stessa pagina senza.',
     },
     { type: 'h2', text: 'Carrello e resi: cosa fa una politica di rimborso al valore dell’ordine' },
     {
@@ -713,11 +713,11 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '**Un rimborso istantaneo ha alzato la soddisfazione senza un aumento significativo dell’intenzione di reso.** Martínez-López, Feng, Li e López-López ([Journal of Retailing and Consumer Services, 2022](https://doi.org/10.1016/j.jretconser.2022.103067)) hanno condotto due esperimenti a scenario su un panel online. Sono scenari immaginati, non acquisti reali.',
+      text: 'Un rimborso istantaneo ha alzato la soddisfazione senza un aumento significativo dell’intenzione di reso. Martínez-López, Feng, Li e López-López ([Journal of Retailing and Consumer Services, 2022](https://doi.org/10.1016/j.jretconser.2022.103067)) hanno condotto due esperimenti a scenario su un panel online. Sono scenari immaginati, non acquisti reali.',
     },
     {
       type: 'paragraph',
-      text: '**La nostra lettura:** i resi gratuiti sono una decisione di margine, quindi metti il costo nero su bianco prima di prometterli. La velocità del rimborso è un’altra leva, e i dati a scenario dicono che vale un test.',
+      text: 'La nostra lettura: i resi gratuiti sono una decisione di margine, quindi metti il costo nero su bianco prima di prometterli. La velocità del rimborso è un’altra leva, e i dati a scenario dicono che vale un test.',
     },
     { type: 'h2', text: 'Dopo la visita: retargeting, recensioni e riacquisti' },
     {
@@ -726,31 +726,31 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '**Le richieste di recensione troppo presto.** Jung, Ryu, Han e Cho ([Journal of Marketing, 2023](https://doi.org/10.1177/00222429221143329)) hanno condotto due esperimenti sul campo in Corea, nei viaggi e nell’abbigliamento: un promemoria immediato ha ridotto il numero di recensioni, uno ritardato l’ha aumentato.',
+      text: 'Le richieste di recensione troppo presto. Jung, Ryu, Han e Cho ([Journal of Marketing, 2023](https://doi.org/10.1177/00222429221143329)) hanno condotto due esperimenti sul campo in Corea, nei viaggi e nell’abbigliamento: un promemoria immediato ha ridotto il numero di recensioni, uno ritardato l’ha aumentato.',
     },
     {
       type: 'paragraph',
-      text: '**La nostra lettura:** il ritardo giusto dipende da quanto il prodotto ci mette a mostrare il suo valore: più lungo per integratori e skincare che per una camicia.',
+      text: 'La nostra lettura: il ritardo giusto dipende da quanto il prodotto ci mette a mostrare il suo valore: più lungo per integratori e skincare che per una camicia.',
     },
     {
       type: 'paragraph',
-      text: '**La prima recensione ignorata.** Park, Shin e Xie ([Marketing Science, 2021](https://doi.org/10.1287/mksc.2020.1264)) hanno confrontato prodotti identici su Amazon e Best Buy e mostrato che una prima recensione negativa abbassa il rating medio: dopo un anno è inferiore di **0,29 stelle** rispetto ai prodotti la cui prima recensione era positiva. Quando lanci un nuovo prodotto, le prime recensioni non sono un dettaglio: sono una leva che compone nel tempo.',
+      text: 'La prima recensione ignorata. Park, Shin e Xie ([Marketing Science, 2021](https://doi.org/10.1287/mksc.2020.1264)) hanno confrontato prodotti identici su Amazon e Best Buy e mostrato che una prima recensione negativa abbassa il rating medio: dopo un anno è inferiore di 0,29 stelle rispetto ai prodotti la cui prima recensione era positiva. Quando lanci un nuovo prodotto, le prime recensioni sono una leva che compone nel tempo.',
     },
     {
       type: 'paragraph',
-      text: '**I biglietti scritti a mano.** Kim, Choi e Kim ([Journal of Interactive Marketing, 2022](https://doi.org/10.1177/10949968221102306)) hanno condotto un esperimento sul campo randomizzato con un rivenditore online e un esperimento di follow-up: un biglietto scritto a mano ha alzato la spesa solo tra i clienti fedeli, e gli incentivi aggiuntivi hanno attenuato l’effetto.',
+      text: 'I biglietti scritti a mano. Kim, Choi e Kim ([Journal of Interactive Marketing, 2022](https://doi.org/10.1177/10949968221102306)) hanno condotto un esperimento sul campo randomizzato con un rivenditore online e un esperimento di follow-up: un biglietto scritto a mano ha alzato la spesa solo tra i clienti fedeli, e gli incentivi aggiuntivi hanno attenuato l’effetto.',
     },
     {
       type: 'paragraph',
-      text: '**La nostra lettura:** se scrivi a mano, metti il biglietto nei pacchi dei clienti che hanno già comprato e lascia fuori il codice sconto.',
+      text: 'La nostra lettura: se scrivi a mano, metti il biglietto nei pacchi dei clienti che hanno già comprato e lascia fuori il codice sconto.',
     },
     {
       type: 'paragraph',
-      text: '**Gli inviti al passaparola.** Jung, Bapna, Golden e Sun ([Information Systems Research, 2020](https://doi.org/10.1287/isre.2019.0873)) hanno condotto esperimenti sul campo randomizzati con un incentivo fisso: un invito presentato in chiave prosociale ha aumentato sia l’avvio dei referral sia il numero di referral riusciti, rispetto a inviti egoistici o equi.',
+      text: 'Gli inviti al passaparola. Jung, Bapna, Golden e Sun ([Information Systems Research, 2020](https://doi.org/10.1287/isre.2019.0873)) hanno condotto esperimenti sul campo randomizzati con un incentivo fisso: un invito presentato in chiave prosociale ha aumentato sia l’avvio dei referral sia il numero di referral riusciti, rispetto a inviti egoistici o equi.',
     },
     {
       type: 'paragraph',
-      text: '**La nostra lettura:** stesso premio, parole diverse. Testa il testo dell’invito prima di alzare l’incentivo.',
+      text: 'La nostra lettura: stesso premio, parole diverse. Testa il testo dell’invito prima di alzare l’incentivo.',
     },
     { type: 'h2', text: 'Quick win per iniziare oggi su Shopify' },
     {
@@ -759,7 +759,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Controlla quante caratteristiche stai comunicando nell’hero della homepage e nelle descrizioni prodotto. Se sono più di tre, taglia. Non è ridurre il messaggio, è concentrarlo.',
+      text: 'Controlla quante caratteristiche stai comunicando nell’hero della homepage e nelle descrizioni prodotto. Se sono più di tre, taglia. Un messaggio più corto arriva meglio.',
     },
     {
       type: 'paragraph',
@@ -781,16 +781,16 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**Da quale pagina partite, e perché?** La risposta deve venire da dove i tuoi clienti abbandonano tra scheda prodotto, carrello e checkout, non da un modello.',
-        '**Da dove viene ogni raccomandazione?** Dai tuoi dati, da un test o da uno studio che puoi leggere, come in questa guida.',
-        '**Come lo misurate?** Un test A/B affidabile richiede di solito alcune migliaia di sessioni per variante. Con meno traffico, chiedi come confronteranno il prima e il dopo.',
-        '**Chi mette online le modifiche?** Chiedi se design, testi e app sono inclusi, o se ricevi un report da applicare da solo.',
+        'Da quale pagina partite, e perché? La risposta deve venire da dove i tuoi clienti abbandonano tra scheda prodotto, carrello e checkout, non da un modello.',
+        'Da dove viene ogni raccomandazione? Dai tuoi dati, da un test o da uno studio che puoi leggere, come in questa guida.',
+        'Come lo misurate? Un test A/B affidabile richiede di solito alcune migliaia di sessioni per variante. Con meno traffico, chiedi come confronteranno il prima e il dopo.',
+        'Chi mette online le modifiche? Chiedi se design, testi e app sono inclusi, o se ricevi un report da applicare da solo.',
       ],
     },
     { type: 'h2', text: 'CRO per Shopify durante una migrazione e dopo' },
     {
       type: 'paragraph',
-      text: 'Durante una migrazione, lo Shopify Launch Sprint, il nostro [servizio di migrazione a Shopify a prezzo fisso](/it/sprint-migrazione-shopify), **copre il flusso d’acquisto**: ricerca, scheda prodotto, carrello e checkout vengono analizzati passo per passo e ricostruiti con la nostra checklist. Porta il tuo store su Shopify in 14 giorni con il nostro Custom AI System, con go-live tra il giorno 15 e il 30, 90 giorni di supporto e 4 garanzie scritte. Una di queste riguarda la conversione: “Il checkout converte meno di prima a 90 giorni? Lo ottimizziamo gratis finché non supera.” Per tutto il processo, leggi la [guida alla migrazione a Shopify](/it/migrazione-shopify).',
+      text: 'Durante una migrazione, lo Shopify Launch Sprint, il nostro [servizio di migrazione a Shopify a prezzo fisso](/it/sprint-migrazione-shopify), copre il flusso d’acquisto: ricerca, scheda prodotto, carrello e checkout vengono analizzati passo per passo e ricostruiti con la nostra checklist. Porta il tuo store su Shopify in 14 giorni con il nostro Custom AI System, con go-live tra il giorno 15 e il 30, 90 giorni di supporto e 4 garanzie scritte. Una di queste riguarda la conversione: “Il checkout converte meno di prima a 90 giorni? Lo ottimizziamo gratis finché non supera.” Per tutto il processo, leggi la [guida alla migrazione a Shopify](/it/migrazione-shopify).',
     },
     {
       type: 'paragraph',
@@ -804,12 +804,12 @@ const article: Article = {
     { type: 'h3', text: 'Cos’è il CRO per Shopify?' },
     {
       type: 'paragraph',
-      text: 'Il CRO per Shopify (Conversion Rate Optimization) è il CRO per eCommerce applicato a uno store Shopify: il processo di aumentare la percentuale di visitatori che completano un acquisto o un’altra azione desiderata. Si lavora sugli elementi del sito (pagine prodotto, checkout, navigazione, copy, immagini) per ridurre gli ostacoli all’acquisto e aumentare i segnali di fiducia, basandosi su dati e test invece che su opinioni.',
+      text: '**Il CRO per Shopify (Conversion Rate Optimization) è il CRO per eCommerce applicato a uno store Shopify: il processo di aumentare la percentuale di visitatori che completano un acquisto o un’altra azione desiderata.** Si lavora sugli elementi del sito (pagine prodotto, checkout, navigazione, copy, immagini) per ridurre gli ostacoli all’acquisto e aumentare i segnali di fiducia, basandosi su dati e test invece che su opinioni.',
     },
     { type: 'h3', text: 'Qual è un buon tasso di conversione per un eCommerce su Shopify?' },
     {
       type: 'paragraph',
-      text: 'Lo store Shopify mediano converte l’1,4% dei visitatori. Gli store nel top 20% superano il 2,7%, il top 10% il 3,7% (Littledata, 436 store Shopify, 90 giorni al 24 ottobre 2026). Questi benchmark variano per settore: il fashion ha mediamente tassi più bassi degli integratori o del food, perché il ciclo decisionale è più lungo. Confrontarsi con la mediana del settore è più utile che confrontarsi con quella generale.',
+      text: '**Lo store Shopify mediano converte l’1,4% dei visitatori.** Gli store nel top 20% superano il 2,7%, il top 10% il 3,7% (Littledata, 436 store Shopify, 90 giorni al 24 ottobre 2026). Questi benchmark variano per settore: il fashion ha mediamente tassi più bassi degli integratori o del food, perché il ciclo decisionale è più lungo. Confrontarsi con la mediana del settore è più utile che confrontarsi con quella generale.',
     },
     { type: 'h3', text: 'Da dove si inizia un progetto CRO su Shopify?' },
     {
@@ -829,12 +829,12 @@ const article: Article = {
     { type: 'h3', text: 'Cosa deve includere un servizio CRO per Shopify?' },
     {
       type: 'paragraph',
-      text: 'Una lista ordinata di modifiche a scheda prodotto, carrello e checkout, ognuna legata ai tuoi dati o a uno studio citato, le modifiche messe online e un modo per misurarle. Chiedi chi le implementa: un report da applicare da solo è un altro servizio.',
+      text: '**Una lista ordinata di modifiche a scheda prodotto, carrello e checkout, ognuna legata ai tuoi dati o a uno studio citato, le modifiche messe online e un modo per misurarle.** Chiedi chi le implementa: un report da applicare da solo è un altro servizio.',
     },
     { type: 'h3', text: 'Quanto impatta il CRO rispetto a investire in advertising?' },
     {
       type: 'paragraph',
-      text: 'L’advertising porta traffico. Il CRO determina quanto di quel traffico si converte. Raddoppiare il budget advertising con un tasso di conversione dell’1% porta gli stessi ordini di un advertising invariato con un tasso al 2%, ma con il doppio della spesa. In pratica, ogni miglioramento del tasso di conversione moltiplica il valore di ogni euro speso in advertising. I due lavorano in parallelo, non in alternativa.',
+      text: '**L’advertising porta traffico.** Il CRO determina quanto di quel traffico si converte. Raddoppiare il budget advertising con un tasso di conversione dell’1% porta gli stessi ordini di un advertising invariato con un tasso al 2%, ma con il doppio della spesa. In pratica, ogni miglioramento del tasso di conversione moltiplica il valore di ogni euro speso in advertising. I due lavorano in parallelo, non in alternativa.',
     },
     {
       type: 'paragraph',

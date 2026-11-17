@@ -171,7 +171,7 @@ const it: MigrazioneCopy = {
       },
       {
         type: 'paragraph',
-        text: 'Lo Sprint copre la migrazione da WooCommerce, Magento, PrestaShop, BigCommerce, Wix, Squarespace, piattaforme proprietarie e gestionali, con le stesse fasi (audit, mappa dei redirect 301, migrazione dei dati, QA). Tra i nostri casi pubblicati, due sono in fondo alla guida: WooCommerce (Integratori DTC Nazzi) e piattaforma proprietaria collegata a un gestionale (Cumini). Per ogni piattaforma trovi qui sopra la guida dedicata. Il primo passo è sempre l’audit del tuo store.',
+        text: 'Lo Sprint copre la migrazione da WooCommerce, Magento, PrestaShop, BigCommerce, Wix, Squarespace, piattaforme proprietarie e gestionali, con le stesse fasi (audit, mappa dei redirect 301, migrazione dei dati, QA). Tra i nostri casi pubblicati, due sono in fondo alla guida: WooCommerce (Integratori DTC Nazzi) e piattaforma proprietaria collegata a un gestionale (Cumini). Il primo passo è sempre l’audit del tuo store.',
       },
       { type: 'h2', text: 'Cosa si sposta davvero in una migrazione a Shopify?' },
       {
@@ -220,7 +220,7 @@ const it: MigrazioneCopy = {
       },
       {
         type: 'paragraph',
-        text: 'Nel caso Integratori DTC Nazzi (da WooCommerce a Shopify) abbiamo fatto questo controllo dopo il lancio su 215 URL WooCommerce archiviati, e il CSV dei redirect 301 è stato consegnato per l’importazione in Shopify. In Search Console gli ultimi 28 giorni al 9 ottobre 2026 mostrano clic +41% rispetto ai 28 giorni prima del go-live, e clic 2,7 volte e impressioni 4,0 volte rispetto agli stessi 28 giorni del 2025. In una migrazione il posizionamento si muove per qualche settimana, e la mappa dei redirect decide quanto recupera.',
+        text: 'Nel caso Integratori DTC Nazzi (da WooCommerce a Shopify) abbiamo fatto questo controllo dopo il lancio su 215 URL WooCommerce archiviati, e il CSV dei redirect 301 è stato consegnato per l’importazione in Shopify. In Search Console gli ultimi 28 giorni al 9 ottobre 2026 mostrano clic +41% rispetto ai 28 giorni prima del go-live, e clic 2,7 volte e impressioni 4,0 volte rispetto agli stessi 28 giorni del 2025.',
       },
       {
         type: 'paragraph',
@@ -229,7 +229,7 @@ const it: MigrazioneCopy = {
       { type: 'h2', text: 'Come si gestiscono tracking e dati?' },
       {
         type: 'paragraph',
-        text: 'Il tracking va ricostruito prima del lancio, non dopo, perché ogni giorno senza dati corretti è un giorno che non potrai confrontare con prima.',
+        text: 'Il tracking si ricostruisce prima del lancio: ogni giorno senza dati corretti è un giorno che non potrai confrontare con prima.',
       },
       {
         type: 'list',
@@ -365,7 +365,7 @@ const it: MigrazioneCopy = {
   charts: {
     label: 'search console',
     title1: 'Dopo una migrazione Google rielabora il sito. ',
-    titleEm: 'Conta cosa succede dopo.',
+    titleEm: 'Il recupero parte dai redirect.',
     subtitle:
       'Il posizionamento si muove per qualche settimana: come risale dipende da come è fatta la migrazione.',
   },
@@ -391,7 +391,7 @@ const it: MigrazioneCopy = {
       {
         question: 'Cosa succede al posizionamento su Google migrando a Shopify?',
         answer:
-          'Il posizionamento si muove per qualche settimana dopo una migrazione, e la mappa dei redirect decide quanto recupera: una mappa completa di redirect 301, contenuti conservati e monitoraggio in Search Console permettono di recuperarlo. Nello Sprint il traffico organico a 90 giorni è una delle 4 garanzie scritte.',
+          'Il posizionamento si muove per qualche settimana dopo una migrazione. Quanto recupera dipende da una mappa completa di redirect 301, dai contenuti conservati e dal monitoraggio in Search Console. Nello Sprint il traffico organico a 90 giorni è una delle 4 garanzie scritte.',
       },
       {
         question: 'I clienti mantengono account e password?',
@@ -477,7 +477,7 @@ const en: MigrazioneCopy = {
       },
       {
         type: 'paragraph',
-        text: 'The Sprint covers migration from WooCommerce, Magento, PrestaShop, BigCommerce, Wix, Squarespace, proprietary platforms and ERPs, with the same phases (audit, 301 redirect map, data migration, QA). Among our published case studies, two are at the end of this guide: WooCommerce (Supplement DTC Nazzi) and a proprietary platform tied to an ERP (Cumini). Each platform has its own dedicated guide above. The first step is always an audit of your store.',
+        text: 'The Sprint covers migration from WooCommerce, Magento, PrestaShop, BigCommerce, Wix, Squarespace, proprietary platforms and ERPs, with the same phases (audit, 301 redirect map, data migration, QA). Among our published case studies, two are at the end of this guide: WooCommerce (Supplement DTC Nazzi) and a proprietary platform tied to an ERP (Cumini). The first step is always an audit of your store.',
       },
       { type: 'h2', text: 'What actually gets migrated to Shopify?' },
       {
@@ -526,7 +526,7 @@ const en: MigrazioneCopy = {
       },
       {
         type: 'paragraph',
-        text: 'On Supplement DTC Nazzi (WooCommerce to Shopify) we ran this post-launch check on 215 archived WooCommerce URLs, and the 301 redirect CSV was handed over to import into Shopify. In Search Console, the 28 days to 9 October 2026 show clicks 41% above the 28 days before go-live, and clicks at 2.7x and impressions at 4.0x the same 28 days of 2025. During a migration rankings move for a few weeks, and the redirect map decides how much they recover.',
+        text: 'On Supplement DTC Nazzi (WooCommerce to Shopify) we ran this post-launch check on 215 archived WooCommerce URLs, and the 301 redirect CSV was handed over to import into Shopify. In Search Console, the 28 days to 9 October 2026 show clicks 41% above the 28 days before go-live, and clicks at 2.7x and impressions at 4.0x the same 28 days of 2025.',
       },
       {
         type: 'paragraph',
@@ -535,7 +535,7 @@ const en: MigrazioneCopy = {
       { type: 'h2', text: 'How do you handle tracking and data?' },
       {
         type: 'paragraph',
-        text: 'Rebuild tracking before launch, not after, because every day without correct data is a day you cannot compare with before.',
+        text: 'You rebuild tracking before launch: every day without correct data is a day you cannot compare with before.',
       },
       {
         type: 'list',
@@ -671,7 +671,7 @@ const en: MigrazioneCopy = {
   charts: {
     label: 'search console',
     title1: 'After a migration, Google re-processes the site. ',
-    titleEm: 'What matters is what happens next.',
+    titleEm: 'Recovery starts with the redirects.',
     subtitle:
       'Rankings move for a few weeks: how they recover depends on how the migration is done.',
   },
@@ -697,7 +697,7 @@ const en: MigrazioneCopy = {
       {
         question: 'What happens to my Google rankings when I migrate to Shopify?',
         answer:
-          'Rankings move for a few weeks after a migration, and the redirect map decides how much they recover: a complete map of 301 redirects, preserved content and monitoring in Search Console let them recover. In the Sprint, organic traffic at 90 days is one of the 4 written guarantees.',
+          'Rankings move for a few weeks after a migration. How much they recover depends on a complete map of 301 redirects, preserved content and monitoring in Search Console. In the Sprint, organic traffic at 90 days is one of the 4 written guarantees.',
       },
       {
         question: 'Do customers keep their accounts and passwords?',

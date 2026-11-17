@@ -100,16 +100,16 @@ const article: Article = {
   content: [
     {
       type: 'paragraph',
-      text: '**Ad creative is everything a shopper sees and reads in an ad: image or video, headline, words and type. Peer-reviewed studies show that it works differently depending on what you sell (pleasure or function) and on the kind of ad (promotional or not), so the best ad creative is the one that fits the product.** This article collects 11 studies, each with authors, journal, year, what was tested and a link to the DOI.',
+      text: 'Ad creative is everything a shopper sees and reads in an ad: image or video, headline, words and type. Peer-reviewed studies show that it works differently depending on what you sell (pleasure or function) and on the kind of ad (promotional or not), so the best ad creative is the one that fits the product. This article collects 11 studies, each with authors, journal, year, what was tested and a link to the DOI.',
     },
     {
       type: 'paragraph',
-      text: 'None of the studies was run on Meta or on Shopify. They come from laboratories, social posts, emails and TV spots. That is the reason to read them with the sample and the metric in front of you, which is how each one is reported below.',
+      text: 'None of the studies was run on Meta or on Shopify. They come from laboratories, social posts, emails and TV spots, so each one below is reported with its sample and its metric.',
     },
     { type: 'h2', text: 'How should you read studies on ad creative?' },
     {
       type: 'paragraph',
-      text: '**Read each study as a hypothesis for your own ads, not as a rule.** Look at three things: what was measured (attitude, purchase intent, likes, clicks, rarely sales), who was measured (students, social media users, a single company’s TV spots) and what the authors say about when the result flips.',
+      text: '**Read each study as a hypothesis to test in your own ads.** Look at three things: what was measured (attitude, purchase intent, likes, clicks, rarely sales), who was measured (students, social media users, a single company’s TV spots) and what the authors say about when the result flips.',
     },
     {
       type: 'paragraph',
@@ -118,7 +118,7 @@ const article: Article = {
     { type: 'h2', text: 'Should the ad match the product: pleasure or function?' },
     {
       type: 'paragraph',
-      text: '**Yes: three studies point the same way, creative that matches the product’s role (pleasure or function) is judged better.**',
+      text: 'Yes: three studies point the same way, creative that matches the product’s role (pleasure or function) is judged better.',
     },
     {
       type: 'paragraph',
@@ -130,16 +130,16 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Zarantonello, Jedidi and Schmitt ([International Journal of Research in Marketing, 2013](https://doi.org/10.1016/j.ijresmar.2012.09.001)) analyzed 256 tests of TV spots from one multinational consumer goods company in 23 countries. In developed markets the experiential route weighed the most, in emerging markets the functional route weighed relatively more. It is a single company, so it shows a pattern, not a law.',
+      text: 'Zarantonello, Jedidi and Schmitt ([International Journal of Research in Marketing, 2013](https://doi.org/10.1016/j.ijresmar.2012.09.001)) analyzed 256 tests of TV spots from one multinational consumer goods company in 23 countries. In developed markets the experiential route weighed the most, in emerging markets the functional route weighed relatively more. It is a single company, so take it as a pattern.',
     },
     {
       type: 'paragraph',
-      text: '**Our take.** Before you brief an ad, write one line: is this product bought for pleasure or for function? Then check that image, layout and words say the same thing. A catalog that mixes both, say a pleasure-led line and a technical one, deserves different creative for each, not one template.',
+      text: 'Our take: before you brief an ad, write one line: is this product bought for pleasure or for function? Then check that image, layout and words say the same thing. If your catalog mixes both, say a pleasure-led line and a technical one, make different creative for each.',
     },
     { type: 'h2', text: 'What should the image or video show?' },
     {
       type: 'paragraph',
-      text: '**The studies on imagery say show how the product is used and felt, and give pleasure-led products motion.** Four studies, four different settings.',
+      text: '**The studies on imagery say show how the product is used and felt, and give pleasure-led products motion.** The four studies below come from four different settings.',
     },
     {
       type: 'paragraph',
@@ -159,7 +159,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '**Our take.** Two of these studies give you a creative brief you can write in a sentence: a hand using the product for the post, a slower video for a benefit message and a faster one for a price message. Test them as two ads that differ in that one thing.',
+      text: 'Our take: two of these studies give you a creative brief you can write in one sentence. Show a hand using the product in the post, use a slower video for a benefit message and a faster one for a price message. Test each as two ads that differ in that one thing.',
     },
     { type: 'h2', text: 'How should the words in the ad sound?' },
     {
@@ -180,7 +180,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '**Our take.** The first lever is the cheapest to test: write the same ad with three claims and with five, and keep the visual identical. The other two give you a wording variant to put against your current one when engagement is the goal.',
+      text: 'Our take: the first lever is the cheapest to test. Write the same ad with three claims and with five, and keep the visual identical. The other two give you a wording variant to run against your current one when engagement is the goal.',
     },
     { type: 'h2', text: 'Does the typeface of a promotion matter?' },
     {
@@ -189,7 +189,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '**Our take.** Treat this as a rule for sale and offer creative only. For a brand story or a product-led ad, the study gives you no reason to expect the same effect.',
+      text: 'Our take: use this only for sale and offer creative. For a brand story or a product-led ad, the study gives you no reason to expect the same effect.',
     },
     { type: 'h2', text: 'How do you turn these studies into tests for Meta and Google?' },
     {
@@ -207,7 +207,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '**Our take.** The value of the research is the reason behind each test. A test with a stated reason teaches you something even when it loses.',
+      text: 'Our take: the research gives each test a reason, and a test with a stated reason teaches you something even when it loses.',
     },
     { type: 'h2', text: 'What happens after the click?' },
     {
@@ -222,12 +222,12 @@ const article: Article = {
     { type: 'h3', text: 'What is ad creative?' },
     {
       type: 'paragraph',
-      text: 'Ad creative is everything a shopper sees and reads in an ad: the image or video, the headline, the body text and the typography. In paid social and search it is the part you control after targeting and budget, so it is where research on persuasion applies most directly.',
+      text: '**Ad creative is everything a shopper sees and reads in an ad: the image or video, the headline, the body text and the typography.** In paid social and search it is the part you control after targeting and budget, so it is where research on persuasion applies most directly.',
     },
     { type: 'h3', text: 'What do peer-reviewed studies say about ad creative best practices?' },
     {
       type: 'paragraph',
-      text: 'They agree on one thing: there is no single best creative, only creative that fits the product and the goal. The studies in this article tie design, images, motion, wording and typography to the type of product (pleasure or function) and to the type of ad (promotional or not).',
+      text: '**They agree on one thing: there is no single best creative, only creative that fits the product and the goal.** The studies in this article tie design, images, motion, wording and typography to the type of product (pleasure or function) and to the type of ad (promotional or not).',
     },
     { type: 'h3', text: 'Do these studies apply to Meta ads?' },
     {
@@ -237,17 +237,17 @@ const article: Article = {
     { type: 'h3', text: 'How many claims should an ad make?' },
     {
       type: 'paragraph',
-      text: 'One study of persuasive messages (Shu and Carlson, Journal of Marketing, 2014) rated impressions at 4.37 with three claims and 3.96 with four, in scenarios with 521 students. It measured impressions, not sales, so treat three as a starting point for a test.',
+      text: '**One study of persuasive messages (Shu and Carlson, Journal of Marketing, 2014) rated impressions at 4.37 with three claims and 3.96 with four, in scenarios with 521 students.** It measured impressions, not sales, so treat three as a starting point for a test.',
     },
     { type: 'h3', text: 'Is video better than a still image?' },
     {
       type: 'paragraph',
-      text: 'For pleasure-led products, one set of experiments (Roggeveen and colleagues, Journal of Marketing, 2015) reports that video, compared with a still image, raised the choice of the hedonic option by more than 79%. The result is about hedonic products and services, not every category.',
+      text: '**For pleasure-led products, one set of experiments (Roggeveen and colleagues, Journal of Marketing, 2015) reports that video, compared with a still image, raised the choice of the hedonic option by more than 79%.** The result is about hedonic products and services, not every category.',
     },
     { type: 'h3', text: 'How do I turn a study into an ad test?' },
     {
       type: 'paragraph',
-      text: 'Take one result, change one variable, keep the rest of the ad identical, and read the metric the study used: clicks for a click study, purchase intent for an intent study. Write down the study’s limit before the test starts.',
+      text: '**Take one result, change one variable, keep the rest of the ad identical, and read the metric the study used: clicks for a click study, purchase intent for an intent study.** Write down the study’s limit before the test starts.',
     },
     {
       type: 'paragraph',
@@ -257,16 +257,16 @@ const article: Article = {
   contentIt: [
     {
       type: 'paragraph',
-      text: '**Le creatività pubblicitarie sono tutto ciò che un cliente vede e legge in un annuncio: immagine o video, titolo, parole e carattere. Gli studi peer-reviewed mostrano che funzionano in modo diverso a seconda di cosa vendi (piacere o funzione) e del tipo di annuncio (promozionale o no): la creatività migliore è quella adatta al prodotto.** Questo articolo raccoglie 11 studi, ognuno con autori, rivista, anno, cosa è stato testato e link al DOI.',
+      text: 'Le creatività pubblicitarie sono tutto ciò che un cliente vede e legge in un annuncio: immagine o video, titolo, parole e carattere. Gli studi peer-reviewed mostrano che funzionano in modo diverso a seconda di cosa vendi (piacere o funzione) e del tipo di annuncio (promozionale o no): la creatività migliore è quella adatta al prodotto. Questo articolo raccoglie 11 studi, ognuno con autori, rivista, anno, cosa è stato testato e link al DOI.',
     },
     {
       type: 'paragraph',
-      text: 'Nessuno degli studi è stato fatto su Meta o su Shopify. Vengono da laboratori, post social, email e spot TV. Per questo vanno letti con il campione e la metrica sotto gli occhi, ed è così che ciascuno è riportato qui sotto.',
+      text: 'Nessuno degli studi è stato fatto su Meta o su Shopify. Vengono da laboratori, post social, email e spot TV, quindi ciascuno è riportato qui sotto con il suo campione e la sua metrica.',
     },
     { type: 'h2', text: 'Come si leggono gli studi sulle creatività pubblicitarie?' },
     {
       type: 'paragraph',
-      text: '**Leggi ogni studio come un’ipotesi per le tue ads, non come una regola.** Guarda tre cose: cosa è stato misurato (atteggiamento, intenzione d’acquisto, like, clic, raramente vendite), su chi (studenti, utenti dei social, spot TV di una sola azienda) e cosa dicono gli autori su quando il risultato si inverte.',
+      text: '**Leggi ogni studio come un’ipotesi da mettere alla prova nelle tue ads.** Guarda tre cose: cosa è stato misurato (atteggiamento, intenzione d’acquisto, like, clic, raramente vendite), su chi (studenti, utenti dei social, spot TV di una sola azienda) e cosa dicono gli autori su quando il risultato si inverte.',
     },
     {
       type: 'paragraph',
@@ -275,7 +275,7 @@ const article: Article = {
     { type: 'h2', text: 'La creatività deve rispecchiare il prodotto: piacere o funzione?' },
     {
       type: 'paragraph',
-      text: '**Sì: tre studi vanno nella stessa direzione, una creatività coerente con il ruolo del prodotto (piacere o funzione) viene giudicata meglio.**',
+      text: 'Sì: tre studi vanno nella stessa direzione, una creatività coerente con il ruolo del prodotto (piacere o funzione) viene giudicata meglio.',
     },
     {
       type: 'paragraph',
@@ -287,16 +287,16 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Zarantonello, Jedidi e Schmitt ([International Journal of Research in Marketing, 2013](https://doi.org/10.1016/j.ijresmar.2012.09.001)) hanno analizzato 256 test di spot TV di una multinazionale di largo consumo in 23 paesi. Nei mercati sviluppati pesava soprattutto la via esperienziale, in quelli emergenti relativamente di più la via funzionale. È una sola azienda: mostra uno schema, non una legge.',
+      text: 'Zarantonello, Jedidi e Schmitt ([International Journal of Research in Marketing, 2013](https://doi.org/10.1016/j.ijresmar.2012.09.001)) hanno analizzato 256 test di spot TV di una multinazionale di largo consumo in 23 paesi. Nei mercati sviluppati pesava soprattutto la via esperienziale, in quelli emergenti relativamente di più la via funzionale. È una sola azienda, quindi prendilo come uno schema.',
     },
     {
       type: 'paragraph',
-      text: '**La nostra lettura.** Prima di preparare un annuncio, scrivi una riga: questo prodotto si compra per piacere o per funzione? Poi controlla che immagine, impaginazione e parole dicano la stessa cosa. Un catalogo che mescola le due cose, per esempio una linea legata al piacere e una tecnica, merita creatività diverse, non un unico modello.',
+      text: 'La nostra lettura: prima di preparare un annuncio, scrivi una riga: questo prodotto si compra per piacere o per funzione? Poi controlla che immagine, impaginazione e parole dicano la stessa cosa. Se il catalogo mescola le due cose, per esempio una linea legata al piacere e una tecnica, fai creatività diverse per ciascuna.',
     },
     { type: 'h2', text: 'Cosa deve mostrare l’immagine o il video di un annuncio?' },
     {
       type: 'paragraph',
-      text: '**Gli studi sulle immagini dicono: mostra come si usa e come si sente il prodotto, e dai movimento ai prodotti legati al piacere.** Quattro studi, quattro contesti diversi.',
+      text: '**Gli studi sulle immagini dicono: mostra come si usa e come si sente il prodotto, e dai movimento ai prodotti legati al piacere.** I quattro studi qui sotto vengono da contesti diversi.',
     },
     {
       type: 'paragraph',
@@ -316,7 +316,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '**La nostra lettura.** Due di questi studi ti danno un brief creativo che si scrive in una frase: una mano che usa il prodotto per il post, un video più lento per un messaggio sui benefici e uno più rapido per un messaggio sul prezzo. Testali come due annunci che differiscono per quell’unica cosa.',
+      text: 'La nostra lettura: due di questi studi ti danno un brief creativo che si scrive in una frase. Mostra una mano che usa il prodotto nel post, usa un video più lento per un messaggio sui benefici e uno più rapido per un messaggio sul prezzo. Testa ciascuno come due annunci che differiscono per quell’unica cosa.',
     },
     { type: 'h2', text: 'Come devono suonare le parole di un annuncio?' },
     {
@@ -337,7 +337,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '**La nostra lettura.** La prima leva è la più economica da testare: scrivi lo stesso annuncio con tre claim e con cinque, lasciando identico il visual. Le altre due ti danno una variante di testo da mettere contro quella attuale quando l’obiettivo è il coinvolgimento.',
+      text: 'La nostra lettura: la prima leva è la più economica da testare. Scrivi lo stesso annuncio con tre claim e con cinque, lasciando identico il visual. Le altre due ti danno una variante di testo da far correre contro quella attuale quando l’obiettivo è il coinvolgimento.',
     },
     { type: 'h2', text: 'Il carattere tipografico di una promozione conta?' },
     {
@@ -346,7 +346,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '**La nostra lettura.** Consideralo una regola solo per creatività da saldo e offerta. Per una storia di marca o un annuncio centrato sul prodotto, lo studio non dà motivo di aspettarsi lo stesso effetto.',
+      text: 'La nostra lettura: usalo solo per creatività da saldo e offerta. Per una storia di marca o un annuncio centrato sul prodotto, lo studio non dà motivo di aspettarsi lo stesso effetto.',
     },
     { type: 'h2', text: 'Come si trasformano questi studi in test per Meta e Google?' },
     {
@@ -364,7 +364,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '**La nostra lettura.** Il valore della ricerca è il motivo dietro ogni test. Un test con un motivo dichiarato ti insegna qualcosa anche quando perde.',
+      text: 'La nostra lettura: la ricerca dà a ogni test un motivo, e un test con un motivo dichiarato ti insegna qualcosa anche quando perde.',
     },
     { type: 'h2', text: 'Cosa succede dopo il clic?' },
     {
@@ -379,12 +379,12 @@ const article: Article = {
     { type: 'h3', text: 'Cosa sono le creatività pubblicitarie?' },
     {
       type: 'paragraph',
-      text: 'Le creatività pubblicitarie sono tutto ciò che un cliente vede e legge in un annuncio: immagine o video, titolo, testo e carattere tipografico. Nel paid social e nella ricerca sono la parte che controlli dopo targeting e budget, quindi è dove la ricerca sulla persuasione si applica più direttamente.',
+      text: '**Le creatività pubblicitarie sono tutto ciò che un cliente vede e legge in un annuncio: immagine o video, titolo, testo e carattere tipografico.** Nel paid social e nella ricerca sono la parte che controlli dopo targeting e budget, quindi è dove la ricerca sulla persuasione si applica più direttamente.',
     },
     { type: 'h3', text: 'Cosa dicono gli studi peer-reviewed sulle best practice delle creatività?' },
     {
       type: 'paragraph',
-      text: 'Concordano su un punto: non esiste una creatività migliore in assoluto, esiste quella adatta al prodotto e all’obiettivo. Gli studi di questo articolo legano design, immagini, movimento, parole e carattere al tipo di prodotto (piacere o funzione) e al tipo di annuncio (promozionale o no).',
+      text: '**Concordano su un punto: non esiste una creatività migliore in assoluto, esiste quella adatta al prodotto e all’obiettivo.** Gli studi di questo articolo legano design, immagini, movimento, parole e carattere al tipo di prodotto (piacere o funzione) e al tipo di annuncio (promozionale o no).',
     },
     { type: 'h3', text: 'Questi studi valgono per le Meta Ads?' },
     {
@@ -394,17 +394,17 @@ const article: Article = {
     { type: 'h3', text: 'Quanti claim deve contenere un annuncio?' },
     {
       type: 'paragraph',
-      text: 'Uno studio sui messaggi persuasivi (Shu e Carlson, Journal of Marketing, 2014) ha misurato impressioni a 4,37 con tre claim e a 3,96 con quattro, in scenari con 521 studenti. Misura impressioni, non vendite: considera tre un punto di partenza per un test.',
+      text: '**Uno studio sui messaggi persuasivi (Shu e Carlson, Journal of Marketing, 2014) ha misurato impressioni a 4,37 con tre claim e a 3,96 con quattro, in scenari con 521 studenti.** Misura impressioni, non vendite: considera tre un punto di partenza per un test.',
     },
     { type: 'h3', text: 'Il video è meglio di un’immagine ferma?' },
     {
       type: 'paragraph',
-      text: 'Per i prodotti legati al piacere, una serie di esperimenti (Roggeveen e colleghi, Journal of Marketing, 2015) riporta che il video, rispetto a un’immagine ferma, aumenta di oltre il 79% la scelta dell’opzione edonica. Il risultato riguarda prodotti e servizi edonici, non ogni categoria.',
+      text: '**Per i prodotti legati al piacere, una serie di esperimenti (Roggeveen e colleghi, Journal of Marketing, 2015) riporta che il video, rispetto a un’immagine ferma, aumenta di oltre il 79% la scelta dell’opzione edonica.** Il risultato riguarda prodotti e servizi edonici, non ogni categoria.',
     },
     { type: 'h3', text: 'Come trasformo uno studio in un test sugli annunci?' },
     {
       type: 'paragraph',
-      text: 'Prendi un risultato, cambia una sola variabile, tieni identico il resto dell’annuncio e leggi la metrica dello studio: clic per uno studio sui clic, intenzione d’acquisto per uno sull’intenzione. Scrivi il limite dello studio prima di far partire il test.',
+      text: '**Prendi un risultato, cambia una sola variabile, tieni identico il resto dell’annuncio e leggi la metrica dello studio: clic per uno studio sui clic, intenzione d’acquisto per uno sull’intenzione.** Scrivi il limite dello studio prima di far partire il test.',
     },
     {
       type: 'paragraph',

@@ -110,7 +110,7 @@ const article: Article = {
   content: [
     {
       type: 'paragraph',
-      text: '**Shopify vs WooCommerce comes down to one question: who will look after the store once it is live?** If the honest answer is “nobody on our side, we want to sell”, Shopify is usually the better fit. If it is “a developer we already pay, and we want to own the code and the server”, WooCommerce can be the better one.',
+      text: 'Shopify vs WooCommerce comes down to one question: who will look after the store once it is live? If the honest answer is “nobody on our side, we want to sell”, Shopify is usually the better fit. If it is “a developer we already pay, and we want to own the code and the server”, WooCommerce can be the better one.',
     },
     {
       type: 'paragraph',
@@ -119,15 +119,15 @@ const article: Article = {
     { type: 'h2', text: 'Who maintains the store?' },
     {
       type: 'paragraph',
-      text: '**On Shopify, Shopify runs hosting, security and platform updates for you. On WooCommerce, you or someone you pay does all of it.**',
+      text: '**On Shopify, Shopify runs hosting, security and platform updates for you.** On WooCommerce, you or someone you pay does all of it.',
     },
     {
       type: 'paragraph',
-      text: 'WooCommerce is a free plugin that runs on WordPress, on a server you choose. The host, WordPress itself, WooCommerce, the theme and every extension each have their own update cycle, and the PHP version is a setting you own. WooCommerce’s own [server recommendations](https://woocommerce.com/document/server-requirements/) say that older PHP versions still work but have reached end of life and may expose the site to security vulnerabilities, and the WordPress documentation on [hardening WordPress](https://developer.wordpress.org/advanced-administration/security/hardening/) tells you to keep WordPress and plugins updated. None of this is a flaw. It is the price of control.',
+      text: 'WooCommerce is a free plugin that runs on WordPress, on a server you choose. The host, WordPress itself, WooCommerce, the theme and every extension each have their own update cycle, and the PHP version is a setting you own. WooCommerce’s own [server recommendations](https://woocommerce.com/document/server-requirements/) say that older PHP versions still work but have reached end of life and may expose the site to security vulnerabilities, and the WordPress documentation on [hardening WordPress](https://developer.wordpress.org/advanced-administration/security/hardening/) tells you to keep WordPress and plugins updated. That is the price of control.',
     },
     {
       type: 'paragraph',
-      text: 'It is also not abstract. If your site runs on PHP, which WooCommerce does, [CERT-EU advisory 2026-018](https://cert.europa.eu/publications/security-advisories/2026-018/) describes two critical flaws (CVSS 9.2) that allow remote code execution without authentication. They are fixed in PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35, while PHP 8.1 and earlier get no official fix. Whether a given store is exposed depends on the version and configuration of its server, so the first question for whoever maintains a WooCommerce store is which PHP version it runs. On Shopify that question does not exist: the runtime is not yours to patch.',
+      text: 'Here is a concrete case. If your site runs on PHP, which WooCommerce does, [CERT-EU advisory 2026-018](https://cert.europa.eu/publications/security-advisories/2026-018/) describes two critical flaws (CVSS 9.2) that allow remote code execution without authentication. They are fixed in PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35, while PHP 8.1 and earlier get no official fix. Whether a given store is exposed depends on the version and configuration of its server, so the first question for whoever maintains a WooCommerce store is which PHP version it runs. On Shopify that question does not exist: the runtime is not yours to patch.',
     },
     {
       type: 'paragraph',
@@ -136,7 +136,7 @@ const article: Article = {
     { type: 'h2', text: 'What breaks, and who notices first?' },
     {
       type: 'paragraph',
-      text: '**Things break on both platforms; the difference is how many parties are involved when they do.**',
+      text: 'Things break on both platforms; the difference is how many parties are involved when they do.',
     },
     {
       type: 'paragraph',
@@ -144,12 +144,12 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Shopify removes the platform layer from that list, but not all breakage. Apps are the weak point: a heavy app or leftover code from one you removed can slow the store, and theme edits can break a section. A move creates its own problems too. When we launched Nazzi on Shopify, we checked tracking after the campaigns restarted and aligned the pixel and Google configuration on 20 August. What matters is who is on call when it happens.',
+      text: 'Shopify removes the platform layer from that list, but not all breakage. Apps are the weak point: a heavy app or leftover code from one you removed can slow the store, and theme edits can break a section. A move creates its own problems too. When we launched Nazzi on Shopify, we checked tracking after the campaigns restarted and aligned the pixel and Google configuration on 20 August. So ask who is on call when it happens.',
     },
     { type: 'h2', text: 'How fast can you change things?' },
     {
       type: 'paragraph',
-      text: '**On Shopify most commercial changes are settings; on WooCommerce most are an extension choice or a development task, but WooCommerce can do things Shopify cannot.**',
+      text: 'On Shopify most commercial changes are settings; on WooCommerce most are an extension choice or a development task, but WooCommerce can do things Shopify cannot.',
     },
     {
       type: 'paragraph',
@@ -162,7 +162,7 @@ const article: Article = {
     { type: 'h2', text: 'What does it cost to grow?' },
     {
       type: 'paragraph',
-      text: '**Shopify’s cost is visible and recurring; WooCommerce’s cost is spread across vendors and hours, and is easy to underestimate.**',
+      text: 'Shopify’s cost is visible and recurring; WooCommerce’s cost is spread across vendors and hours, and is easy to underestimate.',
     },
     {
       type: 'paragraph',
@@ -179,7 +179,7 @@ const article: Article = {
     { type: 'h2', text: 'How easy is it to leave?' },
     {
       type: 'paragraph',
-      text: '**Both platforms let you take products, customers and orders with you, but on WooCommerce you also own the database and the files outright.**',
+      text: 'Both platforms let you take products, customers and orders with you, but on WooCommerce you also own the database and the files outright.',
     },
     {
       type: 'paragraph',
@@ -187,12 +187,12 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'The market moves both ways. According to [Store Leads](https://storeleads.app/reports/shopify), 27,247 merchants moved to Shopify from other platforms in the 90 days to 9 October 2026, and 9,204 of them came from WooCommerce, the largest single source. That is a gross flow: in the same period Store Leads counts 17,922 stores leaving Shopify, so the net gain is 9,325. Read it as a sign that WooCommerce is where many stores start and outgrow their setup, not as proof that one platform is right for you. The practical side is in our [WooCommerce to Shopify migration guide](/blog/woocommerce-to-shopify-migration).',
+      text: 'The market moves both ways. According to [Store Leads](https://storeleads.app/reports/shopify), 27,247 merchants moved to Shopify from other platforms in the 90 days to 9 October 2026, and 9,204 of them came from WooCommerce, the largest single source. That is a gross flow: in the same period Store Leads counts 17,922 stores leaving Shopify, so the net gain is 9,325. Read it as a sign that WooCommerce is where many stores start and outgrow their setup. The practical side is in our [WooCommerce to Shopify migration guide](/blog/woocommerce-to-shopify-migration).',
     },
     { type: 'h2', text: 'What our move at Nazzi shows' },
     {
       type: 'paragraph',
-      text: '**Nazzi is our WooCommerce case, and it shows a good reason to move.**',
+      text: 'Nazzi is our WooCommerce case, and it shows a good reason to move.',
     },
     {
       type: 'paragraph',
@@ -209,7 +209,7 @@ const article: Article = {
     { type: 'h2', text: 'When WooCommerce is the better choice' },
     {
       type: 'paragraph',
-      text: '**WooCommerce is the better choice when someone you trust already maintains it and control matters more than convenience.**',
+      text: 'WooCommerce is the better choice when someone you trust already maintains it and control matters more than convenience.',
     },
     {
       type: 'list',
@@ -224,7 +224,7 @@ const article: Article = {
     { type: 'h2', text: 'When Shopify is the better choice' },
     {
       type: 'paragraph',
-      text: '**Shopify is the better choice when you want to sell and grow without being on call for the infrastructure.**',
+      text: 'Shopify is the better choice when you want to sell and grow without being on call for the infrastructure.',
     },
     {
       type: 'list',
@@ -242,19 +242,19 @@ const article: Article = {
     },
     { type: 'h2', text: 'Frequently asked questions' },
     { type: 'h3', text: 'Is Shopify better than WooCommerce?' },
-    { type: 'paragraph', text: 'It depends on who will maintain the store. Shopify is usually better if nobody on your side wants to handle hosting, updates and security. WooCommerce is usually better if you already have a developer and want full control of the code, the server and the data.' },
+    { type: 'paragraph', text: '**It depends on who will maintain the store.** Shopify is usually better if nobody on your side wants to handle hosting, updates and security. WooCommerce is usually better if you already have a developer and want full control of the code, the server and the data.' },
     { type: 'h3', text: 'Is WooCommerce cheaper than Shopify?' },
     { type: 'paragraph', text: 'It can be. WooCommerce software is free, but you pay for hosting, extensions, security and developer time, and those costs come from different vendors, so they are easy to underestimate. Shopify shows its cost on one invoice. Add up a full year of both for your own store before you decide.' },
     { type: 'h3', text: 'Which is better for SEO, Shopify or WooCommerce?' },
     { type: 'paragraph', text: 'Both can rank well. WordPress gives more control over URLs and content, while Shopify fixes some URL prefixes but handles the technical basics for you. In our Nazzi migration, Google clicks in the last 28 days were 2.7 times the same period of the year before, but that reflects migration work and content, not the platform alone.' },
     { type: 'h3', text: 'Is WooCommerce secure?' },
-    { type: 'paragraph', text: 'It can be, if someone keeps WordPress, WooCommerce, extensions and PHP up to date. Security is your responsibility on a self-hosted store. If your site runs on PHP, check the version against CERT-EU advisory 2026-018, which lists the fixed releases.' },
+    { type: 'paragraph', text: '**It can be, if someone keeps WordPress, WooCommerce, extensions and PHP up to date.** Security is your responsibility on a self-hosted store. If your site runs on PHP, check the version against CERT-EU advisory 2026-018, which lists the fixed releases.' },
     { type: 'h3', text: 'Is it hard to move from WooCommerce to Shopify?' },
-    { type: 'paragraph', text: 'It is a project, not a button. Products, customers, orders and blog content can move, but URLs, redirects, plugins and tracking need planning. Our Shopify Launch Sprint does it in 14 days with a fixed calendar; the practical steps are in our WooCommerce to Shopify migration guide.' },
+    { type: 'paragraph', text: '**It is a project, not a button.** Products, customers, orders and blog content can move, but URLs, redirects, plugins and tracking need planning. Our Shopify Launch Sprint does it in 14 days with a fixed calendar; the practical steps are in our WooCommerce to Shopify migration guide.' },
     { type: 'h3', text: 'Is Shopify or WooCommerce better for a small store?' },
-    { type: 'paragraph', text: 'For a small store with nobody to maintain it, Shopify is usually easier: one subscription, hosting and security included. A small store with a developer already on hand can run well on WooCommerce at a lower cost. Add up a year of both before you decide.' },
+    { type: 'paragraph', text: '**For a small store with nobody to maintain it, Shopify is usually easier: one subscription, hosting and security included.** A small store with a developer already on hand can run well on WooCommerce at a lower cost. Add up a year of both before you decide.' },
     { type: 'h3', text: 'When should I stay on WooCommerce?' },
-    { type: 'paragraph', text: 'Stay if maintenance is already routine for someone you trust, if the store is part of a content-led WordPress site, or if you need logic that does not fit Shopify’s data model. A move only pays off if it solves a problem you actually have.' },
+    { type: 'paragraph', text: '**Stay if maintenance is already routine for someone you trust, if the store is part of a content-led WordPress site, or if you need logic that does not fit Shopify’s data model.** A move only pays off if it solves a problem you actually have.' },
     {
       type: 'paragraph',
       text: 'The Sprint has a public price by revenue: €5,800 under €2M, €8,800 from €2M to €20M, €12,800 above €20M, VAT excluded, in 4 installments.',
@@ -267,7 +267,7 @@ const article: Article = {
   contentIt: [
     {
       type: 'paragraph',
-      text: '**Shopify o WooCommerce si riduce a una domanda: chi si occuperà dello store dopo il lancio?** Se la risposta sincera è “nessuno da parte nostra, noi vogliamo vendere”, di solito conviene Shopify. Se è “uno sviluppatore che già paghiamo, e vogliamo il codice e il server in casa nostra”, può convenire WooCommerce.',
+      text: 'Shopify o WooCommerce si riduce a una domanda: chi si occuperà dello store dopo il lancio? Se la risposta sincera è “nessuno da parte nostra, noi vogliamo vendere”, di solito conviene Shopify. Se è “uno sviluppatore che già paghiamo, e vogliamo il codice e il server in casa nostra”, può convenire WooCommerce.',
     },
     {
       type: 'paragraph',
@@ -276,15 +276,15 @@ const article: Article = {
     { type: 'h2', text: 'Chi mantiene lo store?' },
     {
       type: 'paragraph',
-      text: '**Su Shopify hosting, sicurezza e aggiornamenti della piattaforma li gestisce Shopify. Su WooCommerce li gestisci tu, o qualcuno che paghi.**',
+      text: '**Su Shopify hosting, sicurezza e aggiornamenti della piattaforma li gestisce Shopify.** Su WooCommerce li gestisci tu, o qualcuno che paghi.',
     },
     {
       type: 'paragraph',
-      text: 'WooCommerce è un plugin gratuito che gira su WordPress, su un server che scegli tu. L’hosting, WordPress, WooCommerce, il tema e ogni estensione hanno ciascuno il proprio ciclo di aggiornamenti, e la versione di PHP è un’impostazione che governi tu. Le [raccomandazioni sul server](https://woocommerce.com/document/server-requirements/) di WooCommerce stesso dicono che le versioni vecchie di PHP funzionano ancora ma sono a fine vita e possono esporre il sito a vulnerabilità, e la documentazione di WordPress sull’[hardening](https://developer.wordpress.org/advanced-administration/security/hardening/) chiede di tenere aggiornati WordPress e i plugin. Non è un difetto. È il prezzo del controllo.',
+      text: 'WooCommerce è un plugin gratuito che gira su WordPress, su un server che scegli tu. L’hosting, WordPress, WooCommerce, il tema e ogni estensione hanno ciascuno il proprio ciclo di aggiornamenti, e la versione di PHP è un’impostazione che governi tu. Le [raccomandazioni sul server](https://woocommerce.com/document/server-requirements/) di WooCommerce stesso dicono che le versioni vecchie di PHP funzionano ancora ma sono a fine vita e possono esporre il sito a vulnerabilità, e la documentazione di WordPress sull’[hardening](https://developer.wordpress.org/advanced-administration/security/hardening/) chiede di tenere aggiornati WordPress e i plugin. È il prezzo del controllo.',
     },
     {
       type: 'paragraph',
-      text: 'E non è un discorso astratto. Se il tuo sito gira su PHP, come WooCommerce, l’[advisory CERT-EU 2026-018](https://cert.europa.eu/publications/security-advisories/2026-018/) descrive due falle critiche (CVSS 9,2) che permettono l’esecuzione di codice da remoto senza autenticazione. Sono corrette in PHP 8.5.12, 8.4.27, 8.3.36 e 8.2.35, mentre per PHP 8.1 e precedenti non c’è una correzione ufficiale. Se un certo store sia esposto dipende dalla versione e dalla configurazione del suo server, quindi la prima domanda a chi mantiene uno store WooCommerce è quale versione di PHP usa. Su Shopify quella domanda non esiste: l’ambiente di esecuzione non è una cosa che devi aggiornare tu.',
+      text: 'Un caso concreto. Se il tuo sito gira su PHP, come WooCommerce, l’[advisory CERT-EU 2026-018](https://cert.europa.eu/publications/security-advisories/2026-018/) descrive due falle critiche (CVSS 9,2) che permettono l’esecuzione di codice da remoto senza autenticazione. Sono corrette in PHP 8.5.12, 8.4.27, 8.3.36 e 8.2.35, mentre per PHP 8.1 e precedenti non c’è una correzione ufficiale. Se un certo store sia esposto dipende dalla versione e dalla configurazione del suo server, quindi la prima domanda a chi mantiene uno store WooCommerce è quale versione di PHP usa. Su Shopify quella domanda non esiste: l’ambiente di esecuzione non è una cosa che devi aggiornare tu.',
     },
     {
       type: 'paragraph',
@@ -293,7 +293,7 @@ const article: Article = {
     { type: 'h2', text: 'Cosa si rompe, e chi se ne accorge per primo?' },
     {
       type: 'paragraph',
-      text: '**Su entrambe le piattaforme qualcosa si rompe; cambia quante parti sono coinvolte quando succede.**',
+      text: 'Su entrambe le piattaforme qualcosa si rompe; cambia quante parti sono coinvolte quando succede.',
     },
     {
       type: 'paragraph',
@@ -301,12 +301,12 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Shopify toglie dalla lista il livello della piattaforma, ma non ogni guasto. Le app sono il punto debole: un’app pesante, o il codice rimasto di una che hai tolto, può rallentare lo store, e le modifiche al tema possono rompere una sezione. Anche il passaggio ha i suoi problemi. Quando abbiamo lanciato Nazzi su Shopify, abbiamo controllato il tracciamento dopo la ripartenza delle campagne e il 20 agosto abbiamo allineato la configurazione di pixel e Google. Conta chi è reperibile quando succede.',
+      text: 'Shopify toglie dalla lista il livello della piattaforma, ma non ogni guasto. Le app sono il punto debole: un’app pesante, o il codice rimasto di una che hai tolto, può rallentare lo store, e le modifiche al tema possono rompere una sezione. Anche il passaggio ha i suoi problemi. Quando abbiamo lanciato Nazzi su Shopify, abbiamo controllato il tracciamento dopo la ripartenza delle campagne e il 20 agosto abbiamo allineato la configurazione di pixel e Google. Chiediti chi è reperibile quando succede.',
     },
     { type: 'h2', text: 'Quanto sei veloce a cambiare le cose?' },
     {
       type: 'paragraph',
-      text: '**Su Shopify la maggior parte dei cambi commerciali sono impostazioni; su WooCommerce sono per lo più la scelta di un’estensione o un lavoro di sviluppo, ma WooCommerce può fare cose che Shopify non fa.**',
+      text: 'Su Shopify la maggior parte dei cambi commerciali sono impostazioni; su WooCommerce sono per lo più la scelta di un’estensione o un lavoro di sviluppo, ma WooCommerce può fare cose che Shopify non fa.',
     },
     {
       type: 'paragraph',
@@ -319,7 +319,7 @@ const article: Article = {
     { type: 'h2', text: 'Quanto costa crescere?' },
     {
       type: 'paragraph',
-      text: '**Il costo di Shopify è visibile e ricorrente; quello di WooCommerce è sparso tra fornitori e ore di lavoro, ed è facile da sottostimare.**',
+      text: 'Il costo di Shopify è visibile e ricorrente; quello di WooCommerce è sparso tra fornitori e ore di lavoro, ed è facile da sottostimare.',
     },
     {
       type: 'paragraph',
@@ -336,7 +336,7 @@ const article: Article = {
     { type: 'h2', text: 'Quanto è facile andarsene?' },
     {
       type: 'paragraph',
-      text: '**Entrambe le piattaforme ti lasciano portare via prodotti, clienti e ordini, ma su WooCommerce database e file sono anche tuoi in senso pieno.**',
+      text: 'Entrambe le piattaforme ti lasciano portare via prodotti, clienti e ordini, ma su WooCommerce database e file sono anche tuoi in senso pieno.',
     },
     {
       type: 'paragraph',
@@ -344,12 +344,12 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Il mercato si muove in entrambe le direzioni. Secondo [Store Leads](https://storeleads.app/reports/shopify), nei 90 giorni al 9 ottobre 2026 sono passati a Shopify da altre piattaforme 27.247 merchant, e 9.204 arrivavano da WooCommerce, la prima fonte in assoluto. È un flusso lordo: nello stesso periodo Store Leads conta 17.922 store che lasciano Shopify, quindi il saldo netto è +9.325. Leggilo come il segnale che WooCommerce è il punto di partenza di tanti store che poi superano la configurazione iniziale, non come la prova che una piattaforma sia giusta per te. La parte pratica è nella nostra [guida alla migrazione da WooCommerce a Shopify](/it/blog/migrazione-woocommerce-shopify).',
+      text: 'Il mercato si muove in entrambe le direzioni. Secondo [Store Leads](https://storeleads.app/reports/shopify), nei 90 giorni al 9 ottobre 2026 sono passati a Shopify da altre piattaforme 27.247 merchant, e 9.204 arrivavano da WooCommerce, la prima fonte in assoluto. È un flusso lordo: nello stesso periodo Store Leads conta 17.922 store che lasciano Shopify, quindi il saldo netto è +9.325. Leggilo come il segnale che WooCommerce è il punto di partenza di tanti store che poi superano la configurazione iniziale. La parte pratica è nella nostra [guida alla migrazione da WooCommerce a Shopify](/it/blog/migrazione-woocommerce-shopify).',
     },
     { type: 'h2', text: 'Cosa mostra il nostro passaggio di Nazzi' },
     {
       type: 'paragraph',
-      text: '**Nazzi è il nostro caso WooCommerce, e mostra un buon motivo per cambiare.**',
+      text: 'Nazzi è il nostro caso WooCommerce, e mostra un buon motivo per cambiare.',
     },
     {
       type: 'paragraph',
@@ -366,7 +366,7 @@ const article: Article = {
     { type: 'h2', text: 'Quando WooCommerce è la scelta migliore' },
     {
       type: 'paragraph',
-      text: '**WooCommerce è la scelta migliore quando qualcuno di cui ti fidi lo mantiene già e il controllo conta più della comodità.**',
+      text: 'WooCommerce è la scelta migliore quando qualcuno di cui ti fidi lo mantiene già e il controllo conta più della comodità.',
     },
     {
       type: 'list',
@@ -381,7 +381,7 @@ const article: Article = {
     { type: 'h2', text: 'Quando Shopify è la scelta migliore' },
     {
       type: 'paragraph',
-      text: '**Shopify è la scelta migliore quando vuoi vendere e crescere senza essere reperibile per l’infrastruttura.**',
+      text: 'Shopify è la scelta migliore quando vuoi vendere e crescere senza essere reperibile per l’infrastruttura.',
     },
     {
       type: 'list',
@@ -399,19 +399,19 @@ const article: Article = {
     },
     { type: 'h2', text: 'Domande frequenti' },
     { type: 'h3', text: 'È meglio Shopify o WooCommerce?' },
-    { type: 'paragraph', text: 'Dipende da chi manterrà lo store. Shopify è di solito meglio se nessuno da parte tua vuole occuparsi di hosting, aggiornamenti e sicurezza. WooCommerce è di solito meglio se hai già uno sviluppatore e vuoi il controllo completo di codice, server e dati.' },
+    { type: 'paragraph', text: '**Dipende da chi manterrà lo store.** Shopify è di solito meglio se nessuno da parte tua vuole occuparsi di hosting, aggiornamenti e sicurezza. WooCommerce è di solito meglio se hai già uno sviluppatore e vuoi il controllo completo di codice, server e dati.' },
     { type: 'h3', text: 'WooCommerce costa meno di Shopify?' },
     { type: 'paragraph', text: 'Può costare meno. Il software WooCommerce è gratuito, ma paghi hosting, estensioni, sicurezza e ore di sviluppo, e queste voci arrivano da fornitori diversi, quindi si sottostimano facilmente. Shopify mostra il costo in una fattura sola. Somma un anno intero di entrambe per il tuo store prima di decidere.' },
     { type: 'h3', text: 'Per la SEO è meglio Shopify o WooCommerce?' },
-    { type: 'paragraph', text: 'Entrambe possono posizionarsi bene. WordPress dà più controllo su URL e contenuti, Shopify ha alcuni prefissi di URL fissi ma gestisce da solo le basi tecniche. Nella migrazione di Nazzi i clic da Google negli ultimi 28 giorni sono 2,7 volte quelli dello stesso periodo dell’anno prima, ma conta il lavoro di migrazione e di contenuti, non solo la piattaforma.' },
+    { type: 'paragraph', text: '**Entrambe possono posizionarsi bene.** WordPress dà più controllo su URL e contenuti, Shopify ha alcuni prefissi di URL fissi ma gestisce da solo le basi tecniche. Nella migrazione di Nazzi i clic da Google negli ultimi 28 giorni sono 2,7 volte quelli dello stesso periodo dell’anno prima, ma conta il lavoro di migrazione e di contenuti, non solo la piattaforma.' },
     { type: 'h3', text: 'WooCommerce è sicuro?' },
-    { type: 'paragraph', text: 'Può esserlo, se qualcuno tiene aggiornati WordPress, WooCommerce, estensioni e PHP. Su uno store self-hosted la sicurezza è una tua responsabilità. Se il tuo sito gira su PHP, controlla la versione con l’advisory CERT-EU 2026-018, che elenca le versioni corrette.' },
+    { type: 'paragraph', text: '**Può esserlo, se qualcuno tiene aggiornati WordPress, WooCommerce, estensioni e PHP.** Su uno store self-hosted la sicurezza è una tua responsabilità. Se il tuo sito gira su PHP, controlla la versione con l’advisory CERT-EU 2026-018, che elenca le versioni corrette.' },
     { type: 'h3', text: 'È difficile passare da WooCommerce a Shopify?' },
-    { type: 'paragraph', text: 'È un progetto, non un pulsante. Prodotti, clienti, ordini e articoli del blog si possono spostare, ma URL, redirect, plugin e tracciamento vanno pianificati. Lo Shopify Launch Sprint lo fa in 14 giorni con un calendario fisso; i passaggi pratici sono nella nostra guida alla migrazione da WooCommerce a Shopify.' },
+    { type: 'paragraph', text: '**È un progetto, non un pulsante.** Prodotti, clienti, ordini e articoli del blog si possono spostare, ma URL, redirect, plugin e tracciamento vanno pianificati. Lo Shopify Launch Sprint lo fa in 14 giorni con un calendario fisso; i passaggi pratici sono nella nostra guida alla migrazione da WooCommerce a Shopify.' },
     { type: 'h3', text: 'Per un piccolo negozio è meglio Shopify o WooCommerce?' },
-    { type: 'paragraph', text: 'Per un piccolo negozio senza nessuno che lo mantenga, Shopify è di solito più semplice: un solo abbonamento, con hosting e sicurezza inclusi. Un piccolo negozio con uno sviluppatore già disponibile può funzionare bene su WooCommerce a un costo più basso. Somma un anno di entrambe prima di decidere.' },
+    { type: 'paragraph', text: '**Per un piccolo negozio senza nessuno che lo mantenga, Shopify è di solito più semplice: un solo abbonamento, con hosting e sicurezza inclusi.** Un piccolo negozio con uno sviluppatore già disponibile può funzionare bene su WooCommerce a un costo più basso. Somma un anno di entrambe prima di decidere.' },
     { type: 'h3', text: 'Quando conviene restare su WooCommerce?' },
-    { type: 'paragraph', text: 'Conviene restare se la manutenzione è già routine per una persona di cui ti fidi, se lo store è parte di un sito WordPress guidato dai contenuti, o se ti serve una logica che non entra nel modello dati di Shopify. Cambiare vale solo se risolve un problema che hai davvero.' },
+    { type: 'paragraph', text: '**Conviene restare se la manutenzione è già routine per una persona di cui ti fidi, se lo store è parte di un sito WordPress guidato dai contenuti, o se ti serve una logica che non entra nel modello dati di Shopify.** Cambiare vale solo se risolve un problema che hai davvero.' },
     {
       type: 'paragraph',
       text: 'Lo Sprint ha un prezzo pubblico per fatturato: €5.800 sotto i €2M, €8.800 tra €2M e €20M, €12.800 oltre i €20M, IVA esclusa, in 4 rate.',

@@ -108,9 +108,9 @@ const it: DataTeamCopy = {
   },
   whyUs: {
     label: 'perché noi',
-    heading: 'Un team, non una somma di fornitori',
+    heading: 'Un team unico al posto di tanti fornitori',
     description:
-      'Il confronto è semplice: da una parte freelancer e agenzie da coordinare tu, dall’altra un team unico che risponde di tutto.',
+      'Da una parte freelancer e agenzie da coordinare tu, dall’altra un team unico che risponde di tutto.',
     agencyLabel: 'Freelancer e<br />agenzie tradizionali',
     agencyItems: [
       'Competenze sparse, nessuno le coordina',
@@ -129,7 +129,7 @@ const it: DataTeamCopy = {
       'Partnership che durano anni',
     ],
     featuresDescription:
-      'Non consegniamo task e spariamo. Restiamo dentro il progetto e cresciamo insieme al brand. Ecco cosa significa averci come team.',
+      'Restiamo dentro il progetto e cresciamo insieme al brand. Averci come team significa questo.',
     features: [
       'Presenza continua, mese dopo mese',
       'Team modulare, attivi solo le competenze che servono',
@@ -224,9 +224,9 @@ const en: DataTeamCopy = {
   },
   whyUs: {
     label: 'why us',
-    heading: 'A team, not a pile of vendors',
+    heading: 'One team instead of a pile of vendors',
     description:
-      'The comparison is simple: on one side freelancers and agencies you have to coordinate, on the other a single team that owns it all.',
+      'On one side freelancers and agencies you have to coordinate, on the other a single team that owns it all.',
     agencyLabel: 'Freelancers and<br />traditional agencies',
     agencyItems: [
       'Scattered skills, no one coordinates them',
@@ -245,7 +245,7 @@ const en: DataTeamCopy = {
       'Partnerships that last for years',
     ],
     featuresDescription:
-      'We don’t deliver tasks and disappear. We stay inside the project and grow with the brand. That’s what having us as a team means.',
+      'We stay inside the project and grow with the brand. That is what having us as a team means.',
     features: [
       'Continuous presence, month after month',
       'Modular team, only the skills you need',

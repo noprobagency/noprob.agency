@@ -119,12 +119,12 @@ const article: Article = {
     { type: 'h2', text: 'Who can migrate your store to Shopify? Five types of provider' },
     {
       type: 'paragraph',
-      text: 'Five types of provider can migrate a store to Shopify: you with an app, a freelancer, a generalist agency, a Shopify Partner agency and a migration specialist, and each fits a different store. Shopify’s own [migration guide](https://help.shopify.com/en/manual/migrating-to-shopify) lists five methods: copy and paste, CSV import, a migration app, hiring a Shopify Partner, and a custom build on the Shopify API. The first three are DIY. The last two are people.',
+      text: '**Five types of provider can migrate a store to Shopify: you with an app, a freelancer, a generalist agency, a Shopify Partner agency and a migration specialist, and each fits a different store.** Shopify’s own [migration guide](https://help.shopify.com/en/manual/migrating-to-shopify) lists five methods: copy and paste, CSV import, a migration app, hiring a Shopify Partner, and a custom build on the Shopify API. The first three you do yourself, and the last two mean hiring people.',
     },
     { type: 'h3', text: 'DIY with migration apps and tools' },
     {
       type: 'paragraph',
-      text: 'DIY with an app fits a small catalog with simple data and a founder who has time. [Matrixify](https://matrixify.app) describes itself as an app for bulk import and export of Shopify data through Excel and CSV files, and lists migration from another platform among its uses. [LitExtension](https://litextension.com/shopify-migration.html) offers a self-serve automated package and a second, expert-led one, and lists 301 redirects as an extra option. The [Cart2Cart listing](https://apps.shopify.com/cart2cart-magento-importer) on the Shopify App Store describes an automated migration with a preview, and says charges depend on the entities and options you choose. Shopify’s own [Store Migration app](https://apps.shopify.com/store-migration) imports product and customer data.',
+      text: '**DIY with an app fits a small catalog with simple data and a founder who has time.** [Matrixify](https://matrixify.app) describes itself as an app for bulk import and export of Shopify data through Excel and CSV files, and lists migration from another platform among its uses. [LitExtension](https://litextension.com/shopify-migration.html) offers a self-serve automated package and a second, expert-led one, and lists 301 redirects as an extra option. The [Cart2Cart listing](https://apps.shopify.com/cart2cart-magento-importer) on the Shopify App Store describes an automated migration with a preview, and says charges depend on the entities and options you choose. Shopify’s own [Store Migration app](https://apps.shopify.com/store-migration) imports product and customer data.',
     },
     {
       type: 'paragraph',
@@ -133,86 +133,86 @@ const article: Article = {
     { type: 'h3', text: 'A freelancer' },
     {
       type: 'paragraph',
-      text: 'A freelancer fits a defined job: a WooCommerce store, a catalog that exports cleanly, and an owner who can review the result carefully. The risk is structural, not personal: one person is also one calendar. If they are ill or booked in your go-live week, nobody else has seen your redirect map. Ask who covers the launch if they cannot.',
+      text: '**A freelancer fits a defined job: a WooCommerce store, a catalog that exports cleanly, and an owner who can review the result carefully.** The risk comes from the setup: one person is also one calendar. If they are ill or booked in your go-live week, nobody else has seen your redirect map. Ask who covers the launch if they cannot.',
     },
     { type: 'h3', text: 'A generalist agency' },
     {
       type: 'paragraph',
-      text: 'A generalist agency fits a project where the migration is one piece of a larger brief, such as a redesign, a brand refresh and a platform change together. Check whether migration is a core service or a side one, because a migration is mostly data, URLs and tracking, not layout.',
+      text: '**A generalist agency fits a project where the migration is one piece of a larger brief, such as a redesign, a brand refresh and a platform change together.** Check whether migration is a core service or a side one, because a migration is mostly data, URLs and tracking, and very little layout.',
     },
     { type: 'h3', text: 'A Shopify Partner agency' },
     {
       type: 'paragraph',
-      text: 'A Shopify Partner agency fits a team that wants an official relationship with people who work on Shopify every day. Being a Partner says the agency builds on Shopify. It does not say it has moved a store like yours. Shopify’s [Partner Directory](https://www.shopify.com/partners/directory) groups partners into Select, Plus, Premier and Platinum tiers based on experience and proven success on Shopify, shows reviews, work samples and certifications, and says partners work independently, so you agree the terms with them directly. Treat the tier as a first filter and migration work samples as the real evidence.',
+      text: '**A Shopify Partner agency fits a team that wants an official relationship with people who work on Shopify every day.** Being a Partner says the agency builds on Shopify. It does not say it has moved a store like yours. Shopify’s [Partner Directory](https://www.shopify.com/partners/directory) groups partners into Select, Plus, Premier and Platinum tiers based on experience and proven success on Shopify, shows reviews, work samples and certifications, and says partners work independently, so you agree the terms with them directly. Treat the tier as a first filter and migration work samples as the real evidence.',
     },
     { type: 'h3', text: 'A migration specialist' },
     {
       type: 'paragraph',
-      text: 'A migration specialist fits stores where the move itself is the risk: a large catalog, years of organic traffic, an ERP behind the shop, or a proprietary platform. The whole offer is the move: inventory, redirects, reconciliation, tracking, go-live and the weeks after. The scope is the move itself: a specialist gets you onto Shopify and through the weeks after, while design, ads and email are separate work. We are in this group: the Sprint is built for exactly these stores.',
+      text: '**A migration specialist fits stores where the move itself is the risk: a large catalog, years of organic traffic, an ERP behind the shop, or a proprietary platform.** The whole offer is the move: inventory, redirects, reconciliation, tracking, go-live and the weeks after. Design, ads and email are separate work. We are in this group, and the Sprint is built for these stores.',
     },
     { type: 'h2', text: 'Which type fits which store?' },
     {
       type: 'paragraph',
-      text: 'The right provider depends on how much organic traffic, data complexity and internal time you have, not on how big the agency is.',
+      text: '**The right provider depends on how much organic traffic, data complexity and internal time you have.** The size of the agency matters much less.',
     },
     {
       type: 'list',
       items: [
-        '**Small catalog, little organic traffic, time to spare:** DIY with an app, and Shopify’s [URL redirect import](https://help.shopify.com/en/manual/online-store/menus-and-links/url-redirect) for the redirects.',
-        '**Clear scope, one source platform, a careful owner:** a freelancer, with a named backup for launch week.',
-        '**Migration inside a bigger redesign:** a generalist agency, with the migration written as its own line in the contract.',
-        '**Organic traffic that pays the bills, an ERP, or a proprietary platform:** a migration specialist.',
+        'Small catalog, little organic traffic, time to spare: DIY with an app, and Shopify’s [URL redirect import](https://help.shopify.com/en/manual/online-store/menus-and-links/url-redirect) for the redirects.',
+        'Clear scope, one source platform, a careful owner: a freelancer, with a named backup for launch week.',
+        'Migration inside a bigger redesign: a generalist agency, with the migration written as its own line in the contract.',
+        'Organic traffic that pays the bills, an ERP, or a proprietary platform: a migration specialist.',
       ],
     },
     { type: 'h2', text: 'What should you check before hiring a Shopify migration agency? Nine criteria' },
     {
       type: 'paragraph',
-      text: 'Nine criteria separate providers, and each one can be checked with a document or a question before you pay anything. For each, here is what good looks like and how we answer.',
+      text: '**Nine criteria separate providers, and each one can be checked with a document or a question before you pay anything.** For each, here is what good looks like and how we answer.',
     },
     { type: 'h3', text: '1. Proof you can verify' },
     {
       type: 'paragraph',
-      text: 'Proof is a case study with a number, a platform like yours, a period and a method. A story without a number is not proof. Our answer: two public case studies. [Supplement DTC Nazzi](/use-cases/integratori-nazzi-dtc-shopify), coming from WooCommerce, sold 105% more online in its first 85 days on Shopify than in the same days of the year before. [Cumini](/use-cases/cumini-luxury-fashion-ecommerce), coming from a proprietary platform tied to its ERP, grew online sales 67.7% in the 12 months after the move. We publish percentages, never clients’ absolute figures, and those results come from the full engagement: migration, tracking and ongoing work.',
+      text: '**Proof is a case study with a number, a platform like yours, a period and a method.** A story without a number is not proof. Our answer: two public case studies. [Supplement DTC Nazzi](/use-cases/integratori-nazzi-dtc-shopify), coming from WooCommerce, sold 105% more online in its first 85 days on Shopify than in the same days of the year before. [Cumini](/use-cases/cumini-luxury-fashion-ecommerce), coming from a proprietary platform tied to its ERP, grew online sales 67.7% in the 12 months after the move. We publish percentages, never clients’ absolute figures, and those results come from the full engagement: migration, tracking and ongoing work.',
     },
     { type: 'h3', text: '2. A written redirect and SEO plan' },
     {
       type: 'paragraph',
-      text: 'A redirect and SEO plan is a document that maps every old URL with traffic to a new page, written before launch and tested after it. A promise that SEO will be preserved is not a plan. Ask to see a sample map, who tests it, and what happens if traffic drops. Google’s [guidance on site moves](https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes) is a neutral yardstick: it recommends permanent redirects from old URLs to new ones and monitoring afterwards. The full list is in our [Shopify migration SEO checklist](/blog/shopify-migration-seo-checklist). Our answer: a 1:1 Redirect Map for every URL that had traffic in the last 12 months, tested automatically before go-live and after.',
+      text: '**A redirect and SEO plan is a document that maps every old URL with traffic to a new page, written before launch and tested after it.** A promise that SEO will be preserved is not a plan. Ask to see a sample map, who tests it, and what happens if traffic drops. Google’s [guidance on site moves](https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes) is a neutral yardstick: it recommends permanent redirects from old URLs to new ones and monitoring afterwards. The full list is in our [Shopify migration SEO checklist](/blog/shopify-migration-seo-checklist). Our answer: a 1:1 Redirect Map for every URL that had traffic in the last 12 months, tested automatically before go-live and after.',
     },
     { type: 'h3', text: '3. Data mapping' },
     {
       type: 'paragraph',
-      text: 'Data mapping is the written record of where each field from the old store lands in Shopify, plus a count comparison afterwards. It covers products, variants, customers, orders, discount codes and reviews. Ask what happens to the fields Shopify has no place for, and ask for the reconciliation after the import. Our answer: a Data Migration Report with old and new counts side by side.',
+      text: '**Data mapping is the written record of where each field from the old store lands in Shopify, plus a count comparison afterwards.** It covers products, variants, customers, orders, discount codes and reviews. Ask what happens to the fields Shopify has no place for, and ask for the reconciliation after the import. Our answer: a Data Migration Report with old and new counts side by side.',
     },
     { type: 'h3', text: '4. A fixed scope and calendar' },
     {
       type: 'paragraph',
-      text: 'A fixed scope and calendar means you know the deliverables, the dates and the price before work starts. Our answer: 14 days to a store ready to publish, go-live on a day you choose between day 15 and day 30, and a public price by company revenue, from €5,800 (the three tiers and what a price should include are in [what a Shopify migration costs](/blog/shopify-migration-cost)). Your Shopify plan and apps are paid to Shopify, not to us. If you are moving to Plus, ask each agency to price the plan, the move and the Plus work separately: our [Shopify Plus migration](/blog/shopify-plus-migration) article shows why.',
+      text: '**A fixed scope and calendar means you know the deliverables, the dates and the price before work starts.** Our answer: 14 days to a store ready to publish, go-live on a day you choose between day 15 and day 30, and a public price by company revenue, from €5,800 (the three tiers and what a price should include are in [what a Shopify migration costs](/blog/shopify-migration-cost)). Your Shopify plan and apps are paid to Shopify, not to us. If you are moving to Plus, ask each agency to price the plan, the move and the Plus work separately: our [Shopify Plus migration](/blog/shopify-plus-migration) article shows why.',
     },
     { type: 'h3', text: '5. Who does the work' },
     {
       type: 'paragraph',
-      text: 'Who does the work means the names and roles of the people who touch your store, and whether the person on the sales call is the one who builds it. Ask for the team and the backup. Our answer: one point of contact for you, and a team with one specialist per area (development, SEO and redirects, tracking, checkout, design, AI) working in parallel.',
+      text: '**Who does the work means the names and roles of the people who touch your store, and whether the person on the sales call is the one who builds it.** Ask for the team and the backup. Our answer: one point of contact for you, and a team with one specialist per area (development, SEO and redirects, tracking, checkout, design, AI) working in parallel.',
     },
     { type: 'h3', text: '6. Post-launch support' },
     {
       type: 'paragraph',
-      text: 'Post-launch support covers the weeks when problems appear: broken links, a tracking gap, a checkout that converts worse than before. Ask how long, what it covers and who answers. Our answer: 90 days from go-live of bug fixes, minor changes, SEO and tracking checks, a weekly 10-minute Loom and a report on day 90.',
+      text: '**Post-launch support covers the weeks when problems appear: broken links, a tracking gap, a checkout that converts worse than before.** Ask how long, what it covers and who answers. Our answer: 90 days from go-live of bug fixes, minor changes, SEO and tracking checks, a weekly 10-minute Loom and a report on day 90.',
     },
     { type: 'h3', text: '7. Guarantees in writing' },
     {
       type: 'paragraph',
-      text: 'A guarantee in writing is a clause with a measurable condition and a remedy, in the contract and not only on the sales page. Compare what is measured, against which baseline, and what you get. Our answer: four. Store ready on day 14 or we refund the first installment. Organic traffic below the baseline 90 days after go-live? We work for free until it comes back. Store offline at launch because of us? We pay one installment. Checkout converting less than before at 90 days? We optimize it for free until it beats it. They are measured on a dashboard you receive on day 1, and the terms fit on one page.',
+      text: '**A guarantee in writing is a clause with a measurable condition and a remedy, in the contract and not only on the sales page.** Compare what is measured, against which baseline, and what you get. Our answer: four. Store ready on day 14 or we refund the first installment. Organic traffic below the baseline 90 days after go-live? We work for free until it comes back. Store offline at launch because of us? We pay one installment. Checkout converting less than before at 90 days? We optimize it for free until it beats it. They are measured on a dashboard you receive on day 1, and the terms fit on one page.',
     },
     { type: 'h3', text: '8. Ownership of code and accounts' },
     {
       type: 'paragraph',
-      text: 'Ownership means the Shopify store, domain, analytics and ad accounts are in your name, and that you can leave without asking permission. Ask who owns the Shopify account at the start, who holds the DNS, and whether the code is yours or licensed. A provider who holds your domain or your store is holding your business. Our answer: you give us the accesses on day 1, and after the 90 days the store is yours, with no lock-in. The terms are in a one-page contract, so read it for the details on accounts and code.',
+      text: '**Ownership means the Shopify store, domain, analytics and ad accounts are in your name, and that you can leave without asking permission.** Ask who owns the Shopify account at the start, who holds the DNS, and whether the code is yours or licensed. If the provider holds your domain or your store, you cannot leave without their consent. Our answer: you give us the accesses on day 1, and after the 90 days the store is yours, with no lock-in. The terms are in a one-page contract, so read it for the details on accounts and code.',
     },
     { type: 'h3', text: '9. References' },
     {
       type: 'paragraph',
-      text: 'References are people you can ask, not logos on a slide. Ask for two clients with a similar platform, and ask them how the migration went. Our answer: the two case studies above, and [10 five-star reviews on Trustpilot](https://www.trustpilot.com/review/noprob.agency), with over 7 years of eCommerce projects behind the method.',
+      text: '**References are people you can ask, not logos on a slide.** Ask for two clients with a similar platform, and ask them how the migration went. Our answer: the two case studies above, and [10 five-star reviews on Trustpilot](https://www.trustpilot.com/review/noprob.agency), with over 7 years of eCommerce projects behind the method.',
     },
     { type: 'h2', text: 'What should you ask on the first call?' },
     {
@@ -258,24 +258,24 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**Stores with traffic and orders to protect.** Every old URL with traffic gets a 301 redirect, mapped before launch and tested after it.',
-        '**A 1:1 replica of your store.** The Sprint rebuilds your store 1:1 with our Custom AI System. Design and rebranding follow after go-live, with dedicated partners.',
-        '**Stores coming from any platform.** WooCommerce, Magento, PrestaShop, BigCommerce, Wix, Squarespace, proprietary platforms and ERP-integrated stores: the method is the same on every source (audit, 301 redirect map, data migration and QA), and we wrote a guide for [WooCommerce](/blog/woocommerce-to-shopify-migration), [Magento](/blog/magento-to-shopify-migration), [PrestaShop](/blog/prestashop-to-shopify-migration), [BigCommerce](/blog/bigcommerce-to-shopify-migration), [Wix](/blog/wix-vs-shopify) and [Squarespace](/blog/squarespace-vs-shopify).',
-        '**A small catalog with simple data.** A migration app and a redirect CSV may be all you need; the Sprint starts where a tool stops.',
-        '**A fixed price with clear tiers.** Above the limits of your tier (products, languages, ERP) fixed-price add-ons apply, and complex B2B portals, marketplaces and POS are handled by dedicated partners after go-live.',
-        '**Company revenue under €300k.** The Sprint starts with an initial assessment, to make sure the investment is sustainable for the store. You can still apply, and we evaluate feasibility together.',
+        'Stores with traffic and orders to protect: every old URL with traffic gets a 301 redirect, mapped before launch and tested after it.',
+        'A 1:1 replica of your store: the Sprint rebuilds it 1:1 with our Custom AI System. Design and rebranding follow after go-live, with dedicated partners.',
+        'Stores coming from any platform: WooCommerce, Magento, PrestaShop, BigCommerce, Wix, Squarespace, proprietary platforms and ERP-integrated stores: the method is the same on every source (audit, 301 redirect map, data migration and QA), and we wrote a guide for [WooCommerce](/blog/woocommerce-to-shopify-migration), [Magento](/blog/magento-to-shopify-migration), [PrestaShop](/blog/prestashop-to-shopify-migration), [BigCommerce](/blog/bigcommerce-to-shopify-migration), [Wix](/blog/wix-vs-shopify) and [Squarespace](/blog/squarespace-vs-shopify).',
+        'A small catalog with simple data: a migration app and a redirect CSV may be all you need, and the Sprint starts where a tool stops.',
+        'A fixed price with clear tiers: above the limits of your tier (products, languages, ERP) fixed-price add-ons apply, and complex B2B portals, marketplaces and POS are handled by dedicated partners after go-live.',
+        'Company revenue under €300k: the Sprint starts with an initial assessment, to make sure the investment is sustainable for the store. You can still apply, and we evaluate feasibility together.',
       ],
     },
     { type: 'h2', text: 'Frequently asked questions' },
     { type: 'h3', text: 'How do I choose a Shopify migration agency?' },
     {
       type: 'paragraph',
-      text: 'Compare providers on nine checks: verifiable proof, a written redirect and SEO plan, data mapping, a fixed scope and calendar, who does the work, post-launch support, guarantees in writing, ownership of code and accounts, and references. Ask for documents, not adjectives.',
+      text: '**Compare providers on nine checks: verifiable proof, a written redirect and SEO plan, data mapping, a fixed scope and calendar, who does the work, post-launch support, guarantees in writing, ownership of code and accounts, and references.** Ask for documents, not adjectives.',
     },
     { type: 'h3', text: 'Do I need a Shopify migration expert, or can I use an app?' },
     {
       type: 'paragraph',
-      text: 'An app can move a small catalog with simple data. It moves records, but someone still has to decide where old URLs redirect, rebuild the storefront and set up tracking. If organic traffic pays your bills, or an ERP sits behind the shop, plan for a person who owns the whole move.',
+      text: '**An app can move a small catalog with simple data.** It moves records, but someone still has to decide where old URLs redirect, rebuild the storefront and set up tracking. If organic traffic pays your bills, or an ERP sits behind the shop, plan for a person who owns the whole move.',
     },
     { type: 'h3', text: 'Does being a Shopify Partner mean an agency can migrate my store?' },
     {
@@ -295,7 +295,7 @@ const article: Article = {
     { type: 'h3', text: 'How much does a Shopify migration agency cost?' },
     {
       type: 'paragraph',
-      text: 'Agencies price different scopes, so compare the eight lines of a quote, not the total. The Shopify Launch Sprint has a public price by revenue: €5,800, €8,800 or €12,800, VAT excluded, in 4 installments.',
+      text: '**Agencies price different scopes, so compare the eight lines of a quote, not the total.** The Shopify Launch Sprint has a public price by revenue: €5,800, €8,800 or €12,800, VAT excluded, in 4 installments.',
     },
     { type: 'h3', text: 'Who is the Shopify Launch Sprint built for?' },
     {
@@ -305,7 +305,7 @@ const article: Article = {
     { type: 'h2', text: 'What should you do this week?' },
     {
       type: 'paragraph',
-      text: 'Shortlist two or three providers of different types, run the same ten questions on each, and compare their documents, not their decks. Ask every one for a sample redirect map, the contract and the list of extras. Our own approach is described in the [Shopify migration guide](/shopify-migration).',
+      text: '**Shortlist two or three providers of different types, run the same ten questions on each, and compare their documents, not their decks.** Ask every one for a sample redirect map, the contract and the list of extras. Our own approach is described in the [Shopify migration guide](/shopify-migration).',
     },
     {
       type: 'paragraph',
@@ -313,7 +313,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '**Next step.** Send us your store: [apply to the Shopify Launch Sprint](/shopify-migration-sprint) and we reply within 48 hours with your tier, the price and the first available kickoff date.',
+      text: 'Send us your store: [apply to the Shopify Launch Sprint](/shopify-migration-sprint) and we reply within 48 hours with your tier, the price and the first available kickoff date.',
     },
     {
       type: 'paragraph',
@@ -332,12 +332,12 @@ const article: Article = {
     { type: 'h2', text: 'Chi può migrare il tuo store su Shopify? Cinque tipi di fornitore' },
     {
       type: 'paragraph',
-      text: 'Cinque tipi di fornitore possono migrare uno store su Shopify: tu con un’app, un freelance, un’agenzia generalista, un’agenzia Shopify Partner e uno specialista di migrazioni, e ognuno si adatta a uno store diverso. La [guida alla migrazione](https://help.shopify.com/en/manual/migrating-to-shopify) di Shopify elenca cinque metodi: copia e incolla, import da CSV, un’app di migrazione, un Shopify Partner, una soluzione su misura con le API di Shopify. I primi tre sono fai da te. Gli ultimi due sono persone.',
+      text: '**Cinque tipi di fornitore possono migrare uno store su Shopify: tu con un’app, un freelance, un’agenzia generalista, un’agenzia Shopify Partner e uno specialista di migrazioni, e ognuno si adatta a uno store diverso.** La [guida alla migrazione](https://help.shopify.com/en/manual/migrating-to-shopify) di Shopify elenca cinque metodi: copia e incolla, import da CSV, un’app di migrazione, un Shopify Partner, una soluzione su misura con le API di Shopify. Per i primi tre fai tu, per gli ultimi due assumi delle persone.',
     },
     { type: 'h3', text: 'Fai da te con app e strumenti di migrazione' },
     {
       type: 'paragraph',
-      text: 'Il fai da te con un’app va bene per un catalogo piccolo con dati semplici e un fondatore che ha tempo. [Matrixify](https://matrixify.app) si descrive come un’app per importare ed esportare in blocco i dati di Shopify con file Excel e CSV, e tra gli usi indica la migrazione da un’altra piattaforma. [LitExtension](https://litextension.com/shopify-migration.html) offre un pacchetto automatico self-service e un secondo pacchetto seguito da esperti, e indica i redirect 301 come opzione aggiuntiva. La [scheda di Cart2Cart](https://apps.shopify.com/cart2cart-magento-importer) sullo Shopify App Store descrive una migrazione automatica con anteprima, e dice che i costi dipendono dalle entità e dalle opzioni scelte. La [Store Migration](https://apps.shopify.com/store-migration) di Shopify importa dati di prodotti e clienti.',
+      text: '**Il fai da te con un’app va bene per un catalogo piccolo con dati semplici e un fondatore che ha tempo.** [Matrixify](https://matrixify.app) si descrive come un’app per importare ed esportare in blocco i dati di Shopify con file Excel e CSV, e tra gli usi indica la migrazione da un’altra piattaforma. [LitExtension](https://litextension.com/shopify-migration.html) offre un pacchetto automatico self-service e un secondo pacchetto seguito da esperti, e indica i redirect 301 come opzione aggiuntiva. La [scheda di Cart2Cart](https://apps.shopify.com/cart2cart-magento-importer) sullo Shopify App Store descrive una migrazione automatica con anteprima, e dice che i costi dipendono dalle entità e dalle opzioni scelte. La [Store Migration](https://apps.shopify.com/store-migration) di Shopify importa dati di prodotti e clienti.',
     },
     {
       type: 'paragraph',
@@ -346,86 +346,86 @@ const article: Article = {
     { type: 'h3', text: 'Un freelance' },
     {
       type: 'paragraph',
-      text: 'Un freelance va bene per un lavoro definito: uno store WooCommerce, un catalogo che si esporta pulito e un titolare che sa rivedere con cura il risultato. Il rischio è strutturale, non personale: una persona è anche un solo calendario. Se sta male o è occupata nella settimana del tuo go-live, nessun altro ha visto la tua mappa dei redirect. Chiedi chi copre il lancio se lei non può.',
+      text: '**Un freelance va bene per un lavoro definito: uno store WooCommerce, un catalogo che si esporta pulito e un titolare che sa rivedere con cura il risultato.** Il rischio sta nella struttura: una persona è anche un solo calendario. Se sta male o è occupata nella settimana del tuo go-live, nessun altro ha visto la tua mappa dei redirect. Chiedi chi copre il lancio se lei non può.',
     },
     { type: 'h3', text: 'Un’agenzia generalista' },
     {
       type: 'paragraph',
-      text: 'Un’agenzia generalista va bene quando la migrazione è un pezzo di un progetto più grande, per esempio redesign, rinnovo del brand e cambio di piattaforma insieme. Verifica se la migrazione è un servizio centrale o uno collaterale, perché una migrazione è fatta soprattutto di dati, URL e tracking, non di grafica.',
+      text: '**Un’agenzia generalista va bene quando la migrazione è un pezzo di un progetto più grande, per esempio redesign, rinnovo del brand e cambio di piattaforma insieme.** Verifica se la migrazione è un servizio centrale o uno collaterale, perché una migrazione è fatta soprattutto di dati, URL e tracking, e pochissimo di grafica.',
     },
     { type: 'h3', text: 'Un’agenzia Shopify Partner' },
     {
       type: 'paragraph',
-      text: 'Un’agenzia Shopify Partner va bene se cerchi un rapporto ufficiale con persone che lavorano su Shopify ogni giorno. Essere Partner dice che l’agenzia costruisce su Shopify. Non dice che ha già spostato uno store come il tuo. La [directory dei Partner](https://www.shopify.com/partners/directory) di Shopify divide i partner in livelli Select, Plus, Premier e Platinum in base a esperienza e risultati dimostrati su Shopify, mostra recensioni, esempi di lavoro e certificazioni, e precisa che i partner lavorano in modo indipendente, quindi le condizioni le concordi direttamente con loro. Il livello è un primo filtro, le prove vere sono gli esempi di migrazione.',
+      text: '**Un’agenzia Shopify Partner va bene se cerchi un rapporto ufficiale con persone che lavorano su Shopify ogni giorno.** Essere Partner dice che l’agenzia costruisce su Shopify. Non dice che ha già spostato uno store come il tuo. La [directory dei Partner](https://www.shopify.com/partners/directory) di Shopify divide i partner in livelli Select, Plus, Premier e Platinum in base a esperienza e risultati dimostrati su Shopify, mostra recensioni, esempi di lavoro e certificazioni, e precisa che i partner lavorano in modo indipendente, quindi le condizioni le concordi direttamente con loro. Il livello è un primo filtro, le prove vere sono gli esempi di migrazione.',
     },
     { type: 'h3', text: 'Uno specialista di migrazioni' },
     {
       type: 'paragraph',
-      text: 'Uno specialista di migrazioni va bene quando il rischio è il passaggio stesso: catalogo grande, anni di traffico organico, un gestionale dietro al negozio o una piattaforma proprietaria. L’intera offerta è il passaggio: inventario, redirect, riconciliazione, tracking, go-live e le settimane dopo. L’ambito è il passaggio stesso: uno specialista ti porta su Shopify e attraverso le settimane dopo, mentre design, ads ed email sono lavori a parte. Siamo in questo gruppo: lo Sprint è pensato proprio per questi store.',
+      text: '**Uno specialista di migrazioni va bene quando il rischio è il passaggio stesso: catalogo grande, anni di traffico organico, un gestionale dietro al negozio o una piattaforma proprietaria.** L’intera offerta è il passaggio: inventario, redirect, riconciliazione, tracking, go-live e le settimane dopo. Design, ads ed email sono lavori a parte. Siamo in questo gruppo, e lo Sprint è pensato per questi store.',
     },
     { type: 'h2', text: 'Quale tipo va con quale store?' },
     {
       type: 'paragraph',
-      text: 'Il fornitore giusto dipende da quanto traffico organico, quanta complessità dei dati e quanto tempo interno hai, non da quanto è grande l’agenzia.',
+      text: '**Il fornitore giusto dipende da quanto traffico organico, quanta complessità dei dati e quanto tempo interno hai.** La dimensione dell’agenzia conta molto meno.',
     },
     {
       type: 'list',
       items: [
-        '**Catalogo piccolo, poco traffico organico, tempo a disposizione:** fai da te con un’app e l’[import dei redirect](https://help.shopify.com/en/manual/online-store/menus-and-links/url-redirect) di Shopify.',
-        '**Ambito chiaro, una sola piattaforma di partenza, un titolare attento:** un freelance, con un sostituto nominato per la settimana del lancio.',
-        '**Migrazione dentro un redesign più grande:** un’agenzia generalista, con la migrazione scritta come voce a sé nel contratto.',
-        '**Traffico organico che paga le spese, un gestionale o una piattaforma proprietaria:** uno specialista di migrazioni.',
+        'Catalogo piccolo, poco traffico organico, tempo a disposizione: fai da te con un’app e l’[import dei redirect](https://help.shopify.com/en/manual/online-store/menus-and-links/url-redirect) di Shopify.',
+        'Ambito chiaro, una sola piattaforma di partenza, un titolare attento: un freelance, con un sostituto nominato per la settimana del lancio.',
+        'Migrazione dentro un redesign più grande: un’agenzia generalista, con la migrazione scritta come voce a sé nel contratto.',
+        'Traffico organico che paga le spese, un gestionale o una piattaforma proprietaria: uno specialista di migrazioni.',
       ],
     },
     { type: 'h2', text: 'Cosa controllare prima di assumere un’agenzia di migrazione Shopify? Nove criteri' },
     {
       type: 'paragraph',
-      text: 'Nove criteri distinguono i fornitori, e ognuno si verifica con un documento o una domanda prima di pagare qualsiasi cosa. Per ciascuno: come dovrebbe essere una buona risposta e come rispondiamo noi.',
+      text: '**Nove criteri distinguono i fornitori, e ognuno si verifica con un documento o una domanda prima di pagare qualsiasi cosa.** Per ciascuno: come dovrebbe essere una buona risposta e come rispondiamo noi.',
     },
     { type: 'h3', text: '1. Prove verificabili' },
     {
       type: 'paragraph',
-      text: 'Una prova è un caso studio con un numero, una piattaforma simile alla tua, un periodo e un metodo. Una storia senza numero non è una prova. La nostra risposta: due casi studio pubblici. [Integratori DTC Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify), arrivato da WooCommerce, ha venduto online il 105% in più nei primi 85 giorni su Shopify rispetto agli stessi giorni dell’anno prima. [Cumini](/it/casi-studio/cumini-luxury-fashion-ecommerce), arrivato da una piattaforma proprietaria legata al gestionale, ha fatto crescere le vendite online del 67,7% nei 12 mesi dopo il passaggio. Pubblichiamo percentuali, mai valori assoluti dei clienti, e quei risultati vengono dall’intero incarico: migrazione, tracking e lavoro continuativo.',
+      text: '**Una prova è un caso studio con un numero, una piattaforma simile alla tua, un periodo e un metodo.** Una storia senza numero non è una prova. La nostra risposta: due casi studio pubblici. [Integratori DTC Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify), arrivato da WooCommerce, ha venduto online il 105% in più nei primi 85 giorni su Shopify rispetto agli stessi giorni dell’anno prima. [Cumini](/it/casi-studio/cumini-luxury-fashion-ecommerce), arrivato da una piattaforma proprietaria legata al gestionale, ha fatto crescere le vendite online del 67,7% nei 12 mesi dopo il passaggio. Pubblichiamo percentuali, mai valori assoluti dei clienti, e quei risultati vengono dall’intero incarico: migrazione, tracking e lavoro continuativo.',
     },
     { type: 'h3', text: '2. Un piano scritto di redirect e SEO' },
     {
       type: 'paragraph',
-      text: 'Un piano di redirect e SEO è un documento che associa ogni vecchio URL con traffico a una nuova pagina, scritto prima del lancio e testato dopo. La promessa che la SEO verrà mantenuta non è un piano. Chiedi una mappa di esempio, chi la testa e cosa succede se il traffico cala. Le [indicazioni di Google sullo spostamento di un sito](https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes) sono un metro neutro: raccomandano redirect permanenti dai vecchi URL ai nuovi e un monitoraggio dopo. L’elenco completo è nella nostra [checklist SEO per la migrazione a Shopify](/it/blog/migrazione-shopify-seo-checklist). La nostra risposta: una Redirect Map 1:1 per ogni URL che ha avuto traffico negli ultimi 12 mesi, testata in automatico prima del go-live e dopo.',
+      text: '**Un piano di redirect e SEO è un documento che associa ogni vecchio URL con traffico a una nuova pagina, scritto prima del lancio e testato dopo.** La promessa che la SEO verrà mantenuta non è un piano. Chiedi una mappa di esempio, chi la testa e cosa succede se il traffico cala. Le [indicazioni di Google sullo spostamento di un sito](https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes) sono un metro neutro: raccomandano redirect permanenti dai vecchi URL ai nuovi e un monitoraggio dopo. L’elenco completo è nella nostra [checklist SEO per la migrazione a Shopify](/it/blog/migrazione-shopify-seo-checklist). La nostra risposta: una Redirect Map 1:1 per ogni URL che ha avuto traffico negli ultimi 12 mesi, testata in automatico prima del go-live e dopo.',
     },
     { type: 'h3', text: '3. Mappatura dei dati' },
     {
       type: 'paragraph',
-      text: 'La mappatura dei dati è il documento che dice dove finisce ogni campo del vecchio store in Shopify, più il confronto dei conteggi a fine import. Riguarda prodotti, varianti, clienti, ordini, codici sconto e recensioni. Chiedi cosa succede ai campi per cui Shopify non ha un posto e chiedi la riconciliazione dopo l’import. La nostra risposta: un Data Migration Report con i conteggi vecchi e nuovi affiancati.',
+      text: '**La mappatura dei dati è il documento che dice dove finisce ogni campo del vecchio store in Shopify, più il confronto dei conteggi a fine import.** Riguarda prodotti, varianti, clienti, ordini, codici sconto e recensioni. Chiedi cosa succede ai campi per cui Shopify non ha un posto e chiedi la riconciliazione dopo l’import. La nostra risposta: un Data Migration Report con i conteggi vecchi e nuovi affiancati.',
     },
     { type: 'h3', text: '4. Ambito e calendario fissi' },
     {
       type: 'paragraph',
-      text: 'Ambito e calendario fissi significano che conosci consegne, date e prezzo prima che il lavoro inizi. La nostra risposta: 14 giorni per uno store pronto da pubblicare, go-live nel giorno che scegli tra il 15 e il 30, e un prezzo pubblico in base al fatturato aziendale, da €5.800 (le tre fasce e cosa deve includere un prezzo sono in [quanto costa migrare a Shopify](/it/blog/costo-migrazione-shopify)). Piano Shopify e app li paghi a Shopify, non a noi. Se vai su Plus, chiedi a ogni agenzia di prezzare a parte piano, passaggio e lavoro Plus: l’articolo sulla [migrazione a Shopify Plus](/it/blog/migrazione-shopify-plus) spiega perché.',
+      text: '**Ambito e calendario fissi significano che conosci consegne, date e prezzo prima che il lavoro inizi.** La nostra risposta: 14 giorni per uno store pronto da pubblicare, go-live nel giorno che scegli tra il 15 e il 30, e un prezzo pubblico in base al fatturato aziendale, da €5.800 (le tre fasce e cosa deve includere un prezzo sono in [quanto costa migrare a Shopify](/it/blog/costo-migrazione-shopify)). Piano Shopify e app li paghi a Shopify, non a noi. Se vai su Plus, chiedi a ogni agenzia di prezzare a parte piano, passaggio e lavoro Plus: l’articolo sulla [migrazione a Shopify Plus](/it/blog/migrazione-shopify-plus) spiega perché.',
     },
     { type: 'h3', text: '5. Chi fa il lavoro' },
     {
       type: 'paragraph',
-      text: 'Chi fa il lavoro significa nomi e ruoli delle persone che toccano il tuo store, e se chi parla nella videochiamata commerciale è lo stesso che costruisce. Chiedi il team e il sostituto. La nostra risposta: un solo referente per te e un team con uno specialista per area (sviluppo, SEO e redirect, tracking, checkout, design, AI) che lavora in parallelo.',
+      text: '**Chi fa il lavoro significa nomi e ruoli delle persone che toccano il tuo store, e se chi parla nella videochiamata commerciale è lo stesso che costruisce.** Chiedi il team e il sostituto. La nostra risposta: un solo referente per te e un team con uno specialista per area (sviluppo, SEO e redirect, tracking, checkout, design, AI) che lavora in parallelo.',
     },
     { type: 'h3', text: '6. Supporto dopo il lancio' },
     {
       type: 'paragraph',
-      text: 'Il supporto dopo il lancio copre le settimane in cui emergono i problemi: link rotti, un buco nel tracking, un checkout che converte meno di prima. Chiedi quanto dura, cosa copre e chi risponde. La nostra risposta: 90 giorni dal go-live di correzioni, modifiche minori, controlli SEO e tracking, una Loom di 10 minuti a settimana e un report al giorno 90.',
+      text: '**Il supporto dopo il lancio copre le settimane in cui emergono i problemi: link rotti, un buco nel tracking, un checkout che converte meno di prima.** Chiedi quanto dura, cosa copre e chi risponde. La nostra risposta: 90 giorni dal go-live di correzioni, modifiche minori, controlli SEO e tracking, una Loom di 10 minuti a settimana e un report al giorno 90.',
     },
     { type: 'h3', text: '7. Garanzie scritte' },
     {
       type: 'paragraph',
-      text: 'Una garanzia scritta è una clausola con una condizione misurabile e un rimedio, nel contratto e non solo nella pagina commerciale. Confronta cosa si misura, rispetto a quale baseline e cosa ottieni. La nostra risposta: quattro. Store pronto al giorno 14 o ti rimborsiamo la prima rata. Traffico organico sotto la baseline a 90 giorni dal go-live? Lavoriamo gratis finché non torna. Store offline al lancio per colpa nostra? Una rata la paghiamo noi. Il checkout converte meno di prima a 90 giorni? Lo ottimizziamo gratis finché non supera. Si misurano su una dashboard che ricevi dal giorno 1, e le condizioni stanno in una pagina.',
+      text: '**Una garanzia scritta è una clausola con una condizione misurabile e un rimedio, nel contratto e non solo nella pagina commerciale.** Confronta cosa si misura, rispetto a quale baseline e cosa ottieni. La nostra risposta: quattro. Store pronto al giorno 14 o ti rimborsiamo la prima rata. Traffico organico sotto la baseline a 90 giorni dal go-live? Lavoriamo gratis finché non torna. Store offline al lancio per colpa nostra? Una rata la paghiamo noi. Il checkout converte meno di prima a 90 giorni? Lo ottimizziamo gratis finché non supera. Si misurano su una dashboard che ricevi dal giorno 1, e le condizioni stanno in una pagina.',
     },
     { type: 'h3', text: '8. Proprietà di codice e account' },
     {
       type: 'paragraph',
-      text: 'Proprietà significa che store Shopify, dominio, analytics e account pubblicitari sono a tuo nome, e che puoi andartene senza chiedere permesso. Chiedi di chi è l’account Shopify all’inizio, chi gestisce il DNS e se il codice è tuo o in licenza. Un fornitore che tiene il tuo dominio o il tuo store tiene in mano la tua attività. La nostra risposta: ci dai gli accessi al giorno 1 e dopo i 90 giorni lo store è tuo, senza vincoli. Le condizioni sono in un contratto di una pagina, quindi leggilo per i dettagli su account e codice.',
+      text: '**Proprietà significa che store Shopify, dominio, analytics e account pubblicitari sono a tuo nome, e che puoi andartene senza chiedere permesso.** Chiedi di chi è l’account Shopify all’inizio, chi gestisce il DNS e se il codice è tuo o in licenza. Se il fornitore tiene il tuo dominio o il tuo store, non puoi andartene senza il suo consenso. La nostra risposta: ci dai gli accessi al giorno 1 e dopo i 90 giorni lo store è tuo, senza vincoli. Le condizioni sono in un contratto di una pagina, quindi leggilo per i dettagli su account e codice.',
     },
     { type: 'h3', text: '9. Referenze' },
     {
       type: 'paragraph',
-      text: 'Le referenze sono persone a cui puoi chiedere, non loghi su una slide. Chiedi due clienti con una piattaforma simile alla tua, e chiedi a loro com’è andata la migrazione. La nostra risposta: i due casi studio qui sopra, e [10 recensioni a 5 stelle su Trustpilot](https://www.trustpilot.com/review/noprob.agency), con oltre 7 anni di progetti eCommerce dietro il metodo.',
+      text: '**Le referenze sono persone a cui puoi chiedere, non loghi su una slide.** Chiedi due clienti con una piattaforma simile alla tua, e chiedi a loro com’è andata la migrazione. La nostra risposta: i due casi studio qui sopra, e [10 recensioni a 5 stelle su Trustpilot](https://www.trustpilot.com/review/noprob.agency), con oltre 7 anni di progetti eCommerce dietro il metodo.',
     },
     { type: 'h2', text: 'Cosa chiedere nella prima videochiamata?' },
     {
@@ -471,12 +471,12 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**Store con traffico e ordini da proteggere.** Ogni vecchio URL con traffico ottiene un redirect 301, mappato prima del lancio e testato dopo.',
-        '**Una replica 1:1 del tuo store.** Lo Sprint ricostruisce il tuo store 1:1 con il nostro Custom AI System. Design e rebranding vengono dopo il go-live, con partner dedicati.',
-        '**Store che arrivano da qualsiasi piattaforma.** WooCommerce, Magento, PrestaShop, BigCommerce, Wix, Squarespace, piattaforme proprietarie e gestionali con negozio integrato: il metodo è lo stesso su ogni sorgente (audit, mappa dei redirect 301, migrazione dei dati e QA), e abbiamo scritto una guida per [WooCommerce](/it/blog/migrazione-woocommerce-shopify), [Magento](/it/blog/migrazione-magento-shopify), [PrestaShop](/it/blog/migrazione-prestashop-shopify), [BigCommerce](/it/blog/migrazione-bigcommerce-shopify), [Wix](/it/blog/wix-o-shopify) e [Squarespace](/it/blog/squarespace-o-shopify).',
-        '**Un catalogo piccolo con dati semplici.** Un’app di migrazione e un CSV di redirect possono bastare; lo Sprint parte dove lo strumento si ferma.',
-        '**Un prezzo fisso con scaglioni chiari.** Oltre i limiti del tuo scaglione (prodotti, lingue, gestionale) si applicano extra a prezzo fisso, e portali B2B complessi, marketplace e cassa sono gestiti da partner dedicati dopo il go-live.',
-        '**Fatturato aziendale sotto i 300k euro.** Lo Sprint parte con una valutazione preventiva, per assicurarci che l’investimento sia sostenibile per lo store. Puoi comunque candidarti e valutiamo insieme la fattibilità.',
+        'Store con traffico e ordini da proteggere: ogni vecchio URL con traffico ottiene un redirect 301, mappato prima del lancio e testato dopo.',
+        'Una replica 1:1 del tuo store: lo Sprint la ricostruisce 1:1 con il nostro Custom AI System. Design e rebranding vengono dopo il go-live, con partner dedicati.',
+        'Store che arrivano da qualsiasi piattaforma: WooCommerce, Magento, PrestaShop, BigCommerce, Wix, Squarespace, piattaforme proprietarie e gestionali con negozio integrato: il metodo è lo stesso su ogni sorgente (audit, mappa dei redirect 301, migrazione dei dati e QA), e abbiamo scritto una guida per [WooCommerce](/it/blog/migrazione-woocommerce-shopify), [Magento](/it/blog/migrazione-magento-shopify), [PrestaShop](/it/blog/migrazione-prestashop-shopify), [BigCommerce](/it/blog/migrazione-bigcommerce-shopify), [Wix](/it/blog/wix-o-shopify) e [Squarespace](/it/blog/squarespace-o-shopify).',
+        'Un catalogo piccolo con dati semplici: un’app di migrazione e un CSV di redirect possono bastare, e lo Sprint parte dove lo strumento si ferma.',
+        'Un prezzo fisso con scaglioni chiari: oltre i limiti del tuo scaglione (prodotti, lingue, gestionale) si applicano extra a prezzo fisso, e portali B2B complessi, marketplace e cassa sono gestiti da partner dedicati dopo il go-live.',
+        'Fatturato aziendale sotto i 300k euro: lo Sprint parte con una valutazione preventiva, per assicurarci che l’investimento sia sostenibile per lo store. Puoi comunque candidarti e valutiamo insieme la fattibilità.',
       ],
     },
     { type: 'h2', text: 'Domande frequenti' },
@@ -488,7 +488,7 @@ const article: Article = {
     { type: 'h3', text: 'Serve un esperto di migrazione Shopify o basta un’app?' },
     {
       type: 'paragraph',
-      text: 'Un’app può spostare un catalogo piccolo con dati semplici. Sposta record, ma qualcuno deve comunque decidere dove puntano i vecchi URL, ricostruire la vetrina e impostare il tracking. Se il traffico organico è ciò che ti fa fatturare, o dietro al negozio c’è un gestionale, serve chi si prende tutta la migrazione.',
+      text: '**Un’app può spostare un catalogo piccolo con dati semplici.** Sposta record, ma qualcuno deve comunque decidere dove puntano i vecchi URL, ricostruire la vetrina e impostare il tracking. Se il traffico organico è ciò che ti fa fatturare, o dietro al negozio c’è un gestionale, serve chi si prende tutta la migrazione.',
     },
     { type: 'h3', text: 'Essere Shopify Partner significa saper migrare il mio store?' },
     {
@@ -508,7 +508,7 @@ const article: Article = {
     { type: 'h3', text: 'Quanto costa un’agenzia di migrazione Shopify?' },
     {
       type: 'paragraph',
-      text: 'Le agenzie prezzano perimetri diversi, quindi confronta le otto voci del preventivo, non il totale. Lo Shopify Launch Sprint ha un prezzo pubblico per fatturato: €5.800, €8.800 o €12.800, IVA esclusa, in 4 rate.',
+      text: '**Le agenzie prezzano perimetri diversi, quindi confronta le otto voci del preventivo, non il totale.** Lo Shopify Launch Sprint ha un prezzo pubblico per fatturato: €5.800, €8.800 o €12.800, IVA esclusa, in 4 rate.',
     },
     { type: 'h3', text: 'A chi è pensato lo Shopify Launch Sprint?' },
     {
@@ -518,7 +518,7 @@ const article: Article = {
     { type: 'h2', text: 'Cosa fare questa settimana?' },
     {
       type: 'paragraph',
-      text: 'Scegli due o tre fornitori di tipi diversi, fai a ciascuno le stesse dieci domande e confronta i loro documenti, non le loro presentazioni. Chiedi a tutti una mappa dei redirect di esempio, il contratto e l’elenco degli extra. Il nostro modo di lavorare è nella [guida alla migrazione a Shopify](/it/migrazione-shopify).',
+      text: '**Scegli due o tre fornitori di tipi diversi, fai a ciascuno le stesse dieci domande e confronta i loro documenti, non le loro presentazioni.** Chiedi a tutti una mappa dei redirect di esempio, il contratto e l’elenco degli extra. Il nostro modo di lavorare è nella [guida alla migrazione a Shopify](/it/migrazione-shopify).',
     },
     {
       type: 'paragraph',
@@ -526,7 +526,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '**Prossimo passo.** Mandaci il tuo store: [candidati allo Shopify Launch Sprint](/it/sprint-migrazione-shopify) e rispondiamo entro 48 ore con la tua fascia, il prezzo e la prima data di kickoff disponibile.',
+      text: 'Mandaci il tuo store: [candidati allo Shopify Launch Sprint](/it/sprint-migrazione-shopify) e rispondiamo entro 48 ore con la tua fascia, il prezzo e la prima data di kickoff disponibile.',
     },
     {
       type: 'paragraph',

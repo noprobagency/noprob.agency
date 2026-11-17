@@ -42,7 +42,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Un eCommerce non cresce per caso, serve un sistema. Questo caso studio racconta cosa succede quando viene costruito nel modo corretto.',
+      text: 'Un eCommerce cresce quando dietro c’è un sistema. Questo caso studio racconta cosa succede quando lo costruisci come si deve.',
     },
     {
       type: 'paragraph',
@@ -66,11 +66,11 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Cumini è una luxury fashion boutique multibrand italiana, con due negozi fisici in Friuli-Venezia Giulia. Da anni rappresenta un punto di riferimento per l’alta moda sul territorio, grazie a una selezione che include alcuni dei nomi più rilevanti del prêt-à-porter internazionale.',
+      text: 'Cumini è una luxury fashion boutique multibrand italiana, con due negozi fisici in Friuli-Venezia Giulia. Da anni è un punto di riferimento per l’alta moda in zona, con una selezione che comprende alcuni dei nomi più importanti del prêt-à-porter internazionale.',
     },
     {
       type: 'paragraph',
-      text: 'Un posizionamento solido che, tuttavia, non trovava ancora una piena espressione nel canale digitale: l’eCommerce era già attivo, ma usato come sola estensione del punto vendita fisico e non sviluppato come strumento strategico.',
+      text: 'Un posizionamento solido, che online non si vedeva ancora: l’eCommerce era già attivo, ma funzionava come estensione del punto vendita fisico, senza una strategia propria.',
     },
     {
       type: 'paragraph',
@@ -82,7 +82,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Mancava, in sintesi, un ecosistema strutturato capace di supportare lo sviluppo del brand anche sul digitale.',
+      text: 'Mancava un sistema strutturato che sostenesse il brand anche online.',
     },
     {
       type: 'paragraph',
@@ -94,7 +94,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'I dettagli di questi anni richiederebbero un’analisi a sé. Qui vengono sintetizzati per offrire il contesto necessario, non per costruire un manuale operativo.',
+      text: 'I dettagli di questi anni richiederebbero un’analisi a sé. Qui li riassumiamo per dare il contesto.',
     },
     {
       type: 'paragraph',
@@ -110,7 +110,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'L’obiettivo era iniziare a integrare alcuni primi interventi in modo progressivo, calibrandoli sulle reali necessità del momento.',
+      text: 'L’idea era partire con pochi interventi e calibrarli sulle necessità del momento.',
     },
     {
       type: 'paragraph',
@@ -126,11 +126,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Questo risultato va interpretato nel modo corretto.',
-    },
-    {
-      type: 'paragraph',
-      text: 'Non è stato un picco eccezionale, ma la risposta a una domanda che, in fondo, era già esistente: l’attivazione di Google Ads ha semplicemente reso visibile un’offerta che prima non lo era.',
+      text: 'La domanda esisteva già: Google Ads ha reso visibile un’offerta che prima non lo era.',
     },
     {
       type: 'h3',
@@ -146,7 +142,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Il tema centrale restava la piattaforma eCommerce.',
+      text: 'Il problema restava la piattaforma eCommerce.',
     },
     {
       type: 'paragraph',
@@ -166,11 +162,11 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'In questo contesto, la leva principale è stata la flessibilità: integrazione rapida di competenze verticali, test continui, lettura dei dati e adattamento costante.',
+      text: 'La leva principale è stata la flessibilità: competenze verticali inserite in fretta, test continui, lettura dei dati e adattamenti costanti.',
     },
     {
       type: 'paragraph',
-      text: 'In questo contesto il fatturato eCommerce ha registrato una crescita significativa.',
+      text: 'Il fatturato eCommerce è cresciuto in modo significativo.',
     },
     {
       type: 'metrics',
@@ -191,7 +187,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Il tema centrale restava lo stesso: la piattaforma proprietaria non consentiva né attività di marketing automation né sistemi di tracciamento completi e precisi.',
+      text: 'Il problema era sempre lo stesso: la piattaforma proprietaria non consentiva né attività di marketing automation né sistemi di tracciamento completi e precisi.',
     },
     {
       type: 'paragraph',
@@ -203,19 +199,15 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Parallelamente, il team ha raggiunto una maggiore stabilità operativa: i professionisti coinvolti lavoravano in modo sempre più coordinato sui diversi canali, rendendo la gestione complessiva più efficace.',
+      text: 'Intanto il team si era stabilizzato: i professionisti coinvolti lavoravano in modo sempre più coordinato sui diversi canali.',
     },
     {
       type: 'paragraph',
-      text: 'In questo contesto si è aperta una nuova fase del progetto.',
+      text: 'Si è aperta una nuova fase. Accanto alle attività di performance ci siamo dedicati al branding, con nuove linee editoriali per i social e più attenzione alla coerenza dell’immagine, per rendere il brand più riconoscibile anche online.',
     },
     {
       type: 'paragraph',
-      text: 'Accanto alle attività di performance ci siamo dedicati al branding, con l’introduzione di nuove linee editoriali per i social, con una maggiore attenzione alla coerenza complessiva dell’immagine, con l’obiettivo di rendere il brand più riconoscibile e coerente anche nel digitale.',
-    },
-    {
-      type: 'paragraph',
-      text: 'Tutto ciò ha permesso al brand di continuare a crescere in modo coerente su tutti i fronti, anche con la piattaforma di allora.',
+      text: 'Il brand ha continuato a crescere su tutti i fronti, anche con la piattaforma di allora.',
     },
     {
       type: 'paragraph',
@@ -250,7 +242,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Il passaggio a Shopify non è stato un semplice cambio di piattaforma, ma un vero e proprio punto di svolta per l’intero progetto: ecco perché.',
+      text: 'Per il progetto Shopify è stato un punto di svolta, per le ragioni che seguono.',
     },
     {
       type: 'paragraph',
@@ -313,7 +305,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Naturalmente, un tracciamento affidabile non è un obiettivo in sé, ma la condizione necessaria per prendere tutte le decisioni a livello strategico, di marketing e di comunicazione.',
+      text: 'Un tracciamento affidabile serve a prendere le decisioni di strategia, di marketing e di comunicazione.',
     },
     {
       type: 'h3',
@@ -330,7 +322,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Parliamo di numeri precisi, non di stime generiche: CAC complessivo, nCAC (costo di acquisizione di un nuovo cliente), ROAS per canale, ROAS totale dello shop, margine di contribuzione reale al netto di tutti i costi.',
+      text: 'Sono numeri precisi: CAC complessivo, nCAC (costo di acquisizione di un nuovo cliente), ROAS per canale, ROAS totale dello shop, margine di contribuzione reale al netto di tutti i costi.',
     },
     {
       type: 'paragraph',
@@ -338,7 +330,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Ad oggi, il focus è sulla retention e sulla LTV: la crescita non passa solo dall’acquisizione di nuovi clienti, ma dal saper valorizzare quelli esistenti e aumentare il loro valore nel tempo.',
+      text: 'Oggi il focus è su retention e LTV: oltre ai nuovi clienti, conta aumentare nel tempo il valore di quelli che hai già.',
     },
     {
       type: 'h3',
@@ -346,7 +338,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Il tasso di conversione da mobile rappresenta uno degli indicatori più sensibili per un eCommerce fashion.',
+      text: 'Il tasso di conversione da mobile è uno degli indicatori più sensibili per un eCommerce fashion.',
     },
     {
       type: 'paragraph',
@@ -358,7 +350,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Con la transizione a Shopify, la situazione è cambiata radicalmente grazie a un checkout nativo progettato per l’esperienza mobile, privo di errori e perfettamente coerente con gli standard del brand.',
+      text: 'Con la transizione a Shopify, la situazione è cambiata con un checkout nativo pensato per il mobile, senza errori e coerente con il brand.',
     },
     {
       type: 'paragraph',
@@ -379,7 +371,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Oggi Klaviyo riceve dati puliti e aggiornati in tempo reale su ogni comportamento utente. I flussi sono attivi, coerenti, performanti. Il risultato? Tra il 1° novembre 2025 e il 24 aprile 2026 le entrate attribuite a Klaviyo sono cresciute del 301% rispetto al periodo precedente, e valgono il 61,66% delle entrate totali dello store.',
+      text: 'Oggi Klaviyo riceve dati puliti e aggiornati in tempo reale su ogni comportamento utente. I flussi sono attivi e funzionano. Tra il 1° novembre 2025 e il 24 aprile 2026 le entrate attribuite a Klaviyo sono cresciute del 301% rispetto al periodo precedente, e valgono il 61,66% delle entrate totali dello store.',
     },
     {
       type: 'h3',
@@ -399,7 +391,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Per questo, gli investimenti durante i periodi di lancio della nuova collezione non sono finalizzati alla conversione immediata, ma alla costruzione di una base di utenti che, nella maggior parte dei casi, si attiva nei mesi successivi, spesso in corrispondenza dei saldi.',
+      text: 'Per questo, gli investimenti nei periodi di lancio della nuova collezione servono a costruire una base di utenti che, nella maggior parte dei casi, si attiva nei mesi successivi, spesso con i saldi.',
     },
     {
       type: 'paragraph',
@@ -415,19 +407,15 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Nei mesi successivi alla migrazione, i risultati hanno iniziato a consolidarsi.',
-    },
-    {
-      type: 'paragraph',
       text: 'Per misurarli abbiamo messo a confronto i 12 mesi prima di Shopify (da giugno 2024 a maggio 2025) con i 12 mesi dopo (da giugno 2025 a maggio 2026). Stessi negozi, stesso catalogo, stessa squadra.',
     },
     {
       type: 'list',
       items: [
-        'vendite online: **+67,7%**',
-        'ordini: **+49,4%**',
-        'scontrino medio: **+12,2%**',
-        'clienti che tornano a comprare: **+35,3%**',
+        'vendite online: +67,7%',
+        'ordini: +49,4%',
+        'scontrino medio: +12,2%',
+        'clienti che tornano a comprare: +35,3%',
       ],
     },
     {
@@ -460,32 +448,24 @@ export const cumini: UseCase = {
       note: 'Da gennaio a metà ottobre 2026, confrontato con tutto il 2025. Anno ancora in corso: il MER scende perché stiamo investendo di più in advertising.',
     },
     {
-      type: 'paragraph',
-      text: 'Ad oggi, Cumini ha raggiunto un livello di maturità che le permette di crescere in modo costante e prevedibile nel tempo.',
-    },
-    {
       type: 'h2',
-      text: 'Metodo, numeri, crescita: la combinazione che fa la differenza',
+      text: 'Perché il MER scende mentre le vendite crescono',
     },
     {
       type: 'paragraph',
-      text: 'La crescita di un eCommerce fashion non è mai lineare: alterna fasi di accelerazione, momenti di stallo e periodi in cui si lavora per costruire, non per raccogliere.',
+      text: 'La crescita di un eCommerce fashion non è lineare: alterna mesi in cui si raccoglie e mesi in cui si costruisce.',
     },
     {
       type: 'paragraph',
-      text: 'Il MER lo mostra bene. Era 6,8 nel 2023 ed è 3,7 nel 2026: scende man mano che investiamo di più in advertising, in un mercato sempre più competitivo. Eppure le vendite online crescono: +26,3% nel 2025 e, a metà ottobre 2026, già il 15,4% in più di tutto il 2025.',
+      text: 'Lo si vede dal MER. Era 6,8 nel 2023 ed è 3,7 nel 2026: scende man mano che investiamo di più in advertising, in un mercato sempre più competitivo. Eppure le vendite online crescono: +26,3% nel 2025 e, a metà ottobre 2026, già il 15,4% in più di tutto il 2025.',
     },
     {
       type: 'paragraph',
-      text: 'Per questo non guardiamo solo il MER, ma anche il margine di contribuzione: quanto resta all’azienda dopo pubblicità e costi. È la metrica che conta davvero. Su base annua il marketing è in positivo sia nel 2025 sia nel 2026.',
+      text: 'Per questo guardiamo anche il margine di contribuzione, cioè quanto resta all’azienda dopo pubblicità e costi. Su base annua il marketing è in positivo sia nel 2025 sia nel 2026.',
     },
     {
       type: 'paragraph',
-      text: 'I mesi di lancio costruiscono la domanda che arriva con i saldi. Conta il risultato dell’anno, non il singolo mese.',
-    },
-    {
-      type: 'paragraph',
-      text: 'Nel lungo periodo, con numeri coerenti e una strategia fondata sulla stabilità, il valore tende a crescere in modo costante e ad accumulare risultati duraturi. È il frutto di un lavoro pensato e portato avanti con una logica di lungo termine.',
+      text: 'I mesi di lancio costruiscono la domanda che arriva con i saldi, quindi il risultato si giudica sull’anno.',
     },
     {
       type: 'h2',
@@ -497,7 +477,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Per questo, la crescita non può essere gestita in modo isolato. Richiede una strategia multicanale integrata, in cui ogni touchpoint contribuisce in modo diverso al percorso d’acquisto.',
+      text: 'Per questo la crescita richiede una strategia multicanale, in cui ogni touchpoint pesa in modo diverso sul percorso d’acquisto.',
     },
     {
       type: 'paragraph',
@@ -505,23 +485,15 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Per questo, nessun canale viene interrotto sulla base delle sole performance di breve periodo. Il risultato è sempre l’effetto combinato di più leve che lavorano insieme.',
+      text: 'Per questo nessun canale viene interrotto sulla base delle sole performance di breve periodo.',
     },
     {
       type: 'paragraph',
-      text: 'Questo approccio si riflette direttamente sui risultati complessivi. Il vero indicatore di crescita non è il fatturato online in sé, ma la capacità di generare valore in modo costante e prevedibile nel tempo.',
+      text: 'Operativamente, il lavoro si basa sul monitoraggio continuo degli stessi indicatori (MER, ROAS per canale, margine di contribuzione, CAC e tasso di riacquisto) da cui derivano le decisioni.',
     },
     {
       type: 'paragraph',
-      text: 'Operativamente, il lavoro si basa sul monitoraggio continuo degli stessi indicatori (MER, ROAS per canale, margine di contribuzione, CAC e tasso di riacquisto) da cui derivano le decisioni. I risultati sono il prodotto di un insieme di scelte progressive, non di singole azioni isolate.',
-    },
-    {
-      type: 'paragraph',
-      text: 'La variabile determinante è il bilanciamento. Gestire un eCommerce oggi significa coordinare in modo coerente tutte le leve: advertising, branding, email marketing, SEO, sviluppo tecnico e analytics.',
-    },
-    {
-      type: 'paragraph',
-      text: 'È da questo equilibrio che dipende il potenziale di crescita. Anche una sola area gestita in modo non adeguato può limitarlo.',
+      text: 'Gestire un eCommerce oggi significa coordinare tutte le leve: advertising, branding, email marketing, SEO, sviluppo tecnico e analytics. Se ne trascuri una, frena anche le altre.',
     },
     {
       type: 'paragraph',
@@ -546,11 +518,11 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Se sei arrivato fin qui, probabilmente riconosci qualcosa della tua realtà in queste pagine. Un brand con un prodotto forte e negozi fisici che performano bene, ma con un eCommerce che non esprime il suo pieno potenziale. O uno store online attivo, ma privo di una vera governance: dati incompleti, advertising guidato dall’intuizione, piattaforma tecnica che non scala con l’ambizione del brand.',
+      text: 'Se sei arrivato fin qui, probabilmente riconosci qualcosa della tua realtà in queste pagine. Un brand con un prodotto forte e negozi fisici che performano bene, ma con un eCommerce che non esprime il suo pieno potenziale. O uno store online attivo, ma senza una regia chiara: dati incompleti, advertising guidato dall’intuizione, piattaforma tecnica che non scala con l’ambizione del brand.',
     },
     {
       type: 'paragraph',
-      text: 'Il modello costruito con Cumini è pensato per boutique fashion e brand multibrand B2C che vantano già un prodotto validato e un fatturato aziendale strutturato. È per chi vuole trasformare il canale online in un asset strategico, gestito con la stessa cura e attenzione dedicate al punto vendita fisico.',
+      text: 'Il modello costruito con Cumini funziona per boutique fashion e brand multibrand B2C che hanno già un prodotto validato e un fatturato aziendale strutturato. È per chi vuole trasformare il canale online in un asset strategico, gestito con la stessa cura e attenzione dedicate al punto vendita fisico.',
     },
     {
       type: 'paragraph',
@@ -576,7 +548,7 @@ export const cumini: UseCase = {
     { type: 'paragraph', text: 'Status: In steady growth' },
     {
       type: 'paragraph',
-      text: "An eCommerce doesn't grow by chance, it needs a system. This case study describes what happens when one is built the right way.",
+      text: 'An eCommerce grows when there is a system behind it. This case study shows what happens when you build one properly.',
     },
     { type: 'paragraph', text: 'In just over 4 years, since 2022:' },
     {
@@ -594,11 +566,11 @@ export const cumini: UseCase = {
     { type: 'h2', text: 'The starting point' },
     {
       type: 'paragraph',
-      text: 'Cumini is an Italian luxury fashion multibrand boutique with two physical stores in Friuli-Venezia Giulia. For years it has been a reference point for high fashion in the region, thanks to a selection that includes some of the most relevant names in international ready-to-wear.',
+      text: 'Cumini is an Italian luxury fashion multibrand boutique with two physical stores in Friuli-Venezia Giulia. For years it has been a reference point for high fashion in the region, with a selection that includes some of the biggest names in international ready-to-wear.',
     },
     {
       type: 'paragraph',
-      text: 'A solid positioning that, however, was not yet fully expressed on the digital channel: the eCommerce was already active, but used as a mere extension of the physical store and not developed as a strategic tool.',
+      text: 'A solid positioning that did not yet show online: the eCommerce was already active, but it worked as an extension of the physical store, with no strategy of its own.',
     },
     {
       type: 'paragraph',
@@ -610,7 +582,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: "What was missing, in short, was a structured ecosystem capable of supporting the brand's development on the digital channel as well.",
+      text: 'What was missing was a structured system to support the brand online as well.',
     },
     {
       type: 'paragraph',
@@ -619,7 +591,7 @@ export const cumini: UseCase = {
     { type: 'h2', text: 'From 2022 to 2024: the construction years' },
     {
       type: 'paragraph',
-      text: 'The details of these years would deserve a separate analysis. They are summarized here to provide the necessary context, not to build an operational manual.',
+      text: 'The details of these years would deserve a separate analysis. We summarize them here for context.',
     },
     {
       type: 'paragraph',
@@ -632,7 +604,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'The objective was to start integrating some initial interventions progressively, calibrating them to the real needs of the moment.',
+      text: 'The idea was to start with a few interventions and calibrate them to the needs of the moment.',
     },
     {
       type: 'paragraph',
@@ -646,10 +618,9 @@ export const cumini: UseCase = {
       type: 'paragraph',
       text: 'In a few months, this single channel allowed us to achieve the same eCommerce revenue as the entire previous year.',
     },
-    { type: 'paragraph', text: 'This result should be interpreted correctly.' },
     {
       type: 'paragraph',
-      text: 'It was not an exceptional spike, but the response to a demand that already existed: the activation of Google Ads simply made an offer visible that previously was not.',
+      text: 'The demand already existed: Google Ads made visible an offer that previously was not.',
     },
     { type: 'h3', text: '2023: development and operational consolidation' },
     {
@@ -662,7 +633,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'The central issue remained the eCommerce platform.',
+      text: 'The problem remained the eCommerce platform.',
     },
     {
       type: 'paragraph',
@@ -682,11 +653,11 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'In this context, the main lever was flexibility: rapid integration of vertical skills, continuous testing, data reading, and constant adaptation.',
+      text: 'The main lever was flexibility: vertical skills brought in quickly, continuous testing, reading the data and adapting all the time.',
     },
     {
       type: 'paragraph',
-      text: 'In this context eCommerce revenue recorded significant growth.',
+      text: 'eCommerce revenue grew significantly.',
     },
     { type: 'metrics', merValue: '6', note: 'April to December 2023: this is where the dashboard data starts.' },
     { type: 'h3', text: '2024: toward a new infrastructure' },
@@ -700,7 +671,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'The central issue remained the same: the proprietary platform allowed neither marketing automation activities nor complete and accurate tracking systems.',
+      text: 'The problem was still the same: the proprietary platform allowed neither marketing automation activities nor complete and accurate tracking systems.',
     },
     {
       type: 'paragraph',
@@ -712,16 +683,15 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'In parallel, the team reached greater operational stability: the professionals involved worked in an increasingly coordinated way across the various channels, making overall management more effective.',
-    },
-    { type: 'paragraph', text: 'In this context, a new phase of the project opened up.' },
-    {
-      type: 'paragraph',
-      text: 'Alongside performance activities, we dedicated ourselves to branding, with new editorial lines for social media and greater attention to the overall consistency of the image, with the goal of making the brand more recognizable and consistent in the digital space as well.',
+      text: 'Meanwhile the team had settled: the professionals involved worked in an increasingly coordinated way across the various channels.',
     },
     {
       type: 'paragraph',
-      text: "All this allowed the brand to continue growing in a coherent way on all fronts, even on the platform of the time.",
+      text: 'A new phase opened up. Alongside performance activities, we dedicated ourselves to branding, with new editorial lines for social media and more attention to the consistency of the image, to make the brand more recognizable online as well.',
+    },
+    {
+      type: 'paragraph',
+      text: 'The brand kept growing on all fronts, even on the platform of the time.',
     },
     {
       type: 'paragraph',
@@ -749,7 +719,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'The transition to Shopify was not just a platform change, but a true turning point for the entire project: here is why.',
+      text: 'For the project, Shopify was a turning point, for the reasons below.',
     },
     {
       type: 'paragraph',
@@ -807,7 +777,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Naturally, reliable tracking is not an objective in itself, but the necessary condition for making all decisions at a strategic, marketing, and communication level.',
+      text: 'Reliable tracking is what lets you make decisions on strategy, marketing, and communication.',
     },
     { type: 'h3', text: 'Deciding on data: the strategic shift' },
     {
@@ -821,7 +791,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'We are talking about precise numbers, not generic estimates: total CAC, nCAC (new customer acquisition cost), ROAS by channel, total ROAS of the shop, real contribution margin net of all costs.',
+      text: 'The numbers are precise: total CAC, nCAC (new customer acquisition cost), ROAS by channel, total ROAS of the shop, real contribution margin net of all costs.',
     },
     {
       type: 'paragraph',
@@ -829,7 +799,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: "Today, the focus is on retention and LTV: growth doesn't come only from acquiring new customers, but from knowing how to value existing ones and increasing their value over time.",
+      text: 'Today the focus is on retention and LTV: besides new customers, what counts is raising the value of the ones you already have over time.',
     },
     { type: 'h3', text: 'Conversion rate: mobile priority' },
     {
@@ -846,7 +816,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: "With the transition to Shopify, the situation changed radically thanks to a native checkout designed for the mobile experience, free of errors and perfectly aligned with the brand's standards.",
+      text: 'With the move to Shopify, the situation changed with a native checkout built for mobile, free of errors and consistent with the brand.',
     },
     {
       type: 'paragraph',
@@ -867,7 +837,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'Today Klaviyo receives clean and updated data in real time on every user behavior. The flows are active, consistent, and high-performing. The result? Between November 1, 2025 and April 24, 2026 revenue attributed to Klaviyo grew 301% on the previous period, and it is worth 61.66% of the store total revenue.',
+      text: 'Today Klaviyo receives clean and updated data in real time on every user behavior. The flows are active and working. Between November 1, 2025 and April 24, 2026 revenue attributed to Klaviyo grew 301% on the previous period, and it is worth 61.66% of the store total revenue.',
     },
     { type: 'h3', text: 'New collection, full price' },
     {
@@ -884,7 +854,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'For this reason, investments during new collection launch periods are not aimed at immediate conversion, but at building a base of users who, in most cases, activate in the following months, often during sales.',
+      text: 'For this reason, investments during new collection launches go into building a base of users who, in most cases, activate in the following months, often during sales.',
     },
     {
       type: 'paragraph',
@@ -897,19 +867,15 @@ export const cumini: UseCase = {
     { type: 'h2', text: '2026: new results' },
     {
       type: 'paragraph',
-      text: 'In the months following the migration, the results began to consolidate.',
-    },
-    {
-      type: 'paragraph',
       text: 'To measure them we compared the 12 months before Shopify (June 2024 to May 2025) with the 12 months after (June 2025 to May 2026). Same stores, same catalog, same team.',
     },
     {
       type: 'list',
       items: [
-        'online sales: **+67.7%**',
-        'orders: **+49.4%**',
-        'average order value: **+12.2%**',
-        'returning customers: **+35.3%**',
+        'online sales: +67.7%',
+        'orders: +49.4%',
+        'average order value: +12.2%',
+        'returning customers: +35.3%',
       ],
     },
     {
@@ -941,30 +907,22 @@ export const cumini: UseCase = {
       growthValue: '+15.4%',
       note: 'January to mid October 2026, compared with the whole of 2025. Year still in progress: MER goes down because we are investing more in advertising.',
     },
+    { type: 'h2', text: 'Why MER goes down while sales grow' },
     {
       type: 'paragraph',
-      text: 'Today, Cumini has reached a level of maturity that allows it to grow consistently and predictably over time.',
-    },
-    { type: 'h2', text: 'Method, numbers, growth: the combination that makes the difference' },
-    {
-      type: 'paragraph',
-      text: 'The growth of a fashion eCommerce is never linear: it alternates phases of acceleration, moments of stagnation, and periods in which work is done to build, not to harvest.',
+      text: 'The growth of a fashion eCommerce is not linear: it alternates months of harvesting with months of building.',
     },
     {
       type: 'paragraph',
-      text: 'The MER shows it well. It was 6.8 in 2023 and is 3.7 in 2026: it goes down as we invest more in advertising, in an increasingly competitive market. Yet online sales keep growing: +26.3% in 2025 and, by mid October 2026, already 15.4% more than the whole of 2025.',
+      text: 'You can see it in the MER. It was 6.8 in 2023 and is 3.7 in 2026: it goes down as we invest more in advertising, in an increasingly competitive market. Yet online sales keep growing: +26.3% in 2025 and, by mid October 2026, already 15.4% more than the whole of 2025.',
     },
     {
       type: 'paragraph',
-      text: 'That is why we do not look at MER alone, but also at contribution margin: what the company keeps after advertising and costs. It is the metric that really matters. On a yearly basis marketing is positive in both 2025 and 2026.',
+      text: 'That is why we also look at contribution margin, which is what the company keeps after advertising and costs. On a yearly basis marketing is positive in both 2025 and 2026.',
     },
     {
       type: 'paragraph',
-      text: 'Launch months build the demand that arrives with the sales. What counts is the result of the year, not the single month.',
-    },
-    {
-      type: 'paragraph',
-      text: 'In the long run, with consistent numbers and a strategy founded on stability, value tends to grow steadily and to accumulate lasting results. It is the result of work conceived and carried out with a long-term logic.',
+      text: 'Launch months build the demand that arrives with the sales, so the result is judged over the year.',
     },
     { type: 'h2', text: 'Today: structure and growth' },
     {
@@ -973,7 +931,7 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'For this reason, growth cannot be managed in an isolated way. It requires an integrated multichannel strategy, in which each touchpoint contributes differently to the purchase journey.',
+      text: 'For this reason, growth takes a multichannel strategy, in which each touchpoint weighs differently on the purchase journey.',
     },
     {
       type: 'paragraph',
@@ -981,23 +939,15 @@ export const cumini: UseCase = {
     },
     {
       type: 'paragraph',
-      text: 'For this reason, no channel is interrupted based solely on short-term performance. The result is always the combined effect of multiple levers working together.',
+      text: 'For this reason, no channel is interrupted based solely on short-term performance.',
     },
     {
       type: 'paragraph',
-      text: 'This approach is directly reflected in overall results. The real growth indicator is not online revenue itself, but the ability to generate value consistently and predictably over time.',
+      text: 'Operationally, the work is based on the continuous monitoring of the same indicators (MER, ROAS by channel, contribution margin, CAC, and repurchase rate) from which decisions are derived.',
     },
     {
       type: 'paragraph',
-      text: 'Operationally, the work is based on the continuous monitoring of the same indicators (MER, ROAS by channel, contribution margin, CAC, and repurchase rate) from which decisions are derived. The results are the product of a set of progressive choices, not isolated actions.',
-    },
-    {
-      type: 'paragraph',
-      text: 'The determining variable is balance. Managing an eCommerce today means coordinating in a coherent way all the levers: advertising, branding, email marketing, SEO, technical development, and analytics.',
-    },
-    {
-      type: 'paragraph',
-      text: 'It is from this balance that growth potential depends. Even a single area managed inadequately can limit it.',
+      text: 'Managing an eCommerce today means coordinating all the levers: advertising, branding, email marketing, SEO, technical development, and analytics. If you neglect one, it holds back the others.',
     },
     { type: 'paragraph', text: 'Today:' },
     {
@@ -1014,11 +964,11 @@ export const cumini: UseCase = {
     { type: 'h2', text: 'Does this model work for you?' },
     {
       type: 'paragraph',
-      text: "If you have made it this far, you probably recognize something of your own reality in these pages. A brand with a strong product and physical stores that perform well, but with an eCommerce that does not express its full potential. Or an active online store, but lacking real governance: incomplete data, advertising guided by intuition, a technical platform that does not scale with the ambition of the business.",
+      text: "If you have made it this far, you probably recognize something of your own reality in these pages. A brand with a strong product and physical stores that perform well, but with an eCommerce that does not express its full potential. Or an active online store, but with no clear direction: incomplete data, advertising guided by intuition, a technical platform that does not scale with the ambition of the brand.",
     },
     {
       type: 'paragraph',
-      text: 'The model built with Cumini is designed for fashion boutiques and multibrand B2C brands that already have a validated product and structured company revenue. It is for those who want to transform the online channel into a strategic asset, managed with the same care and attention dedicated to the physical store.',
+      text: 'The model built with Cumini fits fashion boutiques and multibrand B2C brands that already have a validated product and structured company revenue. It is for those who want to transform the online channel into a strategic asset, managed with the same care and attention dedicated to the physical store.',
     },
     {
       type: 'paragraph',

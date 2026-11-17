@@ -16,9 +16,9 @@ const article: Article = {
   excerptIt:
     'Da cosa dipende il costo di una migrazione a Shopify, quali costi non compaiono mai nel preventivo, tre modi di comprarla e come confrontare i preventivi voce per voce. Con il nostro prezzo pubblico.',
   ledeEn:
-    'A quote is a list of jobs, not a number. Here are the eight lines to look for, the costs nobody puts in writing, and our own price, published in full.',
+    'A quote is a list of jobs with a total at the bottom. Here are the eight lines to look for, the costs nobody puts in writing, and our own price, published in full.',
   ledeIt:
-    'Un preventivo è un elenco di lavori, non un numero. Ecco le otto voci da cercare, i costi che nessuno scrive e il nostro prezzo, pubblicato per intero.',
+    'Un preventivo è un elenco di lavori con un totale in fondo. Ecco le otto voci da cercare, i costi che nessuno scrive e il nostro prezzo, pubblicato per intero.',
   image: '/images/blog/shopify-migration-cost-cover.png',
   imageAlt: 'Copertina astratta, sfondo verde salvia, con una griglia regolare di puntini',
   imageAltEn: 'Abstract cover, sage green background with a regular dot grid',
@@ -100,7 +100,7 @@ const article: Article = {
   content: [
     {
       type: 'paragraph',
-      text: 'Shopify migration cost is the sum of three things: the quote for the move, the monthly bill that starts after it, and what you lose if the move goes wrong. Most quotes show only the first. This article is about reading all three, and comparing quotes by what they cover, not by the total.',
+      text: 'Shopify migration cost is the sum of three things: the quote for the move, the monthly bill that starts after it, and what you lose if the move goes wrong. Most quotes show only the first. This article reads all three and compares quotes line by line, before you look at the total.',
     },
     {
       type: 'paragraph',
@@ -113,7 +113,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'So the useful question is not "how much" but "for what": break the work into lines, see what each one delivers, add the costs that sit outside the quote, then compare.',
+      text: 'So ask what you are paying for: break the work into lines, see what each one delivers, add the costs that sit outside the quote, then compare.',
     },
     { type: 'h2', text: 'What are the eight lines of a migration quote?' },
     {
@@ -154,12 +154,12 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Do the arithmetic on the last one: what would a week offline cost you, or a quarter of weaker rankings? The quote is usually the smaller risk, so the question is not only "how much" but "who pays if it fails".',
+      text: 'Do the arithmetic on the last one: what would a week offline cost you, or a quarter of weaker rankings? The quote is usually the smaller risk, so ask "who pays if it fails" as well as "how much".',
     },
     { type: 'h2', text: 'What are the three ways to buy a migration?' },
     {
       type: 'paragraph',
-      text: '**You can do it yourself with tools, hire a freelancer, or buy a fixed-scope project from an agency; they differ less in price than in who carries the risk.** None of them is tied to a platform: the eight lines are the same whether you leave WooCommerce, PrestaShop, Magento or a custom platform.',
+      text: '**You can do it yourself with tools, hire a freelancer, or buy a fixed-scope project from an agency; the main difference is who carries the risk.** None of them is tied to a platform: the eight lines are the same whether you leave WooCommerce, PrestaShop, Magento or a custom platform.',
     },
     {
       type: 'list',
@@ -176,7 +176,7 @@ const article: Article = {
     { type: 'h2', text: 'How do you read a migration quote, and what should you ask?' },
     {
       type: 'paragraph',
-      text: '**Read a quote for what each line delivers, what it excludes and who pays if it fails, not for the total.** Put every quote in the same grid and fill it in. Treat a vague answer to any row as a price you have not seen yet:',
+      text: '**Read a quote line by line: what each line delivers, what it excludes and who pays if it fails.** Put every quote in the same grid and fill it in, and look at the total last. Treat a vague answer to any row as a price you have not seen yet:',
     },
     {
       type: 'list',
@@ -211,7 +211,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'The first installment is paid at kickoff, the second at go-live, the third and fourth during the support months. We price by revenue because revenue and complexity tend to travel together. Each tier has limits on products, languages and connected ERP; beyond them, fixed-price add-ons apply, and we tell you on a call before you sign. Never an open quote.',
+      text: 'The first installment is paid at kickoff, the second at go-live, the third and fourth during the support months. We price by revenue because revenue and complexity tend to travel together. Each tier has limits on products, languages and connected ERP; beyond them, fixed-price add-ons apply, and we tell you on a call before you sign, so the quote is never open.',
     },
     { type: 'h3', text: 'What the price covers, line by line' },
     {
@@ -230,12 +230,12 @@ const article: Article = {
     { type: 'h3', text: 'What is handled separately' },
     {
       type: 'paragraph',
-      text: 'The Shopify plan and the apps are paid directly to Shopify. Custom design and rebranding, advertising, email marketing and CRM, product photography, copywriting, translations, marketplaces, POS and complex B2B portals are done with dedicated partners after go-live. The Sprint is built for stores coming from another platform.',
+      text: '**The Shopify plan and the apps are paid directly to Shopify.** Custom design and rebranding, advertising, email marketing and CRM, product photography, copywriting, translations, marketplaces, POS and complex B2B portals are done with dedicated partners after go-live. The Sprint is built for stores coming from another platform.',
     },
     { type: 'h3', text: 'The risk side: four written guarantees and 90 days of support' },
     {
       type: 'paragraph',
-      text: 'A guarantee is a price on risk: it tells you who pays if the lines above fail. Ours are measured by a results dashboard that you receive on day 1, and written on one page of the contract:',
+      text: '**A guarantee says who pays if the lines above fail.** Ours are measured by a results dashboard that you receive on day 1, and written on one page of the contract:',
     },
     {
       type: 'list',
@@ -267,31 +267,31 @@ const article: Article = {
     { type: 'h3', text: 'What is the cheapest way to migrate to Shopify?' },
     {
       type: 'paragraph',
-      text: 'Doing it yourself with Shopify’s import tools or a migration app. The cost is mostly your time. The risk sits in the lines those tools do not cover: redirects, tracking and testing. It works best for small catalogs with little organic traffic to protect.',
+      text: '**Doing it yourself with Shopify’s import tools or a migration app.** The cost is mostly your time. The risk sits in the lines those tools do not cover: redirects, tracking and testing. It works best for small catalogs with little organic traffic to protect.',
     },
     { type: 'h3', text: 'Why do Shopify migration quotes vary so much?' },
     {
       type: 'paragraph',
-      text: 'Because they usually cover different scopes. A quote that leaves out redirects, tracking, QA or support is not cheaper, it is shorter. Add the missing lines to every quote before you compare totals.',
+      text: '**Because they usually cover different scopes.** A quote that leaves out redirects, tracking, QA or support is not cheaper, it is shorter. Add the missing lines to every quote before you compare totals.',
     },
     { type: 'h3', text: 'Which costs are not in a Shopify migration quote?' },
     {
       type: 'paragraph',
-      text: 'The Shopify plan, monthly app fees, payment fees, your team’s time, and the cost of a migration that goes wrong, in lost sales and lost rankings. Check the first three on Shopify’s pricing page and in your payment provider’s terms.',
+      text: '**The Shopify plan, monthly app fees, payment fees, your team’s time, and the cost of a migration that goes wrong, in lost sales and lost rankings.** Check the first three on Shopify’s pricing page and in your payment provider’s terms.',
     },
     { type: 'h3', text: 'How much does the Shopify Launch Sprint cost?' },
     {
       type: 'paragraph',
-      text: '€5,800 for companies under €2M in revenue, €8,800 between €2M and €20M, €12,800 above €20M, VAT excluded, in four installments. It includes the migration, the 1:1 redirect map, tracking, QA, a 14-day calendar, 90 days of support and 4 written guarantees. The Shopify plan and apps are paid directly to Shopify.',
+      text: '**€5,800 for companies under €2M in revenue, €8,800 between €2M and €20M, €12,800 above €20M, VAT excluded, in four installments.** It includes the migration, the 1:1 redirect map, tracking, QA, a 14-day calendar, 90 days of support and 4 written guarantees. The Shopify plan and apps are paid directly to Shopify.',
     },
     { type: 'h3', text: 'Is a fixed-price migration safer than an hourly one?' },
     {
       type: 'paragraph',
-      text: 'Only if the scope is written down. With a fixed price and a clear scope, the provider carries the overrun. With an hourly estimate, you do. A fixed price with vague scope and open extras is an hourly quote in disguise.',
+      text: '**Only if the scope is written down.** With a fixed price and a clear scope, the provider carries the overrun. With an hourly estimate, you do. A fixed price with vague scope and open extras is an hourly quote in disguise.',
     },
     {
       type: 'paragraph',
-      text: '**Next step.** Send us your store: [apply to the Shopify Launch Sprint](/shopify-migration-sprint) and we reply within 48 hours with your tier, the price and the first available kickoff date.',
+      text: 'Next step. Send us your store: [apply to the Shopify Launch Sprint](/shopify-migration-sprint) and we reply within 48 hours with your tier, the price and the first available kickoff date.',
     },
     {
       type: 'paragraph',
@@ -301,7 +301,7 @@ const article: Article = {
   contentIt: [
     {
       type: 'paragraph',
-      text: 'Il costo della migrazione a Shopify è la somma di tre cose: il preventivo per il passaggio, il canone mensile che parte dopo e ciò che perdi se il passaggio va male. La maggior parte dei preventivi mostra solo la prima. Qui si leggono tutte e tre, e si confrontano i preventivi per ciò che coprono, non per il totale.',
+      text: 'Il costo della migrazione a Shopify è la somma di tre cose: il preventivo per il passaggio, il canone mensile che parte dopo e ciò che perdi se il passaggio va male. La maggior parte dei preventivi mostra solo la prima. Qui le leggiamo tutte e tre e confrontiamo i preventivi voce per voce, prima di guardare il totale.',
     },
     {
       type: 'paragraph',
@@ -310,11 +310,11 @@ const article: Article = {
     { type: 'h2', text: 'Quanto costa migrare a Shopify?' },
     {
       type: 'paragraph',
-      text: '**Una migrazione a Shopify costa quanto costa il suo perimetro: il tuo tempo se usi uno strumento di importazione, e un prezzo pubblico fisso di €5.800, €8.800 o €12.800 (IVA esclusa, in 4 rate, per fascia di fatturato) se scegli lo Shopify Launch Sprint.** In mezzo, freelance e pacchetti parziali prezzano lavori diversi sotto la stessa parola, "migrazione".',
+      text: 'Una migrazione a Shopify costa quanto costa il suo perimetro: il tuo tempo se usi uno strumento di importazione, e un prezzo pubblico fisso di €5.800, €8.800 o €12.800 (IVA esclusa, in 4 rate, per fascia di fatturato) se scegli lo Shopify Launch Sprint. In mezzo, freelance e pacchetti parziali prezzano lavori diversi sotto la stessa parola, "migrazione".',
     },
     {
       type: 'paragraph',
-      text: 'Quindi la domanda utile non è "quanto" ma "per cosa": scomponi il lavoro in voci, vedi cosa consegna ciascuna, aggiungi i costi che stanno fuori dal preventivo, poi confronta.',
+      text: 'Quindi chiediti per cosa paghi: scomponi il lavoro in voci, vedi cosa consegna ciascuna, aggiungi i costi che stanno fuori dal preventivo, poi confronta.',
     },
     { type: 'h2', text: 'Quali sono le otto voci di un preventivo di migrazione?' },
     {
@@ -355,12 +355,12 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Fai il conto sull’ultimo punto: quanto ti costerebbe una settimana offline, o un trimestre di posizionamenti più deboli? Il preventivo di solito è il rischio più piccolo, quindi la domanda non è solo "quanto" ma "chi paga se va male".',
+      text: 'Fai il conto sull’ultimo punto: quanto ti costerebbe una settimana offline, o un trimestre di posizionamenti più deboli? Il preventivo di solito è il rischio più piccolo, quindi chiedi anche "chi paga se va male", oltre a "quanto".',
     },
     { type: 'h2', text: 'Quali sono i tre modi di comprare una migrazione?' },
     {
       type: 'paragraph',
-      text: '**Puoi farla da solo con gli strumenti, affidarti a un freelance o comprare un progetto a perimetro fisso da un’agenzia; la differenza sta meno nel prezzo che in chi si prende il rischio.** Nessuno dei tre dipende dalla piattaforma: le otto voci sono le stesse sia che tu lasci WooCommerce, PrestaShop, Magento o una piattaforma proprietaria.',
+      text: '**Puoi farla da solo con gli strumenti, affidarti a un freelance o comprare un progetto a perimetro fisso da un’agenzia; la differenza principale è chi si prende il rischio.** Nessuno dei tre dipende dalla piattaforma: le otto voci sono le stesse sia che tu lasci WooCommerce, PrestaShop, Magento o una piattaforma proprietaria.',
     },
     {
       type: 'list',
@@ -377,7 +377,7 @@ const article: Article = {
     { type: 'h2', text: 'Come si legge un preventivo di migrazione e cosa chiedere?' },
     {
       type: 'paragraph',
-      text: '**Leggi un preventivo per ciò che consegna ogni voce, per ciò che esclude e per chi paga se fallisce, non per il totale.** Metti ogni preventivo nella stessa griglia. Una risposta vaga a una riga è un prezzo che non hai ancora visto:',
+      text: '**Leggi un preventivo voce per voce: cosa consegna ciascuna, cosa esclude e chi paga se fallisce.** Metti ogni preventivo nella stessa griglia e guarda il totale per ultimo. Una risposta vaga a una riga è un prezzo che non hai ancora visto:',
     },
     {
       type: 'list',
@@ -412,7 +412,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'La prima rata si paga al kickoff, la seconda al go-live, la terza e la quarta durante i mesi di supporto. Prezziamo in base al fatturato perché fatturato e complessità tendono ad andare insieme. Ogni fascia ha dei limiti su prodotti, lingue e gestionale collegato; oltre, si applicano extra a prezzo fisso, e ti diciamo in videochiamata prima che tu firmi. Mai un preventivo aperto.',
+      text: 'La prima rata si paga al kickoff, la seconda al go-live, la terza e la quarta durante i mesi di supporto. Prezziamo in base al fatturato perché fatturato e complessità tendono ad andare insieme. Ogni fascia ha dei limiti su prodotti, lingue e gestionale collegato; oltre, si applicano extra a prezzo fisso, e ti diciamo in videochiamata prima che tu firmi, quindi il preventivo non resta mai aperto.',
     },
     { type: 'h3', text: 'Cosa copre il prezzo, voce per voce' },
     {
@@ -431,12 +431,12 @@ const article: Article = {
     { type: 'h3', text: 'Cosa si gestisce a parte' },
     {
       type: 'paragraph',
-      text: 'Il piano Shopify e le app si pagano direttamente a Shopify. Design su misura e rebranding, advertising, email marketing e CRM, fotografia, copywriting, traduzioni, marketplace, POS e portali B2B complessi si fanno con partner dedicati dopo il go-live. Lo Sprint è pensato per chi arriva da un’altra piattaforma.',
+      text: '**Il piano Shopify e le app si pagano direttamente a Shopify.** Design su misura e rebranding, advertising, email marketing e CRM, fotografia, copywriting, traduzioni, marketplace, POS e portali B2B complessi si fanno con partner dedicati dopo il go-live. Lo Sprint è pensato per chi arriva da un’altra piattaforma.',
     },
     { type: 'h3', text: 'Il lato del rischio: quattro garanzie scritte e 90 giorni di supporto' },
     {
       type: 'paragraph',
-      text: 'Una garanzia è un prezzo sul rischio: ti dice chi paga se le voci sopra falliscono. Le nostre sono misurate da una dashboard dei risultati che ricevi il giorno 1, e scritte su una pagina del contratto:',
+      text: '**Una garanzia dice chi paga se le voci sopra falliscono.** Le nostre sono misurate da una dashboard dei risultati che ricevi il giorno 1, e scritte su una pagina del contratto:',
     },
     {
       type: 'list',
@@ -468,31 +468,31 @@ const article: Article = {
     { type: 'h3', text: 'Qual è il modo più economico per migrare a Shopify?' },
     {
       type: 'paragraph',
-      text: 'Farlo da soli con gli strumenti di importazione di Shopify o con un’app di migrazione. Il costo è soprattutto il tuo tempo. Il rischio sta nelle voci che quegli strumenti non coprono: redirect, tracking e collaudo. Funziona meglio con cataloghi piccoli e poco traffico organico da proteggere.',
+      text: '**Farlo da soli con gli strumenti di importazione di Shopify o con un’app di migrazione.** Il costo è soprattutto il tuo tempo. Il rischio sta nelle voci che quegli strumenti non coprono: redirect, tracking e collaudo. Funziona meglio con cataloghi piccoli e poco traffico organico da proteggere.',
     },
     { type: 'h3', text: 'Perché i preventivi di migrazione a Shopify sono così diversi?' },
     {
       type: 'paragraph',
-      text: 'Perché di solito coprono perimetri diversi. Un preventivo senza redirect, tracking, collaudo o supporto non costa meno, è più corto. Aggiungi le voci mancanti a ogni preventivo prima di confrontare i totali.',
+      text: '**Perché di solito coprono perimetri diversi.** Un preventivo senza redirect, tracking, collaudo o supporto non costa meno, è più corto. Aggiungi le voci mancanti a ogni preventivo prima di confrontare i totali.',
     },
     { type: 'h3', text: 'Quali costi non sono nel preventivo di una migrazione a Shopify?' },
     {
       type: 'paragraph',
-      text: 'Il piano Shopify, le app a canone mensile, le commissioni di pagamento, il tempo del tuo team e il costo di una migrazione andata male, in vendite e posizionamenti persi. Per i primi tre controlla la pagina prezzi di Shopify e i termini del tuo fornitore di pagamenti.',
+      text: '**Il piano Shopify, le app a canone mensile, le commissioni di pagamento, il tempo del tuo team e il costo di una migrazione andata male, in vendite e posizionamenti persi.** Per i primi tre controlla la pagina prezzi di Shopify e i termini del tuo fornitore di pagamenti.',
     },
     { type: 'h3', text: 'Quanto costa lo Shopify Launch Sprint?' },
     {
       type: 'paragraph',
-      text: '€5.800 per aziende sotto i €2M di fatturato, €8.800 tra €2M e €20M, €12.800 oltre i €20M, IVA esclusa, in quattro rate. Include la migrazione, la mappa dei redirect 1:1, il tracking, il collaudo, un calendario di 14 giorni, 90 giorni di supporto e 4 garanzie scritte. Piano Shopify e app si pagano direttamente a Shopify.',
+      text: '**€5.800 per aziende sotto i €2M di fatturato, €8.800 tra €2M e €20M, €12.800 oltre i €20M, IVA esclusa, in quattro rate.** Include la migrazione, la mappa dei redirect 1:1, il tracking, il collaudo, un calendario di 14 giorni, 90 giorni di supporto e 4 garanzie scritte. Piano Shopify e app si pagano direttamente a Shopify.',
     },
     { type: 'h3', text: 'Una migrazione a prezzo fisso è più sicura di una a ore?' },
     {
       type: 'paragraph',
-      text: 'Solo se il perimetro è scritto. Con prezzo fisso e perimetro chiaro, lo sforamento lo paga chi fornisce il servizio. Con una stima a ore lo paghi tu. Un prezzo fisso con perimetro vago ed extra aperti è un preventivo a ore travestito.',
+      text: '**Solo se il perimetro è scritto.** Con prezzo fisso e perimetro chiaro, lo sforamento lo paga chi fornisce il servizio. Con una stima a ore lo paghi tu. Un prezzo fisso con perimetro vago ed extra aperti è un preventivo a ore travestito.',
     },
     {
       type: 'paragraph',
-      text: '**Prossimo passo.** Mandaci il tuo store: [candidati allo Shopify Launch Sprint](/it/sprint-migrazione-shopify) e rispondiamo entro 48 ore con la tua fascia, il prezzo e la prima data di kickoff disponibile.',
+      text: 'Prossimo passo. Mandaci il tuo store: [candidati allo Shopify Launch Sprint](/it/sprint-migrazione-shopify) e rispondiamo entro 48 ore con la tua fascia, il prezzo e la prima data di kickoff disponibile.',
     },
     {
       type: 'paragraph',

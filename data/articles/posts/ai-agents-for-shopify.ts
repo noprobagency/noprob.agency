@@ -62,7 +62,7 @@ const article: Article = {
     },
     {
       type: "paragraph",
-      text: "Keep two directions apart. This page is about agents that work for the store: answering, sorting, checking, preparing. Agents that shop for your customers through ChatGPT or Copilot are in [agentic commerce for Shopify](/blog/agentic-commerce-shopify), and Shopify documents its side at [shopify.dev/docs/agents](https://shopify.dev/docs/agents). For the wider view of what AI does well in a store, read [AI for ecommerce](/blog/ai-for-ecommerce). We do not repeat it here.",
+      text: "Keep two directions apart. This page is about agents that work for the store: answering, sorting, checking, preparing. Agents that shop for your customers through ChatGPT or Copilot are in [agentic commerce for Shopify](/blog/agentic-commerce-shopify), and Shopify documents its side at [shopify.dev/docs/agents](https://shopify.dev/docs/agents). For the wider view of what AI does well in a store, read [AI for ecommerce](/blog/ai-for-ecommerce).",
     },
     {
       type: "h2",
@@ -81,7 +81,7 @@ const article: Article = {
       items: [
         "**Chatbot.** It replies from the text it was given: your returns policy and a link to the form. It never looks at the order. Fast, cheap and identical for every customer.",
         "**Workflow.** A router labels the message “return”, the system looks up the order in Shopify, sends the return instructions, and anything that does not fit a label goes to a person. Every branch was drawn before the customer wrote. [Shopify Flow](https://help.shopify.com/en/manual/shopify-flow) works this way: triggers, conditions, actions.",
-        "**AI agent.** It has the goal “resolve this request within policy” and tools to read orders, read the policy and check stock. It finds the order, sees it was a gift and is still inside the return window, checks that the right size is in stock, proposes an exchange, prepares the request and stops at the step that needs a person. The route depended on what it found. Nobody wrote it.",
+        "**AI agent.** It has the goal “resolve this request within policy” and tools to read orders, read the policy and check stock. It finds the order, sees it was a gift and is still inside the return window, checks that the right size is in stock, proposes an exchange, prepares the request and stops at the step that needs a person. The route depended on what it found, and nobody wrote it in advance.",
       ],
     },
     {
@@ -115,7 +115,7 @@ const article: Article = {
     },
     {
       type: "paragraph",
-      text: "The pattern is easy to remember: fixed jobs are workflows, investigative jobs are agents, plain questions are a chatbot with the right data.",
+      text: "In short: fixed jobs are workflows, investigative jobs are agents, plain questions are a chatbot with the right data.",
     },
     {
       type: "h2",
@@ -315,7 +315,7 @@ const article: Article = {
     },
     {
       type: "paragraph",
-      text: "Tieni separate due direzioni. Questa pagina parla degli agenti che lavorano per lo store: rispondere, smistare, controllare, preparare. Gli agenti che comprano per i tuoi clienti tramite ChatGPT o Copilot sono in [agentic commerce per Shopify](/it/blog/agentic-commerce-shopify), e Shopify documenta la sua parte su [shopify.dev/docs/agents](https://shopify.dev/docs/agents). Per la visione generale su cosa fa bene l’AI in uno store leggi [AI per eCommerce](/it/blog/ai-per-ecommerce). Qui non la ripetiamo.",
+      text: "Tieni separate due direzioni. Questa pagina parla degli agenti che lavorano per lo store: rispondere, smistare, controllare, preparare. Gli agenti che comprano per i tuoi clienti tramite ChatGPT o Copilot sono in [agentic commerce per Shopify](/it/blog/agentic-commerce-shopify), e Shopify documenta la sua parte su [shopify.dev/docs/agents](https://shopify.dev/docs/agents). Per la visione generale su cosa fa bene l’AI in uno store leggi [AI per eCommerce](/it/blog/ai-per-ecommerce).",
     },
     {
       type: "h2",
@@ -334,7 +334,7 @@ const article: Article = {
       items: [
         "**Chatbot.** Risponde con il testo che gli hanno dato: la tua policy sui resi e il link al modulo. L’ordine non lo guarda mai. Veloce, economico e identico per tutti i clienti.",
         "**Workflow.** Un router etichetta il messaggio come “reso”, il sistema cerca l’ordine in Shopify, manda le istruzioni di reso, e tutto ciò che non rientra in un’etichetta passa a una persona. Ogni ramo è stato disegnato prima che il cliente scrivesse. [Shopify Flow](https://help.shopify.com/en/manual/shopify-flow) funziona così: trigger, condizioni, azioni.",
-        "**Agente AI.** Ha l’obiettivo “risolvi questa richiesta nel rispetto della policy” e strumenti per leggere gli ordini, leggere la policy e controllare le scorte. Trova l’ordine, vede che era un regalo ed è ancora nei termini di reso, verifica che la taglia giusta sia disponibile, propone un cambio, prepara la pratica e si ferma al passo che richiede una persona. La strada dipendeva da ciò che ha trovato. Nessuno l’ha scritta.",
+        "**Agente AI.** Ha l’obiettivo “risolvi questa richiesta nel rispetto della policy” e strumenti per leggere gli ordini, leggere la policy e controllare le scorte. Trova l’ordine, vede che era un regalo ed è ancora nei termini di reso, verifica che la taglia giusta sia disponibile, propone un cambio, prepara la pratica e si ferma al passo che richiede una persona. La strada dipendeva da ciò che ha trovato, e nessuno l’ha scritta prima.",
       ],
     },
     {
@@ -365,7 +365,7 @@ const article: Article = {
     },
     {
       type: "paragraph",
-      text: "Lo schema è facile da ricordare: i lavori fissi sono workflow, i lavori d’indagine sono agenti, le domande semplici sono un chatbot con i dati giusti.",
+      text: "In breve: i lavori fissi sono workflow, i lavori d’indagine sono agenti, le domande semplici sono un chatbot con i dati giusti.",
     },
     {
       type: "h2",

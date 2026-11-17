@@ -100,11 +100,11 @@ const article: Article = {
   content: [
     {
       type: 'paragraph',
-      text: '**White label Shopify means a partner builds the Shopify project and your agency sells it under its own brand: your name on the proposal, the contract and the invoice, someone else’s hands on the code.** White label Shopify development pays when requests arrive faster than you can hire and you stay the person the client trusts. It stops paying when access, ownership or the paperwork is vague.',
+      text: 'White label Shopify means a partner builds the Shopify project and your agency sells it under its own brand: your name on the proposal, the contract and the invoice, someone else’s hands on the code. White label Shopify development pays when requests arrive faster than you can hire and you stay the person the client trusts. It stops paying when access, ownership or the paperwork is vague.',
     },
     {
       type: 'paragraph',
-      text: 'We are noprob agency, and this guide is for small agencies, web agencies and performance agencies that get Shopify requests and do not want to hire for them. Two rules for reading it. The facts come from Shopify’s own pages, linked next to each one. Commercial practice (what to write down, how to price, what to tell the client) has no official source, so we write it as our opinion and mark it: “in our view” or “we recommend”.',
+      text: 'We are noprob agency, and this guide is for small agencies, web agencies and performance agencies that get Shopify requests and do not want to hire for them. The facts come from Shopify’s own pages, linked next to each one. Commercial practice (what to write down, how to price, what to tell the client) has no official source, so we write it as our opinion and mark it: “in our view” or “we recommend”.',
     },
     { type: 'h2', text: 'What does white label Shopify development mean?' },
     {
@@ -117,12 +117,12 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Offers of white label web development or white label web design services cover many kinds of sites. On Shopify the work happens inside the client’s own store, in the client’s own account, so access and ownership follow Shopify’s procedures. The next sections cover them.',
+      text: 'Offers of white label web development or white label web design services cover many kinds of sites. On Shopify the work happens inside the client’s own store, in the client’s own account, so access and ownership follow Shopify’s procedures.',
     },
     { type: 'h2', text: 'When does white label Shopify make sense for an agency, and when does it not?' },
     {
       type: 'paragraph',
-      text: '**In our view it makes sense when you own the client relationship and the project has an edge: a start, an end and a scope you can write on one page.** This section is opinion. The Shopify facts come in the sections after it.',
+      text: 'In our view it makes sense when you own the client relationship and the project has an edge: a start, an end and a scope you can write on one page.',
     },
     { type: 'paragraph', text: 'It tends to work when:' },
     {
@@ -150,7 +150,7 @@ const article: Article = {
     { type: 'h2', text: 'How does a builder get access to a client’s Shopify store?' },
     {
       type: 'paragraph',
-      text: '**Through a collaborator account that the client approves, not through a shared login.** Shopify’s page on [working on client stores](https://help.shopify.com/en/partners/manage-clients-stores/working-on-client-stores) recommends the collaborator account and says a partner cannot ask for or use the merchant’s credentials. A staff account, created by the merchant, is the fallback when the collaborator account is not enough.',
+      text: '**Through a collaborator account that the client approves.** Shopify’s page on [working on client stores](https://help.shopify.com/en/partners/manage-clients-stores/working-on-client-stores) recommends the collaborator account and says a partner cannot ask for or use the merchant’s credentials, so a shared login is out. A staff account, created by the merchant, is the fallback when the collaborator account is not enough.',
     },
     {
       type: 'paragraph',
@@ -227,12 +227,12 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'In our view this belongs in the contract, not in a footnote. Decide before day one who builds the store, from which Partner account, and who receives the compensation. And do not build your price counting on it: Shopify can change the amounts.',
+      text: 'In our view this belongs in the contract. Decide before day one who builds the store, from which Partner account, and who receives the compensation. And do not build your price counting on it: Shopify can change the amounts.',
     },
     { type: 'h2', text: 'What should you put in writing before the first white label project?' },
     {
       type: 'paragraph',
-      text: '**Put in writing who works for whom, what “done” means, how access starts and ends, who owns the code and what happens when someone does not pay.** This is our recommendation, not a legal template. Shopify and a few other sources give hints on some of the points, linked below.',
+      text: '**Put in writing who works for whom, what “done” means, how access starts and ends, who owns the code and what happens when someone does not pay.** This is our recommendation. Shopify and a few other sources give hints on some of the points, linked below.',
     },
     {
       type: 'list',
@@ -273,19 +273,19 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**Sell a fixed price on a fixed scope.** Margin disappears in open scope, one small request at a time.',
-        '**Never resell below your costs to win a client.** A discount you cannot afford becomes a late project.',
-        '**Talk about margin with the builder before the first quote.** A good partner tells you what the job costs and when it will be done.',
+        'Sell a fixed price on a fixed scope. Margin disappears in open scope, one small request at a time.',
+        'Never resell below your costs to win a client. A discount you cannot afford becomes a late project.',
+        'Talk about margin with the builder before the first quote. A good partner tells you what the job costs and when it will be done.',
       ],
     },
     {
       type: 'paragraph',
-      text: 'Shopify’s own compensation (previous sections) is a possible extra, not a base for the price. Nothing in this guide promises a result: your margin depends on what you charge and what you deliver. To see how a finished migration reads from the client’s side, open the [Nazzi case study](/use-cases/integratori-nazzi-dtc-shopify). Your client will ask the questions in [how to choose a Shopify migration agency](/blog/choose-shopify-migration-agency), so it helps to have the answers.',
+      text: 'Shopify’s own compensation (previous sections) is a possible extra, so do not use it as the base for your price. Nothing in this guide promises a result: your margin depends on what you charge and what you deliver. To see how a finished migration reads from the client’s side, open the [Nazzi case study](/use-cases/integratori-nazzi-dtc-shopify). Your client will ask the questions in [how to choose a Shopify migration agency](/blog/choose-shopify-migration-agency), so it helps to have the answers.',
     },
     { type: 'h2', text: 'How does noprob agency work with agencies?' },
     {
       type: 'paragraph',
-      text: '**Your agency resells the Shopify migration under its own brand and we carry it out, or you point out a store to us. In both cases you earn from €1,000 per project.** That is our [agency partner program](/ambassador).',
+      text: '**Your agency resells the Shopify migration under its own brand and we carry it out, or you point out a store to us.** In both cases you earn from €1,000 per project. That is our [agency partner program](/ambassador).',
     },
     {
       type: 'paragraph',
@@ -295,32 +295,32 @@ const article: Article = {
     { type: 'h3', text: 'What is white label Shopify development?' },
     {
       type: 'paragraph',
-      text: 'White label Shopify development is when one company builds a Shopify store or migration and another agency sells it under its own brand. The client contracts with the agency, the builder works for the agency and the store stays the client’s.',
+      text: '**White label Shopify development is when one company builds a Shopify store or migration and another agency sells it under its own brand.** The client contracts with the agency, the builder works for the agency and the store stays the client’s.',
     },
     { type: 'h3', text: 'Does Shopify allow white label work?' },
     {
       type: 'paragraph',
-      text: 'Shopify’s Partner Program Agreement does not mention white label. It keeps the partner responsible for its subcontractors and allows access to a merchant’s store only for work the merchant authorizes. Read it, and ask a consultant if you are unsure.',
+      text: '**Shopify’s Partner Program Agreement does not mention white label.** It keeps the partner responsible for its subcontractors and allows access to a merchant’s store only for work the merchant authorizes. Read it, and ask a consultant if you are unsure.',
     },
     { type: 'h3', text: 'How does a white label partner access my client’s Shopify store?' },
     {
       type: 'paragraph',
-      text: 'Through a collaborator account. The partner requests access from the Dev Dashboard with the store’s myshopify URL and the client’s 4-digit code, and the client approves and sets the permissions. Sharing the client’s login is not an option.',
+      text: '**Through a collaborator account.** The partner requests access from the Dev Dashboard with the store’s myshopify URL and the client’s 4-digit code, and the client approves and sets the permissions. Sharing the client’s login is not an option.',
     },
     { type: 'h3', text: 'How is the store transferred to the client?' },
     {
       type: 'paragraph',
-      text: 'The builder creates a client transfer store in its own organization and transfers it from the Dev Dashboard to the client’s email. The client accepts and chooses a plan. Shopify Payments, Balance, Credit and Capital must be off first, and a pending transfer expires after seven days.',
+      text: '**The builder creates a client transfer store in its own organization and transfers it from the Dev Dashboard to the client’s email.** The client accepts and chooses a plan. Shopify Payments, Balance, Credit and Capital must be off first, and a pending transfer expires after seven days.',
     },
     { type: 'h3', text: 'When does white label Shopify development pay for an agency?' },
     {
       type: 'paragraph',
-      text: 'In our view, when you own the client relationship, requests arrive faster than you can hire and the project has a fixed scope and calendar. The margin is what is left after the builder’s price and your own management time, so quote only after you have the builder’s price in writing.',
+      text: '**In our view, when you own the client relationship, requests arrive faster than you can hire and the project has a fixed scope and calendar.** The margin is what is left after the builder’s price and your own management time, so quote only after you have the builder’s price in writing.',
     },
     { type: 'h3', text: 'What should a white label agreement include?' },
     {
       type: 'paragraph',
-      text: 'We recommend putting in writing who contracts with whom, scope and acceptance, access and its end date, the store transfer, code ownership, confidentiality, customer data, payment terms, contact with the client and support. It is not legal advice: have a consultant review it.',
+      text: '**We recommend putting in writing who contracts with whom, scope and acceptance, access and its end date, the store transfer, code ownership, confidentiality, customer data, payment terms, contact with the client and support.** It is not legal advice: have a consultant review it.',
     },
     { type: 'partnerBanner' },
     {
@@ -331,11 +331,11 @@ const article: Article = {
   contentIt: [
     {
       type: 'paragraph',
-      text: '**White label Shopify vuol dire che un partner costruisce il progetto Shopify e la tua agenzia lo vende con il proprio marchio: il tuo nome su preventivo, contratto e fattura, le mani di qualcun altro sul codice.** Lo sviluppo Shopify in white label conviene quando le richieste arrivano più in fretta di quanto riesci ad assumere e resti tu la persona di cui il cliente si fida. Smette di convenire quando accessi, proprietà o carte sono vaghi.',
+      text: 'White label Shopify vuol dire che un partner costruisce il progetto Shopify e la tua agenzia lo vende con il proprio marchio: il tuo nome su preventivo, contratto e fattura, le mani di qualcun altro sul codice. Lo sviluppo Shopify in white label conviene quando le richieste arrivano più in fretta di quanto riesci ad assumere e resti tu la persona di cui il cliente si fida. Smette di convenire quando accessi, proprietà o carte sono vaghi.',
     },
     {
       type: 'paragraph',
-      text: 'Siamo noprob agency, e questa guida è per le piccole agenzie, le web agency e le performance agency che ricevono richieste Shopify e non vogliono assumere per farle. Due regole per leggerla. I fatti arrivano dalle pagine di Shopify, linkate accanto a ciascuno. Le pratiche commerciali (cosa scrivere, come fissare il prezzo, cosa dire al cliente) non hanno una fonte ufficiale, quindi le scriviamo come nostra opinione e lo segnaliamo: “secondo noi” o “ti consigliamo”.',
+      text: 'Siamo noprob agency, e questa guida è per le piccole agenzie, le web agency e le performance agency che ricevono richieste Shopify e non vogliono assumere per farle. I fatti arrivano dalle pagine di Shopify, linkate accanto a ciascuno. Le pratiche commerciali (cosa scrivere, come fissare il prezzo, cosa dire al cliente) non hanno una fonte ufficiale, quindi le scriviamo come nostra opinione e lo segnaliamo: “secondo noi” o “ti consigliamo”.',
     },
     { type: 'h2', text: 'Cosa significa sviluppo Shopify in white label?' },
     {
@@ -348,12 +348,12 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Le offerte di sviluppo web o di servizi di web design in white label riguardano molti tipi di sito. Su Shopify il lavoro si fa dentro lo store del cliente, nel suo account, quindi accessi e proprietà seguono le procedure di Shopify. Le prossime sezioni le spiegano.',
+      text: 'Le offerte di sviluppo web o di servizi di web design in white label riguardano molti tipi di sito. Su Shopify il lavoro si fa dentro lo store del cliente, nel suo account, quindi accessi e proprietà seguono le procedure di Shopify.',
     },
     { type: 'h2', text: 'Quando conviene a un’agenzia il white label Shopify, e quando no?' },
     {
       type: 'paragraph',
-      text: '**Secondo noi conviene quando la relazione con il cliente è tua e il progetto ha dei confini: un inizio, una fine e un perimetro che sta in una pagina.** Questa sezione è opinione. I fatti su Shopify arrivano nelle sezioni dopo.',
+      text: 'Secondo noi conviene quando la relazione con il cliente è tua e il progetto ha dei confini: un inizio, una fine e un perimetro che sta in una pagina.',
     },
     { type: 'paragraph', text: 'Di solito funziona quando:' },
     {
@@ -381,7 +381,7 @@ const article: Article = {
     { type: 'h2', text: 'Come ottiene l’accesso allo store Shopify del cliente chi costruisce?' },
     {
       type: 'paragraph',
-      text: '**Con un account collaboratore che il cliente approva, non con un login condiviso.** La pagina di Shopify su [come lavorare sugli store dei clienti](https://help.shopify.com/en/partners/manage-clients-stores/working-on-client-stores) consiglia l’account collaboratore e dice che un partner non può chiedere né usare le credenziali del merchant. L’account staff, creato dal merchant, è la via di riserva quando il collaboratore non basta.',
+      text: '**Con un account collaboratore che il cliente approva.** La pagina di Shopify su [come lavorare sugli store dei clienti](https://help.shopify.com/en/partners/manage-clients-stores/working-on-client-stores) consiglia l’account collaboratore e dice che un partner non può chiedere né usare le credenziali del merchant, quindi il login condiviso è escluso. L’account staff, creato dal merchant, è la via di riserva quando il collaboratore non basta.',
     },
     {
       type: 'paragraph',
@@ -458,12 +458,12 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Secondo noi questo va nel contratto, non in una nota a piè di pagina. Decidete prima del giorno uno chi costruisce lo store, da quale account Partner e chi riceve il compenso. E non costruire il prezzo contandoci: Shopify può cambiare gli importi.',
+      text: 'Secondo noi questo va nel contratto. Decidi prima del giorno uno chi costruisce lo store, da quale account Partner e chi riceve il compenso. E non costruire il prezzo contandoci: Shopify può cambiare gli importi.',
     },
     { type: 'h2', text: 'Cosa mettere per iscritto prima del primo progetto white label?' },
     {
       type: 'paragraph',
-      text: '**Scrivi chi lavora per chi, cosa vuol dire “finito”, come iniziano e finiscono gli accessi, di chi è il codice e cosa succede se qualcuno non paga.** È un nostro consiglio, non un modello legale. Shopify e qualche altra fonte danno indicazioni su alcuni punti, linkate qui sotto.',
+      text: '**Scrivi chi lavora per chi, cosa vuol dire “finito”, come iniziano e finiscono gli accessi, di chi è il codice e cosa succede se qualcuno non paga.** È un nostro consiglio. Shopify e qualche altra fonte danno indicazioni su alcuni punti, linkate qui sotto.',
     },
     {
       type: 'list',
@@ -504,19 +504,19 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**Vendi un prezzo fisso su un perimetro fisso.** Il margine sparisce nel perimetro aperto, una piccola richiesta alla volta.',
-        '**Non rivendere mai sotto i tuoi costi per vincere un cliente.** Uno sconto che non puoi permetterti diventa un progetto in ritardo.',
-        '**Parla del margine con chi costruisce prima del primo preventivo.** Un buon partner ti dice quanto costa il lavoro e quando sarà pronto.',
+        'Vendi un prezzo fisso su un perimetro fisso. Il margine sparisce nel perimetro aperto, una piccola richiesta alla volta.',
+        'Non rivendere mai sotto i tuoi costi per vincere un cliente. Uno sconto che non puoi permetterti diventa un progetto in ritardo.',
+        'Parla del margine con chi costruisce prima del primo preventivo. Un buon partner ti dice quanto costa il lavoro e quando sarà pronto.',
       ],
     },
     {
       type: 'paragraph',
-      text: 'I compensi di Shopify (sezioni precedenti) sono un possibile extra, non la base del prezzo. Niente in questa guida promette un risultato: il tuo margine dipende da ciò che fai pagare e da ciò che consegni. Per vedere come appare una migrazione finita dal lato del cliente, apri il [caso studio Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify). Il tuo cliente ti farà le domande di [come scegliere un’agenzia di migrazione a Shopify](/it/blog/scegliere-agenzia-migrazione-shopify), quindi conviene avere le risposte.',
+      text: 'I compensi di Shopify (sezioni precedenti) sono un possibile extra, quindi non usarli come base del prezzo. Niente in questa guida promette un risultato: il tuo margine dipende da ciò che fai pagare e da ciò che consegni. Per vedere come appare una migrazione finita dal lato del cliente, apri il [caso studio Nazzi](/it/casi-studio/integratori-nazzi-dtc-shopify). Il tuo cliente ti farà le domande di [come scegliere un’agenzia di migrazione a Shopify](/it/blog/scegliere-agenzia-migrazione-shopify), quindi conviene avere le risposte.',
     },
     { type: 'h2', text: 'Come lavora noprob agency con le agenzie?' },
     {
       type: 'paragraph',
-      text: '**La tua agenzia rivende la migrazione a Shopify con il proprio marchio e noi la realizziamo, oppure ci segnali uno store. In entrambi i casi guadagni da €1.000 a progetto.** È il nostro [programma partner per agenzie](/it/ambassador).',
+      text: '**La tua agenzia rivende la migrazione a Shopify con il proprio marchio e noi la realizziamo, oppure ci segnali uno store.** In entrambi i casi guadagni da €1.000 a progetto. È il nostro [programma partner per agenzie](/it/ambassador).',
     },
     {
       type: 'paragraph',
@@ -526,32 +526,32 @@ const article: Article = {
     { type: 'h3', text: 'Cos’è lo sviluppo Shopify in white label?' },
     {
       type: 'paragraph',
-      text: 'Lo sviluppo Shopify in white label è quando un’azienda costruisce uno store o una migrazione Shopify e un’altra agenzia li vende con il proprio marchio. Il cliente firma con l’agenzia, chi costruisce lavora per l’agenzia e lo store resta del cliente.',
+      text: '**Lo sviluppo Shopify in white label è quando un’azienda costruisce uno store o una migrazione Shopify e un’altra agenzia li vende con il proprio marchio.** Il cliente firma con l’agenzia, chi costruisce lavora per l’agenzia e lo store resta del cliente.',
     },
     { type: 'h3', text: 'Shopify permette il lavoro in white label?' },
     {
       type: 'paragraph',
-      text: 'Il Partner Program Agreement di Shopify non nomina il white label. Tiene il partner responsabile dei suoi subappaltatori e consente l’accesso allo store di un merchant solo per lavori che il merchant autorizza. Leggilo, e chiedi a un consulente se hai dubbi.',
+      text: '**Il Partner Program Agreement di Shopify non nomina il white label.** Tiene il partner responsabile dei suoi subappaltatori e consente l’accesso allo store di un merchant solo per lavori che il merchant autorizza. Leggilo, e chiedi a un consulente se hai dubbi.',
     },
     { type: 'h3', text: 'Come accede un partner white label allo store Shopify del mio cliente?' },
     {
       type: 'paragraph',
-      text: 'Con un account collaboratore. Il partner chiede l’accesso dal Dev Dashboard con l’URL myshopify dello store e il codice di 4 cifre del cliente, e il cliente approva e imposta i permessi. Condividere il login del cliente non è un’opzione.',
+      text: '**Con un account collaboratore.** Il partner chiede l’accesso dal Dev Dashboard con l’URL myshopify dello store e il codice di 4 cifre del cliente, e il cliente approva e imposta i permessi. Condividere il login del cliente non è un’opzione.',
     },
     { type: 'h3', text: 'Come si trasferisce lo store al cliente?' },
     {
       type: 'paragraph',
-      text: 'Chi costruisce crea un client transfer store nella propria organizzazione e lo trasferisce dal Dev Dashboard all’email del cliente. Il cliente accetta e sceglie un piano. Prima vanno disattivati Shopify Payments, Balance, Credit e Capital, e un trasferimento in sospeso scade dopo sette giorni.',
+      text: '**Chi costruisce crea un client transfer store nella propria organizzazione e lo trasferisce dal Dev Dashboard all’email del cliente.** Il cliente accetta e sceglie un piano. Prima vanno disattivati Shopify Payments, Balance, Credit e Capital, e un trasferimento in sospeso scade dopo sette giorni.',
     },
     { type: 'h3', text: 'Quando conviene a un’agenzia lo sviluppo Shopify in white label?' },
     {
       type: 'paragraph',
-      text: 'Secondo noi, quando la relazione con il cliente è tua, le richieste arrivano più in fretta di quanto riesci ad assumere e il progetto ha un perimetro e un calendario fissi. Il margine è ciò che resta dopo il prezzo di chi costruisce e il tuo tempo di gestione, quindi fai il preventivo solo dopo aver avuto per iscritto il prezzo di chi costruisce.',
+      text: '**Secondo noi, quando la relazione con il cliente è tua, le richieste arrivano più in fretta di quanto riesci ad assumere e il progetto ha un perimetro e un calendario fissi.** Il margine è ciò che resta dopo il prezzo di chi costruisce e il tuo tempo di gestione, quindi fai il preventivo solo dopo aver avuto per iscritto il prezzo di chi costruisce.',
     },
     { type: 'h3', text: 'Cosa deve contenere un accordo white label?' },
     {
       type: 'paragraph',
-      text: 'Ti consigliamo di scrivere chi firma con chi, perimetro e accettazione, accessi e data di chiusura, trasferimento dello store, proprietà del codice, riservatezza, dati dei clienti, pagamenti, contatti con il cliente e assistenza. Non è consulenza legale: fallo rivedere a un consulente.',
+      text: '**Ti consigliamo di scrivere chi firma con chi, perimetro e accettazione, accessi e data di chiusura, trasferimento dello store, proprietà del codice, riservatezza, dati dei clienti, pagamenti, contatti con il cliente e assistenza.** Non è consulenza legale: fallo rivedere a un consulente.',
     },
     { type: 'partnerBanner' },
     {

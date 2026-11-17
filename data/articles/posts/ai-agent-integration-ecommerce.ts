@@ -16,9 +16,9 @@ const article: Article = {
   excerptIt:
     'L’integrazione di agenti AI in un eCommerce si riduce a quattro decisioni: cosa vede l’agente, quale accesso ottiene (prima in sola lettura), chi approva le azioni irreversibili e come lo testi su casi veri.',
   ledeEn:
-    'AI agent integration is not a widget you add to a page. It is four decisions about data, access, approval and tests. Here is what to ask for before you buy or build.',
+    'AI agent integration comes down to four decisions about data, access, approval and tests. Here is what to ask for before you buy or build.',
   ledeIt:
-    'Integrare un agente AI non vuol dire aggiungere un widget a una pagina. Sono quattro decisioni su dati, accessi, approvazione e test. Ecco cosa chiedere prima di comprare o costruire.',
+    'Integrare un agente AI si riduce a quattro decisioni su dati, accessi, approvazione e test. Ecco cosa chiedere prima di comprare o costruire.',
   image: '/images/blog/ai-agent-integration-ecommerce-cover.png',
   imageAlt: 'Copertina astratta con puntini beige che si dissolvono in modo radiale su sfondo sabbia sfumato, senza testo',
   imageAltEn: 'Abstract cover with beige dots fading out radially on a soft sand gradient background, no text',
@@ -100,7 +100,7 @@ const article: Article = {
   content: [
     {
       type: 'paragraph',
-      text: '**AI agent integration means connecting an agent to the data it has to read, the tools it is allowed to use and a person who approves what cannot be undone, then proving on real cases that it does the job.** Four decisions cover it, in this order: what the agent sees, what it can touch, who signs off and how you know it works. The model, the vendor and the name on the box come after.',
+      text: 'AI agent integration means connecting an agent to the data it has to read, the tools it is allowed to use and a person who approves what cannot be undone, then proving on real cases that it does the job. Four decisions cover it, in this order: what the agent sees, what it can touch, who signs off and how you know it works. The model, the vendor and the name on the box come after.',
     },
     {
       type: 'paragraph',
@@ -153,7 +153,7 @@ const article: Article = {
     { type: 'h2', text: 'Which access should you give an AI agent, and why read-only first?' },
     {
       type: 'paragraph',
-      text: '**Give it read-only access to the sources of its first job, through its own account, and add write permissions one at a time.** A wrong read costs a wrong answer. A wrong write costs a wrong store.',
+      text: '**Give it read-only access to the sources of its first job, through its own account, and add write permissions one at a time.** A wrong read gives you a wrong answer; a wrong write changes the store.',
     },
     {
       type: 'paragraph',
@@ -163,10 +163,10 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**A separate account for the agent**, with a [staff role](https://help.shopify.com/en/manual/your-account/staff-accounts/staff-permissions) limited to what the first job needs. Never the owner login.',
-        '**Read permissions only**, on the sources of the first job. Sales and stock first, customer details last.',
-        '**A log of every call**, so you can read what the agent did and why.',
-        '**One write permission at a time**, each added only after the scorecard cases pass and each with its own approval rule.',
+        'A separate account for the agent, with a [staff role](https://help.shopify.com/en/manual/your-account/staff-accounts/staff-permissions) limited to what the first job needs. Never the owner login.',
+        'Read permissions only, on the sources of the first job. Sales and stock first, customer details last.',
+        'A log of every call, so you can read what the agent did and why.',
+        'One write permission at a time, each added only after the scorecard cases pass and each with its own approval rule.',
       ],
     },
     {
@@ -194,7 +194,7 @@ const article: Article = {
     { type: 'h2', text: 'Where does human approval go?' },
     {
       type: 'paragraph',
-      text: '**At the action, not at the answer: the agent may read and draft freely, and anything that moves money, makes a promise or cannot be undone stops at a person who sees the evidence.** Two sources say the same. The [OWASP AI Agent Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/AI_Agent_Security_Cheat_Sheet.html) asks for approval on high-impact and irreversible actions, and the [MCP specification](https://modelcontextprotocol.io/specification/2026-07-28/server/tools) says there should always be a person who can deny a tool call.',
+      text: '**Put it at the action: the agent may read and draft freely, and anything that moves money, makes a promise or cannot be undone stops at a person who sees the evidence.** Two sources say the same. The [OWASP AI Agent Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/AI_Agent_Security_Cheat_Sheet.html) asks for approval on high-impact and irreversible actions, and the [MCP specification](https://modelcontextprotocol.io/specification/2026-07-28/server/tools) says there should always be a person who can deny a tool call.',
     },
     {
       type: 'paragraph',
@@ -204,11 +204,11 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**Refunds and store credit.** The agent prepares the case with order, reason and policy attached. A person decides.',
-        '**Price changes and discount codes.** The agent proposes the change and shows what it touches.',
-        '**Bulk edits** to the catalog or the stock.',
-        '**Messages** to customers and to the whole mailing list.',
-        '**Deletions** of anything.',
+        'Refunds and store credit. The agent prepares the case with order, reason and policy attached. A person decides.',
+        'Price changes and discount codes. The agent proposes the change and shows what it touches.',
+        'Bulk edits to the catalog or the stock.',
+        'Messages to customers and to the whole mailing list.',
+        'Deletions of anything.',
       ],
     },
     {
@@ -218,16 +218,16 @@ const article: Article = {
     { type: 'h2', text: 'How do you measure whether an integrated AI agent works?' },
     {
       type: 'paragraph',
-      text: '**Write test cases from real situations, run them before launch and after every change, and compare the results with how the task went before.** Anthropic’s guide to [evals for AI agents](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents) sets the bar low on purpose: “20-50 simple tasks drawn from real failures is a great start.” [OpenAI’s evaluation guidance](https://developers.openai.com/api/docs/guides/evaluation-best-practices) adds what to cover: typical, edge and adversarial cases, not a judgment by feel.',
+      text: '**Write test cases from real situations, run them before launch and after every change, and compare the results with how the task went before.** Anthropic’s guide to [evals for AI agents](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents) sets the bar low on purpose: “20-50 simple tasks drawn from real failures is a great start.” [OpenAI’s evaluation guidance](https://developers.openai.com/api/docs/guides/evaluation-best-practices) adds what to cover: typical, edge and adversarial cases.',
     },
     { type: 'paragraph', text: 'Write each case with four fields:' },
     {
       type: 'list',
       items: [
-        '**The situation,** taken from a real week, order or message.',
-        '**What the agent sees,** exactly the sources it will have in production.',
-        '**What must be true** in the output, not the exact words.',
-        '**What counts as an error,** and whether it blocks the launch.',
+        'The situation, taken from a real week, order or message.',
+        'What the agent sees, exactly the sources it will have in production.',
+        'What must be true in the output, not the exact words.',
+        'What counts as an error, and whether it blocks the launch.',
       ],
     },
     {
@@ -240,7 +240,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '**Integrating an agent gives one job to one agent that works for you inside the store. Preparing the whole store makes your data, access and rules ready for any agent, yours or your customer’s.** The first is a project. The second is a base.',
+      text: '**Integrating an agent gives one job to one agent that works for you inside the store.** Preparing the whole store makes your data, access and rules ready for any agent, yours or your customer’s.',
     },
     {
       type: 'table',
@@ -258,7 +258,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'The second direction is no longer theoretical. Shopify’s [Agentic Storefronts](https://www.shopify.com/news/winter-26-edition-agentic-storefronts) publish a catalog to ChatGPT, Perplexity and Microsoft Copilot from one configuration, and the merchant stays the merchant of record. [Digital Commerce 360](https://www.digitalcommerce360.com/2026/08/06/how-shopify-is-approaching-agentic-ai-2026/) reports that Shopify’s president said on the earnings call that traffic and orders from AI to Shopify stores tripled year over year in the second quarter of 2026.',
+      text: 'The second direction already exists. Shopify’s [Agentic Storefronts](https://www.shopify.com/news/winter-26-edition-agentic-storefronts) publish a catalog to ChatGPT, Perplexity and Microsoft Copilot from one configuration, and the merchant stays the merchant of record. [Digital Commerce 360](https://www.digitalcommerce360.com/2026/08/06/how-shopify-is-approaching-agentic-ai-2026/) reports that Shopify’s president said on the earnings call that traffic and orders from AI to Shopify stores tripled year over year in the second quarter of 2026.',
     },
     {
       type: 'paragraph',
@@ -277,27 +277,27 @@ const article: Article = {
     { type: 'h3', text: 'What is AI agent integration?' },
     {
       type: 'paragraph',
-      text: 'AI agent integration is connecting an agent to your store data and tools, with limited access, a person who approves irreversible actions and a set of real cases that proves it works. It is more than a chat widget: the agent works on your data, not only on text it was given.',
+      text: '**AI agent integration is connecting an agent to your store data and tools, with limited access, a person who approves irreversible actions and a set of real cases that proves it works.** It is more than a chat widget: the agent works on your data, not only on text it was given.',
     },
     { type: 'h3', text: 'What access does an AI agent need to my ecommerce store?' },
     {
       type: 'paragraph',
-      text: 'Start with read-only access to the sources of its first job, through a separate account with limited permissions. Add write permissions one at a time, each with its own approval rule, after the agent passes your test cases.',
+      text: '**Start with read-only access to the sources of its first job, through a separate account with limited permissions.** Add write permissions one at a time, each with its own approval rule, after the agent passes your test cases.',
     },
     { type: 'h3', text: 'What should the first AI agent do in an ecommerce store?' },
     {
       type: 'paragraph',
-      text: 'A read-and-report job that repeats every week and can be checked against data you trust: a weekly sales and ads readout, a stock watch, reply drafts for customer support or an SEO check. Let it act only after it has earned that on test cases.',
+      text: '**A read-and-report job that repeats every week and can be checked against data you trust: a weekly sales and ads readout, a stock watch, reply drafts for customer support or an SEO check.** Let it act only after it has earned that on test cases.',
     },
     { type: 'h3', text: 'Which actions need human approval?' },
     {
       type: 'paragraph',
-      text: 'Anything that moves money, makes a promise to a customer or cannot be undone: refunds, price and discount changes, bulk catalog edits, messages to customers or to the whole mailing list, and deletions. OWASP and the MCP specification both call for a person in the loop on these steps.',
+      text: '**Anything that moves money, makes a promise to a customer or cannot be undone: refunds, price and discount changes, bulk catalog edits, messages to customers or to the whole mailing list, and deletions.** OWASP and the MCP specification both call for a person in the loop on these steps.',
     },
     { type: 'h3', text: 'How do I know an AI agent is working?' },
     {
       type: 'paragraph',
-      text: 'Run a fixed set of real cases before launch and after every change. Anthropic calls 20-50 simple tasks drawn from real failures a great start. Then compare task time, corrections by the approver and handoffs with the weeks before the agent.',
+      text: '**Run a fixed set of real cases before launch and after every change.** Anthropic calls 20-50 simple tasks drawn from real failures a great start. Then compare task time, corrections by the approver and handoffs with the weeks before the agent.',
     },
     { type: 'h3', text: 'Are ecommerce AI agents the same as chatbots?' },
     {
@@ -312,7 +312,7 @@ const article: Article = {
   contentIt: [
     {
       type: 'paragraph',
-      text: '**L’integrazione di agenti AI in un eCommerce significa collegare l’agente ai dati che deve leggere, agli strumenti che può usare e a una persona che approva ciò che non si può annullare, poi dimostrare su casi veri che fa il suo lavoro.** Quattro decisioni coprono tutto, in quest’ordine: cosa vede l’agente, cosa può toccare, chi firma e come sai che funziona. Il modello, il fornitore e il nome sulla scatola vengono dopo.',
+      text: 'L’integrazione di agenti AI in un eCommerce significa collegare l’agente ai dati che deve leggere, agli strumenti che può usare e a una persona che approva ciò che non si può annullare, poi dimostrare su casi veri che fa il suo lavoro. Quattro decisioni coprono tutto, in quest’ordine: cosa vede l’agente, cosa può toccare, chi firma e come sai che funziona. Il modello, il fornitore e il nome sulla scatola vengono dopo.',
     },
     {
       type: 'paragraph',
@@ -365,7 +365,7 @@ const article: Article = {
     { type: 'h2', text: 'Che accessi dare a un agente AI, e perché prima in sola lettura?' },
     {
       type: 'paragraph',
-      text: '**Dagli accesso in sola lettura alle fonti del suo primo compito, con un account suo, e aggiungi i permessi di scrittura uno alla volta.** Una lettura sbagliata costa una risposta sbagliata. Una scrittura sbagliata costa uno store sbagliato.',
+      text: '**Dagli accesso in sola lettura alle fonti del suo primo compito, con un account suo, e aggiungi i permessi di scrittura uno alla volta.** Una lettura sbagliata dà una risposta sbagliata; una scrittura sbagliata cambia lo store.',
     },
     {
       type: 'paragraph',
@@ -375,10 +375,10 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**Un account separato per l’agente**, con un [ruolo staff](https://help.shopify.com/en/manual/your-account/staff-accounts/staff-permissions) limitato a ciò che serve al primo compito. Mai il login del titolare.',
-        '**Solo permessi di lettura**, sulle fonti del primo compito. Prima vendite e magazzino, per ultimi i dettagli dei clienti.',
-        '**Un log di ogni chiamata**, così puoi leggere cosa ha fatto l’agente e perché.',
-        '**Un permesso di scrittura alla volta**, aggiunto solo dopo che i casi del banco di prova passano e ciascuno con la sua regola di approvazione.',
+        'Un account separato per l’agente, con un [ruolo staff](https://help.shopify.com/en/manual/your-account/staff-accounts/staff-permissions) limitato a ciò che serve al primo compito. Mai il login del titolare.',
+        'Solo permessi di lettura, sulle fonti del primo compito. Prima vendite e magazzino, per ultimi i dettagli dei clienti.',
+        'Un log di ogni chiamata, così puoi leggere cosa ha fatto l’agente e perché.',
+        'Un permesso di scrittura alla volta, aggiunto solo dopo che i casi del banco di prova passano e ciascuno con la sua regola di approvazione.',
       ],
     },
     {
@@ -406,7 +406,7 @@ const article: Article = {
     { type: 'h2', text: 'Dove va l’approvazione di una persona?' },
     {
       type: 'paragraph',
-      text: '**Sull’azione, non sulla risposta: l’agente può leggere e scrivere bozze liberamente, e tutto ciò che muove denaro, fa una promessa o non si può annullare si ferma davanti a una persona che vede le prove.** Due fonti dicono la stessa cosa. L’[OWASP AI Agent Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/AI_Agent_Security_Cheat_Sheet.html) chiede l’approvazione per le azioni ad alto impatto e irreversibili, e la [specifica MCP](https://modelcontextprotocol.io/specification/2026-07-28/server/tools) dice che ci deve sempre essere una persona che può negare una chiamata a uno strumento.',
+      text: '**Metti l’approvazione sull’azione: l’agente può leggere e scrivere bozze liberamente, e tutto ciò che muove denaro, fa una promessa o non si può annullare si ferma davanti a una persona che vede le prove.** Due fonti dicono la stessa cosa. L’[OWASP AI Agent Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/AI_Agent_Security_Cheat_Sheet.html) chiede l’approvazione per le azioni ad alto impatto e irreversibili, e la [specifica MCP](https://modelcontextprotocol.io/specification/2026-07-28/server/tools) dice che ci deve sempre essere una persona che può negare una chiamata a uno strumento.',
     },
     {
       type: 'paragraph',
@@ -416,11 +416,11 @@ const article: Article = {
     {
       type: 'list',
       items: [
-        '**Rimborsi e credito negozio.** L’agente prepara la pratica con ordine, motivo e policy allegati. Una persona decide.',
-        '**Cambi di prezzo e codici sconto.** L’agente propone la modifica e mostra cosa tocca.',
-        '**Modifiche di massa** a catalogo o magazzino.',
-        '**Messaggi** ai clienti e a tutta la lista email.',
-        '**Cancellazioni** di qualsiasi cosa.',
+        'Rimborsi e credito negozio. L’agente prepara la pratica con ordine, motivo e policy allegati. Una persona decide.',
+        'Cambi di prezzo e codici sconto. L’agente propone la modifica e mostra cosa tocca.',
+        'Modifiche di massa a catalogo o magazzino.',
+        'Messaggi ai clienti e a tutta la lista email.',
+        'Cancellazioni di qualsiasi cosa.',
       ],
     },
     {
@@ -430,16 +430,16 @@ const article: Article = {
     { type: 'h2', text: 'Come si misura se un agente AI integrato funziona?' },
     {
       type: 'paragraph',
-      text: '**Scrivi casi di prova da situazioni vere, falli girare prima del lancio e dopo ogni modifica, e confronta i risultati con come andava il compito prima.** La guida di Anthropic alle [valutazioni degli agenti AI](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents) mette l’asticella bassa di proposito: “20-50 simple tasks drawn from real failures is a great start”, cioè 20-50 compiti semplici presi da errori reali sono un ottimo inizio. Le [indicazioni di OpenAI sulla valutazione](https://developers.openai.com/api/docs/guides/evaluation-best-practices) aggiungono cosa coprire: casi tipici, limite e avversari, non un giudizio a sensazione.',
+      text: '**Scrivi casi di prova da situazioni vere, falli girare prima del lancio e dopo ogni modifica, e confronta i risultati con come andava il compito prima.** La guida di Anthropic alle [valutazioni degli agenti AI](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents) mette l’asticella bassa di proposito: “20-50 simple tasks drawn from real failures is a great start”, cioè 20-50 compiti semplici presi da errori reali sono un ottimo inizio. Le [indicazioni di OpenAI sulla valutazione](https://developers.openai.com/api/docs/guides/evaluation-best-practices) aggiungono cosa coprire: casi tipici, limite e avversari.',
     },
     { type: 'paragraph', text: 'Scrivi ogni caso con quattro campi:' },
     {
       type: 'list',
       items: [
-        '**La situazione,** presa da una settimana, un ordine o un messaggio veri.',
-        '**Cosa vede l’agente,** esattamente le fonti che avrà in produzione.',
-        '**Cosa deve essere vero** nel risultato, non le parole esatte.',
-        '**Cosa conta come errore,** e se blocca il lancio.',
+        'La situazione, presa da una settimana, un ordine o un messaggio veri.',
+        'Cosa vede l’agente, esattamente le fonti che avrà in produzione.',
+        'Cosa deve essere vero nel risultato, non le parole esatte.',
+        'Cosa conta come errore, e se blocca il lancio.',
       ],
     },
     {
@@ -452,7 +452,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '**Integrare un agente affida un compito a un agente che lavora per te dentro lo store. Preparare l’intero store rende dati, accessi e regole pronti per qualsiasi agente, il tuo o quello dei tuoi clienti.** Il primo è un progetto. Il secondo è una base.',
+      text: '**Integrare un agente affida un compito a un agente che lavora per te dentro lo store.** Preparare l’intero store rende dati, accessi e regole pronti per qualsiasi agente, il tuo o quello dei tuoi clienti.',
     },
     {
       type: 'table',
@@ -470,7 +470,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'La seconda direzione non è più teoria. Gli [Agentic Storefronts](https://www.shopify.com/news/winter-26-edition-agentic-storefronts) di Shopify pubblicano un catalogo su ChatGPT, Perplexity e Microsoft Copilot da un’unica configurazione, e il merchant resta merchant of record. [Digital Commerce 360](https://www.digitalcommerce360.com/2026/08/06/how-shopify-is-approaching-agentic-ai-2026/) riporta che il presidente di Shopify ha detto nella presentazione dei risultati trimestrali che traffico e ordini dall’AI verso gli store Shopify sono triplicati su base annua nel secondo trimestre 2026.',
+      text: 'La seconda direzione esiste già. Gli [Agentic Storefronts](https://www.shopify.com/news/winter-26-edition-agentic-storefronts) di Shopify pubblicano un catalogo su ChatGPT, Perplexity e Microsoft Copilot da un’unica configurazione, e il merchant resta merchant of record. [Digital Commerce 360](https://www.digitalcommerce360.com/2026/08/06/how-shopify-is-approaching-agentic-ai-2026/) riporta che il presidente di Shopify ha detto nella presentazione dei risultati trimestrali che traffico e ordini dall’AI verso gli store Shopify sono triplicati su base annua nel secondo trimestre 2026.',
     },
     {
       type: 'paragraph',
@@ -489,12 +489,12 @@ const article: Article = {
     { type: 'h3', text: 'Cos’è l’integrazione di agenti AI?' },
     {
       type: 'paragraph',
-      text: 'L’integrazione di un agente AI è il collegamento dell’agente ai dati e agli strumenti del tuo store, con accessi limitati, una persona che approva le azioni irreversibili e un insieme di casi veri che dimostra che funziona. È più di un widget di chat: l’agente lavora sui tuoi dati, non solo sul testo che gli hanno dato.',
+      text: '**L’integrazione di un agente AI è il collegamento dell’agente ai dati e agli strumenti del tuo store, con accessi limitati, una persona che approva le azioni irreversibili e un insieme di casi veri che dimostra che funziona.** È più di un widget di chat: l’agente lavora sui tuoi dati, non solo sul testo che gli hanno dato.',
     },
     { type: 'h3', text: 'Che accessi servono a un agente AI sul mio eCommerce?' },
     {
       type: 'paragraph',
-      text: 'Parti da un accesso in sola lettura alle fonti del suo primo compito, con un account separato e permessi limitati. Aggiungi i permessi di scrittura uno alla volta, ciascuno con la sua regola di approvazione, dopo che l’agente ha superato i tuoi casi di prova.',
+      text: '**Parti da un accesso in sola lettura alle fonti del suo primo compito, con un account separato e permessi limitati.** Aggiungi i permessi di scrittura uno alla volta, ciascuno con la sua regola di approvazione, dopo che l’agente ha superato i tuoi casi di prova.',
     },
     { type: 'h3', text: 'Cosa deve fare il primo agente AI in un eCommerce?' },
     {
@@ -504,12 +504,12 @@ const article: Article = {
     { type: 'h3', text: 'Quali azioni richiedono l’approvazione di una persona?' },
     {
       type: 'paragraph',
-      text: 'Tutto ciò che muove denaro, fa una promessa a un cliente o non si può annullare: rimborsi, cambi di prezzo e di sconti, modifiche di massa al catalogo, messaggi ai clienti o a tutta la lista email e cancellazioni. OWASP e la specifica MCP chiedono entrambi una persona nel ciclo su questi passi.',
+      text: '**Tutto ciò che muove denaro, fa una promessa a un cliente o non si può annullare: rimborsi, cambi di prezzo e di sconti, modifiche di massa al catalogo, messaggi ai clienti o a tutta la lista email e cancellazioni.** OWASP e la specifica MCP chiedono entrambi una persona nel ciclo su questi passi.',
     },
     { type: 'h3', text: 'Come capisco se un agente AI funziona?' },
     {
       type: 'paragraph',
-      text: 'Fai girare un insieme fisso di casi veri prima del lancio e dopo ogni modifica. Per Anthropic 20-50 compiti semplici presi da errori reali sono un ottimo inizio. Poi confronta tempo del compito, correzioni di chi approva e passaggi a una persona con le settimane prima dell’agente.',
+      text: '**Fai girare un insieme fisso di casi veri prima del lancio e dopo ogni modifica.** Per Anthropic 20-50 compiti semplici presi da errori reali sono un ottimo inizio. Poi confronta tempo del compito, correzioni di chi approva e passaggi a una persona con le settimane prima dell’agente.',
     },
     { type: 'h3', text: 'Gli agenti AI per l’eCommerce sono la stessa cosa dei chatbot?' },
     {

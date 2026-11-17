@@ -159,7 +159,7 @@ const it: BlocchiCopy = {
     h1: 'Guide su Shopify, AI ed ',
     h1Em: 'eCommerce',
     intro:
-      'Scriviamo di tre cose: Shopify, AI ed eCommerce, dalla migrazione di uno store fino a farsi trovare dagli assistenti AI e a farlo crescere. Ogni guida nasce dai progetti che seguiamo, e se stai per migrare parti dalla [guida completa](/it/migrazione-shopify) e dallo [Shopify Launch Sprint](/it/sprint-migrazione-shopify).',
+      'Scriviamo di Shopify, AI ed eCommerce, dalla migrazione di uno store fino a farsi trovare dagli assistenti AI e a farlo crescere. Ogni guida nasce dai progetti che seguiamo, e se stai per migrare parti dalla [guida completa](/it/migrazione-shopify) e dallo [Shopify Launch Sprint](/it/sprint-migrazione-shopify).',
     sections: {
       migrate: {
         description:
@@ -269,7 +269,7 @@ const en: BlocchiCopy = {
     h1: 'Shopify, AI and ',
     h1Em: 'eCommerce Guides',
     intro:
-      'We write about three things: Shopify, AI and eCommerce, from migrating a store to getting found by AI assistants and growing it. Every guide comes from projects we run, and if you are about to migrate, start with the [complete guide](/shopify-migration) and the [Shopify Launch Sprint](/shopify-migration-sprint).',
+      'We write about Shopify, AI and eCommerce, from migrating a store to getting found by AI assistants and growing it. Every guide comes from projects we run, and if you are about to migrate, start with the [complete guide](/shopify-migration) and the [Shopify Launch Sprint](/shopify-migration-sprint).',
     sections: {
       migrate: {
         description:

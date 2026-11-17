@@ -25,7 +25,7 @@ export const zeroLossIt: ZlCopy = {
     h1: 'La tua migrazione a Shopify in 14 giorni. Più posizioni su Google, più vendite, più AI.',
     proofNote: 'Caso Nazzi: +105% di vendite online in 85 giorni',
     paragraph:
-      'In 14 giorni un team completo porta il tuo store su Shopify, con il nostro Custom AI System: più veloce, pronto per gli agenti AI, costruito per vendere. Poi 90 giorni su SEO, conversioni e AOV, misurati in dashboard. Prezzo fisso, zero sorprese.',
+      'In 14 giorni un team completo porta il tuo store su Shopify, con il nostro Custom AI System: più veloce, pronto per gli agenti AI, costruito per vendere. Poi 90 giorni su SEO, conversioni e AOV, misurati in dashboard, a prezzo fisso.',
     ctaPrimary: 'Candidati allo sprint',
     ctaNote: 'Prezzo fisso da €5.800 · Rispondiamo in 48 ore',
     ctaSecondary: 'Guarda i risultati',
@@ -36,7 +36,7 @@ export const zeroLossIt: ZlCopy = {
   overview: {
     h2: 'Cos’è lo Shopify Launch Sprint',
     paragraph:
-      "Quattordici giorni, un calendario fisso, un referente. Il giorno 1 ci dai gli accessi, il giorno 14 hai lo store su Shopify pronto a pubblicare. Non è un redesign: è il tuo store, ricostruito da zero con il nostro Custom AI System, più veloce, più forte su Google e con un checkout costruito per vendere di più.",
+      "Quattordici giorni, un calendario fisso, un referente. Il giorno 1 ci dai gli accessi, il giorno 14 hai lo store su Shopify pronto a pubblicare. È il tuo store, con le stesse pagine e gli stessi contenuti, ricostruito da zero con il nostro Custom AI System: più veloce, più forte su Google e con un checkout costruito per vendere di più.",
     cta: 'Candidati allo sprint',
     deliverablesTitle: 'Cosa ottieni al giorno 14',
     deliverables: [
@@ -114,7 +114,7 @@ export const zeroLossIt: ZlCopy = {
         title: 'Il tuo store, pronto a pubblicare su Shopify',
         short: 'Store pronto a pubblicare',
         paragraph:
-          "Il tuo store ricostruito 1:1 su Shopify, con il Custom AI System, sviluppato su misura per te: stesse pagine, stessa struttura, stessi contenuti. Correggiamo bug ed errori che ti porti dietro da anni e applichiamo la nostra checklist sul flusso d'acquisto: ricerca, scheda prodotto, carrello, checkout. Non è un restyling: è il tuo store, più veloce e più corto da comprare.",
+          "Il tuo store ricostruito 1:1 su Shopify, con il Custom AI System, sviluppato su misura per te: stesse pagine, stessa struttura, stessi contenuti. Correggiamo bug ed errori che ti porti dietro da anni e applichiamo la nostra checklist sul flusso d'acquisto: ricerca, scheda prodotto, carrello, checkout. Il risultato è il tuo store, più veloce e con meno passaggi tra prodotto e pagamento.",
         imageAlt: 'Screenshot dello staging Shopify affiancato al sito attuale, con la checklist in overlay',
         mockup: 'staging',
       },
@@ -130,7 +130,7 @@ export const zeroLossIt: ZlCopy = {
         title: 'Redirect Map 1:1',
         short: 'Redirect Map',
         paragraph:
-          'Ogni URL che ha ricevuto traffico negli ultimi 12 mesi ha il suo redirect 301 verso una pagina che risponde 200. Non a mano: con un test automatico che gira prima del go-live e dopo. È il motivo per cui il traffico organico non si perde.',
+          'Ogni URL che ha ricevuto traffico negli ultimi 12 mesi ha il suo redirect 301 verso una pagina che risponde 200. Un test automatico li controlla tutti prima del go-live e di nuovo dopo. Per questo il traffico organico non si perde.',
         imageAlt: 'CSV della Redirect Map e output del test automatico con 100% verde',
         mockup: 'redirects',
       },
@@ -152,7 +152,7 @@ export const zeroLossIt: ZlCopy = {
       yourTeam: "Compili il form di intake (30 minuti), prepari la lista degli accessi e l'export di catalogo e ordini.",
       ourTeamTitle: 'Il nostro team',
       ourTeam:
-        'Apriamo il canale dedicato, prepariamo lo store di sviluppo e il piano di import. Il kickoff parte solo quando abbiamo tutti gli accessi. Non si parte a metà.',
+        'Apriamo il canale dedicato, prepariamo lo store di sviluppo e il piano di import. Il kickoff parte solo quando abbiamo tutti gli accessi.',
     },
     weeks: [
       {
@@ -254,7 +254,7 @@ export const zeroLossIt: ZlCopy = {
   },
   guarantees: {
     h2: 'Se non funziona, paghiamo noi.',
-    sub: 'Quattro garanzie, misurate dalla dashboard che ricevi il giorno 1. Non da opinioni.',
+    sub: 'Quattro garanzie, misurate dalla dashboard che ricevi il giorno 1.',
     cards: [
       { key: 'Sprint', text: 'Store pronto al giorno 14 o ti rimborsiamo la prima rata.' },
       { key: 'SEO', text: 'Traffico organico sotto la baseline a 90 giorni dal go-live? Lavoriamo gratis finché non torna.' },
@@ -265,9 +265,9 @@ export const zeroLossIt: ZlCopy = {
   },
   aiSystem: {
     label: 'Custom AI System',
-    h2: "Non un semplice redesign. Il tuo store, con i superpoteri dell'AI.",
+    h2: "Il tuo store, con i superpoteri dell'AI.",
     paragraph:
-      "Non solo sviluppo, non solo marketing: con il Custom AI System lavoriamo insieme su sito, dati, flusso d'acquisto e AI. Compatto e forte, con sei superpoteri.",
+      "Con il Custom AI System lavoriamo insieme su sito, dati, flusso d'acquisto e AI. Ha sei superpoteri.",
     powers: [
       { title: 'Ultra veloce', text: 'Codice scritto da zero solo per il tuo store: niente codice morto, niente app che rallentano.' },
       { title: 'Pronto per gli agenti AI', text: 'Catalogo e dati strutturati pronti per ChatGPT, Copilot e Google AI Mode, dove i clienti stanno iniziando a comprare.' },
@@ -279,11 +279,11 @@ export const zeroLossIt: ZlCopy = {
   },
   resultsFirst: {
     label: 'Ossessionati dai risultati',
-    h2: '14 giorni non è fretta. È un team intero sul tuo store.',
+    h2: '14 giorni, perché sul tuo store lavora un team intero.',
     paragraph:
-      'Su Shopify in 14 giorni perché non lavora una persona sola: si mette sotto un team intero, uno specialista per ogni area, tutti nello stesso momento. Così hai tutto subito, nessun collo di bottiglia e i primi risultati il prima possibile. Ogni area ha un numero da far salire, e non ci fermiamo finché non sale.',
+      'Sul tuo store si mette un team intero: uno specialista per ogni area, tutti nello stesso momento. Così in 14 giorni hai tutto, senza colli di bottiglia, e i primi risultati arrivano il prima possibile. Ogni area ha un numero da far salire, e andiamo avanti finché sale.',
     areas: ['Sviluppo Shopify', 'SEO e redirect', 'Tracking e dati', 'Checkout e CRO', 'Design', 'AI'],
-    line: 'Lavoriamo in parallelo, non in fila.',
+    line: 'Lavoriamo in parallelo, tutte le aree insieme.',
   },
   sticky: {
     prefix: 'Prezzo fisso da',
@@ -294,7 +294,7 @@ export const zeroLossIt: ZlCopy = {
     eyebrow: 'Perché adesso',
     h2: 'I tuoi competitor stanno già passando a Shopify. Ogni mese che aspetti, il vantaggio è loro.',
     paragraph:
-      'Non è una moda, è una migrazione di massa. Con Shopify e l’AI una modifica si fa in minuti, una promo parte in giornata e il tuo catalogo è già dentro ChatGPT. Chi parte prima accumula mesi di test, dati e posizioni su Google che chi arriva dopo non recupera più.',
+      'È una migrazione di massa. Con Shopify e l’AI una modifica si fa in minuti, una promo parte in giornata e il tuo catalogo è già dentro ChatGPT. Chi parte prima accumula mesi di test, dati e posizioni su Google che chi arriva dopo non recupera più.',
     sourceLabel: 'Fonte',
     stats: [
       {
@@ -309,7 +309,7 @@ export const zeroLossIt: ZlCopy = {
       },
       {
         value: '+32%',
-        label: 'il volume venduto su Shopify in un anno. Il mercato si sposta dove si vende di più.',
+        label: 'il volume venduto su Shopify in un anno.',
         source: { label: 'Shopify, risultati Q2 2026', href: ZL_SOURCES.shopifyQ2 },
       },
       {
@@ -349,7 +349,7 @@ export const zeroLossIt: ZlCopy = {
         sources: [{ label: 'Shopify', href: ZL_SOURCES.shopifyAgentic }],
       },
     ],
-    closing: 'Prima parti, prima vedi i risultati. Lo sprint dura 14 giorni: fra due settimane il vantaggio lo prendi tu, non il tuo competitor.',
+    closing: 'Prima parti, prima vedi i risultati. Lo sprint dura 14 giorni, quindi fra due settimane il tuo store è pronto e il vantaggio è tuo.',
     cta: 'Candidati allo sprint',
   },
   proof: {
@@ -460,7 +460,7 @@ export const zeroLossIt: ZlCopy = {
       {
         question: 'Il sito sarà uguale a prima?',
         answer:
-          "Struttura, pagine e contenuti sì: è il tuo store, non un redesign. Ma lo ricostruiamo con il Custom AI System: più veloce, senza i bug di prima e con il flusso d'acquisto ottimizzato con la nostra checklist. Se vuoi cambiare immagine, quello arriva dopo il go-live, con partner dedicati.",
+          "Struttura, pagine e contenuti restano gli stessi, quindi è lo store che conosci. Lo ricostruiamo con il Custom AI System: più veloce, senza i bug di prima e con il flusso d'acquisto ottimizzato con la nostra checklist. Se vuoi cambiare immagine, quello arriva dopo il go-live, con partner dedicati.",
       },
       {
         question: 'Da quali piattaforme migrate?',
@@ -499,7 +499,7 @@ export const zeroLossIt: ZlCopy = {
       {
         question: 'Perché il prezzo dipende dal fatturato della mia azienda?',
         answer:
-          'Perché fatturato e complessità dello store vanno insieme: più prodotti, lingue, integrazioni e persone da allineare. È lo stesso criterio che usano le migliori consulenze prodottizzate. Il prezzo del tuo scaglione lo vedi qui, prima di parlarci.',
+          'Perché fatturato e complessità dello store vanno insieme: più prodotti, lingue, integrazioni e persone da allineare. Il prezzo del tuo scaglione lo vedi qui, prima di parlarci.',
       },
       {
         question: "Cos'è la dashboard che ricevo il giorno 1?",
@@ -523,7 +523,7 @@ export const zeroLossIt: ZlCopy = {
     h1Pre: 'Il tuo store su Shopify in',
     h1Em: '14 giorni.',
     description:
-      'Un intero team, totalmente in focus sul tuo store. Lo ricostruiamo su Shopify con il nostro Custom AI System in soli 14 giorni e lo prepariamo a uno sprint di performance su ogni area: è il prossimo passo per il tuo eCommerce.',
+      'Un team intero lavora solo sul tuo store. Lo ricostruiamo su Shopify con il nostro Custom AI System in 14 giorni, poi per 90 giorni lavoriamo su SEO, conversione e scontrino medio.',
     badges: ['Risposta in 48 ore', 'Supporto 7/7', 'Prezzo fisso, nessun preventivo'],
   },
   form: {

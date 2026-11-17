@@ -36,7 +36,7 @@ const article: Article = {
   content: [
     {
       type: 'paragraph',
-      text: '**To integrate Claude Duet into a Shopify eCommerce, treat it as the proactive assistant of the founder or the eCommerce manager, and keep the work on the store itself with Claude and Claude Code.** Duet watches the inbox, the calendar and the connected apps, prepares your morning, drafts, and asks before it acts. Claude connected to Shopify and Claude Code do the work on catalog, data and store code. You keep the approvals.',
+      text: 'To integrate Claude Duet into a Shopify eCommerce, treat it as the proactive assistant of the founder or the eCommerce manager, and keep the work on the store itself with Claude and Claude Code. Duet watches the inbox, the calendar and the connected apps, prepares your morning, drafts, and asks before it acts. Claude connected to Shopify and Claude Code do the work on catalog, data and store code. You keep the approvals.',
     },
     {
       type: 'paragraph',
@@ -101,12 +101,12 @@ const article: Article = {
     { type: 'h2', text: 'How do you build a team around Claude Duet?' },
     {
       type: 'paragraph',
-      text: '**Give each tool one role and keep the roles apart: Duet is the assistant, Claude connected to Shopify is the analyst, Claude Code is the builder, and you are the approver.**',
+      text: 'Give each tool one role and keep the roles apart: Duet is the assistant, Claude connected to Shopify is the analyst, Claude Code is the builder, and you are the approver.',
     },
     {
       type: 'list',
       items: [
-        '**Claude Duet, the founder’s assistant.** Morning brief, inbox, calendar, supplier and customer follow-ups, invoices, weekly numbers. It talks to you, not to your catalog.',
+        '**Claude Duet, the founder’s assistant.** Morning brief, inbox, calendar, supplier and customer follow-ups, invoices, weekly numbers. It talks to you and stays away from your catalog.',
         '**Claude connected to Shopify, the analyst.** It reads orders, products and sales, answers questions and drafts. We cover the connection in [Claude and Claude Code on Shopify](/blog/claude-shopify).',
         '**Claude Code, the builder.** [Claude Code](https://code.claude.com/docs/en/overview) reads a codebase, edits files, runs commands and connects tools through MCP. For a store that means code changes, feeds, redirect maps and scripts, worked on a copy and reviewed before anything goes live.',
         '**Custom agents, for jobs that repeat.** When a job runs the same way every day, such as checking catalog data or sorting returns, it becomes an agent with narrow tools. See [AI agents for Shopify](/blog/ai-agents-for-shopify) and [how to build one](/blog/build-ai-agent-shopify).',
@@ -144,27 +144,27 @@ const article: Article = {
       headers: ['Day', 'Duet', 'You'],
       rows: [
         [
-          '**Monday, the week opens**',
+          'Monday, the week opens',
           'Duet prepares the brief on inbox and calendar, the supplier threads left unanswered, and a draft of the weekly numbers with the source of each.',
           'You decide the priorities and which drafts go out.',
         ],
         [
-          '**Tuesday, customers**',
+          'Tuesday, customers',
           'Duet groups the customer emails by topic and drafts replies for the common ones.',
           'You approve each reply and every refund or exception.',
         ],
         [
-          '**Wednesday, catalog and store**',
+          'Wednesday, catalog and store',
           'Claude connected to Shopify proposes product-data fixes and Claude Code prepares the change on a copy. Duet reminds you what is waiting.',
           'You review the changes and approve publishing.',
         ],
         [
-          '**Thursday, money and suppliers**',
+          'Thursday, money and suppliers',
           'Duet checks unpaid invoices, drafts the reminders and prepares supplier follow-ups with meeting slots.',
           'You approve each send and make every payment yourself.',
         ],
         [
-          '**Friday, review**',
+          'Friday, review',
           'Duet writes the weekly summary, with what stalled and why.',
           'You pick the two priorities for next week and turn every mistake into a written rule.',
         ],
@@ -172,28 +172,28 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'The Friday rule matters most. An agent improves through the instructions you write after a mistake, not through the mistake itself. Keep one document with those rules and hand it to Duet and to Claude Code.',
+      text: 'The Friday rule matters most: an agent improves through the instructions you write after a mistake. Keep one document with those rules and hand it to Duet and to Claude Code.',
     },
     { type: 'h2', text: 'What are the limits of Claude Duet, written as safety rules?' },
     {
       type: 'paragraph',
-      text: '**Anthropic states the limits of the preview openly, in the [Limitations section](https://support.claude.com/en/articles/17631495-get-started-with-claude-duet) of its support article, and each one becomes a rule for your store.**',
+      text: 'Anthropic states the limits of the preview openly, in the [Limitations section](https://support.claude.com/en/articles/17631495-get-started-with-claude-duet) of its support article, and each one becomes a rule for your store.',
     },
     {
       type: 'list',
       items: [
-        '**It checks your accounts at set intervals, so something urgent can arrive between checks.** Rule: urgent signals such as failed payments, stockouts or an offline store go to alerts built in Shopify and in [Shopify Flow](/blog/shopify-flow-ai), not to the assistant.',
-        '**It can misread a thread or misjudge what is urgent.** Rule: read every draft and every approval request before you confirm, as Anthropic itself advises.',
-        '**It reads content written by other people, and that content can contain instructions meant to mislead it (prompt injection): no defense is perfect, says [Anthropic](https://support.claude.com/en/articles/17631495-get-started-with-claude-duet).** Rule: a customer email never authorises an action, and approvals stay human.',
-        '**It shares your [plan limits](https://support.claude.com/en/articles/17631495-get-started-with-claude-duet).** Rule: big files and long jobs go to Claude Code on a schedule; Duet keeps briefs and triage.',
-        '**You cannot watch or take over its browser ([support article](https://support.claude.com/en/articles/17631495-get-started-with-claude-duet)).** Rule: for customer data and money, prefer a connector to the browser.',
-        '**On 23 October Anthropic added a [note to the announcement](https://claude.com/resources/articles/claude-duet): safety, privacy and security protections are still being developed.** Rule: start with the lowest-risk jobs and give it only the customer data a task needs.',
+        'It checks your accounts at set intervals, so something urgent can arrive between checks. Rule: urgent signals such as failed payments, stockouts or an offline store go to alerts built in Shopify and in [Shopify Flow](/blog/shopify-flow-ai), not to the assistant.',
+        'It can misread a thread or misjudge what is urgent. Rule: read every draft and every approval request before you confirm, as Anthropic itself advises.',
+        'It reads content written by other people, and that content can contain instructions meant to mislead it (prompt injection): no defense is perfect, says [Anthropic](https://support.claude.com/en/articles/17631495-get-started-with-claude-duet). Rule: a customer email never authorises an action, and approvals stay human.',
+        'It shares your [plan limits](https://support.claude.com/en/articles/17631495-get-started-with-claude-duet). Rule: big files and long jobs go to Claude Code on a schedule; Duet keeps briefs and triage.',
+        'You cannot watch or take over its browser ([support article](https://support.claude.com/en/articles/17631495-get-started-with-claude-duet)). Rule: for customer data and money, prefer a connector to the browser.',
+        'On 23 October Anthropic added a [note to the announcement](https://claude.com/resources/articles/claude-duet): safety, privacy and security protections are still being developed. Rule: start with the lowest-risk jobs and give it only the customer data a task needs.',
       ],
     },
     { type: 'h2', text: 'How do you start this week?' },
     {
       type: 'paragraph',
-      text: '**Start with access and roles, not with automation.** In this order:',
+      text: '**Start with access and roles, and leave automation for later.** In this order:',
     },
     {
       type: 'list',
@@ -214,22 +214,22 @@ const article: Article = {
     { type: 'h3', text: 'What is Claude Duet?' },
     {
       type: 'paragraph',
-      text: 'Claude Duet is a separate Anthropic app in which Claude works as a proactive agent. It sends a morning brief, watches your connected apps, completes tasks and asks your approval before sending, paying, signing or deleting. It opened as a research preview on [21 October 2026](https://claude.com/resources/articles/claude-duet).',
+      text: '**Claude Duet is a separate Anthropic app in which Claude works as a proactive agent.** It sends a morning brief, watches your connected apps, completes tasks and asks your approval before sending, paying, signing or deleting. It opened as a research preview on [21 October 2026](https://claude.com/resources/articles/claude-duet).',
     },
     { type: 'h3', text: 'Is Claude Duet available outside the US?' },
     {
       type: 'paragraph',
-      text: 'Anthropic’s [support article](https://support.claude.com/en/articles/17631495-get-started-with-claude-duet) describes a waitlist for Pro and Max subscribers in the US and lists no other countries or plans. Check the [product page](https://claude.com/product/claude-duet) for updates and join the waitlist with the email of your Claude account.',
+      text: '**Anthropic’s [support article](https://support.claude.com/en/articles/17631495-get-started-with-claude-duet) describes a waitlist for Pro and Max subscribers in the US and lists no other countries or plans.** Check the [product page](https://claude.com/product/claude-duet) for updates and join the waitlist with the email of your Claude account.',
     },
     { type: 'h3', text: 'How much does Claude Duet cost?' },
     {
       type: 'paragraph',
-      text: 'During the preview Claude Duet is [included in Pro and Max](https://support.claude.com/en/articles/17631495-get-started-with-claude-duet) at no extra cost. It uses your plan’s five-hour and weekly limits, background work included, so heavy use can reach the limits sooner.',
+      text: '**During the preview Claude Duet is [included in Pro and Max](https://support.claude.com/en/articles/17631495-get-started-with-claude-duet) at no extra cost.** It uses your plan’s five-hour and weekly limits, background work included, so heavy use can reach the limits sooner.',
     },
     { type: 'h3', text: 'Does Claude Duet connect to Shopify?' },
     {
       type: 'paragraph',
-      text: 'Yes, Anthropic’s [announcement](https://claude.com/resources/articles/claude-duet) names Shopify among the apps it works with and says Duet can set up, design and manage a Shopify store. Connect it with the narrowest access first and keep refunds, prices, publishing and messages to customers under your approval.',
+      text: '**Yes, Anthropic’s [announcement](https://claude.com/resources/articles/claude-duet) names Shopify among the apps it works with and says Duet can set up, design and manage a Shopify store.** Connect it with the narrowest access first and keep refunds, prices, publishing and messages to customers under your approval.',
     },
     { type: 'h3', text: 'Should Claude Duet run my store on its own?' },
     {
@@ -239,7 +239,7 @@ const article: Article = {
     { type: 'h3', text: 'What is the difference between Claude Duet, Claude and Claude Code?' },
     {
       type: 'paragraph',
-      text: 'Duet is the proactive assistant that reaches out with briefs and drafts. Claude is the chat you open to ask questions and, with connectors, read your Shopify data. Claude Code is the builder that edits files and runs commands in a project, such as your store’s code.',
+      text: '**Duet is the proactive assistant that reaches out with briefs and drafts.** Claude is the chat you open to ask questions and, with connectors, read your Shopify data. Claude Code is the builder that edits files and runs commands in a project, such as your store’s code.',
     },
     {
       type: 'paragraph',
@@ -249,7 +249,7 @@ const article: Article = {
   contentIt: [
     {
       type: 'paragraph',
-      text: '**Per integrare Claude Duet in un eCommerce Shopify, trattalo come l’assistente proattivo del founder o del responsabile eCommerce e lascia il lavoro sullo store a Claude e Claude Code.** Duet sorveglia la posta, il calendario e le app collegate, ti prepara la mattina, scrive bozze e chiede prima di agire. Claude collegato a Shopify e Claude Code lavorano su catalogo, dati e codice. Le approvazioni restano a te.',
+      text: 'Per integrare Claude Duet in un eCommerce Shopify, trattalo come l’assistente proattivo del founder o del responsabile eCommerce e lascia il lavoro sullo store a Claude e Claude Code. Duet sorveglia la posta, il calendario e le app collegate, ti prepara la mattina, scrive bozze e chiede prima di agire. Claude collegato a Shopify e Claude Code lavorano su catalogo, dati e codice. Le approvazioni restano a te.',
     },
     {
       type: 'paragraph',
@@ -258,7 +258,7 @@ const article: Article = {
     { type: 'h2', text: 'Cos’è Claude Duet, secondo Anthropic?' },
     {
       type: 'paragraph',
-      text: '**Claude Duet è un’app separata di Anthropic in cui Claude lavora come agente proattivo: ti porta ciò che richiede attenzione, completa i compiti che gli dai, continua a lavorare quando ti allontani e ti chiede conferma prima di agire per tuo conto.** Anthropic l’ha aperto come research preview il 21 ottobre 2026, nel suo [annuncio](https://claude.com/resources/articles/claude-duet). L’[articolo di supporto](https://support.claude.com/en/articles/17631495-get-started-with-claude-duet) e la [pagina prodotto](https://claude.com/product/claude-duet) aggiungono i dettagli:',
+      text: 'Claude Duet è un’app separata di Anthropic in cui Claude lavora come agente proattivo: ti porta ciò che richiede attenzione, completa i compiti che gli dai, continua a lavorare quando ti allontani e ti chiede conferma prima di agire per tuo conto. Anthropic l’ha aperto come research preview il 21 ottobre 2026, nel suo [annuncio](https://claude.com/resources/articles/claude-duet). L’[articolo di supporto](https://support.claude.com/en/articles/17631495-get-started-with-claude-duet) e la [pagina prodotto](https://claude.com/product/claude-duet) aggiungono i dettagli:',
     },
     {
       type: 'list',
@@ -314,16 +314,16 @@ const article: Article = {
     { type: 'h2', text: 'Come costruisci un team attorno a Claude Duet?' },
     {
       type: 'paragraph',
-      text: '**Dai a ogni strumento un ruolo e tieni i ruoli separati: Duet è l’assistente, Claude collegato a Shopify è l’analista, Claude Code è il costruttore e tu sei chi approva.**',
+      text: 'Dai a ogni strumento un ruolo e tieni i ruoli separati: Duet è l’assistente, Claude collegato a Shopify è l’analista, Claude Code è il costruttore e tu sei chi approva.',
     },
     {
       type: 'list',
       items: [
-        '**Claude Duet, l’assistente del founder.** Riepilogo del mattino, posta, calendario, solleciti a fornitori e clienti, fatture, numeri settimanali. Parla con te, non con il tuo catalogo.',
-        '**Claude collegato a Shopify, l’analista.** Legge ordini, prodotti e vendite, risponde alle domande e scrive bozze. La connessione la spieghiamo in [Claude e Claude Code su Shopify](/it/blog/claude-shopify).',
-        '**Claude Code, il costruttore.** [Claude Code](https://code.claude.com/docs/en/overview) legge un codebase, modifica file, esegue comandi e collega strumenti tramite MCP. Per uno store significa modifiche al codice del sito, feed, mappe di redirect e script, lavorati su una copia e rivisti prima che vada online qualcosa.',
-        '**Agenti su misura, per i lavori che si ripetono.** Quando un lavoro gira sempre uguale, come il controllo dei dati del catalogo o lo smistamento dei resi, diventa un agente con strumenti stretti. Vedi [agenti AI per Shopify](/it/blog/agenti-ai-shopify) e [come crearne uno](/it/blog/creare-agente-ai-shopify).',
-        '**Tu e i tuoi specialisti, chi approva.** Ogni azione che invia, spende, pubblica o cancella finisce qui.',
+        'Claude Duet, l’assistente del founder. Riepilogo del mattino, posta, calendario, solleciti a fornitori e clienti, fatture, numeri settimanali. Parla con te e non tocca il tuo catalogo.',
+        'Claude collegato a Shopify, l’analista. Legge ordini, prodotti e vendite, risponde alle domande e scrive bozze. La connessione la spieghiamo in [Claude e Claude Code su Shopify](/it/blog/claude-shopify).',
+        'Claude Code, il costruttore. [Claude Code](https://code.claude.com/docs/en/overview) legge un codebase, modifica file, esegue comandi e collega strumenti tramite MCP. Per uno store significa modifiche al codice del sito, feed, mappe di redirect e script, lavorati su una copia e rivisti prima che vada online qualcosa.',
+        'Agenti su misura, per i lavori che si ripetono. Quando un lavoro gira sempre uguale, come il controllo dei dati del catalogo o lo smistamento dei resi, diventa un agente con strumenti stretti. Vedi [agenti AI per Shopify](/it/blog/agenti-ai-shopify) e [come crearne uno](/it/blog/creare-agente-ai-shopify).',
+        'Tu e i tuoi specialisti, chi approva. Ogni azione che invia, spende, pubblica o cancella finisce qui.',
       ],
     },
     {
@@ -357,27 +357,27 @@ const article: Article = {
       headers: ['Giorno', 'Duet', 'Tu'],
       rows: [
         [
-          '**Lunedì, si apre la settimana**',
+          'Lunedì, si apre la settimana',
           'Duet prepara il riepilogo di posta e calendario, le conversazioni coi fornitori rimaste senza risposta e una bozza dei numeri settimanali con la fonte di ciascuno.',
           'Tu decidi le priorità e quali bozze partono.',
         ],
         [
-          '**Martedì, clienti**',
+          'Martedì, clienti',
           'Duet raggruppa le email dei clienti per argomento e scrive le risposte per i casi comuni.',
           'Tu approvi ogni risposta e ogni rimborso o eccezione.',
         ],
         [
-          '**Mercoledì, catalogo e store**',
+          'Mercoledì, catalogo e store',
           'Claude collegato a Shopify propone correzioni ai dati prodotto e Claude Code prepara la modifica su una copia. Duet ti ricorda cosa è in attesa.',
           'Tu rivedi le modifiche e approvi la pubblicazione.',
         ],
         [
-          '**Giovedì, soldi e fornitori**',
+          'Giovedì, soldi e fornitori',
           'Duet controlla le fatture non pagate, scrive i solleciti e prepara i follow-up ai fornitori con le proposte di orario.',
           'Tu approvi ogni invio e fai di persona ogni pagamento.',
         ],
         [
-          '**Venerdì, revisione**',
+          'Venerdì, revisione',
           'Duet scrive il riepilogo della settimana, con cosa si è fermato e perché.',
           'Tu scegli le due priorità della prossima e trasformi ogni errore in una regola scritta.',
         ],
@@ -385,28 +385,28 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'La regola del venerdì è la più importante. Un agente migliora con le istruzioni che scrivi dopo un errore, non con l’errore in sé. Tieni un solo documento con quelle regole e consegnalo a Duet e a Claude Code.',
+      text: 'La regola del venerdì è la più importante: un agente migliora con le istruzioni che scrivi dopo un errore. Tieni un solo documento con quelle regole e consegnalo a Duet e a Claude Code.',
     },
     { type: 'h2', text: 'Quali sono i limiti di Claude Duet, scritti come regole di sicurezza?' },
     {
       type: 'paragraph',
-      text: '**Anthropic dichiara apertamente i limiti della preview, nella sezione [Limitations](https://support.claude.com/en/articles/17631495-get-started-with-claude-duet) del suo articolo di supporto, e ciascuno diventa una regola per il tuo store.**',
+      text: 'Anthropic dichiara apertamente i limiti della preview, nella sezione [Limitations](https://support.claude.com/en/articles/17631495-get-started-with-claude-duet) del suo articolo di supporto, e ciascuno diventa una regola per il tuo store.',
     },
     {
       type: 'list',
       items: [
-        '**Controlla i tuoi account a intervalli fissi, quindi qualcosa di urgente può arrivare tra un controllo e l’altro.** Regola: i segnali urgenti, come pagamenti falliti, prodotti esauriti o store offline, passano da avvisi creati in Shopify e in [Shopify Flow](/it/blog/shopify-flow-ai), non dall’assistente.',
-        '**Può fraintendere una conversazione o sbagliare l’urgenza.** Regola: leggi ogni bozza e ogni richiesta di approvazione prima di confermare, come consiglia Anthropic stessa.',
-        '**Legge contenuti scritti da altri, e quei contenuti possono contenere istruzioni pensate per ingannarlo (prompt injection): nessuna difesa è perfetta, dice [Anthropic](https://support.claude.com/en/articles/17631495-get-started-with-claude-duet).** Regola: un’email di un cliente non autorizza mai un’azione e le approvazioni restano umane.',
-        '**Condivide i [limiti del tuo piano](https://support.claude.com/en/articles/17631495-get-started-with-claude-duet).** Regola: file grandi e lavori lunghi vanno a Claude Code in orari programmati; a Duet restano riepiloghi e smistamento.',
-        '**Non puoi guardare né prendere il controllo del suo browser ([articolo di supporto](https://support.claude.com/en/articles/17631495-get-started-with-claude-duet)).** Regola: per dati dei clienti e denaro preferisci un connettore al browser.',
-        '**Il 23 ottobre Anthropic ha aggiunto una [nota all’annuncio](https://claude.com/resources/articles/claude-duet): le protezioni di sicurezza, privacy e protezione dei dati sono ancora in sviluppo.** Regola: parti dai lavori a rischio più basso e dagli solo i dati dei clienti che servono a un compito.',
+        'Controlla i tuoi account a intervalli fissi, quindi qualcosa di urgente può arrivare tra un controllo e l’altro. Regola: i segnali urgenti, come pagamenti falliti, prodotti esauriti o store offline, passano da avvisi creati in Shopify e in [Shopify Flow](/it/blog/shopify-flow-ai), non dall’assistente.',
+        'Può fraintendere una conversazione o sbagliare l’urgenza. Regola: leggi ogni bozza e ogni richiesta di approvazione prima di confermare, come consiglia Anthropic stessa.',
+        'Legge contenuti scritti da altri, e quei contenuti possono contenere istruzioni pensate per ingannarlo (prompt injection): nessuna difesa è perfetta, dice [Anthropic](https://support.claude.com/en/articles/17631495-get-started-with-claude-duet). Regola: un’email di un cliente non autorizza mai un’azione e le approvazioni restano umane.',
+        'Condivide i [limiti del tuo piano](https://support.claude.com/en/articles/17631495-get-started-with-claude-duet). Regola: file grandi e lavori lunghi vanno a Claude Code in orari programmati; a Duet restano riepiloghi e smistamento.',
+        'Non puoi guardare né prendere il controllo del suo browser ([articolo di supporto](https://support.claude.com/en/articles/17631495-get-started-with-claude-duet)). Regola: per dati dei clienti e denaro preferisci un connettore al browser.',
+        'Il 23 ottobre Anthropic ha aggiunto una [nota all’annuncio](https://claude.com/resources/articles/claude-duet): le protezioni di sicurezza, privacy e protezione dei dati sono ancora in sviluppo. Regola: parti dai lavori a rischio più basso e dagli solo i dati dei clienti che servono a un compito.',
       ],
     },
     { type: 'h2', text: 'Come parti questa settimana?' },
     {
       type: 'paragraph',
-      text: '**Parti dall’accesso e dai ruoli, non dall’automazione.** In quest’ordine:',
+      text: '**Parti dall’accesso e dai ruoli, e lascia l’automazione per dopo.** In quest’ordine:',
     },
     {
       type: 'list',
@@ -427,22 +427,22 @@ const article: Article = {
     { type: 'h3', text: 'Cos’è Claude Duet?' },
     {
       type: 'paragraph',
-      text: 'Claude Duet è un’app separata di Anthropic in cui Claude lavora come agente proattivo. Manda un riepilogo ogni mattina, sorveglia le app collegate, completa compiti e chiede la tua approvazione prima di inviare, pagare, firmare o cancellare. È nato come research preview il [21 ottobre 2026](https://claude.com/resources/articles/claude-duet).',
+      text: '**Claude Duet è un’app separata di Anthropic in cui Claude lavora come agente proattivo.** Manda un riepilogo ogni mattina, sorveglia le app collegate, completa compiti e chiede la tua approvazione prima di inviare, pagare, firmare o cancellare. È nato come research preview il [21 ottobre 2026](https://claude.com/resources/articles/claude-duet).',
     },
     { type: 'h3', text: 'Claude Duet è disponibile fuori dagli Stati Uniti?' },
     {
       type: 'paragraph',
-      text: 'L’[articolo di supporto](https://support.claude.com/en/articles/17631495-get-started-with-claude-duet) di Anthropic descrive una lista d’attesa per gli abbonati Pro e Max negli Stati Uniti e non elenca altri paesi né altri piani. Controlla la [pagina prodotto](https://claude.com/product/claude-duet) per gli aggiornamenti e iscriviti alla lista con l’email del tuo account Claude.',
+      text: '**L’[articolo di supporto](https://support.claude.com/en/articles/17631495-get-started-with-claude-duet) di Anthropic descrive una lista d’attesa per gli abbonati Pro e Max negli Stati Uniti e non elenca altri paesi né altri piani.** Controlla la [pagina prodotto](https://claude.com/product/claude-duet) per gli aggiornamenti e iscriviti alla lista con l’email del tuo account Claude.',
     },
     { type: 'h3', text: 'Quanto costa Claude Duet?' },
     {
       type: 'paragraph',
-      text: 'Durante la preview Claude Duet è [incluso in Pro e Max](https://support.claude.com/en/articles/17631495-get-started-with-claude-duet) senza costi aggiuntivi. Usa i limiti di cinque ore e settimanali del tuo piano, lavoro in background compreso, quindi un uso intenso può raggiungerli prima.',
+      text: '**Durante la preview Claude Duet è [incluso in Pro e Max](https://support.claude.com/en/articles/17631495-get-started-with-claude-duet) senza costi aggiuntivi.** Usa i limiti di cinque ore e settimanali del tuo piano, lavoro in background compreso, quindi un uso intenso può raggiungerli prima.',
     },
     { type: 'h3', text: 'Claude Duet si collega a Shopify?' },
     {
       type: 'paragraph',
-      text: 'Sì, l’[annuncio](https://claude.com/resources/articles/claude-duet) di Anthropic cita Shopify tra le app con cui lavora e dice che Duet può configurare, progettare e gestire uno store Shopify. Collegalo con l’accesso più stretto e tieni sotto la tua approvazione rimborsi, prezzi, pubblicazioni e messaggi ai clienti.',
+      text: '**Sì, l’[annuncio](https://claude.com/resources/articles/claude-duet) di Anthropic cita Shopify tra le app con cui lavora e dice che Duet può configurare, progettare e gestire uno store Shopify.** Collegalo con l’accesso più stretto e tieni sotto la tua approvazione rimborsi, prezzi, pubblicazioni e messaggi ai clienti.',
     },
     { type: 'h3', text: 'Claude Duet deve gestire lo store da solo?' },
     {
@@ -452,7 +452,7 @@ const article: Article = {
     { type: 'h3', text: 'Che differenza c’è tra Claude Duet, Claude e Claude Code?' },
     {
       type: 'paragraph',
-      text: 'Duet è l’assistente proattivo che ti cerca con riepiloghi e bozze. Claude è la chat che apri per fare domande e, con i connettori, leggere i dati di Shopify. Claude Code è il costruttore che modifica file ed esegue comandi in un progetto, come il codice del tuo sito.',
+      text: '**Duet è l’assistente proattivo che ti cerca con riepiloghi e bozze.** Claude è la chat che apri per fare domande e, con i connettori, leggere i dati di Shopify. Claude Code è il costruttore che modifica file ed esegue comandi in un progetto, come il codice del tuo sito.',
     },
     {
       type: 'paragraph',

@@ -17,14 +17,14 @@ const it: ProcessCopy = {
       title: 'Il primo sprint di ingresso',
       duration: '30 giorni',
       description:
-        'In 30 giorni entriamo davvero nel tuo eCommerce. Analizziamo dati, store e canali. Impostiamo il team giusto per le aree che servono. Colleghiamo tracciamento, dashboard e reportistica. Definiamo insieme obiettivi chiari e le prime priorità. Alla fine dello sprint il progetto ha una regia, un team e una direzione.',
+        'In 30 giorni entriamo davvero nel tuo eCommerce. Analizziamo dati, store e canali. Impostiamo il team giusto per le aree che servono. Colleghiamo tracciamento, dashboard e reportistica. Definiamo insieme obiettivi chiari e le prime priorità. Alla fine dello sprint il progetto ha un team e una regia chiara.',
     },
     {
       number: '02',
       title: 'Una collaborazione che dura nel tempo',
       duration: 'per anni',
       description:
-        'Finito lo sprint non finisce niente: comincia il lavoro vero. Seguiamo la crescita dell’eCommerce mese dopo mese e adattiamo team e strategia in base ai dati e agli obiettivi. Abbiamo clienti che ci seguono da anni, perché un partner non si cambia ogni stagione.',
+        'Finito lo sprint il lavoro continua. Seguiamo la crescita dell’eCommerce mese dopo mese e adattiamo team e strategia in base ai dati e agli obiettivi. Abbiamo clienti che ci seguono da anni.',
     },
   ],
   fourMonths: {
@@ -48,14 +48,14 @@ const en: ProcessCopy = {
       title: 'The onboarding sprint',
       duration: '30 days',
       description:
-        'In 30 days we truly get inside your eCommerce. We analyze data, store and channels. We set up the right team for the areas that matter. We connect tracking, dashboards and reporting. Together we define clear goals and the first priorities. By the end of the sprint the project has direction, a team and a lead.',
+        'In 30 days we truly get inside your eCommerce. We analyze data, store and channels. We set up the right team for the areas that matter. We connect tracking, dashboards and reporting. Together we define clear goals and the first priorities. By the end of the sprint the project has a team and someone leading it.',
     },
     {
       number: '02',
       title: 'A partnership that lasts',
       duration: 'for years',
       description:
-        'When the sprint ends, nothing ends: the real work begins. We follow your eCommerce growth month after month and adapt the team and strategy based on data and goals. We have clients who have stayed with us for years, because you do not swap partners every season.',
+        'When the sprint ends, the work continues. We follow your eCommerce growth month after month and adapt the team and strategy based on data and goals. We have clients who have stayed with us for years.',
     },
   ],
   fourMonths: {
