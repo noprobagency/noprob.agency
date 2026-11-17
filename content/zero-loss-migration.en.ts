@@ -12,7 +12,7 @@ export const zeroLossEn: ZlCopy = {
   meta: {
     title: 'Shopify Migration Services in 14 Days | Shopify Launch Sprint',
     description:
-      'Shopify migration in 14 days with our Custom AI System, without losing Google rankings or sales. Fixed price, 4 written guarantees, 90 days of support.',
+      'Shopify migration services in 14 days with our Custom AI System: fixed calendar, public price, 4 written guarantees and 90 days of support.',
     ogAlt: 'Shopify Launch Sprint: your eCommerce on Shopify in 14 days, more SEO and more sales',
   },
   nav: {
@@ -25,7 +25,7 @@ export const zeroLossEn: ZlCopy = {
     h1: 'Your Shopify migration in 14 days. Higher on Google, more sales, more AI.',
     proofNote: 'Nazzi case study: +105% online sales in 85 days',
     paragraph:
-      'In 14 days a full team moves your store to Shopify, with our Custom AI System: faster, ready for AI agents, built to sell. Then 90 days on SEO, conversion and AOV, measured in a dashboard, at a fixed price.',
+      'The Shopify Launch Sprint is our Shopify migration service: in 14 days a full team moves your store to Shopify, with our Custom AI System (faster, ready for AI agents, built to sell). Then 90 days on SEO, conversion and AOV, measured in a dashboard, at a fixed price.',
     ctaPrimary: 'Apply for the sprint',
     ctaNote: 'Fixed price from €5,800 · We reply within 48 hours',
     ctaSecondary: 'See the results',
@@ -443,6 +443,16 @@ export const zeroLossEn: ZlCopy = {
     },
     items: [
       {
+        question: 'What do your Shopify migration services include?',
+        answer:
+          'Our Shopify migration service is the Shopify Launch Sprint. On day 14 you get five deliverables: the Shopify store ready to publish, the Data Migration Report, the 1:1 Redirect Map, the Tracking Spec with server-side setup and the Go-live Checklist with your date. The price also covers the results dashboard from day 1, zero-downtime go-live between day 15 and day 30, and 90 days of support.',
+      },
+      {
+        question: 'Who are the Shopify migration experts on my project?',
+        answer:
+          'You have one point of contact and a full team behind them, with a specialist for each area: Shopify development, SEO and redirects, tracking and data, checkout and CRO, design, AI. They all work on your store at the same time and build it with our Custom AI System. The team brings 7+ years of eCommerce projects and several Shopify migrations with 0 minutes offline.',
+      },
+      {
         question: 'How much time do I need?',
         answer:
           'About 8 hours in total: 30 minutes for the form, 90 for the kickoff, 60 for the staging review, 45 at delivery, a few 10-minute Looms, being reachable on go-live day. We do the rest.',
@@ -465,7 +475,7 @@ export const zeroLossEn: ZlCopy = {
       {
         question: 'Which platforms do you migrate from?',
         answer:
-          'WooCommerce, Magento, PrestaShop, BigCommerce, Wix, Squarespace, proprietary platforms and ERPs. The method is the same on each one; the sprint is built for stores coming from another platform.',
+          'WooCommerce, Magento, PrestaShop, BigCommerce, Wix, Squarespace, proprietary platforms and ERPs. The method is the same on each one; the sprint is built for Shopify replatforming, meaning stores that come from another platform.',
       },
       {
         question: 'What happens if the accesses do not arrive in time?',
