@@ -25,7 +25,7 @@ const article: Article = {
   articleType: 'Article',
   date: '2026-05-06',
   datePublishedIso: '2026-05-06T10:00:00+02:00',
-  dateModifiedIso: '2026-10-28T09:00:00+00:00',
+  dateModifiedIso: '2026-11-17T09:00:00+00:00',
   wordCount: 3100,
   articleSection: 'Shopify',
   readingTimeMinutes: 12,
@@ -171,7 +171,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: "The front end of your store, what the customer sees, is managed through themes. The Shopify Theme Store has free and paid options. Advanced customizations require a Shopify developer. Routine visual changes can be handled through the Online Store 2.0 editor without writing code.",
+      text: "The front end of your store, what the customer sees, is managed through themes. The Shopify Theme Store has free and paid options. Advanced customizations require a Shopify developer, and our [Shopify development](/shopify-development) service covers them. Routine visual changes can be handled through the Online Store 2.0 editor without writing code.",
     },
     { type: 'h3', text: 'Payments and Shopify Payments' },
     {
@@ -553,7 +553,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Il lato visibile del negozio, quello che vede il cliente, si gestisce tramite temi. Shopify ha il suo Theme Store con temi gratuiti e a pagamento. Per personalizzazioni avanzate serve uno sviluppatore Shopify, oppure si usa il nuovo editor visuale (Online Store 2.0) per interventi base senza toccare il codice.',
+      text: 'Il lato visibile del negozio, quello che vede il cliente, si gestisce tramite temi. Shopify ha il suo Theme Store con temi gratuiti e a pagamento. Per personalizzazioni avanzate serve uno sviluppatore Shopify, e le copre il nostro servizio di [sviluppo Shopify](/it/sviluppo-shopify), oppure si usa il nuovo editor visuale (Online Store 2.0) per interventi base senza toccare il codice.',
     },
     { type: 'h3', text: 'Pagamenti e Shopify Payments' },
     {

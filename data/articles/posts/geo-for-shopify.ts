@@ -25,7 +25,7 @@ const article: Article = {
   articleType: 'BlogPosting',
   date: '2026-10-27',
   datePublishedIso: '2026-10-27T17:05:00+00:00',
-  dateModifiedIso: '2026-10-28T09:00:00+00:00',
+  dateModifiedIso: '2026-11-17T09:00:00+00:00',
   wordCount: 2150,
   articleSection: 'AI Search',
   readingTimeMinutes: 9,
@@ -163,7 +163,7 @@ const article: Article = {
     { type: 'h2', text: 'What does the Custom AI System do for GEO?' },
     {
       type: 'paragraph',
-      text: '**In the [Shopify Launch Sprint](/shopify-migration-sprint), the Custom AI System builds GEO into the store from the start.** Two of its six superpowers cover this: catalog and structured data ready for ChatGPT, Copilot and Google AI Mode, and an automatic GEO layer, so every new product is born with schema and data generated on its own.',
+      text: '**In the [Shopify Launch Sprint](/shopify-migration-sprint), the Custom AI System builds GEO into the store from the start.** Two of its six superpowers cover this: catalog and structured data ready for ChatGPT, Copilot and Google AI Mode, and an automatic GEO layer, so every new product is born with schema and data generated on its own. For the search work that continues after launch, see our [Shopify SEO agency](/shopify-seo-agency).',
     },
     {
       type: 'paragraph',
@@ -360,7 +360,7 @@ const article: Article = {
     { type: 'h2', text: 'Cosa fa il Custom AI System per la GEO?' },
     {
       type: 'paragraph',
-      text: '**Nello [Shopify Launch Sprint](/it/sprint-migrazione-shopify) il Custom AI System costruisce la GEO dentro lo store fin dall’inizio.** Due dei suoi sei superpoteri riguardano questo: catalogo e dati strutturati pronti per ChatGPT, Copilot e Google AI Mode, e un livello di GEO automatico, per cui ogni prodotto nuovo nasce con schema e dati generati da soli.',
+      text: '**Nello [Shopify Launch Sprint](/it/sprint-migrazione-shopify) il Custom AI System costruisce la GEO dentro lo store fin dall’inizio.** Due dei suoi sei superpoteri riguardano questo: catalogo e dati strutturati pronti per ChatGPT, Copilot e Google AI Mode, e un livello di GEO automatico, per cui ogni prodotto nuovo nasce con schema e dati generati da soli. Per il lavoro di ricerca che continua dopo il lancio c’è la nostra [agenzia SEO per Shopify](/it/agenzia-seo-shopify).',
     },
     {
       type: 'paragraph',

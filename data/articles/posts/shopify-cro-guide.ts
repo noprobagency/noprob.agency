@@ -25,10 +25,10 @@ const article: Article = {
   articleType: 'Article',
   date: '2026-05-06',
   datePublishedIso: '2026-05-06T14:00:00+02:00',
-  dateModifiedIso: '2026-11-10T14:00:00+00:00',
-  wordCount: 4114,
+  dateModifiedIso: '2026-11-17T09:00:00+00:00',
+  wordCount: 4560,
   articleSection: 'CRO',
-  readingTimeMinutes: 16,
+  readingTimeMinutes: 18,
   keywordsEn:
     'shopify cro, shopify conversion rate optimization, ecommerce conversion rate optimization, how to increase conversion rate, ecommerce cro, product page optimization, how to increase shopify conversion rate, ecommerce cro tips, shopify cro services',
   keywordsIt:
@@ -69,6 +69,11 @@ const article: Article = {
       answer:
         'Advertising brings traffic. CRO determines how much of that traffic converts. Doubling your advertising budget at a 1% conversion rate delivers the same orders as unchanged advertising at a 2% rate, with twice the spend. Every improvement in conversion rate multiplies the value of every euro spent on advertising. The two work in parallel, not as alternatives.',
     },
+    {
+      question: 'Does Shopify CRO work differently for fashion and beauty stores?',
+      answer:
+        'The method is the same, the levers weigh differently. In fashion and beauty, the studies on returns, retargeting timing, video and the hand touching the product apply first, because many of these purchases are pleasure-driven and the product is worn or handled. Pick one lever, change one thing and measure it on your own store.',
+    },
   ],
   faqIt: [
     {
@@ -105,6 +110,11 @@ const article: Article = {
       question: 'Quanto impatta il CRO rispetto a investire in advertising?',
       answer:
         'L’advertising porta traffico. Il CRO determina quanto di quel traffico si converte. Raddoppiare il budget advertising con un tasso di conversione dell’1% porta gli stessi ordini di un advertising invariato con un tasso al 2%, ma con il doppio della spesa. In pratica, ogni miglioramento del tasso di conversione moltiplica il valore di ogni euro speso in advertising. I due lavorano in parallelo, non in alternativa.',
+    },
+    {
+      question: 'Il CRO per Shopify funziona in modo diverso nei negozi di moda e beauty?',
+      answer:
+        'Il metodo è lo stesso, le leve pesano in modo diverso. Nella moda e nel beauty valgono per primi gli studi su resi, tempi del retargeting, video e mano che tocca il prodotto, perché molti di questi acquisti sono di piacere e il prodotto si indossa o si maneggia. Scegli una leva, cambia una cosa sola e misurala sul tuo store.',
     },
   ],
   content: [
@@ -380,6 +390,25 @@ const article: Article = {
     {
       type: 'paragraph',
       text: 'Our take: same reward, different wording. Test the invitation text before you raise the incentive.',
+    },
+    { type: 'h2', text: 'Shopify CRO for fashion and beauty stores: which studies apply' },
+    {
+      type: 'paragraph',
+      text: '**For fashion and beauty stores, the studies above that apply most are the ones on returns, retargeting timing, video and the hand touching the product.** Fashion and beauty are among the sectors we work in, and the same funnel logic holds: the buying decision happens on the product page, and the gain is in the details around it.',
+    },
+    {
+      type: 'list',
+      items: [
+        'Returns and refunds: the free-returns study comes from a fashion retailer, and the same margin question applies to any category where shoppers order sizes or shades to try at home. Put the cost on paper first, then test refund speed.',
+        'Retargeting timing: the field experiment with the email within an hour and the one 24 to 72 hours later was run on a Japanese online fashion store. Test the delay on your own abandoned-cart flow.',
+        'Video and GIF: dynamic formats raised the choice of the pleasure-oriented option, which fits many fashion and beauty purchases. Test them on the product page before the homepage.',
+        'The hand touching the product: the vicarious haptic effect concerns products that are worn, held or handled, so it fits a cream, a palette or a jacket. A lifestyle photo with a hand is cheap to add to the gallery.',
+        'Review requests: the study covered apparel, and a delayed reminder produced more reviews than an immediate one. Review volume feeds the social proof of the next shopper.',
+      ],
+    },
+    {
+      type: 'paragraph',
+      text: 'The studies were run in specific settings, so read each result as a hypothesis for your own test. Our rule: pick one lever from the list, change one thing, and measure it before the next.',
     },
     { type: 'h2', text: 'Shopify quick wins to implement today' },
     {
@@ -751,6 +780,25 @@ const article: Article = {
     {
       type: 'paragraph',
       text: 'La nostra lettura: stesso premio, parole diverse. Testa il testo dell’invito prima di alzare l’incentivo.',
+    },
+    { type: 'h2', text: 'CRO per Shopify nei negozi di moda e beauty: quali studi valgono' },
+    {
+      type: 'paragraph',
+      text: '**Per un negozio di moda o beauty, gli studi qui sopra che pesano di più sono quelli su resi, tempi del retargeting, video e mano che tocca il prodotto.** Moda e beauty sono tra i settori su cui lavoriamo, e la logica del percorso è la stessa: la decisione d’acquisto si prende sulla pagina prodotto, e il guadagno sta nei dettagli intorno.',
+    },
+    {
+      type: 'list',
+      items: [
+        'Resi e rimborsi: lo studio sui resi gratuiti viene da un rivenditore di moda, e la stessa domanda di margine vale per ogni categoria in cui i clienti ordinano taglie o tonalità da provare a casa. Metti prima il costo su carta, poi testa la velocità del rimborso.',
+        'Tempi del retargeting: l’esperimento sul campo con l’email entro un’ora e quella dopo 24-72 ore è stato fatto su un negozio giapponese di moda online. Testa il ritardo sul tuo flusso di carrelli abbandonati.',
+        'Video e GIF: i formati dinamici hanno aumentato la scelta dell’opzione orientata al piacere, che si adatta a molti acquisti di moda e beauty. Provali sulla pagina prodotto prima che in homepage.',
+        'La mano che tocca il prodotto: l’effetto tattile vicario riguarda prodotti indossati, tenuti o maneggiati, quindi si adatta a una crema, una palette o una giacca. Una foto lifestyle con una mano costa poco da aggiungere alla galleria.',
+        'Richieste di recensione: lo studio riguardava l’abbigliamento, e un promemoria ritardato ha prodotto più recensioni di uno immediato. Le recensioni alimentano la social proof del cliente successivo.',
+      ],
+    },
+    {
+      type: 'paragraph',
+      text: 'Gli studi sono stati condotti in contesti precisi, quindi leggi ogni risultato come un’ipotesi da verificare nel tuo test. La nostra regola: scegli una leva dalla lista, cambia una cosa sola e misurala prima della successiva.',
     },
     { type: 'h2', text: 'Quick win per iniziare oggi su Shopify' },
     {

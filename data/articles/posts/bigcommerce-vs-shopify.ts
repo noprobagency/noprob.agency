@@ -25,7 +25,7 @@ const article: Article = {
   articleType: 'BlogPosting',
   date: '2026-10-29',
   datePublishedIso: '2026-10-29T09:00:00+00:00',
-  dateModifiedIso: '2026-11-04T21:18:00+00:00',
+  dateModifiedIso: '2026-11-17T09:00:00+00:00',
   wordCount: 2800,
   articleSection: 'Migrate to Shopify',
   readingTimeMinutes: 11,
@@ -313,7 +313,7 @@ const article: Article = {
       type: 'list',
       items: [
         'You keep paying for gaps: custom development or apps for what you want to change every week, and developers who are hard to find.',
-        'You want more markets in one store, or you are heading to a multi-store setup with [Shopify Plus](/blog/shopify-plus).',
+        'You want more markets in one store, or you are heading to a multi-store setup with a [Shopify Plus migration](/blog/shopify-plus-migration).',
         'Your price should not move with sales. A plan chosen for features, not for a revenue threshold, is easier to forecast.',
         'Your team wants to edit without a ticket: the admin and the theme editor, with an app for the rare special case.',
         'You want the store ready for AI shopping: Sidekick for your team, agentic storefronts for your customers.',
@@ -610,7 +610,7 @@ const article: Article = {
       type: 'list',
       items: [
         'Continui a pagare per i vuoti: sviluppo su misura o app per ciò che vuoi cambiare ogni settimana, e sviluppatori difficili da trovare.',
-        'Vuoi più mercati in un solo store, o ti stai muovendo verso un setup multi-store con [Shopify Plus](/it/blog/shopify-plus).',
+        'Vuoi più mercati in un solo store, o ti stai muovendo verso un setup multi-store con una [migrazione a Shopify Plus](/it/blog/migrazione-shopify-plus).',
         'Il tuo prezzo non deve muoversi con le vendite. Un piano scelto per le funzioni, non per una soglia di fatturato, è più facile da prevedere.',
         'Il tuo team vuole modificare senza ticket: l’admin e l’editor del tema, con un’app per il caso speciale raro.',
         'Vuoi lo store pronto per lo shopping con AI: Sidekick per il tuo team, agentic storefront per i tuoi clienti.',

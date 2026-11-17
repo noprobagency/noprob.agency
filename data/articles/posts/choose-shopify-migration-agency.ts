@@ -8,9 +8,9 @@ const article: Article = {
   seoTitle: 'Shopify Migration Agency: How to Choose, 9 Tests',
   seoTitleIt: 'Agenzia migrazione Shopify: come scegliere',
   seoDescription:
-    'How to choose a Shopify migration agency: 5 provider types, 9 tests, first-call questions and red flags, plus a public price and 4 guarantees to compare.',
+    'How to choose a Shopify migration agency or expert: 5 provider types, 9 tests, first-call questions and red flags, plus a public price and 4 guarantees.',
   seoDescriptionIt:
-    'Come scegliere un’agenzia di migrazione Shopify: 5 tipi di fornitore, 9 criteri, domande per la prima videochiamata e segnali d’allarme, con prezzo pubblico.',
+    'Come scegliere un’agenzia o un esperto di migrazione Shopify: 5 tipi di fornitore, 9 criteri, domande per la videochiamata, segnali d’allarme, prezzo pubblico.',
   excerpt:
     'A guide to choosing who migrates your store to Shopify: app, freelancer, generalist agency, Shopify Partner or specialist. Nine tests, first-call questions, red flags, and who the Shopify Launch Sprint is for.',
   excerptIt:
@@ -25,19 +25,24 @@ const article: Article = {
   articleType: 'BlogPosting',
   date: '2026-10-16',
   datePublishedIso: '2026-10-16T08:50:00+01:00',
-  dateModifiedIso: '2026-11-06T12:00:00+00:00',
-  wordCount: 2565,
-  readingTimeMinutes: 9,
+  dateModifiedIso: '2026-11-17T12:00:00+00:00',
+  wordCount: 2890,
+  readingTimeMinutes: 10,
   articleSection: 'Shopify migration',
   keywordsEn:
-    'shopify migration agency, shopify migration experts, shopify migration services, how to choose a shopify migration agency, shopify migration partner, hire shopify migration expert',
+    'shopify migration agency, best shopify migration agency, shopify migration experts, shopify migration services, how to choose a shopify migration agency, shopify migration partner, hire shopify migration expert',
   keywordsIt:
-    'agenzia migrazione shopify, esperto migrazione shopify, scegliere agenzia shopify, migrazione shopify servizi, shopify partner migrazione, chi può migrare a shopify',
+    'agenzia migrazione shopify, migliore agenzia migrazione shopify, esperto migrazione shopify, scegliere agenzia shopify, migrazione shopify servizi, shopify partner migrazione, chi può migrare a shopify',
   faqEn: [
     {
       question: 'How do I choose a Shopify migration agency?',
       answer:
         'Compare providers on nine checks: verifiable proof, a written redirect and SEO plan, data mapping, a fixed scope and calendar, who does the work, post-launch support, guarantees in writing, ownership of code and accounts, and references. Ask for documents, not adjectives.',
+    },
+    {
+      question: 'What is the best Shopify migration agency?',
+      answer:
+        'The best Shopify migration agency for your store depends on three things: how much organic traffic you have to protect, how complex your data is and how much time your team can give. Whoever you choose, get the commitments in writing. In the Shopify Launch Sprint we write down the price by revenue (€5,800, €8,800 or €12,800, VAT excluded, in 4 installments), the calendar (store ready in 14 days, go-live between day 15 and day 30), 90 days of support and 4 guarantees.',
     },
     {
       question: 'Do I need a Shopify migration expert, or can I use an app?',
@@ -75,6 +80,11 @@ const article: Article = {
       question: 'Come si sceglie un’agenzia di migrazione Shopify?',
       answer:
         'Confronta i fornitori su nove controlli: prove verificabili, un piano scritto di redirect e SEO, la mappatura dei dati, ambito e calendario fissi, chi fa il lavoro, supporto dopo il lancio, garanzie scritte, proprietà di codice e account, referenze. Chiedi documenti, non aggettivi.',
+    },
+    {
+      question: 'Qual è la migliore agenzia di migrazione Shopify?',
+      answer:
+        'La migliore agenzia di migrazione Shopify per il tuo store dipende da tre cose: quanto traffico organico hai da proteggere, quanto sono complessi i tuoi dati e quanto tempo può metterci il tuo team. Chiunque tu scelga, fatti mettere gli impegni per iscritto. Nello Shopify Launch Sprint mettiamo per iscritto il prezzo per fatturato (€5.800, €8.800 o €12.800, IVA esclusa, in 4 rate), il calendario (store pronto in 14 giorni, go-live tra il giorno 15 e il 30), 90 giorni di supporto e 4 garanzie.',
     },
     {
       question: 'Serve un esperto di migrazione Shopify o basta un’app?',
@@ -116,7 +126,7 @@ const article: Article = {
       type: 'paragraph',
       text: 'A Shopify migration agency, a freelancer and a migration app can all move the same products. What differs is who answers for the parts that do not show on launch day: redirects, data that does not reconcile, tracking, and the first 90 days. Those parts decide whether the move costs you rankings and sales, so compare Shopify migration services on them. If you want to see the whole path first, start with our guide to [Shopify migration](/shopify-migration).',
     },
-    { type: 'h2', text: 'Who can migrate your store to Shopify? Five types of provider' },
+    { type: 'h2', text: 'Shopify migration experts: who can migrate your store? Five types of provider' },
     {
       type: 'paragraph',
       text: '**Five types of provider can migrate a store to Shopify: you with an app, a freelancer, a generalist agency, a Shopify Partner agency and a migration specialist, and each fits a different store.** Shopify’s own [migration guide](https://help.shopify.com/en/manual/migrating-to-shopify) lists five methods: copy and paste, CSV import, a migration app, hiring a Shopify Partner, and a custom build on the Shopify API. The first three you do yourself, and the last two mean hiring people.',
@@ -214,6 +224,19 @@ const article: Article = {
       type: 'paragraph',
       text: '**References are people you can ask, not logos on a slide.** Ask for two clients with a similar platform, and ask them how the migration went. Our answer: the two case studies above, and [10 five-star reviews on Trustpilot](https://www.trustpilot.com/review/noprob.agency), with over 7 years of eCommerce projects behind the method.',
     },
+    { type: 'h3', text: 'How do you vet an agency’s SEO track record?' },
+    {
+      type: 'paragraph',
+      text: '**You vet an agency’s SEO track record with three documents from a past migration: a sample redirect map, Search Console before and after go-live, and a case study with numbers.** In the map, look for one row per old URL and a destination that is the closest page on the new store. Ask how many rows it had and how they were tested.',
+    },
+    {
+      type: 'paragraph',
+      text: 'In Search Console, ask for the 28 days before go-live next to a recent 28 days on the same property: clicks, impressions and average position. Google takes a few weeks to process the change, so compare the same 28-day windows, not the first days. If the graph you are shown starts after launch, ask to see the 28 days before it.',
+    },
+    {
+      type: 'paragraph',
+      text: 'Our answer, on Nazzi: we checked 215 archived WooCommerce URLs against the new store and delivered the 301 redirect CSV. In the 28 days to 9 October, against the 28 days before go-live, clicks were up 41%, impressions were at 2.2x and average position had improved by 21%. On Cumini the tracking audit went from 31/100 before the migration to 92/100 after it, so the numbers we compare come from tracking that works.',
+    },
     { type: 'h2', text: 'What should you ask on the first call?' },
     {
       type: 'paragraph',
@@ -272,6 +295,11 @@ const article: Article = {
       type: 'paragraph',
       text: '**Compare providers on nine checks: verifiable proof, a written redirect and SEO plan, data mapping, a fixed scope and calendar, who does the work, post-launch support, guarantees in writing, ownership of code and accounts, and references.** Ask for documents, not adjectives.',
     },
+    { type: 'h3', text: 'What is the best Shopify migration agency?' },
+    {
+      type: 'paragraph',
+      text: '**The best Shopify migration agency for your store depends on three things: how much organic traffic you have to protect, how complex your data is and how much time your team can give.** Whoever you choose, get the commitments in writing. In the Shopify Launch Sprint we write down the price by revenue (€5,800, €8,800 or €12,800, VAT excluded, in 4 installments), the calendar (store ready in 14 days, go-live between day 15 and day 30), 90 days of support and 4 guarantees.',
+    },
     { type: 'h3', text: 'Do I need a Shopify migration expert, or can I use an app?' },
     {
       type: 'paragraph',
@@ -329,7 +357,7 @@ const article: Article = {
       type: 'paragraph',
       text: 'Un’agenzia di migrazione Shopify, un freelance e un’app possono spostare gli stessi prodotti. Cambia chi risponde delle parti che il giorno del lancio non si vedono: redirect, dati che non tornano, tracking e i primi 90 giorni. Sono queste a decidere se il passaggio ti costa posizioni e vendite: confronta su queste i servizi di migrazione Shopify. Se vuoi vedere prima l’intero percorso, parti dalla nostra guida alla [migrazione Shopify](/it/migrazione-shopify).',
     },
-    { type: 'h2', text: 'Chi può migrare il tuo store su Shopify? Cinque tipi di fornitore' },
+    { type: 'h2', text: 'Esperti di migrazione Shopify: chi può migrare il tuo store? Cinque tipi di fornitore' },
     {
       type: 'paragraph',
       text: '**Cinque tipi di fornitore possono migrare uno store su Shopify: tu con un’app, un freelance, un’agenzia generalista, un’agenzia Shopify Partner e uno specialista di migrazioni, e ognuno si adatta a uno store diverso.** La [guida alla migrazione](https://help.shopify.com/en/manual/migrating-to-shopify) di Shopify elenca cinque metodi: copia e incolla, import da CSV, un’app di migrazione, un Shopify Partner, una soluzione su misura con le API di Shopify. Per i primi tre fai tu, per gli ultimi due assumi delle persone.',
@@ -427,6 +455,19 @@ const article: Article = {
       type: 'paragraph',
       text: '**Le referenze sono persone a cui puoi chiedere, non loghi su una slide.** Chiedi due clienti con una piattaforma simile alla tua, e chiedi a loro com’è andata la migrazione. La nostra risposta: i due casi studio qui sopra, e [10 recensioni a 5 stelle su Trustpilot](https://www.trustpilot.com/review/noprob.agency), con oltre 7 anni di progetti eCommerce dietro il metodo.',
     },
+    { type: 'h3', text: 'Come si verificano i risultati SEO di un’agenzia?' },
+    {
+      type: 'paragraph',
+      text: '**I risultati SEO di un’agenzia si verificano con tre documenti di una migrazione passata: una mappa dei redirect di esempio, Search Console prima e dopo il go-live e un caso studio con i numeri.** Nella mappa cerca una riga per ogni vecchio URL e una destinazione che sia la pagina più vicina sul nuovo store. Chiedi quante righe aveva e come sono state testate.',
+    },
+    {
+      type: 'paragraph',
+      text: 'In Search Console chiedi i 28 giorni prima del go-live accanto a 28 giorni recenti sulla stessa proprietà: clic, impressioni e posizione media. Google impiega alcune settimane a elaborare il cambio: confronta le stesse finestre di 28 giorni, non i primi giorni. Se il grafico che ti mostrano parte dopo il lancio, chiedi di vedere i 28 giorni prima.',
+    },
+    {
+      type: 'paragraph',
+      text: 'La nostra risposta, su Nazzi: abbiamo controllato 215 URL WooCommerce archiviati rispetto al nuovo store e consegnato il CSV dei redirect 301. Nei 28 giorni al 9 ottobre, rispetto ai 28 giorni prima del go-live, i clic sono a +41%, le impressioni a 2,2 volte e la posizione media è migliorata del 21%. Su Cumini l’audit del tracking è passato da 31/100 prima della migrazione a 92/100 dopo, quindi i numeri che confrontiamo vengono da un tracking che funziona.',
+    },
     { type: 'h2', text: 'Cosa chiedere nella prima videochiamata?' },
     {
       type: 'paragraph',
@@ -484,6 +525,11 @@ const article: Article = {
     {
       type: 'paragraph',
       text: 'Confronta i fornitori su nove controlli: prove verificabili, un piano scritto di redirect e SEO, la mappatura dei dati, ambito e calendario fissi, chi fa il lavoro, supporto dopo il lancio, garanzie scritte, proprietà di codice e account, referenze. Chiedi documenti, non aggettivi.',
+    },
+    { type: 'h3', text: 'Qual è la migliore agenzia di migrazione Shopify?' },
+    {
+      type: 'paragraph',
+      text: '**La migliore agenzia di migrazione Shopify per il tuo store dipende da tre cose: quanto traffico organico hai da proteggere, quanto sono complessi i tuoi dati e quanto tempo può metterci il tuo team.** Chiunque tu scelga, fatti mettere gli impegni per iscritto. Nello Shopify Launch Sprint mettiamo per iscritto il prezzo per fatturato (€5.800, €8.800 o €12.800, IVA esclusa, in 4 rate), il calendario (store pronto in 14 giorni, go-live tra il giorno 15 e il 30), 90 giorni di supporto e 4 garanzie.',
     },
     { type: 'h3', text: 'Serve un esperto di migrazione Shopify o basta un’app?' },
     {

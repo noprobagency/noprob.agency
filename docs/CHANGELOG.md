@@ -4,6 +4,18 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.217.0 (17 Nov 2026)
+
+- **SEO, articles in striking distance** (Francesca, package B of `SEO/data/strategia-2026-11-17.md`, from Search Console 28 days): 12 articles reworked in EN and IT, written by Fable and Sonnet subagents, humanizer pass, reviewer pass.
+  - Shopify Plus migration and Shopify Plus split by intent: the migration article keeps the migration queries (new checklist, services section, 2 FAQ); Shopify Plus becomes pricing, Plus vs Advanced and when it pays off.
+  - Magento to Shopify: cost section, Magento 2 and Adobe Commerce, services H2, 2 FAQ; Adobe lifecycle and B2B sources added to `docs/dati-verificati.md`.
+  - Shopify AI agent: definition first, cost section, 3 FAQ, link to the AI agents landing.
+  - Migration checklist: title and H1 on "Shopify migration checklist", checklist at a glance, FAQ.
+  - Migration agency: "experts" in description and H2, how to vet an agency's SEO track record, FAQ.
+  - GEO vs SEO: SEO, GEO and AEO table. Shopify CRO: fashion and beauty section and FAQ.
+  - Internal links to `/shopify-seo-agency`, `/shopify-development`, `/ai-agents-for-ecommerce`, `/blog/shopify-plus-migration` and `/it/migrazione-shopify`; `llms.txt` titles updated.
+  - SEO titles kept within 48 characters (the template adds the brand).
+
 ### Changelog v1.216.0 (17 Nov 2026)
 
 - **Humanizer pass on the whole site**: 19 parallel passes with the humanizer skill over every public text (home and global copy, migration guide, Sprint landing, AI Accelerator, development and SEO pages, AI agents, data team, blocks, ambassador, `llms.txt`, the three case studies and all 37 blog articles, IT and EN), in Antonio's voice (`SEO/data/interviste/voce-di-antonio.md`). Targeted edits only: "not X but Y" contrasts roughly halved (80 to 39), dramatic closers and fragments, aphorisms, staged openers, self-describing sentences removed. One bold rule everywhere in articles and case studies (`SEO/strumenti/grassetti.py`, written in `seo-voce`): the first sentence of the first paragraph under each heading stays bold as the citable answer, short list labels stay bold only when every item has one, no bold anywhere else. Facts, numbers, links, slugs, SEO titles, FAQ questions, the Sprint offer and the mandatory closing line unchanged (checked file by file against main); legal pages untouched (Francesca).
