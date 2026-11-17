@@ -6,7 +6,7 @@ const article: Article = {
   title: 'Shopify vs Magento: What Each One Asks You to Run, and When to Stay on Magento',
   titleIt: 'Shopify o Magento: cosa ti chiede di mantenere ciascuna, e quando restare su Magento',
   seoTitle: 'Shopify vs Magento: Costs, Support Dates, B2B',
-  seoTitleIt: 'Shopify o Magento: costi, date di supporto e B2B',
+  seoTitleIt: 'Shopify o Magento: costi, date di supporto, B2B',
   seoDescription:
     'Shopify vs Magento decided on facts: Adobe’s support dates by version, the stack you run, product types, B2B and multi-store, and when to stay on Magento.',
   seoDescriptionIt:
