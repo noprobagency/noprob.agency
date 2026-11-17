@@ -35,6 +35,9 @@ import shopifyMigrationAiAgents from './posts/shopify-migration-ai-agents'
 import bigcommerceVsShopify from './posts/bigcommerce-vs-shopify'
 import shopify301Redirects from './posts/shopify-301-redirects'
 import shopifyPlusMigration from './posts/shopify-plus-migration'
+import shopifyVsMagento from './posts/shopify-vs-magento'
+import hireShopifyExpert from './posts/hire-shopify-expert'
+import shopifyDataMigration from './posts/shopify-data-migration'
 
 export type ArticleSection =
   | { type: 'paragraph'; text: string }
@@ -94,6 +97,9 @@ export type Article = {
 
 /** One article per file in ./posts; a new article = a new file + one import line here. */
 export const articles: Article[] = [
+  shopifyVsMagento,
+  hireShopifyExpert,
+  shopifyDataMigration,
   shopifyPartnerProgram,
   whiteLabelShopifyAgencies,
   adCreativeResearch,

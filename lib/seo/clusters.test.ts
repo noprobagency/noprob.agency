@@ -83,9 +83,12 @@ describe('blog categories', () => {
         'squarespace-vs-shopify',
         'shopify-migration-ai-agents',
         'bigcommerce-vs-shopify',
+        'shopify-vs-magento',
+        'shopify-data-migration',
       ].sort()
     )
     expect(byId.shopify).toContain('shopify-301-redirects')
+    expect(byId.shopify).toContain('hire-shopify-expert')
     expect(byId.shopify).toEqual(expect.arrayContaining(['shopify-partner-program', 'white-label-shopify-agencies']))
     expect(byId['ai-agents']).toEqual(
       [
