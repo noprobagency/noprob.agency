@@ -25,7 +25,7 @@ const article: Article = {
   articleType: 'BlogPosting',
   date: '2026-11-10',
   datePublishedIso: '2026-11-10T09:00:00+00:00',
-  dateModifiedIso: '2026-11-10T09:00:00+00:00',
+  dateModifiedIso: '2026-11-17T12:00:00+00:00',
   wordCount: 2691,
   readingTimeMinutes: 11,
   articleSection: 'Shopify',
@@ -222,7 +222,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'One point is not settled. The tiers post ties the shop count to revenue share, while the Help Center says any plan counts, and Starter and Lite pay no revenue share. Until Shopify says which applies, plan on the stricter reading.',
+      text: 'One point is not settled. The tiers post ties the shop count to revenue share, while the Help Center says any plan counts, and Starter and Lite pay no revenue share. Until Shopify says which applies, plan on the stricter reading. If you are a merchant reading this to choose a partner, the tier shows volume, and the tests that matter are in [how to hire a Shopify expert](/blog/hire-shopify-expert).',
     },
     { type: 'h2', text: 'What does Shopify attribute to a partner?' },
     {
@@ -432,7 +432,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Un punto non è chiarito. Il post sui livelli lega il conteggio degli shop alla revenue share, mentre l’Help Center dice che conta qualsiasi piano, e Starter e Lite non danno revenue share. Finché Shopify non dice quale vale, pianifica sulla lettura più severa.',
+      text: 'Un punto non è chiarito. Il post sui livelli lega il conteggio degli shop alla revenue share, mentre l’Help Center dice che conta qualsiasi piano, e Starter e Lite non danno revenue share. Finché Shopify non dice quale vale, pianifica sulla lettura più severa. Se sei un merchant e leggi per scegliere un partner, il livello indica il volume, e le prove che contano sono in [come scegliere un esperto Shopify](/it/blog/esperto-shopify).',
     },
     { type: 'h2', text: 'Cosa attribuisce Shopify a un partner?' },
     {

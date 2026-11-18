@@ -38,10 +38,13 @@ Stati: `da fare`, `in corso`, `fatto (data, PR)`, `bloccato (motivo)`.
 | 65 | 10 nov | Articolo white label per agenzie | white label web development (US 260), white label shopify | team | fatto (10 nov, questa PR) |
 | 66 | 10 nov | Guida CRO da 11 a 21 studi verificati su fonte primaria | ecommerce conversion rate optimization (US 590, KD 27) | team | fatto (10 nov, questa PR) |
 | 67 | 10 nov | Articolo ad creative con 11 studi verificati | ad creative (US 880, KD 25) | team | fatto (10 nov, questa PR) |
-| 60 | nov | `/about` e home su "Shopify experts": titolo, H1 e blocco chi ci lavora, senza nuove affermazioni | shopify experts (US 1.000, KD 13), hire shopify expert (210, KD 15) | team | da fare |
-| 61 | nov | Sprint e guida alla migrazione: rinforzo su "Shopify migration services" e link interni da compratore | shopify migration services (US 260, KD 4) | team | da fare |
-| 62 | nov | Pagina "Shopify Plus agency" solo con prove verificate su Plus (`docs/dati-verificati.md`) | shopify plus agency (US 590, KD 16), shopify plus development company (110) | team | da fare |
+| 60 | nov | `/about` e home su "Shopify experts": titolo, H1 e blocco chi ci lavora, senza nuove affermazioni | shopify experts (US 1.000, KD 13), hire shopify expert (210, KD 15) | team | fatto (17 nov, PR #284) |
+| 61 | nov | Sprint e guida alla migrazione: rinforzo su "Shopify migration services" e link interni da compratore | shopify migration services (US 260, KD 4) | team | fatto (17 nov, PR #284) |
+| 62 | nov | Pagina "Shopify Plus agency" solo con prove verificate su Plus (`docs/dati-verificati.md`) | shopify plus agency (US 590, KD 16), shopify plus development company (110) | team | non si fa (17 nov: nessun progetto Plus nostro in `docs/dati-verificati.md`; la ricerca la coprono i due articoli Plus, PR #283) |
 | 63 | 10 nov | Landing "Shopify SEO Agency", EN e IT, senza prezzo, CTA a una call (sì di Antonio del 10 nov) | shopify seo agency (US 1.000, KD 0, CPC $30,37) | team | fatto (10 nov, questa PR) |
+| 68 | 17 nov | Pacchetto C: tre articoli nuovi, "Shopify vs Magento", "How to hire a Shopify expert", "Shopify data migration" (`SEO/data/strategia-2026-11-17.md`) | shopify vs magento (90, KD 0), hire shopify expert (210), shopify data migration (30) | team | fatto (17 nov, PR #285) |
+| 69 | 17 nov | Pacchetto B: 12 articoli in zona di sorpasso (Plus, Magento, agenti AI, checklist, agenzie, GEO, CRO) e link verso le pagine commerciali e i 3 articoli nuovi | shopify plus migration, magento to shopify migration, shopify ai agent, shopify migration checklist | team | fatto (18 nov, PR #283) |
+| 70 | 1 dic | Misura a 14 giorni dei pacchetti A, B e C sulle query della sezione 2 di `strategia-2026-11-17.md` | | analista | da fare |
 | 25 | quando sbloccata | "Cos'è un Custom AI System per Shopify" (`docs/articoli-da-scrivere.md`) | | team | bloccato (servono i dati di velocità prima e dopo di Nazzi e Cumini) |
 | 26 | 28 ott | Revisione completa del sito (4 revisori) e implementazione con le decisioni di Antonio | | team | fatto (28 ott, v1.80.0 - v1.82.0) |
 | 27 | 28 ott | "Shopify Plus: quando conviene e come migrare" (R-37) | shopify plus, shopify plus agency | team | fatto (28 ott, v1.82.0) |

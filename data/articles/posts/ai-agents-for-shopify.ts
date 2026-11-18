@@ -4,13 +4,13 @@ const article: Article = {
   slug: "ai-agents-for-shopify",
   slugIt: "agenti-ai-shopify",
   title:
-    "Is Your Shopify AI Agent a Chatbot, a Workflow or an Agent?",
+    "Shopify AI Agent: Is Yours a Chatbot, a Workflow or an Agent?",
   titleIt:
     "Agenti AI per Shopify: chatbot, workflow o agente? Come riconoscerli sul tuo store",
-  seoTitle: "Shopify AI Agent, Chatbot or Workflow? The Guide",
+  seoTitle: "Shopify AI Agent: What It Is vs a Chatbot",
   seoTitleIt: "Agenti AI per Shopify: chatbot, workflow, agente",
   seoDescription:
-    "Shopify AI agents explained: tell a chatbot, a workflow and a real agent apart, what to hand over, what to keep, what to ask vendors.",
+    "What a Shopify AI agent is and how to tell it from a chatbot or a workflow: what to hand over, what to keep, what it costs and what to ask vendors.",
   seoDescriptionIt:
     "Agenti AI per Shopify: come distinguere chatbot, workflow e agente AI su uno store, cosa affidare, cosa no e le domande da fare a un fornitore.",
   excerpt:
@@ -18,7 +18,7 @@ const article: Article = {
   excerptIt:
     "Il criterio che separa chatbot, workflow e agente AI su uno store Shopify, cinque domande per ogni fornitore, cosa ha senso affidare a un agente oggi e cosa no, e i cinque pattern dietro la maggior parte degli agenti.",
   ledeEn:
-    "AI agents for ecommerce are everywhere in sales pages and rare in practice. Here is how to tell a chatbot, a workflow and a Shopify AI agent apart, and where each one belongs.",
+    "The Shopify AI agent is everywhere in sales pages and rare in practice. Here is what one is, how to tell it from a chatbot and a workflow, and where each of the three belongs on your store.",
   ledeIt:
     "Gli agenti AI per Shopify compaiono ovunque nelle pagine di vendita e raramente nella pratica. Ecco come distinguere chatbot, workflow e agente AI, e dove ha senso ciascuno.",
   image: "/images/blog/ai-agents-for-shopify-cover.png",
@@ -27,18 +27,18 @@ const article: Article = {
   articleType: "BlogPosting",
   date: "2026-10-29",
   datePublishedIso: "2026-10-29T09:00:00+00:00",
-  dateModifiedIso: "2026-11-10T12:00:00+00:00",
-  wordCount: 2900,
+  dateModifiedIso: "2026-11-17T12:00:00+00:00",
+  wordCount: 3200,
   articleSection: "AI agents",
-  readingTimeMinutes: 12,
+  readingTimeMinutes: 13,
   keywordsEn:
-    "ai agents for ecommerce, shopify ai agent, ai agent for shopify, ai agent vs chatbot, ai agent vs workflow, ai agents in ecommerce, shopify ai automation, ai agent patterns",
+    "shopify ai agent, ai agent for shopify, ai agents for ecommerce, shopify ai agent cost, ai agent vs chatbot, ai agent vs workflow, ai agents in ecommerce, shopify ai automation, ai agent patterns",
   keywordsIt:
     "agenti ai, agente ai shopify, agenti ai ecommerce, agenti ai cosa sono, differenza chatbot e agente ai, chatbot workflow agente, agenti ai per shopify, pattern agenti ai",
   content: [
     {
       type: "paragraph",
-      text: "**AI agents for ecommerce are systems that choose their next step from what they find, using tools on your store data: a Shopify AI agent might read an order, check your policy and prepare a return, where a chatbot only answers and a workflow follows a path drawn in advance.** One question tells the three apart: is the path already written?",
+      text: "**A Shopify AI agent chooses its next step from what it finds, using tools on your store data: it might read an order, check your policy and prepare a return, where a chatbot only answers and a workflow follows a path drawn in advance.** One question tells the three apart, and it is the first one we ask when we build [AI agents for eCommerce](/ai-agents-for-ecommerce): is the path already written?",
     },
     {
       type: "paragraph",
@@ -46,11 +46,11 @@ const article: Article = {
     },
     {
       type: "h2",
-      text: "What are AI agents, and what do they mean for an ecommerce store?",
+      text: "What is a Shopify AI agent?",
     },
     {
       type: "paragraph",
-      text: "**An AI agent is a system that perceives a situation, decides what to do and acts toward a goal, usually in several steps, adapting each step to what the previous one turned up.** The language model inside it is only one part.",
+      text: "**A Shopify AI agent is a system that works toward a goal on your store in several steps: it reads orders, products and policies through tools, decides what to do next from what it found, and acts within the permissions you gave it.** It differs from a chatbot, which only answers, and from a workflow, which follows a path written in advance. The language model inside it is only one part.",
     },
     {
       type: "paragraph",
@@ -235,6 +235,11 @@ const article: Article = {
       type: "paragraph",
       text: "AI also reaches your store from outside. Agents that shop for customers are in [agentic commerce for Shopify](/blog/agentic-commerce-shopify) and [ChatGPT shopping for Shopify](/blog/chatgpt-shopping-shopify); getting cited in AI answers is in [GEO for Shopify](/blog/geo-for-shopify) and [GEO vs SEO](/blog/geo-vs-seo).",
     },
+    { type: "h2", text: "How much does a Shopify AI agent cost?" },
+    {
+      type: "paragraph",
+      text: "**A Shopify AI agent costs the sum of five things: your Shopify plan, the model usage, the setup, the apps and the time to maintain and check it.** Only the plan and the model usage have public prices. Sidekick is included in your plan (features and limits vary by plan) and Flow is a free app, so a workflow in Flow adds no line to the bill. A custom agent adds the model, billed per million tokens, plus the hours to set it up and check it, and in our worked example the model is the small line. The checklist for reading a quote, the official model prices and that example are in our guide to [AI agent cost for a Shopify store](/blog/build-ai-agent-shopify).",
+    },
     {
       type: "h2",
       text: "How do the AI Accelerator, the Sprint and the Custom AI System fit in?",
@@ -248,6 +253,11 @@ const article: Article = {
       text: "The Custom AI System is code written from scratch for one store and designed for the AI agents that work on it, which also makes the store ready for the agents that visit it. In the Sprint, go-live falls between day 15 and 30, followed by 90 days of support. In the AI Accelerator we help you decide which of the cases above deserve a workflow, an agent or nothing yet.",
     },
     { type: "h2", text: "Frequently asked questions" },
+    { type: "h3", text: "What is a Shopify AI agent?" },
+    {
+      type: "paragraph",
+      text: "A Shopify AI agent is a system that works toward a goal on your store in several steps: it reads orders, products and policies through tools, decides what to do next from what it found, and acts within the permissions you gave it. It differs from a chatbot, which only answers, and from a workflow, which follows a path written in advance.",
+    },
     {
       type: "h3",
       text: "What is the difference between an AI agent and a chatbot?",
@@ -260,6 +270,16 @@ const article: Article = {
     {
       type: "paragraph",
       text: "In ecommerce, AI agents are systems that act on store data to reach a goal, such as resolving a return request, cleaning a catalog or explaining a drop in sales. Money, promises and irreversible actions should still wait for a person.",
+    },
+    { type: "h3", text: "Does Shopify have its own AI agent?" },
+    {
+      type: "paragraph",
+      text: "Yes, Sidekick. It is the assistant built into the Shopify admin: it is included in your plan (features and limits vary by plan), it can build Shopify Flow workflows, and it proposes changes before applying them. Sidekick works for you inside the admin. An agent that answers your customers or runs one of your own processes is something you add on top.",
+    },
+    { type: "h3", text: "How much does a Shopify AI agent cost?" },
+    {
+      type: "paragraph",
+      text: "A Shopify AI agent costs the sum of five things: your Shopify plan, the model usage, the setup, the apps and the time to maintain and check it. Only the plan and the model usage have public prices. Sidekick is included in your plan and Shopify Flow is a free app, while a custom agent is billed per use of the model and needs someone to set it up and check it.",
     },
     { type: "h3", text: "Do I need an AI agent for my Shopify store?" },
     {
@@ -291,7 +311,7 @@ const article: Article = {
   contentIt: [
     {
       type: "paragraph",
-      text: "**Gli agenti AI per un eCommerce sono sistemi che scelgono il passo successivo in base a ciò che trovano, usando strumenti sui dati del tuo store: un agente AI Shopify può leggere un ordine, controllare la tua policy e preparare un reso, dove un chatbot risponde soltanto e un workflow segue un percorso disegnato prima.** Una domanda separa le tre forme: la strada è già scritta?",
+      text: "**Gli agenti AI per un eCommerce sono sistemi che scelgono il passo successivo in base a ciò che trovano, usando strumenti sui dati del tuo store: un agente AI Shopify può leggere un ordine, controllare la tua policy e preparare un reso, dove un chatbot risponde soltanto e un workflow segue un percorso disegnato prima.** Una domanda separa le tre forme, ed è la prima che ci facciamo quando costruiamo [agenti AI per eCommerce](/it/agenti-ai-per-ecommerce): la strada è già scritta?",
     },
     {
       type: "paragraph",
@@ -485,6 +505,11 @@ const article: Article = {
       type: "paragraph",
       text: "L’AI arriva al tuo store anche da fuori. Gli agenti che comprano per i clienti sono in [agentic commerce per Shopify](/it/blog/agentic-commerce-shopify) e in [ChatGPT shopping per Shopify](/it/blog/chatgpt-shopping-shopify); farsi citare nelle risposte AI è in [GEO SEO per Shopify](/it/blog/geo-seo-shopify) e in [GEO vs SEO](/it/blog/geo-vs-seo).",
     },
+    { type: "h2", text: "Quanto costa un agente AI per Shopify?" },
+    {
+      type: "paragraph",
+      text: "**Un agente AI per Shopify costa la somma di cinque voci: il piano Shopify, il consumo del modello, il setup, le app e il tempo per mantenerlo e controllarlo.** Solo il piano e il consumo del modello hanno prezzi pubblici. Sidekick è incluso nel piano (funzioni e limiti variano in base al piano) e Flow è un’app gratuita, quindi un workflow in Flow non aggiunge voci al conto. Un agente su misura aggiunge il modello, che si paga per milione di token, più le ore per configurarlo e controllarlo, e nel nostro esempio svolto il modello è la voce piccola. L’elenco per leggere un preventivo, i prezzi ufficiali dei modelli e quell’esempio sono nella guida su [quanto costa un agente AI per uno store Shopify](/it/blog/creare-agente-ai-shopify).",
+    },
     {
       type: "h2",
       text: "Come entrano in gioco AI Accelerator, Sprint e Custom AI System?",
@@ -498,6 +523,11 @@ const article: Article = {
       text: "Il Custom AI System è codice scritto da zero per un solo store e pensato per gli agenti AI che ci lavorano, e rende lo store pronto anche per gli agenti che lo visitano. Nello Sprint il go-live cade tra il giorno 15 e il 30, seguito da 90 giorni di supporto. Nell’AI Accelerator ti aiutiamo a decidere quali dei casi qui sopra meritano un workflow, un agente o per ora niente.",
     },
     { type: "h2", text: "Domande frequenti" },
+    { type: "h3", text: "Cos’è un agente AI per Shopify?" },
+    {
+      type: "paragraph",
+      text: "Un agente AI per Shopify è un sistema che lavora verso un obiettivo sul tuo store in più passi: legge ordini, prodotti e policy tramite strumenti, decide il passo successivo da ciò che ha trovato e agisce entro i permessi che gli hai dato. Si distingue da un chatbot, che risponde soltanto, e da un workflow, che segue un percorso scritto prima.",
+    },
     { type: "h3", text: "Che differenza c’è tra un agente AI e un chatbot?" },
     {
       type: "paragraph",
@@ -507,6 +537,16 @@ const article: Article = {
     {
       type: "paragraph",
       text: "Nell’eCommerce gli agenti AI sono sistemi che agiscono sui dati dello store per raggiungere un obiettivo, come risolvere una richiesta di reso, ripulire un catalogo o spiegare un calo delle vendite. Denaro, promesse e azioni irreversibili devono comunque aspettare una persona.",
+    },
+    { type: "h3", text: "Shopify ha un suo agente AI?" },
+    {
+      type: "paragraph",
+      text: "Sì, Sidekick. È l’assistente integrato nell’admin di Shopify: è incluso nel tuo piano (funzioni e limiti variano in base al piano), sa costruire i workflow di Shopify Flow e propone le modifiche prima di applicarle. Sidekick lavora per te dentro l’admin. Un agente che risponde ai tuoi clienti o segue un tuo processo è qualcosa che aggiungi tu.",
+    },
+    { type: "h3", text: "Quanto costa un agente AI per Shopify?" },
+    {
+      type: "paragraph",
+      text: "Un agente AI per Shopify costa la somma di cinque voci: il piano Shopify, il consumo del modello, il setup, le app e il tempo per mantenerlo e controllarlo. Solo il piano e il consumo del modello hanno prezzi pubblici. Sidekick è incluso nel piano e Shopify Flow è un’app gratuita, mentre un agente su misura si paga a consumo del modello e ha bisogno di qualcuno che lo configuri e lo controlli.",
     },
     { type: "h3", text: "Mi serve un agente AI per il mio store Shopify?" },
     {
@@ -537,6 +577,11 @@ const article: Article = {
   ],
   faqEn: [
     {
+      question: "What is a Shopify AI agent?",
+      answer:
+        "A Shopify AI agent is a system that works toward a goal on your store in several steps: it reads orders, products and policies through tools, decides what to do next from what it found, and acts within the permissions you gave it. It differs from a chatbot, which only answers, and from a workflow, which follows a path written in advance.",
+    },
+    {
       question: "What is the difference between an AI agent and a chatbot?",
       answer:
         "A chatbot answers; an AI agent pursues a goal in several steps and chooses each step from what it finds. The test is whether the path is already written. A chatbot follows one move, a workflow follows paths drawn in advance, and an agent builds the path as it goes using tools on your data.",
@@ -545,6 +590,16 @@ const article: Article = {
       question: "What are AI agents in ecommerce?",
       answer:
         "In ecommerce, AI agents are systems that act on store data to reach a goal, such as resolving a return request, cleaning a catalog or explaining a drop in sales. Money, promises and irreversible actions should still wait for a person.",
+    },
+    {
+      question: "Does Shopify have its own AI agent?",
+      answer:
+        "Yes, Sidekick. It is the assistant built into the Shopify admin: it is included in your plan (features and limits vary by plan), it can build Shopify Flow workflows, and it proposes changes before applying them. Sidekick works for you inside the admin. An agent that answers your customers or runs one of your own processes is something you add on top.",
+    },
+    {
+      question: "How much does a Shopify AI agent cost?",
+      answer:
+        "A Shopify AI agent costs the sum of five things: your Shopify plan, the model usage, the setup, the apps and the time to maintain and check it. Only the plan and the model usage have public prices. Sidekick is included in your plan and Shopify Flow is a free app, while a custom agent is billed per use of the model and needs someone to set it up and check it.",
     },
     {
       question: "Do I need an AI agent for my Shopify store?",
@@ -564,6 +619,11 @@ const article: Article = {
   ],
   faqIt: [
     {
+      question: "Cos’è un agente AI per Shopify?",
+      answer:
+        "Un agente AI per Shopify è un sistema che lavora verso un obiettivo sul tuo store in più passi: legge ordini, prodotti e policy tramite strumenti, decide il passo successivo da ciò che ha trovato e agisce entro i permessi che gli hai dato. Si distingue da un chatbot, che risponde soltanto, e da un workflow, che segue un percorso scritto prima.",
+    },
+    {
       question: "Che differenza c’è tra un agente AI e un chatbot?",
       answer:
         "Un chatbot risponde; un agente AI persegue un obiettivo in più passi e sceglie ogni passo da ciò che trova. Il test è se la strada è già scritta. Un chatbot ha una sola mossa, un workflow segue strade disegnate prima, un agente costruisce la strada mentre procede usando strumenti sui tuoi dati.",
@@ -572,6 +632,16 @@ const article: Article = {
       question: "Cosa sono gli agenti AI nell’eCommerce?",
       answer:
         "Nell’eCommerce gli agenti AI sono sistemi che agiscono sui dati dello store per raggiungere un obiettivo, come risolvere una richiesta di reso, ripulire un catalogo o spiegare un calo delle vendite. Denaro, promesse e azioni irreversibili devono comunque aspettare una persona.",
+    },
+    {
+      question: "Shopify ha un suo agente AI?",
+      answer:
+        "Sì, Sidekick. È l’assistente integrato nell’admin di Shopify: è incluso nel tuo piano (funzioni e limiti variano in base al piano), sa costruire i workflow di Shopify Flow e propone le modifiche prima di applicarle. Sidekick lavora per te dentro l’admin. Un agente che risponde ai tuoi clienti o segue un tuo processo è qualcosa che aggiungi tu.",
+    },
+    {
+      question: "Quanto costa un agente AI per Shopify?",
+      answer:
+        "Un agente AI per Shopify costa la somma di cinque voci: il piano Shopify, il consumo del modello, il setup, le app e il tempo per mantenerlo e controllarlo. Solo il piano e il consumo del modello hanno prezzi pubblici. Sidekick è incluso nel piano e Shopify Flow è un’app gratuita, mentre un agente su misura si paga a consumo del modello e ha bisogno di qualcuno che lo configuri e lo controlli.",
     },
     {
       question: "Mi serve un agente AI per il mio store Shopify?",

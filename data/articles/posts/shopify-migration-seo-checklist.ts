@@ -3,37 +3,42 @@ import type { Article } from '../index'
 const article: Article = {
   slug: 'shopify-migration-seo-checklist',
   slugIt: 'migrazione-shopify-seo-checklist',
-  title: 'Website Migration SEO: The Shopify Checklist That Protects Your Rankings',
-  titleIt: 'Migrazione sito SEO: la checklist per passare a Shopify senza perdere posizioni',
-  seoTitle: 'Website Migration SEO Checklist for Shopify',
-  seoTitleIt: 'Migrazione sito SEO: checklist per Shopify',
+  title: 'Shopify Migration Checklist: The SEO Steps That Protect Your Rankings',
+  titleIt: 'Checklist migrazione Shopify: i passi SEO per non perdere posizioni',
+  seoTitle: 'Shopify Migration Checklist: SEO in 3 Phases',
+  seoTitleIt: 'Checklist migrazione Shopify: la SEO in tre fasi',
   seoDescription:
-    'A website migration SEO checklist for Shopify in three phases: before, launch day and the 90 days after. Redirect map, canonicals, hreflang, Search Console.',
+    'A Shopify migration checklist for SEO in three phases: before, launch day and the 90 days after. Redirect map, canonicals, hreflang, Search Console.',
   seoDescriptionIt:
-    'Checklist di migrazione sito SEO per Shopify in tre fasi: prima, giorno del lancio e i 90 giorni dopo. Redirect 301, canonical, hreflang e Search Console.',
+    'Checklist di migrazione a Shopify per la SEO in tre fasi: prima, giorno del lancio e i 90 giorni dopo. Redirect 301, canonical, hreflang, Search Console.',
   excerpt:
-    'A website migration SEO checklist built for Shopify: before launch, launch day and the 90 days after, with the redirect map, canonicals, hreflang and Search Console steps.',
+    'A Shopify migration checklist for SEO: before launch, launch day and the 90 days after, with the redirect map, canonicals, hreflang and Search Console steps.',
   excerptIt:
-    'Una checklist di migrazione sito SEO pensata per Shopify: prima del lancio, il giorno del lancio e i 90 giorni dopo, con mappa dei redirect, canonical, hreflang e Search Console.',
+    'Una checklist di migrazione a Shopify per la SEO: prima del lancio, il giorno del lancio e i 90 giorni dopo, con mappa dei redirect, canonical, hreflang e Search Console.',
   ledeEn:
-    'A Shopify migration is won or lost on the URLs. This is the working checklist: three phases, the Shopify-specific traps, and what to watch for 90 days.',
+    'A Shopify migration is won or lost on the URLs. This is the Shopify migration checklist we work from: three phases, the Shopify-specific traps, and what to watch for 90 days.',
   ledeIt:
-    'Una migrazione a Shopify si vince o si perde sugli URL. È la checklist di lavoro: tre fasi, le trappole specifiche di Shopify e cosa controllare per 90 giorni.',
+    'Una migrazione a Shopify si vince o si perde sugli URL. È la checklist di migrazione a Shopify su cui lavoriamo: tre fasi, le trappole specifiche di Shopify e cosa controllare per 90 giorni.',
   image: '/images/blog/shopify-migration-seo-checklist-cover.png',
   imageAlt: 'Copertina astratta, sfondo azzurro sfumato, con un’onda di puntini di dimensione variabile',
   imageAltEn: 'Abstract cover, softly graded sky blue background with a wave of dots changing size',
   articleType: 'BlogPosting',
   date: '2026-10-12',
   datePublishedIso: '2026-10-12T10:20:00+01:00',
-  dateModifiedIso: '2026-11-06T12:00:00+00:00',
-  wordCount: 2400,
-  readingTimeMinutes: 9,
+  dateModifiedIso: '2026-11-17T12:00:00+00:00',
+  wordCount: 2860,
+  readingTimeMinutes: 10,
   articleSection: 'Shopify migration',
   keywordsEn:
-    'website migration seo, seo website migration checklist, shopify 301 redirects, shopify migration seo, shopify redirect map, shopify change of address',
+    'shopify migration checklist, shopify seo migration, website migration seo, seo website migration checklist, shopify 301 redirects, shopify migration seo, shopify redirect map, shopify change of address',
   keywordsIt:
-    'migrazione sito seo, redirect 301 shopify, migrazione shopify seo, checklist migrazione seo, mappa dei redirect, cambio di indirizzo search console',
+    'checklist migrazione shopify, migrazione sito seo, redirect 301 shopify, migrazione shopify seo, checklist migrazione seo, mappa dei redirect, cambio di indirizzo search console',
   faqEn: [
+    {
+      question: 'What is on a Shopify migration checklist?',
+      answer:
+        'A Shopify migration checklist for SEO has three phases. Before the migration: a Search Console and crawl baseline, the URL inventory, a one-to-one redirect map and the same titles and copy on the new pages. On launch day: redirects tested, password and noindex removed, the new sitemap submitted, a test order. In the 90 days after: crawling first, then indexing, then clicks.',
+    },
     {
       question: 'Will I lose my Google rankings if I migrate to Shopify?',
       answer:
@@ -71,6 +76,11 @@ const article: Article = {
     },
   ],
   faqIt: [
+    {
+      question: 'Cosa c’è in una checklist di migrazione a Shopify?',
+      answer:
+        'Una checklist di migrazione a Shopify per la SEO ha tre fasi. Prima della migrazione: una baseline da Search Console e da un crawl, l’inventario degli URL, una mappa dei redirect uno a uno e gli stessi title e testi sulle nuove pagine. Il giorno del lancio: redirect testati, password e noindex tolti, nuova sitemap inviata, un ordine di prova. Nei 90 giorni dopo: prima la scansione, poi l’indicizzazione, poi i clic.',
+    },
     {
       question: 'Perderò le posizioni su Google se migro a Shopify?',
       answer:
@@ -110,7 +120,7 @@ const article: Article = {
   content: [
     {
       type: 'paragraph',
-      text: 'A website migration SEO plan for Shopify comes down to one document and three phases. The document is the redirect map, which tells Google where every old URL lives now. The phases are before launch, launch day and the 90 days after. When we run a migration inside our [Shopify migration service with a written SEO guarantee](/shopify-migration-sprint), the Shopify Launch Sprint, this is the SEO work running underneath it.',
+      text: 'This Shopify migration checklist covers the SEO side of the move. Like any website migration SEO plan, it comes down to one document and three phases. The document is the redirect map, which tells Google where every old URL lives now. The phases are before launch, launch day and the 90 days after. When we run a migration inside our [Shopify migration service with a written SEO guarantee](/shopify-migration-sprint), the Shopify Launch Sprint, this is the SEO work running underneath it.',
     },
     {
       type: 'paragraph',
@@ -120,7 +130,20 @@ const article: Article = {
       type: 'paragraph',
       text: 'Rankings move during every migration. What you control is how complete the map is and how fast you notice gaps: that decides the recovery, and in the Sprint organic traffic at 90 days is one of the 4 written guarantees.',
     },
-    { type: 'h2', text: 'What does moving to Shopify change for SEO?' },
+    { type: 'h2', text: 'Shopify migration checklist at a glance' },
+    {
+      type: 'paragraph',
+      text: 'A Shopify migration checklist for SEO has three phases: before the migration, launch day and the 90 days after.',
+    },
+    {
+      type: 'list',
+      items: [
+        '**Before the migration:** export a baseline from Search Console and a crawl, build the URL inventory, map every old URL to its new one, keep titles, H1s and copy as they are, and leave the new store behind the password.',
+        '**Launch day:** import and test the redirects, remove the password and any noindex, submit the new sitemap in Search Console, place a test order and check that the purchase event fires.',
+        '**The 90 days after:** watch crawling in the first week, indexing in weeks 2 to 4 and clicks from day 30, then write the review at day 90. Keep every redirect for at least a year.',
+      ],
+    },
+    { type: 'h2', text: 'Website migration SEO: what does moving to Shopify change?' },
     {
       type: 'paragraph',
       text: 'Moving to Shopify changes three things Google cares about: the URL structure, which Shopify fixes; the templates that output your titles, canonicals and markup; and the sitemap, which Shopify generates for you.',
@@ -273,7 +296,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'This phase lines up with the 90 days of support in the Shopify Launch Sprint, and organic traffic at 90 days is one of its 4 written guarantees. The Sprint has a public price by revenue: €5,800 under €2M, €8,800 from €2M to €20M, €12,800 above €20M, VAT excluded, in 4 installments.',
+      text: 'This phase lines up with the 90 days of support in the Shopify Launch Sprint, and organic traffic at 90 days is one of its 4 written guarantees. The Sprint has a public price by revenue: €5,800 under €2M, €8,800 from €2M to €20M, €12,800 above €20M, VAT excluded, in 4 installments. After day 90, the ongoing SEO work on the new store is what our [Shopify SEO agency](/shopify-seo-agency) service does.',
     },
     { type: 'h2', text: 'Do you need Search Console’s Change of Address tool?' },
     {
@@ -320,6 +343,8 @@ const article: Article = {
       text: 'Planning the budget and the partner? Read [how much a Shopify migration costs](/blog/shopify-migration-cost) and how to [choose a Shopify migration agency](/blog/choose-shopify-migration-agency).',
     },
     { type: 'h2', text: 'Frequently asked questions' },
+    { type: 'h3', text: 'What is on a Shopify migration checklist?' },
+    { type: 'paragraph', text: '**A Shopify migration checklist for SEO has three phases.** Before the migration: a Search Console and crawl baseline, the URL inventory, a one-to-one redirect map and the same titles and copy on the new pages. On launch day: redirects tested, password and noindex removed, the new sitemap submitted, a test order. In the 90 days after: crawling first, then indexing, then clicks.' },
     { type: 'h3', text: 'Will I lose my Google rankings if I migrate to Shopify?' },
     { type: 'paragraph', text: '**Rankings usually move for a while after any migration, including well-run ones, and a complete 301 redirect map is what decides how fast they come back.** One of the 4 written guarantees in the Sprint covers it: "Organic traffic below the baseline 90 days after go-live? We work for free until it comes back." Google itself says visibility can fluctuate temporarily during a site move and should settle over time.' },
     { type: 'h3', text: 'Do I need Search Console’s Change of Address tool when I move to Shopify?' },
@@ -342,7 +367,7 @@ const article: Article = {
   contentIt: [
     {
       type: 'paragraph',
-      text: 'Un piano di migrazione sito SEO per Shopify si riduce a un documento e tre fasi. Il documento è la mappa dei redirect, che dice a Google dove vive oggi ogni vecchio URL. Le fasi sono prima del lancio, giorno del lancio e i 90 giorni dopo. Quando facciamo una migrazione dentro il nostro [servizio di migrazione a Shopify con garanzia SEO scritta](/it/sprint-migrazione-shopify), lo Shopify Launch Sprint, questo è il lavoro SEO che gira sotto.',
+      text: 'Questa checklist di migrazione a Shopify copre la parte SEO del passaggio. Come ogni piano di migrazione sito SEO, si riduce a un documento e tre fasi. Il documento è la mappa dei redirect, che dice a Google dove vive oggi ogni vecchio URL. Le fasi sono prima del lancio, giorno del lancio e i 90 giorni dopo. Quando facciamo una migrazione dentro il nostro [servizio di migrazione a Shopify con garanzia SEO scritta](/it/sprint-migrazione-shopify), lo Shopify Launch Sprint, questo è il lavoro SEO che gira sotto.',
     },
     {
       type: 'paragraph',
@@ -352,7 +377,20 @@ const article: Article = {
       type: 'paragraph',
       text: 'Il posizionamento si muove in ogni migrazione. Controlli quanto è completa la mappa e quanto in fretta vedi i buchi: questo decide il recupero, e nello Sprint il traffico organico a 90 giorni è una delle 4 garanzie scritte.',
     },
-    { type: 'h2', text: 'Cosa cambia per la SEO in una migrazione Shopify?' },
+    { type: 'h2', text: 'La checklist di migrazione a Shopify in breve' },
+    {
+      type: 'paragraph',
+      text: 'Una checklist di migrazione a Shopify per la SEO ha tre fasi: prima della migrazione, il giorno del lancio e i 90 giorni dopo.',
+    },
+    {
+      type: 'list',
+      items: [
+        '**Prima della migrazione:** esporta una baseline da Search Console e da un crawl, costruisci l’inventario degli URL, mappa ogni vecchio URL sul nuovo, tieni title, H1 e testi come sono e lascia il nuovo store dietro la password.',
+        '**Il giorno del lancio:** importa e testa i redirect, togli la password e ogni noindex, invia la nuova sitemap in Search Console, fai un ordine di prova e controlla che l’evento di acquisto scatti.',
+        '**I 90 giorni dopo:** guarda la scansione nella prima settimana, l’indicizzazione nelle settimane da 2 a 4 e i clic dal giorno 30, poi scrivi la revisione al giorno 90. Tieni ogni redirect per almeno un anno.',
+      ],
+    },
+    { type: 'h2', text: 'Migrazione sito SEO: cosa cambia passando a Shopify?' },
     {
       type: 'paragraph',
       text: 'Passare a Shopify cambia tre cose che contano per Google: la struttura degli URL, che Shopify fissa; i template che producono titoli, canonical e markup; la sitemap, che Shopify genera da sola.',
@@ -505,7 +543,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Questa fase coincide con i 90 giorni di supporto dello Shopify Launch Sprint, che tra le 4 garanzie scritte ha il traffico organico a 90 giorni. Lo Sprint ha un prezzo pubblico per fatturato: €5.800 sotto i €2M, €8.800 tra €2M e €20M, €12.800 oltre i €20M, IVA esclusa, in 4 rate.',
+      text: 'Questa fase coincide con i 90 giorni di supporto dello Shopify Launch Sprint, che tra le 4 garanzie scritte ha il traffico organico a 90 giorni. Lo Sprint ha un prezzo pubblico per fatturato: €5.800 sotto i €2M, €8.800 tra €2M e €20M, €12.800 oltre i €20M, IVA esclusa, in 4 rate. Dopo il giorno 90 il lavoro SEO continuativo sul nuovo store lo segue la nostra [agenzia SEO Shopify](/it/agenzia-seo-shopify).',
     },
     { type: 'h2', text: 'Serve lo strumento Cambio di indirizzo di Search Console?' },
     {
@@ -552,6 +590,8 @@ const article: Article = {
       text: 'Stai pianificando budget e partner? Leggi [quanto costa migrare a Shopify](/it/blog/costo-migrazione-shopify) e come [scegliere un’agenzia di migrazione Shopify](/it/blog/scegliere-agenzia-migrazione-shopify).',
     },
     { type: 'h2', text: 'Domande frequenti' },
+    { type: 'h3', text: 'Cosa c’è in una checklist di migrazione a Shopify?' },
+    { type: 'paragraph', text: '**Una checklist di migrazione a Shopify per la SEO ha tre fasi.** Prima della migrazione: una baseline da Search Console e da un crawl, l’inventario degli URL, una mappa dei redirect uno a uno e gli stessi title e testi sulle nuove pagine. Il giorno del lancio: redirect testati, password e noindex tolti, nuova sitemap inviata, un ordine di prova. Nei 90 giorni dopo: prima la scansione, poi l’indicizzazione, poi i clic.' },
     { type: 'h3', text: 'Perderò le posizioni su Google se migro a Shopify?' },
     { type: 'paragraph', text: '**Il posizionamento di solito si muove per un periodo dopo qualunque migrazione, anche quelle fatte bene, ed è la mappa completa dei redirect 301 a decidere quanto in fretta recupera.** Una delle 4 garanzie scritte dello Sprint lo copre: "Traffico organico sotto la baseline a 90 giorni dal go-live? Lavoriamo gratis finché non torna." Lo dice anche Google: durante un trasferimento di sito la visibilità può fluttuare temporaneamente e poi si assesta.' },
     { type: 'h3', text: 'Devo usare lo strumento Cambio di indirizzo di Search Console per passare a Shopify?' },

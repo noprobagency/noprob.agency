@@ -25,7 +25,7 @@ const article: Article = {
   articleType: 'Article',
   date: '2026-05-06',
   datePublishedIso: '2026-05-06T10:00:00+02:00',
-  dateModifiedIso: '2026-10-28T09:00:00+00:00',
+  dateModifiedIso: '2026-11-17T12:00:00+00:00',
   wordCount: 3100,
   articleSection: 'Shopify',
   readingTimeMinutes: 12,
@@ -171,7 +171,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: "The front end of your store, what the customer sees, is managed through themes. The Shopify Theme Store has free and paid options. Advanced customizations require a Shopify developer. Routine visual changes can be handled through the Online Store 2.0 editor without writing code.",
+      text: "The front end of your store, what the customer sees, is managed through themes. The Shopify Theme Store has free and paid options. Advanced customizations require a Shopify developer, and our [Shopify development](/shopify-development) service covers them. Routine visual changes can be handled through the Online Store 2.0 editor without writing code.",
     },
     { type: 'h3', text: 'Payments and Shopify Payments' },
     {
@@ -382,7 +382,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '2. Decide how the storefront is built before touching anything else. You have three routes: a free template such as Dawn or Horizon to validate the idea, a paid template from the Shopify Theme Store, or a storefront written for your store only. The first two start fast but carry code and apps you do not use; the third is what we build with our Custom AI System in the Shopify Launch Sprint, our [Shopify migration service](/shopify-migration-sprint), where many jobs become code instead of another monthly app. Choose by volume and ambition, not by price alone.',
+      text: '2. Decide how the storefront is built before touching anything else. You have three routes: a free template such as Dawn or Horizon to validate the idea, a paid template from the Shopify Theme Store, or a storefront written for your store only. The first two start fast but carry code and apps you do not use; the third is what we build with our Custom AI System in the Shopify Launch Sprint, our [Shopify migration service](/shopify-migration-sprint), where many jobs become code instead of another monthly app. Choose by volume and ambition, not by price alone. If you need help, here is [how to hire a Shopify expert](/blog/hire-shopify-expert).',
     },
     {
       type: 'paragraph',
@@ -553,7 +553,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Il lato visibile del negozio, quello che vede il cliente, si gestisce tramite temi. Shopify ha il suo Theme Store con temi gratuiti e a pagamento. Per personalizzazioni avanzate serve uno sviluppatore Shopify, oppure si usa il nuovo editor visuale (Online Store 2.0) per interventi base senza toccare il codice.',
+      text: 'Il lato visibile del negozio, quello che vede il cliente, si gestisce tramite temi. Shopify ha il suo Theme Store con temi gratuiti e a pagamento. Per personalizzazioni avanzate serve uno sviluppatore Shopify, e le copre il nostro servizio di [sviluppo Shopify](/it/sviluppo-shopify), oppure si usa il nuovo editor visuale (Online Store 2.0) per interventi base senza toccare il codice.',
     },
     { type: 'h3', text: 'Pagamenti e Shopify Payments' },
     {
@@ -768,7 +768,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '2. Decidi come si costruisce la vetrina prima di toccare altro. Le strade sono tre: un template gratuito come Dawn o Horizon per partire e validare, un template a pagamento dal Theme Store di Shopify, oppure una vetrina scritta solo per il tuo store. Le prime due partono in fretta ma portano codice e app che non usi; la terza è quella che costruiamo con il nostro Custom AI System nello Shopify Launch Sprint, il nostro [servizio di migrazione a Shopify](/it/sprint-migrazione-shopify), dove molti compiti diventano codice invece di un\'altra app a canone mensile. Scegli per volumi e ambizione, non solo per prezzo.',
+      text: '2. Decidi come si costruisce la vetrina prima di toccare altro. Le strade sono tre: un template gratuito come Dawn o Horizon per partire e validare, un template a pagamento dal Theme Store di Shopify, oppure una vetrina scritta solo per il tuo store. Le prime due partono in fretta ma portano codice e app che non usi; la terza è quella che costruiamo con il nostro Custom AI System nello Shopify Launch Sprint, il nostro [servizio di migrazione a Shopify](/it/sprint-migrazione-shopify), dove molti compiti diventano codice invece di un\'altra app a canone mensile. Scegli per volumi e ambizione, non solo per prezzo. Se ti serve aiuto, ecco [come scegliere un esperto Shopify](/it/blog/esperto-shopify).',
     },
     {
       type: 'paragraph',

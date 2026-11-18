@@ -25,8 +25,8 @@ const article: Article = {
   articleType: 'BlogPosting',
   date: '2026-10-29',
   datePublishedIso: '2026-10-29T09:00:00+00:00',
-  dateModifiedIso: '2026-11-06T12:00:00+00:00',
-  wordCount: 2200,
+  dateModifiedIso: '2026-11-17T09:00:00+00:00',
+  wordCount: 2290,
   articleSection: 'AI search and GEO',
   readingTimeMinutes: 9,
   keywordsEn:
@@ -65,6 +65,16 @@ const article: Article = {
     {
       type: 'paragraph',
       text: '**Mostly yes: they are different names for the work of getting your content used inside AI answers.** GEO (generative engine optimization) is the name most used for AI assistants in general. AEO (answer engine optimization) is the older label for winning the answer box, and “AI SEO” is the loose version of both. For a store the label changes nothing, because the tasks below are the same. We say GEO, and when a search says AEO or AI SEO we mean the same list.',
+    },
+    {
+      type: 'table',
+      headers: ['', 'SEO', 'GEO', 'AEO'],
+      rows: [
+        ['Where you show up', 'Google results and AI Overviews', 'ChatGPT, Perplexity, Copilot and other assistants', 'Answer boxes, featured snippets and voice answers'],
+        ['What you win', 'A click to your page', 'A mention or a link inside the answer', 'The single answer shown to the person'],
+        ['What you work on', 'Indexing, content, links, speed', 'Product data, schema, feeds, mentions on other sites', 'Short direct answers, FAQ, clear headings'],
+        ['How you check', 'Search Console', 'A monthly list of prompts', 'Search Console and the results page by hand'],
+      ],
     },
     { type: 'h2', text: 'Is GEO replacing SEO, and is SEO dead?' },
     {
@@ -181,7 +191,7 @@ const article: Article = {
     { type: 'h2', text: 'How do we build both into a Shopify store?' },
     {
       type: 'paragraph',
-      text: 'In the Shopify Launch Sprint, our [Shopify migration service](/shopify-migration-sprint), the Custom AI System builds the data side into the store from day one: product data, structured data and an automatic GEO layer, in a store ready for AI agents. Every new product is born with schema and data. A migration is also the riskiest moment for SEO, so the redirects come first: see our [guide to migrating to Shopify](/shopify-migration). The Sprint takes 14 days, go-live is between day 15 and 30, and 90 days of support follow.',
+      text: 'In the Shopify Launch Sprint, our [Shopify migration service](/shopify-migration-sprint), the Custom AI System builds the data side into the store from day one: product data, structured data and an automatic GEO layer, in a store ready for AI agents. Every new product is born with schema and data. A migration is also the riskiest moment for SEO, so the redirects come first: see our [guide to migrating to Shopify](/shopify-migration). The Sprint takes 14 days, go-live is between day 15 and 30, and 90 days of support follow. For the ongoing work after launch, there is our [Shopify SEO agency](/shopify-seo-agency).',
     },
     {
       type: 'paragraph',
@@ -263,6 +273,16 @@ const article: Article = {
     {
       type: 'paragraph',
       text: '**In gran parte sì: sono nomi diversi dello stesso lavoro, far usare i tuoi contenuti dalle risposte AI.** GEO (generative engine optimization) è il nome più usato per gli assistenti AI in generale. AEO (answer engine optimization) è l’etichetta più vecchia per vincere il riquadro della risposta, e “AI SEO” è la versione generica di entrambe. Per uno store l’etichetta non cambia nulla, perché le attività qui sotto sono le stesse. Noi diciamo GEO, e quando una ricerca dice AEO o AI SEO intendiamo la stessa lista.',
+    },
+    {
+      type: 'table',
+      headers: ['', 'SEO', 'GEO', 'AEO'],
+      rows: [
+        ['Dove compari', 'Risultati di Google e AI Overviews', 'ChatGPT, Perplexity, Copilot e altri assistenti', 'Box delle risposte, snippet in evidenza e risposte vocali'],
+        ['Cosa ottieni', 'Un clic verso la tua pagina', 'Una menzione o un link dentro la risposta', 'L’unica risposta mostrata alla persona'],
+        ['Su cosa lavori', 'Indicizzazione, contenuti, link, velocità', 'Dati prodotto, schema, feed, menzioni su altri siti', 'Risposte brevi e dirette, FAQ, titoli chiari'],
+        ['Come controlli', 'Search Console', 'Una lista mensile di prompt', 'Search Console e la pagina dei risultati a mano'],
+      ],
     },
     { type: 'h2', text: 'La GEO sostituisce la SEO? La SEO è morta?' },
     {
@@ -379,7 +399,7 @@ const article: Article = {
     { type: 'h2', text: 'Come costruiamo entrambe in uno store Shopify?' },
     {
       type: 'paragraph',
-      text: 'Nello Shopify Launch Sprint, il nostro [servizio di migrazione a Shopify](/it/sprint-migrazione-shopify), il Custom AI System costruisce la parte di dati nello store fin dal primo giorno: dati prodotto, dati strutturati e un livello GEO automatico, in uno store pronto per gli agenti AI. Ogni nuovo prodotto nasce con schema e dati. Una migrazione è anche il momento più rischioso per la SEO, quindi i redirect vengono prima: vedi la nostra [guida alla migrazione a Shopify](/it/migrazione-shopify). Lo Sprint dura 14 giorni, il go-live è tra il giorno 15 e il 30, e seguono 90 giorni di supporto.',
+      text: 'Nello Shopify Launch Sprint, il nostro [servizio di migrazione a Shopify](/it/sprint-migrazione-shopify), il Custom AI System costruisce la parte di dati nello store fin dal primo giorno: dati prodotto, dati strutturati e un livello GEO automatico, in uno store pronto per gli agenti AI. Ogni nuovo prodotto nasce con schema e dati. Una migrazione è anche il momento più rischioso per la SEO, quindi i redirect vengono prima: vedi la nostra [guida alla migrazione a Shopify](/it/migrazione-shopify). Lo Sprint dura 14 giorni, il go-live è tra il giorno 15 e il 30, e seguono 90 giorni di supporto. Per il lavoro continuo dopo il lancio c’è la nostra [agenzia SEO per Shopify](/it/agenzia-seo-shopify).',
     },
     {
       type: 'paragraph',

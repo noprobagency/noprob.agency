@@ -4,6 +4,20 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.219.0 (17 Nov 2026)
+
+- **SEO, articles in striking distance** (Francesca, package B of `SEO/data/strategia-2026-11-17.md`, from Search Console 28 days): 12 articles reworked in EN and IT, written by Fable and Sonnet subagents, humanizer pass, reviewer pass.
+  - Shopify Plus migration and Shopify Plus split by intent: the migration article keeps the migration queries (new checklist, services section, 2 FAQ); Shopify Plus becomes pricing, Plus vs Advanced and when it pays off.
+  - Magento to Shopify: cost section, Magento 2 and Adobe Commerce, services H2, 2 FAQ; Adobe lifecycle and B2B sources added to `docs/dati-verificati.md`.
+  - Shopify AI agent: definition first, cost section, 3 FAQ, link to the AI agents landing.
+  - Migration checklist: title and H1 on "Shopify migration checklist", checklist at a glance, FAQ.
+  - Migration agency: "experts" in description and H2, how to vet an agency's SEO track record, FAQ.
+  - GEO vs SEO: SEO, GEO and AEO table. Shopify CRO: fashion and beauty section and FAQ.
+  - Internal links to `/shopify-seo-agency`, `/shopify-development`, `/ai-agents-for-ecommerce`, `/blog/shopify-plus-migration` and `/it/migrazione-shopify`; `llms.txt` titles updated.
+  - SEO titles kept within 48 characters (the template adds the brand).
+  - 11 internal links to the three new articles (Shopify vs Magento, hire a Shopify expert, Shopify data migration), from 8 articles, the migration guide and the development FAQ.
+  - `SEO/calendario.md`: items 60 and 61 done (PR #284), 62 dropped, new items 68 to 70.
+
 ### Changelog v1.218.0 (17 Nov 2026)
 
 - **SEO package C, three new articles** (strategy of 17 Nov 2026, C1-C3), IT and EN in one file each, written in Antonio's voice, humanizer pass, reviewed until pass. `/blog/shopify-vs-magento` (IT `/it/blog/shopify-o-magento`): the comparison decided on what does not map one to one (product types, store views, extensions, B2B), Adobe's support dates for every 2.4 version, the stack a merchant runs, Shopify Plus vs Adobe Commerce, when to stay on Magento; no license figure for Adobe Commerce. `/blog/hire-shopify-expert` (IT `/it/blog/esperto-shopify`): freelancer, agency or dedicated team, our public prices as a yardstick, eight tests, a one-week trial task, what goes in writing, links to home, about, development, SEO agency and data team. `/blog/shopify-data-migration` (IT `/it/blog/migrazione-dati-shopify`): what moves by CSV, app or API, the official import order, passwords and gift cards, and the reconciliation table behind the Data Migration Report. Dotted covers, `data/articles/index.ts`, clusters (two in "Migrate to Shopify", one in "Shopify guides"), table and cluster tests, `llms.txt`. `docs/dati-verificati.md`: new sections "Migrazione dei dati a Shopify" and "Shopify vs Magento" with the official Shopify and Adobe pages read on 17 Nov 2026 (Francesca).

@@ -5,34 +5,34 @@ const article: Article = {
   slugIt: 'migrazione-magento-shopify',
   title: 'Magento to Shopify Migration: Where Magento Does Not Map One to One',
   titleIt: 'Migrazione Magento Shopify: dove Magento non si traduce uno a uno',
-  seoTitle: 'Magento to Shopify Migration: What Changes',
-  seoTitleIt: 'Migrazione da Magento a Shopify: cosa cambia',
+  seoTitle: 'Magento to Shopify Migration: Steps and Cost',
+  seoTitleIt: 'Migrazione da Magento a Shopify: passi e costi',
   seoDescription:
-    'Magento to Shopify: how product types, store views, B2B, extensions and .html URLs map across, Shopify or Plus, and a 14-day Sprint at a public price.',
+    'Migrate from Magento to Shopify: how product types, store views, B2B, extensions and .html URLs map across, what it costs and how a 14-day Sprint runs it.',
   seoDescriptionIt:
-    'Da Magento a Shopify: come passano tipi di prodotto, store view, B2B, estensioni e URL .html, Shopify o Plus, e uno Sprint di 14 giorni a prezzo pubblico.',
+    'Migrare da Magento a Shopify: come passano tipi di prodotto, store view, B2B, estensioni e URL .html, quanto costa e come lo fa uno Sprint di 14 giorni.',
   excerpt:
     'A Magento to Shopify migration is decided where Magento does not map one to one: product types, store views, customer groups, extensions and URL rewrites. The redirect map, the extension inventory and the Sprint calendar.',
   excerptIt:
     'Una migrazione da Magento a Shopify si decide dove Magento non si traduce uno a uno: tipi di prodotto, store view, gruppi clienti, estensioni e URL rewrite. Con la mappa dei redirect, l’inventario delle estensioni e il calendario dello Sprint.',
   ledeEn:
-    'Moving from Magento 2 or Adobe Commerce to Shopify is mostly a translation job. This article sorts what translates from what does not and shows the method we use.',
+    'When you migrate from Magento to Shopify, most of the work is translation. This article sorts what translates from what does not on Magento 2 and Adobe Commerce, then gives the cost and the calendar we work with.',
   ledeIt:
-    'Passare da Magento 2 o Adobe Commerce a Shopify è soprattutto un lavoro di traduzione. Qui separiamo ciò che si traduce da ciò che no e spieghiamo il metodo con cui lo facciamo.',
+    'Migrare da Magento a Shopify è soprattutto un lavoro di traduzione. Qui separiamo ciò che si traduce da ciò che no su Magento 2 e Adobe Commerce, poi diamo i costi e il calendario con cui lavoriamo.',
   image: '/images/blog/magento-to-shopify-migration-cover.png',
   imageAlt: 'Copertina astratta, sfondo menta, con una dissolvenza radiale di puntini più grandi ai bordi',
   imageAltEn: 'Abstract cover, mint background with a radial fade of dots growing toward the edges',
   articleType: 'BlogPosting',
   date: '2026-10-23',
   datePublishedIso: '2026-10-23T13:40:00+01:00',
-  dateModifiedIso: '2026-11-09T10:30:00+00:00',
-  wordCount: 2850,
-  readingTimeMinutes: 10,
+  dateModifiedIso: '2026-11-17T12:00:00+00:00',
+  wordCount: 3530,
+  readingTimeMinutes: 12,
   articleSection: 'Shopify migration',
   keywordsEn:
-    'migrate from magento to shopify, magento to shopify migration, migrating from magento to shopify, adobe commerce to shopify, magento to shopify plus, magento 2 to shopify, magento 1 to shopify, magento to shopify product migration',
+    'migrate from magento to shopify, magento to shopify migration, migrating from magento to shopify, adobe commerce to shopify, magento to shopify plus, magento 2 to shopify, magento 1 to shopify, magento to shopify product migration, magento to shopify migration service, magento to shopify migration cost',
   keywordsIt:
-    'migrazione magento shopify, da magento a shopify, migrare da magento a shopify, adobe commerce a shopify, magento 2 shopify, da magento a shopify plus, magento 1 shopify, importare prodotti da magento a shopify',
+    'migrazione magento shopify, da magento a shopify, migrare da magento a shopify, adobe commerce a shopify, magento 2 shopify, da magento a shopify plus, magento 1 shopify, importare prodotti da magento a shopify, costo migrazione magento shopify, servizio migrazione magento shopify',
   faqEn: [
     {
       question: 'Will I lose my Google rankings migrating from Magento to Shopify?',
@@ -75,9 +75,19 @@ const article: Article = {
         'Yes, with the same method as Magento 2: export the data, clean it, load products, then customers, then orders, inventory the modules and write the redirect map. Adobe ended support for Magento 1 on 30 June 2020.',
     },
     {
+      question: 'How much does it cost to migrate from Magento to Shopify?',
+      answer:
+        'With the Shopify Launch Sprint the migration costs €5,800 under €2M in revenue, €8,800 from €2M to €20M and €12,800 above €20M, VAT excluded, in 4 installments. The Shopify plan is billed separately by Shopify, which lists Shopify Plus from €2,100 a month and the standard plans below that. Custom modules, store views and B2B rules are what make the work grow.',
+    },
+    {
       question: 'How long does a Magento to Shopify migration take?',
       answer:
         'It depends on store views, custom modules, B2B rules, ERP connections and catalog data quality. With the Shopify Launch Sprint the store is ready on day 14 and go-live falls between day 15 and 30, followed by 90 days of support.',
+    },
+    {
+      question: 'Can you migrate from Shopify to Magento?',
+      answer:
+        'Yes, a store can migrate from Shopify to Magento, and it is the same job in the other direction: data, storefront, integrations and redirects. It pays off when custom B2B logic tied to an ERP is your edge, or when your websites carry genuinely different catalogs. You also take back the patches, hosting and upgrades that Shopify handles for you.',
     },
   ],
   faqIt: [
@@ -122,9 +132,19 @@ const article: Article = {
         'Sì, con lo stesso metodo di Magento 2: esporti i dati, li pulisci, carichi prodotti, poi clienti, poi ordini, fai l’inventario dei moduli e scrivi la mappa dei redirect. Adobe ha chiuso il supporto a Magento 1 il 30 giugno 2020.',
     },
     {
+      question: 'Quanto costa migrare da Magento a Shopify?',
+      answer:
+        'Con lo Shopify Launch Sprint la migrazione costa €5.800 sotto i €2M di fatturato, €8.800 tra €2M e €20M e €12.800 oltre i €20M, IVA esclusa, in 4 rate. Il piano Shopify si paga a parte: Shopify indica Shopify Plus da €2.100 al mese e i piani standard sotto quella cifra. Il lavoro cresce con moduli personalizzati, store view e regole B2B.',
+    },
+    {
       question: 'Quanto dura una migrazione da Magento a Shopify?',
       answer:
         'Dipende da store view, moduli personalizzati, regole B2B, collegamenti al gestionale e qualità dei dati di catalogo. Con lo Shopify Launch Sprint lo store è pronto al giorno 14 e il go-live cade tra il giorno 15 e il 30, seguito da 90 giorni di supporto.',
+    },
+    {
+      question: 'Si può migrare da Shopify a Magento?',
+      answer:
+        'Sì, uno store può migrare da Shopify a Magento, ed è lo stesso lavoro nell’altra direzione: dati, vetrina, integrazioni e redirect. Conviene quando la logica B2B su misura legata a un gestionale è il tuo vantaggio, o quando i tuoi website hanno cataloghi davvero diversi. Ti riprendi anche patch, hosting e aggiornamenti, che su Shopify non sono a tuo carico.',
     },
   ],
   content: [
@@ -160,7 +180,7 @@ const article: Article = {
     { type: 'h2', text: 'When is staying on Magento the better call?' },
     {
       type: 'paragraph',
-      text: 'Staying on Magento is the better call when the logic in your custom modules is your competitive edge and rebuilding it would cost more than the maintenance you would save: deep B2B pricing and approval rules tied to an ERP, or websites with genuinely different catalogs. Shopify can reach much of this with B2B, Markets, Shopify Functions and apps, but you rebuild that logic on the Shopify side.',
+      text: 'Staying on Magento is the better call when the logic in your custom modules is your competitive edge and rebuilding it would cost more than the maintenance you would save: deep B2B pricing and approval rules tied to an ERP, or websites with genuinely different catalogs. Shopify can reach much of this with B2B, Markets, Shopify Functions and apps, but you rebuild that logic on the Shopify side. The same two cases explain most moves in the other direction, from Shopify to Magento. For the full decision, with Adobe’s support dates for every 2.4 version, read [Shopify vs Magento](/blog/shopify-vs-magento).',
     },
     { type: 'h2', text: 'How do Magento product types map to Shopify?' },
     {
@@ -199,11 +219,21 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Two things follow. Historical orders are not on the CSV route, so a store that needs them plans for an app or the API. And an app still needs checking: Shopify’s guide says to validate the data mappings before the run and test the output. On Magento we check configurable products, attribute sets and store view content first, because those are the structures that do not map one to one.',
+      text: 'Two things follow. Historical orders are not on the CSV route, so a store that needs them plans for an app or the API. And an app still needs checking: Shopify’s guide says to validate the data mappings before the run and test the output. On Magento we check configurable products, attribute sets and store view content first, because those are the structures that do not map one to one. The reconciliation step after the import is in [Magento to Shopify data migration](/blog/shopify-data-migration).',
+    },
+    { type: 'h3', text: 'Magento 2 and Adobe Commerce' },
+    {
+      type: 'paragraph',
+      text: '**From Magento 2, Open Source or Adobe Commerce, the migration to Shopify follows the same steps, and two things set its size: how much B2B you use and, on Adobe Commerce, how close your release is to the end of support.** Adobe Commerce adds B2B features on top of the core: company accounts, shared catalogs with prices per company, negotiable quotes, requisition lists and purchase order approvals ([Adobe’s B2B documentation](https://experienceleague.adobe.com/en/docs/commerce-admin/b2b/introduction)). Each one you use gets a line in the inventory, next to the Shopify B2B feature, app or code that takes over its job.',
     },
     {
       type: 'paragraph',
-      text: 'Still on Magento 1? The destination and the method are the same. Adobe [ended support for Magento 1 on 30 June 2020](https://www.helpnetsecurity.com/2020/06/29/magento-1-eol/) and warned that stores still running it take on more responsibility for security and PCI compliance. Export the data, clean it, then load products, customers and orders in that order; the module inventory and the redirect map below apply as they are.',
+      text: 'The release you run decides the timing. Adobe gives each Adobe Commerce version three years of standard support from its release date ([lifecycle policy](https://experienceleague.adobe.com/en/docs/commerce-operations/release/planning/lifecycle-policy)), and its [versions page](https://experienceleague.adobe.com/en/docs/commerce-operations/release/versions) shows that regular support for the 2.4.6 line ended on 11 August 2026 and that the 2.4.7 line ends on 31 May 2027. Our rule: if a Magento upgrade is due anyway, get the migration priced before you pay for the upgrade.',
+    },
+    { type: 'h3', text: 'Magento 1' },
+    {
+      type: 'paragraph',
+      text: '**From Magento 1 the destination and the method are the same as from any later version.** Adobe [ended support for Magento 1 on 30 June 2020](https://www.helpnetsecurity.com/2020/06/29/magento-1-eol/) and warned that stores still running it take on more responsibility for security and PCI compliance. Export the data, clean it, then load products, customers and orders in that order; the module inventory and the redirect map below apply as they are.',
     },
     { type: 'h2', text: 'What happens to store views, websites and customer groups?' },
     {
@@ -276,6 +306,41 @@ const article: Article = {
       type: 'paragraph',
       text: 'Our opinion: write the requirement list before you ask for any quote, and check plan prices on Shopify’s site, because they change. The Sprint price is public, from €5,800 excl. VAT in 4 installments and set by your revenue tier: see the [Sprint page](/shopify-migration-sprint).',
     },
+    { type: 'h2', text: 'How much does a Magento to Shopify migration cost?' },
+    {
+      type: 'paragraph',
+      text: '**A Magento to Shopify migration with the Shopify Launch Sprint costs €5,800, €8,800 or €12,800 excluding VAT, by revenue tier, in 4 installments.** The price is public and you know it before the first conversation.',
+    },
+    {
+      type: 'table',
+      caption: 'Shopify Launch Sprint price by revenue tier, VAT excluded',
+      headers: ['Annual revenue', 'Sprint price', 'Payment'],
+      rows: [
+        ['Under €2M', '€5,800', '4 installments'],
+        ['From €2M to €20M', '€8,800', '4 installments'],
+        ['Above €20M', '€12,800', '4 installments'],
+      ],
+    },
+    {
+      type: 'paragraph',
+      text: 'The Shopify plan is a second line, paid to Shopify. On annual billing [Shopify’s pricing page](https://www.shopify.com/pricing) lists Basic at €19, Grow at €56 and Advanced at €289 a month, and Shopify Plus from €2,100 a month. Prices vary by country, so check the page for yours. Paid apps are a third line, billed by each vendor.',
+    },
+    {
+      type: 'paragraph',
+      text: 'Three things make the work grow on Magento:',
+    },
+    {
+      type: 'list',
+      items: [
+        '**Custom modules:** every module with no native feature or app behind it is code to write and test.',
+        '**Store views and websites:** each one brings its own content, its own rows in the redirect map and a market or a store to configure.',
+        '**B2B:** customer groups, tier prices and company accounts are rebuilt as companies and catalogs in Shopify B2B, and they can move you up a plan.',
+      ],
+    },
+    {
+      type: 'paragraph',
+      text: 'This is why the inventory comes before the signature: you read what is rebuilt, what becomes an app and what is retired, then you decide. For how quotes are put together on any platform, and the lines some of them leave out, read [what a Shopify migration costs](/blog/shopify-migration-cost).',
+    },
     { type: 'h2', text: 'How long does a Magento to Shopify migration take?' },
     {
       type: 'paragraph',
@@ -310,10 +375,23 @@ const article: Article = {
         'Import products, then customers, then orders, place test orders, check tracking and only then switch the domain.',
       ],
     },
-    { type: 'h2', text: 'How do we run a Magento to Shopify migration?' },
+    { type: 'h2', text: 'Magento to Shopify migration services: how we run it in 14 days' },
     {
       type: 'paragraph',
-      text: '**We run a Magento to Shopify migration with the process of every Shopify Launch Sprint: inventory first, decisions in writing, the new store built while Magento keeps selling, a tested redirect map and a fixed go-live date.** Antonio brings more than 7 years of eCommerce projects and several migrations with 0 minutes offline.',
+      text: '**Our Magento to Shopify migration service is the Shopify Launch Sprint: store ready on day 14, go-live between day 15 and 30, then 90 days of support, at a public price and with 4 written guarantees.** The order of work is the same on every store: inventory first, decisions in writing, the new store built while Magento keeps selling, a tested redirect map and a fixed go-live date. Antonio brings more than 7 years of eCommerce projects and several migrations with 0 minutes offline.',
+    },
+    {
+      type: 'paragraph',
+      text: 'The four guarantees are one page of the contract:',
+    },
+    {
+      type: 'list',
+      items: [
+        'Store ready on day 14 or we refund the first installment.',
+        'Organic traffic below the baseline 90 days after go-live? We work for free until it comes back.',
+        'Store offline at launch because of us? We pay one installment.',
+        'Checkout converting less than before at 90 days? We optimize it for free until it beats it.',
+      ],
     },
     {
       type: 'paragraph',
@@ -364,10 +442,20 @@ const article: Article = {
       type: 'paragraph',
       text: '**Yes, with the same method as Magento 2: export the data, clean it, load products, then customers, then orders, inventory the modules and write the redirect map.** Adobe ended support for Magento 1 on 30 June 2020.',
     },
+    { type: 'h3', text: 'How much does it cost to migrate from Magento to Shopify?' },
+    {
+      type: 'paragraph',
+      text: '**With the Shopify Launch Sprint the migration costs €5,800 under €2M in revenue, €8,800 from €2M to €20M and €12,800 above €20M, VAT excluded, in 4 installments.** The Shopify plan is billed separately by Shopify, which lists Shopify Plus from €2,100 a month and the standard plans below that. Custom modules, store views and B2B rules are what make the work grow. The full list of quote lines is in [what a Shopify migration costs](/blog/shopify-migration-cost).',
+    },
     { type: 'h3', text: 'How long does a Magento to Shopify migration take?' },
     {
       type: 'paragraph',
       text: '**It depends on store views, custom modules, B2B rules, ERP connections and catalog data quality.** With the Shopify Launch Sprint the store is ready on day 14 and go-live falls between day 15 and 30, followed by 90 days of support.',
+    },
+    { type: 'h3', text: 'Can you migrate from Shopify to Magento?' },
+    {
+      type: 'paragraph',
+      text: '**Yes, a store can migrate from Shopify to Magento, and it is the same job in the other direction: data, storefront, integrations and redirects.** It pays off when custom B2B logic tied to an ERP is your edge, or when your websites carry genuinely different catalogs. You also take back the patches, hosting and upgrades that Shopify handles for you. The section "When is staying on Magento the better call?" above describes both cases.',
     },
     { type: 'h2', text: 'The two hard parts of leaving Magento: modules and URLs' },
     {
@@ -420,7 +508,7 @@ const article: Article = {
     { type: 'h2', text: 'Quando conviene restare su Magento?' },
     {
       type: 'paragraph',
-      text: 'Conviene restare su Magento quando la logica dei moduli personalizzati è il tuo vantaggio competitivo e rifarla costerebbe più della manutenzione che risparmi: prezzi B2B profondi e regole legate al gestionale, o website con cataloghi davvero diversi. Shopify arriva a gran parte di questo con B2B, Markets, Functions e app, ma quella logica si ricostruisce lato Shopify.',
+      text: 'Conviene restare su Magento quando la logica dei moduli personalizzati è il tuo vantaggio competitivo e rifarla costerebbe più della manutenzione che risparmi: prezzi B2B profondi e regole legate al gestionale, o website con cataloghi davvero diversi. Shopify arriva a gran parte di questo con B2B, Markets, Functions e app, ma quella logica si ricostruisce lato Shopify. Gli stessi due casi spiegano quasi tutti i passaggi al contrario, da Shopify a Magento. Per la decisione completa, con le date di supporto di Adobe per ogni versione 2.4, leggi [Shopify o Magento](/it/blog/shopify-o-magento).',
     },
     { type: 'h2', text: 'Come si traducono i tipi di prodotto di Magento su Shopify?' },
     {
@@ -459,11 +547,21 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Ne seguono due cose. Lo storico ordini non passa dal CSV, quindi chi ne ha bisogno mette in conto un’app o le API. E un’app va comunque controllata: la guida di Shopify dice di validare la mappatura dei dati prima dell’esecuzione e di testare il risultato. Su Magento controlliamo per primi prodotti configurabili, attribute set e contenuti delle store view, perché sono le strutture che non si traducono uno a uno.',
+      text: 'Ne seguono due cose. Lo storico ordini non passa dal CSV, quindi chi ne ha bisogno mette in conto un’app o le API. E un’app va comunque controllata: la guida di Shopify dice di validare la mappatura dei dati prima dell’esecuzione e di testare il risultato. Su Magento controlliamo per primi prodotti configurabili, attribute set e contenuti delle store view, perché sono le strutture che non si traducono uno a uno. Il passaggio di riconciliazione dopo l’import è in [migrazione dati da Magento a Shopify](/it/blog/migrazione-dati-shopify).',
+    },
+    { type: 'h3', text: 'Magento 2 e Adobe Commerce' },
+    {
+      type: 'paragraph',
+      text: '**Da Magento 2, Open Source o Adobe Commerce, la migrazione a Shopify segue gli stessi passi, e due cose ne decidono la misura: quanto B2B usi e, su Adobe Commerce, quanto è vicina la fine del supporto della tua versione.** Adobe Commerce aggiunge al nucleo le funzioni B2B: account aziendali, cataloghi condivisi con prezzi per azienda, preventivi negoziabili, liste di richiesta e approvazione degli ordini d’acquisto ([documentazione B2B di Adobe](https://experienceleague.adobe.com/en/docs/commerce-admin/b2b/introduction)). Ognuna di quelle che usi ha una riga nell’inventario, accanto alla funzione B2B di Shopify, all’app o al codice che ne prende il posto.',
     },
     {
       type: 'paragraph',
-      text: 'Sei ancora su Magento 1? Destinazione e metodo sono gli stessi. Adobe ha [chiuso il supporto a Magento 1 il 30 giugno 2020](https://www.helpnetsecurity.com/2020/06/29/magento-1-eol/) e ha avvertito che chi resta su quella versione si assume più responsabilità su sicurezza e conformità PCI. Esporta i dati, puliscili, poi carica prodotti, clienti e ordini in quest’ordine; l’inventario dei moduli e la mappa dei redirect qui sotto valgono uguali.',
+      text: 'La versione su cui sei decide i tempi. Adobe dà a ogni versione di Adobe Commerce tre anni di supporto standard dalla data di rilascio ([politica sul ciclo di vita](https://experienceleague.adobe.com/en/docs/commerce-operations/release/planning/lifecycle-policy)), e la [pagina delle versioni](https://experienceleague.adobe.com/en/docs/commerce-operations/release/versions) indica che il supporto regolare della linea 2.4.6 è finito l’11 agosto 2026 e che quello della 2.4.7 finisce il 31 maggio 2027. La nostra regola: se un aggiornamento di Magento è comunque in arrivo, fatti dare il prezzo della migrazione prima di pagare l’aggiornamento.',
+    },
+    { type: 'h3', text: 'Magento 1' },
+    {
+      type: 'paragraph',
+      text: '**Da Magento 1 destinazione e metodo sono gli stessi delle versioni successive.** Adobe ha [chiuso il supporto a Magento 1 il 30 giugno 2020](https://www.helpnetsecurity.com/2020/06/29/magento-1-eol/) e ha avvertito che chi resta su quella versione si assume più responsabilità su sicurezza e conformità PCI. Esporta i dati, puliscili, poi carica prodotti, clienti e ordini in quest’ordine; l’inventario dei moduli e la mappa dei redirect qui sotto valgono uguali.',
     },
     { type: 'h2', text: 'Che fine fanno store view, website e gruppi clienti?' },
     {
@@ -536,6 +634,41 @@ const article: Article = {
       type: 'paragraph',
       text: 'La nostra opinione: scrivi i requisiti prima di chiedere un preventivo e controlla i prezzi dei piani sul sito di Shopify, perché cambiano. Il prezzo dello Sprint è pubblico, da €5.800 IVA esclusa in 4 rate, e dipende dal tuo scaglione di fatturato: vedi la [pagina dello Sprint](/it/sprint-migrazione-shopify).',
     },
+    { type: 'h2', text: 'Quanto costa una migrazione da Magento a Shopify?' },
+    {
+      type: 'paragraph',
+      text: '**Una migrazione da Magento a Shopify con lo Shopify Launch Sprint costa €5.800, €8.800 o €12.800 IVA esclusa, in base al fatturato, in 4 rate.** Il prezzo è pubblico e lo conosci prima della prima videochiamata.',
+    },
+    {
+      type: 'table',
+      caption: 'Prezzo dello Shopify Launch Sprint per scaglione di fatturato, IVA esclusa',
+      headers: ['Fatturato annuo', 'Prezzo dello Sprint', 'Pagamento'],
+      rows: [
+        ['Sotto i €2M', '€5.800', '4 rate'],
+        ['Tra €2M e €20M', '€8.800', '4 rate'],
+        ['Oltre i €20M', '€12.800', '4 rate'],
+      ],
+    },
+    {
+      type: 'paragraph',
+      text: 'Il piano Shopify è una seconda voce e si paga a Shopify. Con fatturazione annuale la [pagina prezzi di Shopify](https://www.shopify.com/it/prezzi) indica Basic a €19, Grow a €56 e Advanced a €289 al mese, e Shopify Plus da €2.100 al mese. I prezzi cambiano da paese a paese: controlla la pagina per il tuo. Le app a pagamento sono una terza voce e le fattura ogni fornitore.',
+    },
+    {
+      type: 'paragraph',
+      text: 'Su Magento il lavoro cresce per tre cose:',
+    },
+    {
+      type: 'list',
+      items: [
+        '**Moduli personalizzati:** ogni modulo senza una funzione nativa o un’app che lo sostituisca è codice da scrivere e testare.',
+        '**Store view e website:** ognuno porta i suoi contenuti, le sue righe nella mappa dei redirect e un mercato o uno store da configurare.',
+        '**B2B:** gruppi clienti, prezzi a scaglioni e account aziendali si ricostruiscono come aziende e cataloghi in Shopify B2B, e possono farti salire di piano.',
+      ],
+    },
+    {
+      type: 'paragraph',
+      text: 'Per questo l’inventario viene prima della firma: leggi cosa si ricostruisce, cosa diventa un’app e cosa si dismette, poi decidi tu. Per capire come nasce un preventivo su qualsiasi piattaforma, e le voci che alcuni lasciano fuori, leggi [quanto costa una migrazione a Shopify](/it/blog/costo-migrazione-shopify).',
+    },
     { type: 'h2', text: 'Quanto dura una migrazione da Magento a Shopify?' },
     {
       type: 'paragraph',
@@ -570,10 +703,23 @@ const article: Article = {
         'Importa prima i prodotti, poi i clienti, poi gli ordini, esegui gli ordini di prova, controlla il tracking e solo allora sposta il dominio.',
       ],
     },
-    { type: 'h2', text: 'Come lavoriamo una migrazione da Magento a Shopify?' },
+    { type: 'h2', text: 'Servizio di migrazione da Magento a Shopify: come lo facciamo in 14 giorni' },
     {
       type: 'paragraph',
-      text: 'Lavoriamo una migrazione da Magento a Shopify con il processo di ogni Shopify Launch Sprint: prima l’inventario, le decisioni per iscritto, il nuovo store costruito mentre Magento continua a vendere, una mappa dei redirect testata e una data di go-live fissa. Antonio porta oltre 7 anni di progetti eCommerce e diverse migrazioni con 0 minuti offline.',
+      text: '**Il nostro servizio di migrazione da Magento a Shopify è lo Shopify Launch Sprint: store pronto al giorno 14, go-live tra il giorno 15 e il 30, poi 90 giorni di supporto, a prezzo pubblico e con 4 garanzie scritte.** L’ordine del lavoro è lo stesso su ogni store: prima l’inventario, le decisioni per iscritto, il nuovo store costruito mentre Magento continua a vendere, una mappa dei redirect testata e una data di go-live fissa. Antonio porta oltre 7 anni di progetti eCommerce e diverse migrazioni con 0 minuti offline.',
+    },
+    {
+      type: 'paragraph',
+      text: 'Le quattro garanzie stanno su una pagina del contratto:',
+    },
+    {
+      type: 'list',
+      items: [
+        'Store pronto al giorno 14 o ti rimborsiamo la prima rata.',
+        'Traffico organico sotto la baseline a 90 giorni dal go-live? Lavoriamo gratis finché non torna.',
+        'Store offline al lancio per colpa nostra? Una rata la paghiamo noi.',
+        'Il checkout converte meno di prima a 90 giorni? Lo ottimizziamo gratis finché non supera.',
+      ],
     },
     {
       type: 'paragraph',
@@ -624,10 +770,20 @@ const article: Article = {
       type: 'paragraph',
       text: '**Sì, con lo stesso metodo di Magento 2: esporti i dati, li pulisci, carichi prodotti, poi clienti, poi ordini, fai l’inventario dei moduli e scrivi la mappa dei redirect.** Adobe ha chiuso il supporto a Magento 1 il 30 giugno 2020.',
     },
+    { type: 'h3', text: 'Quanto costa migrare da Magento a Shopify?' },
+    {
+      type: 'paragraph',
+      text: '**Con lo Shopify Launch Sprint la migrazione costa €5.800 sotto i €2M di fatturato, €8.800 tra €2M e €20M e €12.800 oltre i €20M, IVA esclusa, in 4 rate.** Il piano Shopify si paga a parte: Shopify indica Shopify Plus da €2.100 al mese e i piani standard sotto quella cifra. Il lavoro cresce con moduli personalizzati, store view e regole B2B. L’elenco completo delle voci di un preventivo è in [quanto costa una migrazione a Shopify](/it/blog/costo-migrazione-shopify).',
+    },
     { type: 'h3', text: 'Quanto dura una migrazione da Magento a Shopify?' },
     {
       type: 'paragraph',
       text: '**Dipende da store view, moduli personalizzati, regole B2B, collegamenti al gestionale e qualità dei dati di catalogo.** Con lo Shopify Launch Sprint lo store è pronto al giorno 14 e il go-live cade tra il giorno 15 e il 30, seguito da 90 giorni di supporto.',
+    },
+    { type: 'h3', text: 'Si può migrare da Shopify a Magento?' },
+    {
+      type: 'paragraph',
+      text: '**Sì, uno store può migrare da Shopify a Magento, ed è lo stesso lavoro nell’altra direzione: dati, vetrina, integrazioni e redirect.** Conviene quando la logica B2B su misura legata a un gestionale è il tuo vantaggio, o quando i tuoi website hanno cataloghi davvero diversi. Ti riprendi anche patch, hosting e aggiornamenti, che su Shopify non sono a tuo carico. I due casi sono descritti sopra, in "Quando conviene restare su Magento?".',
     },
     { type: 'h2', text: 'Le due parti difficili di lasciare Magento: moduli e URL' },
     {

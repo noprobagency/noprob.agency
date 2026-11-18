@@ -198,7 +198,7 @@ const it: MigrazioneCopy = {
       },
       {
         type: 'paragraph',
-        text: 'Shopify documenta le basi nel suo [centro assistenza sulla migrazione](https://help.shopify.com/it/manual/migrating-to-shopify), con le app di importazione e il formato dei file CSV. Leggilo prima di definire il perimetro del progetto.',
+        text: 'Shopify documenta le basi nel suo [centro assistenza sulla migrazione](https://help.shopify.com/it/manual/migrating-to-shopify), con le app di importazione e il formato dei file CSV. Leggilo prima di definire il perimetro del progetto. Per dimostrare che ogni prodotto, cliente e ordine è arrivato, leggi [migrazione dati Shopify](/it/blog/migrazione-dati-shopify).',
       },
       { type: 'h2', text: 'Come si mantiene la SEO e come si impostano i redirect 301?' },
       {
@@ -525,7 +525,7 @@ const en: MigrazioneCopy = {
       },
       {
         type: 'paragraph',
-        text: 'Shopify documents the basics in its [migrating to Shopify help center](https://help.shopify.com/en/manual/migrating-to-shopify), including import apps and the CSV file format. Read it before you scope the project.',
+        text: 'Shopify documents the basics in its [migrating to Shopify help center](https://help.shopify.com/en/manual/migrating-to-shopify), including import apps and the CSV file format. Read it before you scope the project. To prove that every product, customer and order arrived, see [Shopify data migration](/blog/shopify-data-migration).',
       },
       { type: 'h2', text: 'How do you keep your SEO and set up 301 redirects?' },
       {

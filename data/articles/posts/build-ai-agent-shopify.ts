@@ -26,7 +26,7 @@ const article: Article = {
   articleType: "BlogPosting",
   date: "2026-10-29",
   datePublishedIso: "2026-10-29T09:00:00+00:00",
-  dateModifiedIso: "2026-10-29T09:00:00+00:00",
+  dateModifiedIso: "2026-11-17T12:00:00+00:00",
   wordCount: 2600,
   articleSection: "AI agents",
   readingTimeMinutes: 11,
@@ -164,7 +164,7 @@ const article: Article = {
     { type: "h3", text: "A custom agent on Claude or another model" },
     {
       type: "paragraph",
-      text: "You, or a developer, write the instructions, the tools and the checks, and call a model such as Claude, GPT or Gemini through its API. It is worth it when your process is specific: unusual policies, a back office that is not standard, cases with several steps. We build with AI agents on Claude Code every day, and it shapes how we design them: small steps, written limits, tests before anything touches a customer.",
+      text: "You, or a developer, write the instructions, the tools and the checks, and call a model such as Claude, GPT or Gemini through its API. It is worth it when your process is specific: unusual policies, a back office that is not standard, cases with several steps. We build with AI agents on Claude Code every day, and it shapes how we design them: small steps, written limits, tests before anything touches a customer. If you want one built for your store, that is our [AI agents for eCommerce](/ai-agents-for-ecommerce) service.",
     },
     { type: "h3", text: "The Custom AI System" },
     {
@@ -393,7 +393,7 @@ const article: Article = {
     { type: "h3", text: "Un agente su misura con Claude o un altro modello" },
     {
       type: "paragraph",
-      text: "Tu, o uno sviluppatore, scrivi istruzioni, strumenti e controlli e chiami un modello come Claude, GPT o Gemini tramite la sua API. Vale la pena quando il tuo processo è particolare: policy fuori dal comune, un gestionale non standard, casi con più passaggi. Noi lavoriamo ogni giorno con agenti AI costruiti su Claude Code, e questo orienta come li progettiamo: passi piccoli, limiti scritti, test prima che qualcosa tocchi un cliente.",
+      text: "Tu, o uno sviluppatore, scrivi istruzioni, strumenti e controlli e chiami un modello come Claude, GPT o Gemini tramite la sua API. Vale la pena quando il tuo processo è particolare: policy fuori dal comune, un gestionale non standard, casi con più passaggi. Noi lavoriamo ogni giorno con agenti AI costruiti su Claude Code, e questo orienta come li progettiamo: passi piccoli, limiti scritti, test prima che qualcosa tocchi un cliente. Se ne vuoi uno costruito per il tuo store, è il nostro servizio di [agenti AI per eCommerce](/it/agenti-ai-per-ecommerce).",
     },
     { type: "h3", text: "Il Custom AI System" },
     {
