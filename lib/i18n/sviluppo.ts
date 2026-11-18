@@ -319,7 +319,7 @@ const it: SviluppoCopy = {
       {
         question: 'Chi è il mio punto di contatto?',
         answer:
-          'Un solo eCommerce Manager, che guida il team e gestisce tutta la comunicazione. La stessa persona dall’inizio alla fine.',
+          'Un solo eCommerce Manager, che guida il team e gestisce tutta la comunicazione. La stessa persona dall’inizio alla fine. Prima di affidarti a chiunque, fai le [otto prove per un esperto Shopify](/it/blog/esperto-shopify).',
       },
       {
         question: 'Offrite garanzie?',
@@ -578,7 +578,7 @@ const en: SviluppoCopy = {
       {
         question: 'Who is my point of contact?',
         answer:
-          'A single eCommerce Manager, who leads the team and handles all communication. The same person from start to finish.',
+          'A single eCommerce Manager, who leads the team and handles all communication. The same person from start to finish. Before you hire anyone, run the [eight tests for a Shopify expert](/blog/hire-shopify-expert).',
       },
       {
         question: 'Do you offer guarantees?',

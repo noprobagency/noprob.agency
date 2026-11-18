@@ -25,7 +25,7 @@ const article: Article = {
   articleType: 'BlogPosting',
   date: '2026-10-29',
   datePublishedIso: '2026-10-29T09:00:00+00:00',
-  dateModifiedIso: '2026-11-17T09:00:00+00:00',
+  dateModifiedIso: '2026-11-17T12:00:00+00:00',
   wordCount: 2800,
   articleSection: 'Migrate to Shopify',
   readingTimeMinutes: 11,
@@ -288,7 +288,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: '[BigCommerce’s page](https://www.bigcommerce.com/compare/bigcommerce-vs-shopify/) cites a 2023 Forrester study with a 211% ROI within 8 months and a 30% increase in site conversion. [Shopify’s page](https://www.shopify.com/compare/shopify-vs-bigcommerce) says its checkout has a 12% higher conversion rate, from a study completed in April 2023, and a total cost of ownership 31% better, from research commissioned by Shopify on 250 enterprises with revenue of $10 million or more (December 2023 to January 2024). Each is the vendor’s own study. Neither tells you what happens on your store, so I would not build a decision on them.',
+      text: '[BigCommerce’s page](https://www.bigcommerce.com/compare/bigcommerce-vs-shopify/) cites a 2023 Forrester study with a 211% ROI within 8 months and a 30% increase in site conversion. [Shopify’s page](https://www.shopify.com/compare/shopify-vs-bigcommerce) says its checkout has a 12% higher conversion rate, from a study completed in April 2023, and a total cost of ownership 31% better, from research commissioned by Shopify on 250 enterprises with revenue of $10 million or more (December 2023 to January 2024). Each is the vendor’s own study. Neither tells you what happens on your store, so I would not build a decision on them. Shopify publishes the same kind of page against Adobe Commerce; we read it in [Shopify vs Magento](/blog/shopify-vs-magento).',
     },
     { type: 'h2', text: 'When should you stay on BigCommerce?' },
     {
@@ -585,7 +585,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'La [pagina di BigCommerce](https://www.bigcommerce.com/compare/bigcommerce-vs-shopify/) cita uno studio Forrester del 2023 con un ROI del 211% in 8 mesi e un aumento della conversione del sito del 30%. La [pagina di Shopify](https://www.shopify.com/compare/shopify-vs-bigcommerce) dice che il suo checkout ha una conversione più alta del 12%, da uno studio concluso ad aprile 2023, e un costo totale di proprietà migliore del 31%, da una ricerca commissionata da Shopify su 250 imprese con ricavi di almeno 10 milioni di dollari (da dicembre 2023 a gennaio 2024). Ognuno è lo studio del fornitore stesso. Nessuno dei due ti dice cosa succede sul tuo store, quindi non ci costruirei sopra una decisione.',
+      text: 'La [pagina di BigCommerce](https://www.bigcommerce.com/compare/bigcommerce-vs-shopify/) cita uno studio Forrester del 2023 con un ROI del 211% in 8 mesi e un aumento della conversione del sito del 30%. La [pagina di Shopify](https://www.shopify.com/compare/shopify-vs-bigcommerce) dice che il suo checkout ha una conversione più alta del 12%, da uno studio concluso ad aprile 2023, e un costo totale di proprietà migliore del 31%, da una ricerca commissionata da Shopify su 250 imprese con ricavi di almeno 10 milioni di dollari (da dicembre 2023 a gennaio 2024). Ognuno è lo studio del fornitore stesso. Nessuno dei due ti dice cosa succede sul tuo store, quindi non ci costruirei sopra una decisione. Shopify pubblica lo stesso tipo di pagina contro Adobe Commerce; la leggiamo in [Shopify o Magento](/it/blog/shopify-o-magento).',
     },
     { type: 'h2', text: 'Quando conviene restare su BigCommerce?' },
     {

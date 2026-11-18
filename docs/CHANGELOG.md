@@ -15,6 +15,8 @@ old entries, add a new one on top.
   - GEO vs SEO: SEO, GEO and AEO table. Shopify CRO: fashion and beauty section and FAQ.
   - Internal links to `/shopify-seo-agency`, `/shopify-development`, `/ai-agents-for-ecommerce`, `/blog/shopify-plus-migration` and `/it/migrazione-shopify`; `llms.txt` titles updated.
   - SEO titles kept within 48 characters (the template adds the brand).
+  - 11 internal links to the three new articles (Shopify vs Magento, hire a Shopify expert, Shopify data migration), from 8 articles, the migration guide and the development FAQ.
+  - `SEO/calendario.md`: items 60 and 61 done (PR #284), 62 dropped, new items 68 to 70.
 
 ### Changelog v1.218.0 (17 Nov 2026)
 

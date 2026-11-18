@@ -129,7 +129,7 @@ const article: Article = {
     { type: 'h2', text: 'Shopify migration experts: who can migrate your store? Five types of provider' },
     {
       type: 'paragraph',
-      text: '**Five types of provider can migrate a store to Shopify: you with an app, a freelancer, a generalist agency, a Shopify Partner agency and a migration specialist, and each fits a different store.** Shopify’s own [migration guide](https://help.shopify.com/en/manual/migrating-to-shopify) lists five methods: copy and paste, CSV import, a migration app, hiring a Shopify Partner, and a custom build on the Shopify API. The first three you do yourself, and the last two mean hiring people.',
+      text: '**Five types of provider can migrate a store to Shopify: you with an app, a freelancer, a generalist agency, a Shopify Partner agency and a migration specialist, and each fits a different store.** Shopify’s own [migration guide](https://help.shopify.com/en/manual/migrating-to-shopify) lists five methods: copy and paste, CSV import, a migration app, hiring a Shopify Partner, and a custom build on the Shopify API. The first three you do yourself, and the last two mean hiring people. If the job is not a migration but ongoing work on a store that already sells, see [how to hire a Shopify expert](/blog/hire-shopify-expert).',
     },
     { type: 'h3', text: 'DIY with migration apps and tools' },
     {
@@ -360,7 +360,7 @@ const article: Article = {
     { type: 'h2', text: 'Esperti di migrazione Shopify: chi può migrare il tuo store? Cinque tipi di fornitore' },
     {
       type: 'paragraph',
-      text: '**Cinque tipi di fornitore possono migrare uno store su Shopify: tu con un’app, un freelance, un’agenzia generalista, un’agenzia Shopify Partner e uno specialista di migrazioni, e ognuno si adatta a uno store diverso.** La [guida alla migrazione](https://help.shopify.com/en/manual/migrating-to-shopify) di Shopify elenca cinque metodi: copia e incolla, import da CSV, un’app di migrazione, un Shopify Partner, una soluzione su misura con le API di Shopify. Per i primi tre fai tu, per gli ultimi due assumi delle persone.',
+      text: '**Cinque tipi di fornitore possono migrare uno store su Shopify: tu con un’app, un freelance, un’agenzia generalista, un’agenzia Shopify Partner e uno specialista di migrazioni, e ognuno si adatta a uno store diverso.** La [guida alla migrazione](https://help.shopify.com/en/manual/migrating-to-shopify) di Shopify elenca cinque metodi: copia e incolla, import da CSV, un’app di migrazione, un Shopify Partner, una soluzione su misura con le API di Shopify. Per i primi tre fai tu, per gli ultimi due assumi delle persone. Se il lavoro non è una migrazione ma il lavoro continuo su uno store che già vende, leggi [come scegliere un esperto Shopify](/it/blog/esperto-shopify).',
     },
     { type: 'h3', text: 'Fai da te con app e strumenti di migrazione' },
     {

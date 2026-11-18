@@ -25,7 +25,7 @@ const article: Article = {
   articleType: 'BlogPosting',
   date: '2026-10-23',
   datePublishedIso: '2026-10-23T13:40:00+01:00',
-  dateModifiedIso: '2026-11-17T10:30:00+00:00',
+  dateModifiedIso: '2026-11-17T12:00:00+00:00',
   wordCount: 3530,
   readingTimeMinutes: 12,
   articleSection: 'Shopify migration',
@@ -180,7 +180,7 @@ const article: Article = {
     { type: 'h2', text: 'When is staying on Magento the better call?' },
     {
       type: 'paragraph',
-      text: 'Staying on Magento is the better call when the logic in your custom modules is your competitive edge and rebuilding it would cost more than the maintenance you would save: deep B2B pricing and approval rules tied to an ERP, or websites with genuinely different catalogs. Shopify can reach much of this with B2B, Markets, Shopify Functions and apps, but you rebuild that logic on the Shopify side. The same two cases explain most moves in the other direction, from Shopify to Magento.',
+      text: 'Staying on Magento is the better call when the logic in your custom modules is your competitive edge and rebuilding it would cost more than the maintenance you would save: deep B2B pricing and approval rules tied to an ERP, or websites with genuinely different catalogs. Shopify can reach much of this with B2B, Markets, Shopify Functions and apps, but you rebuild that logic on the Shopify side. The same two cases explain most moves in the other direction, from Shopify to Magento. For the full decision, with Adobe’s support dates for every 2.4 version, read [Shopify vs Magento](/blog/shopify-vs-magento).',
     },
     { type: 'h2', text: 'How do Magento product types map to Shopify?' },
     {
@@ -219,7 +219,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Two things follow. Historical orders are not on the CSV route, so a store that needs them plans for an app or the API. And an app still needs checking: Shopify’s guide says to validate the data mappings before the run and test the output. On Magento we check configurable products, attribute sets and store view content first, because those are the structures that do not map one to one.',
+      text: 'Two things follow. Historical orders are not on the CSV route, so a store that needs them plans for an app or the API. And an app still needs checking: Shopify’s guide says to validate the data mappings before the run and test the output. On Magento we check configurable products, attribute sets and store view content first, because those are the structures that do not map one to one. The reconciliation step after the import is in [Magento to Shopify data migration](/blog/shopify-data-migration).',
     },
     { type: 'h3', text: 'Magento 2 and Adobe Commerce' },
     {
@@ -508,7 +508,7 @@ const article: Article = {
     { type: 'h2', text: 'Quando conviene restare su Magento?' },
     {
       type: 'paragraph',
-      text: 'Conviene restare su Magento quando la logica dei moduli personalizzati è il tuo vantaggio competitivo e rifarla costerebbe più della manutenzione che risparmi: prezzi B2B profondi e regole legate al gestionale, o website con cataloghi davvero diversi. Shopify arriva a gran parte di questo con B2B, Markets, Functions e app, ma quella logica si ricostruisce lato Shopify. Gli stessi due casi spiegano quasi tutti i passaggi al contrario, da Shopify a Magento.',
+      text: 'Conviene restare su Magento quando la logica dei moduli personalizzati è il tuo vantaggio competitivo e rifarla costerebbe più della manutenzione che risparmi: prezzi B2B profondi e regole legate al gestionale, o website con cataloghi davvero diversi. Shopify arriva a gran parte di questo con B2B, Markets, Functions e app, ma quella logica si ricostruisce lato Shopify. Gli stessi due casi spiegano quasi tutti i passaggi al contrario, da Shopify a Magento. Per la decisione completa, con le date di supporto di Adobe per ogni versione 2.4, leggi [Shopify o Magento](/it/blog/shopify-o-magento).',
     },
     { type: 'h2', text: 'Come si traducono i tipi di prodotto di Magento su Shopify?' },
     {
@@ -547,7 +547,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Ne seguono due cose. Lo storico ordini non passa dal CSV, quindi chi ne ha bisogno mette in conto un’app o le API. E un’app va comunque controllata: la guida di Shopify dice di validare la mappatura dei dati prima dell’esecuzione e di testare il risultato. Su Magento controlliamo per primi prodotti configurabili, attribute set e contenuti delle store view, perché sono le strutture che non si traducono uno a uno.',
+      text: 'Ne seguono due cose. Lo storico ordini non passa dal CSV, quindi chi ne ha bisogno mette in conto un’app o le API. E un’app va comunque controllata: la guida di Shopify dice di validare la mappatura dei dati prima dell’esecuzione e di testare il risultato. Su Magento controlliamo per primi prodotti configurabili, attribute set e contenuti delle store view, perché sono le strutture che non si traducono uno a uno. Il passaggio di riconciliazione dopo l’import è in [migrazione dati da Magento a Shopify](/it/blog/migrazione-dati-shopify).',
     },
     { type: 'h3', text: 'Magento 2 e Adobe Commerce' },
     {

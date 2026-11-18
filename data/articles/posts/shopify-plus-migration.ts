@@ -171,7 +171,7 @@ const article: Article = {
     { type: 'h2', text: 'Shopify Plus migration checklist' },
     {
       type: 'paragraph',
-      text: '**A Shopify Plus migration checklist follows Shopify’s own import order: products, customers, historical orders, gift cards, B2B, then other data.** The order comes from the [Plus launch checklist](https://help.shopify.com/en/manual/intro-to-shopify/plus-launch-checklist). Here it is, with the details that save you a bad launch week.',
+      text: '**A Shopify Plus migration checklist follows Shopify’s own import order: products, customers, historical orders, gift cards, B2B, then other data.** The order comes from the [Plus launch checklist](https://help.shopify.com/en/manual/intro-to-shopify/plus-launch-checklist). The import order and the reconciliation table are in [Shopify data migration](/blog/shopify-data-migration). Here it is, with the details that save you a bad launch week.',
     },
     {
       type: 'list',
@@ -477,7 +477,7 @@ const article: Article = {
     { type: 'h2', text: 'Checklist per la migrazione a Shopify Plus' },
     {
       type: 'paragraph',
-      text: '**La checklist di una migrazione a Shopify Plus segue l’ordine di import indicato da Shopify: prodotti, clienti, ordini storici, gift card, B2B, poi gli altri dati.** L’ordine viene dalla [checklist di lancio Plus](https://help.shopify.com/it/manual/intro-to-shopify/plus-launch-checklist). Eccolo, con i dettagli che ti risparmiano una brutta settimana di lancio.',
+      text: '**La checklist di una migrazione a Shopify Plus segue l’ordine di import indicato da Shopify: prodotti, clienti, ordini storici, gift card, B2B, poi gli altri dati.** L’ordine viene dalla [checklist di lancio Plus](https://help.shopify.com/it/manual/intro-to-shopify/plus-launch-checklist). L’ordine di import e la tabella di riconciliazione sono in [migrazione dati Shopify](/it/blog/migrazione-dati-shopify). Eccolo, con i dettagli che ti risparmiano una brutta settimana di lancio.',
     },
     {
       type: 'list',
