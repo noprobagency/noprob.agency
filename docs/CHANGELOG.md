@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.220.0 (18 Nov 2026)
+
+- Cold email: no newsletter-style opt-out line (Antonio, 18/11). Italy v3 first email ends with "Se non è il momento, dimmelo pure 🙂" before the signature instead of the PS; the US footer keeps only the postal address (CAN-SPAM) and "if you'd rather not hear from me, just say so", without the company name in capitals. A "no" is still caught and suppressed as before. Copy versions unchanged, so threads in progress keep their follow-ups.
+
 ### Changelog v1.219.0 (17 Nov 2026)
 
 - **SEO, articles in striking distance** (Francesca, package B of `SEO/data/strategia-2026-11-17.md`, from Search Console 28 days): 12 articles reworked in EN and IT, written by Fable and Sonnet subagents, humanizer pass, reviewer pass.

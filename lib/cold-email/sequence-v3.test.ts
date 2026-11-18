@@ -17,7 +17,7 @@ describe('Italy v3 first email', () => {
     expect(subject).toBe('Acme, due cose sulle vendite')
     expect(body.startsWith('Ciao Sara 🙂\nPiacere Antonio!\n\nStavo girando su Acme ed ho notato X.')).toBe(true)
     expect(body).toContain('Antonio\neCommerce manager da 7 anni')
-    expect(body.endsWith('PS se non vi interessa, rispondi pure "no" e non ti scrivo più!')).toBe(true)
+    expect(body.endsWith('Se non è il momento, dimmelo pure 🙂\n\nAntonio\neCommerce manager da 7 anni')).toBe(true)
     expect(body).not.toMatch(/https?:/)
     expect(renderV3First({ brand: 'Acme', firstName: null }, 'x').body.startsWith('Ciao 🙂')).toBe(true)
   })
