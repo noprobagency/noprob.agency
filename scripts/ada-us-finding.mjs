@@ -10,7 +10,7 @@
 import { execFileSync } from 'node:child_process'
 import { existsSync, readFileSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
-import { fetchHome, freshRun, htmlSignals, pagespeed, pickFinding, stableLcp } from '../lib/cold/us-finding.mjs'
+import { fetchHome, freshRun, htmlSignals, networkDown, pagespeed, pickFinding, stableLcp } from '../lib/cold/us-finding.mjs'
 import { detectPlatform } from '../lib/cold/detect-platform.mjs'
 import { isSuppressed, parseSuppressed } from '../lib/cold/sweep.mjs'
 
@@ -52,15 +52,25 @@ async function each(items, n, fn) {
 
 // Phase 1: homepage, platform, opt-out and a first PageSpeed run on the final URL (after redirects)
 const work = []
+const unreachable = []
 await each(leads, 4, async (lead) => {
   const domain = domainOf(lead)
   if (!domain || (lead.findingAt && !force)) { stats.skipped++; return }
   if (isSuppressed({ email: lead.email, website: `https://${domain}` }, suppressed)) { Object.assign(lead, { finding: null, findingRule: 'suppressed', findingAt: new Date().toISOString() }); stats.suppressed++; return }
   const home = await fetchHome(domain)
-  if (!home) { Object.assign(lead, { finding: null, findingRule: 'unreachable', findingAt: new Date().toISOString() }); stats.unreachable++; return }
+  if (!home) { unreachable.push(lead); return }
   if (detectPlatform(home.html, {}).platform === 'shopify') { Object.assign(lead, { finding: null, findingRule: 'shopify', findingAt: new Date().toISOString() }); stats.shopify++; return }
   work.push({ lead, home, first: await pagespeed(home.url, KEY), at: Date.now() })
 })
+
+// Most homepages failing together means our network was down, not the stores (19/11: 77 of 77):
+// write nothing, so the next run measures them again.
+if (networkDown(work.length + stats.shopify, unreachable.length)) {
+  console.error(`Network down? ${unreachable.length} homepages unreachable, ${work.length + stats.shopify} reached: nothing written, run again later.`)
+  process.exit(2)
+}
+for (const lead of unreachable) Object.assign(lead, { finding: null, findingRule: 'unreachable', findingAt: new Date().toISOString() })
+stats.unreachable = unreachable.length
 
 // Phase 2: PageSpeed LCP swings, so a slow first run counts only if a fresh second run,
 // at least 60 s later and with a different fetchTime (not Google's cache), is slow too.
