@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.221.0 (21 Nov 2026)
+
+- Ada US finding: when most homepages fail at once (at least 5), the script writes nothing and exits with code 2, so a network fault on our side no longer marks a whole batch "unreachable" (19/11: 77 of 77, recomputed by hand on 21/11, 71 with a finding).
+
 ### Changelog v1.220.0 (18 Nov 2026)
 
 - Cold email: no newsletter-style opt-out line (Antonio, 18/11). Italy v3 first email ends with "Se non è il momento, dimmelo pure 🙂" before the signature instead of the PS; the US footer keeps only the postal address (CAN-SPAM) and "if you'd rather not hear from me, just say so", without the company name in capitals. A "no" is still caught and suppressed as before. Copy versions unchanged, so threads in progress keep their follow-ups.

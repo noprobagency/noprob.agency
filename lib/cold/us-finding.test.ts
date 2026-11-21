@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { freshRun, htmlSignals, pickFinding, stableLcp } from './us-finding.mjs'
+import { freshRun, htmlSignals, networkDown, pickFinding, stableLcp } from './us-finding.mjs'
 
 describe('pickFinding', () => {
   it('uses a slow mobile LCP first, rounded down', () => {
@@ -52,5 +52,14 @@ describe('freshRun', () => {
     expect(freshRun({ fetchTime: '2026-11-15T19:00:00Z' }, { fetchTime: '2026-11-15T19:00:00Z' })).toBe(false)
     expect(freshRun({ fetchTime: '2026-11-15T19:00:00Z' }, { fetchTime: '2026-11-15T19:01:10Z' })).toBe(true)
     expect(freshRun({ fetchTime: 'x' }, null)).toBe(false)
+  })
+})
+
+describe('networkDown', () => {
+  it('stops the run when most homepages fail together', () => {
+    expect(networkDown(0, 77)).toBe(true)
+    expect(networkDown(10, 11)).toBe(true)
+    expect(networkDown(70, 7)).toBe(false)
+    expect(networkDown(0, 4)).toBe(false)
   })
 })
