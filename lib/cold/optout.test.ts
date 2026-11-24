@@ -18,12 +18,18 @@ describe('isOptOut', () => {
     expect(isOptOut('Cancellami dalla lista')).toBe(true)
     expect(isOptOut('No grazie')).toBe(true)
     expect(isOptOut('Non siamo interessati al momento')).toBe(true)
+    expect(isOptOut('Per cortesia cancelli la mia mail\n\nGrazie')).toBe(true)
+    expect(isOptOut('Cancellate la mia email dalla lista')).toBe(true)
+    expect(isOptOut('Rimuovete il mio indirizzo')).toBe(true)
+    expect(isOptOut('Rimuovetemi, grazie')).toBe(true)
+    expect(isOptOut('Non scrivetemi più')).toBe(true)
   })
 
   it('leaves real conversations alone', () => {
     expect(isOptOut('Sure, how much is the sprint?')).toBe(false)
     expect(isOptOut('Ciao, si ci stiamo pensando. Quanto tempo serve?')).toBe(false)
     expect(isOptOut('No problem, send me the list of issues')).toBe(false)
+    expect(isOptOut('Mi manda i dati del preventivo via mail?')).toBe(false)
     expect(isOptOut('')).toBe(false)
   })
 
