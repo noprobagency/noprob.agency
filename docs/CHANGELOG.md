@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.222.0 (24 Nov 2026)
+
+- Cold email: the US finding started by the review now saves its finished batch in the CRM (commit and push, retried). On 24/11 the finished batch stayed an uncommitted change in the runner's CRM clone and the 9:20 and 10:20 send runs stopped on it ("clone CRM non riuscito").
+
 ### Changelog v1.221.0 (21 Nov 2026)
 
 - Ada US finding: when most homepages fail at once (at least 5), the script writes nothing and exits with code 2, so a network fault on our side no longer marks a whole batch "unreachable" (19/11: 77 of 77, recomputed by hand on 21/11, 71 with a finding).

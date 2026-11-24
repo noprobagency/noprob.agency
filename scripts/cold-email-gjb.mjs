@@ -201,7 +201,7 @@ if (!cloud && !dry) {
   })()
   for (const file of usLotFiles()) {
     if (lotDone(readLot(file)) || running.includes(file)) continue
-    spawn('node', ['scripts/ada-us-finding.mjs', file], { detached: true, stdio: 'ignore' }).unref()
+    spawn('node', ['scripts/cold-email-us-finding.mjs', file], { detached: true, stdio: 'ignore' }).unref()
     console.error(`US finding started on ${file}`)
   }
 }
