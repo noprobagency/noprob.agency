@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.223.0 (24 Nov 2026)
+
+- Cold outreach: opt-out detection reads the polite Italian forms too ("cancelli la mia mail", "rimuovete il mio indirizzo", "rimuovetemi", "non scrivetemi più"). On 23/11 one of them was read as a normal reply; the store was added to the opt-out list by hand.
+
 ### Changelog v1.222.0 (24 Nov 2026)
 
 - Cold email: the US finding started by the review now saves its finished batch in the CRM (commit and push, retried). On 24/11 the finished batch stayed an uncommitted change in the runner's CRM clone and the 9:20 and 10:20 send runs stopped on it ("clone CRM non riuscito").
