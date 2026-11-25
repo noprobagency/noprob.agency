@@ -4,6 +4,11 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.225.0 (25 Nov 2026)
+
+- Cold outreach, US line (D-107): copy us2 in Catarina's style (Antonio as a person, eCommerce manager, "some up to €20M a year", a quick call, no link) on every new US first email from 30/11; days before still send us1. A thread keeps the copy of its first email, so open us1 threads get the us1 follow-up. us2 needs no site finding, so from 30/11 a US lead without one can start. Live with `approvedUs: "us2"` in the runner config.
+- Cold outreach: in New York hours US follow-ups go before Italian ones. Italian follow-ups also have the morning runs, but the older Italian backlog was filling the follow-up half of every afternoon run: by 25/11 only 4 US follow-ups had gone out, against 65 overdue.
+
 ### Changelog v1.224.0 (25 Nov 2026)
 
 - Cold outreach: the homepage measure of the Italian v3 first emails no longer waits out PageSpeed 429s in a send run (one try, 60 s timeout) and stops after 5 minutes per run; past that the run sends the v2 first email and measures on a later run. On 25/11 a 429 from the PageSpeed quota, shared with Damiano USA, held the 10:20 run over an hour and the 11:20 run was skipped.

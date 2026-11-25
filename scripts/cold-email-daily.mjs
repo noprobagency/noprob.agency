@@ -36,7 +36,7 @@ import { domainOf, excludeDomains, stopStore } from '../lib/cold-email/leads.mjs
 import { appendSuppressed, applySuppressed, readSuppressed, refusals } from '../lib/cold-email/suppression.mjs'
 import { publishTaken, takenBody } from '../lib/cold-email/taken.mjs'
 import { SEQUENCE_VERSION, dueDate, dueStep, followUpCap, lineOf, orderFirsts, render } from '../lib/cold-email/sequence.mjs'
-import { US_VERSION, US_ZONE, usHours, usReady } from '../lib/cold-email/sequence-us.mjs'
+import { US_VERSION, US_ZONE, usHours, usReady, usVersionOn } from '../lib/cold-email/sequence-us.mjs'
 import { V3_VERSION, canMeasure, measureDato, pagespeedKey, renderV3First, v3FollowUpBody } from '../lib/cold-email/sequence-v3.mjs'
 
 const DIR = 'cold-email/data'
@@ -220,8 +220,12 @@ if (approved.it || approved.us) {
     .filter((d) => !(d.step.key === 'e3' && lineOf(d.lead) === 'it' && d.lead.sequence.version !== V3_VERSION && !(config.approvedV3 === V3_VERSION && d.lead.lang === 'it')))
     .sort((a, b) => priority(a.lead) - priority(b.lead) || (a.step.key === 'e1' ? 0 : dueDate(a.lead, a.step).localeCompare(dueDate(b.lead, b.step))))
   // Follow-ups first; then first emails of Italy and USA in turns, so both lines start every day.
-  // In New York hours US first emails go first (D-102).
-  due.splice(0, due.length, ...due.filter((d) => d.step.key !== 'e1'), ...orderFirsts(due.filter((d) => d.step.key === 'e1'), { usFirst: approved.us }))
+  // In New York hours US first emails go first (D-102), and so do US follow-ups: they can
+  // go out only in those runs, while Italian ones have the morning runs too. Before (25/11)
+  // the older Italian backlog took the follow-up half of every afternoon run: 4 US e2 on 150.
+  const usFollowUpFirst = (d) => (approved.us && lineOf(d.lead) === 'us' ? 0 : 1)
+  const followUpsDue = due.filter((d) => d.step.key !== 'e1').sort((a, b) => usFollowUpFirst(a) - usFollowUpFirst(b))
+  due.splice(0, due.length, ...followUpsDue, ...orderFirsts(due.filter((d) => d.step.key === 'e1'), { usFirst: approved.us }))
 
   // At most one first email per store a day, even with several people of the same store.
   const storesToday = new Set(db.leads.filter((l) => l.sequence.sent.some((x) => x.step === 'e1' && x.date === today)).map((l) => l.domain))
@@ -302,7 +306,7 @@ if (approved.it || approved.us) {
       if (lead.dato) v3 = renderV3First(lead, lead.dato)
     }
     const copyV3 = Boolean(v3) || (step.key !== 'e1' && lineOf(lead) === 'it' && lead.lang === 'it' && config.approvedV3 === V3_VERSION && Boolean(v3FollowUpBody(lead, step.key)))
-    const { subject, body } = v3 || render(lead, step.key, { v3: config.approvedV3 === V3_VERSION })
+    const { subject, body } = v3 || render(lead, step.key, { v3: config.approvedV3 === V3_VERSION, today })
     if (dry) {
       console.log(`[dry] ${m.email.split('@')[0]}@ ${step.key} -> ${lead.email} · ${subject}`)
       if (v3) stats.v3++
@@ -321,7 +325,7 @@ if (approved.it || approved.us) {
     if (step.key === 'e1') {
       seq.threadId = res.threadId
       seq.messageId = messageId(await m.api.thread(res.threadId))
-      seq.version = lineOf(lead) === 'us' ? US_VERSION : v3 ? V3_VERSION : SEQUENCE_VERSION
+      seq.version = lineOf(lead) === 'us' ? usVersionOn(today) : v3 ? V3_VERSION : SEQUENCE_VERSION
       if (v3) stats.v3++
       seq.mailbox = m.key
     }
