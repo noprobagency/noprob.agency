@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.229.0 (25 Nov 2026)
+
+- Mac runner: the versioned `scripts/mac/agenti-mac.sh` now starts from the runner's live copy (Damiano's D-108 changes of 25/11: no stock gates, treg balance stop under $1) plus the D-107 publishing rules. The installer keeps the previous copy and refuses to overwrite a runner file edited by hand after the last install (`--forza` to override): hand edits go through a PR first.
+
 ### Changelog v1.228.0 (25 Nov 2026)
 
 - Cold outreach, D-107 Italy: new `it-cat` copy (Catarina's message: Antonio as a person, eCommerce manager living in Lisbon, stores up to €20M a year, 15-minute video call), with follow-ups on working days 3 and 7 in the same thread. With `approvedItCat: "it-cat"` in config.json, half of the new Italian first emails of each mailbox get it and half keep the current copy as control (`sequence.arm`); the log line counts both. Off until the seed test.
