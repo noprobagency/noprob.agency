@@ -37,6 +37,7 @@ import { appendSuppressed, applySuppressed, readSuppressed, refusals } from '../
 import { publishTaken, takenBody } from '../lib/cold-email/taken.mjs'
 import { SEQUENCE_VERSION, dueDate, dueStep, followUpCap, lineOf, orderFirsts, render } from '../lib/cold-email/sequence.mjs'
 import { US_VERSION, US_ZONE, usHours, usReady, usVersionOn } from '../lib/cold-email/sequence-us.mjs'
+import { ITCAT_VERSION, nextArm, renderItCat } from '../lib/cold-email/sequence-itcat.mjs'
 import { V3_VERSION, canMeasure, measureDato, pagespeedKey, renderV3First, v3FollowUpBody } from '../lib/cold-email/sequence-v3.mjs'
 
 const DIR = 'cold-email/data'
@@ -73,7 +74,7 @@ const db = JSON.parse(readFileSync(LEADS, 'utf8'))
 const save = () => {
   if (!dry) writeFileSync(LEADS, JSON.stringify({ ...db, updatedAt: new Date().toISOString() }, null, 2))
 }
-const stats = { shopify: 0, v3: 0, replies: 0, optouts: 0, bounces: 0, sent: { e1: 0, e2: 0, e3: 0, e4: 0, e5: 0 }, skipped: 0, recent: 0 }
+const stats = { shopify: 0, v3: 0, itcat: 0, control: 0, replies: 0, optouts: 0, bounces: 0, sent: { e1: 0, e2: 0, e3: 0, e4: 0, e5: 0 }, skipped: 0, recent: 0 }
 
 // Mailboxes: antonio@ always, plus config.mailboxes (e.g. hello@ with its own Keychain token).
 // Every lead keeps the mailbox of its first email (sequence.mailbox, antonio@ when unset):
@@ -207,6 +208,9 @@ for (const m of MAILBOXES) {
 // Each line sends only its approved copy: Italy (SEQUENCE_VERSION) and USA (US_VERSION).
 // US emails go out only in New York working hours (the afternoon runs of the Mac).
 const usApproved = usReady() && config.approvedUs === US_VERSION
+// D-107: half of the new Italian first emails of each mailbox get it-cat, the other half
+// the current copy (control). On only with config.approvedItCat, set after the seed test.
+const itCatOn = config.approvedItCat === ITCAT_VERSION
 const approved = { it: config.approved === SEQUENCE_VERSION, us: usApproved && usHours() }
 if (!approved.it) note += ` · Italia ferma (sequenza ${SEQUENCE_VERSION} non approvata)`
 if (!usApproved && db.leads.some((l) => lineOf(l) === 'us' && l.segment === 'target')) note += ` · USA ferma (sequenza ${US_VERSION} non approvata)`
@@ -217,7 +221,7 @@ if (approved.it || approved.us) {
     .filter((d) => d.step && approved[lineOf(d.lead)])
     // The v2 e3 names two clients, against the rule (revision of 15/11): it waits until the
     // rewritten v3 follow-ups are on (approvedV3), which have no names.
-    .filter((d) => !(d.step.key === 'e3' && lineOf(d.lead) === 'it' && d.lead.sequence.version !== V3_VERSION && !(config.approvedV3 === V3_VERSION && d.lead.lang === 'it')))
+    .filter((d) => !(d.step.key === 'e3' && lineOf(d.lead) === 'it' && ![V3_VERSION, ITCAT_VERSION].includes(d.lead.sequence.version) && !(config.approvedV3 === V3_VERSION && d.lead.lang === 'it')))
     .sort((a, b) => priority(a.lead) - priority(b.lead) || (a.step.key === 'e1' ? 0 : dueDate(a.lead, a.step).localeCompare(dueDate(b.lead, b.step))))
   // Follow-ups first; then first emails of Italy and USA in turns, so both lines start every day.
   // In New York hours US first emails go first (D-102), and so do US follow-ups: they can
@@ -279,8 +283,11 @@ if (approved.it || approved.us) {
     }
     // First emails carry the company name as a person writes it (no SRL, no caps).
     if (step.key === 'e1') lead.brand = cleanCompany(lead.brand)
+    // D-107 test: the arm of this first email, balanced inside its mailbox. it-cat needs no measure.
+    const arm = step.key === 'e1' && itCatOn && lineOf(lead) === 'it' && lead.lang === 'it' ? nextArm(db.leads, m.key) : null
+    const itcat = arm === 'it-cat' ? renderItCat(lead, 'e1') : null
     let v3 = null
-    if (step.key === 'e1' && lineOf(lead) === 'it' && config.approvedV3 === V3_VERSION) {
+    if (!itcat && step.key === 'e1' && lineOf(lead) === 'it' && config.approvedV3 === V3_VERSION) {
       if (!lead.datoAt && canMeasure({ errors: datoErrors, spentMs: datoMs })) {
         const t0 = Date.now()
         const dato = await measureDato(lead.domain, pageKey).catch((err) => {
@@ -305,11 +312,16 @@ if (approved.it || approved.us) {
       }
       if (lead.dato) v3 = renderV3First(lead, lead.dato)
     }
-    const copyV3 = Boolean(v3) || (step.key !== 'e1' && lineOf(lead) === 'it' && lead.lang === 'it' && config.approvedV3 === V3_VERSION && Boolean(v3FollowUpBody(lead, step.key)))
-    const { subject, body } = v3 || render(lead, step.key, { v3: config.approvedV3 === V3_VERSION, today })
+    const copyV3 = Boolean(v3) || (step.key !== 'e1' && lineOf(lead) === 'it' && lead.lang === 'it' && lead.sequence.version !== ITCAT_VERSION && config.approvedV3 === V3_VERSION && Boolean(v3FollowUpBody(lead, step.key)))
+    const { subject, body } = itcat || v3 || render(lead, step.key, { v3: config.approvedV3 === V3_VERSION, today })
     if (dry) {
-      console.log(`[dry] ${m.email.split('@')[0]}@ ${step.key} -> ${lead.email} · ${subject}`)
+      console.log(`[dry] ${m.email.split('@')[0]}@ ${step.key}${arm ? ` ${arm}` : ''} -> ${lead.email} · ${subject}`)
       if (v3) stats.v3++
+      // The arm counts for the balance in this dry run too (nothing is saved).
+      if (arm) {
+        Object.assign(lead.sequence, { arm, mailbox: m.key })
+        stats[arm === 'it-cat' ? 'itcat' : 'control']++
+      }
       if (step.key === 'e1') {
         storesToday.add(lead.domain)
         firsts++
@@ -325,9 +337,13 @@ if (approved.it || approved.us) {
     if (step.key === 'e1') {
       seq.threadId = res.threadId
       seq.messageId = messageId(await m.api.thread(res.threadId))
-      seq.version = lineOf(lead) === 'us' ? usVersionOn(today) : v3 ? V3_VERSION : SEQUENCE_VERSION
+      seq.version = lineOf(lead) === 'us' ? usVersionOn(today) : itcat ? ITCAT_VERSION : v3 ? V3_VERSION : SEQUENCE_VERSION
       if (v3) stats.v3++
       seq.mailbox = m.key
+      if (arm) {
+        seq.arm = arm
+        stats[arm === 'it-cat' ? 'itcat' : 'control']++
+      }
     }
     seq.sent.push({ step: step.key, date: today, id: res.id, ...(copyV3 ? { copy: V3_VERSION } : {}) })
     if (step.key === 'e1') {
@@ -348,6 +364,7 @@ if (approved.it || approved.us) {
   }
   stats.skipped = Math.max(0, due.length - stats.recent - sent)
   if (stats.v3) note += ` · prime v3 ${stats.v3}`
+  if (stats.itcat || stats.control) note += ` · test it-cat ${stats.itcat}, controllo ${stats.control}`
   if (stats.shopify) note += ` · passati a Shopify ${stats.shopify}`
   if (MAILBOXES.length > 1) note += ` · per casella ${MAILBOXES.map((m) => `${m.email.split('@')[0]}@ ${m.sent}`).join(', ')}`
   save()

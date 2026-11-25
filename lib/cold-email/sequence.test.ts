@@ -2,6 +2,7 @@ import { describe, expect, it, vi } from 'vitest'
 import { excludeDomains, firstNameOf, fromCrm, stopStore } from './leads.mjs'
 import { STEPS, addWorkingDays, dueStep, followUpCap, interleaveLines, orderFirsts, render } from './sequence.mjs'
 import { renderUs, usHours, usReady, usVersionOn } from './sequence-us.mjs'
+import { ITCAT_VERSION, nextArm, renderItCat } from './sequence-itcat.mjs'
 
 const prospect = (over = {}) => ({
   id: 'p1',
@@ -287,5 +288,34 @@ describe('US line', () => {
     expect(followUpCap(7, true)).toBe(3)
     expect(followUpCap(1, true)).toBe(0)
     expect(followUpCap(7, false)).toBe(7)
+  })
+})
+
+describe('Italy it-cat test (D-107)', () => {
+  const lead = { segment: 'target', lang: 'it', brand: 'Acme', firstName: 'Sara', sequence: { sent: [] as { step: string; date: string }[], stoppedAt: null, version: ITCAT_VERSION } }
+  it('renders the approved text word for word', () => {
+    expect(renderItCat(lead, 'e1')).toEqual({
+      subject: 'Acme',
+      body: "Ciao Sara,\n\nsono Antonio, italiano, vivo a Lisbona e faccio l'eCommerce manager da 7 anni. Ho gestito negozi online che fatturavano fino a 20 milioni l'anno.\n\nHo visto Acme, mi piace molto quello che state facendo e mi piacerebbe seguirlo io, come vostro eCommerce manager.\n\nTi va una videochiamata di 15 minuti?\n\nSe non è il momento, dimmelo pure 🙂\n\nAntonio",
+    })
+    expect(renderItCat({ ...lead, firstName: null }, 'e1').body).toMatch(/^Ciao,\n\nsono Antonio/)
+    expect(renderItCat(lead, 'e1').body).not.toMatch(/https?:|noprob|Shopify/i)
+  })
+  it('follows up on days 3 and 7 in the same thread, then stops', () => {
+    expect(render(lead, 'e2', { v3: true })).toEqual({ subject: 'Re: Acme', body: 'Ciao Sara, ti è arrivata la mia email? 🙂\n\nAntonio' })
+    expect(render(lead, 'e3', { v3: true }).body).toBe("Ciao Sara, ultimo messaggio, promesso. Se un giorno vi serve una mano sull'eCommerce, scrivimi.\n\nAntonio")
+    const sent = (dates: string[]) => ({ ...lead, sequence: { ...lead.sequence, sent: dates.map((date, i) => ({ step: `e${i + 1}`, date })) } })
+    expect(dueStep(sent(['2026-11-25']), '2026-11-27')).toBeNull()
+    expect(dueStep(sent(['2026-11-25']), '2026-11-30')?.key).toBe('e2')
+    expect(dueStep(sent(['2026-11-25', '2026-11-30']), '2026-12-04')?.key).toBe('e3')
+    expect(dueStep(sent(['2026-11-25', '2026-11-30', '2026-12-04']), '2026-12-31')).toBeNull()
+  })
+  it('splits first emails 50/50 inside each mailbox', () => {
+    const l = (mailbox: string, arm?: string) => ({ sequence: { mailbox, arm } })
+    expect(nextArm([], 'antonio')).toBe('it-cat')
+    expect(nextArm([l('antonio', 'it-cat')], 'antonio')).toBe('control')
+    expect(nextArm([l('antonio', 'it-cat')], 'hello')).toBe('it-cat')
+    expect(nextArm([l('antonio', 'it-cat'), l('antonio', 'control'), l('antonio')], 'antonio')).toBe('it-cat')
+    expect(nextArm([{ sequence: { arm: 'control' } }], 'antonio')).toBe('it-cat')
   })
 })

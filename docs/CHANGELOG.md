@@ -4,6 +4,12 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.228.0 (25 Nov 2026)
+
+- Cold outreach, D-107 Italy: new `it-cat` copy (Catarina's message: Antonio as a person, eCommerce manager living in Lisbon, stores up to €20M a year, 15-minute video call), with follow-ups on working days 3 and 7 in the same thread. With `approvedItCat: "it-cat"` in config.json, half of the new Italian first emails of each mailbox get it and half keep the current copy as control (`sequence.arm`); the log line counts both. Off until the seed test.
+- Cold outreach: `scripts/cold-email-seed.mjs` sends one email of a new copy (it-cat, us2) from antonio@ or hello@ to a seed address (example store, never a lead), only with `--send`.
+- Mac runner: `agenti-mac.sh` is now versioned in `scripts/mac/` with an installer. Sends never wait for publishing the state (D-107): local commits that cannot be pushed after 3 `pull --rebase` tries are published on the next run and the run starts from the local copy; state left uncommitted by an interrupted run is committed, never thrown away by a reset; the heartbeat before sends gets a single try. On 24/11 an unpushed commit stopped the 9:20 and 10:20 runs ("clone CRM non riuscito").
+
 ### Changelog v1.227.0 (25 Nov 2026)
 
 - Cold outreach, Damiano US: no PageSpeed figure on new US leads (opt in with `--speed`). Copy us2 (D-107, from 30/11) uses no site figure, and the shared Google key was returning 429s to Dante's first-email hook during his sends. Platform check (never Shopify) and verified email unchanged.
