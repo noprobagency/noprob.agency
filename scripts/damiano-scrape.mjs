@@ -19,7 +19,7 @@
 // Italy (platform checked live, real cart, decision maker, paid verified email), from
 // structured Hunter filters (US, 1-200 people, consumer industries, store technology,
 // WooCommerce first). Contacts must be in the US with a company mailbox. Every lead gets
-// a speed figure for the email hook: Google PageSpeed mobile when PAGESPEED_API_KEY is set
+// a speed figure for the email hook only with --speed (off since 25/11, us2 needs none): Google PageSpeed mobile when PAGESPEED_API_KEY is set
 // (env or ~/Library/Application Support/noprob-agenti/pagespeed.env), else the DataForSEO
 // page audit (HTML weight, fetch time, on-page score, $0.00015). Writes docs/cold/damiano/us.
 //
@@ -59,6 +59,9 @@ const US = opt('market', 'it') === 'us'
 const INTL = opt('market', 'it') === 'intl' || US
 // In intl mode the email is optional: Ada is LinkedIn-first and Gojiberry finds it later.
 const PAY_EMAIL = !INTL || US || args.includes('--email')
+// US speed figure (PageSpeed) only with --speed: copy us2 (D-107, from 30/11) uses no site
+// figure, and the shared Google key gave Dante 429s during his sends (Claudio, 25/11).
+const SPEED = US && args.includes('--speed')
 const OUT = opt('out', US ? 'docs/cold/damiano/us' : INTL ? 'docs/cold/damiano/intl' : 'docs/cold/damiano')
 const STATE_FILE = join(OUT, 'state.json')
 const PEOPLE_VERSION = 2 // bump to redo the free people searches on cached companies
@@ -773,8 +776,8 @@ if (!EXPORT_ONLY && !supply?.paused) {
     log(`page done, ${Object.keys(state.companies).length} companies`)
   }
 
-  // US: the speed figure on every ready lead (the reserve kept for calls in flight covers it).
-  if (US) {
+  // US with --speed: the speed figure on every ready lead (the reserve kept for calls in flight covers it).
+  if (SPEED) {
     await pool(leads().filter((c) => !c.speed || (PSI_KEY && c.speed.source !== 'pagespeed')).map((c) => c.domain), 4, (d) => speedCheck(state.companies[d]))
     log('speed figures added')
   }

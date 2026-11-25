@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.227.0 (25 Nov 2026)
+
+- Cold outreach, Damiano US: no PageSpeed figure on new US leads (opt in with `--speed`). Copy us2 (D-107, from 30/11) uses no site figure, and the shared Google key was returning 429s to Dante's first-email hook during his sends. Platform check (never Shopify) and verified email unchanged.
+
 ### Changelog v1.226.0 (25 Nov 2026)
 
 - Cold outreach, US line (D-107): copy us2 in Catarina's style (Antonio as a person, eCommerce manager, "some up to €20M a year", a quick call, no link) on every new US first email from 30/11; days before still send us1. A thread keeps the copy of its first email, so open us1 threads get the us1 follow-up. us2 needs no site finding, so from 30/11 a US lead without one can start. Live with `approvedUs: "us2"` in the runner config.
