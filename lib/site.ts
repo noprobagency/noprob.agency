@@ -47,11 +47,8 @@ export const AREA_SERVED = [
   { '@type': 'Place', name: 'Worldwide' },
 ] as const
 
-/**
- * External profiles of the founder (`Person.sameAs`). Add Antonio's LinkedIn
- * profile URL here once confirmed: it is not published anywhere in the repo.
- */
-export const FOUNDER_SAME_AS: readonly string[] = []
+/** External profiles of the founder (`Person.sameAs`). LinkedIn confirmed by Claudio on 25/11 (Antonio's CV and signature). */
+export const FOUNDER_SAME_AS: readonly string[] = ['https://www.linkedin.com/in/antoniomanitta']
 
 /** External profiles of the company (`Organization.sameAs`). Add the Upwork agency page once it has a public URL. */
 export const ORGANIZATION_SAME_AS: readonly string[] = [
