@@ -28,6 +28,10 @@ describe('Organization JSON-LD', () => {
     expect(organizationJsonLd.sameAs).toContain(TRUSTPILOT_URL)
     expect(organizationJsonLd.sameAs.length).toBeGreaterThanOrEqual(4)
   })
+
+  it("ties the founder to Antonio's LinkedIn profile", () => {
+    expect((organizationJsonLd.founder as { sameAs?: readonly string[] }).sameAs).toContain('https://www.linkedin.com/in/antoniomanitta')
+  })
 })
 
 describe('buildMetadata', () => {
