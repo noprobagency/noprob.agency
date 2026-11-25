@@ -29,7 +29,7 @@ import { SENDER, accessToken, buildRaw, gmail, lastReplyText, messageId, threadO
 import { isBareNo } from '../lib/cold/optout.mjs'
 import { fetchPlatform } from '../lib/cold/fetch-platform.mjs'
 import { cleanCompany } from '../lib/cold-email/approve.mjs'
-import { importUsRows, lotDone, mtimeOf, outOfTarget, readImported, readLot, saveImported, usLotFiles } from '../lib/cold-email/us-lots.mjs'
+import { importUsRows, lotDone, mtimeOf, outOfTarget, readImported, readLot, releaseNoHook, saveImported, usLotFiles } from '../lib/cold-email/us-lots.mjs'
 import { pool } from '../lib/cold/fetch-platform.mjs'
 import { gojiberryDomains, gojiberryOn, gojiberryQueuedToday, gojiberryRemaining, loadGojiberryDomains, saveGojiberryDomains } from '../lib/cold-email/gojiberry.mjs'
 import { domainOf, excludeDomains, stopStore } from '../lib/cold-email/leads.mjs'
@@ -152,13 +152,20 @@ save()
 let note = ''
 // 2b. US batches finished by Ada's finding script go into leads.json (this run owns it).
 // Mac only: the sites are checked live, and datacenter addresses are often blocked.
+// With us2 approved (D-107) no finding is needed: batches go in as they are, and the leads
+// held only for a missing finding go back to the queue (they start on the day us2 starts).
+const hookRequired = config.approvedUs !== 'us2'
+if (!hookRequired) {
+  const back = releaseNoHook(db)
+  if (back) note += ` · USA senza aggancio rimessi in coda ${back}`
+}
 if (!process.env.CI) {
   const imported = readImported()
   for (const file of usLotFiles()) {
     const rows = readLot(file)
-    if (!lotDone(rows) || imported[file] === mtimeOf(file)) continue
+    if (!lotDone(rows, { hookRequired }) || imported[file] === mtimeOf(file)) continue
     const live = await pool([...new Set(rows.map((r) => `https://${domainOf(r.domain)}`))], 12, (u) => fetchPlatform(u))
-    const n = importUsRows(db, rows, { suppressed: [...readSuppressed()].map((s) => String(s).toLowerCase()), gojiberry: new Set([...loadGojiberryDomains()].map(domainOf)), live, lcpApproved: config.usLcpApproved === true, clean: cleanCompany, excluded: outOfTarget() })
+    const n = importUsRows(db, rows, { suppressed: [...readSuppressed()].map((s) => String(s).toLowerCase()), gojiberry: new Set([...loadGojiberryDomains()].map(domainOf)), live, lcpApproved: config.usLcpApproved === true, clean: cleanCompany, excluded: outOfTarget(), hookRequired })
     note += ` · lotto USA ${file.split('/').pop()} (nuovi ${n.added}, aggiornati ${n.updated}, pronti ${n.ready}, LCP in attesa ${n.lcpWaiting})`
     if (!dry) {
       imported[file] = mtimeOf(file)
