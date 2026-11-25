@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.225.0 (25 Nov 2026)
+
+- SEO: the founder's `Person` JSON-LD (site-wide, `/about`, `/it/chi-siamo`) now carries `sameAs` with Antonio's LinkedIn profile, so Google and the AI answers can tie the author to his profile.
+
 ### Changelog v1.224.0 (25 Nov 2026)
 
 - Cold outreach: the homepage measure of the Italian v3 first emails no longer waits out PageSpeed 429s in a send run (one try, 60 s timeout) and stops after 5 minutes per run; past that the run sends the v2 first email and measures on a later run. On 25/11 a 429 from the PageSpeed quota, shared with Damiano USA, held the 10:20 run over an hour and the 11:20 run was skipped.
