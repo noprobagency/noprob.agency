@@ -1,5 +1,6 @@
-import { describe, expect, it } from 'vitest'
-import { fraseDato, renderV3First, v3Subject } from './sequence-v3.mjs'
+import { afterEach, describe, expect, it, vi } from 'vitest'
+import { pagespeed } from '../cold/us-finding.mjs'
+import { DATO_BUDGET_MS, canMeasure, fraseDato, renderV3First, v3Subject } from './sequence-v3.mjs'
 import { dueStep, render } from './sequence.mjs'
 
 describe('Italy v3 first email', () => {
@@ -52,5 +53,25 @@ describe('engine review of 15/11', () => {
     expect(fraseDato({ lcpMs: 28400 })?.frase).toContain('segna oltre 20 secondi')
     expect(fraseDato({ lcpMs: 21000 })?.frase).toContain('segna oltre 20 secondi')
     expect(fraseDato({ lcpMs: 19500 })?.frase).toContain('segna circa 19 secondi')
+  })
+})
+
+describe('homepage measure in a send run', () => {
+  afterEach(() => vi.unstubAllGlobals())
+
+  it('stops after 3 errors in a row or past the time budget', () => {
+    expect(canMeasure({ errors: 0, spentMs: 0 })).toBe(true)
+    expect(canMeasure({ errors: 2, spentMs: DATO_BUDGET_MS - 1 })).toBe(true)
+    expect(canMeasure({ errors: 3, spentMs: 0 })).toBe(false)
+    expect(canMeasure({ errors: 0, spentMs: DATO_BUDGET_MS })).toBe(false)
+  })
+
+  it('with one pause a 429 is not waited out', async () => {
+    const fetch = vi.fn(async () => new Response('', { status: 429 }))
+    vi.stubGlobal('fetch', fetch)
+    const wait = vi.fn(async () => {})
+    expect(await pagespeed('https://example.com/', 'k', { wait, pauses: [0] })).toBe(null)
+    expect(fetch).toHaveBeenCalledTimes(1)
+    expect(wait).not.toHaveBeenCalled()
   })
 })

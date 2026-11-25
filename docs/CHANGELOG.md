@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.224.0 (25 Nov 2026)
+
+- Cold outreach: the homepage measure of the Italian v3 first emails no longer waits out PageSpeed 429s in a send run (one try, 60 s timeout) and stops after 5 minutes per run; past that the run sends the v2 first email and measures on a later run. On 25/11 a 429 from the PageSpeed quota, shared with Damiano USA, held the 10:20 run over an hour and the 11:20 run was skipped.
+
 ### Changelog v1.223.0 (24 Nov 2026)
 
 - Cold outreach: opt-out detection reads the polite Italian forms too ("cancelli la mia mail", "rimuovete il mio indirizzo", "rimuovetemi", "non scrivetemi più"). On 23/11 one of them was read as a normal reply; the store was added to the opt-out list by hand.
