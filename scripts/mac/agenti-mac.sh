@@ -3,8 +3,8 @@
 # Uso: agenti-mac.sh damiano | cold [--dry]
 # Lavora su cloni propri, non tocca le cartelle di lavoro. GitHub resta l'ultima sponda:
 # il job "cold" scrive state/mac-heartbeat e la routine "Claudio · avvio invii" salta se è recente.
-# Sorgente versionata: scripts/mac/agenti-mac.sh nel repo del sito; si installa con
-# scripts/mac/installa-agenti-mac.sh (mai sopra un giro in corso).
+# Sorgente versionata: scripts/mac/agenti-mac.sh nel repo del sito; si cambia con una PR e si
+# installa con scripts/mac/installa-agenti-mac.sh (mai sopra un giro in corso).
 # D-107: gli invii non aspettano mai la pubblicazione dello stato. Un conflitto di push si
 # riprova con pull --rebase fino a 3 volte, poi si pubblica al giro dopo; il giro parte
 # comunque dalla copia locale, che ha lo stato più recente.
@@ -73,31 +73,40 @@ salva() { # salva [-1] <messaggio> <percorsi...>  (-1: un solo tentativo, prima 
 }
 
 if [ "$JOB" = damiano ]; then
-  # Italia: massimo 3 giri al giorno (D-59). USA: contatore a parte, massimo 2 giri al giorno e
-  # solo fuori dagli orari di invio (prima delle 9:00 e dalle 16:45 di Lisbona), perché la misura
-  # PageSpeed usa la stessa chiave di Dante (decisione di Claudio, 25/11: niente 429 negli invii,
-  # spesa sotto $2,50 al giorno).
+  # D-108 (Antonio, 25/11): al massimo finché finiscono i crediti treg, nessuna ricarica, senza i
+  # cancelli della scorta (--pause-days/--resume-days/--us-days 999). Tetto $2,50 al giorno:
+  # Italia 3 giri da $0,65 (D-59) + USA 1 giro da $0,55 (D-99). PageSpeed tolto dai lead USA
+  # (v1.227.0), quindi niente più finestra oraria per gli USA.
+  # Pausa: niente giri finché esiste damiano.pausa (si crea da sola con il saldo sotto $1).
+  [ -f "$BASE/damiano.pausa" ] && { log "in pausa ($(head -1 "$BASE/damiano.pausa"))"; exit 0; }
+  SALDO=$(treg balance --json 2>/dev/null | node -e 'let d="";process.stdin.on("data",c=>d+=c).on("end",()=>{try{console.log(JSON.parse(d).balance_usd.toFixed(2))}catch{console.log("")}})')
+  if [ -n "$SALDO" ] && node -e 'process.exit(Number(process.argv[1])<1?0:1)' "$SALDO"; then
+    echo "saldo treg \$$SALDO sotto \$1 il $(date '+%F %H:%M'): D-108, resoconto con Antonio" > "$BASE/damiano.pausa"
+    D="$DIR/crm/manager/diario/$(date +%F).md"
+    printf '\n## %s · Damiano (automatico)\n- Saldo treg $%s, sotto $1: giri fermi (D-108). Claudio: resoconto generale con Antonio.\n' "$(date +%H:%M)" "$SALDO" >> "$D"
+    salva "diario: Damiano, saldo treg sotto \$1" "manager/diario/$(date +%F).md"
+    log "saldo $SALDO sotto \$1: in pausa"; exit 0
+  fi
   OGGI=$(date +%F); F="$BASE/damiano.giri"; FU="$BASE/damiano-us.giri"; N=0; NU=0
   [ "$(cut -d' ' -f1 "$F" 2>/dev/null)" = "$OGGI" ] && N=$(cut -d' ' -f2 "$F")
   [ "$(cut -d' ' -f1 "$FU" 2>/dev/null)" = "$OGGI" ] && NU=$(cut -d' ' -f2 "$FU")
-  HM=$((10#$(date +%H)*60 + 10#$(date +%M)))
   IT_OK=0; [ "$N" -lt 3 ] && IT_OK=1
-  US_OK=0; [ "$NU" -lt 2 ] && { [ "$HM" -lt 540 ] || [ "$HM" -ge 1005 ]; } && US_OK=1
+  US_OK=0; [ "$NU" -lt 1 ] && US_OK=1
   if [ "$IT_OK" = 0 ] && [ "$US_OK" = 0 ]; then
-    log "niente da fare (Italia $N/3, USA $NU/2, USA solo prima delle 9:00 o dalle 16:45)"; exit 0
+    log "giri di oggi finiti (Italia $N/3, USA $NU/1)"; exit 0
   fi
   [ -f "$DIR/crm/state/damiano/state.json" ] || { log "stato mancante"; exit 1; }
   cd "$DIR/site" || exit 1
   ST=0
   if [ "$IT_OK" = 1 ]; then
     echo "$OGGI $((N+1))" > "$F"
-    CI=true node scripts/damiano-scrape.mjs --add 50 --spend 0.65 > "$BASE/damiano-summary.json" 2> "$BASE/damiano-progress.log"
+    CI=true node scripts/damiano-scrape.mjs --add 50 --spend 0.65 --pause-days 999 --resume-days 999 > "$BASE/damiano-summary.json" 2> "$BASE/damiano-progress.log"
     ST=$?
   fi
   if [ "$US_OK" = 1 ]; then
     # D-99: negozi USA per Ada. Si ferma da solo sotto $1 di saldo treg.
     echo "$OGGI $((NU+1))" > "$FU"
-    CI=true node scripts/damiano-scrape.mjs --market us --add 100 --spend 1.00 > "$BASE/damiano-us-summary.json" 2> "$BASE/damiano-us-progress.log"
+    CI=true node scripts/damiano-scrape.mjs --market us --add 100 --spend 0.55 --us-days 999 > "$BASE/damiano-us-summary.json" 2> "$BASE/damiano-us-progress.log"
     STU=$?
   fi
   salva "chore(state): Damiano Mac $(date -u '+%F %H:%M')" state/damiano
