@@ -37,7 +37,7 @@ import { appendSuppressed, applySuppressed, readSuppressed, refusals } from '../
 import { publishTaken, takenBody } from '../lib/cold-email/taken.mjs'
 import { SEQUENCE_VERSION, dueDate, dueStep, followUpCap, lineOf, orderFirsts, render } from '../lib/cold-email/sequence.mjs'
 import { US_VERSION, US_ZONE, usHours, usReady } from '../lib/cold-email/sequence-us.mjs'
-import { V3_VERSION, measureDato, pagespeedKey, renderV3First, v3FollowUpBody } from '../lib/cold-email/sequence-v3.mjs'
+import { V3_VERSION, canMeasure, measureDato, pagespeedKey, renderV3First, v3FollowUpBody } from '../lib/cold-email/sequence-v3.mjs'
 
 const DIR = 'cold-email/data'
 const LEADS = `${DIR}/leads.json`
@@ -170,6 +170,7 @@ if (!process.env.CI) {
 // 3. Sends, within each mailbox's budget
 const pageKey = pagespeedKey()
 let datoErrors = 0
+let datoMs = 0
 // The mailbox budget covers every email; dailyCap limits only new first emails, so
 // follow-ups keep their days even when a big batch reaches the same step together.
 // Ada's campaign sends from antonio@ too (from 9:00, up to its warm-up limit): the
@@ -275,12 +276,14 @@ if (approved.it || approved.us) {
     // First emails carry the company name as a person writes it (no SRL, no caps).
     if (step.key === 'e1') lead.brand = cleanCompany(lead.brand)
     let v3 = null
-    if (step.key === 'e1' && lineOf(lead) === 'it' && config.approvedV3 === V3_VERSION && datoErrors < 3) {
-      if (!lead.datoAt) {
+    if (step.key === 'e1' && lineOf(lead) === 'it' && config.approvedV3 === V3_VERSION) {
+      if (!lead.datoAt && canMeasure({ errors: datoErrors, spentMs: datoMs })) {
+        const t0 = Date.now()
         const dato = await measureDato(lead.domain, pageKey).catch((err) => {
           console.error(`dato ${lead.domain}: ${err.message}`)
           return { error: 'exception' }
         })
+        datoMs += Date.now() - t0
         // A site down is retried on the next runs (up to 3); a PageSpeed or code error never
         // blocks the day: after 3 in a row this run sends the v2 first email and measures later.
         if (dato && 'error' in dato) {
