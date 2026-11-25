@@ -1,7 +1,7 @@
 import { describe, expect, it, vi } from 'vitest'
 import { excludeDomains, firstNameOf, fromCrm, stopStore } from './leads.mjs'
 import { STEPS, addWorkingDays, dueStep, followUpCap, interleaveLines, orderFirsts, render } from './sequence.mjs'
-import { renderUs, usHours, usReady } from './sequence-us.mjs'
+import { renderUs, usHours, usReady, usVersionOn } from './sequence-us.mjs'
 
 const prospect = (over = {}) => ({
   id: 'p1',
@@ -238,7 +238,7 @@ describe('US line', () => {
   })
   it('renders the approved copy with the footer', () => {
     expect(usReady()).toBe(true)
-    const e1 = render(us, 'e1')
+    const e1 = render(us, 'e1', { today: '2026-11-25' })
     expect(e1.subject).toBe('Acme')
     expect(e1.body).toContain('Hey Sam! 🙂')
     expect(e1.body).toContain('one thing jumped out: slow mobile.')
@@ -251,6 +251,22 @@ describe('US line', () => {
     const copy = { e1: (v: { brand: string }) => ({ subject: `${v.brand} question`, lines: ['Hi!'] }), e2: (v: { brand: string }) => ({ subject: `${v.brand} question`, lines: ['Again'] }) }
     expect(renderUs(us, 'e1', copy, 'Footer')).toEqual({ subject: 'Acme question', body: 'Hi!\n\nAntonio\n\nFooter' })
     expect(renderUs(us, 'e2', copy, 'Footer').subject).toBe('Re: Acme question')
+  })
+  it('us2 from 30/11: no finding needed, Catarina-style copy, us1 threads keep their follow-up', () => {
+    expect(dueStep({ ...us, finding: undefined }, '2026-11-25')).toBe(null)
+    expect(dueStep({ ...us, finding: undefined }, '2026-11-30')?.key).toBe('e1')
+    const e1 = render({ ...us, finding: undefined }, 'e1', { today: '2026-11-30' })
+    expect(e1.subject).toBe('Acme')
+    expect(e1.body).toBe(
+      "Hi Sam,\n\nI'm Antonio, and I just came across Acme. I really like what you're doing.\n\nI work as an eCommerce manager and run online stores, some up to €20M a year. I'd love to be the eCommerce manager for Acme.\n\nUp for a quick call this week or next?\n\nIf it's not the right time, just tell me 🙂\n\nAntonio\n\n30 N Gould St Ste R, Sheridan, WY 82801, USA · if you'd rather not hear from me, just say so",
+    )
+    const us2Thread = { ...us, sequence: { ...us.sequence, version: 'us2', sent: [{ step: 'e1', date: '2026-11-30' }] } }
+    expect(render(us2Thread, 'e2', { today: '2026-12-04' })).toMatchObject({ subject: 'Re: Acme' })
+    expect(render(us2Thread, 'e2', { today: '2026-12-04' }).body).toMatch(/^Hi Sam, any chance for a quick call about Acme\? 🙂\n\nAntonio\n\n30 N Gould/)
+    const us1Thread = { ...us, sequence: { ...us.sequence, version: 'us1', sent: [{ step: 'e1', date: '2026-11-24' }] } }
+    expect(render(us1Thread, 'e2', { today: '2026-12-01' }).body).toContain('happy to send that report for Acme')
+    expect(usVersionOn('2026-11-25')).toBe('us1')
+    expect(usVersionOn('2026-11-30')).toBe('us2')
   })
   it('sends nothing on the US line on Thanksgiving and the day after', () => {
     expect(dueStep(us, '2026-11-26')).toBeNull()
