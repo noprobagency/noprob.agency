@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.230.0 (25 Nov 2026)
+
+- Cold outreach, US line (D-107): with `approvedUs: "us2"` a US batch is imported without waiting for the site finding, new US leads without one stay in the queue, and leads held only for a missing finding ("senza aggancio") go back to target. They start when us2 starts (30/11, dueStep). Dry run on the live queue: 25 leads back in the queue, the 25/11 batch imported (58 new).
+
 ### Changelog v1.229.0 (25 Nov 2026)
 
 - Mac runner: the versioned `scripts/mac/agenti-mac.sh` now starts from the runner's live copy (Damiano's D-108 changes of 25/11: no stock gates, treg balance stop under $1) plus the D-107 publishing rules. The installer keeps the previous copy and refuses to overwrite a runner file edited by hand after the last install (`--forza` to override): hand edits go through a PR first.

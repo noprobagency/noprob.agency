@@ -3,7 +3,7 @@ import { execFileSync } from 'node:child_process'
 import { mkdirSync, mkdtempSync, symlinkSync, writeFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
-import { importUsRows, lotDone, saveLot, usLotFiles } from './us-lots.mjs'
+import { importUsRows, lotDone, releaseNoHook, saveLot, usLotFiles } from './us-lots.mjs'
 
 const row = (over = {}) => ({ domain: 'acme-us.com', email: 'sam@acme-us.com', name: 'Sam Lee', brand: 'Acme US', platform: 'woocommerce', market: 'US', finding: 'the images on your homepage weigh over 5 MB, which slows it down on phones', findingRule: 'images', findingAt: '2026-11-16T10:00:00Z', ...over })
 const ctx = (over = {}) => ({ suppressed: /** @type {string[]} */ ([]), gojiberry: new Set<string>(), live: new Map<string, unknown>([['https://acme-us.com', { platform: 'woocommerce', status: 200 }]]), lcpApproved: false, clean: (s: string) => s, ...over })
@@ -19,6 +19,23 @@ describe('US batches', () => {
     expect(n).toMatchObject({ added: 2, ready: 1, lcpWaiting: 1, blocked: 2 })
     expect(db.leads.find((l) => l.domain === 'acme-us.com')).toMatchObject({ line: 'us', lang: 'en', segment: 'target' })
     expect(db.leads.find((l) => l.domain === 'slow.com')).toMatchObject({ segment: 'review', reason: 'frase LCP da approvare', findingPending: 'x' })
+  })
+  it('with us2 (D-107) takes batches and leads without a finding', () => {
+    const bare = row({ finding: null, findingRule: null, findingAt: null })
+    expect(lotDone([bare], { hookRequired: false })).toBe(true)
+    expect(lotDone([], { hookRequired: false })).toBe(false)
+    const db: { leads: Record<string, unknown>[] } = { leads: [] }
+    importUsRows(db, [bare], ctx({ hookRequired: false }))
+    expect(db.leads[0]).toMatchObject({ segment: 'target', reason: null })
+    importUsRows((db.leads = [], db), [bare], ctx())
+    expect(db.leads[0]).toMatchObject({ segment: 'review', reason: 'senza aggancio' })
+  })
+  it('puts US leads held for a missing finding back in the queue, nothing else', () => {
+    const l = (over = {}) => ({ line: 'us', segment: 'review', reason: 'senza aggancio', sequence: { sent: [] as unknown[] }, ...over })
+    const db = { leads: [l(), l({ reason: 'fuori target' }), l({ line: undefined }), l({ sequence: { sent: [{}] } })] }
+    expect(releaseNoHook(db)).toBe(1)
+    expect(db.leads[0]).toMatchObject({ segment: 'target', reason: null })
+    expect(db.leads.slice(1).map((x) => x.segment)).toEqual(['review', 'review', 'review'])
   })
   it('never revives a lead marked out of target', () => {
     const db = { leads: [{ domain: 'acme-us.com', email: 'sam@acme-us.com', line: 'us', segment: 'review', reason: 'fuori target', sequence: { sent: [] } }] }
