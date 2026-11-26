@@ -3,36 +3,36 @@ import type { Article } from '../index'
 const article: Article = {
   slug: 'prestashop-to-shopify-migration',
   slugIt: 'migrazione-prestashop-shopify',
-  title: 'Migrate PrestaShop to Shopify: What Maps, What Does Not, and What to Redirect',
-  titleIt: 'Migrazione PrestaShop Shopify: cosa si mappa, cosa no e come fare i redirect',
-  seoTitle: 'Migrate PrestaShop to Shopify: Modules and URLs',
-  seoTitleIt: 'Migrazione PrestaShop Shopify: moduli e URL',
+  title: 'PrestaShop to Shopify Migration: What Maps, What Does Not, and What to Redirect',
+  titleIt: 'Migrazione da PrestaShop a Shopify: cosa si mappa, cosa no e come fare i redirect',
+  seoTitle: 'PrestaShop to Shopify Migration: Steps and URLs',
+  seoTitleIt: 'Migrazione da PrestaShop a Shopify: passi e URL',
   seoDescription:
-    'PrestaShop to Shopify: how combinations, customer groups, multistore and modules map, the redirect map for old URLs, and EU payments and invoicing.',
+    'PrestaShop to Shopify migration: the steps, how modules and combinations map, the 301 redirect map for old URLs, and what it costs with a public price.',
   seoDescriptionIt:
-    'Da PrestaShop a Shopify: come si mappano combinazioni, gruppi clienti, multistore e moduli, la mappa dei redirect degli URL e pagamenti e fatture UE.',
+    'Migrazione da PrestaShop a Shopify: i passi, come si mappano moduli e combinazioni, i redirect 301 dei vecchi URL e il costo con prezzo pubblico.',
   excerpt:
     'What changes when you migrate PrestaShop to Shopify: combinations, groups, multistore and modules, the redirect map for PrestaShop URLs, and EU payments and invoicing. Here is the method we apply, step by step.',
   excerptIt:
     'Cosa cambia nella migrazione da PrestaShop a Shopify: combinazioni, gruppi, multistore e moduli, la mappa dei redirect degli URL PrestaShop, pagamenti e fatture UE. Qui il metodo che applichiamo, passo per passo.',
   ledeEn:
-    'PrestaShop does a lot natively or through modules, and Shopify does it differently. This is the map of what carries over, what needs a decision, and which old URLs need a redirect. We apply the Shopify Launch Sprint method: audit, 301 redirect map, data migration, QA.',
+    'A PrestaShop to Shopify migration is mostly decisions: PrestaShop does a lot natively or through modules, and Shopify does it differently. This is the map of what carries over, what needs a decision, and which old URLs need a redirect. We apply the Shopify Launch Sprint method: audit, 301 redirect map, data migration, QA.',
   ledeIt:
-    'PrestaShop fa molte cose nativamente o con i moduli, e Shopify le fa in modo diverso. Questa è la mappa di cosa passa, cosa richiede una decisione e quali vecchi URL vanno rediretti. Applichiamo il metodo dello Shopify Launch Sprint: audit, mappa dei redirect 301, migrazione dei dati, QA.',
+    'La migrazione da PrestaShop a Shopify è fatta soprattutto di decisioni: PrestaShop fa molte cose nativamente o con i moduli, e Shopify le fa in modo diverso. Questa è la mappa di cosa passa, cosa richiede una decisione e quali vecchi URL vanno rediretti. Applichiamo il metodo dello Shopify Launch Sprint: audit, mappa dei redirect 301, migrazione dei dati, QA.',
   image: '/images/blog/prestashop-to-shopify-migration-cover.png',
   imageAlt: 'Copertina astratta, sfondo grigio chiaro, con fasce diagonali di puntini',
   imageAltEn: 'Abstract cover, light grey background with diagonal bands of dots',
   articleType: 'BlogPosting',
   date: '2026-10-26',
   datePublishedIso: '2026-10-26T11:05:00+00:00',
-  dateModifiedIso: '2026-11-04T21:21:00+00:00',
-  wordCount: 2390,
+  dateModifiedIso: '2026-11-26T12:00:00+00:00',
+  wordCount: 2700,
   articleSection: 'Shopify migration',
   readingTimeMinutes: 10,
   keywordsEn:
-    'prestashop to shopify, migrate prestashop to shopify, shopify vs prestashop, prestashop to shopify migration, prestashop redirect map, prestashop combinations shopify variants',
+    'prestashop to shopify migration, migrate prestashop to shopify, how to migrate from prestashop to shopify, prestashop to shopify migration checklist, prestashop to shopify, shopify vs prestashop, prestashop redirect map, prestashop combinations shopify variants',
   keywordsIt:
-    'migrazione prestashop shopify, da prestashop a shopify, prestashop o shopify, passare da prestashop a shopify, redirect prestashop shopify, combinazioni prestashop varianti shopify',
+    'migrazione da prestashop a shopify, migrazione prestashop shopify, come migrare da prestashop a shopify, checklist migrazione prestashop shopify, da prestashop a shopify, prestashop o shopify, passare da prestashop a shopify, redirect prestashop shopify, combinazioni prestashop varianti shopify',
   faqEn: [
     {
       question: 'Can I import PrestaShop products into Shopify?',
@@ -68,6 +68,11 @@ const article: Article = {
       question: 'How much does a PrestaShop to Shopify migration cost?',
       answer:
         'The Shopify Launch Sprint has a public price by annual revenue: €5,800, €8,800 or €12,800, VAT excluded, in 4 installments. Our guide on migration cost explains what drives a quote up or down.',
+    },
+    {
+      question: 'How do I choose an agency for a PrestaShop to Shopify migration?',
+      answer:
+        'Check three things you can verify. First, a written 301 redirect plan built from your PrestaShop URLs, not a promise that SEO will be fine. Second, a module audit and data mapping before the quote, because the module list is the real scope. Third, a fixed calendar and price with guarantees in writing. With the Shopify Launch Sprint we put four in writing: store ready on day 14 or we refund the first installment; organic traffic below the baseline 90 days after go-live, we work for free until it comes back; store offline at launch because of us, we pay one installment; checkout converting less than before at 90 days, we optimize it for free until it beats it.',
     },
   ],
   faqIt: [
@@ -106,11 +111,16 @@ const article: Article = {
       answer:
         'Lo Shopify Launch Sprint ha un prezzo pubblico per fatturato annuo: €5.800, €8.800 o €12.800, IVA esclusa, in 4 rate. La nostra guida sul costo della migrazione spiega cosa fa salire o scendere un preventivo.',
     },
+    {
+      question: 'Come scelgo un’agenzia per la migrazione da PrestaShop a Shopify?',
+      answer:
+        'Controlla tre cose verificabili. Primo, un piano scritto dei redirect 301 costruito dai tuoi URL di PrestaShop, non la promessa che la SEO andrà bene. Secondo, l’audit dei moduli e la mappatura dei dati prima del preventivo, perché la lista dei moduli è il vero perimetro. Terzo, calendario e prezzo fissi con garanzie scritte. Con lo Shopify Launch Sprint ne mettiamo quattro per iscritto: store pronto al giorno 14 o ti rimborsiamo la prima rata; traffico organico sotto la baseline a 90 giorni dal go-live, lavoriamo gratis finché non torna; store offline al lancio per colpa nostra, una rata la paghiamo noi; il checkout converte meno di prima a 90 giorni, lo ottimizziamo gratis finché non supera.',
+    },
   ],
   content: [
     {
       type: 'paragraph',
-      text: 'Migrating PrestaShop to Shopify means moving a catalog built on combinations, customer groups and modules into a platform with variants, collections and apps, and giving every old PrestaShop URL a 301 redirect to its new address. The product data is the easy part. The decisions sit in the things PrestaShop does natively or through modules that Shopify does differently.',
+      text: 'A PrestaShop to Shopify migration means moving a catalog built on combinations, customer groups and modules into a platform with variants, collections and apps, and giving every old PrestaShop URL a 301 redirect to its new address. The product data is the easy part. The decisions sit in the things PrestaShop does natively or through modules that Shopify does differently.',
     },
     {
       type: 'paragraph',
@@ -119,6 +129,22 @@ const article: Article = {
     {
       type: 'paragraph',
       text: 'Coming from another platform? Read the guides for [WooCommerce](/blog/woocommerce-to-shopify-migration), [Magento](/blog/magento-to-shopify-migration) and [BigCommerce](/blog/bigcommerce-to-shopify-migration).',
+    },
+    { type: 'h2', text: 'How to migrate from PrestaShop to Shopify, step by step' },
+    {
+      type: 'paragraph',
+      text: '**To migrate from PrestaShop to Shopify, work in six steps: modules, concepts, data, redirects, payments and invoicing, then launch.** Each step has its own section below.',
+    },
+    {
+      type: 'list',
+      items: [
+        '1. Audit the modules. Sort each one into native Shopify, app, custom code or retire: the list is the real scope of the project.',
+        '2. Decide the concepts with no one-to-one match: combinations, customer groups and specific prices, multistore and carriers.',
+        '3. Export and map the data. Take the catalog with ID, URL rewrite and default category, import it by CSV or migration app, and verify prices on a sample.',
+        '4. Build the 301 redirect map from the PrestaShop IDs in your old URLs, and check it with a crawl and Search Console.',
+        '5. Set up taxes, payments, shipping and invoicing, and test each with a real order. Export your past PDF invoices.',
+        '6. Launch on the calendar, test the redirects before and after go-live, and email customers that they will set a new password.',
+      ],
     },
     { type: 'h2', text: 'Shopify vs PrestaShop: why do merchants switch?' },
     {
@@ -280,10 +306,19 @@ const article: Article = {
       type: 'paragraph',
       text: '**The Shopify Launch Sprint has a public price by annual revenue: €5,800, €8,800 or €12,800, VAT excluded, in 4 installments.** Our guide on migration cost explains what drives a quote up or down.',
     },
-    { type: 'h2', text: 'The list to write before anything else' },
+    { type: 'h3', text: 'How do I choose an agency for a PrestaShop to Shopify migration?' },
+    {
+      type: 'paragraph',
+      text: '**Check three things you can verify.** First, a written 301 redirect plan built from your PrestaShop URLs, not a promise that SEO will be fine. Second, a module audit and data mapping before the quote, because the module list is the real scope. Third, a fixed calendar and price with guarantees in writing. With the [Shopify Launch Sprint](/shopify-migration-sprint) we put four in writing: store ready on day 14 or we refund the first installment; organic traffic below the baseline 90 days after go-live, we work for free until it comes back; store offline at launch because of us, we pay one installment; checkout converting less than before at 90 days, we optimize it for free until it beats it. Our guide to [choosing a Shopify migration agency](/blog/choose-shopify-migration-agency) lists nine criteria.',
+    },
+    { type: 'h2', text: 'PrestaShop to Shopify migration checklist: the list to write first' },
     {
       type: 'paragraph',
       text: '**Most of the risk in leaving PrestaShop sits in what nobody wrote down: a module installed years ago, a customer group with its own prices, a carrier rule, an old URL with links.** Write that list before you plan anything else, and the rest of the project gets much more predictable.',
+    },
+    {
+      type: 'paragraph',
+      text: 'It is the starting point of steps 1, 2 and 4 above: the modules, the groups and prices, the carrier rules and the old URLs that have links.',
     },
     {
       type: 'paragraph',
@@ -310,6 +345,22 @@ const article: Article = {
     {
       type: 'paragraph',
       text: 'Arrivi da un’altra piattaforma? Leggi le guide per [WooCommerce](/it/blog/migrazione-woocommerce-shopify), [Magento](/it/blog/migrazione-magento-shopify) e [BigCommerce](/it/blog/migrazione-bigcommerce-shopify).',
+    },
+    { type: 'h2', text: 'Come migrare da PrestaShop a Shopify, passo per passo' },
+    {
+      type: 'paragraph',
+      text: '**Per migrare da PrestaShop a Shopify si lavora in sei passi: moduli, concetti, dati, redirect, pagamenti e fatture, poi il lancio.** Ogni passo ha la sua sezione qui sotto.',
+    },
+    {
+      type: 'list',
+      items: [
+        '1. Fai l’audit dei moduli. Metti ognuno in un gruppo: nativo in Shopify, app, codice su misura o da eliminare. La lista è il vero perimetro del progetto.',
+        '2. Decidi i concetti che non hanno un equivalente uno a uno: combinazioni, gruppi clienti e prezzi specifici, multistore e corrieri.',
+        '3. Esporta e mappa i dati. Prendi il catalogo con ID, URL riscritto e categoria predefinita, importalo con un CSV o con un’app di migrazione e verifica i prezzi su un campione.',
+        '4. Costruisci la mappa dei redirect 301 dagli ID di PrestaShop nei tuoi vecchi URL e controllala con una scansione e Search Console.',
+        '5. Configura tasse, pagamenti, spedizioni e fatturazione e prova ognuno con un ordine vero. Esporta le fatture PDF passate.',
+        '6. Lancia sul calendario, prova i redirect prima e dopo il go-live e avvisa i clienti con un’email che dovranno scegliere una nuova password.',
+      ],
     },
     { type: 'h2', text: 'PrestaShop o Shopify: perché si cambia?' },
     {
@@ -471,10 +522,19 @@ const article: Article = {
       type: 'paragraph',
       text: '**Lo Shopify Launch Sprint ha un prezzo pubblico per fatturato annuo: €5.800, €8.800 o €12.800, IVA esclusa, in 4 rate.** La nostra guida sul costo della migrazione spiega cosa fa salire o scendere un preventivo.',
     },
-    { type: 'h2', text: 'L’elenco da scrivere prima di tutto' },
+    { type: 'h3', text: 'Come scelgo un’agenzia per la migrazione da PrestaShop a Shopify?' },
+    {
+      type: 'paragraph',
+      text: '**Controlla tre cose verificabili.** Primo, un piano scritto dei redirect 301 costruito dai tuoi URL di PrestaShop, non la promessa che la SEO andrà bene. Secondo, l’audit dei moduli e la mappatura dei dati prima del preventivo, perché la lista dei moduli è il vero perimetro. Terzo, calendario e prezzo fissi con garanzie scritte. Con lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) ne mettiamo quattro per iscritto: store pronto al giorno 14 o ti rimborsiamo la prima rata; traffico organico sotto la baseline a 90 giorni dal go-live, lavoriamo gratis finché non torna; store offline al lancio per colpa nostra, una rata la paghiamo noi; il checkout converte meno di prima a 90 giorni, lo ottimizziamo gratis finché non supera. La nostra guida su [come scegliere un’agenzia di migrazione Shopify](/it/blog/scegliere-agenzia-migrazione-shopify) elenca nove criteri.',
+    },
+    { type: 'h2', text: 'Checklist per la migrazione da PrestaShop a Shopify: l’elenco da scrivere per primo' },
     {
       type: 'paragraph',
       text: '**Gran parte del rischio nel lasciare PrestaShop sta in ciò che nessuno ha scritto: un modulo installato anni fa, un gruppo clienti con prezzi propri, una regola dei corrieri, un vecchio URL con dei link.** Scrivi prima questa lista e il resto del progetto diventa molto più prevedibile.',
+    },
+    {
+      type: 'paragraph',
+      text: 'È il punto di partenza dei passi 1, 2 e 4 qui sopra: i moduli, i gruppi e i prezzi, le regole dei corrieri e i vecchi URL con dei link.',
     },
     {
       type: 'paragraph',

@@ -5,39 +5,49 @@ const article: Article = {
   slugIt: 'shopify-mcp',
   title: 'Shopify MCP Explained: Which Server Does What for Your Store',
   titleIt: 'Shopify MCP spiegato: quale server fa cosa nel tuo store',
-  seoTitle: 'Shopify MCP Explained: Servers, Uses and Risks',
-  seoTitleIt: 'Shopify MCP spiegato: server, usi e rischi',
+  seoTitle: 'Shopify MCP Servers Explained: Tools and Risks',
+  seoTitleIt: 'Shopify MCP spiegato: server, strumenti, rischi',
   seoDescription:
-    'Shopify MCP explained for merchants: which servers exist, what each does for your store, what you need to connect them and which permissions to give.',
+    'Shopify MCP server guide: the Shopify connector for Claude, Dev MCP and agent servers, what tools each gives an AI agent, setup and permissions.',
   seoDescriptionIt:
-    'Shopify MCP spiegato a chi gestisce uno store: quali server esistono, cosa fa ciascuno, cosa serve per collegarli e quali permessi dare all’AI.',
+    'Guida ai server Shopify MCP: il connettore per Claude, Dev MCP e i server per agenti, quali strumenti dà ciascuno a un agente AI, setup e permessi.',
   excerpt:
     'Shopify MCP is a family of servers. A plain-language map for merchants and eCommerce leads: the connector for your own store, the developer tools, the agent servers, what you need to connect them and the permissions to give.',
   excerptIt:
     'Shopify MCP è una famiglia di server. Una mappa in parole semplici per chi gestisce uno store: il connettore per il tuo store, gli strumenti per sviluppatori, i server per gli agenti, cosa serve per collegarli e i permessi da dare.',
   ledeEn:
-    'Shopify MCP is a family of servers, and most guides are written for developers. Here is which one does what for your store, what you need to connect it and where the risks are.',
+    'Shopify MCP is a family of servers, and most guides are written for developers. Here is which Shopify MCP server or connector does what for your store, which tools it gives an AI agent, what you need to connect it and where the risks are.',
   ledeIt:
-    'Shopify MCP è una famiglia di server e quasi tutte le guide sono scritte per sviluppatori. Ecco quale fa cosa nel tuo store, cosa serve per collegarlo e dove stanno i rischi.',
+    'Shopify MCP è una famiglia di server e quasi tutte le guide sono scritte per sviluppatori. Ecco quale server o connettore Shopify MCP fa cosa nel tuo store, quali strumenti dà a un agente AI, cosa serve per collegarlo e dove stanno i rischi.',
   image: '/images/blog/shopify-mcp-cover.png',
   imageAlt: 'Copertina astratta, sfondo rosa cipria, con un’onda di puntini di dimensione variabile',
   imageAltEn: 'Abstract cover, blush pink background with a wave of dots changing size',
   articleType: 'BlogPosting',
   date: '2026-10-29',
   datePublishedIso: '2026-10-29T09:00:00+00:00',
-  dateModifiedIso: '2026-10-29T09:00:00+00:00',
-  wordCount: 2600,
+  dateModifiedIso: '2026-11-26T12:00:00+00:00',
+  wordCount: 2950,
   articleSection: 'AI agents',
   readingTimeMinutes: 9,
   keywordsEn:
-    'shopify mcp, shopify mcp server, shopify dev mcp, shopify storefront mcp, shopify mcp claude, shopify mcp claude code, model context protocol shopify, shopify ucp',
+    'shopify mcp, shopify mcp server, shopify mcp connector, shopify mcp tools, what is shopify mcp, shopify mcp explained, shopify dev mcp, shopify storefront mcp, shopify mcp claude, shopify mcp claude code, model context protocol shopify, shopify ucp',
   keywordsIt:
-    'shopify mcp, mcp shopify, model context protocol shopify, server mcp shopify, shopify dev mcp, shopify mcp claude, protocollo mcp ecommerce, shopify ucp',
+    'shopify mcp, mcp shopify, connettore shopify mcp, strumenti shopify mcp, cos’è shopify mcp, model context protocol shopify, server mcp shopify, shopify dev mcp, shopify mcp claude, protocollo mcp ecommerce, shopify ucp',
   faqEn: [
     {
       question: 'What is MCP in Shopify?',
       answer:
         'MCP (Model Context Protocol) is an open standard that lets an AI app such as Claude call tools on an outside system in a uniform way. In Shopify it means servers that let an AI tool read and, with your approval, change your store, or let shopping assistants search a catalog and build a cart.',
+    },
+    {
+      question: 'Does Shopify have an official MCP server?',
+      answer:
+        'Yes. Shopify documents several MCP servers: a connector for Claude and other AI tools that lets you manage your own store, Dev MCP and the AI Toolkit for developers, and agent servers for catalog, cart, checkout, Ask, orders and customer accounts. Shopify’s help page calls the first one a connector and does not use the word MCP.',
+    },
+    {
+      question: 'What tools does a Shopify MCP server give an AI agent?',
+      answer:
+        'It depends on the server. The Shopify connector can write to products, collections, inventory and percentage-off discount codes and read orders, customers and analytics, but it cannot issue refunds or cancel orders. Dev MCP and the AI Toolkit give a coding assistant documentation, API schemas and code checks. The catalog servers search and look up products, Cart MCP builds carts, Checkout MCP turns a cart into a checkout, Ask MCP answers policy questions, Order MCP reads an order and Customer Accounts MCP handles order status and account preferences.',
     },
     {
       question: 'Is Shopify MCP free?',
@@ -72,6 +82,16 @@ const article: Article = {
         'MCP (Model Context Protocol) è uno standard aperto che permette a un’app AI come Claude di usare strumenti di un sistema esterno sempre nello stesso modo. In Shopify sono i server che fanno leggere e, con la tua approvazione, modificare lo store a uno strumento AI, o che fanno cercare un catalogo e creare un carrello agli assistenti d’acquisto.',
     },
     {
+      question: 'Shopify ha un server MCP ufficiale?',
+      answer:
+        'Sì. Shopify documenta più server MCP: un connettore per Claude e altri strumenti AI con cui gestisci il tuo store, Dev MCP e AI Toolkit per gli sviluppatori e i server per agenti di catalogo, carrello, checkout, Ask, ordini e account cliente. La pagina del centro assistenza di Shopify chiama il primo un connettore e non usa la parola MCP.',
+    },
+    {
+      question: 'Quali strumenti dà un server Shopify MCP a un agente AI?',
+      answer:
+        'Dipende dal server. Il connettore Shopify può scrivere su prodotti, collezioni, inventario e codici sconto in percentuale e leggere ordini, clienti e analytics, ma non può fare rimborsi né annullare ordini. Dev MCP e AI Toolkit danno a un assistente per il codice documentazione, schemi delle API e controlli sul codice. I server di catalogo cercano e consultano i prodotti, Cart MCP costruisce carrelli, Checkout MCP trasforma un carrello in checkout, Ask MCP risponde alle domande sulle policy, Order MCP legge un ordine e Customer Accounts MCP gestisce stato ordine e preferenze dell’account.',
+    },
+    {
       question: 'Shopify MCP è gratis?',
       answer:
         'Il centro assistenza di Shopify dice che per il connettore non c’è un costo Shopify aggiuntivo: paghi il tuo piano Shopify e l’abbonamento dello strumento AI. Le pagine dei server per sviluppatori e per agenti non indicano costi, ma ogni assistente che costruisci paga i costi del proprio modello AI.',
@@ -100,16 +120,20 @@ const article: Article = {
   content: [
     {
       type: 'paragraph',
-      text: 'Shopify MCP is the set of servers that let an AI tool such as Claude read and act on a Shopify store through the Model Context Protocol (MCP). Shopify offers several of them: one for merchants who manage their own store from a chat, one for developers, and a group of agent servers that let shopping assistants search a catalog and build a cart. This guide is for a merchant or eCommerce lead, and it follows Shopify’s documentation as of 29 October 2026.',
+      text: 'Shopify MCP is the set of servers that let an AI tool such as Claude read and act on a Shopify store through the Model Context Protocol (MCP). Shopify offers several of them: one for merchants who manage their own store from a chat through the Shopify connector in Claude or another AI tool, one for developers, and a group of agent servers that let shopping assistants search a catalog and build a cart. This guide is for a merchant or eCommerce lead, and it follows Shopify’s documentation as of 29 October 2026.',
     },
     {
       type: 'paragraph',
       text: 'We are noprob agency and we sell the [Shopify Launch Sprint](/shopify-migration-sprint). Our team works every day with AI agents built on Claude Code. The plan: what MCP is in two sentences, then every Shopify server one by one, what you need to connect them and the permissions we would give.',
     },
-    { type: 'h2', text: 'What is MCP, in two sentences?' },
+    { type: 'h2', text: 'What is Shopify MCP?' },
     {
       type: 'paragraph',
-      text: '**MCP is an open standard that lets an AI app ask an outside system to run a tool, in the same way every time.** [MCP’s own introduction](https://modelcontextprotocol.io/docs/getting-started/intro) compares it to a USB-C port: one standard plug instead of one cable for every pair of devices.',
+      text: '**Shopify MCP is the set of Shopify servers that let an AI app such as Claude read and, with your approval, change a store, using the Model Context Protocol (MCP).** MCP is an open standard that lets an AI app ask an outside system to run a tool, in the same way every time.',
+    },
+    {
+      type: 'paragraph',
+      text: '[MCP’s own introduction](https://modelcontextprotocol.io/docs/getting-started/intro) compares it to a USB-C port: one standard plug instead of one cable for every pair of devices.',
     },
     {
       type: 'paragraph',
@@ -118,6 +142,23 @@ const article: Article = {
     {
       type: 'paragraph',
       text: 'MCP does not decide the rules. It standardizes the plug. Who may call what, which actions need your confirmation and what happens when the model gets it wrong all stay with you. The [MCP specification](https://modelcontextprotocol.io/specification/2026-07-28/server/tools) itself says there should always be a human who can deny a tool call.',
+    },
+    { type: 'h2', text: 'Shopify MCP servers at a glance' },
+    {
+      type: 'paragraph',
+      text: '**A merchant needs the Shopify connector, a developer needs Dev MCP and the AI Toolkit, and the other servers are for agents that serve shoppers.** One line each, with the detail in the next section:',
+    },
+    {
+      type: 'list',
+      items: [
+        '**Shopify connector:** manage your own store from a chat in Claude or another AI tool. Used by merchants and eCommerce leads.',
+        '**Dev MCP and AI Toolkit:** give an AI coding assistant Shopify’s current documentation, API schemas and code checks. Used by developers and agencies.',
+        '**Storefront Catalog MCP:** search and look up one store’s products and physical locations. Used by builders of shopping assistants and on-site agents.',
+        '**Global Catalog MCP:** search products across Shopify merchants. Used by agents that compare stores.',
+        '**Cart MCP and Checkout MCP:** build a cart, then turn it into a checkout. Used by agents shopping for a buyer.',
+        '**Ask MCP and Order MCP:** answer policy questions and read the state of an order. Used by support and order-status assistants.',
+        '**Customer Accounts MCP:** handle tasks for a logged-in customer. Used by developers of assistants for existing customers.',
+      ],
     },
     { type: 'h2', text: 'Which Shopify MCP servers exist today?' },
     {
@@ -295,6 +336,16 @@ const article: Article = {
       type: 'paragraph',
       text: '**MCP (Model Context Protocol) is an open standard that lets an AI app such as Claude call tools on an outside system in a uniform way.** In Shopify it means servers that let an AI tool read and, with your approval, change your store, or let shopping assistants search a catalog and build a cart.',
     },
+    { type: 'h3', text: 'Does Shopify have an official MCP server?' },
+    {
+      type: 'paragraph',
+      text: '**Yes, Shopify documents several MCP servers.** They are a connector for Claude and other AI tools that lets you manage your own store, Dev MCP and the AI Toolkit for developers, and agent servers for catalog, cart, checkout, Ask, orders and customer accounts. Shopify’s help page calls the first one a connector and does not use the word MCP.',
+    },
+    { type: 'h3', text: 'What tools does a Shopify MCP server give an AI agent?' },
+    {
+      type: 'paragraph',
+      text: '**It depends on the server.** The Shopify connector can write to products, collections, inventory and percentage-off discount codes and read orders, customers and analytics, but it cannot issue refunds or cancel orders. Dev MCP and the AI Toolkit give a coding assistant documentation, API schemas and code checks. The catalog servers search and look up products, Cart MCP builds carts, Checkout MCP turns a cart into a checkout, Ask MCP answers policy questions, Order MCP reads an order and Customer Accounts MCP handles order status and account preferences.',
+    },
     { type: 'h3', text: 'Is Shopify MCP free?' },
     {
       type: 'paragraph',
@@ -332,16 +383,20 @@ const article: Article = {
   contentIt: [
     {
       type: 'paragraph',
-      text: 'Shopify MCP è l’insieme dei server che permettono a uno strumento AI come Claude di leggere e agire su uno store Shopify attraverso il Model Context Protocol (MCP). Shopify ne offre più d’uno: uno per chi gestisce il proprio store da una chat, uno per gli sviluppatori e un gruppo di server per agenti che fanno cercare un catalogo e creare un carrello agli assistenti d’acquisto. Questa guida è per chi gestisce uno store o guida l’eCommerce e segue la documentazione di Shopify al 29 ottobre 2026.',
+      text: 'Shopify MCP è l’insieme dei server che permettono a uno strumento AI come Claude di leggere e agire su uno store Shopify attraverso il Model Context Protocol (MCP). Shopify ne offre più d’uno: uno per chi gestisce il proprio store da una chat tramite il connettore Shopify in Claude o in un altro strumento AI, uno per gli sviluppatori e un gruppo di server per agenti che fanno cercare un catalogo e creare un carrello agli assistenti d’acquisto. Questa guida è per chi gestisce uno store o guida l’eCommerce e segue la documentazione di Shopify al 29 ottobre 2026.',
     },
     {
       type: 'paragraph',
       text: 'Siamo noprob agency e vendiamo lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify). Il nostro team lavora ogni giorno con agenti AI costruiti su Claude Code. Il percorso: cos’è MCP in due frasi, poi ogni server Shopify uno per uno, cosa serve per collegarli e i permessi che daremmo noi.',
     },
-    { type: 'h2', text: 'Cos’è MCP, in due frasi?' },
+    { type: 'h2', text: 'Cos’è Shopify MCP?' },
     {
       type: 'paragraph',
-      text: '**MCP è uno standard aperto che permette a un’app AI di chiedere a un sistema esterno di eseguire uno strumento, sempre nello stesso modo.** [L’introduzione ufficiale di MCP](https://modelcontextprotocol.io/docs/getting-started/intro) lo paragona a una porta USB-C: una presa standard al posto di un cavo diverso per ogni coppia di dispositivi.',
+      text: '**Shopify MCP è l’insieme dei server Shopify che permettono a un’app AI come Claude di leggere e, con la tua approvazione, modificare uno store, usando il Model Context Protocol (MCP).** MCP è uno standard aperto che permette a un’app AI di chiedere a un sistema esterno di eseguire uno strumento, sempre nello stesso modo.',
+    },
+    {
+      type: 'paragraph',
+      text: '[L’introduzione ufficiale di MCP](https://modelcontextprotocol.io/docs/getting-started/intro) lo paragona a una porta USB-C: una presa standard al posto di un cavo diverso per ogni coppia di dispositivi.',
     },
     {
       type: 'paragraph',
@@ -350,6 +405,23 @@ const article: Article = {
     {
       type: 'paragraph',
       text: 'MCP non decide le regole. Standardizza la presa. Chi può chiamare cosa, quali azioni richiedono la tua conferma e cosa succede quando il modello sbaglia restano a te. La stessa [specifica di MCP](https://modelcontextprotocol.io/specification/2026-07-28/server/tools) dice che ci dovrebbe sempre essere una persona in grado di negare una chiamata a uno strumento.',
+    },
+    { type: 'h2', text: 'I server Shopify MCP in sintesi' },
+    {
+      type: 'paragraph',
+      text: '**Chi gestisce uno store ha bisogno del connettore Shopify, chi sviluppa di Dev MCP e AI Toolkit, e gli altri server sono per gli agenti che servono i clienti.** Una riga ciascuno, con il dettaglio nella sezione dopo:',
+    },
+    {
+      type: 'list',
+      items: [
+        '**Connettore Shopify:** gestire il tuo store da una chat in Claude o in un altro strumento AI. Lo usano chi gestisce lo store e chi guida l’eCommerce.',
+        '**Dev MCP e AI Toolkit:** danno a un assistente AI per il codice la documentazione aggiornata di Shopify, gli schemi delle API e i controlli sul codice. Li usano sviluppatori e agenzie.',
+        '**Storefront Catalog MCP:** cercare e consultare i prodotti di un solo store e i suoi punti vendita fisici. Lo usa chi costruisce assistenti d’acquisto e agenti sul sito.',
+        '**Global Catalog MCP:** cercare prodotti tra tutti i merchant Shopify. Lo usano gli agenti che confrontano gli store.',
+        '**Cart MCP e Checkout MCP:** costruire un carrello e poi trasformarlo in checkout. Li usano gli agenti che comprano per conto di un cliente.',
+        '**Ask MCP e Order MCP:** rispondere alle domande sulle policy e leggere lo stato di un ordine. Li usano gli assistenti di supporto e di stato ordine.',
+        '**Customer Accounts MCP:** operazioni per un cliente che ha fatto l’accesso. Lo usa chi sviluppa assistenti per i clienti già registrati.',
+      ],
     },
     { type: 'h2', text: 'Quali server Shopify MCP esistono oggi?' },
     {
@@ -526,6 +598,16 @@ const article: Article = {
     {
       type: 'paragraph',
       text: '**MCP (Model Context Protocol) è uno standard aperto che permette a un’app AI come Claude di usare strumenti di un sistema esterno sempre nello stesso modo.** In Shopify sono i server che fanno leggere e, con la tua approvazione, modificare lo store a uno strumento AI, o che fanno cercare un catalogo e creare un carrello agli assistenti d’acquisto.',
+    },
+    { type: 'h3', text: 'Shopify ha un server MCP ufficiale?' },
+    {
+      type: 'paragraph',
+      text: '**Sì, Shopify documenta più server MCP.** Sono un connettore per Claude e altri strumenti AI con cui gestisci il tuo store, Dev MCP e AI Toolkit per gli sviluppatori e i server per agenti di catalogo, carrello, checkout, Ask, ordini e account cliente. La pagina del centro assistenza di Shopify chiama il primo un connettore e non usa la parola MCP.',
+    },
+    { type: 'h3', text: 'Quali strumenti dà un server Shopify MCP a un agente AI?' },
+    {
+      type: 'paragraph',
+      text: '**Dipende dal server.** Il connettore Shopify può scrivere su prodotti, collezioni, inventario e codici sconto in percentuale e leggere ordini, clienti e analytics, ma non può fare rimborsi né annullare ordini. Dev MCP e AI Toolkit danno a un assistente per il codice documentazione, schemi delle API e controlli sul codice. I server di catalogo cercano e consultano i prodotti, Cart MCP costruisce carrelli, Checkout MCP trasforma un carrello in checkout, Ask MCP risponde alle domande sulle policy, Order MCP legge un ordine e Customer Accounts MCP gestisce stato ordine e preferenze dell’account.',
     },
     { type: 'h3', text: 'Shopify MCP è gratis?' },
     {

@@ -4,6 +4,11 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.231.0 (26 Nov 2026)
+
+- SEO, EN reinforcements in the overtaking zone (US priority): `/blog/prestashop-to-shopify-migration` (title on "PrestaShop to Shopify Migration", step-by-step H2, checklist H2, FAQ on choosing an agency) and `/blog/shopify-mcp` (title on "Shopify MCP Servers", "What is Shopify MCP?" definition, servers-at-a-glance list, 2 new FAQ, "connector" wording). Italian versions aligned in the same files. Only facts already in the articles or in `dati-verificati.md`.
+- SEO calendar: item 31 (AI answer citations, month 2) done: 7 of 30 answers cite noprob.agency (0 of 30 on 29 Oct), $0.11.
+
 ### Changelog v1.230.0 (25 Nov 2026)
 
 - Cold outreach, US line (D-107): with `approvedUs: "us2"` a US batch is imported without waiting for the site finding, new US leads without one stay in the queue, and leads held only for a missing finding ("senza aggancio") go back to target. They start when us2 starts (30/11, dueStep). Dry run on the live queue: 25 leads back in the queue, the 25/11 batch imported (58 new).
