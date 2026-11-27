@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.232.0 (27 Nov 2026)
+
+- Cold outreach: the morning review imports Damiano's Italian queue when the Italian first emails ready drop under 50 (fills up to 60 as before). Before, the count added the US leads too (154 on 27/11, paused for Thanksgiving), so Italy could run dry with 339 Italian leads still waiting in the queue.
+
 ### Changelog v1.231.0 (26 Nov 2026)
 
 - SEO, EN reinforcements in the overtaking zone (US priority): `/blog/prestashop-to-shopify-migration` (title on "PrestaShop to Shopify Migration", step-by-step H2, checklist H2, FAQ on choosing an agency) and `/blog/shopify-mcp` (title on "Shopify MCP Servers", "What is Shopify MCP?" definition, servers-at-a-glance list, 2 new FAQ, "connector" wording). Italian versions aligned in the same files. Only facts already in the articles or in `dati-verificati.md`.

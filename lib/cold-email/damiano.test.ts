@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { directTake, helloPayload, helloTake, pickQueue } from './damiano.mjs'
+import { directTake, helloPayload, helloTake, pickQueue, readyItaly } from './damiano.mjs'
 
 const row = (over = {}) => ({ brand: 'Acme', domain: 'www.acme.it', name: 'Sara De Luca', title: 'CEO', email: 'sara@acme.it', linkedin: 'https://linkedin.com/in/sara', city: 'Verona', ...over })
 
@@ -40,5 +40,20 @@ describe('channel top-up', () => {
   })
   it('takes the LinkedIn rows too when hello@ keeps no reserve', () => {
     expect(directTake(rows(74, 5), 0, 0)).toHaveLength(60)
+  })
+})
+
+describe('feed threshold', () => {
+  const lead = (o: Record<string, unknown>) => ({ segment: 'target', sequence: { sent: [], stoppedAt: null }, ...o })
+  it('counts only Italian first emails ready', () => {
+    const leads = [
+      ...Array.from({ length: 30 }, () => lead({})),
+      ...Array.from({ length: 150 }, () => lead({ line: 'us' })),
+      lead({ sequence: { sent: [{ step: 'e1' }], stoppedAt: null } }),
+      lead({ segment: 'review' }),
+      lead({ sequence: { sent: [], stoppedAt: '2026-11-20' } }),
+    ]
+    expect(readyItaly(leads)).toBe(30)
+    expect(directTake(Array.from({ length: 339 }, (_, i) => ({ email: `n${i}@a.it`, domain: `s${i}.it` })), readyItaly(leads), 0)).toHaveLength(30)
   })
 })
