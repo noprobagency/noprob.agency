@@ -35,7 +35,7 @@ import { gojiberryOn, loadGojiberryDomains } from '../lib/cold-email/gojiberry.m
 import { optoutSweep } from '../lib/cold/sweep.mjs'
 import { cleanCompany, review, storeVerdict } from '../lib/cold-email/approve.mjs'
 import { storeCheck } from '../lib/cold/store-check.mjs'
-import { DAMIANO, FEED, directTake, helloPayload, helloTake, pickQueue } from '../lib/cold-email/damiano.mjs'
+import { DAMIANO, FEED, directTake, helloPayload, helloTake, pickQueue, readyItaly } from '../lib/cold-email/damiano.mjs'
 import { danteLead } from '../lib/cold-email/dante.mjs'
 import { domainOf, fromDamiano, fromGojiberry } from '../lib/cold-email/leads.mjs'
 import { readSuppressed } from '../lib/cold-email/suppression.mjs'
@@ -156,7 +156,8 @@ if (!cloud && existsSync(damiano.queue)) {
     rows = rows.filter((r) => !used[domainOf(r.domain)])
     if (feed.hello && !dry) contacts = await listContacts(DANTE.list)
   }
-  const ready = db.leads.filter((l) => l.segment === 'target' && !l.sequence.sent.length && !l.sequence.stoppedAt).length
+  // Italy only: the queue holds Italian stores, and US leads must not keep the count up (D-5).
+  const ready = readyItaly(db.leads)
   if (ready < FEED.directDay && !dailyRunning) {
     const take = directTake(rows, ready, helloImport ? FEED.helloReserve : 0)
     const live = await pool(take.map((r) => `https://${domainOf(r.domain)}`), 12, (u) => fetchPlatform(u))
