@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.234.0 (28 Nov 2026)
+
+- SEO internal links: 5 high-impression articles (Shopify Plus migration, migration cost, choosing an agency, SEO checklist, PrestaShop) now link the home page or `/about` with descriptive "Shopify experts" anchors (Italian: "esperti Shopify" to `/it` and `/it/chi-siamo`). Before, only 1 or 2 articles linked those pages.
+
 ### Changelog v1.233.0 (28 Nov 2026)
 
 - SEO, second reinforcement of `/blog/ai-agents-for-shopify` on "shopify ai agent" (US): title with cost, "AI agents on Shopify" in the intro, a Shopify AI agent implementation checklist, 3 new FAQ (what actions it can take and whether it is safe, AI sales agent, how to connect one, with a link to the Shopify MCP article). Italian aligned. Only facts already in the article.

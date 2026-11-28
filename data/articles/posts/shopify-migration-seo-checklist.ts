@@ -124,7 +124,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Our [Shopify migration guide](/shopify-migration) covers the whole project. This article goes deeper on the SEO part and gives you the checklist itself, to use with us, with another team, or alone.',
+      text: 'Our [Shopify migration guide](/shopify-migration) covers the whole project. This article goes deeper on the SEO part and gives you the checklist itself, to use with [our Shopify experts](/about), with another team, or alone.',
     },
     {
       type: 'paragraph',
@@ -371,7 +371,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'La nostra [guida alla migrazione a Shopify](/it/migrazione-shopify) copre tutto il progetto. Qui approfondiamo la parte SEO e ti diamo la checklist, da usare con noi, con un altro team o da solo.',
+      text: 'La nostra [guida alla migrazione a Shopify](/it/migrazione-shopify) copre tutto il progetto. Qui approfondiamo la parte SEO e ti diamo la checklist, da usare con i nostri [esperti Shopify](/it/chi-siamo), con un altro team o da solo.',
     },
     {
       type: 'paragraph',

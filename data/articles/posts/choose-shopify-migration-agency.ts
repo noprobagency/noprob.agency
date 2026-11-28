@@ -202,7 +202,7 @@ const article: Article = {
     { type: 'h3', text: '5. Who does the work' },
     {
       type: 'paragraph',
-      text: '**Who does the work means the names and roles of the people who touch your store, and whether the person on the sales call is the one who builds it.** Ask for the team and the backup. Our answer: one point of contact for you, and a team with one specialist per area (development, SEO and redirects, tracking, checkout, design, AI) working in parallel.',
+      text: '**Who does the work means the names and roles of the people who touch your store, and whether the person on the sales call is the one who builds it.** Ask for the team and the backup. Our answer: one point of contact for you, and the [Shopify experts on the project](/about), one specialist per area (development, SEO and redirects, tracking, checkout, design, AI) working in parallel.',
     },
     { type: 'h3', text: '6. Post-launch support' },
     {
@@ -433,7 +433,7 @@ const article: Article = {
     { type: 'h3', text: '5. Chi fa il lavoro' },
     {
       type: 'paragraph',
-      text: '**Chi fa il lavoro significa nomi e ruoli delle persone che toccano il tuo store, e se chi parla nella videochiamata commerciale è lo stesso che costruisce.** Chiedi il team e il sostituto. La nostra risposta: un solo referente per te e un team con uno specialista per area (sviluppo, SEO e redirect, tracking, checkout, design, AI) che lavora in parallelo.',
+      text: '**Chi fa il lavoro significa nomi e ruoli delle persone che toccano il tuo store, e se chi parla nella videochiamata commerciale è lo stesso che costruisce.** Chiedi il team e il sostituto. La nostra risposta: un solo referente per te e gli [esperti Shopify del progetto](/it/chi-siamo), uno specialista per area (sviluppo, SEO e redirect, tracking, checkout, design, AI) che lavorano in parallelo.',
     },
     { type: 'h3', text: '6. Supporto dopo il lancio' },
     {
