@@ -4,6 +4,10 @@ Newest first. Rules live in [AGENT.md](../AGENT.md), the current architecture in
 [ARCHITECTURE.md](ARCHITECTURE.md). Every entry here is history: do not update
 old entries, add a new one on top.
 
+### Changelog v1.233.0 (28 Nov 2026)
+
+- SEO, second reinforcement of `/blog/ai-agents-for-shopify` on "shopify ai agent" (US): title with cost, "AI agents on Shopify" in the intro, a Shopify AI agent implementation checklist, 3 new FAQ (what actions it can take and whether it is safe, AI sales agent, how to connect one, with a link to the Shopify MCP article). Italian aligned. Only facts already in the article.
+
 ### Changelog v1.232.0 (27 Nov 2026)
 
 - Cold outreach: the morning review imports Damiano's Italian queue when the Italian first emails ready drop under 50 (fills up to 60 as before). Before, the count added the US leads too (154 on 27/11, paused for Thanksgiving), so Italy could run dry with 339 Italian leads still waiting in the queue.
