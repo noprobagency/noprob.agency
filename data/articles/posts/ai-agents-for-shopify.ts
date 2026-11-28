@@ -7,12 +7,12 @@ const article: Article = {
     "Shopify AI Agent: Is Yours a Chatbot, a Workflow or an Agent?",
   titleIt:
     "Agenti AI per Shopify: chatbot, workflow o agente? Come riconoscerli sul tuo store",
-  seoTitle: "Shopify AI Agent: What It Is vs a Chatbot",
-  seoTitleIt: "Agenti AI per Shopify: chatbot, workflow, agente",
+  seoTitle: "Shopify AI Agent: What It Is, Cost, vs Chatbot",
+  seoTitleIt: "Agente AI per Shopify: cosa fa, costo, chatbot",
   seoDescription:
-    "What a Shopify AI agent is and how to tell it from a chatbot or a workflow: what to hand over, what to keep, what it costs and what to ask vendors.",
+    "Shopify AI agent explained: what it is, what actions it can take, how it differs from a chatbot, what it costs and what to keep with people.",
   seoDescriptionIt:
-    "Agenti AI per Shopify: come distinguere chatbot, workflow e agente AI su uno store, cosa affidare, cosa no e le domande da fare a un fornitore.",
+    "Agente AI per Shopify: cosa fa, quali azioni può compiere, differenza con un chatbot, quanto costa e cosa non affidargli. Guida con checklist.",
   excerpt:
     "The criterion that separates a chatbot, a workflow and an AI agent on a Shopify store, five questions for any vendor, what makes sense to hand to an agent today and what does not, and the five patterns behind most agents.",
   excerptIt:
@@ -27,8 +27,8 @@ const article: Article = {
   articleType: "BlogPosting",
   date: "2026-10-29",
   datePublishedIso: "2026-10-29T09:00:00+00:00",
-  dateModifiedIso: "2026-11-17T12:00:00+00:00",
-  wordCount: 3200,
+  dateModifiedIso: "2026-11-28T12:00:00+00:00",
+  wordCount: 3750,
   articleSection: "AI agents",
   readingTimeMinutes: 13,
   keywordsEn:
@@ -42,7 +42,7 @@ const article: Article = {
     },
     {
       type: "paragraph",
-      text: "We are noprob agency. We work every day with AI agents built on Claude Code: they write and test the code of the stores we build with the [Shopify Launch Sprint](/shopify-migration-sprint), and they read store data for us. If you want one built into your store, see our [AI agents for eCommerce](/ai-agents-for-ecommerce) service. This page is the map for our series on agents: the criterion to tell the three forms apart, the questions to ask a vendor, what to hand to an agent and what to keep, and the five patterns behind most of what is for sale. Each section points to the article that goes deeper.",
+      text: "We are noprob agency. We work every day with AI agents built on Claude Code: they write and test the code of the stores we build with the [Shopify Launch Sprint](/shopify-migration-sprint), and they read store data for us. If you want one built into your store, see our [AI agents for eCommerce](/ai-agents-for-ecommerce) service. This page is the map for our series on AI agents on Shopify: the criterion to tell the three forms apart, the questions to ask a vendor, what to hand to an agent and what to keep, and the five patterns behind most of what is for sale. Each section points to the article that goes deeper.",
     },
     {
       type: "h2",
@@ -186,6 +186,22 @@ const article: Article = {
       type: "paragraph",
       text: "A practical test: could you undo it in a minute? If yes, an agent can do it and you review later. If not, it waits for a click. Begin with read-only access and add write tools one at a time, each with its own approval rule.",
     },
+    { type: "h3", text: "Shopify AI agent implementation checklist" },
+    {
+      type: "paragraph",
+      text: "**A Shopify AI agent implementation checklist has six steps, and each one comes from the sections above.**",
+    },
+    {
+      type: "list",
+      items: [
+        "**Pick the job.** Work with several steps that can be checked and undone, where the next step depends on what the last one found.",
+        "**Choose the simplest form.** A chatbot with the right data or a workflow first; an agent only when the path cannot be written in advance.",
+        "**Start read-only.** List the tools it calls on your store and give read access first; add write tools one at a time.",
+        "**Name the approval steps.** Refunds, discounts, price changes and promises to customers wait for a person.",
+        "**Write the limits.** A maximum number of steps and a handoff to a person, with the context attached, when it does not know.",
+        "**Test before and after every change.** A fixed set of real cases with a pass mark.",
+      ],
+    },
     {
       type: "h2",
       text: "Which patterns sit behind most AI agents, and what do they look like on a Shopify store?",
@@ -299,6 +315,27 @@ const article: Article = {
       type: "paragraph",
       text: "“AI assistant” is a loose label for software you talk to. It can be a chatbot that only answers or an agent that uses tools, so judge it by what it does.",
     },
+    { type: "h3", text: "What actions can a Shopify AI agent take, and is it safe?" },
+    {
+      type: "paragraph",
+      text: "Within the permissions you give it, a Shopify AI agent can read orders, products and policies, check stock, draft replies and prepare cases such as a return or an exchange. It is safe when access starts read-only, write tools are added one at a time and a person approves anything that moves money, makes a promise to a customer or cannot be undone. The full list is in the section “What should you not hand to an AI agent?”, and the risks are in [AI agent security for Shopify](/blog/ai-agent-security-shopify).",
+    },
+    {
+      type: "h3",
+      text: "Can an AI agent act as a sales agent on my Shopify store?",
+    },
+    {
+      type: "paragraph",
+      text: "Partly, and it helps to be precise about which part. An agent can answer product questions from your catalog, find the order and prepare a draft for a person, while prices, discounts and promises to customers stay with a person. Product advice may be a chatbot or an agent that searches your catalog, and its quality depends on your product data far more than on the model. Start from the test of whether the path is already written: if it is, a chatbot or a workflow is enough.",
+    },
+    {
+      type: "h3",
+      text: "How do you connect an AI agent to a Shopify store?",
+    },
+    {
+      type: "paragraph",
+      text: "You connect it through tools: each tool is a function your system runs for the agent, with the permissions you granted on your store. Start with read-only tools, such as looking up an order, then add write tools one at a time, each with its own approval rule. Ask any vendor for the list of tools and permissions. Shopify exposes parts of its side the same way, for example an Order MCP that fetches the current status of an order on demand; see [how Shopify MCP works](/blog/shopify-mcp).",
+    },
     {
       type: "paragraph",
       text: "The Sprint has a public price by revenue: €5,800 under €2M, €8,800 from €2M to €20M, €12,800 above €20M, VAT excluded, in 4 installments.",
@@ -315,7 +352,7 @@ const article: Article = {
     },
     {
       type: "paragraph",
-      text: "Siamo noprob agency. Lavoriamo ogni giorno con agenti AI costruiti su Claude Code: scrivono e testano il codice degli store che costruiamo con lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) e leggono i dati dello store per noi. Se ne vuoi uno costruito dentro il tuo store, guarda il nostro servizio di [agenti AI per eCommerce](/it/agenti-ai-per-ecommerce). Questa pagina è la mappa della nostra serie sugli agenti: il criterio per distinguere le tre forme, le domande da fare a un fornitore, cosa affidare a un agente e cosa tenere, e i cinque pattern dietro quasi tutto ciò che si vende. Ogni sezione rimanda all’articolo che va più a fondo.",
+      text: "Siamo noprob agency. Lavoriamo ogni giorno con agenti AI costruiti su Claude Code: scrivono e testano il codice degli store che costruiamo con lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify) e leggono i dati dello store per noi. Se ne vuoi uno costruito dentro il tuo store, guarda il nostro servizio di [agenti AI per eCommerce](/it/agenti-ai-per-ecommerce). Questa pagina è la mappa della nostra serie sugli agenti AI per Shopify: il criterio per distinguere le tre forme, le domande da fare a un fornitore, cosa affidare a un agente e cosa tenere, e i cinque pattern dietro quasi tutto ciò che si vende. Ogni sezione rimanda all’articolo che va più a fondo.",
     },
     {
       type: "h2",
@@ -456,6 +493,22 @@ const article: Article = {
       type: "paragraph",
       text: "Un test pratico: potresti annullarlo in un minuto? Se sì, un agente può farlo e tu rivedi dopo. Se no, aspetta un clic. Comincia con accesso in sola lettura e aggiungi gli strumenti di scrittura uno alla volta, ciascuno con la sua regola di approvazione.",
     },
+    { type: "h3", text: "Checklist per implementare un agente AI per Shopify" },
+    {
+      type: "paragraph",
+      text: "**La checklist per implementare un agente AI per Shopify ha sei passi, e ciascuno viene dalle sezioni qui sopra.**",
+    },
+    {
+      type: "list",
+      items: [
+        "**Scegli il lavoro.** Un lavoro a più passi, controllabile e reversibile, dove il passo dopo dipende da ciò che ha trovato il precedente.",
+        "**Scegli la forma più semplice.** Prima un chatbot con i dati giusti o un workflow; un agente solo quando la strada non si può scrivere prima.",
+        "**Parti in sola lettura.** Elenca gli strumenti che chiama sul tuo store e dai prima l’accesso in lettura; aggiungi gli strumenti di scrittura uno alla volta.",
+        "**Indica i passi di approvazione.** Rimborsi, sconti, cambi di prezzo e promesse ai clienti aspettano una persona.",
+        "**Scrivi i limiti.** Un numero massimo di passi e il passaggio a una persona, con il contesto allegato, quando non sa.",
+        "**Testa prima e dopo ogni modifica.** Un insieme fisso di casi veri con una soglia da superare.",
+      ],
+    },
     {
       type: "h2",
       text: "Quali pattern ci sono dietro gli agenti AI, e come sono su uno store Shopify?",
@@ -567,6 +620,30 @@ const article: Article = {
       text: "“Assistente AI” è un’etichetta generica per un software con cui parli. Può essere un chatbot che risponde soltanto o un agente che usa strumenti, quindi giudicalo da ciò che fa.",
     },
     {
+      type: "h3",
+      text: "Quali azioni può compiere un agente AI per Shopify, ed è sicuro?",
+    },
+    {
+      type: "paragraph",
+      text: "Entro i permessi che gli dai, un agente AI per Shopify può leggere ordini, prodotti e policy, controllare le scorte, scrivere bozze di risposta e preparare pratiche come un reso o un cambio. È sicuro quando l’accesso parte in sola lettura, gli strumenti di scrittura si aggiungono uno alla volta e una persona approva tutto ciò che muove denaro, fa una promessa a un cliente o non si può annullare. L’elenco completo è nella sezione “Cosa non va affidato a un agente AI?”, e i rischi sono in [sicurezza degli agenti AI su Shopify](/it/blog/sicurezza-agenti-ai-shopify).",
+    },
+    {
+      type: "h3",
+      text: "Un agente AI può fare da agente di vendita sul mio store Shopify?",
+    },
+    {
+      type: "paragraph",
+      text: "In parte, ed è utile essere precisi su quale parte. Un agente può rispondere a domande sui prodotti dal tuo catalogo, trovare l’ordine e preparare una bozza per una persona, mentre prezzi, sconti e promesse ai clienti restano a una persona. I consigli di prodotto possono essere di un chatbot o di un agente che cerca nel catalogo, e la qualità dipende dai dati prodotto molto più che dal modello. Parti dal test se la strada è già scritta: se lo è, bastano un chatbot o un workflow.",
+    },
+    {
+      type: "h3",
+      text: "Come si collega un agente AI a uno store Shopify?",
+    },
+    {
+      type: "paragraph",
+      text: "Lo colleghi tramite strumenti: ogni strumento è una funzione che il tuo sistema esegue per l’agente, con i permessi che hai concesso sul tuo store. Parti da strumenti in sola lettura, come cercare un ordine, poi aggiungi gli strumenti di scrittura uno alla volta, ciascuno con la sua regola di approvazione. Chiedi a ogni fornitore l’elenco di strumenti e permessi. Shopify espone così anche una parte del suo lato, per esempio un Order MCP che recupera su richiesta lo stato attuale di un ordine; vedi [come funziona Shopify MCP](/it/blog/shopify-mcp).",
+    },
+    {
       type: "paragraph",
       text: "Lo Sprint ha un prezzo pubblico per fatturato: €5.800 sotto i €2M, €8.800 tra €2M e €20M, €12.800 oltre i €20M, IVA esclusa, in 4 rate.",
     },
@@ -616,6 +693,21 @@ const article: Article = {
       answer:
         "“AI assistant” is a loose label for software you talk to. It can be a chatbot that only answers or an agent that uses tools, so judge it by what it does.",
     },
+    {
+      question: "What actions can a Shopify AI agent take, and is it safe?",
+      answer:
+        "Within the permissions you give it, a Shopify AI agent can read orders, products and policies, check stock, draft replies and prepare cases such as a return or an exchange. It is safe when access starts read-only, write tools are added one at a time and a person approves anything that moves money, makes a promise to a customer or cannot be undone.",
+    },
+    {
+      question: "Can an AI agent act as a sales agent on my Shopify store?",
+      answer:
+        "Partly. An agent can answer product questions from your catalog, find the order and prepare a draft for a person, while prices, discounts and promises to customers stay with a person. Start from the test of whether the path is already written: if it is, a chatbot or a workflow is enough.",
+    },
+    {
+      question: "How do you connect an AI agent to a Shopify store?",
+      answer:
+        "You connect it through tools: each tool is a function your system runs for the agent, with the permissions you granted on your store. Start with read-only tools, such as looking up an order, then add write tools one at a time, each with its own approval rule. Ask any vendor for the list of tools and permissions.",
+    },
   ],
   faqIt: [
     {
@@ -657,6 +749,21 @@ const article: Article = {
       question: "Cos’è un assistente AI, e come si distingue da un agente?",
       answer:
         "“Assistente AI” è un’etichetta generica per un software con cui parli. Può essere un chatbot che risponde soltanto o un agente che usa strumenti, quindi giudicalo da ciò che fa.",
+    },
+    {
+      question: "Quali azioni può compiere un agente AI per Shopify, ed è sicuro?",
+      answer:
+        "Entro i permessi che gli dai, un agente AI per Shopify può leggere ordini, prodotti e policy, controllare le scorte, scrivere bozze di risposta e preparare pratiche come un reso o un cambio. È sicuro quando l’accesso parte in sola lettura, gli strumenti di scrittura si aggiungono uno alla volta e una persona approva tutto ciò che muove denaro, fa una promessa a un cliente o non si può annullare.",
+    },
+    {
+      question: "Un agente AI può fare da agente di vendita sul mio store Shopify?",
+      answer:
+        "In parte. Un agente può rispondere a domande sui prodotti dal tuo catalogo, trovare l’ordine e preparare una bozza per una persona, mentre prezzi, sconti e promesse ai clienti restano a una persona. Parti dal test se la strada è già scritta: se lo è, bastano un chatbot o un workflow.",
+    },
+    {
+      question: "Come si collega un agente AI a uno store Shopify?",
+      answer:
+        "Lo colleghi tramite strumenti: ogni strumento è una funzione che il tuo sistema esegue per l’agente, con i permessi che hai concesso sul tuo store. Parti da strumenti in sola lettura, come cercare un ordine, poi aggiungi gli strumenti di scrittura uno alla volta, ciascuno con la sua regola di approvazione. Chiedi a ogni fornitore l’elenco di strumenti e permessi.",
     },
   ],
 };
