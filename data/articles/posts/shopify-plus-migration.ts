@@ -358,7 +358,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'This is how we cover them. We move the store with the [Shopify Launch Sprint](/shopify-migration-sprint): 14 days to a store ready to publish, go-live between day 15 and day 30, 90 days of support, 4 written guarantees and a public price by revenue. It is built with our Custom AI System for stores coming from another platform. Already on Shopify and want help with the Plus work? [Write to us](/contacts).',
+      text: 'This is how we cover them. Our [team of Shopify experts](/) moves the store with the [Shopify Launch Sprint](/shopify-migration-sprint): 14 days to a store ready to publish, go-live between day 15 and day 30, 90 days of support, 4 written guarantees and a public price by revenue. It is built with our Custom AI System for stores coming from another platform. Already on Shopify and want help with the Plus work? [Write to us](/contacts).',
     },
     {
       type: 'list',
@@ -664,7 +664,7 @@ const article: Article = {
     },
     {
       type: 'paragraph',
-      text: 'Ecco come le copriamo noi. Spostiamo lo store con lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify): 14 giorni per uno store pronto a pubblicare, go-live tra il giorno 15 e il giorno 30, 90 giorni di supporto, 4 garanzie scritte e un prezzo pubblico per fatturato. È costruito con il nostro Custom AI System per chi arriva da un’altra piattaforma. Sei già su Shopify e vuoi una mano con le funzioni Plus? [Scrivici](/it/contatti).',
+      text: 'Ecco come le copriamo noi. Il nostro team di [esperti Shopify](/it) sposta lo store con lo [Shopify Launch Sprint](/it/sprint-migrazione-shopify): 14 giorni per uno store pronto a pubblicare, go-live tra il giorno 15 e il giorno 30, 90 giorni di supporto, 4 garanzie scritte e un prezzo pubblico per fatturato. È costruito con il nostro Custom AI System per chi arriva da un’altra piattaforma. Sei già su Shopify e vuoi una mano con le funzioni Plus? [Scrivici](/it/contatti).',
     },
     {
       type: 'list',
